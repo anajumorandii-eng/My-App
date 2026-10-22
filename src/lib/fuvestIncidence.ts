@@ -21,7 +21,7 @@ export interface FuvestFilter {
   startYear: number; endYear: number; scope: FuvestScope; subject?: string;
   highConfidenceOnly?: boolean;
 }
-export interface AnnualIncidence { year: number; count: number; total: number; rate: number | null; }
+export interface AnnualIncidence { year: number; count: number; total: number; rate: number | null; covered?: boolean; }
 export interface IncidenceRow {
   id: string; subject: string; topicId: string | null; label: string; count: number; total: number;
   rate: number; editions: number; observedEditions: number; annual: AnnualIncidence[];
@@ -69,7 +69,7 @@ export function incidenceRows(corpus: FuvestCorpus, filter: FuvestFilter, group:
     const annual = years.map(year => {
       const total = denominator.filter(question => question.year === year).length;
       const count = entry.questions.filter(question => question.year === year).length;
-      return { year, count, total, rate: total ? count / total : null };
+      return { year, count, total, rate: total ? count / total : null, covered: coveredYears.has(year) };
     });
     return { id, subject: entry.subject, topicId: entry.topicId, label: entry.label,
       count: entry.questions.length, total: denominator.length, rate: entry.questions.length / denominator.length,
@@ -92,4 +92,32 @@ export function interdisciplinaryPairs(corpus: FuvestCorpus, filter: FuvestFilte
 }
 export async function loadFuvestCorpus(): Promise<FuvestCorpus> {
   return (await import('../data/fuvestIncidence.json')).default as FuvestCorpus;
+}
+
+export interface PeriodIncidence {
+ count: number; total: number; rate: number | null; coveredEditions: number;
+}
+export interface IncidenceComparison {
+ id: string; subject: string; topicId: string | null; label: string;
+ earlier: PeriodIncidence; recent: PeriodIncidence; deltaPercentagePoints: number | null;
+}
+/** Compare conditional rates, never subtract percentages built on different subjects. */
+export function compareIncidencePeriods(corpus:FuvestCorpus,scope:FuvestScope='1a',subject?:string):IncidenceComparison[]{
+ const periods=[{startYear:2017,endYear:2021,scope,subject},{startYear:2022,endYear:2026,scope,subject}];
+ const rows=periods.map(filter=>incidenceRows(corpus,filter));
+ const pools=periods.map(filter=>scopeQuestions(corpus,filter));
+ const labels=new Map(rows.flat().map(row=>[row.id,row]));
+ return [...labels.values()].map(label=>{
+  const values=rows.map((period,index)=>{
+   const row=period.find(row=>row.id===label.id);
+   const total=pools[index].filter(q=>q.subject===label.subject).length;
+   const phase=scope.startsWith('medicina')?'2a-dia2':scope;
+   const coveredEditions=new Set(corpus.papers.filter(p=>p.phase===phase&&p.year>=periods[index].startYear&&p.year<=periods[index].endYear&&p.classifiedQuestions===p.expectedQuestions).map(p=>p.year)).size;
+   const count=row?.count??0;
+   return {count,total,rate:total?count/total:null,coveredEditions};
+  });
+  const [earlier,recent]=values;
+  return {id:label.id,subject:label.subject,topicId:label.topicId,label:label.label,earlier,recent,
+   deltaPercentagePoints:earlier.rate===null||recent.rate===null?null:100*(recent.rate-earlier.rate)};
+ }).sort((a,b)=>a.subject.localeCompare(b.subject,'pt-BR')||(b.recent.count+b.earlier.count)-(a.recent.count+a.earlier.count));
 }

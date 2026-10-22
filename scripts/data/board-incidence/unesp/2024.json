@@ -1,0 +1,3864 @@
+{
+  "board": "UNESP",
+  "year": 2024,
+  "coverageNote": "Edição comum integral: 90 objetivas na primeira fase, 24 discursivas no dia 1 da segunda fase e questões impressas 25–36 mais uma redação no dia 2; 127 unidades. Grupos de dias separados. Gabarito V1 conferido; não há anulação indicada no documento disponível. Os índices primários consultados na descoberta não disponibilizaram espelho público correspondente das discursivas; answerKeyUrl e hash nulos nesses cadernos. Estratégias discursivas autorais, sem alegar correção oficial nem dupla revisão independente.",
+  "sourceManifest": [
+    {
+      "role": "exam",
+      "sourceUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/UNESP/2024/UNESP_2024_1a_fase.pdf",
+      "sha256": "afbb348bfadc769aefd7baaef245b69cd1b44b97ee3dc2197eca731a2a3f053d",
+      "pages": 36,
+      "bytes": 3437538
+    },
+    {
+      "role": "answer-key",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTM0MTAyMQ%3d%3d",
+      "sha256": "a2f863f9d05a6dc8bee5a6440faadf12256e55825eb10e96c42e49f0cee7e565",
+      "pages": 1,
+      "bytes": 325874
+    },
+    {
+      "role": "exam",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTYyMzIwNw%3d%3d",
+      "sha256": "d77a85de45227d14b73f360cfc709d132eeeacea1cd2212545a34da8b5bf4820",
+      "pages": 28,
+      "bytes": 2046867
+    },
+    {
+      "role": "exam",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTYyODg1MA%3d%3d",
+      "sha256": "95c3118cceea5d4e6f4228ac43f684ff42cc44a0ef8418eafc2a49fc8a9e8f79",
+      "pages": 24,
+      "bytes": 1523568
+    }
+  ],
+  "papers": [
+    {
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "001 — V1 imprensa",
+      "sha256": "afbb348bfadc769aefd7baaef245b69cd1b44b97ee3dc2197eca731a2a3f053d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NTM0MTAyMQ%3d%3d",
+      "answerKeySha256": "a2f863f9d05a6dc8bee5a6440faadf12256e55825eb10e96c42e49f0cee7e565",
+      "pages": 36,
+      "id": "unesp-2024-primeira-fase-objetiva",
+      "group": "primeira-fase-objetiva",
+      "phase": "1ª fase",
+      "sourceUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/UNESP/2024/UNESP_2024_1a_fase.pdf",
+      "expectedQuestions": 90,
+      "coverageNote": "Caderno espelho GitLFS com SHA conferido; gabarito V1 primário Vunesp. Confirmar pareamento das alternativas. Leitura integral por item; sínteses e estratégias autorais. Numeração impressa preservada.",
+      "questions": [
+        {
+          "number": "01",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Inferência em crônica"
+          ],
+          "skills": [
+            "Localizar o conflito entre agradar à torcida e manter a palavra",
+            "Distinguir a saída da seleção da continuidade no clube"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A decisão de Pelé preserva a coerência pessoal diante dos apelos externos.",
+          "rationale": "O comando exige distinguir a saída da seleção da continuidade no clube.",
+          "strategy": [
+            "Localizar o conflito entre agradar à torcida e manter a palavra",
+            "Distinguir a saída da seleção da continuidade no clube"
+          ],
+          "trap": "Confundir aposentadoria da seleção com abandono do futebol.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "02",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Analogia e linguagem figurada"
+          ],
+          "skills": [
+            "Relacionar fazenda e sítio aos dois espaços esportivos",
+            "Associar a maior extensão à seleção"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Fazenda e imensidão representam a escala da Seleção Brasileira.",
+          "rationale": "O comando exige associar a maior extensão à seleção.",
+          "strategy": [
+            "Relacionar fazenda e sítio aos dois espaços esportivos",
+            "Associar a maior extensão à seleção"
+          ],
+          "trap": "Trocar os referentes da comparação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "03",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Interlocução e resposta"
+          ],
+          "skills": [
+            "Identificar o motivo explicitado no agradecimento",
+            "Separar acolhimento pessoal de elogio técnico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Pelé agradece o reconhecimento de sua dimensão humana.",
+          "rationale": "O comando exige separar acolhimento pessoal de elogio técnico.",
+          "strategy": [
+            "Identificar o motivo explicitado no agradecimento",
+            "Separar acolhimento pessoal de elogio técnico"
+          ],
+          "trap": "Reduzir a resposta à vaidade esportiva.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "04",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Paradoxo"
+          ],
+          "skills": [
+            "Definir fama e anonimato",
+            "Reconhecer a tensão semântica na mesma expressão"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A expressão famoso incógnito reúne sentidos opostos.",
+          "rationale": "O comando exige reconhecer a tensão semântica na mesma expressão.",
+          "strategy": [
+            "Definir fama e anonimato",
+            "Reconhecer a tensão semântica na mesma expressão"
+          ],
+          "trap": "Tomar intensificação como oposição.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "05",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Pronomes relativos e referenciação"
+          ],
+          "skills": [
+            "Reconstituir o antecedente de cada relativo",
+            "Testar a retomada no contexto de cada oração"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Os relativos retomam um livro e a sombra de Pelé.",
+          "rationale": "O comando exige testar a retomada no contexto de cada oração.",
+          "strategy": [
+            "Reconstituir o antecedente de cada relativo",
+            "Testar a retomada no contexto de cada oração"
+          ],
+          "trap": "Escolher o substantivo mais próximo sem testar o sentido.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "06",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Intertextualidade em tirinha"
+          ],
+          "skills": [
+            "Ler a sequência de falas sobre o avião",
+            "Reconhecer a citação transformada de uma letra de canção"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A tatuagem de avião aciona uma alusão à canção.",
+          "rationale": "O comando exige reconhecer a citação transformada de uma letra de canção.",
+          "strategy": [
+            "Ler a sequência de falas sobre o avião",
+            "Reconhecer a citação transformada de uma letra de canção"
+          ],
+          "trap": "Confundir a alusão cultural com mera ambiguidade.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "07",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Eu lírico e interpretação de canção"
+          ],
+          "skills": [
+            "Localizar o contraste introduzido por porém",
+            "Relacionar a retomada da alegria ao novo amor"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O amor à Portela substitui a desilusão afetiva.",
+          "rationale": "O comando exige relacionar a retomada da alegria ao novo amor.",
+          "strategy": [
+            "Localizar o contraste introduzido por porém",
+            "Relacionar a retomada da alegria ao novo amor"
+          ],
+          "trap": "Atribuir ao novo amor a mesma decepção anterior.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "08",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Ordem direta e sujeito posposto"
+          ],
+          "skills": [
+            "Recuperar o sujeito samba na estrofe",
+            "Reordenar sujeito verbo e complemento"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A conquista do coração tem o samba como sujeito.",
+          "rationale": "O comando exige reordenar sujeito verbo e complemento.",
+          "strategy": [
+            "Recuperar o sujeito samba na estrofe",
+            "Reordenar sujeito verbo e complemento"
+          ],
+          "trap": "Tratar coração como sujeito de conquistou.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "09",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Humor e inferência em meme"
+          ],
+          "skills": [
+            "Comparar as duas imagens divinas",
+            "Relacionar a resposta romana à semelhança visual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A cópia romana de Poseidon ironiza a falta de invenção.",
+          "rationale": "O comando exige relacionar a resposta romana à semelhança visual.",
+          "strategy": [
+            "Comparar as duas imagens divinas",
+            "Relacionar a resposta romana à semelhança visual"
+          ],
+          "trap": "Atribuir invenção ao ato de copiar.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "10",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Moral implícita na fábula"
+          ],
+          "skills": [
+            "Contrapor o alimento possuído ao reflexo desejado",
+            "Inferir a virtude oposta à cobiça"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A perda da carne valoriza a moderação dos desejos.",
+          "rationale": "O comando exige inferir a virtude oposta à cobiça.",
+          "strategy": [
+            "Contrapor o alimento possuído ao reflexo desejado",
+            "Inferir a virtude oposta à cobiça"
+          ],
+          "trap": "Tomar a ambição frustrada como valor elogiado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "11",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Discurso indireto"
+          ],
+          "skills": [
+            "Converter primeira pessoa em terceira",
+            "Recuar fez para fizera na narração passada"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A mudança de narrador exige ajuste de pronome e tempo verbal.",
+          "rationale": "O comando exige recuar fez para fizera na narração passada.",
+          "strategy": [
+            "Converter primeira pessoa em terceira",
+            "Recuar fez para fizera na narração passada"
+          ],
+          "trap": "Usar lhe como objeto direto de fazer perder.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "12",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Pronomes e classes gramaticais"
+          ],
+          "skills": [
+            "Identificar a função de cujas na ligação entre nomes",
+            "Distinguir pronome objeto de artigo nas alternativas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O relativo cujas deve ser comparado a outro pronome.",
+          "rationale": "O comando exige distinguir pronome objeto de artigo nas alternativas.",
+          "strategy": [
+            "Identificar a função de cujas na ligação entre nomes",
+            "Distinguir pronome objeto de artigo nas alternativas"
+          ],
+          "trap": "Classificar todas as ocorrências de a como artigo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "13",
+          "page": 6,
+          "subject": "Literatura",
+          "topicId": "por_lit_classica_barroca",
+          "topic": "Literatura Clássica, Medieval e Barroca",
+          "subtopics": [
+            "Arcadismo e locus amoenus"
+          ],
+          "skills": [
+            "Identificar pastores e natureza harmoniosa",
+            "Relacionar a idealização campestre ao Arcadismo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A paisagem pastoril de Bocage segue o ideal árcade.",
+          "rationale": "O comando exige relacionar a idealização campestre ao Arcadismo.",
+          "strategy": [
+            "Identificar pastores e natureza harmoniosa",
+            "Relacionar a idealização campestre ao Arcadismo"
+          ],
+          "trap": "Confundir campo idealizado com descrição naturalista.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "14",
+          "page": 6,
+          "subject": "Literatura",
+          "topicId": "por_lit_classica_barroca",
+          "topic": "Literatura Clássica, Medieval e Barroca",
+          "subtopics": [
+            "Bocage e subjetividade amorosa"
+          ],
+          "skills": [
+            "Ler a condição expressa nos versos finais",
+            "Relacionar alegria do campo à presença da amada"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A presença de Marília transforma a percepção da paisagem.",
+          "rationale": "O comando exige relacionar alegria do campo à presença da amada.",
+          "strategy": [
+            "Ler a condição expressa nos versos finais",
+            "Relacionar alegria do campo à presença da amada"
+          ],
+          "trap": "Atribuir à noite a transformação central.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "15",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Personificação"
+          ],
+          "skills": [
+            "Localizar o Tejo sorrindo e o rouxinol suspirando",
+            "Reconhecer a humanização recorrente"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O soneto atribui ações humanas a elementos naturais.",
+          "rationale": "O comando exige reconhecer a humanização recorrente.",
+          "strategy": [
+            "Localizar o Tejo sorrindo e o rouxinol suspirando",
+            "Reconhecer a humanização recorrente"
+          ],
+          "trap": "Escolher antítese por um contraste isolado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "16",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Valores dos tempos verbais"
+          ],
+          "skills": [
+            "Reescrever os versos finais com tivesse visto e causaria",
+            "Comparar o tempo morfológico ao valor contextual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "As formas vira e causara têm valor expressivo de condição e consequência.",
+          "rationale": "O comando exige comparar o tempo morfológico ao valor contextual.",
+          "strategy": [
+            "Reescrever os versos finais com tivesse visto e causaria",
+            "Comparar o tempo morfológico ao valor contextual"
+          ],
+          "trap": "Ler o mais-que-perfeito apenas como anterioridade factual.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "17",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Charge e ironia política"
+          ],
+          "skills": [
+            "Ler a justificativa pessoal de Bush",
+            "Relacionar o motivo fútil à crítica da guerra"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A vingança infantil projeta arbitrariedade sobre a invasão do Iraque.",
+          "rationale": "O comando exige relacionar o motivo fútil à crítica da guerra.",
+          "strategy": [
+            "Ler a justificativa pessoal de Bush",
+            "Relacionar o motivo fútil à crítica da guerra"
+          ],
+          "trap": "Confundir ironia com endosso à invasão.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "18",
+          "page": 7,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Metalinguagem e caracterização"
+          ],
+          "skills": [
+            "Localizar as declarações de impossibilidade de parar",
+            "Relacionar vício e danação à compulsão criativa"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Verissimo caracteriza escrever como impulso irresistível.",
+          "rationale": "O comando exige relacionar vício e danação à compulsão criativa.",
+          "strategy": [
+            "Localizar as declarações de impossibilidade de parar",
+            "Relacionar vício e danação à compulsão criativa"
+          ],
+          "trap": "Interpretar os avisos ao leitor como recusa real de escrever.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "19",
+          "page": 7,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Machado de Assis e procedimentos narrativos"
+          ],
+          "skills": [
+            "Destacar os chamamentos ao leitor",
+            "Identificar a reflexão sobre a própria escrita"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A interlocução com o leitor e a metalinguagem aproximam as prosas.",
+          "rationale": "O comando exige identificar a reflexão sobre a própria escrita.",
+          "strategy": [
+            "Destacar os chamamentos ao leitor",
+            "Identificar a reflexão sobre a própria escrita"
+          ],
+          "trap": "Confundir história de terror com tese sobrenatural.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "20",
+          "page": 7,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Subordinação adverbial concessiva"
+          ],
+          "skills": [
+            "Isolar a oração sobre perder amigos vida ou sono",
+            "Substituir a locução por ainda que"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Mesmo que introduz uma concessão ao custo das ideias.",
+          "rationale": "O comando exige substituir a locução por ainda que.",
+          "strategy": [
+            "Isolar a oração sobre perder amigos vida ou sono",
+            "Substituir a locução por ainda que"
+          ],
+          "trap": "Confundir obstáculo superado com causa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "21",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Ideia central e leitura multimodal"
+          ],
+          "skills": [
+            "Relacionar a expansão de jogadores aos gastos",
+            "Conferir a tendência ascendente no gráfico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O mercado de games cresce como negócio e entretenimento.",
+          "rationale": "O comando exige conferir a tendência ascendente no gráfico.",
+          "strategy": [
+            "Relacionar a expansão de jogadores aos gastos",
+            "Conferir a tendência ascendente no gráfico"
+          ],
+          "trap": "Reduzir a tese ao declínio do cinema.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "22",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Comparação temporal"
+          ],
+          "skills": [
+            "Contrapor sala doméstica e centro de exposições",
+            "Usar o porte dos espaços como evidência do crescimento"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Os locais dos congressos evidenciam a expansão do setor.",
+          "rationale": "O comando exige usar o porte dos espaços como evidência do crescimento.",
+          "strategy": [
+            "Contrapor sala doméstica e centro de exposições",
+            "Usar o porte dos espaços como evidência do crescimento"
+          ],
+          "trap": "Confundir jogadores mundiais com participantes do congresso.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "23",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Conector concessivo though"
+          ],
+          "skills": [
+            "Ler a afirmação sobre todas as idades",
+            "Contrapor participação e duração das sessões"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Though ressalva o tempo menor gasto pelos mais velhos.",
+          "rationale": "O comando exige contrapor participação e duração das sessões.",
+          "strategy": [
+            "Ler a afirmação sobre todas as idades",
+            "Contrapor participação e duração das sessões"
+          ],
+          "trap": "Traduzir though como causa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "24",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Construção correlativa comparativa"
+          ],
+          "skills": [
+            "Identificar as duas grandezas da construção the bigger",
+            "Interpretar a variação no mesmo sentido"
+          ],
+          "relatedSubjects": [
+            "Matemática"
+          ],
+          "relatedTopicIds": [],
+          "summary": "A ampliação do público corresponde à ampliação do mercado.",
+          "rationale": "O comando exige interpretar a variação no mesmo sentido.",
+          "strategy": [
+            "Identificar as duas grandezas da construção the bigger",
+            "Interpretar a variação no mesmo sentido"
+          ],
+          "trap": "Ler a relação como proporcionalidade inversa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "25",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Confronto de texto e gráfico"
+          ],
+          "skills": [
+            "Ler as curvas de games e cinema no ano citado",
+            "Estimar a razão de aproximadamente cinco"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O gráfico permite comparar receita de games e bilheteria.",
+          "rationale": "O comando exige estimar a razão de aproximadamente cinco.",
+          "strategy": [
+            "Ler as curvas de games e cinema no ano citado",
+            "Estimar a razão de aproximadamente cinco"
+          ],
+          "trap": "Inferir divisão por idade de um gráfico de receitas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "26",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Polissemia de as"
+          ],
+          "skills": [
+            "Relacionar o primeiro as ao crescimento em curso",
+            "Interpretar o segundo as como classificação do meio"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "As assume sentidos de progressão e papel comparativo.",
+          "rationale": "O comando exige interpretar o segundo as como classificação do meio.",
+          "strategy": [
+            "Relacionar o primeiro as ao crescimento em curso",
+            "Interpretar o segundo as como classificação do meio"
+          ],
+          "trap": "Dar a mesma tradução às duas ocorrências.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "27",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Humor em quadrinhos"
+          ],
+          "skills": [
+            "Ler a recusa inicial e sua explicação",
+            "Relacionar a permanência no computador à atração do jogo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O menino coloca o lançamento do game acima do convite social.",
+          "rationale": "O comando exige relacionar a permanência no computador à atração do jogo.",
+          "strategy": [
+            "Ler a recusa inicial e sua explicação",
+            "Relacionar a permanência no computador à atração do jogo"
+          ],
+          "trap": "Supor que o sorvete seja prêmio do game.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "28",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Expressão idiomática"
+          ],
+          "skills": [
+            "Recuperar quem fez o convite",
+            "Interpretar a exclamação à luz da prioridade do lançamento"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Out of her mind expressa irritação com o convite recebido.",
+          "rationale": "O comando exige interpretar a exclamação à luz da prioridade do lançamento.",
+          "strategy": [
+            "Recuperar quem fez o convite",
+            "Interpretar a exclamação à luz da prioridade do lançamento"
+          ],
+          "trap": "Atribuir a fala a uma reconciliação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "29",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Referência pronominal"
+          ],
+          "skills": [
+            "Localizar a meta no quadrinho anterior",
+            "Testar a retomada pelo acontecimento aguardado"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "That retoma atingir o nível 80 com o personagem.",
+          "rationale": "O comando exige testar a retomada pelo acontecimento aguardado.",
+          "strategy": [
+            "Localizar a meta no quadrinho anterior",
+            "Testar a retomada pelo acontecimento aguardado"
+          ],
+          "trap": "Retomar a ida à sorveteria.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "30",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Localização de informação explícita"
+          ],
+          "skills": [
+            "Localizar a lista de benefícios",
+            "Selecionar a habilidade de solucionar problemas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O uso educativo de games pode ampliar a resolução de problemas.",
+          "rationale": "O comando exige selecionar a habilidade de solucionar problemas.",
+          "strategy": [
+            "Localizar a lista de benefícios",
+            "Selecionar a habilidade de solucionar problemas"
+          ],
+          "trap": "Transformar contato remoto em contato presencial.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "31",
+          "page": 10,
+          "subject": "História",
+          "topicId": "his_idade_media",
+          "topic": "Idade Média",
+          "subtopics": [
+            "Arte românica e gótica"
+          ],
+          "skills": [
+            "Comparar arcos e ornamentação nas fotografias",
+            "Situar as construções nos séculos XII e XIII"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "As fachadas diferenciam a sobriedade românica da verticalidade gótica.",
+          "rationale": "O comando exige situar as construções nos séculos XII e XIII.",
+          "strategy": [
+            "Comparar arcos e ornamentação nas fotografias",
+            "Situar as construções nos séculos XII e XIII"
+          ],
+          "trap": "Associar a igreja românica ao protestantismo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "32",
+          "page": 10,
+          "subject": "História",
+          "topicId": "his_brasil_colonia",
+          "topic": "Brasil Colônia",
+          "subtopics": [
+            "Pacto colonial"
+          ],
+          "skills": [
+            "Associar o pedido de devolução à relação metrópole-colônia",
+            "Identificar o exclusivo comercial na lógica mercantilista"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O meme representa a exploração colonial portuguesa.",
+          "rationale": "O comando exige identificar o exclusivo comercial na lógica mercantilista.",
+          "strategy": [
+            "Associar o pedido de devolução à relação metrópole-colônia",
+            "Identificar o exclusivo comercial na lógica mercantilista"
+          ],
+          "trap": "Projetar domínio político português após a independência.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "33",
+          "page": 11,
+          "subject": "História",
+          "topicId": "his_brasil_colonia",
+          "topic": "Brasil Colônia",
+          "subtopics": [
+            "Culturas africanas e religiosidade"
+          ],
+          "skills": [
+            "Contrapor centralidade religiosa e explicação racional",
+            "Rejeitar equivalência entre diferença e inferioridade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O texto diferencia relações sociais com o sagrado sem hierarquizá-las.",
+          "rationale": "O comando exige rejeitar equivalência entre diferença e inferioridade.",
+          "strategy": [
+            "Contrapor centralidade religiosa e explicação racional",
+            "Rejeitar equivalência entre diferença e inferioridade"
+          ],
+          "trap": "Interpretar a comparação como evolucionismo civilizatório.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "34",
+          "page": 11,
+          "subject": "História",
+          "topicId": "his_brasil_colonia",
+          "topic": "Brasil Colônia",
+          "subtopics": [
+            "Mulheres e sociabilidade urbana"
+          ],
+          "skills": [
+            "Identificar os cruzamentos entre trabalho livre e escravidão",
+            "Relacionar essas sobreposições à indefinição social"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A circulação de mulheres pobres ocorre nas fronteiras de categorias sociais.",
+          "rationale": "O comando exige relacionar essas sobreposições à indefinição social.",
+          "strategy": [
+            "Identificar os cruzamentos entre trabalho livre e escravidão",
+            "Relacionar essas sobreposições à indefinição social"
+          ],
+          "trap": "Projetar família burguesa ideal sobre o espaço descrito.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "35",
+          "page": 12,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Cultura popular e carnaval"
+          ],
+          "skills": [
+            "Comparar liberação moderna e liberdade contemporânea",
+            "Identificar prazer e alteração comportamental como eixos comuns"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Os dois textos associam festa e suspensão de normas.",
+          "rationale": "O comando exige identificar prazer e alteração comportamental como eixos comuns.",
+          "strategy": [
+            "Comparar liberação moderna e liberdade contemporânea",
+            "Identificar prazer e alteração comportamental como eixos comuns"
+          ],
+          "trap": "Inventar oposição entre dois diagnósticos semelhantes.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "36",
+          "page": 12,
+          "subject": "História",
+          "topicId": "his_brasil_imperio",
+          "topic": "Brasil Império",
+          "subtopics": [
+            "Republicanismo e federalismo"
+          ],
+          "skills": [
+            "Relacionar soberania do povo à crítica ao privilégio",
+            "Identificar a defesa federalista das províncias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O manifesto defende soberania popular e autonomia provincial.",
+          "rationale": "O comando exige identificar a defesa federalista das províncias.",
+          "strategy": [
+            "Relacionar soberania do povo à crítica ao privilégio",
+            "Identificar a defesa federalista das províncias"
+          ],
+          "trap": "Confundir federalismo com centralização.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "37",
+          "page": 13,
+          "subject": "História",
+          "topicId": "his_imperialismo_guerras",
+          "topic": "Imperialismo e Guerras Mundiais",
+          "subtopics": [
+            "Gênero na sociedade burguesa"
+          ],
+          "skills": [
+            "Observar o protagonismo feminino nas cenas",
+            "Distinguir sátira de comprovação de matriarcado"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "As caricaturas ironizam novos papéis sociais femininos no século XIX.",
+          "rationale": "O comando exige distinguir sátira de comprovação de matriarcado.",
+          "strategy": [
+            "Observar o protagonismo feminino nas cenas",
+            "Distinguir sátira de comprovação de matriarcado"
+          ],
+          "trap": "Tomar ironia como descrição literal de igualdade.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "38",
+          "page": 13,
+          "subject": "História",
+          "topicId": "his_guerra_fria_contemporaneo",
+          "topic": "Guerra Fria e Mundo Contemporâneo",
+          "subtopics": [
+            "Povos originários e Estados nacionais"
+          ],
+          "skills": [
+            "Identificar as linhas culturais anteriores aos Estados",
+            "Relacionar a sobrevivência à violência da nova delimitação"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A continuidade indígena persiste sob fronteiras que fragmentaram povos.",
+          "rationale": "O comando exige relacionar a sobrevivência à violência da nova delimitação.",
+          "strategy": [
+            "Identificar as linhas culturais anteriores aos Estados",
+            "Relacionar a sobrevivência à violência da nova delimitação"
+          ],
+          "trap": "Concluir que todos os povos foram exterminados.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "39",
+          "page": 14,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Crise de 1929 e café"
+          ],
+          "skills": [
+            "Situar a fotografia no governo provisório",
+            "Relacionar excedentes à crise agroexportadora"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A destruição de café responde à retração do mercado externo.",
+          "rationale": "O comando exige relacionar excedentes à crise agroexportadora.",
+          "strategy": [
+            "Situar a fotografia no governo provisório",
+            "Relacionar excedentes à crise agroexportadora"
+          ],
+          "trap": "Tratar a queima como simples abandono dos cafeicultores.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "40",
+          "page": 14,
+          "subject": "História",
+          "topicId": "his_guerra_fria_contemporaneo",
+          "topic": "Guerra Fria e Mundo Contemporâneo",
+          "subtopics": [
+            "Identidade pós-colonial"
+          ],
+          "skills": [
+            "Comparar a minoria em Trinidad ao universo indiano",
+            "Identificar a mediação europeia da identidade nacional"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A identidade da diáspora não coincide com as diferenças vividas na Índia.",
+          "rationale": "O comando exige identificar a mediação europeia da identidade nacional.",
+          "strategy": [
+            "Comparar a minoria em Trinidad ao universo indiano",
+            "Identificar a mediação europeia da identidade nacional"
+          ],
+          "trap": "Presumir uma identidade homogênea dentro e fora do país.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "41",
+          "page": 15,
+          "subject": "História",
+          "topicId": "his_imperialismo_guerras",
+          "topic": "Imperialismo e Guerras Mundiais",
+          "subtopics": [
+            "Nazismo e campos de extermínio"
+          ],
+          "skills": [
+            "Localizar a linguagem impessoal da morte",
+            "Relacioná-la à coisificação das vítimas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Arendt destaca a transformação dos prisioneiros em material descartável.",
+          "rationale": "O comando exige relacioná-la à coisificação das vítimas.",
+          "strategy": [
+            "Localizar a linguagem impessoal da morte",
+            "Relacioná-la à coisificação das vítimas"
+          ],
+          "trap": "Reduzir a crítica às condições sanitárias.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "42",
+          "page": 15,
+          "subject": "História",
+          "topicId": "his_republica_liberal_atual",
+          "topic": "República Liberal e Brasil Contemporâneo",
+          "subtopics": [
+            "Infraestrutura e década de 1990"
+          ],
+          "skills": [
+            "Comparar 6 com 11,6 e 7,5 com 13,8",
+            "Relacionar a concentração ao contexto tecnológico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Os investimentos em telecomunicações superam metade do total em dois anos.",
+          "rationale": "O comando exige relacionar a concentração ao contexto tecnológico.",
+          "strategy": [
+            "Comparar 6 com 11,6 e 7,5 com 13,8",
+            "Relacionar a concentração ao contexto tecnológico"
+          ],
+          "trap": "Invocar exploração do pré-sal antes de sua descoberta.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "43",
+          "page": 16,
+          "subject": "Geografia",
+          "topicId": "geo_geopolitica_regional",
+          "topic": "Geopolítica Regional Contemporânea",
+          "subtopics": [
+            "Otan e defesa coletiva"
+          ],
+          "skills": [
+            "Situar a mudança de neutralidade após a guerra",
+            "Distinguir aliança militar de união monetária"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A adesão finlandesa busca proteção militar recíproca.",
+          "rationale": "O comando exige distinguir aliança militar de união monetária.",
+          "strategy": [
+            "Situar a mudança de neutralidade após a guerra",
+            "Distinguir aliança militar de união monetária"
+          ],
+          "trap": "Confundir Otan com União Europeia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "44",
+          "page": 16,
+          "subject": "Geografia",
+          "topicId": "geo_geopolitica_regional",
+          "topic": "Geopolítica Regional Contemporânea",
+          "subtopics": [
+            "Soft power"
+          ],
+          "skills": [
+            "Relacionar filmes e música à projeção internacional",
+            "Distinguir atração cultural de coerção militar"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A difusão cultural sul-coreana amplia influência por consentimento.",
+          "rationale": "O comando exige distinguir atração cultural de coerção militar.",
+          "strategy": [
+            "Relacionar filmes e música à projeção internacional",
+            "Distinguir atração cultural de coerção militar"
+          ],
+          "trap": "Definir soft power por imposição de força.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "45",
+          "page": 16,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Toyotismo e just in time"
+          ],
+          "skills": [
+            "Identificar redução de estoques e desperdícios",
+            "Situar o modelo no Japão do pós-guerra"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A produção ajustada à demanda caracteriza o toyotismo.",
+          "rationale": "O comando exige situar o modelo no Japão do pós-guerra.",
+          "strategy": [
+            "Identificar redução de estoques e desperdícios",
+            "Situar o modelo no Japão do pós-guerra"
+          ],
+          "trap": "Associar just in time à produção fordista de estoques.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "46",
+          "page": 17,
+          "subject": "Geografia",
+          "topicId": "geo_cartografia",
+          "topic": "Cartografia e Fundamentos",
+          "subtopics": [
+            "Paisagem e localização"
+          ],
+          "skills": [
+            "Comparar elementos das duas cenas urbanas",
+            "Usar sinais materiais e culturais para localizar lugares"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O jogo exige reconhecer diferenças socioespaciais em paisagens.",
+          "rationale": "O comando exige usar sinais materiais e culturais para localizar lugares.",
+          "strategy": [
+            "Comparar elementos das duas cenas urbanas",
+            "Usar sinais materiais e culturais para localizar lugares"
+          ],
+          "trap": "Substituir leitura da paisagem por cálculo populacional.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "47",
+          "page": 17,
+          "subject": "Geografia",
+          "topicId": "geo_economica_brasil",
+          "topic": "Geografia Econômica do Brasil",
+          "subtopics": [
+            "Indústria da seca"
+          ],
+          "skills": [
+            "Relacionar desigualdade regional e poder político",
+            "Identificar apropriação dos investimentos emergenciais"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "As oligarquias capturam recursos destinados ao enfrentamento da estiagem.",
+          "rationale": "O comando exige identificar apropriação dos investimentos emergenciais.",
+          "strategy": [
+            "Relacionar desigualdade regional e poder político",
+            "Identificar apropriação dos investimentos emergenciais"
+          ],
+          "trap": "Confundir a indústria da seca com uma obra isolada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "48",
+          "page": 18,
+          "subject": "Geografia",
+          "topicId": "geo_populacao_urbana_brasil",
+          "topic": "Geografia da População e Urbana do Brasil",
+          "subtopics": [
+            "Censo e políticas públicas"
+          ],
+          "skills": [
+            "Ler os dois sentidos de atrasados",
+            "Relacionar estatística populacional ao planejamento público"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A charge aproxima atraso censitário e direitos sociais não atendidos.",
+          "rationale": "O comando exige relacionar estatística populacional ao planejamento público.",
+          "strategy": [
+            "Ler os dois sentidos de atrasados",
+            "Relacionar estatística populacional ao planejamento público"
+          ],
+          "trap": "Atribuir preconceito ao instrumento censitário.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "49",
+          "page": 18,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Tectonismo e falhas transformantes"
+          ],
+          "skills": [
+            "Ler as setas e limites do mapa",
+            "Distinguir falha transformante de subducção"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O terremoto da Anatólia envolve deslocamento lateral de placas.",
+          "rationale": "O comando exige distinguir falha transformante de subducção.",
+          "strategy": [
+            "Ler as setas e limites do mapa",
+            "Distinguir falha transformante de subducção"
+          ],
+          "trap": "Associar todo terremoto a afundamento de placa.",
+          "confidence": "medium",
+          "reviewNote": "Tectonismo/pedologia gerais associados ao tópico físico disponível na taxonomia, cujo nome menciona Brasil; o recorte do item é geral.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "50",
+          "page": 19,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Intemperismo e formação dos solos"
+          ],
+          "skills": [
+            "Comparar chuva temperatura e espessura do perfil",
+            "Relacionar aridez à preservação da rocha matriz"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Em regiões áridas a alteração química é limitada e persistem fragmentos rochosos.",
+          "rationale": "O comando exige relacionar aridez à preservação da rocha matriz.",
+          "strategy": [
+            "Comparar chuva temperatura e espessura do perfil",
+            "Relacionar aridez à preservação da rocha matriz"
+          ],
+          "trap": "Supor maior argila onde há menor intemperismo.",
+          "confidence": "medium",
+          "reviewNote": "Tectonismo/pedologia gerais associados ao tópico físico disponível na taxonomia, cujo nome menciona Brasil; o recorte do item é geral.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "51",
+          "page": 19,
+          "subject": "Geografia",
+          "topicId": "geo_hidrogeografia",
+          "topic": "Hidrogeografia",
+          "subtopics": [
+            "Hierarquia fluvial"
+          ],
+          "skills": [
+            "Seguir a numeração desde os pequenos tributários",
+            "Relacionar cabeceiras ao relevo mais alto e declivoso"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Os cursos de primeira ordem estão próximos às nascentes.",
+          "rationale": "O comando exige relacionar cabeceiras ao relevo mais alto e declivoso.",
+          "strategy": [
+            "Seguir a numeração desde os pequenos tributários",
+            "Relacionar cabeceiras ao relevo mais alto e declivoso"
+          ],
+          "trap": "Situar rios iniciais junto à foz.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "52",
+          "page": 20,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Industrialização e impactos ambientais"
+          ],
+          "skills": [
+            "Situar a industrialização no século XVIII",
+            "Relacionar produção mecanizada e uso ampliado de recursos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A Revolução Industrial intensifica os impactos ambientais modernos.",
+          "rationale": "O comando exige relacionar produção mecanizada e uso ampliado de recursos.",
+          "strategy": [
+            "Situar a industrialização no século XVIII",
+            "Relacionar produção mecanizada e uso ampliado de recursos"
+          ],
+          "trap": "Aceitar datas incompatíveis nas alternativas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "53",
+          "page": 20,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Espécies exóticas invasoras"
+          ],
+          "skills": [
+            "Identificar a introdução fora da área nativa",
+            "Relacionar expansão populacional e impacto ecológico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O escape de peixes ornamentais pode desequilibrar ecossistemas.",
+          "rationale": "O comando exige relacionar expansão populacional e impacto ecológico.",
+          "strategy": [
+            "Identificar a introdução fora da área nativa",
+            "Relacionar expansão populacional e impacto ecológico"
+          ],
+          "trap": "Confundir invasão com biopirataria.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "54",
+          "page": 20,
+          "subject": "Geografia",
+          "topicId": "geo_cartografia",
+          "topic": "Cartografia e Fundamentos",
+          "subtopics": [
+            "Escala de globo terrestre"
+          ],
+          "skills": [
+            "Calcular 2π vezes o raio de 12 cm",
+            "Converter 40000 km a centímetros e formar a razão"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A escala resulta da comparação entre duas circunferências.",
+          "rationale": "O comando exige converter 40000 km a centímetros e formar a razão.",
+          "strategy": [
+            "Calcular 2π vezes o raio de 12 cm",
+            "Converter 40000 km a centímetros e formar a razão"
+          ],
+          "trap": "Comparar raio do modelo à circunferência real.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "55",
+          "page": 20,
+          "subject": "Filosofia",
+          "topicId": "fil_etica_politica_contemporanea",
+          "topic": "Ética e Política Contemporâneas",
+          "subtopics": [
+            "Ciência e neutralidade"
+          ],
+          "skills": [
+            "Identificar pressões institucionais e políticas",
+            "Distinguir objetividade dos resultados de neutralidade social"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Japiassu apresenta condicionamentos sociais do fazer científico.",
+          "rationale": "O comando exige distinguir objetividade dos resultados de neutralidade social.",
+          "strategy": [
+            "Identificar pressões institucionais e políticas",
+            "Distinguir objetividade dos resultados de neutralidade social"
+          ],
+          "trap": "Concluir que não existe método científico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "56",
+          "page": 21,
+          "subject": "Filosofia",
+          "topicId": "fil_origem_pre_socraticos",
+          "topic": "Origens da Filosofia e os Pré-Socráticos",
+          "subtopics": [
+            "Pitagorismo e matematização da natureza"
+          ],
+          "skills": [
+            "Relacionar o diagrama geométrico à regularidade natural",
+            "Reconhecer a arché numérica pitagórica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O número como princípio aproxima filosofia antiga e ciência moderna.",
+          "rationale": "O comando exige reconhecer a arché numérica pitagórica.",
+          "strategy": [
+            "Relacionar o diagrama geométrico à regularidade natural",
+            "Reconhecer a arché numérica pitagórica"
+          ],
+          "trap": "Escolher uma doutrina apenas por citar matemática.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "57",
+          "page": 21,
+          "subject": "Filosofia",
+          "topicId": "fil_marx_critica_sociedade",
+          "topic": "Marx e a Crítica à Sociedade Capitalista",
+          "subtopics": [
+            "Arte e consumo"
+          ],
+          "skills": [
+            "Observar repetição industrial das latas",
+            "Relacionar estética da propaganda e circulação comercial"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A Pop Art incorpora a lógica mercantil e publicitária do pós-guerra.",
+          "rationale": "O comando exige relacionar estética da propaganda e circulação comercial.",
+          "strategy": [
+            "Observar repetição industrial das latas",
+            "Relacionar estética da propaganda e circulação comercial"
+          ],
+          "trap": "Tratar arte e economia como esferas separadas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "58",
+          "page": 22,
+          "subject": "Filosofia",
+          "topicId": "fil_etica_politica_contemporanea",
+          "topic": "Ética e Política Contemporâneas",
+          "subtopics": [
+            "Ética da inteligência artificial"
+          ],
+          "skills": [
+            "Identificar a preocupação ética levantada",
+            "Avaliar campanhas informativas como orientação de uso"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O uso responsável de IA pressupõe informação sobre possíveis prejuízos.",
+          "rationale": "O comando exige avaliar campanhas informativas como orientação de uso.",
+          "strategy": [
+            "Identificar a preocupação ética levantada",
+            "Avaliar campanhas informativas como orientação de uso"
+          ],
+          "trap": "Confundir responsabilidade com simples concorrência comercial.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "59",
+          "page": 22,
+          "subject": "Sociologia",
+          "topicId": "soc_trabalho_sociedade",
+          "topic": "Trabalho e Sociedade",
+          "subtopics": [
+            "Uberização e precarização"
+          ],
+          "skills": [
+            "Localizar eliminação de direitos e custos transferidos",
+            "Distinguir flexibilidade aparente de controle empresarial"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Plataformas transferem riscos mantendo mecanismos de exploração.",
+          "rationale": "O comando exige distinguir flexibilidade aparente de controle empresarial.",
+          "strategy": [
+            "Localizar eliminação de direitos e custos transferidos",
+            "Distinguir flexibilidade aparente de controle empresarial"
+          ],
+          "trap": "Tomar autonomia formal como ausência de subordinação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "60",
+          "page": 22,
+          "subject": "Filosofia",
+          "topicId": "fil_etica_politica_contemporanea",
+          "topic": "Ética e Política Contemporâneas",
+          "subtopics": [
+            "Hans Jonas e responsabilidade"
+          ],
+          "skills": [
+            "Identificar o imperativo voltado a consequências duradouras",
+            "Relacionar o dever de preservação à ética normativa"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Jonas propõe normas que preservem a vida das gerações futuras.",
+          "rationale": "O comando exige relacionar o dever de preservação à ética normativa.",
+          "strategy": [
+            "Identificar o imperativo voltado a consequências duradouras",
+            "Relacionar o dever de preservação à ética normativa"
+          ],
+          "trap": "Reduzir o imperativo a uma instituição internacional.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "61",
+          "page": 22,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Doença celíaca e glúten"
+          ],
+          "skills": [
+            "Identificar o agente alimentar descrito",
+            "Localizar a farinha de trigo entre as opções"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A restrição do trigo evita a reação autoimune ao glúten.",
+          "rationale": "O comando exige localizar a farinha de trigo entre as opções.",
+          "strategy": [
+            "Identificar o agente alimentar descrito",
+            "Localizar a farinha de trigo entre as opções"
+          ],
+          "trap": "Confundir intolerância ao glúten com lactose.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "62",
+          "page": 23,
+          "subject": "Biologia",
+          "topicId": "bio_botanica",
+          "topic": "Botânica",
+          "subtopics": [
+            "Polinização e fecundação cruzada"
+          ],
+          "skills": [
+            "Relacionar visita floral ao transporte de gametófitos",
+            "Distinguir favorecimento da fecundação cruzada de proibição da autofecundação"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Abelhas transportam pólen e favorecem cruzamentos entre plantas.",
+          "rationale": "O comando exige distinguir favorecimento da fecundação cruzada de proibição da autofecundação.",
+          "strategy": [
+            "Relacionar visita floral ao transporte de gametófitos",
+            "Distinguir favorecimento da fecundação cruzada de proibição da autofecundação"
+          ],
+          "trap": "Afirmar que polinizadores eliminam pragas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "63",
+          "page": 23,
+          "subject": "Biologia",
+          "topicId": "bio_evolucao",
+          "topic": "Evolução",
+          "subtopics": [
+            "Seleção natural e neodarwinismo"
+          ],
+          "skills": [
+            "Separar origem da variação e seleção",
+            "Avaliar o sucesso reprodutivo dos portadores dos alelos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A bioluminescência é selecionada sobre variações hereditárias.",
+          "rationale": "O comando exige avaliar o sucesso reprodutivo dos portadores dos alelos.",
+          "strategy": [
+            "Separar origem da variação e seleção",
+            "Avaliar o sucesso reprodutivo dos portadores dos alelos"
+          ],
+          "trap": "Atribuir mudanças à necessidade de iluminar o escuro.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "64",
+          "page": 23,
+          "subject": "Biologia",
+          "topicId": "bio_estrutura_fisio_celular",
+          "topic": "Estrutura e Fisiologia Celular",
+          "subtopics": [
+            "Ciclo celular e G0"
+          ],
+          "skills": [
+            "Identificar a diferenciação neuronal",
+            "Relacionar a ausência de divisão à fase G0"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Neurônios maduros permanecem fora do ciclo proliferativo.",
+          "rationale": "O comando exige relacionar a ausência de divisão à fase G0.",
+          "strategy": [
+            "Identificar a diferenciação neuronal",
+            "Relacionar a ausência de divisão à fase G0"
+          ],
+          "trap": "Confundir interrupção da divisão com morte celular.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "65",
+          "page": 24,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Hematopoiese fetal e adulta"
+          ],
+          "skills": [
+            "Ler a curva hepática antes do nascimento",
+            "Relacionar fígado à produção de componentes biliares"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O fígado participa da produção de células sanguíneas na fase fetal.",
+          "rationale": "O comando exige relacionar fígado à produção de componentes biliares.",
+          "strategy": [
+            "Ler a curva hepática antes do nascimento",
+            "Relacionar fígado à produção de componentes biliares"
+          ],
+          "trap": "Confundir medula amarela com tecido hematopoético ativo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "66",
+          "page": 24,
+          "subject": "Biologia",
+          "topicId": "bio_zoologia",
+          "topic": "Zoologia",
+          "subtopics": [
+            "Ectotermia e sazonalidade"
+          ],
+          "skills": [
+            "Comparar os meses de maior frequência",
+            "Relacionar temperatura ambiente ao metabolismo dos répteis"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A atividade de serpentes aumenta no período quente e eleva acidentes.",
+          "rationale": "O comando exige relacionar temperatura ambiente ao metabolismo dos répteis.",
+          "strategy": [
+            "Comparar os meses de maior frequência",
+            "Relacionar temperatura ambiente ao metabolismo dos répteis"
+          ],
+          "trap": "Atribuir o padrão a competição alimentar sem evidência.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "67",
+          "page": 25,
+          "subject": "Biologia",
+          "topicId": "bio_genetica",
+          "topic": "Genética",
+          "subtopics": [
+            "Herança ligada ao X e sistema ABO"
+          ],
+          "skills": [
+            "Ler os alelos nos cromossomos maternos",
+            "Cruzar o X heterozigoto com o X normal paterno"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Os genótipos permitem calcular a chance de descendente daltônico.",
+          "rationale": "O comando exige cruzar o X heterozigoto com o X normal paterno.",
+          "strategy": [
+            "Ler os alelos nos cromossomos maternos",
+            "Cruzar o X heterozigoto com o X normal paterno"
+          ],
+          "trap": "Confundir probabilidade entre meninos e no conjunto das crianças.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "68",
+          "page": 25,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Lipídios e lipoproteínas"
+          ],
+          "skills": [
+            "Identificar a dupla ligação na gordura Y",
+            "Relacionar HDL à remoção do colesterol circulante"
+          ],
+          "relatedSubjects": [
+            "Química"
+          ],
+          "relatedTopicIds": [],
+          "summary": "Ácidos graxos insaturados relacionam-se à manutenção de HDL.",
+          "rationale": "O comando exige relacionar HDL à remoção do colesterol circulante.",
+          "strategy": [
+            "Identificar a dupla ligação na gordura Y",
+            "Relacionar HDL à remoção do colesterol circulante"
+          ],
+          "trap": "Trocar os papéis de LDL e HDL.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "69",
+          "page": 26,
+          "subject": "Química",
+          "topicId": "qui_radioatividade",
+          "topic": "Radioatividade",
+          "subtopics": [
+            "Emissão de pósitron e estrutura nuclear"
+          ],
+          "skills": [
+            "Reconhecer Z igual a 8 no oxigênio",
+            "Subtrair os prótons de 18 para obter nêutrons"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A emissão beta positiva mantém massa e reduz o número atômico.",
+          "rationale": "O comando exige subtrair os prótons de 18 para obter nêutrons.",
+          "strategy": [
+            "Reconhecer Z igual a 8 no oxigênio",
+            "Subtrair os prótons de 18 para obter nêutrons"
+          ],
+          "trap": "Reduzir o número de massa junto com o número atômico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "70",
+          "page": 26,
+          "subject": "Química",
+          "topicId": "qui_inorganica",
+          "topic": "Química Inorgânica",
+          "subtopics": [
+            "Pictogramas de segurança química"
+          ],
+          "skills": [
+            "Interpretar a chama e o símbolo de risco crônico",
+            "Relacionar os riscos a ventilação e afastamento de calor"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Os símbolos indicam inflamabilidade e perigo à saúde.",
+          "rationale": "O comando exige relacionar os riscos a ventilação e afastamento de calor.",
+          "strategy": [
+            "Interpretar a chama e o símbolo de risco crônico",
+            "Relacionar os riscos a ventilação e afastamento de calor"
+          ],
+          "trap": "Armazenar aerossol inflamável em ambiente aquecido.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "71",
+          "page": 26,
+          "subject": "Química",
+          "topicId": "qui_eletroquimica",
+          "topic": "Eletroquímica",
+          "subtopics": [
+            "Pilhas de lítio e descarte"
+          ],
+          "skills": [
+            "Identificar lítio como reagente oxidado",
+            "Relacionar metal residual à produção de hidrogênio inflamável"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Descarga completa consome lítio metálico que reagiria com água.",
+          "rationale": "O comando exige relacionar metal residual à produção de hidrogênio inflamável.",
+          "strategy": [
+            "Identificar lítio como reagente oxidado",
+            "Relacionar metal residual à produção de hidrogênio inflamável"
+          ],
+          "trap": "Chamar de redução a reação do lítio com água.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "72",
+          "page": 27,
+          "subject": "Química",
+          "topicId": "qui_gases",
+          "topic": "Gases",
+          "subtopics": [
+            "Pressões parciais e estequiometria"
+          ],
+          "skills": [
+            "Subtrair a pressão de vapor da pressão total",
+            "Aplicar PV=nRT e a proporção de um mol de carbonato por mol de CO2"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O gás coletado exige descontar vapor de água antes de calcular massa.",
+          "rationale": "O comando exige aplicar PV=nRT e a proporção de um mol de carbonato por mol de CO2.",
+          "strategy": [
+            "Subtrair a pressão de vapor da pressão total",
+            "Aplicar PV=nRT e a proporção de um mol de carbonato por mol de CO2"
+          ],
+          "trap": "Usar volume em mL com constante em litros.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "73",
+          "page": 27,
+          "subject": "Química",
+          "topicId": "qui_termoquimica",
+          "topic": "Termoquímica",
+          "subtopics": [
+            "Lei de Hess"
+          ],
+          "skills": [
+            "Somar as formações de dois CO2 e duas águas",
+            "Subtrair a combustão do ácido no ciclo de Hess"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "As combustões fornecem a entalpia de formação do ácido acético.",
+          "rationale": "O comando exige subtrair a combustão do ácido no ciclo de Hess.",
+          "strategy": [
+            "Somar as formações de dois CO2 e duas águas",
+            "Subtrair a combustão do ácido no ciclo de Hess"
+          ],
+          "trap": "Trocar o sinal da combustão ao reorganizar o ciclo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "74",
+          "page": 27,
+          "subject": "Química",
+          "topicId": "qui_equilibrio",
+          "topic": "Equilíbrio Químico",
+          "subtopics": [
+            "Produto de solubilidade"
+          ],
+          "skills": [
+            "Converter 1,7 g/L em concentração molar",
+            "Calcular s vezes o quadrado de 2s"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A solubilidade de Ca(OH)2 determina Kps por s e 2s.",
+          "rationale": "O comando exige calcular s vezes o quadrado de 2s.",
+          "strategy": [
+            "Converter 1,7 g/L em concentração molar",
+            "Calcular s vezes o quadrado de 2s"
+          ],
+          "trap": "Esquecer o coeficiente dois dos hidróxidos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "75",
+          "page": 28,
+          "subject": "Química",
+          "topicId": "qui_organica_reacoes",
+          "topic": "Reações e Aplicações Orgânicas",
+          "subtopics": [
+            "Redução de carbonila e atividade óptica"
+          ],
+          "skills": [
+            "Comparar carbonila e hidroxila nas estruturas",
+            "Verificar os quatro ligantes diferentes no carbono do lactato"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A redução do piruvato gera álcool com centro quiral.",
+          "rationale": "O comando exige verificar os quatro ligantes diferentes no carbono do lactato.",
+          "strategy": [
+            "Comparar carbonila e hidroxila nas estruturas",
+            "Verificar os quatro ligantes diferentes no carbono do lactato"
+          ],
+          "trap": "Confundir carboxila com carbonila reduzida.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "76",
+          "page": 28,
+          "subject": "Física",
+          "topicId": "fis_cinematica",
+          "topic": "Cinemática Escalar",
+          "subtopics": [
+            "Gráficos de posição velocidade e aceleração"
+          ],
+          "skills": [
+            "Associar patamares de aceleração aos trechos descritos",
+            "Usar derivadas qualitativas para relacionar posição e velocidade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "As inclinações permitem identificar as três grandezas do trajeto.",
+          "rationale": "O comando exige usar derivadas qualitativas para relacionar posição e velocidade.",
+          "strategy": [
+            "Associar patamares de aceleração aos trechos descritos",
+            "Usar derivadas qualitativas para relacionar posição e velocidade"
+          ],
+          "trap": "Tratar velocidade negativa como aceleração necessariamente negativa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "77",
+          "page": 29,
+          "subject": "Física",
+          "topicId": "fis_eletrostatica",
+          "topic": "Eletrostática e Campo Elétrico",
+          "subtopics": [
+            "Soma vetorial de forças elétricas"
+          ],
+          "skills": [
+            "Identificar as bases pelas estruturas e complementaridade",
+            "Somar atrações e subtrair repulsões nas setas"
+          ],
+          "relatedSubjects": [
+            "Biologia"
+          ],
+          "relatedTopicIds": [],
+          "summary": "O pareamento timina-adenina acompanha uma resultante de forças colineares.",
+          "rationale": "O comando exige somar atrações e subtrair repulsões nas setas.",
+          "strategy": [
+            "Identificar as bases pelas estruturas e complementaridade",
+            "Somar atrações e subtrair repulsões nas setas"
+          ],
+          "trap": "Somar os módulos de todas as forças sem sentido.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "78",
+          "page": 29,
+          "subject": "Física",
+          "topicId": "fis_termodinamica_gases",
+          "topic": "Termodinâmica dos Gases",
+          "subtopics": [
+            "Transformação isotérmica e pressão hidrostática"
+          ],
+          "skills": [
+            "Somar pressão atmosférica e ρgh",
+            "Aplicar P1V1=P2V2"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O aumento de pressão no mergulho reduz o volume do ar.",
+          "rationale": "O comando exige aplicar P1V1=P2V2.",
+          "strategy": [
+            "Somar pressão atmosférica e ρgh",
+            "Aplicar P1V1=P2V2"
+          ],
+          "trap": "Considerar somente a pressão da coluna de água.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "79",
+          "page": 30,
+          "subject": "Física",
+          "topicId": "fis_optica_geometrica",
+          "topic": "Óptica Geométrica",
+          "subtopics": [
+            "Índice de refração"
+          ],
+          "skills": [
+            "Ler no gráfico o índice próximo de 1,4",
+            "Dividir a velocidade no vácuo pelo índice"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A solução de 40 Brix tem velocidade luminosa obtida por c/n.",
+          "rationale": "O comando exige dividir a velocidade no vácuo pelo índice.",
+          "strategy": [
+            "Ler no gráfico o índice próximo de 1,4",
+            "Dividir a velocidade no vácuo pelo índice"
+          ],
+          "trap": "Multiplicar c pelo índice de refração.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "80",
+          "page": 30,
+          "subject": "Física",
+          "topicId": "fis_ondas_fundamentos",
+          "topic": "Fundamentos de Ondas e Oscilações",
+          "subtopics": [
+            "Frequência e comprimento de onda"
+          ],
+          "skills": [
+            "Ler o pico em 461 nm",
+            "Converter a unidade e aplicar f=c/λ"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O pico azul de absorção corresponde a frequência próxima de 6,5×10¹⁴ Hz.",
+          "rationale": "O comando exige converter a unidade e aplicar f=c/λ.",
+          "strategy": [
+            "Ler o pico em 461 nm",
+            "Converter a unidade e aplicar f=c/λ"
+          ],
+          "trap": "Supor que maior comprimento de onda implica maior frequência.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "81",
+          "page": 31,
+          "subject": "Física",
+          "topicId": "fis_circuitos",
+          "topic": "Circuitos Elétricos",
+          "subtopics": [
+            "Resistividade e isolamento"
+          ],
+          "skills": [
+            "Comparar resistividades dos dois tecidos",
+            "Relacionar isolamento elétrico à transmissão eficiente"
+          ],
+          "relatedSubjects": [
+            "Biologia"
+          ],
+          "relatedTopicIds": [],
+          "summary": "A mielina de alta resistividade limita a dispersão de corrente do axônio.",
+          "rationale": "O comando exige relacionar isolamento elétrico à transmissão eficiente.",
+          "strategy": [
+            "Comparar resistividades dos dois tecidos",
+            "Relacionar isolamento elétrico à transmissão eficiente"
+          ],
+          "trap": "Colocar a condução preferencial na camada mais resistiva.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "82",
+          "page": 31,
+          "subject": "Física",
+          "topicId": "fis_eletromagnetismo",
+          "topic": "Eletromagnetismo",
+          "subtopics": [
+            "Solenoide e superposição de campos"
+          ],
+          "skills": [
+            "Usar a regra da mão direita com a corrente indicada",
+            "Somar o campo axial ao vetor vertical terrestre"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O campo da bobina soma-se vetorialmente ao campo terrestre.",
+          "rationale": "O comando exige somar o campo axial ao vetor vertical terrestre.",
+          "strategy": [
+            "Usar a regra da mão direita com a corrente indicada",
+            "Somar o campo axial ao vetor vertical terrestre"
+          ],
+          "trap": "Ignorar o sentido da corrente nas espiras.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "83",
+          "page": 32,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Razões e leitura de gráfico"
+          ],
+          "skills": [
+            "Converter p/(p+u)≥0,6 em p/u≥1,5",
+            "Contar as unidades no gráfico acima do limiar"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Uma razão privada/pública de 1,5 corresponde a 60% de matrículas privadas.",
+          "rationale": "O comando exige contar as unidades no gráfico acima do limiar.",
+          "strategy": [
+            "Converter p/(p+u)≥0,6 em p/u≥1,5",
+            "Contar as unidades no gráfico acima do limiar"
+          ],
+          "trap": "Usar 0,6 como limiar da razão privada/pública.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "84",
+          "page": 32,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_plana",
+          "topic": "Geometria Plana",
+          "subtopics": [
+            "Áreas em malha"
+          ],
+          "skills": [
+            "Ler medidas da malha para cada região",
+            "Calcular áreas de paralelogramo triângulo e retângulo e reduzir a razão"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "As áreas dos três polígonos são comparadas por bases e alturas.",
+          "rationale": "O comando exige calcular áreas de paralelogramo triângulo e retângulo e reduzir a razão.",
+          "strategy": [
+            "Ler medidas da malha para cada região",
+            "Calcular áreas de paralelogramo triângulo e retângulo e reduzir a razão"
+          ],
+          "trap": "Confundir altura perpendicular com lado inclinado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "85",
+          "page": 32,
+          "subject": "Matemática",
+          "topicId": "mat_equacoes",
+          "topic": "Equações, Desigualdades e Modelagem Algébrica",
+          "subtopics": [
+            "Raízes positivas e discriminante"
+          ],
+          "skills": [
+            "Impor 1−4n>0 para raízes distintas",
+            "Usar soma e produto iguais a 1/n para exigir n>0"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A quadrática exige discriminante positivo e soma e produto positivos.",
+          "rationale": "O comando exige usar soma e produto iguais a 1/n para exigir n>0.",
+          "strategy": [
+            "Impor 1−4n>0 para raízes distintas",
+            "Usar soma e produto iguais a 1/n para exigir n>0"
+          ],
+          "trap": "Incluir n=0 como equação quadrática.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "86",
+          "page": 33,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Média ponderada e centro de massa"
+          ],
+          "skills": [
+            "Somar momentos das duas placas já dados",
+            "Acrescentar massa três no ponto (2,1) e dividir por oito"
+          ],
+          "relatedSubjects": [
+            "Física"
+          ],
+          "relatedTopicIds": [],
+          "summary": "A placa circular altera as médias ponderadas das coordenadas.",
+          "rationale": "O comando exige acrescentar massa três no ponto (2,1) e dividir por oito.",
+          "strategy": [
+            "Somar momentos das duas placas já dados",
+            "Acrescentar massa três no ponto (2,1) e dividir por oito"
+          ],
+          "trap": "Fazer média simples das coordenadas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "87",
+          "page": 33,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Espaço amostral equiprovável"
+          ],
+          "skills": [
+            "Listar as três somas e os três produtos possíveis",
+            "Contar os pares que satisfazem soma maior ou igual e dividir por nove"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A comparação entre somas e produtos exige enumerar nove pares.",
+          "rationale": "O comando exige contar os pares que satisfazem soma maior ou igual e dividir por nove.",
+          "strategy": [
+            "Listar as três somas e os três produtos possíveis",
+            "Contar os pares que satisfazem soma maior ou igual e dividir por nove"
+          ],
+          "trap": "Tratar os valores numéricos como um único sorteio.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "88",
+          "page": 33,
+          "subject": "Matemática",
+          "topicId": "mat_log_exponenciais",
+          "topic": "Logaritmos e Exponenciais",
+          "subtopics": [
+            "Crescimento exponencial"
+          ],
+          "skills": [
+            "Usar f(0)=3 para determinar o fator inicial",
+            "Aplicar a razão 18000/3 e ler a raiz de ordem sete no gráfico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Os dados inicial e final determinam os parâmetros do modelo.",
+          "rationale": "O comando exige aplicar a razão 18000/3 e ler a raiz de ordem sete no gráfico.",
+          "strategy": [
+            "Usar f(0)=3 para determinar o fator inicial",
+            "Aplicar a razão 18000/3 e ler a raiz de ordem sete no gráfico"
+          ],
+          "trap": "Usar crescimento linear entre os dois instantes.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "89",
+          "page": 34,
+          "subject": "Matemática",
+          "topicId": "mat_trigonometria",
+          "topic": "Trigonometria",
+          "subtopics": [
+            "Inclinação de reta e semelhança"
+          ],
+          "skills": [
+            "Usar a proporção entre desnível e distância horizontal",
+            "Comparar a tangente obtida aos valores tabelados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A rampa permite obter altura de pilar e faixa angular.",
+          "rationale": "O comando exige comparar a tangente obtida aos valores tabelados.",
+          "strategy": [
+            "Usar a proporção entre desnível e distância horizontal",
+            "Comparar a tangente obtida aos valores tabelados"
+          ],
+          "trap": "Ler o ângulo complementar à inclinação pedida.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "90",
+          "page": 34,
+          "subject": "Matemática",
+          "topicId": "mat_teoria_numeros",
+          "topic": "Teoria dos Números Inteiros",
+          "subtopics": [
+            "Algarismos e restrições de ordem"
+          ],
+          "skills": [
+            "Verificar os pares adjacentes do número proposto",
+            "Identificar 32 como sequência decrescente proibida"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A resposta automática ignora pares consecutivos no sentido inverso.",
+          "rationale": "O comando exige identificar 32 como sequência decrescente proibida.",
+          "strategy": [
+            "Verificar os pares adjacentes do número proposto",
+            "Identificar 32 como sequência decrescente proibida"
+          ],
+          "trap": "Verificar apenas sequências crescentes.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "Imprensa",
+      "sha256": "d77a85de45227d14b73f360cfc709d132eeeacea1cd2212545a34da8b5bf4820",
+      "answerKeyUrl": null,
+      "answerKeySha256": null,
+      "pages": 28,
+      "id": "unesp-2024-segunda-fase-discursiva-dia1",
+      "group": "segunda-fase-discursiva-dia1",
+      "phase": "2ª fase · dia 1",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTYyMzIwNw%3d%3d",
+      "expectedQuestions": 24,
+      "coverageNote": "Fonte primária Vunesp. Contém24 questões discursivas. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna. Leitura integral por item; sínteses e estratégias autorais. Numeração impressa preservada.",
+      "questions": [
+        {
+          "number": "01",
+          "page": 3,
+          "subject": "História",
+          "topicId": null,
+          "topic": "Pré-História e fontes visuais",
+          "subtopics": [
+            "Arte rupestre e pastoreio"
+          ],
+          "skills": [
+            "Caracterizar pigmentos e figuras sobre rocha",
+            "Relacionar a cena de animais e pessoas ao pastoreio"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A pintura de Jabberen documenta relações entre humanos e rebanhos.",
+          "rationale": "O comando exige relacionar a cena de animais e pessoas ao pastoreio.",
+          "strategy": [
+            "Caracterizar pigmentos e figuras sobre rocha",
+            "Relacionar a cena de animais e pessoas ao pastoreio"
+          ],
+          "trap": "Tratar a fonte visual como escrita alfabética.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "02",
+          "page": 4,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Revoluções inglesas e expansão comercial"
+          ],
+          "skills": [
+            "Relacionar revoluções e fortalecimento parlamentar à tolerância",
+            "Explicar comércio marítimo e expansão colonial no enriquecimento"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Mudanças políticas e econômicas ampliam a potência britânica no século XVII.",
+          "rationale": "O comando exige explicar comércio marítimo e expansão colonial no enriquecimento.",
+          "strategy": [
+            "Relacionar revoluções e fortalecimento parlamentar à tolerância",
+            "Explicar comércio marítimo e expansão colonial no enriquecimento"
+          ],
+          "trap": "Usar acontecimentos posteriores a 1714 como causas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "03",
+          "page": 5,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Transição monarquia-república"
+          ],
+          "skills": [
+            "Definir a função imperial e sua intervenção institucional",
+            "Selecionar crises como federalismo revoltas e disputas civis-militares"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A extinção do Poder Moderador abre disputas na República nascente.",
+          "rationale": "O comando exige selecionar crises como federalismo revoltas e disputas civis-militares.",
+          "strategy": [
+            "Definir a função imperial e sua intervenção institucional",
+            "Selecionar crises como federalismo revoltas e disputas civis-militares"
+          ],
+          "trap": "Descrever a transição como consenso estável.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "04",
+          "page": 6,
+          "subject": "História",
+          "topicId": "his_guerra_fria_contemporaneo",
+          "topic": "Guerra Fria e Mundo Contemporâneo",
+          "subtopics": [
+            "Ditadura argentina e direitos humanos"
+          ],
+          "skills": [
+            "Identificar a reivindicação e a desqualificação machista",
+            "Relacionar ditaduras do Cone Sul e derrota nas Malvinas à transição argentina"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "As Mães da Praça de Maio confrontam os desaparecimentos da ditadura.",
+          "rationale": "O comando exige relacionar ditaduras do Cone Sul e derrota nas Malvinas à transição argentina.",
+          "strategy": [
+            "Identificar a reivindicação e a desqualificação machista",
+            "Relacionar ditaduras do Cone Sul e derrota nas Malvinas à transição argentina"
+          ],
+          "trap": "Confundir desaparecimento forçado com migração voluntária.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "05",
+          "page": 7,
+          "subject": "Geografia",
+          "topicId": "geo_populacao_urbana_brasil",
+          "topic": "Geografia da População e Urbana do Brasil",
+          "subtopics": [
+            "Crescimento populacional e bônus demográfico"
+          ],
+          "skills": [
+            "Distinguir crescimento vegetativo e crescimento total",
+            "Explicar a alta proporção ativa e o desafio de absorção no trabalho"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A expansão indiana combina estrutura etária favorável e demanda por empregos.",
+          "rationale": "O comando exige explicar a alta proporção ativa e o desafio de absorção no trabalho.",
+          "strategy": [
+            "Distinguir crescimento vegetativo e crescimento total",
+            "Explicar a alta proporção ativa e o desafio de absorção no trabalho"
+          ],
+          "trap": "Confundir bônus com garantia automática de desenvolvimento.",
+          "confidence": "medium",
+          "reviewNote": "Demografia mundial enquadrada no tópico populacional disponível; o recorte não é exclusivamente brasileiro.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "06",
+          "page": 8,
+          "subject": "Geografia",
+          "topicId": "geo_populacao_urbana_brasil",
+          "topic": "Geografia da População e Urbana do Brasil",
+          "subtopics": [
+            "Segregação e riscos socioambientais"
+          ],
+          "skills": [
+            "Propor fiscalização prevenção e habitação segura",
+            "Relacionar concentração fundiária e preço urbano à exposição ao risco"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A valorização imobiliária desloca trabalhadores para encostas vulneráveis.",
+          "rationale": "O comando exige relacionar concentração fundiária e preço urbano à exposição ao risco.",
+          "strategy": [
+            "Propor fiscalização prevenção e habitação segura",
+            "Relacionar concentração fundiária e preço urbano à exposição ao risco"
+          ],
+          "trap": "Atribuir o desastre exclusivamente à chuva.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "07",
+          "page": 9,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Domínios morfoclimáticos e mares de morros"
+          ],
+          "skills": [
+            "Selecionar dois critérios naturais de regionalização",
+            "Caracterizar morros arredondados e relacionar degradação ao desmatamento e urbanização"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relevo clima e vegetação delimitam domínios ameaçados pela ocupação.",
+          "rationale": "O comando exige caracterizar morros arredondados e relacionar degradação ao desmatamento e urbanização.",
+          "strategy": [
+            "Selecionar dois critérios naturais de regionalização",
+            "Caracterizar morros arredondados e relacionar degradação ao desmatamento e urbanização"
+          ],
+          "trap": "Confundir domínio natural com divisão administrativa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "08",
+          "page": 10,
+          "subject": "Geografia",
+          "topicId": "geo_economica_brasil",
+          "topic": "Geografia Econômica do Brasil",
+          "subtopics": [
+            "Matrizes elétrica e energética"
+          ],
+          "skills": [
+            "Distinguir eletricidade do conjunto de usos energéticos",
+            "Relacionar rios de planalto e investimentos estatais às hidrelétricas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A predominância hidráulica na eletricidade tem bases naturais e históricas.",
+          "rationale": "O comando exige relacionar rios de planalto e investimentos estatais às hidrelétricas.",
+          "strategy": [
+            "Distinguir eletricidade do conjunto de usos energéticos",
+            "Relacionar rios de planalto e investimentos estatais às hidrelétricas"
+          ],
+          "trap": "Supor que a matriz elétrica representa toda a energia consumida.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "09",
+          "page": 11,
+          "subject": "Filosofia",
+          "topicId": "fil_etica_politica_contemporanea",
+          "topic": "Ética e Política Contemporâneas",
+          "subtopics": [
+            "Reflexão filosófica e deliberação moral"
+          ],
+          "skills": [
+            "Identificar questionamento e argumentação nos dois textos",
+            "Situar a deliberação imparcial no campo da ética"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A investigação racional de conceitos fundamenta o exame da conduta.",
+          "rationale": "O comando exige situar a deliberação imparcial no campo da ética.",
+          "strategy": [
+            "Identificar questionamento e argumentação nos dois textos",
+            "Situar a deliberação imparcial no campo da ética"
+          ],
+          "trap": "Equiparar filosofia a um método experimental.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "10",
+          "page": 12,
+          "subject": "Sociologia",
+          "topicId": "soc_estratificacao_desigualdade",
+          "topic": "Estratificação Social e Desigualdade",
+          "subtopics": [
+            "Racismo e mito da democracia racial"
+          ],
+          "skills": [
+            "Definir a suposta convivência igualitária e a reprodução de privilégios",
+            "Relacionar mito explicativo à ocultação da desigualdade racial"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O pacto da branquitude contradiz a imagem de igualdade racial realizada.",
+          "rationale": "O comando exige relacionar mito explicativo à ocultação da desigualdade racial.",
+          "strategy": [
+            "Definir a suposta convivência igualitária e a reprodução de privilégios",
+            "Relacionar mito explicativo à ocultação da desigualdade racial"
+          ],
+          "trap": "Confundir a formulação do mito com comprovação de igualdade.",
+          "confidence": "medium",
+          "reviewNote": "A questão pede também noção filosófica de mito; principal escolhido pela explicação da desigualdade racial.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "11",
+          "page": 13,
+          "subject": "Filosofia",
+          "topicId": "fil_marx_critica_sociedade",
+          "topic": "Marx e a Crítica à Sociedade Capitalista",
+          "subtopics": [
+            "Escola de Frankfurt e consumo"
+          ],
+          "skills": [
+            "Relacionar a tira ao debate sobre indústria cultural",
+            "Explicar a liberdade de escolha limitada pela fabricação de desejos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A autonomia aparente do consumidor convive com dependência mercantil.",
+          "rationale": "O comando exige explicar a liberdade de escolha limitada pela fabricação de desejos.",
+          "strategy": [
+            "Relacionar a tira ao debate sobre indústria cultural",
+            "Explicar a liberdade de escolha limitada pela fabricação de desejos"
+          ],
+          "trap": "Tomar variedade de produtos como plena autonomia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "12",
+          "page": 14,
+          "subject": "Filosofia",
+          "topicId": "fil_moderna_racionalismo_empirismo",
+          "topic": "Filosofia Moderna: Racionalismo e Empirismo",
+          "subtopics": [
+            "Ceticismo empirismo e conhecimento"
+          ],
+          "skills": [
+            "Comparar equipolência cética e validade empírica",
+            "Contrapor conhecimento sensível aristotélico e inteligível platônico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Suspensão do juízo e experiência sensível são respostas distintas à epistemologia.",
+          "rationale": "O comando exige contrapor conhecimento sensível aristotélico e inteligível platônico.",
+          "strategy": [
+            "Comparar equipolência cética e validade empírica",
+            "Contrapor conhecimento sensível aristotélico e inteligível platônico"
+          ],
+          "trap": "Atribuir o mundo das ideias a Aristóteles.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "13",
+          "page": 15,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Neurofisiologia e moluscos"
+          ],
+          "skills": [
+            "Caracterizar simetria bilateral e proteção da concha",
+            "Relacionar canais de membrana ao potencial de ação e músculo esquelético"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Toxinas de caramujos bloqueiam a comunicação entre nervo e músculo.",
+          "rationale": "O comando exige relacionar canais de membrana ao potencial de ação e músculo esquelético.",
+          "strategy": [
+            "Caracterizar simetria bilateral e proteção da concha",
+            "Relacionar canais de membrana ao potencial de ação e músculo esquelético"
+          ],
+          "trap": "Explicar impulso nervoso sem permeabilidade iônica.",
+          "confidence": "medium",
+          "reviewNote": "Inclui zoologia de moluscos, mas o bloqueio do impulso e a resposta muscular definem o principal.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "14",
+          "page": 16,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Néfron e hormônio antidiurético"
+          ],
+          "skills": [
+            "Localizar filtração glomerular e identificar ureia",
+            "Relacionar queda de ADH à menor reabsorção de água e preservação da reabsorção de solutos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A ingestão de água reduz ADH e aumenta a excreção de água sem elevar muito solutos.",
+          "rationale": "O comando exige relacionar queda de ADH à menor reabsorção de água e preservação da reabsorção de solutos.",
+          "strategy": [
+            "Localizar filtração glomerular e identificar ureia",
+            "Relacionar queda de ADH à menor reabsorção de água e preservação da reabsorção de solutos"
+          ],
+          "trap": "Confundir filtração do sangue com secreção tubular.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "15",
+          "page": 17,
+          "subject": "Biologia",
+          "topicId": "bio_codigo_genetico_sintese",
+          "topic": "Código Genético e Síntese Proteica",
+          "subtopics": [
+            "Expressão gênica e reprodução vegetal"
+          ],
+          "skills": [
+            "Identificar ausência de RNA mensageiro a partir do gene",
+            "Relacionar óvulo a semente e explicar união de enxerto a porta-enxerto"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A inativação de VviAGL11 impede transcrição e compromete a formação da semente.",
+          "rationale": "O comando exige relacionar óvulo a semente e explicar união de enxerto a porta-enxerto.",
+          "strategy": [
+            "Identificar ausência de RNA mensageiro a partir do gene",
+            "Relacionar óvulo a semente e explicar união de enxerto a porta-enxerto"
+          ],
+          "trap": "Confundir semente com parede do ovário.",
+          "confidence": "medium",
+          "reviewNote": "Inclui enxertia e formação de sementes; a inativação e transcrição definem o principal.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "16",
+          "page": 18,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Metalurgia do vanádio"
+          ],
+          "skills": [
+            "Classificar ligação e NOX no pentóxido",
+            "Balancear 3V2O5+10Al e converter massa de óxido em metal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A redução aluminotérmica permite calcular a produção de vanádio.",
+          "rationale": "O comando exige balancear 3V2O5+10Al e converter massa de óxido em metal.",
+          "strategy": [
+            "Classificar ligação e NOX no pentóxido",
+            "Balancear 3V2O5+10Al e converter massa de óxido em metal"
+          ],
+          "trap": "Usar proporção de massas sem balanceamento.",
+          "confidence": "medium",
+          "reviewNote": "Inclui ligação e NOX; a obtenção quantitativa do metal define o principal.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "17",
+          "page": 19,
+          "subject": "Química",
+          "topicId": "qui_equilibrio",
+          "topic": "Equilíbrio Químico",
+          "subtopics": [
+            "pH e constante básica"
+          ],
+          "skills": [
+            "Calcular pH de ácido forte e reconhecer neutralidade do nitrato",
+            "Converter pH dez em OH− e aplicar equilíbrio da base fraca"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A cor do indicador permite inferir pH e estimar Kb.",
+          "rationale": "O comando exige converter pH dez em OH− e aplicar equilíbrio da base fraca.",
+          "strategy": [
+            "Calcular pH de ácido forte e reconhecer neutralidade do nitrato",
+            "Converter pH dez em OH− e aplicar equilíbrio da base fraca"
+          ],
+          "trap": "Usar concentração inicial como concentração ionizada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "18",
+          "page": 20,
+          "subject": "Química",
+          "topicId": "qui_organica_reacoes",
+          "topic": "Reações e Aplicações Orgânicas",
+          "subtopics": [
+            "Funções e reações aromáticas"
+          ],
+          "skills": [
+            "Contar carbonos e hidrogênios no naftaleno e reconhecer fenol",
+            "Identificar redução do nitrogrupo e nitração do aromático"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "As etapas de síntese de naftol envolvem substituição aromática e redução.",
+          "rationale": "O comando exige identificar redução do nitrogrupo e nitração do aromático.",
+          "strategy": [
+            "Contar carbonos e hidrogênios no naftaleno e reconhecer fenol",
+            "Identificar redução do nitrogrupo e nitração do aromático"
+          ],
+          "trap": "Classificar fenol como álcool alifático.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "19",
+          "page": 21,
+          "subject": "Física",
+          "topicId": "fis_dinamica_impulsiva",
+          "topic": "Dinâmica Impulsiva",
+          "subtopics": [
+            "Impulso e conservação de energia"
+          ],
+          "skills": [
+            "Aplicar conservação de energia para altura e retorno",
+            "Usar variação do momento em meio segundo incluindo o peso"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A queda e o rebote permitem obter energia e força média da cama elástica.",
+          "rationale": "O comando exige usar variação do momento em meio segundo incluindo o peso.",
+          "strategy": [
+            "Aplicar conservação de energia para altura e retorno",
+            "Usar variação do momento em meio segundo incluindo o peso"
+          ],
+          "trap": "Igualar força elástica média à força resultante.",
+          "confidence": "medium",
+          "reviewNote": "Conservação de energia é exigida em a; o cálculo da força média por impulso define o principal.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "20",
+          "page": 22,
+          "subject": "Física",
+          "topicId": "fis_ondas_fundamentos",
+          "topic": "Fundamentos de Ondas e Oscilações",
+          "subtopics": [
+            "Velocidade frequência e onda rasa"
+          ],
+          "skills": [
+            "Calcular √gh e λ=v/f para a primeira onda",
+            "Calcular λ=vT da segunda e testar h<λ/2"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A classificação de onda rasa depende da relação entre profundidade e comprimento.",
+          "rationale": "O comando exige calcular λ=vT da segunda e testar h<λ/2.",
+          "strategy": [
+            "Calcular √gh e λ=v/f para a primeira onda",
+            "Calcular λ=vT da segunda e testar h<λ/2"
+          ],
+          "trap": "Classificar a onda pela frequência isoladamente.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "21",
+          "page": 23,
+          "subject": "Física",
+          "topicId": "fis_eletrostatica",
+          "topic": "Eletrostática e Campo Elétrico",
+          "subtopics": [
+            "Quantização da carga e campo elétrico"
+          ],
+          "skills": [
+            "Dividir q pela carga elementar e explicar perda de elétrons",
+            "Aplicar Coulomb e E=F/q à distância dada"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O carregamento da abelha e a repulsão da flor seguem relações eletrostáticas.",
+          "rationale": "O comando exige aplicar Coulomb e E=F/q à distância dada.",
+          "strategy": [
+            "Dividir q pela carga elementar e explicar perda de elétrons",
+            "Aplicar Coulomb e E=F/q à distância dada"
+          ],
+          "trap": "Supor deslocamento de prótons na eletrização por atrito.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "22",
+          "page": 24,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Probabilidade geométrica e complemento"
+          ],
+          "skills": [
+            "Somar ângulos obtusos e agudos e dividir por 360",
+            "Identificar ângulos de polígonos regulares e usar complemento para duas rodadas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A chance de parar em cada setor depende de seu ângulo central.",
+          "rationale": "O comando exige identificar ângulos de polígonos regulares e usar complemento para duas rodadas.",
+          "strategy": [
+            "Somar ângulos obtusos e agudos e dividir por 360",
+            "Identificar ângulos de polígonos regulares e usar complemento para duas rodadas"
+          ],
+          "trap": "Considerar equiprováveis cinco setores de tamanhos diferentes.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "23",
+          "page": 25,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Prisma e semelhança"
+          ],
+          "skills": [
+            "Montar a proporção dos triângulos CBD e JAD para obter x",
+            "Somar áreas dos retângulos e do paralelogramo e multiplicar por dez"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O prisma com base em N exige semelhança e decomposição de áreas.",
+          "rationale": "O comando exige somar áreas dos retângulos e do paralelogramo e multiplicar por dez.",
+          "strategy": [
+            "Montar a proporção dos triângulos CBD e JAD para obter x",
+            "Somar áreas dos retângulos e do paralelogramo e multiplicar por dez"
+          ],
+          "trap": "Usar a área do retângulo envolvente como base inteira.",
+          "confidence": "medium",
+          "reviewNote": "A prova de semelhança é necessária; o objeto final é o volume do prisma.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "24",
+          "page": 26,
+          "subject": "Matemática",
+          "topicId": "mat_trigonometria",
+          "topic": "Trigonometria",
+          "subtopics": [
+            "Função seno e reta secante"
+          ],
+          "skills": [
+            "Calcular f(0) e localizar máximo e segundo zero positivo",
+            "Aplicar a razão entre variação vertical e horizontal de Q a R"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A função seno determina os pontos usados no coeficiente angular.",
+          "rationale": "O comando exige aplicar a razão entre variação vertical e horizontal de Q a R.",
+          "strategy": [
+            "Calcular f(0) e localizar máximo e segundo zero positivo",
+            "Aplicar a razão entre variação vertical e horizontal de Q a R"
+          ],
+          "trap": "Escolher o primeiro zero em vez do segundo positivo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        }
+      ]
+    },
+    {
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "Imprensa",
+      "sha256": "95c3118cceea5d4e6f4228ac43f684ff42cc44a0ef8418eafc2a49fc8a9e8f79",
+      "answerKeyUrl": null,
+      "answerKeySha256": null,
+      "pages": 24,
+      "id": "unesp-2024-segunda-fase-discursiva-dia2",
+      "group": "segunda-fase-discursiva-dia2",
+      "phase": "2ª fase · dia 2 e redação",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTYyODg1MA%3d%3d",
+      "expectedQuestions": 13,
+      "coverageNote": "Fonte primária Vunesp. Contém12 questões e proposta de redação. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna. Leitura integral por item; sínteses e estratégias autorais. Numeração impressa preservada.",
+      "questions": [
+        {
+          "number": "25",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Sentido figurado e voz passiva"
+          ],
+          "skills": [
+            "Relacionar expressão idiomática e imagem da boca",
+            "Transformar o objeto palavras em sujeito paciente preservando a locução verbal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "por_sintaxe"
+          ],
+          "summary": "A charge materializa o ato de engolir palavras em um balão de fala.",
+          "rationale": "O comando exige transformar o objeto palavras em sujeito paciente preservando a locução verbal.",
+          "strategy": [
+            "Relacionar expressão idiomática e imagem da boca",
+            "Transformar o objeto palavras em sujeito paciente preservando a locução verbal"
+          ],
+          "trap": "Manter o agente como sujeito na passiva.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "26",
+          "page": 5,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Poesia de Machado e vozes"
+          ],
+          "skills": [
+            "Relacionar ciúme e azedume à comparação",
+            "Distinguir narrador externo das falas personificadas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A insatisfação anima o desejo de cada ser pela condição alheia.",
+          "rationale": "O comando exige distinguir narrador externo das falas personificadas.",
+          "strategy": [
+            "Relacionar ciúme e azedume à comparação",
+            "Distinguir narrador externo das falas personificadas"
+          ],
+          "trap": "Atribuir todos os versos a um mesmo falante.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "27",
+          "page": 6,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Circularidade e formação de palavras"
+          ],
+          "skills": [
+            "Reconstruir a cadeia de aspirações entre os quatro seres",
+            "Selecionar palavra prefixada e explicar o valor negativo do prefixo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "por_sintaxe"
+          ],
+          "summary": "O retorno do desejo do sol ao vaga-lume fecha o círculo.",
+          "rationale": "O comando exige selecionar palavra prefixada e explicar o valor negativo do prefixo.",
+          "strategy": [
+            "Reconstruir a cadeia de aspirações entre os quatro seres",
+            "Selecionar palavra prefixada e explicar o valor negativo do prefixo"
+          ],
+          "trap": "Identificar mero radical como prefixo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "28",
+          "page": 7,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Parnasianismo e rimas ricas"
+          ],
+          "skills": [
+            "Examinar organização estrófica métrica e rimas",
+            "Comparar classes gramaticais de dois pares rimados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A forma do soneto e as rimas permitem reconhecer disciplina parnasiana.",
+          "rationale": "O comando exige comparar classes gramaticais de dois pares rimados.",
+          "strategy": [
+            "Examinar organização estrófica métrica e rimas",
+            "Comparar classes gramaticais de dois pares rimados"
+          ],
+          "trap": "Concluir que todo poema de Machado é formalmente romântico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "29",
+          "page": 9,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Moral narrativa e discurso indireto"
+          ],
+          "skills": [
+            "Escolher provérbio que valorize a paciência e ligá-lo ao desfecho",
+            "Converter a fala do camaleão ajustando pessoa e futuro"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "por_sintaxe"
+          ],
+          "summary": "O camaleão prudente contrasta com a pressa prejudicial da lebre.",
+          "rationale": "O comando exige converter a fala do camaleão ajustando pessoa e futuro.",
+          "strategy": [
+            "Escolher provérbio que valorize a paciência e ligá-lo ao desfecho",
+            "Converter a fala do camaleão ajustando pessoa e futuro"
+          ],
+          "trap": "Manter meu e chegarei dentro do discurso indireto.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "30",
+          "page": 10,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Intertextualidade e ordem direta"
+          ],
+          "skills": [
+            "Reconhecer fábula e personificação na comparação",
+            "Reordenar antigos e outros papéis como sujeitos das frases"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "por_sintaxe"
+          ],
+          "summary": "A referência à tartaruga aproxima o conto de fábulas com animais humanizados.",
+          "rationale": "O comando exige reordenar antigos e outros papéis como sujeitos das frases.",
+          "strategy": [
+            "Reconhecer fábula e personificação na comparação",
+            "Reordenar antigos e outros papéis como sujeitos das frases"
+          ],
+          "trap": "Confundir intertextualidade com citação literal obrigatória.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "31",
+          "page": 12,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Analogia argumentativa e interlocução"
+          ],
+          "skills": [
+            "Explicar o encadeamento competitivo e a imagem dos hamsters",
+            "Localizar a instrução inicial ao leitor como interlocução direta"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Giannetti compara competição de consumo a corrida armamentista sem ganho coletivo.",
+          "rationale": "O comando exige localizar a instrução inicial ao leitor como interlocução direta.",
+          "strategy": [
+            "Explicar o encadeamento competitivo e a imagem dos hamsters",
+            "Localizar a instrução inicial ao leitor como interlocução direta"
+          ],
+          "trap": "Ler aumento de consumo como satisfação proporcional.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "32",
+          "page": 13,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Sinonímia e oração condicional"
+          ],
+          "skills": [
+            "Propor equivalentes contextuais para os termos destacados",
+            "Substituir a não ser que por a menos que preservando a hipótese"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A precisão lexical e a condição de exceção estruturam o argumento.",
+          "rationale": "O comando exige substituir a não ser que por a menos que preservando a hipótese.",
+          "strategy": [
+            "Propor equivalentes contextuais para os termos destacados",
+            "Substituir a não ser que por a menos que preservando a hipótese"
+          ],
+          "trap": "Trocar condição por causa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "33",
+          "page": 15,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Definição e explicação causal"
+          ],
+          "skills": [
+            "Definir a distância entre semelhança e humanidade completa",
+            "Relacionar animações e jogos a desconforto e aversão"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O vale da estranheza descreve repulsa diante do quase humano.",
+          "rationale": "O comando exige relacionar animações e jogos a desconforto e aversão.",
+          "strategy": [
+            "Definir a distância entre semelhança e humanidade completa",
+            "Relacionar animações e jogos a desconforto e aversão"
+          ],
+          "trap": "Afirmar que o efeito exige robô físico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "34",
+          "page": 16,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Comparação de aplicações tecnológicas"
+          ],
+          "skills": [
+            "Explicar utilidade e atratividade de tecnologias assistivas",
+            "Contrapor exagero de traços no cinema e uso aversivo em vilões de games"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "O desenho pode evitar ou explorar o desconforto com figuras quase humanas.",
+          "rationale": "O comando exige contrapor exagero de traços no cinema e uso aversivo em vilões de games.",
+          "strategy": [
+            "Explicar utilidade e atratividade de tecnologias assistivas",
+            "Contrapor exagero de traços no cinema e uso aversivo em vilões de games"
+          ],
+          "trap": "Supor que realismo crescente sempre melhora a aceitação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "35",
+          "page": 17,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Benefícios da música e informação explícita"
+          ],
+          "skills": [
+            "Listar efeitos cognitivos e sobre identidade na demência",
+            "Explicar recorde de silêncio e relato sensorial da cantora"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A música favorece cognição e memórias enquanto o silêncio pode reorganizar a percepção.",
+          "rationale": "O comando exige explicar recorde de silêncio e relato sensorial da cantora.",
+          "strategy": [
+            "Listar efeitos cognitivos e sobre identidade na demência",
+            "Explicar recorde de silêncio e relato sensorial da cantora"
+          ],
+          "trap": "Reduzir o texto ao entretenimento musical.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "36",
+          "page": 18,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Concessão e leitura crítica"
+          ],
+          "skills": [
+            "Identificar equilíbrio entre som e silêncio e sentido adversativo de however",
+            "Relacionar lembranças traumáticas à necessidade de pesquisa sobre demência"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A oposição introduz riscos da musicoterapia sem negar seu potencial.",
+          "rationale": "O comando exige relacionar lembranças traumáticas à necessidade de pesquisa sobre demência.",
+          "strategy": [
+            "Identificar equilíbrio entre som e silêncio e sentido adversativo de however",
+            "Relacionar lembranças traumáticas à necessidade de pesquisa sobre demência"
+          ],
+          "trap": "Tratar however como conclusão favorável sem ressalva.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "R",
+          "page": 19,
+          "subject": "Redação",
+          "topicId": "por_red_argumentacao",
+          "topic": "Introdução, Argumentação e Coerência",
+          "subtopics": [
+            "Internet e possibilidade de futuro off-line"
+          ],
+          "skills": [
+            "Confrontar indispensabilidade tecnológica com crítica à conexão compulsória",
+            "Defender uma tese de viabilidade com argumentos sociais e exemplos delimitados",
+            "Articular conclusão coerente sem copiar a coletânea"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "A proposta pede discutir a viabilidade de uma vida futura desvinculada da internet.",
+          "rationale": "O comando exige articular conclusão coerente sem copiar a coletânea.",
+          "strategy": [
+            "Confrontar indispensabilidade tecnológica com crítica à conexão compulsória",
+            "Defender uma tese de viabilidade com argumentos sociais e exemplos delimitados",
+            "Articular conclusão coerente sem copiar a coletânea"
+          ],
+          "trap": "Discutir apenas vantagens da internet sem responder à possibilidade de futuro off-line.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        }
+      ]
+    }
+  ]
+}

@@ -5,7 +5,9 @@ import {dirname} from 'node:path';
 import {mockTopics} from '../src/data/mockData';
 import {studyAreaForTopic} from '../src/data/studyProtocols';
 import {boardIncidenceRows,isCompleteBoardCorpus,type BoardCorpus,type BoardPaper,type BoardQuestion,type ResearchBoard} from '../src/lib/boardIncidence';
-const plans=[{board:'ENEM',slug:'enem',years:[2021,2022,2023,2024,2025]},{board:'UNESP',slug:'unesp',years:[2022,2023,2024,2025,2026]},{board:'FAMERP',slug:'famerp',years:[2022,2023,2024,2025,2026]},{board:'UNIFESP',slug:'unifesp',years:[2022,2023,2024,2025,2026]}] as const;
+// User-authorized release of the 16 completed editions; deferred years are explicit.
+// Drafts never enter this input list or the published denominators.
+const plans=[{board:'ENEM',slug:'enem',years:[2024,2025],plannedYears:[2021,2022,2023,2024,2025]},{board:'UNESP',slug:'unesp',years:[2022,2023,2024,2025],plannedYears:[2022,2023,2024,2025,2026]},{board:'FAMERP',slug:'famerp',years:[2022,2023,2024,2025,2026],plannedYears:[2022,2023,2024,2025,2026]},{board:'UNIFESP',slug:'unifesp',years:[2022,2023,2024,2025,2026],plannedYears:[2022,2023,2024,2025,2026]}] as const;
 const known=new Map(mockTopics.map(topic=>[topic.id,{...topic,subject:studyAreaForTopic(topic)}]));
 const harmonization=JSON.parse(await readFile('scripts/data/fuvest-incidence/subtopic-aliases.json','utf8'));
 const aliases=new Map<string,string[]>(harmonization.aliases.map((entry:any)=>[`${entry.subject}:${entry.original}`,entry.canonical]));
@@ -37,7 +39,8 @@ for(const plan of plans){
    const {questions:rawQuestions,...metadata}=input;
    papers.push({...metadata,board,year,classifiedQuestions:rawQuestions.length});
    sources.push({sourceUrl:input.sourceUrl,sha256:input.sha256,pages:input.pages,role:'exam'},...(input.answerKeyUrl?[{sourceUrl:input.answerKeyUrl,sha256:input.answerKeySha256,role:'answer-key'}]:[]));
-   for(const row of rawQuestions){
+   for(const original of rawQuestions){
+    const row={...original,subject:original.subject==='Artes'?'Arte':original.subject,relatedSubjects:(original.relatedSubjects??[]).map((subject:string)=>subject==='Artes'?'Arte':subject)};
     const number=String(row.number).replace(/^(\D*)(\d+)$/,(_:string,prefix:string,n:string)=>prefix+String(Number(n)).padStart(2,'0'));
     if(!number||!Number.isInteger(row.page)||row.page<1||row.page>input.pages||!row.subject||!row.topic||!row.summary||!row.rationale||!row.trap||!Array.isArray(row.strategy)||row.strategy.length<2||!row.subtopics?.length||!row.skills?.length||typeof row.excluded!=='boolean'||!['high','medium','low'].includes(row.confidence))throw Error(`Ficha incompleta: ${input.id}:${number}`);
     const ownAnswerKey=row.answerKeyUrl!=null||row.answerKeySha256!=null;
@@ -58,23 +61,33 @@ for(const plan of plans){
   const own=papers.filter(paper=>paper.year===year);
   if(own.length<2||!questions.some(question=>question.year===year&&question.subject==='Redação'))throw Error(`Dia/fase/redação ausente: ${board}/${year}`);
  }
- const corpus:BoardCorpus={board,reviewedOn:'2026-10-21',reviewType:'Classificação editorial por leitura das fontes. Revisão de integração; sem dupla codificação independente integral nem dificuldade medida.',coverageNote:coverageNotes.join('\n'),years:[...plan.years],papers,questions};
+ const corpus:BoardCorpus={board,reviewedOn:'2026-10-22',reviewType:'Classificação editorial por leitura das fontes. Revisão de integração; sem dupla codificação independente integral nem dificuldade medida.',coverageNote:coverageNotes.join('\n'),years:[...plan.years],plannedYears:[...plan.plannedYears],papers,questions};
  if(!isCompleteBoardCorpus(corpus,board))throw Error(`Corpus incompleto: ${board}`);
- const documents=[...new Map(sources.map(source=>[source.sourceUrl,source])).values()];
+ const bySourceUrl=new Map<string,any>();
+ for(const source of sources){
+  const {url,localPath,answerKeyPath,...metadata}=source;
+  const sourceUrl=source.sourceUrl??url;
+  if(!validUrl(sourceUrl)||!validHash(source.sha256))throw Error(`Documento sem URL/hash: ${board}`);
+  const previous=bySourceUrl.get(sourceUrl);
+  if(previous&&previous.sha256!==source.sha256)throw Error(`Hashes divergentes para a mesma fonte: ${sourceUrl}`);
+  // Keep provenance from the detailed manifest when the paper repeats its URL.
+  bySourceUrl.set(sourceUrl,{...metadata,...previous,sourceUrl});
+ }
+ const documents=[...bySourceUrl.values()];
  const exported={...corpus,sourceDocuments:documents,classificationFiles,language:board==='ENEM'?'Inglês nas questões opcionais; aplicação regular impressa':'conforme caderno'};
  await queueWrite(`src/data/incidence/${plan.slug}.json`,JSON.stringify(exported,null,2)+'\n');
  const out=`public/analises/incidencia/${plan.slug}`;
  await queueWrite(`${out}/corpus.json`,JSON.stringify(exported,null,2)+'\n');
  await queueWrite(`${out}/questoes.csv`,csv([['id','ano','fase','grupo','questao','materia','assunto','subassuntos','confianca','excluida','motivo','sintese','justificativa','estrategia','erro','fonte','gabarito'],...questions.map(question=>{const paper=papers.find(paper=>paper.id===question.paperId)!;return [question.id,question.year,question.phase,paper.group,question.number,question.subject,question.topic,question.subtopics.join(' | '),question.confidence,question.excluded,question.excludedReason,question.summary,question.rationale,question.strategy.join(' → '),question.trap,`${paper.sourceUrl}#page=${question.page}`,question.answerKeyUrl];})]));
- const report=[`# ${board}: incidência ${plan.years[0]}–${plan.years.at(-1)}`,'',`${questions.length} questões/propostas, ${papers.length} cadernos. ${questions.filter(question=>question.excluded).length} itens excluídos. A proposta de redação é uma unidade; subitens e cores equivalentes não são questões extras.`,'',corpus.coverageNote,'','Classificação editorial: uma matéria e assunto principal por item. Subassuntos são presenças múltiplas. n/N usa apenas a matéria, grupo e edições selecionados. Questões anuladas saem da frequência. Confiança editorial não é uma probabilidade. Não há dificuldade medida nem previsão de cobrança. Formatos diferentes têm grupos distintos. Não se somam percentuais entre bancas. No ENEM, contagem não equivale ao peso na TRI. Na UNIFESP, estes são cadernos do Sistema Misto; o ENEM não é contado novamente como UNIFESP.','', '|Ano|Fase|Grupo|Classificadas/previstas|Fonte|','|---|---|---|---|---|',...papers.map(paper=>`|${paper.year}|${paper.phase}|${paper.group}|${paper.classifiedQuestions}/${paper.expectedQuestions}|[PDF](${paper.sourceUrl})|`),''];
+ const report=[`# ${board}: incidência ${plan.years[0]}–${plan.years.at(-1)}`,'',`${questions.length} questões/propostas, ${papers.length} cadernos. ${questions.filter(question=>question.excluded).length} itens excluídos. A proposta de redação é uma unidade; subitens e cores equivalentes não são questões extras.`,'',corpus.coverageNote,'',`Edições não classificadas nesta publicação: ${plan.plannedYears.filter(year=>!(plan.years as readonly number[]).includes(year)).join(', ')||'nenhuma'}. Ausência de classificação não representa zero de cobrança. Rascunhos não entram nos denominadores.`,'','Classificação editorial: uma matéria e assunto principal por item. Subassuntos são presenças múltiplas. n/N usa apenas a matéria, grupo e edições selecionados. Questões anuladas saem da frequência. Confiança editorial não é uma probabilidade. Não há dificuldade medida nem previsão de cobrança. Formatos diferentes têm grupos distintos. Não se somam percentuais entre bancas. No ENEM, contagem não equivale ao peso na TRI. Na UNIFESP, estes são cadernos do Sistema Misto; o ENEM não é contado novamente como UNIFESP.','', '|Ano|Fase|Grupo|Classificadas/previstas|Fonte|','|---|---|---|---|---|',...papers.map(paper=>`|${paper.year}|${paper.phase}|${paper.group}|${paper.classifiedQuestions}/${paper.expectedQuestions}|[PDF](${paper.sourceUrl})|`),''];
  for(const [mode,name] of [['topic','assuntos'],['subtopic','subassuntos']] as const){
-  const aggregate:unknown[][]=[['grupo','materia','assunto','ocorrencias','total_materia','percentual','com_ressalva','edicoes_com_ocorrencia','edicoes_cobertas',...plan.years.map(year=>`${year}_n_N`),'questoes']];
+  const aggregate:unknown[][]=[['grupo','materia','assunto','ocorrencias','total_materia','percentual','com_ressalva','edicoes_com_ocorrencia','edicoes_cobertas',...plan.plannedYears.map(year=>`${year}_n_N`),'questoes']];
   for(const group of [...new Set(papers.map(paper=>paper.group))]){
-   const filter={startYear:plan.years[0],endYear:plan.years.at(-1)!,group};
+   const filter={startYear:plan.plannedYears[0],endYear:plan.plannedYears.at(-1)!,group};
    const rows=boardIncidenceRows(corpus,filter,mode);
    for(const row of rows)aggregate.push([group,row.subject,row.label,row.count,row.total,(100*row.rate).toFixed(4),row.uncertain,row.editions,row.observedEditions,...row.annual.map(annual=>annual.total?`${annual.count}/${annual.total}`:annual.covered?'sem categoria':'não classificado'),row.questionIds.join(' | ')]);
    if(mode==='topic'){
-    report.push(`## ${group}`,'',`|Matéria|Assunto|n/N|%|Edições|${plan.years.join('|')}|`,`|${Array(5+plan.years.length).fill('---').join('|')}|`,...rows.map(row=>`|${row.subject}|${row.label}|${row.count}/${row.total}|${(100*row.rate).toFixed(1)}|${row.editions}/${row.observedEditions}|${row.annual.map(annual=>annual.total?`${annual.count}/${annual.total}`:annual.covered?'Sem categoria':'Não classificado').join('|')}|`),'');
+    report.push(`## ${group}`,'',`|Matéria|Assunto|n/N|%|Edições|${plan.plannedYears.join('|')}|`,`|${Array(5+plan.plannedYears.length).fill('---').join('|')}|`,...rows.map(row=>`|${row.subject}|${row.label}|${row.count}/${row.total}|${(100*row.rate).toFixed(1)}|${row.editions}/${row.observedEditions}|${row.annual.map(annual=>annual.total?`${annual.count}/${annual.total}`:annual.covered?'Sem categoria':'Não classificado').join('|')}|`),'');
    }
   }
   await queueWrite(`${out}/incidencia-${name}.csv`,csv(aggregate));
@@ -88,13 +101,13 @@ for(const plan of plans){
    const own=pool.filter(question=>question.subject===subject);
    return {subject,total:own.length,topics:[...new Set(own.map(question=>question.topicId??`fuvest-unmapped:${question.topic}`))].map(topicId=>{const matching=own.filter(question=>(question.topicId??`fuvest-unmapped:${question.topic}`)===topicId);return {topicId,count:matching.length,numbers:matching.map(question=>question.number)};})};
   });
-  cohorts.push({id:paper.id,board,year:paper.year,phase:paper.phase,phaseGroup:paper.phaseGroup,version:paper.version,examUrl:paper.sourceUrl,answerKeyUrl:paper.answerKeyUrl,reviewedOn:corpus.reviewedOn,examSha256:paper.sha256,answerKeySha256:paper.answerKeySha256,completeSubjects:subjects.map(subject=>subject.subject),totalQuestions:paper.expectedQuestions,excludedNumbers:questions.filter(question=>question.paperId===paper.id&&question.excluded).map(question=>question.number),classification:'complete',subjects});
+  cohorts.push({id:paper.id,board,year:paper.year,group:paper.group,format:paper.format,phase:paper.phase,phaseGroup:paper.phaseGroup,version:paper.version,examUrl:paper.sourceUrl,answerKeyUrl:paper.answerKeyUrl,reviewedOn:corpus.reviewedOn,examSha256:paper.sha256,answerKeySha256:paper.answerKeySha256,completeSubjects:subjects.map(subject=>subject.subject),totalQuestions:paper.expectedQuestions,excludedNumbers:questions.filter(question=>question.paperId===paper.id&&question.excluded).map(question=>question.number),classification:'complete',subjects});
  }
  for(const question of questions.filter(question=>!question.excluded))cases.push({id:question.id,cohortId:question.paperId,number:question.number,topicId:question.topicId??`fuvest-unmapped:${question.topic}`,relatedTopicIds:question.relatedTopicIds,subject:question.subject,chapter:question.subtopics.join(' · '),title:question.summary,concept:question.rationale,trap:question.trap,steps:question.strategy,commandWords:[]});
 
  console.log(JSON.stringify({board,questions:questions.length,papers:papers.length,excluded:questions.filter(question=>question.excluded).length}));
 }
-await queueWrite('src/data/boardIncidenceCounts.json',JSON.stringify({reviewedOn:'2026-10-21',cohorts},null,2)+'\n');
+await queueWrite('src/data/boardIncidenceCounts.json',JSON.stringify({reviewedOn:'2026-10-22',cohorts},null,2)+'\n');
 await queueWrite('src/data/boardIncidenceCases.json',JSON.stringify(cases,null,2)+'\n');
 
 for(const [path,content] of pendingWrites){

@@ -24,3 +24,17 @@ it('não estima percentuais quando a fonte de dados falha',async()=>{
  expect(screen.queryByRole('table')).toBeNull();
  spy.mockRestore();
 });
+
+it('explicita anos adiados e permite consultar ausência de cobertura sem percentual',async()=>{
+ const spy=vi.spyOn(research,'loadBoardCorpus').mockResolvedValue({...fixture,plannedYears:[2025,2026]});
+ render(<BoardIncidencePanel board="FAMERP" subject="Biologia"/>);
+ expect(await screen.findByRole('note')).toHaveTextContent('Anos ainda não classificados: 2025');
+ fireEvent.change(screen.getByLabelText('Do vestibular'),{target:{value:'2025'}});
+ expect(screen.getByRole('table')).toHaveTextContent('Não classificado');
+ fireEvent.change(screen.getByLabelText('Até o vestibular'),{target:{value:'2025'}});
+ expect(screen.getByText('Este formato não está classificado no período selecionado. Não há denominador.')).toBeInTheDocument();
+ expect(screen.getByText('Sem cobertura neste filtro')).toBeInTheDocument();
+ expect(screen.queryByText('0/0')).toBeNull();
+ expect(screen.queryByText(/NaN%|Infinity%/)).toBeNull();
+ spy.mockRestore();
+});

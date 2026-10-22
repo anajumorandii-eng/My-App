@@ -36,11 +36,11 @@ export function ExamEvidencePanel({ subject, topicIds, boards = [] }: { subject:
         <p className="text-xs mt-2">Versão {cohort.version}. {complete ? `${group.total} questões válidas classificadas nesta matéria.` : `${group.total} exemplos classificados de um caderno de ${cohort.totalQuestions} questões; amostra não representativa.`} {cohort.excludedNumbers.length ? `Anuladas excluídas: ${cohort.excludedNumbers.join(', ')}.` : ''}</p>
         <ul className="text-sm space-y-2 mt-3">{topics.map(row => <li key={row.topicId}>{mockTopics.find(topic => topic.id === row.topicId)?.name ?? row.topicId.replace(/^fuvest-unmapped:/, '')}: <b>{row.count}/{group.total}</b>{complete ? ` (${(row.count / group.total * 100).toFixed(1)}% observado)` : ' exemplos da seleção'} · questões {row.numbers.join(', ')}</li>)}</ul>
         {!topics.length && <p className="text-sm mt-2">Nenhuma questão recebeu este tópico principal neste recorte; relações secundárias podem aparecer nos exemplos abaixo.</p>}
-        <div className="flex flex-wrap gap-4 mt-3 text-xs"><a className="underline" href={cohort.examUrl} target="_blank" rel="noreferrer">Prova oficial</a>{cohort.answerKeyUrl && <a className="underline" href={cohort.answerKeyUrl} target="_blank" rel="noreferrer">Gabarito / respostas esperadas</a>}</div>
+        <div className="flex flex-wrap gap-4 mt-3 text-xs"><a className="underline" href={cohort.examUrl} target="_blank" rel="noreferrer">PDF da prova</a>{cohort.answerKeyUrl && <a className="underline" href={cohort.answerKeyUrl} target="_blank" rel="noreferrer">Gabarito / respostas esperadas</a>}</div>
       </details>;
     })}
     <h3 className="font-semibold">Comandos, conceitos e pontos de atenção</h3>
-    <p className="text-xs text-[var(--dim)]">As fichas são análises de questões identificadas. Palavras do comando orientam a leitura; não indicam sozinhas a resposta. Confira o enunciado integral na questão ou na fonte oficial.</p>
+    <p className="text-xs text-[var(--dim)]">As fichas são análises de questões identificadas. Palavras do comando orientam a leitura; não indicam sozinhas a resposta. Confira o enunciado integral na questão ou na fonte indicada.</p>
     {!cases && !error && <p role="status">Carregando análises de questões…</p>}
     {error && <div role="alert"><p>Não foi possível carregar as análises.</p><button type="button" className="underline" onClick={() => setAttempt(value => value + 1)}>Tentar novamente</button></div>}
     {ordered.slice(0, visible).map(item => { const cohort = examEvidenceCohorts.find(cohort => cohort.id === item.cohortId)!; return <article key={item.id} className="border border-[var(--line)] rounded-lg p-4 space-y-2 text-sm">
@@ -49,7 +49,7 @@ export function ExamEvidencePanel({ subject, topicIds, boards = [] }: { subject:
       {item.commandWords.length > 0 && <p><b>Palavras do comando:</b> {item.commandWords.join(' · ')}</p>}
       {item.relatedTopicIds.length > 0 && <p><b>Conecta com:</b> {item.relatedTopicIds.map(id => mockTopics.find(topic => topic.id === id)?.name ?? id).join(' · ')}</p>}
       {item.steps.length > 0 && <details><summary className="cursor-pointer">Decisões de leitura</summary><ol className="list-decimal pl-5 mt-2">{item.steps.map(step => <li key={step}>{step}</li>)}</ol></details>}
-      <div className="flex flex-wrap gap-4 text-xs"><a className="underline" href={cohort.examUrl} target="_blank" rel="noreferrer">Conferir enunciado na prova oficial</a>{item.questionId && <Link className="underline" to={`/questoes?topic=${encodeURIComponent(item.topicId)}&board=${encodeURIComponent(cohort.board)}`}>Resolver questões deste recorte</Link>}</div>
+      <div className="flex flex-wrap gap-4 text-xs"><a className="underline" href={cohort.examUrl} target="_blank" rel="noreferrer">Conferir enunciado na fonte</a>{item.questionId && <Link className="underline" to={`/questoes?topic=${encodeURIComponent(item.topicId)}&board=${encodeURIComponent(cohort.board)}`}>Resolver questões deste recorte</Link>}</div>
     </article>; })}
     {cases && !ordered.length && <p className="text-sm">Sem exemplo analisado para esta seleção. Consulte a prova oficial; não há base aqui para inferir um estilo específico.</p>}
     {ordered.length > visible && <button type="button" className="text-sm underline" onClick={() => setVisible(value => value + 4)}>Mostrar mais análises ({ordered.length - visible})</button>}

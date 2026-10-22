@@ -23,10 +23,12 @@ test('subassuntos são presença multirrótulo e conexões não duplicam questã
  assert.equal(interdisciplinaryPairs(multi,filter)[0].count,1);
 });
 
-test('corpus real contém 685 registros rastreáveis, exclui duas anuladas e recorta Medicina em 60', async()=>{
+test('corpus real contém 1135 registros rastreáveis, exclui duas anuladas e recorta Medicina em 60', async()=>{
  const {loadFuvestCorpus}=await import('./fuvestIncidence');const actual=await loadFuvestCorpus();
- assert.equal(actual.papers.length,15);assert.equal(actual.questions.length,685);assert.equal(new Set(actual.questions.map(q=>q.id)).size,685);
+ assert.equal(actual.papers.length,20);assert.equal(actual.questions.length,1135);assert.equal(new Set(actual.questions.map(q=>q.id)).size,1135);
  assert.equal(scopeQuestions(actual,{startYear:2022,endYear:2026,scope:'1a'}).length,448);
+ assert.equal(scopeQuestions(actual,{startYear:2017,endYear:2026,scope:'1a'}).length,898);
+ assert.equal(scopeQuestions(actual,{startYear:2017,endYear:2021,scope:'2a-dia1'}).length,0);
  assert.equal(scopeQuestions(actual,{startYear:2022,endYear:2026,scope:'2a-dia1'}).length,55);
  assert.equal(scopeQuestions(actual,{startYear:2022,endYear:2026,scope:'2a-dia2'}).length,180);
  assert.equal(scopeQuestions(actual,{startYear:2022,endYear:2026,scope:'medicina'}).length,60);
@@ -36,7 +38,7 @@ test('corpus real contém 685 registros rastreáveis, exclui duas anuladas e rec
   assert.equal(qs.length,paper.expectedQuestions);assert.ok(qs.every(q=>Number.isInteger(q.page)&&q.page>0&&q.page<=paper.pages));
  }
  for(const q of actual.questions){assert.ok(q.strategy.length>=2);assert.ok(q.rationale.length>10);assert.ok(q.subtopics.length>0);}
- const english=actual.questions.filter(q=>q.subject==='Inglês');assert.equal(english.length,37);
+ const english=actual.questions.filter(q=>q.year>=2022&&q.subject==='Inglês');assert.equal(english.length,37);
  assert.ok(english.every(q=>q.subtopics.every(label=>!label.startsWith('Text Comprehension:'))));
  const chemistry2026=actual.questions.find(q=>q.year===2026&&q.phase==='2a-dia2'&&q.number==='Q01')!;
  assert.ok(chemistry2026.answerKeyUrl?.endsWith('quimica.pdf'));
@@ -65,7 +67,7 @@ test('recorrência não transforma uma única ocorrência de Educação Física 
  for(const scope of ['medicina','medicina-sp','medicina-bauru'] as const){
   const pool=scopeQuestions(actual,{startYear:2022,endYear:2026,scope});
   assert.equal(pool.length,60);
-  for(const year of actual.years)assert.equal(pool.filter(q=>q.year===year).length,12);
+  for(const year of actual.years.filter(year=>year>=2022))assert.equal(pool.filter(q=>q.year===year).length,12);
  }
  assert.equal(medicineQuestion({phase:'2a-dia2',number:'B04',year:2024},'medicina-sp'),true);
  assert.equal(medicineQuestion({phase:'2a-dia2',number:'G01',year:2024},'medicina-sp'),false);
@@ -78,3 +80,18 @@ test('recorrência não transforma uma única ocorrência de Educação Física 
   assert.deepEqual(selected.map(q=>q.number).sort(),[...rule.selectedNumbers].sort());
  }
  });
+
+test('comparação de períodos mantém denominadores próprios e não confunde ausência de fase com zero',async()=>{
+ const {compareIncidencePeriods}=await import('./fuvestIncidence');
+ const data:FuvestCorpus={...corpus,years:[2017,2022],papers:[
+  {id:'2017-f1',year:2017,phase:'1a',version:'V',sourceUrl:'https://example.org/2017.pdf',answerKeyUrl:null,sha256:'a'.repeat(64),answerKeySha256:null,pages:1,expectedQuestions:1,classifiedQuestions:1},
+  {id:'2022-f1',year:2022,phase:'1a',version:'V',sourceUrl:'https://example.org/2022.pdf',answerKeyUrl:null,sha256:'b'.repeat(64),answerKeySha256:null,pages:1,expectedQuestions:2,classifiedQuestions:2}
+ ],questions:[q(2017,'01'),q(2022,'01'),q(2022,'02',{topicId:'bio_genetica',topic:'Genética'})]};
+ const comparison=compareIncidencePeriods(data,'1a');
+ const ecology=comparison.find(row=>row.topicId==='bio_ecologia')!;
+ assert.equal(ecology.earlier.rate,1);assert.equal(ecology.recent.rate,0.5);assert.equal(ecology.deltaPercentagePoints,-50);
+ const genetics=comparison.find(row=>row.topicId==='bio_genetica')!;
+ assert.equal(genetics.earlier.count,0);assert.equal(genetics.earlier.total,1);
+ assert.equal(incidenceRows(data,{startYear:2017,endYear:2022,scope:'1a'})[0].annual[0].covered,true);
+ assert.equal(incidenceRows(data,{startYear:2017,endYear:2022,scope:'2a-dia1'}).length,0);
+});

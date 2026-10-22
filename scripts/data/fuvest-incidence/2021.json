@@ -1,0 +1,2576 @@
+{
+  "year": 2021,
+  "reviewedOn": "2026-10-21",
+  "reviewType": "single-editor-source-reading",
+  "sourceManifest": [
+    {
+      "year": 2021,
+      "role": "first-phase-exam",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2021",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2021_primeira_fase.pdf",
+      "sha256": "c263cea2fb60468c6085a84473429a967e21c8bc37f200d6d0fff68722f7d8c3",
+      "bytes": 5753077,
+      "pages": 28,
+      "localFilename": "fuvest_2021_primeira_fase.pdf",
+      "classificationStatus": "source-read"
+    },
+    {
+      "year": 2021,
+      "role": "first-phase-answer-key",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2021",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2021_primeira_fase_gabarito_v2.pdf",
+      "sha256": "316b8834ad412e619f38c37d43dec4103ef4e71c87eaaaa7c600b9e849aea577",
+      "bytes": 520919,
+      "pages": 2,
+      "localFilename": "fuvest_2021_primeira_fase_gabarito_v2.pdf",
+      "classificationStatus": "source-read"
+    }
+  ],
+  "papers": [
+    {
+      "id": "fuvest-2021-f1",
+      "phase": "1a",
+      "version": "V",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2021_primeira_fase.pdf",
+      "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2021_primeira_fase_gabarito_v2.pdf",
+      "sha256": "c263cea2fb60468c6085a84473429a967e21c8bc37f200d6d0fff68722f7d8c3",
+      "answerKeySha256": "316b8834ad412e619f38c37d43dec4103ef4e71c87eaaaa7c600b9e849aea577",
+      "pages": 28,
+      "expectedQuestions": 90,
+      "questions": [
+        {
+          "number": "01",
+          "page": 2,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_plana",
+          "topic": "Geometria Plana",
+          "subtopics": [
+            "Distâncias em malha ortogonal"
+          ],
+          "skills": [
+            "leitura_de_malha",
+            "comparacao_de_comprimentos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara três percursos de ruas entre os pontos X e Y.",
+          "rationale": "O critério decisivo é somar segmentos horizontais e verticais da malha.",
+          "strategy": [
+            "Conte as unidades horizontais e verticais de cada trajeto",
+            "Compare os totais, observando o desvio para cima no percurso a."
+          ],
+          "trap": "Confundir distância em linha reta com comprimento do caminho.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "02",
+          "page": 2,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Monotonicidade em gráficos"
+          ],
+          "skills": [
+            "leitura_de_grafico",
+            "identificacao_de_monotonicidade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o gráfico em que y diminui sempre que x aumenta.",
+          "rationale": "A resolução exige identificar uma função estritamente decrescente em todo o domínio desenhado.",
+          "strategy": [
+            "Percorra cada gráfico da esquerda para a direita",
+            "Elimine trechos constantes ou crescentes e selecione o que só desce."
+          ],
+          "trap": "Aceitar um gráfico que diminui apenas em parte do intervalo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "03",
+          "page": 2,
+          "subject": "Matemática",
+          "topicId": "mat_teoria_numeros",
+          "topic": "Teoria dos Números Inteiros",
+          "subtopics": [
+            "Números primos"
+          ],
+          "skills": [
+            "teste_de_divisibilidade",
+            "verificacao_de_proposicoes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Avalia propriedades dos primos a partir de um quadrinho de encontro de parentes.",
+          "rationale": "A informação necessária é divisibilidade e identificação de números primos.",
+          "strategy": [
+            "Recorde que 2 é primo e par",
+            "Teste os números entre 24 e 36 e os contraexemplos das demais afirmações."
+          ],
+          "trap": "Tomar todos os ímpares por primos ou considerar 143 primo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "04",
+          "page": 2,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_plana",
+          "topic": "Geometria Plana",
+          "subtopics": [
+            "Decomposição de áreas por centros"
+          ],
+          "skills": [
+            "decomposicao_de_areas",
+            "comparacao_de_fracoes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Expressa a área de um pentágono formado pelos centros de triângulos e quadrados.",
+          "rationale": "A comparação depende das frações de área produzidas pelos segmentos que ligam centros e vértice comum.",
+          "strategy": [
+            "Divida o pentágono pelo vértice comum das peças",
+            "Associe cada região a um terço do triângulo ou um quarto do quadrado e some."
+          ],
+          "trap": "Somar as áreas completas das cinco peças externas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "05",
+          "page": 3,
+          "subject": "Matemática",
+          "topicId": "mat_aritmetica_proporcionalidade",
+          "topic": "Aritmética e Proporcionalidade",
+          "subtopics": [
+            "Porcentagem e valor líquido"
+          ],
+          "skills": [
+            "calculo_percentual",
+            "modelagem_de_receita_liquida"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina o preço que preserva a receita após uma taxa de cartão de 6%.",
+          "rationale": "O aumento deve compensar uma dedução calculada sobre o preço novo.",
+          "strategy": [
+            "Escreva 0,94V como valor líquido da venda",
+            "Iguale esse valor ao preço P e isole V."
+          ],
+          "trap": "Aumentar simplesmente P em 6%, ignorando a base da taxa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "06",
+          "page": 3,
+          "subject": "Matemática",
+          "topicId": "mat_sequencias_matrizes",
+          "topic": "Sequências, Matrizes e Sistemas Lineares",
+          "subtopics": [
+            "Sistema de pontuação"
+          ],
+          "skills": [
+            "modelagem_de_sistema_linear",
+            "calculo_de_diferenca"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a diferença entre acertos e erros em 50 arremessos com pontuação total 124.",
+          "rationale": "Duas relações lineares determinam as quantidades desconhecidas.",
+          "strategy": [
+            "Represente acertos por a e erros por e, com a+e=50",
+            "Use 5a−2e=124 e calcule a−e."
+          ],
+          "trap": "Tratar a perda de dois pontos como acréscimo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "07",
+          "page": 3,
+          "subject": "Matemática",
+          "topicId": "mat_teoria_numeros",
+          "topic": "Teoria dos Números Inteiros",
+          "subtopics": [
+            "Máximo divisor comum"
+          ],
+          "skills": [
+            "calculo_de_mdc",
+            "contagem_de_blocos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina o mínimo de cubos inteiros iguais que preenchem um paralelepípedo.",
+          "rationale": "O maior lado admissível deve dividir simultaneamente as três dimensões.",
+          "strategy": [
+            "Calcule o MDC de 60, 24 e 18",
+            "Divida cada dimensão pelo MDC e multiplique as quantidades."
+          ],
+          "trap": "Usar o MMC ou dividir o volume por uma aresta em vez de pelo volume do cubo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "08",
+          "page": 3,
+          "subject": "Matemática",
+          "topicId": "mat_combinatoria",
+          "topic": "Análise Combinatória",
+          "subtopics": [
+            "Princípio multiplicativo e ordem de grandeza"
+          ],
+          "skills": [
+            "principio_multiplicativo",
+            "estimativa_logaritmica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Estima o número de códigos de dez letras de um alfabeto de 26 letras.",
+          "rationale": "A quantidade de escolhas independentes é calculada pelo princípio multiplicativo.",
+          "strategy": [
+            "Escreva a contagem como 26 elevado a 10",
+            "Use o logaritmo fornecido para situar o resultado entre as ordens de grandeza."
+          ],
+          "trap": "Excluir repetições de letras sem que essa restrição exista.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "09",
+          "page": 3,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_plana",
+          "topic": "Geometria Plana",
+          "subtopics": [
+            "Triângulo equilátero e Pitágoras"
+          ],
+          "skills": [
+            "leitura_de_diagrama",
+            "aplicacao_de_pitagoras"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula o segmento DF a partir de um triângulo equilátero e de um quadrilátero com lados paralelos.",
+          "rationale": "A figura reduz a distância procurada à hipotenusa de um triângulo retângulo.",
+          "strategy": [
+            "Obtenha a altura de ABE e a posição do ponto médio F",
+            "Determine os catetos horizontal e vertical de FD e aplique Pitágoras."
+          ],
+          "trap": "Confundir BC com toda a projeção horizontal de FD.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "10",
+          "page": 3,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_analitica",
+          "topic": "Geometria Analítica",
+          "subtopics": [
+            "Interseção de disco e semiplano"
+          ],
+          "skills": [
+            "representacao_de_inequacoes",
+            "leitura_de_regiao_cartesiana"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Traduz uma região hachurada em desigualdades cartesianas.",
+          "rationale": "É preciso combinar a equação do círculo com o semiplano acima da corda.",
+          "strategy": [
+            "Identifique o disco unitário por x²+y²≤1",
+            "Obtenha a reta que passa por (−1,0) e (0,1) e teste o lado hachurado."
+          ],
+          "trap": "Inverter o sinal da desigualdade ou trocar y−x por y+x.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "11",
+          "page": 4,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Interseção de parábola e reta"
+          ],
+          "skills": [
+            "analise_de_discriminante",
+            "intersecao_de_graficos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Estabelece a condição sobre c para que a parábola x²+c encontre a reta y=x.",
+          "rationale": "A existência de interseção equivale a raízes reais de uma equação quadrática.",
+          "strategy": [
+            "Iguale x²+c a x",
+            "Exija discriminante não negativo e isole c."
+          ],
+          "trap": "Excluir o caso de tangência, no qual há uma única interseção.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "12",
+          "page": 4,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_plana",
+          "topic": "Geometria Plana",
+          "subtopics": [
+            "Quadrado inscrito em triângulo retângulo"
+          ],
+          "skills": [
+            "semelhanca_de_triangulos",
+            "modelagem_geometrica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Encontra o maior quadrado com um vértice no ângulo reto de uma peça triangular.",
+          "rationale": "A semelhança de triângulos relaciona o lado do quadrado aos catetos 12 e 35.",
+          "strategy": [
+            "Chame o lado do quadrado de s e situe seu vértice oposto na hipotenusa",
+            "Use semelhança ou a equação da hipotenusa para resolver s."
+          ],
+          "trap": "Escolher metade do menor cateto sem considerar a inclinação da hipotenusa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "13",
+          "page": 4,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Arcos de circunferência na esfera"
+          ],
+          "skills": [
+            "proporcionalidade_angular",
+            "calculo_de_arcos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula o percurso polo–Equador–meridiano 45°L–polo em uma Terra esférica.",
+          "rationale": "O cálculo é de comprimentos de arcos proporcionais aos ângulos centrais.",
+          "strategy": [
+            "Conte um quarto da circunferência em cada trecho meridiano",
+            "Some o arco equatorial de 45 graus, equivalente a um oitavo da circunferência."
+          ],
+          "trap": "Confundir 45 graus com um quarto do Equador.",
+          "confidence": "high",
+          "reviewNote": "Classificada em Matemática: a esfera terrestre é o suporte para calcular arcos; não exige conhecimento externo de geografia física.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "14",
+          "page": 4,
+          "subject": "Geografia",
+          "topicId": "geo_cartografia",
+          "topic": "Cartografia e Fundamentos",
+          "subtopics": [
+            "Projeções cartográficas e distorções"
+          ],
+          "skills": [
+            "comparacao_de_projecoes",
+            "identificacao_de_distorcoes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara Mercator, Gall-Peters e Robinson quanto às distorções de representação.",
+          "rationale": "O princípio cartográfico central é a impossibilidade de planificar uma superfície curva sem deformações.",
+          "strategy": [
+            "Compare as três representações e seus contornos",
+            "Reconheça que a tecnologia muda as escolhas de projeção, mas não elimina a distorção."
+          ],
+          "trap": "Atribuir ausência de distorções à projeção computacional mais recente.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "15",
+          "page": 5,
+          "subject": "Geografia",
+          "topicId": "geo_economica_brasil",
+          "topic": "Geografia Econômica do Brasil",
+          "subtopics": [
+            "Integração amazônica e conflitos fundiários"
+          ],
+          "skills": [
+            "analise_espacial",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [
+            "História"
+          ],
+          "relatedTopicIds": [
+            "his_republica_liberal_atual"
+          ],
+          "summary": "Relaciona incentivos da SUDAM à expansão agropecuária e aos conflitos no campo.",
+          "rationale": "A associação entre política de ocupação e consequências territoriais é o núcleo da questão.",
+          "strategy": [
+            "Situe os incentivos amazônicos no período da ditadura militar",
+            "Associe aquisição especulativa de terras a grilagem, desmatamento e conflitos."
+          ],
+          "trap": "Supor que o incentivo empresarial resultou em reforma agrária ou conservação generalizada.",
+          "confidence": "high",
+          "reviewNote": "Questão interdisciplinar: a datação da SUDAM na ditadura é indispensável, assim como a leitura das consequências territoriais; Geografia é a área principal.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "16",
+          "page": 5,
+          "subject": "Geografia",
+          "topicId": "geo_geopolitica_regional",
+          "topic": "Geopolítica Regional Contemporânea",
+          "subtopics": [
+            "OPEP e países produtores de petróleo"
+          ],
+          "skills": [
+            "leitura_de_mapa",
+            "identificacao_de_organizacao_internacional"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a organização internacional cujos integrantes estão destacados no mapa.",
+          "rationale": "É necessário reconhecer a composição e a distribuição geográfica da OPEP.",
+          "strategy": [
+            "Observe a presença de países do Golfo, da África e da Venezuela",
+            "Compare essa composição com OPEP, OTAN, OCDE e BRICS."
+          ],
+          "trap": "Associar os países destacados a um bloco apenas por proximidade regional.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "17",
+          "page": 5,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Sismicidade e falhas geológicas"
+          ],
+          "skills": [
+            "analise_espacial",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica um terremoto baiano e a importância de estudar a sismicidade brasileira.",
+          "rationale": "O conceito decisivo é a reativação de falhas no interior de placas.",
+          "strategy": [
+            "Localize o evento no território brasileiro",
+            "Relacione o abalo às falhas geológicas e descarte explicações por abertura da crosta ou maremotos."
+          ],
+          "trap": "Concluir que um país afastado de bordas de placas não pode ter terremotos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "18",
+          "page": 6,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Fronteira do capital e gentrificação"
+          ],
+          "skills": [
+            "analise_espacial",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a expansão territorial estadunidense à renovação urbana do fim do século XX.",
+          "rationale": "A chave é a leitura geográfica de duas formas de expansão e valorização capitalista do espaço.",
+          "strategy": [
+            "Distinga expansão absoluta da fronteira de revalorização de áreas já ocupadas",
+            "Associe os processos à Marcha para o Oeste e à revitalização central."
+          ],
+          "trap": "Escolher imagens apenas por serem dos Estados Unidos, sem atender aos processos citados.",
+          "confidence": "medium",
+          "reviewNote": "A associação histórica à Marcha para o Oeste apoia a interpretação geográfica de fronteira e gentrificação. A taxonomia histórica não possui recorte específico adequado à expansão estadunidense do século XIX; não foi forçado um ID secundário.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "19",
+          "page": 7,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Urbanização e financeirização"
+          ],
+          "skills": [
+            "analise_espacial",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o contexto da zona crítica no esquema de urbanização de Lefebvre.",
+          "rationale": "O esquema exige reconhecer a urbanização avançada sob capitalismo financeiro e neoliberalismo.",
+          "strategy": [
+            "Leia a progressão do agrário ao urbano no esquema",
+            "Relacione a etapa avançada à financeirização e à crise hipotecária de 2008."
+          ],
+          "trap": "Misturar marcos de séculos anteriores com a urbanização contemporânea.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "20",
+          "page": 7,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Acordo Mercosul–União Europeia e ambiente"
+          ],
+          "skills": [
+            "analise_espacial",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica entraves ambientais à ratificação do acordo comercial em 2020.",
+          "rationale": "O fator decisivo é a conexão entre comércio internacional e compromisso climático.",
+          "strategy": [
+            "Identifique a exigência ligada ao Acordo de Paris",
+            "Relacione a resistência europeia ao desmatamento e às queimadas no Brasil."
+          ],
+          "trap": "Atribuir a resistência à saída brasileira da OMC, que não ocorreu.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "21",
+          "page": 7,
+          "subject": "Geografia",
+          "topicId": "geo_hidrogeografia",
+          "topic": "Hidrogeografia",
+          "subtopics": [
+            "Aquíferos e usos de água subterrânea"
+          ],
+          "skills": [
+            "analise_espacial",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a natureza geológica e as possibilidades de uso dos aquíferos.",
+          "rationale": "É necessário distinguir reservas subterrâneas permeáveis de águas superficiais ou processos vulcânicos.",
+          "strategy": [
+            "Defina aquífero como formação geológica com água em circulação natural",
+            "Associe seu aproveitamento a abastecimento e águas minerais ou termais."
+          ],
+          "trap": "Considerar toda água de aquífero inacessível às atividades humanas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "22",
+          "page": 7,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Altitude, temperatura e disponibilidade de oxigênio"
+          ],
+          "skills": [
+            "analise_espacial",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica as condições adversas para instalar uma estação no Everest.",
+          "rationale": "A dificuldade decorre de efeitos da altitude sobre temperatura e pressão do ar.",
+          "strategy": [
+            "Associe grande altitude à queda de temperatura",
+            "Reconheça a menor disponibilidade de oxigênio e descarte pressão atmosférica elevada."
+          ],
+          "trap": "Supor que a pressão atmosférica aumenta com a altitude.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "23",
+          "page": 8,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Biomas brasileiros e distribuição de serpentes"
+          ],
+          "skills": [
+            "cruzamento_de_mapas",
+            "relacao_bioma_distribuicao"
+          ],
+          "relatedSubjects": [
+            "Biologia"
+          ],
+          "relatedTopicIds": [
+            "bio_ecologia"
+          ],
+          "summary": "Cruza mapas de biomas, altitude e ocorrências de jararaca.",
+          "rationale": "O cruzamento espacial dos mapas e o estado de conservação dos biomas determinam a resposta.",
+          "strategy": [
+            "Compare a concentração de pontos com a Mata Atlântica",
+            "Confira a amplitude altimétrica e as ocorrências fora desse bioma."
+          ],
+          "trap": "Tomar uma ocorrência predominante como distribuição exclusiva.",
+          "confidence": "medium",
+          "reviewNote": "Predomina o cruzamento cartográfico entre biomas, relevo e pontos de ocorrência. A interpretação também exige a ecologia da Mata Atlântica; não é uma questão de anatomia de serpentes.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "24",
+          "page": 8,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Adaptações vegetais em biomas"
+          ],
+          "skills": [
+            "relacao_estrutura_funcao",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara características da vegetação na transição Cerrado–Mata Atlântica.",
+          "rationale": "A resposta depende da relação entre ambiente de bioma e frequência de características adaptativas.",
+          "strategy": [
+            "Associe caules tortuosos às condições do Cerrado",
+            "Reconheça o aumento relativo de folhas largas na floresta atlântica."
+          ],
+          "trap": "Transferir adaptações ao fogo e à insolação direta para a floresta úmida.",
+          "confidence": "high",
+          "reviewNote": "O conteúdo necessário é a adaptação ecológica da vegetação aos biomas; a identificação dos biomas não foi contada como disciplina secundária independente.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "25",
+          "page": 8,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Resíduos sólidos e decomposição"
+          ],
+          "skills": [
+            "leitura_de_grafico",
+            "avaliacao_de_destinacao_de_residuos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Associa tempos de decomposição à destinação adequada de resíduos.",
+          "rationale": "O problema exige avaliar persistência ambiental e gestão de resíduos, sem cálculo químico.",
+          "strategy": [
+            "Compare a maior persistência do grupo Y com a do grupo X",
+            "Associe PET ao grupo mais persistente e priorize reuso e reciclagem."
+          ],
+          "trap": "Indicar incineração de vidro ou atribuir papel ao grupo mais persistente.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "26",
+          "page": 9,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Dinâmica populacional e fluxos"
+          ],
+          "skills": [
+            "balanco_de_taxas_populacionais",
+            "leitura_de_graficos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Avalia a tendência do tamanho de uma população a partir de quatro taxas anuais.",
+          "rationale": "A variação populacional é o balanço entre natalidade e imigração contra mortalidade e emigração.",
+          "strategy": [
+            "Some natalidade e imigração em cada instante",
+            "Compare com mortalidade e emigração e perceba que os saldos se anulam."
+          ],
+          "trap": "Interpretar a elevação isolada da mortalidade como prova de redução da população.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "27",
+          "page": 9,
+          "subject": "Biologia",
+          "topicId": "bio_biotecnologia",
+          "topic": "Biotecnologia",
+          "subtopics": [
+            "Milho Bt e seleção de resistência"
+          ],
+          "skills": [
+            "avaliacao_de_transgenia",
+            "identificacao_de_selecao_de_resistencia"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Avalia benefício e risco do milho transgênico produtor de proteína Cry.",
+          "rationale": "A inserção gênica e a seleção de insetos resistentes são centrais para avaliar a tecnologia.",
+          "strategy": [
+            "Associe a morte das lagartas à redução de perdas na lavoura",
+            "Reconheça a seleção de variantes resistentes como possível efeito negativo."
+          ],
+          "trap": "Atribuir ao milho Bt maior valor nutricional ou resistência universal dos mamíferos a qualquer proteína.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "28",
+          "page": 9,
+          "subject": "Biologia",
+          "topicId": "bio_genetica",
+          "topic": "Genética",
+          "subtopics": [
+            "Herança recessiva ligada ao X"
+          ],
+          "skills": [
+            "leitura_de_heredograma",
+            "calculo_de_probabilidade_condicional"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa uma genealogia de adrenoleucodistrofia e o risco para um bebê.",
+          "rationale": "O padrão ligado ao X e a probabilidade de a gestante ser portadora determinam o risco.",
+          "strategy": [
+            "Reconheça o padrão recessivo ligado ao X nos homens afetados",
+            "Calcule a chance de III.2 portar o alelo e depois transmiti-lo a um filho menino."
+          ],
+          "trap": "Usar 50% sem considerar que a gestante pode não ser portadora.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "29",
+          "page": 9,
+          "subject": "Biologia",
+          "topicId": "bio_codigo_genetico_sintese",
+          "topic": "Código Genético e Síntese Proteica",
+          "subtopics": [
+            "Cromossomos duplicados antes da metáfase"
+          ],
+          "skills": [
+            "leitura_de_esquema_cromossomico",
+            "comparacao_de_cromatides"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Escolhe a representação de alelos em cromossomos distintos durante a mitose.",
+          "rationale": "A organização de cromátides irmãs e o desaparecimento da carioteca são o conhecimento decisivo.",
+          "strategy": [
+            "Situe a célula na prometáfase, com membrana nuclear desorganizada",
+            "Exija duas cópias homólogas de cada cromossomo e alelos iguais nas cromátides irmãs."
+          ],
+          "trap": "Colocar alelos de genes de cromossomos diferentes na mesma dupla de homólogos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "30",
+          "page": 10,
+          "subject": "Química",
+          "topicId": "qui_equilibrio",
+          "topic": "Equilíbrio Químico",
+          "subtopics": [
+            "Acidificação oceânica e carbonatos"
+          ],
+          "skills": [
+            "analise_de_equilibrio",
+            "relacao_acidificacao_calcificacao"
+          ],
+          "relatedSubjects": [
+            "Biologia"
+          ],
+          "relatedTopicIds": [
+            "bio_ecologia"
+          ],
+          "summary": "Relaciona dissolução de CO₂ à dificuldade de formação de estruturas calcárias marinhas.",
+          "rationale": "As duas equações de equilíbrio e a liberação de H⁺ explicam a alteração ambiental.",
+          "strategy": [
+            "Identifique que o CO₂ dissolvido aumenta a acidez e reduz a alcalinidade",
+            "Relacione essa mudança à menor formação de carbonato de cálcio em recifes."
+          ],
+          "trap": "Afirmar que acidificação eleva o pH ou favorece a calcificação.",
+          "confidence": "medium",
+          "reviewNote": "Classificação principal em Química pelo equilíbrio ácido-base/carbonatos. Biologia secundária é necessária para associar recifes a esqueletos calcários de corais.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "31",
+          "page": 10,
+          "subject": "Biologia",
+          "topicId": "bio_botanica",
+          "topic": "Botânica",
+          "subtopics": [
+            "Grupos vegetais e estruturas reprodutivas"
+          ],
+          "skills": [
+            "classificacao_de_grupos_vegetais",
+            "comparacao_de_estruturas_reprodutivas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Classifica três plantas pela presença de flores, sementes e frutos.",
+          "rationale": "A distinção entre gimnospermas, pteridófitas e angiospermas é suficiente para resolver.",
+          "strategy": [
+            "Associe sementes sem frutos à gimnosperma X",
+            "Classifique Y sem sementes e Z com flores e frutos entre os grupos oferecidos."
+          ],
+          "trap": "Usar a dispersão por aves como prova isolada de que a planta é angiosperma.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "32",
+          "page": 10,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Determinação sexual e aromatase"
+          ],
+          "skills": [
+            "leitura_de_grafico_enzimatico",
+            "relacao_hormonio_diferenciacao"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona temperatura de incubação, expressão gênica e sexo em tartarugas.",
+          "rationale": "O efeito hormonal da aromatase e a leitura do gráfico decidem a diferenciação sexual.",
+          "strategy": [
+            "Leia a maior atividade enzimática entre 28 e 30 graus",
+            "Associe conversão de testosterona em estradiol ao desenvolvimento feminino."
+          ],
+          "trap": "Confundir alta atividade da aromatase com maior masculinização.",
+          "confidence": "high",
+          "reviewNote": "A determinação sexual ambiental e a ação da aromatase foram alocadas em Fisiologia Animal; a expressão gênica aparece como mecanismo, sem exigir cálculo de herança.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "33",
+          "page": 10,
+          "subject": "Biologia",
+          "topicId": "bio_microbiologia",
+          "topic": "Microbiologia e Virologia",
+          "subtopics": [
+            "ISTs, agentes e vacinas"
+          ],
+          "skills": [
+            "classificacao_de_agentes_infecciosos",
+            "associacao_de_vacinas_e_sintomas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a combinação correta de agente, sintoma e prevenção de uma IST.",
+          "rationale": "A questão exige classificar agentes infecciosos e conhecer a vacina contra HPV.",
+          "strategy": [
+            "Verifique o tipo de agente em cada linha da tabela",
+            "Confronte sintomas e disponibilidade de vacina, reconhecendo o condiloma por HPV."
+          ],
+          "trap": "Aceitar HCV como bactéria ou existência de vacina preventiva contra HIV.",
+          "confidence": "high",
+          "reviewNote": "ISTs alocadas em Microbiologia e Virologia porque a distinção dos agentes e a vacina de HPV decidem a alternativa; não há mecanismo fisiológico a resolver.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "34",
+          "page": 11,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Deficiência de vitamina C e escorbuto"
+          ],
+          "skills": [
+            "identificacao_de_deficiencia_nutricional",
+            "interpretacao_de_sintomas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a doença descrita por Camões em sintomas de boca e gengivas.",
+          "rationale": "O diagnóstico por deficiência nutricional, e não o conhecimento literário, determina a resposta.",
+          "strategy": [
+            "Identifique inchaço e lesões gengivais como sinais de escorbuto",
+            "Associe a deficiência de vitamina C às dietas das longas navegações."
+          ],
+          "trap": "Selecionar uma epidemia histórica só por estar ligada às viagens marítimas.",
+          "confidence": "high",
+          "reviewNote": "O poema serve de descrição clínica: não é necessário conhecer Os Lusíadas para diagnosticar escorbuto; não foi contado em Literatura.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "35",
+          "page": 11,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Prata americana e economia mercantil"
+          ],
+          "skills": [
+            "contextualizacao_historica",
+            "analise_de_fontes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Avalia os efeitos globais da exploração espanhola de prata no século XVI.",
+          "rationale": "A circulação monetária e a exploração colonial do trabalho indígena explicam sua importância.",
+          "strategy": [
+            "Relacione a prata ao aumento da moeda nas redes comerciais",
+            "Considere o impacto da mineração sobre as estruturas sociais indígenas."
+          ],
+          "trap": "Antecipar industrialização ou fim do capital mercantil ao século XVI.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "36",
+          "page": 11,
+          "subject": "História",
+          "topicId": "his_brasil_colonia",
+          "topic": "Brasil Colônia",
+          "subtopics": [
+            "Expansão territorial da América portuguesa"
+          ],
+          "skills": [
+            "contextualizacao_historica",
+            "analise_de_fontes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa a ultrapassagem de Tordesilhas e o longo processo de definição das fronteiras.",
+          "rationale": "A mineração e as drogas do sertão integram uma história de interiorização territorial.",
+          "strategy": [
+            "Relacione mineração e exploração amazônica à ocupação para oeste",
+            "Diferencie expansão colonial da conclusão das fronteiras no início do século XX."
+          ],
+          "trap": "Tratar o Tratado de Tordesilhas como limite permanentemente obedecido.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "37",
+          "page": 11,
+          "subject": "História",
+          "topicId": "his_brasil_imperio",
+          "topic": "Brasil Império",
+          "subtopics": [
+            "Economia agroexportadora e dívida"
+          ],
+          "skills": [
+            "contextualizacao_historica",
+            "analise_de_fontes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece características estruturais da economia do Império brasileiro.",
+          "rationale": "A centralidade das exportações agrícolas e do endividamento externo distingue a economia imperial.",
+          "strategy": [
+            "Identifique a agricultura de exportação como eixo econômico",
+            "Verifique a dependência financeira e descarte industrialização dominante ou trabalho assalariado geral."
+          ],
+          "trap": "Confundir experiências industriais pontuais com predomínio industrial nacional.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "38",
+          "page": 12,
+          "subject": "História",
+          "topicId": "his_brasil_imperio",
+          "topic": "Brasil Império",
+          "subtopics": [
+            "Cabanagem e formação do Estado"
+          ],
+          "skills": [
+            "contextualizacao_historica",
+            "analise_de_fontes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a Cabanagem no quadro dos conflitos regenciais.",
+          "rationale": "A revolta revela exclusão social e violência na constituição do Estado nacional.",
+          "strategy": [
+            "Situe a revolta entre 1835 e 1840 no período regencial",
+            "Relacione sua repressão ao caráter socialmente excludente do Estado em formação."
+          ],
+          "trap": "Atribuir o conflito a imperialismos europeus da Segunda Revolução Industrial.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "39",
+          "page": 12,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Elites e cultura popular na Primeira República"
+          ],
+          "skills": [
+            "contextualizacao_historica",
+            "analise_de_fontes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a crítica de Rui Barbosa à apresentação do Corta-jaca em recepção presidencial.",
+          "rationale": "O discurso revela hierarquização cultural das elites republicanas e preferência europeizante.",
+          "strategy": [
+            "Observe os juízos depreciativos sobre danças populares",
+            "Compare-os ao prestígio atribuído à música de Wagner e à cultura europeia."
+          ],
+          "trap": "Ler a fala como defesa da incorporação igualitária da cultura popular.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "40",
+          "page": 12,
+          "subject": "História",
+          "topicId": "his_imperialismo_guerras",
+          "topic": "Imperialismo e Guerras Mundiais",
+          "subtopics": [
+            "Milícias fascistas e violência política"
+          ],
+          "skills": [
+            "contextualizacao_historica",
+            "analise_de_fontes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a atuação dos Camisas Negras na ascensão de Mussolini.",
+          "rationale": "O conhecimento das organizações paramilitares fascistas e suas funções é decisivo.",
+          "strategy": [
+            "Distinga Camisas Negras, SA e SS",
+            "Associe os italianos à intimidação e à violência contra opositores de Mussolini."
+          ],
+          "trap": "Trocar as funções históricas das organizações nazistas e fascistas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "41",
+          "page": 12,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Renascimento e representação do espaço"
+          ],
+          "skills": [
+            "analise_de_imagem_artistica",
+            "identificacao_de_caracteristicas_renascentistas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece um traço renascentista em A Primavera, de Botticelli.",
+          "rationale": "A questão exige identificar convenções artísticas do Renascimento em uma obra visual.",
+          "strategy": [
+            "Observe a composição figurativa e a construção do espaço da pintura",
+            "Diferencie perspectiva e referências clássicas de teocentrismo ou contrastes barrocos."
+          ],
+          "trap": "Identificar a figura central automaticamente como Virgem Maria.",
+          "confidence": "high",
+          "reviewNote": "Pintura e alternativas conferidas visualmente na página 12. A classificação trata de arte renascentista em História, sem usar apenas o autor ou a data como critério.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "42",
+          "page": 13,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Gripe espanhola e desigualdade urbana"
+          ],
+          "skills": [
+            "cruzamento_de_tabelas",
+            "contextualizacao_de_desigualdade_historica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona mortalidade por gripe em 1918 a moradia e serviços nos distritos paulistanos.",
+          "rationale": "O quadro histórico da epidemia mostra desigualdade social nas condições de vida e de mortalidade.",
+          "strategy": [
+            "Compare taxas por mil habitantes, não só óbitos absolutos",
+            "Cruze os distritos mais afetados com moradias coletivas e serviços precários."
+          ],
+          "trap": "Concluir que o impacto foi igual em toda a cidade ou independente das condições sanitárias.",
+          "confidence": "high",
+          "reviewNote": "A fonte histórica de 1918 e as desigualdades da cidade na Primeira República justificam História. Taxas e características distritais estão fornecidas, sem exigir técnica estatística externa.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "43",
+          "page": 13,
+          "subject": "História",
+          "topicId": "his_idade_antiga",
+          "topic": "Idade Antiga",
+          "subtopics": [
+            "Mulheres em Esparta e Atenas"
+          ],
+          "skills": [
+            "contextualizacao_historica",
+            "analise_de_fontes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Distingue a posição social das mulheres nas cidades gregas.",
+          "rationale": "A informação decisiva é a formação física e a autonomia patrimonial relativa das espartanas.",
+          "strategy": [
+            "Separe cidadania política de direitos patrimoniais",
+            "Associe educação física e administração de bens às mulheres de Esparta."
+          ],
+          "trap": "Projetar participação feminina na Eclésia ateniense.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "44",
+          "page": 14,
+          "subject": "História",
+          "topicId": "his_brasil_colonia",
+          "topic": "Brasil Colônia",
+          "subtopics": [
+            "Escravização indígena e africana"
+          ],
+          "skills": [
+            "contextualizacao_historica",
+            "analise_de_fontes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa a coexistência de diferentes origens de mão de obra escravizada no Brasil colonial.",
+          "rationale": "O texto exige reconhecer transição gradual e variações regionais do trabalho compulsório.",
+          "strategy": [
+            "Observe que a substituição descrita não foi instantânea",
+            "Relacione disponibilidade de capital e diversidade regional à continuidade da escravização indígena."
+          ],
+          "trap": "Supor que o tráfico africano eliminou imediatamente a escravidão indígena.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "45",
+          "page": 14,
+          "subject": "Física",
+          "topicId": "fis_leis_newton",
+          "topic": "Leis de Newton e Dinâmica do Movimento Retilíneo",
+          "subtopics": [
+            "Aceleração, equilíbrio e ação e reação"
+          ],
+          "skills": [
+            "avaliacao_de_proposicoes",
+            "distincao_de_pares_de_forcas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Avalia afirmações sobre salto, carro em velocidade constante e livro sobre mesa.",
+          "rationale": "As três leis de Newton distinguem aceleração de velocidade e pares de interação.",
+          "strategy": [
+            "Reconheça a aceleração gravitacional no topo do salto e resultante nula em movimento uniforme",
+            "Verifique que peso e normal atuam no mesmo livro e não são ação e reação."
+          ],
+          "trap": "Concluir que velocidade nula implica aceleração nula.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "46",
+          "page": 14,
+          "subject": "Física",
+          "topicId": "fis_estatica",
+          "topic": "Estática dos Corpos Sólidos e dos Fluidos",
+          "subtopics": [
+            "Momento de forças e equilíbrio"
+          ],
+          "skills": [
+            "leitura_de_diagrama_de_forcas",
+            "equilibrio_de_torques"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona forças em palitos que sustentam uma garrafa na borda da mesa.",
+          "rationale": "O equilíbrio de torques em torno do apoio A determina a relação solicitada.",
+          "strategy": [
+            "Escolha A como eixo para eliminar a força da mesa",
+            "Iguale o torque de P ao da componente vertical de F e use o ângulo com a vertical."
+          ],
+          "trap": "Usar seno quando o ângulo fornecido é com a vertical.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "47",
+          "page": 15,
+          "subject": "Física",
+          "topicId": "fis_gravitacao_circular",
+          "topic": "Gravitação e Movimento Circular",
+          "subtopics": [
+            "Período do pêndulo simples"
+          ],
+          "skills": [
+            "medida_de_periodo_em_grafico",
+            "calculo_de_comprimento_do_pendulo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Estima o comprimento do fio a partir do gráfico de aceleração de um celular oscilante.",
+          "rationale": "A medida do período e sua relação com o comprimento de um pêndulo são centrais.",
+          "strategy": [
+            "Meça o intervalo entre máximos consecutivos do gráfico",
+            "Use T=2π√(L/g) com os valores aproximados fornecidos."
+          ],
+          "trap": "Tomar o número de picos no intervalo inteiro como período em segundos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "48",
+          "page": 15,
+          "subject": "Física",
+          "topicId": "fis_energia",
+          "topic": "Dinâmica Energética e Transformações de Energia",
+          "subtopics": [
+            "Potência hidráulica e energia mensal"
+          ],
+          "skills": [
+            "balanco_de_energia",
+            "conversao_de_unidades"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Dimensiona painéis solares que complementam uma miniusina hidrelétrica.",
+          "rationale": "O balanço de energia exige converter vazão em potência e depois em geração mensal.",
+          "strategy": [
+            "Calcule a potência da queda por vazão mássica vezes gh",
+            "Converta a produção de 30 dias em kWh, subtraia da demanda e divida por 40, arredondando para cima."
+          ],
+          "trap": "Misturar potência em watts com energia em kWh ou arredondar para menos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "49",
+          "page": 15,
+          "subject": "Física",
+          "topicId": "fis_ondulatoria",
+          "topic": "Ondulatória",
+          "subtopics": [
+            "Ondas estacionárias e tensão na corda"
+          ],
+          "skills": [
+            "relacao_frequencia_tensao",
+            "proporcionalidade_quadratica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a massa suspensa à duplicação da frequência fundamental de uma corda.",
+          "rationale": "Com comprimento fixo, a frequência acompanha a raiz quadrada da tração.",
+          "strategy": [
+            "Use f=v/(2L) no primeiro harmônico",
+            "Combine v proporcional à raiz da tensão com tensão igual a mg para comparar as massas."
+          ],
+          "trap": "Supor que duplicar frequência exige somente duplicar massa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "50",
+          "page": 15,
+          "subject": "Física",
+          "topicId": "fis_termodinamica_gases",
+          "topic": "Termodinâmica dos Gases",
+          "subtopics": [
+            "Ciclo de gás ideal no diagrama p–V"
+          ],
+          "skills": [
+            "leitura_de_diagrama_pv",
+            "analise_da_primeira_lei"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Julga calor, trabalho e temperatura em etapas isobárica, isocórica e isotérmica.",
+          "rationale": "A primeira lei e a interpretação das transformações do gás determinam as afirmações.",
+          "strategy": [
+            "Reconheça trabalho nulo em BC e temperatura constante em CA",
+            "Analise o sinal do calor em BC e na compressão isotérmica CA."
+          ],
+          "trap": "Atribuir trabalho à etapa de volume constante ou aumento de temperatura à isotérmica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "51",
+          "page": 16,
+          "subject": "Física",
+          "topicId": "fis_optica_instrumental",
+          "topic": "Óptica Instrumental e da Visão",
+          "subtopics": [
+            "Correção de miopia"
+          ],
+          "skills": [
+            "leitura_de_tracado_de_raios",
+            "identificacao_de_lente_corretiva"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o traçado de raios de uma lente corretiva para indivíduo míope.",
+          "rationale": "A correção exige uma lente divergente que ajuste a focalização à retina.",
+          "strategy": [
+            "Recorde que a imagem do míope se forma antes da retina",
+            "Selecione a lente divergente cujo traçado leva a focalização final à retina."
+          ],
+          "trap": "Escolher lente convergente por associar correção visual sempre à concentração de raios.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "52",
+          "page": 16,
+          "subject": "Física",
+          "topicId": "fis_eletrostatica",
+          "topic": "Eletrostática e Campo Elétrico",
+          "subtopics": [
+            "Indução em condutores em contato"
+          ],
+          "skills": [
+            "analise_de_inducao",
+            "conservacao_de_carga"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina os sinais das cargas em três latas próximas a dois balões negativos.",
+          "rationale": "A redistribuição de elétrons por indução explica os sinais com conservação da carga total.",
+          "strategy": [
+            "Considere os elétrons repelidos de ambas as extremidades para a lata central",
+            "Associe falta de elétrons nas latas externas a cargas positivas e excesso central a negativa."
+          ],
+          "trap": "Achar que a ausência de contato com os balões impede qualquer separação de cargas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "53",
+          "page": 16,
+          "subject": "Física",
+          "topicId": "fis_circuitos",
+          "topic": "Circuitos Elétricos",
+          "subtopics": [
+            "Associação paralela e interruptores"
+          ],
+          "skills": [
+            "leitura_de_circuitos",
+            "identificacao_de_ramos_independentes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Escolhe o circuito que acende duas lâmpadas de modo independente na tensão nominal.",
+          "rationale": "A independência e a tensão constante em cada lâmpada exigem ramos paralelos com chaves próprias.",
+          "strategy": [
+            "Identifique ramos ligados aos mesmos terminais da fonte",
+            "Verifique uma chave em série com cada lâmpada, sem alterar a outra."
+          ],
+          "trap": "Escolher ligação em série ou uma única chave para ambas as lâmpadas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "54",
+          "page": 17,
+          "subject": "Física",
+          "topicId": "fis_energia",
+          "topic": "Dinâmica Energética e Transformações de Energia",
+          "subtopics": [
+            "Trabalho gravitacional e elétrico"
+          ],
+          "skills": [
+            "calculo_de_trabalho",
+            "analise_de_perpendicularidade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula os trabalhos sobre uma esfera elevada verticalmente em campo elétrico horizontal.",
+          "rationale": "O produto escalar entre força e deslocamento decide o trabalho de cada força.",
+          "strategy": [
+            "Associe o deslocamento para cima ao trabalho gravitacional negativo",
+            "Observe a perpendicularidade entre força elétrica e deslocamento para concluir trabalho elétrico nulo."
+          ],
+          "trap": "Usar qEh apesar de campo elétrico e movimento serem perpendiculares.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "55",
+          "page": 17,
+          "subject": "Física",
+          "topicId": "fis_energia",
+          "topic": "Dinâmica Energética e Transformações de Energia",
+          "subtopics": [
+            "Equivalência massa–energia"
+          ],
+          "skills": [
+            "calculo_de_energia_irradiada",
+            "estimativa_de_ordem_de_grandeza"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Estima a massa convertida em energia pelo Sol ao longo de sua existência.",
+          "rationale": "A potência irradiada integrada no tempo e E=mc² determinam a ordem de grandeza.",
+          "strategy": [
+            "Converta a idade solar de anos para segundos e multiplique pela potência",
+            "Divida a energia por c² e compare as potências de dez."
+          ],
+          "trap": "Dividir por c em vez de c² ou esquecer a conversão de anos para segundos.",
+          "confidence": "high",
+          "reviewNote": "Equivalência massa–energia alocada em Dinâmica Energética, que a inclui explicitamente na taxonomia; não foi deslocada automaticamente para Física Moderna.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "56",
+          "page": 17,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Localização de informação em texto científico"
+          ],
+          "skills": [
+            "compreensao_em_ingles",
+            "inferencia_contextual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica por que a composição química das estrelas importa para a possibilidade de vida.",
+          "rationale": "O conteúdo é fornecido pelo texto em inglês e dispensa conhecimento prévio de astronomia.",
+          "strategy": [
+            "Localize a afirmação sobre planetas e surgimento de vida no primeiro parágrafo",
+            "Escolha a paráfrase em português que preserve essa relação."
+          ],
+          "trap": "Substituir a afirmação textual por uma hipótese astronômica não mencionada.",
+          "confidence": "high",
+          "reviewNote": "Astronomia é tema do texto, mas as informações necessárias são dadas em inglês; não há matéria secundária de Física.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "57",
+          "page": 17,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Vocabulário contextual e metáfora"
+          ],
+          "skills": [
+            "vocabulario_contextual",
+            "interpretacao_de_metafora_em_ingles"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta yardstick na caracterização do Sol.",
+          "rationale": "O sentido figurado da palavra é esclarecido pela explicação de reference point.",
+          "strategy": [
+            "Leia a frase e a justificativa sobre abundância dos elementos",
+            "Associe yardstick a padrão de comparação ou parâmetro."
+          ],
+          "trap": "Traduzir a palavra literalmente sem considerar a explicação do astrofísico.",
+          "confidence": "high",
+          "reviewNote": "Vocabulário contextual em inglês; o parâmetro solar é explicado no próprio texto.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "58",
+          "page": 17,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Critério comparativo e compreensão textual"
+          ],
+          "skills": [
+            "compreensao_em_ingles",
+            "inferencia_contextual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o critério tradicional para julgar a normalidade de estrelas.",
+          "rationale": "A última parte do texto explicita a comparação química com o Sol.",
+          "strategy": [
+            "Localize o período sobre julgar estrelas normais ou não",
+            "Identifique a semelhança de composição química com o Sol como critério."
+          ],
+          "trap": "Confundir o critério textual com luminosidade, densidade ou gravitação.",
+          "confidence": "high",
+          "reviewNote": "Compreensão de informação fornecida em inglês; não exige cálculo ou teoria astronômica externa.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "59",
+          "page": 18,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Causa da fama efêmera em redes sociais"
+          ],
+          "skills": [
+            "compreensao_em_ingles",
+            "inferencia_contextual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica um fator da perda de popularidade em plataformas digitais.",
+          "rationale": "A resposta exige localizar a causa expressa pela perda de interesse da audiência.",
+          "strategy": [
+            "Leia o parágrafo que descreve como a fama desaparece",
+            "Associe audience gets bored à perda de interesse do público."
+          ],
+          "trap": "Atribuir o fenômeno à falta de conhecimento de hardware, ausente do texto.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "60",
+          "page": 18,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Analogia e imprevisibilidade"
+          ],
+          "skills": [
+            "interpretacao_de_analogia",
+            "inferencia_em_ingles"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a comparação das redes sociais a um jardim de vaga-lumes.",
+          "rationale": "O efeito da imagem se apoia no surgimento e desaparecimento imprevisível de luzes.",
+          "strategy": [
+            "Observe os verbos de acender e apagar e os qualificadores da comparação",
+            "Relacione-os ao caráter imprevisível da atenção e da fama."
+          ],
+          "trap": "Transformar a analogia em garantia de igualdade ou funcionalidade dos grupos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "61",
+          "page": 18,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Interpretação de letra de canção"
+          ],
+          "skills": [
+            "compreensao_em_ingles",
+            "inferencia_contextual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Infere a dificuldade central da voz que recusa trabalhar na fazenda de Maggie.",
+          "rationale": "A compreensão das cenas em inglês revela restrições à liberdade individual.",
+          "strategy": [
+            "Compare as queixas sobre ideias, punições e vigilância",
+            "Identifique a limitação da expressão pessoal como elemento comum."
+          ],
+          "trap": "Tomar a relação de trabalho como falta de criatividade do trabalhador.",
+          "confidence": "high",
+          "reviewNote": "A canção é tratada como compreensão de inglês, sem exigir a história do álbum ou a biografia do compositor.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "62",
+          "page": 18,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Provérbios e sentido figurado"
+          ],
+          "skills": [
+            "interpretacao_de_proverbios",
+            "associacao_de_sentidos_figurados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona três provérbios a precipitação, ingratidão e esperança.",
+          "rationale": "A resolução exige compreender expressões idiomáticas e seu ensinamento.",
+          "strategy": [
+            "Interprete o aviso sobre contar galinhas e sobre morder a mão que alimenta",
+            "Associe a borda prateada da nuvem à esperança e confira a sequência."
+          ],
+          "trap": "Traduzir as imagens literalmente sem recuperar a ideia moral de cada provérbio.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "63",
+          "page": 19,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Valor de oração reduzida temporal"
+          ],
+          "skills": [
+            "analise_de_oracao_reduzida",
+            "identificacao_de_relacao_temporal_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa as noções simultâneas expressas por ao tropeçar.",
+          "rationale": "A oração reduzida de infinitivo admite leitura temporal e causal no contexto.",
+          "strategy": [
+            "Reescreva o trecho como quando tropeçou",
+            "Verifique também a relação de causa entre o tropeço e a facada."
+          ],
+          "trap": "Classificar apenas pela sequência cronológica e ignorar a causa implicada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "64",
+          "page": 19,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Emprego da vírgula"
+          ],
+          "skills": [
+            "analise_de_pontuacao",
+            "identificacao_de_elipse_e_adjunto"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara vírgulas que marcam elipse verbal e deslocamento de adjunto.",
+          "rationale": "A função sintática da pontuação, não o tema do texto, determina a correspondência.",
+          "strategy": [
+            "Reconheça o verbo elíptico após E depois",
+            "Compare a separação de para sempre à de um adjunto adverbial final e confira o par equivalente."
+          ],
+          "trap": "Equiparar toda vírgula a pausa livre, sem analisar a construção.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "65",
+          "page": 19,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Pronome relativo como sujeito"
+          ],
+          "skills": [
+            "analise_de_pronome_relativo",
+            "identificacao_de_sujeito"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a função sintática de que em oração relativa.",
+          "rationale": "O relativo retoma a editora e ocupa a posição de sujeito de impôs.",
+          "strategy": [
+            "Substitua que pelo antecedente editora DC Comics",
+            "Busque entre os termos indicados outro sujeito, como seus pais de decidiram."
+          ],
+          "trap": "Confundir o relativo sujeito com objeto por estar após uma vírgula.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "66",
+          "page": 19,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Narrador e contradição em Angústia"
+          ],
+          "skills": [
+            "analise_literaria",
+            "relacao_trecho_obra"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa a oscilação do ponto de vista de Luís da Silva no romance.",
+          "rationale": "A interpretação solicitada se refere ao plano maior de Angústia e à instabilidade de seu narrador.",
+          "strategy": [
+            "Observe as justificativas contraditórias para a inocência de Marina",
+            "Relacione a oscilação ao narrador do romance e à convivência de posições contrárias."
+          ],
+          "trap": "Atribuir neutralidade ou maturidade estável a uma voz marcada por contradições.",
+          "confidence": "high",
+          "reviewNote": "Literatura porque o comando pede o plano maior de Angústia; não basta a autoria de Graciliano Ramos para essa classificação.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "67",
+          "page": 19,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Formação de palavras por cruzamento vocabular"
+          ],
+          "skills": [
+            "analise_morfologica",
+            "identificacao_de_cruzamento_vocabular"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece palavras formadas por fusão parcial, como dramédia.",
+          "rationale": "A identificação do processo morfológico exige distinguir fusão vocabular de composição e derivação.",
+          "strategy": [
+            "Decomponha dramédia em drama e comédia",
+            "Compare as alternativas e identifique fusões em deleitura e namorido."
+          ],
+          "trap": "Confundir qualquer palavra com dois radicais com cruzamento vocabular.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "68",
+          "page": 20,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Conjugação verbal e pessoa gramatical"
+          ],
+          "skills": [
+            "flexao_verbal",
+            "preservacao_de_tempo_e_modo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Converte formas dirigidas a vós para a terceira pessoa do plural.",
+          "rationale": "A operação decisiva é conservar tempo e modo ao mudar a pessoa verbal.",
+          "strategy": [
+            "Identifique presente em sois e ides e imperfeito em podíeis e éreis",
+            "Conjugue as quatro formas em eles, preservando seus tempos."
+          ],
+          "trap": "Trocar o imperfeito podiam por futuro do pretérito poderiam.",
+          "confidence": "high",
+          "reviewNote": "A mudança de pessoa verbal independe do conhecimento de Romanceiro da Inconfidência; classificada em Português.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "69",
+          "page": 20,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Abstração e concretização na linguagem poética"
+          ],
+          "skills": [
+            "interpretacao_de_imagens_poeticas",
+            "comparacao_de_sentidos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a potência das palavras em poema de Cecília Meireles.",
+          "rationale": "O contraste entre vento e instrumentos de execução é recuperável no próprio poema.",
+          "strategy": [
+            "Observe a imagem impalpável das palavras como vento",
+            "Confronte-a com madeira, corda e enforcamento para reconhecer efeitos concretos na história."
+          ],
+          "trap": "Entender a mobilidade das palavras como ausência de efeitos históricos.",
+          "confidence": "medium",
+          "reviewNote": "Fronteira editorial: o poema é literário, mas o contraste necessário está integralmente nos versos reproduzidos, sem exigir conhecimento da obra; classificada em Português.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "70",
+          "page": 20,
+          "subject": "História",
+          "topicId": "his_republica_liberal_atual",
+          "topic": "República Liberal e Brasil Contemporâneo",
+          "subtopics": [
+            "Tiradentes e resistência à ditadura"
+          ],
+          "skills": [
+            "contextualizacao_historica",
+            "analise_de_fontes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a evocação de Tiradentes em canção de 1973 à resistência política.",
+          "rationale": "A data da canção e a reapropriação do símbolo nacional exigem contexto da ditadura militar.",
+          "strategy": [
+            "Situe 1973 no período de autoritarismo brasileiro",
+            "Leia a voz que supera a do rei como atualização do símbolo de liberdade contra a opressão."
+          ],
+          "trap": "Restringir a canção à crítica colonial e ignorar seu contexto de produção.",
+          "confidence": "high",
+          "reviewNote": "A atualização de Tiradentes em 1973 exige reconhecer o contexto da ditadura; o conhecimento de teoria ou história literária não é decisivo.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "71",
+          "page": 20,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Comissário e Sem Medo em Mayombe"
+          ],
+          "skills": [
+            "analise_literaria",
+            "relacao_trecho_obra"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta duas falas do Comissário em momentos diferentes do romance.",
+          "rationale": "A resposta depende de reconstruir a relação com Ondina e a situação final de Sem Medo.",
+          "strategy": [
+            "Contextualize a primeira fala no conflito amoroso envolvendo Ondina",
+            "Relacione o pedido de perdão ao companheiro baleado e à mudança do Comissário."
+          ],
+          "trap": "Tomar a acusação de homossexualidade como descrição factual da relação entre os dois.",
+          "confidence": "high",
+          "reviewNote": "Literatura: a situação das duas falas e a relação entre Comissário, Ondina e Sem Medo exigem conhecimento de Mayombe além dos excertos.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "72",
+          "page": 21,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Substituição lexical em contexto"
+          ],
+          "skills": [
+            "substituicao_lexical",
+            "preservacao_de_sentido_contextual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Escolhe equivalentes para quatro expressões de Nove noites.",
+          "rationale": "A questão exige preservar sentidos contextuais, sem conhecimento externo da obra.",
+          "strategy": [
+            "Leia paternalismo, historinha e desentendido no diálogo tenso",
+            "Confronte bovina à insistência e selecione os quatro equivalentes coerentes."
+          ],
+          "trap": "Escolher sinônimos isolados de dicionário que alteram a relação entre as personagens.",
+          "confidence": "high",
+          "reviewNote": "Substituição vocabular resolvida pelo excerto; não exige conhecer o restante de Nove noites.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "73",
+          "page": 21,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Investigação narrativa em Nove noites"
+          ],
+          "skills": [
+            "analise_literaria",
+            "relacao_trecho_obra"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o caráter investigativo do romance e seu vínculo com testemunhos dos Krahô.",
+          "rationale": "A classificação do projeto narrativo exige relacionar o diálogo ao modo de construção de Nove noites.",
+          "strategy": [
+            "Observe as perguntas insistentes sobre o interesse pelo passado",
+            "Relacione a pesquisa do narrador aos testemunhos que sustentam a investigação do romance."
+          ],
+          "trap": "Reduzir a obra a relato etnográfico ou autobiográfico do narrador na aldeia.",
+          "confidence": "medium",
+          "reviewNote": "Fronteira editorial: mantida em Literatura porque pergunta pelo caráter do romance e seus testemunhos, articulando o diálogo ao projeto investigativo de Nove noites.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "74",
+          "page": 21,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Inferência sobre reação do narrador"
+          ],
+          "skills": [
+            "inferencia_textual",
+            "analise_de_reacao_do_narrador"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta o desconforto do narrador diante das perguntas de Leusipo.",
+          "rationale": "A reação de frustração e o fracasso da diplomacia estão explícitos no excerto.",
+          "strategy": [
+            "Observe as tentativas de explicar ficção e mitologia",
+            "Compare-as à conclusão de que o narrador não consegue responder à insistência de Leusipo."
+          ],
+          "trap": "Supor abandono definitivo do projeto ou êxito em submeter o interlocutor.",
+          "confidence": "medium",
+          "reviewNote": "Fronteira editorial: a pergunta limita-se à cena apresentada e à reação visível no excerto; classificada em Português, diferentemente da questão 73.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "75",
+          "page": 21,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Ironia e ambivalência em Quincas Borba"
+          ],
+          "skills": [
+            "analise_literaria",
+            "relacao_trecho_obra"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica no primeiro capítulo a reversibilidade entre cômico e trágico.",
+          "rationale": "A questão relaciona o trecho inicial a um elemento estrutural do romance machadiano.",
+          "strategy": [
+            "Observe Rubião celebrar uma herança decorrente de mortes",
+            "Relacione essa inversão de desgraça em vantagem à ambivalência que atravessa o romance."
+          ],
+          "trap": "Confundir a intervenção do narrador com narração em primeira pessoa pelo protagonista.",
+          "confidence": "high",
+          "reviewNote": "Literatura: o enunciado pede um elemento de construção do romance, vinculando a passagem inicial à estrutura de Quincas Borba.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "76",
+          "page": 22,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Lirismo reflexivo em Claro enigma"
+          ],
+          "skills": [
+            "analise_literaria",
+            "relacao_trecho_obra"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa melancolia, recolhimento e incomunicabilidade em Remissão.",
+          "rationale": "O poema é situado explicitamente como expressão da condição do escritor em Claro enigma.",
+          "strategy": [
+            "Observe a poesia consumida pelo tempo e a solidão da escrita",
+            "Relacione as imagens ao lirismo reflexivo e ao mundo indiferente à voz poética."
+          ],
+          "trap": "Ler a escrita como garantia de perenidade ou como escapismo espiritual confortável.",
+          "confidence": "high",
+          "reviewNote": "Literatura: o comando situa Remissão no lirismo reflexivo de Claro enigma, exigindo relação entre poema e conjunto da obra.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "77",
+          "page": 22,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Polissemia e humor em tirinha"
+          ],
+          "skills": [
+            "identificacao_de_polissemia",
+            "interpretacao_de_humor"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica o humor no uso da expressão tomar distância por Mafalda.",
+          "rationale": "A graça resulta da mudança de sentido de tomar entre remédio e afastamento.",
+          "strategy": [
+            "Recupere a expectativa de uma resposta sobre medicamento",
+            "Compare-a à resposta que desloca tomar para a ideia de afastamento."
+          ],
+          "trap": "Buscar o efeito cômico na antonímia ou na semelhança de sons.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "78",
+          "page": 22,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Contraposição e conclusão de poema"
+          ],
+          "skills": [
+            "analise_de_contraponto",
+            "inferencia_de_conclusao_poetica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a aproximação final entre usina e banguê em Psicanálise do açúcar.",
+          "rationale": "A conclusão retoma o trabalhador rural como base comum aos dois processos descritos.",
+          "strategy": [
+            "Liste os contrastes entre tecnologia industrial e engenho primitivo",
+            "Leia a adversativa final e reconheça a permanência do trabalho agrícola na base de ambos."
+          ],
+          "trap": "Atribuir a diferença à espécie da cana ou à estação do ano.",
+          "confidence": "medium",
+          "reviewNote": "Fronteira editorial: a contraposição entre usina e banguê e sua superação são reconstruídas no poema reproduzido; classificada em Português, sem pressupor conhecimento de A Educação pela Pedra.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "79",
+          "page": 22,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Coesão referencial"
+          ],
+          "skills": [
+            "identificacao_de_antecedente",
+            "analise_de_coesao_referencial"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o referente de ela em passagem sobre a brancura do açúcar.",
+          "rationale": "A recuperação do antecedente nominal exige encadear a frase ao verso anterior.",
+          "strategy": [
+            "Leia a expressão nominal mais instável das brancuras",
+            "Substitua ela por esse antecedente e teste a coerência de dura."
+          ],
+          "trap": "Retomar usina apenas porque é um substantivo feminino próximo.",
+          "confidence": "high",
+          "reviewNote": "Coesão referencial no próprio trecho poético; não foi contada em Literatura por causa da autoria de João Cabral.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "80",
+          "page": 23,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Cristalização e separação de misturas"
+          ],
+          "skills": [
+            "leitura_de_fluxograma",
+            "distincao_de_processos_de_separacao"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Distingue o uso poético de sublimar dos processos reais de obtenção do açúcar.",
+          "rationale": "A decisão exige reconhecer cristalização e centrifugação como separações físicas.",
+          "strategy": [
+            "Acompanhe a passagem de xarope para cristais no fluxograma",
+            "Compare-a à sublimação e identifique o sentido metafórico do verbo no poema."
+          ],
+          "trap": "Confundir formação de cristais a partir da solução com passagem direta de sólido para vapor.",
+          "confidence": "high",
+          "reviewNote": "O poema é retomado, mas a distinção entre cristalização, centrifugação e sublimação exige Química; não depende do conhecimento da obra poética.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "81",
+          "page": 23,
+          "subject": "Química",
+          "topicId": "qui_modelos_atomicos",
+          "topic": "Modelos Atômicos e Estrutura do Átomo",
+          "subtopics": [
+            "Família periódica e hidrogênio"
+          ],
+          "skills": [
+            "leitura_de_tabela_periodica",
+            "comparacao_de_propriedades"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a característica que diferencia o hidrogênio dos metais alcalinos no meme.",
+          "rationale": "A posição na família 1 não torna o hidrogênio um metal alcalino com as mesmas ligações.",
+          "strategy": [
+            "Identifique os elementos representados como membros da primeira coluna",
+            "Compare a tendência covalente do H com o comportamento iônico dos metais alcalinos."
+          ],
+          "trap": "Inferir propriedades químicas idênticas só pela posição na coluna.",
+          "confidence": "high",
+          "reviewNote": "O meme foi inspecionado: a família reúne H e os metais alcalinos. A cultura do jogo é contextual e não necessária à resolução.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "82",
+          "page": 23,
+          "subject": "Química",
+          "topicId": "qui_oxirreducao",
+          "topic": "Oxirredução",
+          "subtopics": [
+            "Corrosão e proteção por ligas"
+          ],
+          "skills": [
+            "leitura_de_tabela",
+            "comparacao_de_taxas_de_corrosao"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara taxas de corrosão de titânio puro e de ligas com metais nobres.",
+          "rationale": "A leitura quantitativa da tabela identifica quais adições reduzem ou agravam a corrosão.",
+          "strategy": [
+            "Compare as taxas das ligas às do titânio puro em cada concentração",
+            "Reconheça Pd, Rh, Pt e Ru como melhores resultados e Cu e Au entre os piores."
+          ],
+          "trap": "Interpretar taxa maior como maior proteção ou o asterisco como reação lenta.",
+          "confidence": "high",
+          "reviewNote": "A tabela permite comparar taxas de corrosão; não é necessário supor potenciais-padrão de eletrodo que não foram fornecidos.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "83",
+          "page": 24,
+          "subject": "Química",
+          "topicId": "qui_organica_reacoes",
+          "topic": "Reações e Aplicações Orgânicas",
+          "subtopics": [
+            "Desidratação na formação de HMF"
+          ],
+          "skills": [
+            "leitura_de_estrutura_organica",
+            "balanco_de_atomos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica as espécies eliminadas em duas etapas de transformação da frutose.",
+          "rationale": "O balanço estrutural de átomos e ligações permite reconhecer a perda de água.",
+          "strategy": [
+            "Compare a espécie 2 à 3 e acompanhe O e H eliminados",
+            "Repita a comparação de 3 ao HMF e identifique água em ambas as etapas."
+          ],
+          "trap": "Contar uma hidroxila isolada sem considerar o hidrogênio eliminado na mesma etapa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "84",
+          "page": 24,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Quantidade de matéria e limite de contaminante"
+          ],
+          "skills": [
+            "conversao_mol_massa",
+            "calculo_de_concentracao"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula o teor de HMF no mel e o compara a limites nacionais e internacionais.",
+          "rationale": "A conversão de milimol em massa e a concentração em mg/kg determinam a classificação.",
+          "strategy": [
+            "Converta 0,2 mmol de HMF em miligramas usando 126 g/mol",
+            "Divida pelos 0,5 kg de mel e compare aos limites de 40, 60 e 80 mg/kg."
+          ],
+          "trap": "Comparar a massa total no frasco diretamente com um limite por quilograma.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "85",
+          "page": 24,
+          "subject": "Química",
+          "topicId": "qui_organica_reacoes",
+          "topic": "Reações e Aplicações Orgânicas",
+          "subtopics": [
+            "Polimerização e monômeros"
+          ],
+          "skills": [
+            "leitura_de_modelo_particulado",
+            "identificacao_de_polimerizacao"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a formação progressiva de um polímero em representação de partículas.",
+          "rationale": "A reunião de unidades distintas em cadeias extensas caracteriza polimerização.",
+          "strategy": [
+            "Compare as partículas separadas ao encadeamento final",
+            "Identifique os dois tipos de unidades como monômeros que formam um polímero."
+          ],
+          "trap": "Confundir a criação de ligações entre unidades com mera mudança de estado físico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "86",
+          "page": 25,
+          "subject": "Química",
+          "topicId": "qui_oxirreducao",
+          "topic": "Oxirredução",
+          "subtopics": [
+            "Oxidação, respiração e modelos atômicos"
+          ],
+          "skills": [
+            "avaliacao_de_equacoes",
+            "distincao_de_modelos_atomicos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Julga conceitos químicos apresentados em poema com equações e modelo atômico.",
+          "rationale": "A afirmação correta identifica alteração de estados de oxidação na corrosão do ferro.",
+          "strategy": [
+            "Distinga a reação de respiração da fotossíntese e reconheça a corrosão do ferro",
+            "Compare o desenho orbital ao modelo de Thomson e avalie as três proposições."
+          ],
+          "trap": "Aceitar a equação com consumo de oxigênio como fotossíntese ou atribuir órbitas a Thomson.",
+          "confidence": "medium",
+          "reviewNote": "Questão interna à Química com três núcleos: respiração/energia, corrosão e modelo atômico. Oxirredução foi escolhida por ser o núcleo da única proposição correta; o texto poético é suporte, não conteúdo de Literatura.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "87",
+          "page": 25,
+          "subject": "Química",
+          "topicId": "qui_equilibrio",
+          "topic": "Equilíbrio Químico",
+          "subtopics": [
+            "Deslocamento de equilíbrio e solubilidade"
+          ],
+          "skills": [
+            "analise_de_deslocamento_de_equilibrio",
+            "uso_de_dados_de_solubilidade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Prevê cores de complexos de cobalto após adicionar três sais.",
+          "rationale": "A disponibilidade de cloreto solúvel desloca o equilíbrio para o complexo azul.",
+          "strategy": [
+            "Identifique que sulfato não fornece cloreto e que AgCl é pouco solúvel",
+            "Compare NaCl ao KCl solúvel do ensaio conhecido para prever a sequência final."
+          ],
+          "trap": "Supor que todo sal de cloreto fornece a mesma concentração de íons livres.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "88",
+          "page": 26,
+          "subject": "Química",
+          "topicId": "qui_organica_reacoes",
+          "topic": "Reações e Aplicações Orgânicas",
+          "subtopics": [
+            "Reconstrução de aminoácido em reação de Maillard"
+          ],
+          "skills": [
+            "reconstrucao_de_estrutura_organica",
+            "conservacao_de_grupos_funcionais"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Escolhe o aminoácido precursor de um intermediário que pode formar acrilamida.",
+          "rationale": "A comparação de estruturas e das perdas de CO₂ e H₂O permite reconstituir o reagente.",
+          "strategy": [
+            "Use a reação-modelo da glicina para reconhecer a transformação do grupo amino",
+            "Conserve a cadeia lateral com amida e recoloque o grupo carboxila do aminoácido precursor."
+          ],
+          "trap": "Escolher uma molécula com amida mas sem a posição correta do grupo amino e da carboxila.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "89",
+          "page": 26,
+          "subject": "Química",
+          "topicId": "qui_polaridade_geometria",
+          "topic": "Polaridade das Ligações e Geometria Molecular",
+          "subtopics": [
+            "Solubilidade e interação hidrofóbica"
+          ],
+          "skills": [
+            "relacao_solubilidade_salinidade",
+            "analise_de_interacoes_intermoleculares"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica o menor rendimento de um skimmer em água doce.",
+          "rationale": "A salinidade altera a solubilidade das partes apolares e a interação com as bolhas.",
+          "strategy": [
+            "Compare a solubilidade da matéria orgânica em água doce e salgada",
+            "Relacione menor concentração de sais à maior permanência das regiões apolares na água e à menor captura por bolhas."
+          ],
+          "trap": "Afirmar que a molécula de água muda sua polaridade quando se acrescenta sal.",
+          "confidence": "high",
+          "reviewNote": "A explicação é de solubilidade/interações moleculares e efeito dos sais; o aquarismo não constitui matéria biológica secundária.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "90",
+          "page": 26,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Destilação global de poluentes"
+          ],
+          "skills": [
+            "relacao_volatilizacao_temperatura",
+            "interpretacao_de_transporte_atmosferico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica o transporte de pesticidas voláteis até regiões polares.",
+          "rationale": "A diferença de volatilização e condensação com a temperatura fundamenta a analogia com destilação.",
+          "strategy": [
+            "Associe regiões quentes à evaporação dos compostos",
+            "Relacione transporte atmosférico e condensação em regiões frias à deposição polar."
+          ],
+          "trap": "Substituir o transporte atmosférico por correntes marítimas ou atribuir afinidade específica dos poluentes pelo gelo.",
+          "confidence": "high",
+          "reviewNote": "A destilação global é explicada pelo princípio físico de separação/volatilização, agrupado em Análises Quantitativas e Estequiometria na taxonomia, que inclui separação de misturas.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        }
+      ]
+    }
+  ]
+}

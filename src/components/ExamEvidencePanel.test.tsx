@@ -2,11 +2,11 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { expect, it } from 'vitest';
 import { ExamEvidencePanel } from './ExamEvidencePanel';
-it('separa recortes completos e amostras e mostra análises com origem e comandos', async () => {
+it('substitui amostras por recortes completos e mostra análises com origem e comandos', async () => {
   render(<MemoryRouter><ExamEvidencePanel subject="Biologia" topicIds={['bio_ecologia', 'bio_evolucao']} /></MemoryRouter>);
   expect(screen.queryByText('18.5%')).toBeNull();
   expect(screen.getByText(/UNICAMP 2026.*1ª fase.*Recorte completo da matéria/)).toBeInTheDocument();
-  expect(screen.getByText(/UNESP 2025.*Amostra selecionada/)).toBeInTheDocument();
+  expect(screen.getByText(/UNESP 2025.*1ª fase.*Recorte completo da matéria/)).toBeInTheDocument();
   fireEvent.change(screen.getByLabelText('Banca das evidências'), { target: { value: 'UNICAMP' } });
   fireEvent.change(screen.getByLabelText('Fase das evidências'), { target: { value: '2a' } });
   expect(await screen.findByText(/questão 11: Plumagem de pavões/)).toBeInTheDocument();

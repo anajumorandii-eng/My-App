@@ -1,0 +1,1528 @@
+{
+  "board": "UNIFESP",
+  "year": 2022,
+  "coverageNote": "Sistema Misto2022:25objetivasV1 e redaçãoR no caderno001;20discursivas no caderno002.46unidades. Fontes Vunesp em espelho identificado Etapa,hashes conferidos. Leitura integral de todos os itens e figuras decisivas. ChaveV1 de 20/01/2022 com25letras,sem anulação indicada. Sem espelho discursivo público localizado; estratégias autorais e notas de limitações,especialmente ploidia na Q03 eaceleração média na Q11. Não inclui ENEM novamente como UNIFESP.",
+  "sourceManifest": [
+    {
+      "board": "UNIFESP",
+      "year": 2022,
+      "role": "linguas",
+      "sha256": "a5ab46b020127a3ccfec5c399cd4d0e149313754c67b4b90663c9cf7ea9ef7c4",
+      "pages": 12,
+      "bytes": 772992,
+      "coverageNote": "Cópia do documento Vunesp em espelho Etapa. Índice público do processo 2022 não ofereceu documentos na consulta; capa,ano,código de processo e chave V1 identificados. A redação está neste caderno.",
+      "phase": "Língua Portuguesa, Língua Inglesa e Redação",
+      "group": "linguas-redacao",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "V1 — imprensa",
+      "answerKeyUrl": "https://filescol.grupoetapa.com.br/etaparesolve/etaparesolve/etaparesolve/2022/Unifesp/FaseUnica_466/gabarito/gabarito.pdf",
+      "answerKeySha256": "a95bdcb45fe6481830d6263a4c723f14d2331831a021fcc2ec138ba92ebcfa20",
+      "expectedQuestionsIncludingEssay": 26,
+      "sourceType": "identified-mirror",
+      "answerKeySourceType": "identified-mirror",
+      "sourceUrl": "https://filescol.grupoetapa.com.br/etaparesolve/etaparesolve/etaparesolve/2022/Unifesp/FaseUnica_466/prova/prova.pdf"
+    },
+    {
+      "board": "UNIFESP",
+      "year": 2022,
+      "role": "especificos",
+      "sha256": "eb210eaa13d441897f6b5a7ae49e3a7de8711e18872eb1e2da1e01a94a731b32",
+      "pages": 28,
+      "bytes": 2322742,
+      "coverageNote": "Cópia do documento Vunesp em espelho Etapa. Índice público do processo 2022 não ofereceu documentos na consulta; capa,ano,código de processo e chave V1 identificados. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna.",
+      "phase": "Conhecimentos específicos",
+      "group": "conhecimentos-especificos",
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "Caderno002 — imprensa",
+      "answerKeyUrl": null,
+      "answerKeySha256": null,
+      "expectedQuestionsIncludingEssay": 20,
+      "sourceType": "identified-mirror",
+      "sourceUrl": "https://filescol.grupoetapa.com.br/etaparesolve/etaparesolve/etaparesolve/2022/Unifesp/FaseUnica_467/prova/prova.pdf"
+    }
+  ],
+  "papers": [
+    {
+      "id": "unifesp-2022-linguas-redacao",
+      "group": "linguas-objetiva",
+      "phase": "Língua Portuguesa, Língua Inglesa e Redação",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "V1 — imprensa",
+      "sourceUrl": "https://filescol.grupoetapa.com.br/etaparesolve/etaparesolve/etaparesolve/2022/Unifesp/FaseUnica_466/prova/prova.pdf",
+      "answerKeyUrl": "https://filescol.grupoetapa.com.br/etaparesolve/etaparesolve/etaparesolve/2022/Unifesp/FaseUnica_466/gabarito/gabarito.pdf",
+      "answerKeySha256": "a95bdcb45fe6481830d6263a4c723f14d2331831a021fcc2ec138ba92ebcfa20",
+      "sha256": "a5ab46b020127a3ccfec5c399cd4d0e149313754c67b4b90663c9cf7ea9ef7c4",
+      "pages": 12,
+      "expectedQuestions": 26,
+      "coverageNote": "Cópia do documento Vunesp em espelho Etapa. Índice público do processo 2022 não ofereceu documentos na consulta; capa,ano,código de processo e chave V1 identificados. A redação está neste caderno. Estratégias discursivas autorais,sem espelho público localizado.",
+      "questions": [
+        {
+          "number": "01",
+          "page": 3,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Cartum",
+            "Sentimentos e implícitos"
+          ],
+          "skills": [
+            "Infere elogio à repressão dos sentimentos na fala do cartum"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Infere elogio à repressão dos sentimentos na fala do cartum.",
+          "rationale": "O homem manda trancar sentimentos no celeiro, valorizando não os expressar.",
+          "strategy": [
+            "Leia keep our feelings e lock it up junto ao celeiro fechado",
+            "Associe a recomendação de aprisionar emoções à insensibilidade."
+          ],
+          "trap": "Interpretar o celeiro literalmente como espaço de privacidade sem a metáfora emocional.",
+          "confidence": "medium",
+          "reviewNote": "Embora anterior ao bloco16–25, o conteúdo discriminante é leitura de fala em inglês; matéria Inglês por exigência linguística, sem classificar pela posição.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "02",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Inferência",
+            "Solidão e anúncio matrimonial"
+          ],
+          "skills": [
+            "Identifica o receio de solidão atribuído pelo cronista à viúva"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o receio de solidão atribuído pelo cronista à viúva.",
+          "rationale": "O comentário distingue busca de companhia de idealização amorosa.",
+          "strategy": [
+            "Compare os requisitos práticos do anúncio com a recusa de sonhadores",
+            "Relacione remédio contra o enjoo e companhia ao medo de continuar só."
+          ],
+          "trap": "Transformar a busca pragmática em desejo de romance idealizado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "03",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Metáfora",
+            "Exigência econômica"
+          ],
+          "skills": [
+            "Interpreta o náufrago como pretendente sem recursos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta o náufrago como pretendente sem recursos.",
+          "rationale": "A frase seguinte exige que o esposo também possua meios, elucidando a metáfora.",
+          "strategy": [
+            "Leia a referência à tábua de salvação com a condição financeira do candidato",
+            "Associe o pretendente pobre à busca de sustento no casamento."
+          ],
+          "trap": "Tomar náufrago por homem triste só pelo campo semântico da crônica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "04",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Discurso indireto",
+            "Correlação verbal"
+          ],
+          "skills": [
+            "Converte a exortação passemos em forma subordinada"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Converte a exortação passemos em forma subordinada.",
+          "rationale": "A transposição após verbo de dizer no passado favorece que passasse, mantendo valor de recomendação.",
+          "strategy": [
+            "Identifique passemos como exortação no diálogo imaginado",
+            "Use a subordinação no relato e a correlação de passado: que passasse."
+          ],
+          "trap": "Manter presente imperativo sem adequar o discurso relatado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "05",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Coesão referencial",
+            "Pronomes e sujeitos elípticos"
+          ],
+          "skills": [
+            "Recupera os referentes de lhe e do sujeito de sentia"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Recupera os referentes de lhe e do sujeito de sentia.",
+          "rationale": "O capitão pergunta a Sêneca como curar o próprio tédio; lhe retoma o destinatário e sentia o capitão.",
+          "strategy": [
+            "Separe quem escreve de quem recebe a carta",
+            "Relacione lhe aSêneca e sentia ao capitão."
+          ],
+          "trap": "Atribuir o tédio aNero apenas por ser nome próximo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "06",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Formação de palavras",
+            "Prefixos de negação"
+          ],
+          "skills": [
+            "Compara o sentido negativo de in e a"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara o sentido negativo de in e a.",
+          "rationale": "Indefinível nega possibilidade de definir, como anormal nega normalidade.",
+          "strategy": [
+            "Isole o sentido do prefixo em indefinível",
+            "Compare com a- em anormal e elimine deslocamento,interconexão ou transcendência."
+          ],
+          "trap": "Escolher interconectado por começar com as mesmas letras.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "07",
+          "page": 4,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Meme",
+            "Personificação e ironia"
+          ],
+          "skills": [
+            "Reconhece a morte personificada e o desfecho irônico sobre plantas"
+          ],
+          "relatedSubjects": [
+            "Português"
+          ],
+          "relatedTopicIds": [
+            "por_texto"
+          ],
+          "summary": "Reconhece a morte personificada e o desfecho irônico sobre plantas.",
+          "rationale": "A figura humana representaDeath e a resposta inesperada troca a ameaça ao homem pela morte de suas plantas.",
+          "strategy": [
+            "Leia a pergunta sobre a visita daMorte e a resposta for your indoor plants",
+            "Associe personificação à figura daMorte e ironia à quebra da expectativa."
+          ],
+          "trap": "Marcar antítese por haver pergunta e resposta, sem oposição semântica necessária.",
+          "confidence": "medium",
+          "reviewNote": "Questão de figuras em fala inglesa; Inglês principal pela leitura do meme, Português secundário.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "08",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Comparação argumentativa",
+            "Tecnociência e Renascimento"
+          ],
+          "skills": [
+            "Identifica o ponto comum entre duas mutações históricas no ensaio"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o ponto comum entre duas mutações históricas no ensaio.",
+          "rationale": "Ambas incluem ciência/técnica; a atual perde a articulação com passado/futuro que o autor atribui aoRenascimento.",
+          "strategy": [
+            "Diferencie o elemento compartilhado da diferença temporal enfatizada",
+            "Escolha a atenção aos fatos da técnica como convergência,sem atribuir à atual o resgate do passado."
+          ],
+          "trap": "Confundir crítica à falta de reflexão com inexistência de transformação técnica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "09",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Síntese de argumento",
+            "Ambivalência"
+          ],
+          "skills": [
+            "Sintetiza a dupla orientação do Renascimento para antigo e novo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Sintetiza a dupla orientação do Renascimento para antigo e novo.",
+          "rationale": "A paixão por heranças e novidades produz caracterização ambivalente.",
+          "strategy": [
+            "Localize as referências simultâneas a passado e futuro",
+            "Associe essa dupla direção à ambivalência."
+          ],
+          "trap": "Reduzir oRenascimento a conservação imutável do antigo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "10",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Modalização",
+            "Objetividade e impessoalidade"
+          ],
+          "skills": [
+            "Seleciona formulação menos pessoal no comentário sobre livros"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Seleciona formulação menos pessoal no comentário sobre livros.",
+          "rationale": "A opçãoE descreve o primeiro livro sem primeira pessoa ou convite direto ao leitor.",
+          "strategy": [
+            "Compare marcas como procuramos,tendemos e tomemos",
+            "Prefira a construção de terceira pessoa que apresenta o tema do primeiro volume."
+          ],
+          "trap": "Confundir frase longa com impessoalidade ou avaliar apenas o conteúdo citado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "11",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Subordinação",
+            "Conector causal"
+          ],
+          "skills": [
+            "Interpreta posto que em seu emprego causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta posto que em seu emprego causal.",
+          "rationale": "O trecho apresenta a origem tecnocientífica como motivo para a conclusão sobre vazio de pensamento.",
+          "strategy": [
+            "Pergunte por que o autor tende a dizer que há vazio de pensamento",
+            "Reconheça que a oração responde com causa no uso específico."
+          ],
+          "trap": "Impor valor concessivo de posto que sem ler a relação argumentativa do contexto.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "12",
+          "page": 6,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Modernismo brasileiro",
+            "Renovação e autonomia"
+          ],
+          "skills": [
+            "Reconhece o movimento modernista na descrição de renovação literária"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o movimento modernista na descrição de renovação literária.",
+          "rationale": "A assimilação original de matrizes e a ruptura inicialmente vista como afronta caracterizam oModernismo.",
+          "strategy": [
+            "Relacione afronta ao bom gosto e renovação às vanguardas modernistas",
+            "Associe assimilação original à criação de literatura nacional própria."
+          ],
+          "trap": "EscolherRealismo só pelo juízo de maturidade da literatura.",
+          "confidence": "medium",
+          "reviewNote": "A descrição é ampla e poderia evocar outras rupturas; a chaveA fixaModernismo,sem converter a passagem em cronologia exclusiva de todas as renovações.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "13",
+          "page": 6,
+          "subject": "Literatura",
+          "topicId": "por_lit_classica_barroca",
+          "topic": "Literatura Clássica, Medieval e Barroca",
+          "subtopics": [
+            "Locus amoenus",
+            "Lírica camoniana"
+          ],
+          "skills": [
+            "Localiza paisagem amena nas duas primeiras estrofes do soneto"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Localiza paisagem amena nas duas primeiras estrofes do soneto.",
+          "rationale": "Serra,sombra,ribeiros e recolher dos gados compõem cenário aprazível,contrastado com tristeza amorosa.",
+          "strategy": [
+            "Identifique os elementos de natureza idealizada nos quartetos",
+            "Distinga o cenário agradável da dor de ausência nos tercetos."
+          ],
+          "trap": "Confundir lugar ameno com felicidade plena do eu lírico apesar da ausência amada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "14",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Paradoxo",
+            "Qualificação contraditória"
+          ],
+          "skills": [
+            "Reconhece a tensão expressiva de branda guerra"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a tensão expressiva de branda guerra.",
+          "rationale": "Branda suaviza guerra,aproximando ideias incompatíveis no movimento das nuvens.",
+          "strategy": [
+            "Examine o contraste entre adjetivo e substantivo em branda guerra",
+            "Identifique o paradoxo sem tomar qualquer descrição da natureza como contradição."
+          ],
+          "trap": "Escolher tristeza desterrada apenas por a palavra ter sentido figurado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "15",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Derivação imprópria",
+            "Substantivação de infinitivo"
+          ],
+          "skills": [
+            "Identifica caminhar usado como substantivo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica caminhar usado como substantivo.",
+          "rationale": "O artigo e o adjetivo em o manso caminhar nominalizam o infinitivo sem mudança formal.",
+          "strategy": [
+            "Localize caminhar com determinante o e qualificação manso",
+            "Explique a passagem de verbo a substantivo sem afixo."
+          ],
+          "trap": "Confundir desterra com derivação imprópria,pois há alteração morfológica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "16",
+          "page": 7,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Contexto de publicação",
+            "Ocultação de pesquisa"
+          ],
+          "skills": [
+            "Relaciona data da notícia à revelação de pesquisa interna doFacebook"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona data da notícia à revelação de pesquisa interna doFacebook.",
+          "rationale": "A reportagem de14/09/2021 antecede o artigo de16/09 e expõe danos conhecidos desde2020.",
+          "strategy": [
+            "Localize as datas e a expressão swept those findings under the rug",
+            "Associe a publicação à divulgação recente da ocultação dos resultados."
+          ],
+          "trap": "Escolher apenas popularidade geral das redes e ignorar o fato motivador recente.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "17",
+          "page": 7,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Comparação crítica",
+            "Reconhecimento público de danos"
+          ],
+          "skills": [
+            "Explica a analogia entreFacebook e indústria do tabaco"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica a analogia entreFacebook e indústria do tabaco.",
+          "rationale": "Ambos sabiam internamente de danos e não os reconheceram publicamente de modo correspondente.",
+          "strategy": [
+            "Compare knew epublicly denied com a ocultação dos resultados doInstagram",
+            "Selecione a ausência de reconhecimento público do dano documentado."
+          ],
+          "trap": "Afirmar que os produtos das duas empresas causam a mesma doença.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "18",
+          "page": 7,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Vocabulário contextual",
+            "Pursuing"
+          ],
+          "skills": [
+            "Substitui pursuing por seeking no contexto de lucro"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Substitui pursuing por seeking no contexto de lucro.",
+          "rationale": "O verbo significa buscar/perseguir um objetivo,sem garantir que ele seja alcançado.",
+          "strategy": [
+            "Leia pursuing profits como finalidade da política empresarial",
+            "Escolha seeking e descarte ocultar,exibir ou simplesmente gerar."
+          ],
+          "trap": "Confundir propósito de buscar lucro com resultado comprovado de aumentá-lo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "19",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Justificativa argumentativa",
+            "Uso cotidiano deInstagram"
+          ],
+          "skills": [
+            "Relaciona relevância da pesquisa à presença intensa da plataforma na vida adolescente"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona relevância da pesquisa à presença intensa da plataforma na vida adolescente.",
+          "rationale": "O terceiro parágrafo destaca frequência online e preferência peloInstagram.",
+          "strategy": [
+            "Recupere os dados de uso quase constante ou várias vezes ao dia",
+            "Ligue a presença cotidiana expressiva à importância de estudar os impactos."
+          ],
+          "trap": "Concluir que a relevância decorre de efeitos necessariamente benéficos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "20",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Conectores",
+            "Yet adversativo"
+          ],
+          "skills": [
+            "Reconhece contraste introduzido por yet"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece contraste introduzido por yet.",
+          "rationale": "A popularidade é contrastada com estudos que mostram piora de bem-estar conforme cresce uso.",
+          "strategy": [
+            "Compare a presença disseminada da plataforma com os efeitos negativos apresentados em seguida",
+            "Interprete yet como contudo,marcando oposição."
+          ],
+          "trap": "Ler yet como tempo apenas por poder ter esse valor em outros contextos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "21",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Inferência",
+            "Comparação social e imagem corporal"
+          ],
+          "skills": [
+            "Identifica o risco de comparações com vidas e corpos editados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o risco de comparações com vidas e corpos editados.",
+          "rationale": "Celebridades e pares filtrados favorecem comparação ascendente e objetificação do corpo.",
+          "strategy": [
+            "Conecte as expressões manipulated,filtered ecurated à irrealidade dos modelos",
+            "Relacione esse ambiente à comparação prejudicial,incluindo colegas ecelebridades."
+          ],
+          "trap": "Afirmar intenção deliberada não demonstrada pela plataforma ou limitar o problema só a celebridades.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "22",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Expressão idiomática",
+            "História e condenação do tabaco"
+          ],
+          "skills": [
+            "Interpreta a crítica judicial e histórica à negação de danos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a crítica judicial e histórica à negação de danos.",
+          "rationale": "Less than forgiving afirma que a postura de ignorar problemas não foi perdoada.",
+          "strategy": [
+            "Retome head-in-the-sand como recusa de encarar evidências",
+            "Interprete a reação daHistória e dos tribunais como condenação da atitude."
+          ],
+          "trap": "Traduzir less than forgiving como absolvição ou perdão.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "23",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Leitura comparativa",
+            "Perfil etário de rede social"
+          ],
+          "skills": [
+            "Identifica contradição entre anúncio e artigo sobre jovens noFacebook"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica contradição entre anúncio e artigo sobre jovens noFacebook.",
+          "rationale": "O anúncio afirma adoção por18–24anos; o artigo associaFacebook a mães e avós.",
+          "strategy": [
+            "Localize os grupos etários indicados em cada texto",
+            "Compare o uso juvenil destacado no anúncio com o afastamento juvenil descrito no artigo."
+          ],
+          "trap": "Atribuir a contradição à qualidade das imagens,que não é o foco da comparação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "24",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Vocabulário contextual",
+            "Ensuring"
+          ],
+          "skills": [
+            "Interpreta ensuring como guaranteeing no anúncio"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta ensuring como guaranteeing no anúncio.",
+          "rationale": "A recomendação busca garantir comentários positivos dos consumidores sobre o perfil.",
+          "strategy": [
+            "Leia ensuring ligado à oração customers only have positive things to say",
+            "Substitua por guaranteeing sem mudar o sentido."
+          ],
+          "trap": "Escolher hoping,que expressa expectativa e não garantia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "25",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Referenciação",
+            "Ambiguidade de tablets em tirinha"
+          ],
+          "skills": [
+            "Recupera o antecedente da pergunta sobre a prescrição médica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Recupera o antecedente da pergunta sobre a prescrição médica.",
+          "rationale": "A fala anterior diz que o médico prescreveu dois tablets por dia; a cena final revela aparelhos,em vez de comprimidos.",
+          "strategy": [
+            "Relacione How’s that bad à informação imediatamente anterior sobre a prescrição",
+            "Use a loja de computadores para reconhecer a ambiguidade lexical sem trocar o antecedente da pergunta."
+          ],
+          "trap": "Marcar vício em redes como antecedente imediato apenas por ser tema geral da tirinha.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "R",
+          "page": 10,
+          "subject": "Redação",
+          "topicId": "por_red_repertorio",
+          "topic": "Leitura de Coletânea e Repertório Temático",
+          "subtopics": [
+            "Memória pública",
+            "Remoção e ressignificação de monumentos"
+          ],
+          "skills": [
+            "Planeja dissertação sobre dilemas entre lembrar e apagar o passado"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Planeja dissertação sobre dilemas entre lembrar e apagar o passado.",
+          "rationale": "A coletânea contrapõe denúncia da homenagem opressora à manutenção crítica da memória,distinguindo monumento e escrita histórica.",
+          "strategy": [
+            "Compare os argumentos pela retirada e pela permanência crítica,sem equiparar toda retirada a apagar aHistória",
+            "Formule tese sobre destino e contextualização de monumentos,usando contra-argumento e repertório pertinente."
+          ],
+          "trap": "Copiar a coletânea ou tratar remover estátua e destruir documentação histórica como operações idênticas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": null,
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        }
+      ]
+    },
+    {
+      "id": "unifesp-2022-conhecimentos-especificos",
+      "group": "especificos-discursiva",
+      "phase": "Conhecimentos Específicos",
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "Caderno002 — imprensa",
+      "sourceUrl": "https://filescol.grupoetapa.com.br/etaparesolve/etaparesolve/etaparesolve/2022/Unifesp/FaseUnica_467/prova/prova.pdf",
+      "answerKeyUrl": null,
+      "answerKeySha256": null,
+      "sha256": "eb210eaa13d441897f6b5a7ae49e3a7de8711e18872eb1e2da1e01a94a731b32",
+      "pages": 28,
+      "expectedQuestions": 20,
+      "coverageNote": "Cópia do documento Vunesp em espelho Etapa. Índice público do processo 2022 não ofereceu documentos na consulta; capa,ano,código de processo e chave V1 identificados. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna. Estratégias discursivas autorais,sem espelho público localizado.",
+      "questions": [
+        {
+          "number": "01",
+          "page": 3,
+          "subject": "Biologia",
+          "topicId": "bio_zoologia",
+          "topic": "Zoologia",
+          "subtopics": [
+            "Filariose",
+            "Hospedeiros e endossimbiose"
+          ],
+          "skills": [
+            "Relaciona transmissão deWuchereria e ação indireta de antibiótico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_ecologia"
+          ],
+          "summary": "Relaciona transmissão deWuchereria e ação indireta de antibiótico.",
+          "rationale": "O ser humano abriga adultos e reprodução sexuada; mosquito transmite larvas,e a eliminação de bactérias simbiontes compromete o nematódeo.",
+          "strategy": [
+            "Identifique humano como hospedeiro definitivo e picada de mosquito infectado como transmissão",
+            "Explique mutualismo com endossimbiontes e perda de funções fornecidas por eles após antibiótico."
+          ],
+          "trap": "Dizer que antibiótico ataca diretamente qualquer helminto ou inverter hospedeiro definitivo e vetor.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "02",
+          "page": 4,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Enzimas digestivas",
+            "Desmame e hidrólise do amido"
+          ],
+          "skills": [
+            "Relaciona mudança de dieta ao perfil de enzimas digestivas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona mudança de dieta ao perfil de enzimas digestivas.",
+          "rationale": "O gráfico3 mostra queda de lactase e aumento deamilase após desmame; asenzimas atuam no intestino delgado eamilase gera dissacarídeos.",
+          "strategy": [
+            "Selecione3 pela queda de lactase e aumento deamilase compatíveis com menos leite e mais grãos",
+            "Identifique intestino delgado como local de ação conjunta eamilase como produtora de dissacarídeos doamido."
+          ],
+          "trap": "Confundir órgão que produz enzima com o local de atuação de todas elas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "03",
+          "page": 5,
+          "subject": "Biologia",
+          "topicId": "bio_estrutura_fisio_celular",
+          "topic": "Estrutura e Fisiologia Celular",
+          "subtopics": [
+            "Espermatogênese",
+            "Ploidia e conteúdo de DNA"
+          ],
+          "skills": [
+            "Analisa segregação sexual na meiose e limites do uso de espermatócito II"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_genetica"
+          ],
+          "summary": "Analisa segregação sexual na meiose e limites do uso de espermatócito II.",
+          "rationale": "Testículos produzem gametas eX/Y se segregam na anáfaseI; o espermatócito II é haploide com cromossomos duplicados.",
+          "strategy": [
+            "Indique testículos e anáfaseI,distinguindo espermatócito II n,2C deespermátide n, C",
+            "Discuta a exigência de completar a meiose II e registre que a anomalia embrionária não se deduz só de somar cromátides como se fossem cromossomos."
+          ],
+          "trap": "Chamar espermatócito II de diploide apenas por terDNA duplicado ou afirmar triplodia inevitável sem hipótese adicional.",
+          "confidence": "low",
+          "reviewNote": "O itemb pede mutação numérica,mas o próprio diagrama marca espermatócito II como n. Injeção de célula n,2C não determina sozinha um cariótipo embrionário: depende da segregação e eliminação de material. Sem espelho primário,registrar dúvida e não inventar triploidia como conclusão necessária.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "04",
+          "page": 6,
+          "subject": "Biologia",
+          "topicId": "bio_genetica",
+          "topic": "Genética",
+          "subtopics": [
+            "Segregação independente",
+            "Ligação gênica e recombinação"
+          ],
+          "skills": [
+            "Compara cruzamento-teste independente com ligação emcis"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara cruzamento-teste independente com ligação emcis.",
+          "rationale": "A proporção1:1:1:1 indica independência; emAB/ab sem recombinação,aparecem sóAB eab.",
+          "strategy": [
+            "Identifique Aabb para fruto redondo branco e a segunda lei deMendel",
+            "No cenário ligado,preveja metade redondo vermelho e metade alongado branco; recombinantes redondo branco/alongado vermelho evidenciam permutação."
+          ],
+          "trap": "Usar9:3:3:1 no cruzamento com duplo-recessivo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "05",
+          "page": 7,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_vegetal",
+          "topic": "Fisiologia Vegetal",
+          "subtopics": [
+            "Comunicação vegetal",
+            "Expressão gênica e ambiente"
+          ],
+          "skills": [
+            "Interpreta indução de taninos em plantas expostas a voláteis"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_genetica"
+          ],
+          "summary": "Interpreta indução de taninos em plantas expostas a voláteis.",
+          "rationale": "Asplantas experimentais intactas têm mais tanino que controles,compatível com sinalização; capacidade genética e estímulo ambiental interagem.",
+          "strategy": [
+            "Compare a barra experimental com controle,não apenas plantas feridas com intactas",
+            "Explique que genes permitem síntese e exposição aos voláteis modula a expressão e quantidade produzida."
+          ],
+          "trap": "Afirmar herança de característica adquirida ou dizer que o experimento prova intenção consciente dasplantas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "06",
+          "page": 8,
+          "subject": "Química",
+          "topicId": "qui_solucoes",
+          "topic": "Soluções",
+          "subtopics": [
+            "Mistura e substância",
+            "Pressão de vapor e volatilidade"
+          ],
+          "skills": [
+            "Distingue líquidos e compara evaporação das tiras"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Distingue líquidos e compara evaporação das tiras.",
+          "rationale": "Etanol anidro é substância pura;salmoura permite separar solvente e soluto por destilação simples e tem pressão de vapor reduzida pelo soluto.",
+          "strategy": [
+            "Classifique etanol anidro como puro e salmoura como separável por destilação simples",
+            "Compare volatilidade e depressão da pressão de vapor para indicar a tira de salmoura como última a perder água."
+          ],
+          "trap": "Chamar etanol70% de puro ou confundir resíduo sólido seco com água que não evapora.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "07",
+          "page": 9,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Produção deHNO3",
+            "Redox e termoquímica"
+          ],
+          "skills": [
+            "Calcula oxigênio e energia na produção de ácido nítrico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_oxirreducao",
+            "qui_termoquimica"
+          ],
+          "summary": "Calcula oxigênio e energia na produção de ácido nítrico.",
+          "rationale": "Nitrogênio daamônia passa−3→+5,portantoNH3 é redutor;6,3t correspondem10^5mol deHNO3.",
+          "strategy": [
+            "Identifique oxidação doN e calcule2×10^5mol deO2,ou5×10^6L nasCATP",
+            "Multiplique10^5 por−434 para obterΔH=−4,34×10^7kJ,energia liberada."
+          ],
+          "trap": "Usar toneladas como gramas ou tratar energia negativa como absorvida.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "08",
+          "page": 10,
+          "subject": "Química",
+          "topicId": "qui_inorganica",
+          "topic": "Química Inorgânica",
+          "subtopics": [
+            "Gases em água",
+            "Indicador e geometria molecular"
+          ],
+          "skills": [
+            "Identifica gases pelos meios ácido,neutro e básico e suas polaridades"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_polaridade_geometria"
+          ],
+          "summary": "Identifica gases pelos meios ácido,neutro e básico e suas polaridades.",
+          "rationale": "Azul1 éNH3,básico;verde2 éCH4 sem reação acidificante;amarelo3 éCO2 acidificante.",
+          "strategy": [
+            "Use as cores comparadas à escala para associar1NH3,2CH4,3CO2",
+            "DesenheO=C=O linear e identifiqueNH3 como polar,distinguindo polaridade de ligações e de molécula."
+          ],
+          "trap": "DizerCO2 polar por conter ligaçõesC–O polares sem considerar simetria.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "09",
+          "page": 11,
+          "subject": "Química",
+          "topicId": "qui_solucoes",
+          "topic": "Soluções",
+          "subtopics": [
+            "Solubilidade e molalidade",
+            "Ligações de hidrogênio e íons"
+          ],
+          "skills": [
+            "Calcula concentração da sacarose e explica dissolução não eletrolítica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_polaridade_geometria"
+          ],
+          "summary": "Calcula concentração da sacarose e explica dissolução não eletrolítica.",
+          "rationale": "2g/mL de água são 2000g/L de solvente e2000/342≈5,85mol/kg; muitasOH favorecem hidratação,sem produção relevante de íons.",
+          "strategy": [
+            "Converta a solubilidade para as unidades pedidas sem trocar solvente por solução",
+            "RelacioneOH a ligações de hidrogênio e natureza molecular à baixa condutividade."
+          ],
+          "trap": "Afirmar que toda substância solúvel em água se ioniza.",
+          "confidence": "medium",
+          "reviewNote": "Molalidade calculada com densidade daágua aproximada de1g/mL,convenção usual não explicitada no quadro.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "10",
+          "page": 12,
+          "subject": "Química",
+          "topicId": "qui_organica_reacoes",
+          "topic": "Reações e Aplicações Orgânicas",
+          "subtopics": [
+            "Funções orgânicas",
+            "Esterificação da benzocaína"
+          ],
+          "skills": [
+            "Determina etanol eágua na síntese doéster a partir dePABA"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_organica_fundamentos"
+          ],
+          "summary": "Determina etanol eágua na síntese doéster a partir dePABA.",
+          "rationale": "Ambos contêm amina;PABA tem carboxila e benzocaína oéster etílico correspondente.",
+          "strategy": [
+            "Identifique amina e ácido carboxílico nas estruturas",
+            "Escreva a estrutura completa do etanolCH3–CH2–OH comoX eH2O comoY na esterificação."
+          ],
+          "trap": "Identificar amida só por haverN ou metanol apesar da cadeia etílica doéster.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "11",
+          "page": 13,
+          "subject": "Física",
+          "topicId": "fis_dinamica_impulsiva",
+          "topic": "Dinâmica Impulsiva",
+          "subtopics": [
+            "Frenagem",
+            "Força média e impulso"
+          ],
+          "skills": [
+            "Relaciona frenagem do avião à variação de momento e à distância sob hipótese deMUV"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "fis_cinematica",
+            "fis_leis_newton"
+          ],
+          "summary": "Relaciona frenagem do avião à variação de momento e à distância sob hipótese deMUV.",
+          "rationale": "54km/h=15m/s;ma_média=1,2×10^5N e impulso=3,6×10^5N·s;distância22,5m requer desaceleração constante.",
+          "strategy": [
+            "Converta a velocidade e explicite a hipótese uniforme para usar velocidade média7,5m/s durante3s",
+            "Calcule força média por mΔv/Δt e módulo doimpulso por mΔv,distinguindo sinais."
+          ],
+          "trap": "Deduzir22,5m exclusivamente de aceleração média como se ela fixasse toda a trajetória.",
+          "confidence": "medium",
+          "reviewNote": "O comando fornece aceleração média,não constante. A distância não é única sem perfil temporal adicional;22,5m vale para oMUV presumido. Força média e impulso seguem dosdados sem essa hipótese.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "12",
+          "page": 14,
+          "subject": "Física",
+          "topicId": "fis_energia",
+          "topic": "Dinâmica Energética e Transformações de Energia",
+          "subtopics": [
+            "Energia mecânica",
+            "Trabalho do peso e resistência"
+          ],
+          "skills": [
+            "Calcula energias e trabalhos na trajetória dacápsula suborbital"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula energias e trabalhos na trajetória dacápsula suborbital.",
+          "rationale": "Na separaçãoEc=2×10^9J,Ep=3×10^9J;trabalho do peso na subida é−1,2×10^9J e resistência na descida retira4,2×10^9J.",
+          "strategy": [
+            "Some energia cinética e potencial a75km para obter5×10^9J",
+            "UseWp=−mgΔh para subida eΔEm para descida com velocidades desprezadas nos extremos."
+          ],
+          "trap": "Conservar energia mecânica apesar dasforças deresistência ou misturar quilômetro com metro.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "13",
+          "page": 15,
+          "subject": "Física",
+          "topicId": "fis_calorimetria",
+          "topic": "Calorimetria",
+          "subtopics": [
+            "Calor sensível",
+            "Dilatação volumétrica"
+          ],
+          "skills": [
+            "Calcula aquecimento e espaço livre no recipiente dilatado"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula aquecimento e espaço livre no recipiente dilatado.",
+          "rationale": "Massa252g,calor7560cal;glicerina aumenta5cm³ e recipiente0,30,restando45,30cm³.",
+          "strategy": [
+            "Use m=ρV eQ=mcΔT comΔT=50°C",
+            "CalculeΔV=200×5×10^−4×50 e subtraia205 de250,30."
+          ],
+          "trap": "Aplicar dilatação apenas à glicerina e ignorar que o recipiente também expande.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "14",
+          "page": 16,
+          "subject": "Física",
+          "topicId": "fis_ondulatoria",
+          "topic": "Ondulatória",
+          "subtopics": [
+            "Tubo fechado",
+            "Decibéis e energia sonora"
+          ],
+          "skills": [
+            "Calcula comprimento de tubo eenergia incidente no tímpano"
+          ],
+          "relatedSubjects": [
+            "Matemática"
+          ],
+          "relatedTopicIds": [
+            "mat_log_exponenciais"
+          ],
+          "summary": "Calcula comprimento de tubo eenergia incidente no tímpano.",
+          "rationale": "λ=340/170=2m eL=λ/4=0,5m;60dB forneceI=10^−6W/m² eenergia6×10^−11J em1s.",
+          "strategy": [
+            "Reconheça nó naextremidade fechada e ventre naaberta para a fundamental",
+            "IsoleI na expressão logarítmica e useE=IΔSΔt."
+          ],
+          "trap": "Tratar tubo fechado como duasextremidades abertas ou multiplicar60 diretamente pela área.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "15",
+          "page": 17,
+          "subject": "Física",
+          "topicId": "fis_circuitos",
+          "topic": "Circuitos Elétricos",
+          "subtopics": [
+            "Resistores em paralelo",
+            "Gerador real e perdas"
+          ],
+          "skills": [
+            "Determina correntes e dissipação na resistência interna dabateria"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina correntes e dissipação na resistência interna dabateria.",
+          "rationale": "R2||R3=40Ω atravessado por0,25A tem10V;R3 recebe0,2A. Queda interna0,1V dáRi=0,4Ω eP=0,025W.",
+          "strategy": [
+            "Use a corrente total emR1 para obter tensão no paralelo e corrente emR3",
+            "CalculeRi=(12−11,9)/0,25 eP=Ri×0,25²."
+          ],
+          "trap": "Usar12V diretamente emR3 ignorandoR1 earesistência interna.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "16",
+          "page": 18,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_plana",
+          "topic": "Geometria Plana",
+          "subtopics": [
+            "Cordas paralelas",
+            "Teorema dePitágoras"
+          ],
+          "skills": [
+            "Determina raio pelas distâncias de cordas aocentro"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina raio pelas distâncias de cordas aocentro.",
+          "rationale": "Comd=3 e semicorda4,r=5. Com cordas emlados opostos e distância4,a+b=4 e b²−a²=7.",
+          "strategy": [
+            "Calcule área25π no primeiro caso",
+            "No segundo,usea=9/8,b=23/8 e r²=a²+16=1105/64 para obter√1105/8cm."
+          ],
+          "trap": "Somar distâncias como se as duas cordas estivessem no mesmo lado do centro.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "17",
+          "page": 19,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_analitica",
+          "topic": "Geometria Analítica",
+          "subtopics": [
+            "Coeficiente angular",
+            "Ângulo entre retas"
+          ],
+          "skills": [
+            "Determina equações usando interseção eângulo detrinta graus"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "mat_trigonometria"
+          ],
+          "summary": "Determina equações usando interseção eângulo detrinta graus.",
+          "rationale": "A reta s tem inclinação1/3 e intercepto10/3; r é mais inclinada conforme a figura.",
+          "strategy": [
+            "Use s:y=x/3+10/3 e fórmula da tangente da adição para mr=tan(arctan(1/3)+30°)",
+            "Calcule mr=(6+5√3)/13 e n=4−2mr=(40−10√3)/13."
+          ],
+          "trap": "Subtrair30° apesar do ramo r mais inclinado ou usar diretamente tan30 como coeficiente de r.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "18",
+          "page": 20,
+          "subject": "Matemática",
+          "topicId": "mat_aritmetica_proporcionalidade",
+          "topic": "Aritmética e Proporcionalidade",
+          "subtopics": [
+            "Porcentagens",
+            "Contagem limitada de moedas"
+          ],
+          "skills": [
+            "Calcula composição dopreço e conta subconjuntos monetários"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "mat_combinatoria"
+          ],
+          "summary": "Calcula composição dopreço e conta subconjuntos monetários.",
+          "rationale": "X=0,172×6=1,032;Y=0,684/6×100=11,4. Oetanol puro custa1,03/0,27≈3,81 por litro.",
+          "strategy": [
+            "CalculeX,Y e preço unitário do etanol,distinguindo 27% em volume de 17,2% do custo",
+            "Conte soluções de100a+50b+10c+5d+e=381,com limites4,3,2,3,15:dez subconjuntos sem distinguir moedas iguais."
+          ],
+          "trap": "Usar 17,2% como fração volumétrica ou contar permutações de moedas iguais.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "19",
+          "page": 21,
+          "subject": "Matemática",
+          "topicId": "mat_log_exponenciais",
+          "topic": "Logaritmos e Exponenciais",
+          "subtopics": [
+            "Decaimento exponencial",
+            "Meia-vida e logaritmos"
+          ],
+          "skills": [
+            "Modela queda anual de cabelo e idade de meia quantidade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Modela queda anual de cabelo e idade de meia quantidade.",
+          "rationale": "N(t)=100000×0,96^t;N(1)=96000. Com os logaritmos fornecidos,log0,96=−0,02 et=15.",
+          "strategy": [
+            "Aplique o fator remanescente0,96 a cada ano",
+            "Resolva0,96^t=1/2 e adicione 30 à estimativa 15 para obter 45 anos."
+          ],
+          "trap": "Subtrair 4000 fios a cada ano como modelo linear ou responder15 como idade.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        },
+        {
+          "number": "20",
+          "page": 22,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Prisma triangular regular",
+            "Diagonal ealtura"
+          ],
+          "skills": [
+            "Calcula áreas debases elaterais usando diagonal BM"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula áreas debases elaterais usando diagonal BM.",
+          "rationale": "As bases equiláteras de lado12 somam 72√3;altura do triângulo é6√3 eBM20 fornece altura do prisma2√73.",
+          "strategy": [
+            "Calcule duas áreas equiláteras e use a relação BM²=h_prisma²+(6√3)²",
+            "Multiplique perímetro 36 pela altura2√73 para área lateral72√73."
+          ],
+          "trap": "Usar 20 comoaltura do prisma sem decompor o segmento inclinado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        }
+      ]
+    }
+  ]
+}

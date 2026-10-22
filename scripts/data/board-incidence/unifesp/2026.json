@@ -1,0 +1,1564 @@
+{
+  "board": "UNIFESP",
+  "year": 2026,
+  "reviewedOn": "2026-10-22",
+  "reviewType": "single-editor-source-reading",
+  "coverageNote": "Sistema Misto completo: línguas e redação (18/12/2025) e específicos (19/12/2025), versão de imprensa. 46 unidades: 25 objetivas, R e 20 discursivas a/b. ENEM não duplicado. Nenhum espelho público discursivo localizado no índice oficial documentado; estratégias autorais. Leitura editorial individual, sem dupla codificação integral.",
+  "sourceManifest": [
+    {
+      "role": "exam",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NzUzOTExNQ%3d%3d",
+      "sha256": "5cb1b379f28e68e3580be00b7121a0b6493216bd61b5c548138313aabd72711f",
+      "pages": 12,
+      "bytes": 858424,
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2502/documento"
+    },
+    {
+      "role": "answer-key",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NzUzOTExMQ%3d%3d",
+      "sha256": "b0f7d5341cb45197baa7b40bf89f6629f080f42279f2ee29ea4559ada5823881",
+      "pages": 1,
+      "bytes": 311255,
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2502/documento"
+    },
+    {
+      "role": "exam",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NzUzOTcyNg%3d%3d",
+      "sha256": "fa70f2fe0f73b169560aae17854f41b58a0511eeebf6d193c57954440bebd450",
+      "pages": 28,
+      "bytes": 2217779,
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2502/documento"
+    }
+  ],
+  "papers": [
+    {
+      "id": "unifesp-2026-linguas-objetiva",
+      "group": "linguas-objetiva",
+      "phase": "Língua Portuguesa, Língua Inglesa e Redação",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "1 — imprensa",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NzUzOTExNQ%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NzUzOTExMQ%3d%3d",
+      "sha256": "5cb1b379f28e68e3580be00b7121a0b6493216bd61b5c548138313aabd72711f",
+      "answerKeySha256": "b0f7d5341cb45197baa7b40bf89f6629f080f42279f2ee29ea4559ada5823881",
+      "pages": 12,
+      "expectedQuestions": 26,
+      "coverageNote": "Capa: 25 objetivas e uma redação R; gabarito versão 1 lido integralmente, sem anulações indicadas; R não herda chave.",
+      "questions": [
+        {
+          "number": "01",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Interpretação de poema",
+            "indiferença da natureza"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Caracteriza a criatura do poema como indiferente aos contrastes da existência.",
+          "rationale": "A mesma força acolhe belo e monstruoso, gozo e desespero, sem privilégio moral.",
+          "strategy": [
+            "Reunir as atitudes da criatura diante de seres distintos.",
+            "Distinguir ausência de preferência de altruísmo ou egoísmo."
+          ],
+          "trap": "Escolher um sentimento isolado entre pares opostos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "02",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Antítese",
+            "prosopopeia"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica oposição de sentidos e personificação na representação da vida.",
+          "rationale": "O poema opõe polos semânticos e atribui ações e afetos humanos à criatura abstrata.",
+          "strategy": [
+            "Localizar belo/monstruoso e poluto/impoluto.",
+            "Identificar a vida que contempla, gosta e ama."
+          ],
+          "trap": "Confundir toda oposição com paradoxo ou metalinguagem.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "03",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Tema filosófico",
+            "vida e morte"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a reflexão sobre a continuidade da vida no destruir e recriar.",
+          "rationale": "O desfecho interpreta a mesma força como vida ou morte.",
+          "strategy": [
+            "Relacionar as cenas naturais ao último verso.",
+            "Formular o problema geral de existência e transformação."
+          ],
+          "trap": "Tomar divino estatuto como prova de predominância religiosa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "04",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Expressão expletiva",
+            "realce"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece é que como expressão de realce em construção clivada.",
+          "rationale": "É nesse destruir que pode ser retirado mantendo a relação sintática básica.",
+          "strategy": [
+            "Reescrever: nesse destruir suas forças dobra.",
+            "Distinguir o que expletivo dos relativos e integrantes."
+          ],
+          "trap": "Classificar todos os que do poema pela mesma função.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "05",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Conversão",
+            "substantivação do infinitivo"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica destruir empregado como substantivo após preposição e demonstrativo.",
+          "rationale": "Nesse destruir converte o verbo em nome sem alteração formal.",
+          "strategy": [
+            "Separar nesse em em+esse.",
+            "Verificar o uso nominal do infinitivo destruir."
+          ],
+          "trap": "Exigir mudança de sufixo para haver formação de palavra.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "06",
+          "page": 4,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Romantismo",
+            "subjetivismo",
+            "crítica ao racionalismo"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [
+            "Inglês"
+          ],
+          "relatedTopicIds": [
+            "ing_01"
+          ],
+          "summary": "Reconhece o Romantismo pela valorização absoluta dos sentimentos.",
+          "rationale": "A liberdade individual do artista se opõe à razão e à sobriedade iluministas.",
+          "strategy": [
+            "Localizar feelings, individual disposition e rejeição do racionalismo.",
+            "Associar esses traços à ruptura romântica."
+          ],
+          "trap": "Escolher Arcadismo pela referência ao Iluminismo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "07",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Paronímia",
+            "humor lexical"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica o humor na troca de artes cênicas por cínicas.",
+          "rationale": "As palavras têm forma sonora próxima e sentidos distintos.",
+          "strategy": [
+            "Identificar a expectativa artes cênicas.",
+            "Relacionar a justificativa da mentira ao cinismo.",
+            "Nomear a proximidade como paronímia."
+          ],
+          "trap": "Chamar palavras parecidas, mas diferentes, de homônimas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "08",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Inferência de traço de personagem",
+            "pedantismo"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Infere a avaliação de Américo como pedante mesmo por sua filha.",
+          "rationale": "O jargão forense e excesso impróprio de pronomes exibem pretensão de erudição.",
+          "strategy": [
+            "Localizar a imitação do jargão e os pronomes descabidos.",
+            "Relacionar ostentação linguística a pedantismo."
+          ],
+          "trap": "Reduzir o julgamento a hostilidade ou ironia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "09",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Regência verbal",
+            "combinação pronominal lhe+as"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reescreve o emprego de lhas conforme as regências de dar e ter.",
+          "rationale": "Dar comporta destinatário e objeto; ter não admite o mesmo destinatário pronominal.",
+          "strategy": [
+            "Manter lhe+as nos dois usos de dar.",
+            "Usar apenas as como objeto de ter/tivesse."
+          ],
+          "trap": "Conservar o lhe em ter apenas para manter linguagem solene.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "10",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Valor contextual de mesmo",
+            "inclusão"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara mesmo Solange com mesmo os amigos.",
+          "rationale": "Nos dois casos mesmo tem sentido inclusivo equivalente a até.",
+          "strategy": [
+            "Substituir mesmo por até no texto-base.",
+            "Testar a mesma substituição nas alternativas."
+          ],
+          "trap": "Confundir inclusão com concessão ou identidade.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "11",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Oração concessiva",
+            "sem que"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a concessão no anúncio feito sem pergunta anterior.",
+          "rationale": "O avô anuncia apesar de ninguém ter perguntado.",
+          "strategy": [
+            "Relacionar a ausência de pergunta à iniciativa de anunciar.",
+            "Testar embora não lhe houvessem perguntado."
+          ],
+          "trap": "Ler sem que automaticamente como condição.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "12",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Coesão referencial",
+            "relativo e pronome demonstrativo"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Recupera os referentes de em que, lhe e que no episódio das abotoaduras.",
+          "rationale": "Os elementos retomam dia, tio Américo e pedido, respectivamente.",
+          "strategy": [
+            "Ligar em que ao antecedente temporal.",
+            "Identificar o destinatário do pedido em lhe.",
+            "Retomar pedido pelo relativo seguinte."
+          ],
+          "trap": "Escolher o objeto pedido como referente do destinatário.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "13",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Voz passiva sintética",
+            "funções de se"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o se apassivador em não se podia dizer.",
+          "rationale": "A construção permite a paráfrase aquilo não podia ser dito.",
+          "strategy": [
+            "Localizar a ocorrência sublinhada de se.",
+            "Converter para passiva analítica.",
+            "Distinguir reflexividade e conjunção das outras ocorrências."
+          ],
+          "trap": "Tratar o se de se você disser como pronome.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "14",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Discurso indireto",
+            "correlação temporal"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina quais presentes mudam na transposição para discurso indireto.",
+          "rationale": "Dou e tenho passam ao imperfeito; tivesse e daria já expressam relações compatíveis.",
+          "strategy": [
+            "Introduzir disse que no relato.",
+            "Converter dou/tenho em dava/tinha.",
+            "Preservar a hipótese concessiva em tivesse/daria."
+          ],
+          "trap": "Alterar mecanicamente todos os verbos da fala.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "15",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Voz ativa e passiva",
+            "humor em meme"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [
+            "Inglês"
+          ],
+          "relatedTopicIds": [
+            "ing_01"
+          ],
+          "summary": "Interpreta a mudança de sujeito como transformação gramatical, não de assunto.",
+          "rationale": "A ordem de abandonar Roma é repetida em passiva, preservando o conteúdo.",
+          "strategy": [
+            "Comparar You need to abandon Rome com Rome needs to be abandoned by you.",
+            "Identificar a passagem do objeto à posição de sujeito paciente."
+          ],
+          "trap": "Entender subject apenas como tema de conversa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "16",
+          "page": 7,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Propósito textual",
+            "potencial global do funk"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a tese de que o funk brasileiro pode tornar-se sucesso mundial.",
+          "rationale": "A projeção internacional distingue funk de sertanejo, apesar do domínio doméstico deste.",
+          "strategy": [
+            "Comparar título e conclusão do segundo parágrafo.",
+            "Distinguir possibilidade futura de domínio já consolidado."
+          ],
+          "trap": "Afirmar que o texto anuncia domínio mundial já alcançado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "17",
+          "page": 7,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Referência no título",
+            "gênero musical"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a expressão do título ao funk.",
+          "rationale": "O texto reserva ao funk o potencial de mudar a marca brasileira no exterior.",
+          "strategy": [
+            "Localizar o gênero associado a could go global.",
+            "Retomar o título com esse referente."
+          ],
+          "trap": "Escolher sertanejo por liderar o mercado interno.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "18",
+          "page": 7,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Função de exemplo",
+            "imagem cultural"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica a menção a Ainda estou aqui pela imagem musical que sua trilha reforça.",
+          "rationale": "A trilha de samba e bossa nova alimenta a representação estrangeira que o texto problematiza.",
+          "strategy": [
+            "Relacionar smooth soundtrack à imaginação dos estrangeiros.",
+            "Distinguir função argumentativa do filme de seu contexto político."
+          ],
+          "trap": "Responder sobre a ditadura sem relacionar o filme à música.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "19",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Informação explícita",
+            "economia e música"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a ascensão sertaneja à importância crescente da agricultura.",
+          "rationale": "O segundo parágrafo contrapõe manufatura anterior ao peso atual dos estados rurais.",
+          "strategy": [
+            "Localizar o contraste econômico manufacturing/agriculture.",
+            "Conectar a mudança à voz dos rural states."
+          ],
+          "trap": "Explicar a popularidade apenas pela influência americana.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "20",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Concessão",
+            "despite e notwithstanding"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece notwithstanding como equivalente de despite.",
+          "rationale": "O domínio doméstico não resulta em potencial exportador equivalente.",
+          "strategy": [
+            "Isolar a concessão entre popularidade e exportação.",
+            "Testar notwithstanding antes de this dominance."
+          ],
+          "trap": "Trocar a concessão por causa com due to.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "21",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Explicação cultural",
+            "apostos e glosas"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece as explicações dirigidas a leitores estrangeiros sobre o funk.",
+          "rationale": "As passagens traduzem baile funk e detalham passinho e rebolada.",
+          "strategy": [
+            "Localizar expressões parentéticas e relativas explicativas.",
+            "Relacionar as glosas à falta presumida de familiaridade do leitor."
+          ],
+          "trap": "Dizer que as glosas comparam diretamente todas as danças latinas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "22",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Expressão temporal",
+            "any given day"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Traduz o sentido de em um dia qualquer na pesquisa de leitura.",
+          "rationale": "A expressão descreve a proporção observável num dia considerado, não leitura diária contínua.",
+          "strategy": [
+            "Interpretar any given como um dia tomado genericamente.",
+            "Distinguir frequência de leitura de continuidade em todos os dias."
+          ],
+          "trap": "Traduzir como todos os dias de 2004 a 2023.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "23",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Leitura de dados",
+            "exceção a tendência"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica mulheres e adultos muito escolarizados como exceções ao declínio do tempo de leitura.",
+          "rationale": "Nesses grupos o tempo aumentou de 83 para 97 minutos.",
+          "strategy": [
+            "Comparar a tendência geral com o dado específico do segundo parágrafo.",
+            "Relacionar those groups a mulheres e adultos escolarizados."
+          ],
+          "trap": "Generalizar a queda a todos os participantes.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "24",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Informação explícita",
+            "estímulo à leitura"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece iniciativas de leitura na primeira infância como medida proposta.",
+          "rationale": "O último parágrafo menciona early-childhood reading initiatives.",
+          "strategy": [
+            "Localizar as duas medidas sugeridas pelos pesquisadores.",
+            "Escolher a alternativa equivalente à ação para crianças pequenas."
+          ],
+          "trap": "Inventar proibição de acesso digital não proposta.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "25",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Humor em tirinha",
+            "implícito e autoimagem"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica a irritação de Calvin com a interpretação de seu vocabulário restrito.",
+          "rationale": "Calvin se apresenta como conciso; Hobbes transforma a afirmação em crítica à pouca leitura.",
+          "strategy": [
+            "Contrastar a intenção de man of few words com a resposta do tigre.",
+            "Usar a perseguição final como reação à crítica."
+          ],
+          "trap": "Tomar a fala de Hobbes como elogio à sabedoria do menino.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "R",
+          "page": 10,
+          "subject": "Redação",
+          "topicId": "por_red_argumentacao",
+          "topic": "Introdução, Argumentação e Coerência",
+          "subtopics": [
+            "Luto contemporâneo",
+            "espetacularização",
+            "memória coletiva"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Argumenta sobre as tensões entre exposição midiática da morte e lembrança coletiva.",
+          "rationale": "A coletânea articula vínculos afetivos, memória e exploração da intimidade do falecido.",
+          "strategy": [
+            "Definir tese que conecte a elaboração social do luto aos usos das redes.",
+            "Distinguir homenagem e compartilhamento de exploração sensacionalista.",
+            "Sustentar critérios argumentativos para o limite entre memória e espetáculo."
+          ],
+          "trap": "Discutir mortalidade em geral sem abordar a mediação contemporânea do luto.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": []
+        }
+      ]
+    },
+    {
+      "id": "unifesp-2026-especificos-discursiva",
+      "group": "especificos-discursiva",
+      "phase": "Conhecimentos Específicos",
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "002 — imprensa",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NzUzOTcyNg%3d%3d",
+      "answerKeyUrl": null,
+      "sha256": "fa70f2fe0f73b169560aae17854f41b58a0511eeebf6d193c57954440bebd450",
+      "answerKeySha256": null,
+      "pages": 28,
+      "expectedQuestions": 20,
+      "coverageNote": "Capa: 20 questões discursivas com a/b. Índice oficial consultado na descoberta não apresentou espelho público de respostas esperadas correspondente. Campos de gabarito nulos; estratégias são autorais.",
+      "questions": [
+        {
+          "number": "01",
+          "page": 3,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Espécie invasora",
+            "potencial biótico",
+            "resistência ambiental"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica a proliferação de javaporcos como invasores no Brasil.",
+          "rationale": "Ambas as formas pertencem a Sus scrofa; ambiente com baixa resistência permite expressão do potencial reprodutivo.",
+          "strategy": [
+            "Separar espécie Sus scrofa de subespécies scrofa/domesticus.",
+            "Explicar origem exótica em relação à fauna brasileira.",
+            "Relacionar recursos e ausência de inimigos à baixa resistência do meio."
+          ],
+          "trap": "Tratar subespécies como espécies diferentes só pelo terceiro nome.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "02",
+          "page": 4,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Memória imunológica",
+            "linfócito T citotóxico",
+            "terapia antitumoral"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_microbiologia",
+            "bio_codigo_genetico_sintese"
+          ],
+          "summary": "Analisa limites imunológicos de terapia que transporta vírus em Salmonella.",
+          "rationale": "A imunidade prévia elimina a bactéria transportadora; linfócitos T citotóxicos matam células infectadas por perforinas.",
+          "strategy": [
+            "Identificar respiração aeróbia e proteína como produto de tradução.",
+            "Relacionar tratamento prévio à resposta de memória contra Salmonella.",
+            "Identificar T CD8+ como célula efetora citotóxica."
+          ],
+          "trap": "Confundir destruição de células infectadas com ação de anticorpos isolados.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "03",
+          "page": 5,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_vegetal",
+          "topic": "Fisiologia Vegetal",
+          "subtopics": [
+            "Potencial hídrico",
+            "ABA",
+            "estômatos e fotossíntese"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona desidratação, fluxo de potássio e trocas gasosas nas plantas.",
+          "rationale": "O ABA favorece perda de K+ das células-guarda e fechamento estomático, mas transpiração cuticular persiste.",
+          "strategy": [
+            "Associar maior turgescência às plantas bem regadas.",
+            "Explicar a perda de K+ e água das células-guarda sob ABA.",
+            "Relacionar menor entrada de CO2 à queda da fotossíntese e distinguir transpiração cuticular."
+          ],
+          "trap": "Afirmar que fechar estômatos elimina toda perda de água.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "04",
+          "page": 6,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Vitamina D",
+            "cálcio",
+            "contração muscular"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona síntese de vitamina D, absorção de cálcio e retículo sarcoplasmático.",
+          "rationale": "A vitamina lipossolúvel depende de UV e favorece absorção intestinal de Ca²+, usado no controle da contração.",
+          "strategy": [
+            "Identificar radiação UV e armazenamento no tecido adiposo.",
+            "Relacionar absorção intestinal ao cálcio disponível.",
+            "Explicar liberação e recaptação de Ca²+ pelo retículo para controlar actina e miosina."
+          ],
+          "trap": "Dizer que vitamina D fornece energia direta ao sarcômero.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "05",
+          "page": 7,
+          "subject": "Biologia",
+          "topicId": "bio_codigo_genetico_sintese",
+          "topic": "Código Genético e Síntese Proteica",
+          "subtopics": [
+            "Splicing alternativo",
+            "éxons",
+            "duplicação gênica"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_genetica"
+          ],
+          "summary": "Explica o efeito de um oligonucleotídeo sobre a maturação do RNAm de SMN2.",
+          "rationale": "Retenção do éxon 7 altera a isoforma produzida e aumenta proteína funcional sem corrigir o gene SMN1.",
+          "strategy": [
+            "Representar o genótipo m1m1 M2M2 e identificar duplicação para aumentar cópias.",
+            "Definir remoção de íntrons e união de éxons.",
+            "Relacionar a inclusão alternativa do éxon 7 à proteína resultante."
+          ],
+          "trap": "Confundir splicing de RNA com edição de DNA.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "06",
+          "page": 8,
+          "subject": "Química",
+          "topicId": "qui_equilibrio",
+          "topic": "Equilíbrio Químico",
+          "subtopics": [
+            "Kp heterogêneo",
+            "entalpia",
+            "Le Chatelier"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_termoquimica",
+            "qui_oxirreducao"
+          ],
+          "summary": "Analisa o equilíbrio entre ferro, vapor e hidrogênio.",
+          "rationale": "Sólidos não entram em Kp; a formação de H2 é exotérmica e reduz o NOX do hidrogênio.",
+          "strategy": [
+            "Escrever Kp=pH2⁴/pH2O⁴ e variação +1→0.",
+            "Calcular ΔH=−1117−4(−242).",
+            "Prever menor produção de H2 com aquecimento."
+          ],
+          "trap": "Incluir as atividades dos sólidos na expressão de Kp.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "07",
+          "page": 9,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Combustão completa",
+            "volume molar",
+            "Lewis"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_polaridade_geometria"
+          ],
+          "summary": "Calcula o oxigênio necessário à combustão do acetileno.",
+          "rationale": "A proporção 2C2H2:5O2 converte massa de combustível em volume nas CATP.",
+          "strategy": [
+            "Representar H–C≡C–H com pares compartilhados e CO2 linear.",
+            "Balancear 2C2H2+5O2→4CO2+2H2O.",
+            "Converter 1000/26 em mol e multiplicar por 5/2 e 25 L/mol."
+          ],
+          "trap": "Aplicar volume molar de 22,4 L/mol quando o enunciado fixa 25.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "08",
+          "page": 10,
+          "subject": "Química",
+          "topicId": "qui_eletroquimica",
+          "topic": "Eletroquímica",
+          "subtopics": [
+            "Eletrólise",
+            "lei de Faraday",
+            "redução catódica"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina carga transferida e carga do íon de cromo pela deposição.",
+          "rationale": "A massa depositada relaciona mols de Cr e mols de elétrons, revelando x próximo de 3.",
+          "strategy": [
+            "Escrever Crˣ⁺+xe−→Cr no cátodo.",
+            "Converter duas horas a segundos e calcular Q=0,5×7200.",
+            "Dividir Q/F pelos mols 0,65/52 para obter x."
+          ],
+          "trap": "Confundir redução no cátodo com o sinal do ânodo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "09",
+          "page": 11,
+          "subject": "Química",
+          "topicId": "qui_radioatividade",
+          "topic": "Radioatividade",
+          "subtopics": [
+            "Meia-vida",
+            "captura de nêutrons",
+            "decaimento beta"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa produção e meia-vida do amerício-241.",
+          "rationale": "A captura de dois nêutrons produz Pu-241 e beta menos aumenta Z de 94 para 95.",
+          "strategy": [
+            "Subtrair Z=95 de A=241 para obter nêutrons.",
+            "Ler a idade em que resta 50% na curva.",
+            "Conservar A e Z para escrever Pu-241→Am-241+β−."
+          ],
+          "trap": "Confundir o decaimento alfa do amerício com a emissão beta de sua produção.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "10",
+          "page": 12,
+          "subject": "Química",
+          "topicId": "qui_solucoes",
+          "topic": "Soluções",
+          "subtopics": [
+            "Concentração molar",
+            "escala de pH",
+            "funções orgânicas"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_organica_fundamentos",
+            "qui_equilibrio"
+          ],
+          "summary": "Relaciona solubilidade, acidez e funções da acetilcisteína.",
+          "rationale": "A estrutura contém ácido carboxílico e amida; pH logarítmico muda [H+] por fator dez em uma unidade.",
+          "strategy": [
+            "Identificar COOH e CONH sem confundi-los com álcool/amina.",
+            "Comparar 10⁻1,5 e 10⁻2,5 e indicar redução por dez.",
+            "Dividir 180 g/L por 160 g/mol para concentração saturada."
+          ],
+          "trap": "Tratar aumento de uma unidade de pH como aumento de [H+].",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "11",
+          "page": 13,
+          "subject": "Física",
+          "topicId": "fis_estatica",
+          "topic": "Estática dos Corpos Sólidos e dos Fluidos",
+          "subtopics": [
+            "Pressão hidrostática",
+            "empuxo",
+            "densidade variável"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Estima profundidade e empuxo por gráfico de densidade e pressão.",
+          "rationale": "O gráfico fornece valores locais para aplicação aproximada de P=ρgh e E=ρgV.",
+          "strategy": [
+            "Ler a pressão correspondente a 1035 kg/m³.",
+            "Usar h≈P/(ρg), conforme aproximação pedida.",
+            "Ler a densidade a 3,5×10⁷ Pa e aplicar E=ρg×40."
+          ],
+          "trap": "Ler o eixo invertido da pressão como profundidade direta.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "12",
+          "page": 14,
+          "subject": "Física",
+          "topicId": null,
+          "topic": "Dilatação Térmica",
+          "subtopics": [
+            "Dilatação volumétrica",
+            "dilatação aparente",
+            "escalas térmicas"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula dilatação real do líquido a partir do transbordamento e expansão da proveta.",
+          "rationale": "O volume extravasado corresponde à diferença entre expansão do líquido e do recipiente.",
+          "strategy": [
+            "Usar igualdade dos incrementos Kelvin/Celsius e Δ°F=1,8Δ°C para converter o coeficiente.",
+            "Calcular γaparente=6/(500×60).",
+            "Somar γvidro para obter γreal."
+          ],
+          "trap": "Usar os 6 cm³ como dilatação real sem considerar a proveta.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "13",
+          "page": 15,
+          "subject": "Física",
+          "topicId": "fis_optica_geometrica",
+          "topic": "Óptica Geométrica",
+          "subtopics": [
+            "Espelhos planos perpendiculares",
+            "espelho convexo",
+            "raios notáveis"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Constrói imagens por reflexão e obtém foco de espelho convexo por geometria do raio.",
+          "rationale": "Imagens planas são simétricas; o raio que emerge paralelo tem prolongamento incidente passando pelo foco.",
+          "strategy": [
+            "Marcar as imagens a 30 e 40 cm atrás dos respectivos espelhos.",
+            "Calcular a separação por Pitágoras com catetos 60 e 80 cm.",
+            "Prolongar o raio refletido por E1 até F e usar o ângulo de 45° e as distâncias indicadas."
+          ],
+          "trap": "Incluir a imagem por dupla reflexão quando se pedem reflexões únicas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "14",
+          "page": 16,
+          "subject": "Física",
+          "topicId": "fis_ondas_fundamentos",
+          "topic": "Fundamentos de Ondas e Oscilações",
+          "subtopics": [
+            "Período e comprimento de onda",
+            "amplitude",
+            "trabalho do peso"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "fis_energia"
+          ],
+          "summary": "Lê a oscilação de um barco e calcula grandezas da onda e trabalho gravitacional.",
+          "rationale": "O desenho dá 150 m entre crista e vale e o gráfico dá T=20 s, alturas 10 e 14 m.",
+          "strategy": [
+            "Ler T=20 s e λ/2=150 m para calcular f e v.",
+            "Usar Δh=4 m em Wpeso=−mgΔh.",
+            "Dividir a diferença de alturas por dois para obter amplitude."
+          ],
+          "trap": "Confundir distância crista-vale com comprimento de onda inteiro.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "15",
+          "page": 17,
+          "subject": "Física",
+          "topicId": "fis_circuitos",
+          "topic": "Circuitos Elétricos",
+          "subtopics": [
+            "Associação série-paralelo",
+            "instrumentos ideais",
+            "potência"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula corrente e potência com chave aberta e resistência desconhecida com chave fechada.",
+          "rationale": "O voltímetro mede R3; R1 fica em série com o ramo R3/RX e esse conjunto é paralelo a R2.",
+          "strategy": [
+            "Usar I=15/50 e P1=I²×40 com chave aberta.",
+            "Com chave fechada, associar R3 em paralelo com RX, somar R1 em série e colocar esse conjunto em paralelo com R2.",
+            "Igualar a resistência equivalente a 40 Ω e resolver para RX."
+          ],
+          "trap": "Tratar o amperímetro ideal como resistência adicional.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "16",
+          "page": 18,
+          "subject": "Matemática",
+          "topicId": "mat_combinatoria",
+          "topic": "Análise Combinatória",
+          "subtopics": [
+            "Princípio multiplicativo",
+            "contagem por características",
+            "probabilidade"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "mat_dados_probabilidade"
+          ],
+          "summary": "Conta prismas e casos que diferem em exatamente duas características.",
+          "rationale": "As quatro escolhas independentes têm 2,4,4 e 5 possibilidades, com alternativas ao objeto fixo em 1,3,3 e 4.",
+          "strategy": [
+            "Calcular total 2×4×4×5 e favoráveis plástico/não azul.",
+            "Enumerar os seis pares de características que mudam.",
+            "Somar os produtos correspondentes das quantidades 1,3,3 e 4."
+          ],
+          "trap": "Permitir mudança nas características que deveriam permanecer iguais.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "17",
+          "page": 19,
+          "subject": "Matemática",
+          "topicId": "mat_sequencias_matrizes",
+          "topic": "Sequências, Matrizes e Sistemas Lineares",
+          "subtopics": [
+            "Progressão aritmética",
+            "média aritmética",
+            "pontuação"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "mat_dados_probabilidade"
+          ],
+          "summary": "Conta vitórias por limiar médio e reconstrói a PA dos últimos jogos.",
+          "rationale": "A soma igual em blocos de dez permite determinar o primeiro termo da PA e localizar o sexto.",
+          "strategy": [
+            "Calcular média dos quatro primeiros jogos e contar pontuações estritamente superiores.",
+            "Somar os dez primeiros resultados.",
+            "Usar S10=10(2a1+9×6)/2 e obter a6, correspondente ao jogo 16."
+          ],
+          "trap": "Tomar o jogo 16 como o décimo sexto termo da PA final.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "18",
+          "page": 20,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_plana",
+          "topic": "Geometria Plana",
+          "subtopics": [
+            "Semelhança de triângulos",
+            "Pitágoras",
+            "área"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Usa os triângulos formados por uma transversal ao quadrado.",
+          "rationale": "Os triângulos retângulos PQA, QRT e RSC são semelhantes e têm hipotenusas dadas.",
+          "strategy": [
+            "Para a, usar PA=9 e PQ=10 para obter a razão horizontal/hipotenusa.",
+            "Transferir a razão ao trecho QR=12, cuja projeção horizontal é o lado do quadrado.",
+            "Para b, usar as três hipotenusas 10,12,14 e a igualdade dos catetos totais do quadrado para obter área de QRT."
+          ],
+          "trap": "Assumir x e y simultaneamente fixados entre subitens independentes.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "19",
+          "page": 21,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Função definida por partes",
+            "imagem",
+            "vértice de parábola"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina imagem global e valor de um ramo quadrático.",
+          "rationale": "O cruzamento dos ramos lineares dá mínimo −2 e a parábola tem vértice (12,0).",
+          "strategy": [
+            "Resolver −p+2=p−6 e achar o valor mínimo linear.",
+            "Combinar as imagens dos três ramos para obter [−2,+∞).",
+            "Usar f(x)=a(x−12)² e f(9)=3 para calcular f(21)."
+          ],
+          "trap": "Ignorar restrições dos intervalos ao combinar imagens.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "20",
+          "page": 22,
+          "subject": "Matemática",
+          "topicId": "mat_trigonometria",
+          "topic": "Trigonometria",
+          "subtopics": [
+            "Tangente",
+            "razão de áreas",
+            "quadrados"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "mat_geometria_plana"
+          ],
+          "summary": "Relaciona lados de quadrados e tangente do ângulo na divisão interna.",
+          "rationale": "Se os lados de Q1 e Q2 são u e v, a tangente de α em relação à vertical é v/u.",
+          "strategy": [
+            "Traduzir área Q2=2área Q1 em v/u=√2.",
+            "Para α=60°, impor v/u=√3 e achar u=√48.",
+            "Calcular o perímetro 4(u+v)."
+          ],
+          "trap": "Medir α a partir da horizontal e inverter a tangente.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -3,8 +3,8 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { mockTopics } from '../src/data/mockData';
 import { studyAreaForTopic } from '../src/data/studyProtocols';
-import { incidenceRows, interdisciplinaryPairs, scopeQuestions, type FuvestCorpus, type FuvestQuestion, type FuvestPaper } from '../src/lib/fuvestIncidence';
-const years = [2022,2023,2024,2025,2026];
+import { compareIncidencePeriods, incidenceRows, interdisciplinaryPairs, scopeQuestions, type FuvestCorpus, type FuvestQuestion, type FuvestPaper } from '../src/lib/fuvestIncidence';
+const years = Array.from({length:10},(_,index)=>2017+index);
 const harmonization = JSON.parse(await readFile('scripts/data/fuvest-incidence/subtopic-aliases.json', 'utf8'));
 const aliases = new Map<string, string[]>(harmonization.aliases.map((entry: any) => [`${entry.subject}:${entry.original}`, entry.canonical]));
 const questionPatches = new Map<string, string[]>(harmonization.questionPatches.map((entry: any) => [entry.id, entry.subtopics]));
@@ -18,7 +18,8 @@ for (const year of years) {
   const data = JSON.parse(raw);
   for (const document of data.sourceManifest ?? []) sourceDocuments.set(document.sourceUrl, document);
   sources.push({ year, file, sha256: createHash('sha256').update(raw).digest('hex') });
-  if (data.year !== year || data.papers.length !== 3 || new Set(data.papers.map((paper: any) => paper.phase)).size !== 3 || !['1a','2a-dia1','2a-dia2'].every(phase => data.papers.some((paper: any) => paper.phase === phase))) throw new Error(`É preciso classificar os três cadernos: ${year}`);
+  const expectedPhases=year<2022?['1a']:['1a','2a-dia1','2a-dia2'];
+  if (data.year !== year || data.papers.length !== expectedPhases.length || new Set(data.papers.map((paper: any) => paper.phase)).size !== expectedPhases.length || !expectedPhases.every(phase => data.papers.some((paper: any) => paper.phase === phase))) throw new Error(`Cobertura de cadernos divergente do plano: ${year}`);
   for (const input of data.papers) {
     const expected = input.phase === '1a' ? 90 : input.phase === '2a-dia1' ? 11 : 36;
     if (input.expectedQuestions !== expected || input.questions.length !== expected || new Set(input.questions.map((q: any) => q.number)).size !== expected) throw new Error(`Cobertura incompleta: ${input.id}`);
@@ -56,11 +57,12 @@ for (const year of years) {
     }
   }
 }
-if (papers.length !== 15 || new Set(papers.map(paper => paper.id)).size !== 15 || questions.length !== 685 || new Set(questions.map(q => q.id)).size !== 685) throw new Error('O corpus deve conter 685 registros únicos, antes das exclusões.');
+if (papers.length !== 20 || new Set(papers.map(paper => paper.id)).size !== 20 || questions.length !== 1135 || new Set(questions.map(q => q.id)).size !== 1135) throw new Error('O corpus deve conter 1135 registros únicos, antes das exclusões.');
 for(const id of questionPatches.keys())if(!questions.some(question=>question.id===id))throw new Error(`Harmonização aponta questão inexistente: ${id}`);
-const corpus: FuvestCorpus = { reviewedOn: '2026-10-18', reviewType: 'Classificação editorial a partir da leitura das fontes; revisão amostral de integração. Não é classificação oficial nem dupla codificação independente.', years, papers, questions };
+const corpus: FuvestCorpus = { reviewedOn: '2026-10-21', reviewType: 'Classificação editorial a partir da leitura das fontes; revisão amostral de integração. Não é classificação oficial nem dupla codificação independente.', years, papers, questions };
 await writeFile('src/data/fuvestIncidence.json', JSON.stringify({...corpus,sourceDocuments:[...sourceDocuments.values()],harmonizationPolicy:harmonization.policy,classificationFiles:sources}, null, 2) + '\n');
-const counts = papers.map(paper => {
+// Personal priorities retain the recent five-edition window; the explorer uses the decade.
+const counts = papers.filter(paper=>paper.year>=2022).map(paper => {
   const pool = questions.filter(question => question.paperId === paper.id && !question.excluded);
   const subjects = [...new Set(pool.map(question => question.subject))].map(subject => {
     const own = pool.filter(question => question.subject === subject);
@@ -82,45 +84,45 @@ const csv = [header.map(quote).join(';'), ...questions.map(question => {
   const paper = papers.find(paper => paper.id === question.paperId)!;
   return [question.id,question.year,question.phase,question.number,question.page,question.subject,question.topicId,question.topic,question.subtopics.join(' | '),question.originalSubtopics?.join(' | '),question.skills.join(' | '),question.relatedSubjects.join(' | '),question.confidence,question.excluded,question.excludedReason,question.summary,question.rationale,question.strategy.join(' → '),question.trap,question.reviewNote,`${paper.sourceUrl}#page=${question.page}`,question.answerKeyUrl ?? paper.answerKeyUrl,paper.sha256].map(quote).join(';');
 })].join('\n');
-await writeFile('public/analises/fuvest/questoes-2022-2026.csv','\ufeff' + csv + '\n');
-await writeFile('public/analises/fuvest/corpus-2022-2026.json', JSON.stringify({ ...corpus, sourceDocuments:[...sourceDocuments.values()], harmonizationPolicy:harmonization.policy, classificationFiles: sources }, null, 2) + '\n');
-const lines = ['# FUVEST 2022–2026: incidência e estratégias', '', `Corpus: ${questions.length} questões/propostas, ${papers.length} cadernos oficiais, cinco edições. ${questions.filter(question => question.excluded).length} itens excluídos das frequências.`, '', '## Método', '', 'Um assunto principal e uma matéria principal por questão; assuntos associados não duplicam a contagem principal. Cada subassunto mede presença e pode coexistir com outros: suas porcentagens não devem ser somadas. Percentual é n/N da matéria, edição/fase e recorte selecionados. Redação é analisada separadamente, sem pretensão de prever tema. Classificação editorial, não classificação oficial nem probabilidade futura. As frequências dependem da taxonomia e da resolução dos casos ambíguos.', '', 'No dia 2, o banco de 36 questões é separado por campus de Medicina, sem somar candidatos de campi diferentes. Em 2022–2024: São Paulo B/F/Q primeiras quatro; Bauru B/G/Q primeiras quatro; Ribeirão Preto B/F/G/Q primeiras três. Em 2025–2026: todos B/F/G/Q primeiras três. Cada campus tem 12 itens por edição. Manuais e capas documentam os recortes; veja as regras verificadas. Para 2027 as disciplinas estão confirmadas, mas não se antecipa a numeração do caderno futuro.', '', '2026 introduz mudanças de programa e redação; a primeira fase de 2027 terá 80 questões. Resultados por edição permanecem visíveis: não se reescala nota de corte antiga nem se converte frequência em chance de aprovação.', '', '## Cobertura e exclusões', '', '|Ano|Fase|Classificadas/previstas|Excluídas|Fonte oficial|','|---|---|---|---|---|', ...papers.map(paper => `|${paper.year}|${paper.phase}|${paper.classifiedQuestions}/${paper.expectedQuestions}|${questions.filter(question => question.paperId === paper.id && question.excluded).map(question => question.number).join(', ') || 'Nenhuma'}|[PDF](${paper.sourceUrl})|`), '', '## Classificações com ressalvas', '', `Alta: ${questions.filter(q=>q.confidence==='high').length}; média: ${questions.filter(q=>q.confidence==='medium').length}; baixa: ${questions.filter(q=>q.confidence==='low').length}. Esses rótulos são de revisão editorial, não probabilidades estatísticas. O filtro de alta confiança conserva o denominador, para não inflar a frequência.`, ''];
+await writeFile('public/analises/fuvest/questoes-2017-2026.csv','\ufeff' + csv + '\n');
+await writeFile('public/analises/fuvest/corpus-2017-2026.json', JSON.stringify({ ...corpus, sourceDocuments:[...sourceDocuments.values()], harmonizationPolicy:harmonization.policy, classificationFiles: sources }, null, 2) + '\n');
+const lines = ['# FUVEST 2017–2026: incidência e estratégias', '', `Corpus: ${questions.length} questões/propostas, ${papers.length} cadernos oficiais, dez edições na primeira fase e cinco na segunda fase. ${questions.filter(question => question.excluded).length} itens excluídos das frequências.`, '', '## Método', '', 'Um assunto principal e uma matéria principal por questão; assuntos associados não duplicam a contagem principal. Cada subassunto mede presença e pode coexistir com outros: suas porcentagens não devem ser somadas. Percentual é n/N da matéria, edição/fase e recorte selecionados. Redação é analisada separadamente, sem pretensão de prever tema. Classificação editorial, não classificação oficial nem probabilidade futura. As frequências dependem da taxonomia e da resolução dos casos ambíguos.', '', 'No dia 2, o banco de 36 questões é separado por campus de Medicina, sem somar candidatos de campi diferentes. Em 2022–2024: São Paulo B/F/Q primeiras quatro; Bauru B/G/Q primeiras quatro; Ribeirão Preto B/F/G/Q primeiras três. Em 2025–2026: todos B/F/G/Q primeiras três. Cada campus tem 12 itens por edição. Manuais e capas documentam os recortes; veja as regras verificadas. Para 2027 as disciplinas estão confirmadas, mas não se antecipa a numeração do caderno futuro.', '', '2026 introduz mudanças de programa e redação; a primeira fase de 2027 terá 80 questões. Resultados por edição permanecem visíveis: não se reescala nota de corte antiga nem se converte frequência em chance de aprovação.', '', '## Cobertura e exclusões', '', '|Ano|Fase|Classificadas/previstas|Excluídas|Fonte oficial|','|---|---|---|---|---|', ...papers.map(paper => `|${paper.year}|${paper.phase}|${paper.classifiedQuestions}/${paper.expectedQuestions}|${questions.filter(question => question.paperId === paper.id && question.excluded).map(question => question.number).join(', ') || 'Nenhuma'}|[PDF](${paper.sourceUrl})|`), '', '## Classificações com ressalvas', '', `Alta: ${questions.filter(q=>q.confidence==='high').length}; média: ${questions.filter(q=>q.confidence==='medium').length}; baixa: ${questions.filter(q=>q.confidence==='low').length}. Esses rótulos são de revisão editorial, não probabilidades estatísticas. O filtro de alta confiança conserva o denominador, para não inflar a frequência.`, ''];
 for (const scope of ['1a','2a-dia1','2a-dia2','medicina','medicina-sp','medicina-bauru'] as const) {
   lines.push(`## ${scope === '1a' ? '1ª fase' : scope.startsWith('medicina') ? `Medicina — ${scope==='medicina-sp'?'São Paulo':scope==='medicina-bauru'?'Bauru':'Ribeirão Preto'}` : scope === '2a-dia1' ? '2ª fase: dia 1' : '2ª fase: banco completo do dia 2'}`, '');
-  const rows = incidenceRows(corpus, {startYear:2022,endYear:2026,scope});
+  const rows = incidenceRows(corpus, {startYear:2017,endYear:2026,scope});
   for (const subject of [...new Set(rows.map(row=>row.subject))].sort()) {
-    lines.push(`### ${subject}`, '', '|Assunto|n/N da matéria|%|Edições com ocorrência / cobertas|2022|2023|2024|2025|2026|', '|---|---|---|---|---|---|---|---|---|', ...rows.filter(row=>row.subject===subject).map(row=>`|${row.label}|${row.count}/${row.total}|${(100*row.rate).toFixed(1)}|${row.editions}/${row.observedEditions}|${row.annual.map(year=>year.total ? `${year.count}/${year.total}` : 'Sem recorte').join('|')}|`), '');
+    lines.push(`### ${subject}`, '', `|Assunto|n/N da matéria|%|Edições com ocorrência / cobertas|${years.join('|')}|`, `|${Array(4+years.length).fill('---').join('|')}|`, ...rows.filter(row=>row.subject===subject).map(row=>`|${row.label}|${row.count}/${row.total}|${(100*row.rate).toFixed(1)}|${row.editions}/${row.observedEditions}|${row.annual.map(year=>year.total ? `${year.count}/${year.total}` : year.covered?'Sem categoria':'Não classificado').join('|')}|`), '');
   }
-  const pairs = interdisciplinaryPairs(corpus,{startYear:2022,endYear:2026,scope});
+  const pairs = interdisciplinaryPairs(corpus,{startYear:2017,endYear:2026,scope});
   if(pairs.length)lines.push('### Conexões interdisciplinares observadas', '', ...pairs.slice(0,12).map(pair=>`- ${pair.label}: ${pair.count} questões. Referências: ${pair.questionIds.join(', ')}.`),'');
 }
-lines.push('## Como usar a análise', '', 'Comece pelos assuntos recorrentes em várias edições, mas confira as questões e a dificuldade real antes de definir tempo de estudo. Para cada erro, registre conceito ausente, representação inadequada, cálculo ou justificativa. Nas conexões, identifique qual operação exige cada disciplina, resolva a ponte entre os modelos e confira a resposta no nível solicitado. O arquivo CSV contém estratégia e erro específico por questão, com fonte e página.', '', '## Limites', '', 'Cinco edições são um histórico descritivo curto; não estabelecem uma distribuição estacionária nem previsão. Não há taxas de acerto de candidatos nem estimativa empírica de dificuldade neste corpus. Não foi medido acordo entre dois classificadores independentes. A revisão amostral e os casos de confiança média/baixa devem permanecer visíveis. Assunto sem contagem principal pode aparecer como associado; ausência histórica não exclui cobrança no programa atual.', '');
+lines.push('## Como usar a análise', '', 'Comece pelos assuntos recorrentes em várias edições, mas confira as questões e a dificuldade real antes de definir tempo de estudo. Para cada erro, registre conceito ausente, representação inadequada, cálculo ou justificativa. Nas conexões, identifique qual operação exige cada disciplina, resolva a ponte entre os modelos e confira a resposta no nível solicitado. O arquivo CSV contém estratégia e erro específico por questão, com fonte e página.', '', '## Limites', '', 'A década objetiva e as cinco edições discursivas constituem um histórico descritivo; não estabelecem uma distribuição estacionária nem previsão. Não há taxas de acerto de candidatos nem estimativa empírica de dificuldade neste corpus. Não foi medido acordo entre dois classificadores independentes. A revisão amostral e os casos de confiança média/baixa devem permanecer visíveis. Assunto sem contagem principal pode aparecer como associado; ausência histórica não exclui cobrança no programa atual.', '');
 await mkdir('docs/estudos-2026/fuvest-incidencia', {recursive:true});
-await writeFile('docs/estudos-2026/fuvest-incidencia/relatorio-2022-2026.md', lines.join('\n'));
+await writeFile('docs/estudos-2026/fuvest-incidencia/relatorio-2017-2026.md', lines.join('\n'));
 console.log(JSON.stringify({ questions: questions.length, papers: papers.length, excluded: questions.filter(question=>question.excluded).map(question=>question.id), confidence: ['high','medium','low'].map(confidence=>({confidence,count:questions.filter(question=>question.confidence===confidence).length})) }));
 
 // Aggregate downloads retain both conditional-category and whole-block denominators.
 for (const [group,filename] of [['topic','assuntos'],['subtopic','subassuntos']] as const) {
-  const rows: unknown[][] = [['recorte','categoria_editorial','assunto','ocorrencias','total_categoria','percentual_categoria','total_bloco','percentual_bloco','edicoes_com_ocorrencia','edicoes_integralmente_cobertas','2022_n_N','2023_n_N','2024_n_N','2025_n_N','2026_n_N','questoes']];
+  const rows: unknown[][] = [['recorte','categoria_editorial','assunto','ocorrencias','total_categoria','percentual_categoria','total_bloco','percentual_bloco','edicoes_com_ocorrencia','edicoes_integralmente_cobertas',...years.map(year=>`${year}_n_N`),'questoes']];
   for (const scope of ['1a','2a-dia1','2a-dia2','medicina','medicina-sp','medicina-bauru'] as const) {
-    const filter={startYear:2022,endYear:2026,scope};
+    const filter={startYear:2017,endYear:2026,scope};
     const pool=scopeQuestions(corpus,filter);
     for(const row of incidenceRows(corpus,filter,group)){
       const totalBlock=pool.filter(question=>row.subject==='Redação'?question.subject==='Redação':question.subject!=='Redação').length;
-      rows.push([scope,row.subject,row.label,row.count,row.total,(100*row.rate).toFixed(4),totalBlock,(100*row.count/totalBlock).toFixed(4),row.editions,row.observedEditions,...row.annual.map(year=>year.total?`${year.count}/${year.total}`:'sem denominador'),row.questionIds.join(' | ')]);
+      rows.push([scope,row.subject,row.label,row.count,row.total,(100*row.rate).toFixed(4),totalBlock,(100*row.count/totalBlock).toFixed(4),row.editions,row.observedEditions,...row.annual.map(year=>year.total?`${year.count}/${year.total}`:year.covered?'sem denominador':'não classificado'),row.questionIds.join(' | ')]);
     }
   }
-  await writeFile(`public/analises/fuvest/incidencia-${filename}-2022-2026.csv`,'\ufeff'+rows.map(row=>row.map(quote).join(';')).join('\n')+'\n');
+  await writeFile(`public/analises/fuvest/incidencia-${filename}-2017-2026.csv`,'\ufeff'+rows.map(row=>row.map(quote).join(';')).join('\n')+'\n');
 }
-const details: string[] = ['## Distribuição da primeira fase por categoria editorial', '', 'As edições indicam o ano de ingresso: a FUVEST 2026 foi aplicada em 2025. A FUVEST 2027, aplicada em 2026, ainda não integra a série de provas realizadas. Simulados não foram misturados ao histórico.', '', 'Português e Literatura são separados aqui para análise de habilidades, mas pertencem ao mesmo bloco oficial no primeiro dia da segunda fase. Cada n/N deve ser lido com seu recorte. Frequência de itens não é peso em pontos, especialmente na redação.', '', '|Categoria principal|Itens/448 válidos|% dos itens|2022|2023|2024|2025|2026|','|---|---|---|---|---|---|---|---|'];
 const first=corpus.questions.filter(question=>question.phase==='1a'&&!question.excluded);
+const details: string[] = ['## Distribuição da primeira fase por categoria editorial', '', 'As edições indicam o ano de ingresso: a FUVEST 2026 foi aplicada em 2025. A FUVEST 2027, aplicada em 2026, ainda não integra a série de provas realizadas. Simulados não foram misturados ao histórico.', '', 'Português e Literatura são separados aqui para análise de habilidades, mas pertencem ao mesmo bloco oficial no primeiro dia da segunda fase. Cada n/N deve ser lido com seu recorte. Frequência de itens não é peso em pontos, especialmente na redação.', '', `|Categoria principal|Itens/${first.length} válidos|% dos itens|${years.join('|')}|`,`|${Array(3+years.length).fill('---').join('|')}|`];
 for(const subject of [...new Set(first.map(question=>question.subject))].sort()){
  const own=first.filter(question=>question.subject===subject);
- details.push(`|${subject}|${own.length}/448|${(100*own.length/448).toFixed(1)}|${years.map(year=>own.filter(question=>question.year===year).length).join('|')}|`);
+ details.push(`|${subject}|${own.length}/${first.length}|${(100*own.length/first.length).toFixed(1)}|${years.map(year=>own.filter(question=>question.year===year).length).join('|')}|`);
 }
 details.push('', '## Do resultado observado ao treino', '', 'Os exemplos abaixo ilustram operações reais das categorias mais recorrentes, não uma seleção de questões de dificuldade medida. Consulte a série anual antes de transformar frequência agregada em prioridade. Uma categoria ampla tende a acumular mais itens que outra estreita; isso não mede retorno pedagógico por minuto.', '');
 for(const scope of ['1a','medicina','medicina-sp','medicina-bauru'] as const){
- const rows=incidenceRows(corpus,{startYear:2022,endYear:2026,scope});
+ const rows=incidenceRows(corpus,{startYear:2017,endYear:2026,scope});
  for(const subject of [...new Set(rows.map(row=>row.subject))].sort()){
   details.push(`### ${scope.startsWith('medicina')?`Medicina D2 (${scope})`:'1ª fase'} — ${subject}`, '');
   const leaders=rows.filter(row=>row.subject===subject).sort((a,b)=>b.editions-a.editions||b.count-a.count).slice(0,3);
@@ -135,7 +137,7 @@ for(const scope of ['1a','medicina','medicina-sp','medicina-bauru'] as const){
 }
 details.push('## Categorias do currículo sem ocorrência principal', '', 'Zero nesta tabela significa apenas que nenhum item recebeu esse rótulo como principal no recorte. Não demonstra que o conceito esteja ausente dos enunciados, de pré-requisitos ou do programa. A coluna de associação registra outro tópico explicitamente necessário segundo a codificação; não é uma lista exaustiva de todo conhecimento de base.', '', '|Recorte|Matéria|Assunto do currículo|Principal|Associado explicitamente|','|---|---|---|---|---|');
 for(const scope of ['1a','medicina','medicina-sp','medicina-bauru'] as const){
- const pool=scopeQuestions(corpus,{startYear:2022,endYear:2026,scope});
+ const pool=scopeQuestions(corpus,{startYear:2017,endYear:2026,scope});
  for(const topic of mockTopics){
   const subject=studyAreaForTopic(topic);const denominator=pool.filter(question=>question.subject===subject).length;
   if(!denominator||pool.some(question=>question.topicId===topic.id))continue;
@@ -143,6 +145,11 @@ for(const scope of ['1a','medicina','medicina-sp','medicina-bauru'] as const){
  }
 }
 const fullReport=lines.join('\n')+'\n\n'+details.join('\n')+'\n';
-await writeFile('docs/estudos-2026/fuvest-incidencia/relatorio-2022-2026.md',fullReport);
-await writeFile('public/analises/fuvest/relatorio-2022-2026.md',fullReport);
+await writeFile('docs/estudos-2026/fuvest-incidencia/relatorio-2017-2026.md',fullReport);
+await writeFile('public/analises/fuvest/relatorio-2017-2026.md',fullReport);
 await writeFile('public/analises/fuvest/guia-estrategias-2027.md',await readFile('docs/estudos-2026/fuvest-incidencia/estrategias-2027.md','utf8'));
+
+const comparison=compareIncidencePeriods(corpus);
+const comparisonHeader=['fase','materia','assunto','2017_2021_n','2017_2021_N','2017_2021_percentual','2022_2026_n','2022_2026_N','2022_2026_percentual','diferenca_pp'];
+const comparisonRows=comparison.map(row=>['1a',row.subject,row.label,row.earlier.count,row.earlier.total,row.earlier.rate===null?'':(100*row.earlier.rate).toFixed(4),row.recent.count,row.recent.total,row.recent.rate===null?'':(100*row.recent.rate).toFixed(4),row.deltaPercentagePoints?.toFixed(4)??'']);
+await writeFile('public/analises/fuvest/comparacao-periodos-2017-2026.csv','\ufeff'+[comparisonHeader,...comparisonRows].map(row=>row.map(quote).join(';')).join('\n')+'\n');

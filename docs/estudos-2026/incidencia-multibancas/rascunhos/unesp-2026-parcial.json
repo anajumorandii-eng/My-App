@@ -1,0 +1,1373 @@
+{
+  "board": "UNESP",
+  "year": 2026,
+  "status": "ADIADO PELA USUÁRIA, FORA DO GERADOR:45fichas objetivas01–45; faltam46–90 e37unidades discursivas/redação, revisão e auditoria.",
+  "coverageNote": "Primeira fase lida integralmente com figuras daspáginas2–38 vistas. Fontes dos três cadernos e chave recuperadas comSHA256 conferido. Não publicar cobertura completa antes de127fichas e auditoria.",
+  "sourceManifest": [
+    {
+      "board": "UNESP",
+      "year": 2026,
+      "code": "VNSP2504",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/VNSP2504/documento",
+      "label": "Caderno de Questões - Prova de Conhecimentos Gerais - (versão de divulgação à imprensa) - Atenção candidato acesse sua versão de prova na Área do Candidato   02/11/2025",
+      "url": "https://documento.vunesp.com.br/documento/stream/NzQ2NDIyMA%3d%3d",
+      "sha256": "fda4e93aa4b1db96dd07fca3905fd7a254262087da5ddfd44b0f26f742a8a8d0",
+      "pages": 40,
+      "bytes": 4018639,
+      "phase": "1ª fase — Conhecimentos gerais",
+      "group": "conhecimentos-gerais",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "001 — V1 imprensa",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NzQ2NDIxNg%3d%3d",
+      "answerKeySha256": "6fb7957cffb60cc75dcc705629d4e49fdc5092d382a31a84e4edd04dfd00519a",
+      "coverageNote": "Caderno e gabarito primários Vunesp.",
+      "expectedQuestionsIncludingEssay": 90,
+      "sourceType": "primary",
+      "answerKeySourceType": "primary"
+    },
+    {
+      "board": "UNESP",
+      "year": 2026,
+      "code": "VNSP2504",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/VNSP2504/documento",
+      "label": "Caderno de Questões - Prova de Conhecimentos Específicos - C.Hum. e Soc.; C.Nat. e Mat. e suas Tec. - (versão de divulgação à imprensa) - Atenção candidato acesse sua versão de prova na Área do Candidato   07/12/2025",
+      "url": "https://documento.vunesp.com.br/documento/stream/NzUwMDI5Nw%3d%3d",
+      "sha256": "4896768161349a21599113e9eec6b4b0a0a42852cf9071e88bcc4a778171ae66",
+      "pages": 28,
+      "bytes": 2100199,
+      "phase": "2ª fase — Humanas, Natureza e Matemática",
+      "group": "segunda-fase-discursiva-dia1",
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "Imprensa",
+      "answerKeyUrl": null,
+      "answerKeySha256": null,
+      "coverageNote": "Fonte primária Vunesp. Contém24 questões discursivas. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna.",
+      "expectedQuestionsIncludingEssay": 24,
+      "sourceType": "primary"
+    },
+    {
+      "board": "UNESP",
+      "year": 2026,
+      "code": "VNSP2504",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/VNSP2504/documento",
+      "label": "Caderno de Questões - Prova de Conhecimentos Específicos e Redação - Linguagens e suas Tecnologias - (versão de divulgação à imprensa) - Atenção candidato acesse sua versão de prova na Área do Candidato   08/12/2025",
+      "url": "https://documento.vunesp.com.br/documento/stream/NzUwMjkzMw%3d%3d",
+      "sha256": "ad8a838cc7f992a1408231e20ac374d0db238ac45d5029b159e5aef6629851d9",
+      "pages": 20,
+      "bytes": 1382183,
+      "phase": "2ª fase — Linguagens e Redação",
+      "group": "segunda-fase-discursiva-dia2",
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "Imprensa",
+      "answerKeyUrl": null,
+      "answerKeySha256": null,
+      "coverageNote": "Fonte primária Vunesp. Contém12 questões e proposta de redação. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna.",
+      "expectedQuestionsIncludingEssay": 13,
+      "sourceType": "primary"
+    }
+  ],
+  "papers": [
+    {
+      "id": "unesp-2026-conhecimentos-gerais",
+      "group": "conhecimentos-gerais",
+      "phase": "1ª fase — Conhecimentos gerais",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "001 — V1 imprensa",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NzQ2NDIyMA%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NzQ2NDIxNg%3d%3d",
+      "answerKeySha256": "6fb7957cffb60cc75dcc705629d4e49fdc5092d382a31a84e4edd04dfd00519a",
+      "sha256": "fda4e93aa4b1db96dd07fca3905fd7a254262087da5ddfd44b0f26f742a8a8d0",
+      "pages": 40,
+      "expectedQuestions": 90,
+      "coverageNote": "Caderno e gabarito primários Vunesp.",
+      "questions": [
+        {
+          "number": "01",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Conflito social e viagem à Corte"
+          ],
+          "skills": [
+            "Infere a motivação econômica do afastamento de Nhô Quim"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Infere a motivação econômica do afastamento de Nhô Quim.",
+          "rationale": "O pai rejeita a moça pobre apesar de virtuosa e envia o filho para distraí-lo.",
+          "strategy": [
+            "Compare a riqueza da família de Quim à ausência de bens de Rosa",
+            "Relacione a viagem à tentativa paterna de romper a união entre estratos diferentes."
+          ],
+          "trap": "Atribuir o afastamento a defeito moral da moça, que é descrita como virtuosa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "02",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Sentido literal e figurado"
+          ],
+          "skills": [
+            "Reconhece o duplo emprego de plantar batatas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o duplo emprego de plantar batatas.",
+          "rationale": "A expressão de afastamento é retomada literalmente como trabalho útil na roça.",
+          "strategy": [
+            "Identifique a expressão idiomática usada para mandar alguém embora",
+            "Observe o comentário entre parênteses que a reconduz à agricultura."
+          ],
+          "trap": "Tomar toda descrição cômica como jogo entre literal e figurado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "03",
+          "page": 3,
+          "subject": "História",
+          "topicId": "his_brasil_imperio",
+          "topic": "Brasil Império",
+          "subtopics": [
+            "Capital imperial e contexto de produção"
+          ],
+          "skills": [
+            "Localiza a Corte do romance no Rio de Janeiro"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Localiza a Corte do romance no Rio de Janeiro.",
+          "rationale": "Em 1869–1872 a Corte imperial brasileira estava no Rio.",
+          "strategy": [
+            "Use a data da publicação e o termo Corte",
+            "Identifique a capital do Império no período, sem projetar a capital atual."
+          ],
+          "trap": "Escolher Salvador pela condição de primeira capital colonial.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "04",
+          "page": 3,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Romantismo e narrativa satírica"
+          ],
+          "skills": [
+            "Relaciona o humor narrativo às Memórias de um sargento de milícias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona o humor narrativo às Memórias de um sargento de milícias.",
+          "rationale": "A obra combina representação popular e comicidade sem a idealização predominante em outros romances românticos.",
+          "strategy": [
+            "Filtre as alternativas pelo pertencimento ao Romantismo",
+            "Compare a sátira com a narrativa de Manuel Antônio de Almeida."
+          ],
+          "trap": "Escolher Memórias póstumas só pela comicidade e ignorar a escola solicitada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "05",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Oração reduzida de gerúndio e tempo"
+          ],
+          "skills": [
+            "Interpreta a relação temporal da ação de encostar à vidraça"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a relação temporal da ação de encostar à vidraça.",
+          "rationale": "O gerúndio situa o momento em que Quim sente a sensação descrita.",
+          "strategy": [
+            "Reescreva mentalmente como ao encostar-se à vidraça",
+            "Compare essa simultaneidade com as relações de causa e finalidade das alternativas."
+          ],
+          "trap": "Atribuir consequência ao gerúndio sem considerar sua função temporal no período.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "06",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Antítese e progressão geométrica"
+          ],
+          "skills": [
+            "Relaciona oposições verbais à duplicação dos quadrinhos"
+          ],
+          "relatedSubjects": [
+            "Matemática"
+          ],
+          "relatedTopicIds": [
+            "mat_sequencias_matrizes"
+          ],
+          "summary": "Relaciona oposições verbais à duplicação dos quadrinhos.",
+          "rationale": "Cada alternativa oposta se ramifica em duas, formando uma PG de razão dois.",
+          "strategy": [
+            "Identifique pares como agradável/desagradável e pago/grátis",
+            "Conte a duplicação 1,2,4,8 em vez de diferença constante."
+          ],
+          "trap": "Chamar de paradoxo toda oposição ou escolher progressão aritmética.",
+          "confidence": "medium",
+          "reviewNote": "Questão exige recurso expressivo e modelo matemático; Português principal, Matemática secundária.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "07",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Irreversibilidade temporal na lírica"
+          ],
+          "skills": [
+            "Interpreta a impossibilidade de retorno do tempo perdido"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a impossibilidade de retorno do tempo perdido.",
+          "rationale": "O estio desperdiçado não regressa para oferecer a flor adiada.",
+          "strategy": [
+            "Leia a negação de que o verão perdido possa voltar",
+            "Relacione a imagem à irreversibilidade e não à imprevisibilidade do tempo."
+          ],
+          "trap": "Confundir passagem irreversível com falta de previsão meteorológica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "08",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Negação e memória do não vivido"
+          ],
+          "skills": [
+            "Infere a permanência do que não chegou a ser vivido"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Infere a permanência do que não chegou a ser vivido.",
+          "rationale": "A exceção introduzida por menos preserva o rastro do não vivido.",
+          "strategy": [
+            "Separe a regra o tempo apaga tudo da exceção apresentada",
+            "Relacione indelével ao rastro das oportunidades não vividas."
+          ],
+          "trap": "Afirmar que o poema diz que toda experiência íntima é inapagável.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "09",
+          "page": 5,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Ricardo Reis e carpe diem"
+          ],
+          "skills": [
+            "Reconhece a exortação a aproveitar o momento"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a exortação a aproveitar o momento.",
+          "rationale": "A urgência de colher a flor e de não hesitar expressa o carpe diem.",
+          "strategy": [
+            "Reúna as advertências contra adiar e perder dias únicos",
+            "Associe esse aproveitamento à tradição clássica retomada por Ricardo Reis."
+          ],
+          "trap": "Marcar locus amoenus só porque aparece uma flor.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "10",
+          "page": 5,
+          "subject": "Filosofia",
+          "topicId": "fil_origem_pre_socraticos",
+          "topic": "Origens da Filosofia e os Pré-Socráticos",
+          "subtopics": [
+            "Epicurismo e tempo presente"
+          ],
+          "skills": [
+            "Relaciona a fruição finita do presente à filosofia de Epicuro"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a fruição finita do presente à filosofia de Epicuro.",
+          "rationale": "A consciência de brevidade favorece a valorização do instante, entre as alternativas fornecidas.",
+          "strategy": [
+            "Compare a exortação do poema com a busca de fruição sem adiamento",
+            "Escolha Epicuro, sem confundir aproveitamento do presente com hedonismo ilimitado."
+          ],
+          "trap": "Atribuir a referência clássica a Platão apenas por ele ser filósofo grego.",
+          "confidence": "medium",
+          "reviewNote": "Epicurismo helenístico não tem tópico próprio; agrupamento em Origens da Filosofia é aproximação curricular, não cronologia pré-socrática.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "11",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Pleonasmo expressivo"
+          ],
+          "skills": [
+            "Identifica redundância de redondo círculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica redundância de redondo círculo.",
+          "rationale": "A forma redonda já está contida no conceito de círculo e é reiterada para expressividade.",
+          "strategy": [
+            "Compare os sentidos do adjetivo redondo e do substantivo círculo",
+            "Reconheça redundância intencional em vez de erro obrigatório de escrita."
+          ],
+          "trap": "Confundir repetição de ideia com qualquer pronome retomado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "12",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Humor visual e modelos moleculares"
+          ],
+          "skills": [
+            "Interpreta o estereótipo de isolamento associado ao conhecimento químico"
+          ],
+          "relatedSubjects": [
+            "Química",
+            "Inglês"
+          ],
+          "relatedTopicIds": [
+            "qui_polaridade_geometria",
+            "ing_01"
+          ],
+          "summary": "Interpreta o estereótipo de isolamento associado ao conhecimento químico.",
+          "rationale": "O piso molhado é representado por modelos de moléculas de água, exigindo reconhecer a brincadeira técnica.",
+          "strategy": [
+            "Compare a placa wet floor com os modelos H2O no chão",
+            "Relacione o humor restrito a conhecimento molecular ao estereótipo do inteligente sem amigos."
+          ],
+          "trap": "Ler os modelos como armadilha literal ou explicar a cena por reflexão da luz.",
+          "confidence": "medium",
+          "reviewNote": "Inglês e Química são necessários à piada visual; Português principal pelo comando sobre estereótipo.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "13",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Contraste entre artista e obra"
+          ],
+          "skills": [
+            "Reconhece discrição na caracterização da obra de Courbet"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece discrição na caracterização da obra de Courbet.",
+          "rationale": "O artista é barulhento e escandaloso, mas a obra é grave e silenciosa.",
+          "strategy": [
+            "Localize os adjetivos atribuídos à pessoa e os atribuídos aos quadros",
+            "Selecione discrição como síntese do segundo grupo."
+          ],
+          "trap": "Transferir a eloquência pessoal do pintor para sua produção.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "14",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Impessoalidade e primeira pessoa"
+          ],
+          "skills": [
+            "Localiza maior presença do enunciador no ensaio"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Localiza maior presença do enunciador no ensaio.",
+          "rationale": "O nós assistimos inclui explicitamente o crítico na observação.",
+          "strategy": [
+            "Compare as alternativas procurando pronome e verbo de primeira pessoa",
+            "Escolha o trecho com nós, sem confundir adjetivação avaliativa com marca pessoal explícita."
+          ],
+          "trap": "Ler menor impessoalidade como se a questão pedisse a formulação mais impessoal.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "15",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Sentido contextual de marginalidade"
+          ],
+          "skills": [
+            "Interpreta artista marginal como autônomo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta artista marginal como autônomo.",
+          "rationale": "O ensaio define o artista por seus próprios valores e não por exclusão econômica ou criminalidade.",
+          "strategy": [
+            "Retome a definição dada no terceiro parágrafo",
+            "Relacione independência e ética própria à autonomia artística."
+          ],
+          "trap": "Aplicar o sentido cotidiano de marginal como criminoso.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "16",
+          "page": 7,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Realismo nas artes visuais",
+          "subtopics": [
+            "Arte e identificação de Courbet"
+          ],
+          "skills": [
+            "Identifica o autorretrato de Courbet entre cinco pinturas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o autorretrato de Courbet entre cinco pinturas.",
+          "rationale": "A alternativa E mostra o autorretrato com cão preto; as outras remetem a pintores e projetos históricos distintos.",
+          "strategy": [
+            "Compare o caráter autobiográfico e a autonomia descritos no ensaio às imagens",
+            "Identifique a obra E e diferencie-a das cenas históricas de David e Delacroix."
+          ],
+          "trap": "Escolher qualquer imagem do século XIX sem reconhecer sua autoria.",
+          "confidence": "high",
+          "reviewNote": "Autoria e contexto visual deCourbet; Arte sem tópico próprio,sem forçar emLiteratura.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "17",
+          "page": 7,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Coesão e referenciação"
+          ],
+          "skills": [
+            "Recupera antecedentes de pronomes no argumento sobre marginalidade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Recupera antecedentes de pronomes no argumento sobre marginalidade.",
+          "rationale": "A sequência retoma lugar, artista e campo da marginalidade.",
+          "strategy": [
+            "Reponha o substantivo a cada pronome sublinhado na página",
+            "Teste a concordância e o sentido da retomada, evitando escolher o nome mais próximo automaticamente."
+          ],
+          "trap": "Tratar todos os pronomes como referentes a Courbet.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "18",
+          "page": 8,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Modernismo e ruptura com Parnasianismo"
+          ],
+          "skills": [
+            "Reconhece verso livre e coloquialidade em Drummond"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece verso livre e coloquialidade em Drummond.",
+          "rationale": "A construção repetitiva e a linguagem cotidiana afastam o poema do rigor parnasiano.",
+          "strategy": [
+            "Compare métrica/rima e expressão coloquial com o modelo parnasiano",
+            "Escolha verso livre e coloquialidade, sem inventar conteúdo político explícito."
+          ],
+          "trap": "Supor que todo poema modernista exige discurso social engajado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "19",
+          "page": 8,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Síntese lógica e redundância poética"
+          ],
+          "skills": [
+            "Seleciona a redução dos blocos do poema a três proposições"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Seleciona a redução dos blocos do poema a três proposições.",
+          "rationale": "A representação em peças permite conservar pedra no caminho e memória do acontecimento sem repetições permutadas.",
+          "strategy": [
+            "Use a legenda de cores para reconstruir os versos únicos",
+            "Compare as alternativas e retenha a pedra no caminho, a lembrança e as retinas fatigadas na composição D."
+          ],
+          "trap": "Contar peças sem recuperar o texto que cada cor representa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "20",
+          "page": 9,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Homonímia e ambiguidade de nós"
+          ],
+          "skills": [
+            "Explica o humor entre pronome e unidade de velocidade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica o humor entre pronome e unidade de velocidade.",
+          "rationale": "Calvin pergunta sobre nós e Haroldo responde por você e eu, trocando a unidade náutica pelo pronome.",
+          "strategy": [
+            "Identifique o sentido de velocidade no anúncio da leitura",
+            "Compare-o ao pronome da resposta para reconhecer homonímia."
+          ],
+          "trap": "Confundir homonímia com semelhança parcial de grafia própria da paronímia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "21",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Finalidade de aviso ambiental"
+          ],
+          "skills": [
+            "Identifica a prevenção do transporte de uma praga"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a prevenção do transporte de uma praga.",
+          "rationale": "O cartaz pede verificar o veículo para não levar o inseto e ameaça agrícola ao destino.",
+          "strategy": [
+            "Leia os imperativos check carefully e get it off your car",
+            "Relacione a ação solicitada à proteção de lavouras e ambiente."
+          ],
+          "trap": "Afirmar que o cartaz proíbe dirigir na área ou que o inseto é venenoso.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "22",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Dêixis espacial e destino"
+          ],
+          "skills": [
+            "Interpreta home no aviso dirigido a viajantes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta home no aviso dirigido a viajantes.",
+          "rationale": "O termo se refere ao lugar para onde o motorista voltará levando o veículo.",
+          "strategy": [
+            "Distinga a área infestada do destino do viajante",
+            "Leia do not bring como prevenção de levar a praga para casa."
+          ],
+          "trap": "Fixar home no Japão só porque o inseto tem esse país como origem.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "23",
+          "page": 10,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Resultado de pesquisa agrícola"
+          ],
+          "skills": [
+            "Identifica ganhos de produtividade com processos biológicos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica ganhos de produtividade com processos biológicos.",
+          "rationale": "O artigo liga tratamentos por microrganismos à maior nutrição e rendimento com menos fertilizante sintético.",
+          "strategy": [
+            "Localize improve crop nutrition,yields and productivity",
+            "Escolha melhora da produção e descarte a eliminação das bactérias do solo."
+          ],
+          "trap": "Trocar bioinsumos por sementes transgênicas não mencionadas no artigo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "24",
+          "page": 10,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "While e simultaneidade"
+          ],
+          "skills": [
+            "Interpreta efeitos simultâneos no segundo parágrafo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta efeitos simultâneos no segundo parágrafo.",
+          "rationale": "Economia financeira e redução de emissões ocorrem conjuntamente.",
+          "strategy": [
+            "Leia saving farmers e avoiding emissions como resultados paralelos",
+            "Substitua while por ao mesmo tempo que, preservando a simultaneidade."
+          ],
+          "trap": "Impor contraste ou sequência temporal a um conector pelo significado isolado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "25",
+          "page": 10,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Informação específica e soja"
+          ],
+          "skills": [
+            "Identifica a cultura de maior destaque nos resultados apresentados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a cultura de maior destaque nos resultados apresentados.",
+          "rationale": "O texto destaca a soja como principal exportação e registra grande aumento da produção nacional.",
+          "strategy": [
+            "Compare as culturas listadas com o desenvolvimento dado à soja no parágrafo seguinte",
+            "Selecione soybean sem confundir o artigo com comprovação de causalidade exclusiva de todo crescimento nacional."
+          ],
+          "trap": "Escolher o primeiro cereal listado ou atribuir toda alta nacional a uma única pesquisa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "26",
+          "page": 10,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Perseverança e trajetória científica"
+          ],
+          "skills": [
+            "Recupera a atitude à qual a pesquisadora atribui seu sucesso"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Recupera a atitude à qual a pesquisadora atribui seu sucesso.",
+          "rationale": "Ela afirma ter acreditado no trabalho e perseverado diante dos questionamentos.",
+          "strategy": [
+            "Localize believed e persevered na fala citada",
+            "Associe o verbo à persistência, distinguindo-a de fama ou reconhecimento recebido."
+          ],
+          "trap": "Marcar preconceito como causa voluntária do sucesso por ele ter sido um obstáculo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "27",
+          "page": 10,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Aposto explicativo e conceito"
+          ],
+          "skills": [
+            "Reconhece a explicação de micro green revolution"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a explicação de micro green revolution.",
+          "rationale": "A expressão após o travessão esclarece que a revolução verde é feita com microrganismos.",
+          "strategy": [
+            "Observe o trecho que redefine a expressão entre aspas",
+            "Identifique sua função explicativa, e não exemplo de cultura agrícola."
+          ],
+          "trap": "Classificar o comentário como dispensável apenas por estar separado por travessão.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "28",
+          "page": 11,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Preconceito de gênero na ciência"
+          ],
+          "skills": [
+            "Identifica discriminação enfrentada por mulher e mãe jovem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica discriminação enfrentada por mulher e mãe jovem.",
+          "rationale": "O quarto parágrafo explicita prejudices against women and young mothers.",
+          "strategy": [
+            "Localize a descrição dos preconceitos superados",
+            "Relacione-a a gender bias sem atribuir o problema a conflito com outras mães da equipe."
+          ],
+          "trap": "Transformar o preconceito sofrido em rivalidade pessoal com colegas não citadas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "29",
+          "page": 11,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Leitura de gráfico e produção agrícola"
+          ],
+          "skills": [
+            "Compara área plantada e produção sem presumir proporcionalidade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara área plantada e produção sem presumir proporcionalidade.",
+          "rationale": "Há safras com aumento da área e queda da produção, como 2021–22.",
+          "strategy": [
+            "Compare a linha de acreage com as barras de production em safras consecutivas",
+            "Use um contraexemplo para rejeitar proporcionalidade obrigatória e escolher C."
+          ],
+          "trap": "Concluir produtividade constante só porque a área cresce.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "30",
+          "page": 11,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Humor e justificativas fantasiosas"
+          ],
+          "skills": [
+            "Identifica tentativas de Calvin de desculpar a destruição"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica tentativas de Calvin de desculpar a destruição.",
+          "rationale": "As versões passam de acidente com ferramentas a intervenção de alienígenas, diante da cobrança paterna.",
+          "strategy": [
+            "Acompanhe as versões sucessivas e as interrupções do pai",
+            "Reconheça as desculpas em vez de tratar a história de alienígenas como crença factual do menino."
+          ],
+          "trap": "Confundir a versão inventada pelo personagem com confirmação narrativa do acontecimento.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "31",
+          "page": 12,
+          "subject": "História",
+          "topicId": "his_idade_antiga",
+          "topic": "Idade Antiga",
+          "subtopics": [
+            "Cristianismo e diversidade religiosa romana"
+          ],
+          "skills": [
+            "Distingue percepção romana inicial de oposição teológica posterior"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Distingue percepção romana inicial de oposição teológica posterior.",
+          "rationale": "O texto nega projetar a incompatibilidade posterior ao contexto dos séculos I e II.",
+          "strategy": [
+            "Compare a avaliação teológica posterior com a perspectiva do habitante romano",
+            "Reconheça o cristianismo entre outras religiões orientais então presentes."
+          ],
+          "trap": "Derivar diretamente cristianismo do culto a Dioniso, o que o excerto não afirma.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "32",
+          "page": 12,
+          "subject": "História",
+          "topicId": "his_idade_media",
+          "topic": "Idade Média",
+          "subtopics": [
+            "Fortuna e destino"
+          ],
+          "skills": [
+            "Relaciona a roda da fortuna à instabilidade do destino medieval"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a roda da fortuna à instabilidade do destino medieval.",
+          "rationale": "A figura girada por Fortuna simboliza mudanças não controladas pelo indivíduo.",
+          "strategy": [
+            "Observe o agente que move a roda e as posições cambiantes dos homens",
+            "Associe a imagem ao poder do destino e não a controle racional garantido."
+          ],
+          "trap": "Tomar a legenda humorística moderna como prova de jogos de azar medievais.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "33",
+          "page": 13,
+          "subject": "História",
+          "topicId": "his_brasil_colonia",
+          "topic": "Brasil Colônia",
+          "subtopics": [
+            "Saberes africanos e produção colonial"
+          ],
+          "skills": [
+            "Reconhece conhecimentos técnicos como parte da contribuição dos escravizados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece conhecimentos técnicos como parte da contribuição dos escravizados.",
+          "rationale": "Metalurgia,mineração e tecelagem envolvem saberes trazidos, além de força física imposta.",
+          "strategy": [
+            "Liste as técnicas explicitamente atribuídas a africanos",
+            "Relacione esses conhecimentos à produção colonial e à acumulação metropolitana."
+          ],
+          "trap": "Reduzir os escravizados a trabalho sem especialização ou dizer que os europeus lhes ensinaram tudo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "34",
+          "page": 13,
+          "subject": "História",
+          "topicId": "his_brasil_colonia",
+          "topic": "Brasil Colônia",
+          "subtopics": [
+            "Circulação cultural e mitos afro-brasileiros"
+          ],
+          "skills": [
+            "Identifica combinação de tradições africanas,indígenas e europeias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica combinação de tradições africanas,indígenas e europeias.",
+          "rationale": "O excerto aproxima Curupira e moatia e descreve reelaboração de narrativas e festas.",
+          "strategy": [
+            "Recupere os exemplos de personagens e práticas culturais",
+            "Explique a combinação de repertórios sem pressupor pureza ou isolamento cultural."
+          ],
+          "trap": "Afirmar que respeito às proibições metropolitanas impediu produção cultural própria.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "35",
+          "page": 13,
+          "subject": "História",
+          "topicId": "his_brasil_imperio",
+          "topic": "Brasil Império",
+          "subtopics": [
+            "Pintura histórica e projeto nacional"
+          ],
+          "skills": [
+            "Interpreta a representação harmonizadora da primeira missa"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "his_brasil_colonia"
+          ],
+          "summary": "Interpreta a representação harmonizadora da primeira missa.",
+          "rationale": "A tela de1860 projeta uma narrativa de encontro fundacional conciliado para o passado colonial.",
+          "strategy": [
+            "Distinga o momento da pintura do evento de1500 representado",
+            "Observe a composição em torno do rito e a associação idealizada dos grupos."
+          ],
+          "trap": "Ler a tela como fotografia documental ou prova de tolerância efetiva na colonização.",
+          "confidence": "medium",
+          "reviewNote": "Principal pelo projeto de memória oitocentista, com Brasil Colônia relacionado.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "36",
+          "page": 14,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Proclamação da República e interesses privados"
+          ],
+          "skills": [
+            "Interpreta o receio monetário do dono da confeitaria"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta o receio monetário do dono da confeitaria.",
+          "rationale": "A preocupação é pagar novamente a tabuleta e evitar prejuízo em nova reviravolta.",
+          "strategy": [
+            "Compare as propostas de nome com os custos que o personagem insiste em citar",
+            "Relacione a mudança de regime ao desconforto prático e não à lealdade monárquica comprovada."
+          ],
+          "trap": "Atribuir militância republicana ou monarquista a quem enfatiza prejuízo comercial.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "37",
+          "page": 14,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Expansão territorial dos Estados Unidos"
+          ],
+          "skills": [
+            "Reconhece guerras,anexações e compras na formação do território"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece guerras,anexações e compras na formação do território.",
+          "rationale": "O mapa combina cessões doMéxico,compra daLouisiana,Flórida,Alasca e outras aquisições.",
+          "strategy": [
+            "Leia legenda e datas de diferentes parcelas territoriais",
+            "Relacione expansão à combinação de guerra e negociação,sem restringi-la ao pósGuerraCivil."
+          ],
+          "trap": "Considerar todo avanço sobre povos indígenas uma negociação pacífica.",
+          "confidence": "medium",
+          "reviewNote": "Tópico moderno é aproximação curricular para expansão sobretudo oitocentista.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "38",
+          "page": 15,
+          "subject": "História",
+          "topicId": "his_brasil_imperio",
+          "topic": "Brasil Império",
+          "subtopics": [
+            "População de1872 e proporções regionais"
+          ],
+          "skills": [
+            "Compara imigração relativa no Sul e Centro-Sul"
+          ],
+          "relatedSubjects": [
+            "Matemática"
+          ],
+          "relatedTopicIds": [
+            "mat_aritmetica_proporcionalidade"
+          ],
+          "summary": "Compara imigração relativa no Sul e Centro-Sul.",
+          "rationale": "54193/721337≈7,5% e148706/4016922≈3,7%, relação próxima de dois.",
+          "strategy": [
+            "Divida imigrantes pela população total de cada região",
+            "Compare as porcentagens em vez dos números absolutos para selecionar C."
+          ],
+          "trap": "Dizer que o Sul tinha mais imigrantes absolutos que o Centro-Sul.",
+          "confidence": "medium",
+          "reviewNote": "Exige leitura histórica e cálculo proporcional necessário.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "39",
+          "page": 15,
+          "subject": "História",
+          "topicId": "his_guerra_fria_contemporaneo",
+          "topic": "Guerra Fria e Mundo Contemporâneo",
+          "subtopics": [
+            "Pan-africanismo e diáspora"
+          ],
+          "skills": [
+            "Relaciona bandeiras africanas e navio à memória atlântica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona bandeiras africanas e navio à memória atlântica.",
+          "rationale": "A capa reúne países africanos independentes e representação do tráfico que ligaÁfrica eAmérica.",
+          "strategy": [
+            "Identifique bandeiras e o desenho de embarcação/porão no conjunto visual",
+            "Associe a conexão atlântica à diáspora sem chamar países independentes de colônias."
+          ],
+          "trap": "Datá-la como imperialismo dosEstadosUnidos no séculoXVI.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "40",
+          "page": 16,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Mulheres e trabalho na Primeira República"
+          ],
+          "skills": [
+            "Confronta norma doméstica com participação feminina efetiva"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Confronta norma doméstica com participação feminina efetiva.",
+          "rationale": "Os dados mostram presença laboral significativa incompatível com o ideal de reclusão da mulher ao lar.",
+          "strategy": [
+            "Compare a regra social inicial com as proporções de mulheres economicamente ativas",
+            "Reconheça a contradição entre convenção e realidade,sem inferir proibição legal não citada."
+          ],
+          "trap": "Afirmar que o ingresso no trabalho aboliu rapidamente os estereótipos de gênero.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "41",
+          "page": 16,
+          "subject": "Sociologia",
+          "topicId": "soc_estratificacao_desigualdade",
+          "topic": "Estratificação Social e Desigualdade",
+          "subtopics": [
+            "Marginalização social e normas de conduta"
+          ],
+          "skills": [
+            "Interpreta trajetórias contrastantes dos irmãos na letra de rap"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta trajetórias contrastantes dos irmãos na letra de rap.",
+          "rationale": "O acesso desigual a estudos e sobrevivência contrapõe caminho socialmente normatizado à criminalização de parte dos pobres.",
+          "strategy": [
+            "Compare sonho de formação do irmão com a trajetória narrada de crime e prisão",
+            "Associe o contraste à marginalização social sem inventar supressão de políticas em data não mencionada."
+          ],
+          "trap": "Reduzir o conflito a moral individual ou localizar a narrativa necessariamente na ditadura.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "42",
+          "page": 17,
+          "subject": "Sociologia",
+          "topicId": "soc_movimentos_sociais",
+          "topic": "Movimentos Sociais e Cidadania",
+          "subtopics": [
+            "Movimentos em rede e Primavera Árabe"
+          ],
+          "skills": [
+            "Identifica mobilização política apoiada em comunicação digital"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica mobilização política apoiada em comunicação digital.",
+          "rationale": "A PrimaveraÁrabe exemplifica circulação rápida e coordenação por redes,ao contrário das descrições falsas de outros eventos.",
+          "strategy": [
+            "Retome autonomia e tecnologias digitais no excerto deCastells",
+            "Selecione a mobilização social com circulação ágil de mensagens."
+          ],
+          "trap": "Aceitar a descrição deOccupyWallStreet como campanha de investidores apenas por conhecer o nome.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "43",
+          "page": 17,
+          "subject": "Geografia",
+          "topicId": "geo_geopolitica_regional",
+          "topic": "Geopolítica Regional Contemporânea",
+          "subtopics": [
+            "Sul Global e representatividade"
+          ],
+          "skills": [
+            "Interpreta Sul Global como construção geopolítica além da latitude"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta Sul Global como construção geopolítica além da latitude.",
+          "rationale": "O conceito reúne desafios e marginalização internacional,visando ampliar representação de países periféricos.",
+          "strategy": [
+            "Distinga posição socioeconômica de hemisfério geográfico",
+            "Relacione cooperação e presidências doG20 à busca de voz internacional."
+          ],
+          "trap": "Supor transferência concluída do centro de poder para todo o hemisférioSul.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "44",
+          "page": 17,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Divisão internacional do trabalho e valor agregado"
+          ],
+          "skills": [
+            "Interpreta troca desigual entre commodities e chip"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta troca desigual entre commodities e chip.",
+          "rationale": "A charge contrapõe grande volume de soja/minério a produto tecnológico de alto valor agregado.",
+          "strategy": [
+            "Identifique os produtos primários e o chip na fala da charge",
+            "Associe a diferença de valor à especialização desigual daDIT."
+          ],
+          "trap": "Explicar a cena por bipolaridade político-militar daGuerraFria.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "45",
+          "page": 18,
+          "subject": "Geografia",
+          "topicId": "geo_economica_brasil",
+          "topic": "Geografia Econômica do Brasil",
+          "subtopics": [
+            "Moedas sociais e economia local"
+          ],
+          "skills": [
+            "Explica o fomento ao comércio por moeda comunitária"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica o fomento ao comércio por moeda comunitária.",
+          "rationale": "A paridade com o real e a circulação territorial restrita retêm transações no bairro.",
+          "strategy": [
+            "Observe conversão um por um e aceitação local doSampaio",
+            "Relacione a circulação restrita ao incentivo a produtores/comerciantes da comunidade."
+          ],
+          "trap": "Afirmar que a moeda elimina o real e dá controle de toda a economia nacional ao bairro.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        }
+      ]
+    }
+  ],
+  "readEvidence": {
+    "reviewedOn": "2026-10-22",
+    "objectiveText": "90itens ealternativas lidos integralmente.",
+    "objectiveImages": "Todas aspáginas2–38 vistas emgrids2,6,10,14,18,22,26,30,34,38.",
+    "pending": "Redigir46–90; ler/classificar segunda fase24+12/R; revisar, conferir recursos e produzir auditoria. Adiado na publicação das16edições completas."
+  }
+}

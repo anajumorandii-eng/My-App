@@ -7,7 +7,7 @@ export interface BoardPaper {
   pages: number; expectedQuestions: number; classifiedQuestions: number; coverageNote?: string;
 }
 export interface BoardCorpus {
-  board: ResearchBoard; reviewedOn: string; reviewType: string; coverageNote: string; years: number[];
+  board: ResearchBoard; reviewedOn: string; reviewType: string; coverageNote: string; years: number[]; plannedYears?: number[];
   papers: BoardPaper[]; questions: BoardQuestion[];
 }
 export interface BoardIncidenceRow extends Omit<IncidenceRow,'annual'> { annual: (AnnualIncidence & {covered: boolean})[]; }
@@ -18,7 +18,7 @@ export function boardPool(corpus: BoardCorpus, filter: BoardIncidenceFilter, inc
 }
 export function boardIncidenceRows(corpus: BoardCorpus, filter: BoardIncidenceFilter, group: 'topic'|'subtopic'='topic'): BoardIncidenceRow[] {
   const pool=boardPool(corpus,filter);
-  const years=corpus.years.filter(year=>year>=filter.startYear&&year<=filter.endYear);
+  const years=(corpus.plannedYears??corpus.years).filter(year=>year>=filter.startYear&&year<=filter.endYear);
   const completeYears=new Set(years.filter(year=>{
     const papers=corpus.papers.filter(paper=>paper.group===filter.group&&paper.year===year);
     return papers.length>0&&papers.every(paper=>paper.classifiedQuestions===paper.expectedQuestions);
@@ -66,6 +66,7 @@ export function isCompleteBoardCorpus(data: BoardCorpus, board: ResearchBoard): 
     !Array.isArray(data.papers) || !data.papers.length || !Array.isArray(data.questions) || !data.questions.length)return false;
  const strings=(value:unknown):value is string[]=>Array.isArray(value)&&value.every(item=>typeof item==='string'&&item.trim().length>0);
  const text=(value:unknown)=>typeof value==='string'&&value.trim().length>0;
+ if(data.plannedYears&&(!Array.isArray(data.plannedYears)||!data.plannedYears.every(Number.isInteger)||new Set(data.plannedYears).size!==data.plannedYears.length||data.years.some(year=>!data.plannedYears!.includes(year))))return false;
  if(!data.years.every(Number.isInteger)||new Set(data.years).size!==data.years.length)return false;
  if(new Set(data.papers.map(p=>p.id)).size!==data.papers.length ||
     new Set(data.questions.map(q=>q.id)).size!==data.questions.length)return false;

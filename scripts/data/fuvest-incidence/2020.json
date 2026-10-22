@@ -1,0 +1,2520 @@
+{
+  "year": 2020,
+  "reviewedOn": "2026-10-21",
+  "reviewType": "single-editor-source-reading",
+  "sourceManifest": [
+    {
+      "year": 2020,
+      "role": "first-phase-exam",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2020",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2020_primeira_fase_prova_V.pdf",
+      "sha256": "546ee1a55bc49575b425808ea621a28d3844e7640392294e4d4affc71c3fcd5a",
+      "bytes": 9251739,
+      "pages": 26,
+      "localFilename": "fuvest_2020_primeira_fase_prova_V.pdf"
+    },
+    {
+      "year": 2020,
+      "role": "first-phase-answer-key",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2020",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2020_primeira_fase_gabaritos.pdf",
+      "sha256": "32bc137985ce5f318d4a02e385820d0deb86f46cfc88f56c46183717e93d6c8b",
+      "bytes": 512040,
+      "pages": 2,
+      "localFilename": "fuvest_2020_primeira_fase_gabaritos.pdf"
+    }
+  ],
+  "papers": [
+    {
+      "id": "fuvest-2020-f1",
+      "phase": "1a",
+      "version": "V",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2020_primeira_fase_prova_V.pdf",
+      "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2020_primeira_fase_gabaritos.pdf",
+      "sha256": "546ee1a55bc49575b425808ea621a28d3844e7640392294e4d4affc71c3fcd5a",
+      "answerKeySha256": "32bc137985ce5f318d4a02e385820d0deb86f46cfc88f56c46183717e93d6c8b",
+      "pages": 26,
+      "expectedQuestions": 90,
+      "questions": [
+        {
+          "number": "01",
+          "page": 2,
+          "subject": "Química",
+          "topicId": "qui_solucoes",
+          "topic": "Soluções",
+          "subtopics": [
+            "Condensação e dissolução da sacarose"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica o gotejamento doce produzido pelo vapor do café sobre algodão-doce.",
+          "rationale": "O conhecimento decisivo é condensação e dissolução da sacarose: distinga fusão da sacarose de dissolução em água condensada.",
+          "strategy": [
+            "Distinga fusão da sacarose de dissolução em água condensada.",
+            "Use a temperatura de fusão e a alta solubilidade para identificar a solução que goteja."
+          ],
+          "trap": "Confundir dissolução com fusão ou vaporização do açúcar.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "02",
+          "page": 2,
+          "subject": "Física",
+          "topicId": "fis_calorimetria",
+          "topic": "Calorimetria",
+          "subtopics": [
+            "Calor latente e rendimento energético"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [
+            "Química"
+          ],
+          "relatedTopicIds": [
+            "qui_termoquimica"
+          ],
+          "summary": "Compara energia de vaporização de 540 mL de água com consumo de um vaporizador.",
+          "rationale": "O conhecimento decisivo é calor latente e rendimento energético: converta a massa de água em mols e multiplique por 40 kJ/mol.",
+          "strategy": [
+            "Converta a massa de água em mols e multiplique por 40 kJ/mol.",
+            "Calcule a energia elétrica como 1600 vezes 1200 segundos e forme a razão percentual."
+          ],
+          "trap": "Comparar kJ com J ou manter o tempo em minutos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "03",
+          "page": 2,
+          "subject": "Química",
+          "topicId": "qui_modelos_atomicos",
+          "topic": "Modelos Atômicos e Estrutura do Átomo",
+          "subtopics": [
+            "Metais alcalinos e formação de cátions"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa por que sódio e césio não formam espontaneamente a molécula produzida com lasers.",
+          "rationale": "O conhecimento decisivo é metais alcalinos e formação de cátions: localize Na e Cs na família dos metais alcalinos.",
+          "strategy": [
+            "Localize Na e Cs na família dos metais alcalinos.",
+            "Relacione a perda de elétrons à tendência comum de formar cátions."
+          ],
+          "trap": "Tratar todo césio como radioativo ou mudar o elemento removendo elétrons.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "04",
+          "page": 3,
+          "subject": "Química",
+          "topicId": "qui_polaridade_geometria",
+          "topic": "Polaridade das Ligações e Geometria Molecular",
+          "subtopics": [
+            "Polaridade e solubilidade de pigmentos"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona estruturas de licopeno e betanina à coloração das fases aquosa e oleosa.",
+          "rationale": "O conhecimento decisivo é polaridade e solubilidade de pigmentos: observe os grupos polares da betanina e a cadeia hidrocarbonada do licopeno.",
+          "strategy": [
+            "Observe os grupos polares da betanina e a cadeia hidrocarbonada do licopeno.",
+            "Associe o azeite apolar à maior afinidade pelo licopeno."
+          ],
+          "trap": "Atribuir a diferença à massa molar ou à ação de surfactante.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "05",
+          "page": 3,
+          "subject": "Química",
+          "topicId": "qui_cinetica",
+          "topic": "Cinética Química",
+          "subtopics": [
+            "Intermediário de reação e gráficos de concentração"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Deduz uma sequência de reações a partir das curvas de limoneno, alfa-terpineno e p-cimeno.",
+          "rationale": "O conhecimento decisivo é intermediário de reação e gráficos de concentração: identifique o limoneno como reagente consumido e o p-cimeno como produto acumulado.",
+          "strategy": [
+            "Identifique o limoneno como reagente consumido e o p-cimeno como produto acumulado.",
+            "Reconheça a curva que primeiro cresce e depois decresce como intermediário."
+          ],
+          "trap": "Confundir intermediário consumido com catalisador.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "06",
+          "page": 3,
+          "subject": "Química",
+          "topicId": "qui_solucoes",
+          "topic": "Soluções",
+          "subtopics": [
+            "Diluições centesimais e número de moléculas"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina a diluição homeopática que reduz a quantidade média de princípio ativo abaixo de uma molécula.",
+          "rationale": "O conhecimento decisivo é diluições centesimais e número de moléculas: calcule as moléculas iniciais em 0,1 L de solução 1 mol/L.",
+          "strategy": [
+            "Calcule as moléculas iniciais em 0,1 L de solução 1 mol/L.",
+            "Divida essa quantidade por 100 a cada etapa até ficar abaixo da unidade."
+          ],
+          "trap": "Confundir diluição por cem com divisão por dez.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "07",
+          "page": 4,
+          "subject": "Química",
+          "topicId": "qui_radioatividade",
+          "topic": "Radioatividade",
+          "subtopics": [
+            "Série do urânio e emissão alfa"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona formação de hélio às etapas alfa da cadeia de decaimento do urânio.",
+          "rationale": "O conhecimento decisivo é série do urânio e emissão alfa: identifique emissões alfa pela redução de quatro unidades de massa.",
+          "strategy": [
+            "Identifique emissões alfa pela redução de quatro unidades de massa.",
+            "Compare os trechos U-238 até U-234 e U-234 até Th-230 contando partículas alfa."
+          ],
+          "trap": "Contar emissões beta como átomos de hélio.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "08",
+          "page": 4,
+          "subject": "Física",
+          "topicId": "fis_dinamica_impulsiva",
+          "topic": "Dinâmica Impulsiva",
+          "subtopics": [
+            "Conservação do momento em colisão reativa"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [
+            "Química"
+          ],
+          "relatedTopicIds": [
+            "qui_organica_reacoes"
+          ],
+          "summary": "Seleciona representação de íons antes e depois da substituição do cloro pelo flúor.",
+          "rationale": "O conhecimento decisivo é conservação do momento em colisão reativa: reconheça as massas e a composição dos íons F e Cl isolados.",
+          "strategy": [
+            "Reconheça as massas e a composição dos íons F e Cl isolados.",
+            "Conserve o momento para comparar as velocidades dos íons com as moléculas neutras paradas."
+          ],
+          "trap": "Desenhar o íon mais pesado com velocidade igual ou maior sem conservar momento.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "09",
+          "page": 4,
+          "subject": "Química",
+          "topicId": "qui_organica_reacoes",
+          "topic": "Reações e Aplicações Orgânicas",
+          "subtopics": [
+            "Redução orgânica e comparação de estruturas"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa as transformações do grupo heme em biliverdina e bilirrubina.",
+          "rationale": "O conhecimento decisivo é redução orgânica e comparação de estruturas: compare as ligações da biliverdina e da bilirrubina no trecho central.",
+          "strategy": [
+            "Compare as ligações da biliverdina e da bilirrubina no trecho central.",
+            "Identifique adição de hidrogênio e redução da insaturação."
+          ],
+          "trap": "Afirmar transporte de oxigênio apenas porque a molécula contém átomos de O.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "10",
+          "page": 5,
+          "subject": "Química",
+          "topicId": "qui_organica_reacoes",
+          "topic": "Reações e Aplicações Orgânicas",
+          "subtopics": [
+            "Condensação de cetona com hidrazina"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a hidrazona formada por uma cetona insaturada e dinitrofenilhidrazina.",
+          "rationale": "O conhecimento decisivo é condensação de cetona com hidrazina: aplique a troca da carbonila por C=N-NH ao carbono cetônico.",
+          "strategy": [
+            "Aplique a troca da carbonila por C=N-NH ao carbono cetônico.",
+            "Preserve a dupla ligação carbono-carbono e os demais grupos do reagente."
+          ],
+          "trap": "Fazer reagir a dupla C=C no lugar da carbonila.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "11",
+          "page": 5,
+          "subject": "Química",
+          "topicId": "qui_gases",
+          "topic": "Gases",
+          "subtopics": [
+            "Diagrama de fases e sublimação"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica a liofilização natural de alimentos nas grandes altitudes andinas.",
+          "rationale": "O conhecimento decisivo é diagrama de fases e sublimação: leia a fronteira sólido-vapor no diagrama de fases.",
+          "strategy": [
+            "Leia a fronteira sólido-vapor no diagrama de fases.",
+            "Combine congelamento em baixas temperaturas e sublimação favorecida pela baixa pressão."
+          ],
+          "trap": "Associar grandes altitudes a maior pressão atmosférica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "12",
+          "page": 6,
+          "subject": "Química",
+          "topicId": "qui_equilibrio",
+          "topic": "Equilíbrio Químico",
+          "subtopics": [
+            "Neutralização, pH e probabilidade"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [
+            "Matemática"
+          ],
+          "relatedTopicIds": [
+            "mat_dados_probabilidade"
+          ],
+          "summary": "Calcula a chance de uma solução ácido-base ficar vermelha após dois lançamentos de dados.",
+          "rationale": "O conhecimento decisivo é neutralização, ph e probabilidade: compare as quantidades de ácido e base para localizar pH inferior a 3,3.",
+          "strategy": [
+            "Compare as quantidades de ácido e base para localizar pH inferior a 3,3.",
+            "Conte os nove pares favoráveis entre os 36 resultados equiprováveis."
+          ],
+          "trap": "Considerar todo excesso de ácido suficiente para atingir o intervalo vermelho.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "13",
+          "page": 6,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Probabilidade em rede de caminhos"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a probabilidade total de um carro chegar a F em uma rede de cidades.",
+          "rationale": "O conhecimento decisivo é probabilidade em rede de caminhos: enumere os percursos A-C-F, A-B-C-F e A-B-D-F.",
+          "strategy": [
+            "Enumere os percursos A-C-F, A-B-C-F e A-B-D-F.",
+            "Multiplique as probabilidades de cada percurso e some os eventos disjuntos."
+          ],
+          "trap": "Ignorar o caminho que passa por B e C.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "14",
+          "page": 6,
+          "subject": "Matemática",
+          "topicId": "mat_aritmetica_proporcionalidade",
+          "topic": "Aritmética e Proporcionalidade",
+          "subtopics": [
+            "Aumento real e inflação acumulada"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina o aumento real do salário após aumento nominal e inflação.",
+          "rationale": "O conhecimento decisivo é aumento real e inflação acumulada: converta aumento nominal de 300% em fator quatro.",
+          "strategy": [
+            "Converta aumento nominal de 300% em fator quatro.",
+            "Divida pelo fator dois da inflação e compare com o salário inicial."
+          ],
+          "trap": "Subtrair diretamente 100 de 300 para obter o ganho real.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "15",
+          "page": 6,
+          "subject": "Matemática",
+          "topicId": "mat_sequencias_matrizes",
+          "topic": "Sequências, Matrizes e Sistemas Lineares",
+          "subtopics": [
+            "Progressão aritmética de comprimentos"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Estima o comprimento de fita enrolada em cem voltas de raios crescentes.",
+          "rationale": "O conhecimento decisivo é progressão aritmética de comprimentos: escreva os comprimentos das voltas como 2 pi vezes os raios em progressão aritmética.",
+          "strategy": [
+            "Escreva os comprimentos das voltas como 2 pi vezes os raios em progressão aritmética.",
+            "Some os cem termos e converta centímetros em metros."
+          ],
+          "trap": "Usar sempre o raio inicial ou sempre o raio final.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "16",
+          "page": 7,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_plana",
+          "topic": "Geometria Plana",
+          "subtopics": [
+            "Área de paralelogramo e seno"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Encontra o ângulo que reduz à metade a área de um paralelogramo articulado.",
+          "rationale": "O conhecimento decisivo é área de paralelogramo e seno: expresse a área por produto dos lados e seno do ângulo.",
+          "strategy": [
+            "Expresse a área por produto dos lados e seno do ângulo.",
+            "Iguale a razão de áreas a um meio e escolha o menor ângulo interno."
+          ],
+          "trap": "Supor que a área varie linearmente com o ângulo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "17",
+          "page": 7,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Diagonal espacial e esfera circunscrita"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina o diâmetro da menor esfera que contém um paralelepípedo de dimensões dadas.",
+          "rationale": "O conhecimento decisivo é diagonal espacial e esfera circunscrita: identifique o diâmetro da esfera com a diagonal do paralelepípedo.",
+          "strategy": [
+            "Identifique o diâmetro da esfera com a diagonal do paralelepípedo.",
+            "Aplique Pitágoras às três dimensões 7, 4 e 4."
+          ],
+          "trap": "Confundir a diagonal de uma face com a diagonal espacial.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "18",
+          "page": 7,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Máximo de função quadrática"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Modela a receita de uma lanchonete com demanda crescente quando o preço cai.",
+          "rationale": "O conhecimento decisivo é máximo de função quadrática: escreva a receita como (10-x)(200+100x).",
+          "strategy": [
+            "Escreva a receita como (10-x)(200+100x).",
+            "Encontre o vértice da parábola e calcule a receita máxima."
+          ],
+          "trap": "Maximizar a quantidade vendida sem considerar a redução do preço.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "19",
+          "page": 7,
+          "subject": "Matemática",
+          "topicId": "mat_teoria_numeros",
+          "topic": "Teoria dos Números Inteiros",
+          "subtopics": [
+            "Coprimalidade e função de Euler"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara quantidades de inteiros coprimos aos números de 20 a 25.",
+          "rationale": "O conhecimento decisivo é coprimalidade e função de euler: fatore cada número e conte os menores que não compartilham fatores primos.",
+          "strategy": [
+            "Fatore cada número e conte os menores que não compartilham fatores primos.",
+            "Use que 23 é primo para comparar seu total aos dos números compostos."
+          ],
+          "trap": "Contar todos os números ímpares como coprimos de qualquer inteiro.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "20",
+          "page": 7,
+          "subject": "Matemática",
+          "topicId": "mat_complexos_polinomios",
+          "topic": "Números Complexos e Polinômios",
+          "subtopics": [
+            "Identidade polinomial e comparação de coeficientes"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Extrai a soma de parâmetros de uma identidade com diferença de cubos.",
+          "rationale": "O conhecimento decisivo é identidade polinomial e comparação de coeficientes: expanda (x-a) ao cubo menos (x-b) ao cubo.",
+          "strategy": [
+            "Expanda (x-a) ao cubo menos (x-b) ao cubo.",
+            "Compare os coeficientes de x ao quadrado e de x para obter b-a e a+b."
+          ],
+          "trap": "Resolver a identidade para um único valor de x.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "21",
+          "page": 7,
+          "subject": "Matemática",
+          "topicId": "mat_sequencias_matrizes",
+          "topic": "Sequências, Matrizes e Sistemas Lineares",
+          "subtopics": [
+            "Sistema linear de vendas"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina o total de passagens para Paris e Roma a partir das vendas para três destinos.",
+          "rationale": "O conhecimento decisivo é sistema linear de vendas: represente as três quantidades e traduza as relações de dobro e metade.",
+          "strategy": [
+            "Represente as três quantidades e traduza as relações de dobro e metade.",
+            "Resolva o sistema com soma total 78 e some Paris e Roma."
+          ],
+          "trap": "Interpretar o dobro como o dobro de apenas um dos destinos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "22",
+          "page": 7,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_analitica",
+          "topic": "Geometria Analítica",
+          "subtopics": [
+            "Equidistância dos eixos e círculo"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Conta pontos de um círculo equidistantes dos dois eixos cartesianos.",
+          "rationale": "O conhecimento decisivo é equidistância dos eixos e círculo: traduza equidistância como y=x ou y=-x.",
+          "strategy": [
+            "Traduza equidistância como y=x ou y=-x.",
+            "Substitua cada reta na equação do círculo e localize as raízes nos quadrantes."
+          ],
+          "trap": "Considerar apenas y=x ou confundir círculo com circunferência sem verificar o interior.",
+          "confidence": "high",
+          "reviewNote": "O enunciado usa círculo onde a contagem das alternativas pressupõe a fronteira dada pela equação. Com y=x e y=-x, contam-se três interseções; possível imprecisão terminológica, sem dúvida no tópico.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "23",
+          "page": 8,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Média ponderada de precipitação"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a chuva total de uma cidade dividida em setores com áreas distintas.",
+          "rationale": "O conhecimento decisivo é média ponderada de precipitação: some os totais de sábado e domingo em cada setor.",
+          "strategy": [
+            "Some os totais de sábado e domingo em cada setor.",
+            "Pondere as lâminas de chuva pelas áreas 10 e 30 quilômetros quadrados."
+          ],
+          "trap": "Somar diretamente as lâminas dos dois setores.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "24",
+          "page": 8,
+          "subject": "Matemática",
+          "topicId": "mat_equacoes",
+          "topic": "Equações, Desigualdades e Modelagem Algébrica",
+          "subtopics": [
+            "Distâncias entre pontos colineares"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [
+            "Inglês"
+          ],
+          "relatedTopicIds": [
+            "ing_01"
+          ],
+          "summary": "Resolve o problema de distâncias apresentado em uma tira de Calvin.",
+          "rationale": "O conhecimento decisivo é distâncias entre pontos colineares: traduza a relação entre AB e AC e fixe BC em cinco polegadas.",
+          "strategy": [
+            "Traduza a relação entre AB e AC e fixe BC em cinco polegadas.",
+            "Considere as duas ordens possíveis dos três pontos na reta."
+          ],
+          "trap": "Assumir uma única ordem dos pontos ou adicionar o caso degenerado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "25",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Estereótipos de gênero e inferência"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o efeito sexista da feminização de assistentes digitais.",
+          "rationale": "O conhecimento decisivo é estereótipos de gênero e inferência: localize os trechos sobre submissão e tolerância a tratamento hostil.",
+          "strategy": [
+            "Localize os trechos sobre submissão e tolerância a tratamento hostil.",
+            "Associe-os à normalização do assédio contra mulheres."
+          ],
+          "trap": "Tomar voz feminina como inclusão social automática.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "26",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Referência de título e expressão idiomática"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta o título do relatório da Unesco sobre assistentes digitais.",
+          "rationale": "O conhecimento decisivo é referência de título e expressão idiomática: localize a resposta de Siri ao insulto e sua tradução contextual.",
+          "strategy": [
+            "Localize a resposta de Siri ao insulto e sua tradução contextual.",
+            "Relacione a expressão sobre corar à resposta programada diante de impropérios."
+          ],
+          "trap": "Atribuir a frase a preocupação com reconhecimento de voz.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "27",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Ponto de vista e viés tecnológico"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a avaliação defendida pela diretora de igualdade de gênero.",
+          "rationale": "O conhecimento decisivo é ponto de vista e viés tecnológico: leia a fala final sobre como, quando e por quem a tecnologia recebe gênero.",
+          "strategy": [
+            "Leia a fala final sobre como, quando e por quem a tecnologia recebe gênero.",
+            "Reconheça a necessidade de examinar vieses presentes na concepção da IA."
+          ],
+          "trap": "Confundir avaliação crítica de vieses com mera atualização técnica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "28",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Ambiguidade sintática e humor"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica o duplo sentido de buy her flowers em um meme.",
+          "rationale": "O conhecimento decisivo é ambiguidade sintática e humor: compare comprar flores para a esposa com comprar flores vendidas por ela.",
+          "strategy": [
+            "Compare comprar flores para a esposa com comprar flores vendidas por ela.",
+            "Relacione a segunda leitura à resposta inesperada do marido."
+          ],
+          "trap": "Atribuir o humor somente à repetição de never.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "29",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Ideia central e armazenamento em DNA"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a aplicação futura do DNA discutida em texto de divulgação.",
+          "rationale": "O conhecimento decisivo é ideia central e armazenamento em dna: localize a sobrecarga de informação como problema central.",
+          "strategy": [
+            "Localize a sobrecarga de informação como problema central.",
+            "Relacione a densidade e a durabilidade do DNA ao armazenamento digital."
+          ],
+          "trap": "Confundir armazenamento de dados com pesquisa médica em genética.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "30",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Referência temporal e previsão tecnológica"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a previsão de esgotamento da infraestrutura baseada em silício.",
+          "rationale": "O conhecimento decisivo é referência temporal e previsão tecnológica: diferencie a projeção de dados de 2025 do limite de silício de 2040.",
+          "strategy": [
+            "Diferencie a projeção de dados de 2025 do limite de silício de 2040.",
+            "Associe pouco mais de vinte anos à previsão de 2040."
+          ],
+          "trap": "Selecionar a estimativa de 160 zettabytes apenas por conter número destacado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "31",
+          "page": 10,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Imagens poéticas e campo semântico"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta as imagens de um sonho adiado no poema Harlem.",
+          "rationale": "O conhecimento decisivo é imagens poéticas e campo semântico: observe comparações com alimento deteriorado, ferida e explosão.",
+          "strategy": [
+            "Observe comparações com alimento deteriorado, ferida e explosão.",
+            "Reúna essas imagens no campo de deterioração e destruição."
+          ],
+          "trap": "Confundir a carga social do poema com uma lista de sentimentos não expressos nas imagens.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "32",
+          "page": 10,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Claro Enigma e desencanto"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a relação entre sujeito e mundo em Cantiga de enganar.",
+          "rationale": "O conhecimento decisivo é claro enigma e desencanto: localize as negativas sobre sentido, valor e existência.",
+          "strategy": [
+            "Localize as negativas sobre sentido, valor e existência.",
+            "Relacione o faz-de-conta à postura desencantada do sujeito em Claro Enigma."
+          ],
+          "trap": "Ler as canções como afirmação positiva de valores estáveis.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "33",
+          "page": 10,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Argumentação sobre a função da literatura"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a condição transformadora da experiência literária no argumento de Benedito Nunes.",
+          "rationale": "O conhecimento decisivo é argumentação sobre a função da literatura: localize a passagem de retorno ao mundo real após a leitura.",
+          "strategy": [
+            "Localize a passagem de retorno ao mundo real após a leitura.",
+            "Associe a experiência ampliada a uma atitude reflexiva sobre o mundo."
+          ],
+          "trap": "Confundir transformação do leitor com simples fuga anestesiante.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "34",
+          "page": 10,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Angústia e psicologia de Luís da Silva"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a recusa de histórias fáceis à condição do narrador de Angústia.",
+          "rationale": "O conhecimento decisivo é angústia e psicologia de luís da silva: recupere a negatividade e o fracasso que estruturam a percepção de Luís.",
+          "strategy": [
+            "Recupere a negatividade e o fracasso que estruturam a percepção de Luís.",
+            "Explique por que uma ficção simplificadora já não o comove."
+          ],
+          "trap": "Inventar militância política ou recusa da ficção como motivação do narrador.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "35",
+          "page": 10,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Angústia e atmosfera narrativa"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a nota crítica de Graciliano à construção de Angústia.",
+          "rationale": "O conhecimento decisivo é angústia e atmosfera narrativa: associe o ambiente opressivo às tensões vividas e narradas por Luís.",
+          "strategy": [
+            "Associe o ambiente opressivo às tensões vividas e narradas por Luís.",
+            "Distinga atmosfera dramática de comicidade, ingenuidade e apagamento individual."
+          ],
+          "trap": "Tomar imagens de sujeira como prova suficiente de alegoria.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "36",
+          "page": 11,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Sujeito não agente em voz ativa"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica uma construção ativa cujo sujeito não pratica a ação.",
+          "rationale": "O conhecimento decisivo é sujeito não agente em voz ativa: analise o papel semântico de carro em furou o pneu.",
+          "strategy": [
+            "Analise o papel semântico de carro em furou o pneu.",
+            "Separe função sintática de sujeito e papel semântico de agente."
+          ],
+          "trap": "Pressupor que toda voz ativa tenha sujeito agente.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "37",
+          "page": 11,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Reiteração sonora e jogo metalinguístico"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta o jogo entre amora, amor, amargo e amar em poema.",
+          "rationale": "O conhecimento decisivo é reiteração sonora e jogo metalinguístico: compare os segmentos sonoros compartilhados pelos pares de palavras.",
+          "strategy": [
+            "Compare os segmentos sonoros compartilhados pelos pares de palavras.",
+            "Relacione as semelhanças formais aos sentidos contrastantes do amor."
+          ],
+          "trap": "Ler memória apenas como lembrança autobiográfica do eu lírico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "38",
+          "page": 11,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Conotação e construção de sentidos"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica o efeito do substantivo amor sobre a leitura de amora.",
+          "rationale": "O conhecimento decisivo é conotação e construção de sentidos: observe que o corpo da palavra guarda uma evocação de amor.",
+          "strategy": [
+            "Observe que o corpo da palavra guarda uma evocação de amor.",
+            "Relacione essa evocação à intensificação figurada da doçura."
+          ],
+          "trap": "Tratar corpo como referência anatômica literal.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "39",
+          "page": 11,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Interpretação de poema e resistência"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a inversão de força entre planta e bota em poema breve.",
+          "rationale": "O conhecimento decisivo é interpretação de poema e resistência: observe que a planta pisada não é o elemento dito mais frágil.",
+          "strategy": [
+            "Observe que a planta pisada não é o elemento dito mais frágil.",
+            "Relacione a fragilização da bota à resistência diante da força militar."
+          ],
+          "trap": "Reduzir o poema a uma defesa literal da vegetação.",
+          "confidence": "high",
+          "reviewNote": "A resistência civil é inferida da inversão entre planta e bota; não depende de conhecimento da obra completa.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "40",
+          "page": 11,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Intertextualidade com provérbio"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona o poema da planta e da bota a um ditado popular.",
+          "rationale": "O conhecimento decisivo é intertextualidade com provérbio: identifique a resistência do elemento aparentemente fraco.",
+          "strategy": [
+            "Identifique a resistência do elemento aparentemente fraco.",
+            "Associe-a à persistência de água mole contra pedra dura."
+          ],
+          "trap": "Escolher vingança automática em vez da resistência figurada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "41",
+          "page": 11,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Pontuação e relação explicativa"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina a função dos dois-pontos em notícia sobre bots e fake news.",
+          "rationale": "O conhecimento decisivo é pontuação e relação explicativa: leia a proposição anterior sobre comparar robôs.",
+          "strategy": [
+            "Leia a proposição anterior sobre comparar robôs.",
+            "Verifique que a igualdade de alcance desenvolve e explica essa comparação."
+          ],
+          "trap": "Classificar toda segunda oração como conclusão.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "42",
+          "page": 12,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Sagarana e caracterização mestiça"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona o retrato de Manuel Fulô à construção cultural de Sagarana.",
+          "rationale": "O conhecimento decisivo é sagarana e caracterização mestiça: identifique a combinação de marcas aimorés e europeias no retrato.",
+          "strategy": [
+            "Identifique a combinação de marcas aimorés e europeias no retrato.",
+            "Relacione a mistura física e cultural ao projeto narrativo de Rosa."
+          ],
+          "trap": "Aplicar determinismo naturalista ao estilo de Guimarães Rosa.",
+          "confidence": "high",
+          "reviewNote": "Harmonização pela taxonomia do Crivo: Guimarães Rosa integra o capítulo de Literatura Contemporânea, embora sua obra pertença historicamente ao Modernismo.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "43",
+          "page": 12,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Referência textual e autopercepção"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Localiza a definição da incompreensão da narradora em texto de Djamila Ribeiro.",
+          "rationale": "O conhecimento decisivo é referência textual e autopercepção: distinga a formulação geral dos exemplos de exclusão escolar.",
+          "strategy": [
+            "Distinga a formulação geral dos exemplos de exclusão escolar.",
+            "Relacione incompreensão à ausência de consciência de si."
+          ],
+          "trap": "Escolher um episódio de racismo como definição de toda a incompreensão.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "44",
+          "page": 12,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Quincas Borba e hipocrisia social"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a referência a Tartufo à crítica social do romance machadiano.",
+          "rationale": "O conhecimento decisivo é quincas borba e hipocrisia social: observe o cálculo de prestígio na caridade de Sofia.",
+          "strategy": [
+            "Observe o cálculo de prestígio na caridade de Sofia.",
+            "Amplie a hipocrisia ao funcionamento social mostrado no romance."
+          ],
+          "trap": "Reduzir a tartufice a um defeito isolado de Sofia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "45",
+          "page": 12,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Concessão e equivalência de conectivos"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reescreve posto que sem alterar o sentido do comentário sobre Sofia.",
+          "rationale": "O conhecimento decisivo é concessão e equivalência de conectivos: reconheça que a lisonja não produz a alegria esperada.",
+          "strategy": [
+            "Reconheça que a lisonja não produz a alegria esperada.",
+            "Substitua o conector por apesar de preservando a concessão."
+          ],
+          "trap": "Ler posto que como causa no contexto.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "46",
+          "page": 13,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Comparação de perspectivas sobre a morte"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara as perguntas de uma menina e de um eu poético sobre a morte.",
+          "rationale": "O conhecimento decisivo é comparação de perspectivas sobre a morte: identifique a curiosidade concreta sobre o falecimento de Bela.",
+          "strategy": [
+            "Identifique a curiosidade concreta sobre o falecimento de Bela.",
+            "Contraste-a com a indagação filosófica do vínculo com o fantasma."
+          ],
+          "trap": "Atribuir aos dois textos respostas definitivas ou a mesma doutrina religiosa.",
+          "confidence": "high",
+          "reviewNote": "Comparação resolvida pelos excertos; classificada em Português, sem exigir conhecimento externo das obras.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "47",
+          "page": 13,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Ironia e comparação entre poema e samba"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o alvo comum da ironia de Gregório de Matos e Noel Rosa.",
+          "rationale": "O conhecimento decisivo é ironia e comparação entre poema e samba: note como o elogio aparente revela o vazio do homenageado.",
+          "strategy": [
+            "Note como o elogio aparente revela o vazio do homenageado.",
+            "Compare o retratado nulo ao tipo sem singularidade do samba."
+          ],
+          "trap": "Tomar a composição do soneto como alvo comum dos dois textos.",
+          "confidence": "high",
+          "reviewNote": "Ironia comparativa resolvida pelos dois textos fornecidos; não exige história literária do Barroco ou do samba.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "48",
+          "page": 14,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Cooperação internacional em saúde"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica por que governos isolacionistas dificultam resposta à resistência microbiana.",
+          "rationale": "O conhecimento decisivo é cooperação internacional em saúde: relacione a escala mundial do problema à necessidade de coordenação.",
+          "strategy": [
+            "Relacione a escala mundial do problema à necessidade de coordenação.",
+            "Identifique a tensão entre protocolos internacionais e isolamento político."
+          ],
+          "trap": "Supor que microrganismos resistentes existam apenas em países isolacionistas.",
+          "confidence": "high",
+          "reviewNote": "A pergunta exige compreender coordenação internacional e isolacionismo; resistência microbiana é contexto, sem exigir mecanismo evolutivo.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "49",
+          "page": 14,
+          "subject": "Biologia",
+          "topicId": "bio_botanica",
+          "topic": "Botânica",
+          "subtopics": [
+            "Fungos e dispersão por esporos"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a estrutura responsável pela colonização rápida por fungos pluricelulares.",
+          "rationale": "O conhecimento decisivo é fungos e dispersão por esporos: recupere a produção e a dispersão de esporos nos fungos.",
+          "strategy": [
+            "Recupere a produção e a dispersão de esporos nos fungos.",
+            "Associe germinação de esporos haploides à ocupação de novos ambientes."
+          ],
+          "trap": "Atribuir autotrofia aos fungos ou chamar zigoto de haploide.",
+          "confidence": "high",
+          "reviewNote": "Fungos estão explicitamente reunidos em Botânica na taxonomia adotada; a ficha não os classifica biologicamente como plantas.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "50",
+          "page": 14,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Queimadas e ciclagem de nutrientes"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona desmatamento amazônico a efeitos no solo, biodiversidade e evaporação.",
+          "rationale": "O conhecimento decisivo é queimadas e ciclagem de nutrientes: reconheça o aumento transitório de nutrientes pelas cinzas.",
+          "strategy": [
+            "Reconheça o aumento transitório de nutrientes pelas cinzas.",
+            "Associe a retirada da vegetação à perda de espécies e à exposição do solo."
+          ],
+          "trap": "Confundir fertilidade temporária das cinzas com ganho permanente.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "51",
+          "page": 15,
+          "subject": "Biologia",
+          "topicId": "bio_zoologia",
+          "topic": "Zoologia",
+          "subtopics": [
+            "Ecdise e crescimento de insetos"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Seleciona a curva de crescimento de um inseto hemimetábolo.",
+          "rationale": "O conhecimento decisivo é ecdise e crescimento de insetos: relacione o exoesqueleto ao crescimento descontínuo por mudas.",
+          "strategy": [
+            "Relacione o exoesqueleto ao crescimento descontínuo por mudas.",
+            "Escolha os patamares e saltos até a fase adulta."
+          ],
+          "trap": "Escolher curva contínua por confundir crescimento corporal com crescimento populacional.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "52",
+          "page": 15,
+          "subject": "Biologia",
+          "topicId": "bio_estrutura_fisio_celular",
+          "topic": "Estrutura e Fisiologia Celular",
+          "subtopics": [
+            "Célula vegetal e composição de estruturas"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece parede, membrana, vacúolo e núcleo em esquema celular.",
+          "rationale": "O conhecimento decisivo é célula vegetal e composição de estruturas: identifique os quatro números na célula vegetal adulta.",
+          "strategy": [
+            "Identifique os quatro números na célula vegetal adulta.",
+            "Associe parede à celulose, membrana a lipídios, vacúolo à água e núcleo aos ácidos nucleicos."
+          ],
+          "trap": "Inverter membrana e parede ou confundir o grande vacúolo com núcleo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "53",
+          "page": 15,
+          "subject": "Biologia",
+          "topicId": "bio_genetica",
+          "topic": "Genética",
+          "subtopics": [
+            "Herança dominante ligada ao X"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a evidência de ligação ao X em heredograma.",
+          "rationale": "O conhecimento decisivo é herança dominante ligada ao x: observe os descendentes dos homens afetados.",
+          "strategy": [
+            "Observe os descendentes dos homens afetados.",
+            "Relacione transmissão às filhas e ausência de transmissão aos filhos ao cromossomo X paterno."
+          ],
+          "trap": "Usar apenas presença em ambos os sexos como prova de ligação ao X.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "54",
+          "page": 15,
+          "subject": "Biologia",
+          "topicId": "bio_estrutura_fisio_celular",
+          "topic": "Estrutura e Fisiologia Celular",
+          "subtopics": [
+            "Organelas e especialização celular"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona abundância de mitocôndrias e vesículas à função dos tecidos.",
+          "rationale": "O conhecimento decisivo é organelas e especialização celular: associe muitas mitocôndrias ao gasto energético muscular.",
+          "strategy": [
+            "Associe muitas mitocôndrias ao gasto energético muscular.",
+            "Associe vesículas secretoras à atividade do pâncreas."
+          ],
+          "trap": "Escolher tecido apenas pela presença de núcleo, comum a vários tipos celulares.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "55",
+          "page": 15,
+          "subject": "Biologia",
+          "topicId": "bio_codigo_genetico_sintese",
+          "topic": "Código Genético e Síntese Proteica",
+          "subtopics": [
+            "Complementaridade de bases do DNA"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula bases de DNA com cem pares e 32 timinas.",
+          "rationale": "O conhecimento decisivo é complementaridade de bases do dna: converta cem pares em duzentas bases totais e iguale A a T.",
+          "strategy": [
+            "Converta cem pares em duzentas bases totais e iguale A a T.",
+            "Distribua as 136 bases restantes igualmente entre C e G."
+          ],
+          "trap": "Tratar cem pares como cem nucleotídeos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "56",
+          "page": 16,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Poluição hídrica e demanda de oxigênio"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a principal causa da baixa diversidade e oxigenação de rios urbanos.",
+          "rationale": "O conhecimento decisivo é poluição hídrica e demanda de oxigênio: relacione esgoto não tratado à carga orgânica e aos poluentes.",
+          "strategy": [
+            "Relacione esgoto não tratado à carga orgânica e aos poluentes.",
+            "Associe decomposição ao consumo de oxigênio dissolvido."
+          ],
+          "trap": "Atribuir o conjunto de efeitos principalmente ao lixo plástico visível.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "57",
+          "page": 16,
+          "subject": "Biologia",
+          "topicId": "bio_biotecnologia",
+          "topic": "Biotecnologia",
+          "subtopics": [
+            "Transplante de células-tronco e resistência ao HIV"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica a resistência ao HIV após transplante de medula de doador com CCR5 mutante.",
+          "rationale": "O conhecimento decisivo é transplante de células-tronco e resistência ao hiv: reconheça que células sanguíneas passam a derivar das células do doador.",
+          "strategy": [
+            "Reconheça que células sanguíneas passam a derivar das células do doador.",
+            "Associe o receptor alterado à dificuldade de entrada do HIV."
+          ],
+          "trap": "Supor que o transplante altera os gametas ou induz a mutação em todas as células do receptor.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "58",
+          "page": 16,
+          "subject": "História",
+          "topicId": "his_idade_antiga",
+          "topic": "Idade Antiga",
+          "subtopics": [
+            "Povoamento da América e Luzia"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a descoberta de Luzia ao debate sobre migrações para as Américas.",
+          "rationale": "O conhecimento decisivo é povoamento da américa e luzia: localize a descoberta em Minas Gerais na década de 1970.",
+          "strategy": [
+            "Localize a descoberta em Minas Gerais na década de 1970.",
+            "Associe as características do fóssil ao questionamento de uma única onda migratória."
+          ],
+          "trap": "Tratar Luzia como prova de migração direta da África.",
+          "confidence": "high",
+          "reviewNote": "Povoamento pré-colombiano da América não possui tópico próprio; alocado editorialmente em Idade Antiga, com subtema explícito.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "59",
+          "page": 16,
+          "subject": "História",
+          "topicId": "his_idade_media",
+          "topic": "Idade Média",
+          "subtopics": [
+            "Peste Negra e crise demográfica"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o impacto econômico e demográfico da peste no século XIV.",
+          "rationale": "O conhecimento decisivo é peste negra e crise demográfica: situe a epidemia na crise europeia do final da Idade Média.",
+          "strategy": [
+            "Situe a epidemia na crise europeia do final da Idade Média.",
+            "Relacione mortalidade elevada à queda de produção e disponibilidade de trabalho."
+          ],
+          "trap": "Confundir a causa bacteriana da peste com a fome que agravava vulnerabilidades.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "60",
+          "page": 17,
+          "subject": "História",
+          "topicId": "his_idade_media",
+          "topic": "Idade Média",
+          "subtopics": [
+            "Comércio transaariano e ouro africano"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta rotas comerciais norte-africanas e saarianas do século XV.",
+          "rationale": "O conhecimento decisivo é comércio transaariano e ouro africano: localize no mapa as conexões entre Sahel, Saara e Mediterrâneo.",
+          "strategy": [
+            "Localize no mapa as conexões entre Sahel, Saara e Mediterrâneo.",
+            "Relacione os trajetos ao ouro das regiões a sudoeste do deserto."
+          ],
+          "trap": "Imaginar unificação de toda a África setentrional por Songai ou Cairo.",
+          "confidence": "high",
+          "reviewNote": "História africana do século XV e comércio transaariano: alocação em Idade Média por ausência de tópico específico de África.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "61",
+          "page": 17,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Constituição de 1934 e direitos trabalhistas"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece uma dimensão da regulamentação trabalhista entre 1920 e 1946.",
+          "rationale": "O conhecimento decisivo é constituição de 1934 e direitos trabalhistas: situe organização sindical e proteção ao trabalho na Constituição de 1934.",
+          "strategy": [
+            "Situe organização sindical e proteção ao trabalho na Constituição de 1934.",
+            "Distinga esses direitos da restrição à greve durante o Estado Novo."
+          ],
+          "trap": "Atribuir à CLT de 1943 garantia irrestrita de greve.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "62",
+          "page": 17,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Expansão marítima e cartografia renascentista"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa o mapa de Agnese sobre a viagem de Magalhães.",
+          "rationale": "O conhecimento decisivo é expansão marítima e cartografia renascentista: observe a planificação do globo e o registro das rotas oceânicas.",
+          "strategy": [
+            "Observe a planificação do globo e o registro das rotas oceânicas.",
+            "Relacione o mapa ao acúmulo de relatos náuticos e cálculos de distância."
+          ],
+          "trap": "Supor que letrados da época defendessem genericamente a Terra plana.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "63",
+          "page": 17,
+          "subject": "História",
+          "topicId": "his_brasil_colonia",
+          "topic": "Brasil Colônia",
+          "subtopics": [
+            "Invasões holandesas e economia açucareira"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a motivação central da conquista holandesa na América portuguesa.",
+          "rationale": "O conhecimento decisivo é invasões holandesas e economia açucareira: situe os conflitos no circuito mercantil do Atlântico Sul.",
+          "strategy": [
+            "Situe os conflitos no circuito mercantil do Atlântico Sul.",
+            "Associe os interesses neerlandeses ao açúcar e à estrutura escravista."
+          ],
+          "trap": "Antecipar o ciclo do ouro para explicar as invasões do século XVII.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "64",
+          "page": 18,
+          "subject": "História",
+          "topicId": "his_idade_antiga",
+          "topic": "Idade Antiga",
+          "subtopics": [
+            "Mesopotâmia e organização social"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Caracteriza a sociedade mesopotâmica a partir da narrativa de Gilgamesh.",
+          "rationale": "O conhecimento decisivo é mesopotâmia e organização social: identifique pluralidade de deuses, obras hidráulicas e referências guerreiras.",
+          "strategy": [
+            "Identifique pluralidade de deuses, obras hidráulicas e referências guerreiras.",
+            "Relacione agricultura irrigada e centralização política às cidades mesopotâmicas."
+          ],
+          "trap": "Ler o dilúvio como evidência de monoteísmo por associação bíblica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "65",
+          "page": 18,
+          "subject": "História",
+          "topicId": "his_republica_liberal_atual",
+          "topic": "República Liberal e Brasil Contemporâneo",
+          "subtopics": [
+            "Transição democrática e juventude"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Contextualiza a crítica política de Geração Coca-Cola no Brasil dos anos 1980.",
+          "rationale": "O conhecimento decisivo é transição democrática e juventude: situe a composição em 1984 e no debate da transição política.",
+          "strategy": [
+            "Situe a composição em 1984 e no debate da transição política.",
+            "Relacione a rebeldia ao repúdio juvenil às práticas políticas e comportamentais."
+          ],
+          "trap": "Confundir a crítica da canção com apoio ao regime militar ou a um programa institucional específico.",
+          "confidence": "medium",
+          "reviewNote": "A chave oficial indica C. A alternativa A também situa 1984 nas Diretas Já; classificação histórica segura, mas o alcance da rejeição política na letra exige cautela interpretativa.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "66",
+          "page": 18,
+          "subject": "História",
+          "topicId": "his_guerra_fria_contemporaneo",
+          "topic": "Guerra Fria e Mundo Contemporâneo",
+          "subtopics": [
+            "Operação Condor e ditaduras sul-americanas"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa cooperação repressiva e disputas entre ditaduras do Cone Sul.",
+          "rationale": "O conhecimento decisivo é operação condor e ditaduras sul-americanas: reconheça o combate comum aos opositores políticos.",
+          "strategy": [
+            "Reconheça o combate comum aos opositores políticos.",
+            "Use a disputa por liderança para distinguir cooperação de alinhamento automático."
+          ],
+          "trap": "Reduzir a operação a simples troca de informações sem repressão transnacional.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "67",
+          "page": 18,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Revoluções inglesas e parlamentarismo"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona contenção de conflitos à consolidação parlamentar britânica.",
+          "rationale": "O conhecimento decisivo é revoluções inglesas e parlamentarismo: situe as revoluções e disputas políticas no século XVII.",
+          "strategy": [
+            "Situe as revoluções e disputas políticas no século XVII.",
+            "Relacione o fortalecimento parlamentar do século XVIII à acomodação das elites."
+          ],
+          "trap": "Antecipar sufrágio universal ou deslocar Cromwell para o século XVIII.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "68",
+          "page": 19,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Imprensa e controle da informação"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara transformações da imprensa e da comunicação eletrônica.",
+          "rationale": "O conhecimento decisivo é imprensa e controle da informação: identifique a tensão comum entre circulação de informação e tentativas de controle.",
+          "strategy": [
+            "Identifique a tensão comum entre circulação de informação e tentativas de controle.",
+            "Avalie a importância dos agentes que dominam e utilizam as tecnologias."
+          ],
+          "trap": "Supor que inovação técnica elimine exclusão ou garanta pensamento crítico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "69",
+          "page": 19,
+          "subject": "Física",
+          "topicId": "fis_gravitacao_circular",
+          "topic": "Gravitação e Movimento Circular",
+          "subtopics": [
+            "Período de órbita circular lunar"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula o intervalo entre passagens de um módulo orbital sobre o mesmo ponto lunar.",
+          "rationale": "O conhecimento decisivo é período de órbita circular lunar: some a altitude de 260 km ao raio lunar de 1740 km.",
+          "strategy": [
+            "Some a altitude de 260 km ao raio lunar de 1740 km.",
+            "Iguale gravitação e força centrípeta e obtenha o período orbital."
+          ],
+          "trap": "Usar a altitude em lugar da distância ao centro da Lua.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "70",
+          "page": 19,
+          "subject": "Física",
+          "topicId": null,
+          "topic": "Grandezas e unidades: análise dimensional",
+          "subtopics": [
+            "Análise dimensional da constante de Planck"
+          ],
+          "skills": [
+            "analise_dimensional"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina a unidade de h a partir da relação entre energia e frequência.",
+          "rationale": "O conhecimento decisivo é análise dimensional da constante de planck: escreva joule como quilograma metro quadrado por segundo quadrado.",
+          "strategy": [
+            "Escreva joule como quilograma metro quadrado por segundo quadrado.",
+            "Divida a unidade da energia pela frequência em inverso de segundo."
+          ],
+          "trap": "Confundir frequência com período e multiplicar potências de segundo incorretamente.",
+          "confidence": "high",
+          "reviewNote": "A fórmula quântica é fornecida; exige análise dimensional. Sem tópico específico de unidades na taxonomia, mantido topicId nulo.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "71",
+          "page": 19,
+          "subject": "Física",
+          "topicId": "fis_ondas_fundamentos",
+          "topic": "Fundamentos de Ondas e Oscilações",
+          "subtopics": [
+            "Comprimento de onda e propagação de sinal"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [
+            "Matemática"
+          ],
+          "relatedTopicIds": [
+            "mat_log_exponenciais"
+          ],
+          "summary": "Obtém frequência de telefonia a partir do gráfico de perda de sinal.",
+          "rationale": "O conhecimento decisivo é comprimento de onda e propagação de sinal: leia um par do gráfico, como 60 dB a 10 m, e substitua na expressão logarítmica.",
+          "strategy": [
+            "Leia um par do gráfico, como 60 dB a 10 m, e substitua na expressão logarítmica.",
+            "Determine o comprimento de onda e calcule frequência por c dividido por lambda."
+          ],
+          "trap": "Ler a perda em decibéis como fator linear ou inverter frequência e comprimento de onda.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "72",
+          "page": 20,
+          "subject": "Física",
+          "topicId": "fis_cinematica",
+          "topic": "Cinemática Escalar",
+          "subtopics": [
+            "Velocidade média de propagação"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula velocidades médias do impulso nervoso em dois percursos.",
+          "rationale": "O conhecimento decisivo é velocidade média de propagação: use 1,70 m em 30 ms para o percurso total.",
+          "strategy": [
+            "Use 1,70 m em 30 ms para o percurso total.",
+            "Use 40% da altura e os 10 ms restantes para o trecho tronco-cérebro."
+          ],
+          "trap": "Dividir a distância restante pelos 30 ms totais.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "73",
+          "page": 20,
+          "subject": "Física",
+          "topicId": "fis_termodinamica_gases",
+          "topic": "Termodinâmica dos Gases",
+          "subtopics": [
+            "Teoria cinética e escape atmosférico"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona retenção de atmosfera a temperatura, massa molecular e velocidade de escape.",
+          "rationale": "O conhecimento decisivo é teoria cinética e escape atmosférico: compare velocidades moleculares para mesma temperatura e massas diferentes.",
+          "strategy": [
+            "Compare velocidades moleculares para mesma temperatura e massas diferentes.",
+            "Reconheça que maior velocidade de escape favorece retenção nas mesmas condições térmicas."
+          ],
+          "trap": "Afirmar que moléculas de nitrogênio escapam mais facilmente que hidrogênio.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "74",
+          "page": 20,
+          "subject": "Física",
+          "topicId": "fis_energia",
+          "topic": "Dinâmica Energética e Transformações de Energia",
+          "subtopics": [
+            "Conservação de energia e elasticidade"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina a constante mínima do elástico para um salto de trinta metros.",
+          "rationale": "O conhecimento decisivo é conservação de energia e elasticidade: calcule a extensão máxima como 30 menos 10 metros.",
+          "strategy": [
+            "Calcule a extensão máxima como 30 menos 10 metros.",
+            "Iguale a perda gravitacional em trinta metros à energia elástica na extensão de vinte metros."
+          ],
+          "trap": "Usar apenas a extensão elástica como altura total da queda.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "75",
+          "page": 20,
+          "subject": "Física",
+          "topicId": "fis_circuitos",
+          "topic": "Circuitos Elétricos",
+          "subtopics": [
+            "Associações de resistores e corrente limite"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara a corrente de uma lâmpada em três circuitos com resistores defeituosos.",
+          "rationale": "O conhecimento decisivo é associações de resistores e corrente limite: calcule a resistência equivalente no ramo que contém a lâmpada em cada montagem.",
+          "strategy": [
+            "Calcule a resistência equivalente no ramo que contém a lâmpada em cada montagem.",
+            "Compare sua corrente com V dividido por R mais L para detectar os excessos."
+          ],
+          "trap": "Usar a corrente total da fonte como se fosse sempre a corrente da lâmpada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "76",
+          "page": 20,
+          "subject": "Física",
+          "topicId": "fis_ondulatoria",
+          "topic": "Ondulatória",
+          "subtopics": [
+            "Difração e resolução angular"
+          ],
+          "skills": [
+            "calculo",
+            "interpretacao_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Estima o tamanho de um pixel na imagem do buraco negro obtida pelo EHT.",
+          "rationale": "O conhecimento decisivo é difração e resolução angular: leia no gráfico a resolução angular para diâmetro próximo de dez mil quilômetros.",
+          "strategy": [
+            "Leia no gráfico a resolução angular para diâmetro próximo de dez mil quilômetros.",
+            "Multiplique a resolução próxima de dez elevado a menos dez pela distância até M87."
+          ],
+          "trap": "Interpretar eixos logarítmicos como escalas lineares.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "77",
+          "page": 21,
+          "subject": "Física",
+          "topicId": "fis_eletromagnetismo",
+          "topic": "Eletromagnetismo",
+          "subtopics": [
+            "Campo de solenoide e força de Lorentz"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica direções das forças elétrica e magnética sobre carga positiva.",
+          "rationale": "O conhecimento decisivo é campo de solenoide e força de lorentz: determine o campo interno com a regra da mão direita aplicada à corrente do solenoide.",
+          "strategy": [
+            "Determine o campo interno com a regra da mão direita aplicada à corrente do solenoide.",
+            "Use qE e o produto vetorial da velocidade pelo campo para orientar as forças."
+          ],
+          "trap": "Confundir direção do campo magnético com direção da força magnética.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "78",
+          "page": 21,
+          "subject": "Física",
+          "topicId": "fis_cinematica_vetorial",
+          "topic": "Cinemática Vetorial",
+          "subtopics": [
+            "Lançamento horizontal e referencial"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Seleciona a trajetória de pacote solto por drone visto do solo.",
+          "rationale": "O conhecimento decisivo é lançamento horizontal e referencial: conserve a velocidade horizontal inicial do pacote no instante da soltura.",
+          "strategy": [
+            "Conserve a velocidade horizontal inicial do pacote no instante da soltura.",
+            "Combine movimento horizontal uniforme e queda vertical acelerada para obter a parábola adiante."
+          ],
+          "trap": "Imaginar que o pacote perde toda a velocidade horizontal ao ser solto.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "79",
+          "page": 21,
+          "subject": "Física",
+          "topicId": "fis_gravitacao_circular",
+          "topic": "Gravitação e Movimento Circular",
+          "subtopics": [
+            "Pêndulo, dilatação térmica e gravidade"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "fis_calorimetria"
+          ],
+          "summary": "Ordena períodos de pêndulo na Terra em duas temperaturas e na Lua.",
+          "rationale": "O conhecimento decisivo é pêndulo, dilatação térmica e gravidade: converta 0 °C e 32 °F para reconhecer a mesma temperatura e compare com 250 K.",
+          "strategy": [
+            "Converta 0 °C e 32 °F para reconhecer a mesma temperatura e compare com 250 K.",
+            "Combine encurtamento da haste pelo frio e aumento do período quando a gravidade diminui."
+          ],
+          "trap": "Considerar 250 K uma temperatura maior que 0 °C.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "80",
+          "page": 21,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Frente fria e instabilidade atmosférica"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona um sistema frontal a frio e chuva na cidade de São Paulo.",
+          "rationale": "O conhecimento decisivo é frente fria e instabilidade atmosférica: identifique o ar frio mais denso avançando sob o ar quente.",
+          "strategy": [
+            "Identifique o ar frio mais denso avançando sob o ar quente.",
+            "Associe a subida do ar quente à condensação, nuvens e instabilidade."
+          ],
+          "trap": "Supor que o encontro das massas estabilize necessariamente a atmosfera.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "81",
+          "page": 22,
+          "subject": "Geografia",
+          "topicId": "geo_cartografia",
+          "topic": "Cartografia e Fundamentos",
+          "subtopics": [
+            "Esfericidade e distribuição da radiação"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a demonstração de Eratóstenes às zonas climáticas terrestres.",
+          "rationale": "O conhecimento decisivo é esfericidade e distribuição da radiação: use a curvatura para comparar o ângulo de incidência solar por latitude.",
+          "strategy": [
+            "Use a curvatura para comparar o ângulo de incidência solar por latitude.",
+            "Associe maior concentração de energia à faixa equatorial."
+          ],
+          "trap": "Trocar solstícios e equinócios ou atribuir as zonas climáticas à altitude polar.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "82",
+          "page": 22,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Corredores ecológicos e febre amarela"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [
+            "Biologia"
+          ],
+          "relatedTopicIds": [
+            "bio_microbiologia"
+          ],
+          "summary": "Identifica o avanço espacial de um vírus em São Paulo a partir de mortes de macacos.",
+          "rationale": "O conhecimento decisivo é corredores ecológicos e febre amarela: leia a legenda e separe o avanço observado em 2017 das projeções de 2018.",
+          "strategy": [
+            "Leia a legenda e separe o avanço observado em 2017 das projeções de 2018.",
+            "Siga o corredor entre sul de Minas e Campinas e associe a epizootia à febre amarela."
+          ],
+          "trap": "Escolher regiões da previsão futura ou doenças sem esse padrão de epizootia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "83",
+          "page": 22,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Desertificação e recuperação ambiental"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Seleciona medida de mitigação da degradação em áreas secas.",
+          "rationale": "O conhecimento decisivo é desertificação e recuperação ambiental: relacione desertificação à degradação do solo e da cobertura vegetal.",
+          "strategy": [
+            "Relacione desertificação à degradação do solo e da cobertura vegetal.",
+            "Priorize prevenção e recuperação com espécies nativas."
+          ],
+          "trap": "Supor que qualquer espécie exótica de crescimento rápido restaure o ambiente.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "84",
+          "page": 23,
+          "subject": "Geografia",
+          "topicId": "geo_economica_brasil",
+          "topic": "Geografia Econômica do Brasil",
+          "subtopics": [
+            "Agricultura familiar e estrutura fundiária"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara número e área de estabelecimentos familiares e não familiares.",
+          "rationale": "O conhecimento decisivo é agricultura familiar e estrutura fundiária: diferencie o mapa de número de estabelecimentos do mapa de área ocupada.",
+          "strategy": [
+            "Diferencie o mapa de número de estabelecimentos do mapa de área ocupada.",
+            "Relacione a menor área familiar à importância na oferta de alimentos ao mercado interno."
+          ],
+          "trap": "Confundir maior número de propriedades com maior extensão de terras.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "85",
+          "page": 23,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Redes, fixos e fluxos de informação"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona infraestrutura de telecomunicações ao poder geopolítico dos EUA.",
+          "rationale": "O conhecimento decisivo é redes, fixos e fluxos de informação: observe a concentração dos fluxos e centros de conexão no mapa.",
+          "strategy": [
+            "Observe a concentração dos fluxos e centros de conexão no mapa.",
+            "Explique como instalações fixas permitem orientar e acessar fluxos globais."
+          ],
+          "trap": "Supor que circulação imaterial torne irrelevante a infraestrutura territorial.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "86",
+          "page": 24,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Vulnerabilidade socioambiental a ciclones"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica a elevada mortalidade causada pelo ciclone Idai no sudeste africano.",
+          "rationale": "O conhecimento decisivo é vulnerabilidade socioambiental a ciclones: distinga intensidade do fenômeno de capacidade social de prevenção e resposta.",
+          "strategy": [
+            "Distinga intensidade do fenômeno de capacidade social de prevenção e resposta.",
+            "Relacione vulnerabilidade e infraestrutura pública limitada aos danos humanos."
+          ],
+          "trap": "Atribuir o desastre apenas a causas naturais ou a temperaturas oceânicas reduzidas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "87",
+          "page": 24,
+          "subject": "Geografia",
+          "topicId": "geo_populacao_urbana_brasil",
+          "topic": "Geografia da População e Urbana do Brasil",
+          "subtopics": [
+            "Gentrificação e segregação em Barcelona"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica os processos urbanos ligados à expulsão de moradores por aluguéis elevados.",
+          "rationale": "O conhecimento decisivo é gentrificação e segregação em barcelona: relacione valorização imobiliária e turismo à substituição de população de menor renda.",
+          "strategy": [
+            "Relacione valorização imobiliária e turismo à substituição de população de menor renda.",
+            "Associe o deslocamento forçado à segregação socioespacial."
+          ],
+          "trap": "Confundir aumento de aluguéis com conurbação de cidades.",
+          "confidence": "high",
+          "reviewNote": "Conceitos gerais de geografia urbana aplicados a Barcelona; o tópico disponível inclui Brasil no título, mas reúne urbanização e segregação.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "88",
+          "page": 24,
+          "subject": "Geografia",
+          "topicId": "geo_geopolitica_regional",
+          "topic": "Geopolítica Regional Contemporânea",
+          "subtopics": [
+            "Diplomacia brasileira e conflito no Oriente Médio"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Avalia mudanças diplomáticas sobre Golã e Jerusalém em 2019.",
+          "rationale": "O conhecimento decisivo é diplomacia brasileira e conflito no oriente médio: relacione os posicionamentos brasileiros às políticas dos EUA e de Israel.",
+          "strategy": [
+            "Relacione os posicionamentos brasileiros às políticas dos EUA e de Israel.",
+            "Compare-os com a posição majoritária do Conselho de Segurança."
+          ],
+          "trap": "Associar a aproximação com Israel a uma aproximação simultânea com a Síria.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "89",
+          "page": 25,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Movimentos de massa e risco em encostas"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona chuva, declividade e contato solo-rocha a escorregamentos.",
+          "rationale": "O conhecimento decisivo é movimentos de massa e risco em encostas: observe na figura a superfície de ruptura entre solo e rocha.",
+          "strategy": [
+            "Observe na figura a superfície de ruptura entre solo e rocha.",
+            "Relacione infiltração e inclinação à instabilidade, agravada pela ocupação."
+          ],
+          "trap": "Explicar deslizamentos por redução da fertilidade ou diminuição do peso do solo molhado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "90",
+          "page": 25,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Altitude e pisos de vegetação"
+          ],
+          "skills": [
+            "analise_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Ordena formações vegetais da base ao topo do Chimborazo.",
+          "rationale": "O conhecimento decisivo é altitude e pisos de vegetação: relacione o aumento de altitude à redução de temperatura.",
+          "strategy": [
+            "Relacione o aumento de altitude à redução de temperatura.",
+            "Ordene floresta tropical, temperada, coníferas, tundra, rocha e gelo."
+          ],
+          "trap": "Inverter floresta temperada e coníferas ou colocar floresta tropical em maior altitude.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-10-18",
+  "reviewedOn": "2026-10-21",
   "cohorts": [
     {
       "id": "fuvest-2022-f1",
@@ -10,7 +10,7 @@
       "version": "V",
       "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_primeira_fase_tipo_V.pdf",
       "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_primeira_fase_gabarito_retificado.pdf",
-      "reviewedOn": "2026-10-18",
+      "reviewedOn": "2026-10-21",
       "examSha256": "adf72b06ef0ec73b522185ce8c142a96895ab5d54405a39b03cffb8ee5120281",
       "answerKeySha256": "366fdfb78ab349a964cf3dbd9a4df81773f816c696f6725485cc7140b11df64d",
       "completeSubjects": [
@@ -553,7 +553,7 @@
       "version": "A — Caderno Reserva, 14 páginas",
       "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_segunda_fase_dia_1.pdf",
       "answerKeyUrl": null,
-      "reviewedOn": "2026-10-18",
+      "reviewedOn": "2026-10-21",
       "examSha256": "fbff1b7f188b0acdc7fa3affb125cfa3ca8b7d8bbf063c380007c4f4f7be4a7b",
       "answerKeySha256": null,
       "completeSubjects": [
@@ -641,7 +641,7 @@
       "version": "A — banco integral de 36 questões, 38 páginas",
       "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_segunda_fase_dia_2.pdf",
       "answerKeyUrl": null,
-      "reviewedOn": "2026-10-18",
+      "reviewedOn": "2026-10-21",
       "examSha256": "25d3a4aecd29ea147f961e1a6d8ae32f36f0a447a941fe428c04e0e5b4407b76",
       "answerKeySha256": null,
       "completeSubjects": [
@@ -919,7 +919,7 @@
       "version": "V",
       "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_primeira_fase_prova_V.pdf",
       "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_gabarito_primeira_fase.pdf",
-      "reviewedOn": "2026-10-18",
+      "reviewedOn": "2026-10-21",
       "examSha256": "8a9941afd99addd61090c6432c8f8c28bbb6f8ed14d50cb2b8d30dfedf4751ac",
       "answerKeySha256": "34dd073be5c79c6e7f4464dc16399d05abd4605cdbc29a134ce15d69ba7ed86b",
       "completeSubjects": [
@@ -1466,7 +1466,7 @@
       "version": "Caderno oficial completo",
       "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_1.pdf",
       "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_abordagens_esperadas_2fase.pdf",
-      "reviewedOn": "2026-10-18",
+      "reviewedOn": "2026-10-21",
       "examSha256": "9945042f8edfbf11ce743d0ff4995815be9d2b31579232ffbc0788c4f6d6ac96",
       "answerKeySha256": "a7986775b44738f01df40da2fc23dc3cf6993ebce69be04cb0152eac90a7f43e",
       "completeSubjects": [
@@ -1554,7 +1554,7 @@
       "version": "Caderno oficial completo",
       "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_2.pdf",
       "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_abordagens_esperadas_2fase.pdf",
-      "reviewedOn": "2026-10-18",
+      "reviewedOn": "2026-10-21",
       "examSha256": "1fe9afaf17b1849c8b9aa92882f52a2ef846b03005b13166ebfec9474433379c",
       "answerKeySha256": "a7986775b44738f01df40da2fc23dc3cf6993ebce69be04cb0152eac90a7f43e",
       "completeSubjects": [
@@ -1826,7 +1826,7 @@
       "version": "V",
       "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_primeira_fase_prova_V.pdf",
       "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_gabarito_primeira_fase_retificado_2023-11-24.pdf",
-      "reviewedOn": "2026-10-18",
+      "reviewedOn": "2026-10-21",
       "examSha256": "f7d6e72253ac8fb23ec2283a5776155e6f5a91ef192c280bcc0e94e167c7f41e",
       "answerKeySha256": "e0ba949bd86f7aee6f7526639e2efd47383482c8f7eefdb32979cb198a333dfb",
       "completeSubjects": [
@@ -2375,7 +2375,7 @@
       "version": "A – 1º dia",
       "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_segunda_fase_prova_1dia.pdf",
       "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2024_2024.01.22_RESPOSTAS_USP_Guia.pdf",
-      "reviewedOn": "2026-10-18",
+      "reviewedOn": "2026-10-21",
       "examSha256": "0c8e8465e707ca57611a34e37ed885f2cd75f5072706d8b03ce7d367d555ce28",
       "answerKeySha256": "ac5d38390febca1415a61caf3e3e291115662fd9dfb6417c81d857b9e6ccffad",
       "completeSubjects": [
@@ -2463,7 +2463,7 @@
       "version": "A – caderno completo das seis disciplinas",
       "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_segunda_fase_prova_2dia.pdf",
       "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2024_2024.01.22_RESPOSTAS_USP_Guia.pdf",
-      "reviewedOn": "2026-10-18",
+      "reviewedOn": "2026-10-21",
       "examSha256": "cc591c016f2dbbc3a6f22e80bc4b95539378cce8f2f24fc88dd34cf9e4c8d0c7",
       "answerKeySha256": "ac5d38390febca1415a61caf3e3e291115662fd9dfb6417c81d857b9e6ccffad",
       "completeSubjects": [
@@ -2753,7 +2753,7 @@
       "version": "V1",
       "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_primeira_fase_prova_V1.pdf",
       "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_gabarito_primeira_fase.pdf",
-      "reviewedOn": "2026-10-18",
+      "reviewedOn": "2026-10-21",
       "examSha256": "f512449b47ac31abe1ae00d5f88fb14478c7139fa1db137145b7e33cec1b97c8",
       "answerKeySha256": "ddd7f38cc2584298e812f4a7bf083e74be4926ae948f0cb531117a60ec91fd5f",
       "completeSubjects": [
@@ -3307,7 +3307,7 @@
       "version": "Caderno oficial Z; Português e Redação",
       "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_prova_2fase_dia1.pdf",
       "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2025_guia_respostas.pdf",
-      "reviewedOn": "2026-10-18",
+      "reviewedOn": "2026-10-21",
       "examSha256": "1efb3ec7a497dfb64180f7f95a38da1e0058a3aa234e4aa3dfb736261150c1fc",
       "answerKeySha256": "c0f8c0098bb960ffea4e29a45c1251e3a23b020dad18131e2b214fc6fa9fc9b2",
       "completeSubjects": [
@@ -3401,7 +3401,7 @@
       "version": "Banco oficial completo B/F/G/H/M/Q; 36 questões",
       "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_prova_2fase_dia2.pdf",
       "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2025_guia_respostas.pdf",
-      "reviewedOn": "2026-10-18",
+      "reviewedOn": "2026-10-21",
       "examSha256": "420339db266ec93d9cf8f9491064aacf858b55ffe8f04b4d7bd3b5f47b11aee4",
       "answerKeySha256": "c0f8c0098bb960ffea4e29a45c1251e3a23b020dad18131e2b214fc6fa9fc9b2",
       "completeSubjects": [
@@ -3691,7 +3691,7 @@
       "version": "V1",
       "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
       "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-gabarito.pdf",
-      "reviewedOn": "2026-10-18",
+      "reviewedOn": "2026-10-21",
       "examSha256": "93b417ad6ea7e81a3b6adc46337920fd71c213306849846723f13583074f9025",
       "answerKeySha256": "a9e1084a125fa35bcefb875610328c0a8cb9b1a298880f2f0c75b928bd860e8e",
       "completeSubjects": [
@@ -4246,7 +4246,7 @@
       "version": "A",
       "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia1-prova.pdf",
       "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia1-respostas-esperadas.pdf",
-      "reviewedOn": "2026-10-18",
+      "reviewedOn": "2026-10-21",
       "examSha256": "1a2e017b8a3558da8e797cb61b5882d17165759c98bf59042c49a3644fc300ce",
       "answerKeySha256": "5968ddb76ff51c26da32c58236341776423eaab4c0b5b10bc7a8445c45b49b66",
       "completeSubjects": [
@@ -4328,7 +4328,7 @@
       "version": "B-W — banco completo B/F/G/H/M/Q",
       "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-prova.pdf",
       "answerKeyUrl": null,
-      "reviewedOn": "2026-10-18",
+      "reviewedOn": "2026-10-21",
       "examSha256": "77500abdde9cef9922669412e375665a1a271707f6d53299596feb6ff5917f05",
       "answerKeySha256": null,
       "completeSubjects": [

@@ -10,9 +10,9 @@ test('calcula um sinal reduzido por tamanho da amostra, separando fases sem soma
   assert.equal(topicIncidenceWeight(ecology, 'COMVEST'), weight);
   assert.ok(Math.abs(topicIncidenceWeight(ecology, 'UNICAMP', '1a-fase') - 2 / 34) < 1e-9);
 });
-test('amostras selecionadas não viram incidência e banca sem dados não herda outra banca', () => {
-  assert.equal(topicIncidenceWeight(ecology, 'FAMERP'), 0);
-  assert.equal(topicIncidenceWeight(ecology, 'UNESP'), 0);
+test('bancas completas passam a fornecer sinal próprio e banca sem dados não herda outra banca', () => {
+  assert.ok(topicIncidenceWeight(ecology, 'FAMERP') > 0);
+  assert.ok(topicIncidenceWeight(ecology, 'UNESP') > 0);
   assert.equal(topicIncidenceWeight(ecology, 'Banca Inexistente'), 0);
   assert.ok(topicIncidenceWeight(ecology, 'FUVEST', '2a-fase') > 0);
   assert.ok(topicIncidenceWeight(ecology, 'FUVEST', '1a-fase') > 0);
@@ -41,4 +41,15 @@ test('recorte de Medicina usa 15 questões por disciplina em cinco edições, pr
  assert.equal(completeTopicEvidence({id:'mat_funcoes',subject:'Matemática'},'FUVEST','2a-fase','medicina').length,0);
  assert.equal(completeTopicEvidence({id:'por_texto',subject:'Português'},'FUVEST','2a-fase','medicina').length,5);
  assert.equal(completeTopicEvidence(ecology,'FUVEST','2a-fase').reduce((sum,row)=>sum+row.total,0),30);
+});
+
+test('sinal UNESP mantém segunda fase objetiva e discursiva em denominadores separados',()=>{
+ const rows=completeTopicEvidence(ecology,'UNESP','2a-fase');
+ const groups=[...new Set(rows.map(row=>row.cohort.group))];
+ assert.equal(groups.length,2);
+ const expected=groups.reduce((sum,group)=>{
+  const own=rows.filter(row=>row.cohort.group===group);
+  return sum+own.reduce((n,row)=>n+row.count,0)/(own.reduce((n,row)=>n+row.total,0)+20);
+ },0)/groups.length;
+ assert.equal(topicIncidenceWeight(ecology,'UNESP','2a-fase'),expected);
 });
