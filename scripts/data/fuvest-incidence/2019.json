@@ -1,0 +1,2592 @@
+{
+  "year": 2019,
+  "reviewedOn": "2026-10-21",
+  "reviewType": "single-editor-source-reading",
+  "sourceManifest": [
+    {
+      "year": 2019,
+      "role": "first-phase-exam",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2019",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2019_primeira_fase.pdf",
+      "sha256": "b6ff89a26436635f4fed4af7b9480ed5d51b3310c425b16ebde689c789d70728",
+      "bytes": 6400677,
+      "pages": 25,
+      "localFilename": "fuvest_2019_primeira_fase.pdf",
+      "classificationStatus": "reviewed-first-phase-source-reading"
+    },
+    {
+      "year": 2019,
+      "role": "first-phase-answer-key",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2019",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuv2019.gabarito.oficial.pdf",
+      "sha256": "a6fff130b2be76877753cb4a8ad086efd4a749ed9f790677b2e2a49ecd8dd91b",
+      "bytes": 125036,
+      "pages": 2,
+      "localFilename": "fuv2019.gabarito.oficial.pdf",
+      "classificationStatus": "reviewed-first-phase-source-reading"
+    }
+  ],
+  "papers": [
+    {
+      "id": "fuvest-2019-f1",
+      "phase": "1a",
+      "version": "V",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2019_primeira_fase.pdf",
+      "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuv2019.gabarito.oficial.pdf",
+      "sha256": "b6ff89a26436635f4fed4af7b9480ed5d51b3310c425b16ebde689c789d70728",
+      "answerKeySha256": "a6fff130b2be76877753cb4a8ad086efd4a749ed9f790677b2e2a49ecd8dd91b",
+      "pages": 25,
+      "expectedQuestions": 90,
+      "questions": [
+        {
+          "number": "01",
+          "page": 2,
+          "subject": "Química",
+          "topicId": "qui_radioatividade",
+          "topic": "Radioatividade",
+          "subtopics": [
+            "Datação por carbono-14"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [
+            "Geografia"
+          ],
+          "relatedTopicIds": [
+            "geo_fisica_brasil"
+          ],
+          "summary": "Relaciona vestígios de fogueiras à datação de ocupações indígenas recentes.",
+          "rationale": "O conteúdo decisivo é datação por carbono-14: situe mil anos atrás no Holoceno.",
+          "strategy": [
+            "Situe mil anos atrás no Holoceno.",
+            "Identifique carbono nos restos orgânicos e seu decaimento radioativo."
+          ],
+          "trap": "Escolher Jurássico ou isótopos estáveis.",
+          "confidence": "medium",
+          "reviewNote": "Questão interdisciplinar: radioatividade é o mecanismo decisivo; exige também situar a ocupação recente no Holoceno. Geografia registrada como área secundária.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "02",
+          "page": 2,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Neoliberalismo e financeirização"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica os efeitos econômicos e sociais do neoliberalismo após 1980.",
+          "rationale": "O conteúdo decisivo é neoliberalismo e financeirização: associe neoliberalismo à centralidade financeira.",
+          "strategy": [
+            "Associe neoliberalismo à centralidade financeira.",
+            "Compare concentração patrimonial e redução de direitos sociais nas opções."
+          ],
+          "trap": "Atribuir ao neoliberalismo ampliação universal do Estado social.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "03",
+          "page": 2,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Clima e processos escultores"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Localiza Saara, Antártida e floresta tropical em eixos de temperatura e chuva.",
+          "rationale": "O conteúdo decisivo é clima e processos escultores: observe que a precipitação diminui para a direita e a temperatura cresce para baixo.",
+          "strategy": [
+            "Observe que a precipitação diminui para a direita e a temperatura cresce para baixo.",
+            "Posicione o deserto quente e seco, a Antártida fria e seca e a floresta quente e úmida."
+          ],
+          "trap": "Ler os eixos segundo a orientação convencional sem conferir os valores.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "04",
+          "page": 2,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Inversão térmica"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o perfil atmosférico que retém poluentes urbanos.",
+          "rationale": "O conteúdo decisivo é inversão térmica: identifique a camada em que a temperatura aumenta com a altitude.",
+          "strategy": [
+            "Identifique a camada em que a temperatura aumenta com a altitude.",
+            "Relacione a estabilidade do ar à retenção dos poluentes junto ao solo."
+          ],
+          "trap": "Confundir inversão térmica com efeito estufa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "05",
+          "page": 3,
+          "subject": "Geografia",
+          "topicId": "geo_geopolitica_regional",
+          "topic": "Geopolítica Regional Contemporânea",
+          "subtopics": [
+            "Refugiados e conflitos"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona países de origem e acolhimento de refugiados às guerras e à proximidade territorial.",
+          "rationale": "O conteúdo decisivo é refugiados e conflitos: leia separadamente as colunas de origem e destino.",
+          "strategy": [
+            "Leia separadamente as colunas de origem e destino.",
+            "Associe os deslocamentos forçados às guerras e aos países fronteiriços."
+          ],
+          "trap": "Supor que o destino majoritário é necessariamente a Europa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "06",
+          "page": 3,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Deriva continental"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a evidência morfológica usada por Wegener.",
+          "rationale": "O conteúdo decisivo é deriva continental: compare os contornos da América do Sul e da África nos mapas.",
+          "strategy": [
+            "Compare os contornos da América do Sul e da África nos mapas.",
+            "Distinga encaixe antigo de ligações continentais atuais."
+          ],
+          "trap": "Interpretar a teoria como permanência de ligações atuais.",
+          "confidence": "medium",
+          "reviewNote": "Deriva continental é geologia geral; aproximação pela taxonomia disponível de Geografia Física do Brasil, sem restringir o fenômeno ao Brasil.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "07",
+          "page": 4,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Desigualdade e segurança alimentar"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara desperdício, perdas produtivas e insegurança alimentar entre regiões.",
+          "rationale": "O conteúdo decisivo é desigualdade e segurança alimentar: diferencie descarte de alimentos bons e perdas na cadeia produtiva.",
+          "strategy": [
+            "Diferencie descarte de alimentos bons e perdas na cadeia produtiva.",
+            "Relacione os contrastes regionais à desigualdade econômica."
+          ],
+          "trap": "Deduzir escassez mundial de produção a partir da existência de fome.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "08",
+          "page": 4,
+          "subject": "Geografia",
+          "topicId": "geo_economica_brasil",
+          "topic": "Geografia Econômica do Brasil",
+          "subtopics": [
+            "Reprimarização das exportações"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a mudança da pauta exportadora brasileira entre 2000 e 2017.",
+          "rationale": "O conteúdo decisivo é reprimarização das exportações: compare a participação de básicos e manufaturados no início e no fim.",
+          "strategy": [
+            "Compare a participação de básicos e manufaturados no início e no fim.",
+            "Associe o crescimento dos básicos à perda relativa de valor agregado."
+          ],
+          "trap": "Confundir crescimento relativo dos básicos com fato inédito na história brasileira.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "09",
+          "page": 4,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Latitude e sazonalidade térmica"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Associa cinco curvas anuais de temperatura a cidades dos dois hemisférios.",
+          "rationale": "O conteúdo decisivo é latitude e sazonalidade térmica: separe curvas com verão em julho e em janeiro.",
+          "strategy": [
+            "Separe curvas com verão em julho e em janeiro.",
+            "Use amplitude térmica e proximidade equatorial para distinguir as cidades."
+          ],
+          "trap": "Trocar Santos e Buenos Aires por ignorar suas amplitudes anuais.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "10",
+          "page": 5,
+          "subject": "Geografia",
+          "topicId": "geo_populacao_urbana_brasil",
+          "topic": "Geografia da População e Urbana do Brasil",
+          "subtopics": [
+            "Terciário avançado e metropolização"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona edifícios corporativos à concentração espacial do terciário paulistano.",
+          "rationale": "O conteúdo decisivo é terciário avançado e metropolização: leia a intensidade dos lançamentos por distrito no mapa.",
+          "strategy": [
+            "Leia a intensidade dos lançamentos por distrito no mapa.",
+            "Confronte a concentração do terciário avançado com a desconcentração industrial."
+          ],
+          "trap": "Supor que a saída industrial dispersa igualmente os serviços financeiros.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "11",
+          "page": 5,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Compartimentos do relevo"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Classifica os compartimentos atravessados pelo perfil entre interior e litoral.",
+          "rationale": "O conteúdo decisivo é compartimentos do relevo: identifique a superfície elevada no trecho 1.",
+          "strategy": [
+            "Identifique a superfície elevada no trecho 1.",
+            "Reconheça a queda da escarpa e o trecho baixo da planície litorânea."
+          ],
+          "trap": "Chamar o trecho costeiro de depressão periférica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "12",
+          "page": 5,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Gradientes adiabáticos"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula temperaturas em ascensão e descida de ar numa montanha.",
+          "rationale": "O conteúdo decisivo é gradientes adiabáticos: aplique a razão seca de 200 a 400 m e a úmida de 400 a 1400 m.",
+          "strategy": [
+            "Aplique a razão seca de 200 a 400 m e a úmida de 400 a 1400 m.",
+            "Na descida a sotavento use a razão seca até o nível do mar."
+          ],
+          "trap": "Aplicar a razão úmida também a toda a descida.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "13",
+          "page": 6,
+          "subject": "Física",
+          "topicId": "fis_estatica",
+          "topic": "Estática dos Corpos Sólidos e dos Fluidos",
+          "subtopics": [
+            "Pressão e força sobre janela"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a força resultante sobre a janela de uma cabine pressurizada.",
+          "rationale": "O conteúdo decisivo é pressão e força sobre janela: leia as pressões externas a 10000 m e internas equivalentes a 2000 m.",
+          "strategy": [
+            "Leia as pressões externas a 10000 m e internas equivalentes a 2000 m.",
+            "Multiplique a diferença de pressão pela área em metros quadrados."
+          ],
+          "trap": "Usar apenas a pressão externa ou converter incorretamente centímetros quadrados.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "14",
+          "page": 6,
+          "subject": "Matemática",
+          "topicId": "mat_aritmetica_proporcionalidade",
+          "topic": "Aritmética e Proporcionalidade",
+          "subtopics": [
+            "Proporção e leitura gráfica"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Estima consumo energético animal a partir de uma curva de área superficial.",
+          "rationale": "O conteúdo decisivo é proporção e leitura gráfica: leia as áreas correspondentes a 3,5 e 7 kg.",
+          "strategy": [
+            "Leia as áreas correspondentes a 3,5 e 7 kg.",
+            "Multiplique 250 kcal pela razão entre essas áreas."
+          ],
+          "trap": "Dobrar o consumo por ter dobrado a massa.",
+          "confidence": "high",
+          "reviewNote": "O animal é contexto: a operação decisiva é proporção entre áreas lidas no gráfico, sem exigir fisiologia.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "15",
+          "page": 6,
+          "subject": "Física",
+          "topicId": "fis_cinematica",
+          "topic": "Cinemática Escalar",
+          "subtopics": [
+            "Estroboscopia e frequência"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina a rotação de uma polia a partir de duas frequências consecutivas de aparente imobilidade.",
+          "rationale": "O conteúdo decisivo é estroboscopia e frequência: represente números inteiros consecutivos de voltas entre flashes a 9 e 12 Hz.",
+          "strategy": [
+            "Represente números inteiros consecutivos de voltas entre flashes a 9 e 12 Hz.",
+            "Encontre a frequência real comum e converta hertz em rpm."
+          ],
+          "trap": "Tomar a frequência de flashes como frequência real da polia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "16",
+          "page": 6,
+          "subject": "Física",
+          "topicId": "fis_energia",
+          "topic": "Dinâmica Energética e Transformações de Energia",
+          "subtopics": [
+            "Conservação da energia e trajetórias"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara energia, trabalho e duração em dois percursos sem dissipação.",
+          "rationale": "O conteúdo decisivo é conservação da energia e trajetórias: use as mesmas alturas inicial e final para comparar energia cinética e trabalho do peso.",
+          "strategy": [
+            "Use as mesmas alturas inicial e final para comparar energia cinética e trabalho do peso.",
+            "Compare o comprimento percorrido em cada patamar de velocidade para avaliar os tempos."
+          ],
+          "trap": "Concluir que conservação de energia implica igualdade de tempos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "17",
+          "page": 7,
+          "subject": "Física",
+          "topicId": "fis_dinamica_impulsiva",
+          "topic": "Dinâmica Impulsiva",
+          "subtopics": [
+            "Colisão inelástica e subida"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "fis_energia"
+          ],
+          "summary": "Obtém a velocidade inicial de um rapaz que salta sobre um skate e sobe uma rampa.",
+          "rationale": "O conteúdo decisivo é colisão inelástica e subida: conserve o momento linear na união de rapaz e skate.",
+          "strategy": [
+            "Conserve o momento linear na união de rapaz e skate.",
+            "Use a conversão de energia cinética do conjunto em energia potencial na subida."
+          ],
+          "trap": "Conservar energia cinética durante o impacto inelástico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "18",
+          "page": 7,
+          "subject": "Física",
+          "topicId": "fis_eletrostatica",
+          "topic": "Eletrostática e Campo Elétrico",
+          "subtopics": [
+            "Superposição de forças elétricas"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina a resultante sobre a carga negativa interna a um triângulo.",
+          "rationale": "O conteúdo decisivo é superposição de forças elétricas: calcule as distâncias d e d vezes raiz de dois na figura.",
+          "strategy": [
+            "Calcule as distâncias d e d vezes raiz de dois na figura.",
+            "Cancele as componentes horizontais e some algebricamente as verticais pela lei de Coulomb."
+          ],
+          "trap": "Somar módulos sem considerar as direções das atrações.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "19",
+          "page": 7,
+          "subject": "Física",
+          "topicId": "fis_optica_geometrica",
+          "topic": "Óptica Geométrica",
+          "subtopics": [
+            "Imagem em lente convergente"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Classifica a imagem de uma vela situada entre lente e foco.",
+          "rationale": "O conteúdo decisivo é imagem em lente convergente: reconheça a lente convergente no ar.",
+          "strategy": [
+            "Reconheça a lente convergente no ar.",
+            "Trace raios para objeto dentro da distância focal e identifique imagem virtual ampliada e direita."
+          ],
+          "trap": "Afirmar que toda lente convergente produz imagem real.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "20",
+          "page": 7,
+          "subject": "Física",
+          "topicId": "fis_circuitos",
+          "topic": "Circuitos Elétricos",
+          "subtopics": [
+            "Gerador real e potência"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Expressa a potência dissipada no resistor externo de uma bateria real.",
+          "rationale": "O conteúdo decisivo é gerador real e potência: calcule a corrente usando R mais a resistência interna.",
+          "strategy": [
+            "Calcule a corrente usando R mais a resistência interna.",
+            "Substitua a corrente em P igual a R vezes corrente ao quadrado."
+          ],
+          "trap": "Tratar a tensão nominal como tensão integral no resistor externo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "21",
+          "page": 7,
+          "subject": "Física",
+          "topicId": "fis_calorimetria",
+          "topic": "Calorimetria",
+          "subtopics": [
+            "Equilíbrio com fusão do gelo"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina o estado final de água e gelo em recipiente térmico.",
+          "rationale": "O conteúdo decisivo é equilíbrio com fusão do gelo: compare o calor cedido pela água ao esfriar até zero com o necessário para aquecer e fundir o gelo.",
+          "strategy": [
+            "Compare o calor cedido pela água ao esfriar até zero com o necessário para aquecer e fundir o gelo.",
+            "Distribua o calor restante na água total para obter a temperatura final."
+          ],
+          "trap": "Usar somente calor sensível e omitir a fusão.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "22",
+          "page": 8,
+          "subject": "Física",
+          "topicId": "fis_termodinamica_gases",
+          "topic": "Termodinâmica dos Gases",
+          "subtopics": [
+            "Trabalho em diagrama pressão-volume"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara energia interna e trabalho em três caminhos entre os mesmos estados.",
+          "rationale": "O conteúdo decisivo é trabalho em diagrama pressão-volume: use a independência da energia interna em relação ao caminho.",
+          "strategy": [
+            "Use a independência da energia interna em relação ao caminho.",
+            "Compare as áreas sob as três curvas no diagrama P por V."
+          ],
+          "trap": "Atribuir energia interna diferente a estados finais iguais.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "23",
+          "page": 8,
+          "subject": "Física",
+          "topicId": "fis_optica_instrumental",
+          "topic": "Óptica Instrumental e da Visão",
+          "subtopics": [
+            "Distância focal e lente de água"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a posição da palha no foco de uma lente improvisada.",
+          "rationale": "O conteúdo decisivo é distância focal e lente de água: determine o raio da calota com semidiâmetro 7 cm e profundidade 1 cm.",
+          "strategy": [
+            "Determine o raio da calota com semidiâmetro 7 cm e profundidade 1 cm.",
+            "Use a fórmula fornecida da lente plano-convexa para obter a distância focal."
+          ],
+          "trap": "Usar o diâmetro da poça como raio de curvatura.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "24",
+          "page": 8,
+          "subject": "Física",
+          "topicId": "fis_circuitos",
+          "topic": "Circuitos Elétricos",
+          "subtopics": [
+            "Efeito Joule no chuveiro"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona resistência elétrica e aquecimento da água em fluxo constante.",
+          "rationale": "O conteúdo decisivo é efeito joule no chuveiro: compare as potências V ao quadrado sobre R nas duas posições.",
+          "strategy": [
+            "Compare as potências V ao quadrado sobre R nas duas posições.",
+            "Aplique a mesma razão ao aumento de temperatura para o fluxo fixo."
+          ],
+          "trap": "Supor que resistência menor implica potência menor sob tensão fixa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "25",
+          "page": 8,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Cadeia alimentar e perturbação"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Prevê efeito da destruição do capim sobre passarinhos de uma cadeia trófica.",
+          "rationale": "O conteúdo decisivo é cadeia alimentar e perturbação: identifique os passarinhos como consumidores secundários.",
+          "strategy": [
+            "Identifique os passarinhos como consumidores secundários.",
+            "Propague a redução de biomassa dos produtores aos gafanhotos e às aves."
+          ],
+          "trap": "Classificar o efeito indireto nas aves como aumento de biomassa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "26",
+          "page": 8,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Biomas brasileiros"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Associa vegetação, precipitação e clima a quatro biomas.",
+          "rationale": "O conteúdo decisivo é biomas brasileiros: identifique Pampas pela vegetação herbácea temperada e Amazônia pela chuva abundante.",
+          "strategy": [
+            "Identifique Pampas pela vegetação herbácea temperada e Amazônia pela chuva abundante.",
+            "Diferencie Mata Atlântica e Cerrado pelas formações vegetais descritas."
+          ],
+          "trap": "Confundir a formação mista do Cerrado com a Caatinga.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "27",
+          "page": 9,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Efeito estufa e desmatamento"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [
+            "Física"
+          ],
+          "relatedTopicIds": [
+            "fis_ondulatoria"
+          ],
+          "summary": "Combina comprimentos de onda e causas do aumento de gases de efeito estufa.",
+          "rationale": "O conteúdo decisivo é efeito estufa e desmatamento: distinga radiação solar de menor comprimento e emissão terrestre de maior comprimento.",
+          "strategy": [
+            "Distinga radiação solar de menor comprimento e emissão terrestre de maior comprimento.",
+            "Relacione destruição de florestas ao aumento de gases estufa."
+          ],
+          "trap": "Inverter os comprimentos de onda da energia incidente e emitida.",
+          "confidence": "medium",
+          "reviewNote": "Exige radiação de diferentes comprimentos de onda e causas ambientais. Física é área secundária necessária; o termo refletida do enunciado simplifica a emissão terrestre.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "28",
+          "page": 9,
+          "subject": "Biologia",
+          "topicId": "bio_botanica",
+          "topic": "Botânica",
+          "subtopics": [
+            "Grupos vegetais vasculares"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica um vegetal vascular sem sementes nem frutos.",
+          "rationale": "O conteúdo decisivo é grupos vegetais vasculares: separe plantas vasculares de briófitas.",
+          "strategy": [
+            "Separe plantas vasculares de briófitas.",
+            "Reconheça as pteridófitas como vasculares sem sementes."
+          ],
+          "trap": "Confundir vascularização com presença obrigatória de sementes.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "29",
+          "page": 9,
+          "subject": "Biologia",
+          "topicId": "bio_zoologia",
+          "topic": "Zoologia",
+          "subtopics": [
+            "Esquistossomose"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona parasita, hospedeiro intermediário e modo de infecção.",
+          "rationale": "O conteúdo decisivo é esquistossomose: identifique Schistosoma como platelminto e o caramujo como molusco.",
+          "strategy": [
+            "Identifique Schistosoma como platelminto e o caramujo como molusco.",
+            "Associe a infecção humana à penetração de cercárias pela pele."
+          ],
+          "trap": "Trocar esquistossomose por doença transmitida por inseto.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "30",
+          "page": 9,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Hormônios da gestação"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica progesterona, estrógeno e a queda hormonal após o parto.",
+          "rationale": "O conteúdo decisivo é hormônios da gestação: compare as curvas crescentes com os hormônios produzidos pela placenta.",
+          "strategy": [
+            "Compare as curvas crescentes com os hormônios produzidos pela placenta.",
+            "Associe a queda final à eliminação placentária."
+          ],
+          "trap": "Tomar FSH e LH como hormônios predominantes durante toda a gravidez.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "31",
+          "page": 9,
+          "subject": "Química",
+          "topicId": "qui_equilibrio",
+          "topic": "Equilíbrio Químico",
+          "subtopics": [
+            "Acidificação oceânica e carbonatos"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [
+            "Biologia"
+          ],
+          "relatedTopicIds": [
+            "bio_ecologia"
+          ],
+          "summary": "Relaciona dióxido de carbono dissolvido à redução da formação de recifes.",
+          "rationale": "O conteúdo decisivo é acidificação oceânica e carbonatos: escreva a formação e a dissociação do ácido carbônico.",
+          "strategy": [
+            "Escreva a formação e a dissociação do ácido carbônico.",
+            "Relacione maior acidez à menor disponibilidade de carbonato para precipitar carbonato de cálcio."
+          ],
+          "trap": "Atribuir o dano à oxidação pelo oxigênio fotossintético.",
+          "confidence": "medium",
+          "reviewNote": "A alternativa oficial E usa uma explicação simplificada por ácido carbônico e corrosão. O eixo editorial é equilíbrio ácido-base/carbonatos, com efeito ecológico necessário como secundário.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "32",
+          "page": 10,
+          "subject": "Biologia",
+          "topicId": "bio_zoologia",
+          "topic": "Zoologia",
+          "subtopics": [
+            "Cladograma dos deuterostômios"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Associa caracteres aos ramos de um cladograma animal.",
+          "rationale": "O conteúdo decisivo é cladograma dos deuterostômios: localize o surgimento de notocorda após a separação dos equinodermos.",
+          "strategy": [
+            "Localize o surgimento de notocorda após a separação dos equinodermos.",
+            "Confira pulmão, âmnio, pelos e ovo com casca nos grupos descendentes."
+          ],
+          "trap": "Escolher uma característica que não abrange todos os descendentes do ramo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "33",
+          "page": 10,
+          "subject": "Biologia",
+          "topicId": "bio_genetica",
+          "topic": "Genética",
+          "subtopics": [
+            "Herança autossômica recessiva"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula risco de descendente afetado usando heredograma e frequência populacional.",
+          "rationale": "O conteúdo decisivo é herança autossômica recessiva: reconheça III2 não afetada com mãe afetada como heterozigota obrigatória.",
+          "strategy": [
+            "Reconheça III2 não afetada com mãe afetada como heterozigota obrigatória.",
+            "Multiplique a probabilidade de III3 ser portador por um quarto."
+          ],
+          "trap": "Aplicar fator de sexo a uma herança autossômica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "34",
+          "page": 10,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Vacinação e imunidade ativa"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Diferencia vacina de soro no contexto de queda da cobertura vacinal.",
+          "rationale": "O conteúdo decisivo é vacinação e imunidade ativa: associe movimentos antivacinação à redução de cobertura.",
+          "strategy": [
+            "Associe movimentos antivacinação à redução de cobertura.",
+            "Reconheça antígenos como estímulo à resposta imune ativa em pessoas saudáveis."
+          ],
+          "trap": "Definir vacina como inoculação de anticorpos para cura imediata.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "35",
+          "page": 11,
+          "subject": "Química",
+          "topicId": "qui_polaridade_geometria",
+          "topic": "Polaridade das Ligações e Geometria Molecular",
+          "subtopics": [
+            "Estrutura de Lewis do hidrônio"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Seleciona a estrutura eletrônica correta do cátion hidrônio.",
+          "rationale": "O conteúdo decisivo é estrutura de lewis do hidrônio: conte os elétrons de valência de H3O positivo.",
+          "strategy": [
+            "Conte os elétrons de valência de H3O positivo.",
+            "Confira três ligações e um par não ligante no oxigênio."
+          ],
+          "trap": "Esquecer de retirar um elétron por causa da carga positiva.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "36",
+          "page": 11,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Densidade e deslocamento de água"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica um metal por pesagens e volume de água deslocada.",
+          "rationale": "O conteúdo decisivo é densidade e deslocamento de água: subtraia da massa total a massa da amostra para obter a água remanescente.",
+          "strategy": [
+            "Subtraia da massa total a massa da amostra para obter a água remanescente.",
+            "Use a água deslocada para calcular o volume do metal e divida 44 g por ele."
+          ],
+          "trap": "Usar 389 menos 350 como massa do metal.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "37",
+          "page": 11,
+          "subject": "Química",
+          "topicId": "qui_cinetica",
+          "topic": "Cinética Química",
+          "subtopics": [
+            "Temperatura e colisões"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Avalia fatores que modificam o tempo de dissolução de antiácido.",
+          "rationale": "O conteúdo decisivo é temperatura e colisões: compare temperaturas mantendo a condição de gás da água.",
+          "strategy": [
+            "Compare temperaturas mantendo a condição de gás da água.",
+            "Associe menor tempo a maior frequência e energia de colisões."
+          ],
+          "trap": "Explicar os resultados apenas por deslocamento de equilíbrio.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "38",
+          "page": 11,
+          "subject": "Química",
+          "topicId": "qui_eletroquimica",
+          "topic": "Eletroquímica",
+          "subtopics": [
+            "Oxidação na descarga de bateria"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o papel do lítio numa bateria de dissulfeto de ferro.",
+          "rationale": "O conteúdo decisivo é oxidação na descarga de bateria: compare o número de oxidação do lítio metálico e no produto.",
+          "strategy": [
+            "Compare o número de oxidação do lítio metálico e no produto.",
+            "Associe a perda de elétrons ao ânodo na descarga."
+          ],
+          "trap": "Chamar o lítio oxidado de cátodo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "39",
+          "page": 12,
+          "subject": "Química",
+          "topicId": "qui_organica_reacoes",
+          "topic": "Reações e Aplicações Orgânicas",
+          "subtopics": [
+            "Ligação peptídica e sequência"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconstrói um tripeptídeo a partir de hidrólises pelas extremidades.",
+          "rationale": "O conteúdo decisivo é ligação peptídica e sequência: use fenilalanina liberada pela carboxipeptidase como extremidade carboxílica e glicina como extremidade amino.",
+          "strategy": [
+            "Use fenilalanina liberada pela carboxipeptidase como extremidade carboxílica e glicina como extremidade amino.",
+            "Conte as seis permutações e confira a estrutura glicina-lisina-fenilalanina."
+          ],
+          "trap": "Ler a cadeia no sentido oposto ou ligar grupos laterais no lugar do esqueleto peptídico.",
+          "confidence": "high",
+          "reviewNote": "As ações das enzimas são fornecidas; a decisão exige estrutura orgânica e sequência das ligações peptídicas, sem cobrança autônoma de fisiologia enzimática.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "40",
+          "page": 12,
+          "subject": "Química",
+          "topicId": "qui_solucoes",
+          "topic": "Soluções",
+          "subtopics": [
+            "Solubilidade e separação"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta soluções de ácido maleico em acetona submetidas a resfriamento, filtração e destilação.",
+          "rationale": "O conteúdo decisivo é solubilidade e separação: identifique o sólido representado por retângulos e a saturação com corpo de fundo.",
+          "strategy": [
+            "Identifique o sólido representado por retângulos e a saturação com corpo de fundo.",
+            "Compare a quantidade precipitada e reconheça que filtrar não muda a concentração da fase líquida saturada."
+          ],
+          "trap": "Confundir mistura heterogênea com solução não saturada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "41",
+          "page": 13,
+          "subject": "Química",
+          "topicId": "qui_polaridade_geometria",
+          "topic": "Polaridade das Ligações e Geometria Molecular",
+          "subtopics": [
+            "Interações intermoleculares e ebulição"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Prevê curvas de ebulição de fluoroalcanos e iodoalcanos.",
+          "rationale": "O conteúdo decisivo é interações intermoleculares e ebulição: compare polarizabilidade e massa dos halogênios para cadeias de igual tamanho.",
+          "strategy": [
+            "Compare polarizabilidade e massa dos halogênios para cadeias de igual tamanho.",
+            "Mantenha o crescimento da ebulição com aumento da cadeia e ordene flúor abaixo de bromo e iodo acima."
+          ],
+          "trap": "Usar somente eletronegatividade para ordenar temperaturas de ebulição.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "42",
+          "page": 13,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Oxidação de aldeído e ganho de massa"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a fração oxidada de cinamaldeído pelo oxigênio incorporado.",
+          "rationale": "O conteúdo decisivo é oxidação de aldeído e ganho de massa: converta o ganho de 1,20 g em mol de oxigênio incorporado.",
+          "strategy": [
+            "Converta o ganho de 1,20 g em mol de oxigênio incorporado.",
+            "Aplique a proporção da equação e compare a massa reagida com 19,80 g."
+          ],
+          "trap": "Dividir diretamente o aumento de massa pela massa inicial como conversão.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "43",
+          "page": 13,
+          "subject": "Química",
+          "topicId": "qui_gases",
+          "topic": "Gases",
+          "subtopics": [
+            "Propriedades dos líquidos"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona fotos humorísticas de gatos às propriedades macroscópicas dos líquidos.",
+          "rationale": "O conteúdo decisivo é propriedades dos líquidos: observe a adaptação aparente dos gatos aos recipientes.",
+          "strategy": [
+            "Observe a adaptação aparente dos gatos aos recipientes.",
+            "Identifique volume constante e forma variável como propriedade evocada."
+          ],
+          "trap": "Atribuir alta compressibilidade aos líquidos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "44",
+          "page": 14,
+          "subject": "Química",
+          "topicId": "qui_organica_reacoes",
+          "topic": "Reações e Aplicações Orgânicas",
+          "subtopics": [
+            "Polimerização por adição"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica monômeros que originam um copolímero EPDM.",
+          "rationale": "O conteúdo decisivo é polimerização por adição: localize as unidades derivadas de eteno e propeno no polímero.",
+          "strategy": [
+            "Localize as unidades derivadas de eteno e propeno no polímero.",
+            "Reconstitua as insaturações do terceiro monômero preservando o anel e a dupla remanescente."
+          ],
+          "trap": "Escolher monômeros com o mesmo número de carbonos mas conectividade diferente.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "45",
+          "page": 14,
+          "subject": "Química",
+          "topicId": "qui_gases",
+          "topic": "Gases",
+          "subtopics": [
+            "Gás ideal no grão de pipoca"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [
+            "Biologia"
+          ],
+          "relatedTopicIds": [
+            "bio_botanica"
+          ],
+          "summary": "Calcula pressão do vapor e reconhece o tecido de reserva do milho.",
+          "rationale": "O conteúdo decisivo é gás ideal no grão de pipoca: calcule 9% de 4,5 mg e converta essa água em mol.",
+          "strategy": [
+            "Calcule 9% de 4,5 mg e converta essa água em mol.",
+            "Aplique PV igual a nRT com 450 K e identifique A como endosperma."
+          ],
+          "trap": "Usar toda a água como vapor ou inserir volume em mL na constante em litros.",
+          "confidence": "medium",
+          "reviewNote": "Interdisciplinar: gás ideal domina o cálculo e o endosperma exige identificação botânica. Biologia consta como secundária.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "46",
+          "page": 15,
+          "subject": "Matemática",
+          "topicId": "mat_equacoes",
+          "topic": "Equações, Desigualdades e Modelagem Algébrica",
+          "subtopics": [
+            "Sistema linear de composição familiar"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina o total de filhos e filhas a partir de relações entre irmãos.",
+          "rationale": "O conteúdo decisivo é sistema linear de composição familiar: defina números de meninas e meninos descontando a própria pessoa em cada frase.",
+          "strategy": [
+            "Defina números de meninas e meninos descontando a própria pessoa em cada frase.",
+            "Resolva as duas equações e some os resultados."
+          ],
+          "trap": "Contar a filha como sua própria irmã.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "47",
+          "page": 15,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Composição de função racional"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Simplifica a função composta de uma transformação racional.",
+          "rationale": "O conteúdo decisivo é composição de função racional: substitua a fração de f em cada ocorrência de x na definição.",
+          "strategy": [
+            "Substitua a fração de f em cada ocorrência de x na definição.",
+            "Reduza numerador e denominador e preserve a restrição x diferente de 2."
+          ],
+          "trap": "Compor apenas o numerador da expressão.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "48",
+          "page": 15,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Vértice da parábola"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina soma de coeficientes de uma quadrática por interseções.",
+          "rationale": "O conteúdo decisivo é vértice da parábola: use o único encontro com y igual a 2 para localizar o vértice em 2,2.",
+          "strategy": [
+            "Use o único encontro com y igual a 2 para localizar o vértice em 2,2.",
+            "Use f de zero igual a menos seis e calcule f de um."
+          ],
+          "trap": "Interpretar uma única interseção com a reta horizontal como raiz simples.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "49",
+          "page": 15,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Leitura de gráfico por descrição"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Seleciona o gráfico compatível com a evolução do faturamento.",
+          "rationale": "O conteúdo decisivo é leitura de gráfico por descrição: marque crescimento linear inicial e queda à metade após três meses.",
+          "strategy": [
+            "Marque crescimento linear inicial e queda à metade após três meses.",
+            "Confira retomada em 4,5 meses e estabilização em 150% do valor do terceiro mês."
+          ],
+          "trap": "Escolher gráfico que respeita a queda mas ignora a altura final.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "50",
+          "page": 15,
+          "subject": "Matemática",
+          "topicId": "mat_sequencias_matrizes",
+          "topic": "Sequências, Matrizes e Sistemas Lineares",
+          "subtopics": [
+            "Progressão geométrica e escala"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Estima a altura de uma pilha formada por duplicações sucessivas.",
+          "rationale": "O conteúdo decisivo é progressão geométrica e escala: conte 2 elevado a 32 folhas após 33 operações.",
+          "strategy": [
+            "Conte 2 elevado a 32 folhas após 33 operações.",
+            "Multiplique por 0,1 mm e converta a quilômetros para comparar as escalas."
+          ],
+          "trap": "Usar 2 elevado a 33 por esquecer a primeira folha.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "51",
+          "page": 16,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Volume de escada maciça"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula o volume de vinte degraus com alturas acumuladas.",
+          "rationale": "O conteúdo decisivo é volume de escada maciça: decomponha a escada em vinte colunas de base 20 por 50 cm.",
+          "strategy": [
+            "Decomponha a escada em vinte colunas de base 20 por 50 cm.",
+            "Some as alturas de 10 a 200 cm e converta o volume para metros cúbicos."
+          ],
+          "trap": "Multiplicar apenas o volume de um degrau aparente por vinte.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "52",
+          "page": 16,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Área de trapézio inclinado"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a área de uma lona entre dois prédios.",
+          "rationale": "O conteúdo decisivo é área de trapézio inclinado: encontre por Pitágoras a distância inclinada entre os topos usando 20 m de desnível e 15 m de vão.",
+          "strategy": [
+            "Encontre por Pitágoras a distância inclinada entre os topos usando 20 m de desnível e 15 m de vão.",
+            "Use essa altura e as bases paralelas 28 e 20 m na área do trapézio."
+          ],
+          "trap": "Usar o vão horizontal como altura da lona inclinada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "53",
+          "page": 16,
+          "subject": "Matemática",
+          "topicId": "mat_log_exponenciais",
+          "topic": "Logaritmos e Exponenciais",
+          "subtopics": [
+            "Propriedades dos logaritmos"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Converte uma igualdade logarítmica em expressão com radicais.",
+          "rationale": "O conteúdo decisivo é propriedades dos logaritmos: exponencie ambos os lados na base dois.",
+          "strategy": [
+            "Exponencie ambos os lados na base dois.",
+            "Transforme o fator constante e a potência de x em radicais equivalentes."
+          ],
+          "trap": "Converter soma de logaritmos em soma de argumentos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "54",
+          "page": 16,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_plana",
+          "topic": "Geometria Plana",
+          "subtopics": [
+            "Arcos em rolamento de triângulo"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a trajetória de um vértice num ciclo de rotação de triângulo.",
+          "rationale": "O conteúdo decisivo é arcos em rolamento de triângulo: obtenha os ângulos do triângulo retângulo com hipotenusa 2 e cateto 1.",
+          "strategy": [
+            "Obtenha os ângulos do triângulo retângulo com hipotenusa 2 e cateto 1.",
+            "Some os arcos percorridos por B nas rotações em torno de C e A."
+          ],
+          "trap": "Usar o perímetro do triângulo como trajetória do vértice.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "55",
+          "page": 16,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Passeio aleatório discreto"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a chance de retorno de uma seta após cinco rodadas.",
+          "rationale": "O conteúdo decisivo é passeio aleatório discreto: separe retornos com zero, um ou dois pares de passos opostos.",
+          "strategy": [
+            "Separe retornos com zero, um ou dois pares de passos opostos.",
+            "Conte as permutações de cada caso e divida pelo total 3 elevado a 5."
+          ],
+          "trap": "Contar somente trajetórias sem rodadas paradas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "56",
+          "page": 17,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Gráfico de dispersão"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Converte duas séries temporais em pares de índices.",
+          "rationale": "O conteúdo decisivo é gráfico de dispersão: leia simultaneamente os dois índices nos mesmos instantes.",
+          "strategy": [
+            "Leia simultaneamente os dois índices nos mesmos instantes.",
+            "Observe a associação inversa e o prolongamento junto de índice 1 alto e índice 2 baixo."
+          ],
+          "trap": "Associar pontos pela ordenação dos valores em vez do mesmo dia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "57",
+          "page": 17,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Ambiguidade e humor"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica o humor de uma instrução de emergência no cartum.",
+          "rationale": "O conteúdo decisivo é ambiguidade e humor: leia a ordem no dispositivo e observe a ação com o martelo.",
+          "strategy": [
+            "Leia a ordem no dispositivo e observe a ação com o martelo.",
+            "Compare o sentido idiomático e o literal de quebrar a cara."
+          ],
+          "trap": "Atribuir o humor apenas à ferramenta fora de contexto.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "58",
+          "page": 17,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Paráfrase de tese"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a função social do mito político segundo o texto.",
+          "rationale": "O conteúdo decisivo é paráfrase de tese: localize a definição de narrativa que responde a uma necessidade prática.",
+          "strategy": [
+            "Localize a definição de narrativa que responde a uma necessidade prática.",
+            "Selecione a paráfrase que mantém sua ligação com situações concretas."
+          ],
+          "trap": "Confundir suspensão da verdade factual com desligamento da realidade.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "59",
+          "page": 17,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Sujeito oculto e correferência"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o sujeito de uma oração relativa no texto sobre mito político.",
+          "rationale": "O conteúdo decisivo é sujeito oculto e correferência: localize o verbo vivem e recupere seu agente no período.",
+          "strategy": [
+            "Localize o verbo vivem e recupere seu agente no período.",
+            "Compare o referente com os indivíduos retomados em fazê-los."
+          ],
+          "trap": "Tomar o pronome relativo que como sujeito de vivem.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "60",
+          "page": 18,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Ironia e crítica a neologismos"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a crítica humorística aos verbos terminados em ilizar.",
+          "rationale": "O conteúdo decisivo é ironia e crítica a neologismos: diferencie os verbos antigos dos derivados difundidos por traduções de marketing.",
+          "strategy": [
+            "Diferencie os verbos antigos dos derivados difundidos por traduções de marketing.",
+            "Reconheça o uso intencional dos termos criticados como recurso irônico."
+          ],
+          "trap": "Interpretar literalmente a campanha como proibição de todos os verbos com esse final.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "61",
+          "page": 18,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Sinonímia contextual"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Seleciona substituições de três expressões num ensaio de crítica.",
+          "rationale": "O conteúdo decisivo é sinonímia contextual: relacione religioso consenso à intensidade da unanimidade.",
+          "strategy": [
+            "Relacione religioso consenso à intensidade da unanimidade.",
+            "Teste orgânico e inexpugnada dentro do contraste entre teoria e prática crítica."
+          ],
+          "trap": "Usar o sentido biológico de orgânico fora do contexto.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "62",
+          "page": 18,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Pressuposição em publicidade"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Infere a desigualdade pressuposta por campanha sobre trabalho e gênero.",
+          "rationale": "O conteúdo decisivo é pressuposição em publicidade: relacione trabalhador e trabalhadora ao slogan sobre uma única letra.",
+          "strategy": [
+            "Relacione trabalhador e trabalhadora ao slogan sobre uma única letra.",
+            "Infira a desigualdade de oportunidades que motiva o pedido de igualdade."
+          ],
+          "trap": "Limitar o problema à diferença morfológica das palavras.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "63",
+          "page": 18,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Valor semântico de conector"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Distingue dois sentidos de agora em textos diferentes.",
+          "rationale": "O conteúdo decisivo é valor semântico de conector: reconheça no primeiro texto a projeção temporal da recomendação.",
+          "strategy": [
+            "Reconheça no primeiro texto a projeção temporal da recomendação.",
+            "Identifique no segundo a ressalva adversativa sobre conseguir emprego."
+          ],
+          "trap": "Atribuir o mesmo valor temporal às duas ocorrências.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "64",
+          "page": 19,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Crítica comparada de romances"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "por_lit_modernismo"
+          ],
+          "summary": "Associa avaliações de Antonio Candido a dois romances brasileiros.",
+          "rationale": "O conteúdo decisivo é crítica comparada de romances: relacione o relativismo e a maturidade narrativa ao romance de Machado.",
+          "strategy": [
+            "Relacione o relativismo e a maturidade narrativa ao romance de Machado.",
+            "Relacione o ritmo mesológico e a opressão da paisagem a Vidas Secas."
+          ],
+          "trap": "Identificar obras apenas pela presença genérica de crítica social.",
+          "confidence": "medium",
+          "reviewNote": "Comparação entre Machado e Graciliano: tema principal em Romantismo e Realismo por Memórias Póstumas, com Modernismo também necessário para Vidas Secas.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "65",
+          "page": 19,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Desfecho de A Relíquia"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Avalia consciência, sinceridade e ascensão burguesa no fim do romance de Eça.",
+          "rationale": "O conteúdo decisivo é desfecho de a relíquia: recupere o contraste final entre hipocrisia religiosa e consciência de Teodorico.",
+          "strategy": [
+            "Recupere o contraste final entre hipocrisia religiosa e consciência de Teodorico.",
+            "Confronte a relação com Crispim e descarte a conversão católica efetiva."
+          ],
+          "trap": "Tomar a crítica da beatice como arrependimento religioso do protagonista.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "66",
+          "page": 19,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Nacionalismo linguístico em Alencar"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona projeto de língua brasileira e vocabulário de Iracema.",
+          "rationale": "O conteúdo decisivo é nacionalismo linguístico em alencar: compare a oposição entre experiências brasileiras e portuguesas no prefácio.",
+          "strategy": [
+            "Compare a oposição entre experiências brasileiras e portuguesas no prefácio.",
+            "Observe o léxico indígena como realização do abrasileiramento literário."
+          ],
+          "trap": "Confundir afirmação nacional com recusa da natureza brasileira.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "67",
+          "page": 19,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Elipse e expressão temporal"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o valor de outras em uma passagem de Iracema.",
+          "rationale": "O conteúdo decisivo é elipse e expressão temporal: recupere a expressão às vezes no período anterior.",
+          "strategy": [
+            "Recupere a expressão às vezes no período anterior.",
+            "Leia outras como outras vezes e identifique a circunstância de tempo."
+          ],
+          "trap": "Atribuir valor de adição a uma expressão que recupera vezes.",
+          "confidence": "high",
+          "reviewNote": "A resolução depende da elipse de vezes e do valor temporal no fragmento, sem conhecimento externo de Iracema.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "68",
+          "page": 20,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Identidade poética e mito"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara transcendência da biografia e persistência do mito em Drummond e Pessoa.",
+          "rationale": "O conteúdo decisivo é identidade poética e mito: leia a dissociação entre eu e existência no Sonetilho.",
+          "strategy": [
+            "Leia a dissociação entre eu e existência no Sonetilho.",
+            "Relacione a eficácia de Ulisses mítico à permanência além da vida factual."
+          ],
+          "trap": "Identificar automaticamente o eu lírico com a figura citada no título.",
+          "confidence": "high",
+          "reviewNote": "A comparação requer a poética de identidade e mito em Drummond/Pessoa; leitura literária comparativa.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "69",
+          "page": 20,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Oxímoro"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Localiza a combinação de sentidos opostos em poema de Drummond.",
+          "rationale": "O conteúdo decisivo é oxímoro: use a definição de oxímoro fornecida.",
+          "strategy": [
+            "Use a definição de oxímoro fornecida.",
+            "Identifique a justaposição entre morrer e existir no mesmo verso."
+          ],
+          "trap": "Tratar qualquer negação do poema como oxímoro.",
+          "confidence": "high",
+          "reviewNote": "A definição de oxímoro é dada e basta localizar o contraste no verso; classificação em Português, sem cobrança autônoma da obra.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "70",
+          "page": 20,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Epígrafe de Duelo em Sagarana"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona disputa entre peixes à estrutura e ao destino das personagens de Duelo.",
+          "rationale": "O conteúdo decisivo é epígrafe de duelo em sagarana: identifique a função da epígrafe no conto.",
+          "strategy": [
+            "Identifique a função da epígrafe no conto.",
+            "Associe ameaças e força inesperada aos destinos de Cassiano e Turíbio."
+          ],
+          "trap": "Ligar a cena a outro conto apenas pela presença de animais.",
+          "confidence": "high",
+          "reviewNote": "Harmonização pela taxonomia do Crivo: Guimarães Rosa integra o capítulo de Literatura Contemporânea, embora sua obra pertença historicamente ao Modernismo.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "71",
+          "page": 21,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Duplicidade do defunto autor"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona experiência vivida e revisão narrativa em Memórias Póstumas.",
+          "rationale": "O conteúdo decisivo é duplicidade do defunto autor: diferencie o Brás que vive o baile do defunto que comenta a própria escrita.",
+          "strategy": [
+            "Diferencie o Brás que vive o baile do defunto que comenta a própria escrita.",
+            "Associe o duplo registro à galhofa e à melancolia."
+          ],
+          "trap": "Reduzir a duplicidade à simples ordem cronológica dos fatos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "72",
+          "page": 21,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Humor e interlocução machadiana"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o efeito estilístico da censura ao leitor em Memórias Póstumas.",
+          "rationale": "O conteúdo decisivo é humor e interlocução machadiana: leia a explicação ao crítico como encenação da interlocução narrativa.",
+          "strategy": [
+            "Leia a explicação ao crítico como encenação da interlocução narrativa.",
+            "Reconheça o humor que relativiza a própria exposição do narrador."
+          ],
+          "trap": "Ler a invocação divina como prova de religiosidade do romance.",
+          "confidence": "high",
+          "reviewNote": "O efeito é o humor do narrador e sua relação com o leitor; não basta a existência de metalinguagem para aceitar a opção que lhe atribui linearidade.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "73",
+          "page": 21,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Tese sobre percepção do tempo"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a pergunta inicial de um artigo científico sobre o tempo.",
+          "rationale": "O conteúdo decisivo é tese sobre percepção do tempo: contraste a precisão cotidiana dos relógios com os limites físicos da percepção.",
+          "strategy": [
+            "Contraste a precisão cotidiana dos relógios com os limites físicos da percepção.",
+            "Localize a ideia de que o presente percebido já passou."
+          ],
+          "trap": "Restringir a tese à organização das tarefas diárias.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "74",
+          "page": 21,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Evidência textual de precisão"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Seleciona a expressão que exemplifica a aparente exatidão do relógio.",
+          "rationale": "O conteúdo decisivo é evidência textual de precisão: procure a afirmação de confiança em conhecer um horário exato.",
+          "strategy": [
+            "Procure a afirmação de confiança em conhecer um horário exato.",
+            "Diferencie essa passagem das metáforas de relatividade e atraso."
+          ],
+          "trap": "Escolher qualquer menção ao relógio sem observar a ideia de exatidão.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "75",
+          "page": 22,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Paradoxo semântico"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica poderes contraditórios atribuídos ao tempo.",
+          "rationale": "O conteúdo decisivo é paradoxo semântico: leia o parágrafo final e localize heals e destroyer.",
+          "strategy": [
+            "Leia o parágrafo final e localize heals e destroyer.",
+            "Associe os dois termos a cura e destruição."
+          ],
+          "trap": "Trocar a contradição explicitada por oposição não mencionada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "76",
+          "page": 22,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Informação explícita sobre fronteira"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a restrição sofrida por migrantes na ponte entre México e EUA.",
+          "rationale": "O conteúdo decisivo é informação explícita sobre fronteira: localize o grupo obrigado repetidamente a esperar.",
+          "strategy": [
+            "Localize o grupo obrigado repetidamente a esperar.",
+            "Diferencie a circulação geral pela ponte do impedimento de alguns migrantes."
+          ],
+          "trap": "Generalizar a restrição a toda pessoa que atravessa a ponte.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "77",
+          "page": 22,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Referência anafórica em inglês"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Recupera o referente de this kind of barrier em notícia sobre imigração.",
+          "rationale": "O conteúdo decisivo é referência anafórica em inglês: retome a descrição de uma parede invisível erguida pela administração.",
+          "strategy": [
+            "Retome a descrição de uma parede invisível erguida pela administração.",
+            "Associe a barreira às práticas que dificultam o acesso ao pedido de asilo."
+          ],
+          "trap": "Ler barrier como referência exclusiva ao muro físico prometido.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "78",
+          "page": 22,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Compreensão de frequência"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o destino habitual dos pedidos de asilo após entrada nos EUA.",
+          "rationale": "O conteúdo decisivo é compreensão de frequência: localize a frase com vast majority e rejected.",
+          "strategy": [
+            "Localize a frase com vast majority e rejected.",
+            "Distinga a análise pelos tribunais de imigração da espera na fronteira."
+          ],
+          "trap": "Confundir existência do processo com aceitação majoritária do pedido.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "79",
+          "page": 22,
+          "subject": "Geografia",
+          "topicId": "geo_geopolitica_regional",
+          "topic": "Geopolítica Regional Contemporânea",
+          "subtopics": [
+            "Política migratória dos EUA"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [
+            "Inglês"
+          ],
+          "relatedTopicIds": [
+            "ing_01"
+          ],
+          "summary": "Relaciona barreiras migratórias à separação de famílias em 2018.",
+          "rationale": "O conteúdo decisivo é política migratória dos eua: associe o muro invisível do texto às práticas de restrição migratória.",
+          "strategy": [
+            "Associe o muro invisível do texto às práticas de restrição migratória.",
+            "Recupere a separação de crianças e familiares para reconhecer a dimensão psicológica."
+          ],
+          "trap": "Afirmar que não havia nenhuma barreira física anterior ao governo Trump.",
+          "confidence": "high",
+          "reviewNote": "A alternativa exige fatos da política migratória de junho de 2018, além do texto em inglês; Geografia é principal e Inglês secundário.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "80",
+          "page": 23,
+          "subject": "História",
+          "topicId": "his_idade_antiga",
+          "topic": "Idade Antiga",
+          "subtopics": [
+            "Expansionismo e arquitetura romana"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona arcos do triunfo às conquistas militares de Roma.",
+          "rationale": "O conteúdo decisivo é expansionismo e arquitetura romana: identifique a função comemorativa dos arcos.",
+          "strategy": [
+            "Identifique a função comemorativa dos arcos.",
+            "Associe vitórias à expansão territorial e ao escravismo romano."
+          ],
+          "trap": "Tratar os arcos isolados como portas defensivas da cidade.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "81",
+          "page": 23,
+          "subject": "História",
+          "topicId": "his_idade_media",
+          "topic": "Idade Média",
+          "subtopics": [
+            "Mulheres e cristandade medieval"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona interpretação religiosa e subordinação feminina no feudalismo.",
+          "rationale": "O conteúdo decisivo é mulheres e cristandade medieval: localize a fundamentação da hierarquia nas narrativas bíblicas.",
+          "strategy": [
+            "Localize a fundamentação da hierarquia nas narrativas bíblicas.",
+            "Associe a culpa pela queda à legitimação da submissão social."
+          ],
+          "trap": "Afirmar proibição absoluta de cultura ou participação política a todas as mulheres.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "82",
+          "page": 23,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Expressionismo e representação da migração",
+          "subtopics": [
+            "Expressionismo e emigração"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [
+            "História"
+          ],
+          "relatedTopicIds": [
+            "his_imperialismo_guerras"
+          ],
+          "summary": "Identifica o expressionismo em Navio de Emigrantes, de Lasar Segall, e sua representação do sofrimento migrante.",
+          "rationale": "O comando exige reconhecer a linguagem visual expressionista da pintura; o contexto das perseguições ajuda a interpretar o sofrimento representado.",
+          "strategy": [
+            "Observe o adensamento e a expressão sofrida das figuras no navio.",
+            "Relacione a obra de 1939–41 às perseguições e à intolerância."
+          ],
+          "trap": "Classificar toda geometrização como cubismo e atribuir esperança à cena.",
+          "confidence": "medium",
+          "reviewNote": "Revisão amostral de integração pela imagem da página23: Arte como principal pela identificação da linguagem expressionista; História como conhecimento associado pelo contexto de perseguições. O currículo não tem tópico próprio de Arte, por isso topicId nulo.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "83",
+          "page": 23,
+          "subject": "História",
+          "topicId": "his_guerra_fria_contemporaneo",
+          "topic": "Guerra Fria e Mundo Contemporâneo",
+          "subtopics": [
+            "Revolução Cultural chinesa"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Caracteriza o movimento político iniciado na China em 1966.",
+          "rationale": "O conteúdo decisivo é revolução cultural chinesa: situe a campanha de Mao contra opositores e referências culturais consideradas burguesas.",
+          "strategy": [
+            "Situe a campanha de Mao contra opositores e referências culturais consideradas burguesas.",
+            "Reconheça o expurgo anti-intelectual e a recusa das influências soviéticas e ocidentais."
+          ],
+          "trap": "Confundir Revolução Cultural com abertura de mercado posterior.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "84",
+          "page": 24,
+          "subject": "História",
+          "topicId": "his_republica_liberal_atual",
+          "topic": "República Liberal e Brasil Contemporâneo",
+          "subtopics": [
+            "Ditadura, recessão e abertura"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona indicadores econômicos e democratização na ditadura brasileira.",
+          "rationale": "O conteúdo decisivo é ditadura, recessão e abertura: localize as recessões de 1981 e 1983 na tabela.",
+          "strategy": [
+            "Localize as recessões de 1981 e 1983 na tabela.",
+            "Associe as eleições de 1982 ao governo Figueiredo e à abertura política."
+          ],
+          "trap": "Supor que a crise do petróleo de 1979 encerrou imediatamente a ditadura.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "85",
+          "page": 24,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Origens da Revolução Industrial"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica transformações agrárias ligadas ao pioneirismo industrial inglês.",
+          "rationale": "O conteúdo decisivo é origens da revolução industrial: relacione cercamentos e concentração fundiária à perda de terras camponesas.",
+          "strategy": [
+            "Relacione cercamentos e concentração fundiária à perda de terras camponesas.",
+            "Associe esse processo à formação de trabalhadores assalariados."
+          ],
+          "trap": "Explicar o pioneirismo somente por ciência ou pacifismo estatal.",
+          "confidence": "medium",
+          "reviewNote": "Revolução Industrial do final do século XVIII: aproximação no tópico Idade Moderna e Iluminismo disponível.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "86",
+          "page": 24,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Alegoria republicana e cidadania"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Contrasta a imagem feminina da República com a cidadania restrita no Brasil.",
+          "rationale": "O conteúdo decisivo é alegoria republicana e cidadania: reconheça a figura feminina como alegoria da pátria e liberdade.",
+          "strategy": [
+            "Reconheça a figura feminina como alegoria da pátria e liberdade.",
+            "Compare o símbolo universalizante com as exclusões políticas da nova ordem."
+          ],
+          "trap": "Tomar a alegoria feminina como participação política efetiva das mulheres.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "87",
+          "page": 25,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Revoluções atlânticas"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara repercussões da independência norte-americana e da Revolução Francesa.",
+          "rationale": "O conteúdo decisivo é revoluções atlânticas: relacione o exemplo republicano americano aos debates ilustrados.",
+          "strategy": [
+            "Relacione o exemplo republicano americano aos debates ilustrados.",
+            "Reconheça sua repercussão política na Europa e viabilidade de um grande Estado republicano."
+          ],
+          "trap": "Negar divisões internas ou radicalismo no processo americano.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "88",
+          "page": 25,
+          "subject": "História",
+          "topicId": "his_guerra_fria_contemporaneo",
+          "topic": "Guerra Fria e Mundo Contemporâneo",
+          "subtopics": [
+            "Fim do apartheid"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta o sentido político da conquista sul-africana de rugby em 1995.",
+          "rationale": "O conteúdo decisivo é fim do apartheid: situe Mandela na presidência após a transição multirracial.",
+          "strategy": [
+            "Situe Mandela na presidência após a transição multirracial.",
+            "Associe a seleção e o gesto público ao marco simbólico de superação do apartheid."
+          ],
+          "trap": "Atribuir a eleição de Mandela ou o Nobel ao campeonato posterior.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "89",
+          "page": 25,
+          "subject": "História",
+          "topicId": "his_brasil_imperio",
+          "topic": "Brasil Império",
+          "subtopics": [
+            "Guerra do Paraguai e abolição"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara charges de Agostini sobre Solano López e um soldado brasileiro.",
+          "rationale": "O conteúdo decisivo é guerra do paraguai e abolição: leia a pilha de crânios como responsabilização de López pelo morticínio.",
+          "strategy": [
+            "Leia a pilha de crânios como responsabilização de López pelo morticínio.",
+            "Relacione o retorno do soldado à persistência da escravidão e ao debate abolicionista."
+          ],
+          "trap": "Interpretar a primeira charge como elogio aos méritos de López.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "90",
+          "page": 25,
+          "subject": "História",
+          "topicId": "his_imperialismo_guerras",
+          "topic": "Imperialismo e Guerras Mundiais",
+          "subtopics": [
+            "Nacionalismo e autodeterminação"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "analise_de_evidencias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o efeito do princípio de autodeterminação nos impérios europeus.",
+          "rationale": "O conteúdo decisivo é nacionalismo e autodeterminação: diferencie nacionalismo de internacionalismo operário.",
+          "strategy": [
+            "Diferencie nacionalismo de internacionalismo operário.",
+            "Relacione autodeterminação ao questionamento dinástico e à fragmentação imperial."
+          ],
+          "trap": "Classificar os rituais internacionais do primeiro de maio como nacionalismo operário.",
+          "confidence": "medium",
+          "reviewNote": "Nacionalismo oitocentista e fragmentação imperial não têm tópico isolado; aproximação em Imperialismo e Guerras Mundiais.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        }
+      ]
+    }
+  ]
+}

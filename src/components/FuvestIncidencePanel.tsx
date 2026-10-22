@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { incidenceRows, interdisciplinaryPairs, loadFuvestCorpus, normalizeIncidenceSubject, scopeQuestions, type FuvestCorpus, type FuvestFilter, type FuvestQuestion, type FuvestScope } from '../lib/fuvestIncidence';
+import { compareIncidencePeriods, incidenceRows, interdisciplinaryPairs, loadFuvestCorpus, normalizeIncidenceSubject, scopeQuestions, type FuvestCorpus, type FuvestFilter, type FuvestQuestion, type FuvestScope } from '../lib/fuvestIncidence';
 import { mockTopics } from '../data/mockData';
 import { FuvestResolutionGuide } from './FuvestResolutionGuide';
 import { FuvestCurrentRules } from './FuvestCurrentRules';
@@ -12,7 +12,7 @@ export function FuvestIncidencePanel({ subject }: { subject: string }) {
   const [corpus, setCorpus] = useState<FuvestCorpus | null>(null);
   const [error, setError] = useState(false);
   const [attempt, setAttempt] = useState(0);
-  const [startYear, setStartYear] = useState(2022);
+  const [startYear, setStartYear] = useState(2017);
   const [endYear, setEndYear] = useState(2026);
   const [scope, setScope] = useState<FuvestScope>(subject === 'Redação' ? '2a-dia1' : '1a');
   const [allAreas, setAllAreas] = useState(false);
@@ -23,6 +23,7 @@ export function FuvestIncidencePanel({ subject }: { subject: string }) {
   const [selectionLabel, setSelectionLabel] = useState('');
   const [visibleRows, setVisibleRows] = useState(12);
   const [visibleQuestions, setVisibleQuestions] = useState(8);
+  const [comparisonVisible,setComparisonVisible]=useState(20);
   const [sort, setSort] = useState('recurrence');
   useEffect(() => {
     let cancelled = false; setError(false);
@@ -30,7 +31,7 @@ export function FuvestIncidencePanel({ subject }: { subject: string }) {
     return ()=>{cancelled=true;};
   },[attempt]);
   const filter: FuvestFilter = { startYear, endYear, scope, subject: allAreas ? undefined : normalizeIncidenceSubject(subject), highConfidenceOnly: highOnly };
-  const resetSelection = () => { setSelectedIds(null); setSelectionLabel(''); setVisibleRows(12); setVisibleQuestions(8); };
+  const resetSelection = () => { setSelectedIds(null); setSelectionLabel(''); setVisibleRows(12); setVisibleQuestions(8);setComparisonVisible(20); };
   const view = useMemo(() => {
     if(!corpus)return null;
     const pool = scopeQuestions(corpus,filter);
@@ -42,12 +43,15 @@ export function FuvestIncidencePanel({ subject }: { subject: string }) {
     const selectedSet = selectedIds ? new Set(selectedIds) : null;
     const matching = pool.filter(question=>(!highOnly || question.confidence==='high') && (!selectedSet || selectedSet.has(question.id)) && (!search || textMatches(question))).sort((a,b)=>b.year-a.year || a.number.localeCompare(b.number));
     const fullScope=scopeQuestions(corpus,{...filter,subject:undefined});
-    return { pool, scheduled, rows, matching, fullScope, pairs:interdisciplinaryPairs(corpus,filter), medium:pool.filter(question=>question.confidence!=='high').length };
+    const phase=scope.startsWith('medicina')?'2a-dia2':scope;
+    const covered=corpus.papers.some(p=>p.phase===phase&&p.year>=startYear&&p.year<=endYear);
+    const comparison=compareIncidencePeriods(corpus,'1a',allAreas?undefined:normalizeIncidenceSubject(subject));
+    return { pool, scheduled, rows, matching, fullScope, covered, comparison, pairs:interdisciplinaryPairs(corpus,filter), medium:pool.filter(question=>question.confidence!=='high').length };
   },[corpus,startYear,endYear,scope,subject,allAreas,highOnly,group,search,sort,selectedIds]);
   const select = (ids: string[],label: string) => {setSelectedIds(ids);setSelectionLabel(label);setVisibleQuestions(8);};
   return <div className="space-y-4">
     <section className="ni-panel p-5 space-y-4" aria-labelledby="fuvest-incidence-title">
-      <div><p className="text-xs font-mono text-[var(--dim)]">LEITURA DAS PROVAS OFICIAIS · 2022–2026</p>
+      <div><p className="text-xs font-mono text-[var(--dim)]">LEITURA DAS PROVAS OFICIAIS · {corpus?`${corpus.years[0]}–${corpus.years.at(-1)}`:'2017–2026'}</p>
         <h2 id="fuvest-incidence-title" className="font-display text-xl mt-1">Incidência por questão, assunto e fase</h2>
         <p className="text-sm text-[var(--dim)] mt-2">Contagens observadas e estratégias de resolução ligadas às questões originais. Cada percentual mostra seu denominador; não representa a chance de cair na próxima prova.</p>
       </div>
@@ -55,10 +59,12 @@ export function FuvestIncidencePanel({ subject }: { subject: string }) {
       {error && <div role="alert"><p>Não foi possível carregar a análise. Nenhum percentual foi estimado.</p><button className="ni-button" onClick={()=>setAttempt(value=>value+1)}>Tentar carregar novamente</button></div>}
       {corpus && view && <>
         <div className="grid sm:grid-cols-3 gap-3 text-sm">
-          <p><b>{corpus.questions.length}</b> registros no corpus completo<br/><span className="text-xs text-[var(--dim)]">Questões e uma proposta de redação por edição</span></p>
+          <p><b>{corpus.questions.length}</b> registros no corpus completo<br/><span className="text-xs text-[var(--dim)]">Primeira fase 2017–2026; segunda fase e redação 2022–2026</span></p>
           <p><b>{view.pool.length}/{view.scheduled.length}</b> questões válidas neste filtro<br/><span className="text-xs text-[var(--dim)]">Anuladas preservadas na auditoria e excluídas da frequência</span></p>
           <p><b>{view.medium}</b> classificações com ressalva neste filtro<br/><span className="text-xs text-[var(--dim)]">Confiança editorial média ou baixa</span></p>
         </div>
+        <div className="flex flex-wrap gap-2"><button className="ni-button" onClick={()=>{setStartYear(2017);setEndYear(2026);resetSelection();}}>Década (2017–2026)</button><button className="ni-button" onClick={()=>{setStartYear(2022);setEndYear(2026);resetSelection();}}>Recorte recente (2022–2026)</button></div>
+        <p className="text-xs text-[var(--dim)]">Cobertura antiga: somente a primeira fase de 2017–2021 está classificada. A segunda fase conserva 2022–2026; anos sem classificação não entram como zero de cobrança.</p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
           <label>Do vestibular<select className="field block w-full" value={startYear} onChange={event=>{const year=Number(event.target.value);setStartYear(year);if(year>endYear)setEndYear(year);resetSelection();}}>{corpus.years.map(year=><option key={year}>{year}</option>)}</select></label>
           <label>Até o vestibular<select className="field block w-full" value={endYear} onChange={event=>{const year=Number(event.target.value);setEndYear(year);if(year<startYear)setStartYear(year);resetSelection();}}>{corpus.years.map(year=><option key={year}>{year}</option>)}</select></label>
@@ -81,11 +87,11 @@ export function FuvestIncidencePanel({ subject }: { subject: string }) {
             <tbody>{view.rows.slice(0,visibleRows).map(row=><tr key={row.id} className="border-b border-[var(--line)] align-top">
               <th scope="row" className="p-2 font-normal min-w-40"><button className="underline text-left" onClick={()=>select(row.questionIds,row.label)}>{row.label}</button><span className="block text-[var(--dim)]">{row.subject}{row.uncertain ? ` · ${row.uncertain} com ressalva` : ''}</span></th>
               <td className="p-2 font-mono">{row.count}/{row.total}</td><td className="p-2 font-mono">{percentage(row.rate)}</td><td className="p-2 font-mono">{row.count}/{view.fullScope.filter(question=>row.subject==='Redação'?question.subject==='Redação':question.subject!=='Redação').length}</td><td className="p-2 font-mono">{row.editions}/{row.observedEditions}</td>
-              {row.annual.map(year=><td key={year.year} className="p-2 font-mono whitespace-nowrap" title={year.total ? percentage(year.rate!) : 'Sem questões dessa categoria principal no recorte'}>{year.total ? `${year.count}/${year.total}` : '—'}</td>)}
+              {row.annual.map(year=><td key={year.year} className="p-2 font-mono whitespace-nowrap" title={year.total ? percentage(year.rate!) : year.covered?'Sem questões dessa categoria principal no recorte':'Fase não classificada neste ano'}>{year.total ? `${year.count}/${year.total}` : year.covered?'—':'Não classificado'}</td>)}
             </tr>)}</tbody>
           </table>
         </div>
-        {!view.rows.length && <p>Sem ocorrências classificadas para este filtro. Isso não exclui o assunto do programa atual; consulte a cobertura e os conceitos associados.</p>}
+        {!view.rows.length && <p>{view.covered?'Sem ocorrências classificadas para este filtro. Isso não exclui o assunto do programa atual; consulte a cobertura e os conceitos associados.':'Fase ainda não classificada neste período. Não há denominador de incidência; isso não significa zero de cobrança.'}</p>}
         {view.rows.length>visibleRows && <button className="ni-button" onClick={()=>setVisibleRows(value=>value+20)}>Mostrar mais categorias</button>}
         <p className="text-xs text-[var(--dim)]">“Edições” = edições com ocorrência / edições integralmente classificadas no recorte. “—” significa que não há denominador dessa matéria no recorte anual. “Bloco” = todas as questões do recorte, com redação isolada das dez questões de Português. São contagens de itens, não pesos em pontos. A tabela mostra categorias observadas; não certifica ausência de conceitos não marcados na classificação.</p>
         {!!view.pairs.length && <details><summary className="cursor-pointer font-semibold text-sm">Pares de áreas exigidos na mesma questão</summary><p className="text-xs mt-2">Coocorrência editorial de conhecimentos necessários, não simples tema do texto. Uma questão pode integrar mais de duas áreas; os pares não devem ser somados.</p><div className="flex flex-wrap gap-2 mt-3">{view.pairs.slice(0,16).map(pair=><button key={pair.label} className="ni-button text-xs" onClick={()=>select(pair.questionIds,pair.label)}>{pair.label} · {pair.count}</button>)}</div></details>}
@@ -111,13 +117,18 @@ export function FuvestIncidencePanel({ subject }: { subject: string }) {
           })}
           {view.matching.length>visibleQuestions && <button className="ni-button" onClick={()=>setVisibleQuestions(value=>value+12)}>Mostrar mais questões analisadas</button>}
         </div>
+        <details><summary className="cursor-pointer font-semibold text-sm">Comparar 2017–2021 com 2022–2026</summary><div className="space-y-3 mt-3 text-sm"><p>Comparação descritiva da primeira fase, com todas as classificações editoriais. Cada período usa o próprio total da matéria; diferenças são pontos percentuais, sem teste de tendência ou previsão. A mudança de programa e decisões de classificação podem afetar o resultado.</p>
+          <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Comparação entre períodos da primeira fase"><table className="w-full text-xs text-left"><thead><tr><th className="p-2">Matéria / assunto</th><th className="p-2">2017–2021 · n/N</th><th className="p-2">2022–2026 · n/N</th><th className="p-2">Diferença (pp)</th></tr></thead><tbody>{view.comparison.slice(0,comparisonVisible).map(row=><tr className="border-b border-[var(--line)]" key={row.id}><th className="p-2 font-normal">{row.subject} · {row.label}</th><td className="p-2 whitespace-nowrap">{row.earlier.total?`${row.earlier.count}/${row.earlier.total} (${percentage(row.earlier.rate!)})`:'Sem denominador'}</td><td className="p-2 whitespace-nowrap">{row.recent.total?`${row.recent.count}/${row.recent.total} (${percentage(row.recent.rate!)})`:'Sem denominador'}</td><td className="p-2">{row.deltaPercentagePoints===null?'—':row.deltaPercentagePoints.toLocaleString('pt-BR',{maximumFractionDigits:1,signDisplay:'always'})}</td></tr>)}</tbody></table></div>
+          {!view.comparison.length&&<p>Não há comparação por assunto para esta matéria na primeira fase.</p>}{view.comparison.length>comparisonVisible&&<button className="ni-button" onClick={()=>setComparisonVisible(value=>value+20)}>Mostrar mais comparações</button>}
+          <a className="underline" href="/analises/fuvest/comparacao-periodos-2017-2026.csv" download>Baixar comparação em CSV</a>
+        </div></details>
         <details><summary className="cursor-pointer font-semibold text-sm">Método, cobertura, fontes e arquivos de auditoria</summary><div className="mt-3 text-sm space-y-3">
           <p>{corpus.reviewType} O rótulo principal depende da operação decisiva pedida no item. A categorização por matéria é do Crivo, inclusive em questões interdisciplinares; Português e Literatura usam denominadores separados (o bloco oficial de Português inclui ambos); não é uma grade oficial de distribuição por disciplina.</p>
           <p>Há um denominador por matéria e recorte. Não se somam fases ou bancos diferentes, nem se aplica a frequência do banco completo a Medicina. Não há dados de taxa de acerto dos candidatos: as estratégias não são uma medida empírica de dificuldade.</p>
           <p>O programa e as propostas de redação mudam no período. O ano de 2026 deve ser consultado separadamente, sem extrapolar uma única edição como tendência. O formato de 80 questões pertence a 2027; não convertemos cortes antigos em previsão de nota.</p>
           <ul className="space-y-2">{corpus.papers.map(paper=><li key={paper.id}>{paper.year} · {phaseLabels[paper.phase]} · {paper.classifiedQuestions}/{paper.expectedQuestions} registros · <a className="underline" href={paper.sourceUrl} target="_blank" rel="noreferrer">PDF oficial</a></li>)}</ul>
           {!!corpus.questions.filter(question=>question.excluded).length && <p><b>Excluídas da frequência:</b> {corpus.questions.filter(question=>question.excluded).map(question=>`${question.year} ${question.number}: ${question.excludedReason}`).join(' · ')}</p>}
-          <div className="flex flex-wrap gap-3"><a className="underline" href="/analises/fuvest/questoes-2022-2026.csv" download>Baixar classificação completa em CSV</a><a className="underline" href="/analises/fuvest/incidencia-assuntos-2022-2026.csv" download>Baixar incidência por assunto</a><a className="underline" href="/analises/fuvest/incidencia-subassuntos-2022-2026.csv" download>Baixar incidência por subassunto</a><a className="underline" href="/analises/fuvest/relatorio-2022-2026.md" download>Baixar relatório técnico</a><a className="underline" href="/analises/fuvest/corpus-2022-2026.json" download>Baixar corpus e fontes em JSON</a></div>
+          <div className="flex flex-wrap gap-3"><a className="underline" href="/analises/fuvest/questoes-2017-2026.csv" download>Baixar classificação completa em CSV</a><a className="underline" href="/analises/fuvest/incidencia-assuntos-2017-2026.csv" download>Baixar incidência por assunto</a><a className="underline" href="/analises/fuvest/incidencia-subassuntos-2017-2026.csv" download>Baixar incidência por subassunto</a><a className="underline" href="/analises/fuvest/relatorio-2017-2026.md" download>Baixar relatório técnico</a><a className="underline" href="/analises/fuvest/corpus-2017-2026.json" download>Baixar corpus e fontes em JSON</a></div>
         </div></details>
       </>}
     </section>

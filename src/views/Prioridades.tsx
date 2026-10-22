@@ -46,7 +46,7 @@ export default function Prioridades() {
       {/* Main Title */}
       <div className="ni-title">
         <div>
-          <h1>O que a FUVEST cobrou desde 2022.</h1>
+          <h1>O que a FUVEST cobrou desde 2017.</h1>
           <p>Compare assuntos, fases e questões oficiais. Veja como resolver e quais conceitos precisam se conectar.</p>
         </div>
         <div className="ni-state">

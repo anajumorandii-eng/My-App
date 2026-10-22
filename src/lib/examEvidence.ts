@@ -37,7 +37,7 @@ export function completeTopicEvidence(topic: Pick<Topic, 'id' | 'subject'>, boar
 export async function loadExamEvidenceCases(): Promise<ExamEvidenceCase[]> {
   const legacy = (await import('../data/examEvidenceCases.json')).default.filter(item => !item.cohortId.startsWith('fuvest-'));
   const corpus = (await import('../data/fuvestIncidence.json')).default;
-  const current = corpus.questions.filter(question => !question.excluded).map(question => ({
+  const current = corpus.questions.filter(question => question.year >= 2022 && !question.excluded).map(question => ({
     id: question.id, cohortId: question.paperId, number: question.number,
     topicId: question.topicId ?? `fuvest-unmapped:${question.topic}`, relatedTopicIds: question.relatedTopicIds,
     subject: question.subject, chapter: question.subtopics.join(' · '), title: question.summary,
