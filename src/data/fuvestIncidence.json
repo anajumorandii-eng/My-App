@@ -29761,7 +29761,7 @@
       ],
       "trap": "Aceitar automaticamente o quociente de volumes como arranjo realizável.",
       "confidence": "medium",
-      "reviewNote": "Gabarito retificado de 24/11/2023 aceita D e E na Prova V; questão mantida, não anulada. A classificação espacial permanece inequívoca.",
+      "reviewNote": "Gabarito retificado de 24/11/2023 substitui D por E (61 embalagens) na Prova V: o D está riscado no PDF, não há duas alternativas aceitas. Questão mantida, não anulada. A classificação espacial permanece inequívoca.",
       "excluded": false,
       "excludedReason": "",
       "subitems": [],
@@ -44378,7 +44378,7 @@
     {
       "year": 2024,
       "file": "scripts/data/fuvest-incidence/2024.json",
-      "sha256": "ea454c6e46ddc9176c3d20fc28ff09bfba2972fc99e3244cb9c28c3caa9f0be8"
+      "sha256": "9047fddc0d377b14f67b70edd2c612e0fe9eaf56e51fd43e918437fcebb40bee"
     },
     {
       "year": 2025,

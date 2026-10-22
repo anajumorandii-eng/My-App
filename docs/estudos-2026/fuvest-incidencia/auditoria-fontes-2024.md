@@ -13,7 +13,7 @@ Reviewed 2026-10-18, single editor. All 137 items classified from actual officia
 
 ## Corrections and ambiguity
 
-- V48: corrected first-phase key dated 24/11/2023 accepts D and E. This is retained, not marked annulled.
+- V48: corrected first-phase key dated 24/11/2023 replaces D with E (61 packages). The D is visibly crossed out; this is not acceptance of both alternatives. The question remains valid, not annulled. Corrected after visual verification of the user-supplied PDF.
 - M02: exclusive kit preferences total 110%. Official expected answers pp. 41–44 explicitly accept an impossibility answer with justification or alternative calculation approaches. Retained with medium confidence and explicit reviewNote; no assumption of annulment.
 - F04 expected-answer objective incorrectly repeats the waves objective; actual question and worked response concern ideal-gas internal energy, first law and mass-energy equivalence. Labels follow the actual demand.
 - No existing suitable taxonomy topic for art analysis (V03), sport institutionalization (V52), or Merton self-fulfilling prophecy (V90); topicId null with explicit concepts.
