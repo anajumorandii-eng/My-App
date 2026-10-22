@@ -1,0 +1,163 @@
+{
+  "scope": "FUVEST primeira fase 2022–2026; conferência de identidade, cobertura, localização e gabaritos; não é nova classificação editorial integral.",
+  "files": [
+    {
+      "year": 2022,
+      "kind": "prova",
+      "attachmentFilename": "1-fuvest_2022_primeira_fase_tipo_V.pdf",
+      "sha256": "adf72b06ef0ec73b522185ce8c142a96895ab5d54405a39b03cffb8ee5120281",
+      "bytes": 10620438,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_primeira_fase_tipo_V.pdf",
+      "matchesRegisteredHash": true
+    },
+    {
+      "year": 2022,
+      "kind": "gabarito",
+      "attachmentFilename": "2-fuvest_2022_primeira_fase_gabarito_retificado.pdf",
+      "sha256": "366fdfb78ab349a964cf3dbd9a4df81773f816c696f6725485cc7140b11df64d",
+      "bytes": 644954,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_primeira_fase_gabarito_retificado.pdf",
+      "matchesRegisteredHash": true
+    },
+    {
+      "year": 2023,
+      "kind": "prova",
+      "attachmentFilename": "3-fuvest2023_primeira_fase_prova_V.pdf",
+      "sha256": "8a9941afd99addd61090c6432c8f8c28bbb6f8ed14d50cb2b8d30dfedf4751ac",
+      "bytes": 6469477,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_primeira_fase_prova_V.pdf",
+      "matchesRegisteredHash": true
+    },
+    {
+      "year": 2023,
+      "kind": "gabarito",
+      "attachmentFilename": "4-fuvest2023_gabarito_primeira_fase.pdf",
+      "sha256": "34dd073be5c79c6e7f4464dc16399d05abd4605cdbc29a134ce15d69ba7ed86b",
+      "bytes": 530692,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_gabarito_primeira_fase.pdf",
+      "matchesRegisteredHash": true
+    },
+    {
+      "year": 2024,
+      "kind": "prova",
+      "attachmentFilename": "1-fuvest2024_primeira_fase_prova_V.pdf",
+      "sha256": "f7d6e72253ac8fb23ec2283a5776155e6f5a91ef192c280bcc0e94e167c7f41e",
+      "bytes": 7271097,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_primeira_fase_prova_V.pdf",
+      "matchesRegisteredHash": true
+    },
+    {
+      "year": 2024,
+      "kind": "gabarito",
+      "attachmentFilename": "8-fuvest2024_gabarito_primeira_fase_retificado_2023-11-24.pdf",
+      "sha256": "e0ba949bd86f7aee6f7526639e2efd47383482c8f7eefdb32979cb198a333dfb",
+      "bytes": 479758,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_gabarito_primeira_fase_retificado_2023-11-24.pdf",
+      "matchesRegisteredHash": true
+    },
+    {
+      "year": 2025,
+      "kind": "prova",
+      "attachmentFilename": "5-fuvest2025_primeira_fase_prova_V1.pdf",
+      "sha256": "f512449b47ac31abe1ae00d5f88fb14478c7139fa1db137145b7e33cec1b97c8",
+      "bytes": 8978910,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_primeira_fase_prova_V1.pdf",
+      "matchesRegisteredHash": true
+    },
+    {
+      "year": 2025,
+      "kind": "gabarito",
+      "attachmentFilename": "2-fuvest2025_gabarito_primeira_fase.pdf",
+      "sha256": "ddd7f38cc2584298e812f4a7bf083e74be4926ae948f0cb531117a60ec91fd5f",
+      "bytes": 198634,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_gabarito_primeira_fase.pdf",
+      "matchesRegisteredHash": true
+    },
+    {
+      "year": 2026,
+      "kind": "prova",
+      "attachmentFilename": "7-fuvest2026-fase1-prova-V1.pdf",
+      "sha256": "93b417ad6ea7e81a3b6adc46337920fd71c213306849846723f13583074f9025",
+      "bytes": 8019288,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
+      "matchesRegisteredHash": true
+    },
+    {
+      "year": 2026,
+      "kind": "gabarito",
+      "attachmentFilename": "6-fuvest2026-fase1-gabarito.pdf",
+      "sha256": "a9e1084a125fa35bcefb875610328c0a8cb9b1a298880f2f0c75b928bd860e8e",
+      "bytes": 218795,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-gabarito.pdf",
+      "matchesRegisteredHash": true
+    }
+  ],
+  "papers": [
+    {
+      "year": 2022,
+      "version": "V",
+      "pdfPages": 26,
+      "records": 90,
+      "valid": 89,
+      "missingNumbers": [],
+      "duplicateNumbers": [],
+      "pageMismatches": [],
+      "annulmentMismatches": []
+    },
+    {
+      "year": 2023,
+      "version": "V",
+      "pdfPages": 28,
+      "records": 90,
+      "valid": 90,
+      "missingNumbers": [],
+      "duplicateNumbers": [],
+      "pageMismatches": [],
+      "annulmentMismatches": []
+    },
+    {
+      "year": 2024,
+      "version": "V",
+      "pdfPages": 36,
+      "records": 90,
+      "valid": 90,
+      "missingNumbers": [],
+      "duplicateNumbers": [],
+      "pageMismatches": [],
+      "annulmentMismatches": []
+    },
+    {
+      "year": 2025,
+      "version": "V1",
+      "pdfPages": 34,
+      "records": 90,
+      "valid": 90,
+      "missingNumbers": [],
+      "duplicateNumbers": [],
+      "pageMismatches": [],
+      "annulmentMismatches": []
+    },
+    {
+      "year": 2026,
+      "version": "V1",
+      "pdfPages": 38,
+      "records": 90,
+      "valid": 89,
+      "missingNumbers": [],
+      "duplicateNumbers": [],
+      "pageMismatches": [],
+      "annulmentMismatches": []
+    }
+  ],
+  "correction": {
+    "id": "fuvest-2024-f1:48",
+    "officialAnswer": "E",
+    "previousNoteIncorrectlyAccepted": [
+      "D",
+      "E"
+    ],
+    "evidence": "Gabarito retificado de 24/11/2023, página1, coluna Prova V: D riscado e substituído por E; enunciado página18, E=61."
+  },
+  "records": 450,
+  "valid": 448
+}
