@@ -19,8 +19,8 @@ test('gerador só publica arquivos depois de validar todas as bancas e separa ga
    const slug=board.toLowerCase();await mkdir(join(root,`scripts/data/board-incidence/${slug}`),{recursive:true});
    for(const year of board==='ENEM'?[2021,2022,2023,2024,2025]:[2022,2023,2024,2025,2026]){
     const item={number:'01',page:1,subject:'Biologia',topicId:null,topic:'Categoria sintética',subtopics:['Subassunto sintético'],skills:['comparar'],relatedSubjects:[],relatedTopicIds:[],summary:'Item sintético',rationale:'Dado sintético',strategy:['Leia','Compare'],trap:'Confundir',confidence:'high',excluded:false};
-    const paper={id:`${slug}-${year}-geral`,group:'geral',phase:'Conhecimentos gerais',phaseGroup:'1a',format:'multiple-choice',version:'A',sourceUrl:'https://example.org/prova.pdf',sha256:createHash('sha256').update(`${slug}-${year}-geral`).digest('hex'),pages:1,expectedQuestions:1,answerKeyUrl:'https://example.org/gabarito.pdf',answerKeySha256:'b'.repeat(64),questions:[item]};
-    const essay={...paper,id:`${slug}-${year}-redacao`,group:'redacao',phase:'Redação',format:'open',sha256:createHash('sha256').update(`${slug}-${year}-redacao`).digest('hex'),questions:[{...item,number:'R',subject:'Redação',topic:'Escrita sintética'}]};
+    const paper={id:`${slug}-${year}-geral`,group:'geral',phase:'Conhecimentos gerais',phaseGroup:'1a',format:'multiple-choice',version:'A',sourceUrl:`https://example.org/${slug}-${year}-geral.pdf`,sha256:createHash('sha256').update(`${slug}-${year}-geral`).digest('hex'),pages:1,expectedQuestions:1,answerKeyUrl:'https://example.org/gabarito.pdf',answerKeySha256:'b'.repeat(64),questions:[item]};
+    const essay={...paper,sourceUrl:`https://example.org/${slug}-${year}-redacao.pdf`,id:`${slug}-${year}-redacao`,group:'redacao',phase:'Redação',format:'open',sha256:createHash('sha256').update(`${slug}-${year}-redacao`).digest('hex'),questions:[{...item,number:'R',subject:'Redação',topic:'Escrita sintética'}]};
     await writeFile(join(root,`scripts/data/board-incidence/${slug}/${year}.json`),JSON.stringify({board,year,coverageNote:'Fixture sintética',papers:[paper,essay]}));
    }
   }

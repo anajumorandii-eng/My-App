@@ -10101,13 +10101,40 @@
       "sourceUrl": "https://filescol.grupoetapa.com.br/etaparesolve/etaparesolve/etaparesolve/2022/Unifesp/FaseUnica_466/prova/prova.pdf",
       "sha256": "a5ab46b020127a3ccfec5c399cd4d0e149313754c67b4b90663c9cf7ea9ef7c4",
       "pages": 12,
-      "role": "exam"
+      "role": "linguas",
+      "board": "UNIFESP",
+      "year": 2022,
+      "bytes": 772992,
+      "coverageNote": "Cópia do documento Vunesp em espelho Etapa. Índice público do processo 2022 não ofereceu documentos na consulta; capa,ano,código de processo e chave V1 identificados. A redação está neste caderno.",
+      "phase": "Língua Portuguesa, Língua Inglesa e Redação",
+      "group": "linguas-redacao",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "V1 — imprensa",
+      "answerKeyUrl": "https://filescol.grupoetapa.com.br/etaparesolve/etaparesolve/etaparesolve/2022/Unifesp/FaseUnica_466/gabarito/gabarito.pdf",
+      "answerKeySha256": "a95bdcb45fe6481830d6263a4c723f14d2331831a021fcc2ec138ba92ebcfa20",
+      "expectedQuestionsIncludingEssay": 26,
+      "sourceType": "identified-mirror",
+      "answerKeySourceType": "identified-mirror"
     },
     {
       "sourceUrl": "https://filescol.grupoetapa.com.br/etaparesolve/etaparesolve/etaparesolve/2022/Unifesp/FaseUnica_467/prova/prova.pdf",
       "sha256": "eb210eaa13d441897f6b5a7ae49e3a7de8711e18872eb1e2da1e01a94a731b32",
       "pages": 28,
-      "role": "exam"
+      "role": "especificos",
+      "board": "UNIFESP",
+      "year": 2022,
+      "bytes": 2322742,
+      "coverageNote": "Cópia do documento Vunesp em espelho Etapa. Índice público do processo 2022 não ofereceu documentos na consulta; capa,ano,código de processo e chave V1 identificados. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna.",
+      "phase": "Conhecimentos específicos",
+      "group": "conhecimentos-especificos",
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "Caderno002 — imprensa",
+      "answerKeyUrl": null,
+      "answerKeySha256": null,
+      "expectedQuestionsIncludingEssay": 20,
+      "sourceType": "identified-mirror"
     },
     {
       "sourceUrl": "https://filescol.grupoetapa.com.br/etaparesolve/etaparesolve/etaparesolve/2022/Unifesp/FaseUnica_466/gabarito/gabarito.pdf",
@@ -10118,24 +10145,37 @@
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/MzI4MzY2Mg%3d%3d",
       "sha256": "daa87d6a5e36f7abefb9f6785f774ade80d08147d0b7cf7d94543e3759d64677",
       "pages": 28,
-      "role": "exam"
+      "role": "exam",
+      "bytes": 2191846,
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2201/documento",
+      "label": "Caderno de Questões - Prova de Conhecimentos Específicos.   13/01/2023"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/MzI4MDE4OA%3d%3d",
       "sha256": "de5a7eeea2374858a1f75d8c4ef5c6f7f9ccd746529950092f6de7a2d9da9913",
-      "role": "answer-key"
+      "role": "answer-key",
+      "pages": 1,
+      "bytes": 775186,
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2201/documento",
+      "label": "Gabarito da Prova de LP, LI e Redação - Público (versão 1 para divulgação na imprensa) - Atenção Candidato: para saber qual a sua versão de prova acesse a área do candidato.   12/01/2023"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/MzI4MDIxMQ%3d%3d",
       "sha256": "ca8efd2955564ae222ccf95e481cdb3c68b64731e0ebad173a51513ead583cad",
       "pages": 12,
-      "role": "exam"
+      "role": "exam",
+      "bytes": 693620,
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2201/documento",
+      "label": "Caderno de Questões da Prova de LP, LI e Redação - Público (versão 1 para divulgação na imprensa) - Atenção Candidato: para saber qual a sua versão de prova acesse a área do candidato.   12/01/2023"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTY5OTc3Nw%3d%3d",
       "sha256": "37dcd1fb0078bec6900e6cd4babeb71bac541a4c9d909a2336bc776a0af96dd5",
       "pages": 24,
-      "role": "exam"
+      "role": "exam",
+      "bytes": 2272461,
+      "label": "Caderno de Questões - Prova de Conhecimentos Específicos - Reaplicação   07/02/2024",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2304/documento"
     },
     {
       "role": "official-notice",
@@ -10158,47 +10198,68 @@
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTY2MjYxOA%3d%3d",
       "sha256": "ae5517eb7bf8254058b9245c10f4fcf183a5abd2662c682082955e61964b5c47",
-      "role": "answer-key"
+      "role": "answer-key",
+      "pages": 1,
+      "bytes": 322415,
+      "label": "Gabarito da Prova de LP, LI e Redação - Público (versão 1 para divulgação na imprensa) - Atenção Candidato: para saber qual a sua versão de prova acesse a área do candidato.   07/01/2024",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2304/documento"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTY2MjYxOQ%3d%3d",
       "sha256": "e67ad5d00e4010b7fc7afc9c0d1f9fd938b66fb263d80db2bf45293ee3e82ae2",
       "pages": 12,
-      "role": "exam"
+      "role": "exam",
+      "bytes": 750691,
+      "label": "Caderno de Questões da Prova de LP, LI e Redação - Público (versão 1 para divulgação na imprensa) - Atenção Candidato: para saber qual a sua versão de prova acesse a área do candidato.   07/01/2024",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2304/documento"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
       "sha256": "962508178f10fd97e78d1155a6f5fe5ce62d709cd677261d38f79b5617d8af20",
       "pages": 12,
-      "role": "exam"
+      "role": "exam",
+      "bytes": 1125718,
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2401/documento"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
       "sha256": "9a22a33dabb7f7b9e8d7a245aceceaf170806f007e41475bc4acc55d6d73d4a7",
-      "role": "answer-key"
+      "role": "answer-key",
+      "pages": 1,
+      "bytes": 114309,
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2401/documento"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzE1MA%3d%3d",
       "sha256": "6ad08ab3e3192d739b0ba759086e92d1ed8bbc51e1ca3dc39ff09a82c2bad128",
       "pages": 28,
-      "role": "exam"
+      "role": "exam",
+      "bytes": 2282543,
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2401/documento"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NzUzOTExNQ%3d%3d",
       "sha256": "5cb1b379f28e68e3580be00b7121a0b6493216bd61b5c548138313aabd72711f",
       "pages": 12,
-      "role": "exam"
+      "role": "exam",
+      "bytes": 858424,
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2502/documento"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NzUzOTExMQ%3d%3d",
       "sha256": "b0f7d5341cb45197baa7b40bf89f6629f080f42279f2ee29ea4559ada5823881",
-      "role": "answer-key"
+      "role": "answer-key",
+      "pages": 1,
+      "bytes": 311255,
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2502/documento"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NzUzOTcyNg%3d%3d",
       "sha256": "fa70f2fe0f73b169560aae17854f41b58a0511eeebf6d193c57954440bebd450",
       "pages": 28,
-      "role": "exam"
+      "role": "exam",
+      "bytes": 2217779,
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2502/documento"
     }
   ],
   "classificationFiles": [

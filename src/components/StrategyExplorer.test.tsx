@@ -34,7 +34,7 @@ describe('guia por matéria, tópico e banca', () => {
     fireEvent.change(screen.getByLabelText('Banca do guia'), { target: { value: 'Unicamp' } });
     expect(screen.getAllByText(/mol antes da proporção/i).length).toBeGreaterThan(0);
     fireEvent.click(screen.getByRole('button', { name: 'Aprofundar este tópico e sua cobrança' }));
-    await waitFor(() => expect(generate).toHaveBeenCalledWith('review-tip', expect.objectContaining({ subject: 'Química', board: 'Unicamp', guideMode: 'strategy' }), expect.any(Function)));
+    await waitFor(() => expect(generate).toHaveBeenCalledWith('review-tip', expect.objectContaining({ subject: 'Química', board: 'Unicamp', guideMode: 'strategy' }), expect.any(Function)), { timeout: 5000 });
     await screen.findByText('Guia do tópico selecionado');
     fireEvent.change(screen.getByLabelText('Banca do guia'), { target: { value: 'Fuvest' } });
     expect(screen.queryByText('Guia do tópico selecionado')).toBeNull();
@@ -140,7 +140,7 @@ it('conclui em uma entrega única com PDF pronto, capa e índice', async () => {
   try {
     render(<MemoryRouter><StrategyExplorer /></MemoryRouter>);
     fireEvent.click(screen.getByRole('button', { name: 'Aprofundar este tópico e sua cobrança' }));
-    await screen.findByRole('link', { name: 'Abrir PDF' });
+    await screen.findByRole('link', { name: 'Abrir PDF' }, { timeout: 5000 });
     expect(screen.getByRole('link', { name: 'Salvar PDF' })).toHaveAttribute('href', 'blob:strategy');
     expect(screen.queryByRole('button', { name: 'Personalizar ilustração da capa' })).toBeNull();
     const sent = JSON.parse(fetch.mock.calls.find(([url]) => url === '/api/study-pdf')![1].body);

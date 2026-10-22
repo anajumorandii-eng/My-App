@@ -31,6 +31,8 @@ test('incidência publica apenas edições completas e mantém fontes, downloads
    await panel.getByLabel('Até o vestibular').selectOption('2023');
    await expect(panel.getByText('Este formato não está classificado no período selecionado. Não há denominador.')).toBeVisible();
    await expect(panel.getByRole('table').locator('tbody tr')).toHaveCount(0);
+   await expect(panel.getByText('Sem cobertura neste filtro')).toBeVisible();
+   await expect(panel.getByText('0/0',{exact:true})).toHaveCount(0);
    await page.screenshot({path:testInfo.outputPath('enem-sem-cobertura.png'),fullPage:true});
   }
   if(board==='UNESP'){

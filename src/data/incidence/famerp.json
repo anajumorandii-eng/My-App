@@ -20312,34 +20312,43 @@
   ],
   "sourceDocuments": [
     {
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/famerp/2022/1dia/famerp2022_1dia_prova.pdf",
+      "sha256": "52645a6071ef8ae0db5259b3a30edc34298c55589d1b6ddd26c38472491f8a7b",
+      "pages": 24,
+      "role": "gerais",
       "board": "FAMERP",
-      "year": 2026,
-      "code": "FMRP2501",
-      "indexUrl": "https://documento.vunesp.com.br/projeto/FMRP2501/documento",
-      "label": "Caderno de Questões - Prova de Conhecimentos Específicos e Redação - (versão de divulgação à imprensa) - Atenção candidato acesse sua versão de prova na Área do Candidato   12/12/2025",
-      "url": "https://documento.vunesp.com.br/documento/stream/NzUyNDMyMQ%3d%3d",
-      "localPath": "/workspace/work/board-source-discovery/famerp/2026/NzUyNDMyMQ.pdf",
-      "sha256": "2a56cb4151eff14aa63d38895b342c311bbc71aa7101c50e6c8909538586fedf",
+      "year": 2022,
+      "bytes": 2088105,
+      "coverageNote": "Cópia do documento Vunesp em espelho Curso Objetivo. Índice público do processo 2022 não ofereceu documentos na consulta; capa,ano,código de processo e chave V1 identificados.",
+      "phase": "Conhecimentos gerais",
+      "group": "conhecimentos-gerais",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "V1 — imprensa",
+      "answerKeyUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/famerp/2022/1dia/famerp2022_1dia_gabarito.pdf",
+      "answerKeySha256": "01735921413b65b528c6a2594fb639c1e2f050d1dcfba90b7fd5034d89259f75",
+      "expectedQuestionsIncludingEssay": 80,
+      "sourceType": "identified-mirror",
+      "answerKeySourceType": "identified-mirror"
+    },
+    {
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/famerp/2022/2dia/famerp2022_2dia_prova.pdf",
+      "sha256": "7d746e737f41dccf1441ec018e6e3879391dda9e7546b06ffb1b75f16c033f29",
       "pages": 28,
-      "bytes": 1655765,
+      "role": "especificos",
+      "board": "FAMERP",
+      "year": 2022,
+      "bytes": 2278569,
+      "coverageNote": "Cópia do documento Vunesp em espelho Curso Objetivo. Índice público do processo 2022 não ofereceu documentos na consulta; capa,ano,código de processo e chave V1 identificados. Inclui proposta de redação como uma unidade separada das20 questões. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna.",
       "phase": "Conhecimentos específicos e Redação",
       "group": "conhecimentos-especificos",
       "phaseGroup": "2a",
       "format": "open",
       "version": "Caderno002 — imprensa",
       "answerKeyUrl": null,
-      "answerKeyPath": null,
       "answerKeySha256": null,
-      "coverageNote": "Caderno e gabarito objetivos publicados na mesma página de documentos da organizadora; versão de imprensa. Inclui proposta de redação como uma unidade separada das20 questões. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna.",
       "expectedQuestionsIncludingEssay": 21,
-      "sourceType": "primary",
-      "role": "especificos"
-    },
-    {
-      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/famerp/2022/1dia/famerp2022_1dia_prova.pdf",
-      "sha256": "52645a6071ef8ae0db5259b3a30edc34298c55589d1b6ddd26c38472491f8a7b",
-      "pages": 24,
-      "role": "exam"
+      "sourceType": "identified-mirror"
     },
     {
       "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/famerp/2022/1dia/famerp2022_1dia_gabarito.pdf",
@@ -20347,33 +20356,77 @@
       "role": "answer-key"
     },
     {
-      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/famerp/2022/2dia/famerp2022_2dia_prova.pdf",
-      "sha256": "7d746e737f41dccf1441ec018e6e3879391dda9e7546b06ffb1b75f16c033f29",
-      "pages": 28,
-      "role": "exam"
-    },
-    {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/MzIxMTgxMw%3d%3d",
       "sha256": "448a1916aa2d98bafee7511bf057d03175856e4aee85e976e1f33faf8d0ae907",
       "pages": 28,
-      "role": "exam"
+      "role": "exam",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/FMRP2201/documento",
+      "label": "Caderno de Questões - Prova de Conhecimentos Específicos e Redação.   14/12/2022",
+      "bytes": 1651367
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/MzIxMTE5NQ%3d%3d",
       "sha256": "dd67becfd994d214e32d3c9aaa8a2f0ead1d596096b2c3d0f9fa58c971d0d40a",
-      "role": "answer-key"
+      "role": "answer-key",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/FMRP2201/documento",
+      "label": "Gabarito - Público (versão 1 para divulgação na imprensa) - Atenção Candidato: para saber qual a sua versão de gabarito acesse a área do candidato   13/12/2022",
+      "pages": 1,
+      "bytes": 787075
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/MzIxMTE5OA%3d%3d",
       "sha256": "8dbb5d717ec77b239c0a938da810fd64fcfa3967f3e657864abdec5c89cc00ff",
       "pages": 28,
-      "role": "exam"
+      "role": "exam",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/FMRP2201/documento",
+      "label": "Caderno de Questões da Prova de Conhecimentos Gerais - Público (versão 1 para divulgação na imprensa) - Atenção Candidato: para saber qual a sua versão de prova acesse a área do candidato   13/12/2022",
+      "bytes": 1811896
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTY0Mzg3MA%3d%3d",
       "sha256": "65e326c89905f51905849066a3b9f5ba38b214da34c49345d475c4010efa4112",
       "pages": 24,
-      "role": "exam"
+      "role": "exam",
+      "board": "FAMERP",
+      "year": 2024,
+      "code": "FMRP2301",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/FMRP2301/documento",
+      "label": "Caderno de Questões da Prova de Conhecimentos Gerais - Público (versão 1 para divulgação na imprensa) - Atenção Candidato: para saber qual a sua versão de prova acesse a área do candidato   14/12/2023",
+      "bytes": 1535595,
+      "phase": "Conhecimentos gerais",
+      "group": "conhecimentos-gerais",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "V1 — imprensa",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NTY0NTYyNA%3d%3d",
+      "answerKeySha256": "057a2b59f4924ba5f412b0f05ed72161dd91cd4e37a83c7889d035f78f18e20b",
+      "coverageNote": "Caderno e gabarito objetivos publicados na mesma página de documentos da organizadora; versão de imprensa.",
+      "expectedQuestionsIncludingEssay": 80,
+      "sourceType": "primary",
+      "answerKeySourceType": "primary",
+      "answerKeyLabel": "Gabarito - Público - Após Recursos (versão 1 para divulgação na imprensa), publicado em 18/12/2023"
+    },
+    {
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTY0NDY2NQ%3d%3d",
+      "sha256": "0fb7d76d1947728e390cfaf217316cd36d31b2039f6856dddb91fec25d80c6e5",
+      "pages": 28,
+      "role": "exam",
+      "board": "FAMERP",
+      "year": 2024,
+      "code": "FMRP2301",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/FMRP2301/documento",
+      "label": "Caderno de Questões - Prova de Conhecimentos Específicos e Redação.   15/12/2023",
+      "bytes": 1578165,
+      "phase": "Conhecimentos específicos e Redação",
+      "group": "conhecimentos-especificos",
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "Caderno002 — imprensa",
+      "answerKeyUrl": null,
+      "answerKeySha256": null,
+      "coverageNote": "Caderno e gabarito objetivos publicados na mesma página de documentos da organizadora; versão de imprensa. Inclui proposta de redação como uma unidade separada das20 questões. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna.",
+      "expectedQuestionsIncludingEssay": 21,
+      "sourceType": "primary"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTY0NTYyNA%3d%3d",
@@ -20381,16 +20434,49 @@
       "role": "answer-key"
     },
     {
-      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTY0NDY2NQ%3d%3d",
-      "sha256": "0fb7d76d1947728e390cfaf217316cd36d31b2039f6856dddb91fec25d80c6e5",
-      "pages": 28,
-      "role": "exam"
-    },
-    {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1MTk1Nw%3d%3d",
       "sha256": "a5972bd6c1903350e9033e0a0da253eb503f63c33601a06e0cd0983acd3cd290",
       "pages": 24,
-      "role": "exam"
+      "role": "gerais",
+      "board": "FAMERP",
+      "year": 2025,
+      "code": "FMRP2401",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/FMRP2401/documento",
+      "label": "Caderno de Questões - Prova de Conhecimentos Gerais - (versão de divulgação à imprensa) - Atenção candidato acesse sua versão de prova na Área do Candidato   12/12/2024",
+      "bytes": 1467187,
+      "phase": "Conhecimentos gerais",
+      "group": "conhecimentos-gerais",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "V1 — imprensa",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1MTk1MA%3d%3d",
+      "answerKeySha256": "e0ad3b858d1b6b570c87fb41e174b2b19318185d9d9ae53934764d6ecf6aa964",
+      "coverageNote": "Caderno e gabarito objetivos publicados na mesma página de documentos da organizadora; versão de imprensa.",
+      "expectedQuestionsIncludingEssay": 80,
+      "sourceType": "primary",
+      "answerKeySourceType": "primary"
+    },
+    {
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1MjgxOQ%3d%3d",
+      "sha256": "525c48d5613e36baa8f96f9728476b7e368f2b3176e7428c2f111dc14866234e",
+      "pages": 28,
+      "role": "especificos",
+      "board": "FAMERP",
+      "year": 2025,
+      "code": "FMRP2401",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/FMRP2401/documento",
+      "label": "Caderno de Questões - Prova de Conhecimentos Específicos e Redação - (versão de divulgação à imprensa) - Atenção candidato acesse sua versão de prova na Área do Candidato   13/12/2024",
+      "bytes": 1531780,
+      "phase": "Conhecimentos específicos e Redação",
+      "group": "conhecimentos-especificos",
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "Caderno002 — imprensa",
+      "answerKeyUrl": null,
+      "answerKeySha256": null,
+      "coverageNote": "Caderno e gabarito objetivos publicados na mesma página de documentos da organizadora; versão de imprensa. Inclui proposta de redação como uma unidade separada das20 questões. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna.",
+      "expectedQuestionsIncludingEssay": 21,
+      "sourceType": "primary"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1MTk1MA%3d%3d",
@@ -20398,27 +20484,54 @@
       "role": "answer-key"
     },
     {
-      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1MjgxOQ%3d%3d",
-      "sha256": "525c48d5613e36baa8f96f9728476b7e368f2b3176e7428c2f111dc14866234e",
-      "pages": 28,
-      "role": "exam"
-    },
-    {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NzUyMjIyNQ%3d%3d",
       "sha256": "0cf763533c927358f73db2e86320b655d00826acfd8592b5dfcd4bd74408b4dd",
       "pages": 28,
-      "role": "exam"
-    },
-    {
-      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NzUyMjIyMQ%3d%3d",
-      "sha256": "afd7bf27a06c583485aec4b9698dc858e3e4edee3c6fa66f1545831f3cb82c8e",
-      "role": "answer-key"
+      "role": "gerais",
+      "board": "FAMERP",
+      "year": 2026,
+      "code": "FMRP2501",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/FMRP2501/documento",
+      "label": "Caderno de Questões - Prova de Conhecimentos Gerais - (versão de divulgação à imprensa) - Atenção candidato acesse sua versão de prova na Área do Candidato   11/12/2025",
+      "bytes": 1676116,
+      "phase": "Conhecimentos gerais",
+      "group": "conhecimentos-gerais",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "V1 — imprensa",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NzUyMjIyMQ%3d%3d",
+      "answerKeySha256": "afd7bf27a06c583485aec4b9698dc858e3e4edee3c6fa66f1545831f3cb82c8e",
+      "coverageNote": "Caderno e gabarito objetivos publicados na mesma página de documentos da organizadora; versão de imprensa.",
+      "expectedQuestionsIncludingEssay": 80,
+      "sourceType": "primary",
+      "answerKeySourceType": "primary"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NzUyNDMyMQ%3d%3d",
       "sha256": "2a56cb4151eff14aa63d38895b342c311bbc71aa7101c50e6c8909538586fedf",
       "pages": 28,
-      "role": "exam"
+      "role": "especificos",
+      "board": "FAMERP",
+      "year": 2026,
+      "code": "FMRP2501",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/FMRP2501/documento",
+      "label": "Caderno de Questões - Prova de Conhecimentos Específicos e Redação - (versão de divulgação à imprensa) - Atenção candidato acesse sua versão de prova na Área do Candidato   12/12/2025",
+      "bytes": 1655765,
+      "phase": "Conhecimentos específicos e Redação",
+      "group": "conhecimentos-especificos",
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "Caderno002 — imprensa",
+      "answerKeyUrl": null,
+      "answerKeySha256": null,
+      "coverageNote": "Caderno e gabarito objetivos publicados na mesma página de documentos da organizadora; versão de imprensa. Inclui proposta de redação como uma unidade separada das20 questões. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna.",
+      "expectedQuestionsIncludingEssay": 21,
+      "sourceType": "primary"
+    },
+    {
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NzUyMjIyMQ%3d%3d",
+      "sha256": "afd7bf27a06c583485aec4b9698dc858e3e4edee3c6fa66f1545831f3cb82c8e",
+      "role": "answer-key"
     }
   ],
   "classificationFiles": [

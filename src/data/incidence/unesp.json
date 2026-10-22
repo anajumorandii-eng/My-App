@@ -21898,86 +21898,152 @@
       "sourceUrl": "https://filescol.grupoetapa.com.br/etaparesolve/etaparesolve/etaparesolve/2022/Unesp/1Fase_439/prova/prova.pdf",
       "sha256": "4f7c409ccb6a4697ac59fc3d1f7c00b6a93643d124b58771ea62e70d98f40682",
       "pages": 32,
-      "role": "exam"
+      "role": "exam",
+      "bytes": 2778036
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/MjQxNTAzNA%3d%3d",
       "sha256": "5dd8221c3fb6194acf8f1f6d7ad4e3554986eb1d08b8e402fd83d911e8baca8a",
-      "role": "answer-key"
+      "role": "answer-key",
+      "bytes": 577201,
+      "pages": 1
     },
     {
       "sourceUrl": "https://filescol.grupoetapa.com.br/etaparesolve/etaparesolve/etaparesolve/2022/Unesp/2Fase_454/prova/prova.pdf",
       "sha256": "542082619d5b2af0d5c0740ffb15dc7f14ba52b7dba07247fdb940704c5f9cfb",
       "pages": 24,
-      "role": "exam"
+      "role": "exam",
+      "bytes": 2244172
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/MjYwMjQyOA%3d%3d",
       "sha256": "ba58660cdd8bfd0d432eb187f66a2c433ddad7a006c89ae5dea13662aa3f7c40",
-      "role": "answer-key"
+      "role": "answer-key",
+      "bytes": 572516,
+      "pages": 1
     },
     {
       "sourceUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/UNESP/2023/UNESP_2023_1a_fase.pdf",
       "sha256": "869ff18deaa9ec35aadb4eeaae2da99a7f164c58db05630a72244f2887c17ff7",
       "pages": 36,
-      "role": "exam"
+      "role": "exam",
+      "bytes": 3989171
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/MzE3NTk4NA%3d%3d",
       "sha256": "e1958e8bcf9aab5648be5f40e7475ceab4d39a945b3a270296ffeb87b72e49d7",
-      "role": "answer-key"
+      "role": "answer-key",
+      "bytes": 778475,
+      "pages": 1
     },
     {
       "sourceUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/UNESP/2023/UNESP_2023_2a_fase.pdf",
       "sha256": "9fcd45bc64beddf584f6db27a90339c5e09e22e2920b4dc4104c1128aaa9641d",
       "pages": 28,
-      "role": "exam"
+      "role": "exam",
+      "bytes": 2785172
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/MzIyMzMxOA%3d%3d",
       "sha256": "b74728238f73024919d246d50487dbfbf091b1a73b3331912a3e38a1170b434e",
-      "role": "answer-key"
+      "role": "answer-key",
+      "bytes": 777612,
+      "pages": 1
     },
     {
       "sourceUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/UNESP/2024/UNESP_2024_1a_fase.pdf",
       "sha256": "afbb348bfadc769aefd7baaef245b69cd1b44b97ee3dc2197eca731a2a3f053d",
       "pages": 36,
-      "role": "exam"
+      "role": "exam",
+      "bytes": 3437538
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTM0MTAyMQ%3d%3d",
       "sha256": "a2f863f9d05a6dc8bee5a6440faadf12256e55825eb10e96c42e49f0cee7e565",
-      "role": "answer-key"
+      "role": "answer-key",
+      "pages": 1,
+      "bytes": 325874
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTYyMzIwNw%3d%3d",
       "sha256": "d77a85de45227d14b73f360cfc709d132eeeacea1cd2212545a34da8b5bf4820",
       "pages": 28,
-      "role": "exam"
+      "role": "exam",
+      "bytes": 2046867
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTYyODg1MA%3d%3d",
       "sha256": "95c3118cceea5d4e6f4228ac43f684ff42cc44a0ef8418eafc2a49fc8a9e8f79",
       "pages": 24,
-      "role": "exam"
+      "role": "exam",
+      "bytes": 1523568
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjU5MzI0Mg%3d%3d",
       "sha256": "b2702765445da4a833b6fa06bad063b8d9b4fb9c00773a6f5184f178e43266fa",
       "pages": 32,
-      "role": "exam"
+      "role": "exam",
+      "board": "UNESP",
+      "year": 2025,
+      "code": "VNSP2404",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/VNSP2404/documento",
+      "label": "Caderno de Questões - Prova de Conhecimentos Gerais - (versão de divulgação à imprensa) - Atenção candidato acesse sua versão de prova na Área do Candidato   15/11/2024",
+      "bytes": 2884780,
+      "phase": "1ª fase — Conhecimentos gerais",
+      "group": "conhecimentos-gerais",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "001 — V1 imprensa",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjU5MzIzOA%3d%3d",
+      "answerKeySha256": "a70664a5827116c0b90dc3b187c13fe97d942c76ef9660c9812ef36da0ecceaf",
+      "coverageNote": "Caderno e gabarito primários Vunesp.",
+      "expectedQuestionsIncludingEssay": 90,
+      "sourceType": "primary",
+      "answerKeySourceType": "primary"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjYzODU2Nw%3d%3d",
       "sha256": "ba5e6d47fc8061b89820a721c279444056cb5ff7b03489fc1b7d9ee8927abe67",
       "pages": 28,
-      "role": "exam"
+      "role": "exam",
+      "board": "UNESP",
+      "year": 2025,
+      "code": "VNSP2404",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/VNSP2404/documento",
+      "label": "Caderno de Questões - Prova de Conhecimentos Específicos - C.Hum. e Soc.; C.Nat. e Mat. e suas Tec. - (versão de divulgação à imprensa) - Atenção candidato acesse sua versão de prova na Área do Candidato   08/12/2024",
+      "bytes": 1765923,
+      "phase": "2ª fase — Humanas, Natureza e Matemática",
+      "group": "segunda-fase-discursiva-dia1",
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "Imprensa",
+      "answerKeyUrl": null,
+      "answerKeySha256": null,
+      "coverageNote": "Fonte primária Vunesp. Contém24 questões discursivas. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna.",
+      "expectedQuestionsIncludingEssay": 24,
+      "sourceType": "primary"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY0MjYwNA%3d%3d",
       "sha256": "a95c27eef1d92379f1b1badb41e0974fba0e8fee7ab4bf188e3cf7305270fa0b",
       "pages": 20,
-      "role": "exam"
+      "role": "exam",
+      "board": "UNESP",
+      "year": 2025,
+      "code": "VNSP2404",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/VNSP2404/documento",
+      "label": "Caderno de Questões - Prova de Conhecimentos Específicos e Redação - Linguagens e suas Tecnologias - (versão de divulgação à imprensa) - Atenção candidato acesse sua versão de prova na Área do Candidato   09/12/2024",
+      "bytes": 1399891,
+      "phase": "2ª fase — Linguagens e Redação",
+      "group": "segunda-fase-discursiva-dia2",
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "Imprensa",
+      "answerKeyUrl": null,
+      "answerKeySha256": null,
+      "coverageNote": "Fonte primária Vunesp. Contém12 questões e proposta de redação. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna.",
+      "expectedQuestionsIncludingEssay": 13,
+      "sourceType": "primary"
     },
     {
       "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjU5MzIzOA%3d%3d",

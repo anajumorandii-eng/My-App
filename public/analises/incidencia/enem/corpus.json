@@ -14041,13 +14041,41 @@
       "sourceUrl": "https://riep.inep.gov.br/bitstreams/71aaf57d-a5b7-4300-bd8b-fcf2ec490570/download",
       "sha256": "d35ce001b6e6fb978d68c3d4c57f2d08ff8a4eb36487f3dd1696fba831b24a9a",
       "pages": 32,
-      "role": "exam"
+      "role": "prova-dia1",
+      "board": "ENEM",
+      "year": 2024,
+      "bytes": 4810400,
+      "coverageNote": "Opção Inglês nas questões01–05; não duplicar Espanhol ou cores. Inclui proposta de redação, unidade separada das90 questões.",
+      "phase": "Dia 1 — aplicação regular impressa",
+      "group": "regular-impresso-dia1",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "Caderno 2 — Amarelo",
+      "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/01f19cf0-4be9-48df-9a29-f5fe33bbae07/download",
+      "answerKeySha256": "e1198aa21e9f04e81ceb314848bab39189fd314b27e2b8dac70a7a662defeb1d",
+      "expectedQuestionsIncludingEssay": 91,
+      "sourceType": "primary",
+      "answerKeySourceType": "primary"
     },
     {
       "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/2dia/enem2024_2dia_prova_amarelo.pdf",
       "sha256": "44a324acab3b3922293f06b6ee08c90696c00ba82c0357e9e803b15d80b0ea24",
       "pages": 32,
-      "role": "exam"
+      "role": "prova-dia2",
+      "board": "ENEM",
+      "year": 2024,
+      "bytes": 4976057,
+      "coverageNote": "Opção Inglês nas questões01–05; não duplicar Espanhol ou cores. Questões91–180. ",
+      "phase": "Dia 2 — aplicação regular impressa",
+      "group": "regular-impresso-dia2",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "Caderno 5 — Amarelo",
+      "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/109a33f5-e556-4e51-b9e3-8e0bdf3353d8/download",
+      "answerKeySha256": "342edd1d18c0266812b9e379c7b9b2ebfcdd739857445bd03cf3c55951861297",
+      "expectedQuestionsIncludingEssay": 90,
+      "sourceType": "identified-mirror",
+      "answerKeySourceType": "primary"
     },
     {
       "sourceUrl": "https://riep.inep.gov.br/bitstreams/01f19cf0-4be9-48df-9a29-f5fe33bbae07/download",
@@ -14063,23 +14091,29 @@
       "sourceUrl": "https://riep.inep.gov.br/bitstreams/a11f89c6-3693-49f0-8164-2794b5dac372/download",
       "sha256": "fc5afca9bb3c168c9e1ddc97005736a461104b2552bac02bf0f1386af2164ed3",
       "pages": 32,
-      "role": "exam"
+      "role": "prova-dia1",
+      "bytes": 2784620
     },
     {
       "sourceUrl": "https://riep.inep.gov.br/bitstreams/355fc4cc-8bf1-4bc9-b5a7-4ce989c01c76/download",
       "sha256": "10a6daeb38ea518d8428dac0d68820ab1f3062dd4216ca6915a78ce830a2abac",
-      "role": "answer-key"
+      "role": "gabarito definitivo pareado",
+      "pages": 1,
+      "bytes": 133142
     },
     {
       "sourceUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2025/ENEM_2025_dia_2_caderno_amarelo.pdf",
       "sha256": "6cf3a0361035f86710be6fd8ff6b6848aa99c98fe71730d8ade1ca4ce4f1e560",
       "pages": 32,
-      "role": "exam"
+      "role": "prova-dia2",
+      "bytes": 3122986
     },
     {
       "sourceUrl": "https://riep.inep.gov.br/bitstreams/5830254a-fab5-40e4-bd42-245926bcdd10/download",
       "sha256": "4feea3658a94e20fa226028824b22538cb1b7e405a6a6e547d6a7131e5c97c22",
-      "role": "answer-key"
+      "role": "gabarito definitivo pareado",
+      "pages": 1,
+      "bytes": 294764
     }
   ],
   "classificationFiles": [

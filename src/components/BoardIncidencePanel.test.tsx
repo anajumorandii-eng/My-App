@@ -33,6 +33,8 @@ it('explicita anos adiados e permite consultar ausência de cobertura sem percen
  expect(screen.getByRole('table')).toHaveTextContent('Não classificado');
  fireEvent.change(screen.getByLabelText('Até o vestibular'),{target:{value:'2025'}});
  expect(screen.getByText('Este formato não está classificado no período selecionado. Não há denominador.')).toBeInTheDocument();
+ expect(screen.getByText('Sem cobertura neste filtro')).toBeInTheDocument();
+ expect(screen.queryByText('0/0')).toBeNull();
  expect(screen.queryByText(/NaN%|Infinity%/)).toBeNull();
  spy.mockRestore();
 });

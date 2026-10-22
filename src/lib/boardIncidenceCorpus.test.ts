@@ -2,12 +2,15 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {isCompleteBoardCorpus,boardIncidenceRows,type BoardCorpus,type ResearchBoard} from './boardIncidence';
-const load=async(board:ResearchBoard)=>JSON.parse(await readFile(`public/analises/incidencia/${board.toLowerCase()}/corpus.json`,'utf8')) as BoardCorpus;
+type PublishedCorpus=BoardCorpus&{sourceDocuments:{sourceUrl:string;sha256:string;localPath?:string}[]};
+const load=async(board:ResearchBoard)=>JSON.parse(await readFile(`public/analises/incidencia/${board.toLowerCase()}/corpus.json`,'utf8')) as PublishedCorpus;
 
 test('quatro bancas têm dezesseis edições e 34 cadernos completos, com formatos pandêmicos separados',async()=>{
  let papers=0,items=0;
  for(const board of ['ENEM','UNESP','FAMERP','UNIFESP'] as const){
   const corpus=await load(board);assert.equal(isCompleteBoardCorpus(corpus,board),true);
+  assert.equal(new Set(corpus.sourceDocuments.map(source=>source.sourceUrl)).size,corpus.sourceDocuments.length);
+  for(const source of corpus.sourceDocuments){assert.match(source.sourceUrl,/^https:\/\//);assert.match(source.sha256,/^[a-f0-9]{64}$/);assert.equal(source.localPath,undefined);}
   assert.deepEqual(corpus.years,board==='ENEM'?[2024,2025]:board==='UNESP'?[2022,2023,2024,2025]:[2022,2023,2024,2025,2026]);
   const expected=board==='ENEM'?362:board==='UNESP'?556:board==='FAMERP'?505:230;
   assert.equal(corpus.questions.length,expected);items+=expected;papers+=corpus.papers.length;

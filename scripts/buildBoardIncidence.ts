@@ -63,7 +63,17 @@ for(const plan of plans){
  }
  const corpus:BoardCorpus={board,reviewedOn:'2026-10-22',reviewType:'Classificação editorial por leitura das fontes. Revisão de integração; sem dupla codificação independente integral nem dificuldade medida.',coverageNote:coverageNotes.join('\n'),years:[...plan.years],plannedYears:[...plan.plannedYears],papers,questions};
  if(!isCompleteBoardCorpus(corpus,board))throw Error(`Corpus incompleto: ${board}`);
- const documents=[...new Map(sources.map(source=>[source.sourceUrl,source])).values()];
+ const bySourceUrl=new Map<string,any>();
+ for(const source of sources){
+  const {url,localPath,answerKeyPath,...metadata}=source;
+  const sourceUrl=source.sourceUrl??url;
+  if(!validUrl(sourceUrl)||!validHash(source.sha256))throw Error(`Documento sem URL/hash: ${board}`);
+  const previous=bySourceUrl.get(sourceUrl);
+  if(previous&&previous.sha256!==source.sha256)throw Error(`Hashes divergentes para a mesma fonte: ${sourceUrl}`);
+  // Keep provenance from the detailed manifest when the paper repeats its URL.
+  bySourceUrl.set(sourceUrl,{...metadata,...previous,sourceUrl});
+ }
+ const documents=[...bySourceUrl.values()];
  const exported={...corpus,sourceDocuments:documents,classificationFiles,language:board==='ENEM'?'Inglês nas questões opcionais; aplicação regular impressa':'conforme caderno'};
  await queueWrite(`src/data/incidence/${plan.slug}.json`,JSON.stringify(exported,null,2)+'\n');
  const out=`public/analises/incidencia/${plan.slug}`;
