@@ -1,7 +1,7 @@
 {
   "board": "UNESP",
   "year": 2025,
-  "status": "PARCIAL — fora do gerador por interrupção solicitada",
+  "status": "RASCUNHO HISTÓRICO SUPERADO: edição completa em scripts/data/board-incidence/unesp/2025.json; auditoria-unesp-2025.md. Fora do gerador.",
   "coverageNote": "Todos os itens dos três cadernos foram efetivamente lidos no texto extraído e figuras decisivas inspecionadas. Apenas 90 fichas objetivas foram redigidas; faltam redigir 24 discursivas dia1 e 12 discursivas dia2 (25–36) e R. Não publicar como edição completa. Não houve revisão editorial final das fichas objetivas nem enriquecimento de secundários/ressalvas nas questões interdisciplinares.",
   "sourceManifest": [
     {

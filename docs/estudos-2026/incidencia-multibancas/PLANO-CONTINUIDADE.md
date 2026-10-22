@@ -1,7 +1,7 @@
 # Plano de continuidade — análise de incidência
 
 Retomada em 22/10/2026: PR conferida aberta em rascunho, sem merge, head f0fd5f5d.
-ENEM2024 concluído nesta retomada; demais etapas abaixo continuam pendentes.
+ENEM2024 e UNESP2025 concluídos nesta retomada; demais etapas abaixo continuam pendentes.
 Branch: `codex/expansao-incidencia-2017-2026`. PR: #351, em rascunho.
 A recuperação inicial da PR #350 já foi integrada à main.
 
@@ -12,14 +12,14 @@ FUVEST: primeira fase 2017–2026, segunda fase 2022–2026; 1.135 registros em
 2022–2026 implementada, downloads e auditorias salvos. Ranking pessoal mantém
 as 15 coortes recentes. Não refazer essa classificação.
 
-As outras bancas têm **14 edições completas, 1.480 registros**, ainda sem
+As outras bancas têm **15 edições completas, 1.607 registros**, ainda sem
 integração na interface nem publicação de seus corpus agregados:
 
 | Banca | Edições completas | Registros completos | Pendências |
 |---|---|---:|---|
 | FAMERP | 2022–2026 | 505 | Revisão amostral e integração |
 | UNIFESP | 2023–2026 | 184 | Classificar 2022 |
-| UNESP | 2022–2024 | 429 | Completar 2025; classificar 2026 |
+| UNESP | 2022–2025 | 556 | Classificar 2026 |
 | ENEM | 2024–2025 | 362 | Classificar 2021–2023 |
 
 Arquivos completos: `scripts/data/board-incidence/BANCA/ANO.json`.
@@ -34,9 +34,9 @@ validação estrutural, taxonômica e conferência de fontes no checkpoint.
   completa em `scripts/data/board-incidence/enem/2024.json`, 181 fichas,
   chave CD2 Inglês/CD5 pareada e anulação102 preservada. Auditoria própria
   registra releitura D2, figuras, revisão editorial D1 e 23 ressalvas.
-- `rascunhos/unesp-2025-parcial.json`: 90 fichas objetivas. Os127 itens foram
-  lidos e as figuras decisivas vistas; faltam redigir37 unidades discursivas/
-  redação e concluir revisão/validação. O próprio arquivo registra evidências.
+- `rascunhos/unesp-2025-parcial.json`: rascunho histórico superado. Edição
+  completa em `scripts/data/board-incidence/unesp/2025.json`, 127 unidades
+  90/24/12+R, auditoria própria, fontes e chave objetiva conferidas.
 
 Não mover rascunhos para a pasta de classificação completa antes de concluir
 as fichas e a auditoria. Não preencher lacunas por inferência.
@@ -44,7 +44,7 @@ as fichas e a auditoria. Não preencher lacunas por inferência.
 ## Ordem de retomada
 
 1. Conferir branch/PR e os arquivos salvos; preservar alterações posteriores.
-2. ENEM2024 concluído; terminar UNESP2025 a partir dos rascunhos, sem repetir trabalho
+2. ENEM2024 e UNESP2025 concluídos a partir dos rascunhos, sem repetir trabalho
    já documentado. Salvar cada edição completa e sua auditoria.
 3. Classificar UNIFESP2022, UNESP2026 e ENEM2021–2023 a partir das fontes
    inventariadas; Inglês no ENEM. Não expandir Unicamp nesta tarefa.
