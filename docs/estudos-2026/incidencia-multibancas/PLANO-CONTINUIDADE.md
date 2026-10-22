@@ -1,7 +1,7 @@
 # Plano de continuidade — análise de incidência
 
 Retomada em 22/10/2026: PR conferida aberta em rascunho, sem merge, head f0fd5f5d.
-ENEM2024 e UNESP2025 concluídos nesta retomada; demais etapas abaixo continuam pendentes.
+ENEM2024, UNESP2025 e UNIFESP2022 concluídos nesta retomada; demais etapas abaixo continuam pendentes.
 Branch: `codex/expansao-incidencia-2017-2026`. PR: #351, em rascunho.
 A recuperação inicial da PR #350 já foi integrada à main.
 
@@ -12,13 +12,13 @@ FUVEST: primeira fase 2017–2026, segunda fase 2022–2026; 1.135 registros em
 2022–2026 implementada, downloads e auditorias salvos. Ranking pessoal mantém
 as 15 coortes recentes. Não refazer essa classificação.
 
-As outras bancas têm **15 edições completas, 1.607 registros**, ainda sem
+As outras bancas têm **16 edições completas, 1.653 registros**, ainda sem
 integração na interface nem publicação de seus corpus agregados:
 
 | Banca | Edições completas | Registros completos | Pendências |
 |---|---|---:|---|
 | FAMERP | 2022–2026 | 505 | Revisão amostral e integração |
-| UNIFESP | 2023–2026 | 184 | Classificar 2022 |
+| UNIFESP | 2022–2026 | 230 | Revisão amostral e integração |
 | UNESP | 2022–2025 | 556 | Classificar 2026 |
 | ENEM | 2024–2025 | 362 | Classificar 2021–2023 |
 
@@ -46,7 +46,7 @@ as fichas e a auditoria. Não preencher lacunas por inferência.
 1. Conferir branch/PR e os arquivos salvos; preservar alterações posteriores.
 2. ENEM2024 e UNESP2025 concluídos a partir dos rascunhos, sem repetir trabalho
    já documentado. Salvar cada edição completa e sua auditoria.
-3. Classificar UNIFESP2022, UNESP2026 e ENEM2021–2023 a partir das fontes
+3. UNIFESP2022 concluída; classificar UNESP2026 e ENEM2021–2023 a partir das fontes
    inventariadas; Inglês no ENEM. Não expandir Unicamp nesta tarefa.
 4. Harmonizar rótulos e rever uma amostra dos casos de confiança média/baixa.
 5. Só com os20 arquivos completos, executar:
