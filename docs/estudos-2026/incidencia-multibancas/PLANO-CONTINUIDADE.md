@@ -1,7 +1,7 @@
 # Plano de continuidade — análise de incidência
 
 Retomada em 22/10/2026: PR conferida aberta em rascunho, sem merge, head f0fd5f5d.
-ENEM2024, UNESP2025 e UNIFESP2022 concluídos nesta retomada; demais etapas abaixo continuam pendentes.
+ENEM2024, UNESP2025 e UNIFESP2022 concluídos nesta retomada. Agregação e integração das 16 edições disponíveis concluídas; classificações restantes adiadas pela usuária.
 Branch: `codex/expansao-incidencia-2017-2026`. PR: #351, em rascunho.
 A recuperação inicial da PR #350 já foi integrada à main.
 
@@ -33,7 +33,7 @@ operam com ondas eletromagnéticas”, mas sensores ópticos também as utilizam
 a vantagem pretendida é a menor limitação por nebulosidade em micro-ondas.
 Rascunho totalmente fora das entradas e exports do gerador.
 
-Agregação, integração e testes finais em andamento; resultado em
+Agregação e integração concluídas; resultados e limites da validação em
 `VALIDACAO-INTEGRACAO.md`. Não fazer merge automático.
 
 ## Entregue e preservado
@@ -43,13 +43,13 @@ FUVEST: primeira fase 2017–2026, segunda fase 2022–2026; 1.135 registros em
 2022–2026 implementada, downloads e auditorias salvos. Ranking pessoal mantém
 as 15 coortes recentes. Não refazer essa classificação.
 
-As outras bancas têm **16 edições completas, 1.653 registros**, ainda sem
-integração na interface nem publicação de seus corpus agregados:
+As outras bancas têm **16 edições completas, 1.653 registros**, com
+integração na interface e publicação de seus corpus agregados:
 
 | Banca | Edições completas | Registros completos | Pendências |
 |---|---|---:|---|
-| FAMERP | 2022–2026 | 505 | Revisão amostral e integração |
-| UNIFESP | 2022–2026 | 230 | Revisão amostral e integração |
+| FAMERP | 2022–2026 | 505 | Sem pendência de integração |
+| UNIFESP | 2022–2026 | 230 | Sem pendência de integração |
 | UNESP | 2022–2025 | 556 | Classificar 2026 |
 | ENEM | 2024–2025 | 362 | Classificar 2021–2023 |
 
@@ -77,21 +77,22 @@ as fichas e a auditoria. Não preencher lacunas por inferência.
 1. Conferir branch/PR e os arquivos salvos; preservar alterações posteriores.
 2. ENEM2024 e UNESP2025 concluídos a partir dos rascunhos, sem repetir trabalho
    já documentado. Salvar cada edição completa e sua auditoria.
-3. UNIFESP2022 concluída; classificar UNESP2026 e ENEM2021–2023 a partir das fontes
+3. UNIFESP2022 concluída; UNESP2026 e ENEM2021–2023 adiados pela usuária. Em uma retomada, classificar a partir das fontes
    inventariadas; Inglês no ENEM. Não expandir Unicamp nesta tarefa.
-4. Harmonizar rótulos e rever uma amostra dos casos de confiança média/baixa.
-5. Nesta publicação autorizada com16 arquivos completos, executar:
+4. Concluído: rótulos harmonizados e casos de confiança média/baixa revistos conforme auditorias.
+5. Concluído nesta publicação autorizada com16 arquivos completos:
    `node --import tsx scripts/buildBoardIncidence.ts`.
    O gerador exige todas as edições da lista explícita atual e valida todas as bancas antes de publicar exports. Os anos adiados permanecem na janela planejada, sem denominador.
-6. Integrar `ExamIncidenceExplorer` na view de Prioridades. Substituir as
-   amostras antigas das quatro bancas em `examEvidence.ts`, evitando duplicação;
-   preservar Unicamp existente e a janela recente FUVEST.
+6. Concluído: `ExamIncidenceExplorer` integrado na view de Prioridades e substituídas as
+   amostras antigas das quatro bancas em `examEvidence.ts`, sem duplicação;
+   Unicamp existente e janela recente FUVEST preservadas.
 7. Teste ativo `src/lib/boardIncidenceCorpus.test.ts` adaptado ao escopo
    autorizado16/34/1653, incluindo cobertura ausente, formatos separados,
    reaplicaçãoUNIFESP2024, redação sem chave objetiva e Inglês/anulaçõesENEM.
    A proposta original20/43/2323 permanece em `pendencias/` para expansão futura.
-8. Rodar lint, testes e build; validar desktop/celular, fontes, downloads,
-   filtros e estados sem cobertura. Atualizar descrição da PR com escopo final.
+8. Lint, testes, build e QA desktop/celular executados; fontes, downloads,
+   filtros e estados sem cobertura validados. Resultados e eventuais ressalvas
+   em `VALIDACAO-INTEGRACAO.md`; descrição da PR atualizada com escopo final.
    Não fazer merge automático.
 
 ## Decisões de fonte que devem permanecer
@@ -111,7 +112,7 @@ as fichas e a auditoria. Não preencher lacunas por inferência.
   registra a proveniência. PDFs/imagens/textos extraídos permanecem no scratch;
   o Git conserva fontes, hashes, classificações e auditorias.
 
-## Verificações e ferramentas preservadas
+## Verificações históricas e ferramentas preservadas
 
 FUVEST: lint e build aprovados; suíte completa com1.190 testes Node aprovados
 (um ignorado) e3.276 testes de interface em248arquivos. Chromium desktop e
@@ -129,4 +130,4 @@ Scratch da sessão, caso o ambiente seja mantido:
 `/workspace/work/fuvest-expansion/` (QA e logs). Os dados editoriais necessários
 à retomada estão versionados; as fontes podem ser baixadas pelos links/hashes.
 
-A repetição adicional da suíte no checkpoint foi interrompida a pedido de encerramento imediato. O lint do checkpoint passou; a última suíte completa aprovada é a registrada acima. As novas alterações deste checkpoint são classificações, auditorias e rascunhos não conectados ao runtime.
+No checkpoint anterior, a repetição adicional da suíte foi interrompida a pedido de encerramento imediato. Esse registro é histórico. Os resultados da integração atual, conectada ao runtime, estão em `VALIDACAO-INTEGRACAO.md`.
