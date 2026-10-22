@@ -5,6 +5,37 @@ ENEM2024, UNESP2025 e UNIFESP2022 concluídos nesta retomada; demais etapas abai
 Branch: `codex/expansao-incidencia-2017-2026`. PR: #351, em rascunho.
 A recuperação inicial da PR #350 já foi integrada à main.
 
+## Escopo de publicação atualizado pela usuária
+
+A instrução posterior “ignora por agora essa etapa. usa o que tem” adiou as
+classificações restantes e autorizou agregar/integrar as **16 edições completas
+existentes (1.653 registros, 34 cadernos)**. Esta decisão substitui, para esta
+publicação, a condição original de esperar as 20 edições. As quatro edições
+adiadas são UNESP2026 e ENEM2021–2023: não entram no gerador, denominadores,
+recorrência nem exemplos publicados. Não classificado não é zero.
+
+- ENEM: 2024–2025, 362 registros, quatro cadernos.
+- UNESP: 2022–2025, 556 registros, dez cadernos; formatos 2022/2023 separados.
+- FAMERP: 2022–2026, 505 registros, dez cadernos.
+- UNIFESP: 2022–2026, 230 registros, dez cadernos; reaplicação válida de2024.
+- FUVEST e Unicamp preservadas; ranking pessoal FUVEST mantém2022–2026.
+
+O gerador usa uma lista explícita de edições completas e declara também os anos
+planejados. Não detecta arquivos parciais como completos nem preenche lacunas.
+O teste ativo dos corpus deve exigir16/34/1653 nesta publicação. O teste proposto
+original de20/43/2323 fica em `pendencias/` para uma expansão futura.
+
+Rascunho adicional preservado: `rascunhos/unesp-2026-parcial.json`,45 fichas
+objetivas01–45. As90 objetivas foram lidas e páginas2–38 vistas; faltam redigir
+46–90, ler/classificar as37 unidades de segunda fase, revisar e auditar. Há uma
+ressalva a registrar emQ54: a alternativaE contrapõe radar a sensores que “não
+operam com ondas eletromagnéticas”, mas sensores ópticos também as utilizam;
+a vantagem pretendida é a menor limitação por nebulosidade em micro-ondas.
+Rascunho totalmente fora das entradas e exports do gerador.
+
+Agregação, integração e testes finais em andamento; resultado em
+`VALIDACAO-INTEGRACAO.md`. Não fazer merge automático.
+
 ## Entregue e preservado
 
 FUVEST: primeira fase 2017–2026, segunda fase 2022–2026; 1.135 registros em
@@ -41,7 +72,7 @@ validação estrutural, taxonômica e conferência de fontes no checkpoint.
 Não mover rascunhos para a pasta de classificação completa antes de concluir
 as fichas e a auditoria. Não preencher lacunas por inferência.
 
-## Ordem de retomada
+## Plano original de expansão (etapas de classificação restantes adiadas)
 
 1. Conferir branch/PR e os arquivos salvos; preservar alterações posteriores.
 2. ENEM2024 e UNESP2025 concluídos a partir dos rascunhos, sem repetir trabalho
@@ -49,16 +80,16 @@ as fichas e a auditoria. Não preencher lacunas por inferência.
 3. UNIFESP2022 concluída; classificar UNESP2026 e ENEM2021–2023 a partir das fontes
    inventariadas; Inglês no ENEM. Não expandir Unicamp nesta tarefa.
 4. Harmonizar rótulos e rever uma amostra dos casos de confiança média/baixa.
-5. Só com os20 arquivos completos, executar:
+5. Nesta publicação autorizada com16 arquivos completos, executar:
    `node --import tsx scripts/buildBoardIncidence.ts`.
-   O gerador recusa lacunas e valida todas as bancas antes de publicar exports.
+   O gerador exige todas as edições da lista explícita atual e valida todas as bancas antes de publicar exports. Os anos adiados permanecem na janela planejada, sem denominador.
 6. Integrar `ExamIncidenceExplorer` na view de Prioridades. Substituir as
    amostras antigas das quatro bancas em `examEvidence.ts`, evitando duplicação;
    preservar Unicamp existente e a janela recente FUVEST.
-7. Restaurar o teste proposto em `pendencias/boardIncidenceCorpus.test.ts.txt`
-   para `src/lib/boardIncidenceCorpus.test.ts` somente com os exports prontos.
-   Ele verifica20edições/43cadernos/2.323registros, formatos separados,
+7. Teste ativo `src/lib/boardIncidenceCorpus.test.ts` adaptado ao escopo
+   autorizado16/34/1653, incluindo cobertura ausente, formatos separados,
    reaplicaçãoUNIFESP2024, redação sem chave objetiva e Inglês/anulaçõesENEM.
+   A proposta original20/43/2323 permanece em `pendencias/` para expansão futura.
 8. Rodar lint, testes e build; validar desktop/celular, fontes, downloads,
    filtros e estados sem cobertura. Atualizar descrição da PR com escopo final.
    Não fazer merge automático.

@@ -1,17 +1,19 @@
 import data from '../data/examEvidenceCounts.json';
+import boardData from '../data/boardIncidenceCounts.json';
 import fuvestData from '../data/fuvestIncidenceCounts.json';
 import { canonicalExamBoard } from './questionExamFilters';
 import { studyAreaForTopic } from '../data/studyProtocols';
 import type { Topic } from '../types';
-export const evidenceReviewedOn = fuvestData.reviewedOn;
+export const evidenceReviewedOn = [fuvestData.reviewedOn, boardData.reviewedOn].sort().at(-1)!;
 export interface ExamEvidenceCohort {
-  id: string; board: string; year: number; phase: string; phaseGroup: string; version: string;
+  id: string; board: string; year: number; phase: string; phaseGroup: string; version: string; group?: string; format?: string;
   examUrl: string; answerKeyUrl: string | null; reviewedOn: string; examSha256?: string; answerKeySha256?: string | null;
   completeSubjects: string[]; totalQuestions: number; excludedNumbers: (number|string)[]; classification: string;
   subjects: {subject: string; total: number; topics: {topicId: string; count: number; numbers: (number|string)[]}[]}[];
 }
-// The complete five-edition FUVEST corpus replaces the previous selected-2026 sample.
-export const examEvidenceCohorts: ExamEvidenceCohort[] = [...data.cohorts.filter(cohort => cohort.board !== 'FUVEST'), ...fuvestData.cohorts];
+const replacedBoards = new Set(['FUVEST','ENEM','UNESP','FAMERP','UNIFESP']);
+// Preserve the recent FUVEST window and existing Unicamp examples; replace board samples.
+export const examEvidenceCohorts: ExamEvidenceCohort[] = [...data.cohorts.filter(cohort => !replacedBoards.has(cohort.board)), ...fuvestData.cohorts, ...boardData.cohorts];
 export interface ExamEvidenceCase {
   id: string; cohortId: string; number: number | string; questionId?: string; topicId: string;
   relatedTopicIds: string[]; subject: string; chapter: string; title: string; concept: string;
@@ -35,7 +37,7 @@ export function completeTopicEvidence(topic: Pick<Topic, 'id' | 'subject'>, boar
     });
 }
 export async function loadExamEvidenceCases(): Promise<ExamEvidenceCase[]> {
-  const legacy = (await import('../data/examEvidenceCases.json')).default.filter(item => !item.cohortId.startsWith('fuvest-'));
+  const legacy = (await import('../data/examEvidenceCases.json')).default.filter(item => !['fuvest-','enem-','unesp-','famerp-','unifesp-'].some(prefix=>item.cohortId.startsWith(prefix)));
   const corpus = (await import('../data/fuvestIncidence.json')).default;
   const current = corpus.questions.filter(question => question.year >= 2022 && !question.excluded).map(question => ({
     id: question.id, cohortId: question.paperId, number: question.number,
@@ -43,7 +45,8 @@ export async function loadExamEvidenceCases(): Promise<ExamEvidenceCase[]> {
     subject: question.subject, chapter: question.subtopics.join(' · '), title: question.summary,
     concept: question.rationale, trap: question.trap, steps: question.strategy, commandWords: [],
   }));
-  return [...legacy, ...current];
+  const boards = (await import('../data/boardIncidenceCases.json')).default;
+  return [...legacy, ...current, ...boards];
 }
 /** Select by board AND topic, fairly alternating boards and topics. These are
  * editorial analyses of identified questions, not complete question statements. */

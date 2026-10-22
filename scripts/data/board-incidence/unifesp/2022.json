@@ -46,7 +46,7 @@
   "papers": [
     {
       "id": "unifesp-2022-linguas-redacao",
-      "group": "linguas-redacao",
+      "group": "linguas-objetiva",
       "phase": "Língua Portuguesa, Língua Inglesa e Redação",
       "phaseGroup": "1a",
       "format": "multiple-choice",
@@ -823,8 +823,8 @@
     },
     {
       "id": "unifesp-2022-conhecimentos-especificos",
-      "group": "conhecimentos-especificos",
-      "phase": "Conhecimentos específicos",
+      "group": "especificos-discursiva",
+      "phase": "Conhecimentos Específicos",
       "phaseGroup": "2a",
       "format": "open",
       "version": "Caderno002 — imprensa",

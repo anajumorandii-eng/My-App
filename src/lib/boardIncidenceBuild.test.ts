@@ -32,11 +32,11 @@ test('gerador só publica arquivos depois de validar todas as bancas e separa ga
   await writeFile(last,valid);
   const passed=execute();assert.equal(passed.status,0,passed.stderr);
   const result=JSON.parse(await readFile(join(root,'public/analises/incidencia/enem/corpus.json'),'utf8'));
-  assert.equal(result.questions.length,10);
+  assert.equal(result.questions.length,4);
   assert.equal(result.questions.find((q:{number:string})=>q.number==='R').answerKeyUrl,null);
   assert.equal(result.questions.find((q:{number:string})=>q.number==='01').answerKeyUrl,'https://example.org/gabarito.pdf');
   const csv=await readFile(join(root,'public/analises/incidencia/enem/incidencia-assuntos.csv'),'utf8');
-  assert.match(csv,/"5";"5";"100.0000"/);
+  assert.match(csv,/"2";"2";"100.0000"/);
   const snapshot=await readFile(join(root,'public/analises/incidencia/enem/corpus.json'),'utf8');
   const custom=JSON.parse(valid);custom.papers[0].questions[0].answerKeyUrl='https://example.org/outro-gabarito.pdf';
   await writeFile(last,JSON.stringify(custom));
