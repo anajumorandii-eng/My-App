@@ -1,7 +1,7 @@
 {
   "board": "ENEM",
   "year": 2024,
-  "status": "PARCIAL FORA DO GERADOR: dia1 redigido; dia2 lido mas sem fichas redigidas. Rótulos e confiança do dia1 ainda precisam de revisão editorial final.",
+  "status": "RASCUNHO HISTÓRICO SUPERADO: edição completa em scripts/data/board-incidence/enem/2024.json; auditoria-enem-2024.md. Não usar este arquivo no gerador.",
   "coverageNote": "Leitura textual dos 180 itens e proposta R concluída. Inglês apenas 01–05. Figuras decisivas do D1 e páginas2–31 do D2 inspecionadas. Chave CD5: única anulação102; CD2 sem anulações.",
   "sourceManifest": [
     {
