@@ -1,6 +1,6 @@
 export const nativeMathPrintStyles = `.katex-html { display: none !important; } .katex-mathml { position: static !important; clip: auto !important; width: auto !important; height: auto !important; overflow: visible !important; } .katex-display { display: block; text-align: center; margin: 3mm 0; } math annotation { display: none; }`;
 /** Prepares a file without opening a dialog or requiring a second generation. */
-export async function requestStudyPdf(root: HTMLElement, title: string, styles: string, signal: AbortSignal): Promise<Blob> {
+export async function requestStudyPdf(root: HTMLElement, title: string, styles: string, signal: AbortSignal, documentId?: string): Promise<Blob> {
   for (const image of root.querySelectorAll<HTMLImageElement>('img')) {
     if (image.src.startsWith('data:')) continue;
     const response = await fetch(image.src, { credentials: 'omit', signal });
@@ -14,7 +14,7 @@ export async function requestStudyPdf(root: HTMLElement, title: string, styles: 
   const { authHeaders } = await import('./auth');
   const titleNode = document.createElement('title'); titleNode.textContent = title;
   const html = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">${titleNode.outerHTML}<style>${styles}\n${nativeMathPrintStyles}</style></head><body>${root.outerHTML}</body></html>`;
-  const response = await fetch('/api/study-pdf', { method: 'POST', headers: { ...(await authHeaders()), 'Content-Type': 'application/json' }, body: JSON.stringify({ title: title.slice(0, 300), html }), signal });
+  const response = await fetch('/api/study-pdf', { method: 'POST', headers: { ...(await authHeaders()), 'Content-Type': 'application/json' }, body: JSON.stringify({ title: title.slice(0, 300), html, ...(documentId ? { documentId } : {}) }), signal });
   if (!response.ok) {
     const data = await response.json().catch(() => ({}));
     throw new Error(data.error || 'Não foi possível preparar o PDF. Tente novamente.');

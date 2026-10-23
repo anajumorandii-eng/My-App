@@ -74,7 +74,7 @@ it('salva na conta e mantém uma cópia local se a sincronização falhar', asyn
 it('entrega o aprofundamento da obra com o arquivo completo já preparado', async () => {
   mocks.uid = 'material-completo-obra';
   const image = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAB';
-  const fetch = vi.fn(async (url, options) => url === '/api/study-pdf' ? new Response('%PDF-1.7\n', { headers: { 'Content-Type': 'application/pdf' } }) : Response.json(options?.method === 'POST' ? { dataUrl: image } : { enabled: true }));
+  const fetch = vi.fn(async (url, options) => String(url).startsWith('/api/study-pdf/saved/') ? new Response(null, {status:404}) : url === '/api/study-pdf' ? new Response('%PDF-1.7\n', { headers: { 'Content-Type': 'application/pdf' } }) : Response.json(options?.method === 'POST' ? { dataUrl: image } : { enabled: true }));
   vi.stubGlobal('fetch', fetch);
   vi.stubGlobal('URL', class extends URL { static createObjectURL = () => 'blob:work'; static revokeObjectURL = () => {}; });
   try {

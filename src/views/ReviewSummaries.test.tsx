@@ -89,7 +89,6 @@ it('seleções múltiplas, fase, profundidade e histórico chegam à geração e
   const guide=Object.values(readStrategyGuides(null))[0];
   expect(guide.reviewOptions?.depth).toBe('deep');
   expect(screen.getByText(/Resposta separada\./).closest('details')).not.toHaveAttribute('open');
-  fireEvent.click(screen.getByRole('button',{name:'Exportar revisão em PDF'}));
   expect(await screen.findByText('Exportação CRIVO')).toBeInTheDocument();
 });
 it('sem banca envia seleção vazia e não herda metas Fuvest', async()=>{

@@ -6,8 +6,8 @@ vi.mock('../lib/auth', () => ({ authHeaders: async () => ({ Authorization: 'Bear
 const image = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAB';
 const pdf = () => new Response('%PDF-1.7\n', { headers: { 'Content-Type': 'application/pdf' } });
 afterEach(() => { cleanup(); vi.unstubAllGlobals(); });
-function setup(guideKey: string, fetch: ReturnType<typeof vi.fn>) {
-  vi.stubGlobal('fetch', fetch);
+function setup(guideKey: string, fetch: (url: string, options?: RequestInit) => Promise<Response>, readSaved: typeof fetch = async () => new Response(null, {status:404})) {
+  vi.stubGlobal('fetch', (url: string, options?: RequestInit) => url.startsWith('/api/study-pdf/saved/') ? readSaved(url, options) : fetch(url, options));
   vi.stubGlobal('URL', class extends URL { static createObjectURL = vi.fn(() => 'blob:prepared'); static revokeObjectURL = vi.fn(); });
   const root = document.createElement('article');
   root.dataset.printSubject = 'Matemática'; root.dataset.printTopic = 'Probabilidade';
@@ -101,4 +101,42 @@ it('gerar novo PDF cria outra capa sem regenerar ao abrir ou salvar o arquivo pr
  expect(calls).toHaveLength(2);
  expect(JSON.parse(calls[0][1].body).html).not.toBe(JSON.parse(calls[1][1]!.body).html);
  expect(fetch.mock.calls.filter(([url,options])=>url==='/api/cover-illustrations'&&options?.method==='POST')).toHaveLength(2);
+});
+it('recupera da conta o arquivo exato de uma sessão anterior sem pedir outra capa ou PDF', async () => {
+ const fetch = vi.fn(async (_url: string) => pdf());
+ const { props } = setup('persisted-account-file', fetch, fetch);
+ render(<DeepeningPdf {...props} />);
+ await screen.findByRole('link', {name:'Abrir PDF'});
+ expect(fetch).toHaveBeenCalledTimes(1);
+ expect(fetch.mock.calls[0][0]).toMatch(/^\/api\/study-pdf\/saved\/[a-f0-9]{64}$/);
+});
+it('não substitui a capa salva quando falha a consulta à conta', async () => {
+ const fetch = vi.fn(async () => Response.json({}, {status:503}));
+ const { props } = setup('unavailable-account-file', fetch, fetch);
+ render(<DeepeningPdf {...props} />);
+ expect(await screen.findByRole('alert')).toHaveTextContent('Não foi possível recuperar');
+ expect(fetch).toHaveBeenCalledTimes(1);
+});
+it('revisão sem PDF aguarda exportação explícita e envia a identificação para salvar na conta', async () => {
+ const fetch = vi.fn(async (url: string, _options?: RequestInit) => url === '/api/study-pdf' ? pdf() : Response.json({enabled:false}));
+ const {props} = setup('not-yet-exported', fetch);
+ render(<DeepeningPdf {...props} autoGenerate={false} materialLabel="Revisão"/>);
+ fireEvent.click(await screen.findByRole('button',{name:'Exportar revisão em PDF'}));
+ await screen.findByRole('link',{name:'Abrir PDF'});
+ const call=fetch.mock.calls.find(([url])=>url==='/api/study-pdf')!;
+ expect(JSON.parse(String(call[1]?.body)).documentId).toMatch(/^[a-f0-9]{64}$/);
+});
+it('abre a mesma capa ao passar da geração para a biblioteca, mesmo com título de tela diferente', async () => {
+ const files = new Map<string, string>();
+ const fetch=vi.fn(async(url:string,options?:RequestInit)=>{
+   if(url.startsWith('/api/study-pdf/saved/')) return files.has(url.split('/').at(-1)!) ? pdf() : new Response(null,{status:404});
+   if(url==='/api/study-pdf'){const body=JSON.parse(String(options?.body));files.set(body.documentId,body.html);return pdf();}
+   return Response.json({enabled:false});
+ });
+ const {props}=setup('stable-library-file',fetch,fetch);
+ render(<DeepeningPdf {...props} title="Aprofundamento — Matemática — Probabilidade — FUVEST"/>);
+ await screen.findByRole('link',{name:'Abrir PDF'}); cleanup();
+ render(<DeepeningPdf {...props} title="Aprofundamento — Matemática — Probabilidade"/>);
+ await screen.findByRole('link',{name:'Abrir PDF'});
+ expect(fetch.mock.calls.filter(([url])=>url==='/api/study-pdf')).toHaveLength(1);
 });

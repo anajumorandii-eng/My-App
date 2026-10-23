@@ -134,7 +134,7 @@ it('informa quando o navegador recusa imprimir e preserva o guia para tentar nov
 it('conclui em uma entrega única com PDF pronto, capa e índice', async () => {
   auth.user = { uid: 'material-completo-estrategia' };
   const image = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAB';
-  const fetch = vi.fn(async (url, options) => url === '/api/study-pdf' ? new Response('%PDF-1.7\n', { headers: { 'Content-Type': 'application/pdf' } }) : Response.json(options?.method === 'POST' ? { dataUrl: image } : { enabled: true }));
+  const fetch = vi.fn(async (url, options) => String(url).startsWith('/api/study-pdf/saved/') ? new Response(null, {status:404}) : url === '/api/study-pdf' ? new Response('%PDF-1.7\n', { headers: { 'Content-Type': 'application/pdf' } }) : Response.json(options?.method === 'POST' ? { dataUrl: image } : { enabled: true }));
   vi.stubGlobal('fetch', fetch);
   vi.stubGlobal('URL', class extends URL { static createObjectURL = () => 'blob:strategy'; static revokeObjectURL = () => {}; });
   try {

@@ -5,16 +5,18 @@ import { coverContextKey, readPrintCoverContext } from '../lib/printCoverContext
 import { createStrategyPrintRoot } from '../lib/printStrategyGuide';
 import { requestStudyPdf } from '../lib/printPdfFile';
 import { printStyles } from '../lib/printStyles';
+import { loadSavedStudyPdf, studyPdfDocumentId } from '../lib/savedStudyPdf';
 
 // Reuse the completed file when opening its library entry in this session.
 const completedFiles = new Map<string, Blob>();
 
-export function DeepeningPdf({ getContent, title, guideKey, revision, generateCover = false, onBusyChange, materialLabel = 'Aprofundamento' }: {
+export function DeepeningPdf({ getContent, title, guideKey, revision, generateCover = false, autoGenerate = true, onBusyChange, materialLabel = 'Aprofundamento' }: {
   getContent: () => HTMLElement | null;
   title: string;
   guideKey: string;
   revision: string;
   generateCover?: boolean;
+  autoGenerate?: boolean;
   materialLabel?: string;
   onBusyChange?: (busy: boolean) => void;
 }) {
@@ -23,6 +25,8 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
   const [edition,setEdition]=useState('original');
   const [file, setFile] = useState<{ key: string; url: string; blob: Blob }>();
   const [error, setError] = useState('');
+  const [idle, setIdle] = useState(false);
+  const [requestedKey, setRequestedKey] = useState('');
   const preparedContent = useRef<{ key: string; content: HTMLElement } | undefined>(undefined);
   const documentKey = JSON.stringify(['individual-cover-v1',user?.uid,guideKey,revision,materialLabel,title]);
   const cacheKey = JSON.stringify([documentKey,edition]);
@@ -30,12 +34,19 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
   useEffect(() => {
     const controller = new AbortController();
     let objectUrl: string | undefined;
-    setFile(undefined); setError(''); onBusyChange?.(true);
+    setFile(undefined); setError(''); setIdle(false); onBusyChange?.(true);
     const previous = preparedContent.current?.key === cacheKey ? preparedContent.current.content : undefined;
     const content = previous ?? getContent()?.cloneNode(true) as HTMLElement | undefined;
     void (async () => {
       try {
         let blob = edition==='original'?completedFiles.get(documentKey):undefined;
+        // Library headings may omit the board; identity follows the saved guide.
+        const documentId = user ? await studyPdfDocumentId(JSON.stringify(['study-pdf-v1', user.uid, guideKey, revision, materialLabel])) : undefined;
+        if (!blob && documentId && edition === 'original') {
+          blob = await loadSavedStudyPdf(documentId, AbortSignal.any([controller.signal, AbortSignal.timeout(15_000)]));
+          controller.signal.throwIfAborted();
+        }
+        if (!blob && !autoGenerate && requestedKey !== cacheKey && edition === 'original') { setIdle(true); return; }
         if (!blob) {
           if (!content) throw new Error(`O conteúdo de ${materialLabel.toLowerCase()} não está disponível.`);
           if(!previous){
@@ -65,7 +76,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
           controller.signal.throwIfAborted();
           preparedContent.current = { key: cacheKey, content };
           const signal = AbortSignal.any([controller.signal, AbortSignal.timeout(45_000)]);
-          blob = await requestStudyPdf(createStrategyPrintRoot(content, title), title, printStyles, signal);
+          blob = await requestStudyPdf(createStrategyPrintRoot(content, title), title, printStyles, signal, documentId);
           controller.signal.throwIfAborted();
           completedFiles.set(documentKey, blob);
           if (completedFiles.size > 4) completedFiles.delete(completedFiles.keys().next().value!);
@@ -80,7 +91,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
       }
     })();
     return () => { controller.abort(); if (objectUrl) URL.revokeObjectURL(objectUrl); onBusyChange?.(false); };
-  }, [cacheKey, attempt, generateCover]);
+  }, [cacheKey, attempt, generateCover, autoGenerate, requestedKey]);
   const filename = `${title.replace(/[^\p{L}\p{N} ._-]/gu, '').slice(0, 120) || 'Crivo'}.pdf`;
   const shareFile = ready ? new File([ready.blob], filename, { type: 'application/pdf' }) : undefined;
   return <div data-print-exclude className="space-y-2 text-sm">
@@ -96,7 +107,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
           });
         }}>Compartilhar PDF</button>}
       </div>
-    </> : !error && <p role="status">{materialLabel === 'Aprofundamento' ? 'Preparando seu aprofundamento completo…' : `Preparando ${materialLabel.toLowerCase()} completa…`}</p>}
+    </> : idle ? <button type="button" className="underline" onClick={() => setRequestedKey(cacheKey)}>Exportar {materialLabel.toLowerCase()} em PDF</button> : !error && <p role="status">{materialLabel === 'Aprofundamento' ? 'Preparando seu aprofundamento completo…' : `Preparando ${materialLabel.toLowerCase()} completa…`}</p>}
     {error && <div role="alert" className="space-y-2"><p>{error} {materialLabel === 'Aprofundamento' ? 'O texto do seu aprofundamento continua salvo.' : `O texto de ${materialLabel.toLowerCase()} continua salvo.`}</p>
       {!ready && <button type="button" className="underline" onClick={() => setAttempt(value => value + 1)}>Tentar novamente</button>}
     </div>}
