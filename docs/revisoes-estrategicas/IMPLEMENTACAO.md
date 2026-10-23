@@ -68,3 +68,7 @@ A exportação usa o conteúdo completo, metadados da seleção e fontes salvas.
 - O HTML capturado do exportador real foi processado separadamente pelo renderizador Chromium real do servidor, sem simulação do arquivo. `evidencias/revisao-sintetica.pdf`: quatro páginas A4, todas renderizadas e inspecionadas; capa CRIVO, sumário com páginas, conteúdo/fontes na terceira página e gabarito na quarta. Extração de texto confirma perguntas na página 3 e respostas na 4, com acentos, tabela e unidade cm² preservados. Trata-se de material autoral sintético de validação, não de questão atribuída a banca nem de saída real de IA.
 
 A troca entre origem informada e catálogo limpa metadados ocultos da outra origem; teste específico evita reaplicar data ou extração anterior ao material novo.
+
+## Estado do envio imediato
+
+A pedido explícito da usuária, a branch foi preparada para envio imediato após lint/build e testes focados passarem. Os 1.224 testes de servidor/bibliotecas passaram; a etapa completa de interface ainda estava executando no momento do envio. O CI remoto deverá confirmar a suíte completa. Não se afirma implantação em produção.
