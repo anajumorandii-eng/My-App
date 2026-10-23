@@ -56,7 +56,8 @@ app.use(compression());
 // parser de 20mb mora dentro do próprio roteador, depois da conferência do
 // segredo (ver jsonBodyAfter).
 // Parse large, embedded print assets only after login and the per-user limit.
-app.use('/api/study-pdf', ...jsonBodyAfter('16mb', firebaseAuthMiddleware(), createAiRateLimit({ maxRequests: 5 })), createStudyPdfRouter());
+const studyPdfRenderLimit = createAiRateLimit({ maxRequests: 5 });
+app.use('/api/study-pdf', ...jsonBodyAfter('16mb', firebaseAuthMiddleware(), (req, res, next) => req.method === 'POST' ? studyPdfRenderLimit(req, res, next) : next()), createStudyPdfRouter());
 
 app.use('/api/internal', createApostilaIngestRouter(getFirestore(getFirebaseAdminApp()), process.env.APOSTILA_INGEST_SECRET));
 

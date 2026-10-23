@@ -49,14 +49,13 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
   const [librarySubject, setLibrarySubject] = useState('');
   const [libraryBoard, setLibraryBoard] = useState('');
   const [openedKey, setOpenedKey] = useState('');
-  const [exportKey, setExportKey] = useState('');
   const printContent = useRef<HTMLElement>(null);
   const busy = useRef(false), mounted = useRef(true);
   useEffect(() => { mounted.current = true; return () => { mounted.current = false; }; }, []);
   const selectedWork = works.find(work => `obra:${work.slug}` === topicId);
   const topic = options.sourceMode === 'work' ? (selectedWork ? { id: topicId, name: selectedWork.title, subject: 'Literatura', prerequisites: [] } : undefined) : topics.find(item => item.id === topicId) ?? topics[0];
   const key = reviewSummaryKey(subject, topic?.id ?? topicId, chapter, '', options);
-  useEffect(() => { setProblem(''); setStream(''); setSaveMessage(''); setExportKey(''); }, [key]);
+  useEffect(() => { setProblem(''); setStream(''); setSaveMessage(''); }, [key]);
   const current = guides[openedKey || key];
   const saved = selectReviewSummaries(guides, librarySubject, libraryBoard);
   const allSaved = selectReviewSummaries(guides);
@@ -68,7 +67,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
     if (busy.current) return;
     setSubject(guide.subject); setTopicId(guide.topicId); setChapter(guide.chapter);
     setOptions(normalizeReviewOptions(guide.reviewOptions ?? { boards: guide.targetBoards ?? (guide.board ? [guide.board] : []) }));
-    setOpenedKey(guide.key); setExportKey('');
+    setOpenedKey(guide.key);
   };
   const canGenerate = options.sourceMode === 'provided' ? Boolean(options.sourceText.trim() && options.sourceTitle.trim()) : Boolean(topic);
   const generate = async () => {
@@ -170,7 +169,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
         {!generating && current?.studyPacket && <details data-review-sources><summary className="cursor-pointer text-sm font-semibold">Conferir as fontes deste resumo</summary><StudySourcesPanel packet={current.studyPacket} /></details>}
       </div>
       {!generating && current && <>
-        {exportKey === current.key ? <Suspense fallback={<p role="status">Preparando exportação…</p>}><ReviewPdf getContent={() => printContent.current} title={title} guideKey={current.key} revision={current.savedAt} materialLabel="Revisão" generateCover /></Suspense> : <button type="button" className="underline text-sm" onClick={() => setExportKey(current.key)}>Exportar revisão em PDF</button>}
+        <Suspense fallback={<p role="status">Consultando PDF salvo…</p>}><ReviewPdf key={current.key} getContent={() => printContent.current} title={title} guideKey={current.key} revision={current.savedAt} materialLabel="Revisão" generateCover autoGenerate={false} /></Suspense>
         {/Não foi possível/.test(saveMessage) && <button type="button" className="underline text-sm" onClick={() => void persist(current)}>Tentar salvar novamente</button>}
       </>}
       <Link className="block underline text-sm" to={`/estrategias?${new URLSearchParams({ topic: topic?.id ?? topicId, ...(options.boards.length === 1 ? { board: options.boards[0] } : {}), ...(chapter ? { chapter } : {}) })}`}>Aprofundar este conteúdo</Link>

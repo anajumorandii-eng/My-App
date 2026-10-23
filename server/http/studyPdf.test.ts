@@ -4,6 +4,35 @@ import express from 'express';
 import type { AddressInfo } from 'node:net';
 import { createStudyPdfRouter } from './studyPdf';
 
+test('salva o PDF exato e o recupera em outra sessão, isolado por conta', async () => {
+ const files = new Map<string, Buffer>();
+ let failWrite = false, failRead = false, renders = 0;
+ const storage = {read: async (uid:string,id:string) => { if(failRead) throw new Error('private details'); return files.get(`${uid}/${id}`) ?? null; },
+   write: async (uid:string,id:string,pdf:Buffer) => { if(failWrite) throw new Error('private details'); files.set(`${uid}/${id}`,pdf); }};
+ const id = 'a'.repeat(64);
+ const app = express(); app.use(express.json());
+ app.use((req,res,next)=>{res.locals.userId=req.headers['x-test-user'];next();});
+ app.use(createStudyPdfRouter(async () => Buffer.from(`%PDF-1.7\nCAPA ESCOLHIDA ${++renders}`),storage));
+ const server=app.listen(0,'127.0.0.1'); await new Promise<void>(resolve=>server.once('listening',resolve));
+ const url=`http://127.0.0.1:${(server.address() as AddressInfo).port}`;
+ try {
+   const generated=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json','x-test-user':'A'},body:JSON.stringify({title:'Revisão',html:'<p>Texto</p>',documentId:id})});
+   assert.equal(generated.status,200);
+   const saved=await fetch(`${url}/saved/${id}`,{headers:{'x-test-user':'A'}});
+   assert.equal(saved.status,200); assert.equal(await saved.text(),await generated.text());
+   assert.equal(saved.headers.get('cache-control'),'no-store');
+   assert.equal(renders,1);
+   assert.equal((await fetch(`${url}/saved/${id}`,{headers:{'x-test-user':'B'}})).status,404);
+   assert.equal((await fetch(`${url}/saved/${id}`)).status,401);
+   failWrite=true;
+   const failed=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json','x-test-user':'A'},body:JSON.stringify({title:'Revisão',html:'<p>Texto</p>',documentId:id})});
+   assert.equal(failed.status,503); assert.doesNotMatch(await failed.text(),/private details/);
+   assert.equal(await (await fetch(`${url}/saved/${id}`,{headers:{'x-test-user':'A'}})).text(),'%PDF-1.7\nCAPA ESCOLHIDA 1');
+   failRead=true;
+   assert.equal((await fetch(`${url}/saved/${id}`,{headers:{'x-test-user':'A'}})).status,503);
+ } finally { await new Promise<void>(resolve=>server.close(()=>resolve())); }
+});
+
 async function withServer(render: (html: string) => Promise<Uint8Array>, run: (url: string) => Promise<void>) {
   const app = express(); app.use(express.json()); app.use(createStudyPdfRouter(render));
   const server = app.listen(0, '127.0.0.1');

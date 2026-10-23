@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { existsSync } from 'node:fs';
 import { launch } from 'puppeteer-core';
 import { readSectionPages } from './studyPdfPagination';
+import { studyPdfStorage, type StudyPdfStorage } from './studyPdfStorage';
 
 const MAX_HTML_BYTES = 12 * 1024 * 1024;
 
@@ -53,22 +54,38 @@ export async function renderStudyPdf(html: string): Promise<Uint8Array> {
   }
 }
 
-export function createStudyPdfRouter(render: (html: string) => Promise<Uint8Array> = renderStudyPdf) {
+export function createStudyPdfRouter(render: (html: string) => Promise<Uint8Array> = renderStudyPdf, storage: StudyPdfStorage = studyPdfStorage) {
   const router = Router();
   let rendering = false;
   router.use((_req, res, next) => { res.setHeader('Cache-Control', 'no-store'); next(); });
+  router.get('/saved/:documentId', async (req, res) => {
+    const uid = res.locals.userId as string | undefined;
+    if (!uid) return res.status(401).json({ error: 'Entre na sua conta para recuperar o PDF.' });
+    if (!/^[a-f0-9]{64}$/.test(req.params.documentId)) return res.status(400).json({ error: 'Identificação de PDF inválida.' });
+    try {
+      const pdf = await storage.read(uid, req.params.documentId);
+      if (!pdf) return res.status(404).json({ error: 'PDF ainda não gerado.' });
+      return res.type('application/pdf').send(pdf);
+    } catch { return res.status(503).json({ error: 'Não foi possível recuperar o PDF salvo. Tente novamente para manter sua capa.' }); }
+  });
   router.post('/', async (req, res) => {
     const body = req.body;
-    if (!body || typeof body !== 'object' || Array.isArray(body) || Object.keys(body).some(key => !['title', 'html'].includes(key)) ||
+    if (!body || typeof body !== 'object' || Array.isArray(body) || Object.keys(body).some(key => !['title', 'html', 'documentId'].includes(key)) ||
+      (body.documentId !== undefined && (typeof body.documentId !== 'string' || !/^[a-f0-9]{64}$/.test(body.documentId))) ||
       typeof body.title !== 'string' || !body.title.trim() || body.title.length > 300 ||
       typeof body.html !== 'string' || !body.html.trim() || Buffer.byteLength(body.html) > MAX_HTML_BYTES) {
       return res.status(400).json({ error: 'O material é inválido ou excede o tamanho permitido.' });
     }
+    if (body.documentId && !res.locals.userId) return res.status(401).json({ error: 'Entre na sua conta para salvar o PDF.' });
     if (rendering) return res.status(503).setHeader('Retry-After', '5').json({ error: 'Outro PDF está sendo preparado. Tente novamente em alguns instantes.' });
     rendering = true;
     try {
       const pdf = await render(body.html);
       if (pdf.length > 25 * 1024 * 1024) throw new Error('PDF exceeded limit');
+      if (body.documentId) {
+        try { await storage.write(res.locals.userId as string, body.documentId, Buffer.from(pdf)); }
+        catch { return res.status(503).json({ error: 'Não foi possível salvar o PDF na sua conta. Tente novamente; a capa preparada será mantida.' }); }
+      }
       const filename = body.title.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-zA-Z0-9 -]/g, '').trim().slice(0, 100) || 'Crivo';
       res.setHeader('Content-Type', 'application/pdf');
       res.setHeader('Content-Disposition', `attachment; filename="${filename}.pdf"`);
