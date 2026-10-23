@@ -1,3 +1,5 @@
+import { reviewFormatSources } from './reviewFormatSources';
+import type { ReviewOptions } from '../../src/lib/strategicReview';
 import { getReviewedApostilaReference } from '../../src/lib/reviewedApostilaReferences';
 import { hasCorruptedApostilaText } from '../../src/lib/apostilaTextQuality';
 import { withinCaptureBudget, type EvaluationService } from './evaluation';
@@ -71,7 +73,13 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
         const payload = validateAiPayload(task, req.body);
         const serverSources: import('../../src/lib/studySources').StudySource[] = [];
 
-        if (['content-explanation', 'review-tip', 'podcast-script'].includes(task) && typeof payload.topic === 'string' && typeof payload.subject === 'string') {
+        if (task === 'review-tip' && payload.guideMode === 'review-summary') {
+          const formats = reviewFormatSources((payload.reviewOptions as ReviewOptions).boards);
+          serverSources.push(...formats);
+          if (formats.length) payload.referenceText = `${payload.referenceText ?? ''}\n\n${formats.map(source => `[${source.id}] ${source.title}\nFonte: ${source.url}\n${source.content}`).join('\n\n')}`;
+        }
+
+        if (!(task === 'review-tip' && payload.guideMode === 'review-summary' && (payload.reviewOptions as ReviewOptions).sourceMode !== 'catalog') && ['content-explanation', 'review-tip', 'podcast-script'].includes(task) && typeof payload.topic === 'string' && typeof payload.subject === 'string') {
           try {
             const reference = getReviewedApostilaReference(payload.subject, payload.topic, typeof payload.chapter === 'string' ? payload.chapter : '')
               ?? await apostilaReferences?.getReference(payload.subject, payload.topic);

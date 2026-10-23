@@ -47,7 +47,7 @@ const themes: Record<CoverTheme, { triad: [string, string, string]; hero: string
 export function buildPrintCoverSpec(context: PrintCoverContext, fallbackTitle: string): PrintCoverSpec {
   const theme = selectCoverTheme(context);
   return {
-    brand_header: 'CRIVO', collection_subtitle: 'CADERNOS DE APROFUNDAMENTO',
+    brand_header: 'CRIVO', collection_subtitle: /^revisão/i.test(context.purpose ?? '') ? 'CADERNOS DE REVISÃO' : 'CADERNOS DE APROFUNDAMENTO',
     subject_title: context.subject || (context.work ? 'Literatura' : 'Material de estudo'),
     topic_subtitle: context.work || context.topic || fallbackTitle,
     exam_board: context.board || '', triad_keywords: [...themes[theme].triad],

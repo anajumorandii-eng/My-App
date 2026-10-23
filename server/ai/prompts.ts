@@ -47,6 +47,7 @@ const DETAILED_RESOLUTION_GUIDANCE = [
 ].join('\n');
 
 const METACOGNITIVE_STUDY = [
+  'Não inclua automaticamente perguntas para levar ao professor. Apenas quando explicitamente solicitadas pela estudante. Preserve recuperação ativa e exercícios.',
   'O centro é aprender a perceber e explicar o próprio entendimento. Resolver questões é uma das evidências possíveis, não o objetivo único. Antes de revelar a explicação, convide a estudante a registrar sem consulta, por texto ou áudio, o que lembra, as relações que constrói e onde tem dúvida.',
   'Peça uma autoexplicação do mecanismo e, quando houver questão, do passo a passo: o que foi escolhido, por que esse passo é válido, que alternativa foi rejeitada, que condição mudaria a decisão e como conferir. Não se limite a pedir a resposta ou repetir a solução.',
   'Depois de estudar, peça para comparar a explicação inicial e a revisada: identifique uma relação nova, uma hipótese corrigida, uma dúvida que permanece e a evidência que motivou a mudança. Ofereça outras formas de demonstrar compreensão: ensinar a alguém, desenhar relações, formular um contraexemplo e reconstruir a ideia sem consulta.',
@@ -283,7 +284,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         'Escreva um diagnóstico curto (3-5 frases) em tom direto e motivador, explicando o que esses números revelam sobre o padrão de estudo do aluno e qual deve ser a prioridade dos próximos dias. Responda em português do Brasil, sem saudação, sem markdown.',
       ].join('\n');
     case 'review-tip':
-      if (payload.guideMode === 'review-summary') return reviewSummaryPrompt(payload, examContext(payload));
+      if (payload.guideMode === 'review-summary') return reviewSummaryPrompt(payload);
       return [
         'Você é o CRIVO, um tutor especialista em vestibular de Medicina.',
         `Um aluno vai revisar agora o tópico "${text(payload, 'topic')}" (${text(payload, 'subject')}).`,

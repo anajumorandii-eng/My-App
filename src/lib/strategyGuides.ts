@@ -1,8 +1,10 @@
+import { isReviewOptions } from './strategicReview';
 import { collection, doc, getDocs, setDoc } from 'firebase/firestore';
 import { db } from './firestore';
 
 export interface StrategyGuide {
   kind?: 'review-summary';
+  reviewOptions?: import('./strategicReview').ReviewOptions;
   key: string;
   subject: string;
   topicId: string;
@@ -23,6 +25,8 @@ export const STRATEGY_GUIDES_CHANGED = 'crivo:strategy-guides-changed';
 export function isStrategyGuide(value: unknown): value is StrategyGuide {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return false;
   const guide = value as Record<string, unknown>;
+  if (guide.reviewOptions !== undefined && !isReviewOptions(guide.reviewOptions)) return false;
+  if (guide.targetBoards !== undefined && (!Array.isArray(guide.targetBoards) || !guide.targetBoards.every(board => typeof board === 'string'))) return false;
   if (guide.kind !== undefined && guide.kind !== 'review-summary') return false;
   if (guide.selections !== undefined && (!Array.isArray(guide.selections) || !guide.selections.every(item => item && typeof item === 'object' && ['topicId', 'topicName', 'chapter'].every(field => typeof item[field] === 'string')))) return false;
   return ['key', 'subject', 'topicId', 'topicName', 'chapter', 'board', 'text', 'savedAt'].every(field => typeof guide[field] === 'string');

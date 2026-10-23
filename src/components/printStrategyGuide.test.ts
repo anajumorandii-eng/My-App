@@ -53,3 +53,14 @@ it('não elimina entradas de um sumário extenso', () => {
   content.innerHTML = Array.from({length: 70}, (_, i) => `<h2>Seção ${i}</h2><p>Texto.</p>`).join('');
   expect(createStrategyPrintRoot(content, 'Guia').querySelectorAll('[data-toc-page]')).toHaveLength(70);
 });
+it('revisão exporta gabarito em bloco final separado após as fontes, sem alterar a tela',()=>{
+  const content=document.createElement('article');
+  content.dataset.printPurpose='Revisão estratégica';
+  content.innerHTML='<h2>Recuperação ativa</h2><p>Pergunta</p><details data-review-answer-key><summary>Abrir depois</summary><p>Resposta</p></details><details><summary>Fontes</summary><p>Referências</p></details>';
+  const root=createStrategyPrintRoot(content,'Revisão');
+  const printable=root.querySelector('[data-print-content]')!;
+  expect(printable.lastElementChild).toHaveAttribute('data-print-answer-key');
+  expect(printable.lastElementChild?.textContent).toContain('Gabarito da recuperação ativa');
+  expect(content.querySelector('details')?.open).toBe(false);
+  expect(root.querySelector('[data-print-cover-collection]')?.textContent).toBe('CADERNOS DE REVISÃO');
+});

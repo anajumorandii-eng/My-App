@@ -14,6 +14,19 @@ export function createStrategyPrintRoot(content: HTMLElement, title: string) {
   printable.querySelectorAll('[data-print-exclude]').forEach(element => element.remove());
   printable.querySelectorAll<HTMLElement>('[data-print-only]').forEach(element => { element.hidden = false; element.style.display = 'block'; element.classList.remove('hidden'); });
   printable.querySelectorAll('details').forEach(element => { element.open = true; });
+  printable.querySelectorAll<HTMLElement>('[data-review-sources]').forEach(element => {
+    element.querySelector('summary')!.textContent = 'Fontes da revisão';
+    const panel = element.querySelector('[aria-label="Fontes do estudo"]');
+    panel?.querySelector(':scope > h3')?.remove();
+    panel?.querySelectorAll(':scope > p').forEach(paragraph => {
+      if (paragraph.textContent?.startsWith('Questões com figuras e enunciados extensos permanecem')) paragraph.remove();
+    });
+  });
+  printable.querySelectorAll<HTMLElement>('[data-review-answer-key]').forEach(element => {
+    element.dataset.printAnswerKey = '';
+    element.querySelector('summary')!.textContent = 'Gabarito da recuperação ativa';
+    printable.append(element);
+  });
   const { cover, toc } = createPrintFrontMatter(printable, title);
   // The selected cover already owns these bytes; duplicating them in body
   // metadata can double the PDF request and exceed its size limit.

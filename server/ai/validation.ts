@@ -1,3 +1,4 @@
+import { normalizeReviewOptions, reviewDepths, reviewScopes, reviewBoard, type ReviewOptions } from '../../src/lib/strategicReview';
 import { STUDY_SOURCE_CHAR_LIMIT } from '../../src/lib/studySources';
 import { DEFAULT_PODCAST_SETTINGS, PODCAST_FORMATS, PODCAST_LEVELS, PODCAST_PACES, PODCAST_TONES, PODCAST_HOST_STYLES } from '../../src/lib/podcastConfig';
 import { AiValidationError } from './errors';
@@ -46,6 +47,26 @@ function studyBoards(payload: Payload): string[] {
   const values = payload.targetBoards;
   if (!Array.isArray(values) || values.length > 15 || values.some(value => typeof value !== 'string' || !value.trim() || value.length > 100)) throw new AiValidationError('Bancas de estudo inválidas.');
   return [...new Set(values.map(value => (value as string).trim()))];
+}
+
+function strategicReviewOptions(payload: Payload): ReviewOptions | undefined {
+  if (payload.guideMode !== 'review-summary') return undefined;
+  const raw = payload.reviewOptions === undefined ? {} : asObject(payload.reviewOptions);
+  const boards = payload.targetBoards === undefined ? (typeof payload.board === 'string' && payload.board.trim() ? [payload.board] : []) : studyBoards(payload);
+  if (raw.depth !== undefined && (typeof raw.depth !== 'string' || !Object.hasOwn(reviewDepths, raw.depth))) throw new AiValidationError('Profundidade de revisão inválida.');
+  if (raw.materialKind !== undefined && !['disciplinary','current-affairs','literature'].includes(String(raw.materialKind))) throw new AiValidationError('Tipo de material inválido.');
+  if (raw.sourceMode !== undefined && !['catalog','provided','work'].includes(String(raw.sourceMode))) throw new AiValidationError('Origem do material inválida.');
+  if (raw.useHistory !== undefined && typeof raw.useHistory !== 'boolean') throw new AiValidationError('Opção de histórico inválida.');
+  const scopes = raw.scopes === undefined ? {} : asObject(raw.scopes);
+  for (const board of boards.map(reviewBoard)) {
+    if (scopes[board] !== undefined && !reviewScopes(board).includes(scopes[board] as never)) throw new AiValidationError('Etapa incompatível com a banca selecionada.');
+  }
+  const sourceDate = optionalString(raw, 'sourceDate', 10);
+  if (sourceDate && (!/^\d{4}-\d{2}-\d{2}$/.test(sourceDate) || Number.isNaN(Date.parse(sourceDate)) || new Date(sourceDate).toISOString().slice(0,10) !== sourceDate)) throw new AiValidationError('Data da fonte inválida.');
+  const sourceUrl = optionalString(raw, 'sourceUrl', 1500);
+  if (sourceUrl) { try { if (!['https:', 'http:'].includes(new URL(sourceUrl).protocol)) throw new Error(); } catch { throw new AiValidationError('URL da fonte inválida.'); } }
+  return normalizeReviewOptions({ boards, scopes: scopes as ReviewOptions['scopes'], depth: raw.depth as ReviewOptions['depth'], materialKind: raw.materialKind as ReviewOptions['materialKind'], useHistory: raw.useHistory === true,
+    sourceMode: raw.sourceMode as ReviewOptions['sourceMode'], sourceTitle: optionalString(raw, 'sourceTitle', 300), sourceDate, sourceUrl, sourceText: optionalString(raw, 'sourceText', 12000) });
 }
 
 function requiredBoolean(payload: Payload, field: string): boolean {
@@ -236,9 +257,11 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
       };
     case 'review-tip':
       return {
+        reviewOptions: strategicReviewOptions(payload),
+        errorHistory: optionalString(payload, 'errorHistory', 6000),
         guideMode: optionalString(payload, 'guideMode', 30),
         referenceText: optionalString(payload, 'referenceText', STUDY_SOURCE_CHAR_LIMIT),
-        targetBoards: studyBoards(payload),
+        targetBoards: payload.guideMode === 'review-summary' && payload.targetBoards === undefined && typeof payload.board === 'string' && payload.board.trim() ? [reviewBoard(payload.board)] : studyBoards(payload),
         learnerReflection: optionalString(payload, 'learnerReflection', 6000),
         board: optionalString(payload, 'board', MAX_SHORT_TEXT),
         chapter: optionalString(payload, 'chapter', MAX_SHORT_TEXT),
