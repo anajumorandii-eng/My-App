@@ -1,3 +1,4 @@
+import { isReviewSummary } from '../lib/reviewSummaries';
 import { DeepeningPdf } from '../components/DeepeningPdf';
 import { useEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
@@ -27,7 +28,7 @@ function GuideLibrary({ uid }: { uid: string | null }) {
   const [saving, setSaving] = useState(false);
   const printContent = useRef<HTMLDivElement>(null);
   const heading = useRef<HTMLHeadingElement>(null);
-  const all = Object.values(guides);
+  const all = Object.values(guides).filter(guide => !isReviewSummary(guide));
   const subjects = [...new Set(all.map(guide => guide.subject))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
   const boards = [...new Set(all.flatMap(guideBoards))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
   const query = params.get('busca') ?? '';

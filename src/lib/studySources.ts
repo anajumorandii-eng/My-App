@@ -3,7 +3,7 @@ import { studyAreaForTopic } from '../data/studyProtocols';
 import { prioritySummarySubject } from './actionablePriorities';
 import { canonicalExamBoard } from './questionExamFilters';
 export const STUDY_SOURCE_CHAR_LIMIT = 24000;
-export interface StudySource { id: string; title: string; kind: 'resumo' | 'questao'; content: string; excerpt: boolean; url?: string; questionId?: string; board?: string; topicId?: string }
+export interface StudySource { format?: 'markdown'; id: string; title: string; kind: 'resumo' | 'questao'; content: string; excerpt: boolean; url?: string; questionId?: string; board?: string; topicId?: string }
 export interface StudyPacket { selections?: { topicId: string; topicName: string; chapter: string }[]; sources: StudySource[]; coverage: { board: string; available: number; readable: number; included: number }[]; referenceText: string; topicId: string; chapter: string }
 export interface StudySummary { subject: string; topic: string; sections: { title: string; content: string }[] }
 const cleanUrl = (value?: string) => { try { const url = new URL(value ?? ''); return ['http:', 'https:'].includes(url.protocol) ? url.href : undefined; } catch { return undefined; } };
