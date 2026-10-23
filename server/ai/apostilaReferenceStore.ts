@@ -5,6 +5,9 @@ export interface ApostilaReference {
   topicName: string;
   chapters: { title: string; volume: string }[];
   text: string;
+  url?: string;
+  excerpt?: boolean;
+  format?: 'markdown';
 }
 
 export interface ApostilaReferenceStore {

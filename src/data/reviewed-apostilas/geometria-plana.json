@@ -1,0 +1,35 @@
+{
+  "subject": "Matemática",
+  "topicName": "Geometria Plana",
+  "topicId": "mat_geometria_plana",
+  "reviewedOn": "2026-10-22",
+  "title": "Geometria plana — ângulos e simetrias — volume 1",
+  "url": "https://drive.google.com/file/d/1LY2wYXIO2vQnoq5yunu4jFe7BR2sIx1k/view",
+  "sha256": "b7732943193fea9c5c458cf568f5939e5dcfa5ff2d6f1d2d7414700b49dd321a",
+  "sections": [
+    {
+      "chapter": "Introdução à Geometria Plana",
+      "pdfPages": "4",
+      "printedPages": "70",
+      "text": "Dois ângulos opostos pelo vértice são congruentes: $\\alpha=\\beta$. A bissetriz de um ângulo é a semirreta com origem no vértice que o divide em dois ângulos de mesma medida."
+    },
+    {
+      "chapter": "Ângulos em Triângulos",
+      "pdfPages": "8–10",
+      "printedPages": "74–76",
+      "text": "Para três números reais positivos representarem lados de um triângulo, cada um deve ser menor que a soma dos outros dois: $a<b+c$, $b<a+c$ e $c<a+b$. Em todo triângulo, a soma dos ângulos internos é $\\alpha+\\beta+\\gamma=180^\\circ$. Um ângulo externo mede a soma dos dois internos não adjacentes: $e=\\alpha+\\beta$. Mediana liga um vértice ao ponto médio do lado oposto; altura é perpendicular à reta suporte desse lado."
+    },
+    {
+      "chapter": "Ângulos em Polígonos",
+      "pdfPages": "14–17",
+      "printedPages": "80–83",
+      "text": "Em um polígono convexo de $n$ lados, a soma das medidas dos ângulos internos é $S_i=(n-2)\\cdot180^\\circ$. A soma das medidas dos ângulos externos é $S_e=360^\\circ$; em cada vértice, o ângulo externo e o interno são suplementares. Um polígono é regular quando é equilátero e equiângulo. Em um polígono regular de $n$ lados, cada ângulo interno mede $i=\\frac{(n-2)\\cdot180^\\circ}{n}$ e cada ângulo externo mede $e=\\frac{360^\\circ}{n}$."
+    },
+    {
+      "chapter": "Ângulos e Circunferências",
+      "pdfPages": "21–22",
+      "printedPages": "87–88",
+      "text": "O ângulo central tem vértice no centro da circunferência e mede o mesmo que o arco correspondente. O ângulo inscrito tem vértice na circunferência e mede a metade do arco correspondente: $\\beta=\\frac{m(\\widehat{AB})}{2}$. Se $C$ é o comprimento da circunferência e $r$ seu raio, $\\frac{C}{2r}=\\pi$ e $C=2\\pi r$."
+    }
+  ]
+}

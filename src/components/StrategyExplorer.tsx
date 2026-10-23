@@ -1,3 +1,4 @@
+import { isReviewSummary } from '../lib/reviewSummaries';
 import { DeepeningPdf } from './DeepeningPdf';
 import { Link } from 'react-router-dom';
 import { ExamEvidencePanel } from './ExamEvidencePanel';
@@ -85,7 +86,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
   return <section className="space-y-4" aria-labelledby="guia-estrategias">
     <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[var(--line)] p-4">
       <p className="text-sm text-[var(--dim)]">Os guias que você gera ficam organizados na sua biblioteca.</p>
-      <Link to="/aprofundamentos" className="text-sm font-semibold underline">Meus aprofundamentos ({Object.keys(guides).length})</Link>
+      <Link to="/aprofundamentos" className="text-sm font-semibold underline">Meus aprofundamentos ({Object.values(guides).filter(guide => !isReviewSummary(guide)).length})</Link>
     </div>
     {guidesError && <div role="alert" className="text-sm"><p>{guidesError}</p><button type="button" className="underline" onClick={reloadGuides}>Tentar carregar novamente</button></div>}
     <div className="ni-panel p-4 space-y-3">

@@ -20,6 +20,7 @@ const RetaFinal = lazy(() => import('./views/RetaFinal'));
 const Sessao = lazy(() => import('./views/Sessao'));
 const Questoes = lazy(() => import('./views/Questoes'));
 const Revisoes = lazy(() => import('./views/Revisoes'));
+const ReviewSummaries = lazy(() => import('./views/ReviewSummaries'));
 const Erros = lazy(() => import('./views/Erros'));
 const Podcast = lazy(() => import('./views/Podcast'));
 const Tutor = lazy(() => import('./views/Tutor'));
@@ -103,6 +104,7 @@ export default function App() {
                 <Route path="resumos" element={<Resumos />} />
                 <Route path="visual" element={<Visual />} />
                 <Route path="revisoes" element={<Revisoes />} />
+                <Route path="resumos-revisao" element={<ReviewSummaries />} />
                 <Route path="erros" element={<Erros />} />
                 <Route path="podcast" element={<Podcast />} />
                 <Route path="tutor" element={<Tutor />} />

@@ -1,3 +1,4 @@
+import { reviewSummaryPrompt } from './reviewSummaryPrompt';
 import { AiTask } from './types';
 
 type Payload = Record<string, unknown>;
@@ -282,6 +283,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         'Escreva um diagnóstico curto (3-5 frases) em tom direto e motivador, explicando o que esses números revelam sobre o padrão de estudo do aluno e qual deve ser a prioridade dos próximos dias. Responda em português do Brasil, sem saudação, sem markdown.',
       ].join('\n');
     case 'review-tip':
+      if (payload.guideMode === 'review-summary') return reviewSummaryPrompt(payload, examContext(payload));
       return [
         'Você é o CRIVO, um tutor especialista em vestibular de Medicina.',
         `Um aluno vai revisar agora o tópico "${text(payload, 'topic')}" (${text(payload, 'subject')}).`,

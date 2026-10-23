@@ -100,3 +100,12 @@ it('preserva capítulos dos dois tópicos ao voltar do leitor combinado à estra
   expect(JSON.parse(url.searchParams.get('topics')!)).toEqual([combined.selections[1]]);
   expect(screen.getByText(/Recortes: Ecologia — Dinâmica de Populações/)).toBeInTheDocument();
 });
+
+it('mantém os resumos de revisão na biblioteca própria sem apagar os aprofundamentos', () => {
+  const summary: StrategyGuide = { ...guide(1), key: 'review-summary:1', kind: 'review-summary', topicName: 'Resumo para FUVEST' };
+  cacheStrategyGuides(null, collection(guide(0), summary));
+  open();
+  expect(screen.getAllByRole('link', { name: /Abrir aprofundamento:/ })).toHaveLength(1);
+  expect(screen.queryByText('Resumo para FUVEST')).toBeNull();
+  expect(localStorage.getItem('crivo:strategy-guides:v1:guest')).toContain('review-summary:1');
+});

@@ -1831,8 +1831,8 @@
     "concept": "O enunciado fornece a razão 50/10; basta aplicar 97,4% às latas vendidas e multiplicar por cinco.",
     "trap": "Calcular massa molar de alumina apesar de a razão industrial já estar dada.",
     "steps": [
-      "Calcule 0,974×4,0×10^5 toneladas de alumínio reciclado",
-      "Multiplique por 5 para estimar 1,948×10^6 toneladas de bauxita poupada."
+      "Calcule 0,974×4,0×10⁵ toneladas de alumínio reciclado",
+      "Multiplique por 5 para estimar 1,948×10⁶ toneladas de bauxita poupada."
     ],
     "commandWords": []
   },
@@ -2344,11 +2344,11 @@
     "subject": "Matemática",
     "chapter": "Partilha proporcional · Porcentagem e horas trabalhadas",
     "title": "Determina a maior diferença entre pagamentos proporcionais às horas.",
-    "concept": "As jornadas totalizam 22,20 e15 horas; 40% de71250 são28500, equivalentes a500 por hora.",
+    "concept": "As jornadas totalizam 22, 20 e 15 horas; 40% de 71250 são 28500, equivalentes a 500 por hora.",
     "trap": "Distribuir o pagamento pelos dias de trabalho sem considerar a duração diária.",
     "steps": [
-      "Converta cinco horas e meia e duas horas e meia em5,5 e2,5 e totalize57 horas",
-      "Divida28500 por57 e multiplique pela diferença22−15 para obter3500 reais."
+      "Converta cinco horas e meia e duas horas e meia em 5,5 e 2,5 e totalize 57 horas",
+      "Divida 28500 por 57 e multiplique pela diferença 22−15 para obter 3500 reais."
     ],
     "commandWords": []
   },
@@ -2361,10 +2361,10 @@
     "subject": "Matemática",
     "chapter": "Combinações · Partição em casos disjuntos",
     "title": "Conta equipes com pelo menos três cardiologistas.",
-    "concept": "Os casos válidos são3C+2N,4C+1N e5C+0N, que devem ser somados.",
+    "concept": "Os casos válidos são 3C+2N,4C+1N e 5C+0N, que devem ser somados.",
     "trap": "Multiplicar os três casos alternativos ou contar apenas exatamente três cardiologistas.",
     "steps": [
-      "Escolha médicos sem ordenar a equipe: C(7,k)C(6,5−k)",
+      "Escolha médicos sem ordenar a equipe: C(7, k)C(6,5−k)",
       "Some os produtos para k=3,4,5, como na expressão E."
     ],
     "commandWords": []
@@ -2378,11 +2378,11 @@
     "subject": "Matemática",
     "chapter": "Eventos independentes · Probabilidade e duração",
     "title": "Determina redução do vermelho por probabilidade conjunta.",
-    "concept": "Com ciclo de60s, [(15−x)/60]²=0,04 implica15−x=12 e x=3.",
+    "concept": "Com ciclo de 60s, [(15−x)/60]²=0,04 implica 15−x=12 e x=3.",
     "trap": "Tomar4% como probabilidade individual de cada semáforo.",
     "steps": [
-      "Extraia a raiz da probabilidade conjunta para obter0,2 em cada semáforo",
-      "Converta0,2 de60 em12 segundos e subtraia de15."
+      "Extraia a raiz da probabilidade conjunta para obter 0,2 em cada semáforo",
+      "Converta 0,2 de 60 em 12 segundos e subtraia de 15."
     ],
     "commandWords": []
   },
@@ -2413,7 +2413,7 @@
     "chapter": "Frações mistas · Representação decimal",
     "title": "Subtrai diagonais de telas expressas por números mistos.",
     "concept": "4+5/6−(3+1/2)=4/3≈1,3 polegadas.",
-    "trap": "Subtrair apenas as partes inteiras ou interpretar3½ como3,1.",
+    "trap": "Subtrair apenas as partes inteiras ou interpretar 3½ como 3,1.",
     "steps": [
       "Converta as partes fracionárias para sextos",
       "Calcule a diferença e represente com uma casa decimal."
@@ -2429,11 +2429,11 @@
     "subject": "Matemática",
     "chapter": "Progressão geométrica · Periodicidade e escolha de data",
     "title": "Maximiza a soma das parcelas de maio pagas pela imobiliária.",
-    "concept": "As parcelas crescem; em fevereiro os maios são4,16,...,100, nove isenções e a última parcela incluída.",
+    "concept": "As parcelas crescem; em fevereiro os maios são 4,16,...,100, nove isenções e a última parcela incluída.",
     "trap": "Escolher maio apenas pela isenção imediata e ignorar o valor maior das parcelas finais.",
     "steps": [
-      "Numere as100 parcelas e localize maios a cada12 posições para cada mês inicial",
-      "Escolha fevereiro, que põe maio na posição100 e maximiza as nove parcelas crescentes isentas."
+      "Numere as 100 parcelas e localize maios a cada 12 posições para cada mês inicial",
+      "Escolha fevereiro, que põe maio na posição 100 e maximiza as nove parcelas crescentes isentas."
     ],
     "commandWords": []
   },
@@ -2446,11 +2446,11 @@
     "subject": "Matemática",
     "chapter": "Arcos de circunferência · Tangentes e correia",
     "title": "Soma trechos retos e arcos da correia de duas polias.",
-    "concept": "São30cm de trechos retos, arco150° de raio4 e arco210° de raio8, comπ=3.",
+    "concept": "São 30 cm de trechos retos, arco 150° de raio 4 e arco 210° de raio 8, com π=3.",
     "trap": "Usar semicircunferências em ambas as polias apesar dos ângulos de contato diferentes.",
     "steps": [
-      "Calcule150/360×2×3×4=10 e210/360×2×3×8=28",
-      "Some10+28+15+15=68cm."
+      "Calcule 150/360×2×3×4=10 e 210/360×2×3×8=28",
+      "Some 10+28+15+15=68 cm."
     ],
     "commandWords": []
   },
@@ -2463,11 +2463,11 @@
     "subject": "Matemática",
     "chapter": "Triângulo equilátero · Circuncentro",
     "title": "Determina a distância do centro aos vértices do triângulo equilátero.",
-    "concept": "O hospital é circuncentro; o raio é dois terços da altura10√3/2, ou10√3/3≈5,77km.",
+    "concept": "O hospital é circuncentro; o raio é dois terços da altura 10√3/2, ou 10√3/3≈5,77 km.",
     "trap": "Usar o raio da circunferência inscrita, que é metade do raio pedido.",
     "steps": [
       "Reconheça o triângulo equilátero e a coincidência dos centros",
-      "Calcule dois terços da altura e localize o resultado entre5 e6km."
+      "Calcule dois terços da altura e localize o resultado entre 5 e 6 km."
     ],
     "commandWords": []
   },
@@ -2480,10 +2480,10 @@
     "subject": "Matemática",
     "chapter": "Gráficos senoidais · Amplitude por intervalos",
     "title": "Seleciona oscilações com amplitude constante em cada piso.",
-    "concept": "O gráfico A mantém amplitude menor até9min e maior depois; outras opções alteram amplitude dentro do intervalo ou só a frequência.",
+    "concept": "O gráfico A mantém amplitude menor até 9min e maior depois; outras opções alteram amplitude dentro do intervalo ou só a frequência.",
     "trap": "Confundir frequência maior com amplitude maior.",
     "steps": [
-      "Separe os intervalos0–9 e9–20min",
+      "Separe os intervalos 0–9 e 9–20min",
       "Compare a altura dos picos em cada intervalo e selecione A."
     ],
     "commandWords": []
@@ -2497,11 +2497,11 @@
     "subject": "Matemática",
     "chapter": "Polígonos regulares · Comparação de áreas a perímetro fixo",
     "title": "Escolhe o hexágono regular pela maior área para cerca de comprimento k.",
-    "concept": "As áreas são√3k²/36,k²/16 e√3k²/24; a última é maior.",
+    "concept": "As áreas são √3k²/36, k²/16 e √3k²/24; a última é maior.",
     "trap": "Usar k como lado em vez de perímetro na área do hexágono.",
     "steps": [
-      "Substitua os lados por k/3,k/4 e k/6 nas fórmulas de área",
-      "Compare coeficientes de k² e selecione o hexágono com√3k²/24."
+      "Substitua os lados por k/3, k/4 e k/6 nas fórmulas de área",
+      "Compare coeficientes de k² e selecione o hexágono com √3k²/24."
     ],
     "commandWords": []
   },
@@ -2514,11 +2514,11 @@
     "subject": "Matemática",
     "chapter": "Encontro de móveis · Partição proporcional do percurso",
     "title": "Localiza a câmera do encontro de ônibus em sentidos opostos.",
-    "concept": "O encontro ocorre a250/(250+150)=0,625 do trajeto desde o terminal1, na coberturaIV, de0,6 a0,7.",
+    "concept": "O encontro ocorre a 250/(250+150)=0,625 do trajeto desde o terminal 1, na cobertura IV, de 0,6 a 0,7.",
     "trap": "Usar a diferença das velocidades quando os ônibus se aproximam.",
     "steps": [
-      "Calcule t=9000/400=22,5min e posição5625m",
-      "Some as frações de cobertura desde o terminal1 e identifiqueIV."
+      "Calcule t=9000/400=22,5min e posição 5625m",
+      "Some as frações de cobertura desde o terminal 1 e identifique IV."
     ],
     "commandWords": []
   },
@@ -2531,11 +2531,11 @@
     "subject": "Matemática",
     "chapter": "Probabilidade sem reposição · Tentativas sucessivas",
     "title": "Expressa duas falhas seguidas de acerto na cifra de César.",
-    "concept": "Entre25 deslocamentos não triviais, as chances são24/25,23/24 e1/23.",
-    "trap": "Manter denominador25 após eliminar uma tentativa ou somar eventos sucessivos.",
+    "concept": "Entre 25 deslocamentos não triviais, as chances são 24/25,23/24 e 1/23.",
+    "trap": "Manter denominador 25 após eliminar uma tentativa ou somar eventos sucessivos.",
     "steps": [
       "Exclua o deslocamento que mantém A e elimine cada tentativa errada",
-      "Multiplique as probabilidades condicionais de falha,falha,acerto como em E."
+      "Multiplique as probabilidades condicionais de falha, falha, acerto como em E."
     ],
     "commandWords": []
   },
@@ -2552,7 +2552,7 @@
     "trap": "Inverter a razão de energias e diminuir a magnitude.",
     "steps": [
       "Use E2/E1=10, pois a primeira energia é um décimo da segunda",
-      "Substitua na expressão e arredonde6,9+0,666... para7,6."
+      "Substitua na expressão e arredonde 6,9+0,666... para 7,6."
     ],
     "commandWords": []
   },
@@ -2565,11 +2565,11 @@
     "subject": "Matemática",
     "chapter": "Cilindro · Planificação e volume",
     "title": "Compara volumes de cilindros feitos da mesma folha.",
-    "concept": "Com altura10 e circunferência20, r=10/π e V=1000/π; a outra orientação dá500/π.",
+    "concept": "Com altura 10 e circunferência 20, r=10/π e V=1000/π; a outra orientação dá 500/π.",
     "trap": "Usar20 como diâmetro ou supor volumes iguais por terem mesma área lateral.",
     "steps": [
-      "Use a dimensão enrolada como2πr em cada orientação",
-      "Calcule os volumes e selecione1000/πcm³."
+      "Use a dimensão enrolada como 2πr em cada orientação",
+      "Calcule os volumes e selecione 1000/πcm³."
     ],
     "commandWords": []
   },
@@ -2582,11 +2582,11 @@
     "subject": "Matemática",
     "chapter": "Função afim · Extrapolação de reta de tendência",
     "title": "Estima receita futura pela inclinação da reta ajustada.",
-    "concept": "A reta sobe cerca de1milhão a cada3anos, chegando a8milhões em2026.",
+    "concept": "A reta sobe cerca de 1 milhão a cada 3 anos, chegando a 8 milhões em 2026.",
     "trap": "Ligar o último ponto observado à origem em vez de usar a reta de tendência.",
     "steps": [
-      "Leia pontos da reta, como2015→4 e2021→6, sem usar pontos dispersos",
-      "Prolongue a taxa de1/3milhão por ano por mais5anos até aproximadamente8milhões."
+      "Leia pontos da reta, como 2015→4 e 2021→6, sem usar pontos dispersos",
+      "Prolongue a taxa de 1/3 milhão por ano por mais 5 anos até aproximadamente 8 milhões."
     ],
     "commandWords": []
   },
@@ -2601,11 +2601,11 @@
     "subject": "Matemática",
     "chapter": "Função por partes · Volume e altura com anteparos",
     "title": "Relaciona enchimento do tanque ao gráfico da maior coluna de água.",
-    "concept": "A primeira seção atingeH/2 em2h; a maior altura fica nesse patamar até6h, quando todo o fundo passa a receber aumento conjunto.",
+    "concept": "A primeira seção atinge H/2 em 2h; a maior altura fica nesse patamar até 6h, quando todo o fundo passa a receber aumento conjunto.",
     "trap": "Desenhar queda da maior coluna quando a água transborda para outro compartimento.",
     "steps": [
-      "Use vazão total para contar2h até a primeira seção atingirH/2 e4h adicionais para as demais igualarem esse nível",
-      "Selecione B: crescimento0–2h, patamar2–6h e crescimento de menor inclinação6–12h."
+      "Use vazão total para contar 2h até a primeira seção atingir H/2 e 4h adicionais para as demais igualarem esse nível",
+      "Selecione B: crescimento0–2h, patamar2–6h e crescimento de menor inclinação 6–12h."
     ],
     "commandWords": []
   },
@@ -2618,11 +2618,11 @@
     "subject": "Matemática",
     "chapter": "Estatística · Média aritmética",
     "title": "Calcula o tempo médio de leitura dos seis contratos.",
-    "concept": "A soma36+17+27+13+13+13=119, dividida por6, dá19,833...min.",
+    "concept": "A soma 36+17+27+13+13+13=119, dividida por 6, dá 19,833...min.",
     "trap": "Usar a moda13 como se fosse a média.",
     "steps": [
-      "Some os seis tempos incluindo as três repetições de13",
-      "Divida por6 e arredonde para19,8min."
+      "Some os seis tempos incluindo as três repetições de 13",
+      "Divida por 6 e arredonde para 19,8min."
     ],
     "commandWords": []
   },
@@ -2635,11 +2635,11 @@
     "subject": "Matemática",
     "chapter": "Setor circular · Escolha de menor área suficiente",
     "title": "Seleciona o sensor de menor área que atende setenta metros quadrados.",
-    "concept": "Comπ=3, as áreas são50,121,48,128 e75m²; o menor valor suficiente é75 do tipoV.",
+    "concept": "Com π=3, as áreas são 50,121,48,128 e 75m²; o menor valor suficiente é 75 do tipo V.",
     "trap": "Escolher o menor ângulo ou menor raio isoladamente sem calcular o setor.",
     "steps": [
       "Calcule αR²/120 para cada sensor",
-      "Descarte áreas menores que70 e compare as restantes, escolhendoV."
+      "Descarte áreas menores que 70 e compare as restantes, escolhendoV."
     ],
     "commandWords": []
   },
@@ -2655,7 +2655,7 @@
     "concept": "A tarifa fixa entra uma vez e as taxas unitárias multiplicam as grandezas correspondentes.",
     "trap": "Multiplicar2,00 por F mesmo quando o valor da tarifa já foi substituído.",
     "steps": [
-      "Escreva o termo fixo como2,00 e as parcelas como0,26T e1,40D",
+      "Escreva o termo fixo como 2,00 e as parcelas como 0,26T e 1,40D",
       "Some V=2,00+0,26T+1,40D e selecione B."
     ],
     "commandWords": []
@@ -2669,11 +2669,11 @@
     "subject": "Matemática",
     "chapter": "Vazão · Variações percentuais de volume e tempo",
     "title": "Calcula vazão com aumento de dez por cento no volume e vinte no tempo.",
-    "concept": "A razão entre vazões é1,1/1,2;6000×1,1/1,2=5500L/min.",
-    "trap": "Aumentar a vazão em20% apesar de o tempo de enchimento ter aumentado.",
+    "concept": "A razão entre vazões é 1,1/1,2;6000×1,1/1,2=5500L/min.",
+    "trap": "Aumentar a vazão em 20% apesar de o tempo de enchimento ter aumentado.",
     "steps": [
       "Compare volumes2750000/2500000=1,1 e tempos1,2",
-      "Divida as razões e multiplique a vazão inicial por11/12."
+      "Divida as razões e multiplique a vazão inicial por 11/12."
     ],
     "commandWords": []
   },
@@ -2703,11 +2703,11 @@
     "subject": "Matemática",
     "chapter": "Custo por área · Promoção e decisão de compra",
     "title": "Compara defensivos por rendimento e custo incluindo máscara.",
-    "concept": "TipoA exige40L a4,20 com máscara grátis, total168; tipoB exige50L a3,00 mais12,50, total162,50.",
+    "concept": "Tipo A exige 40L a 4,20 com máscara grátis, total 168; tipo B exige 50L a 3,00 mais 12,50, total 162,50.",
     "trap": "Escolher a promoção só pela máscara grátis sem comparar custo por hectare.",
     "steps": [
-      "Divida20ha pelos rendimentos de0,5 e0,4ha/L",
-      "Calcule os dois custos completos e escolha162,50reais do tipoB."
+      "Divida 20ha pelos rendimentos de 0,5 e 0,4ha/L",
+      "Calcule os dois custos completos e escolha 162,50 reais do tipo B."
     ],
     "commandWords": []
   },
@@ -2721,10 +2721,10 @@
     "chapter": "Equação de primeiro grau · Tarifa de entrega",
     "title": "Recalcula preço unitário mantendo o total de cinco porções.",
     "concept": "O total anterior era10+5×25=135;15+5x=135 fornece x=24.",
-    "trap": "Descontar os5reais de aumento em cada porção em vez de distribuí-los pelas cinco.",
+    "trap": "Descontar os5 reais de aumento em cada porção em vez de distribuí-los pelas cinco.",
     "steps": [
       "Determine o gasto anterior para cinco porções",
-      "Subtraia a nova taxa15 e divida por5 para obter24reais."
+      "Subtraia a nova taxa15 e divida por 5 para obter 24 reais."
     ],
     "commandWords": []
   },
@@ -2737,11 +2737,11 @@
     "subject": "Matemática",
     "chapter": "Probabilidade · Porcentagens ponderadas em gráfico",
     "title": "Identifica a faixa etária com maior número absoluto de funcionários.",
-    "concept": "As contagens são126 até25,142 entre25e45 e132 a partir45; os setores têm pesos80,120 e200.",
+    "concept": "As contagens são 126 até 25,142 entre 25e45 e 132 a partir45; os setores têm pesos80,120 e 200.",
     "trap": "Somar percentuais de setores com tamanhos diferentes.",
     "steps": [
       "Multiplique as porcentagens de cada faixa pelos totais setoriais",
-      "Some as contagens por faixa e selecione25–45anos,142/400."
+      "Some as contagens por faixa e selecione 25–45 anos,142/400."
     ],
     "commandWords": []
   },
@@ -2757,7 +2757,7 @@
     "concept": "BC e DE são verticais e colapsam em pontos; AB e CD cruzam entre planos paralelos e EF segue até a base.",
     "trap": "Manter segmentos verticais como trechos de comprimento positivo no plano da base.",
     "steps": [
-      "Projete cada vértice por uma perpendicular ao chão, fazendoB coincidir comC eD comE",
+      "Projete cada vértice por uma perpendicular ao chão, fazendoB coincidir com C e D com E",
       "Una as projeções na ordem original e selecione o desenho C."
     ],
     "commandWords": []
@@ -2771,11 +2771,11 @@
     "subject": "Matemática",
     "chapter": "Conversão de unidades · Ampliações multiplicativas",
     "title": "Determina a menor objetiva que permite visualizar uma hemácia.",
-    "concept": "O limite100µm equivale0,1mm; a ocular gera0,07mm e a objetiva precisa fator≥10/7.",
-    "trap": "Aceitar1,4 sem verificar que0,098mm ainda fica abaixo de0,1mm.",
+    "concept": "O limite100µm equivale0,1 mm; a ocular gera0,07 mm e a objetiva precisa fator≥10/7.",
+    "trap": "Aceitar1,4 sem verificar que 0,098 mm ainda fica abaixo de 0,1 mm.",
     "steps": [
-      "Converta o limite para milímetros e multiplique0,007 por10",
-      "Compare fatores1,1;1,4;2;10;15 e escolha2, lenteI."
+      "Converta o limite para milímetros e multiplique 0,007 por 10",
+      "Compare fatores1,1;1,4;2;10;15 e escolha 2, lenteI."
     ],
     "commandWords": []
   },
@@ -2788,8 +2788,8 @@
     "subject": "Matemática",
     "chapter": "Média aritmética · Modelagem de erro no divisor",
     "title": "Recupera média correta a partir de diferença causada por divisor errado.",
-    "concept": "Se S é a soma,S/4−S/5=1 implica S=20 e média5.",
-    "trap": "Responder a soma20 ou a média incorreta4 em vez da média correta.",
+    "concept": "Se S é a soma, S/4−S/5=1 implica S=20 e média 5.",
+    "trap": "Responder a soma 20 ou a média incorreta4 em vez da média correta.",
     "steps": [
       "Escreva a diferença entre as médias correta e incorreta",
       "Resolva S/20=1 e calcule S/4=5."
@@ -2805,11 +2805,11 @@
     "subject": "Matemática",
     "chapter": "Arranjos sem repetição · Senhas alfanuméricas",
     "title": "Conta senhas com dois dígitos distintos e três letras diferentes.",
-    "concept": "Há5 dígitos e10 letras nas teclas2,5,7; a ordem é relevante e não há repetição.",
-    "trap": "Atribuir letras às teclas1 e0 ou escolher caracteres como combinações sem ordem.",
+    "concept": "Há5 dígitos e 10 letras nas teclas 2,5,7; a ordem é relevante e não há repetição.",
+    "trap": "Atribuir letras às teclas 1 e 0 ou escolher caracteres como combinações sem ordem.",
     "steps": [
-      "Conte5×4 pares ordenados de dígitos e10×9×8 trios de letras",
-      "Multiplique20×720=14400 possibilidades."
+      "Conte 5×4 pares ordenados de dígitos e 10×9×8 trios de letras",
+      "Multiplique 20×720=14400 possibilidades."
     ],
     "commandWords": []
   },
@@ -2822,11 +2822,11 @@
     "subject": "Matemática",
     "chapter": "Custo total · Comparação de orçamentos",
     "title": "Escolhe loja pelo custo de dois componentes X e um Y.",
-    "concept": "Na lojaI o custo é2×3+1=7; naII é2×2+4=8.",
+    "concept": "Na loja I o custo é 2×3+1=7; naII é 2×2+4=8.",
     "trap": "Comprar X em uma loja e Y em outra apesar da exigência de fornecedor único.",
     "steps": [
       "Aplique as quantidades2X+Y aos preços de cada loja",
-      "Compare7 e8 e selecione lojaI com7reais."
+      "Compare 7 e 8 e selecione loja I com 7 reais."
     ],
     "commandWords": []
   },
@@ -2840,10 +2840,10 @@
     "chapter": "Porcentagens sucessivas · Intervalos de classificação",
     "title": "Classifica desempenhos usando redução relativa de trinta por cento.",
     "concept": "João obtém75%; Felipe0,7×75%=52,5%, que pertence ao intervalo regular.",
-    "trap": "Subtrair30pontos percentuais de75 em vez de reduzir30% dos acertos.",
+    "trap": "Subtrair 30pontos percentuais de 75 em vez de reduzir30% dos acertos.",
     "steps": [
-      "Calcule150 acertos de João e105 de Felipe",
-      "Converta para percentuais e aplique75≤P<90 e50≤P<60."
+      "Calcule 150 acertos de João e 105 de Felipe",
+      "Converta para percentuais e aplique 75≤P<90 e 50≤P<60."
     ],
     "commandWords": []
   },
@@ -2856,11 +2856,11 @@
     "subject": "Matemática",
     "chapter": "Composição de funções · Máximo em gráficos por partes",
     "title": "Encontra máximo de III no intervalo de I entre um e três.",
-    "concept": "I∈[1,3] produzII∈[1,5;3,5]; nesse intervalo a maiorIII ocorre emII=1,5 e vale2,5.",
+    "concept": "I∈[1,3] produzII∈[1,5;3,5]; nesse intervalo a maiorIII ocorre em II=1,5 e vale2,5.",
     "trap": "Aplicar o intervalo1–3 diretamente ao segundo gráfico sem passar pela grandezaII.",
     "steps": [
-      "Use o primeiro gráfico para transportar o intervalo deI ao eixo deII",
-      "Examine extremos e vértice do segundo gráfico e compare2,5;1;2."
+      "Use o primeiro gráfico para transportar o intervalo de I ao eixo de II",
+      "Examine extremos e vértice do segundo gráfico e compare 2,5;1;2."
     ],
     "commandWords": []
   },
@@ -2874,10 +2874,10 @@
     "chapter": "Progressão geométrica · Duplicação e índice inicial",
     "title": "Expressa a quantidade de figuras após vinte etapas de duplicação.",
     "concept": "A primeira etapa já contém3 figuras; há19 duplicações até a vigésima.",
-    "trap": "Contar20 duplicações em vez de19 ou somar todas as telas intermediárias.",
+    "trap": "Contar 20 duplicações em vez de 19 ou somar todas as telas intermediárias.",
     "steps": [
       "Identifique a sequência3,6,12,... com razão2",
-      "Use a20=3×2^(20−1)."
+      "Use a₂₀=3×2⁽²⁰⁻¹⁾."
     ],
     "commandWords": []
   },
@@ -2890,11 +2890,11 @@
     "subject": "Matemática",
     "chapter": "Orçamento e lucro · Percentuais de aumento e margem",
     "title": "Determina gasto médio de consumo necessário ao lucro do evento.",
-    "concept": "São450 meias e50 inteiras, receita35750; falta lucro15600, que corresponde a60% de26000 em consumo.",
-    "trap": "Interpretar aumento de50% como50pontos percentuais ou tomar toda venda de bebidas como lucro.",
+    "concept": "São 450 meias e 50 inteiras, receita 35750; falta lucro15600, que corresponde a 60% de 26000 em consumo.",
+    "trap": "Interpretar aumento de 50% como 50pontos percentuais ou tomar toda venda de bebidas como lucro.",
     "steps": [
-      "Calcule300×1,5=450 meias e a receita450×65+50×130",
-      "Resolva35750−34350+0,6×500g=17000 para obter g=52reais."
+      "Calcule 300×1,5=450 meias e a receita 450×65+50×130",
+      "Resolva 35750−34350+0,6×500g=17000 para obter g=52 reais."
     ],
     "commandWords": []
   },
@@ -2910,7 +2910,7 @@
     "concept": "As bases paralelas têm comprimentos diferentes e geram círculos de raios distintos ao girar sobrePS.",
     "trap": "Escolher cone apesar de a base superior ter raio não nulo.",
     "steps": [
-      "Observe que o ladoPS é o eixo fixo e quePQ eSR são raios diferentes",
+      "Observe que o lado PS é o eixo fixo e que PQ e SR são raios diferentes",
       "Identifique o sólido com duas bases circulares e superfície cônica truncada."
     ],
     "commandWords": []
@@ -2924,11 +2924,11 @@
     "subject": "Matemática",
     "chapter": "Área de retângulo · Diferença de áreas",
     "title": "Calcula a redução da área do campo de futebol.",
-    "concept": "A área antiga é8250 e a nova7140; a diferença é1110m².",
-    "trap": "Multiplicar apenas as reduções5 e7, que não representam a diferença total de áreas.",
+    "concept": "A área antiga é 8250 e a nova7140; a diferença é 1110m².",
+    "trap": "Multiplicar apenas as reduções5 e 7, que não representam a diferença total de áreas.",
     "steps": [
-      "Calcule110×75 e105×68 separadamente",
-      "Subtraia7140 de8250."
+      "Calcule 110×75 e 105×68 separadamente",
+      "Subtraia 7140 de 8250."
     ],
     "commandWords": []
   },
@@ -2945,7 +2945,7 @@
     "trap": "Usar raio como largura da coluna ou esquecer os dois vãos junto às paredes.",
     "steps": [
       "Resolva n≥285/(2r+15) e arredonde para cima:12,9,8,7,6",
-      "Multiplique pelos preços:720,630,600,630,720 e selecioneIII."
+      "Multiplique pelos preços:720,630,600,630,720 e selecione III."
     ],
     "commandWords": []
   },
@@ -2958,10 +2958,10 @@
     "subject": "Matemática",
     "chapter": "Escalas · Razão entre áreas",
     "title": "Converte área real em área de maquete na escala um para duzentos.",
-    "concept": "A área reduz pelo quadrado200² e a conversão de m² para cm² multiplica por10000.",
-    "trap": "Dividir a área por200 em vez de40000.",
+    "concept": "A área reduz pelo quadrado200² e a conversão de m² para cm² multiplica por 10000.",
+    "trap": "Dividir a área por 200 em vez de 40000.",
     "steps": [
-      "Calcule1672/40000 m² na maquete",
+      "Calcule 1672/40000 m² na maquete",
       "Converta para cm² e obtenha418."
     ],
     "commandWords": []
@@ -2975,7 +2975,7 @@
     "subject": "Matemática",
     "chapter": "Leitura de gráfico · Saldo entre duas séries",
     "title": "Ordena saldos comerciais pelas diferenças entre exportação e importação.",
-    "concept": "Em junho2009 o saldo é positivo maior; em junho2010 é17,1−14,8=2,3; janeiro2010 é próximo de zero e negativo.",
+    "concept": "Em junho 2009 o saldo é positivo maior; em junho 2010 é 17,1−14,8=2,3; janeiro2010 é próximo de zero e negativo.",
     "trap": "Ordenar apenas os valores de exportações ignorando as importações.",
     "steps": [
       "Compare as alturas das duas curvas em cada mês indicado",
@@ -2992,11 +2992,11 @@
     "subject": "Matemática",
     "chapter": "Porcentagem · Representação decimal de taxa",
     "title": "Converte cento e trinta e cinco vírgula vinte e cinco por cento em decimal.",
-    "concept": "Dividir135,25 por100 fornece1,3525, sem adicionar a população inicial.",
+    "concept": "Dividir135,25 por 100 fornece 1,3525, sem adicionar a população inicial.",
     "trap": "Responder2,3525, fator final da população, em vez da taxa de crescimento.",
     "steps": [
-      "Interprete o símbolo% como divisão por100",
-      "Desloque a vírgula duas casas para obter1,3525."
+      "Interprete o símbolo% como divisão por 100",
+      "Desloque a vírgula duas casas para obter 1,3525."
     ],
     "commandWords": []
   },
@@ -3009,11 +3009,11 @@
     "subject": "Matemática",
     "chapter": "Função quadrática · Otimização com restrição de custo",
     "title": "Maximiza a área retangular com telas de preços diferentes.",
-    "concept": "40L+30C=6000 gera A(C)=150C−0,75C², cujo vértice éC=100 eL=75.",
+    "concept": "40L+30C=6000 gera A(C)=150C−0,75C², cujo vértice é C=100 e L=75.",
     "trap": "Igualar os lados como num quadrado ignorando os preços diferentes.",
     "steps": [
       "Escreva o custo dos dois lados de cada tipo e isole uma dimensão",
-      "Maximize a parábola da área e compare os lados75 e100m."
+      "Maximize a parábola da área e compare os lados 75 e 100m."
     ],
     "commandWords": []
   },
@@ -3026,11 +3026,11 @@
     "subject": "Matemática",
     "chapter": "Números racionais · Frações e números mistos",
     "title": "Identifica representações equivalentes a quatro e meio.",
-    "concept": "II é4½,IV é18/4 eV é4,5; I representa4^(1/2),III é10/45 eVI é4/5.",
-    "trap": "Tratar4^(1/2) como4½ ou inverter10/45.",
+    "concept": "II é 4½, IV é 18/4 e V é 4,5; I representa 4⁽¹/²⁾, III é 10/45 e VI é 4/5.",
+    "trap": "Tratar4⁽¹/²⁾ como 4½ ou inverter10/45.",
     "steps": [
-      "Leia a diferença entre expoente1/2 emI e fração mista emII",
-      "Converta as representações para decimal e selecioneII,IV,V."
+      "Leia a diferença entre expoente1/2 em I e fração mista em II",
+      "Converta as representações para decimal e selecione II, IV, V."
     ],
     "commandWords": []
   },
@@ -3043,11 +3043,11 @@
     "subject": "Matemática",
     "chapter": "Decaimento exponencial · Determinação de parâmetros",
     "title": "Obtém parâmetros de resfriamento por dois pontos do gráfico.",
-    "concept": "T(0)=100 fornece a=20; T(10)=60 implica b^10=1/2.",
+    "concept": "T(0)=100 fornece a=20; T(10)=60 implica b¹⁰=1/2.",
     "trap": "Confundir b com a variação a cada dez minutos ou usar40 como valor da base.",
     "steps": [
       "Substitua t=0 e T=100 na função para determinar a",
-      "Use o ponto10min,60°C para obter b=(0,5)^(1/10)."
+      "Use o ponto10min,60°C para obter b=(0,5)⁽¹/¹⁰⁾."
     ],
     "commandWords": []
   },
@@ -3060,11 +3060,11 @@
     "subject": "Matemática",
     "chapter": "Volumes · Equivalência entre cilindro e cubo",
     "title": "Calcula aresta de cubo com oitenta por cento do volume cilíndrico.",
-    "concept": "O volume inicial é3×3²×15=405;80% são324=27×12, cuja raiz cúbica é3∛12.",
+    "concept": "O volume inicial é 3×3²×15=405;80% são 324=27×12, cuja raiz cúbica é 3∛12.",
     "trap": "Aplicar80% diretamente à altura ou ao raio em vez do volume.",
     "steps": [
-      "Calcule o volume do cilindro e multiplique por0,8",
-      "Extraia a raiz cúbica de324 e simplifique para3∛12cm."
+      "Calcule o volume do cilindro e multiplique por 0,8",
+      "Extraia a raiz cúbica de 324 e simplifique para 3∛12 cm."
     ],
     "commandWords": []
   },
@@ -4952,7 +4952,7 @@
     "trap": "Subtrair uma massa fixa a cada meia-vida.",
     "steps": [
       "Determine o número de períodos",
-      "Calcule 2,00/2^5 e compare com 0,06 mg."
+      "Calcule 2,00/2⁵ e compare com 0,06 mg."
     ],
     "commandWords": []
   },
@@ -6039,8 +6039,8 @@
     "concept": "A função −(t+1)(t−19) atinge 100 em t=9 no intervalo considerado.",
     "trap": "Avaliar apenas o tempo final de dez horas, ignorando máximo interior.",
     "steps": [
-      "Use monotonicidade do logaritmo e imponha K×100≤10^2,5",
-      "Isole K≤10^0,5."
+      "Use monotonicidade do logaritmo e imponha K×100≤10^(2,5)",
+      "Isole K≤10^(0,5)."
     ],
     "commandWords": []
   },
@@ -7379,11 +7379,11 @@
     "subject": "Física",
     "chapter": "Velocidade média e gráfico",
     "title": "Determina média em aceleração seguida de frenagem.",
-    "concept": "Calcule a área triangular sob o gráfico v por t. Divida pelo tempo total e use velocidade máxima igual a a1T1.",
+    "concept": "Calcule a área triangular sob o gráfico v por t. Divida pelo tempo total e use velocidade máxima igual a a₁T₁.",
     "trap": "Usar média das acelerações.",
     "steps": [
       "Calcule a área triangular sob o gráfico v por t.",
-      "Divida pelo tempo total e use velocidade máxima igual a a1T1."
+      "Divida pelo tempo total e use velocidade máxima igual a a₁T₁."
     ],
     "commandWords": []
   },
@@ -14652,7 +14652,7 @@
     "concept": "O comando exige reconhecer a amina e a origem suprarrenal.",
     "trap": "Confundir amina com amida por conter nitrogênio.",
     "steps": [
-      "Conte a estrutura comoC9H13NO3, reconhecendo o nitrogênio de amina e não de amida.",
+      "Conte a estrutura como C9H13NO3, reconhecendo o nitrogênio de amina e não de amida.",
       "Identifique as suprarrenais como origem hormonal e combine as três informações na alternativaD."
     ],
     "commandWords": []
@@ -15236,11 +15236,11 @@
     "subject": "Química",
     "chapter": "Densidade de mistura · Solubilidade e composição centesimal",
     "title": "Calcula propriedades do sal leve a partir de frações mássicas.",
-    "concept": "A densidade requer soma de volumes, não média direta; cada sal fornece10g em50mL, abaixo das solubilidades individuais fornecidas.",
+    "concept": "A densidade requer soma de volumes, não média direta; cada sal fornece 10g em 50mL, abaixo das solubilidades individuais fornecidas.",
     "trap": "Somar massas com média simples de densidades ou comparar400g/L totais ao limite de apenas um componente.",
     "steps": [
-      "Use rho=1/(0,5/2,17+0,5/1,98)≈2,071g/cm³ e compare200g/L de cada componente aos limites358 e347",
-      "Calcule KCl como52,35%K e47,65%Cl;0,5g×39/74,5≈0,262gK."
+      "Use rho=1/(0,5/2,17+0,5/1,98)≈2,071g/cm³ e compare 200g/L de cada componente aos limites 358 e 347",
+      "Calcule KCl como 52,35%K e 47,65%Cl;0,5g×39/74,5≈0,262gK."
     ],
     "commandWords": []
   },
@@ -15253,11 +15253,11 @@
     "subject": "Química",
     "chapter": "Balanceamento redox · Decomposição de hidróxido",
     "title": "Balanceia remoção de dicromato por tiossulfato e obtenção do óxido.",
-    "concept": "O enxofre passa deNOX médio+2 a+6, perdendo elétrons; o tiossulfato é redutor.",
+    "concept": "O enxofre passa de NOX médio+2 a+6, perdendo elétrons; o tiossulfato é redutor.",
     "trap": "Chamar enxofre oxidante por ter sofrido oxidação.",
     "steps": [
-      "Use variação média+4 por átomo deS e balanceie4Cr2O7²−+3S2O3²−+26H+→8Cr3++6SO4²−+13H2O",
-      "Escreva2Cr(OH)3→Cr2O3+3H2O e confira massa e carga na reação redox."
+      "Use variação média+4 por átomo de S e balanceie4Cr2O7²−+3S2O3²−+26H+→8Cr3++6SO4²−+13H2O",
+      "Escreva 2Cr(OH)3→Cr2O3+3H2O e confira massa e carga na reação redox."
     ],
     "commandWords": []
   },
@@ -15276,7 +15276,7 @@
     "trap": "Alterar o esqueleto carbônico ou desenhar cetona no lugar do aldeído.",
     "steps": [
       "Compare as posições dos grupos em torno da dupla e identifique aldeído nos dois isômeros",
-      "Substitua oH doOH do geraniol pelo grupo acilaR–C(=O)–, conservando a cadeia e indicando esterificação."
+      "Substitua oH do OH do geraniol pelo grupo acilaR–C(=O)–, conservando a cadeia e indicando esterificação."
     ],
     "commandWords": []
   },
@@ -15289,11 +15289,11 @@
     "subject": "Física",
     "chapter": "Movimento uniformemente variado · Conversão de nós e consumo",
     "title": "Calcula aceleração de decolagem e combustível em cruzeiro.",
-    "concept": "V1=70m/s em1225m dá2m/s²; cruzeiro500nós=900km/h por4h consome8800kg nos dois motores.",
+    "concept": "V1=70m/s em 1225m dá 2m/s²; cruzeiro500nós=900 km/h por 4h consome8800 kg nos dois motores.",
     "trap": "Usar500 como km/h ou contar só um dos motores.",
     "steps": [
       "Converta nós usando a equivalência fornecida e aplique v²=2aΔs",
-      "Calcule3600/900=4h e multiplique1100×2×4."
+      "Calcule 3600/900=4h e multiplique 1100×2×4."
     ],
     "commandWords": []
   },
@@ -15306,11 +15306,11 @@
     "subject": "Física",
     "chapter": "Lente divergente · Imagem virtual e equação de Gauss",
     "title": "Determina imagem da vela pela geometria dos raios.",
-    "concept": "A lente afasta raios incidentes e forma imagem virtual; geometria eGauss dão q=−7,5cm.",
+    "concept": "A lente afasta raios incidentes e forma imagem virtual; geometria e Gauss dão q=−7,5 cm.",
     "trap": "Confundir ponto de cruzamento dos prolongamentos com foco real ou omitir sinal de imagem virtual.",
     "steps": [
-      "Use altura18√3 e45cm para achar raio central na lente a3√3cm e foco virtual a9cm",
-      "Com f=−9 e p=45, resolva1/q=1/f−1/p e explique por que não projeta a imagem."
+      "Use altura 18√3 e 45 cm para achar raio central na lente a 3√3 cm e foco virtual a 9 cm",
+      "Com f=−9 e p=45, resolva 1/q=1/f−1/p e explique por que não projeta a imagem."
     ],
     "commandWords": []
   },
@@ -15325,11 +15325,11 @@
     "subject": "Física",
     "chapter": "Força elétrica e peso · Potencial e trabalho",
     "title": "Combina campo e gravidade no desvio da gota e calcula trabalho.",
-    "concept": "qE/m=160m/s² para cima, menosg=10 dá150; a subida0,0003m reduz potencial em24V.",
-    "trap": "Confundir0,03cm com0,03m ou usar a aceleração elétrica sem subtrair o peso.",
+    "concept": "qE/m=160m/s² para cima, menosg=10 dá 150; a subida0,0003m reduz potencial em 24V.",
+    "trap": "Confundir0,03 cm com 0,03m ou usar a aceleração elétrica sem subtrair o peso.",
     "steps": [
       "Calcule a resultante qE−mg e divida por m",
-      "Use VQ−VP=−EΔy=−24V e Wel=q(VP−VQ)=9,6×10^−13J."
+      "Use VQ−VP=−EΔy=−24V e Wel=q(VP−VQ)=9,6×10⁻¹³J."
     ],
     "commandWords": []
   },
@@ -15347,8 +15347,8 @@
     "concept": "Sez=20, só suas notas somam80 e as outras dez, no mínimo20, já excedem93; portantoz=10.",
     "trap": "Resolver só as duas equações e ignorar positividade, ordem e paridade.",
     "steps": [
-      "Escreva x+y+z+w=30 e2x+3y+4z+5w=93; rejeite z=20 e30 pelo total",
-      "Comz=10, use y+3w=13,w par e0<w<y<10 para obterw=2,y=7,x=11."
+      "Escreva x+y+z+w=30 e 2x+3y+4z+5w=93; rejeite z=20 e 30 pelo total",
+      "Comz=10, use y+3w=13, w par e 0<w<y<10 para obterw=2, y=7, x=11."
     ],
     "commandWords": []
   },
@@ -15363,11 +15363,11 @@
     "subject": "Matemática",
     "chapter": "Triângulo circunscrito · Setor circular e área",
     "title": "Calcula perímetro e área de setor menos círculo inscrito.",
-    "concept": "Altura8 e raio3 determinam semibase6, lados10 e perímetro32; a região é setor de raio10 menos disco de raio3.",
+    "concept": "Altura 8 e raio 3 determinam semibase6, lados 10 e perímetro32; a região é setor de raio 10 menos disco de raio 3.",
     "trap": "Subtrair o círculo apenas da área do triângulo e esquecer o segmento circular inferior.",
     "steps": [
-      "Use área=rs para obter base12 e lados10 a partir de altura8 e raio3",
-      "Determine o ângulo central por53,13° e calcule(73,74/360)×3,14×100−3,14×9≈36cm²."
+      "Use área=rs para obter base12 e lados 10 a partir de altura 8 e raio 3",
+      "Determine o ângulo central por 53,13° e calcule(73,74/360)×3,14×100−3,14×9≈36cm²."
     ],
     "commandWords": []
   },
@@ -15383,10 +15383,10 @@
     "subject": "Matemática",
     "chapter": "Vértice de parábola · Pontos inteiros e inclinação",
     "title": "Analisa a parábola e a reta pelo vértice sob restrição de integralidade.",
-    "concept": "g(x)=4x−x²/2 temV=(4,8); a reta por(−2,2) temcoeficiente1 e ângulo45°.",
+    "concept": "g(x)=4x−x²/2 tem V=(4,8); a reta por(−2,2) temcoeficiente1 e ângulo45°.",
     "trap": "Incluir zeros da função apesar de y dever ser positivo ou aceitar x ímpar com y fracionário.",
     "steps": [
-      "CalculeV e a inclinação(8−2)/(4+2)=1",
+      "Calcule V e a inclinação(8−2)/(4+2)=1",
       "Exija0<x<8 e x par para y inteiro: (2,6),(4,8),(6,6)."
     ],
     "commandWords": []
@@ -17013,7 +17013,7 @@
     "concept": "Os três pares fornecem um sistema que determina a função quadrática.",
     "trap": "Tratar ca+b como produto em vez de potência c^(a+b).",
     "steps": [
-      "Substitua os três pares x,y em ax²+bx+c.",
+      "Substitua os três pares x, y em ax²+bx+c.",
       "Subtraia equações para determinar a, b e c.",
       "Calcule c elevado a a+b com atenção ao sinal do expoente."
     ],
@@ -17028,11 +17028,11 @@
     "subject": "Matemática",
     "chapter": "Interseção de funções exponenciais",
     "title": "Determina abscissa de encontro entre duas curvas.",
-    "concept": "A substituição t=2^x reduz a igualdade a uma equação quadrática.",
-    "trap": "Aceitar a raiz negativa para 2^x.",
+    "concept": "A substituição t=2ˣ reduz a igualdade a uma equação quadrática.",
+    "trap": "Aceitar a raiz negativa para 2ˣ.",
     "steps": [
-      "Iguale 2^x-8 e 1/2^x-4.",
-      "Substitua 2^x por t positivo e elimine o denominador.",
+      "Iguale 2ˣ-8 e 1/2ˣ-4.",
+      "Substitua 2ˣ por t positivo e elimine o denominador.",
       "Escolha a raiz positiva e aplique logaritmo de base dois."
     ],
     "commandWords": []
@@ -17327,7 +17327,7 @@
     "steps": [
       "Use g para aceleração e velocidade vertical ao fim de 0,40 s.",
       "Calcule alcance por 1,5 vezes o tempo.",
-      "Iguale esse alcance a a2t²/2."
+      "Iguale esse alcance a a₂t²/2."
     ],
     "commandWords": []
   },
@@ -17401,9 +17401,9 @@
     "concept": "O gráfico fornece frequência limite e a diferença hf menos energia de ionização dá energia cinética.",
     "trap": "Usar todo hf como energia cinética sem descontar a ionização.",
     "steps": [
-      "Leia a frequência tracejada 4,0×10^15 Hz.",
+      "Leia a frequência tracejada 4,0×10¹⁵ Hz.",
       "Converta por λ=c/f e situe no ultravioleta.",
-      "Subtraia 2,5×10^-18 J de hf para obter energia residual."
+      "Subtraia 2,5×10⁻¹⁸ J de hf para obter energia residual."
     ],
     "commandWords": []
   },
@@ -18771,7 +18771,7 @@
     "trap": "Usar o intercepto da reta em vez da interseção P.",
     "steps": [
       "Resolva o sistema das retas para localizar P.",
-      "Use a distância entre P e R igual a oito,zero."
+      "Use a distância entre P e R igual a oito, zero."
     ],
     "commandWords": []
   },
@@ -20513,7 +20513,7 @@
     "concept": "Expoentes do denominador formam sequência de um a dezesseis.",
     "trap": "Somar os denominadores em vez de multiplicar potências da mesma base.",
     "steps": [
-      "Expresse cada numerador dezesseis como 2^4.",
+      "Expresse cada numerador dezesseis como 2⁴.",
       "Some os expoentes do denominador por 16×17/2.",
       "Subtraia a soma de 4×16 para obter o expoente final."
     ],
@@ -20789,8 +20789,8 @@
     "concept": "A proporção molar deve ser aplicada apenas aos oitenta por cento de fosfato da rocha.",
     "trap": "Usar os quinhentos quilogramas como fosfato puro.",
     "steps": [
-      "Escreva PO4^3- e a primeira ionização de H2SO4.",
-      "Balanceie a reação com dois H2SO4 e dois CaSO4.",
+      "Escreva PO₄³⁻ e a primeira ionização de H₂SO₄.",
+      "Balanceie a reação com dois H₂SO₄ e dois CaSO4.",
       "Aplique a razão 196/310 à massa de quatrocentos quilogramas de fosfato."
     ],
     "commandWords": []
@@ -22290,11 +22290,11 @@
     "subject": "Matemática",
     "chapter": "Distância de ponto a reta",
     "title": "Analisa distância de ponto a reta.",
-    "concept": "Aplique a distância do ponto dois,oito à reta e simplifique.",
+    "concept": "Aplique a distância do ponto dois, oito à reta e simplifique.",
     "trap": "Usar distância horizontal ou vertical como perpendicular.",
     "steps": [
       "Escreva a bissetriz como x menos y igual a zero.",
-      "Aplique a distância do ponto dois,oito à reta e simplifique."
+      "Aplique a distância do ponto dois, oito à reta e simplifique."
     ],
     "commandWords": []
   },
@@ -23942,7 +23942,7 @@
     "concept": "Resolva a desigualdade do termo geral e conte termos negativos até o 35.",
     "trap": "Incluir o termo zero entre os negativos.",
     "steps": [
-      "Calcule a razão menos três quartos usando a2 igual a 29 quartos.",
+      "Calcule a razão menos três quartos usando a₂ igual a 29 quartos.",
       "Resolva a desigualdade do termo geral e conte termos negativos até o 35."
     ],
     "commandWords": []
@@ -25003,8 +25003,8 @@
     "subject": "Química",
     "chapter": "Mistura e substância · Pressão de vapor e volatilidade",
     "title": "Distingue líquidos e compara evaporação das tiras.",
-    "concept": "Etanol anidro é substância pura;salmoura permite separar solvente e soluto por destilação simples e tem pressão de vapor reduzida pelo soluto.",
-    "trap": "Chamar etanol70% de puro ou confundir resíduo sólido seco com água que não evapora.",
+    "concept": "Etanol anidro é substância pura; salmoura permite separar solvente e soluto por destilação simples e tem pressão de vapor reduzida pelo soluto.",
+    "trap": "Chamar etanol 70% de puro ou confundir resíduo sólido seco com água que não evapora.",
     "steps": [
       "Classifique etanol anidro como puro e salmoura como separável por destilação simples",
       "Compare volatilidade e depressão da pressão de vapor para indicar a tira de salmoura como última a perder água."
@@ -25023,11 +25023,11 @@
     "subject": "Química",
     "chapter": "Produção deHNO3 · Redox e termoquímica",
     "title": "Calcula oxigênio e energia na produção de ácido nítrico.",
-    "concept": "Nitrogênio daamônia passa−3→+5,portantoNH3 é redutor;6,3t correspondem10^5mol deHNO3.",
+    "concept": "Nitrogênio daamônia passa−3→+5, portantoNH3 é redutor;6,3t correspondem10⁵mol de HNO3.",
     "trap": "Usar toneladas como gramas ou tratar energia negativa como absorvida.",
     "steps": [
-      "Identifique oxidação doN e calcule2×10^5mol deO2,ou5×10^6L nasCATP",
-      "Multiplique10^5 por−434 para obterΔH=−4,34×10^7kJ,energia liberada."
+      "Identifique oxidação do N e calcule 2×10⁵mol de O2, ou 5×10⁶L nasCATP",
+      "Multiplique 10⁵ por−434 para obter ΔH=−4,34×10⁷kJ, energia liberada."
     ],
     "commandWords": []
   },
@@ -25042,11 +25042,11 @@
     "subject": "Química",
     "chapter": "Gases em água · Indicador e geometria molecular",
     "title": "Identifica gases pelos meios ácido,neutro e básico e suas polaridades.",
-    "concept": "Azul1 éNH3,básico;verde2 éCH4 sem reação acidificante;amarelo3 éCO2 acidificante.",
+    "concept": "Azul1 é NH3, básico; verde2 é CH4 sem reação acidificante; amarelo3 é CO2 acidificante.",
     "trap": "DizerCO2 polar por conter ligaçõesC–O polares sem considerar simetria.",
     "steps": [
       "Use as cores comparadas à escala para associar1NH3,2CH4,3CO2",
-      "DesenheO=C=O linear e identifiqueNH3 como polar,distinguindo polaridade de ligações e de molécula."
+      "DesenheO=C=O linear e identifique NH3 como polar, distinguindo polaridade de ligações e de molécula."
     ],
     "commandWords": []
   },
@@ -25061,7 +25061,7 @@
     "subject": "Química",
     "chapter": "Solubilidade e molalidade · Ligações de hidrogênio e íons",
     "title": "Calcula concentração da sacarose e explica dissolução não eletrolítica.",
-    "concept": "2g/mL de água são 2000g/L de solvente e2000/342≈5,85mol/kg; muitasOH favorecem hidratação,sem produção relevante de íons.",
+    "concept": "2g/mL de água são 2000g/L de solvente e 2000/342≈5,85 mol/kg; muitasOH favorecem hidratação, sem produção relevante de íons.",
     "trap": "Afirmar que toda substância solúvel em água se ioniza.",
     "steps": [
       "Converta a solubilidade para as unidades pedidas sem trocar solvente por solução",
@@ -25080,11 +25080,11 @@
     "subject": "Química",
     "chapter": "Funções orgânicas · Esterificação da benzocaína",
     "title": "Determina etanol eágua na síntese doéster a partir dePABA.",
-    "concept": "Ambos contêm amina;PABA tem carboxila e benzocaína oéster etílico correspondente.",
+    "concept": "Ambos contêm amina; PABA tem carboxila e benzocaína oéster etílico correspondente.",
     "trap": "Identificar amida só por haverN ou metanol apesar da cadeia etílica doéster.",
     "steps": [
       "Identifique amina e ácido carboxílico nas estruturas",
-      "Escreva a estrutura completa do etanolCH3–CH2–OH comoX eH2O comoY na esterificação."
+      "Escreva a estrutura completa do etanol CH3–CH2–OH como X e H2O como Y na esterificação."
     ],
     "commandWords": []
   },
@@ -25100,11 +25100,11 @@
     "subject": "Física",
     "chapter": "Frenagem · Força média e impulso",
     "title": "Relaciona frenagem do avião à variação de momento e à distância sob hipótese deMUV.",
-    "concept": "54km/h=15m/s;ma_média=1,2×10^5N e impulso=3,6×10^5N·s;distância22,5m requer desaceleração constante.",
+    "concept": "54 km/h=15m/s; ma_média=1,2×10⁵N e impulso=3,6×10⁵N·s; distância 22,5m requer desaceleração constante.",
     "trap": "Deduzir22,5m exclusivamente de aceleração média como se ela fixasse toda a trajetória.",
     "steps": [
-      "Converta a velocidade e explicite a hipótese uniforme para usar velocidade média7,5m/s durante3s",
-      "Calcule força média por mΔv/Δt e módulo doimpulso por mΔv,distinguindo sinais."
+      "Converta a velocidade e explicite a hipótese uniforme para usar velocidade média 7,5m/s durante3s",
+      "Calcule força média por mΔv/Δt e módulo doimpulso por mΔv, distinguindo sinais."
     ],
     "commandWords": []
   },
@@ -25117,11 +25117,11 @@
     "subject": "Física",
     "chapter": "Energia mecânica · Trabalho do peso e resistência",
     "title": "Calcula energias e trabalhos na trajetória dacápsula suborbital.",
-    "concept": "Na separaçãoEc=2×10^9J,Ep=3×10^9J;trabalho do peso na subida é−1,2×10^9J e resistência na descida retira4,2×10^9J.",
+    "concept": "Na separaçãoEc=2×10⁹J, Ep=3×10⁹J; trabalho do peso na subida é−1,2×10⁹J e resistência na descida retira4,2×10⁹J.",
     "trap": "Conservar energia mecânica apesar dasforças deresistência ou misturar quilômetro com metro.",
     "steps": [
-      "Some energia cinética e potencial a75km para obter5×10^9J",
-      "UseWp=−mgΔh para subida eΔEm para descida com velocidades desprezadas nos extremos."
+      "Some energia cinética e potencial a 75 km para obter 5×10⁹J",
+      "Use Wp=−mgΔh para subida e ΔEm para descida com velocidades desprezadas nos extremos."
     ],
     "commandWords": []
   },
@@ -25134,11 +25134,11 @@
     "subject": "Física",
     "chapter": "Calor sensível · Dilatação volumétrica",
     "title": "Calcula aquecimento e espaço livre no recipiente dilatado.",
-    "concept": "Massa252g,calor7560cal;glicerina aumenta5cm³ e recipiente0,30,restando45,30cm³.",
+    "concept": "Massa252g, calor7560cal; glicerina aumenta5cm³ e recipiente0,30, restando45,30cm³.",
     "trap": "Aplicar dilatação apenas à glicerina e ignorar que o recipiente também expande.",
     "steps": [
-      "Use m=ρV eQ=mcΔT comΔT=50°C",
-      "CalculeΔV=200×5×10^−4×50 e subtraia205 de250,30."
+      "Use m=ρV e Q=mcΔT com ΔT=50°C",
+      "Calcule ΔV=200×5×10⁻⁴×50 e subtraia 205 de 250,30."
     ],
     "commandWords": []
   },
@@ -25153,11 +25153,11 @@
     "subject": "Física",
     "chapter": "Tubo fechado · Decibéis e energia sonora",
     "title": "Calcula comprimento de tubo eenergia incidente no tímpano.",
-    "concept": "λ=340/170=2m eL=λ/4=0,5m;60dB forneceI=10^−6W/m² eenergia6×10^−11J em1s.",
+    "concept": "λ=340/170=2m e L=λ/4=0,5m;60 dB fornece I=10⁻⁶W/m² eenergia6×10⁻¹¹J em 1s.",
     "trap": "Tratar tubo fechado como duasextremidades abertas ou multiplicar60 diretamente pela área.",
     "steps": [
       "Reconheça nó naextremidade fechada e ventre naaberta para a fundamental",
-      "IsoleI na expressão logarítmica e useE=IΔSΔt."
+      "IsoleI na expressão logarítmica e use E=IΔSΔt."
     ],
     "commandWords": []
   },
@@ -25170,11 +25170,11 @@
     "subject": "Física",
     "chapter": "Resistores em paralelo · Gerador real e perdas",
     "title": "Determina correntes e dissipação na resistência interna dabateria.",
-    "concept": "R2||R3=40Ω atravessado por0,25A tem10V;R3 recebe0,2A. Queda interna0,1V dáRi=0,4Ω eP=0,025W.",
-    "trap": "Usar12V diretamente emR3 ignorandoR1 earesistência interna.",
+    "concept": "R2||R3=40Ω atravessado por 0,25A tem 10V; R3 recebe0,2A. Queda interna0,1V dá Ri=0,4Ω e P=0,025W.",
+    "trap": "Usar12V diretamente em R3 ignorandoR1 earesistência interna.",
     "steps": [
-      "Use a corrente total emR1 para obter tensão no paralelo e corrente emR3",
-      "CalculeRi=(12−11,9)/0,25 eP=Ri×0,25²."
+      "Use a corrente total em R1 para obter tensão no paralelo e corrente em R3",
+      "Calcule Ri=(12−11,9)/0,25 e P=Ri×0,25²."
     ],
     "commandWords": []
   },
@@ -25187,11 +25187,11 @@
     "subject": "Matemática",
     "chapter": "Cordas paralelas · Teorema dePitágoras",
     "title": "Determina raio pelas distâncias de cordas aocentro.",
-    "concept": "Comd=3 e semicorda4,r=5. Com cordas emlados opostos e distância4,a+b=4 e b²−a²=7.",
+    "concept": "Comd=3 e semicorda4, r=5. Com cordas emlados opostos e distância 4, a+b=4 e b²−a²=7.",
     "trap": "Somar distâncias como se as duas cordas estivessem no mesmo lado do centro.",
     "steps": [
       "Calcule área25π no primeiro caso",
-      "No segundo,usea=9/8,b=23/8 e r²=a²+16=1105/64 para obter√1105/8cm."
+      "No segundo, usea=9/8, b=23/8 e r²=a²+16=1105/64 para obter √1105/8 cm."
     ],
     "commandWords": []
   },
@@ -25206,10 +25206,10 @@
     "subject": "Matemática",
     "chapter": "Coeficiente angular · Ângulo entre retas",
     "title": "Determina equações usando interseção eângulo detrinta graus.",
-    "concept": "A reta s tem inclinação1/3 e intercepto10/3; r é mais inclinada conforme a figura.",
-    "trap": "Subtrair30° apesar do ramo r mais inclinado ou usar diretamente tan30 como coeficiente de r.",
+    "concept": "A reta s tem inclinação 1/3 e intercepto10/3; r é mais inclinada conforme a figura.",
+    "trap": "Subtrair 30° apesar do ramo r mais inclinado ou usar diretamente tan30 como coeficiente de r.",
     "steps": [
-      "Use s:y=x/3+10/3 e fórmula da tangente da adição para mr=tan(arctan(1/3)+30°)",
+      "Use s: y=x/3+10/3 e fórmula da tangente da adição para mr=tan(arctan(1/3)+30°)",
       "Calcule mr=(6+5√3)/13 e n=4−2mr=(40−10√3)/13."
     ],
     "commandWords": []
@@ -25225,11 +25225,11 @@
     "subject": "Matemática",
     "chapter": "Porcentagens · Contagem limitada de moedas",
     "title": "Calcula composição dopreço e conta subconjuntos monetários.",
-    "concept": "X=0,172×6=1,032;Y=0,684/6×100=11,4. Oetanol puro custa1,03/0,27≈3,81 por litro.",
+    "concept": "X=0,172×6=1,032; Y=0,684/6×100=11,4. Oetanol puro custa1,03/0,27≈3,81 por litro.",
     "trap": "Usar 17,2% como fração volumétrica ou contar permutações de moedas iguais.",
     "steps": [
-      "CalculeX,Y e preço unitário do etanol,distinguindo 27% em volume de 17,2% do custo",
-      "Conte soluções de100a+50b+10c+5d+e=381,com limites4,3,2,3,15:dez subconjuntos sem distinguir moedas iguais."
+      "Calcule X, Y e preço unitário do etanol, distinguindo 27% em volume de 17,2% do custo",
+      "Conte soluções de 100a+50b+10c+5d+e=381, com limites 4,3,2,3,15: dez subconjuntos sem distinguir moedas iguais."
     ],
     "commandWords": []
   },
@@ -25242,11 +25242,11 @@
     "subject": "Matemática",
     "chapter": "Decaimento exponencial · Meia-vida e logaritmos",
     "title": "Modela queda anual de cabelo e idade de meia quantidade.",
-    "concept": "N(t)=100000×0,96^t;N(1)=96000. Com os logaritmos fornecidos,log0,96=−0,02 et=15.",
+    "concept": "N(t)=100000×0,96ᵗ; N(1)=96000. Com os logaritmos fornecidos, log0,96=−0,02 et=15.",
     "trap": "Subtrair 4000 fios a cada ano como modelo linear ou responder15 como idade.",
     "steps": [
       "Aplique o fator remanescente0,96 a cada ano",
-      "Resolva0,96^t=1/2 e adicione 30 à estimativa 15 para obter 45 anos."
+      "Resolva 0,96ᵗ=1/2 e adicione 30 à estimativa 15 para obter 45 anos."
     ],
     "commandWords": []
   },
@@ -25259,11 +25259,11 @@
     "subject": "Matemática",
     "chapter": "Prisma triangular regular · Diagonal ealtura",
     "title": "Calcula áreas debases elaterais usando diagonal BM.",
-    "concept": "As bases equiláteras de lado12 somam 72√3;altura do triângulo é6√3 eBM20 fornece altura do prisma2√73.",
+    "concept": "As bases equiláteras de lado 12 somam 72√3; altura do triângulo é 6√3 e BM20 fornece altura do prisma2√73.",
     "trap": "Usar 20 comoaltura do prisma sem decompor o segmento inclinado.",
     "steps": [
       "Calcule duas áreas equiláteras e use a relação BM²=h_prisma²+(6√3)²",
-      "Multiplique perímetro 36 pela altura2√73 para área lateral72√73."
+      "Multiplique perímetro 36 pela altura 2√73 para área lateral72√73."
     ],
     "commandWords": []
   },

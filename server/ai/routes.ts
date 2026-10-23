@@ -1,3 +1,5 @@
+import { getReviewedApostilaReference } from '../../src/lib/reviewedApostilaReferences';
+import { hasCorruptedApostilaText } from '../../src/lib/apostilaTextQuality';
 import { withinCaptureBudget, type EvaluationService } from './evaluation';
 import type { EvaluationRun } from '../../src/features/ai-evaluation/types';
 import { isEvaluationAdmin } from './evaluationRoutes';
@@ -69,13 +71,14 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
         const payload = validateAiPayload(task, req.body);
         const serverSources: import('../../src/lib/studySources').StudySource[] = [];
 
-        if (['content-explanation', 'review-tip', 'podcast-script'].includes(task) && apostilaReferences && typeof payload.topic === 'string' && typeof payload.subject === 'string') {
+        if (['content-explanation', 'review-tip', 'podcast-script'].includes(task) && typeof payload.topic === 'string' && typeof payload.subject === 'string') {
           try {
-            const reference = await apostilaReferences.getReference(payload.subject, payload.topic);
-            if (reference) {
+            const reference = getReviewedApostilaReference(payload.subject, payload.topic, typeof payload.chapter === 'string' ? payload.chapter : '')
+              ?? await apostilaReferences?.getReference(payload.subject, payload.topic);
+            if (reference && !hasCorruptedApostilaText(reference.text)) {
               const material = reference.text.slice(0, MAX_REFERENCE_CHARS_IN_PROMPT);
               payload.apostilaReference = material;
-              if (task !== 'content-explanation') serverSources.push({ id: 'AS1', title: `Apostila: ${reference.subject} — ${reference.topicName}`, kind: 'resumo', content: material, excerpt: reference.text.length > material.length });
+              if (task !== 'content-explanation') serverSources.push({ id: 'AS1', title: `Apostila: ${reference.subject} — ${reference.topicName}`, kind: 'resumo', content: material, excerpt: reference.excerpt || reference.text.length > material.length, ...(reference.url ? { url: reference.url } : {}), ...(reference.format ? { format: reference.format } : {}) });
               if (task === 'review-tip') payload.referenceText = `${payload.referenceText ?? ''}\n\n[AS1] Apostila do servidor: ${reference.subject} — ${reference.topicName}; trecho complementar\n${material}`;
               if (task === 'podcast-script') payload.sourceText = `${payload.sourceText ?? ''}\n\n[AS1] Apostila do servidor: ${reference.subject} — ${reference.topicName}; trecho complementar\n${material}`;
             }
