@@ -91,3 +91,23 @@ test('Geometria Plana usa a extração conferida em vez do OCR antigo em JSON e 
     }
   } finally { server.closeAllConnections(); await new Promise<void>(resolve => server.close(() => resolve())); }
 });
+test('revisões mantêm opções no fluxo HTTP real e devolvem só os formatos selecionados',async()=>{
+  let prompt='';let referenceReads=0;
+  const service=new AiService({name:'fixture',model:'fixture',isConfigured:true,generate:async request=>{prompt=request.prompt;return 'Revisão';}});
+  const app=express();app.use(express.json());app.use('/ai',createAiRouter(service,undefined,{getReference:async()=>{referenceReads++;return null;}}));
+  const server=app.listen(0);
+  try{
+    await new Promise<void>(resolve=>server.once('listening',resolve));
+    const url=`http://127.0.0.1:${(server.address() as AddressInfo).port}/ai/review-tip`;
+    const base={topic:'Vacinação',subject:'Biologia',guideMode:'review-summary',level:40,daysSinceReview:0,referenceText:'[F1] Boletim fornecido de 2025.',reviewOptions:{sourceMode:'provided',materialKind:'current-affairs',sourceDate:'2025-10-01',depth:'quick'}};
+    const response=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...base,targetBoards:['UNICAMP'],reviewOptions:{...base.reviewOptions,scopes:{UNICAMP:'second'}}})});
+    assert.equal(response.status,200);
+    const result=await response.json();
+    assert.deepEqual(result.serverSources.map((s:{board:string})=>s.board),['UNICAMP']);
+    assert.match(prompt,/Segunda fase/);assert.match(prompt,/2025-10-01/);assert.match(prompt,/Um mini-exemplo/);assert.match(prompt,/\[R1\].*UNICAMP/);
+    assert.doesNotMatch(prompt,/FUVEST|Fuvest/);assert.equal(referenceReads,0);
+    const general=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...base,targetBoards:[],board:'FUVEST'})});
+    assert.equal(general.status,200);assert.equal((await general.json()).serverSources,undefined);
+    assert.match(prompt,/Nenhuma banca selecionada/);assert.doesNotMatch(prompt,/FUVEST|Fuvest/);
+  }finally{server.closeAllConnections();await new Promise<void>(resolve=>server.close(()=>resolve()));}
+});

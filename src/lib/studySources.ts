@@ -53,7 +53,10 @@ export function buildWorkStudyPacket(dossier: import('../types/literaryWorks').W
   for (const card of dossier.evidence.filter(item => item.editorialStatus === 'published' && units.has(item.unitId) && (!unitId || item.unitId === unitId)).slice(0, 4)) {
     sources.push({ id: `F${sources.length + 1}`, title: `Passagem da obra · ${card.location} · ${dossier.edition.label}`, kind: 'resumo', content: `Citação publicada: “${card.quote}”\nContexto: ${card.context}\nRecurso: ${card.formalDevice}\nEfeito: ${card.effect}\nRelação com a obra: ${card.wholeRelation}`, excerpt: false });
   }
-  const referenceText = sources.map(source => `[${source.id}] ${source.title}${source.excerpt ? ' [recorte]' : ''}\nMaterial de obra e análise editorial, não questão oficial.\n${source.content}`).join('\n\n');
+  const critical = dossier.sources?.filter(source => modules.some(module => module.sourceRefs.includes(source.id))).slice(0,3) ?? [];
+  for (const source of critical) sources.push({ id: `F${sources.length+1}`, kind: 'resumo', title: `Crítica documentada · ${source.citation}`, content: clip(`Leitura registrada pelo dossiê, não nova leitura integral. Páginas lidas: ${source.pagesRead || 'não informadas'}.\nTese: ${source.centralThesis}\nContribuição: ${source.contribution}\nLimites: ${source.limitations}`, 1200), excerpt: true, ...(cleanUrl(source.url) ? { url: cleanUrl(source.url) } : {}) });
+  sources.push({ id: `F${sources.length+1}`, kind: 'resumo', title: `Edição consultada · ${dossier.edition.label}`, content: dossier.edition.note, excerpt: true });
+  const referenceText = sources.map(source => `[${source.id}] ${source.title}${source.excerpt ? ' [recorte]' : ''}\nMaterial de obra e análise editorial, não questão oficial.\n${source.url ? `Fonte: ${source.url}\n` : ''}${source.content}`).join('\n\n');
   if (referenceText.length > STUDY_SOURCE_CHAR_LIMIT) throw new Error('As fontes da obra excedem o recorte de estudo disponível.');
   return { topicId: `obra:${dossier.slug}`, chapter: selectedUnit?.title ?? '', sources, coverage: [], referenceText };
 }

@@ -1,8 +1,11 @@
 import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { afterEach, beforeEach, expect, it, vi } from 'vitest';
-const mocks = vi.hoisted(() => ({ auth: { user: null as null | { uid: string } }, generate: vi.fn(), loadGuides: vi.fn(async () => ({})), saveGuide: vi.fn(async () => {}), packet: vi.fn() }));
+const mocks = vi.hoisted(() => ({ auth: { user: null as null | { uid: string } }, generate: vi.fn(), loadGuides: vi.fn(async () => ({})), saveGuide: vi.fn(async () => {}), packet: vi.fn(), history: { errors: [] as unknown[], loading: false, warning: '' } }));
 vi.mock('../context/AuthContext', () => ({ useAuth: () => mocks.auth }));
+vi.mock('../hooks/useErrorReviewHistory', () => ({ useErrorReviewHistory: () => mocks.history }));
+vi.mock('../lib/literaryCatalog', () => ({ getLiteraryWorks: async () => [{id:'bras',slug:'bras-cubas',title:'Memórias póstumas de Brás Cubas',author:'Machado de Assis'}] }));
+vi.mock('../components/DeepeningPdf', () => ({ DeepeningPdf: () => <div>Exportação CRIVO</div> }));
 vi.mock('../hooks/useStudyTargets', () => ({ useStudyTargets: () => ({ targets: [{ board: 'FUVEST' }] }) }));
 vi.mock('../lib/aiClient', () => ({ requestAiTextStream: mocks.generate, AiRequestError: class extends Error {} }));
 vi.mock('../lib/loadStudyPacket', () => ({ loadStudyPacket: mocks.packet }));
@@ -14,31 +17,32 @@ const mount = () => render(<MemoryRouter><ReviewSummaries /></MemoryRouter>);
 beforeEach(() => {
   localStorage.clear(); mocks.auth.user = null; mocks.generate.mockReset(); mocks.saveGuide.mockClear();
   mocks.loadGuides.mockResolvedValue({});
+  mocks.history.errors = []; mocks.history.loading = false;
   mocks.packet.mockResolvedValue({ topicId: 'mat_aritmetica_proporcionalidade', chapter: '', coverage: [], sources: [{ id: 'F1', title: 'Conceitos', kind: 'resumo', content: 'Proporções', excerpt: true }], referenceText: '[F1] Proporções' });
-  mocks.generate.mockResolvedValue({ text: 'Síntese de revisão conferida' });
+  mocks.generate.mockResolvedValue({ text: 'Síntese de revisão conferida\n## Recuperação ativa\n1. Explique.\n## Revisão de última hora\nLembre.\n## Gabarito da recuperação ativa\n1. Resposta separada.' });
 });
 afterEach(cleanup);
-it('exige banca e gera com o recorte e as fontes, salvando separadamente', async () => {
+it('permite revisão geral e gera com o recorte e as fontes, salvando separadamente', async () => {
   mount();
-  expect(screen.getByRole('button', { name: 'Gerar resumo de revisão' })).toBeDisabled();
-  fireEvent.change(screen.getByLabelText('Banca do resumo'), { target: { value: 'FUVEST' } });
+  expect(screen.getByRole('button', { name: 'Gerar resumo de revisão' })).toBeEnabled();
+  fireEvent.click(screen.getByRole('checkbox', { name: 'Fuvest' }));
   fireEvent.change(screen.getByLabelText('Capítulo do resumo'), { target: { value: 'Porcentagem' } });
   fireEvent.click(screen.getByRole('button', { name: 'Gerar resumo de revisão' }));
-  await waitFor(() => expect(mocks.generate).toHaveBeenCalledWith('review-tip', expect.objectContaining({ subject: 'Matemática', board: 'FUVEST', chapter: 'Porcentagem', targetBoards: ['FUVEST'], guideMode: 'review-summary', referenceText: '[F1] Proporções' }), expect.any(Function)));
-  expect(await screen.findByText('Síntese de revisão conferida')).toBeInTheDocument();
+  await waitFor(() => expect(mocks.generate).toHaveBeenCalledWith('review-tip', expect.objectContaining({ subject: 'Matemática', chapter: 'Porcentagem', targetBoards: ['FUVEST'], guideMode: 'review-summary', referenceText: '[F1] Proporções' }), expect.any(Function)));
+  expect(await screen.findByText(/Síntese de revisão conferida/)).toBeInTheDocument();
   await waitFor(() => expect(Object.values(readStrategyGuides(null))).toHaveLength(1));
   expect(Object.values(readStrategyGuides(null))[0]).toMatchObject({ kind: 'review-summary', chapter: 'Porcentagem', board: 'FUVEST' });
   expect(screen.getByText('Meus resumos de revisão (1)')).toBeInTheDocument();
-  fireEvent.change(screen.getByLabelText('Banca do resumo'), { target: { value: 'UNICAMP' } });
-  expect(screen.queryByText('Síntese de revisão conferida')).toBeNull();
+  fireEvent.click(screen.getByRole('checkbox', { name: 'Unicamp/Comvest' }));
+  expect(screen.queryByText(/Síntese de revisão conferida/)).toBeNull();
   fireEvent.click(screen.getByRole('button', { name: /Porcentagem · FUVEST/ }));
-  expect(screen.getByText('Síntese de revisão conferida')).toBeInTheDocument();
+  expect(screen.getByText(/Síntese de revisão conferida/)).toBeInTheDocument();
 });
 it('salva na conta e retoma a biblioteca após remontar sem misturar aprofundamentos', async () => {
   mocks.auth.user = { uid: 'A' };
   cacheStrategyGuides('A', { old: { key: 'old', subject: 'Biologia', topicId: 'bio_ecologia', topicName: 'Guia profundo', chapter: '', board: 'FUVEST', text: 'Aprofundamento preservado', savedAt: '2026-10-20T12:00:00Z' } });
   const first = mount();
-  fireEvent.change(screen.getByLabelText('Banca do resumo'), { target: { value: 'FUVEST' } });
+  fireEvent.click(screen.getByRole('checkbox', { name: 'Fuvest' }));
   fireEvent.click(screen.getByRole('button', { name: 'Gerar resumo de revisão' }));
   await waitFor(() => expect(mocks.saveGuide).toHaveBeenCalledWith('A', expect.objectContaining({ kind: 'review-summary' })));
   expect(screen.queryByText('Guia profundo')).toBeNull();
@@ -46,12 +50,12 @@ it('salva na conta e retoma a biblioteca após remontar sem misturar aprofundame
   first.unmount(); mount();
   expect(screen.getByText('Meus resumos de revisão (1)')).toBeInTheDocument();
   fireEvent.click(screen.getByRole('button', { name: /Aritmética e Proporcionalidade · FUVEST/ }));
-  expect(screen.getByText('Síntese de revisão conferida')).toBeInTheDocument();
+  expect(screen.getByText(/Síntese de revisão conferida/)).toBeInTheDocument();
 });
 it('falha da IA não apaga resumos e não salva uma resposta parcial', async () => {
   mocks.generate.mockImplementation(async (_task, _payload, onDelta) => { onDelta('Rascunho incompleto'); throw new Error('offline'); });
   mount();
-  fireEvent.change(screen.getByLabelText('Banca do resumo'), { target: { value: 'FUVEST' } });
+  fireEvent.click(screen.getByRole('checkbox', { name: 'Fuvest' }));
   fireEvent.click(screen.getByRole('button', { name: 'Gerar resumo de revisão' }));
   expect(await screen.findByRole('alert')).toHaveTextContent('Não foi possível gerar');
   expect(screen.queryByText('Rascunho incompleto')).toBeNull();
@@ -62,7 +66,7 @@ it('troca de conta durante a geração não exibe nem salva a resposta da conta 
   mocks.generate.mockImplementation(() => new Promise(resolve => { complete = resolve; }));
   mocks.auth.user = { uid: 'A' };
   const first = mount();
-  fireEvent.change(screen.getByLabelText('Banca do resumo'), { target: { value: 'FUVEST' } });
+  fireEvent.click(screen.getByRole('checkbox', { name: 'Fuvest' }));
   fireEvent.click(screen.getByRole('button', { name: 'Gerar resumo de revisão' }));
   await waitFor(() => expect(mocks.generate).toHaveBeenCalled());
   mocks.auth.user = { uid: 'B' };
@@ -70,4 +74,54 @@ it('troca de conta durante a geração não exibe nem salva a resposta da conta 
   await act(async () => complete({ text: 'Resumo exclusivo de A' }));
   expect(screen.queryByText('Resumo exclusivo de A')).toBeNull();
   expect(mocks.saveGuide).not.toHaveBeenCalled();
+});
+it('seleções múltiplas, fase, profundidade e histórico chegam à geração e são retomados', async () => {
+  mocks.history.errors = [{id:'err',topicId:'mat_aritmetica_proporcionalidade',questionId:'q',date:'2026-10-20',type:'unknown',notes:'Troquei a razão',confidence:'baixa'}];
+  mount();
+  fireEvent.click(screen.getByRole('checkbox',{name:'Unicamp/Comvest'}));
+  fireEvent.click(screen.getByRole('checkbox',{name:'ENEM/Inep'}));
+  fireEvent.change(screen.getByLabelText('Etapa — Unicamp/Comvest'),{target:{value:'second'}});
+  fireEvent.change(screen.getByLabelText('Profundidade'),{target:{value:'deep'}});
+  fireEvent.click(screen.getByRole('checkbox',{name:/Usar meus erros/}));
+  fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
+  await waitFor(()=>expect(mocks.generate).toHaveBeenCalledWith('review-tip',expect.objectContaining({targetBoards:['ENEM','UNICAMP'],reviewOptions:expect.objectContaining({depth:'deep',scopes:{ENEM:'all',UNICAMP:'second'},useHistory:true}),errorHistory:expect.stringContaining('Troquei a razão')}),expect.any(Function)));
+  await waitFor(()=>expect(Object.values(readStrategyGuides(null))).toHaveLength(1));
+  const guide=Object.values(readStrategyGuides(null))[0];
+  expect(guide.reviewOptions?.depth).toBe('deep');
+  expect(screen.getByText(/Resposta separada\./).closest('details')).not.toHaveAttribute('open');
+  fireEvent.click(screen.getByRole('button',{name:'Exportar revisão em PDF'}));
+  expect(await screen.findByText('Exportação CRIVO')).toBeInTheDocument();
+});
+it('sem banca envia seleção vazia e não herda metas Fuvest', async()=>{
+  mount(); fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
+  await waitFor(()=>expect(mocks.generate).toHaveBeenCalledWith('review-tip',expect.objectContaining({targetBoards:[],reviewOptions:expect.objectContaining({boards:[]})}),expect.any(Function)));
+  expect(mocks.generate.mock.calls[0][1].board).toBeUndefined();
+});
+it('material datado usa apenas a extração fornecida e preserva a referência', async()=>{
+  mount();
+  fireEvent.change(screen.getByLabelText('Material de origem'),{target:{value:'provided'}});
+  fireEvent.change(screen.getByLabelText('Tipo de material'),{target:{value:'current-affairs'}});
+  fireEvent.change(screen.getByLabelText('Título do material'),{target:{value:'Boletim epidemiológico'}});
+  fireEvent.change(screen.getByLabelText('Data da fonte (opcional)'),{target:{value:'2025-10-01'}});
+  fireEvent.change(screen.getByLabelText('Texto ou extração do material'),{target:{value:'Dados de vacinação em 2025.'}});
+  fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
+  await waitFor(()=>expect(mocks.generate).toHaveBeenCalledWith('review-tip',expect.objectContaining({topic:'Boletim epidemiológico',referenceText:expect.stringContaining('2025-10-01'),reviewOptions:expect.objectContaining({materialKind:'current-affairs',sourceDate:'2025-10-01'})}),expect.any(Function)));
+  expect(mocks.packet).not.toHaveBeenCalled();
+});
+it('resposta sem gabarito separado não é salva nem expõe uma revisão incompleta', async()=>{
+  mocks.generate.mockResolvedValue({text:'Revisão sem separação de respostas'});
+  mount(); fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
+  expect(await screen.findByRole('alert')).toHaveTextContent('Não foi possível gerar');
+  expect(Object.keys(readStrategyGuides(null))).toHaveLength(0);
+});
+
+it('obra da biblioteca aceita outra banca e encaminha o tipo literário sem foco Fuvest', async()=>{
+  mount();
+  fireEvent.change(screen.getByLabelText('Material de origem'),{target:{value:'work'}});
+  await screen.findByRole('option',{name:'Memórias póstumas de Brás Cubas — Machado de Assis'});
+  fireEvent.change(screen.getByLabelText('Obra'),{target:{value:'obra:bras-cubas'}});
+  fireEvent.click(screen.getByRole('checkbox',{name:'Unesp/Vunesp'}));
+  fireEvent.change(screen.getByLabelText('Etapa — Unesp/Vunesp'),{target:{value:'second'}});
+  fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
+  await waitFor(()=>expect(mocks.generate).toHaveBeenCalledWith('review-tip',expect.objectContaining({subject:'Literatura',topic:'Memórias póstumas de Brás Cubas',targetBoards:['UNESP'],reviewOptions:expect.objectContaining({materialKind:'literature',sourceMode:'work',scopes:{UNESP:'second'}})}),expect.any(Function)));
 });

@@ -9,12 +9,13 @@ import { printStyles } from '../lib/printStyles';
 // Reuse the completed file when opening its library entry in this session.
 const completedFiles = new Map<string, Blob>();
 
-export function DeepeningPdf({ getContent, title, guideKey, revision, generateCover = false, onBusyChange }: {
+export function DeepeningPdf({ getContent, title, guideKey, revision, generateCover = false, onBusyChange, materialLabel = 'Aprofundamento' }: {
   getContent: () => HTMLElement | null;
   title: string;
   guideKey: string;
   revision: string;
   generateCover?: boolean;
+  materialLabel?: string;
   onBusyChange?: (busy: boolean) => void;
 }) {
   const { user } = useAuth();
@@ -34,7 +35,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
       try {
         let blob = completedFiles.get(cacheKey);
         if (!blob) {
-          if (!content) throw new Error('O conteúdo do aprofundamento não está disponível.');
+          if (!content) throw new Error(`O conteúdo de ${materialLabel.toLowerCase()} não está disponível.`);
           if (generateCover && user && !previous) {
             // An unavailable illustration must not discard the completed study text.
             try {
@@ -78,7 +79,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
   const shareFile = ready ? new File([ready.blob], filename, { type: 'application/pdf' }) : undefined;
   return <div data-print-exclude className="space-y-2 text-sm">
     {ready ? <>
-      <p role="status">Aprofundamento pronto, com capa e índice.</p>
+      <p role="status">{materialLabel === 'Aprofundamento' ? 'Aprofundamento pronto, com capa e índice.' : `${materialLabel} pronta, com capa e índice.`}</p>
       <div className="flex flex-wrap items-center gap-3">
         <a className="rounded-lg border border-[var(--line)] px-4 py-2" href={ready.url} target="_blank" rel="noopener">Abrir PDF</a>
         <a className="underline" href={ready.url} download={filename}>Salvar PDF</a>
@@ -88,8 +89,8 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
           });
         }}>Compartilhar PDF</button>}
       </div>
-    </> : !error && <p role="status">Preparando seu aprofundamento completo…</p>}
-    {error && <div role="alert" className="space-y-2"><p>{error} O texto do seu aprofundamento continua salvo.</p>
+    </> : !error && <p role="status">{materialLabel === 'Aprofundamento' ? 'Preparando seu aprofundamento completo…' : `Preparando ${materialLabel.toLowerCase()} completa…`}</p>}
+    {error && <div role="alert" className="space-y-2"><p>{error} {materialLabel === 'Aprofundamento' ? 'O texto do seu aprofundamento continua salvo.' : `O texto de ${materialLabel.toLowerCase()} continua salvo.`}</p>
       {!ready && <button type="button" className="underline" onClick={() => setAttempt(value => value + 1)}>Tentar novamente</button>}
     </div>}
   </div>;

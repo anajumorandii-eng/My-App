@@ -108,6 +108,7 @@ export const printStyles = `${printCoverFontStyles}\n${printBodyFontStyles}
   [data-print-content] summary { break-inside: avoid; break-after: avoid; }
   [data-print-content] p:has(+ ul), [data-print-content] p:has(+ ol) { break-after: avoid; }
   [data-print-content] li { break-inside: auto; }
+  [data-print-content] [data-print-answer-key] { break-before: page !important; }
   [data-print-content] [data-print-keep] { break-inside: avoid !important; }
   [data-print-content] [data-print-split] { break-inside: auto !important; }
   [data-print-content] table { min-width: 0 !important; table-layout: fixed; break-inside: auto; }
