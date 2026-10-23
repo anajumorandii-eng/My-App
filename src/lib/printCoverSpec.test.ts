@@ -28,3 +28,10 @@ test('sem metadados usa o título recebido e uma capa neutra de leitura', () => 
   assert.equal(spec.exam_board, '');
   assert.equal(selectCoverTheme({}), 'literature');
 });
+test('revisão tem vocabulário visual e palavras-chave próprios do tipo de material',()=>{
+ const context={subject:'Biologia',topic:'Genética'};
+ const study=buildPrintCoverSpec({...context,purpose:'Aprofundamento'},'Genética');
+ const review=buildPrintCoverSpec({...context,purpose:'Revisão estratégica'},'Genética');
+ assert.notEqual(review.visual_spec.central_hero,study.visual_spec.central_hero);
+ assert.deepEqual(review.triad_keywords,['Recordar','Conectar','Aplicar']);
+});

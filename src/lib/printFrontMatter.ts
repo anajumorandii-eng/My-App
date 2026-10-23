@@ -1,5 +1,5 @@
 import { preparedCoverIllustration, readPrintCoverContext } from './printCoverContext';
-import { printCoverArt } from './printCoverArt';
+import { coverEditionSeed, coverMaterial, printCoverArt } from './printCoverArt';
 import { buildPrintCoverSpec, type PrintCoverContext } from './printCoverSpec';
 
 const svgNode = (tag: string, attributes: Record<string, string> = {}) => {
@@ -21,6 +21,8 @@ export function createPrintFrontMatter(content: HTMLElement, title: string) {
   const context: PrintCoverContext = readPrintCoverContext(content);
   const spec = buildPrintCoverSpec(context, title);
   const cover = document.createElement('section'); cover.dataset.printCover = '';
+  const edition=data.printCoverEdition || crypto.randomUUID();
+  cover.dataset.printCoverEdition=edition; cover.dataset.printMaterial=coverMaterial(context);
   const foundation = svgNode('svg', { viewBox: '0 0 210 296', preserveAspectRatio: 'none', 'aria-hidden': 'true' });
   foundation.dataset.printCoverBase = '';
 
@@ -37,6 +39,12 @@ export function createPrintFrontMatter(content: HTMLElement, title: string) {
     for (const r of ['2', '1']) foundation.append(svgNode('circle', { cx: '105', cy: String(y), r, fill: 'none', stroke: '#A6824B', 'stroke-width': '.15' }));
     foundation.append(svgNode('path', { d: `M101.5 ${y}H108.5 M105 ${y - 3.5}V${y + 3.5}`, stroke: '#A6824B', 'stroke-width': '.13', fill: 'none' }));
   }
+  // An engraved constellation also distinguishes editions using generated PNG art.
+  const seed=coverEditionSeed(context,edition);
+  for(let index=0;index<9;index++){
+    const theta=((seed%360)+index*40)*Math.PI/180;
+    foundation.append(svgNode('circle',{cx:String(105+Math.cos(theta)*87),cy:String(148+Math.sin(theta)*126),r:String(.3+((seed>>>(index*3))&3)*.15),fill:coverMaterial(context)==='review'?'#31546a':'#A6824B'}));
+  }
   const header = document.createElement('header'); header.dataset.printCoverHeader = '';
   const brand = document.createElement('p'); brand.textContent = spec.brand_header; brand.dataset.printCoverBrand = '';
   const collection = document.createElement('p'); collection.textContent = spec.collection_subtitle; collection.dataset.printCoverCollection = '';
@@ -47,14 +55,14 @@ export function createPrintFrontMatter(content: HTMLElement, title: string) {
   const titleBlock = document.createElement('div'); titleBlock.dataset.printCoverTitle = '';
   const heading = document.createElement('h1'); heading.textContent = spec.topic_subtitle;
   titleBlock.append(subject, coverDivider(), heading);
-  const art = printCoverArt(context); cover.dataset.printArt = art.key;
+  const art = printCoverArt(context,edition); cover.dataset.printArt = art.key;
   const generated = preparedCoverIllustration(content);
   if (generated) cover.dataset.printGenerated = '';
   const illustration = document.createElement('div'); illustration.dataset.printCoverArt = '';
   const plate = document.createElement('div'); plate.dataset.printCoverPlate = '';
   const image = document.createElement('img'); image.dataset.printIllustration = ''; image.src = generated || art.src;
   image.alt = ''; image.setAttribute('aria-hidden', 'true'); plate.append(image);
-  for (const [position, vignette] of Object.entries(generated ? {} : spec.visual_spec.vignettes)) {
+  for (const [position, vignette] of Object.entries(generated || coverMaterial(context)==='review' ? {} : spec.visual_spec.vignettes)) {
     const caption = document.createElement('p'); caption.dataset.printVignette = position; caption.textContent = vignette.label; plate.append(caption);
   }
   illustration.append(plate);

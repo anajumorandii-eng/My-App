@@ -78,3 +78,27 @@ it('descarta a preparação anterior quando a seleção muda', async () => {
   finish(pdf());
   expect(screen.queryByRole('link')).toBeNull();
 });
+it('não reaproveita o PDF de aprofundamento numa revisão com a mesma chave e versão',async()=>{
+ const fetch=vi.fn(async (url, _options?: {body:string})=>url==='/api/study-pdf'?pdf():Response.json({enabled:false}));
+ const {root,props}=setup('different-materials',fetch);
+ render(<DeepeningPdf {...props} generateCover={false}/>);
+ await screen.findByRole('link',{name:'Abrir PDF'});cleanup();
+ root.dataset.printPurpose='Revisão estratégica';
+ render(<DeepeningPdf {...props} generateCover={false} materialLabel="Revisão"/>);
+ await screen.findByRole('link',{name:'Abrir PDF'});
+ const calls=fetch.mock.calls.filter(([url])=>url==='/api/study-pdf');
+ expect(calls).toHaveLength(2);
+ expect(JSON.parse(calls[1][1]!.body).html).toContain('CADERNOS DE REVISÃO');
+});
+it('gerar novo PDF cria outra capa sem regenerar ao abrir ou salvar o arquivo pronto',async()=>{
+ const fetch=vi.fn(async(url,options)=>url==='/api/study-pdf'?pdf():Response.json(options?.method==='POST'?{dataUrl:image}:{enabled:true}));
+ const {props}=setup('new-cover',fetch);
+ render(<DeepeningPdf {...props}/>);
+ await screen.findByRole('link',{name:'Abrir PDF'});
+ fireEvent.click(screen.getByRole('button',{name:'Gerar novo PDF'}));
+ await screen.findByRole('link',{name:'Abrir PDF'});
+ const calls=fetch.mock.calls.filter(([url])=>url==='/api/study-pdf');
+ expect(calls).toHaveLength(2);
+ expect(JSON.parse(calls[0][1].body).html).not.toBe(JSON.parse(calls[1][1]!.body).html);
+ expect(fetch.mock.calls.filter(([url,options])=>url==='/api/cover-illustrations'&&options?.method==='POST')).toHaveLength(2);
+});

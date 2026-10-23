@@ -20,10 +20,12 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
 }) {
   const { user } = useAuth();
   const [attempt, setAttempt] = useState(0);
+  const [edition,setEdition]=useState('original');
   const [file, setFile] = useState<{ key: string; url: string; blob: Blob }>();
   const [error, setError] = useState('');
   const preparedContent = useRef<{ key: string; content: HTMLElement } | undefined>(undefined);
-  const cacheKey = JSON.stringify([user?.uid, guideKey, revision]);
+  const documentKey = JSON.stringify(['individual-cover-v1',user?.uid,guideKey,revision,materialLabel,title]);
+  const cacheKey = JSON.stringify([documentKey,edition]);
   const ready = file?.key === cacheKey ? file : undefined;
   useEffect(() => {
     const controller = new AbortController();
@@ -33,10 +35,14 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
     const content = previous ?? getContent()?.cloneNode(true) as HTMLElement | undefined;
     void (async () => {
       try {
-        let blob = completedFiles.get(cacheKey);
+        let blob = edition==='original'?completedFiles.get(documentKey):undefined;
         if (!blob) {
           if (!content) throw new Error(`O conteúdo de ${materialLabel.toLowerCase()} não está disponível.`);
-          if (generateCover && user && !previous) {
+          if(!previous){
+            content.dataset.printCoverEdition=crypto.randomUUID();
+            if(edition!=='original'){delete content.dataset.printGeneratedArt;delete content.dataset.printGeneratedContext;}
+          }
+          if ((generateCover || edition!=='original') && user && !previous) {
             // An unavailable illustration must not discard the completed study text.
             try {
               const signal = AbortSignal.any([controller.signal, AbortSignal.timeout(160_000)]);
@@ -61,7 +67,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
           const signal = AbortSignal.any([controller.signal, AbortSignal.timeout(45_000)]);
           blob = await requestStudyPdf(createStrategyPrintRoot(content, title), title, printStyles, signal);
           controller.signal.throwIfAborted();
-          completedFiles.set(cacheKey, blob);
+          completedFiles.set(documentKey, blob);
           if (completedFiles.size > 4) completedFiles.delete(completedFiles.keys().next().value!);
         }
         controller.signal.throwIfAborted();
@@ -83,6 +89,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
       <div className="flex flex-wrap items-center gap-3">
         <a className="rounded-lg border border-[var(--line)] px-4 py-2" href={ready.url} target="_blank" rel="noopener">Abrir PDF</a>
         <a className="underline" href={ready.url} download={filename}>Salvar PDF</a>
+        <button type="button" className="underline" onClick={()=>setEdition(crypto.randomUUID())}>Gerar novo PDF</button>
         {shareFile && navigator.canShare?.({ files: [shareFile] }) && navigator.share && <button type="button" className="underline" onClick={() => {
           void navigator.share({ files: [shareFile], title }).catch(failure => {
             if (failure?.name !== 'AbortError') setError('Não foi possível compartilhar. Use Abrir PDF ou Salvar PDF.');

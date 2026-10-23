@@ -74,7 +74,8 @@ it("gera antes da impressão e usa a imagem somente no mesmo contexto", async ()
   const changed = createStrategyPrintRoot(root, "Outra obra");
   expect(
     changed.querySelector("[data-print-illustration]")!.getAttribute("src")!.slice(0, 23),
-  ).toMatch(/^data:image\/jpeg/);
+  ).toMatch(/^data:image\/svg\+xml/);
+  expect(changed.querySelector("[data-print-illustration]")).not.toHaveAttribute("src", image);
   root.remove();
 });
 

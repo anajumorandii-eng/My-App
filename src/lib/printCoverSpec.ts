@@ -46,14 +46,15 @@ const themes: Record<CoverTheme, { triad: [string, string, string]; hero: string
 /** Bibliographic metadata is authoritative: no LLM can rewrite the title or invent a board. */
 export function buildPrintCoverSpec(context: PrintCoverContext, fallbackTitle: string): PrintCoverSpec {
   const theme = selectCoverTheme(context);
+  const review=/^revis[aã]o\b/i.test(context.purpose || '');
   return {
-    brand_header: 'CRIVO', collection_subtitle: /^revisão/i.test(context.purpose ?? '') ? 'CADERNOS DE REVISÃO' : 'CADERNOS DE APROFUNDAMENTO',
+    brand_header: 'CRIVO', collection_subtitle: review ? 'CADERNOS DE REVISÃO' : 'CADERNOS DE APROFUNDAMENTO',
     subject_title: context.subject || (context.work ? 'Literatura' : 'Material de estudo'),
     topic_subtitle: context.work || context.topic || fallbackTitle,
-    exam_board: context.board || '', triad_keywords: [...themes[theme].triad],
+    exam_board: context.board || '', triad_keywords: review ? ['Recordar','Conectar','Aplicar'] : [...themes[theme].triad],
     footer_tagline: context.purpose || 'Aprofundamento e raciocínio de prova',
     footer_signature: 'CRIVO • MATERIAL DE ESTUDO',
-    visual_spec: { central_hero: themes[theme].hero, vignettes: theme === 'blood' ? {
+    visual_spec: { central_hero: review ? `A review folio with recall cards arranged around one central subject medallion, linked by a restrained circular path. Use a visibly different composition from an in-depth atlas plate. Subject motifs: ${themes[theme].hero}` : themes[theme].hero, vignettes: theme === 'blood' ? {
       top_left: { label: 'Hemácias', illustration: 'Biconcave red blood cells and cross-section in crimson watercolor etching.' },
       bottom_left: { label: 'Defesa', illustration: 'Vintage brass microscope and purple-nucleated leukocytes.' },
       top_right: { label: 'Anticorpos', illustration: 'Y-shaped immunoglobulin antibody structures.' },

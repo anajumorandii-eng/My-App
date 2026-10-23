@@ -23,6 +23,8 @@ export const printStyles = `${printCoverFontStyles}\n${printBodyFontStyles}
   [data-print-cover-subject] { font: 700 64pt/1.05 'Crivo Cover Display', Georgia, serif; letter-spacing: .035em; text-transform: uppercase; color: #1C3028; margin: 0; }
   [data-print-long-subject] [data-print-cover-subject] { font-size: 34pt; }
   [data-print-cover-divider] { display: block; width: 76%; height: 4mm; margin: 2mm auto; }
+  [data-print-material="review"] [data-print-cover-subject], [data-print-material="review"] [data-print-cover-brand] { color: #31546a; }
+  [data-print-material="review"] [data-print-cover-collection] { letter-spacing: .3em; color: #76512c; }
   [data-print-cover] h1 { font: 600 15.5pt/1.2 'Crivo Cover Serif', Georgia, serif; letter-spacing: .18em; text-transform: uppercase; color: #7A1F24; margin: 0; }
   [data-print-long-title] h1 { font-size: 13pt; line-height: 1.2; letter-spacing: .03em; }
   [data-print-cover-art] { position: relative; flex: 1; min-height: 30mm; margin: 2mm 0; overflow: hidden !important; }
