@@ -11,6 +11,7 @@ export function createStrategyPrintRoot(content: HTMLElement, title: string) {
   root.dataset.crivoPrintRoot = '';
   root.style.display = 'none';
   const printable = content.cloneNode(true) as HTMLElement;
+  printable.dataset.printCoverEdition ||= crypto.randomUUID();
   printable.querySelectorAll('[data-print-exclude]').forEach(element => element.remove());
   printable.querySelectorAll<HTMLElement>('[data-print-only]').forEach(element => { element.hidden = false; element.style.display = 'block'; element.classList.remove('hidden'); });
   printable.querySelectorAll('details').forEach(element => { element.open = true; });

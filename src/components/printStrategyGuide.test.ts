@@ -64,3 +64,18 @@ it('revisão exporta gabarito em bloco final separado após as fontes, sem alter
   expect(content.querySelector('details')?.open).toBe(false);
   expect(root.querySelector('[data-print-cover-collection]')?.textContent).toBe('CADERNOS DE REVISÃO');
 });
+it('revisão e aprofundamento da mesma matéria recebem composições próprias, e cada exportação tem outra capa',()=>{
+ const content=document.createElement('article');
+ Object.assign(content.dataset,{printSubject:'Biologia',printTopic:'Genética',printBoard:'FUVEST',printPurpose:'Aprofundamento'});
+ content.innerHTML='<h2>Herança genética</h2><p>Texto preservado.</p>';
+ const first=createStrategyPrintRoot(content,'Genética');
+ const next=createStrategyPrintRoot(content,'Genética');
+ const firstImage=first.querySelector('img[data-print-illustration]')!.getAttribute('src');
+ expect(next.querySelector('img[data-print-illustration]')!.getAttribute('src')).not.toBe(firstImage);
+ content.dataset.printPurpose='Revisão estratégica';
+ const review=createStrategyPrintRoot(content,'Genética');
+ expect(review.querySelector('img[data-print-illustration]')!.getAttribute('src')).not.toBe(firstImage);
+ expect(review.querySelector('[data-print-cover]')).toHaveAttribute('data-print-material','review');
+ expect(review.querySelector('[data-print-content]')!.textContent).toContain('Texto preservado.');
+ expect(content.dataset.printCoverEdition).toBeUndefined();
+});

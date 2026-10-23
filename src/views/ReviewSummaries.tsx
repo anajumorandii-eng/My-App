@@ -170,7 +170,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
         {!generating && current?.studyPacket && <details data-review-sources><summary className="cursor-pointer text-sm font-semibold">Conferir as fontes deste resumo</summary><StudySourcesPanel packet={current.studyPacket} /></details>}
       </div>
       {!generating && current && <>
-        {exportKey === current.key ? <Suspense fallback={<p role="status">Preparando exportação…</p>}><ReviewPdf getContent={() => printContent.current} title={title} guideKey={current.key} revision={current.savedAt} materialLabel="Revisão" /></Suspense> : <button type="button" className="underline text-sm" onClick={() => setExportKey(current.key)}>Exportar revisão em PDF</button>}
+        {exportKey === current.key ? <Suspense fallback={<p role="status">Preparando exportação…</p>}><ReviewPdf getContent={() => printContent.current} title={title} guideKey={current.key} revision={current.savedAt} materialLabel="Revisão" generateCover /></Suspense> : <button type="button" className="underline text-sm" onClick={() => setExportKey(current.key)}>Exportar revisão em PDF</button>}
         {/Não foi possível/.test(saveMessage) && <button type="button" className="underline text-sm" onClick={() => void persist(current)}>Tentar salvar novamente</button>}
       </>}
       <Link className="block underline text-sm" to={`/estrategias?${new URLSearchParams({ topic: topic?.id ?? topicId, ...(options.boards.length === 1 ? { board: options.boards[0] } : {}), ...(chapter ? { chapter } : {}) })}`}>Aprofundar este conteúdo</Link>
