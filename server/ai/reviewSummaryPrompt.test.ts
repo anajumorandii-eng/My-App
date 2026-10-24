@@ -59,3 +59,16 @@ test('histórico real é opcional, sem perfil presumido nem perguntas automátic
 test('validação não aceita opções inválidas nem referências excessivas', () => {
   for (const reviewOptions of [{depth:'tiny'},{depth:'toString'},{useHistory:'yes'},{sourceUrl:'javascript:alert(1)'},{sourceDate:'2026-02-31'},{sourceText:'x'.repeat(12001)}]) assert.throws(()=>validateAiPayload('review-tip',{...base,reviewOptions}));
 });
+
+test('revisões aprofundam o raciocínio em vez de apenas aumentar listas', () => {
+  const strategic = prompt(['ENEM'], {depth:'strategic'});
+  assert.match(strategic, /Ponto de decisão/);
+  assert.match(strategic, /abordagem tentadora.*por que falha/);
+  assert.match(strategic, /justificativa.*evidência.*conclusão/);
+  const deep = prompt(['UNICAMP'], {depth:'deep', scopes:{UNICAMP:'second'}});
+  assert.match(deep, /reconstrução guiada.*aplicação resolvida.*transferência independente/);
+  assert.match(deep, /critério de domínio observável/);
+  const quick = prompt([], {depth:'quick'});
+  assert.match(quick, /compacta.*raciocínio completo/);
+  assert.doesNotMatch(quick, /Fuvest|FUVEST/);
+});

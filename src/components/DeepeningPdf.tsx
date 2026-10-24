@@ -43,19 +43,21 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
   const [file, setFile] = useState<{ key: string; url: string; blob: Blob }>();
   const [error, setError] = useState('');
   const [standardCover, setStandardCover] = useState(false);
+  const [coverProblem, setCoverProblem] = useState('');
   const [idle, setIdle] = useState(false);
   const [requestedKey, setRequestedKey] = useState('');
-  const preparedContent = useRef<{ key: string; content: HTMLElement; standardCover: boolean } | undefined>(undefined);
+  const preparedContent = useRef<{ key: string; content: HTMLElement; standardCover: boolean; coverProblem: string } | undefined>(undefined);
   const documentKey = JSON.stringify(['study-quality-v2',user?.uid,guideKey,revision,materialLabel,title]);
   const cacheKey = JSON.stringify([documentKey,edition]);
   const ready = file?.key === cacheKey ? file : undefined;
   useEffect(() => {
     const controller = new AbortController();
     let objectUrl: string | undefined;
-    setFile(undefined); setError(''); setStandardCover(false); setIdle(false); onBusyChange?.(true);
+    setFile(undefined); setError(''); setCoverProblem(''); setStandardCover(false); setIdle(false); onBusyChange?.(true);
     const previous = preparedContent.current?.key === cacheKey ? preparedContent.current.content : undefined;
     let usingStandardCover = previous ? preparedContent.current!.standardCover : false;
-    if (usingStandardCover) setStandardCover(true);
+    let coverReason = previous ? preparedContent.current!.coverProblem : '';
+    if (usingStandardCover) { setStandardCover(true); setCoverProblem(coverReason); }
     void (async () => {
       try {
         let blob = edition==='original'?completedFiles.get(documentKey):undefined;
@@ -84,16 +86,20 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
                   method: 'POST', headers: { ...headers, 'Content-Type': 'application/json' },
                   body: JSON.stringify(context), signal,
                 });
+                if (!response.ok) {
+                  const retry = Number(response.headers.get('Retry-After'));
+                  throw new Error(response.status === 429 ? `O limite de solicitações de capa foi atingido.${Number.isFinite(retry) && retry > 0 ? ` Aguarde ${Math.ceil(retry)} segundos antes de tentar novamente.` : ' Aguarde alguns minutos antes de tentar novamente.'}` : 'O serviço de ilustração falhou. O texto foi preservado; tente a capa novamente mais tarde.');
+                }
                 const data = await response.json();
                 if (!response.ok || typeof data.dataUrl !== 'string' || data.dataUrl.length > 8_388_640 ||
                     !/^data:image\/png;base64,[A-Za-z0-9+/]+={0,2}$/.test(data.dataUrl)) throw new Error('Ilustração indisponível');
                 content.dataset.printGeneratedArt = data.dataUrl;
                 content.dataset.printGeneratedContext = coverContextKey(context);
-              } else { usingStandardCover = true; setStandardCover(true); }
-            } catch { usingStandardCover = true; if (!controller.signal.aborted) setStandardCover(true); }
+              } else { usingStandardCover = true; setStandardCover(true); coverReason = 'O serviço de ilustração está indisponível.'; setCoverProblem(coverReason); }
+            } catch (failure) { usingStandardCover = true; coverReason = failure instanceof Error && failure.name === 'Error' ? failure.message : 'A ilustração não concluiu a tempo. Tente novamente mais tarde.'; if (!controller.signal.aborted) { setStandardCover(true); setCoverProblem(coverReason); } }
           }
           controller.signal.throwIfAborted();
-          preparedContent.current = { key: cacheKey, content, standardCover: usingStandardCover };
+          preparedContent.current = { key: cacheKey, content, standardCover: usingStandardCover, coverProblem: coverReason };
           const signal = AbortSignal.any([controller.signal, AbortSignal.timeout(45_000)]);
           blob = await requestStudyPdf(createStrategyPrintRoot(content, title), title, printStyles, signal, documentId);
           controller.signal.throwIfAborted();
@@ -116,6 +122,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
   return <div data-print-exclude className="space-y-2 text-sm">
     {ready ? <>
       <p role="status">{materialLabel === 'Aprofundamento' ? 'Aprofundamento pronto, com capa e índice.' : `${materialLabel} pronta, com capa e índice.`}</p>
+      {standardCover && coverProblem && <p role="status">{coverProblem}</p>}
       {standardCover && <p role="status">A ilustração personalizada não ficou disponível. Este PDF usa uma capa padrão provisória. Use Gerar novo PDF para tentar uma nova ilustração.</p>}
       <div className="flex flex-wrap items-center gap-3">
         <a className="rounded-lg border border-[var(--line)] px-4 py-2" href={ready.url} target="_blank" rel="noopener">Abrir PDF</a>

@@ -108,7 +108,12 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
         guideMode: 'review-summary', level: 40, daysSinceReview: 0, referenceText: packet.referenceText || undefined,
       }, delta => { text += delta; if (mounted.current) setStream(text); });
       if (!mounted.current) return;
-      if (!result.text.trim() || !splitReviewAnswers(result.text).answers || !/recuperação ativa/i.test(splitReviewAnswers(result.text).body)) throw new Error('Revisão incompleta');
+      if (!result.text.trim()) throw new Error('Revisão vazia');
+      setStream(result.text);
+      if (!splitReviewAnswers(result.text).answers || !/recuperação ativa/i.test(splitReviewAnswers(result.text).body)) {
+        setProblem('Não foi possível gerar a revisão completa: faltou a recuperação ativa ou seu gabarito separado. O texto recebido está abaixo como rascunho; copie-o antes de tentar novamente.');
+        return;
+      }
       const savedAt = new Date().toISOString();
       setCreatedRevision(savedAt);
       await persist({ kind: 'review-summary', key, subject, topicId: activeTopic.id, topicName: options.sourceMode === 'provided' ? options.sourceTitle : activeTopic.name,
@@ -116,12 +121,12 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
         text: result.text, savedAt,
         studyPacket: result.serverSources?.length ? { ...packet, sources: [...packet.sources, ...result.serverSources] } : packet,
       });
-      if (mounted.current) setConfigurationOpen(false);
+      if (mounted.current) { setStream(''); setConfigurationOpen(false); }
     } catch (failure) {
       if (mounted.current) setProblem(failure instanceof AiRequestError ? failure.message : 'Não foi possível gerar o resumo agora. Os resumos já salvos continuam disponíveis. Tente novamente.');
     } finally {
       busy.current = false;
-      if (mounted.current) { setGenerating(false); setStream(''); }
+      if (mounted.current) setGenerating(false);
     }
   };
   const displayedOptions = current?.reviewOptions ?? options;
@@ -197,10 +202,11 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
       <div ref={printContent as React.RefObject<HTMLDivElement>} data-print-subject={current?.subject || subject} data-print-topic={current?.topicName || topic?.name || options.sourceTitle} data-print-subtopic={current?.chapter || chapter || 'Visão geral'} data-print-board={legacy ? current!.board || 'Geral' : reviewSelectionLabel(displayedOptions)} data-print-purpose={legacy ? 'Revisão salva — etapa e profundidade não registradas' : reviewDepths[displayedOptions.depth]}>
         <h3 className="font-display text-xl">{current?.subject || subject} · {current?.chapter || current?.topicName || chapter || topic?.name || options.sourceTitle}</h3>
         <p className="text-sm text-[var(--dim)]">{selectionDescription}</p>
+        {!generating && stream && <p role="status">Rascunho incompleto — ainda não foi salvo como revisão concluída. Copie o texto antes de sair ou tentar novamente.</p>}
         <ReviewSummaryText text={stream || current?.text || ''} />
         {!generating && current?.studyPacket && <details data-review-sources><summary className="cursor-pointer text-sm font-semibold">Conferir as fontes deste resumo</summary><StudySourcesPanel packet={current.studyPacket} /></details>}
       </div>
-      {!generating && current && <>
+      {!generating && !stream && current && <>
         <Suspense fallback={<p role="status">Consultando PDF salvo…</p>}><ReviewPdf key={current.key} getContent={() => printContent.current} title={title} guideKey={current.key} revision={current.savedAt} materialLabel="Revisão" generateCover autoGenerate={current.savedAt === createdRevision} onBusyChange={setPdfBusy} /></Suspense>
         {/Não foi possível/.test(saveMessage) && <button type="button" className="underline text-sm" onClick={() => void persist(current)}>Tentar salvar novamente</button>}
       </>}

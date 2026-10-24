@@ -74,7 +74,7 @@ it('falha da IA não apaga resumos e não salva uma resposta parcial', async () 
   fireEvent.click(screen.getByRole('checkbox', { name: 'Fuvest' }));
   fireEvent.click(screen.getByRole('button', { name: 'Gerar resumo de revisão' }));
   expect(await screen.findByRole('alert')).toHaveTextContent('Não foi possível gerar');
-  expect(screen.queryByText('Rascunho incompleto')).toBeNull();
+  expect(screen.getByText('Rascunho incompleto')).toBeInTheDocument();
   expect(Object.keys(readStrategyGuides(null))).toHaveLength(0);
 });
 it('troca de conta durante a geração não exibe nem salva a resposta da conta anterior', async () => {
@@ -123,10 +123,11 @@ it('material datado usa apenas a extração fornecida e preserva a referência',
   await waitFor(()=>expect(mocks.generate).toHaveBeenCalledWith('review-tip',expect.objectContaining({topic:'Boletim epidemiológico',referenceText:expect.stringContaining('2025-10-01'),reviewOptions:expect.objectContaining({materialKind:'current-affairs',sourceDate:'2025-10-01'})}),expect.any(Function)));
   expect(mocks.packet).not.toHaveBeenCalled();
 });
-it('resposta sem gabarito separado não é salva nem expõe uma revisão incompleta', async()=>{
+it('preserva resposta sem gabarito como rascunho sem salvar uma revisão incompleta', async()=>{
   mocks.generate.mockResolvedValue({text:'Revisão sem separação de respostas'});
   mount(); fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
   expect(await screen.findByRole('alert')).toHaveTextContent('Não foi possível gerar');
+  expect(screen.getByText('Revisão sem separação de respostas')).toBeInTheDocument();
   expect(Object.keys(readStrategyGuides(null))).toHaveLength(0);
 });
 
