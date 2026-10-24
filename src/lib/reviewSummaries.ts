@@ -8,7 +8,7 @@ export function reviewSummaryKey(subject: string, topicId: string, chapter: stri
 }
 export const isReviewSummary = (guide: StrategyGuide) => guide.kind === 'review-summary';
 export function selectReviewSummaries(guides: Record<string, StrategyGuide>, subject = '', board = '') {
-  return Object.values(guides).filter(guide => isReviewSummary(guide) && (!subject || guide.subject === subject) && (!board || (guide.targetBoards ?? [guide.board]).some(value => reviewBoard(value) === reviewBoard(board))))
+  return Object.values(guides).filter(guide => !guide.deletedAt && isReviewSummary(guide) && (!subject || guide.subject === subject) && (!board || (guide.targetBoards ?? [guide.board]).some(value => reviewBoard(value) === reviewBoard(board))))
     .sort((a, b) => b.savedAt.localeCompare(a.savedAt));
 }
 

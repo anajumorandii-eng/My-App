@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { ReviewSummaryText } from '../components/ReviewSummaryText';
+import { DeleteStudyMaterial } from '../components/DeleteStudyMaterial';
 import { StudySourcesPanel } from '../components/StudySourcesPanel';
 import { useAuth } from '../context/AuthContext';
 import { mockTopics } from '../data/mockData';
@@ -42,7 +43,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
     getLiteraryWorks().then(value => { if (active) { setWorks(value); if (!value.length) setWorkProblem('O catálogo de obras está vazio. Você pode usar um trecho informado.'); } }).catch(() => { if (active) setWorkProblem('Não foi possível carregar as obras. Você pode usar um trecho informado.'); });
     return () => { active = false; };
   }, [options.sourceMode]);
-  const { guides, persist, loading, error, reload, saveMessage, setSaveMessage } = useStrategyGuides(uid);
+  const { guides, persist, remove, loading, error, reload, saveMessage, setSaveMessage } = useStrategyGuides(uid);
   const [configurationOpen, setConfigurationOpen] = useState(true);
   const [createdRevision, setCreatedRevision] = useState('');
   const [pdfBusy, setPdfBusy] = useState(false);
@@ -203,6 +204,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
           <b className="block text-sm">{item.chapter || item.topicName} · {item.board || 'Geral'}</b>
           <span className="text-xs text-[var(--dim)]">{item.subject} · {item.reviewOptions ? reviewDepths[item.reviewOptions.depth] : 'Revisão salva'} · {new Date(item.savedAt).toLocaleDateString('pt-BR')}</span>
         </button>
+        <DeleteStudyMaterial key={item.key} title={item.chapter || item.topicName} disabled={working} remove={() => remove(item.key)} onDeleted={() => { if (current?.key === item.key) { setOpenedKey(''); setStream(''); setConfigurationOpen(true); } }} />
       </li>)}</ul>
     </section>
   </section>;

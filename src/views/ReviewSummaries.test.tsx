@@ -14,6 +14,18 @@ vi.mock('../components/AiText', () => ({ AiText: ({ text }: { text: string }) =>
 import ReviewSummaries from './ReviewSummaries';
 import { cacheStrategyGuides, readStrategyGuides } from '../lib/strategyGuides';
 const mount = () => render(<MemoryRouter><ReviewSummaries /></MemoryRouter>);
+
+it('permite excluir uma revisão antiga e gerar uma nova sem apagar aprofundamentos', async () => {
+  const old = { key: 'review-old', kind: 'review-summary' as const, subject: 'Biologia', topicId: 'bio', topicName: 'Revisão antiga', chapter: '', board: '', text: 'Texto antigo', savedAt: '2025-01-01T00:00:00Z' };
+  cacheStrategyGuides(null, { 'review-old': old, deep: { ...old, key: 'deep', kind: undefined, text: 'Aprofundamento preservado' } });
+  mount();
+  fireEvent.click(screen.getByRole('button', { name: 'Excluir material: Revisão antiga' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Confirmar exclusão' }));
+  await waitFor(() => expect(screen.getByText('Meus resumos de revisão (0)')).toBeInTheDocument());
+  expect(readStrategyGuides(null).deep.text).toBe('Aprofundamento preservado');
+  fireEvent.click(screen.getByRole('button', { name: 'Gerar resumo de revisão' }));
+  await waitFor(() => expect(screen.getByText('Meus resumos de revisão (1)')).toBeInTheDocument());
+});
 beforeEach(() => {
   localStorage.clear(); mocks.auth.user = null; mocks.generate.mockReset(); mocks.saveGuide.mockClear();
   mocks.loadGuides.mockResolvedValue({});

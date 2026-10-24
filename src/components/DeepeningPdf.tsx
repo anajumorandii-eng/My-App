@@ -45,7 +45,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
   const [idle, setIdle] = useState(false);
   const [requestedKey, setRequestedKey] = useState('');
   const preparedContent = useRef<{ key: string; content: HTMLElement } | undefined>(undefined);
-  const documentKey = JSON.stringify(['individual-cover-v1',user?.uid,guideKey,revision,materialLabel,title]);
+  const documentKey = JSON.stringify(['study-quality-v2',user?.uid,guideKey,revision,materialLabel,title]);
   const cacheKey = JSON.stringify([documentKey,edition]);
   const ready = file?.key === cacheKey ? file : undefined;
   useEffect(() => {
@@ -57,7 +57,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
       try {
         let blob = edition==='original'?completedFiles.get(documentKey):undefined;
         // Library headings may omit the board; identity follows the saved guide.
-        const documentId = user ? await studyPdfDocumentId(JSON.stringify(['study-pdf-v1', user.uid, guideKey, revision, materialLabel])) : undefined;
+        const documentId = user ? await studyPdfDocumentId(JSON.stringify(['study-pdf-quality-v2', user.uid, guideKey, revision, materialLabel])) : undefined;
         if (!blob && documentId && edition === 'original') {
           blob = await loadSavedStudyPdf(documentId, AbortSignal.any([controller.signal, AbortSignal.timeout(15_000)]));
           controller.signal.throwIfAborted();

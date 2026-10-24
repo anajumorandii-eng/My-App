@@ -1,5 +1,6 @@
 import { normalizeReviewOptions, reviewDepths, reviewSelectionLabel, type ReviewOptions } from '../../src/lib/strategicReview';
 import { reviewExamGuidance } from './reviewExamGuidance';
+import { STUDY_MATERIAL_QUALITY } from './studyMaterialQuality';
 
 const DEPTH_GUIDANCE = {
   quick: 'Núcleo indispensável, relações essenciais e principais confusões. Um mini-exemplo comentado e duas perguntas de recuperação, com uma aplicação. Síntese curta para consulta próxima da prova. Integre mecanismo e conceito em vez de eliminar o porquê.',
@@ -16,6 +17,7 @@ export function reviewSummaryPrompt(payload: Record<string, unknown>, _context =
     options.boards.length ? 'Somente as bancas e etapas selecionadas comandam conceitos enfatizados, operações de raciocínio, fontes dos enunciados, comandos, exemplos, distratores e critérios de resposta. Não crie seções nem foco de bancas não selecionadas. Uma banca: toda a revisão dirigida a ela. Várias: contemple TODAS com equilíbrio, base conceitual comum uma única vez e comparações somente onde úteis. Nenhuma preferência herdada tem precedência sobre a seleção.' : 'Nenhuma banca selecionada: revisão geral. Não assuma banca padrão, não atribua o foco a uma instituição, não faça tabela de bancas nem análise de bancas específicas. Use aplicações gerais e permita redirecionamento posterior.',
     ...options.boards.map(board => reviewExamGuidance(board, options.scopes[board])),
     DEPTH_GUIDANCE[options.depth],
+    STUDY_MATERIAL_QUALITY,
     options.boards.includes('FAMERP') && options.scopes.FAMERP === 'discursive' && !['Biologia','Química','Física','Redação'].includes(String(payload.subject)) ? 'Limite de aplicabilidade: no ciclo 2027, o componente dissertativo da Famerp não contempla esta matéria. Explique essa incompatibilidade; preserve o estudo conceitual e a recuperação ativa, mas não fabrique uma questão discursiva atribuída à Famerp. Sugira direcionar a revisão às objetivas para esse componente.' : '',
     'A extensão e a variedade das aplicações devem mudar efetivamente entre os níveis. Não sacrifique explicações indispensáveis para cumprir limite de tamanho. Com várias bancas, amplie exemplos para contemplar todas sem repetir o resumo para cada uma.',
     'Adapte estas seções Markdown ## ao assunto; reúna as que não tenham utilidade independente: Essencial para lembrar; Entenda o mecanismo (porquê, causalidade e reconstrução); Como as bancas selecionadas cobram (somente com seleção); Aplicação em questão; Pegadinhas e erros comuns; Recuperação ativa; Revisão de última hora. Não repita a abertura na síntese.',

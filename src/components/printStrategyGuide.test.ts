@@ -3,6 +3,17 @@ import { createStrategyPrintRoot, printStrategyGuide } from '../lib/printStrateg
 import { openStudyPdf } from '../lib/printPdfFile';
 vi.mock('../lib/printPdfFile', () => ({ openStudyPdf: vi.fn() }));
 
+it('exporta referências legíveis sem OCR bruto e preserva a inspeção na tela', () => {
+  const content = document.createElement('article');
+  content.innerHTML = '<h2>Mecanismo</h2><p>Explicação desenvolvida [AS1].</p><details data-study-source><summary>[AS1] Apostila · recorte</summary><p data-source-reference>Material de referência; recorte parcial.</p><div data-source-content>OCR bruto e ficha interna</div><a href="https://example.org/fonte">Conferir origem</a></details>';
+  const root = createStrategyPrintRoot(content, 'Revisão');
+  expect(root.textContent).not.toContain('OCR bruto');
+  expect(root.textContent).toContain('Explicação desenvolvida [AS1].');
+  expect(root.textContent).toContain('Material de referência; recorte parcial.');
+  expect(root.querySelector('a[href="https://example.org/fonte"]')).toBeTruthy();
+  expect(content.textContent).toContain('OCR bruto');
+});
+
 it('usa o mesmo arquivo paginado em todos os dispositivos', () => {
   const content = document.createElement('article');
   content.innerHTML = '<h2>Seção</h2><p>Texto original</p>';

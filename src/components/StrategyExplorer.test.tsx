@@ -5,6 +5,9 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 const { generate, auth, loadGuides, saveGuide } = vi.hoisted(() => ({ generate: vi.fn(async () => ({ text: 'Guia do tópico selecionado' })), auth: { user: null as null | { uid: string } }, loadGuides: vi.fn(async () => ({})), saveGuide: vi.fn(async () => {}) }));
 vi.mock('../hooks/useStudyTargets', () => ({ useStudyTargets: () => ({ targets: [], loading: false, error: null }) }));
 vi.mock('../lib/contentCatalog', () => ({ getLocalQuestionBank: async () => [] }));
+// Source selection has its own integration tests; keep these UI actions independent
+// of loading the multi-megabyte editorial catalog between interactions.
+vi.mock('../data/deepSummaryContent.json', () => ({ default: [] }));
 vi.mock('../lib/aiClient', () => ({ requestAiTextStream: generate }));
 vi.mock('../context/AuthContext', () => ({ useAuth: () => auth }));
 vi.mock('../lib/strategyGuides', async () => {
@@ -16,7 +19,7 @@ import { printStrategyGuide } from '../lib/printStrategyGuide';
 import StrategyExplorer from './StrategyExplorer';
 import { cacheStrategyGuides } from '../lib/strategyGuides';
 
-beforeEach(() => { localStorage.clear(); auth.user = null; loadGuides.mockResolvedValue({}); saveGuide.mockResolvedValue(); generate.mockResolvedValue({ text: 'Guia do tópico selecionado' }); });
+beforeEach(async () => { await import('./AiTextRenderer'); localStorage.clear(); auth.user = null; loadGuides.mockResolvedValue({}); saveGuide.mockResolvedValue(); generate.mockResolvedValue({ text: 'Guia do tópico selecionado' }); });
 
 describe('guia por matéria, tópico e banca', () => {
   it('mantém os guias antigos na biblioteca sem listar todos no topo da estratégia', () => {
@@ -50,7 +53,7 @@ describe('guia por matéria, tópico e banca', () => {
 it('recupera o aprofundamento após sair e voltar e permite imprimir o conteúdo salvo', async () => {
   const first = render(<MemoryRouter><StrategyExplorer /></MemoryRouter>);
   fireEvent.click(screen.getByRole('button', { name: 'Aprofundar este tópico e sua cobrança' }));
-  await screen.findByText('Guia do tópico selecionado');
+  await screen.findByText('Guia do tópico selecionado', {}, { timeout: 5000 });
   await screen.findByText(/Salvo neste navegador/);
   first.unmount();
   render(<MemoryRouter><StrategyExplorer /></MemoryRouter>);
