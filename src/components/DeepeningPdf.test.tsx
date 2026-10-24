@@ -140,3 +140,16 @@ it('abre a mesma capa ao passar da geração para a biblioteca, mesmo com títul
  await screen.findByRole('link',{name:'Abrir PDF'});
  expect(fetch.mock.calls.filter(([url])=>url==='/api/study-pdf')).toHaveLength(1);
 });
+it('aguarda o renderizador de matemática antes de capturar uma revisão nova',async()=>{
+ const fetch=vi.fn(async (url:string, _options?:RequestInit)=>url==='/api/study-pdf'?pdf():Response.json({enabled:false}));
+ const {props}=setup('wait-for-math',fetch);
+ const content=props.getContent()!;
+ content.innerHTML='<div data-ai-text-pending>Fórmula ainda em texto puro</div>';
+ render(<DeepeningPdf {...props} getContent={()=>content} materialLabel="Revisão"/>);
+ await waitFor(()=>expect(screen.getByRole('status')).toHaveTextContent('Preparando revisão'));
+ expect(fetch.mock.calls.some(([url])=>url==='/api/study-pdf')).toBe(false);
+ content.innerHTML='<p>Fórmula pronta</p><math><mi>A</mi></math>';
+ await screen.findByRole('link',{name:'Abrir PDF'});
+ const sent=JSON.parse(String(fetch.mock.calls.find(([url])=>url==='/api/study-pdf')![1]?.body));
+ expect(sent.html).toContain('<math>');expect(sent.html).not.toContain('ainda em texto puro');
+});

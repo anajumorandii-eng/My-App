@@ -10,6 +10,23 @@ import { loadSavedStudyPdf, studyPdfDocumentId } from '../lib/savedStudyPdf';
 // Reuse the completed file when opening its library entry in this session.
 const completedFiles = new Map<string, Blob>();
 
+async function capturePrintableContent(getContent: () => HTMLElement | null, signal: AbortSignal): Promise<HTMLElement> {
+  const content = getContent();
+  if (!content) throw new Error('O conteúdo do material não está disponível.');
+  if (content.querySelector('[data-ai-text-pending]')) {
+    await new Promise<void>((resolve, reject) => {
+      const finish = (failure?: unknown) => { observer.disconnect(); signal.removeEventListener('abort', aborted); failure ? reject(failure) : resolve(); };
+      const aborted = () => finish(signal.reason);
+      const observer = new MutationObserver(() => { if (!content.querySelector('[data-ai-text-pending]')) finish(); });
+      observer.observe(content, { childList: true, subtree: true });
+      signal.addEventListener('abort', aborted, { once: true });
+      if (signal.aborted) aborted();
+    });
+  }
+  signal.throwIfAborted();
+  return content.cloneNode(true) as HTMLElement;
+}
+
 export function DeepeningPdf({ getContent, title, guideKey, revision, generateCover = false, autoGenerate = true, onBusyChange, materialLabel = 'Aprofundamento' }: {
   getContent: () => HTMLElement | null;
   title: string;
@@ -36,7 +53,6 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
     let objectUrl: string | undefined;
     setFile(undefined); setError(''); setIdle(false); onBusyChange?.(true);
     const previous = preparedContent.current?.key === cacheKey ? preparedContent.current.content : undefined;
-    const content = previous ?? getContent()?.cloneNode(true) as HTMLElement | undefined;
     void (async () => {
       try {
         let blob = edition==='original'?completedFiles.get(documentKey):undefined;
@@ -48,7 +64,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
         }
         if (!blob && !autoGenerate && requestedKey !== cacheKey && edition === 'original') { setIdle(true); return; }
         if (!blob) {
-          if (!content) throw new Error(`O conteúdo de ${materialLabel.toLowerCase()} não está disponível.`);
+          const content = previous ?? await capturePrintableContent(getContent, AbortSignal.any([controller.signal, AbortSignal.timeout(15_000)]));
           if(!previous){
             content.dataset.printCoverEdition=crypto.randomUUID();
             if(edition!=='original'){delete content.dataset.printGeneratedArt;delete content.dataset.printGeneratedContext;}

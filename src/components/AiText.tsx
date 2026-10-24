@@ -13,7 +13,7 @@ export function AiText({ text, className = '' }: { text: string; className?: str
       // O texto puro enquanto o renderizador carrega: a aluna lê a resposta
       // imediatamente, e ela só é reformatada (listas, negrito, fórmulas)
       // quando o chunk chega.
-      fallback={<div className={`space-y-2 whitespace-pre-wrap leading-relaxed ${className}`}>{text}</div>}
+      fallback={<div data-ai-text-pending className={`space-y-2 whitespace-pre-wrap leading-relaxed ${className}`}>{text}</div>}
     >
       <AiTextRenderer text={text} className={className} />
     </Suspense>

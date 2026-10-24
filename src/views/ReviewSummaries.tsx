@@ -43,6 +43,9 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
     return () => { active = false; };
   }, [options.sourceMode]);
   const { guides, persist, loading, error, reload, saveMessage, setSaveMessage } = useStrategyGuides(uid);
+  const [configurationOpen, setConfigurationOpen] = useState(true);
+  const [createdRevision, setCreatedRevision] = useState('');
+  const [pdfBusy, setPdfBusy] = useState(false);
   const [generating, setGenerating] = useState(false);
   const [stream, setStream] = useState('');
   const [problem, setProblem] = useState('');
@@ -57,6 +60,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
   const key = reviewSummaryKey(subject, topic?.id ?? topicId, chapter, '', options);
   useEffect(() => { setProblem(''); setStream(''); setSaveMessage(''); }, [key]);
   const current = guides[openedKey || key];
+  const working = generating || pdfBusy;
   const saved = selectReviewSummaries(guides, librarySubject, libraryBoard);
   const allSaved = selectReviewSummaries(guides);
   const savedSubjects = [...new Set(allSaved.map(item => item.subject))].sort((a,b) => a.localeCompare(b,'pt-BR'));
@@ -64,14 +68,14 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
   const scopedErrors = options.sourceMode === 'provided' ? '' : reviewErrorHistory(history.errors, topic?.id ?? topicId);
   const edit = (patch: Partial<ReviewOptions>) => { setOpenedKey(''); setOptions(previous => normalizeReviewOptions({ ...previous, ...patch })); };
   const openSaved = (guide: StrategyGuide) => {
-    if (busy.current) return;
+    if (busy.current || pdfBusy) return;
     setSubject(guide.subject); setTopicId(guide.topicId); setChapter(guide.chapter);
     setOptions(normalizeReviewOptions(guide.reviewOptions ?? { boards: guide.targetBoards ?? (guide.board ? [guide.board] : []) }));
-    setOpenedKey(guide.key);
+    setOpenedKey(guide.key); setCreatedRevision(''); setConfigurationOpen(false);
   };
   const canGenerate = options.sourceMode === 'provided' ? Boolean(options.sourceText.trim() && options.sourceTitle.trim()) : Boolean(topic);
   const generate = async () => {
-    if (busy.current || !canGenerate) return;
+    if (busy.current || pdfBusy || !canGenerate) return;
     busy.current = true; setGenerating(true); setProblem(''); setStream(''); setSaveMessage(''); setOpenedKey('');
     try {
       const activeTopic = topic ?? { id: topicId, name: options.sourceTitle, subject, prerequisites: [] };
@@ -89,11 +93,14 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
       }, delta => { text += delta; if (mounted.current) setStream(text); });
       if (!mounted.current) return;
       if (!result.text.trim() || !splitReviewAnswers(result.text).answers || !/recuperação ativa/i.test(splitReviewAnswers(result.text).body)) throw new Error('Revisão incompleta');
+      const savedAt = new Date().toISOString();
+      setCreatedRevision(savedAt);
       await persist({ kind: 'review-summary', key, subject, topicId: activeTopic.id, topicName: options.sourceMode === 'provided' ? options.sourceTitle : activeTopic.name,
         chapter, board: options.boards.join(' / '), targetBoards: options.boards, reviewOptions: options,
-        text: result.text, savedAt: new Date().toISOString(),
+        text: result.text, savedAt,
         studyPacket: result.serverSources?.length ? { ...packet, sources: [...packet.sources, ...result.serverSources] } : packet,
       });
+      if (mounted.current) setConfigurationOpen(false);
     } catch (failure) {
       if (mounted.current) setProblem(failure instanceof AiRequestError ? failure.message : 'Não foi possível gerar o resumo agora. Os resumos já salvos continuam disponíveis. Tente novamente.');
     } finally {
@@ -106,10 +113,17 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
   const selectionDescription = legacy ? `${current!.board || 'Geral'} · Versão anterior: etapa e profundidade não registradas` : `${reviewSelectionLabel(displayedOptions)} · ${reviewDepths[displayedOptions.depth]}`;
   const title = `Revisão · ${current?.chapter || current?.topicName || chapter || topic?.name || options.sourceTitle}`;
   return <section className="space-y-5" aria-labelledby="review-summary-title">
-    <div className="ni-panel p-5 space-y-3">
+    <div className="flex flex-wrap items-center justify-between gap-3">
       <h2 id="review-summary-title" className="font-display text-2xl">Resumo de revisão por banca</h2>
+      <div className="flex flex-wrap items-center gap-4 text-sm"><a className="underline" href="#saved-review-summaries">Meus resumos ({allSaved.length})</a>
+        {current && <button type="button" disabled={working} className="underline disabled:opacity-50" onClick={() => setConfigurationOpen(true)}>Configurar nova revisão</button>}
+      </div>
+    </div>
+    <details className="ni-panel" open={configurationOpen} onToggle={event => setConfigurationOpen(event.currentTarget.open)}>
+      <summary className="cursor-pointer p-4 text-sm font-semibold">Configurar revisão · {subject} · {reviewDepths[options.depth]}</summary>
+      <div className="px-5 pb-5 space-y-3">
       <p className="text-sm text-[var(--dim)]">Revisões estratégicas para Medicina: entenda os mecanismos, reconheça caminhos de resolução e teste o que consegue recuperar sem consulta.</p>
-      <fieldset disabled={generating} className="grid gap-3 sm:grid-cols-2">
+      <fieldset disabled={working} className="grid gap-3 sm:grid-cols-2">
         <legend className="sr-only">Conteúdo da revisão</legend>
         <label className="text-sm">Material de origem<select className="field block w-full" value={options.sourceMode} onChange={event => { setChapter(''); edit({ sourceMode: event.target.value as ReviewOptions['sourceMode'], useHistory: false, ...(event.target.value === 'work' ? { materialKind: 'literature' as const } : {}) }); if (event.target.value === 'work') { setSubject('Literatura'); setChapter(''); } else if (topicId.startsWith('obra:')) setTopicId(''); }}>
           <option value="catalog">Conteúdo do Crivo</option><option value="provided">Texto ou extração informada</option><option value="work">Obra da biblioteca</option>
@@ -141,7 +155,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
           {Object.entries(reviewDepths).map(([value,label]) => <option key={value} value={value}>{label}</option>)}
         </select></label>
       </fieldset>
-      <fieldset disabled={generating} className="space-y-3">
+      <fieldset disabled={working} className="space-y-3">
         <legend className="text-sm font-semibold">Bancas — selecione uma, várias ou nenhuma</legend>
         <p className="text-xs text-[var(--dim)]">Sem seleção, a revisão é geral. Etapas conforme documentos de ingresso 2027; ENEM 2026. As fontes de formato acompanham a revisão.</p>
         <div className="grid gap-3 sm:grid-cols-2">{banks.map(bank => <div key={bank} className="rounded-lg border border-[var(--line)] p-3 space-y-2">
@@ -154,13 +168,14 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
       </fieldset>
       {options.materialKind === 'current-affairs' && <p className="text-xs text-[var(--dim)]">Esta revisão usa as fontes fornecidas, sem atualização de notícias em tempo real. Informe a data para delimitar os fatos.</p>}
       <p className="text-xs text-[var(--dim)]">A cobrança só é descrita como observada quando há evidência nas fontes. Gerar ou ler não conclui uma revisão nem altera seu agendamento.</p>
-      <button type="button" disabled={generating || !canGenerate || Boolean(options.useHistory && history.loading)} onClick={() => void generate()} className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm font-semibold disabled:opacity-50">
-        {generating ? 'Preparando resumo…' : current ? 'Gerar nova versão do resumo' : 'Gerar resumo de revisão'}
+      <button type="button" disabled={working || !canGenerate || Boolean(options.useHistory && history.loading)} onClick={() => void generate()} className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm font-semibold disabled:opacity-50">
+        {pdfBusy ? 'Preparando capa e PDF…' : generating ? 'Preparando resumo…' : current ? 'Gerar nova versão do resumo' : 'Gerar resumo de revisão'}
       </button>
       {generating && <p role="status" className="text-sm">Preparando {reviewDepths[options.depth].toLowerCase()} · {reviewSelectionLabel(options)}…</p>}
       {problem && <p role="alert" className="text-sm">{problem}</p>}
       {saveMessage && <p role="status" className="text-sm">{saveMessage}</p>}
-    </div>
+      </div>
+    </details>
     {(stream || current) && <article className="ni-panel p-5 space-y-4 min-w-0" aria-label="Resumo selecionado" aria-busy={generating}>
       <div ref={printContent as React.RefObject<HTMLDivElement>} data-print-subject={current?.subject || subject} data-print-topic={current?.topicName || topic?.name || options.sourceTitle} data-print-subtopic={current?.chapter || chapter || 'Visão geral'} data-print-board={legacy ? current!.board || 'Geral' : reviewSelectionLabel(displayedOptions)} data-print-purpose={legacy ? 'Revisão salva — etapa e profundidade não registradas' : reviewDepths[displayedOptions.depth]}>
         <h3 className="font-display text-xl">{current?.subject || subject} · {current?.chapter || current?.topicName || chapter || topic?.name || options.sourceTitle}</h3>
@@ -169,7 +184,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
         {!generating && current?.studyPacket && <details data-review-sources><summary className="cursor-pointer text-sm font-semibold">Conferir as fontes deste resumo</summary><StudySourcesPanel packet={current.studyPacket} /></details>}
       </div>
       {!generating && current && <>
-        <Suspense fallback={<p role="status">Consultando PDF salvo…</p>}><ReviewPdf key={current.key} getContent={() => printContent.current} title={title} guideKey={current.key} revision={current.savedAt} materialLabel="Revisão" generateCover autoGenerate={false} /></Suspense>
+        <Suspense fallback={<p role="status">Consultando PDF salvo…</p>}><ReviewPdf key={current.key} getContent={() => printContent.current} title={title} guideKey={current.key} revision={current.savedAt} materialLabel="Revisão" generateCover autoGenerate={current.savedAt === createdRevision} onBusyChange={setPdfBusy} /></Suspense>
         {/Não foi possível/.test(saveMessage) && <button type="button" className="underline text-sm" onClick={() => void persist(current)}>Tentar salvar novamente</button>}
       </>}
       <Link className="block underline text-sm" to={`/estrategias?${new URLSearchParams({ topic: topic?.id ?? topicId, ...(options.boards.length === 1 ? { board: options.boards[0] } : {}), ...(chapter ? { chapter } : {}) })}`}>Aprofundar este conteúdo</Link>
@@ -184,7 +199,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
       </div>
       {!saved.length && <p className="text-sm text-[var(--dim)]">{allSaved.length ? 'Nenhum resumo salvo para estes filtros.' : 'Seus resumos aparecerão aqui depois da primeira geração.'}</p>}
       <ul className="space-y-2">{saved.map(item => <li key={item.key}>
-        <button type="button" disabled={generating} aria-pressed={item.key === current?.key} onClick={() => openSaved(item)} className="w-full rounded-lg border border-[var(--line)] p-3 text-left disabled:opacity-50">
+        <button type="button" disabled={working} aria-pressed={item.key === current?.key} onClick={() => openSaved(item)} className="w-full rounded-lg border border-[var(--line)] p-3 text-left disabled:opacity-50">
           <b className="block text-sm">{item.chapter || item.topicName} · {item.board || 'Geral'}</b>
           <span className="text-xs text-[var(--dim)]">{item.subject} · {item.reviewOptions ? reviewDepths[item.reviewOptions.depth] : 'Revisão salva'} · {new Date(item.savedAt).toLocaleDateString('pt-BR')}</span>
         </button>
