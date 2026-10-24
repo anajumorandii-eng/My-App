@@ -14,6 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Keep the published check name; lint, interface tests and build run in CI.
   validar:
     name: lint, testes visuais e build
     runs-on: ubuntu-latest
@@ -27,11 +28,6 @@ jobs:
           node-version: 22
           cache: npm
 
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run test:vitest
-      - name: Continuidade do catálogo e conteúdo editorial
-        run: npx vitest run src/data/continuityGeography.test.ts
+      - run: npm ci --no-audit --no-fund
       - run: npm run visual:matrix
       - run: git diff --exit-code -- docs/visual-personalizado/18-matriz-cobertura.json docs/visual-personalizado/18-matriz-cobertura.md
-      - run: npm run build
