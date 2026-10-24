@@ -2,13 +2,16 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "e0ac5171f359b578dd03b3778166fd01585ac8fd",
-  "generated_at_utc": "2026-10-24T15:52:36Z",
+  "source_commit": "7720ffb4b1b1493ed723cdbc15f83bba38c49ef8",
+  "generated_at_utc": "2026-10-24T17:03:26Z",
   "changed_files": [
-    "docs/capas-revisao/README.md",
+    "docs/capas-inspiracoes/README.md",
     "server/ai/coverImages.test.ts",
     "server/ai/coverImages.ts",
-    "src/lib/printCoverSpec.ts"
+    "src/components/DeepeningPdf.test.tsx",
+    "src/components/printStrategyGuide.test.ts",
+    "src/lib/printCoverSpec.ts",
+    "src/lib/printFrontMatter.ts"
   ],
   "next_session": {
     "mode": "delta-only",
