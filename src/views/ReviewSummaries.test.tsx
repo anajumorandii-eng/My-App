@@ -5,7 +5,7 @@ const mocks = vi.hoisted(() => ({ auth: { user: null as null | { uid: string } }
 vi.mock('../context/AuthContext', () => ({ useAuth: () => mocks.auth }));
 vi.mock('../hooks/useErrorReviewHistory', () => ({ useErrorReviewHistory: () => mocks.history }));
 vi.mock('../lib/literaryCatalog', () => ({ getLiteraryWorks: async () => [{id:'bras',slug:'bras-cubas',title:'Memórias póstumas de Brás Cubas',author:'Machado de Assis'}] }));
-vi.mock('../components/DeepeningPdf', () => ({ DeepeningPdf: () => <div>Exportação CRIVO</div> }));
+vi.mock('../components/DeepeningPdf', () => ({ DeepeningPdf: ({autoGenerate, generateCover}: {autoGenerate: boolean; generateCover: boolean}) => <div data-testid="review-pdf" data-auto={String(autoGenerate)} data-cover={String(generateCover)}>Exportação CRIVO</div> }));
 vi.mock('../hooks/useStudyTargets', () => ({ useStudyTargets: () => ({ targets: [{ board: 'FUVEST' }] }) }));
 vi.mock('../lib/aiClient', () => ({ requestAiTextStream: mocks.generate, AiRequestError: class extends Error {} }));
 vi.mock('../lib/loadStudyPacket', () => ({ loadStudyPacket: mocks.packet }));
@@ -33,6 +33,9 @@ it('permite revisão geral e gera com o recorte e as fontes, salvando separadame
   await waitFor(() => expect(Object.values(readStrategyGuides(null))).toHaveLength(1));
   expect(Object.values(readStrategyGuides(null))[0]).toMatchObject({ kind: 'review-summary', chapter: 'Porcentagem', board: 'FUVEST' });
   expect(screen.getByText('Meus resumos de revisão (1)')).toBeInTheDocument();
+  expect(await screen.findByTestId('review-pdf')).toHaveAttribute('data-auto','true');
+  expect(screen.getByTestId('review-pdf')).toHaveAttribute('data-cover','true');
+  fireEvent.click(screen.getByRole('button', { name: 'Configurar nova revisão' }));
   fireEvent.click(screen.getByRole('checkbox', { name: 'Unicamp/Comvest' }));
   expect(screen.queryByText(/Síntese de revisão conferida/)).toBeNull();
   fireEvent.click(screen.getByRole('button', { name: /Porcentagem · FUVEST/ }));
@@ -51,6 +54,7 @@ it('salva na conta e retoma a biblioteca após remontar sem misturar aprofundame
   expect(screen.getByText('Meus resumos de revisão (1)')).toBeInTheDocument();
   fireEvent.click(screen.getByRole('button', { name: /Aritmética e Proporcionalidade · FUVEST/ }));
   expect(screen.getByText(/Síntese de revisão conferida/)).toBeInTheDocument();
+  expect(await screen.findByTestId('review-pdf')).toHaveAttribute('data-auto','false');
 });
 it('falha da IA não apaga resumos e não salva uma resposta parcial', async () => {
   mocks.generate.mockImplementation(async (_task, _payload, onDelta) => { onDelta('Rascunho incompleto'); throw new Error('offline'); });

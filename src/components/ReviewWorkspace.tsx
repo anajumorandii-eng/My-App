@@ -6,7 +6,7 @@ import { ErrorBoundary } from './ErrorBoundary';
 const ObraDetalhe = lazy(()=>import('../views/ObraDetalhe'));
 const resourceRouteContext = { outlet: null, matches: [], isDataRoute: false };
 
-export function ReviewWorkspace({ header }: { header?: (open: (resource: string, path?: string) => void) => React.ReactNode }) {
+export function ReviewWorkspace({ header }: { header?: (open: (resource: string, path?: string) => void, active: string) => React.ReactNode }) {
   const outerNavigate = useNavigate();
   const [params] = useSearchParams();
   const initial = reviewResources.find(r=>r.id===params.get('recurso')) ?? reviewResources[0];
@@ -44,15 +44,15 @@ export function ReviewWorkspace({ header }: { header?: (open: (resource: string,
         </select>
       </label>
       <p className="text-sm text-[var(--dim)]">{selected.description}</p>
-      <p className="text-xs text-[var(--dim)]">As atividades abertas permanecem nesta aba ao alternar recursos. Salve o trabalho antes de sair ou recarregar a página.</p>
+
       <details><summary className="cursor-pointer">Ver todos os recursos</summary>
         <div className="mt-3 grid gap-2 sm:grid-cols-2">{reviewResources.map(r=><button key={r.id} type="button" aria-pressed={r.id===active} onClick={()=>open(r.id)} className="rounded-lg border border-[var(--line)] p-3 text-left">
           <b className="block">{r.label}</b><span className="text-xs text-[var(--dim)]">{r.description}</span>
         </button>)}</div>
       </details>
-      <div className="flex flex-wrap gap-4 text-sm"><a href="/study-guide.html" target="_blank" rel="noreferrer" className="underline">Guia de estudo</a><a href="/real-exams/unicamp-2026.pdf" target="_blank" rel="noreferrer" className="underline">Caderno Unicamp 2026</a></div>
+      <details><summary className="cursor-pointer text-sm">Guias e orientação de uso</summary><p className="text-xs text-[var(--dim)] mt-2">As atividades abertas permanecem nesta aba ao alternar recursos. Salve o trabalho antes de sair ou recarregar a página.</p><div className="flex flex-wrap gap-4 text-sm mt-2"><a href="/study-guide.html" target="_blank" rel="noreferrer" className="underline">Guia de estudo</a><a href="/real-exams/unicamp-2026.pdf" target="_blank" rel="noreferrer" className="underline">Caderno Unicamp 2026</a></div></details>
     </section>
-    {header?.(open)}
+    {header?.(open, active)}
     {reviewResources.filter(r=>locations[r.id]).map(resource=>{
       const Component=resource.Component;
       return <div key={resource.id} hidden={active!==resource.id} className="mt-4 min-w-0" aria-label={resource.label}>

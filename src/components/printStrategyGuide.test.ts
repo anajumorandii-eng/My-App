@@ -79,3 +79,12 @@ it('revisão e aprofundamento da mesma matéria recebem composições próprias,
  expect(review.querySelector('[data-print-content]')!.textContent).toContain('Texto preservado.');
  expect(content.dataset.printCoverEdition).toBeUndefined();
 });
+it('preserva a ilustração inteira na revisão, sem recorte em medalhão',()=>{
+ const content=document.createElement('article');
+ Object.assign(content.dataset,{printSubject:'Matemática',printTopic:'Geometria Plana',printPurpose:'Revisão estratégica'});
+ const root=createStrategyPrintRoot(content,'Geometria');
+ const source=root.querySelector<HTMLImageElement>('[data-print-illustration]')!.src;
+ const svg=decodeURIComponent(source.split(',').slice(1).join(','));
+ expect(svg).toContain('width="400" height="500"');
+ expect(svg).not.toMatch(/clipPath|medallion|<ellipse|scale\(-1/);
+});
