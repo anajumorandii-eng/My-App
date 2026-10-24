@@ -27,7 +27,7 @@ it('permite excluir uma revisão antiga e gerar uma nova sem apagar aprofundamen
   await waitFor(() => expect(screen.getByText('Meus resumos de revisão (1)')).toBeInTheDocument());
 });
 beforeEach(() => {
-  localStorage.clear(); mocks.auth.user = null; mocks.generate.mockReset(); mocks.saveGuide.mockClear();
+  localStorage.clear(); sessionStorage.clear(); mocks.auth.user = null; mocks.generate.mockReset(); mocks.saveGuide.mockClear();
   mocks.loadGuides.mockResolvedValue({});
   mocks.history.errors = []; mocks.history.loading = false;
   mocks.packet.mockResolvedValue({ topicId: 'mat_aritmetica_proporcionalidade', chapter: '', coverage: [], sources: [{ id: 'F1', title: 'Conceitos', kind: 'resumo', content: 'Proporções', excerpt: true }], referenceText: '[F1] Proporções' });
@@ -139,4 +139,37 @@ it('obra da biblioteca aceita outra banca e encaminha o tipo literário sem foco
   fireEvent.change(screen.getByLabelText('Etapa — Unesp/Vunesp'),{target:{value:'second'}});
   fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
   await waitFor(()=>expect(mocks.generate).toHaveBeenCalledWith('review-tip',expect.objectContaining({subject:'Literatura',topic:'Memórias póstumas de Brás Cubas',targetBoards:['UNESP'],reviewOptions:expect.objectContaining({materialKind:'literature',sourceMode:'work',scopes:{UNESP:'second'}})}),expect.any(Function)));
+});
+
+it('mantém as escolhas e explica a retomada após atualizar os arquivos do aplicativo',async()=>{
+ const view=mount();
+ fireEvent.change(screen.getByLabelText('Material de origem'),{target:{value:'provided'}});
+ fireEvent.change(screen.getByLabelText('Título do material'),{target:{value:'Roteiro de fisiologia'}});
+ fireEvent.change(screen.getByLabelText('Texto ou extração do material'),{target:{value:'Texto autoral sintético sobre circulação.'}});
+ fireEvent.change(screen.getByLabelText('Profundidade'),{target:{value:'deep'}});
+ fireEvent.click(screen.getByRole('checkbox',{name:'Unicamp/Comvest'}));
+ fireEvent.change(screen.getByLabelText('Etapa — Unicamp/Comvest'),{target:{value:'second'}});
+ window.dispatchEvent(new Event('crivo:before-asset-reload'));
+ view.unmount();mount();
+ expect(screen.getByLabelText('Título do material')).toHaveValue('Roteiro de fisiologia');
+ expect(screen.getByLabelText('Texto ou extração do material')).toHaveValue('Texto autoral sintético sobre circulação.');
+ expect(screen.getByLabelText('Profundidade')).toHaveValue('deep');
+ expect(screen.getByLabelText('Etapa — Unicamp/Comvest')).toHaveValue('second');
+ expect(screen.getByRole('status',{name:'Atualização do aplicativo'})).toHaveTextContent('Sua seleção foi mantida');
+ expect(mocks.generate).not.toHaveBeenCalled();
+ fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
+ await screen.findByTestId('review-pdf');
+ expect(screen.queryByRole('status',{name:'Atualização do aplicativo'})).not.toBeInTheDocument();
+});
+it('reabre a revisão salva após a atualização sem gerar outra versão automaticamente',async()=>{
+ const old={key:'recover-saved',kind:'review-summary' as const,subject:'Biologia',topicId:'bio',topicName:'Fisiologia salva',chapter:'',board:'FUVEST',text:'Texto de revisão preservado',savedAt:'2025-01-01T00:00:00Z'};
+ cacheStrategyGuides(null,{[old.key]:old});
+ const view=mount();
+ fireEvent.click(screen.getByRole('button',{name:/Fisiologia salva · FUVEST/}));
+ await screen.findByTestId('review-pdf');
+ window.dispatchEvent(new Event('crivo:before-asset-reload'));
+ view.unmount();mount();
+ expect(await screen.findByTestId('review-pdf')).toHaveAttribute('data-auto','false');
+ expect(screen.getByRole('article',{name:'Resumo selecionado'})).toHaveTextContent('Texto de revisão preservado');
+ expect(mocks.generate).not.toHaveBeenCalled();
 });

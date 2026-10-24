@@ -44,3 +44,15 @@ it('abre o dossiê de uma obra sem sair da central',async()=>{
  expect(await screen.findByText('Ficha literária obra-teste')).toBeVisible();
  expect(screen.getByLabelText('Recurso de revisão')).toHaveValue('obras');
 });
+it('preserva o recurso e sua navegação antes da recuperação de uma atualização',()=>{
+ const before=window.location.href;
+ window.history.replaceState({},'', '/revisoes');
+ const view=render(<MemoryRouter initialEntries={['/revisoes']}><ReviewWorkspace/></MemoryRouter>);
+ fireEvent.change(screen.getByLabelText('Recurso de revisão'),{target:{value:'questoes'}});
+ fireEvent.change(screen.getAllByLabelText('Banca').at(-1)!,{target:{value:'UNICAMP'}});
+ window.dispatchEvent(new Event('crivo:before-asset-reload'));
+ const restored=new URL(window.location.href);
+ expect(restored.searchParams.get('recurso')).toBe('questoes');
+ expect(restored.searchParams.get('destino')).toBe('/questoes?board=UNICAMP');
+ view.unmount();window.history.replaceState({},'',before);
+});
