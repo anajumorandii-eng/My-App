@@ -45,10 +45,28 @@ test("prompt de ilustração mantém metadados como dados e reserva textos e mol
 test("revisões não reintroduzem medalhão nem cartões radiais no vocabulário enviado", () => {
   for (const topic of ["Funções", "Geometria plana", "Logaritmos e exponenciais"]) {
     const prompt = buildCoverImagePrompt({ subject: "Matemática", topic, purpose: "Revisão aprofundada" });
-    assert.match(prompt, /open, asymmetrical illustrated atlas composition/);
+    assert.match(prompt, /Revision cover: compose a compact illustrated field/);
+    assert.match(prompt, /ornamental scientific atlas/);
+    assert.match(prompt, /muted botanical green, oxblood accents and antique copper/);
     assert.match(prompt, /topic below determines the objects/);
     assert.doesNotMatch(prompt, /recall cards arranged around|central subject medallion|restrained circular path/);
     assert.match(prompt, new RegExp(topic));
+  }
+});
+
+test("aprofundamento e revisão compartilham linguagem visual mas pedem composições diferentes", () => {
+  const data = { subject: "Química", topic: "Termoquímica", subtopic: "Entalpia" };
+  const study = buildCoverImagePrompt({ ...data, purpose: "Aprofundamento" });
+  const review = buildCoverImagePrompt({ ...data, purpose: "Revisão estratégica" });
+  assert.match(study, /Deepening cover: compose a tall, richly developed scientific tableau/);
+  assert.doesNotMatch(study, /Revision cover:/);
+  assert.match(review, /Revision cover:/);
+  assert.doesNotMatch(review, /Deepening cover:/);
+  for (const prompt of [study, review]) {
+    assert.match(prompt, /Termoquímica/);
+    assert.match(prompt, /Entalpia/);
+    assert.match(prompt, /Vary the scene for this specific document/);
+    assert.doesNotMatch(prompt, /open, asymmetrical/);
   }
 });
 

@@ -153,3 +153,22 @@ it('aguarda o renderizador de matemática antes de capturar uma revisão nova',a
  const sent=JSON.parse(String(fetch.mock.calls.find(([url])=>url==='/api/study-pdf')![1]?.body));
  expect(sent.html).toContain('<math>');expect(sent.html).not.toContain('ainda em texto puro');
 });
+it('gera capas por arquivo e envia o tipo e o recorte próprios de cada material', async () => {
+ const fetch=vi.fn(async(url,options)=>url==='/api/study-pdf'?pdf():Response.json(options?.method==='POST'?{dataUrl:image}:{enabled:true}));
+ const first=setup('inspired-study-file',fetch);
+ first.root.dataset.printPurpose='Aprofundamento';
+ first.root.dataset.printSubtopic='Eventos independentes';
+ render(<DeepeningPdf {...first.props}/>);
+ await screen.findByRole('link',{name:'Abrir PDF'});
+ cleanup();
+ const second=setup('inspired-review-file',fetch);
+ second.root.dataset.printPurpose='Revisão estratégica';
+ second.root.dataset.printSubtopic='Probabilidade condicional';
+ render(<DeepeningPdf {...second.props} materialLabel="Revisão"/>);
+ await screen.findByRole('link',{name:'Abrir PDF'});
+ const requests=fetch.mock.calls.filter(([url,options])=>url==='/api/cover-illustrations'&&options?.method==='POST').map(([,options])=>JSON.parse(options.body));
+ expect(requests).toEqual([
+  expect.objectContaining({purpose:'Aprofundamento',subtopic:'Eventos independentes'}),
+  expect.objectContaining({purpose:'Revisão estratégica',subtopic:'Probabilidade condicional'}),
+ ]);
+});
