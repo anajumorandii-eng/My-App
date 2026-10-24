@@ -42,6 +42,16 @@ test("prompt de ilustração mantém metadados como dados e reserva textos e mol
   assert.match(prompt, /No text, lettering, labels, borders/);
 });
 
+test("revisões não reintroduzem medalhão nem cartões radiais no vocabulário enviado", () => {
+  for (const topic of ["Funções", "Geometria plana", "Logaritmos e exponenciais"]) {
+    const prompt = buildCoverImagePrompt({ subject: "Matemática", topic, purpose: "Revisão aprofundada" });
+    assert.match(prompt, /open, asymmetrical illustrated atlas composition/);
+    assert.match(prompt, /topic below determines the objects/);
+    assert.doesNotMatch(prompt, /recall cards arranged around|central subject medallion|restrained circular path/);
+    assert.match(prompt, new RegExp(topic));
+  }
+});
+
 test("gera uma única imagem no endpoint de imagens com autenticação apenas no servidor", async () => {
   let request: { url?: string; init?: RequestInit } = {};
   const service = new CoverImageService({
