@@ -173,3 +173,11 @@ it('gera capas por arquivo e envia o tipo e o recorte próprios de cada material
   expect.objectContaining({purpose:'Revisão estratégica',subtopic:'Probabilidade condicional'}),
  ]);
 });
+
+it('explica limite de capas sem esconder o PDF disponível', async () => {
+  const fetch = vi.fn(async (url, options) => url === '/api/study-pdf' ? pdf() : options?.method === 'POST' ? Response.json({error:'Limite de ilustrações atingido.'}, {status:429, headers:{'Retry-After':'60'}}) : Response.json({enabled:true}));
+  const {props} = setup('cover-limit-reason', fetch);
+  render(<DeepeningPdf {...props}/>);
+  await screen.findByRole('link', {name:'Abrir PDF'});
+  expect(screen.getByText(/Aguarde 60 segundos/)).toBeInTheDocument();
+});
