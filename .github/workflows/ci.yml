@@ -5,58 +5,154 @@ on:
   push:
     branches: [main]
 
-# O CI só lê o repositório; o token não precisa de escrita em nada.
 permissions:
   contents: read
 
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  lint-and-test:
+  build:
+    name: lint e build
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: npm
-
-      # npm ci respeita o package-lock.json commitado, então o CI instala
-      # exatamente as mesmas versões que o Dockerfile de produção.
       - run: npm ci --no-audit --no-fund
-
       - name: Testar concorrência do registro de continuidade
         run: python scripts/test-continuity-state.py
-
       - run: npm run lint
-
-      - name: Instalar ferramenta de extração de texto dos PDFs
-        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils
-
-      - run: npm test
-        env:
-          # Use the same stable browser as the navigation tests, not the runner's Chromium snapshot.
-          CHROMIUM_PATH: /usr/bin/google-chrome
-
       - name: Continuidade do catálogo e conteúdo editorial
         run: npx vitest run src/data/continuityGeography.test.ts
-
-      # Sem este passo uma quebra de build só aparecia no deploy.
       - run: npm run build
+      # Public assets are already in each checkout; transfer only compiled output.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: crivo-compiled-app
+          path: |
+            dist/index.html
+            dist/assets/
+            dist/server.cjs
+          retention-days: 1
+          if-no-files-found: error
 
-      # Exercita a versão empacotada e o modo de toque com o Chrome do runner.
+  node-tests:
+    name: testes de servidor e bibliotecas
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Garantir ferramenta de extração dos PDFs
+        run: |
+          if ! command -v pdftotext >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y --no-install-recommends poppler-utils
+          fi
+      - run: npm run test:node
+        env:
+          CHROMIUM_PATH: /usr/bin/google-chrome
+
+  interface-tests:
+    name: testes de interface (${{ matrix.shard }}/3)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run test:vitest -- --shard=${{ matrix.shard }}/3
+
+  browser-tests:
+    name: navegação e visual (${{ matrix.suite }})
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        suite: [navigation, recovery, hg-1, hg-2, hg-3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Restaurar arquivos públicos do mesmo commit
+        run: mkdir -p dist && cp -a public/. dist/
+      - uses: actions/download-artifact@v4
+        with:
+          name: crivo-compiled-app
+          path: dist
       - name: Navegação e retomada no iPad
         env:
+          SUITE: ${{ matrix.suite }}
           NODE_ENV: production
           PORT: '3003'
           PLAYWRIGHT_BASE_URL: http://127.0.0.1:3003
           PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH: /usr/bin/google-chrome
           PLAYWRIGHT_OUTPUT_DIR: /tmp/crivo-e2e-artifacts
           PLAYWRIGHT_HTML_OUTPUT_DIR: /tmp/crivo-e2e-report
+          CRIVO_HG_IDS: 'summary-historia-introducao-a-historia-e-primeiras-civilizacoes,summary-historia-antiguidade-classica-o-mundo-grego,summary-historia-antiguidade-classica-o-mundo-romano,summary-historia-alta-idade-media-e-feudalismo,summary-historia-baixa-idade-media,summary-historia-america-espanhola,summary-historia-vida-urbana-e-renascimento-cultural,summary-historia-reforma-religiosa,summary-historia-absolutismo,summary-historia-iluminismo,summary-geografia-coordenadas-geograficas,summary-geografia-movimentos-da-terra,summary-geografia-sistema-de-fusos-horarios,summary-geografia-linguagem-cartografica,summary-geografia-projecoes-cartograficas,summary-geografia-cartografia-digital,summary-geografia-representacoes-graficas-e-cartograficas,summary-geografia-dinamica-climatica,summary-geografia-clima-mundial,summary-geografia-geomorfologia-mundial,summary-geografia-biogeografia-mundial,summary-geografia-agua-na-superficie-terrestre,summary-geografia-desafios-ambientais-do-seculo-xxi,summary-geografia-geopolitica-ambiental,summary-geografia-geopolitica-dos-recursos-hidricos,summary-geografia-hidrogeografia-mundial,summary-geografia-do-mundo-bipolar-ao-multipolar,summary-geografia-globalizacao-e-processos-economicos-atuais,summary-geografia-geografia-das-redes-mundiais,summary-geografia-unilateralismo-e-multilateralismo'
         run: |
           npm start > /tmp/crivo-e2e-server.log 2>&1 &
           server_pid=$!
           trap 'kill "$server_pid"' EXIT
           curl --fail --silent --retry 20 --retry-delay 1 --retry-all-errors --max-time 2 http://127.0.0.1:3003/api/health
-          npm run test:e2e:crivo -- --project=desktop --grep 'Hoje|reduced motion|theme keeps|Discordo|every production route|avoids expensive'
-          npx playwright test --config=playwright.visual-recovery.config.ts --project=desktop
-          CRIVO_HG_IDS=summary-historia-introducao-a-historia-e-primeiras-civilizacoes,summary-historia-antiguidade-classica-o-mundo-grego,summary-historia-antiguidade-classica-o-mundo-romano,summary-historia-alta-idade-media-e-feudalismo,summary-historia-baixa-idade-media,summary-historia-america-espanhola,summary-historia-vida-urbana-e-renascimento-cultural,summary-historia-reforma-religiosa,summary-historia-absolutismo,summary-historia-iluminismo,summary-geografia-coordenadas-geograficas,summary-geografia-movimentos-da-terra,summary-geografia-sistema-de-fusos-horarios,summary-geografia-linguagem-cartografica,summary-geografia-projecoes-cartograficas,summary-geografia-cartografia-digital,summary-geografia-representacoes-graficas-e-cartograficas,summary-geografia-dinamica-climatica,summary-geografia-clima-mundial,summary-geografia-geomorfologia-mundial,summary-geografia-biogeografia-mundial,summary-geografia-agua-na-superficie-terrestre,summary-geografia-desafios-ambientais-do-seculo-xxi,summary-geografia-geopolitica-ambiental,summary-geografia-geopolitica-dos-recursos-hidricos,summary-geografia-hidrogeografia-mundial,summary-geografia-do-mundo-bipolar-ao-multipolar,summary-geografia-globalizacao-e-processos-economicos-atuais,summary-geografia-geografia-das-redes-mundiais,summary-geografia-unilateralismo-e-multilateralismo npx playwright test tests/e2e/visual-entrega-hg.spec.ts --project=desktop
+          case "$SUITE" in
+            navigation)
+              npm run test:e2e:crivo -- --project=desktop --grep 'Hoje|reduced motion|theme keeps|Discordo|every production route|avoids expensive'
+              ;;
+            recovery)
+              npx playwright test --config=playwright.visual-recovery.config.ts --project=desktop
+              ;;
+            hg-*)
+              npx playwright test tests/e2e/visual-entrega-hg.spec.ts --project=desktop --fully-parallel --shard="${SUITE#hg-}/3"
+              ;;
+            *) exit 1 ;;
+          esac
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: crivo-e2e-failure-${{ matrix.suite }}
+          path: |
+            /tmp/crivo-e2e-server.log
+            /tmp/crivo-e2e-artifacts/
+          retention-days: 3
+
+  # Preserve the existing check name; no suite may be skipped or fail silently.
+  lint-and-test:
+    if: ${{ always() }}
+    needs: [build, node-tests, interface-tests, browser-tests]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Conferir todas as suítes
+        env:
+          RESULTS: ${{ toJSON(needs) }}
+        run: |
+          python - <<'PYTHON'
+          import json, os, sys
+          results = json.loads(os.environ['RESULTS'])
+          failed = [name for name, job in results.items() if job['result'] != 'success']
+          if failed:
+              print('Verificações não concluídas com sucesso: ' + ', '.join(failed))
+              sys.exit(1)
+          print('Lint, build, testes e navegação concluídos com sucesso.')
+          PYTHON
