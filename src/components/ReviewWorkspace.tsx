@@ -1,8 +1,9 @@
 import { StudyActivityVisibleContext } from '../context/StudyActivityContext';
-import React, { lazy, Suspense, useMemo, useState } from 'react';
+import React, { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import { Router, Routes, Route, UNSAFE_LocationContext, UNSAFE_RouteContext, useNavigate, useSearchParams, createPath, type To } from 'react-router-dom';
 import { reviewResources } from '../lib/reviewResources';
 import { ErrorBoundary } from './ErrorBoundary';
+import { BEFORE_ASSET_RELOAD } from '../lib/assetRecovery';
 const ObraDetalhe = lazy(()=>import('../views/ObraDetalhe'));
 const resourceRouteContext = { outlet: null, matches: [], isDataRoute: false };
 
@@ -35,6 +36,17 @@ export function ReviewWorkspace({ header }: { header?: (open: (resource: string,
       return resource ? `/revisoes?${new URLSearchParams({recurso:resource.id,destino:path})}` : path;
     } };
   },[outerNavigate]);
+  useEffect(() => {
+    const preserveLocation = () => {
+      if (!/^\/revisoes\/?$/.test(window.location.pathname)) return;
+      const url = new URL(window.location.href);
+      url.searchParams.set('recurso', active);
+      url.searchParams.set('destino', locations[active]);
+      window.history.replaceState(window.history.state, '', url);
+    };
+    window.addEventListener(BEFORE_ASSET_RELOAD, preserveLocation);
+    return () => window.removeEventListener(BEFORE_ASSET_RELOAD, preserveLocation);
+  }, [active, locations]);
   const selected=reviewResources.find(r=>r.id===active)!;
   return <>
     <section className="ni-panel p-4 space-y-3" aria-label="Recursos da central de revisão">

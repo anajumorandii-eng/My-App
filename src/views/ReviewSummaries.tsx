@@ -17,6 +17,8 @@ import { reviewErrorHistory } from '../lib/reviewPersonalization';
 import { renderStudyReference, type StudyPacket } from '../lib/studySources';
 import { getLiteraryWorks } from '../lib/literaryCatalog';
 import type { LiteraryWork } from '../types/literaryWorks';
+import { BEFORE_ASSET_RELOAD } from '../lib/assetRecovery';
+import { readReviewReloadSelection, saveReviewReloadSelection, clearReviewReloadSelection } from '../lib/reviewReloadRecovery';
 import type { StrategyGuide } from '../lib/strategyGuides';
 const ReviewPdf = lazy(() => import('../components/DeepeningPdf').then(module => ({ default: module.DeepeningPdf })));
 
@@ -26,12 +28,15 @@ export default function ReviewSummaries() {
 }
 function ReviewSummariesContent({ uid }: { uid: string | null }) {
   const [params] = useSearchParams();
+  const [recoveredSelection] = useState(() => readReviewReloadSelection(uid));
+  const [showRecoveryNotice, setShowRecoveryNotice] = useState(Boolean(recoveredSelection));
+  useEffect(() => { clearReviewReloadSelection(uid); }, [uid]);
   const requestedTopic = mockTopics.find(topic => topic.id === params.get('topic'));
-  const [subject, setSubject] = useState(requestedTopic ? studyAreaForTopic(requestedTopic) : 'Matemática');
+  const [subject, setSubject] = useState(recoveredSelection?.subject ?? (requestedTopic ? studyAreaForTopic(requestedTopic) : 'Matemática'));
   const topics = mockTopics.filter(topic => studyAreaForTopic(topic) === subject);
-  const [topicId, setTopicId] = useState(requestedTopic?.id ?? topics[0]?.id ?? '');
-  const [chapter, setChapter] = useState(() => requestedTopic?.chapters?.includes(params.get('chapter') ?? '') ? params.get('chapter')! : '');
-  const [options, setOptions] = useState(() => normalizeReviewOptions({ boards: params.get('board') ? [params.get('board')!] : [] }));
+  const [topicId, setTopicId] = useState(recoveredSelection?.topicId ?? requestedTopic?.id ?? topics[0]?.id ?? '');
+  const [chapter, setChapter] = useState(() => recoveredSelection?.chapter ?? (requestedTopic?.chapters?.includes(params.get('chapter') ?? '') ? params.get('chapter')! : ''));
+  const [options, setOptions] = useState(() => normalizeReviewOptions(recoveredSelection?.options ?? { boards: params.get('board') ? [params.get('board')!] : [] }));
   const { targets } = useStudyTargets();
   const banks = [...new Set([...reviewBoards, ...targets.map(item => reviewBoard(item.board)), ...options.boards])].filter(Boolean);
   const history = useErrorReviewHistory();
@@ -44,7 +49,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
     return () => { active = false; };
   }, [options.sourceMode]);
   const { guides, persist, remove, loading, error, reload, saveMessage, setSaveMessage } = useStrategyGuides(uid);
-  const [configurationOpen, setConfigurationOpen] = useState(true);
+  const [configurationOpen, setConfigurationOpen] = useState(recoveredSelection?.configurationOpen ?? true);
   const [createdRevision, setCreatedRevision] = useState('');
   const [pdfBusy, setPdfBusy] = useState(false);
   const [generating, setGenerating] = useState(false);
@@ -52,7 +57,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
   const [problem, setProblem] = useState('');
   const [librarySubject, setLibrarySubject] = useState('');
   const [libraryBoard, setLibraryBoard] = useState('');
-  const [openedKey, setOpenedKey] = useState('');
+  const [openedKey, setOpenedKey] = useState(recoveredSelection?.openedKey ?? '');
   const printContent = useRef<HTMLElement>(null);
   const busy = useRef(false), mounted = useRef(true);
   useEffect(() => { mounted.current = true; return () => { mounted.current = false; }; }, []);
@@ -62,6 +67,14 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
   useEffect(() => { setProblem(''); setStream(''); setSaveMessage(''); }, [key]);
   const current = guides[openedKey || key];
   const working = generating || pdfBusy;
+  useEffect(() => {
+    const preserveSelection = () => saveReviewReloadSelection(uid, {
+      subject, topicId, chapter, options, openedKey: current?.key ?? openedKey, configurationOpen,
+    });
+    window.addEventListener(BEFORE_ASSET_RELOAD, preserveSelection);
+    return () => window.removeEventListener(BEFORE_ASSET_RELOAD, preserveSelection);
+  }, [uid, subject, topicId, chapter, options, current?.key, openedKey, configurationOpen]);
+
   const saved = selectReviewSummaries(guides, librarySubject, libraryBoard);
   const allSaved = selectReviewSummaries(guides);
   const savedSubjects = [...new Set(allSaved.map(item => item.subject))].sort((a,b) => a.localeCompare(b,'pt-BR'));
@@ -70,6 +83,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
   const edit = (patch: Partial<ReviewOptions>) => { setOpenedKey(''); setOptions(previous => normalizeReviewOptions({ ...previous, ...patch })); };
   const openSaved = (guide: StrategyGuide) => {
     if (busy.current || pdfBusy) return;
+    setShowRecoveryNotice(false);
     setSubject(guide.subject); setTopicId(guide.topicId); setChapter(guide.chapter);
     setOptions(normalizeReviewOptions(guide.reviewOptions ?? { boards: guide.targetBoards ?? (guide.board ? [guide.board] : []) }));
     setOpenedKey(guide.key); setCreatedRevision(''); setConfigurationOpen(false);
@@ -77,6 +91,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
   const canGenerate = options.sourceMode === 'provided' ? Boolean(options.sourceText.trim() && options.sourceTitle.trim()) : Boolean(topic);
   const generate = async () => {
     if (busy.current || pdfBusy || !canGenerate) return;
+    setShowRecoveryNotice(false);
     busy.current = true; setGenerating(true); setProblem(''); setStream(''); setSaveMessage(''); setOpenedKey('');
     try {
       const activeTopic = topic ?? { id: topicId, name: options.sourceTitle, subject, prerequisites: [] };
@@ -120,6 +135,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
         {current && <button type="button" disabled={working} className="underline disabled:opacity-50" onClick={() => setConfigurationOpen(true)}>Configurar nova revisão</button>}
       </div>
     </div>
+    {showRecoveryNotice && <p role="status" aria-label="Atualização do aplicativo" className="ni-panel p-4 text-sm">O Crivo foi atualizado para carregar os arquivos necessários. Sua seleção foi mantida. Gere a revisão novamente para continuar; se o texto já estiver salvo, abra seu resumo e use Exportar revisão em PDF.</p>}
     <details className="ni-panel" open={configurationOpen} onToggle={event => setConfigurationOpen(event.currentTarget.open)}>
       <summary className="cursor-pointer p-4 text-sm font-semibold">Configurar revisão · {subject} · {reviewDepths[options.depth]}</summary>
       <div className="px-5 pb-5 space-y-3">
