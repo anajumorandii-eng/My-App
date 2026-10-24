@@ -8,7 +8,8 @@ import { printStrategyGuide } from '../lib/printStrategyGuide';
 import { isStudyPacket } from '../lib/studySources';
 import { canonicalExamBoard } from '../lib/questionExamFilters';
 import type { StrategyGuide } from '../lib/strategyGuides';
-import { AiText } from '../components/AiText';
+import { ReviewSummaryText } from '../components/ReviewSummaryText';
+import { DeleteStudyMaterial } from '../components/DeleteStudyMaterial';
 import { StudySourcesPanel } from '../components/StudySourcesPanel';
 
 const PAGE_SIZE = 12;
@@ -22,7 +23,7 @@ export default function Aprofundamentos() {
 }
 
 function GuideLibrary({ uid }: { uid: string | null }) {
-  const { guides, loading, error, reload, persist, saveMessage } = useStrategyGuides(uid);
+  const { guides, loading, error, reload, persist, remove, saveMessage } = useStrategyGuides(uid);
   const [params, setParams] = useSearchParams();
   const [printError, setPrintError] = useState('');
   const [saving, setSaving] = useState(false);
@@ -73,6 +74,10 @@ function GuideLibrary({ uid }: { uid: string | null }) {
               try { printStrategyGuide(printContent.current, `Aprofundamento — ${selected.subject} — ${selected.chapter || selected.topicName}`); setPrintError(''); }
               catch { setPrintError('Não foi possível abrir a impressão. Tente novamente.'); }
             }}>Imprimir / Salvar em PDF</button>}
+          <DeleteStudyMaterial key={selected.key} title={selected.chapter || selected.topicName} remove={async () => {
+            await remove(selected.key);
+            setParams(previous => { const next = new URLSearchParams(previous); next.delete('guia'); return next; });
+          }} />
           <Link to={contextUrl} className="text-sm underline">Voltar à estratégia deste tópico</Link>
           {uid && /Não foi possível/.test(saveMessage) && <button type="button" disabled={saving} className="text-sm underline disabled:opacity-50" onClick={async () => { setSaving(true); try { await persist(selected); } finally { setSaving(false); } }}>{saving ? 'Salvando…' : 'Salvar novamente na conta'}</button>}
         </div>
@@ -82,7 +87,7 @@ function GuideLibrary({ uid }: { uid: string | null }) {
           <h2 className="font-display text-xl">{selected.subject} · {selected.chapter || selected.topicName}</h2>
           <p className="text-sm text-[var(--dim)]">{selected.topicName} · {selected.board} · Salvo em {dateLabel(selected.savedAt)}</p>
           {selected.selections?.length ? <p className="text-sm">Recortes: {selected.selections.map(item => `${item.topicName} — ${item.chapter || 'visão geral'}`).join(' + ')}</p> : null}
-          <AiText text={selected.text} className="text-sm leading-relaxed" />
+          <ReviewSummaryText text={selected.text} />
           {isStudyPacket(selected.studyPacket) && <StudySourcesPanel packet={selected.studyPacket} />}
         </article>
       </> : !loading && <div className="ni-panel p-5 space-y-3"><h2 className="font-semibold">Guia não encontrado nas cópias disponíveis</h2><p className="text-sm">Confira se você está na mesma conta em que gerou o aprofundamento. Os outros guias continuam na biblioteca.</p></div>}

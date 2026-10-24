@@ -14,6 +14,8 @@ export function createStrategyPrintRoot(content: HTMLElement, title: string) {
   printable.dataset.printCoverEdition ||= crypto.randomUUID();
   printable.querySelectorAll('[data-print-exclude]').forEach(element => element.remove());
   printable.querySelectorAll<HTMLElement>('[data-print-only]').forEach(element => { element.hidden = false; element.style.display = 'block'; element.classList.remove('hidden'); });
+  // References stay readable without exporting raw OCR and internal analytical sheets.
+  printable.querySelectorAll('[data-study-source] [data-source-content]').forEach(element => element.remove());
   printable.querySelectorAll('details').forEach(element => { element.open = true; });
   printable.querySelectorAll<HTMLElement>('[data-review-sources]').forEach(element => {
     element.querySelector('summary')!.textContent = 'Fontes da revisão';

@@ -4,6 +4,8 @@ import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import { StudyParagraph } from './StudyParagraph';
+import { Children, isValidElement } from 'react';
+import { StudyVisual } from './StudyVisual';
 
 // A IA às vezes usa delimitadores estilo MathJax (\[ \] e \( \)) em vez do
 // $ $ / $$ $$ que o remark-math reconhece. Normalizamos antes de renderizar.
@@ -20,6 +22,13 @@ export default function AiTextRenderer({ text, className = '' }: { text: string;
         remarkPlugins={[remarkGfm, remarkMath]}
         rehypePlugins={[rehypeKatex]}
         components={{
+          pre: ({ children }) => {
+            const child = Children.toArray(children)[0];
+            if (isValidElement<{ className?: string; children?: React.ReactNode }>(child) && child.props.className === 'language-study-visual') {
+              return <StudyVisual source={String(child.props.children ?? '')} />;
+            }
+            return <pre className="overflow-x-auto whitespace-pre-wrap">{children}</pre>;
+          },
           table: ({ children }) => (
             <div role="region" aria-label="Tabela de estudo" tabIndex={0}
               className="my-3 max-w-full overflow-x-auto rounded-lg border border-[var(--line)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
@@ -39,8 +48,8 @@ export default function AiTextRenderer({ text, className = '' }: { text: string;
           h1: ({ children }) => <h3 data-heading-level="1" className="font-semibold text-base mt-3">{children}</h3>,
           h2: ({ children }) => <h3 data-heading-level="2" className="font-semibold text-base mt-3">{children}</h3>,
           h3: ({ children }) => <h4 data-heading-level="3" className="font-semibold mt-2">{children}</h4>,
-          code: ({ children }) => (
-            <code className="px-1 py-0.5 rounded bg-black/5 dark:bg-white/10 text-[0.9em]">{children}</code>
+          code: ({ children, className }) => (
+            <code className={`${className ?? ''} px-1 py-0.5 rounded bg-black/5 dark:bg-white/10 text-[0.9em]`}>{children}</code>
           ),
         }}
       >

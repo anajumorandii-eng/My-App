@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { deletedStrategyGuide } from '../lib/strategyGuides';
 import { cacheStrategyGuides, loadStrategyGuides, mergeStrategyGuides, readStrategyGuides, saveStrategyGuide, STRATEGY_GUIDES_CHANGED, strategyGuidesStorageKey, type StrategyGuide } from '../lib/strategyGuides';
 
 /** Shares the existing account/cache collection; no migration or duplicate store. */
@@ -34,6 +35,7 @@ export function useStrategyGuides(uid: string | null) {
   }, [uid, attempt, update]);
   const persist = async (guide: StrategyGuide) => {
     const next = mergeStrategyGuides(current.current, { [guide.key]: guide });
+    if (next[guide.key] !== guide) return;
     update(next);
     let cached = false;
     try { cacheStrategyGuides(uid, next); cached = true; } catch { /* Surface the storage failure below. */ }
@@ -45,5 +47,20 @@ export function useStrategyGuides(uid: string | null) {
     try { await saveStrategyGuide(uid, guide); setSaveMessage('Salvo na sua conta.'); }
     catch { setSaveMessage(cached ? 'Salvo neste navegador. Não foi possível sincronizar com sua conta; tente salvar novamente.' : 'Não foi possível salvar. Imprima ou tente salvar novamente antes de sair.'); }
   };
-  return { guides, loading, error, saveMessage, setSaveMessage, persist, reload: () => setAttempt(value => value + 1) };
+  const remove = async (key: string) => {
+    const guide = current.current[key];
+    if (!guide || guide.deletedAt) return;
+    const marker = deletedStrategyGuide(guide);
+    // Account failure leaves the material readable and lets the student retry.
+    if (uid) await saveStrategyGuide(uid, marker);
+    const next = mergeStrategyGuides(current.current, { [key]: marker });
+    if (!uid) cacheStrategyGuides(uid, next);
+    update(next);
+    if (uid) {
+      try { cacheStrategyGuides(uid, next); }
+      catch { setSaveMessage('Excluído da conta. Não foi possível atualizar a cópia deste navegador; conecte-se antes de consultá-la novamente.'); }
+    }
+  };
+  const visible = useMemo(() => Object.fromEntries(Object.entries(guides).filter(([, guide]) => !guide.deletedAt)), [guides]);
+  return { guides: visible, loading, error, saveMessage, setSaveMessage, persist, remove, reload: () => setAttempt(value => value + 1) };
 }

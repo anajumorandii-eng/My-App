@@ -14,11 +14,13 @@ const packet: StudyPacket = {
   ],
 };
 it('recupera a extração do AS1 salvo e renderiza as fórmulas sem imagens de páginas', async () => {
+  // Verify formatting after the lazy module is available, independently of cold-load speed.
+  await import('./AiTextRenderer');
   render(<MemoryRouter><StudySourcesPanel packet={packet} /></MemoryRouter>);
   expect(screen.getByText(/\[AS1\] Apostila/)).toBeInTheDocument();
   expect(screen.getByRole('status')).toHaveTextContent('texto da apostila foi corrigido');
   expect(screen.getByRole('status')).toHaveTextContent('Gere um novo aprofundamento');
-  await waitFor(() => expect(document.querySelectorAll('.katex').length).toBeGreaterThan(0));
+  await waitFor(() => expect(document.querySelectorAll('.katex').length).toBeGreaterThan(0), { timeout: 5000 });
   expect(screen.queryByRole('img', { hidden: true })).toBeNull();
   expect(screen.getByRole('link', { name: 'Conferir origem cadastrada', hidden: true })).toHaveAttribute('href', expect.stringContaining('1LY2wYXIO2vQnoq5yunu4jFe7BR2sIx1k'));
   expect(document.querySelector('.katex-error')).toBeNull();

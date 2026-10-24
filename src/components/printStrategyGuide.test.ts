@@ -3,6 +3,17 @@ import { createStrategyPrintRoot, printStrategyGuide } from '../lib/printStrateg
 import { openStudyPdf } from '../lib/printPdfFile';
 vi.mock('../lib/printPdfFile', () => ({ openStudyPdf: vi.fn() }));
 
+it('exporta referências legíveis sem OCR bruto e preserva a inspeção na tela', () => {
+  const content = document.createElement('article');
+  content.innerHTML = '<h2>Mecanismo</h2><p>Explicação desenvolvida [AS1].</p><details data-study-source><summary>[AS1] Apostila · recorte</summary><p data-source-reference>Material de referência; recorte parcial.</p><div data-source-content>OCR bruto e ficha interna</div><a href="https://example.org/fonte">Conferir origem</a></details>';
+  const root = createStrategyPrintRoot(content, 'Revisão');
+  expect(root.textContent).not.toContain('OCR bruto');
+  expect(root.textContent).toContain('Explicação desenvolvida [AS1].');
+  expect(root.textContent).toContain('Material de referência; recorte parcial.');
+  expect(root.querySelector('a[href="https://example.org/fonte"]')).toBeTruthy();
+  expect(content.textContent).toContain('OCR bruto');
+});
+
 it('usa o mesmo arquivo paginado em todos os dispositivos', () => {
   const content = document.createElement('article');
   content.innerHTML = '<h2>Seção</h2><p>Texto original</p>';
@@ -64,17 +75,18 @@ it('revisão exporta gabarito em bloco final separado após as fontes, sem alter
   expect(content.querySelector('details')?.open).toBe(false);
   expect(root.querySelector('[data-print-cover-collection]')?.textContent).toBe('CADERNOS DE REVISÃO');
 });
-it('revisão e aprofundamento da mesma matéria recebem composições próprias, e cada exportação tem outra capa',()=>{
+it('capas provisórias preservam a arte inteira e a identidade de cada edição',()=>{
  const content=document.createElement('article');
  Object.assign(content.dataset,{printSubject:'Biologia',printTopic:'Genética',printBoard:'FUVEST',printPurpose:'Aprofundamento'});
  content.innerHTML='<h2>Herança genética</h2><p>Texto preservado.</p>';
  const first=createStrategyPrintRoot(content,'Genética');
  const next=createStrategyPrintRoot(content,'Genética');
  const firstImage=first.querySelector('img[data-print-illustration]')!.getAttribute('src');
- expect(next.querySelector('img[data-print-illustration]')!.getAttribute('src')).not.toBe(firstImage);
+ expect(next.querySelector('img[data-print-illustration]')!.getAttribute('src')).toBe(firstImage);
+ expect(next.querySelector('[data-print-cover]')!.getAttribute('data-print-cover-edition')).not.toBe(first.querySelector('[data-print-cover]')!.getAttribute('data-print-cover-edition'));
  content.dataset.printPurpose='Revisão estratégica';
  const review=createStrategyPrintRoot(content,'Genética');
- expect(review.querySelector('img[data-print-illustration]')!.getAttribute('src')).not.toBe(firstImage);
+ expect(review.querySelector('img[data-print-illustration]')!.getAttribute('src')).toBe(firstImage);
  expect(review.querySelector('[data-print-cover]')).toHaveAttribute('data-print-material','review');
  expect(review.querySelector('[data-print-content]')!.textContent).toContain('Texto preservado.');
  expect(content.dataset.printCoverEdition).toBeUndefined();
@@ -84,9 +96,8 @@ it('preserva a ilustração inteira na revisão, sem recorte em medalhão',()=>{
  Object.assign(content.dataset,{printSubject:'Matemática',printTopic:'Geometria Plana',printPurpose:'Revisão estratégica'});
  const root=createStrategyPrintRoot(content,'Geometria');
  const source=root.querySelector<HTMLImageElement>('[data-print-illustration]')!.src;
- const svg=decodeURIComponent(source.split(',').slice(1).join(','));
- expect(svg).toContain('width="400" height="500"');
- expect(svg).not.toMatch(/clipPath|medallion|<ellipse|scale\(-1/);
+ expect(source).toMatch(/^data:image\/jpeg;base64,/);
+ expect(root.querySelector('[data-print-cover-base]')!.querySelectorAll('circle[fill="#31546a"]')).toHaveLength(0);
 });
 it('preserva a arte gerada sem sobrepor pontos aleatórios do modelo padrão', async()=>{
  const {coverContextKey,readPrintCoverContext}=await import('../lib/printCoverContext');

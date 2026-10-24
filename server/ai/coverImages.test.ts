@@ -45,7 +45,7 @@ test("prompt de ilustração mantém metadados como dados e reserva textos e mol
 test("revisões não reintroduzem medalhão nem cartões radiais no vocabulário enviado", () => {
   for (const topic of ["Funções", "Geometria plana", "Logaritmos e exponenciais"]) {
     const prompt = buildCoverImagePrompt({ subject: "Matemática", topic, purpose: "Revisão aprofundada" });
-    assert.match(prompt, /Revision cover: compose a compact illustrated field/);
+    assert.match(prompt, /Revision cover: compose one unified central illustration/);
     assert.match(prompt, /ornamental scientific atlas/);
     assert.match(prompt, /muted botanical green, oxblood accents and antique copper/);
     assert.match(prompt, /topic below determines the objects/);
@@ -58,7 +58,7 @@ test("aprofundamento e revisão compartilham linguagem visual mas pedem composi�
   const data = { subject: "Química", topic: "Termoquímica", subtopic: "Entalpia" };
   const study = buildCoverImagePrompt({ ...data, purpose: "Aprofundamento" });
   const review = buildCoverImagePrompt({ ...data, purpose: "Revisão estratégica" });
-  assert.match(study, /Deepening cover: compose a tall, richly developed scientific tableau/);
+  assert.match(study, /Deepening cover: compose one unified central illustration/);
   assert.doesNotMatch(study, /Revision cover:/);
   assert.match(review, /Revision cover:/);
   assert.doesNotMatch(review, /Deepening cover:/);
@@ -67,6 +67,22 @@ test("aprofundamento e revisão compartilham linguagem visual mas pedem composi�
     assert.match(prompt, /Entalpia/);
     assert.match(prompt, /Vary the scene for this specific document/);
     assert.doesNotMatch(prompt, /open, asymmetrical/);
+  }
+});
+
+test("padrão aprovado mantém um núcleo ilustrado e prioriza os motivos do tópico", () => {
+  for (const [subject, topic] of [
+    ["Biologia", "Ecologia"], ["Biologia", "Botânica"],
+    ["Biologia", "Fisiologia Animal e Humana"],
+    ["Química", "Análises Quantitativas e Estequiometria"],
+    ["Matemática", "Geometria Plana"],
+  ]) {
+    const prompt = buildCoverImagePrompt({subject, topic, purpose: "Revisão estratégica"});
+    assert.ok(prompt.includes(topic));
+    assert.match(prompt, /one rich cohesive central cluster/);
+    assert.match(prompt, /specific topic takes precedence/);
+    assert.match(prompt, /not a generic DNA, microscope and plant-cell emblem/);
+    assert.doesNotMatch(prompt, /compact illustrated field|open, asymmetrical/);
   }
 });
 

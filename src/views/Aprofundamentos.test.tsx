@@ -14,6 +14,18 @@ const collection = (...items: StrategyGuide[]) => Object.fromEntries(items.map(i
 beforeEach(() => { localStorage.clear(); mocks.uid = null; mocks.load.mockReset().mockResolvedValue({}); vi.mocked(printStrategyGuide).mockClear(); });
 const open = (path = '/aprofundamentos') => render(<MemoryRouter initialEntries={[path]}><Aprofundamentos /></MemoryRouter>);
 
+it('exclui pelo leitor após confirmação, volta à biblioteca e preserva outros guias e progresso', async () => {
+  cacheStrategyGuides(null, collection(guide(0), guide(1)));
+  localStorage.setItem('juju_summary_progress_v1', 'progresso preservado');
+  open(strategyGuideUrl(guide(0)));
+  fireEvent.click(screen.getByRole('button', { name: 'Excluir material: Capítulo 0' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Confirmar exclusão' }));
+  await waitFor(() => expect(screen.getByRole('searchbox')).toBeInTheDocument());
+  expect(screen.getAllByRole('link', { name: /Abrir aprofundamento:/ })).toHaveLength(1);
+  expect(screen.getByRole('link', { name: /Abrir aprofundamento:/ })).toHaveTextContent('Capítulo 1');
+  expect(localStorage.getItem('juju_summary_progress_v1')).toBe('progresso preservado');
+});
+
 it('organiza os guias antigos em páginas e abre um leitor separado sem modificar o armazenamento', async () => {
   cacheStrategyGuides(null, collection(...Array.from({ length: 27 }, (_, i) => guide(i))));
   const before = localStorage.getItem('crivo:strategy-guides:v1:guest');

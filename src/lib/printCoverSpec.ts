@@ -55,8 +55,8 @@ export function buildPrintCoverSpec(context: PrintCoverContext, fallbackTitle: s
     footer_tagline: context.purpose || 'Aprofundamento e raciocínio de prova',
     footer_signature: 'CRIVO • MATERIAL DE ESTUDO',
     visual_spec: { central_hero: `${review
-      ? 'Revision cover: compose a compact illustrated field of related subject details, with a main motif and smaller complementary studies flowing beside and below it. Emphasize connections and visual synthesis; keep the silhouette airy and varied.'
-      : 'Deepening cover: compose a tall, richly developed scientific tableau, with a dominant subject motif and related instruments or structures interwoven into a continuous scene. Emphasize mechanisms and depth through layered detail.'
+      ? 'Revision cover: compose one unified central illustration with a compact, rounded organic silhouette and a clear dominant subject motif. Interweave the supporting details into that same illustration, suggesting synthesis and connections; do not distribute separate studies across the page.'
+      : 'Deepening cover: compose one unified central illustration with a tall, richly detailed organic silhouette. Interweave a dominant subject motif, related instruments and structures into one continuous scene, suggesting mechanisms and depth.'
     } Subject vocabulary, to be selected for the actual topic rather than repeated wholesale: ${themes[theme].hero}`, vignettes: theme === 'blood' ? {
       top_left: { label: 'Hemácias', illustration: 'Biconcave red blood cells and cross-section in crimson watercolor etching.' },
       bottom_left: { label: 'Defesa', illustration: 'Vintage brass microscope and purple-nucleated leukocytes.' },

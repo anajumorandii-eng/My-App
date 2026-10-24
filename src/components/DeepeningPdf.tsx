@@ -42,22 +42,25 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
   const [edition,setEdition]=useState('original');
   const [file, setFile] = useState<{ key: string; url: string; blob: Blob }>();
   const [error, setError] = useState('');
+  const [standardCover, setStandardCover] = useState(false);
   const [idle, setIdle] = useState(false);
   const [requestedKey, setRequestedKey] = useState('');
-  const preparedContent = useRef<{ key: string; content: HTMLElement } | undefined>(undefined);
-  const documentKey = JSON.stringify(['individual-cover-v1',user?.uid,guideKey,revision,materialLabel,title]);
+  const preparedContent = useRef<{ key: string; content: HTMLElement; standardCover: boolean } | undefined>(undefined);
+  const documentKey = JSON.stringify(['study-quality-v2',user?.uid,guideKey,revision,materialLabel,title]);
   const cacheKey = JSON.stringify([documentKey,edition]);
   const ready = file?.key === cacheKey ? file : undefined;
   useEffect(() => {
     const controller = new AbortController();
     let objectUrl: string | undefined;
-    setFile(undefined); setError(''); setIdle(false); onBusyChange?.(true);
+    setFile(undefined); setError(''); setStandardCover(false); setIdle(false); onBusyChange?.(true);
     const previous = preparedContent.current?.key === cacheKey ? preparedContent.current.content : undefined;
+    let usingStandardCover = previous ? preparedContent.current!.standardCover : false;
+    if (usingStandardCover) setStandardCover(true);
     void (async () => {
       try {
         let blob = edition==='original'?completedFiles.get(documentKey):undefined;
         // Library headings may omit the board; identity follows the saved guide.
-        const documentId = user ? await studyPdfDocumentId(JSON.stringify(['study-pdf-v1', user.uid, guideKey, revision, materialLabel])) : undefined;
+        const documentId = user ? await studyPdfDocumentId(JSON.stringify(['study-pdf-quality-v2', user.uid, guideKey, revision, materialLabel])) : undefined;
         if (!blob && documentId && edition === 'original') {
           blob = await loadSavedStudyPdf(documentId, AbortSignal.any([controller.signal, AbortSignal.timeout(15_000)]));
           controller.signal.throwIfAborted();
@@ -86,11 +89,11 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
                     !/^data:image\/png;base64,[A-Za-z0-9+/]+={0,2}$/.test(data.dataUrl)) throw new Error('Ilustração indisponível');
                 content.dataset.printGeneratedArt = data.dataUrl;
                 content.dataset.printGeneratedContext = coverContextKey(context);
-              }
-            } catch { /* The PDF retains its illustrated standard cover. */ }
+              } else { usingStandardCover = true; setStandardCover(true); }
+            } catch { usingStandardCover = true; if (!controller.signal.aborted) setStandardCover(true); }
           }
           controller.signal.throwIfAborted();
-          preparedContent.current = { key: cacheKey, content };
+          preparedContent.current = { key: cacheKey, content, standardCover: usingStandardCover };
           const signal = AbortSignal.any([controller.signal, AbortSignal.timeout(45_000)]);
           blob = await requestStudyPdf(createStrategyPrintRoot(content, title), title, printStyles, signal, documentId);
           controller.signal.throwIfAborted();
@@ -113,6 +116,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
   return <div data-print-exclude className="space-y-2 text-sm">
     {ready ? <>
       <p role="status">{materialLabel === 'Aprofundamento' ? 'Aprofundamento pronto, com capa e índice.' : `${materialLabel} pronta, com capa e índice.`}</p>
+      {standardCover && <p role="status">A ilustração personalizada não ficou disponível. Este PDF usa uma capa padrão provisória. Use Gerar novo PDF para tentar uma nova ilustração.</p>}
       <div className="flex flex-wrap items-center gap-3">
         <a className="rounded-lg border border-[var(--line)] px-4 py-2" href={ready.url} target="_blank" rel="noopener">Abrir PDF</a>
         <a className="underline" href={ready.url} download={filename}>Salvar PDF</a>

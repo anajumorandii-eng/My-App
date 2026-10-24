@@ -13,7 +13,7 @@ import { useEffect, useRef, useState } from 'react';
 import { mockTopics } from '../data/mockData';
 import { studyAreaForTopic, studyBoardProfiles, studyProtocols } from '../data/studyProtocols';
 import { requestAiTextStream } from '../lib/aiClient';
-import { AiText } from './AiText';
+import { ReviewSummaryText } from './ReviewSummaryText';
 
 import { useAuth } from '../context/AuthContext';
 import { strategyGuideUrl } from '../lib/strategyGuides';
@@ -155,7 +155,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
       </div>}
       {(answers[key] || guides[key]) && <div ref={printContent} data-print-subject={subject} data-print-topic={focusName} data-print-subtopic={selections.map(item => `${item.topicName}: ${item.chapter || 'visão geral'}`).join(' · ')} data-print-board={guides[key]?.targetBoards?.join(' · ') || board} data-print-purpose="Aprofundamento dos conceitos e de como são cobrados nas provas">
         <h4 className="font-display text-lg">{subject} · {focusName}{selections.length === 1 && chapter ? ` · ${chapter}` : ''} · {board}</h4>
-        <AiText text={answers[key] || guides[key]?.text || ''} className="text-sm leading-relaxed" />
+        <ReviewSummaryText text={answers[key] || guides[key]?.text || ''} />
         {guides[key]?.studyPacket && <div className="hidden" data-print-only><StudySourcesPanel packet={guides[key].studyPacket!} /></div>}
       </div>}
     </div>
