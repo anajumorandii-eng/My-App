@@ -49,6 +49,7 @@ it('falha da ilustração usa a capa padrão e ainda conclui o PDF', async () =>
   const sent = JSON.parse(fetch.mock.calls.find(([url]) => url === '/api/study-pdf')![1].body);
   expect(sent.html).toContain('data-print-cover'); expect(sent.html).toContain('Sumário');
   expect(sent.html).not.toContain(image);
+  expect(screen.getByText(/capa padrão provisória/)).toBeVisible();
 });
 it('falha do PDF não anuncia pronto e a nova tentativa reutiliza a capa', async () => {
   let calls = 0;
