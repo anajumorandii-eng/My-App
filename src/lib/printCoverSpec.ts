@@ -54,7 +54,7 @@ export function buildPrintCoverSpec(context: PrintCoverContext, fallbackTitle: s
     exam_board: context.board || '', triad_keywords: review ? ['Recordar','Conectar','Aplicar'] : [...themes[theme].triad],
     footer_tagline: context.purpose || 'Aprofundamento e raciocínio de prova',
     footer_signature: 'CRIVO • MATERIAL DE ESTUDO',
-    visual_spec: { central_hero: review ? `A review folio with recall cards arranged around one central subject medallion, linked by a restrained circular path. Use a visibly different composition from an in-depth atlas plate. Subject motifs: ${themes[theme].hero}` : themes[theme].hero, vignettes: theme === 'blood' ? {
+    visual_spec: { central_hero: review ? `An open, asymmetrical illustrated atlas composition: a dominant subject-specific scene or object, with two or three related instruments, specimens or small sketches integrated at different scales. Let delicate watercolor washes and fine engraved lines connect the elements, fading softly into clear space. Keep the objects unframed and directly visible; avoid radial arrangements, hanging cards, wreaths and ornamental pedestals. Select only motifs relevant to the specific topic from this vocabulary: ${themes[theme].hero}` : themes[theme].hero, vignettes: theme === 'blood' ? {
       top_left: { label: 'Hemácias', illustration: 'Biconcave red blood cells and cross-section in crimson watercolor etching.' },
       bottom_left: { label: 'Defesa', illustration: 'Vintage brass microscope and purple-nucleated leukocytes.' },
       top_right: { label: 'Anticorpos', illustration: 'Y-shaped immunoglobulin antibody structures.' },
