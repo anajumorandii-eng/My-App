@@ -88,3 +88,14 @@ it('preserva a ilustração inteira na revisão, sem recorte em medalhão',()=>{
  expect(svg).toContain('width="400" height="500"');
  expect(svg).not.toMatch(/clipPath|medallion|<ellipse|scale\(-1/);
 });
+it('preserva a arte gerada sem sobrepor pontos aleatórios do modelo padrão', async()=>{
+ const {coverContextKey,readPrintCoverContext}=await import('../lib/printCoverContext');
+ const content=document.createElement('article');
+ Object.assign(content.dataset,{printSubject:'Química',printTopic:'Termoquímica',printPurpose:'Revisão estratégica'});
+ content.dataset.printGeneratedArt='data:image/png;base64,AAAA';
+ content.dataset.printGeneratedContext=coverContextKey(readPrintCoverContext(content));
+ const root=createStrategyPrintRoot(content,'Termoquímica');
+ expect(root.querySelector('[data-print-illustration]')).toHaveAttribute('src',content.dataset.printGeneratedArt);
+ expect(root.querySelector('[data-print-cover]')).toHaveAttribute('data-print-generated');
+ expect(root.querySelectorAll('[data-print-cover-base] circle[fill="#31546a"]')).toHaveLength(0);
+});
