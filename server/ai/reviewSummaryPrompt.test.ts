@@ -72,3 +72,11 @@ test('revisões aprofundam o raciocínio em vez de apenas aumentar listas', () =
   assert.match(quick, /compacta.*raciocínio completo/);
   assert.doesNotMatch(quick, /Fuvest|FUVEST/);
 });
+
+test('revisão combinada cobre os recortes e suas conexões sem mudar bancas ou etapas', () => {
+  const value=prompt(['UNICAMP'],{scopes:{UNICAMP:'second'}},{topic:'Ecologia + Evolução',chapters:'Ecologia: Dinâmica de Populações; Evolução: Mecanismos da Evolução Biológica'});
+  assert.match(value,/Recortes da revisão: Ecologia: Dinâmica de Populações; Evolução: Mecanismos da Evolução Biológica/);
+  assert.match(value,/cubra cada recorte.*conexões/i);
+  assert.match(value,/recuperação ativa.*todos os tópicos/i);
+  assert.doesNotMatch(value,/Fuvest|FUVEST|ENEM/);
+});
