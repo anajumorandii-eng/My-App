@@ -2,12 +2,20 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "5f3e061445965d72c8bcb610f01a40ea25f0c3b1",
-  "generated_at_utc": "2026-10-24T23:31:21Z",
+  "source_commit": "cdef68dba25977483324a6333f10f8a4ba5d5153",
+  "generated_at_utc": "2026-10-25T00:05:44Z",
   "changed_files": [
-    ".github/workflows/ci.yml",
-    ".github/workflows/pr-verification.yml",
-    "docs/operacao/verificacao-github.md"
+    "server/ai/reviewSummaryPrompt.test.ts",
+    "server/ai/reviewSummaryPrompt.ts",
+    "src/components/AdditionalStudyTopics.tsx",
+    "src/components/ReviewReloadRecovery.test.ts",
+    "src/components/StrategyExplorer.tsx",
+    "src/lib/loadStudyPacket.test.ts",
+    "src/lib/reviewReloadRecovery.ts",
+    "src/lib/reviewSummaries.test.ts",
+    "src/lib/reviewSummaries.ts",
+    "src/views/ReviewSummaries.test.tsx",
+    "src/views/ReviewSummaries.tsx"
   ],
   "next_session": {
     "mode": "delta-only",
