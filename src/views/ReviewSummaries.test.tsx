@@ -38,7 +38,7 @@ it('permite revisão geral e gera com o recorte e as fontes, salvando separadame
   mount();
   expect(screen.getByRole('button', { name: 'Gerar resumo de revisão' })).toBeEnabled();
   fireEvent.click(screen.getByRole('checkbox', { name: 'Fuvest' }));
-  fireEvent.change(screen.getByLabelText('Capítulo do resumo'), { target: { value: 'Porcentagem' } });
+  fireEvent.click(screen.getByLabelText('Porcentagem'));
   fireEvent.click(screen.getByRole('button', { name: 'Gerar resumo de revisão' }));
   await waitFor(() => expect(mocks.generate).toHaveBeenCalledWith('review-tip', expect.objectContaining({ subject: 'Matemática', chapter: 'Porcentagem', targetBoards: ['FUVEST'], guideMode: 'review-summary', referenceText: '[F1] Proporções' }), expect.any(Function)));
   expect(await screen.findByText(/Síntese de revisão conferida/)).toBeInTheDocument();
@@ -179,26 +179,26 @@ it('combina tópicos com capítulos próprios, salva sem substituir o individual
   const view = mount();
   fireEvent.change(screen.getByLabelText('Matéria do resumo'), {target:{value:'Biologia'}});
   fireEvent.change(screen.getByLabelText('Tópico do resumo'), {target:{value:'bio_ecologia'}});
-  fireEvent.change(screen.getByLabelText('Capítulo do resumo'), {target:{value:'Dinâmica de Populações'}});
+  fireEvent.click(screen.getByLabelText('Dinâmica de Populações'));
   fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
   await waitFor(()=>expect(Object.values(readStrategyGuides(null))).toHaveLength(1));
   fireEvent.click(screen.getByRole('button',{name:'Configurar nova revisão'}));
   fireEvent.click(screen.getByText('Combinar mais tópicos de Biologia na mesma revisão'));
   fireEvent.click(screen.getByRole('checkbox',{name:'Evolução'}));
-  fireEvent.change(screen.getByLabelText('Capítulo de Evolução'),{target:{value:'Mecanismos da Evolução Biológica'}});
+  fireEvent.click(screen.getByLabelText('Mecanismos da Evolução Biológica'));
   fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
-  await waitFor(()=>expect(mocks.packet).toHaveBeenLastCalledWith(expect.objectContaining({id:'bio_ecologia'}),'Dinâmica de Populações',[],[{topic:expect.objectContaining({id:'bio_evolucao'}),chapter:'Mecanismos da Evolução Biológica'}],expect.objectContaining({depth:'strategic'})));
+  await waitFor(()=>expect(mocks.packet).toHaveBeenLastCalledWith(expect.objectContaining({id:'bio_ecologia'}),'',[],[{topic:expect.objectContaining({id:'bio_evolucao'}),chapter:''}],expect.objectContaining({depth:'strategic',topicCuts:{bio_ecologia:['Dinâmica de Populações'],bio_evolucao:['Mecanismos da Evolução Biológica']}})));
   expect(mocks.generate).toHaveBeenLastCalledWith('review-tip',expect.objectContaining({topic:'Ecologia + Evolução',chapters:expect.stringContaining('Evolução: Mecanismos da Evolução Biológica'),guideMode:'review-summary'}),expect.any(Function));
   await waitFor(()=>expect(Object.values(readStrategyGuides(null))).toHaveLength(2));
   const combined=Object.values(readStrategyGuides(null)).find(g=>g.selections?.length===2)!;
-  expect(combined.selections).toEqual([{topicId:'bio_ecologia',topicName:'Ecologia',chapter:'Dinâmica de Populações'},{topicId:'bio_evolucao',topicName:'Evolução',chapter:'Mecanismos da Evolução Biológica'}]);
+  expect(combined.selections).toEqual([{topicId:'bio_ecologia',topicName:'Ecologia',chapter:'',cuts:['Dinâmica de Populações']},{topicId:'bio_evolucao',topicName:'Evolução',chapter:'',cuts:['Mecanismos da Evolução Biológica']}]);
   expect(document.querySelector('[data-print-subtopic]')?.getAttribute('data-print-subtopic')).toContain('Mecanismos da Evolução Biológica');
   view.unmount();mount();
   fireEvent.click(screen.getByRole('button',{name:/^Ecologia \+ Evolução/}));
   fireEvent.click(screen.getByRole('button',{name:'Configurar nova revisão'}));
   expect(screen.getByRole('checkbox',{name:'Evolução'})).toBeChecked();
-  expect(screen.getByLabelText('Capítulo do resumo')).toHaveValue('Dinâmica de Populações');
-  expect(screen.getByLabelText('Capítulo de Evolução')).toHaveValue('Mecanismos da Evolução Biológica');
+  expect(screen.getByLabelText('Dinâmica de Populações')).toBeChecked();
+  expect(screen.getByLabelText('Mecanismos da Evolução Biológica')).toBeChecked();
 });
 
 it('limita a quatro tópicos e limpa a combinação ao trocar de matéria ou material', () => {
@@ -239,10 +239,25 @@ it('retoma tópicos e capítulos adicionais após atualização do aplicativo',(
   fireEvent.change(screen.getByLabelText('Tópico do resumo'),{target:{value:'bio_ecologia'}});
   fireEvent.click(screen.getByText('Combinar mais tópicos de Biologia na mesma revisão'));
   fireEvent.click(screen.getByRole('checkbox',{name:'Evolução'}));
-  fireEvent.change(screen.getByLabelText('Capítulo de Evolução'),{target:{value:'Mecanismos da Evolução Biológica'}});
+  fireEvent.click(screen.getByLabelText('Mecanismos da Evolução Biológica'));
   act(()=>window.dispatchEvent(new Event('crivo:before-asset-reload')));
   view.unmount();mount();
   expect(screen.getByLabelText('Tópico do resumo')).toHaveValue('bio_ecologia');
-  expect(screen.getByLabelText('Capítulo de Evolução')).toHaveValue('Mecanismos da Evolução Biológica');
+  expect(screen.getByLabelText('Mecanismos da Evolução Biológica')).toBeChecked();
   expect(mocks.generate).not.toHaveBeenCalled();
+});
+
+it('gera recortes múltiplos por tópico e restaura a seleção salva com recorte personalizado',async()=>{
+ mount();fireEvent.change(screen.getByLabelText('Tópico do resumo'),{target:{value:'mat_geometria_plana'}});
+ fireEvent.click(screen.getByText('Selecionar subtópicos de Geometria Plana'));
+ fireEvent.click(screen.getByLabelText('Ângulos na circunferência'));fireEvent.click(screen.getByLabelText('Área do círculo'));
+ fireEvent.change(screen.getByLabelText('Recorte personalizado de Geometria Plana'),{target:{value:'Meu erro em áreas compostas'}});fireEvent.click(screen.getByRole('button',{name:'Adicionar recorte'}));
+ fireEvent.click(screen.getByText('Combinar mais tópicos de Matemática na mesma revisão'));fireEvent.click(screen.getByRole('checkbox',{name:'Funções'}));
+ fireEvent.click(screen.getByText('Selecionar subtópicos de Funções'));fireEvent.click(screen.getByLabelText('Função Quadrática'));
+ fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));await waitFor(()=>expect(mocks.generate).toHaveBeenCalled());
+ const request=mocks.generate.mock.calls[0][1];expect(request.chapters).toContain('Ângulos na circunferência + Área do círculo + Meu erro em áreas compostas');expect(request.chapters).toContain('Função Quadrática');
+ await waitFor(()=>expect(Object.values(readStrategyGuides(null))).toHaveLength(1));
+ const saved=Object.values(readStrategyGuides(null))[0];expect(saved.reviewOptions?.topicCuts?.mat_geometria_plana).toHaveLength(3);expect(saved.selections?.[0].cuts).toHaveLength(3);
+ fireEvent.click(screen.getByRole('button',{name:/Geometria Plana \+ Funções · Geral/}));fireEvent.click(screen.getByRole('button',{name:'Editar configurações desta revisão'}));
+ expect(screen.getByLabelText('Área do círculo')).toBeChecked();expect(screen.getByLabelText('Meu erro em áreas compostas')).toBeChecked();expect(screen.getByLabelText('Função Quadrática')).toBeChecked();
 });

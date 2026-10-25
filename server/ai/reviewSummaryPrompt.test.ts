@@ -80,3 +80,8 @@ test('revisão combinada cobre os recortes e suas conexões sem mudar bancas ou 
   assert.match(value,/recuperação ativa.*todos os tópicos/i);
   assert.doesNotMatch(value,/Fuvest|FUVEST|ENEM/);
 });
+
+test('recortes específicos delimitam explicações e tarefas sem ampliar para todo o tópico',()=>{
+ const result=prompt([], {depth:'deep',topicCuts:{mat_geometria_plana:['Ângulos na circunferência','Área do círculo']}}, {chapters:'Geometria plana: Ângulos na circunferência + Área do círculo'});
+ assert.match(result,/Ângulos na circunferência \+ Área do círculo/);assert.match(result,/RECORTES SOBERANOS/);assert.match(result,/pré-requisitos breves e conectados/);assert.ok(result.includes('\\alpha'));assert.ok(!result.includes('\u0000'));
+});

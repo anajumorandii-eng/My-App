@@ -1,3 +1,4 @@
+import { fitPrintMath } from '../../src/lib/fitPrintMath';
 import { Router } from 'express';
 import { existsSync } from 'node:fs';
 import { launch } from 'puppeteer-core';
@@ -24,6 +25,7 @@ export async function renderStudyPdf(html: string): Promise<Uint8Array> {
       await document.fonts.ready;
       await Promise.all([...document.images].map(image => image.decode()));
     });
+    await page.evaluate(fitPrintMath);
     await page.evaluate(() => {
       const usefulHeight = 245 * 96 / 25.4;
       // Keep modest tables and individual solution steps intact; large units flow.

@@ -14,14 +14,17 @@ vi.mock('../components/ReviewSessionGuide',()=>({ReviewSessionGuide:()=>{
 import Revisoes from './Revisoes';
 it('recolhe o roteiro ao estudar o resumo, preservando o tempo escolhido',async()=>{
  render(<MemoryRouter><Revisoes/></MemoryRouter>);
+ fireEvent.click(screen.getByText('Consultar meu roteiro de revisão'));
  fireEvent.change(screen.getByLabelText('Tempo do roteiro'),{target:{value:'45'}});
- fireEvent.click(screen.getByRole('button',{name:'Criar resumo por banca'}));
+ fireEvent.click(screen.getByRole('button',{name:'Criar e abrir revisões'}));
  expect(await screen.findByText('Meu resumo')).toBeVisible();
  expect(screen.getByLabelText('Tempo do roteiro')).not.toBeVisible();
- expect(screen.queryByRole('button',{name:'Criar resumo por banca'})).toBeNull();
+ expect(screen.getByRole('button',{name:'Criar e abrir revisões'})).toHaveAttribute('aria-pressed','true');
  fireEvent.click(screen.getByText('Consultar meu roteiro de revisão'));
  expect(screen.getByLabelText('Tempo do roteiro')).toHaveValue('45');
  fireEvent.change(screen.getByLabelText('Recurso de revisão'),{target:{value:'fila'}});
+ expect(screen.getByLabelText('Tempo do roteiro')).not.toBeVisible();
+ fireEvent.click(screen.getByText('Consultar meu roteiro de revisão'));
  expect(screen.getByLabelText('Tempo do roteiro')).toBeVisible();
  expect(screen.getByLabelText('Tempo do roteiro')).toHaveValue('45');
 });

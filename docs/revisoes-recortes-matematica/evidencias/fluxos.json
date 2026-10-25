@@ -1,0 +1,26 @@
+[
+  {
+    "name": "mobile",
+    "width": 390,
+    "requests": 2,
+    "restored": true,
+    "noHorizontalOverflow": true,
+    "errorRetry": false
+  },
+  {
+    "name": "tablet",
+    "width": 834,
+    "requests": 2,
+    "restored": true,
+    "noHorizontalOverflow": true,
+    "errorRetry": false
+  },
+  {
+    "name": "desktop",
+    "width": 1440,
+    "requests": 2,
+    "restored": true,
+    "noHorizontalOverflow": true,
+    "errorRetry": true
+  }
+]

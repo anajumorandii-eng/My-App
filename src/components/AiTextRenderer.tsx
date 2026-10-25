@@ -7,6 +7,15 @@ import { StudyParagraph } from './StudyParagraph';
 import { Children, isValidElement } from 'react';
 import { StudyVisual } from './StudyVisual';
 
+const greek: Record<string, string> = { α: 'alpha', β: 'beta', γ: 'gamma', θ: 'theta', π: 'pi', φ: 'phi', ω: 'omega', λ: 'lambda', μ: 'mu', Δ: 'Delta', Σ: 'Sigma', Ω: 'Omega' };
+function normalizeMathExpression(expression: string) {
+  return expression.split(/(\\(?:text|textrm|textnormal|textbf|operatorname)\{(?:\\.|[^{}]|\{[^{}]*\})*\})/g).map((segment,index) => index%2 ? segment : [...segment].map(character => {
+    const point = character.codePointAt(0)!;
+    const normalized = point >= 0x1d400 && point <= 0x1d7ff ? character.normalize('NFKD') : character;
+    return [...normalized].map(value => greek[value] ? '\\' + greek[value] + '{}' : value).join('');
+  }).join('')).join('').replace(/\\\$/g, '\\textdollar{}');
+}
+
 // A IA às vezes usa delimitadores estilo MathJax (\[ \] e \( \)) em vez do
 // $ $ / $$ $$ que o remark-math reconhece. Normalizamos antes de renderizar.
 function normalizeMathDelimiters(text: string): string {
@@ -18,7 +27,8 @@ function normalizeMathDelimiters(text: string): string {
       .replace(/\\\(([\s\S]*?)\\\)/g, (_, expr) => '$' + expr + '$')
       // Block delimiters must own their lines, otherwise the opening expression
       // can become fence metadata and swallow the following prose.
-      .replace(/(?<!\\)\$\$([\s\S]*?)(?<!\\)\$\$/g, (_, expr) => '\n$$\n' + expr.trim() + '\n$$\n'))
+      .replace(/(?<!\\)\$\$([\s\S]*?)(?<!\\)\$\$/g, (_, expr) => '\n$$\n' + normalizeMathExpression(expr.trim()) + '\n$$\n')
+      .replace(/(?<![\\$])\$((?:\\.|[^$\n])+?)(?<!\\)\$(?!\$)/g, (_, expr) => '$' + normalizeMathExpression(expr) + '$'))
     .join('');
 }
 

@@ -4,7 +4,7 @@ import type { StrategyGuide } from './strategyGuides';
 import { canonicalExamBoard } from './questionExamFilters';
 
 export function reviewSummaryKey(subject: string, topicId: string, chapter: string, board: string, options?: ReviewOptions, selections?: SavedStudySelection[]): string {
-  if (options) { const normalized = normalizeReviewOptions(options); const { sourceText, ...config } = normalized; return JSON.stringify(['strategic-review-v2', sourceFingerprint(JSON.stringify(normalized.sourceMode === 'catalog' && selections && selections.length > 1 ? [subject, topicId, chapter, config, sourceText, selections.map(item => [item.topicId, item.chapter]).sort((a,b) => a[0].localeCompare(b[0]))] : [subject, topicId, chapter, config, sourceText]))]); }
+  if (options) { const normalized = normalizeReviewOptions(options); const { sourceText, ...config } = normalized; if(config.topicCuts)config.topicCuts=Object.fromEntries(Object.entries(config.topicCuts).sort(([a],[b])=>a.localeCompare(b)).map(([id,cuts])=>[id,[...cuts].sort()])); return JSON.stringify(['strategic-review-v2', sourceFingerprint(JSON.stringify(normalized.sourceMode === 'catalog' && selections && selections.length > 1 ? [subject, topicId, chapter, config, sourceText, selections.map(item => [item.topicId, item.chapter]).sort((a,b) => a[0].localeCompare(b[0]))] : [subject, topicId, chapter, config, sourceText]))]); }
   return JSON.stringify(['review-summary', subject, topicId, chapter, canonicalExamBoard(board)]);
 }
 export const isReviewSummary = (guide: StrategyGuide) => guide.kind === 'review-summary';

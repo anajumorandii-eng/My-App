@@ -1,8 +1,10 @@
+import { normalizeTopicCuts } from './topicCuts';
 import { canonicalExamBoard } from './questionExamFilters';
 export type ReviewDepth = 'quick' | 'strategic' | 'deep';
 export type ReviewMaterialKind = 'disciplinary' | 'current-affairs' | 'literature';
 export type ReviewScope = 'all' | 'first' | 'second' | 'objective' | 'discursive' | 'enem' | 'complementary';
 export interface ReviewOptions {
+  topicCuts?: Record<string,string[]>;
   boards: string[];
   scopes: Record<string, ReviewScope>;
   depth: ReviewDepth;
@@ -32,7 +34,7 @@ export function reviewScopes(board: string): ReviewScope[] {
 }
 export function normalizeReviewOptions(value: Partial<ReviewOptions> = {}): ReviewOptions {
   const boards = [...new Set((value.boards ?? []).map(reviewBoard).filter(Boolean))].sort();
-  return { boards, scopes: Object.fromEntries(boards.map(board => [board, reviewScopes(board).includes(value.scopes?.[board]!) ? value.scopes![board] : 'all'])),
+  return { ...(Object.keys(normalizeTopicCuts(value.topicCuts)).length ? {topicCuts:normalizeTopicCuts(value.topicCuts)} : {}), boards, scopes: Object.fromEntries(boards.map(board => [board, reviewScopes(board).includes(value.scopes?.[board]!) ? value.scopes![board] : 'all'])),
     depth: value.depth && Object.hasOwn(reviewDepths, value.depth) ? value.depth : 'strategic',
     materialKind: ['disciplinary','current-affairs','literature'].includes(value.materialKind ?? '') ? value.materialKind! : 'disciplinary',
     useHistory: value.useHistory === true, sourceMode: value.sourceMode === 'provided' || value.sourceMode === 'work' ? value.sourceMode : 'catalog',
@@ -66,6 +68,7 @@ export function splitReviewAnswers(text: string) {
 export function isReviewOptions(value: unknown): value is ReviewOptions {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return false;
   const v = value as Record<string, unknown>;
+  if(v.topicCuts !== undefined && (!v.topicCuts || typeof v.topicCuts !== 'object' || Array.isArray(v.topicCuts) || Object.values(v.topicCuts).some(items=>!Array.isArray(items)||items.length>8||items.some(item=>typeof item!=='string'||item.length>180))))return false;
   return Array.isArray(v.boards) && v.boards.length <= 15 && v.boards.every(b => typeof b === 'string' && b.length <= 100) && Boolean(v.scopes && typeof v.scopes === 'object' && !Array.isArray(v.scopes)) &&
     ['quick','strategic','deep'].includes(String(v.depth)) && ['disciplinary','current-affairs','literature'].includes(String(v.materialKind)) && ['catalog','provided','work'].includes(String(v.sourceMode)) && typeof v.useHistory === 'boolean' &&
     ['sourceTitle','sourceDate','sourceUrl','sourceText'].every(field => typeof v[field] === 'string') && v.boards.every(b => reviewScopes(b).includes((v.scopes as Record<string, ReviewScope>)[b]));

@@ -1,4 +1,4 @@
-export const nativeMathPrintStyles = `.katex-html { display: none !important; } .katex-mathml { position: static !important; clip: auto !important; width: auto !important; height: auto !important; overflow: visible !important; } .katex-display { display: block; text-align: center; margin: 3mm 0; } math annotation { display: none; }`;
+export const nativeMathPrintStyles = `.katex .katex-mathml { display: none !important; } .katex-display { margin: 3mm 0; max-width: 100%; } .katex { text-indent: 0; } .katex:not(.katex-display > .katex) { display: inline-block; } [data-print-content] .katex svg { height: inherit; max-height: none !important; max-width: none !important; } [data-print-content] .katex .hide-tail, [data-print-content] .katex .katex-stretchy, [data-print-content] .katex .pstrut { overflow: hidden !important; }`;
 /** Prepares a file without opening a dialog or requiring a second generation. */
 export async function requestStudyPdf(root: HTMLElement, title: string, styles: string, signal: AbortSignal, documentId?: string): Promise<Blob> {
   for (const image of root.querySelectorAll<HTMLImageElement>('img')) {

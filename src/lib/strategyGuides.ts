@@ -14,7 +14,7 @@ export interface StrategyGuide {
   board: string;
   text: string;
   savedAt: string;
-  selections?: { topicId: string; topicName: string; chapter: string }[];
+  selections?: { topicId: string; topicName: string; chapter: string; cuts?: string[] }[];
   workSlug?: string;
   workUnitId?: string;
   targetBoards?: string[];
@@ -30,7 +30,7 @@ export function isStrategyGuide(value: unknown): value is StrategyGuide {
   if (guide.reviewOptions !== undefined && !isReviewOptions(guide.reviewOptions)) return false;
   if (guide.targetBoards !== undefined && (!Array.isArray(guide.targetBoards) || !guide.targetBoards.every(board => typeof board === 'string'))) return false;
   if (guide.kind !== undefined && guide.kind !== 'review-summary') return false;
-  if (guide.selections !== undefined && (!Array.isArray(guide.selections) || !guide.selections.every(item => item && typeof item === 'object' && ['topicId', 'topicName', 'chapter'].every(field => typeof item[field] === 'string')))) return false;
+  if (guide.selections !== undefined && (!Array.isArray(guide.selections) || !guide.selections.every(item => item && typeof item === 'object' && ['topicId', 'topicName', 'chapter'].every(field => typeof item[field] === 'string') && (item.cuts === undefined || (Array.isArray(item.cuts) && item.cuts.length<=8 && item.cuts.every((cut:unknown)=>typeof cut==='string'&&cut.length<=180)))))) return false;
   return ['key', 'subject', 'topicId', 'topicName', 'chapter', 'board', 'text', 'savedAt'].every(field => typeof guide[field] === 'string');
 }
 export function mergeStrategyGuides(...collections: StrategyGuides[]): StrategyGuides {

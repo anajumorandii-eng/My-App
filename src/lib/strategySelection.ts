@@ -1,7 +1,7 @@
 import type { Topic } from '../types';
 import { studyAreaForTopic } from '../data/studyProtocols';
 import { canonicalExamBoard } from './questionExamFilters';
-export interface SavedStudySelection { topicId: string; topicName: string; chapter: string }
+export interface SavedStudySelection { cuts?: string[]; topicId: string; topicName: string; chapter: string }
 export function readAdditionalSelections(raw: string | null, topics: Topic[], primaryId: string): { topicId: string; chapter: string }[] {
   try {
     const value: unknown = JSON.parse(raw ?? '[]');
@@ -18,6 +18,7 @@ export function readAdditionalSelections(raw: string | null, topics: Topic[], pr
   } catch { return []; }
 }
 export function strategySelectionKey(subject: string, selections: SavedStudySelection[], board: string): string {
+  if(selections.some(item=>item.cuts?.length))return JSON.stringify(['scoped-v1',subject,selections.map(item=>[item.topicId,item.chapter,[...(item.cuts??[])].sort()]).sort((a,b)=>String(a[0]).localeCompare(String(b[0]))),canonicalExamBoard(board)]);
   if (selections.length === 1) return JSON.stringify([subject, selections[0].topicId, selections[0].chapter, board]);
   return JSON.stringify(['combined-v1', subject, selections.map(item => [item.topicId, item.chapter]).sort((a, b) => a[0].localeCompare(b[0])), canonicalExamBoard(board)]);
 }

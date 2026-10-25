@@ -1,8 +1,9 @@
 import { printCoverFontStyles } from './printCoverFonts';
+import { printMathStyles } from './printMathStyles';
 import { printBodyFontStyles } from './printBodyFonts';
 
 /** Scoped to the temporary print copy; screen themes cannot change paper contrast. */
-export const printStyles = `${printCoverFontStyles}\n${printBodyFontStyles}
+export const printStyles = `${printCoverFontStyles}\n${printBodyFontStyles}\n${printMathStyles}
 @media print {
   @page { size: A4; margin: 0; }
   html, body { background: white !important; color: #263c3d !important; height: auto !important; overflow: visible !important; color-scheme: light !important; }
