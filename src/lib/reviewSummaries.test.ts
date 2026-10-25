@@ -15,3 +15,15 @@ test('biblioteca separa resumos de revisão dos aprofundamentos preservados', ()
   assert.equal(selectReviewSummaries({ a: guide }, 'Química').length, 0);
   assert.equal(deepening.text, 'Síntese');
 });
+
+test('combinações têm identidade própria e preservam a chave individual', async () => {
+  const {normalizeReviewOptions}=await import('./strategicReview');
+  const options=normalizeReviewOptions();
+  const primary={topicId:'bio_ecologia',topicName:'Ecologia',chapter:''};
+  const extra={topicId:'bio_evolucao',topicName:'Evolução',chapter:''};
+  const individual=reviewSummaryKey('Biologia',primary.topicId,'','',options);
+  assert.equal(individual,reviewSummaryKey('Biologia',primary.topicId,'','',options,[primary]));
+  const combined=reviewSummaryKey('Biologia',primary.topicId,'','',options,[primary,extra]);
+  assert.notEqual(combined,individual);
+  assert.notEqual(combined,reviewSummaryKey('Biologia',primary.topicId,'','',options,[primary,{...extra,chapter:'Mecanismos'}]));
+});

@@ -1,3 +1,5 @@
+import { AdditionalStudyTopics } from '../components/AdditionalStudyTopics';
+import { readAdditionalSelections, combineStudyReflections } from '../lib/strategySelection';
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { ReviewSummaryText } from '../components/ReviewSummaryText';
@@ -36,6 +38,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
   const topics = mockTopics.filter(topic => studyAreaForTopic(topic) === subject);
   const [topicId, setTopicId] = useState(recoveredSelection?.topicId ?? requestedTopic?.id ?? topics[0]?.id ?? '');
   const [chapter, setChapter] = useState(() => recoveredSelection?.chapter ?? (requestedTopic?.chapters?.includes(params.get('chapter') ?? '') ? params.get('chapter')! : ''));
+  const [additional, setAdditional] = useState(() => readAdditionalSelections(recoveredSelection?.additional ? JSON.stringify(recoveredSelection.additional) : params.get('topics'), mockTopics, recoveredSelection?.topicId ?? requestedTopic?.id ?? topics[0]?.id ?? ''));
   const [options, setOptions] = useState(() => normalizeReviewOptions(recoveredSelection?.options ?? { boards: params.get('board') ? [params.get('board')!] : [] }));
   const { targets } = useStudyTargets();
   const banks = [...new Set([...reviewBoards, ...targets.map(item => reviewBoard(item.board)), ...options.boards])].filter(Boolean);
@@ -63,28 +66,37 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
   useEffect(() => { mounted.current = true; return () => { mounted.current = false; }; }, []);
   const selectedWork = works.find(work => `obra:${work.slug}` === topicId);
   const topic = options.sourceMode === 'work' ? (selectedWork ? { id: topicId, name: selectedWork.title, subject: 'Literatura', prerequisites: [] } : undefined) : topics.find(item => item.id === topicId) ?? topics[0];
-  const key = reviewSummaryKey(subject, topic?.id ?? topicId, chapter, '', options);
+  const extras = options.sourceMode === 'catalog' ? readAdditionalSelections(JSON.stringify(additional), topics, topic?.id ?? '').flatMap(item => {
+    const selected = topics.find(value => value.id === item.topicId);
+    return selected ? [{ topic: selected, chapter: item.chapter }] : [];
+  }) : [];
+  const selections = options.sourceMode === 'catalog' && topic ? [{ topicId: topic.id, topicName: topic.name, chapter }, ...extras.map(item => ({ topicId: item.topic.id, topicName: item.topic.name, chapter: item.chapter }))] : [];
+  const combined = selections.length > 1;
+  const focusName = combined ? selections.map(item => item.topicName).join(' + ') : topic?.name ?? options.sourceTitle;
+  const key = reviewSummaryKey(subject, topic?.id ?? topicId, chapter, '', options, selections);
   useEffect(() => { setProblem(''); setStream(''); setSaveMessage(''); }, [key]);
   const current = guides[openedKey || key];
   const working = generating || pdfBusy;
   useEffect(() => {
     const preserveSelection = () => saveReviewReloadSelection(uid, {
-      subject, topicId, chapter, options, openedKey: current?.key ?? openedKey, configurationOpen,
+      subject, topicId, chapter, options, additional, openedKey: current?.key ?? openedKey, configurationOpen,
     });
     window.addEventListener(BEFORE_ASSET_RELOAD, preserveSelection);
     return () => window.removeEventListener(BEFORE_ASSET_RELOAD, preserveSelection);
-  }, [uid, subject, topicId, chapter, options, current?.key, openedKey, configurationOpen]);
+  }, [uid, subject, topicId, chapter, options, additional, current?.key, openedKey, configurationOpen]);
 
   const saved = selectReviewSummaries(guides, librarySubject, libraryBoard);
   const allSaved = selectReviewSummaries(guides);
   const savedSubjects = [...new Set(allSaved.map(item => item.subject))].sort((a,b) => a.localeCompare(b,'pt-BR'));
   const savedBoards = [...new Set(allSaved.flatMap(item => item.targetBoards ?? [item.board]).filter(Boolean))].sort();
-  const scopedErrors = options.sourceMode === 'provided' ? '' : reviewErrorHistory(history.errors, topic?.id ?? topicId);
+  const scopedErrors = options.sourceMode === 'provided' ? '' : combined ? combineStudyReflections(selections.map(item => ({ topicName: item.topicName, text: reviewErrorHistory(history.errors, item.topicId) }))) : reviewErrorHistory(history.errors, topic?.id ?? topicId);
   const edit = (patch: Partial<ReviewOptions>) => { setOpenedKey(''); setOptions(previous => normalizeReviewOptions({ ...previous, ...patch })); };
   const openSaved = (guide: StrategyGuide) => {
     if (busy.current || pdfBusy) return;
     setShowRecoveryNotice(false);
-    setSubject(guide.subject); setTopicId(guide.topicId); setChapter(guide.chapter);
+    setSubject(guide.subject); setTopicId(guide.topicId); setChapter(guide.selections?.[0]?.chapter ?? guide.chapter);
+    setAdditional(readAdditionalSelections(JSON.stringify(guide.selections?.slice(1) ?? []), mockTopics, guide.topicId));
+    setStream('');
     setOptions(normalizeReviewOptions(guide.reviewOptions ?? { boards: guide.targetBoards ?? (guide.board ? [guide.board] : []) }));
     setOpenedKey(guide.key); setCreatedRevision(''); setConfigurationOpen(false);
   };
@@ -98,12 +110,13 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
       const packet: StudyPacket = options.sourceMode === 'provided' ? {
         topicId: activeTopic.id, chapter, coverage: [], referenceText: '',
         sources: [{ id: 'F1', title: `${options.sourceTitle}${options.sourceDate ? ` · ${options.sourceDate}` : ' · data não informada'}`, kind: 'resumo', format: 'markdown', content: options.sourceText, excerpt: true, ...(options.sourceUrl ? { url: options.sourceUrl } : {}) }],
-      } : await loadStudyPacket(activeTopic, chapter, options.boards, [], options);
+      } : await loadStudyPacket(activeTopic, chapter, options.boards, extras, options);
       if (options.sourceMode === 'provided') packet.referenceText = renderStudyReference(packet);
       if (!mounted.current) return;
       let text = '';
       const result = await requestAiTextStream('review-tip', {
-        topic: options.sourceMode === 'provided' ? options.sourceTitle : activeTopic.name, subject, chapter: chapter || undefined,
+        topic: options.sourceMode === 'provided' ? options.sourceTitle : focusName, subject, chapter: combined ? undefined : chapter || undefined,
+        ...(combined ? { chapters: selections.map(item => `${item.topicName}: ${item.chapter || 'visão geral'}`).join('; ') } : {}),
         targetBoards: options.boards, reviewOptions: options, errorHistory: options.useHistory && scopedErrors ? scopedErrors : undefined,
         guideMode: 'review-summary', level: 40, daysSinceReview: 0, referenceText: packet.referenceText || undefined,
       }, delta => { text += delta; if (mounted.current) setStream(text); });
@@ -116,8 +129,8 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
       }
       const savedAt = new Date().toISOString();
       setCreatedRevision(savedAt);
-      await persist({ kind: 'review-summary', key, subject, topicId: activeTopic.id, topicName: options.sourceMode === 'provided' ? options.sourceTitle : activeTopic.name,
-        chapter, board: options.boards.join(' / '), targetBoards: options.boards, reviewOptions: options,
+      await persist({ kind: 'review-summary', key, subject, topicId: activeTopic.id, topicName: options.sourceMode === 'provided' ? options.sourceTitle : focusName,
+        chapter: combined ? '' : chapter, ...(combined ? { selections } : {}), board: options.boards.join(' / '), targetBoards: options.boards, reviewOptions: options,
         text: result.text, savedAt,
         studyPacket: result.serverSources?.length ? { ...packet, sources: [...packet.sources, ...result.serverSources] } : packet,
       });
@@ -129,10 +142,13 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
       if (mounted.current) setGenerating(false);
     }
   };
+  const displayedSelections = current?.selections ?? selections;
+  const recortes = displayedSelections.map(item => `${item.topicName}: ${item.chapter || 'visão geral'}`).join(' · ');
+  const displayedPrimaryChapter = displayedSelections[0]?.chapter ?? current?.chapter ?? chapter;
   const displayedOptions = current?.reviewOptions ?? options;
   const legacy = Boolean(current && !current.reviewOptions && !generating);
   const selectionDescription = legacy ? `${current!.board || 'Geral'} · Versão anterior: etapa e profundidade não registradas` : `${reviewSelectionLabel(displayedOptions)} · ${reviewDepths[displayedOptions.depth]}`;
-  const title = `Revisão · ${current?.chapter || current?.topicName || chapter || topic?.name || options.sourceTitle}`;
+  const title = `Revisão · ${current?.chapter || current?.topicName || (combined ? focusName : chapter || topic?.name || options.sourceTitle)}`;
   return <section className="space-y-5" aria-labelledby="review-summary-title">
     <div className="flex flex-wrap items-center justify-between gap-3">
       <h2 id="review-summary-title" className="font-display text-2xl">Resumo de revisão por banca</h2>
@@ -147,17 +163,17 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
       <p className="text-sm text-[var(--dim)]">Revisões estratégicas para Medicina: entenda os mecanismos, reconheça caminhos de resolução e teste o que consegue recuperar sem consulta.</p>
       <fieldset disabled={working} className="grid gap-3 sm:grid-cols-2">
         <legend className="sr-only">Conteúdo da revisão</legend>
-        <label className="text-sm">Material de origem<select className="field block w-full" value={options.sourceMode} onChange={event => { setChapter(''); edit({ sourceMode: event.target.value as ReviewOptions['sourceMode'], useHistory: false, ...(event.target.value === 'work' ? { materialKind: 'literature' as const } : {}) }); if (event.target.value === 'work') { setSubject('Literatura'); setChapter(''); } else if (topicId.startsWith('obra:')) setTopicId(''); }}>
+        <label className="text-sm">Material de origem<select className="field block w-full" value={options.sourceMode} onChange={event => { setAdditional([]); setChapter(''); edit({ sourceMode: event.target.value as ReviewOptions['sourceMode'], useHistory: false, ...(event.target.value === 'work' ? { materialKind: 'literature' as const } : {}) }); if (event.target.value === 'work') { setSubject('Literatura'); setChapter(''); } else if (topicId.startsWith('obra:')) setTopicId(''); }}>
           <option value="catalog">Conteúdo do Crivo</option><option value="provided">Texto ou extração informada</option><option value="work">Obra da biblioteca</option>
         </select></label>
         <label className="text-sm">Tipo de material<select className="field block w-full" value={options.materialKind} onChange={event => edit({ materialKind: event.target.value as ReviewOptions['materialKind'] })} disabled={options.sourceMode === 'work'}>
           <option value="disciplinary">Conteúdo disciplinar</option><option value="current-affairs">Atualidades</option><option value="literature">Literatura e obras</option>
         </select></label>
         {options.sourceMode !== 'work' && <label className="text-sm">Matéria do resumo<select className="field block w-full" value={subject} onChange={event => {
-          setOpenedKey(''); setSubject(event.target.value); setTopicId(mockTopics.find(item => studyAreaForTopic(item) === event.target.value)?.id ?? ''); setChapter('');
+          setOpenedKey(''); setAdditional([]); setSubject(event.target.value); setTopicId(mockTopics.find(item => studyAreaForTopic(item) === event.target.value)?.id ?? ''); setChapter('');
         }}>{studyProtocols.map(item => <option key={item.subject}>{item.subject}</option>)}</select></label>}
         {options.sourceMode === 'catalog' && <>
-          <label className="text-sm">Tópico do resumo<select className="field block w-full" value={topic?.id ?? ''} onChange={event => { setOpenedKey(''); setTopicId(event.target.value); setChapter(''); }}>
+          <label className="text-sm">Tópico do resumo<select className="field block w-full" value={topic?.id ?? ''} onChange={event => { setOpenedKey(''); setTopicId(event.target.value); setChapter(''); setAdditional(previous => previous.filter(item => item.topicId !== event.target.value)); }}>
             {topics.map(item => <option key={item.id} value={item.id}>{item.name}</option>)}
           </select></label>
           <label className="text-sm">Capítulo do resumo<select className="field block w-full" value={chapter} onChange={event => { setOpenedKey(''); setChapter(event.target.value); }}>
@@ -177,6 +193,10 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
           {Object.entries(reviewDepths).map(([value,label]) => <option key={value} value={value}>{label}</option>)}
         </select></label>
       </fieldset>
+      {options.sourceMode === 'catalog' && <>
+        <AdditionalStudyTopics subject={subject} topics={topics} primaryId={topic?.id ?? ''} value={additional} onChange={value => { setOpenedKey(''); setAdditional(value); }} kind="review" disabled={working} />
+        <p className="text-sm"><b>Recortes da revisão:</b> {selections.map(item => `${item.topicName} — ${item.chapter || 'visão geral'}`).join(' + ')}</p>
+      </>}
       <fieldset disabled={working} className="space-y-3">
         <legend className="text-sm font-semibold">Bancas — selecione uma, várias ou nenhuma</legend>
         <p className="text-xs text-[var(--dim)]">Sem seleção, a revisão é geral. Etapas conforme documentos de ingresso 2027; ENEM 2026. As fontes de formato acompanham a revisão.</p>
@@ -186,7 +206,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
             {reviewScopes(bank).map(scope => <option key={scope} value={scope}>{scope === 'all' && ['FUVEST','UNICAMP','UNESP'].includes(bank) ? 'Ambas as fases' : reviewScopeLabels[scope]}</option>)}
           </select></label> : <p className="text-xs text-[var(--dim)]">{bank === 'ENEM' ? 'Exame sem divisão em fases.' : 'Formato delimitado às fontes disponíveis.'}</p>)}
         </div>)}</div>
-        {scopedErrors ? <label className="flex gap-2 text-sm"><input type="checkbox" checked={options.useHistory} onChange={event => edit({ useHistory: event.target.checked })} />Usar meus erros registrados neste tópico para direcionar a revisão</label> : <p className="text-xs text-[var(--dim)]">{history.loading ? 'Carregando histórico de erros…' : history.warning || 'Sem histórico de erros disponível para este recorte. A revisão será gerada normalmente.'}</p>}
+        {scopedErrors ? <label className="flex gap-2 text-sm"><input type="checkbox" checked={options.useHistory} onChange={event => edit({ useHistory: event.target.checked })} />Usar meus erros registrados {combined ? 'nos tópicos selecionados' : 'neste tópico'} para direcionar a revisão</label> : <p className="text-xs text-[var(--dim)]">{history.loading ? 'Carregando histórico de erros…' : history.warning || 'Sem histórico de erros disponível para este recorte. A revisão será gerada normalmente.'}</p>}
       </fieldset>
       {options.materialKind === 'current-affairs' && <p className="text-xs text-[var(--dim)]">Esta revisão usa as fontes fornecidas, sem atualização de notícias em tempo real. Informe a data para delimitar os fatos.</p>}
       <p className="text-xs text-[var(--dim)]">A cobrança só é descrita como observada quando há evidência nas fontes. Gerar ou ler não conclui uma revisão nem altera seu agendamento.</p>
@@ -199,9 +219,10 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
       </div>
     </details>
     {(stream || current) && <article className="ni-panel p-5 space-y-4 min-w-0" aria-label="Resumo selecionado" aria-busy={generating}>
-      <div ref={printContent as React.RefObject<HTMLDivElement>} data-print-subject={current?.subject || subject} data-print-topic={current?.topicName || topic?.name || options.sourceTitle} data-print-subtopic={current?.chapter || chapter || 'Visão geral'} data-print-board={legacy ? current!.board || 'Geral' : reviewSelectionLabel(displayedOptions)} data-print-purpose={legacy ? 'Revisão salva — etapa e profundidade não registradas' : reviewDepths[displayedOptions.depth]}>
-        <h3 className="font-display text-xl">{current?.subject || subject} · {current?.chapter || current?.topicName || chapter || topic?.name || options.sourceTitle}</h3>
+      <div ref={printContent as React.RefObject<HTMLDivElement>} data-print-subject={current?.subject || subject} data-print-topic={current?.topicName || topic?.name || options.sourceTitle} data-print-subtopic={displayedSelections.length > 1 ? recortes : current?.chapter || chapter || 'Visão geral'} data-print-board={legacy ? current!.board || 'Geral' : reviewSelectionLabel(displayedOptions)} data-print-purpose={legacy ? 'Revisão salva — etapa e profundidade não registradas' : reviewDepths[displayedOptions.depth]}>
+        <h3 className="font-display text-xl">{current?.subject || subject} · {current?.chapter || current?.topicName || (combined ? focusName : chapter || topic?.name || options.sourceTitle)}</h3>
         <p className="text-sm text-[var(--dim)]">{selectionDescription}</p>
+        {displayedSelections.length > 1 && <p className="text-sm">Recortes: {recortes}</p>}
         {!generating && stream && <p role="status">Rascunho incompleto — ainda não foi salvo como revisão concluída. Copie o texto antes de sair ou tentar novamente.</p>}
         <ReviewSummaryText text={stream || current?.text || ''} />
         {!generating && current?.studyPacket && <details data-review-sources><summary className="cursor-pointer text-sm font-semibold">Conferir as fontes deste resumo</summary><StudySourcesPanel packet={current.studyPacket} /></details>}
@@ -210,7 +231,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
         <Suspense fallback={<p role="status">Consultando PDF salvo…</p>}><ReviewPdf key={current.key} getContent={() => printContent.current} title={title} guideKey={current.key} revision={current.savedAt} materialLabel="Revisão" generateCover autoGenerate={current.savedAt === createdRevision} onBusyChange={setPdfBusy} /></Suspense>
         {/Não foi possível/.test(saveMessage) && <button type="button" className="underline text-sm" onClick={() => void persist(current)}>Tentar salvar novamente</button>}
       </>}
-      <Link className="block underline text-sm" to={`/estrategias?${new URLSearchParams({ topic: topic?.id ?? topicId, ...(options.boards.length === 1 ? { board: options.boards[0] } : {}), ...(chapter ? { chapter } : {}) })}`}>Aprofundar este conteúdo</Link>
+      <Link className="block underline text-sm" to={`/estrategias?${new URLSearchParams({ topic: topic?.id ?? topicId, ...(options.boards.length === 1 ? { board: options.boards[0] } : {}), ...(displayedPrimaryChapter ? { chapter: displayedPrimaryChapter } : {}), ...(displayedSelections.length > 1 ? { topics: JSON.stringify(displayedSelections.slice(1)) } : {}) })}`}>Aprofundar este conteúdo</Link>
     </article>}
     <section className="ni-panel p-5 space-y-4" aria-labelledby="saved-review-summaries">
       <h3 id="saved-review-summaries" className="font-display text-xl">Meus resumos de revisão ({allSaved.length})</h3>

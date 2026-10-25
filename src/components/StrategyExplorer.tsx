@@ -1,3 +1,4 @@
+import { AdditionalStudyTopics } from './AdditionalStudyTopics';
 import { isReviewSummary } from '../lib/reviewSummaries';
 import { DeepeningPdf } from './DeepeningPdf';
 import { Link } from 'react-router-dom';
@@ -98,17 +99,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
         <label className="text-sm">Tópico do guia<select className="field w-full" value={topic?.id ?? ''} onChange={(event) => { setTopicId(event.target.value); setChapter(''); setAdditional(previous => previous.filter(item => item.topicId !== event.target.value)); }}>{topics.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label>
         <label className="text-sm">Capítulo do guia<select className="field w-full" value={chapter} onChange={(event) => setChapter(event.target.value)}><option value="">Visão geral do tópico</option>{topic?.chapters?.map((name) => <option key={name}>{name}</option>)}</select></label>
       </div>
-      <details className="space-y-3">
-        <summary className="cursor-pointer text-sm font-semibold">Combinar mais tópicos de {subject} no mesmo aprofundamento</summary>
-        <p className="text-xs text-[var(--dim)]">Escolha até quatro tópicos no total. Cada tópico pode usar a visão geral ou um capítulo; o guia deve explicar as conexões e os limites das fontes.</p>
-        <fieldset className="space-y-3"><legend className="text-sm">Outros tópicos da mesma matéria</legend>{topics.filter(item => item.id !== topic?.id).map(item => {
-          const selected = additional.find(value => value.topicId === item.id);
-          return <div key={item.id} className="space-y-2">
-            <label className="flex gap-2 items-start text-sm"><input type="checkbox" checked={!!selected} disabled={!selected && additional.length >= 3} onChange={event => { const checked = event.target.checked; setAdditional(previous => checked ? [...previous, { topicId: item.id, chapter: '' }].slice(0, 3) : previous.filter(value => value.topicId !== item.id)); }} />{item.name}</label>
-            {selected && <label className="block text-sm">Capítulo de {item.name}<select className="field block w-full mt-1" value={selected.chapter} onChange={event => setAdditional(previous => previous.map(value => value.topicId === item.id ? { ...value, chapter: event.target.value } : value))}><option value="">Visão geral do tópico</option>{item.chapters?.map(name => <option key={name}>{name}</option>)}</select></label>}
-          </div>;
-        })}</fieldset>
-      </details>
+      <AdditionalStudyTopics subject={subject} topics={topics} primaryId={topic?.id ?? ''} value={additional} onChange={setAdditional} kind="deepening" />
       <p className="text-sm"><b>Recortes do aprofundamento:</b> {selections.map(item => `${item.topicName}${item.chapter ? ` — ${item.chapter}` : ' — visão geral'}`).join(' + ')}</p>
       <p className="text-xs text-[var(--dim)]"><b>Pré-requisitos no currículo:</b> {topic?.prerequisites.map((id) => mockTopics.find((item) => item.id === id)?.name ?? id).join(', ') || 'Nenhum vínculo cadastrado. Isso não significa ausência de conhecimentos prévios necessários.'}</p>
     </div>

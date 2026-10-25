@@ -174,3 +174,75 @@ it('reabre a revisão salva após a atualização sem gerar outra versão automa
  expect(screen.getByRole('article',{name:'Resumo selecionado'})).toHaveTextContent('Texto de revisão preservado');
  expect(mocks.generate).not.toHaveBeenCalled();
 });
+
+it('combina tópicos com capítulos próprios, salva sem substituir o individual e restaura o recorte', async () => {
+  const view = mount();
+  fireEvent.change(screen.getByLabelText('Matéria do resumo'), {target:{value:'Biologia'}});
+  fireEvent.change(screen.getByLabelText('Tópico do resumo'), {target:{value:'bio_ecologia'}});
+  fireEvent.change(screen.getByLabelText('Capítulo do resumo'), {target:{value:'Dinâmica de Populações'}});
+  fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
+  await waitFor(()=>expect(Object.values(readStrategyGuides(null))).toHaveLength(1));
+  fireEvent.click(screen.getByRole('button',{name:'Configurar nova revisão'}));
+  fireEvent.click(screen.getByText('Combinar mais tópicos de Biologia na mesma revisão'));
+  fireEvent.click(screen.getByRole('checkbox',{name:'Evolução'}));
+  fireEvent.change(screen.getByLabelText('Capítulo de Evolução'),{target:{value:'Mecanismos da Evolução Biológica'}});
+  fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
+  await waitFor(()=>expect(mocks.packet).toHaveBeenLastCalledWith(expect.objectContaining({id:'bio_ecologia'}),'Dinâmica de Populações',[],[{topic:expect.objectContaining({id:'bio_evolucao'}),chapter:'Mecanismos da Evolução Biológica'}],expect.objectContaining({depth:'strategic'})));
+  expect(mocks.generate).toHaveBeenLastCalledWith('review-tip',expect.objectContaining({topic:'Ecologia + Evolução',chapters:expect.stringContaining('Evolução: Mecanismos da Evolução Biológica'),guideMode:'review-summary'}),expect.any(Function));
+  await waitFor(()=>expect(Object.values(readStrategyGuides(null))).toHaveLength(2));
+  const combined=Object.values(readStrategyGuides(null)).find(g=>g.selections?.length===2)!;
+  expect(combined.selections).toEqual([{topicId:'bio_ecologia',topicName:'Ecologia',chapter:'Dinâmica de Populações'},{topicId:'bio_evolucao',topicName:'Evolução',chapter:'Mecanismos da Evolução Biológica'}]);
+  expect(document.querySelector('[data-print-subtopic]')?.getAttribute('data-print-subtopic')).toContain('Mecanismos da Evolução Biológica');
+  view.unmount();mount();
+  fireEvent.click(screen.getByRole('button',{name:/^Ecologia \+ Evolução/}));
+  fireEvent.click(screen.getByRole('button',{name:'Configurar nova revisão'}));
+  expect(screen.getByRole('checkbox',{name:'Evolução'})).toBeChecked();
+  expect(screen.getByLabelText('Capítulo do resumo')).toHaveValue('Dinâmica de Populações');
+  expect(screen.getByLabelText('Capítulo de Evolução')).toHaveValue('Mecanismos da Evolução Biológica');
+});
+
+it('limita a quatro tópicos e limpa a combinação ao trocar de matéria ou material', () => {
+  mount();
+  fireEvent.change(screen.getByLabelText('Matéria do resumo'),{target:{value:'Biologia'}});
+  fireEvent.change(screen.getByLabelText('Tópico do resumo'),{target:{value:'bio_ecologia'}});
+  fireEvent.click(screen.getByText('Combinar mais tópicos de Biologia na mesma revisão'));
+  for(const name of ['Evolução','Botânica','Fisiologia Animal e Humana']) fireEvent.click(screen.getByRole('checkbox',{name}));
+  expect(screen.getByRole('checkbox',{name:'Genética'})).toBeDisabled();
+  fireEvent.click(screen.getByRole('checkbox',{name:'Evolução'}));
+  expect(screen.getByRole('checkbox',{name:'Genética'})).toBeEnabled();
+  fireEvent.change(screen.getByLabelText('Material de origem'),{target:{value:'provided'}});
+  expect(screen.queryByText('Combinar mais tópicos de Biologia na mesma revisão')).toBeNull();
+  fireEvent.change(screen.getByLabelText('Material de origem'),{target:{value:'catalog'}});
+  expect(screen.getByRole('checkbox',{name:'Botânica'})).not.toBeChecked();
+  fireEvent.change(screen.getByLabelText('Matéria do resumo'),{target:{value:'Química'}});
+  expect(screen.queryByRole('checkbox',{name:'Botânica'})).toBeNull();
+});
+
+it('inclui dificuldades dos tópicos adicionais e preserva as etapas selecionadas', async()=>{
+  mocks.history.errors=[{id:'erro-extra',topicId:'bio_evolucao',questionId:'q',date:'2026-10-24',type:'unknown',notes:'Confundi seleção natural com adaptação intencional',confidence:'baixa'}];
+  mount();
+  fireEvent.change(screen.getByLabelText('Matéria do resumo'),{target:{value:'Biologia'}});
+  fireEvent.change(screen.getByLabelText('Tópico do resumo'),{target:{value:'bio_ecologia'}});
+  fireEvent.click(screen.getByText('Combinar mais tópicos de Biologia na mesma revisão'));
+  fireEvent.click(screen.getByRole('checkbox',{name:'Evolução'}));
+  fireEvent.click(screen.getByRole('checkbox',{name:'Unicamp/Comvest'}));
+  fireEvent.change(screen.getByLabelText('Etapa — Unicamp/Comvest'),{target:{value:'second'}});
+  fireEvent.click(screen.getByRole('checkbox',{name:/Usar meus erros registrados/}));
+  fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
+  await waitFor(()=>expect(mocks.generate).toHaveBeenCalledWith('review-tip',expect.objectContaining({targetBoards:['UNICAMP'],reviewOptions:expect.objectContaining({scopes:{UNICAMP:'second'},useHistory:true}),errorHistory:expect.stringContaining('Confundi seleção natural')}),expect.any(Function)));
+  expect(mocks.generate.mock.calls[0][1].errorHistory).toContain('Evolução');
+});
+
+it('retoma tópicos e capítulos adicionais após atualização do aplicativo',()=>{
+  const view=mount();
+  fireEvent.change(screen.getByLabelText('Matéria do resumo'),{target:{value:'Biologia'}});
+  fireEvent.change(screen.getByLabelText('Tópico do resumo'),{target:{value:'bio_ecologia'}});
+  fireEvent.click(screen.getByText('Combinar mais tópicos de Biologia na mesma revisão'));
+  fireEvent.click(screen.getByRole('checkbox',{name:'Evolução'}));
+  fireEvent.change(screen.getByLabelText('Capítulo de Evolução'),{target:{value:'Mecanismos da Evolução Biológica'}});
+  act(()=>window.dispatchEvent(new Event('crivo:before-asset-reload')));
+  view.unmount();mount();
+  expect(screen.getByLabelText('Tópico do resumo')).toHaveValue('bio_ecologia');
+  expect(screen.getByLabelText('Capítulo de Evolução')).toHaveValue('Mecanismos da Evolução Biológica');
+  expect(mocks.generate).not.toHaveBeenCalled();
+});

@@ -20,6 +20,15 @@ test('pacotes reais mudam com banca/fase e preservam diversidade sem preferênci
     assert.equal(multiple.sources.some(s=>s.board==='FUVEST'),false);
     const second=await loadStudyPacket(topic,'',['FUVEST'],[],normalizeReviewOptions({boards:['FUVEST'],scopes:{FUVEST:'second'}}));
     assert.ok(second.sources.filter(s=>s.board).every(s=>/2ª fase/.test(s.title)));
+    const ecology=mockTopics.find(t=>t.id==='bio_ecologia')!;
+    const evolution=mockTopics.find(t=>t.id==='bio_evolucao')!;
+    const combined=await loadStudyPacket(ecology,'Dinâmica de Populações',['FUVEST'],[{topic:evolution,chapter:'Mecanismos da Evolução Biológica'}],normalizeReviewOptions({boards:['FUVEST'],scopes:{FUVEST:'second'}}));
+    assert.equal(combined.selections?.length,2);
+    assert.match(combined.referenceText,/Dinâmica de Populações/);
+    assert.match(combined.referenceText,/Mecanismos da Evolução Biológica/);
+    assert.ok(combined.sources.some(s=>s.topicId==='bio_ecologia'));
+    assert.ok(combined.sources.some(s=>s.topicId==='bio_evolucao'));
+    assert.ok(combined.sources.filter(s=>s.board).every(s=>s.board==='FUVEST' && /2ª fase/.test(s.title)));
     const work=await loadStudyPacket({id:'obra:bras-cubas',name:'Brás Cubas',subject:'Literatura',prerequisites:[]},'',['UNESP'],[],normalizeReviewOptions({boards:['UNESP'],sourceMode:'work',materialKind:'literature'}));
     assert.ok(work.sources.some(s=>/Crítica documentada/.test(s.title)));
     assert.ok(work.sources.some(s=>/Edição consultada/.test(s.title)));

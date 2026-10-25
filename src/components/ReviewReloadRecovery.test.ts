@@ -26,3 +26,8 @@ it('a falta de armazenamento não impede a atualização do aplicativo',()=>{
  expect(()=>saveReviewReloadSelection(null,selection)).not.toThrow();
  expect(readReviewReloadSelection(null)).toBeUndefined();
 });
+
+it('recusa recortes adicionais inválidos na recuperação',()=>{
+ sessionStorage.setItem('crivo:review-reload:v1:guest',JSON.stringify({...selection,savedAt:Date.now(),additional:[{topicId:23,chapter:''}]}));
+ expect(readReviewReloadSelection(null)).toBeUndefined();
+});

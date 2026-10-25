@@ -1,6 +1,7 @@
 import { isReviewOptions, type ReviewOptions } from './strategicReview';
 
 export interface ReviewReloadSelection {
+  additional?: { topicId: string; chapter: string }[];
   subject: string;
   topicId: string;
   chapter: string;
@@ -18,6 +19,7 @@ export function readReviewReloadSelection(uid: string | null): ReviewReloadSelec
     const data = JSON.parse(sessionStorage.getItem(storageKey(uid)) || 'null');
     if (!data || typeof data !== 'object' || !Number.isFinite(data.savedAt) || Date.now() - data.savedAt > 300_000 || data.savedAt > Date.now() ||
       !['subject', 'topicId', 'chapter', 'openedKey'].every(key => typeof data[key] === 'string' && data[key].length <= 16_000) ||
+      (data.additional !== undefined && (!Array.isArray(data.additional) || data.additional.length > 3 || data.additional.some((item: {topicId?: unknown; chapter?: unknown} | null) => !item || typeof item.topicId !== 'string' || item.topicId.length > 300 || typeof item.chapter !== 'string' || item.chapter.length > 500))) ||
       typeof data.configurationOpen !== 'boolean' || !isReviewOptions(data.options) || data.options.sourceText.length > 12_000) return;
     return data;
   } catch { return; }
