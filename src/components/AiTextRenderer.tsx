@@ -10,9 +10,16 @@ import { StudyVisual } from './StudyVisual';
 // A IA às vezes usa delimitadores estilo MathJax (\[ \] e \( \)) em vez do
 // $ $ / $$ $$ que o remark-math reconhece. Normalizamos antes de renderizar.
 function normalizeMathDelimiters(text: string): string {
-  return text
-    .replace(/\\\[([\s\S]*?)\\\]/g, (_, expr) => `$$${expr}$$`)
-    .replace(/\\\(([\s\S]*?)\\\)/g, (_, expr) => `$${expr}$`);
+  // Code is literal: neither currency nor math delimiters may be rewritten there.
+  return text.split(/(```[\s\S]*?```|~~~[\s\S]*?~~~|`+[^`\n]*`+)/g)
+    .map((part, index) => index % 2 ? part : part
+      .replace(/(?<!\\)R\$(?=\s*\d)/g, 'R\\$')
+      .replace(/\\\[([\s\S]*?)\\\]/g, (_, expr) => '\n$$\n' + expr.trim() + '\n$$\n')
+      .replace(/\\\(([\s\S]*?)\\\)/g, (_, expr) => '$' + expr + '$')
+      // Block delimiters must own their lines, otherwise the opening expression
+      // can become fence metadata and swallow the following prose.
+      .replace(/(?<!\\)\$\$([\s\S]*?)(?<!\\)\$\$/g, (_, expr) => '\n$$\n' + expr.trim() + '\n$$\n'))
+    .join('');
 }
 
 export default function AiTextRenderer({ text, className = '' }: { text: string; className?: string }) {

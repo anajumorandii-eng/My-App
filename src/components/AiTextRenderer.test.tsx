@@ -39,3 +39,35 @@ it('preserva blocos de código que contêm barras e separadores literais', () =>
   expect(screen.queryByRole('table')).toBeNull();
   expect(screen.getByText(/\| Exemplo \| Valor \|/).tagName).toBe('CODE');
 });
+
+it('preserva reais e alternativas como texto sem capturar tudo entre dois R$', () => {
+  const text = String.raw`Preço: $P(m)=10+6m$.
+
+**B)** O preço permanece acima de R$ 6/kg.
+**C)** O preço por quilograma é constante.
+**D)** O preço fica abaixo de R$ 6/kg.`;
+  const {container} = render(<AiTextRenderer text={text} />);
+  expect(container.querySelectorAll('.katex')).toHaveLength(1);
+  expect(screen.getByText('C)').tagName).toBe('STRONG');
+  expect(container.textContent).toContain('R$ 6/kg.');
+  expect(container.querySelector('.katex-error')).toBeNull();
+});
+
+it('isola fórmula multilinha com delimitador colado e preserva o texto posterior', () => {
+  const {container} = render(<AiTextRenderer text={String.raw`$$f(x)=\begin{cases}
+ x & x>0\\
+ -x & x\leq0
+\end{cases}$$
+
+**Conferência:** aplique a condição.`} />);
+  expect(container.querySelectorAll('.katex')).toHaveLength(1);
+  expect(container.querySelector('.katex-display')).not.toBeNull();
+  expect(screen.getByText('Conferência:').tagName).toBe('STRONG');
+  expect(container.textContent).not.toContain('undefined');
+});
+
+it('não modifica delimitadores nem moeda dentro de código', () => {
+ const {container} = render(<AiTextRenderer text={'```text\nR$ 6; \\[x\\]; $$f(x)$$\n```\n\n`R$ 8`'} />);
+ expect(container.querySelector('pre code')?.textContent).toBe('R$ 6; \\[x\\]; $$f(x)$$\n');
+ expect(container.querySelectorAll('.katex')).toHaveLength(0);
+});
