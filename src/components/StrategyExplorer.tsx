@@ -1,3 +1,5 @@
+import { SubtopicSelector } from './SubtopicSelector';
+import { describeStudySelection,normalizeTopicCuts } from '../lib/topicCuts';
 import { AdditionalStudyTopics } from './AdditionalStudyTopics';
 import { isReviewSummary } from '../lib/reviewSummaries';
 import { DeepeningPdf } from './DeepeningPdf';
@@ -37,6 +39,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
   const topics = mockTopics.filter((topic) => studyAreaForTopic(topic) === subject);
   const [topicId, setTopicId] = useState(requestedTopic?.id ?? topics[0]?.id ?? '');
   const [additional, setAdditional] = useState(() => readAdditionalSelections(searchParams.get('topics'), mockTopics, requestedTopic?.id ?? topics[0]?.id ?? ''));
+  const [topicCuts,setTopicCuts]=useState<Record<string,string[]>>(()=>{try{return normalizeTopicCuts(JSON.parse(searchParams.get('cuts')??'{}'));}catch{return {};}});
   const [chapter, setChapter] = useState(searchParams.get('chapter') || '');
   const [board, setBoard] = useState(searchParams.get('board') || 'Todas as bancas');
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -50,7 +53,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
   const targetBoards = board === 'Todas as bancas' ? targets.map(item => item.board) : [board];
   const targetSignature = targetBoards.join('|');
   const extras = additional.flatMap(item => { const selected = topics.find(topic => topic.id === item.topicId && topic.id !== topicId); return selected ? [{ topic: selected, chapter: item.chapter }] : []; });
-  const selections = topic ? [{ topicId: topic.id, topicName: topic.name, chapter }, ...extras.map(item => ({ topicId: item.topic.id, topicName: item.topic.name, chapter: item.chapter }))] : [];
+  const selections = topic ? [{ topicId: topic.id, topicName: topic.name, chapter }, ...extras.map(item => ({ topicId: item.topic.id, topicName: item.topic.name, chapter: item.chapter }))].map(item=>({...item,...(topicCuts[item.topicId]?.length?{cuts:topicCuts[item.topicId]}:{})})) : [];
   const focusName = selections.map(item => item.topicName).join(' + ');
   const scopeName = selections.length > 1 ? focusName : chapter || topic?.name;
   const key = strategySelectionKey(subject, selections, board);
@@ -59,7 +62,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
     let cancelled = false;
     if (!topic) return;
     setPacketState(null);
-    void loadStudyPacket(topic, chapter, targetBoards, extras).then(packet => { if (!cancelled) setPacketState({ key, packet }); }).catch(() => { if (!cancelled) setPacketState({ key, error: 'Não foi possível carregar as fontes. Tente aprofundar novamente para recarregá-las.' }); });
+    void loadStudyPacket(topic, chapter, targetBoards, extras, undefined, topicCuts).then(packet => { if (!cancelled) setPacketState({ key, packet }); }).catch(() => { if (!cancelled) setPacketState({ key, error: 'Não foi possível carregar as fontes. Tente aprofundar novamente para recarregá-las.' }); });
     return () => { cancelled = true; };
   }, [key, targetSignature]);
   const changeSubject = (value: string) => { setSubject(value); setTopicId(mockTopics.find((topic) => studyAreaForTopic(topic) === value)?.id ?? ''); setChapter(''); setAdditional([]); };
@@ -67,15 +70,15 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
     if (!topic || busy.current || (board === 'Todas as bancas' && targetsLoading)) return;
     busy.current = true; setLoadingKey(key); setErrors((prev) => ({ ...prev, [key]: '' }));
     try {
-      const packet = await loadStudyPacket(topic, chapter, targetBoards, extras);
+      const packet = await loadStudyPacket(topic, chapter, targetBoards, extras, undefined, topicCuts);
       setPacketState({ key, packet });
       let text = '';
-      const result = await requestAiTextStream('review-tip', { topic: focusName, subject, board, chapter: selections.length > 1 ? 'Seleção combinada de tópicos' : chapter || undefined, chapters: selections.map(item => `${item.topicName}: ${item.chapter || 'visão geral'}`).join('; '), level: 40, daysSinceReview: 0, guideMode: selections.length > 1 ? 'combined-strategy' : 'strategy', learnerReflection: combineStudyReflections(selections.map(item => ({ topicName: item.topicName, text: reflectionForTutor(uid, item.topicId) }))), targetBoards, referenceText: packet.referenceText || undefined }, (delta) => {
+      const result = await requestAiTextStream('review-tip', { topic: focusName, subject, board, chapter: selections.length > 1 ? 'Seleção combinada de tópicos' : chapter || undefined, chapters: selections.map(describeStudySelection).join('; '), level: 40, daysSinceReview: 0, guideMode: selections.length > 1 ? 'combined-strategy' : 'strategy', learnerReflection: combineStudyReflections(selections.map(item => ({ topicName: item.topicName, text: reflectionForTutor(uid, item.topicId) }))), targetBoards, referenceText: packet.referenceText || undefined }, (delta) => {
         text += delta; setAnswers((prev) => ({ ...prev, [key]: text }));
       });
       if (!result.text.trim()) throw new Error('Guia vazio');
       setAnswers((prev) => { const next = { ...prev }; delete next[key]; return next; });
-      void persist({ key, subject, topicId: topic.id, topicName: focusName, chapter: selections.length > 1 ? '' : chapter, ...(selections.length > 1 ? { selections } : {}), board, targetBoards, studyPacket: result.serverSources?.length ? { ...packet, sources: [...packet.sources, ...result.serverSources] } : packet, text: result.text, savedAt: new Date().toISOString() });
+      void persist({ key, subject, topicId: topic.id, topicName: focusName, chapter: selections.length > 1 ? '' : chapter, ...((selections.length > 1||selections.some(item=>item.cuts?.length)) ? { selections } : {}), board, targetBoards, studyPacket: result.serverSources?.length ? { ...packet, sources: [...packet.sources, ...result.serverSources] } : packet, text: result.text, savedAt: new Date().toISOString() });
     } catch {
       setAnswers((prev) => { const next = { ...prev }; delete next[key]; return next; });
       setErrors((prev) => ({ ...prev, [key]: 'Não foi possível aprofundar agora. O protocolo e o exemplo abaixo continuam disponíveis; tente novamente.' }));
@@ -94,10 +97,10 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
         <label className="text-sm">Matéria do guia<select className="field w-full" value={subject} onChange={(event) => changeSubject(event.target.value)}>{studyProtocols.map((item) => <option key={item.subject}>{item.subject}</option>)}</select></label>
         <label className="text-sm">Banca do guia<select className="field w-full" value={board} onChange={(event) => setBoard(event.target.value)}><option>Todas as bancas</option>{[...new Set([...studyBoardProfiles.map(item => item.board), ...targetBoards])].filter(name => !studyBoardProfiles.some(item => item.board === name)).map(name => <option key={name}>{name}</option>)}{studyBoardProfiles.map((item) => <option key={item.board}>{item.board}</option>)}</select></label>
         <label className="text-sm">Tópico do guia<select className="field w-full" value={topic?.id ?? ''} onChange={(event) => { setTopicId(event.target.value); setChapter(''); setAdditional(previous => previous.filter(item => item.topicId !== event.target.value)); }}>{topics.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label>
-        <label className="text-sm">Capítulo do guia<select className="field w-full" value={chapter} onChange={(event) => setChapter(event.target.value)}><option value="">Visão geral do tópico</option>{topic?.chapters?.map((name) => <option key={name}>{name}</option>)}</select></label>
       </div>
-      <AdditionalStudyTopics subject={subject} topics={topics} primaryId={topic?.id ?? ''} value={additional} onChange={setAdditional} kind="deepening" />
-      <p className="text-sm"><b>Recortes do aprofundamento:</b> {selections.map(item => `${item.topicName}${item.chapter ? ` — ${item.chapter}` : ' — visão geral'}`).join(' + ')}</p>
+      {topic&&<SubtopicSelector topic={topic} value={topicCuts[topic.id]??(chapter?[chapter]:[])} onChange={cuts=>{setChapter('');setTopicCuts(previous=>normalizeTopicCuts({...previous,[topic.id]:cuts}));}} disabled={pdfBusy||loadingKey!==null}/>}
+      <AdditionalStudyTopics subject={subject} topics={topics} primaryId={topic?.id ?? ''} value={additional} onChange={setAdditional} kind="deepening" cuts={topicCuts} onCutsChange={(id,cuts)=>setTopicCuts(previous=>normalizeTopicCuts({...previous,[id]:cuts}))} />
+      <p className="text-sm"><b>Recortes do aprofundamento:</b> {selections.map(describeStudySelection).join(' · ')}</p>
       <p className="text-xs text-[var(--dim)]"><b>Pré-requisitos no currículo:</b> {topic?.prerequisites.map((id) => mockTopics.find((item) => item.id === id)?.name ?? id).join(', ') || 'Nenhum vínculo cadastrado. Isso não significa ausência de conhecimentos prévios necessários.'}</p>
     </div>
     {selections.map(item => <details key={item.topicId} open={selections.length === 1}><summary className="cursor-pointer text-sm font-semibold">O que lembro de {item.topicName}</summary><StudyReflectionPanel topicId={item.topicId} topicName={item.topicName} subject={subject} /></details>)}
@@ -141,7 +144,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
           }}>Imprimir / Salvar em PDF</button>}
         {uid && /Não foi possível/.test(saveMessage) && <button type="button" className="text-sm underline" onClick={() => void persist(guides[key])}>Salvar novamente na conta</button>}
       </div>}
-      {(answers[key] || guides[key]) && <div ref={printContent} data-print-subject={subject} data-print-topic={focusName} data-print-subtopic={selections.map(item => `${item.topicName}: ${item.chapter || 'visão geral'}`).join(' · ')} data-print-board={guides[key]?.targetBoards?.join(' · ') || board} data-print-purpose="Aprofundamento dos conceitos e de como são cobrados nas provas">
+      {(answers[key] || guides[key]) && <div ref={printContent} data-print-subject={subject} data-print-topic={focusName} data-print-subtopic={selections.map(describeStudySelection).join(' · ')} data-print-board={guides[key]?.targetBoards?.join(' · ') || board} data-print-purpose="Aprofundamento dos conceitos e de como são cobrados nas provas">
         <h4 className="font-display text-lg">{subject} · {focusName}{selections.length === 1 && chapter ? ` · ${chapter}` : ''} · {board}</h4>
         <ReviewSummaryText text={answers[key] || guides[key]?.text || ''} />
         {guides[key]?.studyPacket && <div className="hidden" data-print-only><StudySourcesPanel packet={guides[key].studyPacket!} /></div>}

@@ -25,3 +25,5 @@ declare module '*.woff?inline' {
   const src: string;
   export default src;
 }
+declare module '*.woff2?inline' { const src: string; export default src; }
+declare module '*.css?raw' { const css: string; export default css; }

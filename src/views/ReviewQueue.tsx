@@ -12,7 +12,7 @@ import { requestAiTextStream } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { urgencyOf } from '../lib/reviewUrgency';
 import { applyReviewOutcome, qualityFromSelfRating } from '../lib/spacedRepetition';
-import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles } from 'lucide-react';
+import { Repeat, CloudOff, Sparkles } from 'lucide-react';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import SummaryReviewsPanel from '../components/SummaryReviewsPanel';
@@ -100,35 +100,11 @@ export default function ReviewQueue() {
     }
   };
 
-  const FirstIcon = SUBJECT_ICONS[queue[0]?.topic?.subject ?? 'Matemática'] ?? Repeat;
+
 
   return (
     <div className="ni-main">
-      {/* Route Breadcrumb */}
-      <div className="ni-route">
-        <span>Estudar</span>
-        <i />
-        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--action-primary)] text-[var(--text-inverse)]">
-            <FirstIcon className="w-3 h-3" />
-          </span>
-          REPETIÇÃO ESPAÇADA
-        </span>
-        <i />
-        <b>REVISÕES ADAPTATIVAS</b>
-      </div>
-
-      {/* Main Title */}
-      <div className="ni-title">
-        <div>
-          <h1>Recupere, aplique e confira o que aprendeu.</h1>
-          <p>As revisões combinam espaçamento, desempenho registrado e tempo disponível. Recupere o conteúdo antes de consultar a explicação.</p>
-        </div>
-        <div className="ni-state">
-          <i /> {pendingToday > 0 ? `${pendingToday} revisões urgentes hoje` : isPersisted ? 'sem pendências urgentes nos dados carregados' : 'demonstração — sem diagnóstico pessoal'}
-        </div>
-      </div>
-
+      <div className="space-y-2 mb-4"><h2 className="font-display text-2xl">Minha fila</h2><p className="text-sm text-[var(--dim)]">Retome um tópico, responda sem consulta e confira os critérios antes de registrar a revisão.</p></div>
       {!isPersisted && (
         <p className="flex items-start text-xs text-[var(--dim)] mb-2">
           <CloudOff className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0" />
@@ -137,10 +113,10 @@ export default function ReviewQueue() {
       )}
       {syncError && <p className="text-xs text-rose-500 mb-2">{syncError}</p>}
 
-      <ManualReviewsPanel questions={questions} loading={questionsLoading} onReview={rateReview} onCommitted={acceptCommittedMastery} />
+      <details className="border-b border-[var(--line)] py-3"><summary className="cursor-pointer py-2 text-sm font-semibold">Agendar ou registrar uma revisão</summary><ManualReviewsPanel questions={questions} loading={questionsLoading} onReview={rateReview} onCommitted={acceptCommittedMastery} /></details>
 
       {/* Subject Filter Bar */}
-      <div className="ni-subjects">
+      {subjects.length>1&&<div className="ni-subjects">
         {subjects.map((subj) => {
           const active = subjectFilter === subj;
           const Icon = SUBJECT_ICONS[subj] ?? Repeat;
@@ -161,29 +137,12 @@ export default function ReviewQueue() {
             </button>
           );
         })}
-      </div>
+      </div>}
 
-      <SummaryReviewsPanel progress={summaryProgress} summaries={interactiveSummaries} />
+      <details className="border-b border-[var(--line)] py-3"><summary className="cursor-pointer py-2 text-sm font-semibold">Revisões de resumos estudados</summary><SummaryReviewsPanel progress={summaryProgress} summaries={interactiveSummaries} /></details>
 
-      {/* Metric summary panel */}
-      <Panel subject="Matemática" className="ni-panel p-5 flex items-center gap-4">
-        <div
-          className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
-          style={{
-            backgroundColor: pendingToday > 0 ? 'rgba(239, 191, 97, 0.2)' : 'rgba(134, 220, 165, 0.2)',
-            color: pendingToday > 0 ? '#efbf61' : '#86dca5',
-          }}
-        >
-          {pendingToday > 0 ? <AlertTriangle className="w-5 h-5" /> : <CheckCircle2 className="w-5 h-5" />}
-        </div>
-        <div>
-          <p className="text-xl font-display font-bold text-[var(--text)]">{pendingToday}</p>
-          <p className="text-xs font-mono uppercase tracking-wider text-[var(--dim)]">
-            {pendingToday > 0 ? 'revisões com alta urgência' : 'nenhuma revisão urgente pendente'}
-          </p>
-        </div>
-      </Panel>
-
+      <p className="py-3 text-sm" role="status">{pendingToday>0?`${pendingToday} revisões com alta urgência.`:'Nenhuma revisão urgente nos dados carregados.'}</p>
+      <details className="border-b border-[var(--line)] pb-3"><summary className="cursor-pointer py-2 text-sm">Ajustar banca e tempo disponível</summary>
       <label className="flex flex-wrap items-center gap-2 mt-4 text-xs text-[var(--dim)]">
         Banca da revisão
         <select value={board} onChange={(event) => setBoard(event.target.value)} className="rounded-lg border border-[var(--line)] bg-[var(--surface)] p-2 text-[var(--text)]">
@@ -200,6 +159,8 @@ export default function ReviewQueue() {
         <p className="text-xs mt-2">A data orienta a prioridade. A resposta sem consulta, os critérios conferidos e a aplicação orientam o próximo intervalo.</p>
       </section>
 
+      </details>
+      {!filteredQueue.length&&<p className="py-5 text-sm text-[var(--dim)]">Sua fila está vazia. Crie uma revisão direcionada ou agende uma revisão manual para começar.</p>}
       {/* Reviews queue */}
       <div className="space-y-3 mt-4">
         {filteredQueue.filter((entry, index) => index < visiveis || activeTopics.includes(entry.mastery.topicId)).map(({ mastery, topic, urgency }) => {
@@ -213,7 +174,6 @@ export default function ReviewQueue() {
             <Panel
               key={mastery.topicId}
               subject={topic!.subject}
-              interactive
               className="ni-panel p-5 transition-colors"
             >
               <div className="flex items-center justify-between">

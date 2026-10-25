@@ -49,25 +49,18 @@ export function ReviewWorkspace({ header }: { header?: (open: (resource: string,
   }, [active, locations]);
   const selected=reviewResources.find(r=>r.id===active)!;
   return <>
-    <section className="ni-panel p-4 space-y-3" aria-label="Recursos da central de revisão">
-      <label className="block font-semibold">Recurso de revisão
-        <select aria-label="Recurso de revisão" className="mt-2 block w-full rounded-lg border border-[var(--line)] bg-[var(--surface2)] p-3 text-[var(--text)]" value={active} onChange={e=>open(e.target.value)}>
-          {reviewResources.map(r=><option key={r.id} value={r.id}>{r.label}</option>)}
-        </select>
-      </label>
-      <p className="text-sm text-[var(--dim)]">{selected.description}</p>
-
-      <details><summary className="cursor-pointer">Ver todos os recursos</summary>
-        <div className="mt-3 grid gap-2 sm:grid-cols-2">{reviewResources.map(r=><button key={r.id} type="button" aria-pressed={r.id===active} onClick={()=>open(r.id)} className="rounded-lg border border-[var(--line)] p-3 text-left">
-          <b className="block">{r.label}</b><span className="text-xs text-[var(--dim)]">{r.description}</span>
-        </button>)}</div>
+    <section className="space-y-3" aria-label="Recursos da central de revisão">
+      <nav aria-label="Atividades de revisão" className="flex flex-wrap gap-2">{reviewResources.filter(r=>['fila','resumos-banca','erros','flashcards'].includes(r.id)).map(r=><button key={r.id} type="button" aria-pressed={active===r.id} onClick={()=>open(r.id)} className={`min-h-11 px-4 py-2 text-sm rounded-lg ${active===r.id?'bg-[var(--text)] text-[var(--ink)]':'text-[var(--dim)] hover:bg-[var(--surface-secondary)]'}`}>{r.id==='resumos-banca'?'Criar e abrir revisões':r.label}</button>)}</nav>
+      <details className="border-b border-[var(--line)] pb-3"><summary className="cursor-pointer py-2 text-sm text-[var(--dim)]">Outras ferramentas de estudo</summary>
+        <label className="block text-sm mt-2">Recurso de revisão<select aria-label="Recurso de revisão" className="field mt-1 block w-full min-h-11" value={active} onChange={e=>open(e.target.value)}>{reviewResources.map(r=><option key={r.id} value={r.id}>{r.label}</option>)}</select></label>
+        <p className="mt-2 text-xs text-[var(--dim)]">{selected.description}</p>
+        <details className="mt-3"><summary className="cursor-pointer py-2 text-sm">Guias e orientação de uso</summary><p className="text-xs text-[var(--dim)] mt-2">As atividades abertas permanecem nesta aba ao alternar recursos.</p><div className="flex flex-wrap gap-4 text-sm mt-2"><a href="/study-guide.html" target="_blank" rel="noreferrer" className="underline">Guia de estudo</a><a href="/real-exams/unicamp-2026.pdf" target="_blank" rel="noreferrer" className="underline">Caderno Unicamp 2026</a></div></details>
       </details>
-      <details><summary className="cursor-pointer text-sm">Guias e orientação de uso</summary><p className="text-xs text-[var(--dim)] mt-2">As atividades abertas permanecem nesta aba ao alternar recursos. Salve o trabalho antes de sair ou recarregar a página.</p><div className="flex flex-wrap gap-4 text-sm mt-2"><a href="/study-guide.html" target="_blank" rel="noreferrer" className="underline">Guia de estudo</a><a href="/real-exams/unicamp-2026.pdf" target="_blank" rel="noreferrer" className="underline">Caderno Unicamp 2026</a></div></details>
     </section>
     {header?.(open, active)}
     {reviewResources.filter(r=>locations[r.id]).map(resource=>{
       const Component=resource.Component;
-      return <div key={resource.id} hidden={active!==resource.id} className="mt-4 min-w-0" aria-label={resource.label}>
+      return <div key={resource.id} hidden={active!==resource.id} className="mt-4 min-w-0 [&_.ni-main]:p-0" aria-label={resource.label}>
         {/* Each retained activity has its own URL. A link opened from errors
             must not change the query or destroy a draft in another activity. */}
         <StudyActivityVisibleContext.Provider value={active===resource.id}>

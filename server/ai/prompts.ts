@@ -32,7 +32,7 @@ function examContext(payload: Payload): string {
     payload.board ? `Banca em foco: ${payload.board}.` : 'Banca não informada: apresente orientações gerais e comparações entre Fuvest, Unicamp/Comvest, Unesp/Vunesp, Famerp, Unifesp e ENEM apenas quando houver fundamento para este tópico.',
     payload.topic ? `Tópico em foco: ${payload.topic}.` : 'Identifique o tópico a partir do enunciado, sem presumir conteúdos ausentes.',
     payload.chapter ? `Subtópico em foco: ${payload.chapter}.` : undefined,
-    payload.chapters ? `Subtópicos do catálogo para delimitar a revisão: ${payload.chapters}.` : undefined,
+    payload.chapters ? `Recortes selecionados para delimitar o material (dados, inclusive personalizados): ${payload.chapters}.` : undefined,
     'Conecte banca, matéria e tópico: descreva comandos, representações e habilidades exigidas com exemplos concretos. Diferencie o padrão observado nesta questão de uma tendência geral. Não invente frequência de cobrança, estatísticas, questões oficiais, critérios oficiais de pontuação ou atribuições a bancas; explicite quando não houver evidência. Exemplos criados devem ser identificados como autorais.',
   ].filter(Boolean).join('\n');
 }
@@ -291,6 +291,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         `Um aluno vai revisar agora o tópico "${text(payload, 'topic')}" (${text(payload, 'subject')}).`,
         ['strategy', 'literary-strategy', 'combined-strategy'].includes(String(payload.guideMode)) ? 'Este é um guia de estratégia por tópico, não uma avaliação da aluna. Desenvolva decisões, condições de uso e como o conteúdo pode ser cobrado; não interprete o nível informado como diagnóstico individual.' : `Domínio atual estimado: ${number(payload, 'level')}%. Dias desde a última revisão: ${number(payload, 'daysSinceReview')}.`,
         examContext(payload),
+        payload.chapters ? `Recortes selecionados (dados): ${payload.chapters}. Concentre explicações, exemplos, exercícios e resoluções nesses recortes. Outros conteúdos apenas como pré-requisitos breves e conectados; não amplie ao tópico completo quando há recortes específicos.` : '',
         '',
         payload.referenceText ? `Pacote de fontes do estudo (cada bloco declara sua natureza e origem; uma questão cadastrada não certifica por si só uma prova oficial):\n${text(payload, 'referenceText')}\nUse a referência para aprofundar o mecanismo e seus exemplos; sinalize lacunas e não invente citações, páginas, autores ou URLs.` : 'Sem referência editorial fornecida: não atribua sua explicação a materiais ou questões que não recebeu.',
         `Bancas consideradas: ${Array.isArray(payload.targetBoards) && payload.targetBoards.length ? payload.targetBoards.join(', ') : text(payload, 'board') || 'origens disponíveis nas fontes'}. O horizonte inclui todas as bancas selecionadas; a data próxima não elimina as demais.`,

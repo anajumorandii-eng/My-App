@@ -106,7 +106,7 @@ it('combina Ecologia e Evolução, envia os dois recortes e recupera o guia sem 
   fireEvent.click(screen.getByText('Combinar mais tópicos de Biologia no mesmo aprofundamento'));
   fireEvent.click(screen.getByRole('checkbox', { name: 'Evolução' }));
   expect(screen.queryByText('Guia do tópico selecionado')).toBeNull();
-  fireEvent.change(screen.getByLabelText('Capítulo de Evolução'), { target: { value: 'Mecanismos da Evolução Biológica' } });
+  fireEvent.click(screen.getByLabelText('Mecanismos da Evolução Biológica'));
   fireEvent.click(screen.getByRole('button', { name: 'Aprofundar este tópico e sua cobrança' }));
   await waitFor(() => expect(generate).toHaveBeenLastCalledWith('review-tip', expect.objectContaining({ topic: 'Ecologia + Evolução', guideMode: 'combined-strategy', chapters: expect.stringContaining('Mecanismos da Evolução Biológica'), referenceText: expect.stringContaining('Recortes solicitados: Ecologia') }), expect.any(Function)));
   await screen.findByText('Guia do tópico selecionado');

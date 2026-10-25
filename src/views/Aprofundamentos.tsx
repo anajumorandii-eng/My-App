@@ -1,3 +1,4 @@
+import { describeStudySelection } from '../lib/topicCuts';
 import { isReviewSummary } from '../lib/reviewSummaries';
 import { DeepeningPdf } from '../components/DeepeningPdf';
 import { useEffect, useRef, useState } from 'react';
@@ -52,7 +53,7 @@ function GuideLibrary({ uid }: { uid: string | null }) {
     return next;
   }, { replace: true });
   const guideUrl = (guide: StrategyGuide) => { const next = new URLSearchParams(params); next.set('guia', guide.key); return `/aprofundamentos?${next}`; };
-  const contextUrl = selected && typeof selected.workSlug === 'string' ? `/obras/${encodeURIComponent(selected.workSlug)}?${new URLSearchParams({ aba: 'estrategias', ...(selected.workUnitId ? { unidade: selected.workUnitId } : {}) })}` : selected ? `/estrategias?${new URLSearchParams({ topic: selected.topicId, ...((selected.selections?.[0]?.chapter || selected.chapter) ? { chapter: selected.selections?.[0]?.chapter || selected.chapter } : {}), ...(Array.isArray(selected.selections) && selected.selections.length > 1 ? { topics: JSON.stringify(selected.selections.slice(1)) } : {}), board: selected.board })}` : '/estrategias';
+  const contextUrl = selected && typeof selected.workSlug === 'string' ? `/obras/${encodeURIComponent(selected.workSlug)}?${new URLSearchParams({ aba: 'estrategias', ...(selected.workUnitId ? { unidade: selected.workUnitId } : {}) })}` : selected ? `/estrategias?${new URLSearchParams({ topic: selected.topicId, ...(selected.selections?.some(item=>item.cuts?.length)?{cuts:JSON.stringify(Object.fromEntries(selected.selections.filter(item=>item.cuts?.length).map(item=>[item.topicId,item.cuts])))}:{}), ...((selected.selections?.[0]?.chapter || selected.chapter) ? { chapter: selected.selections?.[0]?.chapter || selected.chapter } : {}), ...(Array.isArray(selected.selections) && selected.selections.length > 1 ? { topics: JSON.stringify(selected.selections.slice(1)) } : {}), board: selected.board })}` : '/estrategias';
   useEffect(() => {
     if (selected) { heading.current?.focus({ preventScroll: true }); window.scrollTo(0, 0); }
   }, [selected?.key]);
@@ -83,10 +84,10 @@ function GuideLibrary({ uid }: { uid: string | null }) {
         </div>
         {saveMessage && <p role="status" className="text-xs text-[var(--dim)]">{saveMessage}</p>}
         {printError && <p role="alert" className="text-sm">{printError}</p>}
-        <article ref={printContent} className="ni-panel p-5 space-y-4" data-print-subject={selected.subject} data-print-work={selected.workSlug ? selected.topicName : undefined} data-print-topic={selected.workSlug ? undefined : selected.topicName} data-print-subtopic={selected.selections?.map(item => `${item.topicName}: ${item.chapter || 'visão geral'}`).join(' · ') || selected.chapter || (selected.workSlug ? 'Obra completa' : 'Visão geral')} data-print-board={selected.targetBoards?.join(' · ') || selected.board} data-print-purpose={selected.workSlug ? 'Aprofundamento da obra e de sua cobrança na prova' : 'Aprofundamento dos conceitos e de como são cobrados nas provas'}>
+        <article ref={printContent} className="ni-panel p-5 space-y-4" data-print-subject={selected.subject} data-print-work={selected.workSlug ? selected.topicName : undefined} data-print-topic={selected.workSlug ? undefined : selected.topicName} data-print-subtopic={selected.selections?.map(describeStudySelection).join(' · ') || selected.chapter || (selected.workSlug ? 'Obra completa' : 'Visão geral')} data-print-board={selected.targetBoards?.join(' · ') || selected.board} data-print-purpose={selected.workSlug ? 'Aprofundamento da obra e de sua cobrança na prova' : 'Aprofundamento dos conceitos e de como são cobrados nas provas'}>
           <h2 className="font-display text-xl">{selected.subject} · {selected.chapter || selected.topicName}</h2>
           <p className="text-sm text-[var(--dim)]">{selected.topicName} · {selected.board} · Salvo em {dateLabel(selected.savedAt)}</p>
-          {selected.selections?.length ? <p className="text-sm">Recortes: {selected.selections.map(item => `${item.topicName} — ${item.chapter || 'visão geral'}`).join(' + ')}</p> : null}
+          {selected.selections?.length ? <p className="text-sm">Recortes: {selected.selections.map(describeStudySelection).join(' + ')}</p> : null}
           <ReviewSummaryText text={selected.text} />
           {isStudyPacket(selected.studyPacket) && <StudySourcesPanel packet={selected.studyPacket} />}
         </article>

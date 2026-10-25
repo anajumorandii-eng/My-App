@@ -1,18 +1,19 @@
+import { describeStudySelection } from './topicCuts';
 import type { Question, Topic } from '../types';
 import { studyAreaForTopic } from '../data/studyProtocols';
 import { prioritySummarySubject } from './actionablePriorities';
 import { canonicalExamBoard } from './questionExamFilters';
 export const STUDY_SOURCE_CHAR_LIMIT = 24000;
 export interface StudySource { format?: 'markdown'; id: string; title: string; kind: 'resumo' | 'questao'; content: string; excerpt: boolean; url?: string; questionId?: string; board?: string; topicId?: string }
-export interface StudyPacket { selections?: { topicId: string; topicName: string; chapter: string }[]; sources: StudySource[]; coverage: { board: string; available: number; readable: number; included: number }[]; referenceText: string; topicId: string; chapter: string }
+export interface StudyPacket { selections?: { topicId: string; topicName: string; chapter: string; cuts?: string[] }[]; sources: StudySource[]; coverage: { board: string; available: number; readable: number; included: number }[]; referenceText: string; topicId: string; chapter: string }
 export interface StudySummary { subject: string; topic: string; sections: { title: string; content: string }[] }
 const cleanUrl = (value?: string) => { try { const url = new URL(value ?? ''); return ['http:', 'https:'].includes(url.protocol) ? url.href : undefined; } catch { return undefined; } };
 const clip = (text: string, limit: number) => text.length <= limit ? text : `${text.slice(0, limit - 35).replace(/\s+\S*$/, '')}\n[Recorte: continuação não incluída.]`;
 
 /** Seleção equilibrada de evidências; contagens descrevem o banco, nunca incidência de prova. */
-export function buildStudyPacket({ topic, chapter = '', boards = [], questions, summaries }: { topic: Topic; chapter?: string; boards?: string[]; questions: Question[]; summaries: StudySummary[] }): StudyPacket {
+export function buildStudyPacket({ topic, chapter = '', chapters = [], boards = [], questions, summaries }: { topic: Topic; chapter?: string; chapters?: string[]; boards?: string[]; questions: Question[]; summaries: StudySummary[] }): StudyPacket {
   const requested = [...new Set(boards.map(canonicalExamBoard))];
-  const pool = [...new Map(questions.filter(q => q.topicId === topic.id && (!chapter || q.chapter === chapter) && q.examSource && (!requested.length || requested.includes(canonicalExamBoard(q.examSource.board)))).map(q => [q.id, q])).values()];
+  const pool = [...new Map(questions.filter(q => q.topicId === topic.id && (chapters.length ? chapters.includes(q.chapter??'') : !chapter || q.chapter === chapter) && q.examSource && (!requested.length || requested.includes(canonicalExamBoard(q.examSource.board)))).map(q => [q.id, q])).values()];
   const groups = requested.length ? requested : [...new Set(pool.map(q => canonicalExamBoard(q.examSource!.board)))].sort();
   const questionText = (q: Question) => `${q.prompt}\n${q.options.map(option => `${option.id}: ${option.text}`).join('\n')}\nGabarito cadastrado (conferir origem): ${q.correctOptionId}\nComentário cadastrado: ${q.explanation}`;
   const readable = (q: Question) => !q.originalPages?.length && !q.figures?.length && questionText(q).length <= 2000;
@@ -23,9 +24,9 @@ export function buildStudyPacket({ topic, chapter = '', boards = [], questions, 
   }
   const sources: StudySource[] = [];
   const add = (source: Omit<StudySource, 'id'>) => sources.push({ ...source, id: `F${sources.length + 1}` });
-  for (const summary of summaries.filter(s => [topic.subject, prioritySummarySubject(topic)].includes(s.subject) && (topic.chapters?.includes(s.topic) || s.topic === topic.name) && (!chapter || s.topic === chapter)).slice(0, 2)) {
+  for (const summary of summaries.filter(s => [topic.subject, prioritySummarySubject(topic)].includes(s.subject) && (topic.chapters?.includes(s.topic) || s.topic === topic.name) && (chapters.length ? chapters.includes(s.topic) : !chapter || s.topic === chapter)).slice(0, chapters.length ? 8 : 2)) {
     const text = summary.sections.map(section => `${section.title}\n${section.content}`).join('\n\n');
-    add({ title: `Resumo editorial CRIVO: ${summary.topic} (${summary.subject})`, kind: 'resumo', content: clip(text, 3000), excerpt: text.length > 3000 });
+    add({ title: `Resumo editorial CRIVO: ${summary.topic} (${summary.subject})`, kind: 'resumo', content: clip(text, chapters.length ? Math.floor(8000/chapters.length) : 3000), excerpt: text.length > (chapters.length ? Math.floor(8000/chapters.length) : 3000) });
   }
   for (const q of selected) {
     const text = `${q.prompt}\n${q.options.map(option => `${option.id}: ${option.text}`).join('\n')}\nGabarito cadastrado (conferir origem): ${q.correctOptionId}\nComentário cadastrado: ${q.explanation}`;
@@ -67,7 +68,7 @@ export function isStudyPacket(value: unknown): value is StudyPacket {
   return typeof packet.topicId === 'string' && typeof packet.chapter === 'string' && typeof packet.referenceText === 'string' && Array.isArray(packet.coverage) && packet.coverage.every(item => item && typeof item.board === 'string' && ['available', 'readable', 'included'].every(field => Number.isFinite(item[field as 'available']))) && Array.isArray(packet.sources) && packet.sources.every(source => source && ['id', 'title', 'content'].every(field => typeof source[field as 'id'] === 'string') && ['resumo', 'questao'].includes(source.kind));
 }
 
-export interface StudySelection { topic: Topic; chapter: string }
+export interface StudySelection { topic: Topic; chapter: string; chapters?: string[] }
 export function buildCombinedStudyPacket(selections: StudySelection[], boards: string[], material: { questions: Question[]; summaries: StudySummary[] }): StudyPacket {
   if (!selections.length || selections.length > 4 || new Set(selections.map(item => item.topic.id)).size !== selections.length ||
       new Set(selections.map(item => studyAreaForTopic(item.topic))).size !== 1) throw new Error('Escolha até quatro tópicos da mesma área.');
@@ -75,8 +76,9 @@ export function buildCombinedStudyPacket(selections: StudySelection[], boards: s
   const sources: StudySource[] = [];
   const add = (source: StudySource, topicId: string) => sources.push({ ...source, id: `F${sources.length + 1}`, topicId });
   packets.forEach((packet, index) => {
-    const summary = packet.sources.find(source => source.kind === 'resumo');
-    if (summary) add({ ...summary, content: clip(summary.content, 1800), excerpt: summary.excerpt || summary.content.length > 1800 }, selections[index].topic.id);
+    const summaries=packet.sources.filter(source=>source.kind==='resumo');
+    const budget=Math.floor(6500/Math.max(1,packets.reduce((sum,item)=>sum+item.sources.filter(s=>s.kind==='resumo').length,0)));
+    for(const summary of summaries)add({...summary,content:clip(summary.content,Math.min(1800,budget)),excerpt:summary.excerpt||summary.content.length>Math.min(1800,budget)},selections[index].topic.id);
   });
   const buckets = packets.map(packet => packet.sources.filter(source => source.kind === 'questao'));
   const used = new Set<string>();
@@ -98,5 +100,5 @@ export function buildCombinedStudyPacket(selections: StudySelection[], boards: s
   return packet;
 }
 export function renderStudyReference(packet: StudyPacket): string {
-  return `${packet.selections ? `Recortes solicitados: ${packet.selections.map(item => `${item.topicName}${item.chapter ? ` — ${item.chapter}` : ' — visão geral'}`).join('; ')}.\n\n` : ''}${packet.sources.map(source => `[${source.id}] ${source.title}\nTipo: ${source.kind === 'resumo' ? 'síntese ou análise editorial; não é enunciado integral' : 'questão cadastrada com origem identificada'}${source.excerpt ? '; recorte parcial' : ''}\n${source.url ? `Fonte: ${source.url}\n` : ''}${source.content}`).join('\n\n')}`;
+  return `${packet.selections ? `Recortes solicitados: ${packet.selections.map(item => item.cuts?.length ? describeStudySelection(item) : `${item.topicName}${item.chapter ? ` — ${item.chapter}` : ' — visão geral'}`).join('; ')}.\n\n` : ''}${packet.sources.map(source => `[${source.id}] ${source.title}\nTipo: ${source.kind === 'resumo' ? 'síntese ou análise editorial; não é enunciado integral' : 'questão cadastrada com origem identificada'}${source.excerpt ? '; recorte parcial' : ''}\n${source.url ? `Fonte: ${source.url}\n` : ''}${source.content}`).join('\n\n')}`;
 }

@@ -93,3 +93,10 @@ test('pacote combinado reserva fontes para cada tópico e não trunca enunciados
   assert.ok(packet.referenceText.length <= 24000);
   assert.throws(() => buildCombinedStudyPacket([{ topic, chapter: '' }, { topic: { ...evolution, subject: 'Física' }, chapter: '' }], [], { questions: [], summaries: [] }));
 });
+
+test('seleciona fontes de vários recortes do mesmo tópico sem expandir aos capítulos restantes',()=>{
+ const topic={id:'geo',name:'Geometria',subject:'Matemática',prerequisites:[],chapters:['Ângulos','Círculo','Triângulos']};
+ const summaries=topic.chapters.map(topic=>({subject:'Matemática',topic,sections:[{title:topic,content:'Fonte específica de '+topic}]}));
+ const packet=buildStudyPacket({topic,chapters:['Ângulos','Círculo'],questions:[],summaries});
+ assert.equal(packet.sources.filter(item=>item.kind==='resumo').length,2);assert.ok(packet.referenceText.includes('Fonte específica de Ângulos'));assert.ok(packet.referenceText.includes('Fonte específica de Círculo'));assert.ok(!packet.referenceText.includes('Fonte específica de Triângulos'));
+});

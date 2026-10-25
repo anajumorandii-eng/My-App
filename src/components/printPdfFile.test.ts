@@ -34,3 +34,14 @@ it('falha de geração não cria download inválido e mantém o material origina
   await waitFor(() => expect(screen.getByRole('alert')).toHaveTextContent('Tente novamente.'));
   expect(screen.queryByRole('link')).toBeNull(); expect(content.textContent).toBe('Texto salvo');
 });
+
+it('inclui KaTeX e fontes matemáticas incorporadas no HTML exportado',async()=>{
+ vi.stubGlobal('URL',class extends URL {static createObjectURL=()=> 'blob:math';static revokeObjectURL=()=>{};});
+ const send=vi.fn().mockResolvedValue(new Response('%PDF-1.7\n',{headers:{'Content-Type':'application/pdf'}}));vi.stubGlobal('fetch',send);
+ const article=document.createElement('article');article.innerHTML='<p><span class="katex"><span class="katex-mathml"><math><mi>α</mi></math></span><span class="katex-html">α</span></span></p>';
+ printStrategyGuide(article,'Matemática');await screen.findByRole('link',{name:'Abrir PDF para imprimir'});
+ const html=JSON.parse(send.mock.calls[0][1].body).html;
+ expect(html.includes('KaTeX_Math')).toBe(true);expect(html.includes('data:font/woff2;base64,')).toBe(true);
+ expect(html).not.toContain('.katex-html { display: none !important; }');
+ expect(html).not.toMatch(/url\(["']?fonts\/KaTeX/);
+});

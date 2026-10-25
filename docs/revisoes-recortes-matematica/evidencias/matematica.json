@@ -1,0 +1,10 @@
+{
+  "math": 67,
+  "errors": 0,
+  "embeddedFonts": [
+    "KaTeX_Main",
+    "KaTeX_Math"
+  ],
+  "fitted": 4,
+  "overflow": 0
+}

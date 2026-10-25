@@ -61,11 +61,13 @@ function strategicReviewOptions(payload: Payload): ReviewOptions | undefined {
   for (const board of boards.map(reviewBoard)) {
     if (scopes[board] !== undefined && !reviewScopes(board).includes(scopes[board] as never)) throw new AiValidationError('Etapa incompatível com a banca selecionada.');
   }
+  const topicCuts = raw.topicCuts === undefined ? undefined : asObject(raw.topicCuts);
+  if(topicCuts && (Object.keys(topicCuts).length>40 || Object.entries(topicCuts).some(([id,cuts])=>id.length>300||!Array.isArray(cuts)||cuts.length>8||cuts.some(cut=>typeof cut!=='string'||cut.length>180))))throw new AiValidationError('Recortes da revisão inválidos.');
   const sourceDate = optionalString(raw, 'sourceDate', 10);
   if (sourceDate && (!/^\d{4}-\d{2}-\d{2}$/.test(sourceDate) || Number.isNaN(Date.parse(sourceDate)) || new Date(sourceDate).toISOString().slice(0,10) !== sourceDate)) throw new AiValidationError('Data da fonte inválida.');
   const sourceUrl = optionalString(raw, 'sourceUrl', 1500);
   if (sourceUrl) { try { if (!['https:', 'http:'].includes(new URL(sourceUrl).protocol)) throw new Error(); } catch { throw new AiValidationError('URL da fonte inválida.'); } }
-  return normalizeReviewOptions({ boards, scopes: scopes as ReviewOptions['scopes'], depth: raw.depth as ReviewOptions['depth'], materialKind: raw.materialKind as ReviewOptions['materialKind'], useHistory: raw.useHistory === true,
+  return normalizeReviewOptions({ topicCuts:topicCuts as ReviewOptions['topicCuts'], boards, scopes: scopes as ReviewOptions['scopes'], depth: raw.depth as ReviewOptions['depth'], materialKind: raw.materialKind as ReviewOptions['materialKind'], useHistory: raw.useHistory === true,
     sourceMode: raw.sourceMode as ReviewOptions['sourceMode'], sourceTitle: optionalString(raw, 'sourceTitle', 300), sourceDate, sourceUrl, sourceText: optionalString(raw, 'sourceText', 12000) });
 }
 

@@ -110,7 +110,7 @@ it('preserva capítulos dos dois tópicos ao voltar do leitor combinado à estra
   const url = new URL(screen.getByRole('link', { name: 'Voltar à estratégia deste tópico' }).getAttribute('href')!, 'http://localhost');
   expect(url.searchParams.get('chapter')).toBe('Dinâmica de Populações');
   expect(JSON.parse(url.searchParams.get('topics')!)).toEqual([combined.selections[1]]);
-  expect(screen.getByText(/Recortes: Ecologia — Dinâmica de Populações/)).toBeInTheDocument();
+  expect(screen.getByText(/Recortes: Ecologia: Dinâmica de Populações/)).toBeInTheDocument();
 });
 
 it('mantém os resumos de revisão na biblioteca própria sem apagar os aprofundamentos', () => {

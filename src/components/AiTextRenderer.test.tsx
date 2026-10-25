@@ -71,3 +71,20 @@ it('não modifica delimitadores nem moeda dentro de código', () => {
  expect(container.querySelector('pre code')?.textContent).toBe('R$ 6; \\[x\\]; $$f(x)$$\n');
  expect(container.querySelectorAll('.katex')).toHaveLength(0);
 });
+
+it('normaliza símbolos gregos apenas nas expressões e preserva o texto comum', () => {
+ const {container}=render(<AiTextRenderer text={'No texto: α, β e π. Na fórmula: $𝛼 + β + γ = 180^\\circ$ e $θ = 2π/3$.'}/>);
+ const annotations=[...container.querySelectorAll('annotation')].map(item=>item.textContent);
+ expect(annotations[0]).toContain('\\alpha');
+ expect(annotations[0]).toContain('\\beta');
+ expect(annotations[1]).toContain('\\theta');
+ expect(annotations[1]).toContain('\\pi');
+ expect(container.textContent).toContain('No texto: α, β e π.');
+ expect(container.querySelector('.katex-error')).toBeNull();
+});
+
+it('preserva texto LaTeX e normaliza a variável mesmo quando a expressão contém moeda escapada',()=>{
+ const {container}=render(<AiTextRenderer text={String.raw`$𝛼 + \text{valor R\$ 12 e ângulo α} = β$`}/>);
+ const formula=container.querySelector('annotation')?.textContent??'';
+ expect(formula).toContain('\\alpha');expect(formula).toContain('\\beta');expect(formula).toContain('\\text{valor R\\textdollar{} 12 e ângulo α}');expect(container.querySelector('.katex-error')).toBeNull();
+});
