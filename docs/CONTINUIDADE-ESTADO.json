@@ -2,20 +2,12 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "582bd5037182b0285b24efb8b2cc80cbaf8d7e6c",
-  "generated_at_utc": "2026-10-25T03:52:39Z",
+  "source_commit": "963a48261c6881f2338ba116dc8a1199ffd198a0",
+  "generated_at_utc": "2026-10-25T05:11:26Z",
   "changed_files": [
-    "docs/capas-padrao-aprovado/README.md",
-    "server/ai/coverImages.test.ts",
-    "server/ai/coverImages.ts",
-    "src/components/DeepeningPdf.test.tsx",
-    "src/components/DeepeningPdf.tsx",
-    "src/components/StrategyExplorer.tsx",
-    "src/components/WorkDeepening.tsx",
-    "src/lib/printCoverArt.ts",
-    "src/lib/printCoverSpec.test.ts",
-    "src/lib/printCoverSpec.ts",
-    "src/lib/printStyles.ts"
+    "docs/pdf-moeda-delimitadores/README.md",
+    "src/components/AiTextRenderer.test.tsx",
+    "src/components/AiTextRenderer.tsx"
   ],
   "next_session": {
     "mode": "delta-only",
