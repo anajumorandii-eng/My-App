@@ -349,3 +349,26 @@ test("autenticação e administração verificadas bloqueiam geração antes de 
     else process.env.ADMIN_EMAILS = previous;
   }
 });
+
+
+test("direção de Matemática aprovada alcança todas as matérias nos dois materiais", () => {
+  for (const subject of ["Matemática", "Biologia", "Química", "Física", "Geografia", "História", "Literatura", "Gramática", "Redação"]) {
+    for (const purpose of ["Aprofundamento", "Revisão aprofundada"]) {
+      const prompt = buildCoverImagePrompt({ subject, topic: "Tema específico", purpose });
+      assert.match(prompt, /approved CRIVO Mathematics art direction to EVERY subject/);
+      assert.match(prompt, /never reuse mathematical instruments for unrelated subjects/);
+      assert.match(prompt, /No text, lettering, labels, borders/);
+      assert.ok(prompt.includes(subject));
+    }
+  }
+});
+
+test("subtópico comanda o motivo dominante e permanece no contexto enviado à IA", () => {
+ const base = {subject:'Biologia',topic:'Fisiologia',purpose:'Revisão aprofundada'};
+ const gas = buildCoverImagePrompt({...base,subtopic:'Trocas gasosas'});
+ const kidney = buildCoverImagePrompt({...base,subtopic:'Filtração renal'});
+ assert.notEqual(gas,kidney);
+ assert.match(gas,/subtopic is the most specific scope and MUST determine the dominant motif/);
+ assert.ok(gas.includes('"subtopic":"Trocas gasosas"'));
+ assert.ok(kidney.includes('"subtopic":"Filtração renal"'));
+});

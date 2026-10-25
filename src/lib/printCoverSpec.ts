@@ -6,7 +6,7 @@ export interface PrintCoverContext {
   board?: string;
   purpose?: string;
 }
-export type CoverTheme = 'blood' | 'biology' | 'chemistry' | 'physics' | 'mathematics' | 'geography' | 'history' | 'literature';
+export type CoverTheme = 'blood' | 'biology' | 'chemistry' | 'physics' | 'mathematics' | 'geography' | 'history' | 'literature' | 'language' | 'writing' | 'philosophy' | 'sociology';
 export type VignettePosition = 'top_left' | 'bottom_left' | 'top_right' | 'bottom_right';
 export interface PrintCoverSpec {
   brand_header: string;
@@ -30,7 +30,11 @@ export function selectCoverTheme(context: PrintCoverContext): CoverTheme {
   if (/fisica/.test(name)) return 'physics';
   if (/matematica|raciocinio logico/.test(name)) return 'mathematics';
   if (/geografia/.test(name)) return 'geography';
-  if (/historia|filosofia|sociologia|humanas/.test(name)) return 'history';
+  if (/redacao|producao textual/.test(name)) return 'writing';
+  if (/filosofia/.test(name)) return 'philosophy';
+  if (/sociologia/.test(name)) return 'sociology';
+  if (/gramatica|portugues|lingua|ingles|espanhol|interpretacao/.test(name) && !/literatura/.test(name)) return 'language';
+  if (/historia|humanas/.test(name)) return 'history';
   return 'literature';
 }
 const themes: Record<CoverTheme, { triad: [string, string, string]; hero: string }> = {
@@ -38,10 +42,14 @@ const themes: Record<CoverTheme, { triad: [string, string, string]; hero: string
   biology: { triad: ['Vida', 'Estrutura', 'Função'], hero: 'Natural-history atlas of organisms, leaf specimens, a cell, DNA and microscopy.' },
   chemistry: { triad: ['Estrutura', 'Propriedades', 'Transformações'], hero: 'Scientific plate of glass laboratory apparatus, molecular models and a distillation system.' },
   physics: { triad: ['Fenômenos', 'Modelos', 'Relações'], hero: 'Scientific plate of pendulum, prism, lenses, a spring-mass apparatus and wave geometry.' },
-  mathematics: { triad: ['Modelar', 'Relacionar', 'Resolver'], hero: 'Applied mathematics atlas of geometry, graphs, a bridge and draughting instruments.' },
+  mathematics: { triad: ['Modelar', 'Relacionar', 'Resolver'], hero: 'Mathematical constructions and brass draughting instruments selected for the topic; planar geometry uses compass, straightedge, circles, triangles and tangencies, never a globe or polyhedron.' },
   geography: { triad: ['Espaço', 'Sociedade', 'Natureza'], hero: 'Geographical atlas of globe, mountains, river, topography and compass.' },
   history: { triad: ['Contexto', 'Processos', 'Permanências'], hero: 'Historical study plate of architecture, sculpture, books, maps and archival instruments.' },
-  literature: { triad: ['Forma', 'Contexto', 'Interpretação'], hero: 'Literary study plate of open book, quill, ink, manuscript and a theater mask.' },
+  language: { triad: ['Ler', 'Relacionar', 'Interpretar'], hero: 'Annotated text leaves, typographic composition and editorial marks appropriate to the selected language topic; no invented readable words, universal theater masks or mathematical instruments.' },
+  writing: { triad: ['Planejar', 'Argumentar', 'Escrever'], hero: 'Manuscript sheets and editorial composition suggesting thesis, evidence and argument structure, with writing materials appropriate to the topic; no invented readable text or generic literary theater scene.' },
+  philosophy: { triad: ['Problematizar', 'Analisar', 'Argumentar'], hero: 'Conceptual editorial illustration grounded in the selected philosophical problem and historical context; books and archival objects only where relevant, never a universal Greek bust for every tradition.' },
+  sociology: { triad: ['Sociedade', 'Relações', 'Instituições'], hero: 'Integrated social atlas of people, urban space, work and institutions selected for the specific sociological topic and context; avoid classical statues and universal antique European scenes.' },
+  literature: { triad: ['Forma', 'Contexto', 'Interpretação'], hero: 'Open book and archival paper integrated with imagery grounded in the actual literary work, period and themes; use quill or theater mask only when pertinent, never as a universal literary emblem.' },
 };
 /** Bibliographic metadata is authoritative: no LLM can rewrite the title or invent a board. */
 export function buildPrintCoverSpec(context: PrintCoverContext, fallbackTitle: string): PrintCoverSpec {
@@ -55,7 +63,7 @@ export function buildPrintCoverSpec(context: PrintCoverContext, fallbackTitle: s
     footer_tagline: context.purpose || 'Aprofundamento e raciocínio de prova',
     footer_signature: 'CRIVO • MATERIAL DE ESTUDO',
     visual_spec: { central_hero: `${review
-      ? 'Revision cover: compose one unified central illustration with a compact, rounded organic silhouette and a clear dominant subject motif. Interweave the supporting details into that same illustration, suggesting synthesis and connections; do not distribute separate studies across the page.'
+      ? 'Revision cover: compose one unified central illustration with a compact, open organic silhouette and a clear dominant subject motif, retaining the same forest-green, burgundy and antique-gold editorial identity as deepening covers. Interweave the supporting details into that same illustration, suggesting synthesis and connections; do not distribute separate studies across the page.'
       : 'Deepening cover: compose one unified central illustration with a tall, richly detailed organic silhouette. Interweave a dominant subject motif, related instruments and structures into one continuous scene, suggesting mechanisms and depth.'
     } Subject vocabulary, to be selected for the actual topic rather than repeated wholesale: ${themes[theme].hero}`, vignettes: theme === 'blood' ? {
       top_left: { label: 'Hemácias', illustration: 'Biconcave red blood cells and cross-section in crimson watercolor etching.' },

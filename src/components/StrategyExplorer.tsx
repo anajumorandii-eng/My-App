@@ -44,8 +44,6 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const busy = useRef(false);
   const [pdfBusy, setPdfBusy] = useState(false);
-  const [coverGeneration, setCoverGeneration] = useState<{ key: string; id: number } | null>(null);
-  const generationSequence = useRef(0);
   const topic = topics.find((topic) => topic.id === topicId) ?? topics[0];
   const protocol = studyProtocols.find((item) => item.subject === subject)!;
   const boardProfile = studyBoardProfiles.find((item) => item.board === board);
@@ -56,7 +54,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
   const focusName = selections.map(item => item.topicName).join(' + ');
   const scopeName = selections.length > 1 ? focusName : chapter || topic?.name;
   const key = strategySelectionKey(subject, selections, board);
-  useEffect(() => { setSaveMessage(''); setCoverGeneration(null); }, [key]);
+  useEffect(() => { setSaveMessage(''); }, [key]);
   useEffect(() => {
     let cancelled = false;
     if (!topic) return;
@@ -78,7 +76,6 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
       if (!result.text.trim()) throw new Error('Guia vazio');
       setAnswers((prev) => { const next = { ...prev }; delete next[key]; return next; });
       void persist({ key, subject, topicId: topic.id, topicName: focusName, chapter: selections.length > 1 ? '' : chapter, ...(selections.length > 1 ? { selections } : {}), board, targetBoards, studyPacket: result.serverSources?.length ? { ...packet, sources: [...packet.sources, ...result.serverSources] } : packet, text: result.text, savedAt: new Date().toISOString() });
-      setCoverGeneration({ key, id: ++generationSequence.current });
     } catch {
       setAnswers((prev) => { const next = { ...prev }; delete next[key]; return next; });
       setErrors((prev) => ({ ...prev, [key]: 'Não foi possível aprofundar agora. O protocolo e o exemplo abaixo continuam disponíveis; tente novamente.' }));
@@ -137,7 +134,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
         {uid ? <DeepeningPdf key={key} getContent={() => printContent.current}
           guideKey={key} revision={guides[key].savedAt}
           title={`Aprofundamento — ${subject} — ${scopeName} — ${board}`}
-          generateCover={coverGeneration?.key === key} onBusyChange={setPdfBusy} /> :
+          generateCover onBusyChange={setPdfBusy} /> :
           <button type="button" className="underline" onClick={() => {
             try { if (printContent.current) printStrategyGuide(printContent.current, `Aprofundamento — ${subject} — ${scopeName} — ${board}`); setErrors(previous => ({ ...previous, [key]: '' })); }
             catch { setErrors(previous => ({ ...previous, [key]: 'Não foi possível abrir a impressão. Tente novamente.' })); }
