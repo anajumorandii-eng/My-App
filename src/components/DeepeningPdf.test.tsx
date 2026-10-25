@@ -181,3 +181,17 @@ it('explica limite de capas sem esconder o PDF disponível', async () => {
   await screen.findByRole('link', {name:'Abrir PDF'});
   expect(screen.getByText(/Aguarde 60 segundos/)).toBeInTheDocument();
 });
+
+it('exportação pela biblioteca gera arte por padrão com matéria, tópico e subtópico antes do PDF', async () => {
+ const fetch = vi.fn(async (url, options) => url === '/api/study-pdf' ? pdf() : Response.json(options?.method === 'POST' ? {dataUrl:image} : {enabled:true}));
+ const {root, props} = setup('library-default-generated-cover', fetch);
+ root.dataset.printSubtopic = 'Probabilidade condicional';
+ root.dataset.printPurpose = 'Aprofundamento';
+ const {generateCover: _explicit, ...libraryProps} = props;
+ render(<DeepeningPdf {...libraryProps} />);
+ await screen.findByRole('link', {name:'Abrir PDF'});
+ const request = fetch.mock.calls.find(([url, options]) => url === '/api/cover-illustrations' && options?.method === 'POST')!;
+ expect(JSON.parse(String(request[1]?.body))).toMatchObject({subject:'Matemática',topic:'Probabilidade',subtopic:'Probabilidade condicional',purpose:'Aprofundamento'});
+ const sent = JSON.parse(String(fetch.mock.calls.find(([url]) => url === '/api/study-pdf')![1]?.body));
+ expect(sent.html).toContain(image);
+});

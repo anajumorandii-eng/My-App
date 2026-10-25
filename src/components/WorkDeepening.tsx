@@ -1,5 +1,5 @@
 import { DeepeningPdf } from './DeepeningPdf';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useStrategyGuides } from '../hooks/useStrategyGuides';
@@ -27,13 +27,10 @@ function WorkDeepeningContent({ dossier, title, unitId, unitTitle, uid }: { doss
   const [error, setError] = useState('');
   const lock = useRef(false);
   const [pdfBusy, setPdfBusy] = useState(false);
-  const [coverGeneration, setCoverGeneration] = useState<{ key: string; id: number } | null>(null);
-  const generationSequence = useRef(0);
   const content = useRef<HTMLDivElement>(null);
   const topicId = `obra:${dossier.slug}`;
   const key = JSON.stringify(['obra', dossier.slug, unitId ?? '', board]);
   const saved = guides[key];
-  useEffect(() => { setCoverGeneration(null); }, [key]);
   const targetBoards = board === 'Todas as bancas' ? targets.map(target => target.board) : [board];
   const boards = [...new Set(['FUVEST', 'UNICAMP', ...targets.map(target => target.board)])];
   const scope = unitTitle ?? 'Obra completa';
@@ -48,7 +45,6 @@ function WorkDeepeningContent({ dossier, title, unitId, unitTitle, uid }: { doss
         learnerReflection: reflectionForTutor(uid, topicId), level: 40, daysSinceReview: 0,
       }, delta => setPartial(previous => previous + delta));
       if (!result.text.trim()) throw new Error('Guia vazio');
-      setCoverGeneration({ key, id: ++generationSequence.current });
       await persist({ key, subject: 'Literatura', topicId, topicName: title, chapter: unitTitle ?? '', board, targetBoards,
         workSlug: dossier.slug, ...(unitId ? { workUnitId: unitId } : {}),
         studyPacket: result.serverSources?.length ? { ...packet, sources: [...packet.sources, ...result.serverSources] } : packet,
@@ -74,7 +70,7 @@ function WorkDeepeningContent({ dossier, title, unitId, unitTitle, uid }: { doss
         <Link to={strategyGuideUrl(saved)} className="underline">Abrir este guia na biblioteca</Link>
         {uid ? <DeepeningPdf key={key} getContent={() => content.current}
           guideKey={key} revision={saved.savedAt} title={`Aprofundamento — ${title} — ${scope} — ${board}`}
-          generateCover={coverGeneration?.key === key} onBusyChange={setPdfBusy} /> :
+          generateCover onBusyChange={setPdfBusy} /> :
           <button type="button" className="underline" onClick={() => { try { if (content.current) printStrategyGuide(content.current, `Aprofundamento — ${title} — ${scope} — ${board}`); } catch { setError('Não foi possível abrir a impressão. Tente novamente.'); } }}>Imprimir aprofundamento / Salvar em PDF</button>}
         {uid && /Não foi possível/.test(saveMessage) && <button type="button" className="underline" disabled={busy} onClick={() => void persist(saved)}>Salvar novamente na conta</button>}
       </>}

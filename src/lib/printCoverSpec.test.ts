@@ -35,3 +35,13 @@ test('revisão tem vocabulário visual e palavras-chave próprios do tipo de mat
  assert.notEqual(review.visual_spec.central_hero,study.visual_spec.central_hero);
  assert.deepEqual(review.triad_keywords,['Recordar','Conectar','Aplicar']);
 });
+
+test('direção visual distingue linguagens e humanidades sem impor emblemas literários ou históricos', () => {
+  for (const [subject, theme] of [['Gramática','language'], ['Inglês','language'], ['Redação','writing'], ['Filosofia','philosophy'], ['Sociologia','sociology']] as const) {
+    const context = {subject,topic:'Recorte específico'};
+    assert.equal(selectCoverTheme(context),theme);
+    const spec = buildPrintCoverSpec(context,'Material');
+    assert.equal(spec.subject_title,subject);
+    assert.doesNotMatch(spec.visual_spec.central_hero,/Literary study plate|Historical study plate/);
+  }
+});

@@ -27,7 +27,7 @@ async function capturePrintableContent(getContent: () => HTMLElement | null, sig
   return content.cloneNode(true) as HTMLElement;
 }
 
-export function DeepeningPdf({ getContent, title, guideKey, revision, generateCover = false, autoGenerate = true, onBusyChange, materialLabel = 'Aprofundamento' }: {
+export function DeepeningPdf({ getContent, title, guideKey, revision, generateCover = true, autoGenerate = true, onBusyChange, materialLabel = 'Aprofundamento' }: {
   getContent: () => HTMLElement | null;
   title: string;
   guideKey: string;

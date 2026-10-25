@@ -1,3 +1,17 @@
+## Aplicação por matéria e recorte
+
+A direção compartilhada exige um motivo dominante legível em miniatura, linhas secundárias finas, aquarela translúcida e contrastes concentrados no objeto principal. Folhagem só recebe destaque quando pertinente ao conteúdo. Gramática e línguas, Redação, Filosofia e Sociologia têm repertórios próprios, sem receber automaticamente máscaras de teatro, bustos gregos ou cenas históricas europeias. Na indisponibilidade da geração, esses novos repertórios usam as artes de contingência já existentes; elas não substituem o fluxo personalizado.
+
+O endereço e o provedor configurados permanecem inalterados. Os nomes legados de variáveis não identificam o fornecedor atual. Esta entrega trata da direção visual, sem alterar a correção de fórmulas.
+
+## Direção aprovada em 25/10/2026: Matemática em toda a coleção
+
+A estudante aprovou os exemplos de Matemática da prancha apresentada na conversa e pediu sua aplicação a todas as matérias, em aprofundamentos e revisões. Essa aprovação passa a orientar o estilo comum: papel marfim, títulos serifados verde profundo, subtítulo bordô, moldura dourada fina, aquarela naturalista e gravura precisa com cobre e dourado antigo. O exportador mantém texto e moldura separados da imagem para preservar legibilidade e metadados.
+
+A geração interpreta matéria → tópico → subtópico, com o subtópico específico determinando o motivo dominante e de dois a quatro elementos de apoio. A exportação de um aprofundamento sem PDF salvo solicita a ilustração por padrão, inclusive pela biblioteca; abrir um PDF já salvo não dispara outra chamada.
+
+A ilustração adapta os objetos ao tópico, sem transferir compassos e triângulos para outras disciplinas. Geometria plana não usa globos nem poliedros; Literatura não recebe máscaras e penas automaticamente. Aprofundamentos têm composição vertical desenvolvida; revisões têm composição compacta e aberta, com a mesma paleta e sem medalhão. Esta mudança orienta novas gerações; PDFs salvos conservam a capa existente e podem receber outra edição pela ação **Gerar novo PDF**.
+
 # Direção das capas: PDFs aprovados
 
 A referência principal passou a ser o conjunto de quatro PDFs apontado pela estudante: Ecologia, Botânica, Análises Quantitativas e Estequiometria, e Geometria Plana. Foram inspecionadas suas capas; os documentos pessoais não foram publicados.

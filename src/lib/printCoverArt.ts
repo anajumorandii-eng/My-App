@@ -14,5 +14,7 @@ export function coverMaterial(context: PrintCoverContext) {
 /** Standard art is a contingency, not a generated illustration for this file. */
 export function printCoverArt(context: PrintCoverContext) {
   const key = selectCoverTheme(context);
-  return {key, src: plates[key]};
+  const fallbackTheme = key === 'language' || key === 'writing' ? 'literature'
+    : key === 'philosophy' || key === 'sociology' ? 'history' : key;
+  return { key, src: plates[fallbackTheme] };
 }
