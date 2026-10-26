@@ -77,3 +77,14 @@ it('o cabeçalho leva até a atividade aberta e põe o foco nela; trocar de aba 
  fireEvent.click(screen.getByRole('button',{name:'Fila de revisões'}));
  expect(screen.queryByText('Aberto pelo cronograma: Questões')).toBeNull();
 });
+it('com movimento reduzido, leva até a atividade sem animar a rolagem',()=>{
+ const scrolled=vi.fn();
+ Element.prototype.scrollIntoView=scrolled;
+ const original=window.matchMedia;
+ window.matchMedia=((query:string)=>({matches:query.includes('reduce'),media:query,addEventListener(){},removeEventListener(){},addListener(){},removeListener(){},onchange:null,dispatchEvent:()=>false})) as typeof window.matchMedia;
+ try {
+  render(<MemoryRouter><ReviewWorkspace header={open=><button onClick={()=>open('questoes')}>Bloco</button>}/></MemoryRouter>);
+  fireEvent.click(screen.getByText('Bloco'));
+  expect(scrolled).toHaveBeenCalledWith(expect.objectContaining({behavior:'auto'}));
+ } finally { window.matchMedia=original; }
+});

@@ -5,6 +5,9 @@ import { reviewResources } from '../lib/reviewResources';
 import { ErrorBoundary } from './ErrorBoundary';
 import { BEFORE_ASSET_RELOAD } from '../lib/assetRecovery';
 const ObraDetalhe = lazy(()=>import('../views/ObraDetalhe'));
+// Pedir 'smooth' explicitamente fura o scroll-behavior: auto !important que o
+// index.css aplica a quem pediu menos movimento; a preferência é lida aqui.
+const scrollBehavior=():ScrollBehavior=>typeof window!=='undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
 const PRIMARY_RESOURCES=['fila','resumos-banca','erros','flashcards'];
 const MENU_RESOURCES=['agenda','plano','sessao','reta-final','evolucao'];
 const resourceRouteContext = { outlet: null, matches: [], isDataRoute: false };
@@ -39,7 +42,7 @@ export function ReviewWorkspace({ header }: { header?: (open: (resource: string,
   useEffect(()=>{
     if (!revealed) return;
     const target=activityRefs.current[revealed.id];
-    target?.scrollIntoView?.({behavior:'smooth',block:'start'});
+    target?.scrollIntoView?.({behavior:scrollBehavior(),block:'start'});
     target?.focus({preventScroll:true});
   },[revealed]);
   const headerRef=useRef<HTMLDivElement>(null);
@@ -88,7 +91,7 @@ export function ReviewWorkspace({ header }: { header?: (open: (resource: string,
     {reviewResources.filter(r=>locations[r.id]).map(resource=>{
       const Component=resource.Component;
       return <div key={resource.id} ref={element=>{activityRefs.current[resource.id]=element;}} tabIndex={-1} hidden={active!==resource.id} className={`mt-4 min-w-0 scroll-mt-20 outline-none [&_.ni-main]:p-0 ${revealed?.id===resource.id ? 'min-h-[100dvh]' : ''}`} aria-label={resource.label}>
-        {revealed?.id===resource.id && <p className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-[var(--line)] pb-2 text-sm"><b>Aberto pelo cronograma: {resource.label}</b><button type="button" className="min-h-11 underline" onClick={()=>{headerRef.current?.scrollIntoView?.({behavior:'smooth',block:'start'});setRevealed(null);}}>Voltar ao cronograma</button></p>}
+        {revealed?.id===resource.id && <p className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-[var(--line)] pb-2 text-sm"><b>Aberto pelo cronograma: {resource.label}</b><button type="button" className="min-h-11 underline" onClick={()=>{headerRef.current?.scrollIntoView?.({behavior:scrollBehavior(),block:'start'});setRevealed(null);}}>Voltar ao cronograma</button></p>}
         {/* Each retained activity has its own URL. A link opened from errors
             must not change the query or destroy a draft in another activity. */}
         <StudyActivityVisibleContext.Provider value={active===resource.id}>
