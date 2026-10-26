@@ -1,3 +1,4 @@
+import { sampleAcrossSubtopics, PER_SUBTOPIC } from '../lib/diagnosticSample';
 import { QuestionStatement } from '../components/QuestionStatement';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { mockTopics } from '../data/mockData';
@@ -238,14 +239,16 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
       .filter((p) => p.topicId === topicId)
       .map((prompt) => ({ kind: 'discursive', prompt }));
     const all = [...allMc, ...allDiscursive];
-    if (!chapter) return { pool: shuffled(all), usedChapterFilter: false };
-    const filtered = all.filter((item) =>
-      item.kind === 'mc' ? item.question.chapter === chapter : item.prompt.chapter === chapter
-    );
+    const chapterOf = (item: QuizItem) => item.kind === 'mc' ? item.question.chapter : item.prompt.chapter;
+    // Tópico inteiro = amostra por subtópico (ver diagnosticSample.ts); antes
+    // eram todas as questões do tópico, 86 em Ecologia.
+    const wholeTopic = () => sampleAcrossSubtopics(all, chapterOf);
+    if (!chapter) return { pool: wholeTopic(), usedChapterFilter: false };
+    const filtered = all.filter((item) => chapterOf(item) === chapter);
     if (filtered.length >= MIN_CHAPTER_ITEMS) {
       return { pool: shuffled(filtered), usedChapterFilter: true };
     }
-    return { pool: shuffled(all), usedChapterFilter: false };
+    return { pool: wholeTopic(), usedChapterFilter: false };
   }
 
   const startDiagnostic = (topicId: string) => {
@@ -634,6 +637,11 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
             </div>
             {coreState && <CrivoCore state={coreState} subject={topic.subject} topicId={topic.id} size={44} className="shrink-0" />}
           </div>
+          {!quizChapter && (
+            <p className="text-[11px] text-[var(--dim)] -mt-2">
+              Tópico inteiro: até {PER_SUBTOPIC} questões de cada subtópico. Para todas as questões de um subtópico, escolha-o antes de começar.
+            </p>
+          )}
           {chapterFallback && (
             <p className="text-[11px] text-[var(--dim)] -mt-2">
               Ainda não há questões suficientes de "{selectedSubtopic}" — usando a frente inteira de {topic.name}.
