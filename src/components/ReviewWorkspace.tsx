@@ -20,7 +20,10 @@ export function ReviewWorkspace({ header }: { header?: (open: (resource: string,
   const open = (id: string, path?: string) => {
     const resource=reviewResources.find(r=>r.id===id);
     if (!resource) return;
-    setLocations(previous=>previous[id] ? previous : {...previous,[id]:path ?? resource.path});
+    // Trocar de aba preserva onde a atividade estava; um destino explícito
+    // (o bloco do cronograma que pede Questões da Unicamp) precisa valer
+    // mesmo com Questões já aberta, senão o filtro da banca anterior ficava.
+    setLocations(previous=>path ? {...previous,[id]:path} : previous[id] ? previous : {...previous,[id]:resource.path});
     setActive(id);
   };
   const navigator=useMemo(()=>{

@@ -40,21 +40,27 @@ if (!plan) {
   process.exit(1);
 }
 
+// Compara o arquivo com o que o leitor do app aceitou, campo a campo: contar
+// itens não basta, porque uma dica longa demais some sem mudar a contagem.
+// Só a ordem (blocos, provas e prazos são ordenados) não conta como perda.
 const lost: string[] = [];
-const count = (value: unknown) => Array.isArray(value) ? value.length : 0;
-for (const key of ['exams', 'deadlines', 'phases', 'rules', 'eveChecklist'] as const) {
-  if (count(raw[key]) !== plan[key].length) lost.push(`${key}: ${count(raw[key]) - plan[key].length} item(ns) inválido(s)`);
+const byKey = (key: string) => (a: Record<string, string>, b: Record<string, string>) => String(a?.[key]).localeCompare(String(b?.[key]));
+function canonical(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(canonical);
+  if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).filter(([, v]) => v !== undefined).sort(([a], [b]) => a.localeCompare(b)).map(([k, v]) => [k, canonical(v)]));
+  return value;
 }
-for (const [date, day] of Object.entries(raw.days as Record<string, { blocks?: unknown[] }>)) {
-  if (!plan.days[date]) { lost.push(`dia ${date} inválido`); continue; }
-  const dropped = count(day.blocks) - plan.days[date].blocks.length;
-  if (dropped) lost.push(`dia ${date}: ${dropped} bloco(s) inválido(s)`);
-  for (const block of (day.blocks ?? []) as { resource?: string; path?: string; start?: string }[]) {
-    const parsed = plan.days[date].blocks.find((b) => b.start === block.start);
-    if (block.resource && parsed && parsed.resource !== block.resource) lost.push(`dia ${date} ${block.start}: recurso "${block.resource}" desconhecido`);
-    if (block.path && parsed && parsed.path !== block.path) lost.push(`dia ${date} ${block.start}: caminho "${block.path}" fora do recurso`);
-  }
+const input = structuredClone(raw);
+input.exams?.sort(byKey('date'));
+input.deadlines?.sort(byKey('date'));
+for (const day of Object.values(input.days ?? {}) as { blocks?: Record<string, string>[] }[]) day.blocks?.sort(byKey('start'));
+function diff(a: unknown, b: unknown, where: string) {
+  if (JSON.stringify(canonical(a)) === JSON.stringify(canonical(b))) return;
+  if (a && b && typeof a === 'object' && typeof b === 'object') {
+    for (const key of new Set([...Object.keys(a), ...Object.keys(b)])) diff((a as Record<string, unknown>)[key], (b as Record<string, unknown>)[key], `${where}.${key}`);
+  } else lost.push(`${where.slice(1)}: ${String(JSON.stringify(a)).slice(0, 80)} não foi aceito`);
 }
+diff(input, plan, '');
 if (lost.length) {
   console.error(`Recusado, nada foi gravado:\n- ${lost.join('\n- ')}`);
   process.exit(1);
