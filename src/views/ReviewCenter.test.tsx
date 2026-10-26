@@ -4,8 +4,8 @@ import { MemoryRouter } from 'react-router-dom';
 import { expect, it, vi } from 'vitest';
 vi.mock('../context/AuthContext',()=>({useAuth:()=>({user:null})}));
 vi.mock('../lib/reviewResources',()=>({reviewResources:[
- {id:'fila',label:'Fila',path:'/fila',description:'Revisões pendentes',Component:()=> <p>Minha fila</p>},
- {id:'resumos-banca',label:'Resumos de revisão',path:'/resumos-revisao',description:'Gerar e ler',Component:()=> <p>Meu resumo</p>},
+ {id:'fila',label:'Fila de revisões',path:'/fila',description:'Revisões pendentes',Component:()=> <p>Minha fila</p>},
+ {id:'resumos-banca',label:'Criar e abrir revisões',path:'/resumos-revisao',description:'Gerar e ler',Component:()=> <p>Meu resumo</p>},
 ]}));
 vi.mock('../components/ReviewSessionGuide',()=>({ReviewSessionGuide:()=>{
  const [minutes,setMinutes]=useState('30');
@@ -22,7 +22,7 @@ it('recolhe o roteiro ao estudar o resumo, preservando o tempo escolhido',async(
  expect(screen.getByRole('button',{name:'Criar e abrir revisões'})).toHaveAttribute('aria-pressed','true');
  fireEvent.click(screen.getByText('Consultar meu roteiro de revisão'));
  expect(screen.getByLabelText('Tempo do roteiro')).toHaveValue('45');
- fireEvent.change(screen.getByLabelText('Recurso de revisão'),{target:{value:'fila'}});
+ fireEvent.click(screen.getByRole('button',{name:'Fila de revisões'}));
  expect(screen.getByLabelText('Tempo do roteiro')).not.toBeVisible();
  fireEvent.click(screen.getByText('Consultar meu roteiro de revisão'));
  expect(screen.getByLabelText('Tempo do roteiro')).toBeVisible();
