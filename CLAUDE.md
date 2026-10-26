@@ -427,6 +427,26 @@ Decorrências que devem ser preservadas:
   tentativa, e renomeá-lo orfanaria a evidência já registrada. A tela corrige só
   a inicial, na exibição.
 
+## Cronograma na aba Revisões
+
+Com um cronograma importado, `/revisoes` abre pelo dia dele (`StudyPlanToday`):
+fase, blocos com horário e o botão que abre a atividade dentro da central,
+provas e prazos. Sem cronograma, segue o roteiro genérico de antes. Os dois
+não aparecem juntos: o roteiro monta blocos de 5 a 15 minutos e discordaria
+dos blocos de 2h do cronograma.
+
+**O cronograma nunca entra no código.** Ele traz rotina, turma e horários da
+estudante, e o repositório é público. Mora em `users/{uid}/data/studyPlan`,
+gravado por `scripts/importar-cronograma.mts` a partir de um JSON fora do
+repositório. O script recusa o arquivo inteiro se um item for inválido; o
+leitor do app (`parseStudyPlan`) descarta item a item, para não quebrar a tela.
+Sem conta, o app lê `crivo-study-plan` do `localStorage`, e é assim que as
+capturas carregam um cronograma.
+
+Ao capturar com relógio falso do Playwright, crie a página com
+`timezoneId: 'America/Sao_Paulo'`: com `clock.install` antes do carregamento,
+`TZDate` devolve a hora em UTC e o bloco "agora" sai três horas adiantado.
+
 ## IA
 
 O cliente chama `/api/ai/<task>` por `src/lib/aiClient.ts`. Cada tarefa precisa

@@ -5,6 +5,8 @@ import { reviewResources } from '../lib/reviewResources';
 import { ErrorBoundary } from './ErrorBoundary';
 import { BEFORE_ASSET_RELOAD } from '../lib/assetRecovery';
 const ObraDetalhe = lazy(()=>import('../views/ObraDetalhe'));
+const PRIMARY_RESOURCES=['fila','resumos-banca','erros','flashcards'];
+const MENU_RESOURCES=['agenda','plano','sessao','reta-final','evolucao'];
 const resourceRouteContext = { outlet: null, matches: [], isDataRoute: false };
 
 export function ReviewWorkspace({ header }: { header?: (open: (resource: string, path?: string) => void, active: string) => React.ReactNode }) {
@@ -18,7 +20,10 @@ export function ReviewWorkspace({ header }: { header?: (open: (resource: string,
   const open = (id: string, path?: string) => {
     const resource=reviewResources.find(r=>r.id===id);
     if (!resource) return;
-    setLocations(previous=>previous[id] ? previous : {...previous,[id]:path ?? resource.path});
+    // Trocar de aba preserva onde a atividade estava; um destino explícito
+    // (o bloco do cronograma que pede Questões da Unicamp) precisa valer
+    // mesmo com Questões já aberta, senão o filtro da banca anterior ficava.
+    setLocations(previous=>path ? {...previous,[id]:path} : previous[id] ? previous : {...previous,[id]:resource.path});
     setActive(id);
   };
   const navigator=useMemo(()=>{
@@ -48,16 +53,21 @@ export function ReviewWorkspace({ header }: { header?: (open: (resource: string,
     return () => window.removeEventListener(BEFORE_ASSET_RELOAD, preserveLocation);
   }, [active, locations]);
   const selected=reviewResources.find(r=>r.id===active)!;
+  // Agenda, plano, sessão, reta final e evolução já têm entrada própria no
+  // menu; repetidas aqui, a central virava um segundo menu do app. Seguem
+  // abríveis por link (o roteiro abre a agenda), e aparecem na lista só
+  // enquanto estiverem abertas, para o seletor não ficar sem valor.
+  const otherResources=reviewResources.filter(r=>!PRIMARY_RESOURCES.includes(r.id) && (!MENU_RESOURCES.includes(r.id) || r.id===active));
   return <>
+    {header?.(open, active)}
     <section className="space-y-3" aria-label="Recursos da central de revisão">
-      <nav aria-label="Atividades de revisão" className="flex flex-wrap gap-2">{reviewResources.filter(r=>['fila','resumos-banca','erros','flashcards'].includes(r.id)).map(r=><button key={r.id} type="button" aria-pressed={active===r.id} onClick={()=>open(r.id)} className={`min-h-11 px-4 py-2 text-sm rounded-lg ${active===r.id?'bg-[var(--text)] text-[var(--ink)]':'text-[var(--dim)] hover:bg-[var(--surface-secondary)]'}`}>{r.id==='resumos-banca'?'Criar e abrir revisões':r.label}</button>)}</nav>
+      <nav aria-label="Atividades de revisão" className="flex flex-wrap gap-2">{reviewResources.filter(r=>PRIMARY_RESOURCES.includes(r.id)).map(r=><button key={r.id} type="button" aria-pressed={active===r.id} onClick={()=>open(r.id)} className={`min-h-11 px-4 py-2 text-sm rounded-lg ${active===r.id?'bg-[var(--text)] text-[var(--ink)]':'text-[var(--dim)] hover:bg-[var(--surface-secondary)]'}`}>{r.label}</button>)}</nav>
       <details className="border-b border-[var(--line)] pb-3"><summary className="cursor-pointer py-2 text-sm text-[var(--dim)]">Outras ferramentas de estudo</summary>
-        <label className="block text-sm mt-2">Recurso de revisão<select aria-label="Recurso de revisão" className="field mt-1 block w-full min-h-11" value={active} onChange={e=>open(e.target.value)}>{reviewResources.map(r=><option key={r.id} value={r.id}>{r.label}</option>)}</select></label>
-        <p className="mt-2 text-xs text-[var(--dim)]">{selected.description}</p>
+        <label className="block text-sm mt-2">Recurso de revisão<select aria-label="Recurso de revisão" className="field mt-1 block w-full min-h-11" value={otherResources.some(r=>r.id===active)?active:''} onChange={e=>open(e.target.value)}><option value="" disabled>Escolha uma ferramenta</option>{otherResources.map(r=><option key={r.id} value={r.id}>{r.label}</option>)}</select></label>
+        {otherResources.some(r=>r.id===active) && <p className="mt-2 text-xs text-[var(--dim)]">{selected.description}</p>}
         <details className="mt-3"><summary className="cursor-pointer py-2 text-sm">Guias e orientação de uso</summary><p className="text-xs text-[var(--dim)] mt-2">As atividades abertas permanecem nesta aba ao alternar recursos.</p><div className="flex flex-wrap gap-4 text-sm mt-2"><a href="/study-guide.html" target="_blank" rel="noreferrer" className="underline">Guia de estudo</a><a href="/real-exams/unicamp-2026.pdf" target="_blank" rel="noreferrer" className="underline">Caderno Unicamp 2026</a></div></details>
       </details>
     </section>
-    {header?.(open, active)}
     {reviewResources.filter(r=>locations[r.id]).map(resource=>{
       const Component=resource.Component;
       return <div key={resource.id} hidden={active!==resource.id} className="mt-4 min-w-0 [&_.ni-main]:p-0" aria-label={resource.label}>

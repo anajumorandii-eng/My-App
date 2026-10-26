@@ -159,7 +159,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
   const title = `Revisão · ${current?.chapter || current?.topicName || (combined ? focusName : chapter || topic?.name || options.sourceTitle)}`;
   return <section className="grid min-w-0 grid-cols-1 gap-5 [&_.field]:min-h-11 [&_summary]:min-h-11 xl:grid-cols-[minmax(0,1fr)_20rem]" aria-labelledby="review-summary-title">
     <div className="flex flex-wrap items-center justify-between gap-3 xl:col-span-2">
-      <h2 id="review-summary-title" className="font-display text-2xl">Criar e retomar revisões</h2>
+      <h2 id="review-summary-title" className="font-display text-2xl">Criar e abrir revisões</h2>
       <div className="flex flex-wrap items-center gap-4 text-sm"><a className="underline" href="#saved-review-summaries">Meus resumos ({allSaved.length})</a>
         {current && <button type="button" disabled={working} className="underline disabled:opacity-50" onClick={() => setConfigurationOpen(true)}>Configurar nova revisão</button>}
       </div>

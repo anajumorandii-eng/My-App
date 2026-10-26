@@ -21,13 +21,13 @@ it('mantém resposta e banca ao alternar e abre links de capítulos dentro da ce
   fireEvent.change(screen.getByLabelText('Banca'),{target:{value:'UNICAMP'}});
   fireEvent.change(screen.getByLabelText('Recurso de revisão'),{target:{value:'questoes'}});
   expect(screen.getAllByLabelText('Resposta').at(-1)).toHaveValue('');
-  fireEvent.change(screen.getByLabelText('Recurso de revisão'),{target:{value:'fila'}});
+  fireEvent.click(screen.getByRole('button',{name:'Fila de revisões'}));
   expect(screen.getAllByLabelText('Resposta')[0]).toHaveValue('Resposta iniciada');
   expect(screen.getAllByLabelText('Banca')[0]).toHaveValue('UNICAMP');
   fireEvent.click(screen.getAllByRole('link',{name:'Revisar capítulo'})[0]);
   expect(await screen.findByText('Capítulo chapter-1')).toBeVisible();
   expect(screen.getByLabelText('Recurso de revisão')).toHaveValue('resumos');
-  fireEvent.change(screen.getByLabelText('Recurso de revisão'),{target:{value:'fila'}});
+  fireEvent.click(screen.getByRole('button',{name:'Fila de revisões'}));
   expect(screen.getAllByLabelText('Resposta')[0]).toHaveValue('Resposta iniciada');
 });
 it('recria sessões quando a identidade da conta muda',()=>{
@@ -55,4 +55,13 @@ it('preserva o recurso e sua navegação antes da recuperação de uma atualiza�
  expect(restored.searchParams.get('recurso')).toBe('questoes');
  expect(restored.searchParams.get('destino')).toBe('/questoes?board=UNICAMP');
  view.unmount();window.history.replaceState({},'',before);
+});
+it('um destino explícito vale mesmo com a atividade já aberta; trocar de aba não',()=>{
+ render(<MemoryRouter><ReviewWorkspace header={open=><><button onClick={()=>open('questoes','/questoes?board=FUVEST')}>Bloco Fuvest</button><button onClick={()=>open('questoes','/questoes?board=UNICAMP')}>Bloco Unicamp</button></>}/></MemoryRouter>);
+ fireEvent.click(screen.getByText('Bloco Fuvest'));
+ fireEvent.click(screen.getByText('Bloco Unicamp'));
+ expect(screen.getAllByLabelText('Banca').at(-1)).toHaveValue('UNICAMP');
+ fireEvent.click(screen.getByRole('button',{name:'Fila de revisões'}));
+ fireEvent.change(screen.getByLabelText('Recurso de revisão'),{target:{value:'questoes'}});
+ expect(screen.getAllByLabelText('Banca').at(-1)).toHaveValue('UNICAMP');
 });

@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 export const reviewResources = [
   { id:'fila', label:'Fila de revisões', path:'/fila', description:'Adicionar revisão, retomar erros e recuperar tópicos.', Component:lazy(()=>import('../views/ReviewQueue')) },
-  { id:'resumos-banca', label:'Resumo de revisão por banca', path:'/resumos-revisao', description:'Gerar e retomar sínteses por matéria, tópico e banca, com recuperação ativa.', Component:lazy(()=>import('../views/ReviewSummaries')) },
+  { id:'resumos-banca', label:'Criar e abrir revisões', path:'/resumos-revisao', description:'Gerar e retomar sínteses por matéria, tópico e banca, com recuperação ativa.', Component:lazy(()=>import('../views/ReviewSummaries')) },
   { id:'questoes', label:'Questões reais', path:'/questoes', description:'Resolver por etapas e explicar a correta, mesmo quando acertar.', Component:lazy(()=>import('../views/Questoes')) },
   { id:'erros', label:'Caderno de erros', path:'/erros', description:'Diagnosticar o raciocínio e registrar o que evita repetir o erro.', Component:lazy(()=>import('../views/Erros')) },
   { id:'resumos', label:'Resumos e recuperação ativa', path:'/resumos', description:'Reconstruir sem consulta, conferir e transferir.', Component:lazy(()=>import('../views/Resumos')) },
