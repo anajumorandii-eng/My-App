@@ -6,13 +6,19 @@
 // cada subtópico, não de todas as questões dele; quem quer todas escolhe o
 // subtópico, e aí a lista inteira continua valendo (não passa por aqui).
 //
+// Uma questão por subtópico basta para saber onde há lacuna; a segunda só
+// entra para completar o piso. O piso existe porque, com poucas questões, o
+// resultado é sorte (acertar 3 de 4 não separa domínio de chute); o teto,
+// porque o teste é rápido e tópicos como Inglês têm 18 subtópicos.
+//
 // Questões sem subtópico cadastrado (1.157 das 3.094 do banco) formam um
-// grupo próprio com teto separado: tratá-las como um subtópico de 2 jogaria
-// fora quase metade do tópico; deixá-las sem teto trazia o problema de volta,
-// porque em Ecologia elas são 44 das 86.
+// grupo próprio com cota separada: deixá-las de fora ignoraria quase metade
+// do tópico; sem cota, trariam o problema de volta (em Ecologia são 44 das 86).
 
-export const PER_SUBTOPIC = 2;
-export const WITHOUT_SUBTOPIC = 4;
+export const PER_SUBTOPIC = 1;
+export const WITHOUT_SUBTOPIC = 2;
+export const MIN_ITEMS = 8;
+export const MAX_ITEMS = 15;
 
 export function sampleAcrossSubtopics<T>(
   items: readonly T[],
@@ -24,10 +30,20 @@ export function sampleAcrossSubtopics<T>(
     const key = subtopicOf(item) || undefined;
     groups.set(key, [...(groups.get(key) ?? []), item]);
   }
+  // Cada grupo embaralhado uma vez; as rodadas tiram sempre do topo, então
+  // a segunda questão de um subtópico nunca repete a primeira.
+  const queues = shuffle([...groups].map(([key, group]) => ({ key, queue: shuffle(group, random) })), random);
   const picked: T[] = [];
-  for (const [key, group] of groups) {
-    picked.push(...shuffle(group, random).slice(0, key === undefined ? WITHOUT_SUBTOPIC : PER_SUBTOPIC));
-  }
+  const take = (limit: number, perGroup: (key: string | undefined) => number) => {
+    for (const { key, queue } of queues) {
+      if (picked.length >= limit) return;
+      picked.push(...queue.splice(0, Math.min(perGroup(key), limit - picked.length)));
+    }
+  };
+  take(MAX_ITEMS, (key) => key === undefined ? WITHOUT_SUBTOPIC : PER_SUBTOPIC);
+  // Abaixo do piso, completa uma questão por grupo por rodada, para a sobra
+  // não sair toda do mesmo subtópico.
+  while (picked.length < MIN_ITEMS && queues.some(({ queue }) => queue.length > 0)) take(MIN_ITEMS, () => 1);
   return shuffle(picked, random);
 }
 

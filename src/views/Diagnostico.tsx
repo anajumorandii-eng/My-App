@@ -1,4 +1,4 @@
-import { sampleAcrossSubtopics, PER_SUBTOPIC } from '../lib/diagnosticSample';
+import { sampleAcrossSubtopics } from '../lib/diagnosticSample';
 import { QuestionStatement } from '../components/QuestionStatement';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { mockTopics } from '../data/mockData';
@@ -241,7 +241,7 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
     const all = [...allMc, ...allDiscursive];
     const chapterOf = (item: QuizItem) => item.kind === 'mc' ? item.question.chapter : item.prompt.chapter;
     // Tópico inteiro = amostra por subtópico (ver diagnosticSample.ts); antes
-    // eram todas as questões do tópico, 86 em Ecologia.
+    // eram todas as questões do tópico, 86 em Ecologia; agora são 14.
     const wholeTopic = () => sampleAcrossSubtopics(all, chapterOf);
     if (!chapter) return { pool: wholeTopic(), usedChapterFilter: false };
     const filtered = all.filter((item) => chapterOf(item) === chapter);
@@ -639,7 +639,7 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
           </div>
           {!quizChapter && (
             <p className="text-[11px] text-[var(--dim)] -mt-2">
-              Tópico inteiro: até {PER_SUBTOPIC} questões de cada subtópico. Para todas as questões de um subtópico, escolha-o antes de começar.
+              Tópico inteiro: uma amostra com uma questão por subtópico, entre 8 e 15 no total, para mapear onde estão as lacunas. Para todas as questões de um subtópico, escolha-o antes de começar.
             </p>
           )}
           {chapterFallback && (
