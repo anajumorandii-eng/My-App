@@ -70,6 +70,7 @@ interface Options {
   baseUrl?: string;
   apiKey?: string;
   model?: string;
+  transport?: string;
   fetch?: typeof fetch;
   timeoutMs?: number;
 }
@@ -79,6 +80,30 @@ class CoverImageError extends Error {
     readonly status = 502,
   ) {
     super(message);
+  }
+}
+
+function validateDimensions(width: number, height: number) {
+  if (!width || !height || width > 8192 || height > 8192 || width * height > 16_777_216)
+    throw new CoverImageError("As dimensões da ilustração excederam o permitido.");
+}
+
+/** Inspect bounded raster headers; never fetch provider-returned URLs. */
+function jpegDimensions(bytes: Buffer): { width: number; height: number } | undefined {
+  if (bytes.length < 12 || bytes.readUInt16BE(0) !== 0xffd8 || bytes.readUInt16BE(bytes.length - 2) !== 0xffd9) return;
+  for (let offset = 2; offset + 4 <= bytes.length;) {
+    if (bytes[offset] !== 0xff) return;
+    while (bytes[offset] === 0xff) offset++;
+    const marker = bytes[offset++];
+    if (marker === 0xda || marker === 0xd9 || marker === undefined) return;
+    if (offset + 2 > bytes.length) return;
+    const length = bytes.readUInt16BE(offset);
+    if (length < 2 || offset + length > bytes.length) return;
+    if ([0xc0, 0xc1, 0xc2].includes(marker)) {
+      if (length < 8) return;
+      return { height: bytes.readUInt16BE(offset + 3), width: bytes.readUInt16BE(offset + 5) };
+    }
+    offset += length;
   }
 }
 
@@ -116,15 +141,17 @@ export class CoverImageService {
   private readonly baseUrl: string;
   private readonly apiKey: string;
   private readonly model: string;
+  private readonly transport: string;
   private readonly fetchFn: typeof fetch;
   private readonly timeoutMs: number;
   constructor(options: Options) {
     this.baseUrl = options.baseUrl?.trim().replace(/\/+$/, "") || "";
     this.apiKey = options.apiKey?.trim() || "";
     this.model = options.model?.trim() || "";
+    this.transport = options.transport?.trim() || "images";
     this.fetchFn = options.fetch || fetch;
     this.timeoutMs = options.timeoutMs || 150_000;
-    this.isConfigured = Boolean(this.baseUrl && this.apiKey && this.model);
+    this.isConfigured = Boolean(this.baseUrl && this.apiKey && this.model && ["images", "chat"].includes(this.transport));
   }
   async generate(
     context: PrintCoverContext,
@@ -138,14 +165,19 @@ export class CoverImageService {
     const timeout = AbortSignal.timeout(this.timeoutMs);
     let response: Response;
     try {
-      response = await this.fetchFn(`${this.baseUrl}/images/generations`, {
+      response = await this.fetchFn(`${this.baseUrl}/${this.transport === "chat" ? "chat/completions" : "images/generations"}`, {
         method: "POST",
         redirect: "error",
         headers: {
           Authorization: `Bearer ${this.apiKey}`,
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
+        body: JSON.stringify(this.transport === "chat" ? {
+          model: this.model,
+          stream: false,
+          modalities: ["text", "image"],
+          messages: [{ role: "user", content: buildCoverImagePrompt(context) }],
+        } : {
           model: this.model,
           prompt: buildCoverImagePrompt(context),
           n: 1,
@@ -167,9 +199,16 @@ export class CoverImageService {
       }
       const data = (await boundedJson(response)) as {
         data?: { b64_json?: unknown }[];
+        choices?: { message?: { images?: { image_url?: { url?: unknown } }[] } }[];
       };
-      const encoded = data?.data?.[0]?.b64_json;
-      // Accept embedded PNG bytes only: a returned URL must never trigger a
+      const embedded = data?.choices?.[0]?.message?.images?.[0]?.image_url?.url;
+      const match = this.transport === "chat" && typeof embedded === "string"
+        ? /^data:image\/(png|jpeg);base64,([A-Za-z0-9+/]+={0,2})$/.exec(embedded) : null;
+      if (this.transport === "chat" && !match)
+        throw new CoverImageError("O serviço não devolveu uma ilustração incorporada válida.");
+      const mime = match?.[1] || "png";
+      const encoded = match ? match[2] : data?.data?.[0]?.b64_json;
+      // Accept embedded raster bytes only: a returned URL must never trigger a
       // second authenticated fetch to an untrusted host, nor embed active SVG.
       if (
         typeof encoded !== "string" ||
@@ -180,6 +219,13 @@ export class CoverImageService {
           "O serviço não devolveu uma ilustração PNG válida.",
         );
       const bytes = Buffer.from(encoded, "base64");
+      if (mime === "jpeg") {
+        const dimensions = jpegDimensions(bytes);
+        if (bytes.toString("base64") !== encoded || bytes.length > MAX_IMAGE_BYTES || !dimensions)
+          throw new CoverImageError("O serviço não devolveu uma ilustração JPEG válida.");
+        validateDimensions(dimensions.width, dimensions.height);
+        return { dataUrl: `data:image/jpeg;base64,${encoded}` };
+      }
       if (
         bytes.length < 45 ||
         bytes.length > MAX_IMAGE_BYTES ||
@@ -193,16 +239,7 @@ export class CoverImageService {
         );
       const width = bytes.readUInt32BE(16),
         height = bytes.readUInt32BE(20);
-      if (
-        !width ||
-        !height ||
-        width > 8192 ||
-        height > 8192 ||
-        width * height > 16_777_216
-      )
-        throw new CoverImageError(
-          "As dimensões da ilustração excederam o permitido.",
-        );
+      validateDimensions(width, height);
       return { dataUrl: `data:image/png;base64,${encoded}` };
     } catch (error) {
       if (error instanceof CoverImageError) throw error;

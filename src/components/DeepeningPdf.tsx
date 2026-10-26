@@ -92,7 +92,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
                 }
                 const data = await response.json();
                 if (!response.ok || typeof data.dataUrl !== 'string' || data.dataUrl.length > 8_388_640 ||
-                    !/^data:image\/png;base64,[A-Za-z0-9+/]+={0,2}$/.test(data.dataUrl)) throw new Error('Ilustração indisponível');
+                    !/^data:image\/(?:png|jpeg);base64,[A-Za-z0-9+/]+={0,2}$/.test(data.dataUrl)) throw new Error('Ilustração indisponível');
                 content.dataset.printGeneratedArt = data.dataUrl;
                 content.dataset.printGeneratedContext = coverContextKey(context);
               } else { usingStandardCover = true; setStandardCover(true); coverReason = 'O serviço de ilustração está indisponível.'; setCoverProblem(coverReason); }

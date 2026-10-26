@@ -34,7 +34,7 @@ export function preparedCoverIllustration(
     coverContextKey(readPrintCoverContext(content)) &&
     image &&
     image.length <= 8_388_640 &&
-    /^data:image\/png;base64,[A-Za-z0-9+/]+={0,2}$/.test(image)
+    /^data:image\/(?:png|jpeg);base64,[A-Za-z0-9+/]+={0,2}$/.test(image)
     ? image
     : undefined;
 }

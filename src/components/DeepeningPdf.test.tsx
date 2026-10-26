@@ -195,3 +195,16 @@ it('exportação pela biblioteca gera arte por padrão com matéria, tópico e s
  const sent = JSON.parse(String(fetch.mock.calls.find(([url]) => url === '/api/study-pdf')![1]?.body));
  expect(sent.html).toContain(image);
 });
+it('incorpora JPEG da rota multimodal no PDF e preserva a identidade da capa', async () => {
+  const jpeg = 'data:image/jpeg;base64,/9j/2Q==';
+  const fetch = vi.fn(async (url, options) => url === '/api/study-pdf' ? pdf() :
+    Response.json(options?.method === 'POST' ? {dataUrl: jpeg} : {enabled: true}));
+  const { props } = setup('multimodal-jpeg', fetch);
+  render(<DeepeningPdf {...props} />);
+  await screen.findByRole('link', {name:'Abrir PDF'});
+  const sent = JSON.parse(fetch.mock.calls.find(([url]) => url === '/api/study-pdf')![1].body);
+  expect(sent.html).toContain(jpeg);
+  expect(sent.html).toContain('data-print-cover');
+  expect(sent.html).toContain('Sumário');
+  expect(screen.queryByText(/capa padrão provisória/)).toBeNull();
+});

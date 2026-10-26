@@ -254,6 +254,7 @@ app.use('/api/cover-illustrations', adminAuthMiddleware(), requireAdmin,
     baseUrl: process.env.AI_IMAGE_BASE_URL || process.env.OMNIROUTE_BASE_URL,
     apiKey: process.env.AI_IMAGE_API_KEY || process.env.OMNIROUTE_API_KEY,
     model: process.env.AI_IMAGE_MODEL,
+    transport: process.env.AI_IMAGE_TRANSPORT,
   }), createAiDailyLimit({ store: dailyQuotaStore })));
 app.use('/api/admin', adminAuthMiddleware(), requireAdmin, createAdminRouter(getFirestore(getFirebaseAdminApp())));
 // Painel /admin/conteudo: questões, métodos de estudo e episódios de

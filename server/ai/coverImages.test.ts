@@ -372,3 +372,46 @@ test("subtópico comanda o motivo dominante e permanece no contexto enviado à I
  assert.ok(gas.includes('"subtopic":"Trocas gasosas"'));
  assert.ok(kidney.includes('"subtopic":"Filtração renal"'));
 });
+
+
+test("transporte multimodal explícito preserva contexto e aceita PNG incorporado", async () => {
+  let request: {url?: string; init?: RequestInit} = {};
+  const service = new CoverImageService({baseUrl:"https://gateway.test/v1",apiKey:"private-client-key",model:"multimodal-image-route",transport:"chat",fetch:async(url,init)=>{
+    request={url:String(url),init};
+    return Response.json({choices:[{message:{images:[{image_url:{url:`data:image/png;base64,${imageBytes.toString("base64")}`}}]}}]});
+  }});
+  const result=await service.generate(context);
+  assert.equal(request.url,"https://gateway.test/v1/chat/completions");
+  const body=JSON.parse(String(request.init?.body));
+  assert.deepEqual(body.modalities,["text","image"]);
+  assert.equal(body.stream,false);
+  assert.match(body.messages[0].content,/A vida não é útil/);
+  assert.equal(result.dataUrl,`data:image/png;base64,${imageBytes.toString("base64")}`);
+});
+
+test("transporte multimodal valida JPEG, dimensões e recusa URL, SVG ou imagem ausente sem nova chamada", async () => {
+  // Minimal bounded JPEG header for the structural validator; visual decoding is
+  // additionally exercised with the actual gateway raster in the browser.
+  const jpeg=Buffer.from([0xff,0xd8,0xff,0xc0,0,11,8,0,1,0,1,1,1,0x11,0,0xff,0xd9]);
+  const huge=Buffer.from(jpeg);huge.writeUInt16BE(9000,7);
+  const cases=[
+    {url:`data:image/jpeg;base64,${jpeg.toString("base64")}`,ok:true},
+    {url:`data:image/jpeg;base64,${huge.toString("base64")}`,ok:false},
+    {url:`data:image/jpeg;base64,${imageBytes.toString("base64")}`,ok:false},
+    {url:"https://elsewhere.test/image.jpg",ok:false},
+    {url:"data:image/svg+xml;base64,PHN2Zz4=",ok:false},
+    {url:undefined,ok:false},
+  ];
+  for(const item of cases){
+    let calls=0;
+    const service=new CoverImageService({baseUrl:"https://gateway.test/v1",apiKey:"key",model:"multimodal-image-route",transport:"chat",fetch:async()=>{calls++;return Response.json({choices:[{message:{images:[{image_url:{url:item.url}}]}}]});}});
+    if(item.ok)assert.equal((await service.generate(context)).dataUrl,item.url);
+    else await assert.rejects(service.generate(context));
+    assert.equal(calls,1);
+  }
+});
+
+test("transporte inválido desabilita geração em vez de usar outra rota", () => {
+ const service=new CoverImageService({baseUrl:"https://gateway.test/v1",apiKey:"key",model:"image-route",transport:"typo"});
+ assert.equal(service.isConfigured,false);
+});
