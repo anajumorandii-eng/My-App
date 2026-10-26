@@ -242,13 +242,14 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
     const chapterOf = (item: QuizItem) => item.kind === 'mc' ? item.question.chapter : item.prompt.chapter;
     // Tópico inteiro = amostra por subtópico (ver diagnosticSample.ts); antes
     // eram todas as questões do tópico, 86 em Ecologia; agora são 14.
-    const wholeTopic = () => sampleAcrossSubtopics(all, chapterOf);
-    if (!chapter) return { pool: wholeTopic(), usedChapterFilter: false };
+    if (!chapter) return { pool: sampleAcrossSubtopics(all, chapterOf), usedChapterFilter: false };
     const filtered = all.filter((item) => chapterOf(item) === chapter);
     if (filtered.length >= MIN_CHAPTER_ITEMS) {
       return { pool: shuffled(filtered), usedChapterFilter: true };
     }
-    return { pool: wholeTopic(), usedChapterFilter: false };
+    // Subtópico escolhido com poucas questões cai para o tópico como sempre
+    // caiu, sem amostra: a redução vale só para quem escolheu o tópico completo.
+    return { pool: shuffled(all), usedChapterFilter: false };
   }
 
   const startDiagnostic = (topicId: string) => {
@@ -637,7 +638,7 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
             </div>
             {coreState && <CrivoCore state={coreState} subject={topic.subject} topicId={topic.id} size={44} className="shrink-0" />}
           </div>
-          {!quizChapter && (
+          {!quizChapter && !chapterFallback && (
             <p className="text-[11px] text-[var(--dim)] -mt-2">
               Tópico inteiro: uma amostra com uma questão por subtópico, entre 8 e 15 no total, para mapear onde estão as lacunas. Para todas as questões de um subtópico, escolha-o antes de começar.
             </p>
