@@ -2,22 +2,11 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "3482f78e50cf432dbea17ba4652cea361041f349",
-  "generated_at_utc": "2026-10-26T13:18:48Z",
+  "source_commit": "fc3235b36c0a196bfdd8476a005296014dd5a496",
+  "generated_at_utc": "2026-10-26T20:33:33Z",
   "changed_files": [
-    "CLAUDE.md",
-    "scripts/importar-cronograma.mts",
     "src/components/ReviewWorkspace.test.tsx",
-    "src/components/ReviewWorkspace.tsx",
-    "src/components/StudyPlanToday.test.tsx",
-    "src/components/StudyPlanToday.tsx",
-    "src/hooks/useStudyPlan.ts",
-    "src/lib/reviewResources.ts",
-    "src/lib/studyPlan.test.ts",
-    "src/lib/studyPlan.ts",
-    "src/views/ReviewCenter.test.tsx",
-    "src/views/ReviewSummaries.tsx",
-    "src/views/Revisoes.tsx"
+    "src/components/ReviewWorkspace.tsx"
   ],
   "next_session": {
     "mode": "delta-only",
