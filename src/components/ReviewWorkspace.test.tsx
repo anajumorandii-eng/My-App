@@ -65,3 +65,15 @@ it('um destino explícito vale mesmo com a atividade já aberta; trocar de aba n
  fireEvent.change(screen.getByLabelText('Recurso de revisão'),{target:{value:'questoes'}});
  expect(screen.getAllByLabelText('Banca').at(-1)).toHaveValue('UNICAMP');
 });
+it('o cabeçalho leva até a atividade aberta e põe o foco nela; trocar de aba tira a faixa',()=>{
+ const scrolled=vi.fn();
+ Element.prototype.scrollIntoView=scrolled;
+ render(<MemoryRouter><ReviewWorkspace header={open=><button onClick={()=>open('questoes','/questoes?board=FUVEST')}>Bloco do cronograma</button>}/></MemoryRouter>);
+ fireEvent.click(screen.getByText('Bloco do cronograma'));
+ const activity=screen.getByLabelText('Questões',{selector:'div'});
+ expect(activity).toHaveFocus();
+ expect(scrolled).toHaveBeenCalled();
+ expect(screen.getByText('Aberto pelo cronograma: Questões')).toBeVisible();
+ fireEvent.click(screen.getByRole('button',{name:'Fila de revisões'}));
+ expect(screen.queryByText('Aberto pelo cronograma: Questões')).toBeNull();
+});
