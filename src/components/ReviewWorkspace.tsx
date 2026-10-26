@@ -1,10 +1,13 @@
 import { StudyActivityVisibleContext } from '../context/StudyActivityContext';
-import React, { lazy, Suspense, useEffect, useMemo, useState } from 'react';
+import React, { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { Router, Routes, Route, UNSAFE_LocationContext, UNSAFE_RouteContext, useNavigate, useSearchParams, createPath, type To } from 'react-router-dom';
 import { reviewResources } from '../lib/reviewResources';
 import { ErrorBoundary } from './ErrorBoundary';
 import { BEFORE_ASSET_RELOAD } from '../lib/assetRecovery';
 const ObraDetalhe = lazy(()=>import('../views/ObraDetalhe'));
+// Pedir 'smooth' explicitamente fura o scroll-behavior: auto !important que o
+// index.css aplica a quem pediu menos movimento; a preferência é lida aqui.
+const scrollBehavior=():ScrollBehavior=>typeof window!=='undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
 const PRIMARY_RESOURCES=['fila','resumos-banca','erros','flashcards'];
 const MENU_RESOURCES=['agenda','plano','sessao','reta-final','evolucao'];
 const resourceRouteContext = { outlet: null, matches: [], isDataRoute: false };
@@ -17,6 +20,7 @@ export function ReviewWorkspace({ header }: { header?: (open: (resource: string,
   const initialPath = requestedPath && (requestedPath.split(/[?#]/)[0] === initial.path || requestedPath.startsWith(`${initial.path}/`)) ? requestedPath : initial.path;
   const [active,setActive]=useState(initial.id);
   const [locations,setLocations]=useState<Record<string,string>>({[initial.id]:initialPath});
+  const [revealed,setRevealed]=useState<{id:string;request:number}|null>(null);
   const open = (id: string, path?: string) => {
     const resource=reviewResources.find(r=>r.id===id);
     if (!resource) return;
@@ -25,7 +29,23 @@ export function ReviewWorkspace({ header }: { header?: (open: (resource: string,
     // mesmo com Questões já aberta, senão o filtro da banca anterior ficava.
     setLocations(previous=>path ? {...previous,[id]:path} : previous[id] ? previous : {...previous,[id]:resource.path});
     setActive(id);
+    setRevealed(null);
   };
+  // Aberta pelo cabeçalho (o bloco do cronograma), a atividade carrega abaixo
+  // do cronograma e das quatro abas, fora da tela: o painel ficava parado e o
+  // botão "Abrir questões" parecia não funcionar. Por isso o cabeçalho leva
+  // até ela e põe o foco lá; trocar de aba logo acima não precisa disso.
+  // A atividade revelada reserva uma tela de altura: no clique ela ainda está
+  // carregando, e a página curta parava a rolagem no meio do caminho.
+  const activityRefs=useRef<Record<string,HTMLDivElement|null>>({});
+  const openFromHeader=(id:string,path?:string)=>{ open(id,path); setRevealed({id,request:Date.now()}); };
+  useEffect(()=>{
+    if (!revealed) return;
+    const target=activityRefs.current[revealed.id];
+    target?.scrollIntoView?.({behavior:scrollBehavior(),block:'start'});
+    target?.focus({preventScroll:true});
+  },[revealed]);
+  const headerRef=useRef<HTMLDivElement>(null);
   const navigator=useMemo(()=>{
     const resourceFor=(path:string)=>reviewResources.find(r=>path.split(/[?#]/)[0]===r.path || path.startsWith(`${r.path}/`));
     const pathFor=(to:To)=>typeof to==='string' ? to : createPath(to);
@@ -59,7 +79,7 @@ export function ReviewWorkspace({ header }: { header?: (open: (resource: string,
   // enquanto estiverem abertas, para o seletor não ficar sem valor.
   const otherResources=reviewResources.filter(r=>!PRIMARY_RESOURCES.includes(r.id) && (!MENU_RESOURCES.includes(r.id) || r.id===active));
   return <>
-    {header?.(open, active)}
+    <div ref={headerRef}>{header?.(openFromHeader, active)}</div>
     <section className="space-y-3" aria-label="Recursos da central de revisão">
       <nav aria-label="Atividades de revisão" className="flex flex-wrap gap-2">{reviewResources.filter(r=>PRIMARY_RESOURCES.includes(r.id)).map(r=><button key={r.id} type="button" aria-pressed={active===r.id} onClick={()=>open(r.id)} className={`min-h-11 px-4 py-2 text-sm rounded-lg ${active===r.id?'bg-[var(--text)] text-[var(--ink)]':'text-[var(--dim)] hover:bg-[var(--surface-secondary)]'}`}>{r.label}</button>)}</nav>
       <details className="border-b border-[var(--line)] pb-3"><summary className="cursor-pointer py-2 text-sm text-[var(--dim)]">Outras ferramentas de estudo</summary>
@@ -70,7 +90,8 @@ export function ReviewWorkspace({ header }: { header?: (open: (resource: string,
     </section>
     {reviewResources.filter(r=>locations[r.id]).map(resource=>{
       const Component=resource.Component;
-      return <div key={resource.id} hidden={active!==resource.id} className="mt-4 min-w-0 [&_.ni-main]:p-0" aria-label={resource.label}>
+      return <div key={resource.id} ref={element=>{activityRefs.current[resource.id]=element;}} tabIndex={-1} hidden={active!==resource.id} className={`mt-4 min-w-0 scroll-mt-20 outline-none [&_.ni-main]:p-0 ${revealed?.id===resource.id ? 'min-h-[100dvh]' : ''}`} aria-label={resource.label}>
+        {revealed?.id===resource.id && <p className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-[var(--line)] pb-2 text-sm"><b>Aberto pelo cronograma: {resource.label}</b><button type="button" className="min-h-11 underline" onClick={()=>{headerRef.current?.scrollIntoView?.({behavior:scrollBehavior(),block:'start'});setRevealed(null);}}>Voltar ao cronograma</button></p>}
         {/* Each retained activity has its own URL. A link opened from errors
             must not change the query or destroy a draft in another activity. */}
         <StudyActivityVisibleContext.Provider value={active===resource.id}>
