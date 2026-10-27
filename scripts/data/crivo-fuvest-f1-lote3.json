@@ -1,0 +1,818 @@
+[
+  {
+    "id": "crivo_fuvest_f1_l3_01",
+    "subject": "Biologia",
+    "topicId": "bio_botanica",
+    "chapter": "Plantas Terrestres II: Gimnospermas e Angiospermas",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o declínio das abelhas afeta só a produção de mel, ou que gimnospermas dependem delas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLevantamentos em vários países registram declínio de populações de abelhas, associado ao uso de agrotóxicos, à perda de habitat e a doenças. Pesquisadores alertam que culturas como café, maçã, melão e açaí podem ter queda de produtividade. Já lavouras de trigo, milho e arroz, cujo pólen é transportado pelo vento, seriam pouco afetadas.\n\nTexto elaborado para esta questão.\n\nA diferença de impacto entre as culturas citadas se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "nas angiospermas polinizadas por animais, as abelhas transportam o pólen até o estigma, permitindo a fecundação e a formação de frutos e sementes."
+      },
+      {
+        "id": "b",
+        "text": "as abelhas produzem os hormônios que estimulam o amadurecimento dos frutos de café e maçã."
+      },
+      {
+        "id": "c",
+        "text": "trigo, milho e arroz são gimnospermas e, por isso, não formam frutos."
+      },
+      {
+        "id": "d",
+        "text": "as abelhas se alimentam das folhas das plantas, e o declínio delas favorece o crescimento das lavouras."
+      },
+      {
+        "id": "e",
+        "text": "o néctar coletado pelas abelhas é a fonte de água das flores, sem a qual elas murcham."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Muitas angiospermas dependem de animais para levar o pólen das anteras ao estigma (polinização cruzada). Sem polinização, não há fecundação, e o ovário não se desenvolve em fruto com sementes. Gramíneas como trigo, milho e arroz — também angiospermas — são polinizadas pelo vento.\n\nPegadinhas:\n• B: o amadurecimento é controlado por hormônios da própria planta, como o etileno.\n• C: trigo, milho e arroz são angiospermas (gramíneas) e formam frutos (grãos, ou cariopses).\n• D: abelhas se alimentam de néctar e pólen, não de folhas.\n• E: o néctar é um recurso que a flor oferece ao polinizador; não é fonte de água da planta."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_02",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Coordenação Endócrina I",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Inverter os tipos de diabetes, ou achar que a insulina eleva a glicemia.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO diabetes melito se caracteriza por glicemia elevada. No tipo 1, mais comum em crianças e jovens, o sistema imune destrói as células beta das ilhotas pancreáticas. No tipo 2, mais frequente em adultos e associado ao sedentarismo e à obesidade, o pâncreas produz insulina, mas os tecidos respondem pouco a ela. Pacientes com tipo 1 dependem de aplicações diárias de insulina; muitos com tipo 2 controlam a doença, ao menos no início, com dieta, exercícios e medicamentos orais.\n\nTexto elaborado para esta questão.\n\nA diferença de tratamento entre os dois tipos se explica porque a insulina",
+    "options": [
+      {
+        "id": "a",
+        "text": "eleva a glicemia ao liberar glicose do fígado, e no tipo 1 há excesso desse hormônio."
+      },
+      {
+        "id": "b",
+        "text": "é produzida pelo fígado no tipo 2, o que dispensa sua aplicação."
+      },
+      {
+        "id": "c",
+        "text": "promove a captação de glicose pelas células; no tipo 1 ela praticamente não é produzida, enquanto no tipo 2 o problema principal é a resposta reduzida dos tecidos."
+      },
+      {
+        "id": "d",
+        "text": "é um hormônio esteroide, que pode ser tomado por via oral no tipo 2, mas não no tipo 1."
+      },
+      {
+        "id": "e",
+        "text": "é destruída pelos medicamentos orais, que só funcionam quando o pâncreas não a produz."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A insulina, liberada pelas células beta após as refeições, faz músculos e tecido adiposo captarem glicose e estimula o fígado a armazená-la como glicogênio — a glicemia cai. No tipo 1, sem células beta, falta o hormônio, que precisa ser reposto. No tipo 2, há hormônio, mas resistência à sua ação; exercício e medicamentos melhoram a resposta dos tecidos.\n\nPegadinhas:\n• A: quem libera glicose do fígado é o glucagon; a insulina tem efeito oposto.\n• B: a insulina é produzida pelo pâncreas nos dois casos em que existe.\n• D: a insulina é proteica e seria digerida no estômago — por isso é injetada.\n• E: os medicamentos orais do tipo 2 dependem justamente de haver insulina ou de melhorar sua ação."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_03",
+    "subject": "Biologia",
+    "topicId": "bio_estrutura_fisio_celular",
+    "chapter": "Membranas Celulares",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a bomba de sódio e potássio funciona por difusão, sem gasto de energia.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNas células humanas, a concentração de íons K⁺ é muito maior no citoplasma do que no meio extracelular, enquanto a de Na⁺ é maior fora da célula. Essa diferença é mantida pela bomba de sódio e potássio, proteína de membrana que, a cada ciclo, expulsa 3 Na⁺ e introduz 2 K⁺. O cianeto, um veneno potente, bloqueia a cadeia respiratória nas mitocôndrias.\n\nTexto elaborado para esta questão.\n\nEm células expostas ao cianeto, espera-se que, com o tempo,",
+    "options": [
+      {
+        "id": "a",
+        "text": "a bomba passe a funcionar mais rapidamente, já que o cianeto aumenta a produção de ATP."
+      },
+      {
+        "id": "b",
+        "text": "as concentrações de Na⁺ e K⁺ se mantenham, pois os íons atravessam a membrana apenas por difusão."
+      },
+      {
+        "id": "c",
+        "text": "o K⁺ passe a se acumular ainda mais no citoplasma, por osmose."
+      },
+      {
+        "id": "d",
+        "text": "a membrana se torne impermeável aos íons, interrompendo qualquer fluxo entre os meios."
+      },
+      {
+        "id": "e",
+        "text": "as diferenças de concentração de Na⁺ e K⁺ diminuam, pois a falta de ATP interrompe o transporte ativo, e os íons se difundem a favor de seus gradientes."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A bomba move íons contra o gradiente de concentração, gastando ATP (transporte ativo). O cianeto bloqueia a cadeia respiratória, principal fonte de ATP; sem energia, a bomba para. Os vazamentos por difusão continuam (Na⁺ entra, K⁺ sai), e os gradientes se dissipam — o que compromete, por exemplo, o impulso nervoso.\n\nPegadinhas:\n• A: o cianeto reduz, e não aumenta, a produção de ATP.\n• B: se os íons só se difundissem, as concentrações tenderiam a se igualar; a diferença existe porque há transporte ativo.\n• C: sem bomba, o K⁺ tende a sair, a favor de seu gradiente; e osmose é movimento de água, não de íons.\n• D: os canais e vazamentos da membrana não dependem de ATP para existir."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_04",
+    "subject": "Biologia",
+    "topicId": "bio_zoologia",
+    "chapter": "Cordados Tetrápodes",
+    "difficulty": "medium",
+    "skill": "relacao_estrutura_funcao",
+    "trap": "Atribuir aos anfíbios ovos com casca ou pele impermeável, como a dos répteis.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nOs anfíbios estão entre os vertebrados mais ameaçados do planeta. Entre as causas apontadas estão a contaminação da água por agrotóxicos, a destruição de áreas úmidas e a disseminação do fungo Batrachochytrium dendrobatidis, que infecta a pele e já causou o declínio de centenas de espécies. Répteis que vivem nos mesmos ambientes costumam ser menos afetados por esses fatores.\n\nTexto elaborado para esta questão.\n\nA maior vulnerabilidade dos anfíbios está relacionada a",
+    "options": [
+      {
+        "id": "a",
+        "text": "sua respiração exclusivamente pulmonar, que os obriga a permanecer fora da água."
+      },
+      {
+        "id": "b",
+        "text": "sua pele fina, úmida e permeável, que participa das trocas gasosas e da absorção de água, e à reprodução dependente de ambientes úmidos, com ovos sem casca."
+      },
+      {
+        "id": "c",
+        "text": "suas escamas córneas, que retêm substâncias tóxicas e facilitam a instalação de fungos."
+      },
+      {
+        "id": "d",
+        "text": "seus ovos com casca calcária, que se rompem na presença de agrotóxicos."
+      },
+      {
+        "id": "e",
+        "text": "seu metabolismo endotérmico, que exige muito alimento e os torna sensíveis à destruição do habitat."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A pele dos anfíbios é fina, rica em vasos e mantida úmida: participa da respiração cutânea e absorve água. Isso a torna porta de entrada para poluentes e para o fungo quitrídio, que compromete essas trocas. Ovos sem casca, postos na água ou em locais úmidos, também ficam expostos. Répteis têm pele queratinizada, pouco permeável, e ovo amniótico com casca.\n\nPegadinhas:\n• A: muitos anfíbios respiram também pela pele, e a fase larval é aquática.\n• C e D: escamas córneas e ovos com casca são características dos répteis.\n• E: anfíbios são ectotérmicos."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_05",
+    "subject": "Química",
+    "topicId": "qui_cinetica",
+    "chapter": "Cinética Química",
+    "difficulty": "easy",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a geladeira mata os microrganismos ou que muda o produto da reação.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA refrigeração é um dos principais métodos de conservação de alimentos. Um leite pasteurizado que dura cerca de cinco dias na geladeira, a 4 °C, pode azedar em menos de um dia se deixado à temperatura ambiente, em um dia quente. O azedamento resulta da ação de microrganismos que fermentam a lactose, produzindo ácido lático.\n\nTexto elaborado para esta questão.\n\nO efeito da refrigeração se explica porque a temperatura mais baixa",
+    "options": [
+      {
+        "id": "a",
+        "text": "elimina os microrganismos presentes no leite, impedindo a fermentação."
+      },
+      {
+        "id": "b",
+        "text": "altera o produto da fermentação, que deixa de ser o ácido lático."
+      },
+      {
+        "id": "c",
+        "text": "aumenta a energia de ativação das reações, tornando-as impossíveis."
+      },
+      {
+        "id": "d",
+        "text": "reduz a velocidade das reações químicas, inclusive as catalisadas por enzimas dos microrganismos, retardando sua multiplicação e a fermentação."
+      },
+      {
+        "id": "e",
+        "text": "aumenta a concentração de lactose, o que inibe a ação dos microrganismos."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A velocidade de uma reação depende da fração de colisões com energia suficiente para superar a energia de ativação; resfriar diminui a agitação das moléculas e essa fração. O metabolismo dos microrganismos, feito de reações catalisadas por enzimas, fica lento: eles se multiplicam e fermentam menos.\n\nPegadinhas:\n• A: a refrigeração retarda, mas não esteriliza — por isso o leite acaba azedando também na geladeira.\n• B: a temperatura altera a velocidade, não o produto da fermentação.\n• C: a energia de ativação é característica da reação (e do catalisador); a temperatura muda quantas moléculas a superam.\n• E: resfriar não muda a concentração de lactose."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_06",
+    "subject": "Química",
+    "topicId": "qui_equilibrio",
+    "chapter": "Equilíbrios Iônicos",
+    "difficulty": "hard",
+    "skill": "analise_de_equilibrio",
+    "trap": "Achar que perder CO₂ acidifica o sangue, invertendo o deslocamento do equilíbrio.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO pH do sangue é mantido próximo de 7,4 principalmente pelo sistema tampão bicarbonato:\n\nCO₂(g) + H₂O(l) ⇌ H₂CO₃(aq) ⇌ H⁺(aq) + HCO₃⁻(aq)\n\nDurante uma crise de ansiedade, uma pessoa passa a respirar de modo muito rápido e profundo (hiperventilação), eliminando CO₂ pelos pulmões em quantidade maior que a habitual. Ela pode sentir tontura e formigamento nas mãos.\n\nTexto elaborado para esta questão.\n\nNa hiperventilação, espera-se que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a perda de CO₂ desloque os equilíbrios para a esquerda, reduzindo a concentração de H⁺ e elevando o pH do sangue (alcalose)."
+      },
+      {
+        "id": "b",
+        "text": "a perda de CO₂ desloque os equilíbrios para a direita, aumentando a concentração de H⁺ e reduzindo o pH (acidose)."
+      },
+      {
+        "id": "c",
+        "text": "o pH permaneça inalterado, pois a constante de equilíbrio do tampão não muda."
+      },
+      {
+        "id": "d",
+        "text": "o pH diminua, porque o oxigênio inspirado em excesso reage com a água formando ácido."
+      },
+      {
+        "id": "e",
+        "text": "a concentração de HCO₃⁻ aumente, acidificando o sangue."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Retirar CO₂ (um reagente) faz o sistema se deslocar no sentido de repô-lo: H⁺ e HCO₃⁻ se combinam formando H₂CO₃, que se decompõe em CO₂ e água. A concentração de H⁺ cai e o pH sobe — alcalose respiratória, que explica os sintomas. Respirar mais devagar corrige o quadro.\n\nPegadinhas:\n• B: o sentido está invertido; é o acúmulo de CO₂ (respiração insuficiente) que causa acidose.\n• C: K fixa a razão entre as concentrações, não o pH; retirar CO₂ muda as concentrações.\n• D: o O₂ não forma ácido com a água; o que muda é a eliminação de CO₂.\n• E: o HCO₃⁻ é consumido no deslocamento para a esquerda, e o sangue fica menos ácido."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_07",
+    "subject": "Química",
+    "topicId": "qui_organica_reacoes",
+    "chapter": "Polímeros",
+    "difficulty": "medium",
+    "skill": "relacao_estrutura_funcao",
+    "trap": "Achar que plástico 'de origem vegetal' é automaticamente biodegradável, ou que reciclar elimina o polímero.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO PET, poliéster usado em garrafas de refrigerante, é formado por longas cadeias em que unidades de ácido tereftálico e etilenoglicol se ligam por grupos éster. Uma garrafa descartada no ambiente pode levar séculos para se degradar. Em 2016, pesquisadores descreveram uma bactéria capaz de produzir uma enzima que hidrolisa o PET, o que despertou interesse para a reciclagem biológica.\n\nTexto elaborado para esta questão.\n\nA lenta degradação do PET no ambiente se deve principalmente ao fato de",
+    "options": [
+      {
+        "id": "a",
+        "text": "o PET ser um polímero inorgânico, sem átomos de carbono, que não pode ser decomposto."
+      },
+      {
+        "id": "b",
+        "text": "as ligações éster serem impossíveis de romper, mesmo com enzimas ou em meio ácido."
+      },
+      {
+        "id": "c",
+        "text": "suas cadeias longas e organizadas oferecerem poucos pontos de ataque, e poucos organismos possuírem enzimas capazes de hidrolisar essas ligações éster."
+      },
+      {
+        "id": "d",
+        "text": "o PET ser solúvel em água, o que o dispersa no ambiente e impede a ação de bactérias."
+      },
+      {
+        "id": "e",
+        "text": "as garrafas serem produzidas por polimerização de adição, que forma ligações iônicas muito fortes."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O PET é um polímero de condensação: cada ligação éster libera uma molécula de água ao se formar e pode, em princípio, ser hidrolisada. Mas as cadeias são longas, hidrofóbicas e em boa parte cristalinas, e a maioria dos microrganismos não tem enzimas que as ataquem — daí a importância da enzima descrita em 2016.\n\nPegadinhas:\n• A: o PET é orgânico, formado por carbono, hidrogênio e oxigênio.\n• B: o próprio texto descreve uma enzima que hidrolisa essas ligações.\n• D: o PET é insolúvel em água — por isso garrafas persistem inteiras.\n• E: o PET é polímero de condensação, com ligações covalentes."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_08",
+    "subject": "Física",
+    "topicId": "fis_calorimetria",
+    "chapter": "Calor Sensível e Calor Latente",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Usar o calor latente em kJ/g como se fosse kJ/kg, ou confundir calor sensível com latente.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO suor é o principal mecanismo de resfriamento do corpo humano durante exercícios intensos. Em uma corrida de uma hora, um atleta perdeu 0,5 kg de suor, que evaporou da pele. Em dias muito úmidos, o mesmo atleta relata sentir mais calor, porque o suor escorre sem evaporar.\n\nNote e adote:\nCalor latente de vaporização da água à temperatura da pele: 2 400 kJ/kg.\n\nTexto elaborado para esta questão.\n\nA energia retirada do corpo pela evaporação desse suor é de, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "1,2 kJ."
+      },
+      {
+        "id": "b",
+        "text": "2,4 kJ."
+      },
+      {
+        "id": "c",
+        "text": "600 kJ."
+      },
+      {
+        "id": "d",
+        "text": "1 000 kJ."
+      },
+      {
+        "id": "e",
+        "text": "1 200 kJ."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Na mudança de fase, Q = m · L = 0,5 kg × 2 400 kJ/kg = 1 200 kJ. A energia vem do corpo: é o calor latente que a água absorve para evaporar. Em ar úmido, a evaporação é lenta, e o suor que escorre sem evaporar não resfria.\n\nPegadinhas:\n• A (1,2 kJ): toma o calor latente como 2,4 kJ/kg.\n• B (2,4 kJ): usa só o valor de L em kJ/g, sem a massa.\n• C (600 kJ): divide a massa por dois mais uma vez.\n• D (1 000 kJ): não corresponde a operação coerente com os dados."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_09",
+    "subject": "Física",
+    "topicId": "fis_eletromagnetismo",
+    "chapter": "Indução Eletromagnética: Lei de Lenz",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que corrente contínua na base também carregaria o celular por indução.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nCarregadores sem fio de celulares funcionam por indução eletromagnética. A base contém uma bobina ligada à tomada por um circuito que produz corrente alternada; o celular contém outra bobina, posicionada logo acima. Não há contato elétrico entre as duas. Se a bobina da base fosse alimentada por uma corrente contínua e constante, o celular não seria carregado.\n\nTexto elaborado para esta questão.\n\nO funcionamento do carregador e a observação final se explicam porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a bobina da base transfere elétrons diretamente para a bobina do celular através do ar."
+      },
+      {
+        "id": "b",
+        "text": "a corrente alternada na base produz um campo magnético variável, cujo fluxo variável na bobina do celular induz nela uma corrente; um campo constante não induz corrente."
+      },
+      {
+        "id": "c",
+        "text": "a corrente contínua produz campo magnético mais intenso, que danificaria a bateria do celular."
+      },
+      {
+        "id": "d",
+        "text": "o carregamento ocorre por aquecimento da bobina da base, que transmite calor à bateria."
+      },
+      {
+        "id": "e",
+        "text": "a bobina do celular é feita de ímã permanente, que gera corrente quando atraído pela base."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Pela lei de Faraday, só há força eletromotriz induzida quando o fluxo magnético através da bobina varia. A corrente alternada da base cria um campo que muda de intensidade e sentido continuamente; o fluxo variável induz corrente alternada na bobina do celular, que um circuito retifica para carregar a bateria. Com corrente contínua e constante, o fluxo não varia e nada é induzido.\n\nPegadinhas:\n• A: não há passagem de elétrons entre as bobinas; a energia é transferida pelo campo magnético.\n• C: a intensidade do campo não é o ponto; o que falta na corrente contínua é a variação do fluxo.\n• D: o aquecimento é uma perda indesejada, não o mecanismo de carga.\n• E: as bobinas são de fio condutor, e o texto diz que a base é alimentada por corrente."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_10",
+    "subject": "Física",
+    "topicId": "fis_optica_geometrica",
+    "chapter": "Refração: Fundamentos, Leis e Aplicações",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Inverter a condição da reflexão total, exigindo núcleo com índice menor que a casca.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEndoscópios usam feixes de fibras ópticas para levar luz ao interior do corpo e trazer a imagem de volta. Cada fibra tem um núcleo de vidro envolvido por uma casca de outro material. A luz se propaga ao longo da fibra, mesmo em curvas, praticamente sem escapar pelas laterais.\n\nTexto elaborado para esta questão.\n\nPara que a luz fique confinada no núcleo, é necessário que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o índice de refração da casca seja maior que o do núcleo, para que a luz seja atraída para fora."
+      },
+      {
+        "id": "b",
+        "text": "a luz incida na interface núcleo–casca perpendicularmente, com ângulo de incidência nulo."
+      },
+      {
+        "id": "c",
+        "text": "a casca seja espelhada por dentro, refletindo a luz como um espelho plano."
+      },
+      {
+        "id": "d",
+        "text": "o índice de refração do núcleo seja maior que o da casca, e a luz atinja a interface com ângulo de incidência maior que o ângulo limite, sofrendo reflexão total."
+      },
+      {
+        "id": "e",
+        "text": "a velocidade da luz no núcleo seja maior que na casca, o que impede a refração."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A reflexão total só ocorre quando a luz vai de um meio de maior índice de refração para outro de menor índice e incide com ângulo maior que o ângulo limite (sen L = n_casca/n_núcleo). Nessas condições, não há raio refratado: toda a luz volta ao núcleo, em sucessivas reflexões.\n\nPegadinhas:\n• A: com casca de índice maior, a luz sempre refrataria para ela.\n• B: incidência perpendicular faz a luz atravessar a interface sem desvio.\n• C: a fibra não depende de espelhamento; a reflexão total é fenômeno de refração no limite.\n• E: índice maior significa velocidade menor; a luz é mais lenta no núcleo."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_11",
+    "subject": "Matemática",
+    "topicId": "mat_trigonometria",
+    "chapter": "Relações Trigonométricas em Polígonos",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Tomar a porcentagem de inclinação como comprimento em metros, ou usar a razão invertida.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA norma brasileira de acessibilidade recomenda que rampas para cadeiras de rodas tenham inclinação máxima de 8,33%, o que significa que, para cada 100 cm percorridos na horizontal, a rampa sobe no máximo 8,33 cm (aproximadamente 1 cm de altura a cada 12 cm na horizontal). Uma clínica precisa construir uma rampa para vencer um desnível de 0,5 m na entrada, com a inclinação máxima permitida.\n\nTexto elaborado para esta questão.\n\nO comprimento horizontal mínimo dessa rampa é de, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "6 m."
+      },
+      {
+        "id": "b",
+        "text": "8,3 m."
+      },
+      {
+        "id": "c",
+        "text": "12 m."
+      },
+      {
+        "id": "d",
+        "text": "41,7 m."
+      },
+      {
+        "id": "e",
+        "text": "60 m."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Inclinação é a razão entre altura e comprimento horizontal (a tangente do ângulo): 0,0833 = 0,5 / x, logo x = 0,5 ÷ 0,0833 ≈ 6 m. Pela razão 1 : 12, 0,5 m de altura exigem 12 × 0,5 = 6 m.\n\nPegadinhas:\n• B (8,3 m): toma a porcentagem como comprimento em metros.\n• C (12 m): usa a razão 1 : 12 para um desnível de 1 m, e não de 0,5 m.\n• D (41,7 m): multiplica 0,5 por 83,3 em vez de dividir.\n• E (60 m): erra uma casa decimal na divisão."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_12",
+    "subject": "Matemática",
+    "topicId": "mat_log_exponenciais",
+    "chapter": "Equações e Funções Logarítmicas",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Comparar valores de pH por subtração ou divisão, como se a escala fosse linear.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO pH é definido por pH = −log[H⁺], em que [H⁺] é a concentração de íons hidrogênio, em mol/L. O suco de limão tem pH próximo de 2, e a água pura, a 25 °C, tem pH 7.\n\nTexto elaborado para esta questão.\n\nA concentração de íons H⁺ no suco de limão é maior que a da água pura em, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "3,5 vezes."
+      },
+      {
+        "id": "b",
+        "text": "5 vezes."
+      },
+      {
+        "id": "c",
+        "text": "100 000 vezes."
+      },
+      {
+        "id": "d",
+        "text": "10 000 000 vezes."
+      },
+      {
+        "id": "e",
+        "text": "10¹⁴ vezes."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. pH 2 → [H⁺] = 10⁻² mol/L; pH 7 → [H⁺] = 10⁻⁷ mol/L. A razão é 10⁻² ÷ 10⁻⁷ = 10⁵ = 100 000. Cada unidade de pH corresponde a um fator 10 na concentração.\n\nPegadinhas:\n• A (3,5): divide os valores de pH (7 ÷ 2), como se a escala fosse linear.\n• B (5): subtrai os valores de pH e toma a diferença como a razão.\n• D (10⁷): usa só a concentração da água.\n• E (10¹⁴): soma os expoentes em vez de subtraí-los."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_13",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_plana",
+    "chapter": "A Geometria da Proporcionalidade",
+    "difficulty": "easy",
+    "skill": "modelagem",
+    "trap": "Montar a proporção invertida entre altura e sombra.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara estimar a altura do prédio de um hospital sem subir até o topo, um estudante mediu, no mesmo instante, a sombra do prédio, de 15 m, e a de um colega de 1,8 m de altura, que era de 1,2 m. Os raios de sol podem ser considerados paralelos, e o prédio e o colega estavam em pé, verticalmente, sobre um terreno plano.\n\nTexto elaborado para esta questão.\n\nA altura estimada do prédio é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "10 m."
+      },
+      {
+        "id": "b",
+        "text": "12 m."
+      },
+      {
+        "id": "c",
+        "text": "15 m."
+      },
+      {
+        "id": "d",
+        "text": "18 m."
+      },
+      {
+        "id": "e",
+        "text": "22,5 m."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Raios paralelos formam com o objeto e sua sombra triângulos retângulos semelhantes: altura/sombra é constante. 1,8/1,2 = H/15 → H = 15 × 1,5 = 22,5 m.\n\nPegadinhas:\n• A (10 m): monta a proporção invertida (15 × 1,2 ÷ 1,8).\n• B (12 m): não corresponde a uma proporção coerente com os dados.\n• C (15 m): supõe que a altura é igual à sombra.\n• D (18 m): multiplica 15 por 1,2."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_14",
+    "subject": "Matemática",
+    "topicId": "mat_sequencias_matrizes",
+    "chapter": "Progressão Aritmética",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Confundir o último termo com a soma, ou usar n no lugar de n − 1.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um programa de reabilitação cardíaca, um paciente caminha 1 000 m no primeiro dia e aumenta a distância em 200 m a cada dia, até completar 30 dias de programa.\n\nTexto elaborado para esta questão.\n\nA distância total percorrida pelo paciente nos 30 dias é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "6,8 km."
+      },
+      {
+        "id": "b",
+        "text": "117 km."
+      },
+      {
+        "id": "c",
+        "text": "120 km."
+      },
+      {
+        "id": "d",
+        "text": "204 km."
+      },
+      {
+        "id": "e",
+        "text": "234 km."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. As distâncias formam uma PA com a₁ = 1 000 e r = 200. O 30º termo é a₃₀ = 1 000 + 29 × 200 = 6 800 m. A soma é S = (a₁ + a₃₀) · 30 / 2 = 7 800 × 15 = 117 000 m = 117 km.\n\nPegadinhas:\n• A (6,8 km): é a distância do último dia, não o total.\n• C (120 km): usa 30 × 200 no último termo (a₃₀ = 7 000), em vez de 29 × 200.\n• D (204 km): multiplica o último termo pelo número de dias.\n• E (234 km): esquece de dividir por 2 na fórmula da soma."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_15",
+    "subject": "Geografia",
+    "topicId": "geo_hidrogeografia",
+    "chapter": "Geopolítica dos Recursos Hídricos",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que o conflito é por navegação ou que o país a montante não tem vantagem.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 2023, a Etiópia concluiu o enchimento inicial da Grande Barragem do Renascimento, no Nilo Azul, principal formador do Rio Nilo. A obra é vista pelo governo etíope como essencial para gerar eletricidade e promover o desenvolvimento. O Egito, onde a maior parte da população vive às margens do Nilo e quase toda a água doce consumida vem do rio, protestou e defendeu um acordo vinculante sobre o ritmo de enchimento e a operação da barragem.\n\nTexto elaborado para esta questão.\n\nA tensão descrita decorre do fato de",
+    "options": [
+      {
+        "id": "a",
+        "text": "o Egito estar a montante da barragem e poder bloquear a passagem de navios etíopes."
+      },
+      {
+        "id": "b",
+        "text": "a barragem ter sido construída para desviar o Nilo para o Mar Vermelho."
+      },
+      {
+        "id": "c",
+        "text": "a Etiópia depender do Nilo para irrigação e o Egito, apenas para geração de energia."
+      },
+      {
+        "id": "d",
+        "text": "a Etiópia, situada a montante, controlar parte da vazão de um rio do qual o Egito, a jusante e em clima desértico, depende quase totalmente."
+      },
+      {
+        "id": "e",
+        "text": "os dois países disputarem a posse de jazidas de petróleo descobertas no leito do rio."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Em bacias compartilhadas, o país a montante (perto das nascentes) pode alterar a quantidade e o ritmo da água que chega aos de jusante. O Egito, em clima desértico, tem no Nilo quase sua única fonte de água doce; qualquer redução de vazão, sobretudo em anos secos, afeta agricultura e abastecimento. Daí a exigência de regras de operação.\n\nPegadinhas:\n• A: o Egito está a jusante (na foz), e o conflito não é sobre navegação.\n• B: a barragem é hidrelétrica; não desvia o rio.\n• C: inverte os usos — a Etiópia quer energia; o Egito depende do rio para irrigação e consumo.\n• E: o texto não menciona petróleo."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_16",
+    "subject": "Geografia",
+    "topicId": "geo_cartografia",
+    "chapter": "Sistema de Fusos Horários",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Somar a diferença de fuso no sentido errado ou esquecer a mudança de data.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma médica brasileira vai participar de um congresso em Tóquio. Seu voo parte de São Paulo às 22 h do dia 10 (horário de Brasília, UTC−3) e, com uma escala, dura 24 horas no total até o pouso. O horário de Tóquio corresponde a UTC+9.\n\nTexto elaborado para esta questão.\n\nNo momento do pouso, o horário local em Tóquio será",
+    "options": [
+      {
+        "id": "a",
+        "text": "10 h do dia 12."
+      },
+      {
+        "id": "b",
+        "text": "22 h do dia 11."
+      },
+      {
+        "id": "c",
+        "text": "10 h do dia 11."
+      },
+      {
+        "id": "d",
+        "text": "22 h do dia 12."
+      },
+      {
+        "id": "e",
+        "text": "12 h do dia 12."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A diferença entre UTC+9 e UTC−3 é de 12 horas, com Tóquio adiantada. O pouso ocorre 24 h depois da partida: 22 h do dia 11 em Brasília. Somando 12 h, são 10 h do dia 12 em Tóquio.\n\nPegadinhas:\n• B: é o horário de Brasília no pouso, sem a conversão.\n• C: subtrai as 12 h em vez de somar (Tóquio está a leste, adiantada).\n• D: soma 24 h duas vezes.\n• E: usa diferença de 14 h, como se o Brasil estivesse em UTC−5."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_17",
+    "subject": "Geografia",
+    "topicId": "geo_globalizacao_economica",
+    "chapter": "Blocos Econômicos",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Confundir união aduaneira com mercado comum pleno ou com união monetária.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Mercosul, criado em 1991 pelo Tratado de Assunção, eliminou grande parte das tarifas de importação no comércio entre seus membros e adotou uma Tarifa Externa Comum (TEC) para produtos vindos de fora do bloco, ainda que com listas de exceções. Diferentemente da União Europeia, porém, o Mercosul não tem moeda única, e a livre circulação de trabalhadores e de capitais entre os membros é limitada.\n\nTexto elaborado para esta questão.\n\nPelas características descritas, o Mercosul corresponde, predominantemente, a",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma zona de preferências tarifárias, em que apenas alguns produtos têm redução de impostos."
+      },
+      {
+        "id": "b",
+        "text": "uma união monetária, por ter estabelecido a Tarifa Externa Comum."
+      },
+      {
+        "id": "c",
+        "text": "uma união aduaneira imperfeita, com livre comércio interno e tarifa comum para terceiros, mas com exceções e sem as liberdades de um mercado comum."
+      },
+      {
+        "id": "d",
+        "text": "um mercado comum pleno, com livre circulação de mercadorias, pessoas, serviços e capitais."
+      },
+      {
+        "id": "e",
+        "text": "uma união política e econômica, com parlamento e moeda compartilhados, como a União Europeia."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Livre comércio interno somado a uma tarifa externa comum define a união aduaneira; as listas de exceção a tornam 'imperfeita'. As etapas seguintes — mercado comum (livre circulação de fatores de produção) e união econômica e monetária (moeda única) — não foram atingidas, como o texto indica.\n\nPegadinhas:\n• A: o bloco foi além das preferências pontuais; eliminou grande parte das tarifas internas.\n• B: TEC é tarifa de comércio exterior, não moeda.\n• D: o texto diz que a circulação de trabalhadores e capitais é limitada.\n• E: é o modelo da UE, que o texto usa justamente como contraste."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_18",
+    "subject": "História",
+    "topicId": "his_idade_antiga",
+    "chapter": "Antiguidade Clássica: o Mundo Grego",
+    "difficulty": "medium",
+    "skill": "contextualizacao_historica",
+    "trap": "Projetar sobre Atenas a democracia representativa e o sufrágio universal atuais.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa Atenas do século V a.C., os cidadãos se reuniam na Eclésia, a assembleia popular, para votar leis, decidir sobre guerras e escolher magistrados, muitos deles por sorteio. Calcula-se, porém, que os cidadãos fossem uma minoria dos habitantes da pólis.\n\nTexto elaborado para esta questão.\n\nA democracia ateniense caracterizava-se por",
+    "options": [
+      {
+        "id": "a",
+        "text": "ser representativa, com deputados eleitos por todos os habitantes para votar as leis."
+      },
+      {
+        "id": "b",
+        "text": "garantir o voto às mulheres atenienses, mas não aos estrangeiros."
+      },
+      {
+        "id": "c",
+        "text": "abolir a escravidão, condição necessária para a participação igualitária na assembleia."
+      },
+      {
+        "id": "d",
+        "text": "basear a cidadania na renda, permitindo que estrangeiros ricos votassem na Eclésia."
+      },
+      {
+        "id": "e",
+        "text": "ser direta, com participação pessoal dos cidadãos nas decisões, mas restringir a cidadania aos homens adultos filhos de atenienses, excluindo mulheres, estrangeiros (metecos) e escravizados."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Na Eclésia, o cidadão votava pessoalmente — democracia direta, e não representativa. Mas a cidadania era restrita: mulheres, metecos e escravizados, que eram grande parte da população, ficavam de fora. O trabalho escravo, aliás, liberava tempo de muitos cidadãos para a vida política.\n\nPegadinhas:\n• A: não havia representantes eleitos para legislar; e 'todos os habitantes' contradiz o texto.\n• B: as mulheres não eram cidadãs com direitos políticos.\n• C: a escravidão foi mantida e até sustentava a participação política.\n• D: a cidadania dependia da ascendência ateniense; a riqueza não fazia de um meteco um cidadão."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_19",
+    "subject": "História",
+    "topicId": "his_primeira_republica_vargas",
+    "chapter": "Ascensão e Domínio das Oligarquias",
+    "difficulty": "medium",
+    "skill": "contextualizacao_historica",
+    "trap": "Reduzir a Revolta da Vacina a ignorância popular contra a ciência.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm novembro de 1904, o Rio de Janeiro foi palco da Revolta da Vacina. O estopim foi a lei que tornou obrigatória a vacinação contra a varíola, conduzida pelo sanitarista Oswaldo Cruz, com agentes autorizados a entrar nas casas. Ao mesmo tempo, a reforma urbana do prefeito Pereira Passos demolia cortiços no centro para abrir avenidas, expulsando milhares de moradores pobres.\n\nTexto elaborado para esta questão.\n\nConsiderando o contexto, a revolta pode ser compreendida como",
+    "options": [
+      {
+        "id": "a",
+        "text": "um movimento monarquista, que pretendia restaurar o Império por meio da vacinação."
+      },
+      {
+        "id": "b",
+        "text": "uma reação popular à forma autoritária das medidas sanitárias e às remoções da reforma urbana, que atingiam sobretudo a população pobre."
+      },
+      {
+        "id": "c",
+        "text": "uma rebelião de médicos contrários à eficácia da vacina contra a varíola."
+      },
+      {
+        "id": "d",
+        "text": "um protesto organizado pelo governo federal contra a prefeitura do Rio de Janeiro."
+      },
+      {
+        "id": "e",
+        "text": "uma revolta camponesa no interior do país, contra a cobrança de impostos sobre a terra."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A vacina era eficaz, mas a campanha era imposta de cima, com invasão de casas, num momento em que a 'modernização' da capital destruía moradias populares. Medo, desinformação e oposição política se somaram à revolta contra a violência das remoções. O episódio mostra que política de saúde depende também de confiança e de forma de implementação.\n\nPegadinhas:\n• A: houve oposição política ao governo, mas o movimento não visava restaurar o Império por meio da vacina.\n• C: os revoltosos eram sobretudo moradores pobres; Oswaldo Cruz e a medicina oficial defendiam a vacina.\n• D: a lei e a reforma eram iniciativas do próprio poder público, contra o qual a população se levantou.\n• E: o texto situa a revolta no Rio de Janeiro, então capital federal."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_20",
+    "subject": "História",
+    "topicId": "his_imperialismo_guerras",
+    "chapter": "Primeira Guerra Mundial (1914-1918)",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Ver a guerra como restrita aos exércitos, sem mobilização econômica e social.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDurante a Primeira Guerra Mundial, os países beligerantes passaram a controlar a produção industrial, racionar alimentos, recrutar milhões de homens e empregar mulheres em fábricas de munição. A propaganda oficial buscava mobilizar a opinião pública, e a censura limitava as notícias sobre as perdas nas frentes de batalha.\n\nTexto elaborado para esta questão.\n\nAs medidas descritas caracterizam o conflito como",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma guerra limitada, travada apenas por exércitos profissionais, sem impacto sobre a vida civil."
+      },
+      {
+        "id": "b",
+        "text": "uma guerra colonial, restrita aos territórios africanos e asiáticos."
+      },
+      {
+        "id": "c",
+        "text": "uma guerra de movimento, decidida rapidamente por grandes batalhas de cavalaria."
+      },
+      {
+        "id": "d",
+        "text": "uma guerra total, em que economia, sociedade e informação foram mobilizadas pelo Estado para o esforço de guerra."
+      },
+      {
+        "id": "e",
+        "text": "uma guerra religiosa, motivada pela disputa entre católicos e protestantes."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A 'guerra total' envolve toda a sociedade: o Estado dirige a economia, mobiliza mão de obra (inclusive feminina), raciona consumo e controla a informação. As medidas do texto mostram exatamente essa extensão do conflito para além das frentes de combate.\n\nPegadinhas:\n• A: o texto descreve racionamento, trabalho feminino e propaganda, que atingiam a população civil.\n• B: houve frentes coloniais, mas o conflito foi decidido principalmente na Europa.\n• C: a guerra se tornou de trincheiras, longa e de desgaste, após 1914.\n• E: as motivações eram imperialistas, nacionalistas e de alianças, não religiosas."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_21",
+    "subject": "Português",
+    "topicId": "por_sintaxe",
+    "chapter": "Orações Adjetivas",
+    "difficulty": "hard",
+    "skill": "analise_linguistica",
+    "trap": "Achar que a vírgula não muda o sentido de uma oração adjetiva.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nConsidere as frases:\n\nI. Os pacientes que estavam em jejum fizeram o exame de sangue.\nII. Os pacientes, que estavam em jejum, fizeram o exame de sangue.\n\nTexto elaborado para esta questão.\n\nSobre as duas frases, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "em I, apenas parte dos pacientes estava em jejum e só esses fizeram o exame; em II, todos os pacientes estavam em jejum e todos fizeram o exame."
+      },
+      {
+        "id": "b",
+        "text": "as duas frases têm o mesmo sentido, pois a vírgula indica apenas uma pausa na leitura."
+      },
+      {
+        "id": "c",
+        "text": "em I, todos os pacientes estavam em jejum; em II, apenas parte deles."
+      },
+      {
+        "id": "d",
+        "text": "a frase II está incorreta, pois não se usa vírgula antes do pronome relativo 'que'."
+      },
+      {
+        "id": "e",
+        "text": "em ambas, a oração 'que estavam em jejum' é substantiva e funciona como sujeito."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Em I, a oração adjetiva é restritiva: delimita o grupo — entre os pacientes, os que estavam em jejum fizeram o exame. Em II, entre vírgulas, é explicativa: acrescenta uma informação sobre todos os pacientes mencionados.\n\nPegadinhas:\n• B: a vírgula aqui tem valor sintático e semântico, não só de pausa.\n• C: inverte os sentidos.\n• D: a vírgula antes de 'que' é obrigatória na oração adjetiva explicativa.\n• E: a oração caracteriza 'pacientes', exercendo papel de adjetivo; o sujeito de 'fizeram' é 'os pacientes'."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_22",
+    "subject": "Inglês",
+    "topicId": "ing_01",
+    "chapter": "Text Comprehension: Digital Technology",
+    "difficulty": "medium",
+    "skill": "inferencia_em_ingles",
+    "trap": "Concluir que o texto culpa apenas a preguiça dos adolescentes, ou que recomenda proibir celulares.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Teenagers are often described as lazy for sleeping late, but research shows that their internal clock actually shifts during puberty: the hormone melatonin, which signals that it is time to sleep, is released later at night than in children or adults. Bright screens in the evening can delay melatonin even further. When schools start very early, many students end up sleeping far less than they need, which affects memory, mood and attention.\"\n\nTexto elaborado para esta questão.\n\nSegundo o texto, adolescentes que dormem tarde",
+    "options": [
+      {
+        "id": "a",
+        "text": "agem assim por preguiça, como mostram as pesquisas citadas."
+      },
+      {
+        "id": "b",
+        "text": "deveriam ser proibidos de usar celular, conforme recomendação dos pesquisadores."
+      },
+      {
+        "id": "c",
+        "text": "têm o relógio biológico deslocado na puberdade, com liberação mais tardia de melatonina, efeito que telas iluminadas à noite podem acentuar."
+      },
+      {
+        "id": "d",
+        "text": "produzem mais melatonina que adultos, o que os mantém acordados."
+      },
+      {
+        "id": "e",
+        "text": "dormem o suficiente, mesmo quando as aulas começam cedo."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O texto opõe o rótulo ('often described as lazy') à explicação da pesquisa ('their internal clock actually shifts'): a melatonina é liberada mais tarde, e telas podem atrasá-la ainda mais.\n\nPegadinhas:\n• A: o texto apresenta a preguiça como rótulo que a pesquisa contesta ('but research shows').\n• B: o texto não faz essa recomendação; só aponta que telas podem atrasar a melatonina.\n• D: o problema é o horário de liberação ('released later'), não a quantidade; e a melatonina sinaliza sono.\n• E: o texto diz que muitos 'end up sleeping far less than they need'.\nVocabulário: 'shift' = deslocar; 'end up' = acabar por."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_23",
+    "subject": "Sociologia",
+    "topicId": "soc_weber",
+    "chapter": "Dominação e Poder em Weber",
+    "difficulty": "medium",
+    "skill": "aplicacao_conceitual",
+    "trap": "Confundir dominação carismática com tradicional ou com racional-legal.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma pequena cidade, um líder religioso reúne milhares de seguidores. Ele não ocupa cargo público nem herdou sua posição; seus fiéis o obedecem por acreditarem em seus dons extraordinários e em sua missão. Pesquisadores observam que, com a morte desse tipo de líder, os movimentos frequentemente enfrentam crises de sucessão.\n\nTexto elaborado para esta questão.\n\nSegundo a tipologia de Max Weber, a situação descrita corresponde à dominação",
+    "options": [
+      {
+        "id": "a",
+        "text": "racional-legal, pois a obediência se baseia em regras impessoais e em cargos definidos por lei."
+      },
+      {
+        "id": "b",
+        "text": "tradicional, pois a autoridade foi herdada de antepassados segundo costumes antigos."
+      },
+      {
+        "id": "c",
+        "text": "burocrática, pois o líder foi nomeado por concurso público."
+      },
+      {
+        "id": "d",
+        "text": "econômica, pois a obediência resulta do pagamento de salários aos seguidores."
+      },
+      {
+        "id": "e",
+        "text": "carismática, pois a obediência se apoia na crença nas qualidades excepcionais do líder, o que torna instável a sucessão."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Weber distingue três tipos puros de dominação legítima: racional-legal (regras e cargos impessoais), tradicional (costume e herança) e carismática (qualidades extraordinárias atribuídas a uma pessoa). Como o carisma é pessoal, a morte do líder abre crise; Weber chama de 'rotinização do carisma' a sua transformação em tradição ou burocracia.\n\nPegadinhas:\n• A e C: o texto diz que ele não ocupa cargo público; a burocracia é a forma típica da dominação racional-legal.\n• B: o texto afirma que ele não herdou a posição.\n• D: 'econômica' não é um dos três tipos de dominação legítima de Weber, e o texto não fala em pagamento."
+  },
+  {
+    "id": "crivo_fuvest_f1_l3_24",
+    "subject": "Filosofia",
+    "topicId": "fil_socrates_platao",
+    "chapter": "O Mito da Caverna",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Ler a alegoria como elogio da vida na caverna ou como recusa de todo conhecimento.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa alegoria da caverna, narrada por Platão na República, prisioneiros acorrentados desde a infância veem apenas sombras projetadas na parede e as tomam pela realidade. Um deles é libertado, sobe para fora da caverna e, depois de ofuscado pela luz, passa a ver os objetos reais e o Sol. Ao voltar para contar o que viu, é ridicularizado pelos antigos companheiros, que preferem as sombras.\n\nTexto elaborado para esta questão.\n\nNa alegoria, o percurso do prisioneiro libertado representa",
+    "options": [
+      {
+        "id": "a",
+        "text": "a inutilidade do conhecimento, já que os outros prisioneiros não acreditam nele."
+      },
+      {
+        "id": "b",
+        "text": "a passagem da opinião, baseada nas aparências sensíveis, ao conhecimento verdadeiro, processo difícil que provoca resistência de quem permanece preso às aparências."
+      },
+      {
+        "id": "c",
+        "text": "a superioridade dos sentidos, pois só fora da caverna o prisioneiro passa a enxergar."
+      },
+      {
+        "id": "d",
+        "text": "a defesa de que cada pessoa tem sua própria verdade, igualmente válida."
+      },
+      {
+        "id": "e",
+        "text": "a recusa da filosofia em favor da tradição, representada pelos prisioneiros."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. As sombras representam o mundo das aparências e da opinião (dóxa); a saída, dolorosa, é a educação filosófica que conduz ao conhecimento das Ideias, cujo ápice é o Bem, simbolizado pelo Sol. O retorno e a zombaria lembram o destino de Sócrates, condenado pelos atenienses.\n\nPegadinhas:\n• A: a resistência dos prisioneiros não torna o conhecimento inútil; mostra a dificuldade de transmiti-lo.\n• C: a visão é metáfora; para Platão, o conhecimento verdadeiro é intelectual, não sensível.\n• D: é uma posição relativista, próxima dos sofistas, que Platão combate.\n• E: a alegoria valoriza a filosofia contra a opinião comum."
+  }
+]
