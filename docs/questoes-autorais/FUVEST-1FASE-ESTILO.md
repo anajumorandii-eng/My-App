@@ -17,18 +17,42 @@ interpretação textual (156), análise conceitual (132), inferência causal (82
 modelagem (82), análise de evidências (67), leitura de fontes históricas (59),
 interpretação de gráfico (56) e análise de imagem (46).
 
-## Como a questão é montada
+## Como a questão é montada — medido nas questões oficiais
 
-- **Contexto antes do conteúdo.** Situação real (estuário contaminado, antiácido,
-  alpinista, chuveiro na tensão errada) que obriga a escolher o modelo pelo que
-  se pede, não pelo substantivo do texto.
-- **Dados suficientes e só os necessários.** Massa molar, conversão de unidades e
-  constantes vêm no enunciado; o que a questão mede é a operação.
-- **Cinco alternativas, todas plausíveis.** Cada distrator corresponde a um erro
-  real de raciocínio, nunca a um absurdo. Alternativas numéricas em ordem
-  crescente.
-- **Comando curto e preciso** ("é correto afirmar que", "considerando apenas os
-  dados", "a substituição que mantém o sentido e a correção").
+Medição nas 165 questões oficiais de 2025 e 2026 transcritas no banco:
+
+| Traço | Oficial | Lote 1 (v1) | Lote 1 (atual) |
+|---|---|---|---|
+| Enunciado mediano | ~840 caracteres | ~250 | ~570 |
+| Alternativa mediana | ~94 caracteres | ~70 | ~93 |
+| Texto-base com fonte | 47% | 0% | 100% com origem declarada |
+| Gráfico, tabela ou figura | 39% | 8% | 33% (tabelas e "Note e adote") |
+| Comando que completa a frase | 76% | 71% | maioria |
+
+Daí as regras:
+
+- **Texto-base primeiro.** Notícia, artigo científico, documento ou dado de
+  saúde pública, com um recorte atual (garimpo e mercúrio, El Niño de
+  2023–2024, rastreamento de doenças). O conteúdo escolar é a ferramenta para
+  ler o texto, não o assunto da pergunta.
+- **Origem sempre declarada, nunca inventada.** A banca cita fonte real em
+  quase metade das questões. Aqui, fonte real só entra quando conferida (o
+  art. 7º da CLT, transcrito do decreto-lei); o texto escrito pelo CRIVO diz
+  "Texto elaborado para esta questão." e dados hipotéticos dizem "Dados
+  ilustrativos." Inventar referência bibliográfica seria o mesmo erro de
+  inventar enunciado.
+- **Comando que completa a frase** ("espera-se que", "permitem concluir que",
+  "é correto afirmar que", "No texto, o autor").
+- **Alternativas longas e paralelas, com justificativa** ("X, pois…", "Y, uma
+  vez que…"). O distrator típico traz fato verdadeiro com vínculo errado,
+  contradiz o dado da tabela, generaliza o que o texto restringe ou repete
+  palavras do texto com sentido invertido.
+- **"Note e adote"** com constantes e conversões; alternativas numéricas em
+  ordem crescente.
+- **Literatura só com as obras vigentes.** A lista de 2027 está em
+  `docs/estudos-2026/fuvest-incidencia/estrategias-2027.md`. Questão de obra
+  exige trecho conferido na edição; sem isso, a questão de Português é de
+  leitura de texto escrito para ela.
 
 ## Pegadinhas recorrentes que os distratores reproduzem
 
@@ -42,8 +66,8 @@ interpretação de gráfico (56) e análise de imagem (46).
   regiões afetadas pelo El Niño.
 - Atribuir a constante de equilíbrio à pressão, ou à seleção natural uma
   intenção (raciocínio lamarckista).
-- Ler a afirmação do narrador ao pé da letra quando o texto a nega logo depois
-  (ironia machadiana), ou trocar conectivo concessivo por condicional/causal.
+- Tomar como tese do autor a crença que o texto apresenta para refutar
+  ("bastava informar"), ou trocar conectivo concessivo por condicional/causal.
 - Generalizar o que a fonte restringe (CLT "para todos").
 
 ## Comentário
@@ -69,5 +93,5 @@ CRIVO · estilo FUVEST, 1ª fase."
 
 Biologia 5, Química 4, Física 4, Geografia 3, Matemática 3, História 2,
 Português 2, Inglês 1 — com ênfase nos assuntos de Medicina (fisiologia,
-genética, farmacologia em contexto de química e matemática). Gabarito: A 5,
-B 6, C 3, D 5, E 5.
+genética, farmacologia em contexto de química e matemática). Gabarito: A 4,
+B 7, C 4, D 4, E 5.

@@ -40,3 +40,19 @@ test('cada comentário abre pela resposta e só aponta pegadinha em alternativa 
     assert.ok(q.trap.length > 0 && q.skill.length > 0, q.id);
   }
 });
+
+test('o lote acompanha o formato medido nas questões oficiais da FUVEST', () => {
+  // Medido nas 165 questões oficiais de 2025 e 2026 do banco: enunciado
+  // mediano de ~840 caracteres e alternativa mediana de ~94. A primeira versão
+  // do lote tinha enunciados de ~250 caracteres, sem texto-base: parecia
+  // questão de apostila, não da banca.
+  const mediana = (xs: number[]) => [...xs].sort((a, b) => a - b)[Math.floor(xs.length / 2)];
+  const enunciados = lote.map(q => q.prompt.replace(/^Questão autoral[^\n]*\n\n/, ''));
+  assert.ok(mediana(enunciados.map(p => p.length)) >= 450);
+  assert.ok(mediana(lote.flatMap(q => q.options.map(o => o.text.length))) >= 70);
+  for (const [i, p] of enunciados.entries()) {
+    // Texto-base sempre com a origem declarada: fonte real citada, ou a
+    // declaração de que foi escrito para a questão — nunca fonte inventada.
+    assert.match(p, /Texto elaborado para esta questão\.|Decreto-Lei|Disponível em/, lote[i].id);
+  }
+});
