@@ -462,6 +462,10 @@ diagnóstico, recebia 404 e mostrava "não consegui diagnosticar agora", o que
 parecia instabilidade da IA. Um teste em `server/ai/prompts.test.ts` agora
 compara as chamadas do cliente com as rotas do servidor — mantenha-o passando.
 
+Capas por IA, PDF e streaming de revisões: ler antes
+`docs/CONTEXTO-IA-IMAGENS-PDF-2026-10-27.md`. As variáveis `OMNIROUTE_*` são
+nomes legados e não identificam o provedor atual.
+
 Prompts que produzem JSON estruturado são analisados por parsers tolerantes
 (`src/lib/errorDiagnosis.ts`), que nunca lançam e rebaixam confiança que o
 modelo tenha inflado. Saída de modelo é dado suspeito, não fato.
