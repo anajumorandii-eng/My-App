@@ -2,11 +2,14 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "457dd8f24943478d32c176179787210b04324d83",
-  "generated_at_utc": "2026-10-27T02:58:47Z",
+  "source_commit": "a5edbcebcd831acb6642236f893700f4f5797424",
+  "generated_at_utc": "2026-10-27T17:08:48Z",
   "changed_files": [
-    "src/lib/aiClient.test.ts",
-    "src/lib/aiClient.ts"
+    "docs/revisoes-timeout-streaming.md",
+    "server/ai/routes.ts",
+    "server/ai/service.test.ts",
+    "server/ai/service.ts",
+    "server/ai/streaming.test.ts"
   ],
   "next_session": {
     "mode": "delta-only",
