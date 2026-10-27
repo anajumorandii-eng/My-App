@@ -109018,7 +109018,7 @@
     "chapter": "Função Quadrática",
     "topicId": "mat_funcoes",
     "subject": "Matemática",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma farmácia de manipulação estimou que, se cobrar p reais por um frasco de determinado produto, venderá, por mês, q = 200 − 2p frascos, para 0 < p < 100. A receita mensal é o produto do preço pela quantidade vendida.\n\nTexto elaborado para esta questão.\n\nO preço que maximiza a receita mensal e o valor dessa receita máxima são, respectivamente,",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara definir o preço de um produto, empresas estimam como a quantidade vendida varia conforme o valor cobrado: preços altos aumentam o ganho por unidade, mas afastam compradores.\n\nUma farmácia de manipulação estimou que, se cobrar p reais por um frasco de determinado produto, venderá, por mês, q = 200 − 2p frascos, para 0 < p < 100. A receita mensal é o produto do preço pela quantidade vendida.\n\nTexto elaborado para esta questão.\n\nO preço que maximiza a receita mensal e o valor dessa receita máxima são, respectivamente,",
     "options": [
       {
         "id": "a",
@@ -109050,7 +109050,7 @@
     "chapter": "Sólidos de Revolução",
     "topicId": "mat_geometria_espacial",
     "subject": "Matemática",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma prefeitura vai substituir um reservatório cilíndrico de água por outro, também cilíndrico, com o dobro do raio da base e metade da altura do antigo, para reduzir o impacto visual na paisagem.\n\nTexto elaborado para esta questão.\n\nEm relação ao reservatório antigo, a capacidade do novo",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO reservatório antigo abastece um bairro de cerca de 2 000 moradores e fica ao lado de um parque tombado. Por exigência do órgão de patrimônio, a nova estrutura não pode ultrapassar a altura das árvores do parque, mas pode ocupar uma área maior do terreno.\n\nUma prefeitura vai substituir um reservatório cilíndrico de água por outro, também cilíndrico, com o dobro do raio da base e metade da altura do antigo, para reduzir o impacto visual na paisagem.\n\nTexto elaborado para esta questão.\n\nEm relação ao reservatório antigo, a capacidade do novo",
     "options": [
       {
         "id": "a",
@@ -109082,7 +109082,7 @@
     "chapter": "Técnicas de Contagem",
     "topicId": "mat_combinatoria",
     "subject": "Matemática",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm laboratório identifica cada amostra com um código de duas letras seguidas de três algarismos, como AB-307. As letras são escolhidas entre as 26 do alfabeto e não podem ser iguais entre si; os algarismos podem se repetir.\n\nTexto elaborado para esta questão.\n\nO número de códigos distintos que podem ser formados é",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm laboratórios de análises clínicas, cada amostra recebe um código único, impresso em etiqueta, para evitar trocas entre pacientes. Com o aumento do número de exames, o laboratório precisou verificar se o formato de código adotado seria suficiente para identificar todas as amostras de um ano.\n\nUm laboratório identifica cada amostra com um código de duas letras seguidas de três algarismos, como AB-307. As letras são escolhidas entre as 26 do alfabeto e não podem ser iguais entre si; os algarismos podem se repetir.\n\nTexto elaborado para esta questão.\n\nO número de códigos distintos que podem ser formados é",
     "options": [
       {
         "id": "a",
@@ -109114,7 +109114,7 @@
     "chapter": "Estatística Descritiva",
     "topicId": "mat_dados_probabilidade",
     "subject": "Matemática",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma clínica tem dez funcionários. Nove deles recebem salário mensal de R$ 3 000,00, e o diretor recebe R$ 30 000,00. Em uma propaganda de vagas, a clínica anunciou que o 'salário médio' de sua equipe é superior a R$ 5 000,00.\n\nTexto elaborado para esta questão.\n\nSobre a informação divulgada, é correto afirmar que",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma clínica tem dez funcionários. Nove deles recebem salário mensal de R$ 3 000,00, e o diretor recebe R$ 30 000,00. Em uma propaganda de vagas, a clínica anunciou que o 'salário médio' de sua equipe é superior a R$ 5 000,00.\n\nUm candidato à vaga, ao ler o anúncio, imaginou que receberia mais de R$ 5 000,00 caso fosse contratado para uma das funções de base da equipe.\n\nTexto elaborado para esta questão.\n\nSobre a informação divulgada, é correto afirmar que",
     "options": [
       {
         "id": "a",
@@ -109818,7 +109818,7 @@
     "chapter": "Equações e Funções Logarítmicas",
     "topicId": "mat_log_exponenciais",
     "subject": "Matemática",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO pH é definido por pH = −log[H⁺], em que [H⁺] é a concentração de íons hidrogênio, em mol/L. O suco de limão tem pH próximo de 2, e a água pura, a 25 °C, tem pH 7.\n\nTexto elaborado para esta questão.\n\nA concentração de íons H⁺ no suco de limão é maior que a da água pura em, aproximadamente,",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nProfissionais de saúde bucal alertam que alimentos e bebidas ácidos, consumidos com frequência, podem desgastar o esmalte dos dentes, que começa a se dissolver em pH abaixo de cerca de 5,5.\n\nO pH é definido por pH = −log[H⁺], em que [H⁺] é a concentração de íons hidrogênio, em mol/L. O suco de limão tem pH próximo de 2, e a água pura, a 25 °C, tem pH 7.\n\nTexto elaborado para esta questão.\n\nA concentração de íons H⁺ no suco de limão é maior que a da água pura em, aproximadamente,",
     "options": [
       {
         "id": "a",
@@ -109882,7 +109882,7 @@
     "chapter": "Progressão Aritmética",
     "topicId": "mat_sequencias_matrizes",
     "subject": "Matemática",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um programa de reabilitação cardíaca, um paciente caminha 1 000 m no primeiro dia e aumenta a distância em 200 m a cada dia, até completar 30 dias de programa.\n\nTexto elaborado para esta questão.\n\nA distância total percorrida pelo paciente nos 30 dias é de",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um programa de reabilitação cardíaca, um paciente caminha 1 000 m no primeiro dia e aumenta a distância em 200 m a cada dia, até completar 30 dias de programa.\n\nO programa segue diretrizes de reabilitação cardiovascular, que recomendam aumento gradual da carga de exercício, com acompanhamento da frequência cardíaca e da pressão arterial a cada sessão.\n\nTexto elaborado para esta questão.\n\nA distância total percorrida pelo paciente nos 30 dias é de",
     "options": [
       {
         "id": "a",
@@ -109946,7 +109946,7 @@
     "chapter": "Sistema de Fusos Horários",
     "topicId": "geo_cartografia",
     "subject": "Geografia",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma médica brasileira vai participar de um congresso em Tóquio. Seu voo parte de São Paulo às 22 h do dia 10 (horário de Brasília, UTC−3) e, com uma escala, dura 24 horas no total até o pouso. O horário de Tóquio corresponde a UTC+9.\n\nTexto elaborado para esta questão.\n\nNo momento do pouso, o horário local em Tóquio será",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma médica brasileira vai participar de um congresso em Tóquio. Seu voo parte de São Paulo às 22 h do dia 10 (horário de Brasília, UTC−3) e, com uma escala, dura 24 horas no total até o pouso. O horário de Tóquio corresponde a UTC+9.\n\nPara evitar os efeitos da diferença de fuso horário (jet lag) no primeiro dia do congresso, a médica planeja dormir durante parte do voo, de acordo com o horário local do destino.\n\nTexto elaborado para esta questão.\n\nNo momento do pouso, o horário local em Tóquio será",
     "options": [
       {
         "id": "a",
@@ -110106,7 +110106,7 @@
     "chapter": "Orações Adjetivas",
     "topicId": "por_sintaxe",
     "subject": "Português",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nConsidere as frases:\n\nI. Os pacientes que estavam em jejum fizeram o exame de sangue.\nII. Os pacientes, que estavam em jejum, fizeram o exame de sangue.\n\nTexto elaborado para esta questão.\n\nSobre as duas frases, é correto afirmar que",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um relatório de enfermagem sobre a coleta de exames de um setor do hospital, foram redigidas duas versões da mesma frase. A coordenação precisava saber, a partir do texto, se algum paciente havia deixado de fazer o exame.\n\nConsidere as frases:\n\nI. Os pacientes que estavam em jejum fizeram o exame de sangue.\nII. Os pacientes, que estavam em jejum, fizeram o exame de sangue.\n\nTexto elaborado para esta questão.\n\nSobre as duas frases, é correto afirmar que",
     "options": [
       {
         "id": "a",
@@ -110522,7 +110522,7 @@
     "chapter": "Impulso e Quantidade de Movimento",
     "topicId": "fis_dinamica_impulsiva",
     "subject": "Física",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma colisão, a cabeça de um motorista passa de 15 m/s a zero. Sem airbag, ao bater no volante, ela para em cerca de 0,01 s; com o airbag, que infla e se esvazia de modo controlado, a parada leva cerca de 0,1 s.\n\nTexto elaborado para esta questão.\n\nO airbag reduz o risco de lesão porque",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma colisão, a cabeça de um motorista passa de 15 m/s a zero. Sem airbag, ao bater no volante, ela para em cerca de 0,01 s; com o airbag, que infla e se esvazia de modo controlado, a parada leva cerca de 0,1 s.\n\nOs airbags inflam em cerca de 30 milésimos de segundo após o impacto e têm orifícios por onde o gás escapa quando a cabeça os comprime. Eles complementam o cinto de segurança, que continua obrigatório.\n\nTexto elaborado para esta questão.\n\nO airbag reduz o risco de lesão porque",
     "options": [
       {
         "id": "a",
@@ -110682,7 +110682,7 @@
     "chapter": "Introdução à Teoria dos Números Inteiros",
     "topicId": "mat_teoria_numeros",
     "subject": "Matemática",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma paciente toma o medicamento A a cada 6 horas e o medicamento B a cada 8 horas. Ela tomou os dois juntos às 8 h de uma segunda-feira e manterá os horários regularmente.\n\nTexto elaborado para esta questão.\n\nA próxima vez em que ela tomará os dois medicamentos ao mesmo tempo será às",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma paciente toma o medicamento A a cada 6 horas e o medicamento B a cada 8 horas. Ela tomou os dois juntos às 8 h de uma segunda-feira e manterá os horários regularmente.\n\nComo os dois medicamentos causam sonolência, o médico orientou que, nos horários em que coincidissem, a paciente evitasse dirigir. Ela decidiu marcar na agenda esses momentos.\n\nTexto elaborado para esta questão.\n\nA próxima vez em que ela tomará os dois medicamentos ao mesmo tempo será às",
     "options": [
       {
         "id": "a",
@@ -110906,7 +110906,7 @@
     "chapter": "Ambiguidade: Duplicidade no Léxico e na Sintaxe",
     "topicId": "por_norma_culta",
     "subject": "Português",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nConsidere a frase:\n\n\"O médico visitou o paciente em sua casa.\"\n\nTexto elaborado para esta questão.\n\nA frase é ambígua, pois não deixa claro de quem é a casa. Uma reescrita que elimina a ambiguidade, indicando que a visita ocorreu na casa do paciente, é:",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um relatório de atendimento domiciliar, um agente de saúde registrou a frase abaixo. Ao ler o documento, a coordenação não soube dizer onde a visita havia ocorrido.\n\nConsidere a frase:\n\n\"O médico visitou o paciente em sua casa.\"\n\nTexto elaborado para esta questão.\n\nA frase é ambígua, pois não deixa claro de quem é a casa. Uma reescrita que elimina a ambiguidade, indicando que a visita ocorreu na casa do paciente, é:",
     "options": [
       {
         "id": "a",
@@ -111386,7 +111386,7 @@
     "chapter": "Função Constante e Função Afim",
     "topicId": "mat_funcoes",
     "subject": "Matemática",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma família compara dois planos de saúde:\n\n• Plano A: mensalidade de R$ 100,00 e R$ 50,00 por consulta realizada no mês.\n• Plano B: mensalidade de R$ 250,00 e R$ 20,00 por consulta realizada no mês.\n\nTexto elaborado para esta questão.\n\nO plano B fica mais barato que o plano A quando a família realiza, no mês,",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa escolha de um plano de saúde, além da mensalidade, é preciso considerar a coparticipação, valor pago pelo beneficiário a cada consulta ou exame realizado.\n\nUma família compara dois planos de saúde:\n\n• Plano A: mensalidade de R$ 100,00 e R$ 50,00 por consulta realizada no mês.\n• Plano B: mensalidade de R$ 250,00 e R$ 20,00 por consulta realizada no mês.\n\nTexto elaborado para esta questão.\n\nO plano B fica mais barato que o plano A quando a família realiza, no mês,",
     "options": [
       {
         "id": "a",
@@ -111450,7 +111450,7 @@
     "chapter": "Razão e Proporção",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara desinfetar superfícies em ambientes de saúde, recomenda-se diluir 1 parte de água sanitária, que contém 2% de cloro ativo, em 49 partes de água. A solução resultante é usada em panos e borrifadores.\n\nTexto elaborado para esta questão.\n\nA concentração aproximada de cloro ativo na solução preparada é de",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara desinfetar superfícies em ambientes de saúde, recomenda-se diluir 1 parte de água sanitária, que contém 2% de cloro ativo, em 49 partes de água. A solução resultante é usada em panos e borrifadores.\n\nSoluções muito concentradas podem irritar a pele e as vias respiratórias e danificar superfícies; soluções muito diluídas podem não eliminar os microrganismos. Por isso, a proporção indicada deve ser seguida.\n\nTexto elaborado para esta questão.\n\nA concentração aproximada de cloro ativo na solução preparada é de",
     "options": [
       {
         "id": "a",
@@ -111674,7 +111674,7 @@
     "chapter": "Funções da Linguagem",
     "topicId": "por_texto",
     "subject": "Português",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia os trechos de uma bula de medicamento:\n\nI. \"Este medicamento contém 500 mg de paracetamol por comprimido.\"\nII. \"Mantenha fora do alcance de crianças.\"\n\nTexto elaborado para esta questão.\n\nNos trechos I e II, predominam, respectivamente, as funções",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs bulas de medicamentos seguem regras da Agência Nacional de Vigilância Sanitária, que define seções obrigatórias e exige linguagem compreensível ao paciente, além de uma versão técnica destinada aos profissionais de saúde.\n\nLeia os trechos de uma bula de medicamento:\n\nI. \"Este medicamento contém 500 mg de paracetamol por comprimido.\"\nII. \"Mantenha fora do alcance de crianças.\"\n\nTexto elaborado para esta questão.\n\nNos trechos I e II, predominam, respectivamente, as funções",
     "options": [
       {
         "id": "a",
@@ -112058,7 +112058,7 @@
     "chapter": "Sistemas Conservativos e Sistemas Não Conservativos",
     "topicId": "fis_energia",
     "subject": "Física",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um parque aquático, um escorregador tem 5 m de altura entre o ponto de partida e a piscina. Uma criança parte do repouso no topo. A água que escorre pela rampa torna o atrito desprezível.\n\nNote e adote:\ng = 10 m/s².\nDesconsidere a resistência do ar.\n\nTexto elaborado para esta questão.\n\nA velocidade da criança ao chegar à piscina é de",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um parque aquático, um escorregador tem 5 m de altura entre o ponto de partida e a piscina. Uma criança parte do repouso no topo. A água que escorre pela rampa torna o atrito desprezível.\n\nPor segurança, o parque limita a altura dos escorregadores e exige que as crianças desçam sentadas, com os pés à frente. A piscina de chegada tem profundidade suficiente para frear a criança na água.\n\nNote e adote:\ng = 10 m/s².\nDesconsidere a resistência do ar.\n\nTexto elaborado para esta questão.\n\nA velocidade da criança ao chegar à piscina é de",
     "options": [
       {
         "id": "a",
@@ -112090,7 +112090,7 @@
     "chapter": "Reflexão em Superfícies Esféricas",
     "topicId": "fis_optica_geometrica",
     "subject": "Física",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO espelho que o dentista usa para observar os dentes é um pequeno espelho côncavo. Posicionado próximo ao dente, ele fornece uma imagem maior e direita, que facilita ver detalhes.\n\nTexto elaborado para esta questão.\n\nPara que o espelho côncavo forme esse tipo de imagem, o dente deve estar",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO espelho que o dentista usa para observar os dentes é um pequeno espelho côncavo. Posicionado próximo ao dente, ele fornece uma imagem maior e direita, que facilita ver detalhes.\n\nAlém de ampliar a imagem, o espelho permite ver faces dos dentes voltadas para a língua ou para o céu da boca, que não seriam visíveis diretamente. Antes do uso, ele costuma ser aquecido levemente, para não embaçar com a respiração do paciente.\n\nTexto elaborado para esta questão.\n\nPara que o espelho côncavo forme esse tipo de imagem, o dente deve estar",
     "options": [
       {
         "id": "a",
@@ -112154,7 +112154,7 @@
     "chapter": "Funções Trigonométricas",
     "topicId": "mat_trigonometria",
     "subject": "Matemática",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um porto, a altura da maré, em metros, pode ser modelada pela função\n\nh(t) = 2 + 1,5 · sen(π t / 6),\n\nem que t é o tempo, em horas, contado a partir da meia-noite.\n\nTexto elaborado para esta questão.\n\nDe acordo com esse modelo, o intervalo de tempo entre duas marés altas consecutivas e a altura máxima da maré são, respectivamente,",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm portos com grande variação de maré, navios de maior calado só podem entrar ou sair em determinados horários, quando a profundidade é suficiente. Por isso, as autoridades publicam tábuas de maré, e modelos matemáticos ajudam a prever esses horários.\n\nEm um porto, a altura da maré, em metros, pode ser modelada pela função\n\nh(t) = 2 + 1,5 · sen(π t / 6),\n\nem que t é o tempo, em horas, contado a partir da meia-noite.\n\nTexto elaborado para esta questão.\n\nDe acordo com esse modelo, o intervalo de tempo entre duas marés altas consecutivas e a altura máxima da maré são, respectivamente,",
     "options": [
       {
         "id": "a",
@@ -112186,7 +112186,7 @@
     "chapter": "O Problema do Grupo",
     "topicId": "mat_combinatoria",
     "subject": "Matemática",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm hospital precisa formar uma comissão de ética com 3 médicos, escolhidos entre 8 voluntários. Todos os membros da comissão terão a mesma função.\n\nTexto elaborado para esta questão.\n\nO número de comissões diferentes que podem ser formadas é",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm hospital precisa formar uma comissão de ética com 3 médicos, escolhidos entre 8 voluntários. Todos os membros da comissão terão a mesma função.\n\nA comissão analisará projetos de pesquisa com seres humanos, verificando, entre outros aspectos, se os participantes deram consentimento livre e esclarecido. Os 8 voluntários atuam em especialidades diferentes, e qualquer grupo de três é considerado adequado.\n\nTexto elaborado para esta questão.\n\nO número de comissões diferentes que podem ser formadas é",
     "options": [
       {
         "id": "a",
@@ -112218,7 +112218,7 @@
     "chapter": "A Geometria Métrica Plana",
     "topicId": "mat_geometria_plana",
     "subject": "Matemática",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara resgatar uma pessoa em uma janela situada a 12 m de altura em relação ao topo do caminhão, bombeiros apoiam a extremidade de uma escada no peitoril, enquanto a base da escada fica no caminhão, a 9 m da parede, na horizontal. A parede é vertical.\n\nTexto elaborado para esta questão.\n\nO comprimento mínimo da escada é de",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara resgatar uma pessoa em uma janela situada a 12 m de altura em relação ao topo do caminhão, bombeiros apoiam a extremidade de uma escada no peitoril, enquanto a base da escada fica no caminhão, a 9 m da parede, na horizontal. A parede é vertical.\n\nEm operações de resgate, o comprimento da escada precisa ser escolhido antes de o caminhão se posicionar, porque nem sempre é possível aproximá-lo do prédio por causa de carros estacionados e de fios elétricos.\n\nTexto elaborado para esta questão.\n\nO comprimento mínimo da escada é de",
     "options": [
       {
         "id": "a",
@@ -112442,7 +112442,7 @@
     "chapter": "Concordância",
     "topicId": "por_norma_culta",
     "subject": "Português",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nConsidere as frases:\n\nI. Haviam muitos pacientes na sala de espera.\nII. Faz dois anos que a clínica foi inaugurada.\nIII. Fazem três meses que ele não vem às consultas.\n\nTexto elaborado para esta questão.\n\nEstá de acordo com a norma-padrão o que se afirma em:",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um aviso afixado na recepção de uma clínica, a coordenação escreveu as frases a seguir. Antes de imprimir a versão final, pediu a uma revisora que verificasse a concordância verbal.\n\nConsidere as frases:\n\nI. Haviam muitos pacientes na sala de espera.\nII. Faz dois anos que a clínica foi inaugurada.\nIII. Fazem três meses que ele não vem às consultas.\n\nTexto elaborado para esta questão.\n\nEstá de acordo com a norma-padrão o que se afirma em:",
     "options": [
       {
         "id": "a",
@@ -112890,7 +112890,7 @@
     "chapter": "Microscópio e Luneta Astronômica (ou Telescópio Refrator): Noções Básicas",
     "topicId": "fis_optica_instrumental",
     "subject": "Física",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma aula prática, estudantes observam células da mucosa da bochecha em um microscópio óptico composto, usando uma objetiva com aumento de 40 vezes e uma ocular com aumento de 10 vezes.\n\nTexto elaborado para esta questão.\n\nO aumento total da imagem observada é de",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO microscópio óptico composto, aperfeiçoado a partir do século XVII, permitiu a observação das células. Ele usa duas lentes convergentes: a objetiva, próxima ao objeto, e a ocular, junto ao olho do observador.\n\nEm uma aula prática, estudantes observam células da mucosa da bochecha em um microscópio óptico composto, usando uma objetiva com aumento de 40 vezes e uma ocular com aumento de 10 vezes.\n\nTexto elaborado para esta questão.\n\nO aumento total da imagem observada é de",
     "options": [
       {
         "id": "a",
@@ -112922,7 +112922,7 @@
     "chapter": "Introdução ao Modelo Exponencial",
     "topicId": "mat_log_exponenciais",
     "subject": "Matemática",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm condições ideais de laboratório, uma população de bactérias dobra a cada 20 minutos. Uma cultura foi iniciada com 100 bactérias.\n\nTexto elaborado para esta questão.\n\nMantidas as condições, o número de bactérias após 2 horas será de",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAlgumas bactérias, como a Escherichia coli, podem se dividir a cada 20 minutos em condições ideais de temperatura e nutrientes. Fora do laboratório, a falta de recursos, o acúmulo de resíduos e a ação do sistema imune limitam esse crescimento.\n\nEm condições ideais de laboratório, uma população de bactérias dobra a cada 20 minutos. Uma cultura foi iniciada com 100 bactérias.\n\nTexto elaborado para esta questão.\n\nMantidas as condições, o número de bactérias após 2 horas será de",
     "options": [
       {
         "id": "a",
@@ -112954,7 +112954,7 @@
     "chapter": "Lugar Geométrico e Equação da Circunferência",
     "topicId": "mat_geometria_analitica",
     "subject": "Matemática",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um mapa com coordenadas em quilômetros, a antena de uma rede de atendimento de emergência fica no ponto (2, 3) e cobre todos os pontos situados a até 5 km dela.\n\nTexto elaborado para esta questão.\n\nDos pontos abaixo, aquele que fica FORA da área de cobertura da antena é:",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara planejar o atendimento de emergência em uma área rural, uma secretaria de saúde precisa saber quais localidades ficam dentro do alcance de rádio das ambulâncias, já que em parte da região não há sinal de telefonia celular.\n\nEm um mapa com coordenadas em quilômetros, a antena de uma rede de atendimento de emergência fica no ponto (2, 3) e cobre todos os pontos situados a até 5 km dela.\n\nTexto elaborado para esta questão.\n\nDos pontos abaixo, aquele que fica FORA da área de cobertura da antena é:",
     "options": [
       {
         "id": "a",
@@ -112986,7 +112986,7 @@
     "chapter": "Médias",
     "topicId": "mat_sequencias_matrizes",
     "subject": "Matemática",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um vestibular de Medicina, a nota final da segunda fase é a média ponderada das provas, com pesos 3 para Biologia, 2 para Química e 1 para Física. Uma candidata obteve 8 em Biologia, 6 em Química e 5 em Física.\n\nTexto elaborado para esta questão.\n\nA nota final da candidata é de, aproximadamente,",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm vestibulares com provas de pesos diferentes, a mesma soma de notas pode gerar classificações distintas, conforme a matéria em que o candidato teve melhor desempenho.\n\nEm um vestibular de Medicina, a nota final da segunda fase é a média ponderada das provas, com pesos 3 para Biologia, 2 para Química e 1 para Física. Uma candidata obteve 8 em Biologia, 6 em Química e 5 em Física.\n\nTexto elaborado para esta questão.\n\nA nota final da candidata é de, aproximadamente,",
     "options": [
       {
         "id": "a",
@@ -113299,6 +113299,774 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. Para Aristóteles, tornamo-nos corajosos praticando atos corajosos: a virtude é hábito. A coragem enfrenta o medo na medida certa, nem fugindo de tudo (covardia) nem se lançando a riscos sem razão (temeridade). O ponto exato depende das circunstâncias e é discernido pela prudência (phrónesis).\n\nPegadinhas:\n• A: a virtude moral não é inata; é adquirida.\n• B: não sentir medo algum aproxima-se do excesso; o corajoso sente medo e age como convém.\n• C: o meio-termo é 'relativo a nós', não um ponto matemático fixo.\n• E: o excesso é um vício; a virtude está no meio.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_01",
+    "chapter": "Mutações Gênicas",
+    "topicId": "bio_genetica",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA anemia falciforme é causada pela troca de uma única base no gene da β-globina, que faz a hemoglobina ter o aminoácido valina no lugar de ácido glutâmico em uma posição da cadeia. Essa hemoglobina, chamada S, tende a se agregar quando há pouco oxigênio, deformando as hemácias em forma de foice. Pessoas homozigotas para o alelo S têm a doença; heterozigotas geralmente não têm sintomas e apresentam menor risco de formas graves de malária. Em regiões da África onde a malária é endêmica, o alelo S é mais frequente.\n\nTexto elaborado para esta questão.\n\nA maior frequência do alelo S nessas regiões se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "os heterozigotos, protegidos contra formas graves de malária, sobrevivem e se reproduzem mais, o que mantém o alelo na população apesar da doença nos homozigotos."
+      },
+      {
+        "id": "b",
+        "text": "o parasita da malária provoca a mutação no gene da β-globina das pessoas infectadas."
+      },
+      {
+        "id": "c",
+        "text": "o alelo S surgiu porque as populações precisavam se proteger da malária."
+      },
+      {
+        "id": "d",
+        "text": "os homozigotos para o alelo S têm vantagem reprodutiva em relação aos demais."
+      },
+      {
+        "id": "e",
+        "text": "a malária é causada pela própria hemoglobina S, que se espalha entre as pessoas."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. É um caso de vantagem do heterozigoto: onde há malária, pessoas com um alelo normal e um S sobrevivem mais que as homozigotas normais (mais vulneráveis à malária grave) e que as homozigotas S (com anemia falciforme). A seleção natural mantém os dois alelos na população.\n\nPegadinhas:\n• B e C: a mutação é aleatória; o ambiente seleciona, não a produz nem a dirige.\n• D: os homozigotos S têm a doença e menor sobrevivência.\n• E: a malária é causada por um protozoário (Plasmodium), transmitido por mosquitos.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_02",
+    "chapter": "Biomas Brasileiros",
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa Caatinga, durante a estação seca, que pode durar mais de seis meses, a maioria das árvores e arbustos perde as folhas, e a paisagem fica acinzentada. Com as primeiras chuvas, em poucos dias as plantas rebrotam. Cactos, como o mandacaru, mantêm-se verdes o ano todo: têm folhas transformadas em espinhos e caules suculentos.\n\nTexto elaborado para esta questão.\n\nAs características descritas são adaptações que",
+    "options": [
+      {
+        "id": "a",
+        "text": "aumentam a fotossíntese na estação seca, quando a luz é mais intensa."
+      },
+      {
+        "id": "b",
+        "text": "permitem que as plantas absorvam água do ar pelas folhas na estação seca."
+      },
+      {
+        "id": "c",
+        "text": "indicam que as plantas morrem a cada seca e renascem a partir de sementes."
+      },
+      {
+        "id": "d",
+        "text": "reduzem a perda de água por transpiração na seca — pela queda das folhas ou pela redução da superfície foliar — e, nos cactos, permitem armazenar água no caule."
+      },
+      {
+        "id": "e",
+        "text": "atraem polinizadores durante a estação seca."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A transpiração ocorre principalmente pelas folhas. Perdê-las (caducifolia) reduz drasticamente a perda de água quando o solo está seco; as plantas permanecem vivas e rebrotam com as chuvas. Nos cactos, espinhos no lugar de folhas reduzem a superfície de transpiração, o caule verde faz fotossíntese, e tecidos suculentos armazenam água.\n\nPegadinhas:\n• A: sem folhas, a fotossíntese diminui; o ganho é poupar água.\n• B: as plantas absorvem água pelas raízes; a queda das folhas não serve a isso.\n• C: o texto diz que as plantas rebrotam em poucos dias; elas estão vivas.\n• E: a queda das folhas não tem relação com a atração de polinizadores.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_03",
+    "chapter": "Coordenação Nervosa II",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo exame neurológico, o médico bate levemente com um martelo abaixo da patela (joelho) do paciente sentado, e a perna se estende automaticamente, antes que o paciente perceba o golpe. A ausência ou o exagero dessa resposta pode indicar lesões no sistema nervoso.\n\nPacientes com lesões na medula espinal acima do nível lombar podem apresentar esse reflexo exagerado, enquanto lesões no nervo que inerva a coxa podem aboli-lo.\n\nTexto elaborado para esta questão.\n\nA resposta descrita ocorre porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o encéfalo decide conscientemente estender a perna após identificar o golpe."
+      },
+      {
+        "id": "b",
+        "text": "o estímulo é conduzido por um neurônio sensorial até a medula espinal, que o transmite a um neurônio motor, provocando a contração do músculo da coxa sem a necessidade de comando do encéfalo."
+      },
+      {
+        "id": "c",
+        "text": "o martelo estimula diretamente o músculo, sem participação do sistema nervoso."
+      },
+      {
+        "id": "d",
+        "text": "os hormônios liberados na corrente sanguínea pelo golpe provocam a contração."
+      },
+      {
+        "id": "e",
+        "text": "o nervo óptico transmite a imagem do martelo ao músculo da perna."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. É um arco reflexo: o estiramento do tendão estimula receptores no músculo; o neurônio sensorial leva o impulso à medula, onde faz sinapse com o neurônio motor, que comanda a contração. O circuito curto explica a rapidez. O encéfalo é informado depois — por isso o paciente sente o golpe após o movimento.\n\nPegadinhas:\n• A: o movimento ocorre antes da percepção consciente.\n• C: a resposta depende do circuito nervoso; com lesão no nervo ou na medula, ela some.\n• D: a resposta hormonal é lenta; o reflexo é imediato.\n• E: o reflexo ocorre mesmo de olhos fechados.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_04",
+    "chapter": "Fisiologia Vegetal: Transporte no Floema",
+    "topicId": "bio_fisio_vegetal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um experimento clássico, retira-se um anel completo de casca do tronco de uma árvore, removendo o floema, mas preservando o lenho (xilema). Nas semanas seguintes, forma-se um intumescimento logo acima do corte, e as folhas permanecem verdes. Meses depois, porém, a árvore morre.\n\nO procedimento, chamado anel de Malpighi, foi descrito no século XVII. Versões parciais da técnica são usadas por agricultores, que retiram uma faixa estreita de casca de ramos de videiras para aumentar o tamanho das uvas.\n\nTexto elaborado para esta questão.\n\nOs resultados se explicam porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a retirada do xilema impediu a subida de água, e as folhas murcharam imediatamente."
+      },
+      {
+        "id": "b",
+        "text": "a água passou a se acumular acima do corte, afogando as raízes."
+      },
+      {
+        "id": "c",
+        "text": "a casca protege a árvore do sol, e sem ela o tronco queima."
+      },
+      {
+        "id": "d",
+        "text": "as folhas deixaram de realizar fotossíntese logo após o corte."
+      },
+      {
+        "id": "e",
+        "text": "a interrupção do floema impediu que a seiva elaborada chegasse às raízes, que, sem açúcares, morreram com o tempo; enquanto isso, o xilema intacto continuou levando água às folhas."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O floema leva a seiva elaborada (açúcares da fotossíntese) das folhas para as demais partes, inclusive as raízes. Com o anel, os açúcares se acumulam acima do corte (o intumescimento). O xilema, intacto, continua levando água e sais às folhas — por isso elas permanecem verdes por algum tempo. Sem açúcares, as raízes esgotam suas reservas, param de absorver água, e a árvore morre.\n\nPegadinhas:\n• A: o xilema foi preservado, e as folhas permaneceram verdes.\n• B: o acúmulo acima do corte é de seiva elaborada, e a água não se acumula nas raízes.\n• C: a casca protege, mas a morte decorre da interrupção do transporte no floema.\n• D: as folhas seguem fazendo fotossíntese; o problema é distribuir o que produzem.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_05",
+    "chapter": "Organização da Tabela Periódica dos Elementos",
+    "topicId": "qui_modelos_atomicos",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nApós o acidente nuclear de Chernobyl, em 1986, uma das maiores preocupações foi o estrôncio-90, isótopo radioativo liberado no ambiente. Ingerido pelos alimentos, ele tende a se acumular nos ossos e nos dentes, onde substitui o cálcio, permanecendo no organismo por muitos anos.\n\nNote e adote:\nCálcio (Ca) e estrôncio (Sr) pertencem ao grupo 2 da tabela periódica.\n\nTexto elaborado para esta questão.\n\nO estrôncio substitui o cálcio nos ossos porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "os dois elementos têm a mesma massa atômica."
+      },
+      {
+        "id": "b",
+        "text": "o cálcio também é radioativo e se transforma em estrôncio."
+      },
+      {
+        "id": "c",
+        "text": "ambos pertencem ao mesmo grupo, têm dois elétrons na camada de valência e formam íons com carga 2+, com comportamento químico semelhante."
+      },
+      {
+        "id": "d",
+        "text": "o estrôncio é um gás nobre que não reage, ocupando os espaços vazios do osso."
+      },
+      {
+        "id": "e",
+        "text": "o estrôncio é um metal alcalino, mais reativo que o cálcio."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Elementos de um mesmo grupo têm a mesma configuração de valência e propriedades químicas semelhantes. Sr²⁺ e Ca²⁺ têm mesma carga e tamanhos próximos, e o organismo não os distingue bem: o estrôncio entra na hidroxiapatita do osso. Sendo radioativo e de meia-vida de cerca de 29 anos, irradia a medula óssea por longo tempo.\n\nPegadinhas:\n• A: as massas são bem diferentes (Ca ≈ 40; Sr ≈ 88).\n• B: o cálcio comum não é radioativo e não se transforma em estrôncio.\n• D: o estrôncio é um metal alcalinoterroso, não gás nobre.\n• E: o grupo 2 é o dos metais alcalinoterrosos; os alcalinos são do grupo 1.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_06",
+    "chapter": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+    "topicId": "qui_organica_fundamentos",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Agência Nacional de Vigilância Sanitária proíbe o uso de formol em produtos para alisar cabelos, por ser tóxico e potencialmente cancerígeno. O formol é uma solução aquosa de metanal, substância de fórmula H₂C=O, em que o átomo de carbono está ligado a dois hidrogênios e, por ligação dupla, a um oxigênio.\n\nEm 2009, a Anvisa proibiu a venda de formol a varejo em drogarias, farmácias e supermercados, depois de casos de intoxicação em salões de beleza, com irritação dos olhos e das vias respiratórias.\n\nTexto elaborado para esta questão.\n\nO metanal pertence à função",
+    "options": [
+      {
+        "id": "a",
+        "text": "aldeído, pois apresenta o grupo carbonila (C=O) em carbono ligado a pelo menos um hidrogênio."
+      },
+      {
+        "id": "b",
+        "text": "álcool, pois tem nome semelhante ao do metanol."
+      },
+      {
+        "id": "c",
+        "text": "cetona, pois apresenta carbonila entre dois átomos de carbono."
+      },
+      {
+        "id": "d",
+        "text": "ácido carboxílico, pois tem um oxigênio ligado ao carbono."
+      },
+      {
+        "id": "e",
+        "text": "éter, pois o oxigênio está entre dois átomos de carbono."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O sufixo -al indica aldeído: carbonila em carbono primário, ligado a hidrogênio. No metanal, o carbono se liga a dois hidrogênios e ao oxigênio por dupla. O metanol (CH₃OH) é o álcool correspondente, com –OH em vez de C=O.\n\nPegadinhas:\n• B: o sufixo -ol indica álcool; -al, aldeído.\n• C: cetonas têm carbonila entre dois carbonos; o metanal tem um único carbono.\n• D: ácido carboxílico exige –COOH.\n• E: éter exige oxigênio entre dois carbonos (C–O–C).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_07",
+    "chapter": "Equações Iônicas e outras Teorias para Ácidos e Bases",
+    "topicId": "qui_inorganica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO leite de magnésia, usado como antiácido e laxante, é uma suspensão de hidróxido de magnésio, Mg(OH)₂, base pouco solúvel em água. No estômago, ele reage com o ácido clorídrico:\n\nMg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂O\n\nPor ser pouco solúvel, o hidróxido de magnésio age de forma gradual e é considerado mais seguro que bases solúveis, que seriam corrosivas para a mucosa.\n\nNote e adote:\nMassa molar do Mg(OH)₂ = 58 g/mol.\n\nTexto elaborado para esta questão.\n\nUma dose que contém 0,58 g de Mg(OH)₂ é capaz de neutralizar, no máximo,",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,005 mol de HCl."
+      },
+      {
+        "id": "b",
+        "text": "0,01 mol de HCl."
+      },
+      {
+        "id": "c",
+        "text": "0,015 mol de HCl."
+      },
+      {
+        "id": "d",
+        "text": "0,02 mol de HCl."
+      },
+      {
+        "id": "e",
+        "text": "0,04 mol de HCl."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. 0,58 g ÷ 58 g/mol = 0,01 mol de Mg(OH)₂. Pela equação, cada mol da base neutraliza 2 mol de HCl, porque libera duas hidroxilas: 2 × 0,01 = 0,02 mol.\n\nPegadinhas:\n• A (0,005 mol): inverte a proporção (divide por 2).\n• B (0,01 mol): usa proporção 1:1, ignorando as duas hidroxilas.\n• C e E: não correspondem à estequiometria da equação.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_08",
+    "chapter": "Equilíbrios Químicos I",
+    "topicId": "qui_equilibrio",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRefrigerantes são engarrafados com gás carbônico dissolvido sob pressão. Enquanto a garrafa está fechada, quase não se veem bolhas; ao abri-la, forma-se efervescência intensa. Uma garrafa aberta guardada na geladeira perde o gás mais lentamente do que uma deixada ao sol. Em solução, pode-se representar:\n\nCO₂(g) ⇌ CO₂(aq)\n\nTexto elaborado para esta questão.\n\nAs observações se explicam porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "ao abrir a garrafa, a temperatura do líquido aumenta, e o CO₂ é produzido por reação química."
+      },
+      {
+        "id": "b",
+        "text": "a diminuição da pressão sobre o líquido reduz a solubilidade do CO₂, deslocando o equilíbrio no sentido da formação do gás; e a solubilidade dos gases em líquidos diminui com o aumento da temperatura."
+      },
+      {
+        "id": "c",
+        "text": "gases são mais solúveis em água quente, por isso a garrafa ao sol mantém mais gás."
+      },
+      {
+        "id": "d",
+        "text": "a pressão não interfere na solubilidade dos gases, e as bolhas se devem ao açúcar."
+      },
+      {
+        "id": "e",
+        "text": "o CO₂ reage com o oxigênio do ar ao abrir a garrafa."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A solubilidade de um gás em um líquido aumenta com a pressão parcial desse gás sobre o líquido. Ao abrir a garrafa, a pressão cai, e o equilíbrio se desloca no sentido de CO₂(g): surgem as bolhas. Aumentar a temperatura também reduz a solubilidade de gases, por isso a garrafa ao sol perde gás mais depressa.\n\nPegadinhas:\n• A: a efervescência se deve à queda de pressão, não a uma reação nova.\n• C: inverte o efeito da temperatura.\n• D: a pressão é o fator central; o açúcar não forma as bolhas.\n• E: o CO₂ não reage com o oxigênio.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_09",
+    "chapter": "Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre",
+    "topicId": "fis_eletromagnetismo",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA bússola é uma agulha imantada que pode girar livremente. Seu polo norte magnético aponta, aproximadamente, para o norte geográfico da Terra. Sabe-se que polos magnéticos de mesmo nome se repelem e de nomes diferentes se atraem.\n\nAntes dos sistemas de navegação por satélite, a bússola foi decisiva para a navegação; ainda hoje é usada por montanhistas e equipes de resgate. Seu uso exige cuidado perto de estruturas de ferro e de aparelhos elétricos, que alteram a direção indicada pela agulha.\n\nTexto elaborado para esta questão.\n\nCom base nessas informações, conclui-se que",
+    "options": [
+      {
+        "id": "a",
+        "text": "no norte geográfico existe um polo norte magnético, que atrai o polo norte da agulha."
+      },
+      {
+        "id": "b",
+        "text": "a bússola aponta para o norte por causa da rotação da Terra, e não de um campo magnético."
+      },
+      {
+        "id": "c",
+        "text": "a Terra não tem campo magnético, e a bússola é atraída pelo ferro das montanhas."
+      },
+      {
+        "id": "d",
+        "text": "os polos magnéticos da Terra coincidem exatamente com os polos geográficos."
+      },
+      {
+        "id": "e",
+        "text": "nas proximidades do norte geográfico está o polo sul magnético da Terra, que atrai o polo norte da agulha."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Se o polo norte da agulha é atraído para o norte geográfico, ali deve haver um polo magnético de nome oposto: o polo sul magnético da Terra. Além disso, os polos magnéticos não coincidem com os geográficos, e a diferença entre as direções (declinação magnética) varia conforme o lugar.\n\nPegadinhas:\n• A: polos de mesmo nome se repelem.\n• B: a orientação da agulha se deve ao campo magnético terrestre.\n• C: a Terra tem campo magnético; massas de ferro locais apenas o perturbam.\n• D: há diferença entre polos magnéticos e geográficos, que muda ao longo do tempo.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_10",
+    "chapter": "Trabalho e Energia: Teorema da Energia Cinética",
+    "topicId": "fis_energia",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nCampanhas de redução de velocidade em vias urbanas lembram que a distância de frenagem cresce muito com a velocidade. Um carro trafegando a 50 km/h precisa, depois de acionados os freios, de cerca de 10 m para parar em determinado asfalto seco. Considere que a força de frenagem seja a mesma em qualquer velocidade.\n\nTexto elaborado para esta questão.\n\nNas mesmas condições, a 100 km/h, a distância de frenagem seria de, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "10 m."
+      },
+      {
+        "id": "b",
+        "text": "20 m."
+      },
+      {
+        "id": "c",
+        "text": "40 m."
+      },
+      {
+        "id": "d",
+        "text": "80 m."
+      },
+      {
+        "id": "e",
+        "text": "100 m."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Pelo teorema da energia cinética, o trabalho da força de frenagem anula a energia cinética: F · d = m v²/2. Com F constante, d é proporcional a v². Dobrar a velocidade multiplica a energia cinética — e a distância — por 4: 4 × 10 = 40 m.\n\nPegadinhas:\n• A: ignora o efeito da velocidade.\n• B (20 m): supõe proporcionalidade direta com a velocidade.\n• D (80 m): multiplica por 8, como se a dependência fosse cúbica.\n• E (100 m): não corresponde a modelo coerente com os dados.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_11",
+    "chapter": "Plano Inclinado",
+    "topicId": "fis_leis_newton",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara levar uma maca com um paciente, de peso total 600 N, até a entrada de uma clínica, situada 1 m acima do nível da calçada, usa-se uma rampa de 4 m de comprimento. Considere o atrito desprezível e que a maca seja empurrada lentamente, com velocidade constante, paralelamente à rampa.\n\nA norma de acessibilidade limita a inclinação de rampas para que pessoas em cadeira de rodas e profissionais que empurram macas consigam subi-las sem esforço excessivo.\n\nTexto elaborado para esta questão.\n\nA força necessária para empurrar a maca ao longo da rampa é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "150 N."
+      },
+      {
+        "id": "b",
+        "text": "300 N."
+      },
+      {
+        "id": "c",
+        "text": "450 N."
+      },
+      {
+        "id": "d",
+        "text": "600 N."
+      },
+      {
+        "id": "e",
+        "text": "2 400 N."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Sem atrito e com velocidade constante, a força deve equilibrar a componente do peso paralela à rampa: F = P · sen θ = P · h/L = 600 × 1/4 = 150 N. O trabalho é o mesmo que levantar verticalmente (150 × 4 = 600 × 1 = 600 J): a rampa reduz a força, à custa de uma distância maior.\n\nPegadinhas:\n• B e C: não correspondem à relação h/L da rampa.\n• D (600 N): é o peso, a força para erguer a maca na vertical.\n• E (2 400 N): multiplica o peso pela razão L/h, em vez de dividir.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_12",
+    "chapter": "Conceitos Básicos",
+    "topicId": "fis_ondas_fundamentos",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm filmes de ficção científica, explosões de naves no espaço costumam ser acompanhadas de estrondos. Astronautas em caminhada espacial, porém, comunicam-se com a estação e entre si por rádio, mesmo estando a poucos metros uns dos outros.\n\nDurante a caminhada, cada astronauta está dentro de um traje pressurizado, com ar à sua volta. Encostando o capacete no de um colega, um astronauta consegue ouvir, fracamente, a voz do outro.\n\nTexto elaborado para esta questão.\n\nO uso do rádio se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o som se propaga mais rapidamente no vácuo, e o capacete distorce as palavras."
+      },
+      {
+        "id": "b",
+        "text": "o rádio transmite ondas sonoras, que atravessam o vácuo com mais facilidade."
+      },
+      {
+        "id": "c",
+        "text": "a luz e o som são ondas mecânicas, que precisam de um meio para se propagar."
+      },
+      {
+        "id": "d",
+        "text": "o som é uma onda mecânica, que necessita de um meio material para se propagar, enquanto as ondas de rádio são eletromagnéticas e se propagam no vácuo."
+      },
+      {
+        "id": "e",
+        "text": "no espaço, o som existe, mas os astronautas não conseguem ouvi-lo por causa do frio."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O som é a propagação de compressões e rarefações em um meio (ar, água, sólidos); sem partículas, não há como se propagar. Ondas de rádio, como a luz, são eletromagnéticas e atravessam o vácuo. O rádio converte a voz em sinal eletromagnético, e o receptor o converte de volta em som, dentro do capacete.\n\nPegadinhas:\n• A e E: o som não se propaga no vácuo.\n• B: o rádio transmite ondas eletromagnéticas, não sonoras.\n• C: a luz é eletromagnética e se propaga no vácuo.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_13",
+    "chapter": "Potências e Radicais",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nContar as células do corpo humano é difícil, porque elas variam muito em tamanho e quantidade entre os tecidos. Uma estimativa publicada em 2013, baseada no volume e na densidade celular de cada órgão, chegou a valores próximos dos apresentados a seguir. Além das células humanas, o corpo abriga um número comparável de bactérias, sobretudo no intestino.\n\nEstima-se que o corpo de um adulto tenha cerca de 3,7 × 10¹³ células humanas, das quais cerca de 2,5 × 10¹³ são hemácias.\n\nTexto elaborado para esta questão.\n\nDe acordo com essas estimativas, as hemácias correspondem a, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,7% das células humanas."
+      },
+      {
+        "id": "b",
+        "text": "6,8% das células humanas."
+      },
+      {
+        "id": "c",
+        "text": "68% das células humanas."
+      },
+      {
+        "id": "d",
+        "text": "93% das células humanas."
+      },
+      {
+        "id": "e",
+        "text": "148% das células humanas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. (2,5 × 10¹³) ÷ (3,7 × 10¹³) = 2,5 ÷ 3,7 ≈ 0,68 = 68%. Os expoentes iguais se cancelam. As hemácias são pequenas e muito numerosas, mas, por serem pequenas, representam fração muito menor da massa do corpo.\n\nPegadinhas:\n• A e B: erram uma ou duas potências de 10.\n• D (93%): não corresponde à razão entre os valores.\n• E (148%): inverte a divisão (3,7 ÷ 2,5); uma parte não pode ser maior que o todo.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_14",
+    "chapter": "Razões entre Volumes de Sólidos",
+    "topicId": "mat_geometria_espacial",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAntes de construir grandes reservatórios, engenheiros testam maquetes para estudar o escoamento da água e a distribuição das tensões nas paredes. A maquete precisa ter exatamente o mesmo formato do reservatório planejado.\n\nUma maquete de um reservatório de água foi construída na escala 1 : 50, isto é, cada medida linear da maquete é 50 vezes menor que a correspondente no reservatório real. A maquete comporta 2 litros de água.\n\nTexto elaborado para esta questão.\n\nO volume do reservatório real é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,1 m³."
+      },
+      {
+        "id": "b",
+        "text": "2,5 m³."
+      },
+      {
+        "id": "c",
+        "text": "5 m³."
+      },
+      {
+        "id": "d",
+        "text": "100 m³."
+      },
+      {
+        "id": "e",
+        "text": "250 m³."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Se as medidas lineares são multiplicadas por 50, o volume é multiplicado por 50³ = 125 000. Volume real: 2 L × 125 000 = 250 000 L = 250 m³.\n\nPegadinhas:\n• A (0,1 m³): usa a razão linear: 2 L × 50 = 100 L.\n• B (2,5 m³): não corresponde a nenhuma potência da escala aplicada aos 2 L.\n• C (5 m³): eleva a razão ao quadrado: 2 × 2 500 = 5 000 L.\n• D (100 m³): não corresponde à razão cúbica.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_15",
+    "chapter": "Equações do 2º Grau",
+    "topicId": "mat_equacoes",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm hospital vai construir um canteiro retangular para um jardim terapêutico, com área de 60 m². O comprimento do canteiro deve ter 4 m a mais que a largura.\n\nJardins terapêuticos são usados em hospitais para reduzir o estresse de pacientes e acompanhantes. O canteiro será construído encostado em dois muros perpendiculares, e as outras duas laterais receberão bancos.\n\nTexto elaborado para esta questão.\n\nA largura do canteiro deve ser de",
+    "options": [
+      {
+        "id": "a",
+        "text": "4 m."
+      },
+      {
+        "id": "b",
+        "text": "6 m."
+      },
+      {
+        "id": "c",
+        "text": "10 m."
+      },
+      {
+        "id": "d",
+        "text": "15 m."
+      },
+      {
+        "id": "e",
+        "text": "56 m."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Com largura x, o comprimento é x + 4, e x(x + 4) = 60 → x² + 4x − 60 = 0. As raízes são 6 e −10; como a medida é positiva, x = 6 m (e o comprimento, 10 m).\n\nPegadinhas:\n• A: é a diferença entre as dimensões.\n• C (10 m): é o comprimento, não a largura.\n• D (15 m): divide a área por 4.\n• E (56 m): subtrai 4 da área, sem montar a equação.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_16",
+    "chapter": "Energia Elétrica no Brasil",
+    "topicId": "geo_economica_brasil",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Nordeste concentra a maior parte da capacidade instalada de energia eólica do Brasil. Na região, os ventos costumam ser mais fortes e constantes no segundo semestre, período em que, em grande parte do país, os reservatórios das hidrelétricas estão mais baixos por causa da estação seca.\n\nEntre 2012 e 2023, a capacidade eólica instalada no Brasil multiplicou-se várias vezes, e em alguns dias a fonte chegou a gerar praticamente toda a eletricidade consumida no Nordeste. Os parques se concentram no litoral e em serras do interior da Bahia, do Rio Grande do Norte, do Piauí e do Ceará.\n\nTexto elaborado para esta questão.\n\nA situação descrita evidencia",
+    "options": [
+      {
+        "id": "a",
+        "text": "a complementaridade entre fontes: a geração eólica é maior justamente quando a geração hidrelétrica tende a diminuir, o que aumenta a segurança do sistema elétrico interligado."
+      },
+      {
+        "id": "b",
+        "text": "a incompatibilidade entre as fontes, pois os ventos fortes prejudicam as hidrelétricas."
+      },
+      {
+        "id": "c",
+        "text": "que a energia eólica tornou desnecessárias as hidrelétricas no Brasil."
+      },
+      {
+        "id": "d",
+        "text": "que a energia eólica só pode ser usada na região onde é gerada, sem transmissão."
+      },
+      {
+        "id": "e",
+        "text": "que os ventos do Nordeste são produzidos pelas próprias represas das hidrelétricas."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. No Sistema Interligado Nacional, a energia gerada no Nordeste pode abastecer outras regiões. Como os ventos são mais fortes no período seco, a eólica compensa parte da redução hidrelétrica e permite poupar água nos reservatórios.\n\nPegadinhas:\n• B: os ventos não prejudicam as hidrelétricas; as fontes se complementam.\n• C: as hidrelétricas continuam sendo a principal fonte do país.\n• D: o sistema é interligado por linhas de transmissão.\n• E: os ventos do Nordeste se relacionam à circulação atmosférica (como os alísios), não às represas.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_17",
+    "chapter": "Estrutura Ativa da População",
+    "topicId": "geo_populacao_urbana_brasil",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo Brasil, a maior parte da população ocupada trabalha no setor terciário, que inclui comércio e serviços. Esse setor reúne ocupações muito diferentes: médicos, engenheiros de software e professores universitários, mas também ambulantes, entregadores e trabalhadores domésticos, muitos deles sem carteira assinada. A informalidade atinge parcela expressiva dos trabalhadores ocupados.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o crescimento do setor terciário no Brasil",
+    "options": [
+      {
+        "id": "a",
+        "text": "significa que a maioria dos trabalhadores ocupa cargos de alta qualificação e renda."
+      },
+      {
+        "id": "b",
+        "text": "resultou do desaparecimento completo da indústria e da agricultura."
+      },
+      {
+        "id": "c",
+        "text": "é um fenômeno exclusivo do Brasil, sem paralelo em outros países."
+      },
+      {
+        "id": "d",
+        "text": "reúne ocupações de alta qualificação e ocupações precárias, e convive com elevada informalidade, o que torna o setor muito desigual internamente."
+      },
+      {
+        "id": "e",
+        "text": "eliminou a informalidade, pois serviços exigem contratos formais."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A terciarização da economia brasileira combina serviços modernos e bem remunerados com atividades de baixa renda e pouca proteção. Por isso, o tamanho do setor não indica, por si, qualidade do emprego; é preciso olhar renda e formalização.\n\nPegadinhas:\n• A: o texto mostra que o setor inclui ocupações precárias.\n• B: indústria e agricultura continuam existindo, com menor participação no emprego.\n• C: a terciarização ocorre em muitos países.\n• E: o texto aponta informalidade expressiva.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_18",
+    "chapter": "Coordenadas Geográficas",
+    "topicId": "geo_cartografia",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nMapas e sistemas de navegação localizam qualquer ponto da superfície terrestre por dois valores: a latitude, medida em graus a partir do Equador, e a longitude, medida a partir do meridiano de Greenwich.\n\nDuas cidades sul-americanas, A e B, estão no mesmo meridiano, de longitude 50° O. A cidade A está sobre a Linha do Equador, e a cidade B, na latitude 30° S.\n\nNote e adote:\nAo longo de um meridiano, 1° de latitude corresponde a cerca de 111 km.\n\nTexto elaborado para esta questão.\n\nA distância aproximada entre as duas cidades, medida ao longo do meridiano, é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 665 km."
+      },
+      {
+        "id": "b",
+        "text": "3 330 km."
+      },
+      {
+        "id": "c",
+        "text": "5 550 km."
+      },
+      {
+        "id": "d",
+        "text": "6 660 km."
+      },
+      {
+        "id": "e",
+        "text": "10 000 km."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A diferença de latitude é 30° − 0° = 30°. Ao longo do meridiano, 30 × 111 km = 3 330 km. Por estarem no mesmo meridiano, as duas cidades têm a mesma hora solar.\n\nPegadinhas:\n• A (1 665 km): usa 15°, metade da diferença.\n• C (5 550 km): usa 50°, a longitude, que é a mesma para as duas cidades.\n• D (6 660 km): usa 60°.\n• E (10 000 km): é a distância aproximada do Equador ao polo (90°).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_19",
+    "chapter": "Antiguidade Clássica: o Mundo Romano",
+    "topicId": "his_idade_antiga",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm Roma, durante o Império, o Estado distribuía trigo gratuitamente ou a preço baixo a parte da população pobre da cidade e promovia espetáculos públicos, como corridas de carros e lutas de gladiadores. O poeta Juvenal, no século II, ironizou que o povo, que antes concedia poder e cargos, agora só desejava duas coisas: 'pão e circo'.\n\nTexto elaborado para esta questão.\n\nA política criticada por Juvenal consistia em",
+    "options": [
+      {
+        "id": "a",
+        "text": "distribuir terras aos plebeus para que se tornassem pequenos proprietários."
+      },
+      {
+        "id": "b",
+        "text": "garantir educação pública e gratuita a todos os habitantes do Império."
+      },
+      {
+        "id": "c",
+        "text": "estender a cidadania romana a todos os escravizados."
+      },
+      {
+        "id": "d",
+        "text": "ampliar a participação política da plebe, com eleições diretas para imperador."
+      },
+      {
+        "id": "e",
+        "text": "assegurar alimento e diversão à plebe urbana para obter seu apoio e reduzir o risco de revoltas, enquanto o poder político se concentrava no imperador."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A distribuição de trigo e os espetáculos eram formas de controle social: atendiam a necessidades e ofereciam entretenimento à população pobre de Roma, garantindo apoio ao imperador. A ironia de Juvenal está no contraste entre o povo que antes participava da política e o que agora se contentava com benefícios.\n\nPegadinhas:\n• A: as reformas agrárias dos Gracos, no período republicano, são outra política e foram derrotadas.\n• B: o texto não fala em educação.\n• C: a cidadania foi ampliada aos homens livres do Império em 212, não aos escravizados.\n• D: os imperadores não eram escolhidos por eleição direta.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_20",
+    "chapter": "O Fim da Guerra Fria",
+    "topicId": "his_guerra_fria_contemporaneo",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1985, Mikhail Gorbachev assumiu o poder na União Soviética e lançou duas políticas: a glasnost, de maior transparência e liberdade de expressão, e a perestroika, de reestruturação da economia. Em 1989, o Muro de Berlim caiu, e governos socialistas do Leste Europeu foram substituídos. Em dezembro de 1991, a União Soviética foi dissolvida.\n\nTexto elaborado para esta questão.\n\nO processo descrito está relacionado",
+    "options": [
+      {
+        "id": "a",
+        "text": "à vitória militar dos Estados Unidos em uma guerra direta contra a União Soviética."
+      },
+      {
+        "id": "b",
+        "text": "ao fortalecimento do Pacto de Varsóvia, que passou a incluir a Alemanha Ocidental."
+      },
+      {
+        "id": "c",
+        "text": "à crise econômica e política do bloco soviético, às reformas que ampliaram a liberdade de crítica e às mobilizações populares no Leste Europeu, que contribuíram para o fim da bipolaridade."
+      },
+      {
+        "id": "d",
+        "text": "à transformação imediata de todos os países do bloco em potências industriais."
+      },
+      {
+        "id": "e",
+        "text": "à anexação da União Soviética pela China comunista."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A estagnação econômica, os gastos militares e a falta de liberdades enfraqueceram o bloco. As reformas de Gorbachev abriram espaço para críticas e para movimentos nacionais e populares — como na Polônia e na Alemanha Oriental — que derrubaram governos sem intervenção soviética. O fim da URSS encerrou a ordem bipolar.\n\nPegadinhas:\n• A: não houve guerra direta entre as superpotências.\n• B: o Pacto de Varsóvia foi dissolvido em 1991.\n• D: muitos países enfrentaram crise econômica na transição.\n• E: a URSS se dividiu em repúblicas independentes.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_21",
+    "chapter": "O Brasil Atual",
+    "topicId": "his_republica_liberal_atual",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\n\"Art. 196. A saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação.\"\n\nConstituição da República Federativa do Brasil, 1988.\n\nAntes de 1988, a assistência médica pública estava ligada principalmente à Previdência Social, voltada aos trabalhadores com carteira assinada. Considerando o artigo transcrito, a Constituição de 1988",
+    "options": [
+      {
+        "id": "a",
+        "text": "estabeleceu a saúde como direito universal, base para a criação do Sistema Único de Saúde (SUS), rompendo com o modelo que vinculava o atendimento público à contribuição previdenciária."
+      },
+      {
+        "id": "b",
+        "text": "restringiu o atendimento público aos trabalhadores com carteira assinada."
+      },
+      {
+        "id": "c",
+        "text": "transferiu toda a responsabilidade pela saúde às empresas privadas."
+      },
+      {
+        "id": "d",
+        "text": "garantiu atendimento apenas para tratamento de doenças, excluindo a prevenção."
+      },
+      {
+        "id": "e",
+        "text": "manteve o modelo anterior, sem alterações no acesso à saúde."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. 'Direito de todos' e 'acesso universal e igualitário' rompem com a lógica anterior, em que a assistência pública dependia do vínculo previdenciário. A Constituição e a Lei Orgânica da Saúde (1990) deram origem ao SUS, resultado também das lutas do movimento sanitarista.\n\nPegadinhas:\n• B: descreve o modelo anterior, que o artigo supera.\n• C: o artigo afirma o 'dever do Estado'.\n• D: o artigo inclui 'promoção, proteção e recuperação' — a prevenção está contemplada.\n• E: a mudança no acesso é o ponto central do artigo.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_22",
+    "chapter": "Orações Coordenadas",
+    "topicId": "por_sintaxe",
+    "subject": "Português",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia o trecho de um prontuário: \"Paciente internado há três dias com pneumonia. Recebeu antibiótico por via intravenosa e está sem febre nas últimas 48 horas.\" Em seguida, o mesmo prontuário registra a decisão médica.\n\nLeia o período:\n\n\"Os exames do paciente estavam normais; o médico, portanto, decidiu dar-lhe alta.\"\n\nTexto elaborado para esta questão.\n\nA palavra \"portanto\" estabelece, entre as orações, uma relação de",
+    "options": [
+      {
+        "id": "a",
+        "text": "adversidade, pois apresenta uma ideia contrária à da primeira oração."
+      },
+      {
+        "id": "b",
+        "text": "alternância, pois indica que apenas uma das ações ocorrerá."
+      },
+      {
+        "id": "c",
+        "text": "explicação, pois justifica por que os exames estavam normais."
+      },
+      {
+        "id": "d",
+        "text": "conclusão, pois apresenta a decisão do médico como consequência lógica do resultado dos exames."
+      },
+      {
+        "id": "e",
+        "text": "adição, pois apenas acrescenta uma informação sem relação lógica com a anterior."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. 'Portanto' é conjunção coordenativa conclusiva, como 'logo', 'por isso' e 'assim': a segunda oração tira uma conclusão da primeira. Os exames normais levam à alta.\n\nPegadinhas:\n• A: adversativas ('mas', 'porém') indicam oposição, o que não há aqui.\n• B: alternativas usam 'ou' e 'ora... ora'.\n• C: a relação é inversa — a primeira oração justifica a segunda, e não o contrário.\n• E: há relação lógica explícita, e não simples soma.\nNa FUVEST, é comum pedir conectivo que mantenha o sentido: 'portanto' poderia ser trocado por 'por isso', mas não por 'porque'.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_23",
+    "chapter": "Text Comprehension: Pollution",
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Microplastics — fragments smaller than five millimeters — have been found in oceans, soil, drinking water and even in human blood and placentas. Scientists agree that exposure is widespread, but the effects on human health are still uncertain. Some laboratory studies suggest that these particles can cause inflammation in cells, yet researchers stress that more long-term studies in humans are needed before firm conclusions can be drawn.\"\n\nTexto elaborado para esta questão.\n\nDe acordo com o texto,",
+    "options": [
+      {
+        "id": "a",
+        "text": "os microplásticos foram encontrados apenas nos oceanos."
+      },
+      {
+        "id": "b",
+        "text": "a exposição humana aos microplásticos é ampla, mas seus efeitos sobre a saúde ainda não estão bem estabelecidos e dependem de mais estudos de longo prazo."
+      },
+      {
+        "id": "c",
+        "text": "está comprovado que os microplásticos causam câncer em seres humanos."
+      },
+      {
+        "id": "d",
+        "text": "os cientistas discordam sobre a presença de microplásticos no ambiente."
+      },
+      {
+        "id": "e",
+        "text": "os estudos de laboratório mostraram que os microplásticos são inofensivos."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O texto separa o que é consenso ('exposure is widespread') do que é incerto ('the effects on human health are still uncertain') e pede cautela ('more long-term studies [...] are needed').\n\nPegadinhas:\n• A: o texto cita solo, água potável, sangue e placentas.\n• C: o texto não fala em câncer comprovado; fala em indícios de inflamação em laboratório.\n• D: há acordo sobre a exposição ampla.\n• E: os estudos sugerem inflamação, o contrário de inofensivos.\nVocabulário: 'widespread' = generalizado; 'yet' = no entanto; 'firm conclusions' = conclusões definitivas.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l8_24",
+    "chapter": "Cultura e Etnocentrismo",
+    "topicId": "soc_cultura_identidade",
+    "subject": "Sociologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAo visitar uma aldeia indígena, um viajante escreveu que os moradores 'não tinham religião nem leis', porque não encontrou igrejas, tribunais ou documentos escritos. Antropólogos que conviveram com o grupo por anos descreveram, ao contrário, um sistema complexo de crenças, rituais e regras de convivência, transmitidos oralmente.\n\nTexto elaborado para esta questão.\n\nO julgamento do viajante exemplifica",
+    "options": [
+      {
+        "id": "a",
+        "text": "o relativismo cultural, pois ele compreendeu a cultura indígena em seus próprios termos."
+      },
+      {
+        "id": "b",
+        "text": "a aculturação, pois ele adotou os costumes indígenas durante a visita."
+      },
+      {
+        "id": "c",
+        "text": "o multiculturalismo, pois ele defendeu a convivência entre culturas diferentes."
+      },
+      {
+        "id": "d",
+        "text": "a observação participante, método que os antropólogos rejeitam."
+      },
+      {
+        "id": "e",
+        "text": "o etnocentrismo, pois ele tomou as instituições de sua própria sociedade como medida universal e, por não as encontrar, concluiu que a outra cultura não tinha religião nem leis."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Etnocentrismo é avaliar outras culturas a partir dos valores e das formas da própria, tomadas como padrão. O viajante procurou igrejas e tribunais e, sem encontrá-los, negou a existência de religião e de normas. Os antropólogos, pela convivência prolongada, buscaram compreender a cultura em seus próprios termos — atitude ligada ao relativismo cultural.\n\nPegadinhas:\n• A: é a postura dos antropólogos, não a do viajante.\n• B: ele não adotou os costumes; julgou-os.\n• C: o texto não mostra defesa da convivência entre culturas.\n• D: a convivência prolongada dos antropólogos é justamente a observação participante, método central da disciplina.",
     "difficulty": "medium"
   }
 ]

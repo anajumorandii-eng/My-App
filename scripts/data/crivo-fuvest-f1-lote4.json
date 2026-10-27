@@ -313,7 +313,7 @@
     "difficulty": "medium",
     "skill": "modelagem",
     "trap": "Achar que o airbag reduz a variação da quantidade de movimento, e não a força média.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma colisão, a cabeça de um motorista passa de 15 m/s a zero. Sem airbag, ao bater no volante, ela para em cerca de 0,01 s; com o airbag, que infla e se esvazia de modo controlado, a parada leva cerca de 0,1 s.\n\nTexto elaborado para esta questão.\n\nO airbag reduz o risco de lesão porque",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma colisão, a cabeça de um motorista passa de 15 m/s a zero. Sem airbag, ao bater no volante, ela para em cerca de 0,01 s; com o airbag, que infla e se esvazia de modo controlado, a parada leva cerca de 0,1 s.\n\nOs airbags inflam em cerca de 30 milésimos de segundo após o impacto e têm orifícios por onde o gás escapa quando a cabeça os comprime. Eles complementam o cinto de segurança, que continua obrigatório.\n\nTexto elaborado para esta questão.\n\nO airbag reduz o risco de lesão porque",
     "options": [
       {
         "id": "a",
@@ -483,7 +483,7 @@
     "difficulty": "easy",
     "skill": "calculo",
     "trap": "Multiplicar os intervalos em vez de usar o mínimo múltiplo comum.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma paciente toma o medicamento A a cada 6 horas e o medicamento B a cada 8 horas. Ela tomou os dois juntos às 8 h de uma segunda-feira e manterá os horários regularmente.\n\nTexto elaborado para esta questão.\n\nA próxima vez em que ela tomará os dois medicamentos ao mesmo tempo será às",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma paciente toma o medicamento A a cada 6 horas e o medicamento B a cada 8 horas. Ela tomou os dois juntos às 8 h de uma segunda-feira e manterá os horários regularmente.\n\nComo os dois medicamentos causam sonolência, o médico orientou que, nos horários em que coincidissem, a paciente evitasse dirigir. Ela decidiu marcar na agenda esses momentos.\n\nTexto elaborado para esta questão.\n\nA próxima vez em que ela tomará os dois medicamentos ao mesmo tempo será às",
     "options": [
       {
         "id": "a",
@@ -721,7 +721,7 @@
     "difficulty": "medium",
     "skill": "analise_linguistica",
     "trap": "Achar que o pronome possessivo 'sua' sempre se refere ao sujeito da frase.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nConsidere a frase:\n\n\"O médico visitou o paciente em sua casa.\"\n\nTexto elaborado para esta questão.\n\nA frase é ambígua, pois não deixa claro de quem é a casa. Uma reescrita que elimina a ambiguidade, indicando que a visita ocorreu na casa do paciente, é:",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um relatório de atendimento domiciliar, um agente de saúde registrou a frase abaixo. Ao ler o documento, a coordenação não soube dizer onde a visita havia ocorrido.\n\nConsidere a frase:\n\n\"O médico visitou o paciente em sua casa.\"\n\nTexto elaborado para esta questão.\n\nA frase é ambígua, pois não deixa claro de quem é a casa. Uma reescrita que elimina a ambiguidade, indicando que a visita ocorreu na casa do paciente, é:",
     "options": [
       {
         "id": "a",

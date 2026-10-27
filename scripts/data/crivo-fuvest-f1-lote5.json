@@ -415,7 +415,7 @@
     "difficulty": "medium",
     "skill": "modelagem",
     "trap": "Comparar só as mensalidades fixas, esquecendo o custo por consulta.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma família compara dois planos de saúde:\n\n• Plano A: mensalidade de R$ 100,00 e R$ 50,00 por consulta realizada no mês.\n• Plano B: mensalidade de R$ 250,00 e R$ 20,00 por consulta realizada no mês.\n\nTexto elaborado para esta questão.\n\nO plano B fica mais barato que o plano A quando a família realiza, no mês,",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa escolha de um plano de saúde, além da mensalidade, é preciso considerar a coparticipação, valor pago pelo beneficiário a cada consulta ou exame realizado.\n\nUma família compara dois planos de saúde:\n\n• Plano A: mensalidade de R$ 100,00 e R$ 50,00 por consulta realizada no mês.\n• Plano B: mensalidade de R$ 250,00 e R$ 20,00 por consulta realizada no mês.\n\nTexto elaborado para esta questão.\n\nO plano B fica mais barato que o plano A quando a família realiza, no mês,",
     "options": [
       {
         "id": "a",
@@ -483,7 +483,7 @@
     "difficulty": "medium",
     "skill": "calculo",
     "trap": "Dividir por 49 em vez de 50, ou multiplicar a concentração em vez de dividir.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara desinfetar superfícies em ambientes de saúde, recomenda-se diluir 1 parte de água sanitária, que contém 2% de cloro ativo, em 49 partes de água. A solução resultante é usada em panos e borrifadores.\n\nTexto elaborado para esta questão.\n\nA concentração aproximada de cloro ativo na solução preparada é de",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara desinfetar superfícies em ambientes de saúde, recomenda-se diluir 1 parte de água sanitária, que contém 2% de cloro ativo, em 49 partes de água. A solução resultante é usada em panos e borrifadores.\n\nSoluções muito concentradas podem irritar a pele e as vias respiratórias e danificar superfícies; soluções muito diluídas podem não eliminar os microrganismos. Por isso, a proporção indicada deve ser seguida.\n\nTexto elaborado para esta questão.\n\nA concentração aproximada de cloro ativo na solução preparada é de",
     "options": [
       {
         "id": "a",
@@ -721,7 +721,7 @@
     "difficulty": "medium",
     "skill": "analise_linguistica",
     "trap": "Classificar como referencial um enunciado que dá ordem ao leitor.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia os trechos de uma bula de medicamento:\n\nI. \"Este medicamento contém 500 mg de paracetamol por comprimido.\"\nII. \"Mantenha fora do alcance de crianças.\"\n\nTexto elaborado para esta questão.\n\nNos trechos I e II, predominam, respectivamente, as funções",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs bulas de medicamentos seguem regras da Agência Nacional de Vigilância Sanitária, que define seções obrigatórias e exige linguagem compreensível ao paciente, além de uma versão técnica destinada aos profissionais de saúde.\n\nLeia os trechos de uma bula de medicamento:\n\nI. \"Este medicamento contém 500 mg de paracetamol por comprimido.\"\nII. \"Mantenha fora do alcance de crianças.\"\n\nTexto elaborado para esta questão.\n\nNos trechos I e II, predominam, respectivamente, as funções",
     "options": [
       {
         "id": "a",

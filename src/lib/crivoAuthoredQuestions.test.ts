@@ -57,8 +57,13 @@ test('o lote acompanha o formato medido nas questões oficiais da FUVEST', () =>
   // do lote tinha enunciados de ~250 caracteres, sem texto-base: parecia
   // questão de apostila, não da banca.
   const mediana = (xs: number[]) => [...xs].sort((a, b) => a - b)[Math.floor(xs.length / 2)];
-  const enunciados = lote.map(q => q.prompt.replace(/^Questão autoral[^\n]*\n\n/, ''));
-  assert.ok(mediana(enunciados.map(p => p.length)) >= 450);
+  const corpo = (q: Autoral) => q.prompt.replace(/^Questão autoral[^\n]*\n\n/, '');
+  // Por lote, e não no total: do lote 2 ao 8 a mediana caiu de 470 para 380
+  // caracteres sem que a média geral denunciasse a tempo.
+  for (const { arquivo, questoes } of lotes) {
+    assert.ok(mediana(questoes.map(q => corpo(q).length)) >= 450, arquivo);
+  }
+  const enunciados = lote.map(corpo);
   assert.ok(mediana(lote.flatMap(q => q.options.map(o => o.text.length))) >= 70);
   for (const [i, p] of enunciados.entries()) {
     // Texto-base sempre com a origem declarada: fonte primária real citada

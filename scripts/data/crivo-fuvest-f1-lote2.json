@@ -347,7 +347,7 @@
     "difficulty": "medium",
     "skill": "modelagem",
     "trap": "Achar que a receita é máxima no maior preço ou na maior quantidade vendida.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma farmácia de manipulação estimou que, se cobrar p reais por um frasco de determinado produto, venderá, por mês, q = 200 − 2p frascos, para 0 < p < 100. A receita mensal é o produto do preço pela quantidade vendida.\n\nTexto elaborado para esta questão.\n\nO preço que maximiza a receita mensal e o valor dessa receita máxima são, respectivamente,",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara definir o preço de um produto, empresas estimam como a quantidade vendida varia conforme o valor cobrado: preços altos aumentam o ganho por unidade, mas afastam compradores.\n\nUma farmácia de manipulação estimou que, se cobrar p reais por um frasco de determinado produto, venderá, por mês, q = 200 − 2p frascos, para 0 < p < 100. A receita mensal é o produto do preço pela quantidade vendida.\n\nTexto elaborado para esta questão.\n\nO preço que maximiza a receita mensal e o valor dessa receita máxima são, respectivamente,",
     "options": [
       {
         "id": "a",
@@ -381,7 +381,7 @@
     "difficulty": "medium",
     "skill": "modelagem",
     "trap": "Achar que dobrar o raio e reduzir a altura à metade mantém o volume.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma prefeitura vai substituir um reservatório cilíndrico de água por outro, também cilíndrico, com o dobro do raio da base e metade da altura do antigo, para reduzir o impacto visual na paisagem.\n\nTexto elaborado para esta questão.\n\nEm relação ao reservatório antigo, a capacidade do novo",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO reservatório antigo abastece um bairro de cerca de 2 000 moradores e fica ao lado de um parque tombado. Por exigência do órgão de patrimônio, a nova estrutura não pode ultrapassar a altura das árvores do parque, mas pode ocupar uma área maior do terreno.\n\nUma prefeitura vai substituir um reservatório cilíndrico de água por outro, também cilíndrico, com o dobro do raio da base e metade da altura do antigo, para reduzir o impacto visual na paisagem.\n\nTexto elaborado para esta questão.\n\nEm relação ao reservatório antigo, a capacidade do novo",
     "options": [
       {
         "id": "a",
@@ -415,7 +415,7 @@
     "difficulty": "medium",
     "skill": "calculo",
     "trap": "Permitir repetição onde o enunciado a proíbe, ou somar em vez de multiplicar.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm laboratório identifica cada amostra com um código de duas letras seguidas de três algarismos, como AB-307. As letras são escolhidas entre as 26 do alfabeto e não podem ser iguais entre si; os algarismos podem se repetir.\n\nTexto elaborado para esta questão.\n\nO número de códigos distintos que podem ser formados é",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm laboratórios de análises clínicas, cada amostra recebe um código único, impresso em etiqueta, para evitar trocas entre pacientes. Com o aumento do número de exames, o laboratório precisou verificar se o formato de código adotado seria suficiente para identificar todas as amostras de um ano.\n\nUm laboratório identifica cada amostra com um código de duas letras seguidas de três algarismos, como AB-307. As letras são escolhidas entre as 26 do alfabeto e não podem ser iguais entre si; os algarismos podem se repetir.\n\nTexto elaborado para esta questão.\n\nO número de códigos distintos que podem ser formados é",
     "options": [
       {
         "id": "a",
@@ -449,7 +449,7 @@
     "difficulty": "easy",
     "skill": "interpretacao_de_dados",
     "trap": "Tomar a média como valor típico quando há um valor extremo.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma clínica tem dez funcionários. Nove deles recebem salário mensal de R$ 3 000,00, e o diretor recebe R$ 30 000,00. Em uma propaganda de vagas, a clínica anunciou que o 'salário médio' de sua equipe é superior a R$ 5 000,00.\n\nTexto elaborado para esta questão.\n\nSobre a informação divulgada, é correto afirmar que",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma clínica tem dez funcionários. Nove deles recebem salário mensal de R$ 3 000,00, e o diretor recebe R$ 30 000,00. Em uma propaganda de vagas, a clínica anunciou que o 'salário médio' de sua equipe é superior a R$ 5 000,00.\n\nUm candidato à vaga, ao ler o anúncio, imaginou que receberia mais de R$ 5 000,00 caso fosse contratado para uma das funções de base da equipe.\n\nTexto elaborado para esta questão.\n\nSobre a informação divulgada, é correto afirmar que",
     "options": [
       {
         "id": "a",

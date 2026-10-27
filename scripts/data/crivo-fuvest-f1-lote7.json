@@ -381,7 +381,7 @@
     "difficulty": "medium",
     "skill": "calculo",
     "trap": "Somar os aumentos das lentes em vez de multiplicá-los.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma aula prática, estudantes observam células da mucosa da bochecha em um microscópio óptico composto, usando uma objetiva com aumento de 40 vezes e uma ocular com aumento de 10 vezes.\n\nTexto elaborado para esta questão.\n\nO aumento total da imagem observada é de",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO microscópio óptico composto, aperfeiçoado a partir do século XVII, permitiu a observação das células. Ele usa duas lentes convergentes: a objetiva, próxima ao objeto, e a ocular, junto ao olho do observador.\n\nEm uma aula prática, estudantes observam células da mucosa da bochecha em um microscópio óptico composto, usando uma objetiva com aumento de 40 vezes e uma ocular com aumento de 10 vezes.\n\nTexto elaborado para esta questão.\n\nO aumento total da imagem observada é de",
     "options": [
       {
         "id": "a",
@@ -415,7 +415,7 @@
     "difficulty": "medium",
     "skill": "modelagem",
     "trap": "Modelar o crescimento como linear (somar 100 a cada etapa) ou contar mal o número de duplicações.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm condições ideais de laboratório, uma população de bactérias dobra a cada 20 minutos. Uma cultura foi iniciada com 100 bactérias.\n\nTexto elaborado para esta questão.\n\nMantidas as condições, o número de bactérias após 2 horas será de",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAlgumas bactérias, como a Escherichia coli, podem se dividir a cada 20 minutos em condições ideais de temperatura e nutrientes. Fora do laboratório, a falta de recursos, o acúmulo de resíduos e a ação do sistema imune limitam esse crescimento.\n\nEm condições ideais de laboratório, uma população de bactérias dobra a cada 20 minutos. Uma cultura foi iniciada com 100 bactérias.\n\nTexto elaborado para esta questão.\n\nMantidas as condições, o número de bactérias após 2 horas será de",
     "options": [
       {
         "id": "a",
@@ -449,7 +449,7 @@
     "difficulty": "medium",
     "skill": "calculo",
     "trap": "Comparar só uma das coordenadas, sem calcular a distância entre os pontos.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um mapa com coordenadas em quilômetros, a antena de uma rede de atendimento de emergência fica no ponto (2, 3) e cobre todos os pontos situados a até 5 km dela.\n\nTexto elaborado para esta questão.\n\nDos pontos abaixo, aquele que fica FORA da área de cobertura da antena é:",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara planejar o atendimento de emergência em uma área rural, uma secretaria de saúde precisa saber quais localidades ficam dentro do alcance de rádio das ambulâncias, já que em parte da região não há sinal de telefonia celular.\n\nEm um mapa com coordenadas em quilômetros, a antena de uma rede de atendimento de emergência fica no ponto (2, 3) e cobre todos os pontos situados a até 5 km dela.\n\nTexto elaborado para esta questão.\n\nDos pontos abaixo, aquele que fica FORA da área de cobertura da antena é:",
     "options": [
       {
         "id": "a",
@@ -483,7 +483,7 @@
     "difficulty": "medium",
     "skill": "calculo",
     "trap": "Calcular média aritmética simples quando as provas têm pesos diferentes.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um vestibular de Medicina, a nota final da segunda fase é a média ponderada das provas, com pesos 3 para Biologia, 2 para Química e 1 para Física. Uma candidata obteve 8 em Biologia, 6 em Química e 5 em Física.\n\nTexto elaborado para esta questão.\n\nA nota final da candidata é de, aproximadamente,",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm vestibulares com provas de pesos diferentes, a mesma soma de notas pode gerar classificações distintas, conforme a matéria em que o candidato teve melhor desempenho.\n\nEm um vestibular de Medicina, a nota final da segunda fase é a média ponderada das provas, com pesos 3 para Biologia, 2 para Química e 1 para Física. Uma candidata obteve 8 em Biologia, 6 em Química e 5 em Física.\n\nTexto elaborado para esta questão.\n\nA nota final da candidata é de, aproximadamente,",
     "options": [
       {
         "id": "a",

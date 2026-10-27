@@ -313,7 +313,7 @@
     "difficulty": "medium",
     "skill": "calculo",
     "trap": "Achar que a velocidade depende da massa da criança, ou esquecer a raiz quadrada.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um parque aquático, um escorregador tem 5 m de altura entre o ponto de partida e a piscina. Uma criança parte do repouso no topo. A água que escorre pela rampa torna o atrito desprezível.\n\nNote e adote:\ng = 10 m/s².\nDesconsidere a resistência do ar.\n\nTexto elaborado para esta questão.\n\nA velocidade da criança ao chegar à piscina é de",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um parque aquático, um escorregador tem 5 m de altura entre o ponto de partida e a piscina. Uma criança parte do repouso no topo. A água que escorre pela rampa torna o atrito desprezível.\n\nPor segurança, o parque limita a altura dos escorregadores e exige que as crianças desçam sentadas, com os pés à frente. A piscina de chegada tem profundidade suficiente para frear a criança na água.\n\nNote e adote:\ng = 10 m/s².\nDesconsidere a resistência do ar.\n\nTexto elaborado para esta questão.\n\nA velocidade da criança ao chegar à piscina é de",
     "options": [
       {
         "id": "a",
@@ -347,7 +347,7 @@
     "difficulty": "medium",
     "skill": "analise_conceitual",
     "trap": "Achar que o espelho do dentista é convexo, ou que a imagem ampliada é sempre invertida.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO espelho que o dentista usa para observar os dentes é um pequeno espelho côncavo. Posicionado próximo ao dente, ele fornece uma imagem maior e direita, que facilita ver detalhes.\n\nTexto elaborado para esta questão.\n\nPara que o espelho côncavo forme esse tipo de imagem, o dente deve estar",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO espelho que o dentista usa para observar os dentes é um pequeno espelho côncavo. Posicionado próximo ao dente, ele fornece uma imagem maior e direita, que facilita ver detalhes.\n\nAlém de ampliar a imagem, o espelho permite ver faces dos dentes voltadas para a língua ou para o céu da boca, que não seriam visíveis diretamente. Antes do uso, ele costuma ser aquecido levemente, para não embaçar com a respiração do paciente.\n\nTexto elaborado para esta questão.\n\nPara que o espelho côncavo forme esse tipo de imagem, o dente deve estar",
     "options": [
       {
         "id": "a",
@@ -415,7 +415,7 @@
     "difficulty": "hard",
     "skill": "modelagem",
     "trap": "Confundir o período da função com o coeficiente do argumento, ou o valor máximo com a amplitude.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um porto, a altura da maré, em metros, pode ser modelada pela função\n\nh(t) = 2 + 1,5 · sen(π t / 6),\n\nem que t é o tempo, em horas, contado a partir da meia-noite.\n\nTexto elaborado para esta questão.\n\nDe acordo com esse modelo, o intervalo de tempo entre duas marés altas consecutivas e a altura máxima da maré são, respectivamente,",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm portos com grande variação de maré, navios de maior calado só podem entrar ou sair em determinados horários, quando a profundidade é suficiente. Por isso, as autoridades publicam tábuas de maré, e modelos matemáticos ajudam a prever esses horários.\n\nEm um porto, a altura da maré, em metros, pode ser modelada pela função\n\nh(t) = 2 + 1,5 · sen(π t / 6),\n\nem que t é o tempo, em horas, contado a partir da meia-noite.\n\nTexto elaborado para esta questão.\n\nDe acordo com esse modelo, o intervalo de tempo entre duas marés altas consecutivas e a altura máxima da maré são, respectivamente,",
     "options": [
       {
         "id": "a",
@@ -449,7 +449,7 @@
     "difficulty": "medium",
     "skill": "calculo",
     "trap": "Contar como se a ordem dos escolhidos importasse.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm hospital precisa formar uma comissão de ética com 3 médicos, escolhidos entre 8 voluntários. Todos os membros da comissão terão a mesma função.\n\nTexto elaborado para esta questão.\n\nO número de comissões diferentes que podem ser formadas é",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm hospital precisa formar uma comissão de ética com 3 médicos, escolhidos entre 8 voluntários. Todos os membros da comissão terão a mesma função.\n\nA comissão analisará projetos de pesquisa com seres humanos, verificando, entre outros aspectos, se os participantes deram consentimento livre e esclarecido. Os 8 voluntários atuam em especialidades diferentes, e qualquer grupo de três é considerado adequado.\n\nTexto elaborado para esta questão.\n\nO número de comissões diferentes que podem ser formadas é",
     "options": [
       {
         "id": "a",
@@ -483,7 +483,7 @@
     "difficulty": "easy",
     "skill": "calculo",
     "trap": "Somar os catetos ou esquecer a raiz quadrada no teorema de Pitágoras.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara resgatar uma pessoa em uma janela situada a 12 m de altura em relação ao topo do caminhão, bombeiros apoiam a extremidade de uma escada no peitoril, enquanto a base da escada fica no caminhão, a 9 m da parede, na horizontal. A parede é vertical.\n\nTexto elaborado para esta questão.\n\nO comprimento mínimo da escada é de",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara resgatar uma pessoa em uma janela situada a 12 m de altura em relação ao topo do caminhão, bombeiros apoiam a extremidade de uma escada no peitoril, enquanto a base da escada fica no caminhão, a 9 m da parede, na horizontal. A parede é vertical.\n\nEm operações de resgate, o comprimento da escada precisa ser escolhido antes de o caminhão se posicionar, porque nem sempre é possível aproximá-lo do prédio por causa de carros estacionados e de fios elétricos.\n\nTexto elaborado para esta questão.\n\nO comprimento mínimo da escada é de",
     "options": [
       {
         "id": "a",
@@ -721,7 +721,7 @@
     "difficulty": "medium",
     "skill": "analise_linguistica",
     "trap": "Flexionar 'haver' no sentido de existir, ou 'fazer' indicando tempo decorrido.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nConsidere as frases:\n\nI. Haviam muitos pacientes na sala de espera.\nII. Faz dois anos que a clínica foi inaugurada.\nIII. Fazem três meses que ele não vem às consultas.\n\nTexto elaborado para esta questão.\n\nEstá de acordo com a norma-padrão o que se afirma em:",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um aviso afixado na recepção de uma clínica, a coordenação escreveu as frases a seguir. Antes de imprimir a versão final, pediu a uma revisora que verificasse a concordância verbal.\n\nConsidere as frases:\n\nI. Haviam muitos pacientes na sala de espera.\nII. Faz dois anos que a clínica foi inaugurada.\nIII. Fazem três meses que ele não vem às consultas.\n\nTexto elaborado para esta questão.\n\nEstá de acordo com a norma-padrão o que se afirma em:",
     "options": [
       {
         "id": "a",

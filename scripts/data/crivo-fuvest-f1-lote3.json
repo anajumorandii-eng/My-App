@@ -381,7 +381,7 @@
     "difficulty": "medium",
     "skill": "calculo",
     "trap": "Comparar valores de pH por subtração ou divisão, como se a escala fosse linear.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO pH é definido por pH = −log[H⁺], em que [H⁺] é a concentração de íons hidrogênio, em mol/L. O suco de limão tem pH próximo de 2, e a água pura, a 25 °C, tem pH 7.\n\nTexto elaborado para esta questão.\n\nA concentração de íons H⁺ no suco de limão é maior que a da água pura em, aproximadamente,",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nProfissionais de saúde bucal alertam que alimentos e bebidas ácidos, consumidos com frequência, podem desgastar o esmalte dos dentes, que começa a se dissolver em pH abaixo de cerca de 5,5.\n\nO pH é definido por pH = −log[H⁺], em que [H⁺] é a concentração de íons hidrogênio, em mol/L. O suco de limão tem pH próximo de 2, e a água pura, a 25 °C, tem pH 7.\n\nTexto elaborado para esta questão.\n\nA concentração de íons H⁺ no suco de limão é maior que a da água pura em, aproximadamente,",
     "options": [
       {
         "id": "a",
@@ -449,7 +449,7 @@
     "difficulty": "medium",
     "skill": "calculo",
     "trap": "Confundir o último termo com a soma, ou usar n no lugar de n − 1.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um programa de reabilitação cardíaca, um paciente caminha 1 000 m no primeiro dia e aumenta a distância em 200 m a cada dia, até completar 30 dias de programa.\n\nTexto elaborado para esta questão.\n\nA distância total percorrida pelo paciente nos 30 dias é de",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um programa de reabilitação cardíaca, um paciente caminha 1 000 m no primeiro dia e aumenta a distância em 200 m a cada dia, até completar 30 dias de programa.\n\nO programa segue diretrizes de reabilitação cardiovascular, que recomendam aumento gradual da carga de exercício, com acompanhamento da frequência cardíaca e da pressão arterial a cada sessão.\n\nTexto elaborado para esta questão.\n\nA distância total percorrida pelo paciente nos 30 dias é de",
     "options": [
       {
         "id": "a",
@@ -517,7 +517,7 @@
     "difficulty": "medium",
     "skill": "calculo",
     "trap": "Somar a diferença de fuso no sentido errado ou esquecer a mudança de data.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma médica brasileira vai participar de um congresso em Tóquio. Seu voo parte de São Paulo às 22 h do dia 10 (horário de Brasília, UTC−3) e, com uma escala, dura 24 horas no total até o pouso. O horário de Tóquio corresponde a UTC+9.\n\nTexto elaborado para esta questão.\n\nNo momento do pouso, o horário local em Tóquio será",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma médica brasileira vai participar de um congresso em Tóquio. Seu voo parte de São Paulo às 22 h do dia 10 (horário de Brasília, UTC−3) e, com uma escala, dura 24 horas no total até o pouso. O horário de Tóquio corresponde a UTC+9.\n\nPara evitar os efeitos da diferença de fuso horário (jet lag) no primeiro dia do congresso, a médica planeja dormir durante parte do voo, de acordo com o horário local do destino.\n\nTexto elaborado para esta questão.\n\nNo momento do pouso, o horário local em Tóquio será",
     "options": [
       {
         "id": "a",
@@ -687,7 +687,7 @@
     "difficulty": "hard",
     "skill": "analise_linguistica",
     "trap": "Achar que a vírgula não muda o sentido de uma oração adjetiva.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nConsidere as frases:\n\nI. Os pacientes que estavam em jejum fizeram o exame de sangue.\nII. Os pacientes, que estavam em jejum, fizeram o exame de sangue.\n\nTexto elaborado para esta questão.\n\nSobre as duas frases, é correto afirmar que",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um relatório de enfermagem sobre a coleta de exames de um setor do hospital, foram redigidas duas versões da mesma frase. A coordenação precisava saber, a partir do texto, se algum paciente havia deixado de fazer o exame.\n\nConsidere as frases:\n\nI. Os pacientes que estavam em jejum fizeram o exame de sangue.\nII. Os pacientes, que estavam em jejum, fizeram o exame de sangue.\n\nTexto elaborado para esta questão.\n\nSobre as duas frases, é correto afirmar que",
     "options": [
       {
         "id": "a",
