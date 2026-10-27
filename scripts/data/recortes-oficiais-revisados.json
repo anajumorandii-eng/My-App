@@ -193,5 +193,304 @@
     ],
     "url": "/question-media/figuras/unifesp_2025_v1_q25-revisada-1.webp",
     "sha256": "7eeedcaf3071edc1895674dfd79393f9f3a9914840874cb1e2a394ab66a92a08"
+  },
+  {
+    "questionId": "fuvest_2026_q05",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p03.webp",
+    "sourceSha256": "b63e6c61b56883b0c8d6318e25d4c73fc88a386c2550fe863898c1f12fef3184",
+    "box": [
+      622,
+      300,
+      1062,
+      482
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q05-revisada-1.webp",
+    "sha256": "211c2d6310025638c383458428d3535b1e4e3a23967581a88ed9557d049d74e0"
+  },
+  {
+    "questionId": "fuvest_2026_q10",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p05.webp",
+    "sourceSha256": "eed5d9ae85600b4c728d81a3e59e86df5b41e284026e11a14dc957231f4acc30",
+    "box": [
+      66,
+      1118,
+      568,
+      1408
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q10-revisada-1.webp",
+    "sha256": "19bf090e0c576855af0d69b072fe694ceb69c2b7cb896d94e8366d26c6a45bc8"
+  },
+  {
+    "questionId": "fuvest_2026_q13",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p07.webp",
+    "sourceSha256": "d89f347ebd7d8aeaa3b37d10ab80bc00f357493aa6d4681ba6835db234fc6b16",
+    "box": [
+      66,
+      378,
+      568,
+      640
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q13-revisada-1.webp",
+    "sha256": "552332aa4ce8419cc433789fb76b4b775bda9d686871745833811f133688e563"
+  },
+  {
+    "questionId": "fuvest_2026_q14",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p07.webp",
+    "sourceSha256": "d89f347ebd7d8aeaa3b37d10ab80bc00f357493aa6d4681ba6835db234fc6b16",
+    "box": [
+      622,
+      180,
+      1124,
+      940
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q14-revisada-1.webp",
+    "sha256": "427255f66173fd194a322e52a967e50dff8ba1b0145099e7ad05f5425b9c420b"
+  },
+  {
+    "questionId": "fuvest_2026_q17",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p08.webp",
+    "sourceSha256": "e4dc0fc20c981f1c83c9b823f338a70feb00a78f8fcff1335c96ea5f7d212065",
+    "box": [
+      622,
+      450,
+      1080,
+      985
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q17-revisada-1.webp",
+    "sha256": "fc1a2afd2a9ec9bc4c2e31e737ddc04330c6c5293957f5e507cc87b08c11a347"
+  },
+  {
+    "questionId": "fuvest_2026_q19",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p09.webp",
+    "sourceSha256": "a94bd2d6d41f59c009fb0387c99c0b768cf1e6d55d79c3250c5f0cda90c59f24",
+    "box": [
+      72,
+      700,
+      562,
+      1160
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q19-revisada-1.webp",
+    "sha256": "ae6ed361479ce728f4e2fe28e48ccb7cc2f046e7710e83a4ac39793439e92677"
+  },
+  {
+    "questionId": "fuvest_2026_q22",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p10.webp",
+    "sourceSha256": "628426d708e4df3643a59bf002764e48ae140ce3fc3c4a528fb503b26fcc3ede",
+    "box": [
+      88,
+      140,
+      568,
+      458
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q22-revisada-1.webp",
+    "sha256": "5387fafeba9bde0aa64c5c11394d60934414f91999801fc2c321d929df2d569f"
+  },
+  {
+    "questionId": "fuvest_2026_q27",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p12.webp",
+    "sourceSha256": "98178f678db49a99cf83020f822b802638d174a1a62a8d1f59c5a7983d395bf6",
+    "box": [
+      622,
+      240,
+      1124,
+      935
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q27-revisada-1.webp",
+    "sha256": "7a8d8a8c75b8a5377d772292930ff37b1b0692bed151ee7ea427158aeddb88f1"
+  },
+  {
+    "questionId": "fuvest_2026_q28",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p13.webp",
+    "sourceSha256": "832eb3a84c10b1fa0e18a3496c86e209bb3c8d546e3572db7e23651b632eb3d8",
+    "box": [
+      68,
+      138,
+      300,
+      370
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q28-revisada-1.webp",
+    "sha256": "57cf7f55608e37cfe060b311528761a10a1dbd645faae7da33a145965538e66f"
+  },
+  {
+    "questionId": "fuvest_2026_q35",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p15.webp",
+    "sourceSha256": "02196c36e401edc38321d2c5d163a1e28e65825af124d244e2fad580962a212a",
+    "box": [
+      622,
+      300,
+      1124,
+      760
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q35-revisada-1.webp",
+    "sha256": "d7e9ae4dfb4ac6f206fc44a91eedf39fdd6f75d4e1b3313cfcf8c28c3c6538cd"
+  },
+  {
+    "questionId": "fuvest_2026_q36",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p16.webp",
+    "sourceSha256": "eda637e1ad9c8513659e3944c6f7b8e5650677d2159dfc65d1c0ada2f384976a",
+    "box": [
+      88,
+      322,
+      546,
+      586
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q36-revisada-1.webp",
+    "sha256": "b5040581e3d23f810c3772c3aaffda462d733c6f6a5ae75ab575f507f8eb3f3a"
+  },
+  {
+    "questionId": "fuvest_2026_q37",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p16.webp",
+    "sourceSha256": "eda637e1ad9c8513659e3944c6f7b8e5650677d2159dfc65d1c0ada2f384976a",
+    "box": [
+      746,
+      420,
+      1000,
+      680
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q37-revisada-1.webp",
+    "sha256": "882fd615309ac10bfbd5df1a4c3d55e756ce7cdf882eee80865682f2906aee8d"
+  },
+  {
+    "questionId": "fuvest_2026_q43",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p19.webp",
+    "sourceSha256": "6baf2f5a48b83978353dc50627fbd2588a0e0691cb5214c9557f5607b85e5355",
+    "box": [
+      676,
+      136,
+      1070,
+      362
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q43-revisada-1.webp",
+    "sha256": "381f2b477dbb2bf37826f9ca1582c76efb32ee20bd17b27f90fe71df4dbc6796"
+  },
+  {
+    "questionId": "fuvest_2026_q44",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p20.webp",
+    "sourceSha256": "dc48424ae96c4a9c2e414d60f204a4787df2bf3339540ac1d9a502a66b424cb6",
+    "box": [
+      74,
+      136,
+      560,
+      532
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q44-revisada-1.webp",
+    "sha256": "697496e142b36079f8458a08aa9e251942c78e0ec3a956d4539b418d3a035e5b"
+  },
+  {
+    "questionId": "fuvest_2026_q46",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p21.webp",
+    "sourceSha256": "835ce8355f8fac4d8dd10e947e1d98f723c9759b8c30bd8fe45f370b6db7f5f7",
+    "box": [
+      74,
+      136,
+      560,
+      462
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q46-revisada-1.webp",
+    "sha256": "d8849f54b09cfb38c7ab18a7fec0d28a3fdee7d5d9417c4bbba3e80df28417cd"
+  },
+  {
+    "questionId": "fuvest_2026_q52",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p24.webp",
+    "sourceSha256": "bc9cdec5f0bd9f1de52703e55882f0ea9e0b73f89331a6e3cc7ccf0c9fc646a1",
+    "box": [
+      188,
+      250,
+      1002,
+      1128
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q52-revisada-1.webp",
+    "sha256": "3bdef7d1cd1e073c740999e14a4b5dd26c8e48ef444118330536359cd2021831"
+  },
+  {
+    "questionId": "fuvest_2026_q53",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p25.webp",
+    "sourceSha256": "d233dbec0babca2783acb5f9cacf824d9ad423648facae237d9ff48db4406fc2",
+    "box": [
+      74,
+      266,
+      560,
+      530
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q53-revisada-1.webp",
+    "sha256": "ca5c476f5b67f65d7634f0de72cbd391beb68d0981257cfc955765aec6fb695a"
+  },
+  {
+    "questionId": "fuvest_2026_q71",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p30.webp",
+    "sourceSha256": "86c5903dbc7baba86c7a060414eb7036a0c6dc2279a9b938308bf2bc5162f4d0",
+    "box": [
+      622,
+      560,
+      1124,
+      712
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q71-revisada-1.webp",
+    "sha256": "95ef76049aa2dbe1f4218945a511eacd88239224bc22d7defd6bf62694d2fb58"
+  },
+  {
+    "questionId": "fuvest_2026_q72",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p31.webp",
+    "sourceSha256": "36f07b9426506962a440558b7f64f59dd09d7f2090f3aed73e4937f73809e84f",
+    "box": [
+      82,
+      136,
+      552,
+      334
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q72-revisada-1.webp",
+    "sha256": "822a87d31a4627aff5d3ec810e03a560e9f62abfc3a7f6ca1f9e7b06b76908e2"
+  },
+  {
+    "questionId": "fuvest_2026_q73",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p31.webp",
+    "sourceSha256": "36f07b9426506962a440558b7f64f59dd09d7f2090f3aed73e4937f73809e84f",
+    "box": [
+      644,
+      355,
+      1100,
+      785
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q73-revisada-1.webp",
+    "sha256": "e2fd0a8fd522ac8633842a093e07ad1220e0a8eaa9973e8b873066412d004d4d"
+  },
+  {
+    "questionId": "fuvest_2026_q74",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p32.webp",
+    "sourceSha256": "1dd82bc2548ba776a0785d8fec6bd1c2a56659468733554f7a747e1b5ba739ad",
+    "box": [
+      82,
+      170,
+      550,
+      640
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q74-revisada-1.webp",
+    "sha256": "501b87b9e6b57cba99ecaa47113ea1839fd6e3dcd676017bfb05c04daf190561"
+  },
+  {
+    "questionId": "fuvest_2026_q75",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p32.webp",
+    "sourceSha256": "1dd82bc2548ba776a0785d8fec6bd1c2a56659468733554f7a747e1b5ba739ad",
+    "box": [
+      622,
+      240,
+      930,
+      1180
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q75-revisada-1.webp",
+    "sha256": "4355d7dd3ea27705c1b6a132e0d3bb49bea60897a0b7028e79f2ebbf3b3d4888"
+  },
+  {
+    "questionId": "fuvest_2026_q76",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p33.webp",
+    "sourceSha256": "e44fa6ad7e0598f739dd83fd9648261fc5845695f333806ba185d2c77c593af8",
+    "box": [
+      92,
+      262,
+      535,
+      552
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q76-revisada-1.webp",
+    "sha256": "e07b38ce0dfefc49acd365e2d32cb6f7f47b5f5f581cd0e573bd43bb609f3c92"
   }
 ]
