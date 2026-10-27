@@ -57,7 +57,8 @@ test('preserva os registros anteriores fora da correção conferida de G6PD, sem
   assert.equal(preserved.length, 2958);
   assert.equal(bank.filter(q => q.id === 'q_real_fuvest_2022_bio').length, 1);
   assert.equal(hash(JSON.stringify(preserved.map(({ statementComplete: _complete, ...q }) => q))), '7dca5c26bac9342c1b33fb72ad47c375d67ad813e96ebb84cb457e010fc75d1e');
-  assert.equal(bank.length,3127);
+  // Questões autorais (crivo_*) têm teste próprio; aqui só conta o que veio de prova.
+  assert.equal(bank.filter(q=>!q.id.startsWith('crivo_')).length,3127);
   const additions = batches.flatMap(([slug])=>{
     const {source,items,answers}=load(slug);
     return buildReviewedOfficialQuestions(items,answers,source,mockTopics);
