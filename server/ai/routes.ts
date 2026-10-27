@@ -56,6 +56,7 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
   for (const { path, task } of ROUTES) {
     router.post(path, async (req, res) => {
       const requestId = randomUUID();
+      res.setHeader('X-Request-Id', requestId);
       const startedAt = Date.now();
       let evaluationRun: EvaluationRun | null = null;
       let evaluationCapture: 'inactive' | 'saved' | 'failed' = 'inactive';
@@ -121,16 +122,20 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
           // que o corpo do POST termina de chegar, o que abortaria o fluxo
           // logo no primeiro pedaço. E mesmo aqui é preciso checar
           // writableEnded, porque o evento também dispara no fim normal.
-          const stream = service.generateStream(request);
-          res.on('close', () => {
-            if (!res.writableEnded) void stream.return?.(undefined as never);
-          });
+          const disconnected = new AbortController();
+          const stream = service.generateStream({ ...request, signal: disconnected.signal });
+          const onClose = () => {
+            if (!res.writableEnded) disconnected.abort();
+          };
+          res.on('close', onClose);
 
           try {
             for (;;) {
               const passo = await stream.next();
+              disconnected.signal.throwIfAborted();
               if (passo.done === true) {
                 const result = passo.value;
+                if (!result) throw new AiGenerationError('O fluxo terminou sem confirmar a conclusão.');
                 const durationMs = Date.now() - startedAt;
                 const estimatedCostUsd = estimateAiCostUsd(result.model, result.usage);
                 console.info(JSON.stringify({ event: 'ai_request', requestId, userId: res.locals.userId, task, model: result.model, provider: result.provider, usage: result.usage, estimatedCostUsd, fallback: result.fallback, cached: result.cached, streamed: true, status: 200, durationMs }));
@@ -148,6 +153,14 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
               (res as unknown as { flush?: () => void }).flush?.();
             }
           } catch (streamError) {
+            if (disconnected.signal.aborted || res.destroyed) {
+              const durationMs = Date.now() - startedAt;
+              console.info(JSON.stringify({ event: 'ai_request', requestId, userId: res.locals.userId, task, streamed: true, status: 499, durationMs, cancelled: true }));
+              metrics?.record({ task, status: 499, durationMs })
+                .catch(() => console.warn('AI cancellation metrics write failed.'));
+              await finishCapture(null);
+              return;
+            }
             // Cabeçalho já foi enviado: o erro tem que ir pelo próprio fluxo,
             // não como status HTTP.
             const durationMs = Date.now() - startedAt;
@@ -165,6 +178,8 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
             }));
             return res.end();
           } finally {
+            res.off('close', onClose);
+            disconnected.abort();
             try { await stream.return?.(undefined as never); } catch { console.warn('AI stream cleanup failed.'); }
             if (evaluationRun?.status === 'running') await finishCapture(null);
           }

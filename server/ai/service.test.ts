@@ -63,3 +63,42 @@ test('reaproveita cache apenas para o mesmo usuário e tarefa segura', async () 
   assert.equal(cached.cached, true);
   assert.equal((await service.generate({ ...request, userId: 'outra' })).text, 'resposta-2');
 });
+
+test('cancelamento externo aborta o streaming pendente e não cria cache parcial', async () => {
+ let calls=0;
+ const p=provider();
+ p.generateStream=async function* ({signal}) {
+  calls++;
+  yield 'parcial';
+  await new Promise<never>((_,reject)=>{
+   const cancel=()=>reject(signal!.reason);
+   if(signal?.aborted)cancel();else signal?.addEventListener('abort',cancel,{once:true});
+  });
+  return {text:'não deve concluir'};
+ };
+ const service=new AiService(p,5000);
+ for(let attempt=0;attempt<2;attempt++){
+  const controller=new AbortController();
+  const stream=service.generateStream({task:'review-tip',prompt:'mesmo pedido',userId:'test-user',signal:controller.signal});
+  assert.equal((await stream.next()).value,'parcial');
+  const pending=stream.next();controller.abort();
+  await assert.rejects(pending,(error:unknown)=>error instanceof Error && error.name==='AbortError');
+ }
+ assert.equal(calls,2);
+});
+
+test('streaming contínuo pode ultrapassar o limite de inatividade sem ser cortado', async () => {
+ const p=provider();
+ p.generateStream=async function* () {
+  for(const piece of ['um ','dois ','três ']){
+   await new Promise(resolve=>setTimeout(resolve,20));
+   yield piece;
+  }
+  return {text:'um dois três',model:'test-route'};
+ };
+ const service=new AiService(p,50);
+ const stream=service.generateStream({task:'review-tip',prompt:'pedido longo'});
+ let text='';
+ for(;;){const step=await stream.next();if(step.done){assert.equal(step.value.text,'um dois três');break;}text+=step.value;}
+ assert.equal(text,'um dois três ');
+});

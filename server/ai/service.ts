@@ -75,6 +75,7 @@ export class AiService {
    * pronto.
    */
   async *generateStream(request: AiGenerationRequest): AiResultStream {
+    request.signal?.throwIfAborted();
     if (!this.provider.isConfigured) throw new AiUnavailableError();
     if (!this.provider.generateStream) throw new AiGenerationError('Este provedor não suporta streaming.');
 
@@ -95,14 +96,17 @@ export class AiService {
       timeout = setTimeout(() => controller.abort(), this.timeoutMs);
     };
 
+    const signal = request.signal ? AbortSignal.any([controller.signal, request.signal]) : controller.signal;
+    const stream = this.provider.generateStream({ ...request, signal });
     try {
       rearmar();
-      const stream = this.provider.generateStream({ ...request, signal: controller.signal });
 
       for (;;) {
         const passo = await stream.next();
+        signal.throwIfAborted();
         if (passo.done === true) {
           const detail = passo.value;
+          if (!detail || typeof detail.text !== 'string') throw new AiGenerationError('O fluxo terminou sem confirmar a conclusão.');
           const normalized = detail.text.trim();
           if (!normalized) throw new AiGenerationError('O provedor retornou uma resposta vazia.');
           const result: AiGenerationResult = {
@@ -122,11 +126,14 @@ export class AiService {
         yield passo.value;
       }
     } catch (error) {
+      if (request.signal?.aborted) throw request.signal.reason;
       if (controller.signal.aborted) throw new AiTimeoutError();
       if (error instanceof AiTimeoutError || error instanceof AiGenerationError) throw error;
       throw new AiGenerationError(undefined, { cause: error });
     } finally {
       if (timeout) clearTimeout(timeout);
+      controller.abort();
+      await stream.return?.(undefined as never);
     }
   }
 
