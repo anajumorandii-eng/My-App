@@ -45,7 +45,7 @@ def problemas(q: dict) -> list[str]:
     texto = q.get("explanation", "")
     if certa and not texto.startswith(f"Resposta {certa.upper()}."):
         erros.append("comentário não abre com a resposta do gabarito")
-    apontadas = "".join(re.findall(r"^• ([A-E](?: e [A-E])*)", texto, re.M)).replace(" e ", "")
+    apontadas = re.sub(r"[^A-E]", "", "".join(re.findall(r"^• ([A-E](?:(?:, | e )[A-E])*)", texto, re.M)))
     if certa and certa.upper() in apontadas:
         erros.append("pegadinha atribuída à alternativa correta")
     for campo in ("topicId", "subject", "chapter", "prompt"):

@@ -44,7 +44,7 @@ test('ids autorais não se repetem entre lotes', () => {
 test('cada comentário abre pela resposta e só aponta pegadinha em alternativa errada', () => {
   for (const q of lote) {
     assert.ok(q.explanation.startsWith(`Resposta ${q.correctOptionId.toUpperCase()}.`), q.id);
-    const apontadas = [...q.explanation.matchAll(/^• ([A-E](?: e [A-E])*)/gm)].flatMap(m => m[1].split(' e '));
+    const apontadas = [...q.explanation.matchAll(/^• ([A-E](?:(?:, | e )[A-E])*)/gm)].flatMap(m => m[1].split(/, | e /));
     assert.ok(apontadas.length >= 3, `${q.id} explica poucas alternativas erradas`);
     assert.ok(!apontadas.includes(q.correctOptionId.toUpperCase()), q.id);
     assert.ok(q.trap.length > 0 && q.skill.length > 0, q.id);
