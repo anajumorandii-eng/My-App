@@ -21,6 +21,9 @@ test('questão autoral nunca se passa por prova real', () => {
   // se a FUVEST a tivesse aplicado.
   for (const q of bank.filter(q => q.id.startsWith('crivo_'))) {
     assert.equal(q.examSource, undefined, q.id);
+    // Sem styleOf, o filtro de banca não a encontra: foi assim que as
+    // autorais sumiam ao escolher a FUVEST.
+    assert.equal(q.styleOf, 'FUVEST', q.id);
     assert.doesNotMatch(q.prompt, /^FUVEST \d{4}/, q.id);
   }
 });

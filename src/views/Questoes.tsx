@@ -73,8 +73,8 @@ function Metric({
   );
 }
 
-function examSourceLabel(source: Question['examSource'] | string | undefined) {
-  if (!source) return 'Banco de Questões';
+function examSourceLabel(source: Question['examSource'] | string | undefined, styleOf?: string) {
+  if (!source) return styleOf ? `Autoral · estilo ${styleOf}` : 'Banco de Questões';
   return typeof source === 'string' ? source : `${source.board}${source.year ? ` ${source.year}` : ' · reprodução em apostila'}${source.phase ? ` · ${source.phase}` : ''}${source.questionNumber ? ` · questão ${source.questionNumber}` : ''}`;
 }
 
@@ -228,10 +228,9 @@ export default function Questoes() {
 
   const toggleRealExams = () => {
     setOnlyRealExams((v) => !v);
-    if (onlyRealExams) {
-      setBoardFilter('all');
-      setYearFilter('all');
-    }
+    // A banca fica: sem "só reais", ela passa a incluir as questões autorais
+    // no estilo dela. O ano sai, porque autoral não foi aplicada em ano nenhum.
+    if (onlyRealExams) setYearFilter('all');
     // O recorte de provas reais é bem menor que o banco inteiro, então o tópico
     // que estava selecionado pode nem existir nele. Voltar ao topo evita a tela
     // vazia sem explicação.
@@ -243,7 +242,9 @@ export default function Questoes() {
   const changeExam = (board: string, year: string) => {
     setBoardFilter(board);
     setYearFilter(year);
-    if (board !== 'all' || year !== 'all') setOnlyRealExams(true);
+    // Só o ano obriga a prova real. Escolher a banca ligava "só reais" e
+    // escondia as autorais no estilo dela, sem a estudante pedir.
+    if (year !== 'all') setOnlyRealExams(true);
     setTopicFilter(ALL);
     setSubtopicFilter(ALL);
     resetQuestionState();
@@ -471,7 +472,7 @@ export default function Questoes() {
             </span>
           </>
         )}
-        <i /> <b>{examSourceLabel(question?.examSource)}</b>
+        <i /> <b>{examSourceLabel(question?.examSource, question?.styleOf)}</b>
       </div>
 
       {/* Main Title */}
@@ -615,7 +616,7 @@ export default function Questoes() {
           <Panel subject={question.subject} interactive className="ni-panel ni-workspace">
             <div className="flex items-center justify-between gap-4">
               <span className="ni-kicker">
-                Questão {index + 1} de {pool.length} {question.examSource ? `· ${examSourceLabel(question.examSource)}` : ''}
+                Questão {index + 1} de {pool.length} {question.examSource || question.styleOf ? `· ${examSourceLabel(question.examSource, question.styleOf)}` : ''}
               </span>
               <span className="text-[10px] font-mono text-[var(--dim)]">
                 Acertos: <b className="text-[var(--text)]">{correctCount}</b> / {history.length}

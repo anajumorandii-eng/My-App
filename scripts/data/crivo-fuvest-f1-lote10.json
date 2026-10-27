@@ -31,7 +31,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. A criança continua homozigota e sem a enzima, mas, com pouca fenilalanina na dieta, o substrato não se acumula a ponto de causar danos. O fenótipo (desenvolvimento normal) depende do genótipo e do ambiente — aqui, a alimentação. O diagnóstico precoce é decisivo porque o dano neurológico ocorre cedo.\n\nPegadinhas:\n• A: a dieta não altera o DNA.\n• C: o caso mostra exatamente o contrário.\n• D: a doença é genética; o teste após o nascimento detecta o acúmulo de fenilalanina quando o bebê começa a se alimentar.\n• E: em doenças recessivas, os heterozigotos geralmente não manifestam a doença."
+    "explanation": "Resposta B. A criança continua homozigota e sem a enzima, mas, com pouca fenilalanina na dieta, o substrato não se acumula a ponto de causar danos. O fenótipo (desenvolvimento normal) depende do genótipo e do ambiente — aqui, a alimentação. O diagnóstico precoce é decisivo porque o dano neurológico ocorre cedo.\n\nPegadinhas:\n• A: a dieta não altera o DNA.\n• C: o caso mostra exatamente o contrário.\n• D: a doença é genética; o teste após o nascimento detecta o acúmulo de fenilalanina quando o bebê começa a se alimentar.\n• E: em doenças recessivas, os heterozigotos geralmente não manifestam a doença.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_02",
@@ -65,7 +66,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. A função de uma proteína depende de sua forma espacial, mantida por interações relativamente fracas (ligações de hidrogênio, interações hidrofóbicas) e, em alguns casos, por pontes dissulfeto. O calor rompe essas interações, e a cadeia se desenrola e se emaranha de outro modo — desnaturação. A sequência (estrutura primária), unida por ligações peptídicas, não muda.\n\nPegadinhas:\n• A: as ligações peptídicas resistem ao cozimento; sua quebra é hidrólise, como na digestão.\n• B: o calor não sintetiza proteínas novas.\n• C: proteínas não se convertem em carboidratos por aquecimento.\n• E: a clara fica firme justamente porque as proteínas desnaturadas se agregam, e não porque desaparecem."
+    "explanation": "Resposta D. A função de uma proteína depende de sua forma espacial, mantida por interações relativamente fracas (ligações de hidrogênio, interações hidrofóbicas) e, em alguns casos, por pontes dissulfeto. O calor rompe essas interações, e a cadeia se desenrola e se emaranha de outro modo — desnaturação. A sequência (estrutura primária), unida por ligações peptídicas, não muda.\n\nPegadinhas:\n• A: as ligações peptídicas resistem ao cozimento; sua quebra é hidrólise, como na digestão.\n• B: o calor não sintetiza proteínas novas.\n• C: proteínas não se convertem em carboidratos por aquecimento.\n• E: a clara fica firme justamente porque as proteínas desnaturadas se agregam, e não porque desaparecem.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_03",
@@ -99,7 +101,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. Até o ponto ótimo, o aumento de temperatura acelera as colisões entre enzima e substrato; acima dele, a estrutura espacial se desfaz e a atividade cai. A enzima humana tem ótimo perto de 37 °C e quase não funciona a 50 °C; a bacteriana, adaptada a ambientes quentes, tem ótimo perto de 75 °C e resiste a temperaturas que inativariam a humana — por isso enzimas desse tipo são usadas na PCR.\n\nPegadinhas:\n• B: o gráfico mostra quedas após o ótimo.\n• C: acima de cerca de 50 °C, a bacteriana é muito mais ativa.\n• D: inverte o gráfico; acima de 50 °C, a enzima humana está praticamente inativa.\n• E: catalisar a mesma reação não implica ter o mesmo ótimo de temperatura."
+    "explanation": "Resposta A. Até o ponto ótimo, o aumento de temperatura acelera as colisões entre enzima e substrato; acima dele, a estrutura espacial se desfaz e a atividade cai. A enzima humana tem ótimo perto de 37 °C e quase não funciona a 50 °C; a bacteriana, adaptada a ambientes quentes, tem ótimo perto de 75 °C e resiste a temperaturas que inativariam a humana — por isso enzimas desse tipo são usadas na PCR.\n\nPegadinhas:\n• B: o gráfico mostra quedas após o ótimo.\n• C: acima de cerca de 50 °C, a bacteriana é muito mais ativa.\n• D: inverte o gráfico; acima de 50 °C, a enzima humana está praticamente inativa.\n• E: catalisar a mesma reação não implica ter o mesmo ótimo de temperatura.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_04",
@@ -133,7 +136,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. Homologia indica origem comum (mesmos ossos, mesma posição, mesmo desenvolvimento embrionário), mesmo que a função varie — divergência evolutiva a partir de um ancestral tetrápode. Analogia indica mesma função com origens diferentes: o voo surgiu de forma independente em insetos e em morcegos, por convergência.\n\nPegadinhas:\n• A e D: a função não define homologia.\n• B: o braço humano e a asa do morcego são homólogos, apesar das funções diferentes.\n• C: a semelhança funcional das asas resulta de convergência, não de ancestral alado comum."
+    "explanation": "Resposta E. Homologia indica origem comum (mesmos ossos, mesma posição, mesmo desenvolvimento embrionário), mesmo que a função varie — divergência evolutiva a partir de um ancestral tetrápode. Analogia indica mesma função com origens diferentes: o voo surgiu de forma independente em insetos e em morcegos, por convergência.\n\nPegadinhas:\n• A e D: a função não define homologia.\n• B: o braço humano e a asa do morcego são homólogos, apesar das funções diferentes.\n• C: a semelhança funcional das asas resulta de convergência, não de ancestral alado comum.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_05",
@@ -167,7 +171,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. Em III e IV formam-se novas substâncias: o H₂O₂ se decompõe em água e O₂, e a glicose, na respiração celular, origina CO₂ e água. Em I e II, há mudança de estado físico (evaporação e fusão): as substâncias continuam as mesmas.\n\nPegadinhas:\n• A: I e II são transformações físicas.\n• B e D: misturam uma física com uma química.\n• E: inclui as transformações físicas.\nCritério decisivo: formação de substância nova, e não mudança de aparência."
+    "explanation": "Resposta C. Em III e IV formam-se novas substâncias: o H₂O₂ se decompõe em água e O₂, e a glicose, na respiração celular, origina CO₂ e água. Em I e II, há mudança de estado físico (evaporação e fusão): as substâncias continuam as mesmas.\n\nPegadinhas:\n• A: I e II são transformações físicas.\n• B e D: misturam uma física com uma química.\n• E: inclui as transformações físicas.\nCritério decisivo: formação de substância nova, e não mudança de aparência.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_06",
@@ -201,7 +206,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Sublimação é a passagem direta de sólido a gás; como toda mudança no sentido de maior agitação das partículas, absorve energia, retirada do que está em volta — as amostras permanecem a temperaturas muito baixas. O CO₂, mais denso que o ar, acumula-se junto ao chão em locais fechados e desloca o oxigênio.\n\nPegadinhas:\n• A e C: o gelo seco é CO₂, não água, e não passa pelo estado líquido à pressão ambiente.\n• D: a sublimação é endotérmica.\n• E: o texto informa que o gás é mais denso que o ar."
+    "explanation": "Resposta B. Sublimação é a passagem direta de sólido a gás; como toda mudança no sentido de maior agitação das partículas, absorve energia, retirada do que está em volta — as amostras permanecem a temperaturas muito baixas. O CO₂, mais denso que o ar, acumula-se junto ao chão em locais fechados e desloca o oxigênio.\n\nPegadinhas:\n• A e C: o gelo seco é CO₂, não água, e não passa pelo estado líquido à pressão ambiente.\n• D: a sublimação é endotérmica.\n• E: o texto informa que o gás é mais denso que o ar.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_07",
@@ -235,7 +241,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. Sais de ácido fraco e base forte dão soluções básicas: o ânion do ácido fraco (HCO₃⁻) capta H⁺ da água, liberando OH⁻. O Na⁺, cátion de uma base forte, praticamente não reage com a água. Esse caráter básico explica o uso do bicarbonato para neutralizar acidez.\n\nPegadinhas:\n• A: o Na⁺ não hidrolisa de forma significativa, e a solução é básica.\n• B: sais podem formar soluções ácidas, básicas ou neutras, conforme os íons.\n• C: liberar H⁺ tornaria a solução ácida, e a equação mostra formação de OH⁻.\n• E: no sal, o sódio está como íon Na⁺, não como metal."
+    "explanation": "Resposta D. Sais de ácido fraco e base forte dão soluções básicas: o ânion do ácido fraco (HCO₃⁻) capta H⁺ da água, liberando OH⁻. O Na⁺, cátion de uma base forte, praticamente não reage com a água. Esse caráter básico explica o uso do bicarbonato para neutralizar acidez.\n\nPegadinhas:\n• A: o Na⁺ não hidrolisa de forma significativa, e a solução é básica.\n• B: sais podem formar soluções ácidas, básicas ou neutras, conforme os íons.\n• C: liberar H⁺ tornaria a solução ácida, e a equação mostra formação de OH⁻.\n• E: no sal, o sódio está como íon Na⁺, não como metal.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_08",
@@ -269,7 +276,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. Em um ciclo simplificado, Cl reage com O₃ formando ClO e O₂; o ClO reage com oxigênio atômico, liberando de novo o Cl. Por ser regenerado, o cloro destrói muitas moléculas de ozônio. Como os CFCs persistem por décadas, a recuperação é lenta, ainda que o Protocolo de Montreal seja considerado um dos acordos ambientais mais bem-sucedidos.\n\nPegadinhas:\n• B: a destruição ocorre na estratosfera, após a quebra das moléculas pela radiação UV.\n• C: o texto fala em recuperação ao longo das próximas décadas.\n• D: o texto diz que os CFCs são estáveis na baixa atmosfera — por isso chegam à estratosfera.\n• E: menos ozônio significa mais radiação UV na superfície."
+    "explanation": "Resposta A. Em um ciclo simplificado, Cl reage com O₃ formando ClO e O₂; o ClO reage com oxigênio atômico, liberando de novo o Cl. Por ser regenerado, o cloro destrói muitas moléculas de ozônio. Como os CFCs persistem por décadas, a recuperação é lenta, ainda que o Protocolo de Montreal seja considerado um dos acordos ambientais mais bem-sucedidos.\n\nPegadinhas:\n• B: a destruição ocorre na estratosfera, após a quebra das moléculas pela radiação UV.\n• C: o texto fala em recuperação ao longo das próximas décadas.\n• D: o texto diz que os CFCs são estáveis na baixa atmosfera — por isso chegam à estratosfera.\n• E: menos ozônio significa mais radiação UV na superfície.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_09",
@@ -303,7 +311,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. Sem forças externas relevantes, a quantidade de movimento se conserva: 1 000 × 20 = (1 000 + 1 000) · v → v = 10 m/s. A energia cinética, porém, cai de 200 000 J para 100 000 J: metade é gasta na deformação, no calor e no som — o que torna a colisão perfeitamente inelástica.\n\nPegadinhas:\n• A (5 m/s): divide a velocidade por quatro.\n• B (7,1 m/s): não corresponde a modelo coerente com os dados.\n• D (14 m/s): conserva a energia cinética (20/√2), o que não vale quando os carros seguem juntos.\n• E (20 m/s): supõe que o conjunto mantém a velocidade inicial, dobrando a quantidade de movimento."
+    "explanation": "Resposta C. Sem forças externas relevantes, a quantidade de movimento se conserva: 1 000 × 20 = (1 000 + 1 000) · v → v = 10 m/s. A energia cinética, porém, cai de 200 000 J para 100 000 J: metade é gasta na deformação, no calor e no som — o que torna a colisão perfeitamente inelástica.\n\nPegadinhas:\n• A (5 m/s): divide a velocidade por quatro.\n• B (7,1 m/s): não corresponde a modelo coerente com os dados.\n• D (14 m/s): conserva a energia cinética (20/√2), o que não vale quando os carros seguem juntos.\n• E (20 m/s): supõe que o conjunto mantém a velocidade inicial, dobrando a quantidade de movimento.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_10",
@@ -337,7 +346,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. As cargas se concentram nas regiões de maior curvatura de um condutor; nas pontas, o campo elétrico é intenso o suficiente para ionizar o ar e facilitar a descarga ali. Se o raio cai, a corrente segue pelo cabo de baixa resistência até o aterramento. A proteção é local, em uma região limitada ao redor da haste.\n\nPegadinhas:\n• A e B: o para-raios não repele nem impede raios; oferece um caminho preferencial.\n• C: a haste e os cabos são condutores.\n• D: a área protegida é limitada; não abrange uma cidade."
+    "explanation": "Resposta E. As cargas se concentram nas regiões de maior curvatura de um condutor; nas pontas, o campo elétrico é intenso o suficiente para ionizar o ar e facilitar a descarga ali. Se o raio cai, a corrente segue pelo cabo de baixa resistência até o aterramento. A proteção é local, em uma região limitada ao redor da haste.\n\nPegadinhas:\n• A e B: o para-raios não repele nem impede raios; oferece um caminho preferencial.\n• C: a haste e os cabos são condutores.\n• D: a área protegida é limitada; não abrange uma cidade.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_11",
@@ -371,7 +381,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Pela expressão, o período depende só de L e de g, e não da massa nem (em pequenas oscilações) da amplitude. Se o relógio atrasa, o período está longo demais; encurtar o fio reduz T e acelera as oscilações. Reduzir L a um quarto, por exemplo, reduz o período à metade.\n\nPegadinhas:\n• A e E: a massa não aparece na expressão do período.\n• C: para pequenas oscilações, a amplitude não altera o período — foi o que Galileu observou.\n• D: alongar o fio aumentaria o período e agravaria o atraso."
+    "explanation": "Resposta B. Pela expressão, o período depende só de L e de g, e não da massa nem (em pequenas oscilações) da amplitude. Se o relógio atrasa, o período está longo demais; encurtar o fio reduz T e acelera as oscilações. Reduzir L a um quarto, por exemplo, reduz o período à metade.\n\nPegadinhas:\n• A e E: a massa não aparece na expressão do período.\n• C: para pequenas oscilações, a amplitude não altera o período — foi o que Galileu observou.\n• D: alongar o fio aumentaria o período e agravaria o atraso.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_12",
@@ -405,7 +416,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. A sequência de transformações é energia nuclear → térmica → mecânica (turbina) → elétrica (gerador, por indução eletromagnética). Como numa termelétrica, há um ciclo de vapor, mas a fonte de calor é a fissão, não a combustão — por isso não há emissão de CO₂ na geração. Em compensação, há rejeitos radioativos que exigem armazenamento seguro.\n\nPegadinhas:\n• A: a eletricidade é gerada por geradores movidos pelas turbinas.\n• B: a fissão é uma reação nuclear, não uma combustão.\n• C: a fissão gera rejeitos radioativos, e só uma pequena parte da massa é convertida em energia.\n• E: a água do mar é usada para resfriar e condensar o vapor."
+    "explanation": "Resposta D. A sequência de transformações é energia nuclear → térmica → mecânica (turbina) → elétrica (gerador, por indução eletromagnética). Como numa termelétrica, há um ciclo de vapor, mas a fonte de calor é a fissão, não a combustão — por isso não há emissão de CO₂ na geração. Em compensação, há rejeitos radioativos que exigem armazenamento seguro.\n\nPegadinhas:\n• A: a eletricidade é gerada por geradores movidos pelas turbinas.\n• B: a fissão é uma reação nuclear, não uma combustão.\n• C: a fissão gera rejeitos radioativos, e só uma pequena parte da massa é convertida em energia.\n• E: a água do mar é usada para resfriar e condensar o vapor.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_13",
@@ -439,7 +451,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Os intervalos com as duas medições iguais ou acima de 37,8 °C são: 8 h–10 h, 10 h–12 h e 18 h–20 h. São três intervalos de 2 h: 6 horas. A queda depois das 12 h é compatível com o efeito do antitérmico, e a temperatura volta a subir à noite.\n\nPegadinhas:\n• A (4 horas): considera só o período da manhã, 8 h–12 h.\n• C (8 horas): inclui o intervalo 12 h–14 h, em que a medição das 14 h está abaixo de 37,8 °C.\n• D (10 horas): inclui também o intervalo 20 h–22 h.\n• E (16 horas): é o tempo total de observação, de 6 h a 22 h."
+    "explanation": "Resposta B. Os intervalos com as duas medições iguais ou acima de 37,8 °C são: 8 h–10 h, 10 h–12 h e 18 h–20 h. São três intervalos de 2 h: 6 horas. A queda depois das 12 h é compatível com o efeito do antitérmico, e a temperatura volta a subir à noite.\n\nPegadinhas:\n• A (4 horas): considera só o período da manhã, 8 h–12 h.\n• C (8 horas): inclui o intervalo 12 h–14 h, em que a medição das 14 h está abaixo de 37,8 °C.\n• D (10 horas): inclui também o intervalo 20 h–22 h.\n• E (16 horas): é o tempo total de observação, de 6 h a 22 h.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_14",
@@ -473,7 +486,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. Trate os dois irmãos como um bloco: passam a ser 4 elementos (o bloco e os outros 3 pacientes), que podem ser ordenados de 4! = 24 maneiras. Dentro do bloco, os irmãos podem trocar de lugar: 2! = 2. Total: 24 × 2 = 48.\n\nPegadinhas:\n• A (6): ordena apenas os três outros pacientes.\n• B (12): usa 3! × 2, esquecendo o bloco como um dos elementos a ordenar.\n• C (24): esquece que os irmãos podem trocar de lugar dentro do bloco.\n• D (36): não corresponde a contagem coerente com o enunciado."
+    "explanation": "Resposta E. Trate os dois irmãos como um bloco: passam a ser 4 elementos (o bloco e os outros 3 pacientes), que podem ser ordenados de 4! = 24 maneiras. Dentro do bloco, os irmãos podem trocar de lugar: 2! = 2. Total: 24 × 2 = 48.\n\nPegadinhas:\n• A (6): ordena apenas os três outros pacientes.\n• B (12): usa 3! × 2, esquecendo o bloco como um dos elementos a ordenar.\n• C (24): esquece que os irmãos podem trocar de lugar dentro do bloco.\n• D (36): não corresponde a contagem coerente com o enunciado.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_15",
@@ -507,7 +521,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. Os aumentos multiplicam o preço por 1,10 e depois por 1,20: 1,10 × 1,20 = 1,32. O aumento acumulado é de 32%. Se o preço era R$ 100,00, passou a R$ 110,00 e, depois, a R$ 132,00.\n\nPegadinhas:\n• A, D e E: não correspondem à composição dos dois aumentos (28%, 36% e 40%).\n• B (30%): soma as taxas, ignorando que o segundo aumento incide sobre o preço já reajustado."
+    "explanation": "Resposta C. Os aumentos multiplicam o preço por 1,10 e depois por 1,20: 1,10 × 1,20 = 1,32. O aumento acumulado é de 32%. Se o preço era R$ 100,00, passou a R$ 110,00 e, depois, a R$ 132,00.\n\nPegadinhas:\n• A, D e E: não correspondem à composição dos dois aumentos (28%, 36% e 40%).\n• B (30%): soma as taxas, ignorando que o segundo aumento incide sobre o preço já reajustado.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_16",
@@ -541,7 +556,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. A indústria se espalhou pelo território em busca de custos menores e incentivos, mas São Paulo concentrou o comando: sedes de empresas, mercado financeiro, pesquisa e serviços avançados. Por isso se fala em desconcentração da produção, não em perda de centralidade.\n\nPegadinhas:\n• A: o texto mostra que a capital manteve sedes e serviços.\n• C: o texto descreve o movimento oposto.\n• D: o texto cita estados brasileiros como destino.\n• E: a guerra fiscal é apontada como um dos fatores do processo."
+    "explanation": "Resposta B. A indústria se espalhou pelo território em busca de custos menores e incentivos, mas São Paulo concentrou o comando: sedes de empresas, mercado financeiro, pesquisa e serviços avançados. Por isso se fala em desconcentração da produção, não em perda de centralidade.\n\nPegadinhas:\n• A: o texto mostra que a capital manteve sedes e serviços.\n• C: o texto descreve o movimento oposto.\n• D: o texto cita estados brasileiros como destino.\n• E: a guerra fiscal é apontada como um dos fatores do processo.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_17",
@@ -575,7 +591,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. A megalópole resulta da integração entre metrópoles e as cidades do eixo que as liga, com urbanização quase contínua e fluxos diários intensos, como o movimento pendular de trabalhadores. Os municípios continuam com administrações próprias.\n\nPegadinhas:\n• A: são muitos municípios, com administrações diferentes.\n• B: o texto descreve uma faixa urbana.\n• C: a área reúne duas metrópoles e as cidades entre elas.\n• E: nenhuma cidade foi construída para substituí-las."
+    "explanation": "Resposta D. A megalópole resulta da integração entre metrópoles e as cidades do eixo que as liga, com urbanização quase contínua e fluxos diários intensos, como o movimento pendular de trabalhadores. Os municípios continuam com administrações próprias.\n\nPegadinhas:\n• A: são muitos municípios, com administrações diferentes.\n• B: o texto descreve uma faixa urbana.\n• C: a área reúne duas metrópoles e as cidades entre elas.\n• E: nenhuma cidade foi construída para substituí-las.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_18",
@@ -609,7 +626,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. Nas zonas de subducção, a placa oceânica, mais densa, mergulha sob a continental; o atrito e o travamento acumulam energia, liberada em terremotos. O processo também forma vulcões e eleva cordilheiras. No interior de uma placa, como o Brasil, os tremores ocorrem por acomodações internas e, em geral, são fracos.\n\nPegadinhas:\n• B: o Brasil está no interior da placa, não em borda divergente.\n• C: as marés não causam terremotos.\n• D: todo o território está sobre placas tectônicas; o Brasil está na Sul-Americana.\n• E: os Andes resultam da convergência e não barram ondas sísmicas."
+    "explanation": "Resposta A. Nas zonas de subducção, a placa oceânica, mais densa, mergulha sob a continental; o atrito e o travamento acumulam energia, liberada em terremotos. O processo também forma vulcões e eleva cordilheiras. No interior de uma placa, como o Brasil, os tremores ocorrem por acomodações internas e, em geral, são fracos.\n\nPegadinhas:\n• B: o Brasil está no interior da placa, não em borda divergente.\n• C: as marés não causam terremotos.\n• D: todo o território está sobre placas tectônicas; o Brasil está na Sul-Americana.\n• E: os Andes resultam da convergência e não barram ondas sísmicas.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_19",
@@ -643,7 +661,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. O Poder Moderador colocava o imperador acima dos demais poderes, com capacidade de interferir no Legislativo e no Judiciário. O voto censitário excluía a maioria da população, e os escravizados, que não eram cidadãos, estavam fora do sistema. A outorga após a dissolução da Constituinte mostra o caráter centralizador do projeto.\n\nPegadinhas:\n• A: o regime era uma monarquia unitária.\n• B: o voto era censitário; mulheres e escravizados não votavam.\n• C: o Poder Moderador permitia ao imperador interferir nos outros poderes.\n• D: o catolicismo era a religião oficial."
+    "explanation": "Resposta E. O Poder Moderador colocava o imperador acima dos demais poderes, com capacidade de interferir no Legislativo e no Judiciário. O voto censitário excluía a maioria da população, e os escravizados, que não eram cidadãos, estavam fora do sistema. A outorga após a dissolução da Constituinte mostra o caráter centralizador do projeto.\n\nPegadinhas:\n• A: o regime era uma monarquia unitária.\n• B: o voto era censitário; mulheres e escravizados não votavam.\n• C: o Poder Moderador permitia ao imperador interferir nos outros poderes.\n• D: o catolicismo era a religião oficial.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_20",
@@ -677,7 +696,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. O movimento derrubou uma ditadura apoiada pelos Estados Unidos e, ao nacionalizar empresas norte-americanas, entrou em choque com Washington. As sanções, a tentativa de invasão e a aproximação com Moscou transformaram Cuba em peça da Guerra Fria — o que culminaria na crise dos mísseis de 1962.\n\nPegadinhas:\n• A: os Estados Unidos se opuseram à revolução e apoiaram a tentativa de invasão.\n• B: o texto diz que propriedades norte-americanas foram nacionalizadas.\n• D: a revolução teve grande impacto internacional.\n• E: Cuba manteve-se como Estado independente, aliado da União Soviética."
+    "explanation": "Resposta C. O movimento derrubou uma ditadura apoiada pelos Estados Unidos e, ao nacionalizar empresas norte-americanas, entrou em choque com Washington. As sanções, a tentativa de invasão e a aproximação com Moscou transformaram Cuba em peça da Guerra Fria — o que culminaria na crise dos mísseis de 1962.\n\nPegadinhas:\n• A: os Estados Unidos se opuseram à revolução e apoiaram a tentativa de invasão.\n• B: o texto diz que propriedades norte-americanas foram nacionalizadas.\n• D: a revolução teve grande impacto internacional.\n• E: Cuba manteve-se como Estado independente, aliado da União Soviética.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_21",
@@ -711,7 +731,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. A campanha reuniu partidos de oposição, movimentos sociais, artistas e estudantes em grandes comícios, expressando o desgaste do regime. Mesmo derrotada no Congresso, a pressão popular influenciou a transição: a oposição venceu no Colégio Eleitoral, e o primeiro presidente civil desde 1964 tomou posse em 1985 — José Sarney, após a doença de Tancredo. A eleição direta para presidente só ocorreu em 1989.\n\nPegadinhas:\n• A: a emenda foi rejeitada, e Tancredo foi eleito de forma indireta.\n• C: a campanha era de oposição ao regime.\n• D: não houve fechamento do Congresso nem novo ato institucional.\n• E: os comícios reuniram milhões de pessoas."
+    "explanation": "Resposta B. A campanha reuniu partidos de oposição, movimentos sociais, artistas e estudantes em grandes comícios, expressando o desgaste do regime. Mesmo derrotada no Congresso, a pressão popular influenciou a transição: a oposição venceu no Colégio Eleitoral, e o primeiro presidente civil desde 1964 tomou posse em 1985 — José Sarney, após a doença de Tancredo. A eleição direta para presidente só ocorreu em 1989.\n\nPegadinhas:\n• A: a emenda foi rejeitada, e Tancredo foi eleito de forma indireta.\n• C: a campanha era de oposição ao regime.\n• D: não houve fechamento do Congresso nem novo ato institucional.\n• E: os comícios reuniram milhões de pessoas.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_22",
@@ -745,7 +766,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. 'Ela' retoma 'a vacina contra o HPV', o sujeito da frase anterior. 'Essa proteção' resume a ideia expressa na segunda frase (a vacina protege contra tipos do vírus). 'Dessa forma' remete à faixa de 9 a 14 anos mencionada no início. São mecanismos de coesão referencial, que evitam repetições e encadeiam as ideias.\n\nPegadinhas:\n• A: 'Essa proteção' não pode retomar 'o SUS', e 'dessa forma' não se refere à vida sexual.\n• B: o vírus não é o sujeito que 'protege'.\n• C: 'Ela' não retoma 'a aplicação', que só aparece depois.\n• E: a faixa etária é retomada por 'dessa forma', e não por 'Ela'."
+    "explanation": "Resposta D. 'Ela' retoma 'a vacina contra o HPV', o sujeito da frase anterior. 'Essa proteção' resume a ideia expressa na segunda frase (a vacina protege contra tipos do vírus). 'Dessa forma' remete à faixa de 9 a 14 anos mencionada no início. São mecanismos de coesão referencial, que evitam repetições e encadeiam as ideias.\n\nPegadinhas:\n• A: 'Essa proteção' não pode retomar 'o SUS', e 'dessa forma' não se refere à vida sexual.\n• B: o vírus não é o sujeito que 'protege'.\n• C: 'Ela' não retoma 'a aplicação', que só aparece depois.\n• E: a faixa etária é retomada por 'dessa forma', e não por 'Ela'.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_23",
@@ -779,7 +801,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. O texto contrapõe a maioria feminina entre estudantes ('the majority of medical students') à baixa presença no topo ('underrepresented as heads of department'). A conclusão é que mais mulheres nas escolas 'will not, by itself, close the leadership gap'.\n\nPegadinhas:\n• B e C: o texto afirma a sub-representação nos cargos de liderança.\n• D: o Brasil é citado entre os países com maioria feminina de estudantes.\n• E: a falta de mentoras é apontada como um dos fatores.\nVocabulário: 'yet' = no entanto; 'underrepresented' = sub-representadas; 'gap' = diferença, lacuna."
+    "explanation": "Resposta A. O texto contrapõe a maioria feminina entre estudantes ('the majority of medical students') à baixa presença no topo ('underrepresented as heads of department'). A conclusão é que mais mulheres nas escolas 'will not, by itself, close the leadership gap'.\n\nPegadinhas:\n• B e C: o texto afirma a sub-representação nos cargos de liderança.\n• D: o Brasil é citado entre os países com maioria feminina de estudantes.\n• E: a falta de mentoras é apontada como um dos fatores.\nVocabulário: 'yet' = no entanto; 'underrepresented' = sub-representadas; 'gap' = diferença, lacuna.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_24",
@@ -813,6 +836,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. O esquema de Marshall descreve a experiência inglesa, não uma lei universal. No Brasil, a legislação trabalhista e previdenciária avançou sob Vargas, inclusive durante o Estado Novo, sem eleições; os direitos civis seguiram desiguais. Carvalho argumenta que essa ordem favoreceu uma relação de dependência com o Estado.\n\nPegadinhas:\n• A e B: o texto mostra justamente que a sequência brasileira foi outra.\n• C: a história brasileira mostra restrição de direitos políticos em vários períodos.\n• D: no Império, o voto era censitário e restrito a uma minoria."
+    "explanation": "Resposta E. O esquema de Marshall descreve a experiência inglesa, não uma lei universal. No Brasil, a legislação trabalhista e previdenciária avançou sob Vargas, inclusive durante o Estado Novo, sem eleições; os direitos civis seguiram desiguais. Carvalho argumenta que essa ordem favoreceu uma relação de dependência com o Estado.\n\nPegadinhas:\n• A e B: o texto mostra justamente que a sequência brasileira foi outra.\n• C: a história brasileira mostra restrição de direitos políticos em vários períodos.\n• D: no Império, o voto era censitário e restrito a uma minoria.",
+    "styleOf": "FUVEST"
   }
 ]

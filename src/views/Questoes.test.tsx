@@ -91,10 +91,27 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     expect(screen.getByRole('link', { name: /Caderno Unicamp 2026/ })).toHaveAttribute('href', '/real-exams/unicamp-2026.pdf');
     expect(screen.getByRole('button', { name: /Só Questões Reais \(1\)/ })).toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: /Só Questões Reais/ }));
-    expect(screen.getByLabelText('Banca')).toHaveValue('all');
+    // Desligar "só reais" mantém a banca e limpa só o ano: a banca sem o
+    // recorte de prova real passa a incluir as autorais no estilo dela.
+    expect(screen.getByLabelText('Banca')).toHaveValue('UNICAMP');
     expect(screen.getByLabelText('Ano da prova')).toHaveValue('all');
     expect(screen.queryByRole('link', { name: /Caderno Unicamp 2026/ })).not.toBeInTheDocument();
-    expect(screen.getByText(/Questão 1 de 3/)).toBeInTheDocument();
+    expect(screen.getByText(/Questão 1 de 2/)).toBeInTheDocument();
+  });
+
+  it('inclui a autoral no estilo da banca só quando "só reais" está desligado', async () => {
+    questionsHook.mockReturnValue({ questions: [
+      { ...QUESTION, id: 'fuvest26', prompt: 'Prova real', examSource: { board: 'FUVEST', year: 2026 } },
+      { ...QUESTION, id: 'crivo_fuvest_f1_l9_01', prompt: 'Questão autoral', styleOf: 'FUVEST' },
+      { ...QUESTION, id: 'q_sem_banca', prompt: 'Questão de apostila' },
+    ], syncError: null });
+    const user = userEvent.setup();
+    render(<Questoes />);
+    await user.selectOptions(screen.getByLabelText('Banca'), 'FUVEST');
+    expect(screen.getByText(/Questão 1 de 2/)).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: /Só Questões Reais/ }));
+    expect(screen.getByText(/Questão 1 de 1/)).toBeInTheDocument();
+    expect(screen.getByText('Prova real')).toBeInTheDocument();
   });
 
   it('mostra só o texto quando a questão não depende da página original', () => {

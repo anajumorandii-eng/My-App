@@ -31,7 +31,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Para cada gene, Aa × Aa dá 1/4 de chance de aa. Como os genes segregam de forma independente (segunda lei de Mendel), a chance de não manifestar nenhuma condição é 3/4 × 3/4 = 9/16. Logo, pelo menos uma: 1 − 9/16 = 7/16.\n\nPegadinhas:\n• A (1/16): é a chance de manifestar as duas ao mesmo tempo.\n• C (1/2): soma 1/4 + 1/4, contando duas vezes o caso em que as duas ocorrem.\n• D (9/16): é a chance de não manifestar nenhuma.\n• E (3/4): é a chance de não manifestar uma condição específica."
+    "explanation": "Resposta B. Para cada gene, Aa × Aa dá 1/4 de chance de aa. Como os genes segregam de forma independente (segunda lei de Mendel), a chance de não manifestar nenhuma condição é 3/4 × 3/4 = 9/16. Logo, pelo menos uma: 1 − 9/16 = 7/16.\n\nPegadinhas:\n• A (1/16): é a chance de manifestar as duas ao mesmo tempo.\n• C (1/2): soma 1/4 + 1/4, contando duas vezes o caso em que as duas ocorrem.\n• D (9/16): é a chance de não manifestar nenhuma.\n• E (3/4): é a chance de não manifestar uma condição específica.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_02",
@@ -65,7 +66,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. A glicólise, no citoplasma, gera 2 ATP por glicose e consome NAD⁺. Com oxigênio suficiente, o NADH é reoxidado na cadeia respiratória; sem ele, a célula reduz o piruvato a lactato, regenerando NAD⁺ para manter a glicólise. É uma via rápida, mas de baixo rendimento — cerca de 2 ATP, contra aproximadamente 30 na respiração aeróbica.\n\nPegadinhas:\n• A: inverte os rendimentos.\n• B: a glicose (e o glicogênio muscular) não se esgota em segundos; e gorduras não originam lactato.\n• C: o produto final da respiração aeróbica é CO₂ e água.\n• E: a fermentação ocorre no citoplasma e justamente quando falta oxigênio."
+    "explanation": "Resposta D. A glicólise, no citoplasma, gera 2 ATP por glicose e consome NAD⁺. Com oxigênio suficiente, o NADH é reoxidado na cadeia respiratória; sem ele, a célula reduz o piruvato a lactato, regenerando NAD⁺ para manter a glicólise. É uma via rápida, mas de baixo rendimento — cerca de 2 ATP, contra aproximadamente 30 na respiração aeróbica.\n\nPegadinhas:\n• A: inverte os rendimentos.\n• B: a glicose (e o glicogênio muscular) não se esgota em segundos; e gorduras não originam lactato.\n• C: o produto final da respiração aeróbica é CO₂ e água.\n• E: a fermentação ocorre no citoplasma e justamente quando falta oxigênio.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_03",
@@ -99,7 +101,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. É a especiação alopátrica: o istmo impede o fluxo gênico, e cada população acumula mudanças próprias por mutação, seleção (ambientes diferentes) e deriva. Com o tempo, as diferenças tornam-se tão grandes que, mesmo reunidas, as populações não se cruzam com sucesso — isolamento reprodutivo, critério de espécies distintas.\n\nPegadinhas:\n• B: é raciocínio de herança de caracteres adquiridos por necessidade.\n• C: a barreira inicia o processo, mas a especiação exige acúmulo de diferenças ao longo de muitas gerações.\n• D: o istmo é terra firme; separa as populações marinhas.\n• E: o isolamento reprodutivo resulta de diferenças genéticas, não de decisão."
+    "explanation": "Resposta A. É a especiação alopátrica: o istmo impede o fluxo gênico, e cada população acumula mudanças próprias por mutação, seleção (ambientes diferentes) e deriva. Com o tempo, as diferenças tornam-se tão grandes que, mesmo reunidas, as populações não se cruzam com sucesso — isolamento reprodutivo, critério de espécies distintas.\n\nPegadinhas:\n• B: é raciocínio de herança de caracteres adquiridos por necessidade.\n• C: a barreira inicia o processo, mas a especiação exige acúmulo de diferenças ao longo de muitas gerações.\n• D: o istmo é terra firme; separa as populações marinhas.\n• E: o isolamento reprodutivo resulta de diferenças genéticas, não de decisão.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_04",
@@ -133,7 +136,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. O potencial de ação depende da abertura dos canais de Na⁺ voltagem-dependentes: o sódio entra, a membrana se despolariza, e a onda se propaga ao longo do axônio. Bloqueados os canais no trecho do nervo, o sinal gerado no dente não atravessa essa região e não chega ao encéfalo. Como o bloqueio é local e reversível, a consciência se mantém e o efeito acaba quando o fármaco é removido.\n\nPegadinhas:\n• A: a ação é local, no nervo periférico — por isso o paciente segue consciente.\n• B: o efeito é reversível em horas; não há destruição de neurônios.\n• C: o fármaco age nos canais de sódio, não na bomba, e o efeito não é permanente.\n• D: sem potencial de ação, a liberação de neurotransmissores na sinapse seguinte não ocorre."
+    "explanation": "Resposta E. O potencial de ação depende da abertura dos canais de Na⁺ voltagem-dependentes: o sódio entra, a membrana se despolariza, e a onda se propaga ao longo do axônio. Bloqueados os canais no trecho do nervo, o sinal gerado no dente não atravessa essa região e não chega ao encéfalo. Como o bloqueio é local e reversível, a consciência se mantém e o efeito acaba quando o fármaco é removido.\n\nPegadinhas:\n• A: a ação é local, no nervo periférico — por isso o paciente segue consciente.\n• B: o efeito é reversível em horas; não há destruição de neurônios.\n• C: o fármaco age nos canais de sódio, não na bomba, e o efeito não é permanente.\n• D: sem potencial de ação, a liberação de neurotransmissores na sinapse seguinte não ocorre.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_05",
@@ -167,7 +171,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. A 20 m, a pressão é 1 atm (ar) + 2 atm (água) = 3 atm; na superfície, 1 atm. Com temperatura e quantidade de gás constantes, p₁V₁ = p₂V₂ (lei de Boyle): 3 · V = 1 · V₂ → V₂ = 3V. Como os pulmões não se expandem tanto, prender a respiração na subida pode romper alvéolos.\n\nPegadinhas:\n• A: a quantidade de gás é constante, mas o volume depende da pressão.\n• B: usa 2 atm no fundo, esquecendo a pressão atmosférica.\n• D e E: invertem a relação; pressão menor implica volume maior."
+    "explanation": "Resposta C. A 20 m, a pressão é 1 atm (ar) + 2 atm (água) = 3 atm; na superfície, 1 atm. Com temperatura e quantidade de gás constantes, p₁V₁ = p₂V₂ (lei de Boyle): 3 · V = 1 · V₂ → V₂ = 3V. Como os pulmões não se expandem tanto, prender a respiração na subida pode romper alvéolos.\n\nPegadinhas:\n• A: a quantidade de gás é constante, mas o volume depende da pressão.\n• B: usa 2 atm no fundo, esquecendo a pressão atmosférica.\n• D e E: invertem a relação; pressão menor implica volume maior.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_06",
@@ -201,7 +206,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. No H₂O₂, cada oxigênio tem NOX −1. Na reação, parte dos átomos vai a 0 (O₂, oxidação) e parte a −2 (H₂O, redução): é uma auto-oxirredução (desproporcionamento), com o mesmo reagente atuando como oxidante e redutor. O O₂ liberado forma a espuma.\n\nPegadinhas:\n• A: o gás é O₂, como mostra a equação.\n• C: o hidrogênio mantém NOX +1 nos dois lados.\n• D: catalisador não é consumido; a enzima apenas acelera a reação.\n• E: há transferência de elétrons entre átomos de oxigênio de moléculas diferentes de H₂O₂."
+    "explanation": "Resposta B. No H₂O₂, cada oxigênio tem NOX −1. Na reação, parte dos átomos vai a 0 (O₂, oxidação) e parte a −2 (H₂O, redução): é uma auto-oxirredução (desproporcionamento), com o mesmo reagente atuando como oxidante e redutor. O O₂ liberado forma a espuma.\n\nPegadinhas:\n• A: o gás é O₂, como mostra a equação.\n• C: o hidrogênio mantém NOX +1 nos dois lados.\n• D: catalisador não é consumido; a enzima apenas acelera a reação.\n• E: há transferência de elétrons entre átomos de oxigênio de moléculas diferentes de H₂O₂.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_07",
@@ -235,7 +241,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. Massa molar do NaCl: 23 + 35,5 = 58,5 g/mol. A fração de sódio em massa é 23/58,5 ≈ 0,39. Em 5 g de sal: 5 × 0,39 ≈ 2,0 g de sódio — o limite de cerca de 2 g de sódio por dia que corresponde à recomendação.\n\nPegadinhas:\n• A (0,4 g): usa a fração 0,39 sem multiplicar pelos 5 g, e arredonda.\n• B e C: não correspondem a cálculos coerentes com os dados.\n• E (3,0 g): é aproximadamente a massa de cloro, não a de sódio."
+    "explanation": "Resposta D. Massa molar do NaCl: 23 + 35,5 = 58,5 g/mol. A fração de sódio em massa é 23/58,5 ≈ 0,39. Em 5 g de sal: 5 × 0,39 ≈ 2,0 g de sódio — o limite de cerca de 2 g de sódio por dia que corresponde à recomendação.\n\nPegadinhas:\n• A (0,4 g): usa a fração 0,39 sem multiplicar pelos 5 g, e arredonda.\n• B e C: não correspondem a cálculos coerentes com os dados.\n• E (3,0 g): é aproximadamente a massa de cloro, não a de sódio.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_08",
@@ -269,7 +276,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. Hidroxila ligada diretamente a carbono de anel aromático caracteriza fenol (e não álcool). Nitrogênio ligado a uma carbonila (–NH–CO–) caracteriza amida — o nome químico do paracetamol é N-(4-hidroxifenil)acetamida.\n\nPegadinhas:\n• B e E: álcool exige –OH em carbono saturado, fora do anel aromático; cetona exige carbonila entre dois carbonos, e aqui ela está ligada ao nitrogênio.\n• C: não há –COOH nem –COO– ligando dois carbonos.\n• D: amina não tem carbonila ligada ao nitrogênio; a presença da C=O muda a função para amida."
+    "explanation": "Resposta A. Hidroxila ligada diretamente a carbono de anel aromático caracteriza fenol (e não álcool). Nitrogênio ligado a uma carbonila (–NH–CO–) caracteriza amida — o nome químico do paracetamol é N-(4-hidroxifenil)acetamida.\n\nPegadinhas:\n• B e E: álcool exige –OH em carbono saturado, fora do anel aromático; cetona exige carbonila entre dois carbonos, e aqui ela está ligada ao nitrogênio.\n• C: não há –COOH nem –COO– ligando dois carbonos.\n• D: amina não tem carbonila ligada ao nitrogênio; a presença da C=O muda a função para amida.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_09",
@@ -303,7 +311,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. Pela inércia, um corpo mantém sua velocidade se a força resultante sobre ele for nula. Quando o carro para, nada está freando o passageiro sem cinto: ele segue a 60 km/h até que o painel ou o para-brisa apliquem a força que o detém. O cinto aplica essa força antes, ao longo de uma distância maior e sobre regiões mais resistentes do corpo.\n\nPegadinhas:\n• A: o painel exerce força para trás no passageiro, para detê-lo, e não para a frente.\n• B: a gravidade é vertical e não explica o deslocamento horizontal.\n• C: não existe força que o 'lance'; ele apenas continua o movimento que já tinha.\n• D: a explicação adequada é a inércia; a energia do passageiro é dissipada no impacto."
+    "explanation": "Resposta E. Pela inércia, um corpo mantém sua velocidade se a força resultante sobre ele for nula. Quando o carro para, nada está freando o passageiro sem cinto: ele segue a 60 km/h até que o painel ou o para-brisa apliquem a força que o detém. O cinto aplica essa força antes, ao longo de uma distância maior e sobre regiões mais resistentes do corpo.\n\nPegadinhas:\n• A: o painel exerce força para trás no passageiro, para detê-lo, e não para a frente.\n• B: a gravidade é vertical e não explica o deslocamento horizontal.\n• C: não existe força que o 'lance'; ele apenas continua o movimento que já tinha.\n• D: a explicação adequada é a inércia; a energia do passageiro é dissipada no impacto.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_10",
@@ -337,7 +346,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. Pelo teorema do impulso, F_média · Δt = Δp. A cabeça vai de 15 m/s a zero com ou sem airbag, então Δp é o mesmo. Se Δt passa de 0,01 s para 0,1 s, a força média cai a um décimo. A área maior de contato também distribui essa força.\n\nPegadinhas:\n• A: nos dois casos a cabeça para; a velocidade final é zero.\n• B: o efeito é o oposto — a força média diminui.\n• D: o impulso total é o mesmo, pois a cabeça precisa parar; o airbag não o anula.\n• E: a massa da cabeça não muda."
+    "explanation": "Resposta C. Pelo teorema do impulso, F_média · Δt = Δp. A cabeça vai de 15 m/s a zero com ou sem airbag, então Δp é o mesmo. Se Δt passa de 0,01 s para 0,1 s, a força média cai a um décimo. A área maior de contato também distribui essa força.\n\nPegadinhas:\n• A: nos dois casos a cabeça para; a velocidade final é zero.\n• B: o efeito é o oposto — a força média diminui.\n• D: o impulso total é o mesmo, pois a cabeça precisa parar; o airbag não o anula.\n• E: a massa da cabeça não muda.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_11",
@@ -371,7 +381,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. v = λ · f → λ = 1 540 ÷ (5 × 10⁶) = 3,08 × 10⁻⁴ m ≈ 0,3 mm. Por isso o ultrassom distingue estruturas de frações de milímetro.\n\nPegadinhas:\n• A e C: erram uma potência de 10 na conversão de metros para milímetros.\n• D: erra duas potências de 10.\n• E (308 m): divide 1 540 por 5, sem o prefixo mega."
+    "explanation": "Resposta B. v = λ · f → λ = 1 540 ÷ (5 × 10⁶) = 3,08 × 10⁻⁴ m ≈ 0,3 mm. Por isso o ultrassom distingue estruturas de frações de milímetro.\n\nPegadinhas:\n• A e C: erram uma potência de 10 na conversão de metros para milímetros.\n• D: erra duas potências de 10.\n• E (308 m): divide 1 540 por 5, sem o prefixo mega.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_12",
@@ -405,7 +416,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. A luz interage com a matéria fóton a fóton. A energia de cada fóton depende só da frequência (E = hf): os de UVB têm energia capaz de excitar e alterar ligações do DNA, formando lesões. Aumentar a intensidade da luz visível aumenta o número de fótons, mas nenhum deles tem, sozinho, energia suficiente para esse efeito.\n\nPegadinhas:\n• A: é o erro que o modelo de fótons corrigiu — o efeito depende da energia de cada fóton, não só da quantidade.\n• B: frequência maior significa comprimento de onda menor.\n• C: ambas são ondas eletromagnéticas.\n• E: no ar, ambas se propagam praticamente com a mesma velocidade."
+    "explanation": "Resposta D. A luz interage com a matéria fóton a fóton. A energia de cada fóton depende só da frequência (E = hf): os de UVB têm energia capaz de excitar e alterar ligações do DNA, formando lesões. Aumentar a intensidade da luz visível aumenta o número de fótons, mas nenhum deles tem, sozinho, energia suficiente para esse efeito.\n\nPegadinhas:\n• A: é o erro que o modelo de fótons corrigiu — o efeito depende da energia de cada fóton, não só da quantidade.\n• B: frequência maior significa comprimento de onda menor.\n• C: ambas são ondas eletromagnéticas.\n• E: no ar, ambas se propagam praticamente com a mesma velocidade.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_13",
@@ -439,7 +451,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. Dose: 15 mg/kg × 20 kg = 300 mg. Concentração: 200 mg / 5 mL = 40 mg/mL. Volume: 300 ÷ 40 = 7,5 mL.\n\nPegadinhas:\n• B (10 mL): usa a concentração de 30 mg/mL, sem fundamento nos dados.\n• C (15 mL): toma a dose em mg/kg como volume em mL.\n• D (30 mL): divide 300 por 10, como se houvesse 10 mg/mL.\n• E (75 mL): erra uma casa decimal.\nNa prática, erro de unidade em dose pediátrica é causa conhecida de intoxicação."
+    "explanation": "Resposta A. Dose: 15 mg/kg × 20 kg = 300 mg. Concentração: 200 mg / 5 mL = 40 mg/mL. Volume: 300 ÷ 40 = 7,5 mL.\n\nPegadinhas:\n• B (10 mL): usa a concentração de 30 mg/mL, sem fundamento nos dados.\n• C (15 mL): toma a dose em mg/kg como volume em mL.\n• D (30 mL): divide 300 por 10, como se houvesse 10 mg/mL.\n• E (75 mL): erra uma casa decimal.\nNa prática, erro de unidade em dose pediátrica é causa conhecida de intoxicação.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_14",
@@ -473,7 +486,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. Custo: C(x) = 12 000 + 30x. Receita: R(x) = 90x. O ponto de equilíbrio é a interseção das retas: 90x = 12 000 + 30x → 60x = 12 000 → x = 200. Cada consulta contribui com 90 − 30 = 60 reais para cobrir o custo fixo.\n\nPegadinhas:\n• A, C e D: não correspondem à interseção das retas com os dados do enunciado.\n• B (133): divide o custo fixo pelo preço (12 000 ÷ 90), ignorando o custo de cada consulta."
+    "explanation": "Resposta E. Custo: C(x) = 12 000 + 30x. Receita: R(x) = 90x. O ponto de equilíbrio é a interseção das retas: 90x = 12 000 + 30x → 60x = 12 000 → x = 200. Cada consulta contribui com 90 − 30 = 60 reais para cobrir o custo fixo.\n\nPegadinhas:\n• A, C e D: não correspondem à interseção das retas com os dados do enunciado.\n• B (133): divide o custo fixo pelo preço (12 000 ÷ 90), ignorando o custo de cada consulta.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_15",
@@ -507,7 +521,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. Os horários coincidem a cada mmc(6, 8) horas. 6 = 2 × 3 e 8 = 2³, então mmc = 2³ × 3 = 24. Vinte e quatro horas depois das 8 h de segunda: 8 h de terça.\n\nPegadinhas:\n• A (14 h): considera só o intervalo de 6 h.\n• B (22 h): soma os intervalos (6 + 8 = 14 h).\n• C (2 h): usa 18 h, que é múltiplo de 6, mas não de 8.\n• E (8 h de quarta): multiplica os intervalos (6 × 8 = 48 h), que é um múltiplo comum, mas não o mínimo."
+    "explanation": "Resposta D. Os horários coincidem a cada mmc(6, 8) horas. 6 = 2 × 3 e 8 = 2³, então mmc = 2³ × 3 = 24. Vinte e quatro horas depois das 8 h de segunda: 8 h de terça.\n\nPegadinhas:\n• A (14 h): considera só o intervalo de 6 h.\n• B (22 h): soma os intervalos (6 + 8 = 14 h).\n• C (2 h): usa 18 h, que é múltiplo de 6, mas não de 8.\n• E (8 h de quarta): multiplica os intervalos (6 × 8 = 48 h), que é um múltiplo comum, mas não o mínimo.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_16",
@@ -541,7 +556,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. O acordo troca metas impostas por compromissos nacionais (as NDCs), que cada país define e deve tornar mais ambiciosos a cada ciclo. Ao incluir países em desenvolvimento, amplia a participação em relação a Kyoto, mantendo o princípio de responsabilidades comuns, porém diferenciadas.\n\nPegadinhas:\n• A: as metas são nacionalmente determinadas, não uniformes.\n• C: o texto diz que todos os signatários apresentam metas.\n• D: o acordo não proíbe combustíveis fósseis; estabelece metas de redução.\n• E: o mecanismo se baseia em transparência e revisão, não em multas automáticas."
+    "explanation": "Resposta B. O acordo troca metas impostas por compromissos nacionais (as NDCs), que cada país define e deve tornar mais ambiciosos a cada ciclo. Ao incluir países em desenvolvimento, amplia a participação em relação a Kyoto, mantendo o princípio de responsabilidades comuns, porém diferenciadas.\n\nPegadinhas:\n• A: as metas são nacionalmente determinadas, não uniformes.\n• C: o texto diz que todos os signatários apresentam metas.\n• D: o acordo não proíbe combustíveis fósseis; estabelece metas de redução.\n• E: o mecanismo se baseia em transparência e revisão, não em multas automáticas.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_17",
@@ -575,7 +591,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. Roraima é a porta de entrada terrestre, mas tem população pequena e mercado de trabalho limitado; a chegada concentrada sobrecarregou saúde, educação e assistência. A interiorização leva migrantes, voluntariamente, para cidades com mais vagas e serviços, favorecendo a integração e aliviando o estado de entrada.\n\nPegadinhas:\n• A e C: o programa é de acolhimento e redistribuição, não de fechamento ou devolução.\n• B: Roraima já está na Região Norte; a interiorização leva sobretudo a outras regiões.\n• E: os abrigos são temporários; o objetivo é a integração em outras cidades."
+    "explanation": "Resposta D. Roraima é a porta de entrada terrestre, mas tem população pequena e mercado de trabalho limitado; a chegada concentrada sobrecarregou saúde, educação e assistência. A interiorização leva migrantes, voluntariamente, para cidades com mais vagas e serviços, favorecendo a integração e aliviando o estado de entrada.\n\nPegadinhas:\n• A e C: o programa é de acolhimento e redistribuição, não de fechamento ou devolução.\n• B: Roraima já está na Região Norte; a interiorização leva sobretudo a outras regiões.\n• E: os abrigos são temporários; o objetivo é a integração em outras cidades.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_18",
@@ -609,7 +626,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. O MATOPIBA concentra a fronteira agrícola recente no Cerrado: terras planas, mais baratas, com chuvas sazonais, ocupadas por soja e algodão com alto uso de capital. A expansão eleva a produção, mas pressiona a vegetação nativa (o 'berço das águas'), a disponibilidade hídrica e os territórios de povos e comunidades tradicionais.\n\nPegadinhas:\n• B: o texto destaca máquinas, irrigação e culturas de exportação.\n• C: a região é de Cerrado, não de Mata Atlântica, e o texto menciona desmatamento.\n• D: os quatro estados citados ficam majoritariamente fora do bioma amazônico.\n• E: o texto fala da expansão da soja e de culturas de exportação."
+    "explanation": "Resposta A. O MATOPIBA concentra a fronteira agrícola recente no Cerrado: terras planas, mais baratas, com chuvas sazonais, ocupadas por soja e algodão com alto uso de capital. A expansão eleva a produção, mas pressiona a vegetação nativa (o 'berço das águas'), a disponibilidade hídrica e os territórios de povos e comunidades tradicionais.\n\nPegadinhas:\n• B: o texto destaca máquinas, irrigação e culturas de exportação.\n• C: a região é de Cerrado, não de Mata Atlântica, e o texto menciona desmatamento.\n• D: os quatro estados citados ficam majoritariamente fora do bioma amazônico.\n• E: o texto fala da expansão da soja e de culturas de exportação.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_19",
@@ -643,7 +661,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. Com tantas mortes, o trabalhador tornou-se escasso: os camponeses passaram a exigir melhores condições e a deixar as terras em busca de salários. Os senhores reagiram com leis e repressão, e as revoltas mostram o acirramento do conflito. O processo integra a crise do século XIV, que enfraqueceu as relações feudais.\n\nPegadinhas:\n• A: o texto mostra o contrário — revoltas e tentativas dos senhores de conter a mobilidade.\n• B: a população caiu drasticamente; a recuperação levou décadas.\n• C: a crise do feudalismo foi longa; não houve ruptura imediata nem repúblicas generalizadas.\n• D: as revoltas e as leis senhoriais indicam aumento, e não redução, das tensões."
+    "explanation": "Resposta E. Com tantas mortes, o trabalhador tornou-se escasso: os camponeses passaram a exigir melhores condições e a deixar as terras em busca de salários. Os senhores reagiram com leis e repressão, e as revoltas mostram o acirramento do conflito. O processo integra a crise do século XIV, que enfraqueceu as relações feudais.\n\nPegadinhas:\n• A: o texto mostra o contrário — revoltas e tentativas dos senhores de conter a mobilidade.\n• B: a população caiu drasticamente; a recuperação levou décadas.\n• C: a crise do feudalismo foi longa; não houve ruptura imediata nem repúblicas generalizadas.\n• D: as revoltas e as leis senhoriais indicam aumento, e não redução, das tensões.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_20",
@@ -677,7 +696,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. As leis do Ventre Livre e dos Sexagenários respondiam às pressões abolicionistas sem romper de imediato com a escravidão: os 'ingênuos' serviam aos senhores até os 21 anos, e poucos escravizados chegavam aos 60. A Lei Áurea extinguiu a escravidão, mas não ofereceu terra, educação ou trabalho aos libertos — lacuna ligada às desigualdades raciais posteriores.\n\nPegadinhas:\n• A: o texto mostra justamente a ausência de medidas de integração.\n• B: a lei libertava apenas os que nasceriam, e ainda os mantinha sob serviço.\n• D: o texto diz que não houve indenização.\n• E: o texto afirma que poucos atingiam os 60 anos."
+    "explanation": "Resposta C. As leis do Ventre Livre e dos Sexagenários respondiam às pressões abolicionistas sem romper de imediato com a escravidão: os 'ingênuos' serviam aos senhores até os 21 anos, e poucos escravizados chegavam aos 60. A Lei Áurea extinguiu a escravidão, mas não ofereceu terra, educação ou trabalho aos libertos — lacuna ligada às desigualdades raciais posteriores.\n\nPegadinhas:\n• A: o texto mostra justamente a ausência de medidas de integração.\n• B: a lei libertava apenas os que nasceriam, e ainda os mantinha sob serviço.\n• D: o texto diz que não houve indenização.\n• E: o texto afirma que poucos atingiam os 60 anos.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_21",
@@ -711,7 +731,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Em plena Guerra Fria, Bandung reuniu países que queriam afirmar soberania sem se submeter a Washington ou a Moscou, e que denunciavam o colonialismo ainda existente. Daí a ideia de não alinhamento e de um 'Terceiro Mundo' com voz própria.\n\nPegadinhas:\n• A e D: o espírito da conferência era de não alinhamento a qualquer bloco militar.\n• C: a conferência condenou o colonialismo.\n• E: falou-se em cooperação econômica, não em moeda comum."
+    "explanation": "Resposta B. Em plena Guerra Fria, Bandung reuniu países que queriam afirmar soberania sem se submeter a Washington ou a Moscou, e que denunciavam o colonialismo ainda existente. Daí a ideia de não alinhamento e de um 'Terceiro Mundo' com voz própria.\n\nPegadinhas:\n• A e D: o espírito da conferência era de não alinhamento a qualquer bloco militar.\n• C: a conferência condenou o colonialismo.\n• E: falou-se em cooperação econômica, não em moeda comum.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_22",
@@ -745,7 +766,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. O possessivo 'sua' pode remeter tanto ao médico quanto ao paciente. 'Deste' retoma o termo mais próximo — o paciente —, eliminando a dúvida. Outra solução seria 'na casa do paciente'.\n\nPegadinhas:\n• A, B e C: apenas deslocam 'em sua casa', mas o possessivo continua podendo se referir a qualquer um dos dois.\n• E: 'em casa' continua sem indicar de quem é a casa.\nNa FUVEST, ambiguidade costuma ser cobrada com pronome possessivo, adjunto deslocado ou termo que pode se ligar a dois núcleos."
+    "explanation": "Resposta D. O possessivo 'sua' pode remeter tanto ao médico quanto ao paciente. 'Deste' retoma o termo mais próximo — o paciente —, eliminando a dúvida. Outra solução seria 'na casa do paciente'.\n\nPegadinhas:\n• A, B e C: apenas deslocam 'em sua casa', mas o possessivo continua podendo se referir a qualquer um dos dois.\n• E: 'em casa' continua sem indicar de quem é a casa.\nNa FUVEST, ambiguidade costuma ser cobrada com pronome possessivo, adjunto deslocado ou termo que pode se ligar a dois núcleos.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_23",
@@ -779,7 +801,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. O texto atribui ao aumento das temperaturas a chegada do mosquito a lugares onde 'it was once absent' e uma estação de reprodução 'getting longer', mas ressalva: 'warming is not the whole story'.\n\nPegadinhas:\n• B: contradiz a ressalva final do texto.\n• C: o texto não fala de comportamento agressivo nem de horário de picada.\n• D: o texto diz que o mosquito 'used to be rare' nesses lugares — isso mudou.\n• E: a água parada em recipientes abertos aparece como fator que ajuda a disseminação.\nVocabulário: 'used to be' = costumava ser; 'breed' = reproduzir-se; 'the whole story' = toda a explicação."
+    "explanation": "Resposta A. O texto atribui ao aumento das temperaturas a chegada do mosquito a lugares onde 'it was once absent' e uma estação de reprodução 'getting longer', mas ressalva: 'warming is not the whole story'.\n\nPegadinhas:\n• B: contradiz a ressalva final do texto.\n• C: o texto não fala de comportamento agressivo nem de horário de picada.\n• D: o texto diz que o mosquito 'used to be rare' nesses lugares — isso mudou.\n• E: a água parada em recipientes abertos aparece como fator que ajuda a disseminação.\nVocabulário: 'used to be' = costumava ser; 'breed' = reproduzir-se; 'the whole story' = toda a explicação.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_24",
@@ -813,6 +836,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. Durkheim trata o suicídio como fato social, medido por taxas que variam conforme a integração e a regulação dos grupos. A anomia é a ausência ou o enfraquecimento das normas: em crises ou em enriquecimentos súbitos, as expectativas perdem limite, e a taxa sobe. Por isso o aumento também na prosperidade é o dado decisivo.\n\nPegadinhas:\n• A: o altruísta liga-se ao excesso de integração, não à falta de regulação.\n• B: o egoísta, em Durkheim, vem da fraca integração ao grupo — e a abordagem dele é sociológica, não individual.\n• C: o fatalista é o oposto da anomia: regulação excessiva.\n• D: o método de Durkheim busca causas sociais, não hereditárias."
+    "explanation": "Resposta E. Durkheim trata o suicídio como fato social, medido por taxas que variam conforme a integração e a regulação dos grupos. A anomia é a ausência ou o enfraquecimento das normas: em crises ou em enriquecimentos súbitos, as expectativas perdem limite, e a taxa sobe. Por isso o aumento também na prosperidade é o dado decisivo.\n\nPegadinhas:\n• A: o altruísta liga-se ao excesso de integração, não à falta de regulação.\n• B: o egoísta, em Durkheim, vem da fraca integração ao grupo — e a abordagem dele é sociológica, não individual.\n• C: o fatalista é o oposto da anomia: regulação excessiva.\n• D: o método de Durkheim busca causas sociais, não hereditárias.",
+    "styleOf": "FUVEST"
   }
 ]

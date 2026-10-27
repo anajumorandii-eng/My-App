@@ -31,7 +31,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. O alvo do fármaco é o processo de divisão, não a célula cancerosa em si. Tecidos com renovação rápida também são atingidos: folículos pilosos (queda de cabelo), mucosas da boca e do intestino (feridas, diarreia) e medula óssea vermelha (menos leucócitos e hemácias, com risco de infecção e anemia). Por isso o tratamento é feito em ciclos, com intervalos para recuperação.\n\nPegadinhas:\n• A: os sintomas atingem tecidos sadios, sem relação direta com a morte do tumor.\n• B: neurônios quase não se dividem e não controlam o crescimento do cabelo.\n• D: os fármacos bloqueiam a mitose; não a aceleram.\n• E: inverte o alvo — células que não se dividem são pouco afetadas."
+    "explanation": "Resposta C. O alvo do fármaco é o processo de divisão, não a célula cancerosa em si. Tecidos com renovação rápida também são atingidos: folículos pilosos (queda de cabelo), mucosas da boca e do intestino (feridas, diarreia) e medula óssea vermelha (menos leucócitos e hemácias, com risco de infecção e anemia). Por isso o tratamento é feito em ciclos, com intervalos para recuperação.\n\nPegadinhas:\n• A: os sintomas atingem tecidos sadios, sem relação direta com a morte do tumor.\n• B: neurônios quase não se dividem e não controlam o crescimento do cabelo.\n• D: os fármacos bloqueiam a mitose; não a aceleram.\n• E: inverte o alvo — células que não se dividem são pouco afetadas.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_02",
@@ -65,7 +66,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. As sanguessugas são anelídeos (classe Hirudinea), com corpo dividido em anéis e ventosas nas extremidades. A saliva contém hirudina, inibidor da trombina que impede a coagulação, além de substâncias anestésicas e vasodilatadoras. Por isso o sangramento continua após a retirada, drenando o sangue retido enquanto novas veias se formam.\n\nPegadinhas:\n• A: sanguessugas não são insetos, e o efeito é anticoagulante, não antibiótico.\n• B e C: platelmintos são achatados e não segmentados; nematódeos são cilíndricos e não segmentados.\n• D: não são crustáceos, e o efeito descrito é a drenagem do sangue acumulado."
+    "explanation": "Resposta E. As sanguessugas são anelídeos (classe Hirudinea), com corpo dividido em anéis e ventosas nas extremidades. A saliva contém hirudina, inibidor da trombina que impede a coagulação, além de substâncias anestésicas e vasodilatadoras. Por isso o sangramento continua após a retirada, drenando o sangue retido enquanto novas veias se formam.\n\nPegadinhas:\n• A: sanguessugas não são insetos, e o efeito é anticoagulante, não antibiótico.\n• B e C: platelmintos são achatados e não segmentados; nematódeos são cilíndricos e não segmentados.\n• D: não são crustáceos, e o efeito descrito é a drenagem do sangue acumulado.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_03",
@@ -99,7 +101,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. Retrovírus fazem o caminho 'reverso' da informação genética: RNA → DNA. Como a transcriptase reversa erra muito, o HIV muta rapidamente; combinar fármacos que atingem alvos diferentes torna improvável que uma variante seja resistente a todos ao mesmo tempo. A carga viral indetectável indica controle, com o vírus ainda presente em células infectadas.\n\nPegadinhas:\n• B: vírus não têm parede celular, e antibióticos não agem sobre eles.\n• C: inverte o processo; o material genético do HIV é RNA, convertido em DNA.\n• D: o alvo principal são os linfócitos T CD4, e não as hemácias.\n• E: o DNA viral permanece integrado em células, e a interrupção do tratamento leva ao retorno do vírus."
+    "explanation": "Resposta A. Retrovírus fazem o caminho 'reverso' da informação genética: RNA → DNA. Como a transcriptase reversa erra muito, o HIV muta rapidamente; combinar fármacos que atingem alvos diferentes torna improvável que uma variante seja resistente a todos ao mesmo tempo. A carga viral indetectável indica controle, com o vírus ainda presente em células infectadas.\n\nPegadinhas:\n• B: vírus não têm parede celular, e antibióticos não agem sobre eles.\n• C: inverte o processo; o material genético do HIV é RNA, convertido em DNA.\n• D: o alvo principal são os linfócitos T CD4, e não as hemácias.\n• E: o DNA viral permanece integrado em células, e a interrupção do tratamento leva ao retorno do vírus.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_04",
@@ -133,7 +136,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. A DBO mede quanto oxigênio os microrganismos consomem para decompor a matéria orgânica da amostra. No ponto 2, ela salta de 2 para 40 mg/L, e o oxigênio cai de 8 para 2 mg/L, insuficiente para muitos peixes. Os coliformes são indicadores de fezes: sua presença sinaliza risco de patógenos. Rio abaixo, a autodepuração recupera parcialmente o oxigênio, mas a contaminação persiste (5 000 coliformes).\n\nPegadinhas:\n• A: o oxigênio diminuiu no ponto 2.\n• B: os coliformes são indicadores, não os únicos consumidores de oxigênio.\n• C: no ponto 3, os valores ainda são piores que no ponto 1.\n• E: a DBO mede consumo, e não produção, de oxigênio."
+    "explanation": "Resposta D. A DBO mede quanto oxigênio os microrganismos consomem para decompor a matéria orgânica da amostra. No ponto 2, ela salta de 2 para 40 mg/L, e o oxigênio cai de 8 para 2 mg/L, insuficiente para muitos peixes. Os coliformes são indicadores de fezes: sua presença sinaliza risco de patógenos. Rio abaixo, a autodepuração recupera parcialmente o oxigênio, mas a contaminação persiste (5 000 coliformes).\n\nPegadinhas:\n• A: o oxigênio diminuiu no ponto 2.\n• B: os coliformes são indicadores, não os únicos consumidores de oxigênio.\n• C: no ponto 3, os valores ainda são piores que no ponto 1.\n• E: a DBO mede consumo, e não produção, de oxigênio.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_05",
@@ -167,7 +171,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. 25% = 1/4 = (1/2)²: passaram duas meias-vidas. Idade ≈ 2 × 5 730 = 11 460 anos. A cada meia-vida, a proporção cai à metade: 100% → 50% → 25%.\n\nPegadinhas:\n• A (2 865 anos): usa meia meia-vida.\n• C (17 190 anos): usa três meias-vidas, que levariam a 12,5%.\n• D (22 920 anos): usa quatro meias-vidas, que levariam a 6,25%.\n• E (57 300 anos): multiplica a meia-vida por 10."
+    "explanation": "Resposta B. 25% = 1/4 = (1/2)²: passaram duas meias-vidas. Idade ≈ 2 × 5 730 = 11 460 anos. A cada meia-vida, a proporção cai à metade: 100% → 50% → 25%.\n\nPegadinhas:\n• A (2 865 anos): usa meia meia-vida.\n• C (17 190 anos): usa três meias-vidas, que levariam a 12,5%.\n• D (22 920 anos): usa quatro meias-vidas, que levariam a 6,25%.\n• E (57 300 anos): multiplica a meia-vida por 10.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_06",
@@ -201,7 +206,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. Na bauxita, o alumínio está oxidado (Al³⁺ na alumina). A eletrólise fornece os elétrons que o reduzem a Al metálico: Al³⁺ + 3 e⁻ → Al, à custa de muita eletricidade. Na lata usada, o metal já está reduzido; a reciclagem só precisa fundi-lo e moldá-lo.\n\nPegadinhas:\n• A: o alumínio reciclado é o mesmo metal.\n• B: a reciclagem não envolve eletrólise.\n• D: na bauxita, o alumínio está combinado, como óxido.\n• E: as latas são de alumínio metálico (em liga), não de alumina."
+    "explanation": "Resposta C. Na bauxita, o alumínio está oxidado (Al³⁺ na alumina). A eletrólise fornece os elétrons que o reduzem a Al metálico: Al³⁺ + 3 e⁻ → Al, à custa de muita eletricidade. Na lata usada, o metal já está reduzido; a reciclagem só precisa fundi-lo e moldá-lo.\n\nPegadinhas:\n• A: o alumínio reciclado é o mesmo metal.\n• B: a reciclagem não envolve eletrólise.\n• D: na bauxita, o alumínio está combinado, como óxido.\n• E: as latas são de alumínio metálico (em liga), não de alumina.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_07",
@@ -235,7 +241,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. 286 kJ por mol ÷ 2 g por mol = 143 kJ/g, valor bem maior que o de combustíveis como a gasolina (cerca de 46 kJ/g). A combustão não gera CO₂, mas o balanço climático inclui a produção: com gás natural, o carbono é liberado antes; com eletrólise alimentada por fontes renováveis, a emissão é muito menor.\n\nPegadinhas:\n• A: ΔH negativo indica reação exotérmica.\n• B: o valor é de cerca de 143 kJ/g.\n• C: o texto diz que a obtenção a partir do gás natural libera CO₂.\n• D: a decomposição da água é não espontânea e exige energia — daí a eletrólise."
+    "explanation": "Resposta E. 286 kJ por mol ÷ 2 g por mol = 143 kJ/g, valor bem maior que o de combustíveis como a gasolina (cerca de 46 kJ/g). A combustão não gera CO₂, mas o balanço climático inclui a produção: com gás natural, o carbono é liberado antes; com eletrólise alimentada por fontes renováveis, a emissão é muito menor.\n\nPegadinhas:\n• A: ΔH negativo indica reação exotérmica.\n• B: o valor é de cerca de 143 kJ/g.\n• C: o texto diz que a obtenção a partir do gás natural libera CO₂.\n• D: a decomposição da água é não espontânea e exige energia — daí a eletrólise.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_08",
@@ -269,7 +276,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. Alotropia é a existência de diferentes substâncias simples formadas pelo mesmo elemento — como O₂ e O₃, ou grafite e diamante. O ozônio, mais reativo e oxidante que o O₂, protege na estratosfera ao absorver UV-B, mas é poluente ao nível do solo, onde agride os tecidos respiratórios.\n\nPegadinhas:\n• B: isótopos são átomos do mesmo elemento com números de massa diferentes; aqui a diferença é o número de átomos na molécula.\n• C: ambos são formados só por oxigênio — substâncias simples.\n• D: o ozônio é muito mais reativo que o O₂.\n• E: o texto descreve o ozônio troposférico como prejudicial."
+    "explanation": "Resposta A. Alotropia é a existência de diferentes substâncias simples formadas pelo mesmo elemento — como O₂ e O₃, ou grafite e diamante. O ozônio, mais reativo e oxidante que o O₂, protege na estratosfera ao absorver UV-B, mas é poluente ao nível do solo, onde agride os tecidos respiratórios.\n\nPegadinhas:\n• B: isótopos são átomos do mesmo elemento com números de massa diferentes; aqui a diferença é o número de átomos na molécula.\n• C: ambos são formados só por oxigênio — substâncias simples.\n• D: o ozônio é muito mais reativo que o O₂.\n• E: o texto descreve o ozônio troposférico como prejudicial.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_09",
@@ -303,7 +311,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. Em paralelo, todos os aparelhos ficam submetidos à tensão da rede, e desligar um não interrompe os outros. As correntes se somam no fio comum: chuveiro, micro-ondas e ferro juntos podem exigir dezenas de amperes. O disjuntor desarma quando a corrente ultrapassa seu valor nominal, protegendo a fiação do superaquecimento.\n\nPegadinhas:\n• A e B: em série, desligar um aparelho interromperia todos, o que contradiz o texto.\n• C: em paralelo, cada novo ramo diminui a resistência equivalente.\n• E: o disjuntor responde ao excesso de corrente, não à falta de tensão."
+    "explanation": "Resposta D. Em paralelo, todos os aparelhos ficam submetidos à tensão da rede, e desligar um não interrompe os outros. As correntes se somam no fio comum: chuveiro, micro-ondas e ferro juntos podem exigir dezenas de amperes. O disjuntor desarma quando a corrente ultrapassa seu valor nominal, protegendo a fiação do superaquecimento.\n\nPegadinhas:\n• A e B: em série, desligar um aparelho interromperia todos, o que contradiz o texto.\n• C: em paralelo, cada novo ramo diminui a resistência equivalente.\n• E: o disjuntor responde ao excesso de corrente, não à falta de tensão.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_10",
@@ -337,7 +346,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. A luz do Sol não é polarizada: vibra em todas as direções perpendiculares à propagação. Ao refletir em superfícies horizontais, a componente horizontal predomina. Um filtro com eixo vertical bloqueia essa componente, e o brilho da reflexão diminui muito, permitindo ver a luz que vem de dentro da água.\n\nPegadinhas:\n• A: o filtro reduz, e não aumenta, a luz refletida.\n• C: luz e som são ondas de naturezas diferentes; não há conversão.\n• D: o efeito é de polarização, não de difração.\n• E: a polarização não converte ultravioleta em luz visível."
+    "explanation": "Resposta B. A luz do Sol não é polarizada: vibra em todas as direções perpendiculares à propagação. Ao refletir em superfícies horizontais, a componente horizontal predomina. Um filtro com eixo vertical bloqueia essa componente, e o brilho da reflexão diminui muito, permitindo ver a luz que vem de dentro da água.\n\nPegadinhas:\n• A: o filtro reduz, e não aumenta, a luz refletida.\n• C: luz e som são ondas de naturezas diferentes; não há conversão.\n• D: o efeito é de polarização, não de difração.\n• E: a polarização não converte ultravioleta em luz visível.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_11",
@@ -371,7 +381,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. A dilatação linear é proporcional ao coeficiente do material, ao tamanho e à variação de temperatura. Se dente e restauração têm coeficientes muito diferentes, a mesma variação de temperatura os deforma de maneiras distintas; repetidas milhares de vezes, essas diferenças abrem microfendas na borda. Por isso se buscam materiais com coeficiente próximo ao do dente.\n\nPegadinhas:\n• A: dilatação maior que a do dente aumentaria a diferença e as tensões.\n• B: o dente, como qualquer sólido, sofre dilatação térmica.\n• D: as temperaturas da boca não fundem os materiais de restauração.\n• E: sólidos também se dilatam."
+    "explanation": "Resposta C. A dilatação linear é proporcional ao coeficiente do material, ao tamanho e à variação de temperatura. Se dente e restauração têm coeficientes muito diferentes, a mesma variação de temperatura os deforma de maneiras distintas; repetidas milhares de vezes, essas diferenças abrem microfendas na borda. Por isso se buscam materiais com coeficiente próximo ao do dente.\n\nPegadinhas:\n• A: dilatação maior que a do dente aumentaria a diferença e as tensões.\n• B: o dente, como qualquer sólido, sofre dilatação térmica.\n• D: as temperaturas da boca não fundem os materiais de restauração.\n• E: sólidos também se dilatam.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_12",
@@ -405,7 +416,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. Em movimento uniforme, t = d/v = 1,8 ÷ 100 = 0,018 s = 18 ms. Numa fibra sem mielina, a 1,8 m/s, o mesmo percurso levaria cerca de 1 s — diferença que explica a importância da mielina e os sintomas de doenças que a destroem, como a esclerose múltipla.\n\nPegadinhas:\n• A e B: erram a conversão de segundos para milissegundos por fatores de 100 e de 10.\n• C (5,6 ms): divide a velocidade pela distância (100 ÷ 1,8) e trata o resultado como tempo.\n• D (9 ms): usa metade do percurso."
+    "explanation": "Resposta E. Em movimento uniforme, t = d/v = 1,8 ÷ 100 = 0,018 s = 18 ms. Numa fibra sem mielina, a 1,8 m/s, o mesmo percurso levaria cerca de 1 s — diferença que explica a importância da mielina e os sintomas de doenças que a destroem, como a esclerose múltipla.\n\nPegadinhas:\n• A e B: erram a conversão de segundos para milissegundos por fatores de 100 e de 10.\n• C (5,6 ms): divide a velocidade pela distância (100 ÷ 1,8) e trata o resultado como tempo.\n• D (9 ms): usa metade do percurso.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_13",
@@ -439,7 +451,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. Para um infectado, cada teste dá negativo (falso negativo) com probabilidade 1 − 0,8 = 0,2. Sendo independentes, os dois negativos ocorrem com 0,2 × 0,2 = 0,04 = 4%. Com dois testes, a chance de identificar a infecção sobe de 80% para 96%.\n\nPegadinhas:\n• B (16%): multiplica 0,2 por 0,8.\n• C (20%): é a chance de falso negativo em um único teste.\n• D (40%): soma as probabilidades dos dois testes, em vez de multiplicá-las.\n• E (64%): é a probabilidade de os dois darem positivo."
+    "explanation": "Resposta A. Para um infectado, cada teste dá negativo (falso negativo) com probabilidade 1 − 0,8 = 0,2. Sendo independentes, os dois negativos ocorrem com 0,2 × 0,2 = 0,04 = 4%. Com dois testes, a chance de identificar a infecção sobe de 80% para 96%.\n\nPegadinhas:\n• B (16%): multiplica 0,2 por 0,8.\n• C (20%): é a chance de falso negativo em um único teste.\n• D (40%): soma as probabilidades dos dois testes, em vez de multiplicá-las.\n• E (64%): é a probabilidade de os dois darem positivo.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_14",
@@ -473,7 +486,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. Em juros compostos, o saldo é multiplicado por 1,1 a cada mês: 1 000 × 1,1 = 1 100 no primeiro mês e 1 100 × 1,1 = 1 210 no segundo. Em geral, M = C · (1 + i)ⁿ.\n\nPegadinhas:\n• A (R$ 1 020,00): usa 1% ao mês.\n• B (R$ 1 100,00): considera apenas um mês.\n• C (R$ 1 200,00): calcula juros simples, sempre sobre os R$ 1 000,00 iniciais.\n• E (R$ 1 331,00): considera três meses."
+    "explanation": "Resposta D. Em juros compostos, o saldo é multiplicado por 1,1 a cada mês: 1 000 × 1,1 = 1 100 no primeiro mês e 1 100 × 1,1 = 1 210 no segundo. Em geral, M = C · (1 + i)ⁿ.\n\nPegadinhas:\n• A (R$ 1 020,00): usa 1% ao mês.\n• B (R$ 1 100,00): considera apenas um mês.\n• C (R$ 1 200,00): calcula juros simples, sempre sobre os R$ 1 000,00 iniciais.\n• E (R$ 1 331,00): considera três meses.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_15",
@@ -507,7 +521,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Área do retângulo: 40 × 30 = 1 200 m². Área do círculo: π r² = 3 × 10² = 300 m². Restante: 1 200 − 300 = 900 m².\n\nPegadinhas:\n• A (600 m²): subtrai duas vezes a área do jardim.\n• C (1 000 m²): não corresponde a operação coerente com os dados.\n• D (1 140 m²): subtrai o comprimento da circunferência (2πr = 60 m), que não é área.\n• E (1 200 m²): é a área total, sem descontar o jardim."
+    "explanation": "Resposta B. Área do retângulo: 40 × 30 = 1 200 m². Área do círculo: π r² = 3 × 10² = 300 m². Restante: 1 200 − 300 = 900 m².\n\nPegadinhas:\n• A (600 m²): subtrai duas vezes a área do jardim.\n• C (1 000 m²): não corresponde a operação coerente com os dados.\n• D (1 140 m²): subtrai o comprimento da circunferência (2πr = 60 m), que não é área.\n• E (1 200 m²): é a área total, sem descontar o jardim.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_16",
@@ -541,7 +556,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. Pontos de estrangulamento (chokepoints) são passagens estreitas por onde circula grande parte do comércio de um recurso. Como alternativas, como oleodutos, transportam só parte do volume, qualquer ameaça à navegação em Ormuz reduz a oferta esperada e eleva os preços — exemplo de como geografia física e geopolítica se combinam.\n\nPegadinhas:\n• A: o estreito liga o Golfo, de água salgada, ao oceano; não se trata de água doce.\n• B: o estreito fica no Oriente Médio.\n• D: a passagem é intensa e não proibida.\n• E: o estreito fica entre o Golfo Pérsico e o Golfo de Omã, não no Mediterrâneo."
+    "explanation": "Resposta C. Pontos de estrangulamento (chokepoints) são passagens estreitas por onde circula grande parte do comércio de um recurso. Como alternativas, como oleodutos, transportam só parte do volume, qualquer ameaça à navegação em Ormuz reduz a oferta esperada e eleva os preços — exemplo de como geografia física e geopolítica se combinam.\n\nPegadinhas:\n• A: o estreito liga o Golfo, de água salgada, ao oceano; não se trata de água doce.\n• B: o estreito fica no Oriente Médio.\n• D: a passagem é intensa e não proibida.\n• E: o estreito fica entre o Golfo Pérsico e o Golfo de Omã, não no Mediterrâneo.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_17",
@@ -575,7 +591,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. Superfícies escuras e impermeáveis absorvem radiação solar e armazenam calor, liberando-o à noite. Com pouca vegetação e solo impermeabilizado, há menos evapotranspiração, processo que resfria o ambiente. Motores, aparelhos de ar-condicionado e indústrias acrescentam calor, e prédios altos dificultam a ventilação.\n\nPegadinhas:\n• A: a ilha de calor ocorre mesmo em cidades planas; a diferença está no uso do solo.\n• B: o texto não menciona oceano, e o fenômeno ocorre em cidades no interior.\n• C: é o parque arborizado que tem temperatura mais baixa.\n• D: a camada de ozônio filtra ultravioleta e não explica diferenças de temperatura dentro de uma cidade."
+    "explanation": "Resposta E. Superfícies escuras e impermeáveis absorvem radiação solar e armazenam calor, liberando-o à noite. Com pouca vegetação e solo impermeabilizado, há menos evapotranspiração, processo que resfria o ambiente. Motores, aparelhos de ar-condicionado e indústrias acrescentam calor, e prédios altos dificultam a ventilação.\n\nPegadinhas:\n• A: a ilha de calor ocorre mesmo em cidades planas; a diferença está no uso do solo.\n• B: o texto não menciona oceano, e o fenômeno ocorre em cidades no interior.\n• C: é o parque arborizado que tem temperatura mais baixa.\n• D: a camada de ozônio filtra ultravioleta e não explica diferenças de temperatura dentro de uma cidade.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_18",
@@ -609,7 +626,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. O balanço hídrico do Aral dependia dos rios; ao desviá-los, a evaporação passou a superar o que chegava. A concentração de sais cresceu, espécies de peixes desapareceram, e a poeira do leito seco, com sal e agrotóxicos, foi associada a doenças respiratórias. Há projetos de recuperação parcial da porção norte, mas não do lago inteiro.\n\nPegadinhas:\n• B: o texto atribui a redução ao desvio dos rios.\n• C: a irrigação retirou água; o lago encolheu.\n• D: não houve recuperação total.\n• E: a salinidade aumentou, e a pesca entrou em colapso."
+    "explanation": "Resposta A. O balanço hídrico do Aral dependia dos rios; ao desviá-los, a evaporação passou a superar o que chegava. A concentração de sais cresceu, espécies de peixes desapareceram, e a poeira do leito seco, com sal e agrotóxicos, foi associada a doenças respiratórias. Há projetos de recuperação parcial da porção norte, mas não do lago inteiro.\n\nPegadinhas:\n• B: o texto atribui a redução ao desvio dos rios.\n• C: a irrigação retirou água; o lago encolheu.\n• D: não houve recuperação total.\n• E: a salinidade aumentou, e a pesca entrou em colapso.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_19",
@@ -643,7 +661,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. A frase 'o poder freie o poder' resume a ideia: distribuir as funções do Estado entre órgãos distintos, que se controlam (o sistema de freios e contrapesos). A Constituição dos Estados Unidos (1787) e a Constituição brasileira de 1988 adotam esse princípio.\n\nPegadinhas:\n• A e E: Montesquieu critica a concentração de poderes, que caracteriza o absolutismo e o soberano hobbesiano.\n• B: a suspensão do Legislativo é contrária à separação dos poderes.\n• C: a separação dos poderes é própria de governos representativos, não da democracia direta."
+    "explanation": "Resposta D. A frase 'o poder freie o poder' resume a ideia: distribuir as funções do Estado entre órgãos distintos, que se controlam (o sistema de freios e contrapesos). A Constituição dos Estados Unidos (1787) e a Constituição brasileira de 1988 adotam esse princípio.\n\nPegadinhas:\n• A e E: Montesquieu critica a concentração de poderes, que caracteriza o absolutismo e o soberano hobbesiano.\n• B: a suspensão do Legislativo é contrária à separação dos poderes.\n• C: a separação dos poderes é própria de governos representativos, não da democracia direta.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_20",
@@ -677,7 +696,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Com o declínio do ouro, a Coroa tentou garantir a arrecadação com a derrama, o que ameaçava a elite mineira endividada. Leitores de autores iluministas e atentos à independência americana (1776), os conspiradores planejaram uma república. O projeto não previa, de forma consensual, o fim da escravidão — muitos eram proprietários de escravizados.\n\nPegadinhas:\n• A: o movimento se opunha ao pacto colonial e à cobrança.\n• C: o movimento foi de elite, não de escravizados, e não defendia a abolição.\n• D: a independência ocorreu décadas depois, por outro processo.\n• E: o imposto em questão incidia sobre o ouro, e os conspiradores não eram camponeses."
+    "explanation": "Resposta B. Com o declínio do ouro, a Coroa tentou garantir a arrecadação com a derrama, o que ameaçava a elite mineira endividada. Leitores de autores iluministas e atentos à independência americana (1776), os conspiradores planejaram uma república. O projeto não previa, de forma consensual, o fim da escravidão — muitos eram proprietários de escravizados.\n\nPegadinhas:\n• A: o movimento se opunha ao pacto colonial e à cobrança.\n• C: o movimento foi de elite, não de escravizados, e não defendia a abolição.\n• D: a independência ocorreu décadas depois, por outro processo.\n• E: o imposto em questão incidia sobre o ouro, e os conspiradores não eram camponeses.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_21",
@@ -711,7 +731,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. A segunda Revolução Industrial ampliou a busca por matérias-primas, mercados e áreas de investimento. A conferência regulou a disputa entre as potências — como a exigência de ocupação efetiva —, e a partilha que se seguiu ignorou as sociedades africanas, gerando fronteiras artificiais.\n\nPegadinhas:\n• A: a conferência organizou a colonização, não a independência.\n• B: o texto afirma que as fronteiras atravessavam territórios de povos distintos.\n• D: a conferência tratou da ocupação da África.\n• E: o imperialismo europeu na Ásia continuou no mesmo período."
+    "explanation": "Resposta C. A segunda Revolução Industrial ampliou a busca por matérias-primas, mercados e áreas de investimento. A conferência regulou a disputa entre as potências — como a exigência de ocupação efetiva —, e a partilha que se seguiu ignorou as sociedades africanas, gerando fronteiras artificiais.\n\nPegadinhas:\n• A: a conferência organizou a colonização, não a independência.\n• B: o texto afirma que as fronteiras atravessavam territórios de povos distintos.\n• D: a conferência tratou da ocupação da África.\n• E: o imperialismo europeu na Ásia continuou no mesmo período.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_22",
@@ -745,7 +766,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. Em II, 'entregar' pede a preposição 'a', e 'a paciente' tem artigo feminino: a + a = à. Em I, 'marcada para as 14 h' já tem a preposição 'para'; não cabe outra, logo não há crase. Em III, não há crase antes de verbo ('partir'). Em IV, não há crase antes de pronome pessoal ('ela').\n\nPegadinhas:\n• A, B e D: incluem I ou IV, que não admitem crase.\n• C: a frase III está correta justamente por não ter acento; o enunciado pede onde o acento aparece bem empregado.\nTeste prático: troque por uma palavra masculina. 'Entregou o resultado ao paciente' (ao → à) confirma a crase em II."
+    "explanation": "Resposta E. Em II, 'entregar' pede a preposição 'a', e 'a paciente' tem artigo feminino: a + a = à. Em I, 'marcada para as 14 h' já tem a preposição 'para'; não cabe outra, logo não há crase. Em III, não há crase antes de verbo ('partir'). Em IV, não há crase antes de pronome pessoal ('ela').\n\nPegadinhas:\n• A, B e D: incluem I ou IV, que não admitem crase.\n• C: a frase III está correta justamente por não ter acento; o enunciado pede onde o acento aparece bem empregado.\nTeste prático: troque por uma palavra masculina. 'Entregou o resultado ao paciente' (ao → à) confirma a crase em II.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_23",
@@ -779,7 +801,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. O texto opõe uma crença antiga ('scientists believed that the adult brain could not change') às pesquisas recentes ('it remains capable of reorganizing itself throughout life') e relaciona a neuroplasticidade à recuperação de 'some lost functions', com ressalvas ('varies greatly').\n\nPegadinhas:\n• B: a crença é apresentada como superada ('however').\n• C: o texto fala em recuperar 'some' funções, não todas.\n• D: o texto afirma 'throughout life'.\n• E: a recuperação é 'usually faster in the first months'.\nVocabulário: 'stroke' = acidente vascular cerebral (AVC); 'throughout' = ao longo de; 'injury' = lesão."
+    "explanation": "Resposta A. O texto opõe uma crença antiga ('scientists believed that the adult brain could not change') às pesquisas recentes ('it remains capable of reorganizing itself throughout life') e relaciona a neuroplasticidade à recuperação de 'some lost functions', com ressalvas ('varies greatly').\n\nPegadinhas:\n• B: a crença é apresentada como superada ('however').\n• C: o texto fala em recuperar 'some' funções, não todas.\n• D: o texto afirma 'throughout life'.\n• E: a recuperação é 'usually faster in the first months'.\nVocabulário: 'stroke' = acidente vascular cerebral (AVC); 'throughout' = ao longo de; 'injury' = lesão.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_24",
@@ -813,6 +836,7 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. O respeito à autonomia exige que a decisão de um adulto capaz e esclarecido seja acatada, mesmo quando o médico discorda. A beneficência continua presente na busca de alternativas. O caso mostra que os princípios podem entrar em tensão e precisam ser ponderados — e que a situação muda quando o paciente não tem capacidade de decidir, como em emergências com pessoa inconsciente.\n\nPegadinhas:\n• A: impor tratamento a um adulto capaz que o recusa contraria a autonomia.\n• B: o texto não trata de escassez de sangue; a justiça não é o ponto do caso.\n• C: a transfusão não é sempre danosa; a recusa vem da convicção do paciente.\n• E: respeitar a recusa não significa abandonar o paciente."
+    "explanation": "Resposta D. O respeito à autonomia exige que a decisão de um adulto capaz e esclarecido seja acatada, mesmo quando o médico discorda. A beneficência continua presente na busca de alternativas. O caso mostra que os princípios podem entrar em tensão e precisam ser ponderados — e que a situação muda quando o paciente não tem capacidade de decidir, como em emergências com pessoa inconsciente.\n\nPegadinhas:\n• A: impor tratamento a um adulto capaz que o recusa contraria a autonomia.\n• B: o texto não trata de escassez de sangue; a justiça não é o ponto do caso.\n• C: a transfusão não é sempre danosa; a recusa vem da convicção do paciente.\n• E: respeitar a recusa não significa abandonar o paciente.",
+    "styleOf": "FUVEST"
   }
 ]

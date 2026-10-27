@@ -31,7 +31,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. O RNAm é a mensagem que os ribossomos leem no citoplasma: códon a códon, eles montam a sequência de aminoácidos da proteína S. Para alterar o DNA, seria preciso transcrição reversa (enzima que células humanas comuns não usam para isso) e entrada no núcleo; nada disso faz parte do processo, e o RNAm é degradado em poucos dias.\n\nPegadinhas:\n• A: a produção não é permanente — o texto diz que o RNAm é degradado; não há conversão em DNA.\n• B: a duplicação do DNA usa o próprio DNA como molde, não RNAm.\n• D: confunde a mensagem (RNAm) com o produto (proteína S).\n• E: a vacina não contém vírus; contém só a instrução para uma de suas proteínas."
+    "explanation": "Resposta C. O RNAm é a mensagem que os ribossomos leem no citoplasma: códon a códon, eles montam a sequência de aminoácidos da proteína S. Para alterar o DNA, seria preciso transcrição reversa (enzima que células humanas comuns não usam para isso) e entrada no núcleo; nada disso faz parte do processo, e o RNAm é degradado em poucos dias.\n\nPegadinhas:\n• A: a produção não é permanente — o texto diz que o RNAm é degradado; não há conversão em DNA.\n• B: a duplicação do DNA usa o próprio DNA como molde, não RNAm.\n• D: confunde a mensagem (RNAm) com o produto (proteína S).\n• E: a vacina não contém vírus; contém só a instrução para uma de suas proteínas.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_02",
@@ -65,7 +66,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. O alvo não é o mosquito nem a pessoa: é a multiplicação do vírus dentro do vetor. Como a Wolbachia passa da mãe para a prole, ela se espalha na população de Aedes, que continua existindo, mas transmite menos.\n\nPegadinhas:\n• A e D: descrevem outros métodos (larvicidas, técnica do inseto estéril). O texto diz que a bactéria é transmitida aos descendentes — logo, os mosquitos se reproduzem.\n• B: a bactéria não age no sangue humano; atua dentro do mosquito.\n• C: nada no texto indica imunidade em quem é picado."
+    "explanation": "Resposta E. O alvo não é o mosquito nem a pessoa: é a multiplicação do vírus dentro do vetor. Como a Wolbachia passa da mãe para a prole, ela se espalha na população de Aedes, que continua existindo, mas transmite menos.\n\nPegadinhas:\n• A e D: descrevem outros métodos (larvicidas, técnica do inseto estéril). O texto diz que a bactéria é transmitida aos descendentes — logo, os mosquitos se reproduzem.\n• B: a bactéria não age no sangue humano; atua dentro do mosquito.\n• C: nada no texto indica imunidade em quem é picado.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_03",
@@ -99,7 +101,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. É a eutrofização. O nitrogênio, nutriente limitante, provoca explosão de algas; elas sombreiam as camadas de baixo e morrem; a matéria orgânica serve de alimento a bactérias aeróbias, cuja respiração consome o O₂ dissolvido. Nas camadas profundas, onde não há fotossíntese para repor o gás, a hipóxia mata os peixes.\n\nPegadinhas:\n• B: inverte a causa; o texto mostra a mortandade de peixes como último evento, depois das bactérias.\n• C: a fotossíntese libera O₂; o consumo vem da decomposição.\n• D: a desnitrificação ocorre, mas o N₂ é pouco solúvel, escapa para a atmosfera e não é tóxico.\n• E: a falta é de oxigênio, não de alimento — e a mortandade se concentra onde o O₂ não é reposto."
+    "explanation": "Resposta A. É a eutrofização. O nitrogênio, nutriente limitante, provoca explosão de algas; elas sombreiam as camadas de baixo e morrem; a matéria orgânica serve de alimento a bactérias aeróbias, cuja respiração consome o O₂ dissolvido. Nas camadas profundas, onde não há fotossíntese para repor o gás, a hipóxia mata os peixes.\n\nPegadinhas:\n• B: inverte a causa; o texto mostra a mortandade de peixes como último evento, depois das bactérias.\n• C: a fotossíntese libera O₂; o consumo vem da decomposição.\n• D: a desnitrificação ocorre, mas o N₂ é pouco solúvel, escapa para a atmosfera e não é tóxico.\n• E: a falta é de oxigênio, não de alimento — e a mortandade se concentra onde o O₂ não é reposto.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_04",
@@ -133,7 +136,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. A osmose leva água do meio com menor concentração de partículas dissolvidas para o de maior concentração. A solução a 0,9% tem a mesma pressão osmótica do citoplasma das hemácias (isotônica): o fluxo líquido é nulo. Na água destilada, a água entra e a célula estoura; na solução a 3% (hipertônica), a água sai e a célula murcha.\n\nPegadinhas:\n• A: a água destilada usada no experimento também pode ser estéril; o efeito é osmótico.\n• B: o NaCl não reage com a membrana; o que importa é a concentração de partículas.\n• C: na solução a 3% a água sai, não entra.\n• E: a água pura tem pressão osmótica nula, a menor possível."
+    "explanation": "Resposta D. A osmose leva água do meio com menor concentração de partículas dissolvidas para o de maior concentração. A solução a 0,9% tem a mesma pressão osmótica do citoplasma das hemácias (isotônica): o fluxo líquido é nulo. Na água destilada, a água entra e a célula estoura; na solução a 3% (hipertônica), a água sai e a célula murcha.\n\nPegadinhas:\n• A: a água destilada usada no experimento também pode ser estéril; o efeito é osmótico.\n• B: o NaCl não reage com a membrana; o que importa é a concentração de partículas.\n• C: na solução a 3% a água sai, não entra.\n• E: a água pura tem pressão osmótica nula, a menor possível.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_05",
@@ -167,7 +171,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. O lítio, de menor potencial de redução, oxida (ânodo); o cobre, de maior potencial, se reduz (cátodo). ΔE = E°(cátodo) − E°(ânodo) = +0,34 − (−3,04) = 3,38 V. O coeficiente estequiométrico não multiplica o potencial.\n\nPegadinhas:\n• A (1,10 V): é a pilha zinco–cobre, que o enunciado não pede.\n• B (2,28 V): é a diferença entre lítio e zinco.\n• C (2,70 V): soma −3,04 e +0,34 sem inverter o sinal do ânodo.\n• E (3,80 V): soma os módulos de lítio e zinco."
+    "explanation": "Resposta D. O lítio, de menor potencial de redução, oxida (ânodo); o cobre, de maior potencial, se reduz (cátodo). ΔE = E°(cátodo) − E°(ânodo) = +0,34 − (−3,04) = 3,38 V. O coeficiente estequiométrico não multiplica o potencial.\n\nPegadinhas:\n• A (1,10 V): é a pilha zinco–cobre, que o enunciado não pede.\n• B (2,28 V): é a diferença entre lítio e zinco.\n• C (2,70 V): soma −3,04 e +0,34 sem inverter o sinal do ânodo.\n• E (3,80 V): soma os módulos de lítio e zinco.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_06",
@@ -201,7 +206,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. A radiação gama é eletromagnética, sem massa nem carga, com grande poder de penetração: sai do corpo e chega ao detector. A meia-vida de 6 horas basta para o exame e faz a atividade cair rapidamente — após 24 h (4 meias-vidas), resta 1/16.\n\nPegadinhas:\n• A: partículas alfa têm o menor poder de penetração (são barradas por uma folha de papel) e o texto não fala em alfa.\n• C: gama não tem carga nem massa.\n• D: meia-vida curta não significa desaparecimento instantâneo; a atividade cai pela metade a cada 6 h.\n• E: radiação que fica retida no corpo não chegaria ao detector externo."
+    "explanation": "Resposta B. A radiação gama é eletromagnética, sem massa nem carga, com grande poder de penetração: sai do corpo e chega ao detector. A meia-vida de 6 horas basta para o exame e faz a atividade cair rapidamente — após 24 h (4 meias-vidas), resta 1/16.\n\nPegadinhas:\n• A: partículas alfa têm o menor poder de penetração (são barradas por uma folha de papel) e o texto não fala em alfa.\n• C: gama não tem carga nem massa.\n• D: meia-vida curta não significa desaparecimento instantâneo; a atividade cai pela metade a cada 6 h.\n• E: radiação que fica retida no corpo não chegaria ao detector externo.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_07",
@@ -235,7 +241,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. A cadeia hidrocarbônica do retinol interage com lipídios por forças de dispersão de London; o único –OH pouco altera esse caráter. Por isso ele se dissolve na gordura e se acumula. Os vários –OH da vitamina C fazem ligações de hidrogênio com a água: ela circula dissolvida no plasma e o excesso sai pelos rins.\n\nPegadinhas:\n• A: grupos –OH tornam a molécula polar, não apolar.\n• B e D: invertem as propriedades; é a vitamina C que interage mais com a água.\n• C: a estrutura descrita no texto mostra solubilidades bem diferentes."
+    "explanation": "Resposta E. A cadeia hidrocarbônica do retinol interage com lipídios por forças de dispersão de London; o único –OH pouco altera esse caráter. Por isso ele se dissolve na gordura e se acumula. Os vários –OH da vitamina C fazem ligações de hidrogênio com a água: ela circula dissolvida no plasma e o excesso sai pelos rins.\n\nPegadinhas:\n• A: grupos –OH tornam a molécula polar, não apolar.\n• B e D: invertem as propriedades; é a vitamina C que interage mais com a água.\n• C: a estrutura descrita no texto mostra solubilidades bem diferentes.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_08",
@@ -269,7 +276,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. É o efeito Doppler: fonte (ou refletor) que se aproxima comprime as frentes de onda, e a frequência percebida aumenta; quanto maior a velocidade de aproximação, maior o desvio. Se o sangue se afastasse, a frequência diminuiria.\n\nPegadinhas:\n• B: absorção reduz a amplitude, não a frequência; e o sentido aproximação aumenta a frequência.\n• C: a velocidade de propagação depende do meio, não do movimento das hemácias.\n• D: o desvio depende da velocidade; é ele que permite calculá-la.\n• E: a amplitude não codifica a velocidade; a informação está na frequência."
+    "explanation": "Resposta A. É o efeito Doppler: fonte (ou refletor) que se aproxima comprime as frentes de onda, e a frequência percebida aumenta; quanto maior a velocidade de aproximação, maior o desvio. Se o sangue se afastasse, a frequência diminuiria.\n\nPegadinhas:\n• B: absorção reduz a amplitude, não a frequência; e o sentido aproximação aumenta a frequência.\n• C: a velocidade de propagação depende do meio, não do movimento das hemácias.\n• D: o desvio depende da velocidade; é ele que permite calculá-la.\n• E: a amplitude não codifica a velocidade; a informação está na frequência.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_09",
@@ -303,7 +311,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. A pressão venosa é 10 × 133 Pa = 1 330 Pa. A coluna exerce p = ρ·g·h; então h = 1 330 ÷ (1 000 × 10) = 0,133 m ≈ 13 cm. As bolsas costumam ficar bem acima disso para garantir fluxo.\n\nPegadinhas:\n• A (1,3 cm): erra uma casa decimal na divisão.\n• C (76 cm): é a altura de uma coluna de mercúrio sob pressão atmosférica — dado irrelevante aqui, porque a pressão atmosférica age dos dois lados.\n• D (1,3 m): usa 1 330 Pa por mmHg.\n• E (13 m): usa ρ = 100 kg/m³ ou erra duas casas."
+    "explanation": "Resposta B. A pressão venosa é 10 × 133 Pa = 1 330 Pa. A coluna exerce p = ρ·g·h; então h = 1 330 ÷ (1 000 × 10) = 0,133 m ≈ 13 cm. As bolsas costumam ficar bem acima disso para garantir fluxo.\n\nPegadinhas:\n• A (1,3 cm): erra uma casa decimal na divisão.\n• C (76 cm): é a altura de uma coluna de mercúrio sob pressão atmosférica — dado irrelevante aqui, porque a pressão atmosférica age dos dois lados.\n• D (1,3 m): usa 1 330 Pa por mmHg.\n• E (13 m): usa ρ = 100 kg/m³ ou erra duas casas.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_10",
@@ -337,7 +346,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. 72 km/h = 20 m/s. Durante a reação, o carro segue com velocidade constante: 20 × 2,0 = 40 m. Na frenagem, v² = v₀² − 2ad → 0 = 400 − 10d → d = 40 m. Total: 80 m. Com o motorista atento, seriam 20 + 40 = 60 m: a distração acrescenta 20 m.\n\nPegadinhas:\n• A (40 m): é só a frenagem (ou só a reação).\n• B (60 m): usa o tempo de reação do motorista atento.\n• D (100 m): não corresponde a nenhum modelo coerente com os dados.\n• E (120 m): soma os 40 m de reação com uma frenagem calculada como se a velocidade ficasse constante em 20 m/s durante os 4 s de frenagem (80 m)."
+    "explanation": "Resposta C. 72 km/h = 20 m/s. Durante a reação, o carro segue com velocidade constante: 20 × 2,0 = 40 m. Na frenagem, v² = v₀² − 2ad → 0 = 400 − 10d → d = 40 m. Total: 80 m. Com o motorista atento, seriam 20 + 40 = 60 m: a distração acrescenta 20 m.\n\nPegadinhas:\n• A (40 m): é só a frenagem (ou só a reação).\n• B (60 m): usa o tempo de reação do motorista atento.\n• D (100 m): não corresponde a nenhum modelo coerente com os dados.\n• E (120 m): soma os 40 m de reação com uma frenagem calculada como se a velocidade ficasse constante em 20 m/s durante os 4 s de frenagem (80 m).",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_11",
@@ -371,7 +381,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. R(p) = p(200 − 2p) = −2p² + 200p, parábola com concavidade para baixo e raízes 0 e 100. O máximo está no vértice, ponto médio das raízes: p = 50. R(50) = 50 × 100 = 5 000.\n\nPegadinhas:\n• A: p = 25 dá R = 25 × 150 = 3 750, receita menor que a do vértice.\n• C: usa q = 200 no vértice, esquecendo que a quantidade cai com o preço.\n• D e E: p = 100 zera as vendas (q = 0), e a receita é nula; D ainda multiplica 100 por 100."
+    "explanation": "Resposta B. R(p) = p(200 − 2p) = −2p² + 200p, parábola com concavidade para baixo e raízes 0 e 100. O máximo está no vértice, ponto médio das raízes: p = 50. R(50) = 50 × 100 = 5 000.\n\nPegadinhas:\n• A: p = 25 dá R = 25 × 150 = 3 750, receita menor que a do vértice.\n• C: usa q = 200 no vértice, esquecendo que a quantidade cai com o preço.\n• D e E: p = 100 zera as vendas (q = 0), e a receita é nula; D ainda multiplica 100 por 100.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_12",
@@ -405,7 +416,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. V = π r² h. Com raio 2r e altura h/2: V' = π (2r)² (h/2) = π · 4r² · h/2 = 2 π r² h = 2V.\n\nPegadinhas:\n• A: trata o raio como se entrasse na fórmula com expoente 1.\n• B: soma variações percentuais em vez de multiplicar fatores.\n• C: ignora o raio.\n• E: considera a base quatro vezes maior, mas esquece de reduzir a altura à metade."
+    "explanation": "Resposta D. V = π r² h. Com raio 2r e altura h/2: V' = π (2r)² (h/2) = π · 4r² · h/2 = 2 π r² h = 2V.\n\nPegadinhas:\n• A: trata o raio como se entrasse na fórmula com expoente 1.\n• B: soma variações percentuais em vez de multiplicar fatores.\n• C: ignora o raio.\n• E: considera a base quatro vezes maior, mas esquece de reduzir a altura à metade.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_13",
@@ -439,7 +451,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Pelo princípio multiplicativo: primeira letra, 26; segunda, 25 (diferente da primeira); cada algarismo, 10. Total: 26 × 25 × 10 × 10 × 10 = 650 000.\n\nPegadinhas:\n• A (15 600): usa 26 × 25 × 24, como se fossem três letras distintas e nenhum algarismo.\n• C (676 000): permite letras iguais (26 × 26 × 1 000).\n• D (6 760 000): permite letras iguais e usa quatro algarismos.\n• E (17 576 000): usa três letras com repetição (26³) e três algarismos."
+    "explanation": "Resposta B. Pelo princípio multiplicativo: primeira letra, 26; segunda, 25 (diferente da primeira); cada algarismo, 10. Total: 26 × 25 × 10 × 10 × 10 = 650 000.\n\nPegadinhas:\n• A (15 600): usa 26 × 25 × 24, como se fossem três letras distintas e nenhum algarismo.\n• C (676 000): permite letras iguais (26 × 26 × 1 000).\n• D (6 760 000): permite letras iguais e usa quatro algarismos.\n• E (17 576 000): usa três letras com repetição (26³) e três algarismos.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_14",
@@ -473,7 +486,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. Média: (9 × 3 000 + 30 000) ÷ 10 = 57 000 ÷ 10 = 5 700, superior a 5 000 — o anúncio é verdadeiro. Mas nove em dez funcionários ganham 3 000, que é a mediana (valor central da lista ordenada). Um único valor extremo puxa a média e quase não mexe na mediana.\n\nPegadinhas:\n• A: a média é 5 700, não 3 000.\n• B: a afirmação é verdadeira, mas a média não representa o salário típico.\n• C: mediana e média são medidas diferentes de tendência central; e a afirmação sobre a média é verdadeira.\n• D: troca os valores: 5 700 é a média; a mediana é 3 000."
+    "explanation": "Resposta E. Média: (9 × 3 000 + 30 000) ÷ 10 = 57 000 ÷ 10 = 5 700, superior a 5 000 — o anúncio é verdadeiro. Mas nove em dez funcionários ganham 3 000, que é a mediana (valor central da lista ordenada). Um único valor extremo puxa a média e quase não mexe na mediana.\n\nPegadinhas:\n• A: a média é 5 700, não 3 000.\n• B: a afirmação é verdadeira, mas a média não representa o salário típico.\n• C: mediana e média são medidas diferentes de tendência central; e a afirmação sobre a média é verdadeira.\n• D: troca os valores: 5 700 é a média; a mediana é 3 000.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_15",
@@ -507,7 +521,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. A predominância hidrelétrica dá à geração brasileira baixa emissão, mas a amarra ao regime de chuvas. Na estiagem, a falta de água nos reservatórios exigiu termelétricas (mais caras e poluentes), daí a bandeira tarifária. Diversificar com eólica, solar e biomassa reduz essa vulnerabilidade.\n\nPegadinhas:\n• B: o texto diz que mais de 80% é renovável.\n• C: as hidrelétricas dependem da água dos rios e reservatórios, abastecidos pela chuva.\n• D: as termelétricas, em geral a gás, carvão ou óleo, emitem mais; a matriz ficou menos limpa.\n• E: a matriz energética inclui transportes e indústria, onde petróleo e derivados pesam muito; hidrelétricas respondem por parte bem menor dela."
+    "explanation": "Resposta A. A predominância hidrelétrica dá à geração brasileira baixa emissão, mas a amarra ao regime de chuvas. Na estiagem, a falta de água nos reservatórios exigiu termelétricas (mais caras e poluentes), daí a bandeira tarifária. Diversificar com eólica, solar e biomassa reduz essa vulnerabilidade.\n\nPegadinhas:\n• B: o texto diz que mais de 80% é renovável.\n• C: as hidrelétricas dependem da água dos rios e reservatórios, abastecidos pela chuva.\n• D: as termelétricas, em geral a gás, carvão ou óleo, emitem mais; a matriz ficou menos limpa.\n• E: a matriz energética inclui transportes e indústria, onde petróleo e derivados pesam muito; hidrelétricas respondem por parte bem menor dela.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_16",
@@ -541,7 +556,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. A distância do centro tem sentidos opostos nos dois casos. Para os mais pobres, é o que o preço da terra permite: periferização com pouca infraestrutura. Para os mais ricos, é escolha de isolamento e segurança (autossegregação). Os muros mostram que a proximidade física não significa convivência.\n\nPegadinhas:\n• A e D: proximidade física entre condomínios e bairros populares não reduz desigualdade nem integra; os muros separam.\n• B: o texto fala de 'longos deslocamentos diários até o trabalho' — o centro segue concentrando empregos.\n• E: condomínios e periferias continuam urbanos, dentro da metrópole."
+    "explanation": "Resposta C. A distância do centro tem sentidos opostos nos dois casos. Para os mais pobres, é o que o preço da terra permite: periferização com pouca infraestrutura. Para os mais ricos, é escolha de isolamento e segurança (autossegregação). Os muros mostram que a proximidade física não significa convivência.\n\nPegadinhas:\n• A e D: proximidade física entre condomínios e bairros populares não reduz desigualdade nem integra; os muros separam.\n• B: o texto fala de 'longos deslocamentos diários até o trabalho' — o centro segue concentrando empregos.\n• E: condomínios e periferias continuam urbanos, dentro da metrópole.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_17",
@@ -575,7 +591,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. Solo coberto por vegetação nativa, com raízes profundas e matéria orgânica, retém a chuva e a deixa infiltrar até os aquíferos, que liberam água lentamente para as nascentes ao longo da seca. Com pastagem e lavoura, o solo se compacta, o escoamento superficial aumenta nas chuvas (erosão) e a recarga diminui — a vazão de seca cai.\n\nPegadinhas:\n• A: contradiz o texto, que associa a retirada à redução da vazão.\n• B: a irrigação retira água dos rios e aquíferos; não os abastece.\n• C: a estação seca é característica do clima tropical do Cerrado, anterior ao desmatamento.\n• E: as raízes profundas favorecem a infiltração, não a impedem."
+    "explanation": "Resposta D. Solo coberto por vegetação nativa, com raízes profundas e matéria orgânica, retém a chuva e a deixa infiltrar até os aquíferos, que liberam água lentamente para as nascentes ao longo da seca. Com pastagem e lavoura, o solo se compacta, o escoamento superficial aumenta nas chuvas (erosão) e a recarga diminui — a vazão de seca cai.\n\nPegadinhas:\n• A: contradiz o texto, que associa a retirada à redução da vazão.\n• B: a irrigação retira água dos rios e aquíferos; não os abastece.\n• C: a estação seca é característica do clima tropical do Cerrado, anterior ao desmatamento.\n• E: as raízes profundas favorecem a infiltração, não a impedem.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_18",
@@ -609,7 +626,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. O art. 1º ataca a sociedade de ordens: nascimento não define direitos, e distinções só se justificam pela utilidade comum. O art. 17 trata a propriedade como 'inviolável e sagrada' — a igualdade é jurídica, não econômica, marca dos interesses da burguesia.\n\nPegadinhas:\n• A: o art. 17 protege a propriedade; não há redistribuição prevista.\n• B: as mulheres ficaram excluídas; Olympe de Gouges escreveu em 1791 uma declaração dos direitos da mulher justamente por isso.\n• C: o documento combate os privilégios estamentais.\n• D: a Constituição de 1791 adotou o voto censitário, restrito a cidadãos com renda mínima."
+    "explanation": "Resposta E. O art. 1º ataca a sociedade de ordens: nascimento não define direitos, e distinções só se justificam pela utilidade comum. O art. 17 trata a propriedade como 'inviolável e sagrada' — a igualdade é jurídica, não econômica, marca dos interesses da burguesia.\n\nPegadinhas:\n• A: o art. 17 protege a propriedade; não há redistribuição prevista.\n• B: as mulheres ficaram excluídas; Olympe de Gouges escreveu em 1791 uma declaração dos direitos da mulher justamente por isso.\n• C: o documento combate os privilégios estamentais.\n• D: a Constituição de 1791 adotou o voto censitário, restrito a cidadãos com renda mínima.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_19",
@@ -643,7 +661,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. O ouro deslocou o centro dinâmico do Nordeste açucareiro para o Centro-Sul — a mudança da capital para o Rio, porto de escoamento do ouro, é o sinal disso. A mineração gerou vilas, comércio interno e caminhos de abastecimento; a Coroa reagiu com mais controle (quinto, casas de fundição e, depois, a derrama).\n\nPegadinhas:\n• B: a metrópole proibiu manufaturas na colônia (alvará de 1785); o ouro escoou em grande parte para Portugal e, dali, para a Inglaterra.\n• C: o texto cita o grande número de africanos escravizados; a mineração dependeu do trabalho escravo.\n• D: o texto descreve aumento da cobrança, não redução.\n• E: a mineração foi urbanizadora, ao contrário da economia de plantation."
+    "explanation": "Resposta A. O ouro deslocou o centro dinâmico do Nordeste açucareiro para o Centro-Sul — a mudança da capital para o Rio, porto de escoamento do ouro, é o sinal disso. A mineração gerou vilas, comércio interno e caminhos de abastecimento; a Coroa reagiu com mais controle (quinto, casas de fundição e, depois, a derrama).\n\nPegadinhas:\n• B: a metrópole proibiu manufaturas na colônia (alvará de 1785); o ouro escoou em grande parte para Portugal e, dali, para a Inglaterra.\n• C: o texto cita o grande número de africanos escravizados; a mineração dependeu do trabalho escravo.\n• D: o texto descreve aumento da cobrança, não redução.\n• E: a mineração foi urbanizadora, ao contrário da economia de plantation.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_20",
@@ -677,7 +696,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. O habeas corpus protege contra prisão ilegal; suspendê-lo para 'crimes políticos' deixava opositores sem defesa contra detenções arbitrárias, abrindo caminho para a tortura. Com o fechamento do Congresso e as cassações, o Executivo concentrou poderes — início dos 'anos de chumbo'.\n\nPegadinhas:\n• A: a redemocratização começa só no fim dos anos 1970 (anistia, 1979); o AI-5 retirou garantias do Judiciário.\n• B: em 1968 a Guerra Fria estava em curso, e o ato não previa eleições.\n• D: o AI-5 permitia fechar o Congresso e cassar mandatos por decisão do presidente.\n• E: a expressão 'crimes políticos, contra a segurança nacional' mostra o alvo político."
+    "explanation": "Resposta C. O habeas corpus protege contra prisão ilegal; suspendê-lo para 'crimes políticos' deixava opositores sem defesa contra detenções arbitrárias, abrindo caminho para a tortura. Com o fechamento do Congresso e as cassações, o Executivo concentrou poderes — início dos 'anos de chumbo'.\n\nPegadinhas:\n• A: a redemocratização começa só no fim dos anos 1970 (anistia, 1979); o AI-5 retirou garantias do Judiciário.\n• B: em 1968 a Guerra Fria estava em curso, e o ato não previa eleições.\n• D: o AI-5 permitia fechar o Congresso e cassar mandatos por decisão do presidente.\n• E: a expressão 'crimes políticos, contra a segurança nacional' mostra o alvo político.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_21",
@@ -711,7 +731,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. A metonímia substitui um termo por outro com o qual mantém relação de contiguidade: continente pelo conteúdo, lugar pelos ocupantes. 'A sala' está no lugar de 'as pessoas na sala'.\n\nPegadinhas:\n• A: metáfora se apoia em semelhança; aqui a relação é de contiguidade — quem levanta os olhos são as pessoas que ocupam a sala.\n• B: o trecho não exagera números; 'lotado' é descrição.\n• C: não há oposição de ideias no trecho.\n• E: nada é suavizado; a expressão apenas condensa a reação coletiva."
+    "explanation": "Resposta D. A metonímia substitui um termo por outro com o qual mantém relação de contiguidade: continente pelo conteúdo, lugar pelos ocupantes. 'A sala' está no lugar de 'as pessoas na sala'.\n\nPegadinhas:\n• A: metáfora se apoia em semelhança; aqui a relação é de contiguidade — quem levanta os olhos são as pessoas que ocupam a sala.\n• B: o trecho não exagera números; 'lotado' é descrição.\n• C: não há oposição de ideias no trecho.\n• E: nada é suavizado; a expressão apenas condensa a reação coletiva.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_22",
@@ -745,7 +766,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. O texto controla o que foi oferecido ('the same amounts of calories, sugar, fat and fiber') e mostra que a diferença esteve no que foi consumido ('ate about 500 more calories per day'). A hipótese dos pesquisadores é comportamental: comer mais rápido e atrasar a saciedade ('delay the signals of fullness').\n\nPegadinhas:\n• B e C: o texto afirma que açúcar, gordura e fibras eram iguais nas duas dietas.\n• D: os voluntários podiam comer 'as much as they wanted' — ninguém foi obrigado.\n• E: 'gained weight' aparece só para a dieta ultraprocessada.\nVocabulário: 'fullness' = saciedade; 'controlled study' = estudo controlado."
+    "explanation": "Resposta A. O texto controla o que foi oferecido ('the same amounts of calories, sugar, fat and fiber') e mostra que a diferença esteve no que foi consumido ('ate about 500 more calories per day'). A hipótese dos pesquisadores é comportamental: comer mais rápido e atrasar a saciedade ('delay the signals of fullness').\n\nPegadinhas:\n• B e C: o texto afirma que açúcar, gordura e fibras eram iguais nas duas dietas.\n• D: os voluntários podiam comer 'as much as they wanted' — ninguém foi obrigado.\n• E: 'gained weight' aparece só para a dieta ultraprocessada.\nVocabulário: 'fullness' = saciedade; 'controlled study' = estudo controlado.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_23",
@@ -779,7 +801,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. O trabalhador não tem as garantias do assalariado (férias, 13º, previdência) e banca os meios de trabalho, mas também não tem a autonomia do empresário: preço, demanda e punições são decididos pelo algoritmo da plataforma. É a combinação de riscos individualizados com gestão centralizada que define a precarização.\n\nPegadinhas:\n• A: o texto diz que o valor da corrida e a distribuição dos pedidos são definidos pela empresa.\n• B: mais ocupações não significam mais direitos; o texto descreve justamente a ausência deles.\n• C: o artesão controla o processo e o produto; aqui o controle é da plataforma.\n• D: a classificação como autônomo ou 'parceiro' é o oposto da carteira assinada."
+    "explanation": "Resposta E. O trabalhador não tem as garantias do assalariado (férias, 13º, previdência) e banca os meios de trabalho, mas também não tem a autonomia do empresário: preço, demanda e punições são decididos pelo algoritmo da plataforma. É a combinação de riscos individualizados com gestão centralizada que define a precarização.\n\nPegadinhas:\n• A: o texto diz que o valor da corrida e a distribuição dos pedidos são definidos pela empresa.\n• B: mais ocupações não significam mais direitos; o texto descreve justamente a ausência deles.\n• C: o artesão controla o processo e o produto; aqui o controle é da plataforma.\n• D: a classificação como autônomo ou 'parceiro' é o oposto da carteira assinada.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_24",
@@ -813,6 +836,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Para Kant, a moralidade de uma ação não depende de suas consequências, mas do princípio que a orienta. Usar alguém 'simplesmente como meio' é dispor dele sem que possa, como ser racional, consentir com o fim — exatamente o que ocorre no teste sem informação. O consentimento informado, exigido hoje na ética em pesquisa, expressa esse princípio.\n\nPegadinhas:\n• A: é um raciocínio utilitarista (maior bem para o maior número), que o imperativo categórico recusa como critério.\n• C e D: fazem a moralidade depender do resultado, o que contradiz o caráter incondicional do imperativo.\n• E: para Kant, nenhum fim, nem o científico, autoriza tratar pessoas como meros meios."
+    "explanation": "Resposta B. Para Kant, a moralidade de uma ação não depende de suas consequências, mas do princípio que a orienta. Usar alguém 'simplesmente como meio' é dispor dele sem que possa, como ser racional, consentir com o fim — exatamente o que ocorre no teste sem informação. O consentimento informado, exigido hoje na ética em pesquisa, expressa esse princípio.\n\nPegadinhas:\n• A: é um raciocínio utilitarista (maior bem para o maior número), que o imperativo categórico recusa como critério.\n• C e D: fazem a moralidade depender do resultado, o que contradiz o caráter incondicional do imperativo.\n• E: para Kant, nenhum fim, nem o científico, autoriza tratar pessoas como meros meios.",
+    "styleOf": "FUVEST"
   }
 ]

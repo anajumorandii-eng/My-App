@@ -107955,7 +107955,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. O metilmercúrio é pouco excretado e se acumula nos tecidos. Como cada predador ingere ao longo da vida uma biomassa muito maior que a sua, retém o metal de todas as presas: a concentração cresce a cada nível (0,05 → 0,2 → 0,8 → 3,0 ppm). Quem come peixe herbívoro se coloca um nível acima do pacu; quem come tucunaré, dois níveis acima do onívoro.\n\nPegadinhas:\n• A: a tabela mostra a água com concentração dezenas de milhares de vezes menor que a dos peixes; a via principal é a dieta.\n• B: o metilmercúrio está ligado às proteínas do músculo; cozinhar não o remove.\n• C: inverte os dados — o tucunaré tem 16 vezes mais mercúrio que o pacu. Massa maior não dilui um poluente que se acumula pela dieta.\n• E: contradiz a tabela; o mercúrio aumenta, e não diminui, ao longo da cadeia. Quem diminui a cada nível é a energia disponível.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_02",
@@ -107987,7 +107988,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Na sístole, o ventrículo esquerdo gera pressão bem maior que o direito (cerca de 120 mmHg contra 25 mmHg). O sangue segue o gradiente, do esquerdo para o direito: sangue já oxigenado volta aos pulmões. Daí a ausência de cianose, o excesso de fluxo pulmonar (respiração acelerada, congestão, infecções) e, com os anos, o aumento da pressão pulmonar.\n\nPegadinhas:\n• B: descreve o sentido contrário, que só ocorre tardiamente, se a pressão pulmonar superar a sistêmica; nesse caso surgiria a cianose que o texto diz não haver.\n• C: valvas atrioventriculares separam átrio de ventrículo; o defeito descrito é no septo.\n• D: o desvio aumenta, e não reduz, o volume que chega aos pulmões.\n• E: o fluxo tem sentido definido pela diferença de pressão; e o texto descreve sobrecarga pulmonar.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_03",
@@ -108019,7 +108021,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. O irmão hemofílico (XʰY) recebeu o Xʰ da mãe, que tem coagulação normal: ela é portadora (XᴴXʰ). Rita, filha de XᴴXʰ com XᴴY e de coagulação normal, pode ser XᴴXᴴ ou XᴴXʰ, cada um com chance 1/2. Para nascer um menino hemofílico: Rita ser portadora (1/2) × a criança ser menino (1/2) × receber o Xʰ (1/2) = 1/8.\n\nPegadinhas:\n• A (1/16): multiplica um fator 1/2 sem evento correspondente.\n• C (1/4): supõe que Rita é portadora com certeza.\n• D (1/2): é a chance de um filho homem de uma portadora ser hemofílico — responde a outra pergunta.\n• E: o menino recebe o X da mãe; o fenótipo de Paulo não protege os filhos homens.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_04",
@@ -108051,7 +108054,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. A variação genética (mutação e transferência horizontal de genes, por plasmídeos) existe antes e independentemente do fármaco. O antibiótico é o agente seletivo: elimina as sensíveis e deixa as resistentes se multiplicarem. Interromper o tratamento cedo poupa justamente as mais resistentes; usar antibiótico contra vírus seleciona bactérias sem tratar a doença.\n\nPegadinhas:\n• A: quem se torna resistente é a população bacteriana, não o paciente.\n• B e D: são formulações de herança do adquirido e de uso e desuso (Lamarck).\n• C: mutações não são dirigidas pela necessidade; o antibiótico não escolhe qual gene muda.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_05",
@@ -108083,7 +108087,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. ABA e abertura estomática variam em sentidos opostos, e a fotossíntese acompanha a abertura. O mecanismo: o ABA, sinal de déficit hídrico, faz as células-guarda perderem K⁺ e água, e o ostíolo se fecha. Como água sai e CO₂ entra pelo mesmo poro, poupar água custa carbono.\n\nPegadinhas:\n• B: contradiz os dados; a fotossíntese cai enquanto o ABA sobe.\n• C: a fotossíntese cai junto com a abertura (de 100% a 25%); ela depende também do CO₂ que entra pelos estômatos.\n• D: os dados mostram correlação, mas não autorizam essa direção causal, e o ABA não é produzido de açúcares excedentes.\n• E: a tabela mostra fechamento progressivo (de 100% a 20%), não abertura.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_06",
@@ -108115,7 +108120,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Mols de bicarbonato: 0,84 g ÷ 84 g/mol = 0,010 mol. A proporção é 1:1, então são neutralizados 0,010 mol de HCl. pH = 1 significa [H⁺] = 10⁻¹ mol/L = 0,1 mol/L. Volume: 0,010 mol ÷ 0,1 mol/L = 0,1 L = 100 mL. O CO₂ liberado explica a distensão e a eructação citadas no texto, mas não entra no cálculo.\n\nPegadinhas:\n• A (10 mL): toma pH 1 como [H⁺] = 1 mol/L.\n• B (50 mL): usa uma proporção 2 HCl : 1 NaHCO₃ que a equação não tem.\n• D (200 mL): usa a proporção inversa, 1 HCl : 2 NaHCO₃.\n• E (1 L): toma [H⁺] = 0,01 mol/L, que corresponderia a pH 2.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_07",
@@ -108147,7 +108153,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A porcentagem de O₂ é a mesma, mas a pressão total é menor, e portanto a pressão parcial de O₂ também: há menos O₂ dissolvido no sangue. O equilíbrio se desloca para a esquerda, menos HbO₂ se forma e menos oxigênio chega aos tecidos (cansaço). A aclimatação, estimulada pela eritropoetina, aumenta a concentração de Hb, que desloca o equilíbrio para a direita e recompõe a quantidade de HbO₂.\n\nPegadinhas:\n• A e C: a constante de equilíbrio depende só da temperatura. Concentrações e pressões mudam a posição do equilíbrio, não o valor de K.\n• B: usa a porcentagem no lugar da pressão parcial, que é o que determina a quantidade de O₂ dissolvida.\n• E: o sentido está invertido; menos reagente favorece a reação inversa.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_08",
@@ -108179,7 +108186,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Enantiômeros são imagens especulares não sobreponíveis, com a mesma fórmula e as mesmas ligações. Em meio aquiral (ponto de fusão, densidade, solubilidade em água), comportam-se igual — por isso métodos comuns não os separam e é preciso recorrer a agentes quirais, o que encarece a produção. Diferem diante de algo também quiral: a luz polarizada e os receptores e enzimas do organismo, formados por aminoácidos L.\n\nPegadinhas:\n• A e B: enantiômeros têm a mesma fórmula molecular e a mesma função; diferem só no arranjo espacial.\n• C: se tivessem pontos de fusão e ebulição diferentes, a separação seria simples e barata.\n• D: alguns compostos racemizam em certas condições, mas isso não é regra; o próprio texto descreve a venda de uma forma isolada.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_09",
@@ -108211,7 +108219,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Por grama: 2 800 kJ ÷ 180 g ≈ 15,6 kJ/g. Em kcal: 15,6 ÷ 4,2 ≈ 3,7 kcal/g, que arredondado dá o valor de 4 kcal/g dos rótulos.\n\nPegadinhas:\n• A: o valor não resulta dos dados, e o ΔH já é a energia liberada como calor — não há 'perda' a descontar.\n• C: 4,2 é o fator de conversão, não o resultado.\n• D: 15,6 é o valor em kJ/g, sem a conversão pedida.\n• E: converte a energia de 1 mol (2 800 ÷ 4,2) sem dividir pela massa molar.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_10",
@@ -108243,7 +108252,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Desnível: 10 × 3 m = 30 m. Trabalho útil: m·g·h = 60 × 10 × 30 = 18 000 J = 18 kJ. Com rendimento de 25%, a energia consumida é 18 kJ ÷ 0,25 = 72 kJ. Em kcal: 72 ÷ 4,2 ≈ 17 kcal.\n\nPegadinhas:\n• A (4,3 kcal): é só o trabalho útil (18 kJ ÷ 4,2), sem o rendimento.\n• B (7,2 kcal): divide 72 kJ por 10 em vez de por 4,2.\n• D (72): é o valor em kJ apresentado como kcal.\n• E (300 kcal): multiplica 72 kJ por 4,2 em vez de dividir.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_11",
@@ -108275,7 +108285,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. A compressão rápida é aproximadamente adiabática (Q ≈ 0). Pela primeira lei, ΔU = Q − W; na compressão, o trabalho do gás é negativo (o êmbolo realiza trabalho sobre ele), então ΔU = −W > 0. Para um gás ideal, energia interna maior significa temperatura maior.\n\nPegadinhas:\n• B: o texto descarta o atrito como causa principal, e o aquecimento ocorre no interior, onde o ar é comprimido.\n• C: Q = 0 não implica ΔU = 0, porque há trabalho. E num gás ideal a temperatura só muda se a energia interna mudar.\n• D: na compressão é o êmbolo que realiza trabalho sobre o ar, e não o contrário.\n• E: a ponta está vedada; a quantidade de ar é constante.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_12",
@@ -108307,7 +108318,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. No olho míope, a imagem de um objeto distante se forma antes da retina; a lente corretiva precisa fazer os raios divergirem. Ela deve formar, de um objeto no infinito, uma imagem virtual no ponto remoto (50 cm). Assim, f = −50 cm = −0,5 m e V = 1/f = −2,0 di.\n\nPegadinhas:\n• A e B: lentes convergentes corrigem hipermetropia e presbiopia, não miopia.\n• C (−0,5 di): usa a distância focal no lugar da vergência.\n• E (−50 di): divide por 50 sem converter centímetros em metros.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_13",
@@ -108339,7 +108351,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. O que não muda é a resistência: R = V²/P = 220² ÷ 5 500 = 48 400 ÷ 5 500 = 8,8 Ω. Em 110 V: P = 110² ÷ 8,8 = 12 100 ÷ 8,8 = 1 375 W. Como P = V²/R, reduzir a tensão à metade reduz a potência a um quarto — daí a água morna.\n\nPegadinhas:\n• A (687,5 W): divide a potência por oito, como se a dependência fosse cúbica.\n• C (2 750 W): supõe proporção direta entre potência e tensão.\n• D (5 500 W): supõe que a potência nominal vale em qualquer tensão.\n• E (11 000 W): supõe que a corrente se mantém e que a potência dobra.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_14",
@@ -108371,7 +108384,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. O aquecimento do Pacífico desloca a célula de Walker: sobre a Amazônia e o norte do Nordeste predomina ar descendente, que inibe a formação de nuvens (estiagem, rios baixos). No Sul, o jato subtropical mais intenso funciona como bloqueio e mantém as frentes frias estacionadas, com chuvas persistentes.\n\nPegadinhas:\n• A: o efeito é redistribuir a chuva, e o texto mostra seca na Amazônia.\n• B: massas polares não explicam a seca amazônica, e o El Niño tende a elevar as temperaturas no Norte — o texto cita lagos aquecidos.\n• C: as enchentes de 2024 se deveram ao volume de chuva; a elevação do mar não tem essa magnitude.\n• D: os Andes barram massas de ar em baixos níveis, mas a teleconexão atua pela circulação de altitude.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_15",
@@ -108403,7 +108417,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A queda da fecundidade reduz primeiro a base da pirâmide: em 2020, dependentes jovens e idosos somam 31%, contra 42% em 1980. Mas os adultos envelhecem e, com fecundidade abaixo da reposição e vida mais longa, os idosos passam de 10% para 25% na projeção: os dependentes voltam a 40%.\n\nPegadinhas:\n• A: a projeção para 2060 contradiz a ideia de permanência.\n• B: a natalidade caiu; o bônus decorre justamente dessa queda.\n• C: a imigração não é a causa principal da mudança na estrutura etária brasileira.\n• E: a tabela traz proporções, não totais; a população brasileira cresceu de cerca de 120 para mais de 200 milhões no período.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_16",
@@ -108435,7 +108450,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Na escala 1 : 250 000, 1 cm do mapa corresponde a 250 000 cm = 2,5 km. Então 6 cm valem 15 km. A 60 km/h (1 km por minuto), o percurso leva 15 minutos.\n\nPegadinhas:\n• A (6 min): toma 1 cm como 1 km, ignorando a escala.\n• C (25 min): corresponde a 25 km, como se cada centímetro valesse cerca de 4 km.\n• D (1 hora): toma a distância como 60 km, confundindo o dado da velocidade com o do percurso.\n• E (2 h 30 min): erra uma casa decimal e chega a 150 km.\nAtalho: na escala 1 : 250 000, cortar cinco zeros passa de cm para km (2,5 km por cm).",
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_17",
@@ -108467,7 +108483,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Considere 10 000 pessoas. Doentes: 200, das quais 90% testam positivo: 180. Saudáveis: 9 800, das quais 5% testam positivo: 490. Total de positivos: 670. Entre eles, doentes são 180/670 ≈ 27%. Quando a doença é rara, os falsos positivos de um grande grupo de saudáveis superam os verdadeiros positivos — o motivo do exame de confirmação citado no texto.\n\nPegadinhas:\n• A (2%): é a probabilidade antes do exame; o resultado positivo a altera.\n• C (50%): é um palpite que trata os dois resultados como igualmente prováveis.\n• D (90%): é a sensibilidade, P(positivo | doente), e não P(doente | positivo).\n• E (95%): é a especificidade, a chance de uma pessoa saudável ter resultado negativo.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_18",
@@ -108499,7 +108516,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Em 24 h cabem 24 ÷ 6 = 4 meias-vidas: 400 × (1/2)⁴ = 400 ÷ 16 = 25 mg. Em geral, Q(t) = Q₀ · (1/2)^(t/T), em que T é a meia-vida.\n\nPegadinhas:\n• A: modela a queda como linear (100 mg a cada 6 h); no modelo exponencial a quantidade nunca chega a zero.\n• C (50 mg): corresponde a três meias-vidas (18 h).\n• D (100 mg): divide 400 por 4, o número de meias-vidas, em vez de por 2⁴.\n• E (200 mg): corresponde a uma única meia-vida.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_19",
@@ -108531,7 +108549,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Se o preço era 100, passou a 125. Para voltar a 100, o desconto é de 25 sobre 125: 25/125 = 20%. Algebricamente, 1,25 × (1 − d) = 1, logo d = 0,2.\n\nPegadinhas:\n• A (15%) e D (30%): não resultam de nenhuma operação coerente com os dados.\n• C (25%): o desconto incide sobre uma base maior (125); 25% de desconto levaria a 93,75, abaixo do preço original.\n• E (125%): confunde o fator do preço aumentado com a porcentagem de desconto.",
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_20",
@@ -108563,7 +108582,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Sem o tráfico, a elite agrária previa a escassez de trabalhadores e passou a contar com imigrantes e, depois, libertos. Exigir compra para obter terra devoluta impedia que pessoas sem capital se tornassem pequenos proprietários: restava-lhes trabalhar nas fazendas. O próprio texto indica a lógica — a venda da terra financiaria a vinda de colonos, que chegariam sem recursos para comprá-la.\n\nPegadinhas:\n• A e B: são o oposto do efeito da lei; não houve distribuição gratuita nem reforma agrária.\n• D: a pressão inglesa se dirigia ao tráfico (Bill Aberdeen, 1845), não à venda de terras.\n• E: o Segundo Reinado manteve a economia agroexportadora, centrada no café.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_21",
@@ -108595,7 +108615,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. O próprio artigo exclui domésticos e rurais — num país em que a maioria da população ainda vivia no campo. A CLT veio por decreto-lei, durante o Estado Novo, e o modelo corporativista atrelava os sindicatos ao Ministério do Trabalho (reconhecimento oficial, imposto sindical), dando ao governo controle sobre o movimento operário.\n\nPegadinhas:\n• A: o artigo citado desmente a universalidade; os rurais só tiveram estatuto próprio em 1963, e as domésticas, equiparação ampla em 2013.\n• B: em 1943 não havia Congresso funcionando; a CLT é um decreto-lei.\n• C: a Constituição de 1937 declarava a greve 'recurso antissocial'; o modelo era de tutela estatal.\n• D: a CLT reuniu e sistematizou direitos, não os revogou.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_22",
@@ -108627,7 +108648,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. O texto apresenta uma crença ('bastava informar'), declara que a experiência a desmentiu 'em parte' e formula a tese: a informação é 'necessária, mas raramente suficiente'. A enumeração com 'pesa' lista os outros fatores: confiança, exemplo, preço, horário, distância.\n\nPegadinhas:\n• A: generaliza demais; 'em parte' e 'necessária' mostram que o autor não considera a informação inútil.\n• B: é justamente a crença que o texto refuta.\n• D: o preço é apenas um entre vários fatores; 'exclusivamente' contradiz a enumeração.\n• E: o 'cidadão imaginário' é a figura que a campanha mal planejada supõe, não uma pessoa real criticada pelo autor.\nNa FUVEST, alternativas que repetem palavras do texto com o sentido invertido são distratores frequentes.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_23",
@@ -108659,7 +108681,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. 'Embora' introduz oração subordinada adverbial concessiva: um fato que poderia impedir a ação principal, mas não a impede. 'Ainda que' tem o mesmo valor e também exige o subjuntivo ('sejam').\n\nPegadinhas:\n• B (Porque): transforma o obstáculo em causa — a divulgação ocorreria por serem os dados preliminares.\n• C (Desde que): com subjuntivo, exprime condição; o período diria que só divulgariam se os dados fossem preliminares.\n• D (À medida que): exprime proporção e pede indicativo.\n• E (Tão logo): exprime tempo e mudaria a relação lógica.\nConfira sempre o modo verbal depois de trocar o conectivo: sentido e correção são cobrados juntos.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_24",
@@ -108691,7 +108714,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. O texto afirma que antibióticos 'have no effect' contra vírus e que, nesses casos e na interrupção precoce, 'the hardiest bacteria are left behind to multiply'.\n\nPegadinhas:\n• A: o texto termina com 'not to abandon them'; pede uso criterioso.\n• B: quem se torna resistente é a bactéria, não o paciente.\n• C: a interrupção precoce é apresentada como causa do problema.\n• D: inverte o texto; as mais resistentes são as que sobram ('are left behind').\nVocabulário: 'hardiest' = mais resistentes; 'left behind' = deixadas para trás; 'therefore' = portanto.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_01",
@@ -108723,7 +108747,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. O RNAm é a mensagem que os ribossomos leem no citoplasma: códon a códon, eles montam a sequência de aminoácidos da proteína S. Para alterar o DNA, seria preciso transcrição reversa (enzima que células humanas comuns não usam para isso) e entrada no núcleo; nada disso faz parte do processo, e o RNAm é degradado em poucos dias.\n\nPegadinhas:\n• A: a produção não é permanente — o texto diz que o RNAm é degradado; não há conversão em DNA.\n• B: a duplicação do DNA usa o próprio DNA como molde, não RNAm.\n• D: confunde a mensagem (RNAm) com o produto (proteína S).\n• E: a vacina não contém vírus; contém só a instrução para uma de suas proteínas.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_02",
@@ -108755,7 +108780,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. O alvo não é o mosquito nem a pessoa: é a multiplicação do vírus dentro do vetor. Como a Wolbachia passa da mãe para a prole, ela se espalha na população de Aedes, que continua existindo, mas transmite menos.\n\nPegadinhas:\n• A e D: descrevem outros métodos (larvicidas, técnica do inseto estéril). O texto diz que a bactéria é transmitida aos descendentes — logo, os mosquitos se reproduzem.\n• B: a bactéria não age no sangue humano; atua dentro do mosquito.\n• C: nada no texto indica imunidade em quem é picado.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_03",
@@ -108787,7 +108813,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. É a eutrofização. O nitrogênio, nutriente limitante, provoca explosão de algas; elas sombreiam as camadas de baixo e morrem; a matéria orgânica serve de alimento a bactérias aeróbias, cuja respiração consome o O₂ dissolvido. Nas camadas profundas, onde não há fotossíntese para repor o gás, a hipóxia mata os peixes.\n\nPegadinhas:\n• B: inverte a causa; o texto mostra a mortandade de peixes como último evento, depois das bactérias.\n• C: a fotossíntese libera O₂; o consumo vem da decomposição.\n• D: a desnitrificação ocorre, mas o N₂ é pouco solúvel, escapa para a atmosfera e não é tóxico.\n• E: a falta é de oxigênio, não de alimento — e a mortandade se concentra onde o O₂ não é reposto.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_04",
@@ -108819,7 +108846,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A osmose leva água do meio com menor concentração de partículas dissolvidas para o de maior concentração. A solução a 0,9% tem a mesma pressão osmótica do citoplasma das hemácias (isotônica): o fluxo líquido é nulo. Na água destilada, a água entra e a célula estoura; na solução a 3% (hipertônica), a água sai e a célula murcha.\n\nPegadinhas:\n• A: a água destilada usada no experimento também pode ser estéril; o efeito é osmótico.\n• B: o NaCl não reage com a membrana; o que importa é a concentração de partículas.\n• C: na solução a 3% a água sai, não entra.\n• E: a água pura tem pressão osmótica nula, a menor possível.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_05",
@@ -108851,7 +108879,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. O lítio, de menor potencial de redução, oxida (ânodo); o cobre, de maior potencial, se reduz (cátodo). ΔE = E°(cátodo) − E°(ânodo) = +0,34 − (−3,04) = 3,38 V. O coeficiente estequiométrico não multiplica o potencial.\n\nPegadinhas:\n• A (1,10 V): é a pilha zinco–cobre, que o enunciado não pede.\n• B (2,28 V): é a diferença entre lítio e zinco.\n• C (2,70 V): soma −3,04 e +0,34 sem inverter o sinal do ânodo.\n• E (3,80 V): soma os módulos de lítio e zinco.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_06",
@@ -108883,7 +108912,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. A radiação gama é eletromagnética, sem massa nem carga, com grande poder de penetração: sai do corpo e chega ao detector. A meia-vida de 6 horas basta para o exame e faz a atividade cair rapidamente — após 24 h (4 meias-vidas), resta 1/16.\n\nPegadinhas:\n• A: partículas alfa têm o menor poder de penetração (são barradas por uma folha de papel) e o texto não fala em alfa.\n• C: gama não tem carga nem massa.\n• D: meia-vida curta não significa desaparecimento instantâneo; a atividade cai pela metade a cada 6 h.\n• E: radiação que fica retida no corpo não chegaria ao detector externo.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_07",
@@ -108915,7 +108945,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. A cadeia hidrocarbônica do retinol interage com lipídios por forças de dispersão de London; o único –OH pouco altera esse caráter. Por isso ele se dissolve na gordura e se acumula. Os vários –OH da vitamina C fazem ligações de hidrogênio com a água: ela circula dissolvida no plasma e o excesso sai pelos rins.\n\nPegadinhas:\n• A: grupos –OH tornam a molécula polar, não apolar.\n• B e D: invertem as propriedades; é a vitamina C que interage mais com a água.\n• C: a estrutura descrita no texto mostra solubilidades bem diferentes.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_08",
@@ -108947,7 +108978,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. É o efeito Doppler: fonte (ou refletor) que se aproxima comprime as frentes de onda, e a frequência percebida aumenta; quanto maior a velocidade de aproximação, maior o desvio. Se o sangue se afastasse, a frequência diminuiria.\n\nPegadinhas:\n• B: absorção reduz a amplitude, não a frequência; e o sentido aproximação aumenta a frequência.\n• C: a velocidade de propagação depende do meio, não do movimento das hemácias.\n• D: o desvio depende da velocidade; é ele que permite calculá-la.\n• E: a amplitude não codifica a velocidade; a informação está na frequência.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_09",
@@ -108979,7 +109011,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. A pressão venosa é 10 × 133 Pa = 1 330 Pa. A coluna exerce p = ρ·g·h; então h = 1 330 ÷ (1 000 × 10) = 0,133 m ≈ 13 cm. As bolsas costumam ficar bem acima disso para garantir fluxo.\n\nPegadinhas:\n• A (1,3 cm): erra uma casa decimal na divisão.\n• C (76 cm): é a altura de uma coluna de mercúrio sob pressão atmosférica — dado irrelevante aqui, porque a pressão atmosférica age dos dois lados.\n• D (1,3 m): usa 1 330 Pa por mmHg.\n• E (13 m): usa ρ = 100 kg/m³ ou erra duas casas.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_10",
@@ -109011,7 +109044,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. 72 km/h = 20 m/s. Durante a reação, o carro segue com velocidade constante: 20 × 2,0 = 40 m. Na frenagem, v² = v₀² − 2ad → 0 = 400 − 10d → d = 40 m. Total: 80 m. Com o motorista atento, seriam 20 + 40 = 60 m: a distração acrescenta 20 m.\n\nPegadinhas:\n• A (40 m): é só a frenagem (ou só a reação).\n• B (60 m): usa o tempo de reação do motorista atento.\n• D (100 m): não corresponde a nenhum modelo coerente com os dados.\n• E (120 m): soma os 40 m de reação com uma frenagem calculada como se a velocidade ficasse constante em 20 m/s durante os 4 s de frenagem (80 m).",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_11",
@@ -109043,7 +109077,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. R(p) = p(200 − 2p) = −2p² + 200p, parábola com concavidade para baixo e raízes 0 e 100. O máximo está no vértice, ponto médio das raízes: p = 50. R(50) = 50 × 100 = 5 000.\n\nPegadinhas:\n• A: p = 25 dá R = 25 × 150 = 3 750, receita menor que a do vértice.\n• C: usa q = 200 no vértice, esquecendo que a quantidade cai com o preço.\n• D e E: p = 100 zera as vendas (q = 0), e a receita é nula; D ainda multiplica 100 por 100.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_12",
@@ -109075,7 +109110,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. V = π r² h. Com raio 2r e altura h/2: V' = π (2r)² (h/2) = π · 4r² · h/2 = 2 π r² h = 2V.\n\nPegadinhas:\n• A: trata o raio como se entrasse na fórmula com expoente 1.\n• B: soma variações percentuais em vez de multiplicar fatores.\n• C: ignora o raio.\n• E: considera a base quatro vezes maior, mas esquece de reduzir a altura à metade.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_13",
@@ -109107,7 +109143,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Pelo princípio multiplicativo: primeira letra, 26; segunda, 25 (diferente da primeira); cada algarismo, 10. Total: 26 × 25 × 10 × 10 × 10 = 650 000.\n\nPegadinhas:\n• A (15 600): usa 26 × 25 × 24, como se fossem três letras distintas e nenhum algarismo.\n• C (676 000): permite letras iguais (26 × 26 × 1 000).\n• D (6 760 000): permite letras iguais e usa quatro algarismos.\n• E (17 576 000): usa três letras com repetição (26³) e três algarismos.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_14",
@@ -109139,7 +109176,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Média: (9 × 3 000 + 30 000) ÷ 10 = 57 000 ÷ 10 = 5 700, superior a 5 000 — o anúncio é verdadeiro. Mas nove em dez funcionários ganham 3 000, que é a mediana (valor central da lista ordenada). Um único valor extremo puxa a média e quase não mexe na mediana.\n\nPegadinhas:\n• A: a média é 5 700, não 3 000.\n• B: a afirmação é verdadeira, mas a média não representa o salário típico.\n• C: mediana e média são medidas diferentes de tendência central; e a afirmação sobre a média é verdadeira.\n• D: troca os valores: 5 700 é a média; a mediana é 3 000.",
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_15",
@@ -109171,7 +109209,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. A predominância hidrelétrica dá à geração brasileira baixa emissão, mas a amarra ao regime de chuvas. Na estiagem, a falta de água nos reservatórios exigiu termelétricas (mais caras e poluentes), daí a bandeira tarifária. Diversificar com eólica, solar e biomassa reduz essa vulnerabilidade.\n\nPegadinhas:\n• B: o texto diz que mais de 80% é renovável.\n• C: as hidrelétricas dependem da água dos rios e reservatórios, abastecidos pela chuva.\n• D: as termelétricas, em geral a gás, carvão ou óleo, emitem mais; a matriz ficou menos limpa.\n• E: a matriz energética inclui transportes e indústria, onde petróleo e derivados pesam muito; hidrelétricas respondem por parte bem menor dela.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_16",
@@ -109203,7 +109242,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. A distância do centro tem sentidos opostos nos dois casos. Para os mais pobres, é o que o preço da terra permite: periferização com pouca infraestrutura. Para os mais ricos, é escolha de isolamento e segurança (autossegregação). Os muros mostram que a proximidade física não significa convivência.\n\nPegadinhas:\n• A e D: proximidade física entre condomínios e bairros populares não reduz desigualdade nem integra; os muros separam.\n• B: o texto fala de 'longos deslocamentos diários até o trabalho' — o centro segue concentrando empregos.\n• E: condomínios e periferias continuam urbanos, dentro da metrópole.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_17",
@@ -109235,7 +109275,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. Solo coberto por vegetação nativa, com raízes profundas e matéria orgânica, retém a chuva e a deixa infiltrar até os aquíferos, que liberam água lentamente para as nascentes ao longo da seca. Com pastagem e lavoura, o solo se compacta, o escoamento superficial aumenta nas chuvas (erosão) e a recarga diminui — a vazão de seca cai.\n\nPegadinhas:\n• A: contradiz o texto, que associa a retirada à redução da vazão.\n• B: a irrigação retira água dos rios e aquíferos; não os abastece.\n• C: a estação seca é característica do clima tropical do Cerrado, anterior ao desmatamento.\n• E: as raízes profundas favorecem a infiltração, não a impedem.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_18",
@@ -109267,7 +109308,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. O art. 1º ataca a sociedade de ordens: nascimento não define direitos, e distinções só se justificam pela utilidade comum. O art. 17 trata a propriedade como 'inviolável e sagrada' — a igualdade é jurídica, não econômica, marca dos interesses da burguesia.\n\nPegadinhas:\n• A: o art. 17 protege a propriedade; não há redistribuição prevista.\n• B: as mulheres ficaram excluídas; Olympe de Gouges escreveu em 1791 uma declaração dos direitos da mulher justamente por isso.\n• C: o documento combate os privilégios estamentais.\n• D: a Constituição de 1791 adotou o voto censitário, restrito a cidadãos com renda mínima.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_19",
@@ -109299,7 +109341,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. O ouro deslocou o centro dinâmico do Nordeste açucareiro para o Centro-Sul — a mudança da capital para o Rio, porto de escoamento do ouro, é o sinal disso. A mineração gerou vilas, comércio interno e caminhos de abastecimento; a Coroa reagiu com mais controle (quinto, casas de fundição e, depois, a derrama).\n\nPegadinhas:\n• B: a metrópole proibiu manufaturas na colônia (alvará de 1785); o ouro escoou em grande parte para Portugal e, dali, para a Inglaterra.\n• C: o texto cita o grande número de africanos escravizados; a mineração dependeu do trabalho escravo.\n• D: o texto descreve aumento da cobrança, não redução.\n• E: a mineração foi urbanizadora, ao contrário da economia de plantation.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_20",
@@ -109331,7 +109374,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. O habeas corpus protege contra prisão ilegal; suspendê-lo para 'crimes políticos' deixava opositores sem defesa contra detenções arbitrárias, abrindo caminho para a tortura. Com o fechamento do Congresso e as cassações, o Executivo concentrou poderes — início dos 'anos de chumbo'.\n\nPegadinhas:\n• A: a redemocratização começa só no fim dos anos 1970 (anistia, 1979); o AI-5 retirou garantias do Judiciário.\n• B: em 1968 a Guerra Fria estava em curso, e o ato não previa eleições.\n• D: o AI-5 permitia fechar o Congresso e cassar mandatos por decisão do presidente.\n• E: a expressão 'crimes políticos, contra a segurança nacional' mostra o alvo político.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_21",
@@ -109363,7 +109407,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A metonímia substitui um termo por outro com o qual mantém relação de contiguidade: continente pelo conteúdo, lugar pelos ocupantes. 'A sala' está no lugar de 'as pessoas na sala'.\n\nPegadinhas:\n• A: metáfora se apoia em semelhança; aqui a relação é de contiguidade — quem levanta os olhos são as pessoas que ocupam a sala.\n• B: o trecho não exagera números; 'lotado' é descrição.\n• C: não há oposição de ideias no trecho.\n• E: nada é suavizado; a expressão apenas condensa a reação coletiva.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_22",
@@ -109395,7 +109440,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. O texto controla o que foi oferecido ('the same amounts of calories, sugar, fat and fiber') e mostra que a diferença esteve no que foi consumido ('ate about 500 more calories per day'). A hipótese dos pesquisadores é comportamental: comer mais rápido e atrasar a saciedade ('delay the signals of fullness').\n\nPegadinhas:\n• B e C: o texto afirma que açúcar, gordura e fibras eram iguais nas duas dietas.\n• D: os voluntários podiam comer 'as much as they wanted' — ninguém foi obrigado.\n• E: 'gained weight' aparece só para a dieta ultraprocessada.\nVocabulário: 'fullness' = saciedade; 'controlled study' = estudo controlado.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_23",
@@ -109427,7 +109473,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. O trabalhador não tem as garantias do assalariado (férias, 13º, previdência) e banca os meios de trabalho, mas também não tem a autonomia do empresário: preço, demanda e punições são decididos pelo algoritmo da plataforma. É a combinação de riscos individualizados com gestão centralizada que define a precarização.\n\nPegadinhas:\n• A: o texto diz que o valor da corrida e a distribuição dos pedidos são definidos pela empresa.\n• B: mais ocupações não significam mais direitos; o texto descreve justamente a ausência deles.\n• C: o artesão controla o processo e o produto; aqui o controle é da plataforma.\n• D: a classificação como autônomo ou 'parceiro' é o oposto da carteira assinada.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l2_24",
@@ -109459,7 +109506,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Para Kant, a moralidade de uma ação não depende de suas consequências, mas do princípio que a orienta. Usar alguém 'simplesmente como meio' é dispor dele sem que possa, como ser racional, consentir com o fim — exatamente o que ocorre no teste sem informação. O consentimento informado, exigido hoje na ética em pesquisa, expressa esse princípio.\n\nPegadinhas:\n• A: é um raciocínio utilitarista (maior bem para o maior número), que o imperativo categórico recusa como critério.\n• C e D: fazem a moralidade depender do resultado, o que contradiz o caráter incondicional do imperativo.\n• E: para Kant, nenhum fim, nem o científico, autoriza tratar pessoas como meros meios.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_01",
@@ -109491,7 +109539,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Muitas angiospermas dependem de animais para levar o pólen das anteras ao estigma (polinização cruzada). Sem polinização, não há fecundação, e o ovário não se desenvolve em fruto com sementes. Gramíneas como trigo, milho e arroz — também angiospermas — são polinizadas pelo vento.\n\nPegadinhas:\n• B: o amadurecimento é controlado por hormônios da própria planta, como o etileno.\n• C: trigo, milho e arroz são angiospermas (gramíneas) e formam frutos (grãos, ou cariopses).\n• D: abelhas se alimentam de néctar e pólen, não de folhas.\n• E: o néctar é um recurso que a flor oferece ao polinizador; não é fonte de água da planta.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_02",
@@ -109523,7 +109572,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. A insulina, liberada pelas células beta após as refeições, faz músculos e tecido adiposo captarem glicose e estimula o fígado a armazená-la como glicogênio — a glicemia cai. No tipo 1, sem células beta, falta o hormônio, que precisa ser reposto. No tipo 2, há hormônio, mas resistência à sua ação; exercício e medicamentos melhoram a resposta dos tecidos.\n\nPegadinhas:\n• A: quem libera glicose do fígado é o glucagon; a insulina tem efeito oposto.\n• B: a insulina é produzida pelo pâncreas nos dois casos em que existe.\n• D: a insulina é proteica e seria digerida no estômago — por isso é injetada.\n• E: os medicamentos orais do tipo 2 dependem justamente de haver insulina ou de melhorar sua ação.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_03",
@@ -109555,7 +109605,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. A bomba move íons contra o gradiente de concentração, gastando ATP (transporte ativo). O cianeto bloqueia a cadeia respiratória, principal fonte de ATP; sem energia, a bomba para. Os vazamentos por difusão continuam (Na⁺ entra, K⁺ sai), e os gradientes se dissipam — o que compromete, por exemplo, o impulso nervoso.\n\nPegadinhas:\n• A: o cianeto reduz, e não aumenta, a produção de ATP.\n• B: se os íons só se difundissem, as concentrações tenderiam a se igualar; a diferença existe porque há transporte ativo.\n• C: sem bomba, o K⁺ tende a sair, a favor de seu gradiente; e osmose é movimento de água, não de íons.\n• D: os canais e vazamentos da membrana não dependem de ATP para existir.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_04",
@@ -109587,7 +109638,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. A pele dos anfíbios é fina, rica em vasos e mantida úmida: participa da respiração cutânea e absorve água. Isso a torna porta de entrada para poluentes e para o fungo quitrídio, que compromete essas trocas. Ovos sem casca, postos na água ou em locais úmidos, também ficam expostos. Répteis têm pele queratinizada, pouco permeável, e ovo amniótico com casca.\n\nPegadinhas:\n• A: muitos anfíbios respiram também pela pele, e a fase larval é aquática.\n• C e D: escamas córneas e ovos com casca são características dos répteis.\n• E: anfíbios são ectotérmicos.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_05",
@@ -109619,7 +109671,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A velocidade de uma reação depende da fração de colisões com energia suficiente para superar a energia de ativação; resfriar diminui a agitação das moléculas e essa fração. O metabolismo dos microrganismos, feito de reações catalisadas por enzimas, fica lento: eles se multiplicam e fermentam menos.\n\nPegadinhas:\n• A: a refrigeração retarda, mas não esteriliza — por isso o leite acaba azedando também na geladeira.\n• B: a temperatura altera a velocidade, não o produto da fermentação.\n• C: a energia de ativação é característica da reação (e do catalisador); a temperatura muda quantas moléculas a superam.\n• E: resfriar não muda a concentração de lactose.",
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_06",
@@ -109651,7 +109704,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Retirar CO₂ (um reagente) faz o sistema se deslocar no sentido de repô-lo: H⁺ e HCO₃⁻ se combinam formando H₂CO₃, que se decompõe em CO₂ e água. A concentração de H⁺ cai e o pH sobe — alcalose respiratória, que explica os sintomas. Respirar mais devagar corrige o quadro.\n\nPegadinhas:\n• B: o sentido está invertido; é o acúmulo de CO₂ (respiração insuficiente) que causa acidose.\n• C: K fixa a razão entre as concentrações, não o pH; retirar CO₂ muda as concentrações.\n• D: o O₂ não forma ácido com a água; o que muda é a eliminação de CO₂.\n• E: o HCO₃⁻ é consumido no deslocamento para a esquerda, e o sangue fica menos ácido.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_07",
@@ -109683,7 +109737,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. O PET é um polímero de condensação: cada ligação éster libera uma molécula de água ao se formar e pode, em princípio, ser hidrolisada. Mas as cadeias são longas, hidrofóbicas e em boa parte cristalinas, e a maioria dos microrganismos não tem enzimas que as ataquem — daí a importância da enzima descrita em 2016.\n\nPegadinhas:\n• A: o PET é orgânico, formado por carbono, hidrogênio e oxigênio.\n• B: o próprio texto descreve uma enzima que hidrolisa essas ligações.\n• D: o PET é insolúvel em água — por isso garrafas persistem inteiras.\n• E: o PET é polímero de condensação, com ligações covalentes.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_08",
@@ -109715,7 +109770,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Na mudança de fase, Q = m · L = 0,5 kg × 2 400 kJ/kg = 1 200 kJ. A energia vem do corpo: é o calor latente que a água absorve para evaporar. Em ar úmido, a evaporação é lenta, e o suor que escorre sem evaporar não resfria.\n\nPegadinhas:\n• A (1,2 kJ): toma o calor latente como 2,4 kJ/kg.\n• B (2,4 kJ): usa só o valor de L em kJ/g, sem a massa.\n• C (600 kJ): divide a massa por dois mais uma vez.\n• D (1 000 kJ): não corresponde a operação coerente com os dados.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_09",
@@ -109747,7 +109803,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Pela lei de Faraday, só há força eletromotriz induzida quando o fluxo magnético através da bobina varia. A corrente alternada da base cria um campo que muda de intensidade e sentido continuamente; o fluxo variável induz corrente alternada na bobina do celular, que um circuito retifica para carregar a bateria. Com corrente contínua e constante, o fluxo não varia e nada é induzido.\n\nPegadinhas:\n• A: não há passagem de elétrons entre as bobinas; a energia é transferida pelo campo magnético.\n• C: a intensidade do campo não é o ponto; o que falta na corrente contínua é a variação do fluxo.\n• D: o aquecimento é uma perda indesejada, não o mecanismo de carga.\n• E: as bobinas são de fio condutor, e o texto diz que a base é alimentada por corrente.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_10",
@@ -109779,7 +109836,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A reflexão total só ocorre quando a luz vai de um meio de maior índice de refração para outro de menor índice e incide com ângulo maior que o ângulo limite (sen L = n_casca/n_núcleo). Nessas condições, não há raio refratado: toda a luz volta ao núcleo, em sucessivas reflexões.\n\nPegadinhas:\n• A: com casca de índice maior, a luz sempre refrataria para ela.\n• B: incidência perpendicular faz a luz atravessar a interface sem desvio.\n• C: a fibra não depende de espelhamento; a reflexão total é fenômeno de refração no limite.\n• E: índice maior significa velocidade menor; a luz é mais lenta no núcleo.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_11",
@@ -109811,7 +109869,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Inclinação é a razão entre altura e comprimento horizontal (a tangente do ângulo): 0,0833 = 0,5 / x, logo x = 0,5 ÷ 0,0833 ≈ 6 m. Pela razão 1 : 12, 0,5 m de altura exigem 12 × 0,5 = 6 m.\n\nPegadinhas:\n• B (8,3 m): toma a porcentagem como comprimento em metros.\n• C (12 m): usa a razão 1 : 12 para um desnível de 1 m, e não de 0,5 m.\n• D (41,7 m): multiplica 0,5 por 83,3 em vez de dividir.\n• E (60 m): erra uma casa decimal na divisão.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_12",
@@ -109843,7 +109902,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. pH 2 → [H⁺] = 10⁻² mol/L; pH 7 → [H⁺] = 10⁻⁷ mol/L. A razão é 10⁻² ÷ 10⁻⁷ = 10⁵ = 100 000. Cada unidade de pH corresponde a um fator 10 na concentração.\n\nPegadinhas:\n• A (3,5): divide os valores de pH (7 ÷ 2), como se a escala fosse linear.\n• B (5): subtrai os valores de pH e toma a diferença como a razão.\n• D (10⁷): usa só a concentração da água.\n• E (10¹⁴): soma os expoentes em vez de subtraí-los.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_13",
@@ -109875,7 +109935,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Raios paralelos formam com o objeto e sua sombra triângulos retângulos semelhantes: altura/sombra é constante. 1,8/1,2 = H/15 → H = 15 × 1,5 = 22,5 m.\n\nPegadinhas:\n• A (10 m): monta a proporção invertida (15 × 1,2 ÷ 1,8).\n• B (12 m): não corresponde a uma proporção coerente com os dados.\n• C (15 m): supõe que a altura é igual à sombra.\n• D (18 m): multiplica 15 por 1,2.",
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_14",
@@ -109907,7 +109968,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. As distâncias formam uma PA com a₁ = 1 000 e r = 200. O 30º termo é a₃₀ = 1 000 + 29 × 200 = 6 800 m. A soma é S = (a₁ + a₃₀) · 30 / 2 = 7 800 × 15 = 117 000 m = 117 km.\n\nPegadinhas:\n• A (6,8 km): é a distância do último dia, não o total.\n• C (120 km): usa 30 × 200 no último termo (a₃₀ = 7 000), em vez de 29 × 200.\n• D (204 km): multiplica o último termo pelo número de dias.\n• E (234 km): esquece de dividir por 2 na fórmula da soma.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_15",
@@ -109939,7 +110001,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. Em bacias compartilhadas, o país a montante (perto das nascentes) pode alterar a quantidade e o ritmo da água que chega aos de jusante. O Egito, em clima desértico, tem no Nilo quase sua única fonte de água doce; qualquer redução de vazão, sobretudo em anos secos, afeta agricultura e abastecimento. Daí a exigência de regras de operação.\n\nPegadinhas:\n• A: o Egito está a jusante (na foz), e o conflito não é sobre navegação.\n• B: a barragem é hidrelétrica; não desvia o rio.\n• C: inverte os usos — a Etiópia quer energia; o Egito depende do rio para irrigação e consumo.\n• E: o texto não menciona petróleo.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_16",
@@ -109971,7 +110034,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. A diferença entre UTC+9 e UTC−3 é de 12 horas, com Tóquio adiantada. O pouso ocorre 24 h depois da partida: 22 h do dia 11 em Brasília. Somando 12 h, são 10 h do dia 12 em Tóquio.\n\nPegadinhas:\n• B: é o horário de Brasília no pouso, sem a conversão.\n• C: subtrai as 12 h em vez de somar (Tóquio está a leste, adiantada).\n• D: soma 24 h duas vezes.\n• E: usa diferença de 14 h, como se o Brasil estivesse em UTC−5.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_17",
@@ -110003,7 +110067,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Livre comércio interno somado a uma tarifa externa comum define a união aduaneira; as listas de exceção a tornam 'imperfeita'. As etapas seguintes — mercado comum (livre circulação de fatores de produção) e união econômica e monetária (moeda única) — não foram atingidas, como o texto indica.\n\nPegadinhas:\n• A: o bloco foi além das preferências pontuais; eliminou grande parte das tarifas internas.\n• B: TEC é tarifa de comércio exterior, não moeda.\n• D: o texto diz que a circulação de trabalhadores e capitais é limitada.\n• E: é o modelo da UE, que o texto usa justamente como contraste.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_18",
@@ -110035,7 +110100,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Na Eclésia, o cidadão votava pessoalmente — democracia direta, e não representativa. Mas a cidadania era restrita: mulheres, metecos e escravizados, que eram grande parte da população, ficavam de fora. O trabalho escravo, aliás, liberava tempo de muitos cidadãos para a vida política.\n\nPegadinhas:\n• A: não havia representantes eleitos para legislar; e 'todos os habitantes' contradiz o texto.\n• B: as mulheres não eram cidadãs com direitos políticos.\n• C: a escravidão foi mantida e até sustentava a participação política.\n• D: a cidadania dependia da ascendência ateniense; a riqueza não fazia de um meteco um cidadão.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_19",
@@ -110067,7 +110133,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. A vacina era eficaz, mas a campanha era imposta de cima, com invasão de casas, num momento em que a 'modernização' da capital destruía moradias populares. Medo, desinformação e oposição política se somaram à revolta contra a violência das remoções. O episódio mostra que política de saúde depende também de confiança e de forma de implementação.\n\nPegadinhas:\n• A: houve oposição política ao governo, mas o movimento não visava restaurar o Império por meio da vacina.\n• C: os revoltosos eram sobretudo moradores pobres; Oswaldo Cruz e a medicina oficial defendiam a vacina.\n• D: a lei e a reforma eram iniciativas do próprio poder público, contra o qual a população se levantou.\n• E: o texto situa a revolta no Rio de Janeiro, então capital federal.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_20",
@@ -110099,7 +110166,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A 'guerra total' envolve toda a sociedade: o Estado dirige a economia, mobiliza mão de obra (inclusive feminina), raciona consumo e controla a informação. As medidas do texto mostram exatamente essa extensão do conflito para além das frentes de combate.\n\nPegadinhas:\n• A: o texto descreve racionamento, trabalho feminino e propaganda, que atingiam a população civil.\n• B: houve frentes coloniais, mas o conflito foi decidido principalmente na Europa.\n• C: a guerra se tornou de trincheiras, longa e de desgaste, após 1914.\n• E: as motivações eram imperialistas, nacionalistas e de alianças, não religiosas.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_21",
@@ -110131,7 +110199,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Em I, a oração adjetiva é restritiva: delimita o grupo — entre os pacientes, os que estavam em jejum fizeram o exame. Em II, entre vírgulas, é explicativa: acrescenta uma informação sobre todos os pacientes mencionados.\n\nPegadinhas:\n• B: a vírgula aqui tem valor sintático e semântico, não só de pausa.\n• C: inverte os sentidos.\n• D: a vírgula antes de 'que' é obrigatória na oração adjetiva explicativa.\n• E: a oração caracteriza 'pacientes', exercendo papel de adjetivo; o sujeito de 'fizeram' é 'os pacientes'.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_22",
@@ -110163,7 +110232,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. O texto opõe o rótulo ('often described as lazy') à explicação da pesquisa ('their internal clock actually shifts'): a melatonina é liberada mais tarde, e telas podem atrasá-la ainda mais.\n\nPegadinhas:\n• A: o texto apresenta a preguiça como rótulo que a pesquisa contesta ('but research shows').\n• B: o texto não faz essa recomendação; só aponta que telas podem atrasar a melatonina.\n• D: o problema é o horário de liberação ('released later'), não a quantidade; e a melatonina sinaliza sono.\n• E: o texto diz que muitos 'end up sleeping far less than they need'.\nVocabulário: 'shift' = deslocar; 'end up' = acabar por.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_23",
@@ -110195,7 +110265,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Weber distingue três tipos puros de dominação legítima: racional-legal (regras e cargos impessoais), tradicional (costume e herança) e carismática (qualidades extraordinárias atribuídas a uma pessoa). Como o carisma é pessoal, a morte do líder abre crise; Weber chama de 'rotinização do carisma' a sua transformação em tradição ou burocracia.\n\nPegadinhas:\n• A e C: o texto diz que ele não ocupa cargo público; a burocracia é a forma típica da dominação racional-legal.\n• B: o texto afirma que ele não herdou a posição.\n• D: 'econômica' não é um dos três tipos de dominação legítima de Weber, e o texto não fala em pagamento.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l3_24",
@@ -110227,7 +110298,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. As sombras representam o mundo das aparências e da opinião (dóxa); a saída, dolorosa, é a educação filosófica que conduz ao conhecimento das Ideias, cujo ápice é o Bem, simbolizado pelo Sol. O retorno e a zombaria lembram o destino de Sócrates, condenado pelos atenienses.\n\nPegadinhas:\n• A: a resistência dos prisioneiros não torna o conhecimento inútil; mostra a dificuldade de transmiti-lo.\n• C: a visão é metáfora; para Platão, o conhecimento verdadeiro é intelectual, não sensível.\n• D: é uma posição relativista, próxima dos sofistas, que Platão combate.\n• E: a alegoria valoriza a filosofia contra a opinião comum.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_01",
@@ -110259,7 +110331,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Para cada gene, Aa × Aa dá 1/4 de chance de aa. Como os genes segregam de forma independente (segunda lei de Mendel), a chance de não manifestar nenhuma condição é 3/4 × 3/4 = 9/16. Logo, pelo menos uma: 1 − 9/16 = 7/16.\n\nPegadinhas:\n• A (1/16): é a chance de manifestar as duas ao mesmo tempo.\n• C (1/2): soma 1/4 + 1/4, contando duas vezes o caso em que as duas ocorrem.\n• D (9/16): é a chance de não manifestar nenhuma.\n• E (3/4): é a chance de não manifestar uma condição específica.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_02",
@@ -110291,7 +110364,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A glicólise, no citoplasma, gera 2 ATP por glicose e consome NAD⁺. Com oxigênio suficiente, o NADH é reoxidado na cadeia respiratória; sem ele, a célula reduz o piruvato a lactato, regenerando NAD⁺ para manter a glicólise. É uma via rápida, mas de baixo rendimento — cerca de 2 ATP, contra aproximadamente 30 na respiração aeróbica.\n\nPegadinhas:\n• A: inverte os rendimentos.\n• B: a glicose (e o glicogênio muscular) não se esgota em segundos; e gorduras não originam lactato.\n• C: o produto final da respiração aeróbica é CO₂ e água.\n• E: a fermentação ocorre no citoplasma e justamente quando falta oxigênio.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_03",
@@ -110323,7 +110397,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. É a especiação alopátrica: o istmo impede o fluxo gênico, e cada população acumula mudanças próprias por mutação, seleção (ambientes diferentes) e deriva. Com o tempo, as diferenças tornam-se tão grandes que, mesmo reunidas, as populações não se cruzam com sucesso — isolamento reprodutivo, critério de espécies distintas.\n\nPegadinhas:\n• B: é raciocínio de herança de caracteres adquiridos por necessidade.\n• C: a barreira inicia o processo, mas a especiação exige acúmulo de diferenças ao longo de muitas gerações.\n• D: o istmo é terra firme; separa as populações marinhas.\n• E: o isolamento reprodutivo resulta de diferenças genéticas, não de decisão.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_04",
@@ -110355,7 +110430,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. O potencial de ação depende da abertura dos canais de Na⁺ voltagem-dependentes: o sódio entra, a membrana se despolariza, e a onda se propaga ao longo do axônio. Bloqueados os canais no trecho do nervo, o sinal gerado no dente não atravessa essa região e não chega ao encéfalo. Como o bloqueio é local e reversível, a consciência se mantém e o efeito acaba quando o fármaco é removido.\n\nPegadinhas:\n• A: a ação é local, no nervo periférico — por isso o paciente segue consciente.\n• B: o efeito é reversível em horas; não há destruição de neurônios.\n• C: o fármaco age nos canais de sódio, não na bomba, e o efeito não é permanente.\n• D: sem potencial de ação, a liberação de neurotransmissores na sinapse seguinte não ocorre.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_05",
@@ -110387,7 +110463,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. A 20 m, a pressão é 1 atm (ar) + 2 atm (água) = 3 atm; na superfície, 1 atm. Com temperatura e quantidade de gás constantes, p₁V₁ = p₂V₂ (lei de Boyle): 3 · V = 1 · V₂ → V₂ = 3V. Como os pulmões não se expandem tanto, prender a respiração na subida pode romper alvéolos.\n\nPegadinhas:\n• A: a quantidade de gás é constante, mas o volume depende da pressão.\n• B: usa 2 atm no fundo, esquecendo a pressão atmosférica.\n• D e E: invertem a relação; pressão menor implica volume maior.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_06",
@@ -110419,7 +110496,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. No H₂O₂, cada oxigênio tem NOX −1. Na reação, parte dos átomos vai a 0 (O₂, oxidação) e parte a −2 (H₂O, redução): é uma auto-oxirredução (desproporcionamento), com o mesmo reagente atuando como oxidante e redutor. O O₂ liberado forma a espuma.\n\nPegadinhas:\n• A: o gás é O₂, como mostra a equação.\n• C: o hidrogênio mantém NOX +1 nos dois lados.\n• D: catalisador não é consumido; a enzima apenas acelera a reação.\n• E: há transferência de elétrons entre átomos de oxigênio de moléculas diferentes de H₂O₂.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_07",
@@ -110451,7 +110529,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. Massa molar do NaCl: 23 + 35,5 = 58,5 g/mol. A fração de sódio em massa é 23/58,5 ≈ 0,39. Em 5 g de sal: 5 × 0,39 ≈ 2,0 g de sódio — o limite de cerca de 2 g de sódio por dia que corresponde à recomendação.\n\nPegadinhas:\n• A (0,4 g): usa a fração 0,39 sem multiplicar pelos 5 g, e arredonda.\n• B e C: não correspondem a cálculos coerentes com os dados.\n• E (3,0 g): é aproximadamente a massa de cloro, não a de sódio.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_08",
@@ -110483,7 +110562,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Hidroxila ligada diretamente a carbono de anel aromático caracteriza fenol (e não álcool). Nitrogênio ligado a uma carbonila (–NH–CO–) caracteriza amida — o nome químico do paracetamol é N-(4-hidroxifenil)acetamida.\n\nPegadinhas:\n• B e E: álcool exige –OH em carbono saturado, fora do anel aromático; cetona exige carbonila entre dois carbonos, e aqui ela está ligada ao nitrogênio.\n• C: não há –COOH nem –COO– ligando dois carbonos.\n• D: amina não tem carbonila ligada ao nitrogênio; a presença da C=O muda a função para amida.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_09",
@@ -110515,7 +110595,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Pela inércia, um corpo mantém sua velocidade se a força resultante sobre ele for nula. Quando o carro para, nada está freando o passageiro sem cinto: ele segue a 60 km/h até que o painel ou o para-brisa apliquem a força que o detém. O cinto aplica essa força antes, ao longo de uma distância maior e sobre regiões mais resistentes do corpo.\n\nPegadinhas:\n• A: o painel exerce força para trás no passageiro, para detê-lo, e não para a frente.\n• B: a gravidade é vertical e não explica o deslocamento horizontal.\n• C: não existe força que o 'lance'; ele apenas continua o movimento que já tinha.\n• D: a explicação adequada é a inércia; a energia do passageiro é dissipada no impacto.",
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_10",
@@ -110547,7 +110628,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Pelo teorema do impulso, F_média · Δt = Δp. A cabeça vai de 15 m/s a zero com ou sem airbag, então Δp é o mesmo. Se Δt passa de 0,01 s para 0,1 s, a força média cai a um décimo. A área maior de contato também distribui essa força.\n\nPegadinhas:\n• A: nos dois casos a cabeça para; a velocidade final é zero.\n• B: o efeito é o oposto — a força média diminui.\n• D: o impulso total é o mesmo, pois a cabeça precisa parar; o airbag não o anula.\n• E: a massa da cabeça não muda.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_11",
@@ -110579,7 +110661,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. v = λ · f → λ = 1 540 ÷ (5 × 10⁶) = 3,08 × 10⁻⁴ m ≈ 0,3 mm. Por isso o ultrassom distingue estruturas de frações de milímetro.\n\nPegadinhas:\n• A e C: erram uma potência de 10 na conversão de metros para milímetros.\n• D: erra duas potências de 10.\n• E (308 m): divide 1 540 por 5, sem o prefixo mega.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_12",
@@ -110611,7 +110694,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A luz interage com a matéria fóton a fóton. A energia de cada fóton depende só da frequência (E = hf): os de UVB têm energia capaz de excitar e alterar ligações do DNA, formando lesões. Aumentar a intensidade da luz visível aumenta o número de fótons, mas nenhum deles tem, sozinho, energia suficiente para esse efeito.\n\nPegadinhas:\n• A: é o erro que o modelo de fótons corrigiu — o efeito depende da energia de cada fóton, não só da quantidade.\n• B: frequência maior significa comprimento de onda menor.\n• C: ambas são ondas eletromagnéticas.\n• E: no ar, ambas se propagam praticamente com a mesma velocidade.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_13",
@@ -110643,7 +110727,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Dose: 15 mg/kg × 20 kg = 300 mg. Concentração: 200 mg / 5 mL = 40 mg/mL. Volume: 300 ÷ 40 = 7,5 mL.\n\nPegadinhas:\n• B (10 mL): usa a concentração de 30 mg/mL, sem fundamento nos dados.\n• C (15 mL): toma a dose em mg/kg como volume em mL.\n• D (30 mL): divide 300 por 10, como se houvesse 10 mg/mL.\n• E (75 mL): erra uma casa decimal.\nNa prática, erro de unidade em dose pediátrica é causa conhecida de intoxicação.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_14",
@@ -110675,7 +110760,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Custo: C(x) = 12 000 + 30x. Receita: R(x) = 90x. O ponto de equilíbrio é a interseção das retas: 90x = 12 000 + 30x → 60x = 12 000 → x = 200. Cada consulta contribui com 90 − 30 = 60 reais para cobrir o custo fixo.\n\nPegadinhas:\n• A, C e D: não correspondem à interseção das retas com os dados do enunciado.\n• B (133): divide o custo fixo pelo preço (12 000 ÷ 90), ignorando o custo de cada consulta.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_15",
@@ -110707,7 +110793,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. Os horários coincidem a cada mmc(6, 8) horas. 6 = 2 × 3 e 8 = 2³, então mmc = 2³ × 3 = 24. Vinte e quatro horas depois das 8 h de segunda: 8 h de terça.\n\nPegadinhas:\n• A (14 h): considera só o intervalo de 6 h.\n• B (22 h): soma os intervalos (6 + 8 = 14 h).\n• C (2 h): usa 18 h, que é múltiplo de 6, mas não de 8.\n• E (8 h de quarta): multiplica os intervalos (6 × 8 = 48 h), que é um múltiplo comum, mas não o mínimo.",
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_16",
@@ -110739,7 +110826,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. O acordo troca metas impostas por compromissos nacionais (as NDCs), que cada país define e deve tornar mais ambiciosos a cada ciclo. Ao incluir países em desenvolvimento, amplia a participação em relação a Kyoto, mantendo o princípio de responsabilidades comuns, porém diferenciadas.\n\nPegadinhas:\n• A: as metas são nacionalmente determinadas, não uniformes.\n• C: o texto diz que todos os signatários apresentam metas.\n• D: o acordo não proíbe combustíveis fósseis; estabelece metas de redução.\n• E: o mecanismo se baseia em transparência e revisão, não em multas automáticas.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_17",
@@ -110771,7 +110859,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. Roraima é a porta de entrada terrestre, mas tem população pequena e mercado de trabalho limitado; a chegada concentrada sobrecarregou saúde, educação e assistência. A interiorização leva migrantes, voluntariamente, para cidades com mais vagas e serviços, favorecendo a integração e aliviando o estado de entrada.\n\nPegadinhas:\n• A e C: o programa é de acolhimento e redistribuição, não de fechamento ou devolução.\n• B: Roraima já está na Região Norte; a interiorização leva sobretudo a outras regiões.\n• E: os abrigos são temporários; o objetivo é a integração em outras cidades.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_18",
@@ -110803,7 +110892,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. O MATOPIBA concentra a fronteira agrícola recente no Cerrado: terras planas, mais baratas, com chuvas sazonais, ocupadas por soja e algodão com alto uso de capital. A expansão eleva a produção, mas pressiona a vegetação nativa (o 'berço das águas'), a disponibilidade hídrica e os territórios de povos e comunidades tradicionais.\n\nPegadinhas:\n• B: o texto destaca máquinas, irrigação e culturas de exportação.\n• C: a região é de Cerrado, não de Mata Atlântica, e o texto menciona desmatamento.\n• D: os quatro estados citados ficam majoritariamente fora do bioma amazônico.\n• E: o texto fala da expansão da soja e de culturas de exportação.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_19",
@@ -110835,7 +110925,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Com tantas mortes, o trabalhador tornou-se escasso: os camponeses passaram a exigir melhores condições e a deixar as terras em busca de salários. Os senhores reagiram com leis e repressão, e as revoltas mostram o acirramento do conflito. O processo integra a crise do século XIV, que enfraqueceu as relações feudais.\n\nPegadinhas:\n• A: o texto mostra o contrário — revoltas e tentativas dos senhores de conter a mobilidade.\n• B: a população caiu drasticamente; a recuperação levou décadas.\n• C: a crise do feudalismo foi longa; não houve ruptura imediata nem repúblicas generalizadas.\n• D: as revoltas e as leis senhoriais indicam aumento, e não redução, das tensões.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_20",
@@ -110867,7 +110958,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. As leis do Ventre Livre e dos Sexagenários respondiam às pressões abolicionistas sem romper de imediato com a escravidão: os 'ingênuos' serviam aos senhores até os 21 anos, e poucos escravizados chegavam aos 60. A Lei Áurea extinguiu a escravidão, mas não ofereceu terra, educação ou trabalho aos libertos — lacuna ligada às desigualdades raciais posteriores.\n\nPegadinhas:\n• A: o texto mostra justamente a ausência de medidas de integração.\n• B: a lei libertava apenas os que nasceriam, e ainda os mantinha sob serviço.\n• D: o texto diz que não houve indenização.\n• E: o texto afirma que poucos atingiam os 60 anos.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_21",
@@ -110899,7 +110991,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Em plena Guerra Fria, Bandung reuniu países que queriam afirmar soberania sem se submeter a Washington ou a Moscou, e que denunciavam o colonialismo ainda existente. Daí a ideia de não alinhamento e de um 'Terceiro Mundo' com voz própria.\n\nPegadinhas:\n• A e D: o espírito da conferência era de não alinhamento a qualquer bloco militar.\n• C: a conferência condenou o colonialismo.\n• E: falou-se em cooperação econômica, não em moeda comum.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_22",
@@ -110931,7 +111024,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. O possessivo 'sua' pode remeter tanto ao médico quanto ao paciente. 'Deste' retoma o termo mais próximo — o paciente —, eliminando a dúvida. Outra solução seria 'na casa do paciente'.\n\nPegadinhas:\n• A, B e C: apenas deslocam 'em sua casa', mas o possessivo continua podendo se referir a qualquer um dos dois.\n• E: 'em casa' continua sem indicar de quem é a casa.\nNa FUVEST, ambiguidade costuma ser cobrada com pronome possessivo, adjunto deslocado ou termo que pode se ligar a dois núcleos.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_23",
@@ -110963,7 +111057,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. O texto atribui ao aumento das temperaturas a chegada do mosquito a lugares onde 'it was once absent' e uma estação de reprodução 'getting longer', mas ressalva: 'warming is not the whole story'.\n\nPegadinhas:\n• B: contradiz a ressalva final do texto.\n• C: o texto não fala de comportamento agressivo nem de horário de picada.\n• D: o texto diz que o mosquito 'used to be rare' nesses lugares — isso mudou.\n• E: a água parada em recipientes abertos aparece como fator que ajuda a disseminação.\nVocabulário: 'used to be' = costumava ser; 'breed' = reproduzir-se; 'the whole story' = toda a explicação.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l4_24",
@@ -110995,7 +111090,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Durkheim trata o suicídio como fato social, medido por taxas que variam conforme a integração e a regulação dos grupos. A anomia é a ausência ou o enfraquecimento das normas: em crises ou em enriquecimentos súbitos, as expectativas perdem limite, e a taxa sobe. Por isso o aumento também na prosperidade é o dado decisivo.\n\nPegadinhas:\n• A: o altruísta liga-se ao excesso de integração, não à falta de regulação.\n• B: o egoísta, em Durkheim, vem da fraca integração ao grupo — e a abordagem dele é sociológica, não individual.\n• C: o fatalista é o oposto da anomia: regulação excessiva.\n• D: o método de Durkheim busca causas sociais, não hereditárias.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_01",
@@ -111027,7 +111123,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. No início, com recursos abundantes, a população quadruplicou a cada ano (10 → 40 → 160). Depois, o crescimento desacelerou (400 → 600 → 640) e a população se manteve perto de 650: é a curva logística, com estabilização na capacidade de suporte. A redução da vegetação e a mortalidade de filhotes são a resistência ambiental que freia o crescimento.\n\nPegadinhas:\n• A: do ano 4 em diante, os valores praticamente não crescem; isso não é exponencial.\n• B: a população cresceu até o ano 6; não houve declínio contínuo.\n• D: a reprodução continua; o que aumenta é a mortalidade, compensando os nascimentos.\n• E: confunde a maior taxa de crescimento (início) com o maior tamanho (fim).",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_02",
@@ -111059,7 +111156,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. O plasma de uma pessoa B contém anticorpos anti-A, que aglutinariam hemácias com antígeno A (tipos A e AB). Ela pode receber hemácias sem antígeno A: B ou O. Por ser Rh⁻, deve receber hemácias Rh⁻, para não ser sensibilizada contra o antígeno Rh. Restam B⁻ e O⁻.\n\nPegadinhas:\n• B: inclui bolsas Rh⁺, que podem sensibilizar o paciente Rh⁻ e causar reação em transfusões futuras.\n• C: hemácias AB têm antígeno A e seriam aglutinadas pelos anti-A do receptor.\n• D: O⁻ é compatível, mas não é o único: B⁻ também serve.\n• E: inclui AB e Rh⁺.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_03",
@@ -111091,7 +111189,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Cada ciclo de PCR pode dobrar o número de cópias do trecho-alvo: depois de 30 ciclos, uma única molécula pode gerar mais de um bilhão. Por detectar o próprio material genético do vírus, o teste dispensa esperar a resposta imune do paciente, o que permite diagnóstico precoce.\n\nPegadinhas:\n• A: é o princípio da sorologia, e anticorpos levam dias para surgir.\n• B: o vírus não forma colônias; e o texto não descreve cultivo.\n• C: descreve o teste rápido de antígeno.\n• D: o aquecimento é da amostra, para separar as fitas de DNA; não mede febre.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_04",
@@ -111123,7 +111222,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. O etileno é um hormônio vegetal gasoso que desencadeia o amadurecimento: amolecimento, conversão de amido em açúcares, mudança de cor e aroma. Frutos maduros liberam muito etileno, e o saco fechado o mantém concentrado; o próprio amadurecimento estimula mais produção de etileno. As câmaras comerciais controlam esse gás.\n\nPegadinhas:\n• A: a temperatura influencia, mas o saco de papel não esquenta de forma relevante, e o controle comercial é feito pelo gás.\n• C: não há transferência de açúcares entre frutos.\n• D: a auxina atua no crescimento e no desenvolvimento do fruto, não no amadurecimento; e a ausência de luz não é o fator decisivo.\n• E: o papel deixa passar ar, e o amadurecimento não é fermentação.",
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_05",
@@ -111155,7 +111255,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. ΔH positivo indica processo endotérmico: para dissolver, o sistema absorve energia. Ela vem da agitação térmica da própria solução e do que está em contato com a bolsa — a temperatura cai. 'Frio' não é uma forma de energia; é a retirada de calor.\n\nPegadinhas:\n• A e C: ΔH > 0 indica absorção, não liberação de calor.\n• B: não se forma gelo; a solução apenas esfria.\n• E: a bolsa é fechada, e o efeito vem da dissolução, cujo ΔH não é nulo.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_06",
@@ -111187,7 +111288,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Óxidos ácidos, como o SO₂, reagem com água formando ácidos. O CaCO₃ reage com os íons H⁺: CaCO₃ + 2 H⁺ → Ca²⁺ + H₂O + CO₂, elevando o pH. A medida corrige o efeito no lago e no solo; a prevenção exige reduzir as emissões (dessulfurização, troca de combustível).\n\nPegadinhas:\n• A: o SO₂ é óxido ácido, e a calagem eleva o pH.\n• B: o calcário é aplicado no lago e no solo, não na atmosfera.\n• D: a água da chuva não neutraliza o ácido; ela o transporta.\n• E: o CO₂ forma ácido carbônico, fraco, responsável pela leve acidez natural da chuva; a chuva ácida descrita vem do enxofre do carvão.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_07",
@@ -111219,7 +111321,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. No modelo de Bohr, o elétron só ocupa níveis de energia definidos. Ao absorver energia, salta para um nível mais alto; ao voltar, emite um fóton com energia igual à diferença entre os níveis. Como esses níveis são diferentes em cada elemento, cada metal emite cores próprias.\n\nPegadinhas:\n• B: a luz vem de transições eletrônicas, não de aquecimento do núcleo.\n• C: é o modelo de Dalton, que não explica emissão de luz.\n• D: é o modelo de Thomson, que não explica cores específicas.\n• E: órbitas quaisquer com emissão contínua levariam a espectros contínuos e ao colapso do átomo — problema que o modelo de Bohr resolveu.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_08",
@@ -111251,7 +111354,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Na reação de adição, cada H₂ se liga aos dois carbonos de uma dupla, que vira simples. Cadeias com menos duplas cis (as que dobram a cadeia) se alinham melhor, com mais interações de dispersão: o material fica sólido à temperatura ambiente. A isomerização cis → trans nas duplas que restam produz as gorduras trans.\n\nPegadinhas:\n• A: é adição de H₂ à dupla, não substituição de oxigênio.\n• B: as cadeias não são quebradas; ficam mais retas.\n• C: a gordura trans ainda tem ligações duplas, só que em configuração trans.\n• D: são isômeros com propriedades físicas e efeitos biológicos diferentes — como mostra a própria proibição.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_09",
@@ -111283,7 +111387,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Para descrever uma trajetória circular, cada porção da bolsa precisa de força resultante centrípeta, de módulo m·ω²·r. Com ω grande, a aceleração equivale a milhares de vezes g. No referencial da bolsa, é como se a 'gravidade' fosse multiplicada: componentes de maior densidade sedimentam muito mais rápido em direção ao fundo, que fica do lado de fora do giro.\n\nPegadinhas:\n• A: a separação ocorre justamente porque componentes de densidades diferentes se comportam de modo diferente.\n• C: não há evaporação; a bolsa é fechada.\n• D: as hemácias ficam íntegras e são usadas em transfusões.\n• E: a centrífuga não usa campo magnético; o ferro da hemoglobina não explica a separação.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_10",
@@ -111315,7 +111420,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. Pela lei de Ohm, I = V/R = 127 ÷ 1 000 = 0,127 A = 127 mA — faixa capaz de causar fibrilação. Com a pele seca, I = 127 ÷ 100 000 ≈ 1,27 mA, um formigamento. A diferença de cem vezes é o motivo de evitar aparelhos elétricos com mãos molhadas.\n\nPegadinhas:\n• A: erra a conversão por um fator mil.\n• B: usa a resistência da pele seca.\n• C: erra uma casa decimal.\n• E: divide 127 por 100 Ω, valor que não está nos dados.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_11",
@@ -111347,7 +111453,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Em kelvin, as fontes estão a 600 K e 300 K. O rendimento de Carnot é 1 − 300/600 = 0,5: nenhuma máquina operando entre essas temperaturas pode converter mais de 50% do calor em trabalho, qualquer que seja o material. O limite vem da segunda lei da termodinâmica, não da tecnologia.\n\nPegadinhas:\n• A: o limite não é 100%; é o de Carnot.\n• B: usa temperaturas em °C, o que não vale na fórmula.\n• D: não há limite universal de 25%; o máximo depende das temperaturas das fontes.\n• E: toda máquina térmica precisa rejeitar calor para a fonte fria; sem isso, nenhuma funciona.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_12",
@@ -111379,7 +111486,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. O atrito entre materiais diferentes (solado e piso, tecidos) transfere elétrons e eletriza os corpos. Se as cargas se acumulam, a diferença de potencial pode produzir uma descarga — a faísca. Com pisos condutores e aterramento, há um caminho para que as cargas escoem para a terra assim que surgem.\n\nPegadinhas:\n• B: eletrizar as pessoas aumentaria o risco de descargas.\n• C: isolar impediria o escoamento — é o oposto do objetivo.\n• D: acumular cargas aumenta o risco de descarga.\n• E: o escoamento é contínuo e envolve correntes mínimas; não há aquecimento relevante.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_13",
@@ -111411,7 +111519,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Custos mensais: A(x) = 100 + 50x e B(x) = 250 + 20x. B < A ⟺ 250 + 20x < 100 + 50x ⟺ 150 < 30x ⟺ x > 5. Com exatamente 5 consultas, os planos custam o mesmo (R$ 350,00).\n\nPegadinhas:\n• A, B e C: não correspondem à interseção das retas; com 3 consultas, A custa 250 e B, 310.\n• D: inverte a desigualdade — com poucas consultas, o plano A é o mais barato.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_14",
@@ -111443,7 +111552,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Volume: 2 × 1,5 × 1 = 3 m³ = 3 000 L. Consumo diário: 4 × 150 = 600 L. Duração: 3 000 ÷ 600 = 5 dias.\n\nPegadinhas:\n• A: não corresponde a cálculo coerente com os dados.\n• C (7,5 dias): divide 3 000 L por 400 L, como se cada pessoa consumisse 100 L.\n• D (20 dias): considera o consumo de uma só pessoa.\n• E (50 dias): erra a conversão, tomando 3 m³ como 30 000 L.",
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_15",
@@ -111475,7 +111585,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A mistura tem 1 + 49 = 50 partes, das quais 1 é água sanitária. A concentração cai para 1/50 da original: 2% ÷ 50 = 0,04%.\n\nPegadinhas:\n• A e B: erram uma ou duas casas decimais na divisão.\n• C (0,01%): não corresponde à diluição indicada.\n• E (0,4%): divide por 5 em vez de 50.\nDividir por 49 em vez de 50 daria quase o mesmo valor aqui, mas, em diluições menores, contar só a água leva a erro maior.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_16",
@@ -111507,7 +111618,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Ao financiar infraestrutura, a China garante rotas para suas exportações e importações de matérias-primas, abre mercados para suas empresas de construção e amplia sua influência diplomática. O endividamento citado pelos críticos mostra que se trata de empréstimos, não de doações.\n\nPegadinhas:\n• A: a iniciativa é econômica e de infraestrutura, não uma aliança militar formal.\n• B: o texto fala em empréstimos e endividamento.\n• D: não há tratado de livre comércio entre todos os participantes.\n• E: a iniciativa inclui portos e rotas marítimas.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_17",
@@ -111539,7 +111651,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. O semiárido tem chuvas concentradas em poucos meses e muito irregulares de um ano para outro, altas taxas de evaporação e rios que secam na estiagem. O São Francisco, perene por receber águas de áreas mais úmidas, é usado como fonte para abastecer bacias do Nordeste Setentrional.\n\nPegadinhas:\n• B: a água é levada do rio para o semiárido, não do litoral.\n• C: o São Francisco é justamente um rio perene que atravessa o semiárido.\n• D: o projeto é de abastecimento, não de navegação.\n• E: a salinização de aquíferos ocorre em alguns pontos, mas não é o problema central nem tem essa causa no interior.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_18",
@@ -111571,7 +111684,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Médias escondem distribuição: dois países com a mesma renda média podem ter desigualdades muito diferentes. O índice ajustado desconta essa desigualdade em cada dimensão, e a diferença entre os dois índices mostra quanto desenvolvimento humano 'se perde' pela má distribuição — perda grande no caso do Brasil.\n\nPegadinhas:\n• A e D: o texto lista as três dimensões, incluindo saúde (expectativa de vida) e educação.\n• B: o IDH usa indicadores objetivos, não pesquisas de felicidade.\n• C: os indicadores são nacionais e incluem toda a população.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_19",
@@ -111603,7 +111717,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Lutero sustentou que a salvação vem da fé (e não da compra de perdões) e que a Bíblia, traduzida para o alemão, deveria ser lida pelos fiéis. A imprensa de tipos móveis multiplicou panfletos e Bíblias, e os príncipes viram na ruptura com Roma uma oportunidade de autonomia política e de confisco de terras da Igreja.\n\nPegadinhas:\n• A e E: descrevem justamente o que Lutero criticava.\n• C: os príncipes apoiaram Lutero para se libertar da autoridade papal.\n• D: a Reforma criou novas igrejas cristãs; não aboliu o cristianismo.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_20",
@@ -111635,7 +111750,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. O texto reúne os elementos do plantation: grandes propriedades, um produto principal para o mercado externo e mão de obra escravizada. O tráfico atlântico era, ele próprio, parte do lucro do sistema colonial, que concentrava ganhos nos comerciantes e na metrópole.\n\nPegadinhas:\n• A e B: o texto descreve grandes extensões, produção para a Europa e trabalho escravo.\n• C: o engenho processava a cana, mas a colônia não exportava máquinas; dependia de manufaturas europeias.\n• E: a Coroa lucrava com o açúcar e com o tráfico, sob o monopólio comercial.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_21",
@@ -111667,7 +111783,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Com arsenais capazes de destruição mútua, nenhuma superpotência podia buscar vitória militar sem risco extremo. A saída combinou retirada dos mísseis soviéticos, garantia de não invasão de Cuba e retirada discreta dos mísseis americanos na Turquia. Depois da crise, criou-se a 'linha direta' entre Washington e Moscou.\n\nPegadinhas:\n• A: o compromisso foi justamente o de não invadir Cuba.\n• B: não houve confronto militar direto; a retirada americana se limitou à Turquia e foi negociada.\n• D: Cuba seguiu alinhada à União Soviética.\n• E: a crise levou a mais canais de comunicação, não ao rompimento.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_22",
@@ -111699,7 +111816,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Em I, o foco está no referente — a composição do medicamento —, em linguagem objetiva: função referencial. Em II, o verbo no imperativo ('Mantenha') dirige-se ao leitor, procurando orientar seu comportamento: função conativa (ou apelativa).\n\nPegadinhas:\n• B e E: não há expressão de sentimentos do emissor nem trabalho estético com a forma.\n• C: o texto não fala da própria língua nem serve para testar o canal.\n• D: inverte as funções dos trechos.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_23",
@@ -111731,7 +111849,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. O texto contrasta a explicação comum ('a lack of information') com a pesquisa: muitos pais 'have heard the scientific facts', mas lhes falta 'trust'. A estratégia mais eficaz é a conversa com um profissional conhecido, 'who listens to concerns before answering them'.\n\nPegadinhas:\n• A e D: o texto afirma que muitos pais hesitantes conhecem os fatos científicos.\n• B: o texto diz que campanhas que apenas repetem estatísticas são menos eficazes.\n• C: o texto não fala em obrigatoriedade.\nVocabulário: 'hesitancy' = hesitação; 'trust' = confiança; 'deliver' = transmitir, entregar.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_24",
@@ -111763,7 +111882,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. O estado de natureza, para Hobbes, é uma 'guerra de todos contra todos' em potencial. Por medo da morte violenta, os indivíduos renunciam ao direito de fazer tudo o que querem e transferem ao soberano (o Leviatã) o poder de impor leis e garantir a paz. A segurança justifica um poder forte.\n\nPegadinhas:\n• A: Hobbes defende transferência ampla de poder, não a preservação de todos os direitos com representantes temporários.\n• C: é a ideia de Rousseau, para quem o homem natural seria bom.\n• D: fazer justiça pelas próprias mãos é característica do estado de natureza, que o contrato quer superar.\n• E: o contrato cria o Estado; não o abole.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_01",
@@ -111795,7 +111915,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A trissomia 21 é uma alteração cromossômica numérica. Na maioria dos casos, os dois cromossomos 21 do ovócito não se separam corretamente na meiose (não disjunção): o óvulo fica com dois, e a fecundação gera um zigoto com três. Como a meiose do ovócito fica interrompida desde a vida fetal, com a idade aumenta a chance de falhas nessa separação.\n\nPegadinhas:\n• A: a síndrome decorre de um cromossomo inteiro a mais, não de mutação em um gene.\n• B: a mãe não tem a síndrome; o erro ocorre na formação do gameta.\n• C: a idade da mãe não altera os espermatozoides; e a contribuição paterna é minoritária.\n• E: o número de cromossomos do embrião é definido na fecundação, não pelo útero.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_02",
@@ -111827,7 +111948,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Antibióticos de amplo espectro atingem bactérias de muitos grupos, inclusive as da microbiota. Com menos competidoras, espécies resistentes ao fármaco e normalmente controladas, como o C. difficile, ocupam o espaço e produzem toxinas que causam a diarreia. É um exemplo do papel protetor da microbiota.\n\nPegadinhas:\n• A: 'amplo espectro' significa justamente atingir muitos tipos de bactéria.\n• C: bactérias de uma espécie não se convertem em outra.\n• D: o antibiótico não alimenta a bactéria; a vantagem dela vem da eliminação das competidoras.\n• E: antibióticos atuam em estruturas bacterianas, não nas células humanas do intestino.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_03",
@@ -111859,7 +111981,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. É uma alça de retroalimentação negativa: T3 e T4 altos inibem a liberação de TSH; baixos, a estimulam. Sem iodo, a tireoide não consegue produzir os hormônios, o TSH permanece elevado e a glândula cresce, tentando compensar — o bócio. O sal iodado fornece o elemento que falta na dieta.\n\nPegadinhas:\n• A: no bócio por falta de iodo, os hormônios estão baixos, não em excesso.\n• B: o cloro não substitui o iodo nos hormônios.\n• C: o TSH aumenta, e não diminui.\n• D: o sal não se acumula na glândula; o que importa é o iodo adicionado a ele.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_04",
@@ -111891,7 +112014,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. A tendência de longo prazo reflete o carbono fóssil e o desmatamento acrescentados à atmosfera mais depressa do que oceanos e vegetação o retiram. A oscilação anual é a 'respiração' da biosfera: o Hemisfério Norte tem a maior parte das terras e das florestas; na primavera e no verão de lá, a fotossíntese retira CO₂ e a concentração cai até setembro e outubro; no outono e no inverno, predominam respiração e decomposição, e ela volta a subir.\n\nPegadinhas:\n• B: as erupções não explicam um ciclo anual regular, e o próprio observatório desconta sinais vulcânicos locais.\n• C: oceanos que absorvem mais CO₂ reduziriam a concentração; e a oscilação acompanha a vegetação, não o consumo de combustível.\n• D: a fotossíntese não é a única variável; a principal causa é a emissão fóssil.\n• E: a fotossíntese retira CO₂, e a decomposição o libera.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_05",
@@ -111923,7 +112047,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Se 100 mL contêm 5 g, 500 mL contêm 5 × 5 = 25 g. Em outras palavras, a solução tem 50 g/L, e meio litro contém 25 g.\n\nPegadinhas:\n• A (2,5 g): divide por 2 em vez de multiplicar por 5.\n• B (5 g): toma 5% como a massa total da bolsa.\n• D (50 g): é a massa em 1 L, não em 500 mL.\n• E (250 g): erra uma casa decimal.",
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_06",
@@ -111955,7 +112080,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. Na pilha formada entre os dois metais, oxida-se o de menor potencial de redução. Magnésio e zinco, com E° menores que −0,44 V, perdem elétrons e se desgastam (por isso são 'de sacrifício'), e o ferro, como cátodo, fica protegido. É o mesmo princípio da galvanização.\n\nPegadinhas:\n• A, B e E: cobre e prata, com potenciais maiores, fariam o ferro atuar como ânodo — acelerariam sua corrosão.\n• C: o efeito depende de quais metais estão em contato; alguns protegem, outros prejudicam.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_07",
@@ -111987,7 +112113,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. O carbono do etanol vem do CO₂ fixado pela cana na fotossíntese; ao queimar, ele volta à atmosfera, num ciclo curto. O carbono da gasolina estava retido no subsolo e é acrescentado à atmosfera. Por isso o etanol emite menos em termos líquidos — mas, como o texto indica, a produção agrícola e industrial gera emissões, e o balanço não é zero.\n\nPegadinhas:\n• A: a combustão do etanol produz CO₂ e água.\n• C: o etanol é um álcool (C₂H₅OH), não hidrocarboneto.\n• D: o CO₂ se mistura à atmosfera.\n• E: a cana fixa carbono que será liberado na queima do próprio etanol; não compensa as emissões da gasolina.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_08",
@@ -112019,7 +112146,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. A polaridade da molécula depende da soma vetorial dos momentos dipolares das ligações. No CO₂ (O=C=O, linear), os dois vetores têm mesma intensidade e sentidos opostos: a resultante é nula. Na água, os pares de elétrons livres do oxigênio tornam a geometria angular, e os vetores das ligações O–H se somam.\n\nPegadinhas:\n• A: o oxigênio é mais eletronegativo que o carbono; as ligações são polares, como diz o texto.\n• B: o número de átomos não determina a polaridade.\n• C: o estado físico não define a polaridade (há gases polares, como o HCl).\n• D: no CO₂, o carbono não tem pares livres; são os pares do oxigênio, na água, que causam a geometria angular.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_09",
@@ -112051,7 +112179,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Os movimentos são independentes: a componente perpendicular às margens é só a do barco, 4 m/s. O tempo é 120 ÷ 4 = 30 s. Nesse tempo, a correnteza arrasta o barco 3 × 30 = 90 m rio abaixo; a velocidade resultante, de 5 m/s, determina a trajetória, mas não o tempo de travessia.\n\nPegadinhas:\n• A (17 s): soma as velocidades (4 + 3 = 7 m/s).\n• B (24 s): usa a velocidade resultante, de 5 m/s, como se ela fosse perpendicular às margens.\n• D (40 s): usa a velocidade da correnteza.\n• E (120 s): não corresponde a operação coerente com os dados.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_10",
@@ -112083,7 +112212,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Sem atrito, a energia mecânica se conserva: m·g·h = m·v²/2, logo v = √(2gh) = √(2 × 10 × 5) = √100 = 10 m/s. A massa se cancela: uma criança e um adulto chegariam com a mesma velocidade.\n\nPegadinhas:\n• B (14 m/s): usa √200, dobrando a altura ou a gravidade.\n• C (25 m/s): não corresponde a operação coerente com os dados.\n• D (50 m/s): calcula g·h, sem a raiz e sem o fator 2.\n• E (100 m/s): calcula 2gh e esquece a raiz quadrada.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_11",
@@ -112115,7 +112245,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. No espelho côncavo, objetos entre o foco e o vértice produzem raios refletidos divergentes, cujos prolongamentos formam uma imagem virtual, direita e maior — o mesmo princípio do espelho de aumento para maquiagem. Para objetos além do foco, a imagem é real e invertida.\n\nPegadinhas:\n• A e C: nessas posições a imagem é real e invertida (menor ou de mesmo tamanho).\n• B: no foco, os raios refletidos saem paralelos e não formam imagem nítida.\n• E: o espelho côncavo forma imagens menores ou invertidas conforme a posição do objeto.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_12",
@@ -112147,7 +112278,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. A gravidade, com 90% do valor da superfície, é justamente o que curva a trajetória da estação. Tudo dentro dela cai com a mesma aceleração, mas a velocidade horizontal faz a 'queda' contornar a Terra. Sem força de contato entre astronauta e piso, a sensação é de ausência de peso (imponderabilidade).\n\nPegadinhas:\n• A: o texto informa que a gravidade lá é cerca de 90% da superficial.\n• C: no referencial inercial, não há força centrífuga; a gravidade é a força centrípeta.\n• D: os motores fazem correções de órbita, não anulam o peso.\n• E: a massa não depende do meio; os astronautas têm a mesma massa.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_13",
@@ -112179,7 +112311,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. O seno varia entre −1 e 1; então h varia entre 2 − 1,5 = 0,5 m e 2 + 1,5 = 3,5 m. O período de sen(k·t) é 2π/k = 2π ÷ (π/6) = 12 h: é o intervalo entre duas marés altas.\n\nPegadinhas:\n• A: 6 h é meio período, e 1,5 m é a amplitude, não a altura máxima.\n• B: usa meio período.\n• C: 2 m é o nível médio.\n• D: π/6 é o coeficiente de t, não o período.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_14",
@@ -112211,7 +112344,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Como os membros têm a mesma função, a ordem da escolha não importa: é uma combinação. C(8, 3) = 8 · 7 · 6 ÷ (3 · 2 · 1) = 336 ÷ 6 = 56.\n\nPegadinhas:\n• B e C: dividem 336 por 3 ou por 2, sem descontar todas as ordens possíveis.\n• D (336): é o arranjo, que trataria como diferentes as mesmas três pessoas escolhidas em outra ordem.\n• E (512): é 8³, que permitiria repetir o mesmo médico.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_15",
@@ -112243,7 +112377,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. A escada é a hipotenusa de um triângulo retângulo de catetos 12 m e 9 m: L² = 12² + 9² = 144 + 81 = 225, L = 15 m.\n\nPegadinhas:\n• A (10,5 m): faz a média dos catetos.\n• B (12 m): usa apenas a altura.\n• D (21 m): soma os catetos.\n• E (225 m): esquece a raiz quadrada.",
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_16",
@@ -112275,7 +112410,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A terra tem menor calor específico que a água: aquece e esfria mais depressa. No verão, o ar sobre o continente aquecido sobe (baixa pressão) e é substituído pelo ar úmido do oceano, que, ao subir — inclusive contra o Himalaia —, condensa e chove. No inverno, o continente fica mais frio que o oceano, e o gradiente se inverte.\n\nPegadinhas:\n• A: inverte o aquecimento relativo e a pressão.\n• B: correntes marinhas influenciam o clima, mas não explicam a inversão sazonal dos ventos.\n• C: o Himalaia intensifica as chuvas por efeito orográfico, mas não gera os ventos.\n• E: a rotação da Terra não muda de sentido.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_17",
@@ -112307,7 +112443,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. A transição energética elevou a demanda por lítio. Para os países do triângulo, o desafio é antigo: exportar commodity com pouco valor agregado ou desenvolver indústria. A extração em salares evapora grandes volumes de salmoura, em região árida, gerando conflitos com comunidades que dependem da pouca água disponível.\n\nPegadinhas:\n• A: os salares estão no altiplano andino e no deserto; e o texto cita conflitos pela água.\n• C: o texto discute decisões dos próprios governos da região.\n• D: o texto destaca a importância crescente das baterias.\n• E: o triângulo do lítio fica nos Andes, não no Brasil.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_18",
@@ -112339,7 +112476,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Toda projeção plana da superfície esférica distorce algo. A de Mercator preserva os ângulos (é conforme), o que serve à navegação, mas estica paralelos e meridianos nas altas latitudes: regiões próximas aos polos, como a Groenlândia, aparecem muito maiores do que são.\n\nPegadinhas:\n• A: projeções equivalentes, como a de Peters, preservam áreas; a de Mercator preserva ângulos.\n• B: nenhuma projeção plana do globo é isenta de distorções.\n• C: a projeção é do século XVI, muito anterior aos satélites.\n• D: inverte o efeito; a distorção cresce em direção aos polos.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_19",
@@ -112371,7 +112509,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. A 'higiene racial' era parte central da ideologia nazista, a mesma que conduziria ao Holocausto. As leis e o programa T4 foram políticas de Estado, executadas por médicos e enfermeiros. O julgamento dos médicos em Nuremberg deu origem ao Código de Nuremberg (1947), que exige consentimento voluntário em pesquisas com seres humanos.\n\nPegadinhas:\n• B: a esterilização era compulsória, e os assassinatos, sem consentimento.\n• C: as medidas eram leis e programas oficiais.\n• D: o programa matava as pessoas que dizia 'tratar'.\n• E: leis de esterilização existiram em outros países, mas o assassinato sistemático do T4 é próprio do regime nazista e ligado à sua ideologia racial.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_20",
@@ -112403,7 +112542,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. A Revolução de 1930 se apresentou como reação às fraudes e ao poder das oligarquias. O voto secreto e a Justiça Eleitoral dificultavam o controle dos eleitores pelos coronéis. O voto feminino resultou também de décadas de luta de sufragistas, como Bertha Lutz.\n\nPegadinhas:\n• A: o voto secreto dificulta, e não facilita, o voto de cabresto.\n• B: o código organizou eleições; elas seriam suspensas só no Estado Novo (1937).\n• D: a Constituição de 1891 não garantia o voto às mulheres.\n• E: o código não estabeleceu voto censitário.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_21",
@@ -112435,7 +112575,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. O desenvolvimentismo de JK combinou Estado (energia, transportes, Brasília), capital nacional e capital estrangeiro, atraído para setores como o automobilístico. O crescimento foi acelerado, mas financiado com emissão de moeda e empréstimos externos, o que deixou inflação e dívida elevadas para os governos seguintes.\n\nPegadinhas:\n• A: o capital estrangeiro foi incentivado.\n• B: a prioridade foi a indústria.\n• C: a capital foi transferida para Brasília.\n• E: o texto afirma o crescimento da inflação e da dívida.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_22",
@@ -112467,7 +112608,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. 'Haver' no sentido de existir e 'fazer' indicando tempo decorrido são impessoais: não têm sujeito e ficam na 3ª pessoa do singular. Assim, o correto é 'Havia muitos pacientes' e 'Faz três meses'. Só a frase II está correta.\n\nPegadinhas:\n• A e D: em I, 'muitos pacientes' é objeto direto, não sujeito; o verbo não concorda com ele.\n• C: 'Fazem três meses' flexiona um verbo impessoal.\n• E: inclui as duas frases incorretas.\nAtenção: 'existir', ao contrário de 'haver', é pessoal — 'Existiam muitos pacientes' está correto.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_23",
@@ -112499,7 +112641,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. O texto distingue o uso consolidado ('Bone marrow transplants [...] have saved lives for decades') das 'unproven treatments' vendidas sem 'evidence from clinical trials', que 'have caused serious harm'.\n\nPegadinhas:\n• A: o transplante de medula é citado como tratamento usado há décadas.\n• B: o texto diz que essas clínicas vendem terapias 'without evidence'.\n• C: os cientistas alertam contra tratamentos não comprovados, não contra a pesquisa, descrita como 'promising'.\n• D: o texto as descreve como 'expensive' e associadas a danos.\nVocabulário: 'give rise to' = originar; 'unproven' = não comprovado; 'harm' = dano.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l6_24",
@@ -112531,7 +112674,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Comparando pessoas com a mesma escolaridade, brancos ganham mais em todos os níveis (12 × 10; 18 × 14; 40 × 28), e a diferença absoluta é maior no ensino superior (R$ 12 por hora). Se a escolaridade explicasse tudo, as diferenças sumiriam dentro de cada nível. Isso aponta para outros fatores, como discriminação, redes de contato e ocupação de cargos.\n\nPegadinhas:\n• B: no superior, a diferença é a maior em valor absoluto.\n• C: a diferença dentro de cada nível mostra que não.\n• D: a comparação mistura níveis diferentes; a desigualdade aparece na comparação entre iguais.\n• E: nos dois grupos, o rendimento cresce com a escolaridade.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_01",
@@ -112563,7 +112707,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. O T. cruzi presente nos barbeiros triturados contaminou a polpa e alcançou as mucosas do sistema digestório — a transmissão oral. O tratamento térmico (branqueamento) mata o protozoário sem inviabilizar o consumo do açaí.\n\nPegadinhas:\n• A: o agente é um protozoário, como o texto informa.\n• B: o fruto não produz o parasita; ele vem dos insetos.\n• C: o texto descreve outra via, a oral, nos surtos citados.\n• D: a doença de Chagas não é transmitida pelo ar.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_02",
@@ -112595,7 +112740,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Fungos não fazem fotossíntese: liberam enzimas no meio, digerem a matéria orgânica externamente e absorvem os produtos — por isso decompõem restos e reciclam nutrientes. A penicilina é uma substância que o Penicillium libera e que inibe a síntese da parede celular de bactérias, vantagem na competição por recursos.\n\nPegadinhas:\n• A e E: fungos são heterótrofos e não produzem oxigênio por fotossíntese.\n• B: fungos são eucariontes; não são vírus.\n• D: fungos não são bactérias, e a penicilina age a distância, sem fagocitose.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_03",
@@ -112627,7 +112773,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. O óvulo contém milhares de mitocôndrias; o espermatozoide leva poucas, na peça intermediária, e elas são eliminadas no zigoto. Assim, o DNA mitocondrial é de herança materna: a mãe o transmite a todos os filhos, e os filhos homens não o passam adiante.\n\nPegadinhas:\n• B: herança ligada ao X não explica a transmissão da mãe a todos os filhos nem a ausência total de transmissão pelos pais às filhas.\n• C: dominância é conceito de alelos nucleares; não explica a origem das mitocôndrias.\n• D: o espermatozoide tem mitocôndrias, que fornecem ATP para o movimento do flagelo.\n• E: as mitocôndrias do embrião derivam das do óvulo, não de transferência placentária.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_04",
@@ -112659,7 +112806,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. Univitelinos vêm de um só zigoto, que se divide no início do desenvolvimento: mesmo genoma e mesmo sexo. Bivitelinos vêm de dois zigotos e compartilham, em média, metade dos alelos, como irmãos nascidos em épocas diferentes. Diferenças entre univitelinos tendem a refletir ambiente e efeitos epigenéticos — daí o valor desses estudos.\n\nPegadinhas:\n• A: descreve os univitelinos, e não os bivitelinos.\n• B: um espermatozoide fecunda apenas um óvulo.\n• C: o sexo é definido na fecundação pelos cromossomos sexuais; univitelinos têm os mesmos.\n• E: compartilhar o útero não torna os genomas idênticos.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_05",
@@ -112691,7 +112839,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. A volume constante, p/T é constante (com T em kelvin): 30/300 = p/330 → p = 33 psi. Por isso calibrar com o pneu quente leva a pressão abaixo da recomendada quando ele esfria.\n\nPegadinhas:\n• A: supõe que a pressão não muda com o aquecimento.\n• C (36 psi): aumenta a pressão em 20%, sem relação com a variação de temperatura absoluta.\n• D: toma a temperatura como pressão.\n• E (63 psi): usa graus Celsius na proporção (30 × 57/27).",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_06",
@@ -112723,7 +112872,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Os gases se adsorvem na superfície metálica, onde ligações se enfraquecem e as reações ocorrem por um mecanismo de menor energia de ativação. Os metais são regenerados ao fim de cada ciclo, por isso duram anos. O catalisador não muda o ΔH nem a posição do equilíbrio; só a velocidade com que ele é atingido.\n\nPegadinhas:\n• A: se fossem consumidos, os metais precisariam ser repostos.\n• B: o catalisador não altera a variação de entalpia.\n• C: os gases são transformados, não armazenados.\n• D: o catalisador acelera igualmente as reações direta e inversa; não desloca o equilíbrio.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_07",
@@ -112755,7 +112905,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. A diálise combina difusão e o tamanho dos poros. Solutos pequenos passam do lado mais concentrado (sangue) para o menos concentrado (dialisato, que é renovado continuamente); células e proteínas não atravessam a membrana. É assim que a máquina substitui parte da função de filtração dos rins.\n\nPegadinhas:\n• A: inverte o papel da membrana.\n• B: não há aquecimento nem evaporação.\n• D: a ureia não é transformada; é removida.\n• E: o filtro não é centrifugado.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_08",
@@ -112787,7 +112938,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. O dicromato é oxidante forte: retira elétrons do etanol, que se oxida a acetaldeído e, depois, a ácido acético. O cromo recebe esses elétrons e passa de +6 a +3 — redução —, mudando a cor de alaranjado para verde.\n\nPegadinhas:\n• B: inverte os processos; o cromo termina como Cr³⁺, com NOX menor.\n• C: a mudança de cor revela a mudança do NOX do cromo.\n• D: passar de +6 a +3 é redução, não oxidação.\n• E: inverte os papéis; o dicromato é o oxidante, e o etanol, o redutor.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_09",
@@ -112819,7 +112971,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A diferença é de 100 − 70 = 30 dB, ou três aumentos de 10 dB. A intensidade fica multiplicada por 10 × 10 × 10 = 1 000. A escala é logarítmica: β = 10 · log(I/I₀).\n\nPegadinhas:\n• A (3 vezes): conta os degraus de 10 dB sem transformá-los em fator multiplicativo.\n• B (30 vezes): toma a diferença em dB como razão de intensidades.\n• C (100 vezes): usa apenas dois aumentos de 10 dB.\n• E (10 000 vezes): usa quatro aumentos de 10 dB.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_10",
@@ -112851,7 +113004,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Condução e convecção exigem meio material; no vácuo, não ocorrem. A radiação atravessa o vácuo, mas superfícies espelhadas refletem grande parte dela de volta. A tampa isolante limita a perda por convecção e condução pela boca da garrafa. Os mesmos mecanismos protegem uma bebida gelada do calor externo.\n\nPegadinhas:\n• A: troca as funções; o vácuo não impede a radiação, que se propaga nele.\n• C: a garrafa não produz calor, e 'frio' não é refletido; o que ela faz é reduzir trocas.\n• D: líquidos trocam calor também por condução e convecção.\n• E: o objetivo é reduzir, e não aumentar, as trocas.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_11",
@@ -112883,7 +113037,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Em equilíbrio, os momentos em relação ao cotovelo se anulam: F · 4 = P · 32, com P = 2 × 10 = 20 N. Então F = 20 × 32 ÷ 4 = 160 N, oito vezes o peso segurado. O braço de alavanca curto do bíceps exige força grande, mas permite movimentos amplos e rápidos da mão.\n\nPegadinhas:\n• A (2,5 N): inverte os braços de alavanca (20 × 4 ÷ 32).\n• B (20 N): supõe que a força do músculo é igual ao peso.\n• C e D: não correspondem ao equilíbrio de momentos com os dados.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_12",
@@ -112915,7 +113070,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. No microscópio composto, a objetiva forma uma imagem ampliada, que a ocular amplia novamente, como uma lupa. Os aumentos se multiplicam: 40 × 10 = 400. Uma célula de 50 μm apareceria como se tivesse 20 mm.\n\nPegadinhas:\n• A (4): divide os aumentos.\n• B (50): soma os aumentos.\n• D e E: não correspondem à combinação das duas lentes descritas.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_13",
@@ -112947,7 +113103,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Em 2 h (120 min) há 120 ÷ 20 = 6 duplicações. N = 100 × 2⁶ = 100 × 64 = 6 400. Em geral, N(t) = N₀ · 2^(t/T), com T o tempo de duplicação.\n\nPegadinhas:\n• A (700): soma 100 a cada 20 min, como se o crescimento fosse linear.\n• C (12 800): conta 7 duplicações em vez de 6.\n• D e E: erram potências de 10 ou o número de duplicações.\nO mesmo modelo explica por que infecções bacterianas podem se agravar em poucas horas.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_14",
@@ -112979,7 +113136,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A área de cobertura é o círculo de centro (2, 3) e raio 5: pontos com (x − 2)² + (y − 3)² ≤ 25. Para (7, 6): 5² + 3² = 25 + 9 = 34 > 25 — fora. Os demais: (5, 6) → 9 + 9 = 18; (2, 8) → 0 + 25 = 25 (na borda); (−1, 5) → 9 + 4 = 13; (6, 3) → 16 + 0 = 16.\n\nPegadinhas:\n• A, C e E: estão a menos de 5 km da antena.\n• B: está exatamente a 5 km — na borda, ainda coberto.\nComparar apenas uma coordenada (por exemplo, x = 7 está a 5 km de x = 2) leva a erro: a distância depende das duas.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_15",
@@ -113011,7 +113169,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Média ponderada: (8 × 3 + 6 × 2 + 5 × 1) ÷ (3 + 2 + 1) = (24 + 12 + 5) ÷ 6 = 41 ÷ 6 ≈ 6,8. A nota alta em Biologia, de maior peso, puxa a média para cima da média simples.\n\nPegadinhas:\n• A (6,3): é a média aritmética simples, (8 + 6 + 5) ÷ 3.\n• C e D: não correspondem a operações coerentes com os pesos.\n• E (13,7): divide a soma ponderada (41) por 3, o número de provas, e não pela soma dos pesos.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_16",
@@ -113043,7 +113202,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Para grandes volumes em longas distâncias, ferrovias e hidrovias têm menor custo por tonelada e menor consumo de combustível. A opção histórica pelas rodovias, ligada à indústria automobilística a partir dos anos 1950, deixou o país dependente de caminhões e do diesel — o que a greve de 2018 expôs.\n\nPegadinhas:\n• A: o texto mostra concentração em um modal e vulnerabilidade.\n• B: ferrovias são mais baratas para grandes volumes, e o texto diz que respondem por parcela menor.\n• C: o modal predominante, rodoviário, depende do diesel.\n• D: o modal rodoviário encarece o transporte de grãos a longa distância.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_17",
@@ -113075,7 +113235,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. As árvores retiram água do solo pelas raízes e a liberam pelas folhas; somada à evaporação, essa evapotranspiração recicla a umidade vinda do Atlântico ao longo da bacia. Os ventos levam o vapor para oeste, e os Andes o desviam para o sul. Menos floresta significa menos vapor transportado e, potencialmente, menos chuva no centro-sul.\n\nPegadinhas:\n• A: a umidade entra pelo Atlântico e é reciclada pela floresta; os Andes bloqueiam o Pacífico.\n• B: pastagens devolvem menos água à atmosfera que a floresta.\n• D: os Andes desviam o fluxo; não produzem vapor.\n• E: os rios voadores são fluxos atmosféricos.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_18",
@@ -113107,7 +113268,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. O BRICS é uma articulação política e econômica de emergentes, com instituições próprias, como o Novo Banco de Desenvolvimento, e a reivindicação de mais voz nas instituições criadas no pós-guerra. Não tem tarifa externa comum, moeda única ou compromisso de defesa mútua.\n\nPegadinhas:\n• B e E: o grupo não é união aduaneira nem monetária.\n• C: não há tratado de defesa mútua.\n• D: o texto diz que os países ricos têm maior peso no FMI e que o BRICS reúne emergentes.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_19",
@@ -113139,7 +113301,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. Entre nobres, a concessão do feudo criava laços pessoais: o suserano concedia terra e proteção; o vassalo devia fidelidade e auxílio militar. Entre senhor e servo, a relação era de dependência: o servo, preso à terra, entregava parte da produção (talha) e trabalhava dias nas terras do senhor (corveia).\n\nPegadinhas:\n• A e C: a economia feudal era pouco monetizada, e os servos não eram proprietários.\n• B: servos não eram escravos — não podiam ser vendidos separados da terra —, mas também não tinham liberdade plena.\n• E: a sociedade era estamental, com direitos diferentes por ordem.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_20",
@@ -113171,7 +113334,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. A Coroa reaproveitou a mita incaica, mas a converteu em instrumento de exploração colonial: o trabalho era obrigatório, perigoso e voltado à extração de prata, que financiava a Espanha. A mortalidade elevada contribuiu para a queda demográfica indígena.\n\nPegadinhas:\n• A e D: o trabalho era compulsório, não contratado nem voluntário.\n• C: a escravidão africana existiu na América espanhola, mas a mita é trabalho indígena.\n• E: o Império Inca foi conquistado; a instituição foi reaproveitada pelos colonizadores.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_21",
@@ -113203,7 +113367,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. As revoltas tiveram bases sociais e motivos variados: participação popular e de escravizados na Cabanagem e na Balaiada; elites regionais na Farroupilha; disputas com o governo central em todas. A antecipação da maioridade (o 'Golpe da Maioridade') foi articulada pelos liberais para dar ao Império uma autoridade mais estável.\n\nPegadinhas:\n• A: as motivações eram diversas, e não restauradoras.\n• B: o Ato Adicional descentralizou, dando autonomia às províncias.\n• C: o texto lista revoltas no Norte, no Nordeste e no Sul.\n• D: a maioridade foi articulada no Rio de Janeiro, por grupos políticos da Corte.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_22",
@@ -113235,7 +113400,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. O vocativo ('Senhor Secretário de Saúde'), a expressão 'vimos a público', a primeira pessoa coletiva ('Nós, moradores'), os argumentos (distância, idosos e crianças) e o pedido final caracterizam a carta aberta: interlocutor definido, circulação pública e finalidade argumentativa.\n\nPegadinhas:\n• A: o texto toma posição e faz um pedido; não é relato impessoal.\n• B: o editorial é escrito pelo veículo, sem vocativo a uma autoridade.\n• D: não há instruções técnicas.\n• E: não há narrativa literária nem humor.\nA FUVEST cobrou carta como gênero de redação em 2026; reconhecer interlocutor e finalidade é parte da tarefa.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_23",
@@ -113267,7 +113433,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. O texto reconhece 'good evidence' para algumas cepas na prevenção da diarreia associada a antibióticos, ressalta que 'the effects depend on the specific strain and dose' e afirma que, para pessoas saudáveis, a dieta rica em fibras 'may do more [...] than any supplement'.\n\nPegadinhas:\n• B: o texto diz que muitos produtos 'have never been tested in clinical trials'.\n• C: o texto aponta benefício comprovado em um caso específico.\n• D: os probióticos aparecem como prevenção de um efeito do antibiótico, não como substitutos.\n• E: o texto sugere o contrário para pessoas saudáveis.\nVocabulário: 'strain' = cepa; 'may' indica possibilidade, não certeza.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l7_24",
@@ -113299,7 +113466,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. Para Aristóteles, tornamo-nos corajosos praticando atos corajosos: a virtude é hábito. A coragem enfrenta o medo na medida certa, nem fugindo de tudo (covardia) nem se lançando a riscos sem razão (temeridade). O ponto exato depende das circunstâncias e é discernido pela prudência (phrónesis).\n\nPegadinhas:\n• A: a virtude moral não é inata; é adquirida.\n• B: não sentir medo algum aproxima-se do excesso; o corajoso sente medo e age como convém.\n• C: o meio-termo é 'relativo a nós', não um ponto matemático fixo.\n• E: o excesso é um vício; a virtude está no meio.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_01",
@@ -113331,7 +113499,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. É um caso de vantagem do heterozigoto: onde há malária, pessoas com um alelo normal e um S sobrevivem mais que as homozigotas normais (mais vulneráveis à malária grave) e que as homozigotas S (com anemia falciforme). A seleção natural mantém os dois alelos na população.\n\nPegadinhas:\n• B e C: a mutação é aleatória; o ambiente seleciona, não a produz nem a dirige.\n• D: os homozigotos S têm a doença e menor sobrevivência.\n• E: a malária é causada por um protozoário (Plasmodium), transmitido por mosquitos.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_02",
@@ -113363,7 +113532,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A transpiração ocorre principalmente pelas folhas. Perdê-las (caducifolia) reduz drasticamente a perda de água quando o solo está seco; as plantas permanecem vivas e rebrotam com as chuvas. Nos cactos, espinhos no lugar de folhas reduzem a superfície de transpiração, o caule verde faz fotossíntese, e tecidos suculentos armazenam água.\n\nPegadinhas:\n• A: sem folhas, a fotossíntese diminui; o ganho é poupar água.\n• B: as plantas absorvem água pelas raízes; a queda das folhas não serve a isso.\n• C: o texto diz que as plantas rebrotam em poucos dias; elas estão vivas.\n• E: a queda das folhas não tem relação com a atração de polinizadores.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_03",
@@ -113395,7 +113565,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. É um arco reflexo: o estiramento do tendão estimula receptores no músculo; o neurônio sensorial leva o impulso à medula, onde faz sinapse com o neurônio motor, que comanda a contração. O circuito curto explica a rapidez. O encéfalo é informado depois — por isso o paciente sente o golpe após o movimento.\n\nPegadinhas:\n• A: o movimento ocorre antes da percepção consciente.\n• C: a resposta depende do circuito nervoso; com lesão no nervo ou na medula, ela some.\n• D: a resposta hormonal é lenta; o reflexo é imediato.\n• E: o reflexo ocorre mesmo de olhos fechados.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_04",
@@ -113427,7 +113598,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. O floema leva a seiva elaborada (açúcares da fotossíntese) das folhas para as demais partes, inclusive as raízes. Com o anel, os açúcares se acumulam acima do corte (o intumescimento). O xilema, intacto, continua levando água e sais às folhas — por isso elas permanecem verdes por algum tempo. Sem açúcares, as raízes esgotam suas reservas, param de absorver água, e a árvore morre.\n\nPegadinhas:\n• A: o xilema foi preservado, e as folhas permaneceram verdes.\n• B: o acúmulo acima do corte é de seiva elaborada, e a água não se acumula nas raízes.\n• C: a casca protege, mas a morte decorre da interrupção do transporte no floema.\n• D: as folhas seguem fazendo fotossíntese; o problema é distribuir o que produzem.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_05",
@@ -113459,7 +113631,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Elementos de um mesmo grupo têm a mesma configuração de valência e propriedades químicas semelhantes. Sr²⁺ e Ca²⁺ têm mesma carga e tamanhos próximos, e o organismo não os distingue bem: o estrôncio entra na hidroxiapatita do osso. Sendo radioativo e de meia-vida de cerca de 29 anos, irradia a medula óssea por longo tempo.\n\nPegadinhas:\n• A: as massas são bem diferentes (Ca ≈ 40; Sr ≈ 88).\n• B: o cálcio comum não é radioativo e não se transforma em estrôncio.\n• D: o estrôncio é um metal alcalinoterroso, não gás nobre.\n• E: o grupo 2 é o dos metais alcalinoterrosos; os alcalinos são do grupo 1.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_06",
@@ -113491,7 +113664,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. O sufixo -al indica aldeído: carbonila em carbono primário, ligado a hidrogênio. No metanal, o carbono se liga a dois hidrogênios e ao oxigênio por dupla. O metanol (CH₃OH) é o álcool correspondente, com –OH em vez de C=O.\n\nPegadinhas:\n• B: o sufixo -ol indica álcool; -al, aldeído.\n• C: cetonas têm carbonila entre dois carbonos; o metanal tem um único carbono.\n• D: ácido carboxílico exige –COOH.\n• E: éter exige oxigênio entre dois carbonos (C–O–C).",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_07",
@@ -113523,7 +113697,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. 0,58 g ÷ 58 g/mol = 0,01 mol de Mg(OH)₂. Pela equação, cada mol da base neutraliza 2 mol de HCl, porque libera duas hidroxilas: 2 × 0,01 = 0,02 mol.\n\nPegadinhas:\n• A (0,005 mol): inverte a proporção (divide por 2).\n• B (0,01 mol): usa proporção 1:1, ignorando as duas hidroxilas.\n• C e E: não correspondem à estequiometria da equação.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_08",
@@ -113555,7 +113730,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. A solubilidade de um gás em um líquido aumenta com a pressão parcial desse gás sobre o líquido. Ao abrir a garrafa, a pressão cai, e o equilíbrio se desloca no sentido de CO₂(g): surgem as bolhas. Aumentar a temperatura também reduz a solubilidade de gases, por isso a garrafa ao sol perde gás mais depressa.\n\nPegadinhas:\n• A: a efervescência se deve à queda de pressão, não a uma reação nova.\n• C: inverte o efeito da temperatura.\n• D: a pressão é o fator central; o açúcar não forma as bolhas.\n• E: o CO₂ não reage com o oxigênio.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_09",
@@ -113587,7 +113763,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Se o polo norte da agulha é atraído para o norte geográfico, ali deve haver um polo magnético de nome oposto: o polo sul magnético da Terra. Além disso, os polos magnéticos não coincidem com os geográficos, e a diferença entre as direções (declinação magnética) varia conforme o lugar.\n\nPegadinhas:\n• A: polos de mesmo nome se repelem.\n• B: a orientação da agulha se deve ao campo magnético terrestre.\n• C: a Terra tem campo magnético; massas de ferro locais apenas o perturbam.\n• D: há diferença entre polos magnéticos e geográficos, que muda ao longo do tempo.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_10",
@@ -113619,7 +113796,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Pelo teorema da energia cinética, o trabalho da força de frenagem anula a energia cinética: F · d = m v²/2. Com F constante, d é proporcional a v². Dobrar a velocidade multiplica a energia cinética — e a distância — por 4: 4 × 10 = 40 m.\n\nPegadinhas:\n• A: ignora o efeito da velocidade.\n• B (20 m): supõe proporcionalidade direta com a velocidade.\n• D (80 m): multiplica por 8, como se a dependência fosse cúbica.\n• E (100 m): não corresponde a modelo coerente com os dados.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_11",
@@ -113651,7 +113829,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Sem atrito e com velocidade constante, a força deve equilibrar a componente do peso paralela à rampa: F = P · sen θ = P · h/L = 600 × 1/4 = 150 N. O trabalho é o mesmo que levantar verticalmente (150 × 4 = 600 × 1 = 600 J): a rampa reduz a força, à custa de uma distância maior.\n\nPegadinhas:\n• B e C: não correspondem à relação h/L da rampa.\n• D (600 N): é o peso, a força para erguer a maca na vertical.\n• E (2 400 N): multiplica o peso pela razão L/h, em vez de dividir.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_12",
@@ -113683,7 +113862,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. O som é a propagação de compressões e rarefações em um meio (ar, água, sólidos); sem partículas, não há como se propagar. Ondas de rádio, como a luz, são eletromagnéticas e atravessam o vácuo. O rádio converte a voz em sinal eletromagnético, e o receptor o converte de volta em som, dentro do capacete.\n\nPegadinhas:\n• A e E: o som não se propaga no vácuo.\n• B: o rádio transmite ondas eletromagnéticas, não sonoras.\n• C: a luz é eletromagnética e se propaga no vácuo.",
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_13",
@@ -113715,7 +113895,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. (2,5 × 10¹³) ÷ (3,7 × 10¹³) = 2,5 ÷ 3,7 ≈ 0,68 = 68%. Os expoentes iguais se cancelam. As hemácias são pequenas e muito numerosas, mas, por serem pequenas, representam fração muito menor da massa do corpo.\n\nPegadinhas:\n• A e B: erram uma ou duas potências de 10.\n• D (93%): não corresponde à razão entre os valores.\n• E (148%): inverte a divisão (3,7 ÷ 2,5); uma parte não pode ser maior que o todo.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_14",
@@ -113747,7 +113928,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Se as medidas lineares são multiplicadas por 50, o volume é multiplicado por 50³ = 125 000. Volume real: 2 L × 125 000 = 250 000 L = 250 m³.\n\nPegadinhas:\n• A (0,1 m³): usa a razão linear: 2 L × 50 = 100 L.\n• B (2,5 m³): não corresponde a nenhuma potência da escala aplicada aos 2 L.\n• C (5 m³): eleva a razão ao quadrado: 2 × 2 500 = 5 000 L.\n• D (100 m³): não corresponde à razão cúbica.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_15",
@@ -113779,7 +113961,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Com largura x, o comprimento é x + 4, e x(x + 4) = 60 → x² + 4x − 60 = 0. As raízes são 6 e −10; como a medida é positiva, x = 6 m (e o comprimento, 10 m).\n\nPegadinhas:\n• A: é a diferença entre as dimensões.\n• C (10 m): é o comprimento, não a largura.\n• D (15 m): divide a área por 4.\n• E (56 m): subtrai 4 da área, sem montar a equação.",
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_16",
@@ -113811,7 +113994,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. No Sistema Interligado Nacional, a energia gerada no Nordeste pode abastecer outras regiões. Como os ventos são mais fortes no período seco, a eólica compensa parte da redução hidrelétrica e permite poupar água nos reservatórios.\n\nPegadinhas:\n• B: os ventos não prejudicam as hidrelétricas; as fontes se complementam.\n• C: as hidrelétricas continuam sendo a principal fonte do país.\n• D: o sistema é interligado por linhas de transmissão.\n• E: os ventos do Nordeste se relacionam à circulação atmosférica (como os alísios), não às represas.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_17",
@@ -113843,7 +114027,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A terciarização da economia brasileira combina serviços modernos e bem remunerados com atividades de baixa renda e pouca proteção. Por isso, o tamanho do setor não indica, por si, qualidade do emprego; é preciso olhar renda e formalização.\n\nPegadinhas:\n• A: o texto mostra que o setor inclui ocupações precárias.\n• B: indústria e agricultura continuam existindo, com menor participação no emprego.\n• C: a terciarização ocorre em muitos países.\n• E: o texto aponta informalidade expressiva.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_18",
@@ -113875,7 +114060,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. A diferença de latitude é 30° − 0° = 30°. Ao longo do meridiano, 30 × 111 km = 3 330 km. Por estarem no mesmo meridiano, as duas cidades têm a mesma hora solar.\n\nPegadinhas:\n• A (1 665 km): usa 15°, metade da diferença.\n• C (5 550 km): usa 50°, a longitude, que é a mesma para as duas cidades.\n• D (6 660 km): usa 60°.\n• E (10 000 km): é a distância aproximada do Equador ao polo (90°).",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_19",
@@ -113907,7 +114093,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. A distribuição de trigo e os espetáculos eram formas de controle social: atendiam a necessidades e ofereciam entretenimento à população pobre de Roma, garantindo apoio ao imperador. A ironia de Juvenal está no contraste entre o povo que antes participava da política e o que agora se contentava com benefícios.\n\nPegadinhas:\n• A: as reformas agrárias dos Gracos, no período republicano, são outra política e foram derrotadas.\n• B: o texto não fala em educação.\n• C: a cidadania foi ampliada aos homens livres do Império em 212, não aos escravizados.\n• D: os imperadores não eram escolhidos por eleição direta.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_20",
@@ -113939,7 +114126,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. A estagnação econômica, os gastos militares e a falta de liberdades enfraqueceram o bloco. As reformas de Gorbachev abriram espaço para críticas e para movimentos nacionais e populares — como na Polônia e na Alemanha Oriental — que derrubaram governos sem intervenção soviética. O fim da URSS encerrou a ordem bipolar.\n\nPegadinhas:\n• A: não houve guerra direta entre as superpotências.\n• B: o Pacto de Varsóvia foi dissolvido em 1991.\n• D: muitos países enfrentaram crise econômica na transição.\n• E: a URSS se dividiu em repúblicas independentes.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_21",
@@ -113971,7 +114159,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. 'Direito de todos' e 'acesso universal e igualitário' rompem com a lógica anterior, em que a assistência pública dependia do vínculo previdenciário. A Constituição e a Lei Orgânica da Saúde (1990) deram origem ao SUS, resultado também das lutas do movimento sanitarista.\n\nPegadinhas:\n• B: descreve o modelo anterior, que o artigo supera.\n• C: o artigo afirma o 'dever do Estado'.\n• D: o artigo inclui 'promoção, proteção e recuperação' — a prevenção está contemplada.\n• E: a mudança no acesso é o ponto central do artigo.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_22",
@@ -114003,7 +114192,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. 'Portanto' é conjunção coordenativa conclusiva, como 'logo', 'por isso' e 'assim': a segunda oração tira uma conclusão da primeira. Os exames normais levam à alta.\n\nPegadinhas:\n• A: adversativas ('mas', 'porém') indicam oposição, o que não há aqui.\n• B: alternativas usam 'ou' e 'ora... ora'.\n• C: a relação é inversa — a primeira oração justifica a segunda, e não o contrário.\n• E: há relação lógica explícita, e não simples soma.\nNa FUVEST, é comum pedir conectivo que mantenha o sentido: 'portanto' poderia ser trocado por 'por isso', mas não por 'porque'.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_23",
@@ -114035,7 +114225,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. O texto separa o que é consenso ('exposure is widespread') do que é incerto ('the effects on human health are still uncertain') e pede cautela ('more long-term studies [...] are needed').\n\nPegadinhas:\n• A: o texto cita solo, água potável, sangue e placentas.\n• C: o texto não fala em câncer comprovado; fala em indícios de inflamação em laboratório.\n• D: há acordo sobre a exposição ampla.\n• E: os estudos sugerem inflamação, o contrário de inofensivos.\nVocabulário: 'widespread' = generalizado; 'yet' = no entanto; 'firm conclusions' = conclusões definitivas.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l8_24",
@@ -114067,7 +114258,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Etnocentrismo é avaliar outras culturas a partir dos valores e das formas da própria, tomadas como padrão. O viajante procurou igrejas e tribunais e, sem encontrá-los, negou a existência de religião e de normas. Os antropólogos, pela convivência prolongada, buscaram compreender a cultura em seus próprios termos — atitude ligada ao relativismo cultural.\n\nPegadinhas:\n• A: é a postura dos antropólogos, não a do viajante.\n• B: ele não adotou os costumes; julgou-os.\n• C: o texto não mostra defesa da convivência entre culturas.\n• D: a convivência prolongada dos antropólogos é justamente a observação participante, método central da disciplina.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_01",
@@ -114099,7 +114291,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. O alvo do fármaco é o processo de divisão, não a célula cancerosa em si. Tecidos com renovação rápida também são atingidos: folículos pilosos (queda de cabelo), mucosas da boca e do intestino (feridas, diarreia) e medula óssea vermelha (menos leucócitos e hemácias, com risco de infecção e anemia). Por isso o tratamento é feito em ciclos, com intervalos para recuperação.\n\nPegadinhas:\n• A: os sintomas atingem tecidos sadios, sem relação direta com a morte do tumor.\n• B: neurônios quase não se dividem e não controlam o crescimento do cabelo.\n• D: os fármacos bloqueiam a mitose; não a aceleram.\n• E: inverte o alvo — células que não se dividem são pouco afetadas.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_02",
@@ -114131,7 +114324,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. As sanguessugas são anelídeos (classe Hirudinea), com corpo dividido em anéis e ventosas nas extremidades. A saliva contém hirudina, inibidor da trombina que impede a coagulação, além de substâncias anestésicas e vasodilatadoras. Por isso o sangramento continua após a retirada, drenando o sangue retido enquanto novas veias se formam.\n\nPegadinhas:\n• A: sanguessugas não são insetos, e o efeito é anticoagulante, não antibiótico.\n• B e C: platelmintos são achatados e não segmentados; nematódeos são cilíndricos e não segmentados.\n• D: não são crustáceos, e o efeito descrito é a drenagem do sangue acumulado.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_03",
@@ -114163,7 +114357,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Retrovírus fazem o caminho 'reverso' da informação genética: RNA → DNA. Como a transcriptase reversa erra muito, o HIV muta rapidamente; combinar fármacos que atingem alvos diferentes torna improvável que uma variante seja resistente a todos ao mesmo tempo. A carga viral indetectável indica controle, com o vírus ainda presente em células infectadas.\n\nPegadinhas:\n• B: vírus não têm parede celular, e antibióticos não agem sobre eles.\n• C: inverte o processo; o material genético do HIV é RNA, convertido em DNA.\n• D: o alvo principal são os linfócitos T CD4, e não as hemácias.\n• E: o DNA viral permanece integrado em células, e a interrupção do tratamento leva ao retorno do vírus.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_04",
@@ -114195,7 +114390,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A DBO mede quanto oxigênio os microrganismos consomem para decompor a matéria orgânica da amostra. No ponto 2, ela salta de 2 para 40 mg/L, e o oxigênio cai de 8 para 2 mg/L, insuficiente para muitos peixes. Os coliformes são indicadores de fezes: sua presença sinaliza risco de patógenos. Rio abaixo, a autodepuração recupera parcialmente o oxigênio, mas a contaminação persiste (5 000 coliformes).\n\nPegadinhas:\n• A: o oxigênio diminuiu no ponto 2.\n• B: os coliformes são indicadores, não os únicos consumidores de oxigênio.\n• C: no ponto 3, os valores ainda são piores que no ponto 1.\n• E: a DBO mede consumo, e não produção, de oxigênio.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_05",
@@ -114227,7 +114423,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. 25% = 1/4 = (1/2)²: passaram duas meias-vidas. Idade ≈ 2 × 5 730 = 11 460 anos. A cada meia-vida, a proporção cai à metade: 100% → 50% → 25%.\n\nPegadinhas:\n• A (2 865 anos): usa meia meia-vida.\n• C (17 190 anos): usa três meias-vidas, que levariam a 12,5%.\n• D (22 920 anos): usa quatro meias-vidas, que levariam a 6,25%.\n• E (57 300 anos): multiplica a meia-vida por 10.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_06",
@@ -114259,7 +114456,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Na bauxita, o alumínio está oxidado (Al³⁺ na alumina). A eletrólise fornece os elétrons que o reduzem a Al metálico: Al³⁺ + 3 e⁻ → Al, à custa de muita eletricidade. Na lata usada, o metal já está reduzido; a reciclagem só precisa fundi-lo e moldá-lo.\n\nPegadinhas:\n• A: o alumínio reciclado é o mesmo metal.\n• B: a reciclagem não envolve eletrólise.\n• D: na bauxita, o alumínio está combinado, como óxido.\n• E: as latas são de alumínio metálico (em liga), não de alumina.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_07",
@@ -114291,7 +114489,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. 286 kJ por mol ÷ 2 g por mol = 143 kJ/g, valor bem maior que o de combustíveis como a gasolina (cerca de 46 kJ/g). A combustão não gera CO₂, mas o balanço climático inclui a produção: com gás natural, o carbono é liberado antes; com eletrólise alimentada por fontes renováveis, a emissão é muito menor.\n\nPegadinhas:\n• A: ΔH negativo indica reação exotérmica.\n• B: o valor é de cerca de 143 kJ/g.\n• C: o texto diz que a obtenção a partir do gás natural libera CO₂.\n• D: a decomposição da água é não espontânea e exige energia — daí a eletrólise.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_08",
@@ -114323,7 +114522,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Alotropia é a existência de diferentes substâncias simples formadas pelo mesmo elemento — como O₂ e O₃, ou grafite e diamante. O ozônio, mais reativo e oxidante que o O₂, protege na estratosfera ao absorver UV-B, mas é poluente ao nível do solo, onde agride os tecidos respiratórios.\n\nPegadinhas:\n• B: isótopos são átomos do mesmo elemento com números de massa diferentes; aqui a diferença é o número de átomos na molécula.\n• C: ambos são formados só por oxigênio — substâncias simples.\n• D: o ozônio é muito mais reativo que o O₂.\n• E: o texto descreve o ozônio troposférico como prejudicial.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_09",
@@ -114355,7 +114555,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. Em paralelo, todos os aparelhos ficam submetidos à tensão da rede, e desligar um não interrompe os outros. As correntes se somam no fio comum: chuveiro, micro-ondas e ferro juntos podem exigir dezenas de amperes. O disjuntor desarma quando a corrente ultrapassa seu valor nominal, protegendo a fiação do superaquecimento.\n\nPegadinhas:\n• A e B: em série, desligar um aparelho interromperia todos, o que contradiz o texto.\n• C: em paralelo, cada novo ramo diminui a resistência equivalente.\n• E: o disjuntor responde ao excesso de corrente, não à falta de tensão.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_10",
@@ -114387,7 +114588,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. A luz do Sol não é polarizada: vibra em todas as direções perpendiculares à propagação. Ao refletir em superfícies horizontais, a componente horizontal predomina. Um filtro com eixo vertical bloqueia essa componente, e o brilho da reflexão diminui muito, permitindo ver a luz que vem de dentro da água.\n\nPegadinhas:\n• A: o filtro reduz, e não aumenta, a luz refletida.\n• C: luz e som são ondas de naturezas diferentes; não há conversão.\n• D: o efeito é de polarização, não de difração.\n• E: a polarização não converte ultravioleta em luz visível.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_11",
@@ -114419,7 +114621,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. A dilatação linear é proporcional ao coeficiente do material, ao tamanho e à variação de temperatura. Se dente e restauração têm coeficientes muito diferentes, a mesma variação de temperatura os deforma de maneiras distintas; repetidas milhares de vezes, essas diferenças abrem microfendas na borda. Por isso se buscam materiais com coeficiente próximo ao do dente.\n\nPegadinhas:\n• A: dilatação maior que a do dente aumentaria a diferença e as tensões.\n• B: o dente, como qualquer sólido, sofre dilatação térmica.\n• D: as temperaturas da boca não fundem os materiais de restauração.\n• E: sólidos também se dilatam.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_12",
@@ -114451,7 +114654,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Em movimento uniforme, t = d/v = 1,8 ÷ 100 = 0,018 s = 18 ms. Numa fibra sem mielina, a 1,8 m/s, o mesmo percurso levaria cerca de 1 s — diferença que explica a importância da mielina e os sintomas de doenças que a destroem, como a esclerose múltipla.\n\nPegadinhas:\n• A e B: erram a conversão de segundos para milissegundos por fatores de 100 e de 10.\n• C (5,6 ms): divide a velocidade pela distância (100 ÷ 1,8) e trata o resultado como tempo.\n• D (9 ms): usa metade do percurso.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_13",
@@ -114483,7 +114687,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Para um infectado, cada teste dá negativo (falso negativo) com probabilidade 1 − 0,8 = 0,2. Sendo independentes, os dois negativos ocorrem com 0,2 × 0,2 = 0,04 = 4%. Com dois testes, a chance de identificar a infecção sobe de 80% para 96%.\n\nPegadinhas:\n• B (16%): multiplica 0,2 por 0,8.\n• C (20%): é a chance de falso negativo em um único teste.\n• D (40%): soma as probabilidades dos dois testes, em vez de multiplicá-las.\n• E (64%): é a probabilidade de os dois darem positivo.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_14",
@@ -114515,7 +114720,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. Em juros compostos, o saldo é multiplicado por 1,1 a cada mês: 1 000 × 1,1 = 1 100 no primeiro mês e 1 100 × 1,1 = 1 210 no segundo. Em geral, M = C · (1 + i)ⁿ.\n\nPegadinhas:\n• A (R$ 1 020,00): usa 1% ao mês.\n• B (R$ 1 100,00): considera apenas um mês.\n• C (R$ 1 200,00): calcula juros simples, sempre sobre os R$ 1 000,00 iniciais.\n• E (R$ 1 331,00): considera três meses.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_15",
@@ -114547,7 +114753,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Área do retângulo: 40 × 30 = 1 200 m². Área do círculo: π r² = 3 × 10² = 300 m². Restante: 1 200 − 300 = 900 m².\n\nPegadinhas:\n• A (600 m²): subtrai duas vezes a área do jardim.\n• C (1 000 m²): não corresponde a operação coerente com os dados.\n• D (1 140 m²): subtrai o comprimento da circunferência (2πr = 60 m), que não é área.\n• E (1 200 m²): é a área total, sem descontar o jardim.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_16",
@@ -114579,7 +114786,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Pontos de estrangulamento (chokepoints) são passagens estreitas por onde circula grande parte do comércio de um recurso. Como alternativas, como oleodutos, transportam só parte do volume, qualquer ameaça à navegação em Ormuz reduz a oferta esperada e eleva os preços — exemplo de como geografia física e geopolítica se combinam.\n\nPegadinhas:\n• A: o estreito liga o Golfo, de água salgada, ao oceano; não se trata de água doce.\n• B: o estreito fica no Oriente Médio.\n• D: a passagem é intensa e não proibida.\n• E: o estreito fica entre o Golfo Pérsico e o Golfo de Omã, não no Mediterrâneo.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_17",
@@ -114611,7 +114819,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Superfícies escuras e impermeáveis absorvem radiação solar e armazenam calor, liberando-o à noite. Com pouca vegetação e solo impermeabilizado, há menos evapotranspiração, processo que resfria o ambiente. Motores, aparelhos de ar-condicionado e indústrias acrescentam calor, e prédios altos dificultam a ventilação.\n\nPegadinhas:\n• A: a ilha de calor ocorre mesmo em cidades planas; a diferença está no uso do solo.\n• B: o texto não menciona oceano, e o fenômeno ocorre em cidades no interior.\n• C: é o parque arborizado que tem temperatura mais baixa.\n• D: a camada de ozônio filtra ultravioleta e não explica diferenças de temperatura dentro de uma cidade.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_18",
@@ -114643,7 +114852,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. O balanço hídrico do Aral dependia dos rios; ao desviá-los, a evaporação passou a superar o que chegava. A concentração de sais cresceu, espécies de peixes desapareceram, e a poeira do leito seco, com sal e agrotóxicos, foi associada a doenças respiratórias. Há projetos de recuperação parcial da porção norte, mas não do lago inteiro.\n\nPegadinhas:\n• B: o texto atribui a redução ao desvio dos rios.\n• C: a irrigação retirou água; o lago encolheu.\n• D: não houve recuperação total.\n• E: a salinidade aumentou, e a pesca entrou em colapso.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_19",
@@ -114675,7 +114885,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A frase 'o poder freie o poder' resume a ideia: distribuir as funções do Estado entre órgãos distintos, que se controlam (o sistema de freios e contrapesos). A Constituição dos Estados Unidos (1787) e a Constituição brasileira de 1988 adotam esse princípio.\n\nPegadinhas:\n• A e E: Montesquieu critica a concentração de poderes, que caracteriza o absolutismo e o soberano hobbesiano.\n• B: a suspensão do Legislativo é contrária à separação dos poderes.\n• C: a separação dos poderes é própria de governos representativos, não da democracia direta.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_20",
@@ -114707,7 +114918,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Com o declínio do ouro, a Coroa tentou garantir a arrecadação com a derrama, o que ameaçava a elite mineira endividada. Leitores de autores iluministas e atentos à independência americana (1776), os conspiradores planejaram uma república. O projeto não previa, de forma consensual, o fim da escravidão — muitos eram proprietários de escravizados.\n\nPegadinhas:\n• A: o movimento se opunha ao pacto colonial e à cobrança.\n• C: o movimento foi de elite, não de escravizados, e não defendia a abolição.\n• D: a independência ocorreu décadas depois, por outro processo.\n• E: o imposto em questão incidia sobre o ouro, e os conspiradores não eram camponeses.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_21",
@@ -114739,7 +114951,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. A segunda Revolução Industrial ampliou a busca por matérias-primas, mercados e áreas de investimento. A conferência regulou a disputa entre as potências — como a exigência de ocupação efetiva —, e a partilha que se seguiu ignorou as sociedades africanas, gerando fronteiras artificiais.\n\nPegadinhas:\n• A: a conferência organizou a colonização, não a independência.\n• B: o texto afirma que as fronteiras atravessavam territórios de povos distintos.\n• D: a conferência tratou da ocupação da África.\n• E: o imperialismo europeu na Ásia continuou no mesmo período.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_22",
@@ -114771,7 +114984,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Em II, 'entregar' pede a preposição 'a', e 'a paciente' tem artigo feminino: a + a = à. Em I, 'marcada para as 14 h' já tem a preposição 'para'; não cabe outra, logo não há crase. Em III, não há crase antes de verbo ('partir'). Em IV, não há crase antes de pronome pessoal ('ela').\n\nPegadinhas:\n• A, B e D: incluem I ou IV, que não admitem crase.\n• C: a frase III está correta justamente por não ter acento; o enunciado pede onde o acento aparece bem empregado.\nTeste prático: troque por uma palavra masculina. 'Entregou o resultado ao paciente' (ao → à) confirma a crase em II.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_23",
@@ -114803,7 +115017,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. O texto opõe uma crença antiga ('scientists believed that the adult brain could not change') às pesquisas recentes ('it remains capable of reorganizing itself throughout life') e relaciona a neuroplasticidade à recuperação de 'some lost functions', com ressalvas ('varies greatly').\n\nPegadinhas:\n• B: a crença é apresentada como superada ('however').\n• C: o texto fala em recuperar 'some' funções, não todas.\n• D: o texto afirma 'throughout life'.\n• E: a recuperação é 'usually faster in the first months'.\nVocabulário: 'stroke' = acidente vascular cerebral (AVC); 'throughout' = ao longo de; 'injury' = lesão.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l9_24",
@@ -114835,7 +115050,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. O respeito à autonomia exige que a decisão de um adulto capaz e esclarecido seja acatada, mesmo quando o médico discorda. A beneficência continua presente na busca de alternativas. O caso mostra que os princípios podem entrar em tensão e precisam ser ponderados — e que a situação muda quando o paciente não tem capacidade de decidir, como em emergências com pessoa inconsciente.\n\nPegadinhas:\n• A: impor tratamento a um adulto capaz que o recusa contraria a autonomia.\n• B: o texto não trata de escassez de sangue; a justiça não é o ponto do caso.\n• C: a transfusão não é sempre danosa; a recusa vem da convicção do paciente.\n• E: respeitar a recusa não significa abandonar o paciente.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_01",
@@ -114867,7 +115083,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. A criança continua homozigota e sem a enzima, mas, com pouca fenilalanina na dieta, o substrato não se acumula a ponto de causar danos. O fenótipo (desenvolvimento normal) depende do genótipo e do ambiente — aqui, a alimentação. O diagnóstico precoce é decisivo porque o dano neurológico ocorre cedo.\n\nPegadinhas:\n• A: a dieta não altera o DNA.\n• C: o caso mostra exatamente o contrário.\n• D: a doença é genética; o teste após o nascimento detecta o acúmulo de fenilalanina quando o bebê começa a se alimentar.\n• E: em doenças recessivas, os heterozigotos geralmente não manifestam a doença.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_02",
@@ -114899,7 +115116,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A função de uma proteína depende de sua forma espacial, mantida por interações relativamente fracas (ligações de hidrogênio, interações hidrofóbicas) e, em alguns casos, por pontes dissulfeto. O calor rompe essas interações, e a cadeia se desenrola e se emaranha de outro modo — desnaturação. A sequência (estrutura primária), unida por ligações peptídicas, não muda.\n\nPegadinhas:\n• A: as ligações peptídicas resistem ao cozimento; sua quebra é hidrólise, como na digestão.\n• B: o calor não sintetiza proteínas novas.\n• C: proteínas não se convertem em carboidratos por aquecimento.\n• E: a clara fica firme justamente porque as proteínas desnaturadas se agregam, e não porque desaparecem.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_03",
@@ -114931,7 +115149,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Até o ponto ótimo, o aumento de temperatura acelera as colisões entre enzima e substrato; acima dele, a estrutura espacial se desfaz e a atividade cai. A enzima humana tem ótimo perto de 37 °C e quase não funciona a 50 °C; a bacteriana, adaptada a ambientes quentes, tem ótimo perto de 75 °C e resiste a temperaturas que inativariam a humana — por isso enzimas desse tipo são usadas na PCR.\n\nPegadinhas:\n• B: o gráfico mostra quedas após o ótimo.\n• C: acima de cerca de 50 °C, a bacteriana é muito mais ativa.\n• D: inverte o gráfico; acima de 50 °C, a enzima humana está praticamente inativa.\n• E: catalisar a mesma reação não implica ter o mesmo ótimo de temperatura.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_04",
@@ -114963,7 +115182,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Homologia indica origem comum (mesmos ossos, mesma posição, mesmo desenvolvimento embrionário), mesmo que a função varie — divergência evolutiva a partir de um ancestral tetrápode. Analogia indica mesma função com origens diferentes: o voo surgiu de forma independente em insetos e em morcegos, por convergência.\n\nPegadinhas:\n• A e D: a função não define homologia.\n• B: o braço humano e a asa do morcego são homólogos, apesar das funções diferentes.\n• C: a semelhança funcional das asas resulta de convergência, não de ancestral alado comum.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_05",
@@ -114995,7 +115215,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Em III e IV formam-se novas substâncias: o H₂O₂ se decompõe em água e O₂, e a glicose, na respiração celular, origina CO₂ e água. Em I e II, há mudança de estado físico (evaporação e fusão): as substâncias continuam as mesmas.\n\nPegadinhas:\n• A: I e II são transformações físicas.\n• B e D: misturam uma física com uma química.\n• E: inclui as transformações físicas.\nCritério decisivo: formação de substância nova, e não mudança de aparência.",
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_06",
@@ -115027,7 +115248,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Sublimação é a passagem direta de sólido a gás; como toda mudança no sentido de maior agitação das partículas, absorve energia, retirada do que está em volta — as amostras permanecem a temperaturas muito baixas. O CO₂, mais denso que o ar, acumula-se junto ao chão em locais fechados e desloca o oxigênio.\n\nPegadinhas:\n• A e C: o gelo seco é CO₂, não água, e não passa pelo estado líquido à pressão ambiente.\n• D: a sublimação é endotérmica.\n• E: o texto informa que o gás é mais denso que o ar.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_07",
@@ -115059,7 +115281,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. Sais de ácido fraco e base forte dão soluções básicas: o ânion do ácido fraco (HCO₃⁻) capta H⁺ da água, liberando OH⁻. O Na⁺, cátion de uma base forte, praticamente não reage com a água. Esse caráter básico explica o uso do bicarbonato para neutralizar acidez.\n\nPegadinhas:\n• A: o Na⁺ não hidrolisa de forma significativa, e a solução é básica.\n• B: sais podem formar soluções ácidas, básicas ou neutras, conforme os íons.\n• C: liberar H⁺ tornaria a solução ácida, e a equação mostra formação de OH⁻.\n• E: no sal, o sódio está como íon Na⁺, não como metal.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_08",
@@ -115091,7 +115314,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Em um ciclo simplificado, Cl reage com O₃ formando ClO e O₂; o ClO reage com oxigênio atômico, liberando de novo o Cl. Por ser regenerado, o cloro destrói muitas moléculas de ozônio. Como os CFCs persistem por décadas, a recuperação é lenta, ainda que o Protocolo de Montreal seja considerado um dos acordos ambientais mais bem-sucedidos.\n\nPegadinhas:\n• B: a destruição ocorre na estratosfera, após a quebra das moléculas pela radiação UV.\n• C: o texto fala em recuperação ao longo das próximas décadas.\n• D: o texto diz que os CFCs são estáveis na baixa atmosfera — por isso chegam à estratosfera.\n• E: menos ozônio significa mais radiação UV na superfície.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_09",
@@ -115123,7 +115347,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Sem forças externas relevantes, a quantidade de movimento se conserva: 1 000 × 20 = (1 000 + 1 000) · v → v = 10 m/s. A energia cinética, porém, cai de 200 000 J para 100 000 J: metade é gasta na deformação, no calor e no som — o que torna a colisão perfeitamente inelástica.\n\nPegadinhas:\n• A (5 m/s): divide a velocidade por quatro.\n• B (7,1 m/s): não corresponde a modelo coerente com os dados.\n• D (14 m/s): conserva a energia cinética (20/√2), o que não vale quando os carros seguem juntos.\n• E (20 m/s): supõe que o conjunto mantém a velocidade inicial, dobrando a quantidade de movimento.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_10",
@@ -115155,7 +115380,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. As cargas se concentram nas regiões de maior curvatura de um condutor; nas pontas, o campo elétrico é intenso o suficiente para ionizar o ar e facilitar a descarga ali. Se o raio cai, a corrente segue pelo cabo de baixa resistência até o aterramento. A proteção é local, em uma região limitada ao redor da haste.\n\nPegadinhas:\n• A e B: o para-raios não repele nem impede raios; oferece um caminho preferencial.\n• C: a haste e os cabos são condutores.\n• D: a área protegida é limitada; não abrange uma cidade.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_11",
@@ -115187,7 +115413,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Pela expressão, o período depende só de L e de g, e não da massa nem (em pequenas oscilações) da amplitude. Se o relógio atrasa, o período está longo demais; encurtar o fio reduz T e acelera as oscilações. Reduzir L a um quarto, por exemplo, reduz o período à metade.\n\nPegadinhas:\n• A e E: a massa não aparece na expressão do período.\n• C: para pequenas oscilações, a amplitude não altera o período — foi o que Galileu observou.\n• D: alongar o fio aumentaria o período e agravaria o atraso.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_12",
@@ -115219,7 +115446,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A sequência de transformações é energia nuclear → térmica → mecânica (turbina) → elétrica (gerador, por indução eletromagnética). Como numa termelétrica, há um ciclo de vapor, mas a fonte de calor é a fissão, não a combustão — por isso não há emissão de CO₂ na geração. Em compensação, há rejeitos radioativos que exigem armazenamento seguro.\n\nPegadinhas:\n• A: a eletricidade é gerada por geradores movidos pelas turbinas.\n• B: a fissão é uma reação nuclear, não uma combustão.\n• C: a fissão gera rejeitos radioativos, e só uma pequena parte da massa é convertida em energia.\n• E: a água do mar é usada para resfriar e condensar o vapor.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_13",
@@ -115251,7 +115479,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. Os intervalos com as duas medições iguais ou acima de 37,8 °C são: 8 h–10 h, 10 h–12 h e 18 h–20 h. São três intervalos de 2 h: 6 horas. A queda depois das 12 h é compatível com o efeito do antitérmico, e a temperatura volta a subir à noite.\n\nPegadinhas:\n• A (4 horas): considera só o período da manhã, 8 h–12 h.\n• C (8 horas): inclui o intervalo 12 h–14 h, em que a medição das 14 h está abaixo de 37,8 °C.\n• D (10 horas): inclui também o intervalo 20 h–22 h.\n• E (16 horas): é o tempo total de observação, de 6 h a 22 h.",
-    "difficulty": "easy"
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_14",
@@ -115283,7 +115512,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. Trate os dois irmãos como um bloco: passam a ser 4 elementos (o bloco e os outros 3 pacientes), que podem ser ordenados de 4! = 24 maneiras. Dentro do bloco, os irmãos podem trocar de lugar: 2! = 2. Total: 24 × 2 = 48.\n\nPegadinhas:\n• A (6): ordena apenas os três outros pacientes.\n• B (12): usa 3! × 2, esquecendo o bloco como um dos elementos a ordenar.\n• C (24): esquece que os irmãos podem trocar de lugar dentro do bloco.\n• D (36): não corresponde a contagem coerente com o enunciado.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_15",
@@ -115315,7 +115545,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. Os aumentos multiplicam o preço por 1,10 e depois por 1,20: 1,10 × 1,20 = 1,32. O aumento acumulado é de 32%. Se o preço era R$ 100,00, passou a R$ 110,00 e, depois, a R$ 132,00.\n\nPegadinhas:\n• A, D e E: não correspondem à composição dos dois aumentos (28%, 36% e 40%).\n• B (30%): soma as taxas, ignorando que o segundo aumento incide sobre o preço já reajustado.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_16",
@@ -115347,7 +115578,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. A indústria se espalhou pelo território em busca de custos menores e incentivos, mas São Paulo concentrou o comando: sedes de empresas, mercado financeiro, pesquisa e serviços avançados. Por isso se fala em desconcentração da produção, não em perda de centralidade.\n\nPegadinhas:\n• A: o texto mostra que a capital manteve sedes e serviços.\n• C: o texto descreve o movimento oposto.\n• D: o texto cita estados brasileiros como destino.\n• E: a guerra fiscal é apontada como um dos fatores do processo.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_17",
@@ -115379,7 +115611,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. A megalópole resulta da integração entre metrópoles e as cidades do eixo que as liga, com urbanização quase contínua e fluxos diários intensos, como o movimento pendular de trabalhadores. Os municípios continuam com administrações próprias.\n\nPegadinhas:\n• A: são muitos municípios, com administrações diferentes.\n• B: o texto descreve uma faixa urbana.\n• C: a área reúne duas metrópoles e as cidades entre elas.\n• E: nenhuma cidade foi construída para substituí-las.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_18",
@@ -115411,7 +115644,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. Nas zonas de subducção, a placa oceânica, mais densa, mergulha sob a continental; o atrito e o travamento acumulam energia, liberada em terremotos. O processo também forma vulcões e eleva cordilheiras. No interior de uma placa, como o Brasil, os tremores ocorrem por acomodações internas e, em geral, são fracos.\n\nPegadinhas:\n• B: o Brasil está no interior da placa, não em borda divergente.\n• C: as marés não causam terremotos.\n• D: todo o território está sobre placas tectônicas; o Brasil está na Sul-Americana.\n• E: os Andes resultam da convergência e não barram ondas sísmicas.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_19",
@@ -115443,7 +115677,8 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. O Poder Moderador colocava o imperador acima dos demais poderes, com capacidade de interferir no Legislativo e no Judiciário. O voto censitário excluía a maioria da população, e os escravizados, que não eram cidadãos, estavam fora do sistema. A outorga após a dissolução da Constituinte mostra o caráter centralizador do projeto.\n\nPegadinhas:\n• A: o regime era uma monarquia unitária.\n• B: o voto era censitário; mulheres e escravizados não votavam.\n• C: o Poder Moderador permitia ao imperador interferir nos outros poderes.\n• D: o catolicismo era a religião oficial.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_20",
@@ -115475,7 +115710,8 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. O movimento derrubou uma ditadura apoiada pelos Estados Unidos e, ao nacionalizar empresas norte-americanas, entrou em choque com Washington. As sanções, a tentativa de invasão e a aproximação com Moscou transformaram Cuba em peça da Guerra Fria — o que culminaria na crise dos mísseis de 1962.\n\nPegadinhas:\n• A: os Estados Unidos se opuseram à revolução e apoiaram a tentativa de invasão.\n• B: o texto diz que propriedades norte-americanas foram nacionalizadas.\n• D: a revolução teve grande impacto internacional.\n• E: Cuba manteve-se como Estado independente, aliado da União Soviética.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_21",
@@ -115507,7 +115743,8 @@
     ],
     "correctOptionId": "b",
     "explanation": "Resposta B. A campanha reuniu partidos de oposição, movimentos sociais, artistas e estudantes em grandes comícios, expressando o desgaste do regime. Mesmo derrotada no Congresso, a pressão popular influenciou a transição: a oposição venceu no Colégio Eleitoral, e o primeiro presidente civil desde 1964 tomou posse em 1985 — José Sarney, após a doença de Tancredo. A eleição direta para presidente só ocorreu em 1989.\n\nPegadinhas:\n• A: a emenda foi rejeitada, e Tancredo foi eleito de forma indireta.\n• C: a campanha era de oposição ao regime.\n• D: não houve fechamento do Congresso nem novo ato institucional.\n• E: os comícios reuniram milhões de pessoas.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_22",
@@ -115539,7 +115776,8 @@
     ],
     "correctOptionId": "d",
     "explanation": "Resposta D. 'Ela' retoma 'a vacina contra o HPV', o sujeito da frase anterior. 'Essa proteção' resume a ideia expressa na segunda frase (a vacina protege contra tipos do vírus). 'Dessa forma' remete à faixa de 9 a 14 anos mencionada no início. São mecanismos de coesão referencial, que evitam repetições e encadeiam as ideias.\n\nPegadinhas:\n• A: 'Essa proteção' não pode retomar 'o SUS', e 'dessa forma' não se refere à vida sexual.\n• B: o vírus não é o sujeito que 'protege'.\n• C: 'Ela' não retoma 'a aplicação', que só aparece depois.\n• E: a faixa etária é retomada por 'dessa forma', e não por 'Ela'.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_23",
@@ -115571,7 +115809,8 @@
     ],
     "correctOptionId": "a",
     "explanation": "Resposta A. O texto contrapõe a maioria feminina entre estudantes ('the majority of medical students') à baixa presença no topo ('underrepresented as heads of department'). A conclusão é que mais mulheres nas escolas 'will not, by itself, close the leadership gap'.\n\nPegadinhas:\n• B e C: o texto afirma a sub-representação nos cargos de liderança.\n• D: o Brasil é citado entre os países com maioria feminina de estudantes.\n• E: a falta de mentoras é apontada como um dos fatores.\nVocabulário: 'yet' = no entanto; 'underrepresented' = sub-representadas; 'gap' = diferença, lacuna.",
-    "difficulty": "medium"
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l10_24",
@@ -115603,6 +115842,7 @@
     ],
     "correctOptionId": "e",
     "explanation": "Resposta E. O esquema de Marshall descreve a experiência inglesa, não uma lei universal. No Brasil, a legislação trabalhista e previdenciária avançou sob Vargas, inclusive durante o Estado Novo, sem eleições; os direitos civis seguiram desiguais. Carvalho argumenta que essa ordem favoreceu uma relação de dependência com o Estado.\n\nPegadinhas:\n• A e B: o texto mostra justamente que a sequência brasileira foi outra.\n• C: a história brasileira mostra restrição de direitos políticos em vários períodos.\n• D: no Império, o voto era censitário e restrito a uma minoria.",
-    "difficulty": "hard"
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
   }
 ]

@@ -31,7 +31,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. No início, com recursos abundantes, a população quadruplicou a cada ano (10 → 40 → 160). Depois, o crescimento desacelerou (400 → 600 → 640) e a população se manteve perto de 650: é a curva logística, com estabilização na capacidade de suporte. A redução da vegetação e a mortalidade de filhotes são a resistência ambiental que freia o crescimento.\n\nPegadinhas:\n• A: do ano 4 em diante, os valores praticamente não crescem; isso não é exponencial.\n• B: a população cresceu até o ano 6; não houve declínio contínuo.\n• D: a reprodução continua; o que aumenta é a mortalidade, compensando os nascimentos.\n• E: confunde a maior taxa de crescimento (início) com o maior tamanho (fim)."
+    "explanation": "Resposta C. No início, com recursos abundantes, a população quadruplicou a cada ano (10 → 40 → 160). Depois, o crescimento desacelerou (400 → 600 → 640) e a população se manteve perto de 650: é a curva logística, com estabilização na capacidade de suporte. A redução da vegetação e a mortalidade de filhotes são a resistência ambiental que freia o crescimento.\n\nPegadinhas:\n• A: do ano 4 em diante, os valores praticamente não crescem; isso não é exponencial.\n• B: a população cresceu até o ano 6; não houve declínio contínuo.\n• D: a reprodução continua; o que aumenta é a mortalidade, compensando os nascimentos.\n• E: confunde a maior taxa de crescimento (início) com o maior tamanho (fim).",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_02",
@@ -65,7 +66,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. O plasma de uma pessoa B contém anticorpos anti-A, que aglutinariam hemácias com antígeno A (tipos A e AB). Ela pode receber hemácias sem antígeno A: B ou O. Por ser Rh⁻, deve receber hemácias Rh⁻, para não ser sensibilizada contra o antígeno Rh. Restam B⁻ e O⁻.\n\nPegadinhas:\n• B: inclui bolsas Rh⁺, que podem sensibilizar o paciente Rh⁻ e causar reação em transfusões futuras.\n• C: hemácias AB têm antígeno A e seriam aglutinadas pelos anti-A do receptor.\n• D: O⁻ é compatível, mas não é o único: B⁻ também serve.\n• E: inclui AB e Rh⁺."
+    "explanation": "Resposta A. O plasma de uma pessoa B contém anticorpos anti-A, que aglutinariam hemácias com antígeno A (tipos A e AB). Ela pode receber hemácias sem antígeno A: B ou O. Por ser Rh⁻, deve receber hemácias Rh⁻, para não ser sensibilizada contra o antígeno Rh. Restam B⁻ e O⁻.\n\nPegadinhas:\n• B: inclui bolsas Rh⁺, que podem sensibilizar o paciente Rh⁻ e causar reação em transfusões futuras.\n• C: hemácias AB têm antígeno A e seriam aglutinadas pelos anti-A do receptor.\n• D: O⁻ é compatível, mas não é o único: B⁻ também serve.\n• E: inclui AB e Rh⁺.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_03",
@@ -99,7 +101,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. Cada ciclo de PCR pode dobrar o número de cópias do trecho-alvo: depois de 30 ciclos, uma única molécula pode gerar mais de um bilhão. Por detectar o próprio material genético do vírus, o teste dispensa esperar a resposta imune do paciente, o que permite diagnóstico precoce.\n\nPegadinhas:\n• A: é o princípio da sorologia, e anticorpos levam dias para surgir.\n• B: o vírus não forma colônias; e o texto não descreve cultivo.\n• C: descreve o teste rápido de antígeno.\n• D: o aquecimento é da amostra, para separar as fitas de DNA; não mede febre."
+    "explanation": "Resposta E. Cada ciclo de PCR pode dobrar o número de cópias do trecho-alvo: depois de 30 ciclos, uma única molécula pode gerar mais de um bilhão. Por detectar o próprio material genético do vírus, o teste dispensa esperar a resposta imune do paciente, o que permite diagnóstico precoce.\n\nPegadinhas:\n• A: é o princípio da sorologia, e anticorpos levam dias para surgir.\n• B: o vírus não forma colônias; e o texto não descreve cultivo.\n• C: descreve o teste rápido de antígeno.\n• D: o aquecimento é da amostra, para separar as fitas de DNA; não mede febre.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_04",
@@ -133,7 +136,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. O etileno é um hormônio vegetal gasoso que desencadeia o amadurecimento: amolecimento, conversão de amido em açúcares, mudança de cor e aroma. Frutos maduros liberam muito etileno, e o saco fechado o mantém concentrado; o próprio amadurecimento estimula mais produção de etileno. As câmaras comerciais controlam esse gás.\n\nPegadinhas:\n• A: a temperatura influencia, mas o saco de papel não esquenta de forma relevante, e o controle comercial é feito pelo gás.\n• C: não há transferência de açúcares entre frutos.\n• D: a auxina atua no crescimento e no desenvolvimento do fruto, não no amadurecimento; e a ausência de luz não é o fator decisivo.\n• E: o papel deixa passar ar, e o amadurecimento não é fermentação."
+    "explanation": "Resposta B. O etileno é um hormônio vegetal gasoso que desencadeia o amadurecimento: amolecimento, conversão de amido em açúcares, mudança de cor e aroma. Frutos maduros liberam muito etileno, e o saco fechado o mantém concentrado; o próprio amadurecimento estimula mais produção de etileno. As câmaras comerciais controlam esse gás.\n\nPegadinhas:\n• A: a temperatura influencia, mas o saco de papel não esquenta de forma relevante, e o controle comercial é feito pelo gás.\n• C: não há transferência de açúcares entre frutos.\n• D: a auxina atua no crescimento e no desenvolvimento do fruto, não no amadurecimento; e a ausência de luz não é o fator decisivo.\n• E: o papel deixa passar ar, e o amadurecimento não é fermentação.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_05",
@@ -167,7 +171,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. ΔH positivo indica processo endotérmico: para dissolver, o sistema absorve energia. Ela vem da agitação térmica da própria solução e do que está em contato com a bolsa — a temperatura cai. 'Frio' não é uma forma de energia; é a retirada de calor.\n\nPegadinhas:\n• A e C: ΔH > 0 indica absorção, não liberação de calor.\n• B: não se forma gelo; a solução apenas esfria.\n• E: a bolsa é fechada, e o efeito vem da dissolução, cujo ΔH não é nulo."
+    "explanation": "Resposta D. ΔH positivo indica processo endotérmico: para dissolver, o sistema absorve energia. Ela vem da agitação térmica da própria solução e do que está em contato com a bolsa — a temperatura cai. 'Frio' não é uma forma de energia; é a retirada de calor.\n\nPegadinhas:\n• A e C: ΔH > 0 indica absorção, não liberação de calor.\n• B: não se forma gelo; a solução apenas esfria.\n• E: a bolsa é fechada, e o efeito vem da dissolução, cujo ΔH não é nulo.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_06",
@@ -201,7 +206,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. Óxidos ácidos, como o SO₂, reagem com água formando ácidos. O CaCO₃ reage com os íons H⁺: CaCO₃ + 2 H⁺ → Ca²⁺ + H₂O + CO₂, elevando o pH. A medida corrige o efeito no lago e no solo; a prevenção exige reduzir as emissões (dessulfurização, troca de combustível).\n\nPegadinhas:\n• A: o SO₂ é óxido ácido, e a calagem eleva o pH.\n• B: o calcário é aplicado no lago e no solo, não na atmosfera.\n• D: a água da chuva não neutraliza o ácido; ela o transporta.\n• E: o CO₂ forma ácido carbônico, fraco, responsável pela leve acidez natural da chuva; a chuva ácida descrita vem do enxofre do carvão."
+    "explanation": "Resposta C. Óxidos ácidos, como o SO₂, reagem com água formando ácidos. O CaCO₃ reage com os íons H⁺: CaCO₃ + 2 H⁺ → Ca²⁺ + H₂O + CO₂, elevando o pH. A medida corrige o efeito no lago e no solo; a prevenção exige reduzir as emissões (dessulfurização, troca de combustível).\n\nPegadinhas:\n• A: o SO₂ é óxido ácido, e a calagem eleva o pH.\n• B: o calcário é aplicado no lago e no solo, não na atmosfera.\n• D: a água da chuva não neutraliza o ácido; ela o transporta.\n• E: o CO₂ forma ácido carbônico, fraco, responsável pela leve acidez natural da chuva; a chuva ácida descrita vem do enxofre do carvão.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_07",
@@ -235,7 +241,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. No modelo de Bohr, o elétron só ocupa níveis de energia definidos. Ao absorver energia, salta para um nível mais alto; ao voltar, emite um fóton com energia igual à diferença entre os níveis. Como esses níveis são diferentes em cada elemento, cada metal emite cores próprias.\n\nPegadinhas:\n• B: a luz vem de transições eletrônicas, não de aquecimento do núcleo.\n• C: é o modelo de Dalton, que não explica emissão de luz.\n• D: é o modelo de Thomson, que não explica cores específicas.\n• E: órbitas quaisquer com emissão contínua levariam a espectros contínuos e ao colapso do átomo — problema que o modelo de Bohr resolveu."
+    "explanation": "Resposta A. No modelo de Bohr, o elétron só ocupa níveis de energia definidos. Ao absorver energia, salta para um nível mais alto; ao voltar, emite um fóton com energia igual à diferença entre os níveis. Como esses níveis são diferentes em cada elemento, cada metal emite cores próprias.\n\nPegadinhas:\n• B: a luz vem de transições eletrônicas, não de aquecimento do núcleo.\n• C: é o modelo de Dalton, que não explica emissão de luz.\n• D: é o modelo de Thomson, que não explica cores específicas.\n• E: órbitas quaisquer com emissão contínua levariam a espectros contínuos e ao colapso do átomo — problema que o modelo de Bohr resolveu.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_08",
@@ -269,7 +276,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. Na reação de adição, cada H₂ se liga aos dois carbonos de uma dupla, que vira simples. Cadeias com menos duplas cis (as que dobram a cadeia) se alinham melhor, com mais interações de dispersão: o material fica sólido à temperatura ambiente. A isomerização cis → trans nas duplas que restam produz as gorduras trans.\n\nPegadinhas:\n• A: é adição de H₂ à dupla, não substituição de oxigênio.\n• B: as cadeias não são quebradas; ficam mais retas.\n• C: a gordura trans ainda tem ligações duplas, só que em configuração trans.\n• D: são isômeros com propriedades físicas e efeitos biológicos diferentes — como mostra a própria proibição."
+    "explanation": "Resposta E. Na reação de adição, cada H₂ se liga aos dois carbonos de uma dupla, que vira simples. Cadeias com menos duplas cis (as que dobram a cadeia) se alinham melhor, com mais interações de dispersão: o material fica sólido à temperatura ambiente. A isomerização cis → trans nas duplas que restam produz as gorduras trans.\n\nPegadinhas:\n• A: é adição de H₂ à dupla, não substituição de oxigênio.\n• B: as cadeias não são quebradas; ficam mais retas.\n• C: a gordura trans ainda tem ligações duplas, só que em configuração trans.\n• D: são isômeros com propriedades físicas e efeitos biológicos diferentes — como mostra a própria proibição.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_09",
@@ -303,7 +311,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Para descrever uma trajetória circular, cada porção da bolsa precisa de força resultante centrípeta, de módulo m·ω²·r. Com ω grande, a aceleração equivale a milhares de vezes g. No referencial da bolsa, é como se a 'gravidade' fosse multiplicada: componentes de maior densidade sedimentam muito mais rápido em direção ao fundo, que fica do lado de fora do giro.\n\nPegadinhas:\n• A: a separação ocorre justamente porque componentes de densidades diferentes se comportam de modo diferente.\n• C: não há evaporação; a bolsa é fechada.\n• D: as hemácias ficam íntegras e são usadas em transfusões.\n• E: a centrífuga não usa campo magnético; o ferro da hemoglobina não explica a separação."
+    "explanation": "Resposta B. Para descrever uma trajetória circular, cada porção da bolsa precisa de força resultante centrípeta, de módulo m·ω²·r. Com ω grande, a aceleração equivale a milhares de vezes g. No referencial da bolsa, é como se a 'gravidade' fosse multiplicada: componentes de maior densidade sedimentam muito mais rápido em direção ao fundo, que fica do lado de fora do giro.\n\nPegadinhas:\n• A: a separação ocorre justamente porque componentes de densidades diferentes se comportam de modo diferente.\n• C: não há evaporação; a bolsa é fechada.\n• D: as hemácias ficam íntegras e são usadas em transfusões.\n• E: a centrífuga não usa campo magnético; o ferro da hemoglobina não explica a separação.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_10",
@@ -337,7 +346,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. Pela lei de Ohm, I = V/R = 127 ÷ 1 000 = 0,127 A = 127 mA — faixa capaz de causar fibrilação. Com a pele seca, I = 127 ÷ 100 000 ≈ 1,27 mA, um formigamento. A diferença de cem vezes é o motivo de evitar aparelhos elétricos com mãos molhadas.\n\nPegadinhas:\n• A: erra a conversão por um fator mil.\n• B: usa a resistência da pele seca.\n• C: erra uma casa decimal.\n• E: divide 127 por 100 Ω, valor que não está nos dados."
+    "explanation": "Resposta D. Pela lei de Ohm, I = V/R = 127 ÷ 1 000 = 0,127 A = 127 mA — faixa capaz de causar fibrilação. Com a pele seca, I = 127 ÷ 100 000 ≈ 1,27 mA, um formigamento. A diferença de cem vezes é o motivo de evitar aparelhos elétricos com mãos molhadas.\n\nPegadinhas:\n• A: erra a conversão por um fator mil.\n• B: usa a resistência da pele seca.\n• C: erra uma casa decimal.\n• E: divide 127 por 100 Ω, valor que não está nos dados.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_11",
@@ -371,7 +381,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. Em kelvin, as fontes estão a 600 K e 300 K. O rendimento de Carnot é 1 − 300/600 = 0,5: nenhuma máquina operando entre essas temperaturas pode converter mais de 50% do calor em trabalho, qualquer que seja o material. O limite vem da segunda lei da termodinâmica, não da tecnologia.\n\nPegadinhas:\n• A: o limite não é 100%; é o de Carnot.\n• B: usa temperaturas em °C, o que não vale na fórmula.\n• D: não há limite universal de 25%; o máximo depende das temperaturas das fontes.\n• E: toda máquina térmica precisa rejeitar calor para a fonte fria; sem isso, nenhuma funciona."
+    "explanation": "Resposta C. Em kelvin, as fontes estão a 600 K e 300 K. O rendimento de Carnot é 1 − 300/600 = 0,5: nenhuma máquina operando entre essas temperaturas pode converter mais de 50% do calor em trabalho, qualquer que seja o material. O limite vem da segunda lei da termodinâmica, não da tecnologia.\n\nPegadinhas:\n• A: o limite não é 100%; é o de Carnot.\n• B: usa temperaturas em °C, o que não vale na fórmula.\n• D: não há limite universal de 25%; o máximo depende das temperaturas das fontes.\n• E: toda máquina térmica precisa rejeitar calor para a fonte fria; sem isso, nenhuma funciona.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_12",
@@ -405,7 +416,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. O atrito entre materiais diferentes (solado e piso, tecidos) transfere elétrons e eletriza os corpos. Se as cargas se acumulam, a diferença de potencial pode produzir uma descarga — a faísca. Com pisos condutores e aterramento, há um caminho para que as cargas escoem para a terra assim que surgem.\n\nPegadinhas:\n• B: eletrizar as pessoas aumentaria o risco de descargas.\n• C: isolar impediria o escoamento — é o oposto do objetivo.\n• D: acumular cargas aumenta o risco de descarga.\n• E: o escoamento é contínuo e envolve correntes mínimas; não há aquecimento relevante."
+    "explanation": "Resposta A. O atrito entre materiais diferentes (solado e piso, tecidos) transfere elétrons e eletriza os corpos. Se as cargas se acumulam, a diferença de potencial pode produzir uma descarga — a faísca. Com pisos condutores e aterramento, há um caminho para que as cargas escoem para a terra assim que surgem.\n\nPegadinhas:\n• B: eletrizar as pessoas aumentaria o risco de descargas.\n• C: isolar impediria o escoamento — é o oposto do objetivo.\n• D: acumular cargas aumenta o risco de descarga.\n• E: o escoamento é contínuo e envolve correntes mínimas; não há aquecimento relevante.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_13",
@@ -439,7 +451,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. Custos mensais: A(x) = 100 + 50x e B(x) = 250 + 20x. B < A ⟺ 250 + 20x < 100 + 50x ⟺ 150 < 30x ⟺ x > 5. Com exatamente 5 consultas, os planos custam o mesmo (R$ 350,00).\n\nPegadinhas:\n• A, B e C: não correspondem à interseção das retas; com 3 consultas, A custa 250 e B, 310.\n• D: inverte a desigualdade — com poucas consultas, o plano A é o mais barato."
+    "explanation": "Resposta E. Custos mensais: A(x) = 100 + 50x e B(x) = 250 + 20x. B < A ⟺ 250 + 20x < 100 + 50x ⟺ 150 < 30x ⟺ x > 5. Com exatamente 5 consultas, os planos custam o mesmo (R$ 350,00).\n\nPegadinhas:\n• A, B e C: não correspondem à interseção das retas; com 3 consultas, A custa 250 e B, 310.\n• D: inverte a desigualdade — com poucas consultas, o plano A é o mais barato.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_14",
@@ -473,7 +486,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Volume: 2 × 1,5 × 1 = 3 m³ = 3 000 L. Consumo diário: 4 × 150 = 600 L. Duração: 3 000 ÷ 600 = 5 dias.\n\nPegadinhas:\n• A: não corresponde a cálculo coerente com os dados.\n• C (7,5 dias): divide 3 000 L por 400 L, como se cada pessoa consumisse 100 L.\n• D (20 dias): considera o consumo de uma só pessoa.\n• E (50 dias): erra a conversão, tomando 3 m³ como 30 000 L."
+    "explanation": "Resposta B. Volume: 2 × 1,5 × 1 = 3 m³ = 3 000 L. Consumo diário: 4 × 150 = 600 L. Duração: 3 000 ÷ 600 = 5 dias.\n\nPegadinhas:\n• A: não corresponde a cálculo coerente com os dados.\n• C (7,5 dias): divide 3 000 L por 400 L, como se cada pessoa consumisse 100 L.\n• D (20 dias): considera o consumo de uma só pessoa.\n• E (50 dias): erra a conversão, tomando 3 m³ como 30 000 L.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_15",
@@ -507,7 +521,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. A mistura tem 1 + 49 = 50 partes, das quais 1 é água sanitária. A concentração cai para 1/50 da original: 2% ÷ 50 = 0,04%.\n\nPegadinhas:\n• A e B: erram uma ou duas casas decimais na divisão.\n• C (0,01%): não corresponde à diluição indicada.\n• E (0,4%): divide por 5 em vez de 50.\nDividir por 49 em vez de 50 daria quase o mesmo valor aqui, mas, em diluições menores, contar só a água leva a erro maior."
+    "explanation": "Resposta D. A mistura tem 1 + 49 = 50 partes, das quais 1 é água sanitária. A concentração cai para 1/50 da original: 2% ÷ 50 = 0,04%.\n\nPegadinhas:\n• A e B: erram uma ou duas casas decimais na divisão.\n• C (0,01%): não corresponde à diluição indicada.\n• E (0,4%): divide por 5 em vez de 50.\nDividir por 49 em vez de 50 daria quase o mesmo valor aqui, mas, em diluições menores, contar só a água leva a erro maior.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_16",
@@ -541,7 +556,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. Ao financiar infraestrutura, a China garante rotas para suas exportações e importações de matérias-primas, abre mercados para suas empresas de construção e amplia sua influência diplomática. O endividamento citado pelos críticos mostra que se trata de empréstimos, não de doações.\n\nPegadinhas:\n• A: a iniciativa é econômica e de infraestrutura, não uma aliança militar formal.\n• B: o texto fala em empréstimos e endividamento.\n• D: não há tratado de livre comércio entre todos os participantes.\n• E: a iniciativa inclui portos e rotas marítimas."
+    "explanation": "Resposta C. Ao financiar infraestrutura, a China garante rotas para suas exportações e importações de matérias-primas, abre mercados para suas empresas de construção e amplia sua influência diplomática. O endividamento citado pelos críticos mostra que se trata de empréstimos, não de doações.\n\nPegadinhas:\n• A: a iniciativa é econômica e de infraestrutura, não uma aliança militar formal.\n• B: o texto fala em empréstimos e endividamento.\n• D: não há tratado de livre comércio entre todos os participantes.\n• E: a iniciativa inclui portos e rotas marítimas.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_17",
@@ -575,7 +591,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. O semiárido tem chuvas concentradas em poucos meses e muito irregulares de um ano para outro, altas taxas de evaporação e rios que secam na estiagem. O São Francisco, perene por receber águas de áreas mais úmidas, é usado como fonte para abastecer bacias do Nordeste Setentrional.\n\nPegadinhas:\n• B: a água é levada do rio para o semiárido, não do litoral.\n• C: o São Francisco é justamente um rio perene que atravessa o semiárido.\n• D: o projeto é de abastecimento, não de navegação.\n• E: a salinização de aquíferos ocorre em alguns pontos, mas não é o problema central nem tem essa causa no interior."
+    "explanation": "Resposta A. O semiárido tem chuvas concentradas em poucos meses e muito irregulares de um ano para outro, altas taxas de evaporação e rios que secam na estiagem. O São Francisco, perene por receber águas de áreas mais úmidas, é usado como fonte para abastecer bacias do Nordeste Setentrional.\n\nPegadinhas:\n• B: a água é levada do rio para o semiárido, não do litoral.\n• C: o São Francisco é justamente um rio perene que atravessa o semiárido.\n• D: o projeto é de abastecimento, não de navegação.\n• E: a salinização de aquíferos ocorre em alguns pontos, mas não é o problema central nem tem essa causa no interior.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_18",
@@ -609,7 +626,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. Médias escondem distribuição: dois países com a mesma renda média podem ter desigualdades muito diferentes. O índice ajustado desconta essa desigualdade em cada dimensão, e a diferença entre os dois índices mostra quanto desenvolvimento humano 'se perde' pela má distribuição — perda grande no caso do Brasil.\n\nPegadinhas:\n• A e D: o texto lista as três dimensões, incluindo saúde (expectativa de vida) e educação.\n• B: o IDH usa indicadores objetivos, não pesquisas de felicidade.\n• C: os indicadores são nacionais e incluem toda a população."
+    "explanation": "Resposta E. Médias escondem distribuição: dois países com a mesma renda média podem ter desigualdades muito diferentes. O índice ajustado desconta essa desigualdade em cada dimensão, e a diferença entre os dois índices mostra quanto desenvolvimento humano 'se perde' pela má distribuição — perda grande no caso do Brasil.\n\nPegadinhas:\n• A e D: o texto lista as três dimensões, incluindo saúde (expectativa de vida) e educação.\n• B: o IDH usa indicadores objetivos, não pesquisas de felicidade.\n• C: os indicadores são nacionais e incluem toda a população.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_19",
@@ -643,7 +661,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Lutero sustentou que a salvação vem da fé (e não da compra de perdões) e que a Bíblia, traduzida para o alemão, deveria ser lida pelos fiéis. A imprensa de tipos móveis multiplicou panfletos e Bíblias, e os príncipes viram na ruptura com Roma uma oportunidade de autonomia política e de confisco de terras da Igreja.\n\nPegadinhas:\n• A e E: descrevem justamente o que Lutero criticava.\n• C: os príncipes apoiaram Lutero para se libertar da autoridade papal.\n• D: a Reforma criou novas igrejas cristãs; não aboliu o cristianismo."
+    "explanation": "Resposta B. Lutero sustentou que a salvação vem da fé (e não da compra de perdões) e que a Bíblia, traduzida para o alemão, deveria ser lida pelos fiéis. A imprensa de tipos móveis multiplicou panfletos e Bíblias, e os príncipes viram na ruptura com Roma uma oportunidade de autonomia política e de confisco de terras da Igreja.\n\nPegadinhas:\n• A e E: descrevem justamente o que Lutero criticava.\n• C: os príncipes apoiaram Lutero para se libertar da autoridade papal.\n• D: a Reforma criou novas igrejas cristãs; não aboliu o cristianismo.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_20",
@@ -677,7 +696,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. O texto reúne os elementos do plantation: grandes propriedades, um produto principal para o mercado externo e mão de obra escravizada. O tráfico atlântico era, ele próprio, parte do lucro do sistema colonial, que concentrava ganhos nos comerciantes e na metrópole.\n\nPegadinhas:\n• A e B: o texto descreve grandes extensões, produção para a Europa e trabalho escravo.\n• C: o engenho processava a cana, mas a colônia não exportava máquinas; dependia de manufaturas europeias.\n• E: a Coroa lucrava com o açúcar e com o tráfico, sob o monopólio comercial."
+    "explanation": "Resposta D. O texto reúne os elementos do plantation: grandes propriedades, um produto principal para o mercado externo e mão de obra escravizada. O tráfico atlântico era, ele próprio, parte do lucro do sistema colonial, que concentrava ganhos nos comerciantes e na metrópole.\n\nPegadinhas:\n• A e B: o texto descreve grandes extensões, produção para a Europa e trabalho escravo.\n• C: o engenho processava a cana, mas a colônia não exportava máquinas; dependia de manufaturas europeias.\n• E: a Coroa lucrava com o açúcar e com o tráfico, sob o monopólio comercial.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_21",
@@ -711,7 +731,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. Com arsenais capazes de destruição mútua, nenhuma superpotência podia buscar vitória militar sem risco extremo. A saída combinou retirada dos mísseis soviéticos, garantia de não invasão de Cuba e retirada discreta dos mísseis americanos na Turquia. Depois da crise, criou-se a 'linha direta' entre Washington e Moscou.\n\nPegadinhas:\n• A: o compromisso foi justamente o de não invadir Cuba.\n• B: não houve confronto militar direto; a retirada americana se limitou à Turquia e foi negociada.\n• D: Cuba seguiu alinhada à União Soviética.\n• E: a crise levou a mais canais de comunicação, não ao rompimento."
+    "explanation": "Resposta C. Com arsenais capazes de destruição mútua, nenhuma superpotência podia buscar vitória militar sem risco extremo. A saída combinou retirada dos mísseis soviéticos, garantia de não invasão de Cuba e retirada discreta dos mísseis americanos na Turquia. Depois da crise, criou-se a 'linha direta' entre Washington e Moscou.\n\nPegadinhas:\n• A: o compromisso foi justamente o de não invadir Cuba.\n• B: não houve confronto militar direto; a retirada americana se limitou à Turquia e foi negociada.\n• D: Cuba seguiu alinhada à União Soviética.\n• E: a crise levou a mais canais de comunicação, não ao rompimento.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_22",
@@ -745,7 +766,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. Em I, o foco está no referente — a composição do medicamento —, em linguagem objetiva: função referencial. Em II, o verbo no imperativo ('Mantenha') dirige-se ao leitor, procurando orientar seu comportamento: função conativa (ou apelativa).\n\nPegadinhas:\n• B e E: não há expressão de sentimentos do emissor nem trabalho estético com a forma.\n• C: o texto não fala da própria língua nem serve para testar o canal.\n• D: inverte as funções dos trechos."
+    "explanation": "Resposta A. Em I, o foco está no referente — a composição do medicamento —, em linguagem objetiva: função referencial. Em II, o verbo no imperativo ('Mantenha') dirige-se ao leitor, procurando orientar seu comportamento: função conativa (ou apelativa).\n\nPegadinhas:\n• B e E: não há expressão de sentimentos do emissor nem trabalho estético com a forma.\n• C: o texto não fala da própria língua nem serve para testar o canal.\n• D: inverte as funções dos trechos.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_23",
@@ -779,7 +801,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. O texto contrasta a explicação comum ('a lack of information') com a pesquisa: muitos pais 'have heard the scientific facts', mas lhes falta 'trust'. A estratégia mais eficaz é a conversa com um profissional conhecido, 'who listens to concerns before answering them'.\n\nPegadinhas:\n• A e D: o texto afirma que muitos pais hesitantes conhecem os fatos científicos.\n• B: o texto diz que campanhas que apenas repetem estatísticas são menos eficazes.\n• C: o texto não fala em obrigatoriedade.\nVocabulário: 'hesitancy' = hesitação; 'trust' = confiança; 'deliver' = transmitir, entregar."
+    "explanation": "Resposta E. O texto contrasta a explicação comum ('a lack of information') com a pesquisa: muitos pais 'have heard the scientific facts', mas lhes falta 'trust'. A estratégia mais eficaz é a conversa com um profissional conhecido, 'who listens to concerns before answering them'.\n\nPegadinhas:\n• A e D: o texto afirma que muitos pais hesitantes conhecem os fatos científicos.\n• B: o texto diz que campanhas que apenas repetem estatísticas são menos eficazes.\n• C: o texto não fala em obrigatoriedade.\nVocabulário: 'hesitancy' = hesitação; 'trust' = confiança; 'deliver' = transmitir, entregar.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l5_24",
@@ -813,6 +836,7 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. O estado de natureza, para Hobbes, é uma 'guerra de todos contra todos' em potencial. Por medo da morte violenta, os indivíduos renunciam ao direito de fazer tudo o que querem e transferem ao soberano (o Leviatã) o poder de impor leis e garantir a paz. A segurança justifica um poder forte.\n\nPegadinhas:\n• A: Hobbes defende transferência ampla de poder, não a preservação de todos os direitos com representantes temporários.\n• C: é a ideia de Rousseau, para quem o homem natural seria bom.\n• D: fazer justiça pelas próprias mãos é característica do estado de natureza, que o contrato quer superar.\n• E: o contrato cria o Estado; não o abole."
+    "explanation": "Resposta B. O estado de natureza, para Hobbes, é uma 'guerra de todos contra todos' em potencial. Por medo da morte violenta, os indivíduos renunciam ao direito de fazer tudo o que querem e transferem ao soberano (o Leviatã) o poder de impor leis e garantir a paz. A segurança justifica um poder forte.\n\nPegadinhas:\n• A: Hobbes defende transferência ampla de poder, não a preservação de todos os direitos com representantes temporários.\n• C: é a ideia de Rousseau, para quem o homem natural seria bom.\n• D: fazer justiça pelas próprias mãos é característica do estado de natureza, que o contrato quer superar.\n• E: o contrato cria o Estado; não o abole.",
+    "styleOf": "FUVEST"
   }
 ]
