@@ -110135,7 +110135,7 @@
   },
   {
     "id": "crivo_fuvest_f1_l3_22",
-    "chapter": "Text Comprehension: Digital Technology",
+    "chapter": "Text Comprehension: The Human Brain",
     "topicId": "ing_01",
     "subject": "Inglês",
     "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Teenagers are often described as lazy for sleeping late, but research shows that their internal clock actually shifts during puberty: the hormone melatonin, which signals that it is time to sleep, is released later at night than in children or adults. Bright screens in the evening can delay melatonin even further. When schools start very early, many students end up sleeping far less than they need, which affects memory, mood and attention.\"\n\nTexto elaborado para esta questão.\n\nSegundo o texto, adolescentes que dormem tarde",
@@ -110935,7 +110935,7 @@
   },
   {
     "id": "crivo_fuvest_f1_l4_23",
-    "chapter": "Text Comprehension: Ecology (Greenhouse Gases)",
+    "chapter": "Text Comprehension: Global Warming",
     "topicId": "ing_01",
     "subject": "Inglês",
     "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Aedes aegypti, the mosquito that transmits dengue, used to be rare in cities at high altitudes, where cold nights limited its survival. As average temperatures rise, the mosquito is now found in places where it was once absent, and the season in which it can breed is getting longer. Experts warn, however, that warming is not the whole story: unplanned urban growth, water stored in open containers and the movement of people also help the virus spread.\"\n\nTexto elaborado para esta questão.\n\nDe acordo com o texto,",
@@ -110996,5 +110996,773 @@
     "correctOptionId": "e",
     "explanation": "Resposta E. Durkheim trata o suicídio como fato social, medido por taxas que variam conforme a integração e a regulação dos grupos. A anomia é a ausência ou o enfraquecimento das normas: em crises ou em enriquecimentos súbitos, as expectativas perdem limite, e a taxa sobe. Por isso o aumento também na prosperidade é o dado decisivo.\n\nPegadinhas:\n• A: o altruísta liga-se ao excesso de integração, não à falta de regulação.\n• B: o egoísta, em Durkheim, vem da fraca integração ao grupo — e a abordagem dele é sociológica, não individual.\n• C: o fatalista é o oposto da anomia: regulação excessiva.\n• D: o método de Durkheim busca causas sociais, não hereditárias.",
     "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_01",
+    "chapter": "Dinâmica de Populações",
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma população de cabras foi introduzida em uma ilha sem predadores. Os censos anuais registraram:\n\n[Tabela: número de cabras por ano — ano 0: 10; ano 1: 40; ano 2: 160; ano 3: 400; ano 4: 600; ano 5: 640; ano 6: 650; ano 7: 645.]\n\nNos últimos anos do levantamento, observou-se redução da vegetação rasteira e aumento da mortalidade de filhotes no inverno.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nOs dados indicam que a população",
+    "options": [
+      {
+        "id": "a",
+        "text": "cresceu de forma exponencial durante todo o período, pois não havia predadores."
+      },
+      {
+        "id": "b",
+        "text": "entrou em declínio contínuo a partir do ano 3, por causa da redução da vegetação."
+      },
+      {
+        "id": "c",
+        "text": "cresceu rapidamente no início e depois se estabilizou perto da capacidade de suporte da ilha, limitada pela disponibilidade de recursos."
+      },
+      {
+        "id": "d",
+        "text": "estabilizou-se porque os indivíduos deixaram de se reproduzir ao atingir a idade adulta."
+      },
+      {
+        "id": "e",
+        "text": "atingiu o tamanho máximo no ano 1, quando a taxa de crescimento foi maior."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. No início, com recursos abundantes, a população quadruplicou a cada ano (10 → 40 → 160). Depois, o crescimento desacelerou (400 → 600 → 640) e a população se manteve perto de 650: é a curva logística, com estabilização na capacidade de suporte. A redução da vegetação e a mortalidade de filhotes são a resistência ambiental que freia o crescimento.\n\nPegadinhas:\n• A: do ano 4 em diante, os valores praticamente não crescem; isso não é exponencial.\n• B: a população cresceu até o ano 6; não houve declínio contínuo.\n• D: a reprodução continua; o que aumenta é a mortalidade, compensando os nascimentos.\n• E: confunde a maior taxa de crescimento (início) com o maior tamanho (fim).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_02",
+    "chapter": "Alelos Múltiplos e Herança dos Grupos Sanguíneos",
+    "topicId": "bio_genetica",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm paciente com sangue tipo B, Rh negativo, precisa de uma transfusão de concentrado de hemácias. O banco de sangue do hospital dispõe de bolsas dos tipos A⁺, A⁻, B⁺, B⁻, AB⁺, AB⁻, O⁺ e O⁻.\n\nTexto elaborado para esta questão.\n\nPara evitar reações de incompatibilidade, as bolsas que podem ser usadas são apenas as dos tipos",
+    "options": [
+      {
+        "id": "a",
+        "text": "B⁻ e O⁻."
+      },
+      {
+        "id": "b",
+        "text": "B⁺, B⁻, O⁺ e O⁻."
+      },
+      {
+        "id": "c",
+        "text": "B⁻, AB⁻ e O⁻."
+      },
+      {
+        "id": "d",
+        "text": "O⁻."
+      },
+      {
+        "id": "e",
+        "text": "todos os tipos B e AB."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O plasma de uma pessoa B contém anticorpos anti-A, que aglutinariam hemácias com antígeno A (tipos A e AB). Ela pode receber hemácias sem antígeno A: B ou O. Por ser Rh⁻, deve receber hemácias Rh⁻, para não ser sensibilizada contra o antígeno Rh. Restam B⁻ e O⁻.\n\nPegadinhas:\n• B: inclui bolsas Rh⁺, que podem sensibilizar o paciente Rh⁻ e causar reação em transfusões futuras.\n• C: hemácias AB têm antígeno A e seriam aglutinadas pelos anti-A do receptor.\n• D: O⁻ é compatível, mas não é o único: B⁻ também serve.\n• E: inclui AB e Rh⁺.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_03",
+    "chapter": "Biotecnologia",
+    "topicId": "bio_biotecnologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO RT-PCR é considerado o exame de referência para diagnosticar infecções pelo coronavírus, cujo material genético é RNA. Na amostra colhida do nariz, uma enzima de transcrição reversa produz DNA a partir do RNA viral, se houver. Em seguida, o aparelho repete dezenas de ciclos de aquecimento e resfriamento, em que uma DNA polimerase resistente ao calor copia um trecho específico desse DNA. Uma sonda fluorescente indica se o trecho foi amplificado.\n\nTexto elaborado para esta questão.\n\nO RT-PCR é capaz de identificar a infecção ainda no início porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "detecta anticorpos produzidos pelo paciente, que surgem logo no primeiro dia."
+      },
+      {
+        "id": "b",
+        "text": "cultiva o vírus em laboratório até que ele forme colônias visíveis."
+      },
+      {
+        "id": "c",
+        "text": "identifica a proteína S do vírus por meio de uma reação com anticorpos fixados em uma fita."
+      },
+      {
+        "id": "d",
+        "text": "mede a temperatura do paciente ao longo dos ciclos de aquecimento."
+      },
+      {
+        "id": "e",
+        "text": "detecta diretamente o material genético do vírus, amplificando em muitos milhões de vezes um trecho específico, mesmo quando há poucas cópias na amostra."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Cada ciclo de PCR pode dobrar o número de cópias do trecho-alvo: depois de 30 ciclos, uma única molécula pode gerar mais de um bilhão. Por detectar o próprio material genético do vírus, o teste dispensa esperar a resposta imune do paciente, o que permite diagnóstico precoce.\n\nPegadinhas:\n• A: é o princípio da sorologia, e anticorpos levam dias para surgir.\n• B: o vírus não forma colônias; e o texto não descreve cultivo.\n• C: descreve o teste rápido de antígeno.\n• D: o aquecimento é da amostra, para separar as fitas de DNA; não mede febre.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_04",
+    "chapter": "Fisiologia Vegetal: Hormônios Vegetais",
+    "topicId": "bio_fisio_vegetal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara acelerar o amadurecimento de abacates ainda verdes, uma pessoa os guardou em um saco de papel fechado junto com uma banana bem madura. Em dois dias, os abacates amadureceram, enquanto outros, deixados sobre a mesa, continuaram firmes. Comerciantes usam câmaras com controle de gases para amadurecer frutos colhidos verdes.\n\nTexto elaborado para esta questão.\n\nO resultado se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o saco de papel aumentou a temperatura, que é o único fator que provoca o amadurecimento."
+      },
+      {
+        "id": "b",
+        "text": "a banana madura libera etileno, hormônio gasoso que, acumulado no saco, estimula o amadurecimento dos outros frutos."
+      },
+      {
+        "id": "c",
+        "text": "a banana transferiu açúcares para os abacates por contato direto."
+      },
+      {
+        "id": "d",
+        "text": "a falta de luz no interior do saco fez os abacates produzirem auxina, responsável pelo amadurecimento."
+      },
+      {
+        "id": "e",
+        "text": "o oxigênio acabou dentro do saco, e a fermentação amoleceu os frutos."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O etileno é um hormônio vegetal gasoso que desencadeia o amadurecimento: amolecimento, conversão de amido em açúcares, mudança de cor e aroma. Frutos maduros liberam muito etileno, e o saco fechado o mantém concentrado; o próprio amadurecimento estimula mais produção de etileno. As câmaras comerciais controlam esse gás.\n\nPegadinhas:\n• A: a temperatura influencia, mas o saco de papel não esquenta de forma relevante, e o controle comercial é feito pelo gás.\n• C: não há transferência de açúcares entre frutos.\n• D: a auxina atua no crescimento e no desenvolvimento do fruto, não no amadurecimento; e a ausência de luz não é o fator decisivo.\n• E: o papel deixa passar ar, e o amadurecimento não é fermentação.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_05",
+    "chapter": "Termoquímica II",
+    "topicId": "qui_termoquimica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nBolsas de gelo instantâneas, usadas em primeiros socorros esportivos, contêm nitrato de amônio sólido e um compartimento com água. Ao apertar a bolsa, o compartimento se rompe, o sal se dissolve e a bolsa fica muito fria em poucos segundos, sem ter estado no congelador.\n\nNH₄NO₃(s) → NH₄⁺(aq) + NO₃⁻(aq)   ΔH = +26 kJ/mol\n\nTexto elaborado para esta questão.\n\nO resfriamento da bolsa ocorre porque a dissolução do nitrato de amônio",
+    "options": [
+      {
+        "id": "a",
+        "text": "libera calor, que é absorvido pela água e a congela."
+      },
+      {
+        "id": "b",
+        "text": "produz gelo a partir da água, por reação química com o sal."
+      },
+      {
+        "id": "c",
+        "text": "é exotérmica, e a energia liberada é transformada em frio."
+      },
+      {
+        "id": "d",
+        "text": "é endotérmica: absorve energia do próprio sistema e da vizinhança, reduzindo a temperatura da bolsa e da região do corpo em contato com ela."
+      },
+      {
+        "id": "e",
+        "text": "não envolve troca de energia, e o frio se deve à evaporação da água."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. ΔH positivo indica processo endotérmico: para dissolver, o sistema absorve energia. Ela vem da agitação térmica da própria solução e do que está em contato com a bolsa — a temperatura cai. 'Frio' não é uma forma de energia; é a retirada de calor.\n\nPegadinhas:\n• A e C: ΔH > 0 indica absorção, não liberação de calor.\n• B: não se forma gelo; a solução apenas esfria.\n• E: a bolsa é fechada, e o efeito vem da dissolução, cujo ΔH não é nulo.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_06",
+    "chapter": "Química Inorgânica",
+    "topicId": "qui_inorganica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm regiões próximas a usinas termelétricas a carvão, lagos e solos podem se tornar ácidos. O carvão contém enxofre, que, na queima, origina dióxido de enxofre (SO₂). Na atmosfera, esse gás se oxida e reage com a água, formando ácido sulfúrico (H₂SO₄), que retorna à superfície com a chuva. Para recuperar lagos e solos afetados, uma prática comum é a calagem, adição de calcário (CaCO₃) moído.\n\nTexto elaborado para esta questão.\n\nSobre o problema e a medida de recuperação, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o SO₂ é um óxido básico, e a calagem acidifica o meio para neutralizá-lo."
+      },
+      {
+        "id": "b",
+        "text": "o calcário reage com o SO₂ do ar antes de ele chegar ao lago, impedindo a chuva ácida."
+      },
+      {
+        "id": "c",
+        "text": "o SO₂ é um óxido ácido que origina H₂SO₄, e o carbonato de cálcio, de caráter básico, neutraliza o ácido no lago e no solo."
+      },
+      {
+        "id": "d",
+        "text": "o ácido sulfúrico é neutralizado pela própria água da chuva, e a calagem serve apenas para adubar o solo."
+      },
+      {
+        "id": "e",
+        "text": "a chuva ácida se deve ao CO₂ liberado pela queima, e a calagem retira esse gás da atmosfera."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Óxidos ácidos, como o SO₂, reagem com água formando ácidos. O CaCO₃ reage com os íons H⁺: CaCO₃ + 2 H⁺ → Ca²⁺ + H₂O + CO₂, elevando o pH. A medida corrige o efeito no lago e no solo; a prevenção exige reduzir as emissões (dessulfurização, troca de combustível).\n\nPegadinhas:\n• A: o SO₂ é óxido ácido, e a calagem eleva o pH.\n• B: o calcário é aplicado no lago e no solo, não na atmosfera.\n• D: a água da chuva não neutraliza o ácido; ela o transporta.\n• E: o CO₂ forma ácido carbônico, fraco, responsável pela leve acidez natural da chuva; a chuva ácida descrita vem do enxofre do carvão.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_07",
+    "chapter": "Evolução dos Modelos Atômicos",
+    "topicId": "qui_modelos_atomicos",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs cores dos fogos de artifício são obtidas com sais de diferentes metais: o estrôncio produz vermelho; o sódio, amarelo-alaranjado; o bário, verde. Um mesmo metal produz sempre a mesma cor característica, que também pode ser observada no teste de chama em laboratório.\n\nTexto elaborado para esta questão.\n\nO modelo atômico que explica esse fenômeno é o de Bohr, segundo o qual",
+    "options": [
+      {
+        "id": "a",
+        "text": "os elétrons, excitados pela energia da explosão, saltam para níveis mais energéticos e, ao retornar, emitem luz com energias definidas, características de cada elemento."
+      },
+      {
+        "id": "b",
+        "text": "o núcleo do átomo se aquece e emite luz de cor proporcional à sua massa."
+      },
+      {
+        "id": "c",
+        "text": "os átomos são esferas maciças e indivisíveis, que brilham ao colidir umas com as outras."
+      },
+      {
+        "id": "d",
+        "text": "os elétrons ficam incrustados em uma massa positiva, como passas em um pudim, e vibram ao serem aquecidos."
+      },
+      {
+        "id": "e",
+        "text": "os elétrons giram em qualquer órbita, emitindo luz de todas as cores continuamente."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. No modelo de Bohr, o elétron só ocupa níveis de energia definidos. Ao absorver energia, salta para um nível mais alto; ao voltar, emite um fóton com energia igual à diferença entre os níveis. Como esses níveis são diferentes em cada elemento, cada metal emite cores próprias.\n\nPegadinhas:\n• B: a luz vem de transições eletrônicas, não de aquecimento do núcleo.\n• C: é o modelo de Dalton, que não explica emissão de luz.\n• D: é o modelo de Thomson, que não explica cores específicas.\n• E: órbitas quaisquer com emissão contínua levariam a espectros contínuos e ao colapso do átomo — problema que o modelo de Bohr resolveu.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_08",
+    "chapter": "Reações de Adição",
+    "topicId": "qui_organica_reacoes",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara transformar óleos vegetais líquidos em gorduras sólidas, como as margarinas antigas, a indústria usava a hidrogenação parcial: os óleos reagiam com gás hidrogênio na presença de um catalisador metálico. Nesse processo, parte das ligações duplas C=C que permaneciam nas cadeias mudava da configuração cis para a trans. Em 2023, o uso de gorduras parcialmente hidrogenadas foi proibido no Brasil, por estar associado ao aumento do risco cardiovascular.\n\nTexto elaborado para esta questão.\n\nSobre o processo descrito, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a hidrogenação é uma reação de substituição, que troca átomos de oxigênio por hidrogênio nas cadeias."
+      },
+      {
+        "id": "b",
+        "text": "os óleos se solidificam porque a hidrogenação quebra as cadeias em moléculas menores."
+      },
+      {
+        "id": "c",
+        "text": "a gordura trans é idêntica à gordura saturada de origem animal, pois ambas não têm ligações duplas."
+      },
+      {
+        "id": "d",
+        "text": "as configurações cis e trans têm sempre as mesmas propriedades físicas e biológicas."
+      },
+      {
+        "id": "e",
+        "text": "a adição de H₂ às ligações duplas reduz o número de insaturações, e as cadeias, mais retilíneas, se empacotam melhor, elevando o ponto de fusão; as duplas restantes podem isomerizar para trans."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Na reação de adição, cada H₂ se liga aos dois carbonos de uma dupla, que vira simples. Cadeias com menos duplas cis (as que dobram a cadeia) se alinham melhor, com mais interações de dispersão: o material fica sólido à temperatura ambiente. A isomerização cis → trans nas duplas que restam produz as gorduras trans.\n\nPegadinhas:\n• A: é adição de H₂ à dupla, não substituição de oxigênio.\n• B: as cadeias não são quebradas; ficam mais retas.\n• C: a gordura trans ainda tem ligações duplas, só que em configuração trans.\n• D: são isômeros com propriedades físicas e efeitos biológicos diferentes — como mostra a própria proibição.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_09",
+    "chapter": "Dinâmica do Movimento Circular",
+    "topicId": "fis_gravitacao_circular",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm bancos de sangue, bolsas de sangue total são colocadas em centrífugas que giram a milhares de rotações por minuto. Ao final, as hemácias ficam no fundo da bolsa, o plasma, mais leve, fica em cima, e entre eles forma-se uma camada fina de leucócitos e plaquetas. Deixado em repouso, o sangue também se separaria, mas em um tempo muito maior.\n\nTexto elaborado para esta questão.\n\nA centrífuga acelera a separação porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "empurra todas as partículas para fora com a mesma força, independentemente de sua massa."
+      },
+      {
+        "id": "b",
+        "text": "a aceleração centrípeta exigida para manter os componentes em trajetória circular é muitas vezes maior que g; os componentes mais densos, como as hemácias, deslocam-se mais rapidamente para o fundo, como numa sedimentação muito intensificada."
+      },
+      {
+        "id": "c",
+        "text": "o atrito com a parede aquece o plasma, que evapora e deixa as hemácias no fundo."
+      },
+      {
+        "id": "d",
+        "text": "o giro rompe as hemácias, que se acumulam no fundo como fragmentos."
+      },
+      {
+        "id": "e",
+        "text": "a centrífuga cria um campo magnético que atrai o ferro da hemoglobina para o fundo."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Para descrever uma trajetória circular, cada porção da bolsa precisa de força resultante centrípeta, de módulo m·ω²·r. Com ω grande, a aceleração equivale a milhares de vezes g. No referencial da bolsa, é como se a 'gravidade' fosse multiplicada: componentes de maior densidade sedimentam muito mais rápido em direção ao fundo, que fica do lado de fora do giro.\n\nPegadinhas:\n• A: a separação ocorre justamente porque componentes de densidades diferentes se comportam de modo diferente.\n• C: não há evaporação; a bolsa é fechada.\n• D: as hemácias ficam íntegras e são usadas em transfusões.\n• E: a centrífuga não usa campo magnético; o ferro da hemoglobina não explica a separação.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_10",
+    "chapter": "Resistores",
+    "topicId": "fis_circuitos",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA gravidade de um choque elétrico depende da corrente que atravessa o corpo. Correntes de alguns miliamperes causam formigamento; a partir de algumas dezenas de miliamperes, podem provocar parada respiratória e fibrilação cardíaca. A resistência elétrica do corpo varia muito com o estado da pele.\n\nNote e adote:\nTensão da rede: 127 V.\nResistência do corpo entre as mãos: pele seca, cerca de 100 000 Ω; pele molhada, cerca de 1 000 Ω.\n\nTexto elaborado para esta questão.\n\nUma pessoa com as mãos molhadas que toque simultaneamente dois pontos da rede de 127 V fica sujeita a uma corrente de, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,127 mA."
+      },
+      {
+        "id": "b",
+        "text": "1,27 mA."
+      },
+      {
+        "id": "c",
+        "text": "12,7 mA."
+      },
+      {
+        "id": "d",
+        "text": "127 mA."
+      },
+      {
+        "id": "e",
+        "text": "1,27 A."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Pela lei de Ohm, I = V/R = 127 ÷ 1 000 = 0,127 A = 127 mA — faixa capaz de causar fibrilação. Com a pele seca, I = 127 ÷ 100 000 ≈ 1,27 mA, um formigamento. A diferença de cem vezes é o motivo de evitar aparelhos elétricos com mãos molhadas.\n\nPegadinhas:\n• A: erra a conversão por um fator mil.\n• B: usa a resistência da pele seca.\n• C: erra uma casa decimal.\n• E: divide 127 por 100 Ω, valor que não está nos dados.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_11",
+    "chapter": "Máquinas Térmicas e Ciclo de Carnot",
+    "topicId": "fis_termodinamica_gases",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm inventor afirma ter construído um motor térmico que opera entre uma fonte quente a 327 °C e o ambiente a 27 °C e que converte em trabalho 60% do calor retirado da fonte quente. Ele argumenta que o uso de materiais modernos permitiu superar os motores convencionais.\n\nNote e adote:\nT(K) = T(°C) + 273.\nO rendimento máximo de uma máquina térmica operando entre duas fontes é o do ciclo de Carnot: η = 1 − T_fria/T_quente.\n\nTexto elaborado para esta questão.\n\nA afirmação do inventor é",
+    "options": [
+      {
+        "id": "a",
+        "text": "possível, pois 60% é menor que 100%, e nenhuma lei impede esse rendimento."
+      },
+      {
+        "id": "b",
+        "text": "possível, pois o rendimento de Carnot é 1 − 27/327 ≈ 92%, valor maior que 60%."
+      },
+      {
+        "id": "c",
+        "text": "impossível, pois o rendimento máximo entre essas temperaturas é 1 − 300/600 = 50%, menor que os 60% declarados."
+      },
+      {
+        "id": "d",
+        "text": "impossível, pois nenhuma máquina térmica pode ter rendimento superior a 25%."
+      },
+      {
+        "id": "e",
+        "text": "possível apenas se a máquina não trocar calor com o ambiente."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Em kelvin, as fontes estão a 600 K e 300 K. O rendimento de Carnot é 1 − 300/600 = 0,5: nenhuma máquina operando entre essas temperaturas pode converter mais de 50% do calor em trabalho, qualquer que seja o material. O limite vem da segunda lei da termodinâmica, não da tecnologia.\n\nPegadinhas:\n• A: o limite não é 100%; é o de Carnot.\n• B: usa temperaturas em °C, o que não vale na fórmula.\n• D: não há limite universal de 25%; o máximo depende das temperaturas das fontes.\n• E: toda máquina térmica precisa rejeitar calor para a fonte fria; sem isso, nenhuma funciona.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_12",
+    "chapter": "Eletrostática: Processos de Eletrização e Aplicações",
+    "topicId": "fis_eletrostatica",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm centros cirúrgicos, pisos condutores, calçados apropriados e equipamentos aterrados são usados para evitar o acúmulo de cargas elétricas em pessoas e objetos. No passado, quando se usavam anestésicos inflamáveis, uma pequena faísca podia causar explosões. Ainda hoje, descargas eletrostáticas podem danificar equipamentos eletrônicos sensíveis.\n\nTexto elaborado para esta questão.\n\nAs medidas descritas funcionam porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "permitem que as cargas adquiridas por atrito, ao caminhar e ao manusear tecidos, escoem continuamente para a terra, impedindo o acúmulo que provocaria faíscas."
+      },
+      {
+        "id": "b",
+        "text": "eletrizam todas as pessoas com cargas de mesmo sinal, que se repelem e evitam o contato."
+      },
+      {
+        "id": "c",
+        "text": "isolam os corpos do chão, impedindo que as cargas passem para o piso."
+      },
+      {
+        "id": "d",
+        "text": "aumentam a quantidade de cargas nos equipamentos, tornando-os mais resistentes a descargas."
+      },
+      {
+        "id": "e",
+        "text": "transformam as cargas elétricas em calor, aquecendo o ambiente."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O atrito entre materiais diferentes (solado e piso, tecidos) transfere elétrons e eletriza os corpos. Se as cargas se acumulam, a diferença de potencial pode produzir uma descarga — a faísca. Com pisos condutores e aterramento, há um caminho para que as cargas escoem para a terra assim que surgem.\n\nPegadinhas:\n• B: eletrizar as pessoas aumentaria o risco de descargas.\n• C: isolar impediria o escoamento — é o oposto do objetivo.\n• D: acumular cargas aumenta o risco de descarga.\n• E: o escoamento é contínuo e envolve correntes mínimas; não há aquecimento relevante.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_13",
+    "chapter": "Função Constante e Função Afim",
+    "topicId": "mat_funcoes",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma família compara dois planos de saúde:\n\n• Plano A: mensalidade de R$ 100,00 e R$ 50,00 por consulta realizada no mês.\n• Plano B: mensalidade de R$ 250,00 e R$ 20,00 por consulta realizada no mês.\n\nTexto elaborado para esta questão.\n\nO plano B fica mais barato que o plano A quando a família realiza, no mês,",
+    "options": [
+      {
+        "id": "a",
+        "text": "menos de 3 consultas."
+      },
+      {
+        "id": "b",
+        "text": "exatamente 3 consultas."
+      },
+      {
+        "id": "c",
+        "text": "mais de 3 consultas."
+      },
+      {
+        "id": "d",
+        "text": "menos de 5 consultas."
+      },
+      {
+        "id": "e",
+        "text": "mais de 5 consultas."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Custos mensais: A(x) = 100 + 50x e B(x) = 250 + 20x. B < A ⟺ 250 + 20x < 100 + 50x ⟺ 150 < 30x ⟺ x > 5. Com exatamente 5 consultas, os planos custam o mesmo (R$ 350,00).\n\nPegadinhas:\n• A, B e C: não correspondem à interseção das retas; com 3 consultas, A custa 250 e B, 310.\n• D: inverte a desigualdade — com poucas consultas, o plano A é o mais barato.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_14",
+    "chapter": "Prismas",
+    "topicId": "mat_geometria_espacial",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma caixa-d'água com formato de paralelepípedo tem dimensões internas de 2 m de comprimento, 1,5 m de largura e 1 m de altura e abastece uma casa onde vivem quatro pessoas. Em média, cada morador consome 150 litros de água por dia.\n\nTexto elaborado para esta questão.\n\nCom a caixa cheia e sem reabastecimento, a água será suficiente para, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "2 dias."
+      },
+      {
+        "id": "b",
+        "text": "5 dias."
+      },
+      {
+        "id": "c",
+        "text": "7,5 dias."
+      },
+      {
+        "id": "d",
+        "text": "20 dias."
+      },
+      {
+        "id": "e",
+        "text": "50 dias."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Volume: 2 × 1,5 × 1 = 3 m³ = 3 000 L. Consumo diário: 4 × 150 = 600 L. Duração: 3 000 ÷ 600 = 5 dias.\n\nPegadinhas:\n• A: não corresponde a cálculo coerente com os dados.\n• C (7,5 dias): divide 3 000 L por 400 L, como se cada pessoa consumisse 100 L.\n• D (20 dias): considera o consumo de uma só pessoa.\n• E (50 dias): erra a conversão, tomando 3 m³ como 30 000 L.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_15",
+    "chapter": "Razão e Proporção",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara desinfetar superfícies em ambientes de saúde, recomenda-se diluir 1 parte de água sanitária, que contém 2% de cloro ativo, em 49 partes de água. A solução resultante é usada em panos e borrifadores.\n\nTexto elaborado para esta questão.\n\nA concentração aproximada de cloro ativo na solução preparada é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,0004%."
+      },
+      {
+        "id": "b",
+        "text": "0,004%."
+      },
+      {
+        "id": "c",
+        "text": "0,01%."
+      },
+      {
+        "id": "d",
+        "text": "0,04%."
+      },
+      {
+        "id": "e",
+        "text": "0,4%."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A mistura tem 1 + 49 = 50 partes, das quais 1 é água sanitária. A concentração cai para 1/50 da original: 2% ÷ 50 = 0,04%.\n\nPegadinhas:\n• A e B: erram uma ou duas casas decimais na divisão.\n• C (0,01%): não corresponde à diluição indicada.\n• E (0,4%): divide por 5 em vez de 50.\nDividir por 49 em vez de 50 daria quase o mesmo valor aqui, mas, em diluições menores, contar só a água leva a erro maior.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_16",
+    "chapter": "Geopolítica e Geoeconomia da Ásia",
+    "topicId": "geo_geopolitica_regional",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLançada em 2013, a Iniciativa Cinturão e Rota, também chamada de Nova Rota da Seda, financia portos, ferrovias, rodovias e usinas em dezenas de países da Ásia, da África, da Europa e da América Latina, em geral com empréstimos de bancos chineses. Defensores destacam a ampliação da infraestrutura em países pobres; críticos apontam o endividamento de alguns parceiros e a dependência em relação à China.\n\nTexto elaborado para esta questão.\n\nA iniciativa descrita expressa",
+    "options": [
+      {
+        "id": "a",
+        "text": "a formação de uma aliança militar liderada pela China, nos moldes da OTAN."
+      },
+      {
+        "id": "b",
+        "text": "a doação de recursos sem contrapartidas, como forma de ajuda humanitária."
+      },
+      {
+        "id": "c",
+        "text": "a estratégia chinesa de ampliar sua influência econômica e geopolítica por meio de investimentos em infraestrutura e de rotas de comércio que integram mercados à sua economia."
+      },
+      {
+        "id": "d",
+        "text": "a criação de uma zona de livre comércio entre todos os países participantes."
+      },
+      {
+        "id": "e",
+        "text": "a substituição do comércio marítimo chinês pelo transporte aéreo."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Ao financiar infraestrutura, a China garante rotas para suas exportações e importações de matérias-primas, abre mercados para suas empresas de construção e amplia sua influência diplomática. O endividamento citado pelos críticos mostra que se trata de empréstimos, não de doações.\n\nPegadinhas:\n• A: a iniciativa é econômica e de infraestrutura, não uma aliança militar formal.\n• B: o texto fala em empréstimos e endividamento.\n• D: não há tratado de livre comércio entre todos os participantes.\n• E: a iniciativa inclui portos e rotas marítimas.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_17",
+    "chapter": "Hidrogeografia do Brasil",
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Projeto de Integração do Rio São Francisco capta parte da água do rio e a conduz, por canais, túneis e reservatórios, a bacias do semiárido do Nordeste Setentrional, em estados como Ceará, Paraíba, Pernambuco e Rio Grande do Norte. Defensores destacam a garantia de abastecimento para milhões de pessoas; críticos apontam os custos, os atrasos e a necessidade de revitalizar a própria bacia do São Francisco.\n\nTexto elaborado para esta questão.\n\nO projeto responde a um problema relacionado",
+    "options": [
+      {
+        "id": "a",
+        "text": "à escassez hídrica no semiárido, onde predominam chuvas irregulares, alta evaporação e muitos rios intermitentes."
+      },
+      {
+        "id": "b",
+        "text": "ao excesso de chuvas no litoral nordestino, que exigiria escoar a água para o interior."
+      },
+      {
+        "id": "c",
+        "text": "à falta de rios perenes em toda a Região Nordeste, inclusive no próprio São Francisco."
+      },
+      {
+        "id": "d",
+        "text": "à necessidade de navegação entre o Sudeste e o Norte do país."
+      },
+      {
+        "id": "e",
+        "text": "ao aumento do nível do mar, que salinizou toda a água subterrânea do interior nordestino."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O semiárido tem chuvas concentradas em poucos meses e muito irregulares de um ano para outro, altas taxas de evaporação e rios que secam na estiagem. O São Francisco, perene por receber águas de áreas mais úmidas, é usado como fonte para abastecer bacias do Nordeste Setentrional.\n\nPegadinhas:\n• B: a água é levada do rio para o semiárido, não do litoral.\n• C: o São Francisco é justamente um rio perene que atravessa o semiárido.\n• D: o projeto é de abastecimento, não de navegação.\n• E: a salinização de aquíferos ocorre em alguns pontos, mas não é o problema central nem tem essa causa no interior.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_18",
+    "chapter": "Desigualdades Globais",
+    "topicId": "geo_globalizacao_economica",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Índice de Desenvolvimento Humano (IDH), calculado pelo Programa das Nações Unidas para o Desenvolvimento, combina três dimensões: saúde (expectativa de vida ao nascer), educação (anos de escolaridade) e renda (renda nacional bruta per capita). Desde 2010, o programa também publica o IDH ajustado à desigualdade, que reduz o índice de países onde essas dimensões estão mal distribuídas entre a população.\n\nTexto elaborado para esta questão.\n\nA criação do IDH ajustado à desigualdade responde a uma limitação do IDH, que é",
+    "options": [
+      {
+        "id": "a",
+        "text": "medir apenas a renda, sem considerar saúde e educação."
+      },
+      {
+        "id": "b",
+        "text": "basear-se em pesquisas de opinião sobre felicidade."
+      },
+      {
+        "id": "c",
+        "text": "considerar somente a população urbana dos países."
+      },
+      {
+        "id": "d",
+        "text": "excluir a expectativa de vida de seu cálculo."
+      },
+      {
+        "id": "e",
+        "text": "trabalhar com médias nacionais, que podem esconder grandes diferenças entre grupos e regiões de um mesmo país."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Médias escondem distribuição: dois países com a mesma renda média podem ter desigualdades muito diferentes. O índice ajustado desconta essa desigualdade em cada dimensão, e a diferença entre os dois índices mostra quanto desenvolvimento humano 'se perde' pela má distribuição — perda grande no caso do Brasil.\n\nPegadinhas:\n• A e D: o texto lista as três dimensões, incluindo saúde (expectativa de vida) e educação.\n• B: o IDH usa indicadores objetivos, não pesquisas de felicidade.\n• C: os indicadores são nacionais e incluem toda a população.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_19",
+    "chapter": "Reforma Religiosa",
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1517, o monge Martinho Lutero divulgou 95 teses criticando a venda de indulgências, documentos que prometiam o perdão de penas pelos pecados em troca de doações à Igreja. Suas ideias se espalharam rapidamente graças à imprensa, e vários príncipes alemães passaram a apoiá-lo, interessados também em reduzir o poder do papado e se apropriar de bens eclesiásticos.\n\nTexto elaborado para esta questão.\n\nEntre as ideias defendidas por Lutero e as condições que favoreceram sua difusão, estão",
+    "options": [
+      {
+        "id": "a",
+        "text": "a salvação pelas obras e pelas doações à Igreja, difundida oralmente pelos monges."
+      },
+      {
+        "id": "b",
+        "text": "a salvação pela fé e a leitura da Bíblia pelos fiéis, difundidas pela imprensa e apoiadas por interesses políticos e econômicos de príncipes."
+      },
+      {
+        "id": "c",
+        "text": "a defesa da autoridade do papa sobre os reis, sustentada pelos príncipes alemães."
+      },
+      {
+        "id": "d",
+        "text": "a abolição de todas as religiões cristãs, em favor do humanismo laico."
+      },
+      {
+        "id": "e",
+        "text": "a venda de indulgências como forma legítima de arrecadação para as obras da Igreja."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Lutero sustentou que a salvação vem da fé (e não da compra de perdões) e que a Bíblia, traduzida para o alemão, deveria ser lida pelos fiéis. A imprensa de tipos móveis multiplicou panfletos e Bíblias, e os príncipes viram na ruptura com Roma uma oportunidade de autonomia política e de confisco de terras da Igreja.\n\nPegadinhas:\n• A e E: descrevem justamente o que Lutero criticava.\n• C: os príncipes apoiaram Lutero para se libertar da autoridade papal.\n• D: a Reforma criou novas igrejas cristãs; não aboliu o cristianismo.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_20",
+    "chapter": "A Montagem da Colonização",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo século XVI, a Coroa portuguesa incentivou a produção de açúcar no litoral do Nordeste brasileiro. Os engenhos ocupavam grandes extensões de terra, produziam quase exclusivamente para o mercado europeu e dependiam do trabalho de indígenas e, cada vez mais, de africanos escravizados, trazidos pelo tráfico atlântico, que se tornou um negócio lucrativo para comerciantes e para a Coroa.\n\nTexto elaborado para esta questão.\n\nO modelo de produção descrito, conhecido como plantation, caracteriza-se por",
+    "options": [
+      {
+        "id": "a",
+        "text": "pequenas propriedades familiares, voltadas ao abastecimento interno da colônia."
+      },
+      {
+        "id": "b",
+        "text": "produção diversificada de alimentos, com trabalho assalariado de colonos europeus."
+      },
+      {
+        "id": "c",
+        "text": "industrialização do açúcar na colônia, com exportação de máquinas para Portugal."
+      },
+      {
+        "id": "d",
+        "text": "latifúndio, monocultura voltada à exportação e trabalho escravo, integrados ao comércio atlântico."
+      },
+      {
+        "id": "e",
+        "text": "autonomia da colônia em relação à metrópole, que não participava dos lucros do açúcar."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O texto reúne os elementos do plantation: grandes propriedades, um produto principal para o mercado externo e mão de obra escravizada. O tráfico atlântico era, ele próprio, parte do lucro do sistema colonial, que concentrava ganhos nos comerciantes e na metrópole.\n\nPegadinhas:\n• A e B: o texto descreve grandes extensões, produção para a Europa e trabalho escravo.\n• C: o engenho processava a cana, mas a colônia não exportava máquinas; dependia de manufaturas europeias.\n• E: a Coroa lucrava com o açúcar e com o tráfico, sob o monopólio comercial.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_21",
+    "chapter": "Guerra Fria",
+    "topicId": "his_guerra_fria_contemporaneo",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm outubro de 1962, aviões americanos fotografaram bases de mísseis soviéticos em construção em Cuba, a cerca de 150 km da Flórida. O presidente John F. Kennedy ordenou um bloqueio naval à ilha. Durante treze dias, o mundo esteve perto de uma guerra nuclear, até que o líder soviético Nikita Kruschev aceitou retirar os mísseis. Em troca, os Estados Unidos se comprometeram a não invadir Cuba e, sem anúncio público, retiraram mísseis instalados na Turquia.\n\nTexto elaborado para esta questão.\n\nO desfecho da crise mostra que",
+    "options": [
+      {
+        "id": "a",
+        "text": "os Estados Unidos invadiram Cuba e derrubaram o governo de Fidel Castro."
+      },
+      {
+        "id": "b",
+        "text": "a União Soviética venceu militarmente os Estados Unidos, que retiraram suas bases da Europa."
+      },
+      {
+        "id": "c",
+        "text": "a crise foi resolvida por negociação entre as superpotências, com concessões mútuas diante do risco de destruição recíproca."
+      },
+      {
+        "id": "d",
+        "text": "Cuba passou a integrar a OTAN após a retirada dos mísseis."
+      },
+      {
+        "id": "e",
+        "text": "as superpotências romperam definitivamente relações diplomáticas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Com arsenais capazes de destruição mútua, nenhuma superpotência podia buscar vitória militar sem risco extremo. A saída combinou retirada dos mísseis soviéticos, garantia de não invasão de Cuba e retirada discreta dos mísseis americanos na Turquia. Depois da crise, criou-se a 'linha direta' entre Washington e Moscou.\n\nPegadinhas:\n• A: o compromisso foi justamente o de não invadir Cuba.\n• B: não houve confronto militar direto; a retirada americana se limitou à Turquia e foi negociada.\n• D: Cuba seguiu alinhada à União Soviética.\n• E: a crise levou a mais canais de comunicação, não ao rompimento.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_22",
+    "chapter": "Funções da Linguagem",
+    "topicId": "por_texto",
+    "subject": "Português",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia os trechos de uma bula de medicamento:\n\nI. \"Este medicamento contém 500 mg de paracetamol por comprimido.\"\nII. \"Mantenha fora do alcance de crianças.\"\n\nTexto elaborado para esta questão.\n\nNos trechos I e II, predominam, respectivamente, as funções",
+    "options": [
+      {
+        "id": "a",
+        "text": "referencial, centrada na informação sobre o medicamento, e conativa, centrada no receptor, a quem se dirige uma instrução."
+      },
+      {
+        "id": "b",
+        "text": "emotiva, por expressar sentimentos do fabricante, e poética, pela sonoridade da frase."
+      },
+      {
+        "id": "c",
+        "text": "metalinguística, por explicar o próprio código, e fática, por testar o canal de comunicação."
+      },
+      {
+        "id": "d",
+        "text": "conativa, por dar ordem ao leitor, e referencial, por informar sobre o produto."
+      },
+      {
+        "id": "e",
+        "text": "poética, pela seleção cuidadosa das palavras, e emotiva, pela preocupação com as crianças."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Em I, o foco está no referente — a composição do medicamento —, em linguagem objetiva: função referencial. Em II, o verbo no imperativo ('Mantenha') dirige-se ao leitor, procurando orientar seu comportamento: função conativa (ou apelativa).\n\nPegadinhas:\n• B e E: não há expressão de sentimentos do emissor nem trabalho estético com a forma.\n• C: o texto não fala da própria língua nem serve para testar o canal.\n• D: inverte as funções dos trechos.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_23",
+    "chapter": "Text Comprehension: Viruses",
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Vaccine hesitancy is often explained as a lack of information, but surveys suggest a more complex picture. Many hesitant parents have heard the scientific facts; what they lack is trust in the institutions that deliver them. Studies show that a conversation with a familiar doctor or nurse, who listens to concerns before answering them, is more effective at increasing vaccination than campaigns that simply repeat statistics.\"\n\nTexto elaborado para esta questão.\n\nSegundo o texto, a hesitação vacinal",
+    "options": [
+      {
+        "id": "a",
+        "text": "é causada exclusivamente pela falta de acesso a informações científicas."
+      },
+      {
+        "id": "b",
+        "text": "deve ser combatida com campanhas que repitam estatísticas com mais frequência."
+      },
+      {
+        "id": "c",
+        "text": "desaparece quando os pais são obrigados a vacinar os filhos."
+      },
+      {
+        "id": "d",
+        "text": "afeta apenas pais que nunca ouviram falar dos benefícios das vacinas."
+      },
+      {
+        "id": "e",
+        "text": "está muitas vezes ligada à falta de confiança nas instituições, e é reduzida com mais eficácia por conversas com profissionais conhecidos, que escutam as preocupações."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O texto contrasta a explicação comum ('a lack of information') com a pesquisa: muitos pais 'have heard the scientific facts', mas lhes falta 'trust'. A estratégia mais eficaz é a conversa com um profissional conhecido, 'who listens to concerns before answering them'.\n\nPegadinhas:\n• A e D: o texto afirma que muitos pais hesitantes conhecem os fatos científicos.\n• B: o texto diz que campanhas que apenas repetem estatísticas são menos eficazes.\n• C: o texto não fala em obrigatoriedade.\nVocabulário: 'hesitancy' = hesitação; 'trust' = confiança; 'deliver' = transmitir, entregar.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l5_24",
+    "chapter": "Hobbes e o Estado de Natureza",
+    "topicId": "fil_contratualismo_iluminismo",
+    "subject": "Filosofia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara Thomas Hobbes, autor de Leviatã (1651), no estado de natureza, sem um poder comum que os mantenha em respeito, os homens são iguais em capacidade e em desejo de preservar a vida, e por isso desconfiam uns dos outros. Nessa condição, a vida seria \"solitária, pobre, sórdida, embrutecida e curta\". Para sair dela, os indivíduos firmariam um contrato.\n\nTexto elaborado para esta questão.\n\nSegundo Hobbes, pelo contrato social, os indivíduos",
+    "options": [
+      {
+        "id": "a",
+        "text": "preservam todos os seus direitos naturais e apenas elegem representantes temporários."
+      },
+      {
+        "id": "b",
+        "text": "transferem a um soberano o poder de garantir a paz e a segurança, aceitando limitar sua liberdade em troca da preservação da vida."
+      },
+      {
+        "id": "c",
+        "text": "retornam à bondade natural que a sociedade havia corrompido."
+      },
+      {
+        "id": "d",
+        "text": "estabelecem que cada um pode fazer justiça pelas próprias mãos."
+      },
+      {
+        "id": "e",
+        "text": "abolem o Estado e passam a viver sem leis em pequenas comunidades."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O estado de natureza, para Hobbes, é uma 'guerra de todos contra todos' em potencial. Por medo da morte violenta, os indivíduos renunciam ao direito de fazer tudo o que querem e transferem ao soberano (o Leviatã) o poder de impor leis e garantir a paz. A segurança justifica um poder forte.\n\nPegadinhas:\n• A: Hobbes defende transferência ampla de poder, não a preservação de todos os direitos com representantes temporários.\n• C: é a ideia de Rousseau, para quem o homem natural seria bom.\n• D: fazer justiça pelas próprias mãos é característica do estado de natureza, que o contrato quer superar.\n• E: o contrato cria o Estado; não o abole.",
+    "difficulty": "medium"
   }
 ]
