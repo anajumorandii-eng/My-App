@@ -1,10 +1,13 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import type { Question } from '../types';
 
 const bank = JSON.parse(readFileSync('public/questions.json', 'utf8')) as Question[];
-const lote = JSON.parse(readFileSync('scripts/data/crivo-fuvest-f1-lote1.json', 'utf8')) as (Question & { skill: string; trap: string })[];
+type Autoral = Question & { skill: string; trap: string };
+const arquivos = readdirSync('scripts/data').filter(f => /^crivo-fuvest-f1-lote\d+\.json$/.test(f)).sort();
+const lotes = arquivos.map(f => ({ arquivo: f, questoes: JSON.parse(readFileSync(`scripts/data/${f}`, 'utf8')) as Autoral[] }));
+const lote = lotes.flatMap(l => l.questoes);
 
 test('o lote autoral estilo FUVEST está gravado no banco sem os metadados de treino', () => {
   const porId = new Map(bank.map(q => [q.id, q]));
@@ -22,13 +25,20 @@ test('questão autoral nunca se passa por prova real', () => {
   }
 });
 
-test('gabarito do lote é distribuído entre as cinco letras', () => {
-  // Quase todo o rascunho saiu com gabarito B; um padrão desses ensina a
-  // chutar letra em vez de resolver.
-  const contagem = new Map<string, number>();
-  for (const q of lote) contagem.set(q.correctOptionId, (contagem.get(q.correctOptionId) ?? 0) + 1);
-  assert.equal(contagem.size, 5);
-  for (const [letra, n] of contagem) assert.ok(n <= Math.ceil(lote.length * 0.3), `${letra}: ${n}`);
+test('gabarito de cada lote é distribuído entre as cinco letras', () => {
+  // Quase todo o rascunho do lote 1 saiu com gabarito B; um padrão desses
+  // ensina a chutar letra em vez de resolver.
+  for (const { arquivo, questoes } of lotes) {
+    const contagem = new Map<string, number>();
+    for (const q of questoes) contagem.set(q.correctOptionId, (contagem.get(q.correctOptionId) ?? 0) + 1);
+    assert.equal(contagem.size, 5, arquivo);
+    for (const [letra, n] of contagem) assert.ok(n <= Math.ceil(questoes.length * 0.3), `${arquivo} ${letra}: ${n}`);
+  }
+});
+
+test('ids autorais não se repetem entre lotes', () => {
+  const ids = lote.map(q => q.id);
+  assert.equal(new Set(ids).size, ids.length);
 });
 
 test('cada comentário abre pela resposta e só aponta pegadinha em alternativa errada', () => {
@@ -51,8 +61,9 @@ test('o lote acompanha o formato medido nas questões oficiais da FUVEST', () =>
   assert.ok(mediana(enunciados.map(p => p.length)) >= 450);
   assert.ok(mediana(lote.flatMap(q => q.options.map(o => o.text.length))) >= 70);
   for (const [i, p] of enunciados.entries()) {
-    // Texto-base sempre com a origem declarada: fonte real citada, ou a
+    // Texto-base sempre com a origem declarada: fonte primária real citada
+    // numa linha que termina com o ano (lei, declaração, obra), ou a
     // declaração de que foi escrito para a questão — nunca fonte inventada.
-    assert.match(p, /Texto elaborado para esta questão\.|Decreto-Lei|Disponível em/, lote[i].id);
+    assert.match(p, /Texto elaborado para esta questão\.|^[^\n]*\b1[5-9]\d\d\.$|^[^\n]*\b20\d\d\.$/m, lote[i].id);
   }
 });

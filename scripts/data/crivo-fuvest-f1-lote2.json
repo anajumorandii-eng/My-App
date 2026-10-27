@@ -1,0 +1,818 @@
+[
+  {
+    "id": "crivo_fuvest_f1_l2_01",
+    "subject": "Biologia",
+    "topicId": "bio_codigo_genetico_sintese",
+    "chapter": "Ácidos Nucleicos",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o RNA mensageiro da vacina entra no núcleo e altera o DNA.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs vacinas de RNA mensageiro usadas contra a covid-19 contêm moléculas de RNAm envoltas em nanopartículas de lipídios. Ao serem injetadas no músculo, as nanopartículas se fundem à membrana das células, e o RNAm é liberado no citoplasma. A partir dele, a célula produz a proteína S (espícula) do coronavírus, que é apresentada ao sistema imune. Dias depois, o RNAm é degradado por enzimas da própria célula.\n\nTexto elaborado para esta questão.\n\nCom base no texto e no funcionamento da síntese de proteínas, é correto afirmar que o RNAm da vacina",
+    "options": [
+      {
+        "id": "a",
+        "text": "é transcrito em DNA no citoplasma e incorporado ao genoma, garantindo a produção permanente da proteína S."
+      },
+      {
+        "id": "b",
+        "text": "entra no núcleo, onde serve de molde para a duplicação do DNA da célula muscular."
+      },
+      {
+        "id": "c",
+        "text": "é traduzido pelos ribossomos no citoplasma, sem passar pelo núcleo nem alterar o DNA da célula."
+      },
+      {
+        "id": "d",
+        "text": "é a própria proteína S do vírus, que estimula diretamente a produção de anticorpos."
+      },
+      {
+        "id": "e",
+        "text": "contém o vírus atenuado, que se multiplica no músculo e induz a resposta imune."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O RNAm é a mensagem que os ribossomos leem no citoplasma: códon a códon, eles montam a sequência de aminoácidos da proteína S. Para alterar o DNA, seria preciso transcrição reversa (enzima que células humanas comuns não usam para isso) e entrada no núcleo; nada disso faz parte do processo, e o RNAm é degradado em poucos dias.\n\nPegadinhas:\n• A: a produção não é permanente — o texto diz que o RNAm é degradado; não há conversão em DNA.\n• B: a duplicação do DNA usa o próprio DNA como molde, não RNAm.\n• D: confunde a mensagem (RNAm) com o produto (proteína S).\n• E: a vacina não contém vírus; contém só a instrução para uma de suas proteínas."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_02",
+    "subject": "Biologia",
+    "topicId": "bio_microbiologia",
+    "chapter": "Vírus",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Confundir a estratégia da Wolbachia com extermínio do mosquito ou com tratamento das pessoas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo método Wolbachia, mosquitos Aedes aegypti portadores da bactéria Wolbachia são soltos em bairros com transmissão de dengue. A bactéria é transmitida da fêmea para os descendentes e reduz a capacidade de os vírus da dengue, zika e chikungunya se multiplicarem dentro do mosquito. Com solturas repetidas, a proporção de mosquitos com Wolbachia na população local aumenta e tende a se manter sem novas liberações.\n\nTexto elaborado para esta questão.\n\nA estratégia descrita se baseia em",
+    "options": [
+      {
+        "id": "a",
+        "text": "eliminar a população de Aedes aegypti, já que a Wolbachia mata as larvas antes que se tornem adultas."
+      },
+      {
+        "id": "b",
+        "text": "tratar as pessoas infectadas, uma vez que a bactéria passa do mosquito para o sangue humano e destrói o vírus."
+      },
+      {
+        "id": "c",
+        "text": "substituir o uso de vacinas, pois a Wolbachia induz imunidade permanente em quem é picado."
+      },
+      {
+        "id": "d",
+        "text": "tornar os mosquitos estéreis, impedindo a reprodução e reduzindo a população a cada geração."
+      },
+      {
+        "id": "e",
+        "text": "reduzir a competência do mosquito para transmitir os vírus, mantendo a população de Aedes, mas com menor transmissão."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O alvo não é o mosquito nem a pessoa: é a multiplicação do vírus dentro do vetor. Como a Wolbachia passa da mãe para a prole, ela se espalha na população de Aedes, que continua existindo, mas transmite menos.\n\nPegadinhas:\n• A e D: descrevem outros métodos (larvicidas, técnica do inseto estéril). O texto diz que a bactéria é transmitida aos descendentes — logo, os mosquitos se reproduzem.\n• B: a bactéria não age no sangue humano; atua dentro do mosquito.\n• C: nada no texto indica imunidade em quem é picado."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_03",
+    "subject": "Biologia",
+    "topicId": "bio_ecologia",
+    "chapter": "Ciclo do Nitrogênio",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que as algas consomem o oxigênio pela fotossíntese ou que o nitrogênio mata os peixes diretamente.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um lago cercado por lavouras, a chuva carregou para a água grande quantidade de fertilizantes nitrogenados. Nas semanas seguintes, observou-se: 1) proliferação intensa de algas na superfície, deixando a água esverdeada; 2) morte de grande parte dessas algas; 3) aumento da população de bactérias decompositoras; 4) mortandade de peixes, principalmente nas camadas mais profundas.\n\nTexto elaborado para esta questão.\n\nA sequência de eventos é explicada corretamente por:",
+    "options": [
+      {
+        "id": "a",
+        "text": "O nitrato favoreceu as algas; sua decomposição por bactérias aeróbias consumiu o oxigênio dissolvido, e a falta de O₂ matou os peixes."
+      },
+      {
+        "id": "b",
+        "text": "O nitrato é tóxico para peixes, e as algas proliferaram porque deixaram de ser consumidas por eles."
+      },
+      {
+        "id": "c",
+        "text": "As algas consumiram o oxigênio da água pela fotossíntese, provocando a morte dos peixes."
+      },
+      {
+        "id": "d",
+        "text": "As bactérias decompositoras transformaram o nitrogênio em gás N₂, que se acumulou no fundo e asfixiou os peixes."
+      },
+      {
+        "id": "e",
+        "text": "As algas bloquearam a chegada de nutrientes ao fundo, e os peixes morreram por falta de alimento."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. É a eutrofização. O nitrogênio, nutriente limitante, provoca explosão de algas; elas sombreiam as camadas de baixo e morrem; a matéria orgânica serve de alimento a bactérias aeróbias, cuja respiração consome o O₂ dissolvido. Nas camadas profundas, onde não há fotossíntese para repor o gás, a hipóxia mata os peixes.\n\nPegadinhas:\n• B: inverte a causa; o texto mostra a mortandade de peixes como último evento, depois das bactérias.\n• C: a fotossíntese libera O₂; o consumo vem da decomposição.\n• D: a desnitrificação ocorre, mas o N₂ é pouco solúvel, escapa para a atmosfera e não é tóxico.\n• E: a falta é de oxigênio, não de alimento — e a mortandade se concentra onde o O₂ não é reposto."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_04",
+    "subject": "Química",
+    "topicId": "qui_solucoes",
+    "chapter": "Efeitos Coligativos",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a água pura, por ser 'mais limpa', é segura para injeção venosa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nMedicamentos aplicados na veia costumam ser diluídos em soro fisiológico, solução de cloreto de sódio a 0,9% em massa, e não em água destilada. Em laboratório, hemácias colocadas em água destilada incham e se rompem em poucos minutos (hemólise); em solução de NaCl a 0,9%, mantêm sua forma; em solução de NaCl a 3%, murcham.\n\nTexto elaborado para esta questão.\n\nA observação do laboratório e a escolha do soro fisiológico se explicam porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a água destilada contém microrganismos que rompem as hemácias, o que não ocorre no soro, que é estéril."
+      },
+      {
+        "id": "b",
+        "text": "o cloreto de sódio reage com a membrana das hemácias e a fortalece, impedindo seu rompimento."
+      },
+      {
+        "id": "c",
+        "text": "na solução a 3%, a água entra nas hemácias, que murcham pelo excesso de pressão interna."
+      },
+      {
+        "id": "d",
+        "text": "a solução a 0,9% é isotônica em relação ao interior das hemácias; na água destilada, hipotônica, a água entra nas células por osmose até rompê-las."
+      },
+      {
+        "id": "e",
+        "text": "a água destilada tem pressão osmótica maior que a do plasma, o que retira água das hemácias."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A osmose leva água do meio com menor concentração de partículas dissolvidas para o de maior concentração. A solução a 0,9% tem a mesma pressão osmótica do citoplasma das hemácias (isotônica): o fluxo líquido é nulo. Na água destilada, a água entra e a célula estoura; na solução a 3% (hipertônica), a água sai e a célula murcha.\n\nPegadinhas:\n• A: a água destilada usada no experimento também pode ser estéril; o efeito é osmótico.\n• B: o NaCl não reage com a membrana; o que importa é a concentração de partículas.\n• C: na solução a 3% a água sai, não entra.\n• E: a água pura tem pressão osmótica nula, a menor possível."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_05",
+    "subject": "Química",
+    "topicId": "qui_eletroquimica",
+    "chapter": "Introdução ao Estudo das Pilhas e Baterias",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Somar os potenciais com o sinal errado ou escolher o par de metais errado.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nBaterias de lítio dominam o mercado de celulares e carros elétricos por fornecerem diferença de potencial elevada com pouca massa. Considere os potenciais-padrão de redução abaixo e uma pilha hipotética formada por um eletrodo de lítio e outro de cobre, nas condições-padrão.\n\nNote e adote:\nLi⁺ + e⁻ → Li   E° = −3,04 V\nZn²⁺ + 2 e⁻ → Zn   E° = −0,76 V\nCu²⁺ + 2 e⁻ → Cu   E° = +0,34 V\n\nTexto elaborado para esta questão.\n\nA diferença de potencial dessa pilha, nas condições-padrão, é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "1,10 V."
+      },
+      {
+        "id": "b",
+        "text": "2,28 V."
+      },
+      {
+        "id": "c",
+        "text": "2,70 V."
+      },
+      {
+        "id": "d",
+        "text": "3,38 V."
+      },
+      {
+        "id": "e",
+        "text": "3,80 V."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O lítio, de menor potencial de redução, oxida (ânodo); o cobre, de maior potencial, se reduz (cátodo). ΔE = E°(cátodo) − E°(ânodo) = +0,34 − (−3,04) = 3,38 V. O coeficiente estequiométrico não multiplica o potencial.\n\nPegadinhas:\n• A (1,10 V): é a pilha zinco–cobre, que o enunciado não pede.\n• B (2,28 V): é a diferença entre lítio e zinco.\n• C (2,70 V): soma −3,04 e +0,34 sem inverter o sinal do ânodo.\n• E (3,80 V): soma os módulos de lítio e zinco."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_06",
+    "subject": "Química",
+    "topicId": "qui_radioatividade",
+    "chapter": "Radioatividade: o Estudo das Radiações",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que a radiação alfa é a mais penetrante ou que meia-vida longa é desejável em exame.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO tecnécio-99m é o radioisótopo mais usado em exames de cintilografia: injetado no paciente, concentra-se em determinado órgão, e um detector posicionado fora do corpo registra a radiação emitida, formando a imagem. Ele emite radiação gama e tem meia-vida de cerca de 6 horas.\n\nTexto elaborado para esta questão.\n\nAs características que tornam o tecnécio-99m adequado a esse uso são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "a emissão de partículas alfa, que atravessam o corpo com facilidade, e a meia-vida longa, que permite repetir o exame meses depois."
+      },
+      {
+        "id": "b",
+        "text": "a emissão gama, que atravessa os tecidos e alcança o detector externo, e a meia-vida curta, que limita o tempo de exposição do paciente."
+      },
+      {
+        "id": "c",
+        "text": "a emissão gama, que tem carga elétrica e massa elevadas, e por isso é desviada pelos órgãos, formando a imagem."
+      },
+      {
+        "id": "d",
+        "text": "a meia-vida curta, que faz o isótopo desaparecer instantaneamente após o exame, sem emitir mais radiação."
+      },
+      {
+        "id": "e",
+        "text": "a emissão de partículas beta, que ficam retidas no órgão e o tornam visível ao detector."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A radiação gama é eletromagnética, sem massa nem carga, com grande poder de penetração: sai do corpo e chega ao detector. A meia-vida de 6 horas basta para o exame e faz a atividade cair rapidamente — após 24 h (4 meias-vidas), resta 1/16.\n\nPegadinhas:\n• A: partículas alfa têm o menor poder de penetração (são barradas por uma folha de papel) e o texto não fala em alfa.\n• C: gama não tem carga nem massa.\n• D: meia-vida curta não significa desaparecimento instantâneo; a atividade cai pela metade a cada 6 h.\n• E: radiação que fica retida no corpo não chegaria ao detector externo."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_07",
+    "subject": "Química",
+    "topicId": "qui_polaridade_geometria",
+    "chapter": "Interações Intermoleculares",
+    "difficulty": "medium",
+    "skill": "relacao_estrutura_funcao",
+    "trap": "Achar que toda vitamina é eliminada igualmente pela urina, ou associar solubilidade ao tamanho da molécula e não à polaridade.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO retinol (vitamina A) tem uma longa cadeia de carbono e hidrogênio e um único grupo –OH. O ácido ascórbico (vitamina C) é uma molécula pequena, com quatro grupos –OH. Médicos alertam que o uso de suplementos de vitamina A em altas doses, por longos períodos, pode causar intoxicação, risco muito menor no caso da vitamina C.\n\nTexto elaborado para esta questão.\n\nA diferença de risco entre as duas vitaminas se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a vitamina C, por ter mais grupos –OH, é apolar e se acumula no tecido adiposo."
+      },
+      {
+        "id": "b",
+        "text": "a vitamina A é mais solúvel em água e, por isso, permanece mais tempo no sangue."
+      },
+      {
+        "id": "c",
+        "text": "as duas são igualmente solúveis em água, e a diferença se deve apenas à dose recomendada."
+      },
+      {
+        "id": "d",
+        "text": "a vitamina A forma ligações de hidrogênio com a água em maior número, o que dificulta sua excreção."
+      },
+      {
+        "id": "e",
+        "text": "a vitamina A, predominantemente apolar, é lipossolúvel e se acumula no tecido adiposo e no fígado; a vitamina C, com vários grupos –OH, é hidrossolúvel e o excesso é eliminado na urina."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A cadeia hidrocarbônica do retinol interage com lipídios por forças de dispersão de London; o único –OH pouco altera esse caráter. Por isso ele se dissolve na gordura e se acumula. Os vários –OH da vitamina C fazem ligações de hidrogênio com a água: ela circula dissolvida no plasma e o excesso sai pelos rins.\n\nPegadinhas:\n• A: grupos –OH tornam a molécula polar, não apolar.\n• B e D: invertem as propriedades; é a vitamina C que interage mais com a água.\n• C: a estrutura descrita no texto mostra solubilidades bem diferentes."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_08",
+    "subject": "Física",
+    "topicId": "fis_ondulatoria",
+    "chapter": "Efeito Doppler: Descrição e Estudo Quantitativo",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a frequência do aparelho muda, ou inverter o sentido da variação.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo exame de ultrassom com Doppler, uma sonda emite ondas sonoras de frequência fixa em direção a um vaso sanguíneo. As ondas são refletidas pelas hemácias em movimento e voltam à sonda, que compara a frequência recebida com a emitida. A diferença entre elas permite calcular a velocidade do sangue e identificar, por exemplo, estreitamentos em artérias.\n\nTexto elaborado para esta questão.\n\nQuando o sangue se move em direção à sonda, a onda refletida que chega a ela tem",
+    "options": [
+      {
+        "id": "a",
+        "text": "frequência maior que a emitida, e a diferença aumenta com a velocidade do sangue."
+      },
+      {
+        "id": "b",
+        "text": "frequência menor que a emitida, porque o sangue absorve parte da energia da onda."
+      },
+      {
+        "id": "c",
+        "text": "a mesma frequência da emitida, mas velocidade de propagação maior."
+      },
+      {
+        "id": "d",
+        "text": "frequência maior que a emitida, independentemente da velocidade do sangue."
+      },
+      {
+        "id": "e",
+        "text": "a mesma frequência da emitida, mas maior amplitude, que indica a velocidade."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. É o efeito Doppler: fonte (ou refletor) que se aproxima comprime as frentes de onda, e a frequência percebida aumenta; quanto maior a velocidade de aproximação, maior o desvio. Se o sangue se afastasse, a frequência diminuiria.\n\nPegadinhas:\n• B: absorção reduz a amplitude, não a frequência; e o sentido aproximação aumenta a frequência.\n• C: a velocidade de propagação depende do meio, não do movimento das hemácias.\n• D: o desvio depende da velocidade; é ele que permite calculá-la.\n• E: a amplitude não codifica a velocidade; a informação está na frequência."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_09",
+    "subject": "Física",
+    "topicId": "fis_estatica",
+    "chapter": "Hidrostática: Densidade e Pressão",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Usar a pressão atmosférica no lugar da pressão venosa, ou errar a conversão de mmHg.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma infusão de soro sem bomba, a bolsa é pendurada acima do braço do paciente, e o líquido desce pelo equipo por ação da gravidade. Para que o soro entre na veia, a pressão exercida pela coluna de líquido deve superar a pressão do sangue venoso, que, nesse paciente, é de 10 mmHg acima da pressão atmosférica.\n\nNote e adote:\nDensidade do soro: 1 000 kg/m³.\ng = 10 m/s².\n1 mmHg ≈ 133 Pa.\nDesconsidere o atrito no equipo.\n\nTexto elaborado para esta questão.\n\nA altura mínima da superfície do soro em relação ao ponto de aplicação na veia é de, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "1,3 cm."
+      },
+      {
+        "id": "b",
+        "text": "13 cm."
+      },
+      {
+        "id": "c",
+        "text": "76 cm."
+      },
+      {
+        "id": "d",
+        "text": "1,3 m."
+      },
+      {
+        "id": "e",
+        "text": "13 m."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A pressão venosa é 10 × 133 Pa = 1 330 Pa. A coluna exerce p = ρ·g·h; então h = 1 330 ÷ (1 000 × 10) = 0,133 m ≈ 13 cm. As bolsas costumam ficar bem acima disso para garantir fluxo.\n\nPegadinhas:\n• A (1,3 cm): erra uma casa decimal na divisão.\n• C (76 cm): é a altura de uma coluna de mercúrio sob pressão atmosférica — dado irrelevante aqui, porque a pressão atmosférica age dos dois lados.\n• D (1,3 m): usa 1 330 Pa por mmHg.\n• E (13 m): usa ρ = 100 kg/m³ ou erra duas casas."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_10",
+    "subject": "Física",
+    "topicId": "fis_cinematica",
+    "chapter": "Movimento Uniformemente Variado",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Esquecer a distância percorrida durante o tempo de reação.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nCampanhas de trânsito alertam que usar o celular ao volante aumenta o tempo de reação do motorista. Um carro trafega a 72 km/h quando surge um obstáculo à frente. Normalmente, o motorista leva 1,0 s para reagir e pisar no freio; distraído pelo celular, esse tempo passa a 2,0 s. Uma vez acionado o freio, o carro desacelera uniformemente a 5,0 m/s² até parar.\n\nTexto elaborado para esta questão.\n\nCom o motorista distraído, a distância total percorrida desde o surgimento do obstáculo até a parada é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "40 m."
+      },
+      {
+        "id": "b",
+        "text": "60 m."
+      },
+      {
+        "id": "c",
+        "text": "80 m."
+      },
+      {
+        "id": "d",
+        "text": "100 m."
+      },
+      {
+        "id": "e",
+        "text": "120 m."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. 72 km/h = 20 m/s. Durante a reação, o carro segue com velocidade constante: 20 × 2,0 = 40 m. Na frenagem, v² = v₀² − 2ad → 0 = 400 − 10d → d = 40 m. Total: 80 m. Com o motorista atento, seriam 20 + 40 = 60 m: a distração acrescenta 20 m.\n\nPegadinhas:\n• A (40 m): é só a frenagem (ou só a reação).\n• B (60 m): usa o tempo de reação do motorista atento.\n• D (100 m): não corresponde a nenhum modelo coerente com os dados.\n• E (120 m): soma os 40 m de reação com uma frenagem calculada como se a velocidade ficasse constante em 20 m/s durante os 4 s de frenagem (80 m)."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_11",
+    "subject": "Matemática",
+    "topicId": "mat_funcoes",
+    "chapter": "Função Quadrática",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Achar que a receita é máxima no maior preço ou na maior quantidade vendida.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma farmácia de manipulação estimou que, se cobrar p reais por um frasco de determinado produto, venderá, por mês, q = 200 − 2p frascos, para 0 < p < 100. A receita mensal é o produto do preço pela quantidade vendida.\n\nTexto elaborado para esta questão.\n\nO preço que maximiza a receita mensal e o valor dessa receita máxima são, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "R$ 25,00 e R$ 3 750,00."
+      },
+      {
+        "id": "b",
+        "text": "R$ 50,00 e R$ 5 000,00."
+      },
+      {
+        "id": "c",
+        "text": "R$ 50,00 e R$ 10 000,00."
+      },
+      {
+        "id": "d",
+        "text": "R$ 100,00 e R$ 10 000,00."
+      },
+      {
+        "id": "e",
+        "text": "R$ 100,00 e R$ 0,00."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. R(p) = p(200 − 2p) = −2p² + 200p, parábola com concavidade para baixo e raízes 0 e 100. O máximo está no vértice, ponto médio das raízes: p = 50. R(50) = 50 × 100 = 5 000.\n\nPegadinhas:\n• A: p = 25 dá R = 25 × 150 = 3 750, receita menor que a do vértice.\n• C: usa q = 200 no vértice, esquecendo que a quantidade cai com o preço.\n• D e E: p = 100 zera as vendas (q = 0), e a receita é nula; D ainda multiplica 100 por 100."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_12",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_espacial",
+    "chapter": "Sólidos de Revolução",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Achar que dobrar o raio e reduzir a altura à metade mantém o volume.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma prefeitura vai substituir um reservatório cilíndrico de água por outro, também cilíndrico, com o dobro do raio da base e metade da altura do antigo, para reduzir o impacto visual na paisagem.\n\nTexto elaborado para esta questão.\n\nEm relação ao reservatório antigo, a capacidade do novo",
+    "options": [
+      {
+        "id": "a",
+        "text": "permanece a mesma, pois o aumento do raio compensa exatamente a redução da altura."
+      },
+      {
+        "id": "b",
+        "text": "aumenta 50%, pois o raio dobra e a altura cai pela metade."
+      },
+      {
+        "id": "c",
+        "text": "reduz-se à metade, pois a altura é a única dimensão que determina a capacidade."
+      },
+      {
+        "id": "d",
+        "text": "dobra, pois o volume é proporcional ao quadrado do raio e à altura."
+      },
+      {
+        "id": "e",
+        "text": "quadruplica, pois a área da base fica quatro vezes maior."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. V = π r² h. Com raio 2r e altura h/2: V' = π (2r)² (h/2) = π · 4r² · h/2 = 2 π r² h = 2V.\n\nPegadinhas:\n• A: trata o raio como se entrasse na fórmula com expoente 1.\n• B: soma variações percentuais em vez de multiplicar fatores.\n• C: ignora o raio.\n• E: considera a base quatro vezes maior, mas esquece de reduzir a altura à metade."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_13",
+    "subject": "Matemática",
+    "topicId": "mat_combinatoria",
+    "chapter": "Técnicas de Contagem",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Permitir repetição onde o enunciado a proíbe, ou somar em vez de multiplicar.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm laboratório identifica cada amostra com um código de duas letras seguidas de três algarismos, como AB-307. As letras são escolhidas entre as 26 do alfabeto e não podem ser iguais entre si; os algarismos podem se repetir.\n\nTexto elaborado para esta questão.\n\nO número de códigos distintos que podem ser formados é",
+    "options": [
+      {
+        "id": "a",
+        "text": "15 600."
+      },
+      {
+        "id": "b",
+        "text": "650 000."
+      },
+      {
+        "id": "c",
+        "text": "676 000."
+      },
+      {
+        "id": "d",
+        "text": "6 760 000."
+      },
+      {
+        "id": "e",
+        "text": "17 576 000."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Pelo princípio multiplicativo: primeira letra, 26; segunda, 25 (diferente da primeira); cada algarismo, 10. Total: 26 × 25 × 10 × 10 × 10 = 650 000.\n\nPegadinhas:\n• A (15 600): usa 26 × 25 × 24, como se fossem três letras distintas e nenhum algarismo.\n• C (676 000): permite letras iguais (26 × 26 × 1 000).\n• D (6 760 000): permite letras iguais e usa quatro algarismos.\n• E (17 576 000): usa três letras com repetição (26³) e três algarismos."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_14",
+    "subject": "Matemática",
+    "topicId": "mat_dados_probabilidade",
+    "chapter": "Estatística Descritiva",
+    "difficulty": "easy",
+    "skill": "interpretacao_de_dados",
+    "trap": "Tomar a média como valor típico quando há um valor extremo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma clínica tem dez funcionários. Nove deles recebem salário mensal de R$ 3 000,00, e o diretor recebe R$ 30 000,00. Em uma propaganda de vagas, a clínica anunciou que o 'salário médio' de sua equipe é superior a R$ 5 000,00.\n\nTexto elaborado para esta questão.\n\nSobre a informação divulgada, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "é falsa, pois a média dos salários é exatamente R$ 3 000,00."
+      },
+      {
+        "id": "b",
+        "text": "é verdadeira e representa bem o salário típico, pois a média considera todos os funcionários."
+      },
+      {
+        "id": "c",
+        "text": "é falsa, pois a mediana, que é a medida correta de média, vale R$ 3 000,00."
+      },
+      {
+        "id": "d",
+        "text": "é verdadeira, pois a mediana dos salários é R$ 5 700,00."
+      },
+      {
+        "id": "e",
+        "text": "é verdadeira, pois a média é R$ 5 700,00, mas a mediana, de R$ 3 000,00, representa melhor o salário típico, porque a média é inflada pelo salário do diretor."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Média: (9 × 3 000 + 30 000) ÷ 10 = 57 000 ÷ 10 = 5 700, superior a 5 000 — o anúncio é verdadeiro. Mas nove em dez funcionários ganham 3 000, que é a mediana (valor central da lista ordenada). Um único valor extremo puxa a média e quase não mexe na mediana.\n\nPegadinhas:\n• A: a média é 5 700, não 3 000.\n• B: a afirmação é verdadeira, mas a média não representa o salário típico.\n• C: mediana e média são medidas diferentes de tendência central; e a afirmação sobre a média é verdadeira.\n• D: troca os valores: 5 700 é a média; a mediana é 3 000."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_15",
+    "subject": "Geografia",
+    "topicId": "geo_economica_brasil",
+    "chapter": "Matriz Energética",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Supor que matriz renovável é imune a crises, ou confundir matriz elétrica com matriz energética.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nCerca de 60% da eletricidade gerada no Brasil vem de usinas hidrelétricas, e mais de 80% provém de fontes renováveis, proporção muito superior à média mundial. Em 2021, porém, a pior estiagem em quase um século nas bacias do Sudeste e do Centro-Oeste reduziu os reservatórios a níveis críticos. O governo acionou usinas termelétricas e criou uma bandeira tarifária de 'escassez hídrica', que encareceu a conta de luz.\n\nTexto elaborado para esta questão.\n\nO episódio de 2021 evidencia que a matriz elétrica brasileira",
+    "options": [
+      {
+        "id": "a",
+        "text": "tem baixa emissão de gases de efeito estufa em condições normais, mas é vulnerável a variações climáticas, e sua segurança depende de fontes complementares."
+      },
+      {
+        "id": "b",
+        "text": "é majoritariamente fóssil, o que explica o aumento das tarifas quando falta chuva."
+      },
+      {
+        "id": "c",
+        "text": "não depende das chuvas, pois as hidrelétricas usam a água acumulada em aquíferos subterrâneos."
+      },
+      {
+        "id": "d",
+        "text": "tornou-se mais limpa durante a crise, pois as termelétricas substituíram as hidrelétricas."
+      },
+      {
+        "id": "e",
+        "text": "é idêntica à matriz energética do país, que também é quase totalmente hidrelétrica."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A predominância hidrelétrica dá à geração brasileira baixa emissão, mas a amarra ao regime de chuvas. Na estiagem, a falta de água nos reservatórios exigiu termelétricas (mais caras e poluentes), daí a bandeira tarifária. Diversificar com eólica, solar e biomassa reduz essa vulnerabilidade.\n\nPegadinhas:\n• B: o texto diz que mais de 80% é renovável.\n• C: as hidrelétricas dependem da água dos rios e reservatórios, abastecidos pela chuva.\n• D: as termelétricas, em geral a gás, carvão ou óleo, emitem mais; a matriz ficou menos limpa.\n• E: a matriz energética inclui transportes e indústria, onde petróleo e derivados pesam muito; hidrelétricas respondem por parte bem menor dela."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_16",
+    "subject": "Geografia",
+    "topicId": "geo_populacao_urbana_brasil",
+    "chapter": "O Espaço Urbano I",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Tratar condomínios fechados como integração social ou a periferia como escolha individual.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNas metrópoles brasileiras, convivem dois movimentos aparentemente opostos. Famílias de baixa renda ocupam áreas distantes do centro, com pouca infraestrutura e longos deslocamentos diários até o trabalho. Ao mesmo tempo, famílias de alta renda deixam bairros centrais e se mudam para condomínios fechados, murados e vigiados, também afastados do centro.\n\nTexto elaborado para esta questão.\n\nOs dois movimentos descritos expressam",
+    "options": [
+      {
+        "id": "a",
+        "text": "a desconcentração da renda nas metrópoles, já que pobres e ricos passam a morar em áreas semelhantes."
+      },
+      {
+        "id": "b",
+        "text": "a extinção do centro como área de empregos e serviços, que se transferiu integralmente para a periferia."
+      },
+      {
+        "id": "c",
+        "text": "a segregação socioespacial: uma imposta pelo preço da terra e da moradia, outra buscada como autossegregação."
+      },
+      {
+        "id": "d",
+        "text": "a integração das classes sociais, favorecida pela proximidade entre condomínios e bairros populares."
+      },
+      {
+        "id": "e",
+        "text": "o êxodo urbano, pelo qual a população metropolitana passa a viver em áreas rurais."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A distância do centro tem sentidos opostos nos dois casos. Para os mais pobres, é o que o preço da terra permite: periferização com pouca infraestrutura. Para os mais ricos, é escolha de isolamento e segurança (autossegregação). Os muros mostram que a proximidade física não significa convivência.\n\nPegadinhas:\n• A e D: proximidade física entre condomínios e bairros populares não reduz desigualdade nem integra; os muros separam.\n• B: o texto fala de 'longos deslocamentos diários até o trabalho' — o centro segue concentrando empregos.\n• E: condomínios e periferias continuam urbanos, dentro da metrópole."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_17",
+    "subject": "Geografia",
+    "topicId": "geo_fisica_brasil",
+    "chapter": "Domínios Morfoclimáticos",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que o Cerrado é um domínio sem importância hídrica por ter estação seca.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Cerrado é chamado de 'berço das águas' do Brasil: em seu território estão nascentes de rios que formam grandes bacias, como as do São Francisco, do Tocantins-Araguaia e do Paraná. Muitas plantas nativas têm raízes profundas, que alcançam a água mesmo na longa estação seca. Estudos apontam que a substituição da vegetação nativa por pastagens e lavouras de raízes rasas pode reduzir a vazão de rios na estação seca.\n\nTexto elaborado para esta questão.\n\nA relação apontada pelos estudos se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a vegetação nativa consome toda a água da chuva, e sua retirada aumenta a vazão dos rios."
+      },
+      {
+        "id": "b",
+        "text": "as lavouras irrigadas devolvem aos rios mais água do que retiram, compensando o desmatamento."
+      },
+      {
+        "id": "c",
+        "text": "a estação seca do Cerrado é causada pelo desmatamento, e não pelo regime climático da região."
+      },
+      {
+        "id": "d",
+        "text": "a vegetação nativa favorece a infiltração e a recarga dos aquíferos que alimentam as nascentes; com sua retirada, mais água escoa na superfície durante as chuvas e menos abastece os rios na seca."
+      },
+      {
+        "id": "e",
+        "text": "as raízes profundas impedem que a água chegue aos aquíferos, e sua remoção facilita a recarga."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Solo coberto por vegetação nativa, com raízes profundas e matéria orgânica, retém a chuva e a deixa infiltrar até os aquíferos, que liberam água lentamente para as nascentes ao longo da seca. Com pastagem e lavoura, o solo se compacta, o escoamento superficial aumenta nas chuvas (erosão) e a recarga diminui — a vazão de seca cai.\n\nPegadinhas:\n• A: contradiz o texto, que associa a retirada à redução da vazão.\n• B: a irrigação retira água dos rios e aquíferos; não os abastece.\n• C: a estação seca é característica do clima tropical do Cerrado, anterior ao desmatamento.\n• E: as raízes profundas favorecem a infiltração, não a impedem."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_18",
+    "subject": "História",
+    "topicId": "his_moderna_iluminismo",
+    "chapter": "Revolução Francesa",
+    "difficulty": "hard",
+    "skill": "leitura_fontes_historicas",
+    "trap": "Ler 'iguais em direitos' como igualdade econômica ou como direitos políticos para todos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\n\"Art. 1º Os homens nascem e permanecem livres e iguais em direitos. As distinções sociais só podem fundamentar-se na utilidade comum.\n[...]\nArt. 17. Sendo a propriedade um direito inviolável e sagrado, ninguém dela pode ser privado, a não ser quando a necessidade pública, legalmente comprovada, o exigir evidentemente e sob condição de justa e prévia indenização.\"\n\nDeclaração dos Direitos do Homem e do Cidadão, 1789.\n\nConsiderando o documento e seu contexto, é correto afirmar que a Declaração",
+    "options": [
+      {
+        "id": "a",
+        "text": "instituiu a igualdade econômica entre os franceses, determinando a redistribuição das terras da nobreza e do clero."
+      },
+      {
+        "id": "b",
+        "text": "garantiu às mulheres os mesmos direitos políticos dos homens, como reivindicavam os revolucionários."
+      },
+      {
+        "id": "c",
+        "text": "manteve os privilégios jurídicos do clero e da nobreza, sob o argumento da utilidade comum."
+      },
+      {
+        "id": "d",
+        "text": "estabeleceu o voto universal e direto, que passou a vigorar na Constituição de 1791."
+      },
+      {
+        "id": "e",
+        "text": "afirmou a igualdade perante a lei contra os privilégios do Antigo Regime, mas protegeu a propriedade, o que preservou desigualdades econômicas."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O art. 1º ataca a sociedade de ordens: nascimento não define direitos, e distinções só se justificam pela utilidade comum. O art. 17 trata a propriedade como 'inviolável e sagrada' — a igualdade é jurídica, não econômica, marca dos interesses da burguesia.\n\nPegadinhas:\n• A: o art. 17 protege a propriedade; não há redistribuição prevista.\n• B: as mulheres ficaram excluídas; Olympe de Gouges escreveu em 1791 uma declaração dos direitos da mulher justamente por isso.\n• C: o documento combate os privilégios estamentais.\n• D: a Constituição de 1791 adotou o voto censitário, restrito a cidadãos com renda mínima."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_19",
+    "subject": "História",
+    "topicId": "his_brasil_colonia",
+    "chapter": "A Mineração no Brasil Colonial",
+    "difficulty": "medium",
+    "skill": "contextualizacao_historica",
+    "trap": "Achar que o ouro industrializou a colônia ou enriqueceu igualmente os mineradores.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA descoberta de ouro em Minas Gerais, no final do século XVII, provocou intensa migração de colonos e de portugueses e o deslocamento de grande número de africanos escravizados para a região. Surgiram vilas como Vila Rica e Mariana, e a Coroa portuguesa criou casas de fundição para cobrar o quinto, imposto que correspondia a um quinto do ouro extraído. Em 1763, a capital da colônia foi transferida de Salvador para o Rio de Janeiro.\n\nTexto elaborado para esta questão.\n\nEntre os efeitos da mineração no Brasil colonial, destacam-se",
+    "options": [
+      {
+        "id": "a",
+        "text": "o deslocamento do eixo econômico para o Centro-Sul, a urbanização da região mineradora e o aumento da fiscalização metropolitana."
+      },
+      {
+        "id": "b",
+        "text": "a industrialização da colônia, pois o ouro financiou fábricas de tecidos em Minas Gerais."
+      },
+      {
+        "id": "c",
+        "text": "o fim da escravidão na região mineradora, onde o trabalho passou a ser feito por homens livres assalariados."
+      },
+      {
+        "id": "d",
+        "text": "a redução do controle da Coroa, que deixou de cobrar impostos para incentivar a migração."
+      },
+      {
+        "id": "e",
+        "text": "a ruralização da colônia, já que a mineração exigia grandes propriedades agrícolas exportadoras."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O ouro deslocou o centro dinâmico do Nordeste açucareiro para o Centro-Sul — a mudança da capital para o Rio, porto de escoamento do ouro, é o sinal disso. A mineração gerou vilas, comércio interno e caminhos de abastecimento; a Coroa reagiu com mais controle (quinto, casas de fundição e, depois, a derrama).\n\nPegadinhas:\n• B: a metrópole proibiu manufaturas na colônia (alvará de 1785); o ouro escoou em grande parte para Portugal e, dali, para a Inglaterra.\n• C: o texto cita o grande número de africanos escravizados; a mineração dependeu do trabalho escravo.\n• D: o texto descreve aumento da cobrança, não redução.\n• E: a mineração foi urbanizadora, ao contrário da economia de plantation."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_20",
+    "subject": "História",
+    "topicId": "his_republica_liberal_atual",
+    "chapter": "Regime Militar (1964-1985) I",
+    "difficulty": "medium",
+    "skill": "leitura_fontes_historicas",
+    "trap": "Ler o AI-5 como medida de transição democrática ou de combate à corrupção comum.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\n\"Art. 10. Fica suspensa a garantia de habeas corpus, nos casos de crimes políticos, contra a segurança nacional, a ordem econômica e social e a economia popular.\"\n\nAto Institucional nº 5, de 13 de dezembro de 1968.\n\nO AI-5 também autorizava o presidente a decretar o recesso do Congresso Nacional e a cassar mandatos e suspender direitos políticos. Considerando o artigo transcrito e o contexto, o AI-5",
+    "options": [
+      {
+        "id": "a",
+        "text": "marcou o início da redemocratização, ao transferir ao Judiciário o julgamento dos crimes políticos."
+      },
+      {
+        "id": "b",
+        "text": "foi uma resposta às pressões externas pelo fim da Guerra Fria, que exigiam eleições diretas."
+      },
+      {
+        "id": "c",
+        "text": "representou o endurecimento do regime, ao suprimir garantias contra prisões arbitrárias de opositores e ampliar os poderes do Executivo."
+      },
+      {
+        "id": "d",
+        "text": "fortaleceu o Congresso Nacional, que passou a controlar as cassações de mandatos."
+      },
+      {
+        "id": "e",
+        "text": "limitou-se a punir crimes econômicos comuns, sem efeitos sobre a oposição política."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O habeas corpus protege contra prisão ilegal; suspendê-lo para 'crimes políticos' deixava opositores sem defesa contra detenções arbitrárias, abrindo caminho para a tortura. Com o fechamento do Congresso e as cassações, o Executivo concentrou poderes — início dos 'anos de chumbo'.\n\nPegadinhas:\n• A: a redemocratização começa só no fim dos anos 1970 (anistia, 1979); o AI-5 retirou garantias do Judiciário.\n• B: em 1968 a Guerra Fria estava em curso, e o ato não previa eleições.\n• D: o AI-5 permitia fechar o Congresso e cassar mandatos por decisão do presidente.\n• E: a expressão 'crimes políticos, contra a segurança nacional' mostra o alvo político."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_21",
+    "subject": "Português",
+    "topicId": "por_texto",
+    "chapter": "Figuras de Linguagem",
+    "difficulty": "medium",
+    "skill": "analise_linguistica",
+    "trap": "Confundir metonímia com metáfora ou com hipérbole.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia o trecho:\n\n\"Às sete da manhã, o pronto-socorro já estava lotado. Na recepção, uma senhora segurava o braço do neto, que tinha caído da bicicleta; ao lado, um rapaz de terno discutia ao telefone. Quando a enfermeira chamou o primeiro nome, a sala inteira levantou os olhos ao mesmo tempo.\"\n\nTexto elaborado para esta questão.\n\nEm \"a sala inteira levantou os olhos\", ocorre",
+    "options": [
+      {
+        "id": "a",
+        "text": "metáfora, pois a sala é comparada a um ser humano sem o uso de conectivo comparativo."
+      },
+      {
+        "id": "b",
+        "text": "hipérbole, pois há um exagero intencional na quantidade de pessoas presentes."
+      },
+      {
+        "id": "c",
+        "text": "antítese, pois se opõem a sala e as pessoas que nela estão."
+      },
+      {
+        "id": "d",
+        "text": "metonímia, pois o lugar (a sala) é usado para designar as pessoas que estão nele."
+      },
+      {
+        "id": "e",
+        "text": "eufemismo, pois a expressão suaviza a impaciência dos pacientes."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A metonímia substitui um termo por outro com o qual mantém relação de contiguidade: continente pelo conteúdo, lugar pelos ocupantes. 'A sala' está no lugar de 'as pessoas na sala'.\n\nPegadinhas:\n• A: metáfora se apoia em semelhança; aqui a relação é de contiguidade — quem levanta os olhos são as pessoas que ocupam a sala.\n• B: o trecho não exagera números; 'lotado' é descrição.\n• C: não há oposição de ideias no trecho.\n• E: nada é suavizado; a expressão apenas condensa a reação coletiva."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_22",
+    "subject": "Inglês",
+    "topicId": "ing_01",
+    "chapter": "Text Comprehension: Calories and Energy",
+    "difficulty": "medium",
+    "skill": "inferencia_em_ingles",
+    "trap": "Concluir que o texto trata só de calorias, ou que alimentos ultraprocessados têm mais calorias por definição.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"In a controlled study, volunteers were offered two diets for two weeks each: one based on ultra-processed foods and one based on minimally processed foods. Both diets offered the same amounts of calories, sugar, fat and fiber, and volunteers could eat as much as they wanted. On the ultra-processed diet, people ate about 500 more calories per day and gained weight. Researchers suggest that these foods are eaten faster and may delay the signals of fullness.\"\n\nTexto elaborado para esta questão.\n\nDe acordo com o texto, o ganho de peso observado",
+    "options": [
+      {
+        "id": "a",
+        "text": "ocorreu apesar de as duas dietas oferecerem a mesma quantidade de calorias e nutrientes, porque os voluntários comeram mais na dieta ultraprocessada."
+      },
+      {
+        "id": "b",
+        "text": "deveu-se ao maior teor de açúcar e gordura dos alimentos ultraprocessados oferecidos."
+      },
+      {
+        "id": "c",
+        "text": "foi causado pela falta de fibras na dieta ultraprocessada."
+      },
+      {
+        "id": "d",
+        "text": "ocorreu porque os voluntários foram obrigados a comer porções maiores na dieta ultraprocessada."
+      },
+      {
+        "id": "e",
+        "text": "foi igual nas duas dietas, pois a quantidade de calorias oferecida era a mesma."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O texto controla o que foi oferecido ('the same amounts of calories, sugar, fat and fiber') e mostra que a diferença esteve no que foi consumido ('ate about 500 more calories per day'). A hipótese dos pesquisadores é comportamental: comer mais rápido e atrasar a saciedade ('delay the signals of fullness').\n\nPegadinhas:\n• B e C: o texto afirma que açúcar, gordura e fibras eram iguais nas duas dietas.\n• D: os voluntários podiam comer 'as much as they wanted' — ninguém foi obrigado.\n• E: 'gained weight' aparece só para a dieta ultraprocessada.\nVocabulário: 'fullness' = saciedade; 'controlled study' = estudo controlado."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_23",
+    "subject": "Sociologia",
+    "topicId": "soc_trabalho_sociedade",
+    "chapter": "Precarização e Uberização do Trabalho",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Tratar a flexibilidade de horário como autonomia plena, ignorando o controle algorítmico e a falta de direitos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEntregadores e motoristas de aplicativos costumam ser classificados pelas plataformas como trabalhadores autônomos ou 'parceiros'. Eles escolhem quando se conectar, mas o valor de cada corrida, a distribuição dos pedidos e até a exclusão da plataforma são definidos por algoritmos da empresa. Em geral, não têm direito a férias, 13º salário ou contribuição previdenciária paga pelo contratante, e arcam com os custos do veículo e do celular.\n\nTexto elaborado para esta questão.\n\nO fenômeno descrito, conhecido como uberização do trabalho, caracteriza-se por",
+    "options": [
+      {
+        "id": "a",
+        "text": "autonomia plena do trabalhador, que define preço, clientes e condições de seu serviço, como um empresário."
+      },
+      {
+        "id": "b",
+        "text": "ampliação dos direitos trabalhistas, já que as plataformas ofertam mais vagas que o emprego formal."
+      },
+      {
+        "id": "c",
+        "text": "retorno ao trabalho artesanal, em que o trabalhador é dono dos meios e do produto de seu trabalho."
+      },
+      {
+        "id": "d",
+        "text": "contratação de trabalhadores com carteira assinada por meio de aplicativos."
+      },
+      {
+        "id": "e",
+        "text": "transferência de riscos e custos ao trabalhador, combinada com controle das atividades pela empresa, sem as proteções do emprego formal."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O trabalhador não tem as garantias do assalariado (férias, 13º, previdência) e banca os meios de trabalho, mas também não tem a autonomia do empresário: preço, demanda e punições são decididos pelo algoritmo da plataforma. É a combinação de riscos individualizados com gestão centralizada que define a precarização.\n\nPegadinhas:\n• A: o texto diz que o valor da corrida e a distribuição dos pedidos são definidos pela empresa.\n• B: mais ocupações não significam mais direitos; o texto descreve justamente a ausência deles.\n• C: o artesão controla o processo e o produto; aqui o controle é da plataforma.\n• D: a classificação como autônomo ou 'parceiro' é o oposto da carteira assinada."
+  },
+  {
+    "id": "crivo_fuvest_f1_l2_24",
+    "subject": "Filosofia",
+    "topicId": "fil_kant_idealismo",
+    "chapter": "A Ética Kantiana e o Imperativo Categórico",
+    "difficulty": "hard",
+    "skill": "aplicacao_conceitual",
+    "trap": "Julgar a ação pelas consequências (benefício coletivo), que é critério utilitarista e não kantiano.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\n\"Age de tal maneira que uses a humanidade, tanto na tua pessoa como na pessoa de qualquer outro, sempre e simultaneamente como fim e nunca simplesmente como meio.\"\n\nKANT, I. Fundamentação da metafísica dos costumes, 1785.\n\nUm pesquisador propõe testar um novo medicamento em pacientes de um hospital sem informá-los, argumentando que os resultados poderão salvar milhares de vidas no futuro.\n\nÀ luz do trecho, a proposta deve ser",
+    "options": [
+      {
+        "id": "a",
+        "text": "aceita, pois o benefício para milhares de pessoas no futuro supera o risco imposto a poucos pacientes."
+      },
+      {
+        "id": "b",
+        "text": "rejeitada, pois trata os pacientes simplesmente como meio para um fim, desrespeitando-os como seres racionais capazes de consentir."
+      },
+      {
+        "id": "c",
+        "text": "aceita, desde que o medicamento se mostre eficaz ao final da pesquisa."
+      },
+      {
+        "id": "d",
+        "text": "rejeitada apenas se o medicamento causar danos aos pacientes, já que a moralidade depende dos resultados."
+      },
+      {
+        "id": "e",
+        "text": "aceita, pois para Kant a pesquisa científica está acima das obrigações morais."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Para Kant, a moralidade de uma ação não depende de suas consequências, mas do princípio que a orienta. Usar alguém 'simplesmente como meio' é dispor dele sem que possa, como ser racional, consentir com o fim — exatamente o que ocorre no teste sem informação. O consentimento informado, exigido hoje na ética em pesquisa, expressa esse princípio.\n\nPegadinhas:\n• A: é um raciocínio utilitarista (maior bem para o maior número), que o imperativo categórico recusa como critério.\n• C e D: fazem a moralidade depender do resultado, o que contradiz o caráter incondicional do imperativo.\n• E: para Kant, nenhum fim, nem o científico, autoriza tratar pessoas como meros meios."
+  }
+]

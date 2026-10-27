@@ -687,7 +687,7 @@
     "difficulty": "medium",
     "skill": "analise_de_evidencias",
     "trap": "Tratar a CLT como universalização de direitos para todos os trabalhadores.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\n\"Art. 7º Os preceitos constantes da presente Consolidação, salvo quando for, em cada caso, expressamente determinado em contrário, não se aplicam:\na) aos empregados domésticos [...];\nb) aos trabalhadores rurais [...].\"\n\nDecreto-Lei nº 5.452, de 1º de maio de 1943 (Consolidação das Leis do Trabalho), redação original.\n\nA Consolidação das Leis do Trabalho reuniu direitos criados durante o governo Vargas, como a jornada de oito horas, as férias remuneradas e o salário mínimo. Considerando o artigo citado e o contexto de sua promulgação, a CLT",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\n\"Art. 7º Os preceitos constantes da presente Consolidação, salvo quando for, em cada caso, expressamente determinado em contrário, não se aplicam:\na) aos empregados domésticos [...];\nb) aos trabalhadores rurais [...].\"\n\nDecreto-Lei nº 5.452 (Consolidação das Leis do Trabalho), redação original, 1º de maio de 1943.\n\nA Consolidação das Leis do Trabalho reuniu direitos criados durante o governo Vargas, como a jornada de oito horas, as férias remuneradas e o salário mínimo. Considerando o artigo citado e o contexto de sua promulgação, a CLT",
     "options": [
       {
         "id": "a",
