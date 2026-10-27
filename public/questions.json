@@ -107924,5 +107924,773 @@
         "url": "/question-media/figuras/fuvest_2026_q76-revisada-1.webp"
       }
     ]
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_01",
+    "chapter": "Biomagnificação",
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um estuário contaminado por mercúrio, pesquisadores mediram a concentração do metal (na forma de metilmercúrio) em diferentes componentes de uma cadeia alimentar:\n\n• água: 0,00001 ppm\n• fitoplâncton: 0,04 ppm\n• peixes pequenos (planctívoros): 0,5 ppm\n• peixes grandes (predadores): 2 ppm\n• botos: 10 ppm\n\nO padrão observado é explicado corretamente pela seguinte afirmação:",
+    "options": [
+      {
+        "id": "a",
+        "text": "A energia disponível aumenta a cada nível trófico, e com ela a quantidade de mercúrio transferida."
+      },
+      {
+        "id": "b",
+        "text": "Os botos absorvem mais mercúrio diretamente da água, por terem maior superfície corporal que os demais organismos."
+      },
+      {
+        "id": "c",
+        "text": "O fitoplâncton produz metilmercúrio pela fotossíntese, e a produção é proporcional ao tamanho dos consumidores."
+      },
+      {
+        "id": "d",
+        "text": "O metilmercúrio é pouco excretado e se acumula nos tecidos; como cada consumidor ingere grande biomassa do nível anterior, a concentração cresce ao longo da cadeia."
+      },
+      {
+        "id": "e",
+        "text": "A concentração aumenta porque os organismos de topo vivem mais próximos do fundo, onde o mercúrio se deposita."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O metilmercúrio é lipossolúvel e se liga a proteínas dos tecidos; o organismo quase não o elimina. Cada predador consome, ao longo da vida, uma biomassa muito maior que a sua, e retém o metal de todas essas presas: é a biomagnificação (de 0,00001 ppm na água a 10 ppm no boto, um fator de um milhão).\n\nPegadinhas:\n• A: inverte a pirâmide. A energia diminui a cada nível (cerca de 10% passa adiante); é justamente porque sobra pouca energia que o predador precisa comer muita presa.\n• B: a absorção direta da água existe, mas não explica a sequência ordenada por nível trófico — o que a explica é a dieta.\n• C: o fitoplâncton absorve o metal do meio; não o produz por fotossíntese.\n• E: a posição na coluna d'água não aparece nos dados; a variável que ordena as concentrações é o nível trófico.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_02",
+    "chapter": "Coração e Vasos Sanguíneos",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma criança nasceu com comunicação interventricular, uma abertura no septo que separa os dois ventrículos. Considerando as pressões normalmente desenvolvidas pelos ventrículos durante a sístole, a consequência imediata esperada é:",
+    "options": [
+      {
+        "id": "a",
+        "text": "passagem de sangue do ventrículo esquerdo para o direito, aumentando o volume de sangue enviado aos pulmões."
+      },
+      {
+        "id": "b",
+        "text": "passagem de sangue do ventrículo direito para o esquerdo, levando sangue pobre em oxigênio à circulação sistêmica."
+      },
+      {
+        "id": "c",
+        "text": "ausência de mistura, porque as valvas atrioventriculares impedem qualquer fluxo entre os ventrículos."
+      },
+      {
+        "id": "d",
+        "text": "redução do fluxo pulmonar, porque parte do sangue do ventrículo direito escapa para a aorta."
+      },
+      {
+        "id": "e",
+        "text": "fluxo alternado entre os ventrículos, sem efeito sobre a circulação pulmonar ou sistêmica."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Na sístole, o ventrículo esquerdo gera pressão muito maior que o direito (cerca de 120 mmHg contra 25 mmHg), porque bombeia para a circulação sistêmica. O sangue segue o gradiente: passa do esquerdo para o direito. Sangue já oxigenado volta aos pulmões, e o fluxo pulmonar aumenta — o que, com o tempo, sobrecarrega a circulação pulmonar.\n\nPegadinhas:\n• B: descreve o sentido contrário. Isso só ocorre tardiamente, se a pressão pulmonar subir a ponto de inverter o gradiente.\n• C: as valvas atrioventriculares separam átrio de ventrículo; não fecham um orifício no septo.\n• D: o desvio aumenta, e não reduz, o volume que chega aos pulmões.\n• E: o fluxo segue a diferença de pressão, que tem sentido definido durante a sístole.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_03",
+    "chapter": "Herança Sexual",
+    "topicId": "bio_genetica",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRita tem pais com coagulação normal e um irmão hemofílico. A hemofilia A é condicionada por um alelo recessivo ligado ao cromossomo X. Rita vai ter filhos com um homem de coagulação normal. A probabilidade de o primeiro filho do casal ser um menino hemofílico é:",
+    "options": [
+      {
+        "id": "a",
+        "text": "1/2"
+      },
+      {
+        "id": "b",
+        "text": "1/4"
+      },
+      {
+        "id": "c",
+        "text": "1/8"
+      },
+      {
+        "id": "d",
+        "text": "1/16"
+      },
+      {
+        "id": "e",
+        "text": "zero, pois o pai é normal"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O irmão hemofílico (XʰY) recebeu o Xʰ da mãe, que é portadora (XᴴXʰ), já que ela tem coagulação normal. Rita, filha de XᴴXʰ com XᴴY, tem 1/2 de chance de ser portadora. Para nascer um menino hemofílico, são necessários três eventos: Rita ser portadora (1/2), a criança ser menino (1/2) e receber o Xʰ (1/2). Logo, 1/2 × 1/2 × 1/2 = 1/8.\n\nPegadinhas:\n• A (1/2): responde à pergunta 'dado que é menino e que Rita é portadora' — o enunciado pede menino hemofílico entre todos os filhos possíveis.\n• B (1/4): supõe que Rita é portadora com certeza.\n• D (1/16): multiplica por um fator 1/2 a mais, sem evento correspondente.\n• E: o menino recebe o X da mãe, e não do pai; o fenótipo paterno não protege o filho.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_04",
+    "chapter": "Mecanismos da Evolução Biológica",
+    "topicId": "bio_evolucao",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm hospitais, o uso intenso de antibióticos é acompanhado pelo aumento da frequência de bactérias resistentes. A explicação compatível com a teoria sintética da evolução é:",
+    "options": [
+      {
+        "id": "a",
+        "text": "O antibiótico induz as bactérias a produzir enzimas de defesa, e essa resistência adquirida é transmitida às descendentes."
+      },
+      {
+        "id": "b",
+        "text": "As bactérias se adaptam ao antibiótico pelo uso repetido de suas defesas, que se fortalecem a cada exposição."
+      },
+      {
+        "id": "c",
+        "text": "O antibiótico provoca mutações dirigidas no gene-alvo, sempre no sentido da resistência."
+      },
+      {
+        "id": "d",
+        "text": "A resistência surge porque as bactérias deixam de se reproduzir na presença do antibiótico."
+      },
+      {
+        "id": "e",
+        "text": "As bactérias resistentes já existiam na população por mutação; o antibiótico elimina as sensíveis, e as resistentes deixam mais descendentes."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A variação (mutações e genes recebidos por transferência horizontal) é anterior e independente do antibiótico. O fármaco atua como agente seletivo: mata as sensíveis e deixa as resistentes se multiplicarem; a frequência do alelo de resistência sobe a cada geração.\n\nPegadinhas:\n• A e B: são formulações de herança do adquirido e de uso e desuso (Lamarck). A célula não 'aprende' a resistir.\n• C: mutações não são dirigidas pela necessidade; o antibiótico não escolhe o gene que muda.\n• D: se as resistentes não se reproduzissem, sua frequência não aumentaria. A seleção atua justamente pela reprodução diferencial.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_05",
+    "chapter": "Traqueófitas: Transpiração e Reposição Rápida de Água",
+    "topicId": "bio_fisio_vegetal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDurante uma estiagem, folhas de milho expostas ao sol do meio-dia apresentaram aumento da concentração de ácido abscísico (ABA). Uma consequência fisiológica imediata desse aumento é:",
+    "options": [
+      {
+        "id": "a",
+        "text": "fechamento dos estômatos, reduzindo a perda de água e também a entrada de CO₂, o que diminui a fotossíntese."
+      },
+      {
+        "id": "b",
+        "text": "abertura dos estômatos, intensificando a transpiração para resfriar a folha."
+      },
+      {
+        "id": "c",
+        "text": "fechamento dos estômatos, reduzindo a perda de água sem alterar a taxa de fotossíntese."
+      },
+      {
+        "id": "d",
+        "text": "aumento da absorção de água pelas raízes, por elevação da pressão positiva da raiz."
+      },
+      {
+        "id": "e",
+        "text": "aumento da velocidade de subida da seiva bruta, pela maior tensão da coluna de água."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O ABA sinaliza déficit hídrico e provoca saída de íons K⁺ das células-guarda; elas perdem água e o ostíolo se fecha. Como água sai e CO₂ entra pela mesma abertura, poupar água custa carbono: a fotossíntese cai.\n\nPegadinhas:\n• B: a abertura aumentaria a perda de água justamente quando ela falta; o ABA tem efeito oposto.\n• C: acerta o fechamento, mas ignora que o CO₂ entra pelo mesmo poro. Esse é o dilema central da planta.\n• D: o ABA não age pela pressão de raiz, que é pequena e irrelevante numa planta transpirando ao meio-dia.\n• E: com os estômatos fechados, a transpiração cai e a tensão que puxa a seiva bruta diminui.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_06",
+    "chapter": "Cálculos Estequiométricos",
+    "topicId": "qui_estequiometria",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm comprimido antiácido contém 0,84 g de bicarbonato de sódio (NaHCO₃), que reage com o ácido clorídrico do suco gástrico:\n\nNaHCO₃ + HCl → NaCl + H₂O + CO₂\n\nConsiderando que o suco gástrico tem pH = 1 e que todo o ácido nele presente é HCl, o volume de suco gástrico neutralizado por um comprimido é de aproximadamente\n\nDado: massa molar do NaHCO₃ = 84 g/mol.",
+    "options": [
+      {
+        "id": "a",
+        "text": "10 mL"
+      },
+      {
+        "id": "b",
+        "text": "50 mL"
+      },
+      {
+        "id": "c",
+        "text": "100 mL"
+      },
+      {
+        "id": "d",
+        "text": "200 mL"
+      },
+      {
+        "id": "e",
+        "text": "1 L"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Mols de bicarbonato: 0,84 g ÷ 84 g/mol = 0,010 mol. A proporção é 1:1, então são neutralizados 0,010 mol de HCl. pH = 1 significa [H⁺] = 10⁻¹ = 0,1 mol/L. Volume: 0,010 mol ÷ 0,1 mol/L = 0,1 L = 100 mL.\n\nPegadinhas:\n• A (10 mL): resulta de tomar pH 1 como [H⁺] = 1 mol/L.\n• B e D: aparecem quando se usa uma proporção 2:1 ou 1:2 que a equação não tem.\n• E (1 L): resulta de tomar [H⁺] = 0,01 mol/L, isto é, pH 2.\nO CO₂ liberado não altera o cálculo; é ele que provoca a eructação após o antiácido.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_07",
+    "chapter": "Deslocamento de Equilíbrio",
+    "topicId": "qui_equilibrio",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA ligação do oxigênio à hemoglobina pode ser representada, de forma simplificada, por:\n\nHb + O₂ ⇌ HbO₂\n\nAlpinistas que sobem a grandes altitudes sentem cansaço nos primeiros dias, mas, após algumas semanas, passam a ter mais hemoglobina no sangue. Sobre esse fenômeno, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a menor pressão parcial de O₂ aumenta a constante de equilíbrio, favorecendo a formação de HbO₂."
+      },
+      {
+        "id": "b",
+        "text": "a menor pressão parcial de O₂ desloca o equilíbrio para a direita, o que causa o cansaço inicial."
+      },
+      {
+        "id": "c",
+        "text": "o aumento da quantidade de Hb diminui a constante de equilíbrio, compensando a falta de oxigênio."
+      },
+      {
+        "id": "d",
+        "text": "a menor pressão parcial de O₂ desloca o equilíbrio para a esquerda; o aumento de Hb o desloca para a direita, elevando a quantidade de HbO₂."
+      },
+      {
+        "id": "e",
+        "text": "a altitude não interfere no equilíbrio, pois a porcentagem de O₂ no ar é a mesma em qualquer altitude."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Com menos O₂ disponível (pressão parcial menor), o equilíbrio se desloca no sentido de consumir HbO₂ (esquerda): menos oxigênio chega aos tecidos e surge o cansaço. A adaptação (estimulada pela eritropoetina) aumenta a concentração de Hb, que desloca o equilíbrio para a direita e recupera a quantidade de HbO₂.\n\nPegadinhas:\n• A e C: a constante de equilíbrio depende só da temperatura. Concentrações e pressões mudam a posição do equilíbrio, não o valor de K.\n• B: o sentido está invertido; menos reagente favorece a reação inversa.\n• E: a porcentagem de O₂ (cerca de 21%) é a mesma, mas a pressão total é menor, e portanto a pressão parcial de O₂ também. O que importa é a pressão parcial.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_08",
+    "chapter": "Isomeria",
+    "topicId": "qui_organica_fundamentos",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nMuitos fármacos são moléculas quirais, vendidas como mistura de dois enantiômeros. Em alguns casos, apenas um deles tem o efeito terapêutico desejado. Os dois enantiômeros de uma mesma substância",
+    "options": [
+      {
+        "id": "a",
+        "text": "têm pontos de fusão diferentes, o que permite separá-los por destilação simples."
+      },
+      {
+        "id": "b",
+        "text": "têm fórmulas moleculares diferentes, pois um deles possui um átomo de carbono a mais."
+      },
+      {
+        "id": "c",
+        "text": "são sempre igualmente ativos no organismo, já que têm os mesmos grupos funcionais."
+      },
+      {
+        "id": "d",
+        "text": "diferem quanto à função orgânica, sendo um deles um álcool e o outro um éter."
+      },
+      {
+        "id": "e",
+        "text": "têm as mesmas propriedades físicas usuais, mas desviam a luz polarizada em sentidos opostos e podem interagir de modo diferente com receptores do organismo."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Enantiômeros são imagens especulares não sobreponíveis, com a mesma fórmula e as mesmas ligações. Num ambiente aquiral (ponto de fusão, densidade, solubilidade em água), eles se comportam igual. Diferem diante de algo também quiral: a luz polarizada (desvio em sentidos opostos) e os receptores e enzimas do organismo, formados por aminoácidos L — daí a diferença de atividade biológica.\n\nPegadinhas:\n• A: se tivessem pontos de fusão e ebulição diferentes, a separação seria trivial. Separar enantiômeros exige um agente quiral.\n• B e D: descrevem outros tipos de isomeria ou nem isomeria; enantiômeros têm a mesma fórmula e a mesma função.\n• C: contradiz o próprio enunciado e o motivo de a quiralidade importar em Farmacologia.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_09",
+    "chapter": "Termoquímica I",
+    "topicId": "qui_termoquimica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA oxidação completa da glicose no organismo pode ser representada por:\n\nC₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O   ΔH = −2 800 kJ/mol\n\nA energia liberada por grama de glicose é de aproximadamente\n\nDados: massa molar da glicose = 180 g/mol; 1 kcal ≈ 4,2 kJ.",
+    "options": [
+      {
+        "id": "a",
+        "text": "2,6 kcal"
+      },
+      {
+        "id": "b",
+        "text": "3,7 kcal"
+      },
+      {
+        "id": "c",
+        "text": "4,2 kcal"
+      },
+      {
+        "id": "d",
+        "text": "15,6 kcal"
+      },
+      {
+        "id": "e",
+        "text": "667 kcal"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Por grama: 2 800 kJ ÷ 180 g ≈ 15,6 kJ/g. Em kcal: 15,6 ÷ 4,2 ≈ 3,7 kcal/g, o valor próximo de 4 kcal/g usado nos rótulos para carboidratos.\n\nPegadinhas:\n• A (2,6): não corresponde a nenhuma operação coerente com os dados.\n• C (4,2): é o fator de conversão, não a resposta.\n• D (15,6): é o valor em kJ/g, sem a conversão pedida.\n• E (667): resulta de converter a energia de 1 mol (2 800 ÷ 4,2) sem dividir pela massa molar.\nO sinal negativo de ΔH indica liberação de energia; a pergunta já pede o módulo.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_10",
+    "chapter": "Potência, Máquina e Rendimento",
+    "topicId": "fis_energia",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma pessoa de 60 kg sobe, pela escada, dez andares de um prédio, cada um com 3 m de altura. Considere que o corpo humano converte em trabalho mecânico apenas 25% da energia química que consome. A energia metabólica gasta apenas para vencer esse desnível é de aproximadamente\n\nDados: g = 10 m/s²; 1 kcal ≈ 4,2 kJ.",
+    "options": [
+      {
+        "id": "a",
+        "text": "4,3 kcal"
+      },
+      {
+        "id": "b",
+        "text": "7,2 kcal"
+      },
+      {
+        "id": "c",
+        "text": "17 kcal"
+      },
+      {
+        "id": "d",
+        "text": "72 kcal"
+      },
+      {
+        "id": "e",
+        "text": "300 kcal"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Desnível: 10 × 3 m = 30 m. Trabalho útil (energia potencial ganha): m·g·h = 60 × 10 × 30 = 18 000 J = 18 kJ. Com rendimento de 25%, a energia consumida é 18 kJ ÷ 0,25 = 72 kJ. Em kcal: 72 ÷ 4,2 ≈ 17 kcal.\n\nPegadinhas:\n• A (4,3 kcal): é só o trabalho útil (18 kJ), sem levar o rendimento em conta.\n• B e E: não correspondem a nenhum modelo coerente com os dados.\n• D (72): é o valor em kJ apresentado como kcal.\nO resultado mostra por que subir escadas 'gasta pouco' em calorias: o desnível de um prédio de dez andares equivale a menos que um biscoito.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_11",
+    "chapter": "Primeira Lei da Termodinâmica",
+    "topicId": "fis_termodinamica_gases",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma seringa com a ponta vedada contém ar. O êmbolo é empurrado bruscamente, comprimindo o ar em uma fração de segundo. Sobre o ar dentro da seringa durante essa compressão, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a temperatura aumenta, pois o trabalho realizado sobre o gás aumenta sua energia interna sem que haja tempo para perder calor."
+      },
+      {
+        "id": "b",
+        "text": "a temperatura permanece constante, pois não há tempo para trocar calor com o ambiente."
+      },
+      {
+        "id": "c",
+        "text": "a temperatura diminui, pois o gás realiza trabalho ao ser comprimido."
+      },
+      {
+        "id": "d",
+        "text": "a energia interna permanece constante, pois o calor trocado é nulo."
+      },
+      {
+        "id": "e",
+        "text": "a pressão permanece constante, pois a quantidade de gás não se altera."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A compressão rápida é aproximadamente adiabática (Q ≈ 0). Pela primeira lei, ΔU = Q − W; na compressão o trabalho do gás é negativo (o ambiente realiza trabalho sobre ele), então ΔU = −W > 0. Energia interna maior num gás ideal significa temperatura maior — é por isso que a bomba de encher pneu esquenta.\n\nPegadinhas:\n• B: inverte a lógica. 'Sem tempo para trocar calor' define o processo adiabático, não o isotérmico.\n• C: o gás não realiza trabalho ao ser comprimido; trabalho é realizado sobre ele.\n• D: Q = 0 não implica ΔU = 0, porque ainda há trabalho.\n• E: volume menor com temperatura maior faz a pressão subir.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_12",
+    "chapter": "Óptica da Visão",
+    "topicId": "fis_optica_instrumental",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma pessoa míope enxerga com nitidez objetos a no máximo 50 cm de seus olhos. Para enxergar com nitidez objetos muito distantes, ela deve usar óculos com lentes",
+    "options": [
+      {
+        "id": "a",
+        "text": "convergentes de +2,0 di."
+      },
+      {
+        "id": "b",
+        "text": "convergentes de +0,5 di."
+      },
+      {
+        "id": "c",
+        "text": "divergentes de −0,5 di."
+      },
+      {
+        "id": "d",
+        "text": "divergentes de −2,0 di."
+      },
+      {
+        "id": "e",
+        "text": "divergentes de −50 di."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. No míope, a imagem de um objeto distante se forma antes da retina; a lente corretiva precisa fazer os raios divergirem. Ela deve formar, de um objeto no infinito, uma imagem no ponto remoto (50 cm). Então f = −50 cm = −0,5 m e a vergência é V = 1/f = 1/(−0,5 m) = −2,0 di.\n\nPegadinhas:\n• A e B: lentes convergentes corrigem hipermetropia e presbiopia, não miopia.\n• C (−0,5 di): usa a distância focal no lugar da vergência.\n• E (−50 di): divide por 50 cm sem converter para metros. A dioptria é m⁻¹.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_13",
+    "chapter": "Potência Elétrica",
+    "topicId": "fis_circuitos",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm chuveiro tem a especificação 220 V – 5 500 W. Por engano, ele é instalado em uma rede de 110 V. Supondo que sua resistência elétrica não varie, a potência dissipada passa a ser",
+    "options": [
+      {
+        "id": "a",
+        "text": "687,5 W"
+      },
+      {
+        "id": "b",
+        "text": "1 375 W"
+      },
+      {
+        "id": "c",
+        "text": "2 750 W"
+      },
+      {
+        "id": "d",
+        "text": "5 500 W"
+      },
+      {
+        "id": "e",
+        "text": "11 000 W"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O que não muda é a resistência: R = V²/P = 220² ÷ 5 500 = 48 400 ÷ 5 500 = 8,8 Ω. Em 110 V: P = 110² ÷ 8,8 = 12 100 ÷ 8,8 = 1 375 W. Como P = V²/R, reduzir a tensão à metade reduz a potência a um quarto.\n\nPegadinhas:\n• A: divide por oito, como se a dependência fosse cúbica.\n• C (2 750 W): supõe proporção linear entre potência e tensão.\n• D: supõe que a potência nominal vale em qualquer tensão.\n• E: supõe que a corrente se mantém e a potência dobra.\nNa prática, o banho fica morno: a água recebe um quarto da potência.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_14",
+    "chapter": "Dinâmica Climática",
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO El Niño corresponde ao aquecimento anômalo das águas superficiais do Oceano Pacífico equatorial central e oriental, que altera a circulação atmosférica em várias partes do planeta. No Brasil, anos de El Niño intenso costumam estar associados a",
+    "options": [
+      {
+        "id": "a",
+        "text": "chuvas acima da média no norte do Nordeste e estiagem na Região Sul."
+      },
+      {
+        "id": "b",
+        "text": "chuvas acima da média em todo o território, pelo aumento da evaporação no Pacífico."
+      },
+      {
+        "id": "c",
+        "text": "resfriamento generalizado do país, pela chegada de massas de ar mais frias do Pacífico."
+      },
+      {
+        "id": "d",
+        "text": "ausência de efeitos, pois a Cordilheira dos Andes isola o Brasil da circulação atmosférica do Pacífico."
+      },
+      {
+        "id": "e",
+        "text": "estiagem no norte do Nordeste e em parte da Amazônia, e chuvas acima da média na Região Sul."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O aquecimento do Pacífico desloca a célula de circulação de Walker: sobre a Amazônia e o norte do Nordeste predomina ar descendente, que inibe nuvens (seca, maior risco de queimadas). No Sul, o jato subtropical mais intenso retém frentes frias, com chuvas acima da média e enchentes.\n\nPegadinhas:\n• A: inverte o padrão; esse quadro se aproxima do associado à La Niña.\n• B: o efeito é redistribuir a chuva, não aumentá-la em toda parte.\n• C: o El Niño tende a elevar temperaturas médias em grande parte do país.\n• D: os Andes barram massas de ar em baixos níveis, mas a teleconexão atua pela circulação de altitude.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_15",
+    "chapter": "Dinâmica Demográfica",
+    "topicId": "geo_populacao_urbana_brasil",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEntre 1980 e 2020, a taxa de fecundidade no Brasil caiu de cerca de 4,4 para 1,7 filho por mulher, e a expectativa de vida subiu. Nesse processo, por algumas décadas, a proporção de pessoas em idade ativa (15 a 64 anos) cresceu em relação à de crianças e idosos — o chamado bônus demográfico. Sobre esse período, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o bônus é permanente, pois a queda da fecundidade reduz para sempre a razão de dependência."
+      },
+      {
+        "id": "b",
+        "text": "o bônus decorre do aumento da natalidade, que amplia a população em idade ativa no curto prazo."
+      },
+      {
+        "id": "c",
+        "text": "o envelhecimento da população é causado principalmente pela emigração de jovens adultos."
+      },
+      {
+        "id": "d",
+        "text": "o bônus é temporário: a queda da fecundidade reduz primeiro a proporção de jovens, mas, com o envelhecimento, a proporção de idosos cresce e a razão de dependência volta a subir."
+      },
+      {
+        "id": "e",
+        "text": "a população brasileira diminui em números absolutos desde a década de 1990."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A queda da fecundidade reduz a base da pirâmide antes que o topo cresça muito: há proporcionalmente mais adultos para sustentar menos dependentes. Mas esses adultos envelhecem; a fecundidade abaixo da reposição (2,1) e a vida mais longa elevam a proporção de idosos, e a razão de dependência volta a subir. A janela é, por isso, temporária.\n\nPegadinhas:\n• A: ignora o envelhecimento, que é a segunda metade do mesmo processo.\n• B: a natalidade caiu; o bônus vem justamente dessa queda.\n• C: a emigração existe, mas não é a causa principal do envelhecimento brasileiro.\n• E: fecundidade abaixo da reposição não significa população já em queda; por inércia demográfica (muitas mulheres ainda em idade fértil), a população segue crescendo, embora em ritmo cada vez menor.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_16",
+    "chapter": "Linguagem Cartográfica",
+    "topicId": "geo_cartografia",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um mapa rodoviário na escala 1 : 250 000, a distância em linha reta entre duas cidades, ligadas por uma estrada retilínea, é de 6 cm. Um carro que percorre essa estrada com velocidade constante de 60 km/h leva, para ir de uma cidade à outra,",
+    "options": [
+      {
+        "id": "a",
+        "text": "1,5 minuto."
+      },
+      {
+        "id": "b",
+        "text": "15 minutos."
+      },
+      {
+        "id": "c",
+        "text": "25 minutos."
+      },
+      {
+        "id": "d",
+        "text": "150 minutos."
+      },
+      {
+        "id": "e",
+        "text": "6 minutos."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Cada 1 cm do mapa vale 250 000 cm no terreno. Então 6 cm valem 1 500 000 cm = 15 000 m = 15 km. A 60 km/h (1 km por minuto), o percurso leva 15 minutos.\n\nPegadinhas:\n• A: corresponde a 1,5 km, erro de uma casa decimal na conversão.\n• C: não corresponde a nenhuma conversão coerente.\n• D (150 min): corresponde a 150 km, erro de uma casa decimal no sentido oposto.\n• E (6 min): toma 1 cm do mapa como 1 km, ignorando a escala.\nNuma escala 1 : 250 000, 1 cm = 2,5 km; vale memorizar o atalho de cortar cinco zeros para passar de cm a km.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_17",
+    "chapter": "Operações com Probabilidades",
+    "topicId": "mat_dados_probabilidade",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma doença atinge 2% de uma população. Um teste para detectá-la dá resultado positivo em 90% das pessoas doentes e em 5% das pessoas saudáveis. Uma pessoa dessa população, escolhida ao acaso, fez o teste e obteve resultado positivo. A probabilidade de ela estar de fato doente é de aproximadamente",
+    "options": [
+      {
+        "id": "a",
+        "text": "2%"
+      },
+      {
+        "id": "b",
+        "text": "27%"
+      },
+      {
+        "id": "c",
+        "text": "50%"
+      },
+      {
+        "id": "d",
+        "text": "90%"
+      },
+      {
+        "id": "e",
+        "text": "95%"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Imagine 10 000 pessoas. Doentes: 200; destas, 90% testam positivo: 180. Saudáveis: 9 800; destas, 5% testam positivo: 490. Total de positivos: 180 + 490 = 670. Entre os positivos, doentes são 180/670 ≈ 0,27, ou 27%.\n\nPegadinhas:\n• A (2%): é a probabilidade antes do teste; o resultado positivo muda a chance.\n• C (50%): é um palpite sem cálculo.\n• D (90%): é a sensibilidade, P(positivo | doente), e não P(doente | positivo), que é o que se pede.\n• E (95%): é a especificidade, a chance de um saudável testar negativo.\nQuando a doença é rara, os falsos positivos de uma população saudável enorme superam os verdadeiros positivos — por isso exames de rastreamento pedem confirmação.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_18",
+    "chapter": "Modelagem Exponencial de Problemas",
+    "topicId": "mat_log_exponenciais",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA concentração de um medicamento no sangue cai pela metade a cada 6 horas (meia-vida de 6 h). Um paciente recebe uma dose única de 400 mg. Supondo que não haja outra administração, a quantidade do medicamento que permanece no organismo 24 horas depois é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0 mg"
+      },
+      {
+        "id": "b",
+        "text": "25 mg"
+      },
+      {
+        "id": "c",
+        "text": "50 mg"
+      },
+      {
+        "id": "d",
+        "text": "100 mg"
+      },
+      {
+        "id": "e",
+        "text": "200 mg"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Em 24 h cabem 24 ÷ 6 = 4 meias-vidas. A quantidade é 400 × (1/2)⁴ = 400 ÷ 16 = 25 mg. Em geral, Q(t) = Q₀ · (1/2)^(t/T), com T a meia-vida.\n\nPegadinhas:\n• A: modela a queda como linear (perder 100 mg a cada 6 h) e chega a zero. No modelo exponencial a quantidade nunca chega a zero.\n• C (50 mg): corresponde a 18 h, três meias-vidas.\n• D (100 mg): resulta de dividir 400 por 4 (número de meias-vidas) em vez de por 2⁴.\n• E (200 mg): corresponde a uma única meia-vida.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_19",
+    "chapter": "Porcentagem",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm laboratório aumentou em 25% o preço de um reagente. Meses depois, decidiu voltar ao preço original. Para isso, deve aplicar sobre o preço aumentado um desconto de",
+    "options": [
+      {
+        "id": "a",
+        "text": "15%"
+      },
+      {
+        "id": "b",
+        "text": "20%"
+      },
+      {
+        "id": "c",
+        "text": "25%"
+      },
+      {
+        "id": "d",
+        "text": "30%"
+      },
+      {
+        "id": "e",
+        "text": "125%"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Se o preço era 100, passou a 125. Para voltar a 100, o desconto é de 25 sobre 125, ou 25/125 = 20%. Algebricamente, 1,25 × (1 − d) = 1, então 1 − d = 0,8 e d = 0,2.\n\nPegadinhas:\n• A e D: não resultam de nenhuma operação coerente com os dados.\n• C (25%): o desconto incide sobre uma base maior (125). Um desconto de 25% levaria a 93,75, abaixo do preço original.\n• E (125%): confunde o fator de aumento com a porcentagem de desconto.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_20",
+    "chapter": "Brasil Império: Segundo Reinado (1840-1889)",
+    "topicId": "his_brasil_imperio",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1850, o Império aprovou a Lei Eusébio de Queirós, que proibia o tráfico de africanos escravizados, e a Lei de Terras, que determinava que as terras devolutas só poderiam ser adquiridas por compra. Considerando o contexto, a relação entre as duas leis é corretamente apresentada em:",
+    "options": [
+      {
+        "id": "a",
+        "text": "Diante do fim previsível da escravidão, a Lei de Terras dificultava o acesso à terra por ex-escravizados e imigrantes pobres, preservando mão de obra disponível para as grandes propriedades."
+      },
+      {
+        "id": "b",
+        "text": "A Lei de Terras visava distribuir lotes gratuitos aos africanos que deixariam de ser trazidos ao Brasil."
+      },
+      {
+        "id": "c",
+        "text": "As duas leis faziam parte de uma reforma agrária que dividiu os latifúndios cafeeiros do Vale do Paraíba."
+      },
+      {
+        "id": "d",
+        "text": "A Lei de Terras foi imposta pela Inglaterra para garantir que as terras brasileiras fossem compradas por investidores britânicos."
+      },
+      {
+        "id": "e",
+        "text": "As duas leis não tinham relação, pois a primeira tratava de comércio externo e a segunda de impostos urbanos."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Com o fim do tráfico, a elite agrária previa a escassez de trabalhadores e passou a contar com imigrantes e, mais tarde, libertos. Ao exigir compra para obter terra devoluta, a Lei de Terras dificultou que pessoas sem capital se tornassem pequenos proprietários: restava-lhes trabalhar nas fazendas. A lei concentrou a propriedade e deixou um legado de desigualdade no acesso à terra.\n\nPegadinhas:\n• B e C: são o oposto do efeito da lei; não houve distribuição gratuita nem reforma agrária.\n• D: a pressão inglesa se dirigia ao tráfico (Bill Aberdeen, 1845), não à compra de terras.\n• E: a Lei de Terras tratava de terras rurais e da regularização de posses, não de impostos urbanos; a ligação entre as leis está na questão da mão de obra.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_21",
+    "chapter": "A Era Vargas: o Estado Novo",
+    "topicId": "his_primeira_republica_vargas",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Consolidação das Leis do Trabalho (CLT), de 1943, reuniu a legislação trabalhista criada durante o governo Vargas, com direitos como jornada de oito horas, férias remuneradas e salário mínimo. Uma avaliação historicamente correta da CLT em seu contexto é:",
+    "options": [
+      {
+        "id": "a",
+        "text": "Estendeu os mesmos direitos a todos os trabalhadores do país, urbanos e rurais, desde sua promulgação."
+      },
+      {
+        "id": "b",
+        "text": "Foi aprovada por um Congresso eleito, após amplo debate com sindicatos independentes."
+      },
+      {
+        "id": "c",
+        "text": "Garantiu autonomia sindical plena e direito de greve irrestrito."
+      },
+      {
+        "id": "d",
+        "text": "Revogou os direitos trabalhistas anteriores para reduzir custos da industrialização."
+      },
+      {
+        "id": "e",
+        "text": "Ampliou direitos dos trabalhadores urbanos, mas excluiu os rurais e as empregadas domésticas, que eram grande parte da força de trabalho, e vinculou os sindicatos ao Estado."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A CLT consolidou direitos importantes, mas com recorte: o artigo 7º excluía trabalhadores rurais e domésticos — num país ainda majoritariamente rural. Além disso, o modelo corporativista atrelava os sindicatos ao Ministério do Trabalho (imposto sindical, reconhecimento oficial), o que dava ao governo controle sobre o movimento operário.\n\nPegadinhas:\n• A: os rurais só receberam o Estatuto do Trabalhador Rural em 1963; as domésticas tiveram equiparação ampla apenas em 2013.\n• B: em 1943 vigorava o Estado Novo, sem Congresso funcionando; a CLT veio por decreto-lei.\n• C: o modelo era o oposto, de tutela estatal; a greve era tratada como recurso antissocial na Constituição de 1937.\n• D: a CLT reuniu e sistematizou direitos, não os revogou.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_22",
+    "chapter": "Machado de Assis",
+    "topicId": "por_lit_romantismo_realismo",
+    "subject": "Português",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia o trecho final de Memórias póstumas de Brás Cubas, de Machado de Assis, em que o narrador, já morto, faz o balanço de sua vida:\n\n\"Este último capítulo é todo de negativas. Não alcancei a celebridade do emplasto, não fui ministro, não fui califa, não conheci o casamento. [...] Mais; não padeci a morte de D. Plácida, nem a semidemência do Quincas Borba. Somadas umas coisas e outras, qualquer pessoa imaginará que não houve míngua nem sobra, e conseguintemente que saí quite com a vida. E imaginará mal; porque ao chegar a este outro lado do mistério, achei-me com um pequeno saldo, que é a derradeira negativa deste capítulo de negativas: — Não tive filhos, não transmiti a nenhuma criatura o legado da nossa miséria.\"\n\nNo trecho, o narrador",
+    "options": [
+      {
+        "id": "a",
+        "text": "lamenta não ter tido filhos, pois isso o impediu de deixar herdeiros para sua fortuna."
+      },
+      {
+        "id": "b",
+        "text": "conclui que sua vida foi equilibrada, sem perdas nem ganhos, como ele próprio afirma."
+      },
+      {
+        "id": "c",
+        "text": "demonstra arrependimento por suas escolhas e pede perdão ao leitor por não ter alcançado a glória."
+      },
+      {
+        "id": "d",
+        "text": "converte uma ausência em 'saldo' positivo, revelando, sob a forma de uma contabilidade irônica, uma visão pessimista da condição humana."
+      },
+      {
+        "id": "e",
+        "text": "critica a medicina de sua época, responsável pela morte de D. Plácida e pela loucura de Quincas Borba."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O capítulo usa a linguagem de um balanço contábil ('somadas', 'míngua', 'sobra', 'quite', 'saldo'). O esperado seria que 'não ter filhos' fosse um débito; o narrador o transforma em crédito, porque viver é transmitir 'o legado da nossa miséria'. A ironia está em apresentar como vantagem uma conclusão profundamente pessimista sobre a existência — traço do Realismo machadiano e da perspectiva do 'defunto autor', livre de conveniências.\n\nPegadinhas:\n• A: o narrador não lamenta; chama a ausência de filhos de 'saldo'.\n• B: é exatamente o que ele diz que 'qualquer pessoa imaginará', para logo dizer que 'imaginará mal'.\n• C: o tom é desdenhoso e irônico, não de arrependimento.\n• E: D. Plácida e Quincas Borba aparecem como sofrimentos alheios que ele não padeceu; não há crítica à medicina.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_23",
+    "chapter": "Orações Adverbiais",
+    "topicId": "por_sintaxe",
+    "subject": "Português",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nConsidere o período:\n\n\"Embora os dados ainda sejam preliminares, os pesquisadores decidiram divulgar o estudo.\"\n\nA substituição de \"Embora\" que mantém o sentido original e a correção gramatical do período é:",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ainda que"
+      },
+      {
+        "id": "b",
+        "text": "Porque"
+      },
+      {
+        "id": "c",
+        "text": "Desde que"
+      },
+      {
+        "id": "d",
+        "text": "À medida que"
+      },
+      {
+        "id": "e",
+        "text": "Tão logo"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. 'Embora' introduz oração subordinada adverbial concessiva: apresenta um fato que poderia impedir a ação principal, mas não impede. 'Ainda que' tem o mesmo valor e também exige o subjuntivo ('sejam'), preservando a correção.\n\nPegadinhas:\n• B (Porque): transforma o obstáculo em causa — os pesquisadores divulgariam o estudo por serem os dados preliminares, o que muda o sentido.\n• C (Desde que): com subjuntivo, expressa condição; o período passaria a dizer que só divulgariam se os dados fossem preliminares.\n• D (À medida que): expressa proporção e pede indicativo.\n• E (Tão logo): expressa tempo ('assim que') e mudaria a relação lógica.\nNa FUVEST, a pergunta sobre substituição costuma exigir ao mesmo tempo sentido e correção: confira o modo verbal depois de trocar o conectivo.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l1_24",
+    "chapter": "Text Comprehension: Bacteria",
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Antibiotics are among the most important tools of modern medicine, but every time they are used, they give an advantage to the bacteria that happen to survive. When patients stop treatment as soon as they feel better, or when antibiotics are given to treat viral infections, against which they have no effect, the hardiest bacteria are left behind to multiply. Doctors are therefore asked to prescribe these drugs only when they are truly needed — not to abandon them.\"\n\nDe acordo com o texto,",
+    "options": [
+      {
+        "id": "a",
+        "text": "os antibióticos deveriam ser abandonados, pois perderam a eficácia."
+      },
+      {
+        "id": "b",
+        "text": "o organismo do paciente se torna resistente ao antibiótico depois de vários tratamentos."
+      },
+      {
+        "id": "c",
+        "text": "interromper o tratamento assim que os sintomas melhoram é a forma recomendada de evitar a resistência."
+      },
+      {
+        "id": "d",
+        "text": "as bactérias mais resistentes são eliminadas primeiro, o que explica a melhora rápida dos sintomas."
+      },
+      {
+        "id": "e",
+        "text": "o uso de antibióticos contra infecções virais favorece a sobrevivência das bactérias mais resistentes, sem tratar a doença."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O texto diz que antibióticos 'have no effect' contra vírus; usados nesses casos, não tratam a doença e ainda deixam 'the hardiest bacteria' sobreviver e se multiplicar.\n\nPegadinhas:\n• A: o texto termina com 'not to abandon them'; pede uso criterioso, não abandono.\n• B: quem se torna resistente é a bactéria, não o paciente. É um erro conceitual frequente.\n• C: o texto apresenta a interrupção precoce ('stop treatment as soon as they feel better') como causa do problema.\n• D: inverte o texto; as mais resistentes são as que sobram ('are left behind').\nVocabulário útil: 'hardiest' = mais resistentes; 'left behind' = deixadas para trás; 'therefore' = portanto.",
+    "difficulty": "medium"
   }
 ]
