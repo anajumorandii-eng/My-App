@@ -1,0 +1,818 @@
+[
+  {
+    "id": "crivo_fuvest_f1_l10_01",
+    "subject": "Biologia",
+    "topicId": "bio_genetica",
+    "chapter": "Introdução à Genética",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que a dieta 'cura' a mutação, ou que doença genética não pode ser influenciada pelo ambiente.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA fenilcetonúria é uma doença genética autossômica recessiva: pessoas homozigotas não produzem a enzima que converte o aminoácido fenilalanina em tirosina. Sem tratamento, a fenilalanina se acumula no sangue e causa danos graves ao desenvolvimento do sistema nervoso. Desde a década de 1990, todos os recém-nascidos no Brasil têm direito ao teste do pezinho, que detecta a doença nos primeiros dias de vida. Crianças diagnosticadas que seguem uma dieta com pouca fenilalanina têm desenvolvimento normal.\n\nTexto elaborado para esta questão.\n\nO caso da fenilcetonúria mostra que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a dieta corrige a mutação no DNA das células, eliminando a doença."
+      },
+      {
+        "id": "b",
+        "text": "o fenótipo resulta da interação entre o genótipo e o ambiente: o genótipo permanece o mesmo, mas a dieta impede que a deficiência da enzima cause os danos."
+      },
+      {
+        "id": "c",
+        "text": "doenças genéticas não podem ser influenciadas por fatores ambientais."
+      },
+      {
+        "id": "d",
+        "text": "a doença é transmitida pelo leite materno, por isso o teste é feito após o nascimento."
+      },
+      {
+        "id": "e",
+        "text": "pessoas heterozigotas manifestam a doença de forma mais grave que as homozigotas."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A criança continua homozigota e sem a enzima, mas, com pouca fenilalanina na dieta, o substrato não se acumula a ponto de causar danos. O fenótipo (desenvolvimento normal) depende do genótipo e do ambiente — aqui, a alimentação. O diagnóstico precoce é decisivo porque o dano neurológico ocorre cedo.\n\nPegadinhas:\n• A: a dieta não altera o DNA.\n• C: o caso mostra exatamente o contrário.\n• D: a doença é genética; o teste após o nascimento detecta o acúmulo de fenilalanina quando o bebê começa a se alimentar.\n• E: em doenças recessivas, os heterozigotos geralmente não manifestam a doença."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_02",
+    "subject": "Biologia",
+    "topicId": "bio_estrutura_fisio_celular",
+    "chapter": "Composição Química Celular: Proteínas e sua Função Estrutural",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a desnaturação quebra as ligações peptídicas, alterando a sequência de aminoácidos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nFebres muito altas, acima de cerca de 41 °C, são perigosas em parte porque podem alterar proteínas do organismo, como enzimas, que deixam de funcionar. Na cozinha, observa-se fenômeno semelhante: ao ser aquecida, a clara do ovo, rica na proteína albumina, deixa de ser transparente e líquida e se torna branca e firme, sem voltar ao estado original ao esfriar.\n\nTexto elaborado para esta questão.\n\nNos dois casos, o calor provoca nas proteínas",
+    "options": [
+      {
+        "id": "a",
+        "text": "a quebra das ligações peptídicas, que separa todos os aminoácidos da cadeia."
+      },
+      {
+        "id": "b",
+        "text": "a síntese de novas proteínas, com sequência diferente de aminoácidos."
+      },
+      {
+        "id": "c",
+        "text": "a transformação das proteínas em carboidratos, que solidificam a clara."
+      },
+      {
+        "id": "d",
+        "text": "a desnaturação: o rompimento de interações que mantêm a forma tridimensional da proteína, alterando sua estrutura espacial e sua função, sem alterar a sequência de aminoácidos."
+      },
+      {
+        "id": "e",
+        "text": "a evaporação da água das proteínas, que deixam de existir."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A função de uma proteína depende de sua forma espacial, mantida por interações relativamente fracas (ligações de hidrogênio, interações hidrofóbicas) e, em alguns casos, por pontes dissulfeto. O calor rompe essas interações, e a cadeia se desenrola e se emaranha de outro modo — desnaturação. A sequência (estrutura primária), unida por ligações peptídicas, não muda.\n\nPegadinhas:\n• A: as ligações peptídicas resistem ao cozimento; sua quebra é hidrólise, como na digestão.\n• B: o calor não sintetiza proteínas novas.\n• C: proteínas não se convertem em carboidratos por aquecimento.\n• E: a clara fica firme justamente porque as proteínas desnaturadas se agregam, e não porque desaparecem."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_03",
+    "subject": "Biologia",
+    "topicId": "bio_metabolismo_energetico",
+    "chapter": "Proteínas: Enzimas",
+    "difficulty": "hard",
+    "skill": "interpretacao_grafico",
+    "trap": "Achar que a atividade enzimática aumenta indefinidamente com a temperatura.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO gráfico compara a atividade de duas enzimas que catalisam a mesma reação: uma extraída de células humanas e outra de uma bactéria que vive em fontes termais.\n\n[Gráfico: atividade enzimática relativa (%) em função da temperatura (°C), de 0 a 100 °C. Enzima humana: aumenta de quase zero a 0 °C até um máximo de 100% por volta de 37 °C e cai rapidamente, chegando a quase zero por volta de 50 °C. Enzima bacteriana: muito baixa até cerca de 40 °C, aumenta até um máximo por volta de 75 °C e cai a partir de cerca de 85 °C.]\n\nEnzimas de bactérias de fontes termais são usadas, por exemplo, na técnica de PCR, em que a mistura é aquecida repetidamente a mais de 90 °C.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA análise do gráfico permite concluir que",
+    "options": [
+      {
+        "id": "a",
+        "text": "cada enzima tem uma temperatura ótima, acima da qual a atividade cai por desnaturação, e a enzima bacteriana é mais estável ao calor, o que a torna adequada a processos com temperaturas elevadas."
+      },
+      {
+        "id": "b",
+        "text": "a atividade das duas enzimas aumenta continuamente com a temperatura."
+      },
+      {
+        "id": "c",
+        "text": "a enzima humana é mais ativa que a bacteriana em qualquer temperatura."
+      },
+      {
+        "id": "d",
+        "text": "acima de 50 °C, a enzima humana passa a funcionar melhor que a bacteriana."
+      },
+      {
+        "id": "e",
+        "text": "as duas enzimas têm a mesma temperatura ótima, pois catalisam a mesma reação."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Até o ponto ótimo, o aumento de temperatura acelera as colisões entre enzima e substrato; acima dele, a estrutura espacial se desfaz e a atividade cai. A enzima humana tem ótimo perto de 37 °C e quase não funciona a 50 °C; a bacteriana, adaptada a ambientes quentes, tem ótimo perto de 75 °C e resiste a temperaturas que inativariam a humana — por isso enzimas desse tipo são usadas na PCR.\n\nPegadinhas:\n• B: o gráfico mostra quedas após o ótimo.\n• C: acima de cerca de 50 °C, a bacteriana é muito mais ativa.\n• D: inverte o gráfico; acima de 50 °C, a enzima humana está praticamente inativa.\n• E: catalisar a mesma reação não implica ter o mesmo ótimo de temperatura."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_04",
+    "subject": "Biologia",
+    "topicId": "bio_evolucao",
+    "chapter": "Mecanismos da Evolução Biológica",
+    "difficulty": "hard",
+    "skill": "comparacao_conceitual",
+    "trap": "Classificar como homólogas estruturas que só compartilham a função.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs asas de um morcego e as de uma borboleta servem para o voo. A asa do morcego é sustentada por ossos do braço e da mão, como úmero, rádio, ulna e falanges muito alongadas, os mesmos ossos presentes no braço humano e na nadadeira de uma baleia. A asa da borboleta é uma expansão do exoesqueleto, sem ossos.\n\nTexto elaborado para esta questão.\n\nSobre essas estruturas, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as asas do morcego e da borboleta são homólogas, pois ambas servem para voar."
+      },
+      {
+        "id": "b",
+        "text": "o braço humano e a asa do morcego são análogos, pois têm funções diferentes."
+      },
+      {
+        "id": "c",
+        "text": "a semelhança entre as asas de morcego e borboleta prova que os dois descendem de um ancestral alado recente."
+      },
+      {
+        "id": "d",
+        "text": "a nadadeira da baleia e a asa da borboleta são homólogas, pois ambas são usadas para locomoção."
+      },
+      {
+        "id": "e",
+        "text": "a asa do morcego, o braço humano e a nadadeira da baleia são estruturas homólogas, com mesma origem embrionária e evolutiva, enquanto as asas de morcego e de borboleta são análogas, resultado de evolução convergente para a mesma função."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Homologia indica origem comum (mesmos ossos, mesma posição, mesmo desenvolvimento embrionário), mesmo que a função varie — divergência evolutiva a partir de um ancestral tetrápode. Analogia indica mesma função com origens diferentes: o voo surgiu de forma independente em insetos e em morcegos, por convergência.\n\nPegadinhas:\n• A e D: a função não define homologia.\n• B: o braço humano e a asa do morcego são homólogos, apesar das funções diferentes.\n• C: a semelhança funcional das asas resulta de convergência, não de ancestral alado comum."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_05",
+    "subject": "Química",
+    "topicId": "qui_estequiometria",
+    "chapter": "Transformações Físicas e Químicas e Balanceamento de Equações",
+    "difficulty": "easy",
+    "skill": "comparacao_conceitual",
+    "trap": "Classificar como química toda mudança visível, como derretimento e evaporação.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma aula sobre transformações da matéria, o professor listou situações do cotidiano de um hospital:\n\nI. O álcool em gel, espalhado nas mãos, evapora em poucos segundos.\nII. O gelo de uma bolsa térmica derrete após algumas horas.\nIII. Um curativo com água oxigenada libera bolhas de oxigênio em contato com o sangue.\nIV. A glicose do soro é oxidada pelas células do paciente, produzindo CO₂ e água.\n\nTexto elaborado para esta questão.\n\nSão transformações químicas apenas",
+    "options": [
+      {
+        "id": "a",
+        "text": "I e II."
+      },
+      {
+        "id": "b",
+        "text": "I e III."
+      },
+      {
+        "id": "c",
+        "text": "III e IV."
+      },
+      {
+        "id": "d",
+        "text": "II e IV."
+      },
+      {
+        "id": "e",
+        "text": "I, II, III e IV."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Em III e IV formam-se novas substâncias: o H₂O₂ se decompõe em água e O₂, e a glicose, na respiração celular, origina CO₂ e água. Em I e II, há mudança de estado físico (evaporação e fusão): as substâncias continuam as mesmas.\n\nPegadinhas:\n• A: I e II são transformações físicas.\n• B e D: misturam uma física com uma química.\n• E: inclui as transformações físicas.\nCritério decisivo: formação de substância nova, e não mudança de aparência."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_06",
+    "subject": "Química",
+    "topicId": "qui_gases",
+    "chapter": "Composição da Matéria: Estados Físicos",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o gelo seco derrete, formando água, ou que o gás liberado é inofensivo em ambiente fechado.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO gelo seco, dióxido de carbono no estado sólido, é usado para transportar amostras biológicas e algumas vacinas que precisam de temperaturas muito baixas. À pressão ambiente, ele passa diretamente do estado sólido para o gasoso a cerca de −78 °C, sem deixar resíduo líquido. As embalagens recomendam não armazená-lo em câmaras pequenas e sem ventilação, pois o gás, mais denso que o ar, pode se acumular junto ao chão.\n\nTexto elaborado para esta questão.\n\nSobre o gelo seco, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "ele derrete e forma água líquida, que mantém a temperatura baixa por evaporação."
+      },
+      {
+        "id": "b",
+        "text": "ele sofre sublimação, absorvendo energia das amostras, e o CO₂ gasoso acumulado em ambiente fechado pode reduzir a proporção de oxigênio no ar e causar asfixia."
+      },
+      {
+        "id": "c",
+        "text": "ele é água congelada a temperatura muito baixa, por isso não deixa resíduo."
+      },
+      {
+        "id": "d",
+        "text": "a passagem do sólido ao gás libera energia, aquecendo as amostras."
+      },
+      {
+        "id": "e",
+        "text": "o gás liberado é menos denso que o ar e se dispersa imediatamente para o teto."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Sublimação é a passagem direta de sólido a gás; como toda mudança no sentido de maior agitação das partículas, absorve energia, retirada do que está em volta — as amostras permanecem a temperaturas muito baixas. O CO₂, mais denso que o ar, acumula-se junto ao chão em locais fechados e desloca o oxigênio.\n\nPegadinhas:\n• A e C: o gelo seco é CO₂, não água, e não passa pelo estado líquido à pressão ambiente.\n• D: a sublimação é endotérmica.\n• E: o texto informa que o gás é mais denso que o ar."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_07",
+    "subject": "Química",
+    "topicId": "qui_equilibrio",
+    "chapter": "Equilíbrios Iônicos II",
+    "difficulty": "hard",
+    "skill": "analise_de_equilibrio",
+    "trap": "Achar que toda solução de sal é neutra.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO bicarbonato de sódio (NaHCO₃) é usado em soluções para lavagem bucal e, em alguns casos, para corrigir a acidez do sangue em pacientes graves. Ao ser dissolvido em água pura, forma uma solução com pH maior que 7. O íon bicarbonato pode reagir com a água:\n\nHCO₃⁻(aq) + H₂O(l) ⇌ H₂CO₃(aq) + OH⁻(aq)\n\nTexto elaborado para esta questão.\n\nO caráter da solução se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o íon Na⁺ reage com a água formando ácido, o que torna a solução ácida."
+      },
+      {
+        "id": "b",
+        "text": "todo sal dissolvido em água forma solução neutra, e o pH maior que 7 se deve a impurezas."
+      },
+      {
+        "id": "c",
+        "text": "o bicarbonato libera íons H⁺ ao se dissolver, tornando a solução básica."
+      },
+      {
+        "id": "d",
+        "text": "o bicarbonato, derivado de um ácido fraco, sofre hidrólise e produz íons OH⁻, enquanto o Na⁺, derivado de uma base forte, não altera o pH; por isso a solução é básica."
+      },
+      {
+        "id": "e",
+        "text": "o sódio metálico presente no sal reage com a água, liberando gás hidrogênio."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Sais de ácido fraco e base forte dão soluções básicas: o ânion do ácido fraco (HCO₃⁻) capta H⁺ da água, liberando OH⁻. O Na⁺, cátion de uma base forte, praticamente não reage com a água. Esse caráter básico explica o uso do bicarbonato para neutralizar acidez.\n\nPegadinhas:\n• A: o Na⁺ não hidrolisa de forma significativa, e a solução é básica.\n• B: sais podem formar soluções ácidas, básicas ou neutras, conforme os íons.\n• C: liberar H⁺ tornaria a solução ácida, e a equação mostra formação de OH⁻.\n• E: no sal, o sódio está como íon Na⁺, não como metal."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_08",
+    "subject": "Química",
+    "topicId": "qui_oxirreducao",
+    "chapter": "Química Ambiental",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Confundir o buraco na camada de ozônio com o aquecimento global, ou achar que o problema foi resolvido de imediato.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nOs clorofluorcarbonetos (CFCs), usados por décadas em geladeiras, aerossóis e espumas, são estáveis na baixa atmosfera e chegam à estratosfera. Ali, a radiação ultravioleta quebra suas moléculas e libera átomos de cloro, que participam de reações em cadeia que destroem o ozônio: um único átomo de cloro pode destruir milhares de moléculas de O₃. Em 1987, o Protocolo de Montreal estabeleceu a eliminação gradual desses compostos. Estimativas indicam que a camada de ozônio deve se recuperar ao longo das próximas décadas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o cloro atua como catalisador na destruição do ozônio, sendo regenerado ao final de cada ciclo, o que explica o grande efeito de pequenas quantidades de CFC e a lenta recuperação da camada mesmo após a proibição."
+      },
+      {
+        "id": "b",
+        "text": "os CFCs destroem o ozônio na superfície terrestre, onde são liberados."
+      },
+      {
+        "id": "c",
+        "text": "a camada de ozônio se recuperou totalmente logo após o Protocolo de Montreal."
+      },
+      {
+        "id": "d",
+        "text": "os CFCs são instáveis e se decompõem antes de atingir a estratosfera."
+      },
+      {
+        "id": "e",
+        "text": "a destruição do ozônio aumenta a proteção dos seres vivos contra a radiação ultravioleta."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Em um ciclo simplificado, Cl reage com O₃ formando ClO e O₂; o ClO reage com oxigênio atômico, liberando de novo o Cl. Por ser regenerado, o cloro destrói muitas moléculas de ozônio. Como os CFCs persistem por décadas, a recuperação é lenta, ainda que o Protocolo de Montreal seja considerado um dos acordos ambientais mais bem-sucedidos.\n\nPegadinhas:\n• B: a destruição ocorre na estratosfera, após a quebra das moléculas pela radiação UV.\n• C: o texto fala em recuperação ao longo das próximas décadas.\n• D: o texto diz que os CFCs são estáveis na baixa atmosfera — por isso chegam à estratosfera.\n• E: menos ozônio significa mais radiação UV na superfície."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_09",
+    "subject": "Física",
+    "topicId": "fis_dinamica_impulsiva",
+    "chapter": "Colisões",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Achar que a energia cinética se conserva na colisão em que os carros seguem juntos, ou dividir a velocidade por quatro.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um teste de segurança, um carro de 1 000 kg, a 20 m/s, colide com outro carro idêntico, parado. Após a colisão, os dois seguem juntos, deformados. Considere desprezíveis o atrito com o solo durante o choque e as forças externas no intervalo da colisão.\n\nTexto elaborado para esta questão.\n\nA velocidade do conjunto imediatamente após a colisão é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "5 m/s."
+      },
+      {
+        "id": "b",
+        "text": "7,1 m/s."
+      },
+      {
+        "id": "c",
+        "text": "10 m/s."
+      },
+      {
+        "id": "d",
+        "text": "14 m/s."
+      },
+      {
+        "id": "e",
+        "text": "20 m/s."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Sem forças externas relevantes, a quantidade de movimento se conserva: 1 000 × 20 = (1 000 + 1 000) · v → v = 10 m/s. A energia cinética, porém, cai de 200 000 J para 100 000 J: metade é gasta na deformação, no calor e no som — o que torna a colisão perfeitamente inelástica.\n\nPegadinhas:\n• A (5 m/s): divide a velocidade por quatro.\n• B (7,1 m/s): não corresponde a modelo coerente com os dados.\n• D (14 m/s): conserva a energia cinética (20/√2), o que não vale quando os carros seguem juntos.\n• E (20 m/s): supõe que o conjunto mantém a velocidade inicial, dobrando a quantidade de movimento."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_10",
+    "subject": "Física",
+    "topicId": "fis_eletrostatica",
+    "chapter": "Campo Elétrico",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o para-raios atrai raios de longe ou impede que eles caiam.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nOs para-raios, propostos por Benjamin Franklin no século XVIII, são hastes metálicas pontiagudas instaladas no ponto mais alto de uma construção e ligadas à terra por cabos condutores. Em dias de tempestade, a base das nuvens fica eletrizada, induzindo cargas de sinal oposto no solo e nas construções. Hospitais e outros prédios altos são obrigados por norma a ter sistemas de proteção contra descargas atmosféricas.\n\nTexto elaborado para esta questão.\n\nO funcionamento do para-raios baseia-se no fato de",
+    "options": [
+      {
+        "id": "a",
+        "text": "a haste metálica criar cargas elétricas que repelem os raios para longe do prédio."
+      },
+      {
+        "id": "b",
+        "text": "o para-raios impedir a formação de raios em um raio de vários quilômetros."
+      },
+      {
+        "id": "c",
+        "text": "o metal da haste ser isolante, bloqueando a passagem da corrente elétrica."
+      },
+      {
+        "id": "d",
+        "text": "a haste atrair os raios de qualquer distância, protegendo toda a cidade."
+      },
+      {
+        "id": "e",
+        "text": "em um condutor eletrizado, o campo elétrico ser mais intenso nas pontas (poder das pontas), o que favorece a descarga pela haste, e de o cabo oferecer um caminho de baixa resistência para que a corrente chegue à terra sem atravessar a estrutura do prédio."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. As cargas se concentram nas regiões de maior curvatura de um condutor; nas pontas, o campo elétrico é intenso o suficiente para ionizar o ar e facilitar a descarga ali. Se o raio cai, a corrente segue pelo cabo de baixa resistência até o aterramento. A proteção é local, em uma região limitada ao redor da haste.\n\nPegadinhas:\n• A e B: o para-raios não repele nem impede raios; oferece um caminho preferencial.\n• C: a haste e os cabos são condutores.\n• D: a área protegida é limitada; não abrange uma cidade."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_11",
+    "subject": "Física",
+    "topicId": "fis_gravitacao_circular",
+    "chapter": "Movimento Harmônico Simples (MHS)",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o período do pêndulo depende da massa ou da amplitude, em pequenas oscilações.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nSegundo relatos, Galileu Galilei observou que um lustre da catedral de Pisa levava sempre o mesmo tempo para completar uma oscilação, tanto quando balançava muito quanto quando balançava pouco. Para pequenas oscilações, o período de um pêndulo simples é dado por T = 2π√(L/g), em que L é o comprimento do fio e g é a aceleração da gravidade. Essa regularidade foi usada para construir relógios de pêndulo.\n\nTexto elaborado para esta questão.\n\nPara um relógio de pêndulo que está atrasando, isto é, cujo pêndulo oscila mais lentamente que o necessário, a correção adequada é",
+    "options": [
+      {
+        "id": "a",
+        "text": "aumentar a massa do pêndulo, o que torna as oscilações mais rápidas."
+      },
+      {
+        "id": "b",
+        "text": "encurtar o comprimento do pêndulo, o que diminui o período das oscilações."
+      },
+      {
+        "id": "c",
+        "text": "aumentar a amplitude das oscilações, o que reduz o período."
+      },
+      {
+        "id": "d",
+        "text": "alongar o comprimento do pêndulo, o que diminui o período."
+      },
+      {
+        "id": "e",
+        "text": "diminuir a massa do pêndulo, o que aumenta a frequência das oscilações."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Pela expressão, o período depende só de L e de g, e não da massa nem (em pequenas oscilações) da amplitude. Se o relógio atrasa, o período está longo demais; encurtar o fio reduz T e acelera as oscilações. Reduzir L a um quarto, por exemplo, reduz o período à metade.\n\nPegadinhas:\n• A e E: a massa não aparece na expressão do período.\n• C: para pequenas oscilações, a amplitude não altera o período — foi o que Galileu observou.\n• D: alongar o fio aumentaria o período e agravaria o atraso."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_12",
+    "subject": "Física",
+    "topicId": "fis_energia",
+    "chapter": "A Física por trás da Obtenção de Energia Elétrica, das Quedas-d'Água aos Reatores Nucleares",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a usina nuclear produz eletricidade diretamente da radiação, sem turbina e gerador.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs usinas de Angra dos Reis, no Rio de Janeiro, são as únicas usinas nucleares do Brasil. Em seus reatores, a fissão de núcleos de urânio libera grande quantidade de energia, que aquece a água de um circuito fechado. Esse calor é usado para produzir vapor em outro circuito, que movimenta turbinas acopladas a geradores. Depois, o vapor é condensado com água do mar.\n\nTexto elaborado para esta questão.\n\nSobre a geração de energia nessas usinas, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a radiação do urânio é convertida diretamente em corrente elétrica, sem necessidade de turbinas."
+      },
+      {
+        "id": "b",
+        "text": "a energia vem da queima do urânio com oxigênio, como em uma termelétrica a carvão."
+      },
+      {
+        "id": "c",
+        "text": "a usina não produz rejeitos, pois todo o urânio é transformado em energia."
+      },
+      {
+        "id": "d",
+        "text": "a energia nuclear liberada na fissão é convertida em energia térmica, depois em energia cinética das turbinas e, por fim, em energia elétrica nos geradores, de modo semelhante ao de uma termelétrica, mas sem combustão."
+      },
+      {
+        "id": "e",
+        "text": "a água do mar é o combustível do reator, por conter hidrogênio."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A sequência de transformações é energia nuclear → térmica → mecânica (turbina) → elétrica (gerador, por indução eletromagnética). Como numa termelétrica, há um ciclo de vapor, mas a fonte de calor é a fissão, não a combustão — por isso não há emissão de CO₂ na geração. Em compensação, há rejeitos radioativos que exigem armazenamento seguro.\n\nPegadinhas:\n• A: a eletricidade é gerada por geradores movidos pelas turbinas.\n• B: a fissão é uma reação nuclear, não uma combustão.\n• C: a fissão gera rejeitos radioativos, e só uma pequena parte da massa é convertida em energia.\n• E: a água do mar é usada para resfriar e condensar o vapor."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_13",
+    "subject": "Matemática",
+    "topicId": "mat_funcoes",
+    "chapter": "Introdução às Funções",
+    "difficulty": "easy",
+    "skill": "interpretacao_de_dados",
+    "trap": "Contar os horários da tabela em vez dos intervalos de tempo, ou usar critério de febre diferente do enunciado.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA temperatura de uma criança internada foi medida a cada duas horas, e os registros estão na tabela. Às 10 h, ela recebeu um antitérmico. Considere que houve febre nos intervalos em que a temperatura foi igual ou superior a 37,8 °C nas duas medições que delimitam o intervalo.\n\n[Tabela: horário — temperatura (°C): 6 h — 37,0; 8 h — 37,9; 10 h — 38,6; 12 h — 38,0; 14 h — 37,4; 16 h — 37,1; 18 h — 37,9; 20 h — 38,2; 22 h — 37,3.]\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nDe acordo com o critério adotado, a criança esteve com febre, ao longo do dia, durante",
+    "options": [
+      {
+        "id": "a",
+        "text": "4 horas."
+      },
+      {
+        "id": "b",
+        "text": "6 horas."
+      },
+      {
+        "id": "c",
+        "text": "8 horas."
+      },
+      {
+        "id": "d",
+        "text": "10 horas."
+      },
+      {
+        "id": "e",
+        "text": "16 horas."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Os intervalos com as duas medições iguais ou acima de 37,8 °C são: 8 h–10 h, 10 h–12 h e 18 h–20 h. São três intervalos de 2 h: 6 horas. A queda depois das 12 h é compatível com o efeito do antitérmico, e a temperatura volta a subir à noite.\n\nPegadinhas:\n• A (4 horas): considera só o período da manhã, 8 h–12 h.\n• C (8 horas): inclui o intervalo 12 h–14 h, em que a medição das 14 h está abaixo de 37,8 °C.\n• D (10 horas): inclui também o intervalo 20 h–22 h.\n• E (16 horas): é o tempo total de observação, de 6 h a 22 h."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_14",
+    "subject": "Matemática",
+    "topicId": "mat_combinatoria",
+    "chapter": "O Problema da Fila",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Esquecer que os dois irmãos podem trocar de lugar entre si, ou não tratá-los como bloco.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nCinco pacientes aguardam atendimento e serão organizados em uma fila. Dois deles são irmãos e pediram para ficar lado a lado, em qualquer ordem entre si.\n\nTexto elaborado para esta questão.\n\nO número de maneiras diferentes de organizar a fila atendendo ao pedido é",
+    "options": [
+      {
+        "id": "a",
+        "text": "6."
+      },
+      {
+        "id": "b",
+        "text": "12."
+      },
+      {
+        "id": "c",
+        "text": "24."
+      },
+      {
+        "id": "d",
+        "text": "36."
+      },
+      {
+        "id": "e",
+        "text": "48."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Trate os dois irmãos como um bloco: passam a ser 4 elementos (o bloco e os outros 3 pacientes), que podem ser ordenados de 4! = 24 maneiras. Dentro do bloco, os irmãos podem trocar de lugar: 2! = 2. Total: 24 × 2 = 48.\n\nPegadinhas:\n• A (6): ordena apenas os três outros pacientes.\n• B (12): usa 3! × 2, esquecendo o bloco como um dos elementos a ordenar.\n• C (24): esquece que os irmãos podem trocar de lugar dentro do bloco.\n• D (36): não corresponde a contagem coerente com o enunciado."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_15",
+    "subject": "Matemática",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "chapter": "Porcentagem",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Somar as taxas de aumentos sucessivos em vez de multiplicar os fatores.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO preço de um medicamento de uso contínuo foi reajustado duas vezes em sequência: primeiro, em 10%; meses depois, em 20% sobre o novo preço. Uma associação de pacientes queria informar o aumento total no período.\n\nTexto elaborado para esta questão.\n\nO aumento acumulado do preço do medicamento foi de",
+    "options": [
+      {
+        "id": "a",
+        "text": "28%."
+      },
+      {
+        "id": "b",
+        "text": "30%."
+      },
+      {
+        "id": "c",
+        "text": "32%."
+      },
+      {
+        "id": "d",
+        "text": "36%."
+      },
+      {
+        "id": "e",
+        "text": "40%."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Os aumentos multiplicam o preço por 1,10 e depois por 1,20: 1,10 × 1,20 = 1,32. O aumento acumulado é de 32%. Se o preço era R$ 100,00, passou a R$ 110,00 e, depois, a R$ 132,00.\n\nPegadinhas:\n• A, D e E: não correspondem à composição dos dois aumentos (28%, 36% e 40%).\n• B (30%): soma as taxas, ignorando que o segundo aumento incide sobre o preço já reajustado."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_16",
+    "subject": "Geografia",
+    "topicId": "geo_economica_brasil",
+    "chapter": "O Espaço Industrial Brasileiro I",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a desconcentração tirou de São Paulo toda a importância econômica, ou que se deu sem incentivos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA partir dos anos 1970, muitas indústrias deixaram a Região Metropolitana de São Paulo e se instalaram no interior paulista e em outros estados, como Minas Gerais, Paraná, Bahia e Goiás. Entre os fatores apontados estão os custos mais altos na metrópole, como terrenos e salários, os congestionamentos, a ação mais forte dos sindicatos e os incentivos fiscais oferecidos por outros estados, a chamada guerra fiscal. Ainda assim, a capital paulista manteve sedes de empresas, bancos e serviços especializados.\n\nTexto elaborado para esta questão.\n\nO processo descrito caracteriza",
+    "options": [
+      {
+        "id": "a",
+        "text": "a desindustrialização total de São Paulo, que perdeu sua importância econômica no país."
+      },
+      {
+        "id": "b",
+        "text": "a desconcentração industrial, com a dispersão de fábricas para outras áreas, enquanto a metrópole reforçou seu papel de centro de gestão, finanças e serviços."
+      },
+      {
+        "id": "c",
+        "text": "a concentração de todas as indústrias brasileiras na capital paulista."
+      },
+      {
+        "id": "d",
+        "text": "a transferência das indústrias para o exterior, sem efeitos em outros estados brasileiros."
+      },
+      {
+        "id": "e",
+        "text": "o fim dos incentivos fiscais concedidos pelos estados às empresas."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A indústria se espalhou pelo território em busca de custos menores e incentivos, mas São Paulo concentrou o comando: sedes de empresas, mercado financeiro, pesquisa e serviços avançados. Por isso se fala em desconcentração da produção, não em perda de centralidade.\n\nPegadinhas:\n• A: o texto mostra que a capital manteve sedes e serviços.\n• C: o texto descreve o movimento oposto.\n• D: o texto cita estados brasileiros como destino.\n• E: a guerra fiscal é apontada como um dos fatores do processo."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_17",
+    "subject": "Geografia",
+    "topicId": "geo_populacao_urbana_brasil",
+    "chapter": "O Espaço Urbano II",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir megalópole com metrópole isolada ou com cidade de grande área.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEntre as regiões metropolitanas de São Paulo e do Rio de Janeiro, ao longo da Via Dutra e do Vale do Paraíba, formou-se uma faixa urbana em que cidades médias e grandes estão cada vez mais integradas por fluxos de pessoas, mercadorias, capitais e informações. Milhares de pessoas trabalham em uma cidade e moram em outra, e empresas distribuem suas unidades por diferentes municípios da região.\n\nTexto elaborado para esta questão.\n\nA área descrita é frequentemente apontada como uma megalópole em formação, isto é,",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma única cidade de grande extensão territorial, sob uma mesma administração municipal."
+      },
+      {
+        "id": "b",
+        "text": "uma área rural com grande produção agrícola entre duas metrópoles."
+      },
+      {
+        "id": "c",
+        "text": "um conjunto de bairros periféricos de uma só metrópole."
+      },
+      {
+        "id": "d",
+        "text": "a integração de duas ou mais metrópoles e das cidades entre elas em uma ampla rede urbana contínua ou quase contínua, com intensos fluxos de pessoas e atividades."
+      },
+      {
+        "id": "e",
+        "text": "uma cidade planejada, construída para substituir as duas metrópoles."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A megalópole resulta da integração entre metrópoles e as cidades do eixo que as liga, com urbanização quase contínua e fluxos diários intensos, como o movimento pendular de trabalhadores. Os municípios continuam com administrações próprias.\n\nPegadinhas:\n• A: são muitos municípios, com administrações diferentes.\n• B: o texto descreve uma faixa urbana.\n• C: a área reúne duas metrópoles e as cidades entre elas.\n• E: nenhuma cidade foi construída para substituí-las."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_18",
+    "subject": "Geografia",
+    "topicId": "geo_climatologia_socioambiental",
+    "chapter": "Geomorfologia Mundial",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que o Brasil tem poucos terremotos fortes porque está longe do oceano, ou que os Andes são cordilheira antiga e estável.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Chile registra alguns dos terremotos mais fortes do planeta, como o de 1960, o de maior magnitude já medido por instrumentos. Ao longo da costa chilena, a placa de Nazca, sob o Oceano Pacífico, mergulha sob a placa Sul-Americana. O Brasil, por sua vez, situa-se no interior da placa Sul-Americana e registra principalmente tremores de baixa magnitude.\n\nTexto elaborado para esta questão.\n\nA diferença entre os dois países se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o Chile está em uma zona de convergência entre placas, onde a subducção acumula tensões liberadas em grandes terremotos e forma vulcões e a Cordilheira dos Andes, enquanto o Brasil está longe das bordas de placa."
+      },
+      {
+        "id": "b",
+        "text": "o Brasil está sobre a borda de duas placas que se afastam, onde não há atividade sísmica."
+      },
+      {
+        "id": "c",
+        "text": "os terremotos no Chile são causados pelas marés do Oceano Pacífico."
+      },
+      {
+        "id": "d",
+        "text": "o Brasil não está sobre nenhuma placa tectônica, por isso não tem terremotos."
+      },
+      {
+        "id": "e",
+        "text": "os Andes impedem que as ondas sísmicas do Pacífico cheguem ao Chile."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Nas zonas de subducção, a placa oceânica, mais densa, mergulha sob a continental; o atrito e o travamento acumulam energia, liberada em terremotos. O processo também forma vulcões e eleva cordilheiras. No interior de uma placa, como o Brasil, os tremores ocorrem por acomodações internas e, em geral, são fracos.\n\nPegadinhas:\n• B: o Brasil está no interior da placa, não em borda divergente.\n• C: as marés não causam terremotos.\n• D: todo o território está sobre placas tectônicas; o Brasil está na Sul-Americana.\n• E: os Andes resultam da convergência e não barram ondas sísmicas."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_19",
+    "subject": "História",
+    "topicId": "his_brasil_imperio",
+    "chapter": "Brasil Império: Formação do Estado Nacional Brasileiro",
+    "difficulty": "medium",
+    "skill": "leitura_fontes_historicas",
+    "trap": "Achar que a Constituição de 1824 instituiu o voto universal ou a separação estrita entre três poderes.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Constituição de 1824, outorgada por D. Pedro I depois de dissolver a Assembleia Constituinte, estabelecia quatro poderes: Legislativo, Executivo, Judiciário e Moderador. O Poder Moderador, exercido pelo imperador, permitia-lhe, entre outras atribuições, dissolver a Câmara dos Deputados, nomear senadores e suspender magistrados. O voto era censitário e indireto, e o catolicismo era a religião oficial do Império.\n\nTexto elaborado para esta questão.\n\nAs características da Constituição de 1824 indicam",
+    "options": [
+      {
+        "id": "a",
+        "text": "a instituição de uma república federativa, com eleições diretas para presidente."
+      },
+      {
+        "id": "b",
+        "text": "a garantia do voto a todos os brasileiros, inclusive aos escravizados e às mulheres."
+      },
+      {
+        "id": "c",
+        "text": "a separação estrita entre três poderes independentes, sem interferência do imperador."
+      },
+      {
+        "id": "d",
+        "text": "a liberdade religiosa plena, sem religião oficial do Estado."
+      },
+      {
+        "id": "e",
+        "text": "a centralização do poder nas mãos do imperador, por meio do Poder Moderador, e a restrição da participação política a uma minoria com renda."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O Poder Moderador colocava o imperador acima dos demais poderes, com capacidade de interferir no Legislativo e no Judiciário. O voto censitário excluía a maioria da população, e os escravizados, que não eram cidadãos, estavam fora do sistema. A outorga após a dissolução da Constituinte mostra o caráter centralizador do projeto.\n\nPegadinhas:\n• A: o regime era uma monarquia unitária.\n• B: o voto era censitário; mulheres e escravizados não votavam.\n• C: o Poder Moderador permitia ao imperador interferir nos outros poderes.\n• D: o catolicismo era a religião oficial."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_20",
+    "subject": "História",
+    "topicId": "his_guerra_fria_contemporaneo",
+    "chapter": "América Latina no Século XX",
+    "difficulty": "medium",
+    "skill": "contextualizacao_historica",
+    "trap": "Achar que a Revolução Cubana foi socialista desde o primeiro dia ou que não teve relação com a Guerra Fria.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm janeiro de 1959, guerrilheiros liderados por Fidel Castro derrubaram o ditador Fulgencio Batista, em Cuba. O novo governo realizou uma reforma agrária e nacionalizou empresas e propriedades, muitas delas norte-americanas. Os Estados Unidos reagiram com sanções econômicas e apoiaram, em 1961, uma tentativa fracassada de invasão na Baía dos Porcos. No mesmo ano, Fidel declarou o caráter socialista da revolução, e Cuba se aproximou da União Soviética.\n\nTexto elaborado para esta questão.\n\nO processo descrito mostra que a Revolução Cubana",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi organizada pelos Estados Unidos para afastar Cuba da influência soviética."
+      },
+      {
+        "id": "b",
+        "text": "manteve as propriedades norte-americanas na ilha, garantindo boas relações com Washington."
+      },
+      {
+        "id": "c",
+        "text": "começou como movimento contra a ditadura de Batista e, com as reformas e o conflito com os Estados Unidos, alinhou-se à União Soviética, tornando Cuba um foco de tensão da Guerra Fria na América."
+      },
+      {
+        "id": "d",
+        "text": "não teve impacto nas relações internacionais, pois ocorreu em um país pequeno."
+      },
+      {
+        "id": "e",
+        "text": "resultou na anexação de Cuba pela União Soviética."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O movimento derrubou uma ditadura apoiada pelos Estados Unidos e, ao nacionalizar empresas norte-americanas, entrou em choque com Washington. As sanções, a tentativa de invasão e a aproximação com Moscou transformaram Cuba em peça da Guerra Fria — o que culminaria na crise dos mísseis de 1962.\n\nPegadinhas:\n• A: os Estados Unidos se opuseram à revolução e apoiaram a tentativa de invasão.\n• B: o texto diz que propriedades norte-americanas foram nacionalizadas.\n• D: a revolução teve grande impacto internacional.\n• E: Cuba manteve-se como Estado independente, aliado da União Soviética."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_21",
+    "subject": "História",
+    "topicId": "his_republica_liberal_atual",
+    "chapter": "Regime Militar (1964-1985) II",
+    "difficulty": "medium",
+    "skill": "contextualizacao_historica",
+    "trap": "Achar que a campanha das Diretas Já conseguiu aprovar a eleição direta em 1984.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1984, milhões de pessoas participaram de comícios em várias cidades brasileiras na campanha das Diretas Já, que defendia a aprovação de uma emenda constitucional, a chamada Emenda Dante de Oliveira, para restabelecer a eleição direta para presidente da República. Em abril daquele ano, a emenda não alcançou, na Câmara dos Deputados, os votos necessários. Em janeiro de 1985, Tancredo Neves foi eleito presidente pelo Colégio Eleitoral.\n\nTexto elaborado para esta questão.\n\nSobre a campanha das Diretas Já, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "conseguiu aprovar a eleição direta, e Tancredo Neves foi eleito pelo voto popular."
+      },
+      {
+        "id": "b",
+        "text": "mobilizou amplos setores da sociedade pela redemocratização, mas a emenda foi rejeitada, e a transição ocorreu por eleição indireta, encerrando o regime militar em 1985."
+      },
+      {
+        "id": "c",
+        "text": "foi organizada pelos militares para prolongar o regime."
+      },
+      {
+        "id": "d",
+        "text": "resultou no fechamento do Congresso Nacional e na edição de um novo ato institucional."
+      },
+      {
+        "id": "e",
+        "text": "não teve participação popular, limitando-se a negociações entre partidos."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A campanha reuniu partidos de oposição, movimentos sociais, artistas e estudantes em grandes comícios, expressando o desgaste do regime. Mesmo derrotada no Congresso, a pressão popular influenciou a transição: a oposição venceu no Colégio Eleitoral, e o primeiro presidente civil desde 1964 tomou posse em 1985 — José Sarney, após a doença de Tancredo. A eleição direta para presidente só ocorreu em 1989.\n\nPegadinhas:\n• A: a emenda foi rejeitada, e Tancredo foi eleito de forma indireta.\n• C: a campanha era de oposição ao regime.\n• D: não houve fechamento do Congresso nem novo ato institucional.\n• E: os comícios reuniram milhões de pessoas."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_22",
+    "subject": "Português",
+    "topicId": "por_texto",
+    "chapter": "Fatores de Textualidade",
+    "difficulty": "medium",
+    "skill": "analise_de_coesao_referencial",
+    "trap": "Atribuir o pronome ao termo errado ou não perceber que o termo retoma uma ideia inteira.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia o texto:\n\n\"A vacina contra o HPV é oferecida gratuitamente pelo SUS a meninas e meninos de 9 a 14 anos. Ela protege contra tipos do vírus associados ao câncer do colo do útero e a outros tipos de câncer. Essa proteção é maior quando a aplicação ocorre antes do início da vida sexual, motivo pelo qual a faixa etária foi definida dessa forma.\"\n\nTexto elaborado para esta questão.\n\nNo texto, \"Ela\", \"Essa proteção\" e \"dessa forma\" retomam, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "\"a vacina contra o HPV\", \"o SUS\" e \"a vida sexual\"."
+      },
+      {
+        "id": "b",
+        "text": "\"o vírus\", \"o câncer do colo do útero\" e \"meninas e meninos\"."
+      },
+      {
+        "id": "c",
+        "text": "\"a aplicação\", \"a vacina\" e \"o câncer\"."
+      },
+      {
+        "id": "d",
+        "text": "\"a vacina contra o HPV\", a proteção oferecida pela vacina contra os tipos do vírus citados, e a definição da faixa de 9 a 14 anos."
+      },
+      {
+        "id": "e",
+        "text": "\"a faixa etária\", \"o HPV\" e \"o colo do útero\"."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. 'Ela' retoma 'a vacina contra o HPV', o sujeito da frase anterior. 'Essa proteção' resume a ideia expressa na segunda frase (a vacina protege contra tipos do vírus). 'Dessa forma' remete à faixa de 9 a 14 anos mencionada no início. São mecanismos de coesão referencial, que evitam repetições e encadeiam as ideias.\n\nPegadinhas:\n• A: 'Essa proteção' não pode retomar 'o SUS', e 'dessa forma' não se refere à vida sexual.\n• B: o vírus não é o sujeito que 'protege'.\n• C: 'Ela' não retoma 'a aplicação', que só aparece depois.\n• E: a faixa etária é retomada por 'dessa forma', e não por 'Ela'."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_23",
+    "subject": "Inglês",
+    "topicId": "ing_01",
+    "chapter": "Text Comprehension: Women Empowerment",
+    "difficulty": "medium",
+    "skill": "inferencia_em_ingles",
+    "trap": "Concluir que o texto afirma que a desigualdade de gênero na medicina já desapareceu.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Women now make up the majority of medical students in many countries, including Brazil. Yet this change has not been fully reflected at the top of the profession: women remain underrepresented as heads of department, journal editors and recipients of major research grants. Researchers point to several factors, such as the unequal division of care work at home and the lack of female mentors, and argue that more women in medical schools will not, by itself, close the leadership gap.\"\n\nTexto elaborado para esta questão.\n\nSegundo o texto,",
+    "options": [
+      {
+        "id": "a",
+        "text": "embora as mulheres já sejam maioria entre estudantes de Medicina em muitos países, elas continuam sub-representadas em cargos de liderança, e o aumento de estudantes mulheres não basta, por si só, para eliminar essa diferença."
+      },
+      {
+        "id": "b",
+        "text": "as mulheres já ocupam a maioria dos cargos de chefia na medicina."
+      },
+      {
+        "id": "c",
+        "text": "a desigualdade entre homens e mulheres na medicina desapareceu no Brasil."
+      },
+      {
+        "id": "d",
+        "text": "as mulheres são minoria entre os estudantes de Medicina no Brasil."
+      },
+      {
+        "id": "e",
+        "text": "a falta de mentoras não tem relação com a sub-representação feminina."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O texto contrapõe a maioria feminina entre estudantes ('the majority of medical students') à baixa presença no topo ('underrepresented as heads of department'). A conclusão é que mais mulheres nas escolas 'will not, by itself, close the leadership gap'.\n\nPegadinhas:\n• B e C: o texto afirma a sub-representação nos cargos de liderança.\n• D: o Brasil é citado entre os países com maioria feminina de estudantes.\n• E: a falta de mentoras é apontada como um dos fatores.\nVocabulário: 'yet' = no entanto; 'underrepresented' = sub-representadas; 'gap' = diferença, lacuna."
+  },
+  {
+    "id": "crivo_fuvest_f1_l10_24",
+    "subject": "Sociologia",
+    "topicId": "soc_movimentos_sociais",
+    "chapter": "Cidadania e Direitos",
+    "difficulty": "hard",
+    "skill": "aplicacao_conceitual",
+    "trap": "Aplicar ao Brasil a sequência inglesa dos direitos sem considerar as diferenças históricas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO sociólogo britânico T. H. Marshall analisou a formação da cidadania na Inglaterra como uma sequência: primeiro os direitos civis, como liberdade de expressão e de ir e vir, no século XVIII; depois os direitos políticos, como o voto, no século XIX; e, no século XX, os direitos sociais, como educação, saúde e previdência. Estudiosos brasileiros, como o historiador José Murilo de Carvalho, observaram que, no Brasil, os direitos sociais ganharam impulso durante o governo Vargas, em um período de restrição dos direitos políticos, e que os direitos civis continuaram frágeis para grande parte da população.\n\nTexto elaborado para esta questão.\n\nA comparação entre os dois casos permite afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a cidadania no Brasil seguiu exatamente a mesma sequência descrita por Marshall para a Inglaterra."
+      },
+      {
+        "id": "b",
+        "text": "os direitos sociais só surgiram no Brasil depois da plena garantia dos direitos civis e políticos."
+      },
+      {
+        "id": "c",
+        "text": "a cidadania é um conjunto de direitos que, uma vez conquistados, nunca podem ser restringidos."
+      },
+      {
+        "id": "d",
+        "text": "os direitos políticos foram os primeiros a se consolidar no Brasil, durante o Império."
+      },
+      {
+        "id": "e",
+        "text": "a formação da cidadania depende de processos históricos específicos: no Brasil, a ordem e o modo de conquista dos direitos foram diferentes dos ingleses, com direitos sociais ampliados em um contexto autoritário e direitos civis frágeis."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O esquema de Marshall descreve a experiência inglesa, não uma lei universal. No Brasil, a legislação trabalhista e previdenciária avançou sob Vargas, inclusive durante o Estado Novo, sem eleições; os direitos civis seguiram desiguais. Carvalho argumenta que essa ordem favoreceu uma relação de dependência com o Estado.\n\nPegadinhas:\n• A e B: o texto mostra justamente que a sequência brasileira foi outra.\n• C: a história brasileira mostra restrição de direitos políticos em vários períodos.\n• D: no Império, o voto era censitário e restrito a uma minoria."
+  }
+]

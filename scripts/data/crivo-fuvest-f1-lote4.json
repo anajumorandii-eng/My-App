@@ -495,19 +495,19 @@
       },
       {
         "id": "c",
-        "text": "8 h de terça-feira."
+        "text": "2 h de terça-feira."
       },
       {
         "id": "d",
-        "text": "2 h de terça-feira."
+        "text": "8 h de terça-feira."
       },
       {
         "id": "e",
         "text": "8 h de quarta-feira."
       }
     ],
-    "correctOptionId": "c",
-    "explanation": "Resposta C. Os horários coincidem a cada mmc(6, 8) horas. 6 = 2 × 3 e 8 = 2³, então mmc = 2³ × 3 = 24. Vinte e quatro horas depois das 8 h de segunda: 8 h de terça.\n\nPegadinhas:\n• A (14 h): considera só o intervalo de 6 h.\n• B (22 h): soma os intervalos (6 + 8 = 14 h).\n• D (2 h): usa 18 h, que é múltiplo de 6, mas não de 8.\n• E (8 h de quarta): multiplica os intervalos (6 × 8 = 48 h), que é um múltiplo comum, mas não o mínimo."
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Os horários coincidem a cada mmc(6, 8) horas. 6 = 2 × 3 e 8 = 2³, então mmc = 2³ × 3 = 24. Vinte e quatro horas depois das 8 h de segunda: 8 h de terça.\n\nPegadinhas:\n• A (14 h): considera só o intervalo de 6 h.\n• B (22 h): soma os intervalos (6 + 8 = 14 h).\n• C (2 h): usa 18 h, que é múltiplo de 6, mas não de 8.\n• E (8 h de quarta): multiplica os intervalos (6 × 8 = 48 h), que é um múltiplo comum, mas não o mínimo."
   },
   {
     "id": "crivo_fuvest_f1_l4_16",

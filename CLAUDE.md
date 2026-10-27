@@ -121,7 +121,7 @@ retrato é 834×1112, em paisagem 1366×900.
 
 ## Banco de questões
 
-`public/questions.json` guarda 3.343 questões e é mesclado por id com o
+`public/questions.json` guarda 3.367 questões e é mesclado por id com o
 Firestore em `src/hooks/useQuestions.ts`. Questões vindas de apostila carregam
 `originalPages: {url, page}[]`, apontando para recortes WebP em
 `public/question-media/apostilas/<colecao>/<id>-p<N>.webp`.
