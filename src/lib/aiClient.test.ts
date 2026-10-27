@@ -109,3 +109,35 @@ test('repassa o erro do servidor quando a resposta nem chega a abrir', async () 
     (error: unknown) => error instanceof AiRequestError && error.status === 429 && error.code === 'AI_DAILY_LIMITED',
   );
 });
+
+test('aceita a confirmação final com CRLF mesmo se a quebra chegar em partes', async () => {
+  const deltas: string[] = [];
+  const result = await comFetch(sse([
+    'data: {"delta":"Revisão pronta"}\r', '\n\r\n',
+    'data: {"done":true,"text":"Revisão pronta","requestId":"review-final"}\r\n\r', '\n',
+  ]), () => requestAiTextStream('review-tip', {}, delta => deltas.push(delta)));
+  assert.equal(result.text, 'Revisão pronta');
+  assert.equal(result.requestId, 'review-final');
+  assert.deepEqual(deltas, ['Revisão pronta']);
+});
+
+test('aceita JSON final completo no encerramento sem descartar o último buffer', async () => {
+  const result = await comFetch(sse([
+    'data: {"delta":"Texto recebido"}\n\n',
+    'data: {"done":true,"text":"Texto recebido"}',
+  ]), () => requestAiTextStream('review-tip', {}, () => {}));
+  assert.equal(result.text, 'Texto recebido');
+});
+
+test('texto sem confirmação final é interrupção, não resposta vazia', async () => {
+  const deltas: string[] = [];
+  await assert.rejects(() => comFetch(sse(['data: {"delta":"Revisão parcial"}\n\n']),
+    () => requestAiTextStream('review-tip', {}, delta => deltas.push(delta))),
+    (error: unknown) => error instanceof AiRequestError && error.code === 'AI_STREAM_INCOMPLETE' && !/vazia/i.test(error.message));
+  assert.deepEqual(deltas, ['Revisão parcial']);
+});
+
+test('fluxo realmente vazio mantém identificação própria', async () => {
+  await assert.rejects(() => comFetch(sse([]), () => requestAiTextStream('review-tip', {}, () => {})),
+    (error: unknown) => error instanceof AiRequestError && error.code === 'AI_EMPTY_RESPONSE');
+});

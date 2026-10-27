@@ -137,30 +137,49 @@ export async function requestAiTextStream(
     const decoder = new TextDecoder();
     let buffer = '';
     let final: AiTextResponse | null = null;
-
-    for (;;) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      rearmar();
-      buffer += decoder.decode(value, { stream: true });
-
-      let corte = buffer.indexOf('\n\n');
-      while (corte !== -1) {
-        const bruto = buffer.slice(0, corte).trim();
-        buffer = buffer.slice(corte + 2);
-        if (bruto.startsWith('data:')) {
-          const frame = JSON.parse(bruto.slice(5).trim()) as StreamFrame;
-          if ((frame as AiTextResponse).evaluationCapture === 'failed') window.dispatchEvent?.(new Event('crivo-evaluation-capture-failed'));
-          if (frame.error) throw new AiRequestError(frame.error, 502, frame.code, frame.requestId);
-          if (frame.delta) onDelta(frame.delta);
-          if (frame.done && typeof frame.text === 'string') final = frame as AiTextResponse;
-        }
-        corte = buffer.indexOf('\n\n');
+    let receivedText = false;
+    const consume = (raw: string) => {
+      const data = raw.split(/\r?\n/).filter(line => line.startsWith('data:')).map(line => line.slice(5).trimStart()).join('\n');
+      if (!data.trim() || data.trim() === '[DONE]') return;
+      const frame = JSON.parse(data) as StreamFrame;
+      if ((frame as AiTextResponse).evaluationCapture === 'failed') window.dispatchEvent?.(new Event('crivo-evaluation-capture-failed'));
+      if (frame.error) throw new AiRequestError(frame.error, 502, frame.code, frame.requestId);
+      if (frame.delta) {
+        receivedText ||= Boolean(frame.delta.trim());
+        onDelta(frame.delta);
       }
+      if (frame.done && typeof frame.text === 'string') final = frame as AiTextResponse;
+    };
+
+    try {
+      for (;;) {
+        const { done, value } = await reader.read();
+        buffer += done ? decoder.decode() : decoder.decode(value, { stream: true });
+        if (!done) rearmar();
+        let boundary = /\r?\n\r?\n/.exec(buffer);
+        while (boundary) {
+          consume(buffer.slice(0, boundary.index));
+          buffer = buffer.slice(boundary.index + boundary[0].length);
+          boundary = /\r?\n\r?\n/.exec(buffer);
+        }
+        if (done) {
+          // A complete terminal JSON can arrive without the trailing separator.
+          // Partial deltas alone still never certify a completed material.
+          if (buffer.trim()) consume(buffer);
+          break;
+        }
+      }
+    } finally {
+      reader.releaseLock();
     }
 
-    if (!final || !final.text.trim()) throw new AiRequestError('A IA retornou uma resposta vazia.');
-    return final;
+    const completed = final as AiTextResponse | null;
+    if (!completed?.text.trim()) {
+      throw receivedText
+        ? new AiRequestError('O texto chegou, mas a transmissão terminou sem confirmar a conclusão. O texto recebido não foi confirmado como concluído. Tente novamente.', 502, 'AI_STREAM_INCOMPLETE')
+        : new AiRequestError('A IA retornou uma resposta vazia.', 502, 'AI_EMPTY_RESPONSE');
+    }
+    return completed;
   } catch (error) {
     if (error instanceof AiRequestError) throw error;
     if (error instanceof DOMException && error.name === 'AbortError') {
