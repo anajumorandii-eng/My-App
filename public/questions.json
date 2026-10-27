@@ -111764,5 +111764,773 @@
     "correctOptionId": "b",
     "explanation": "Resposta B. O estado de natureza, para Hobbes, é uma 'guerra de todos contra todos' em potencial. Por medo da morte violenta, os indivíduos renunciam ao direito de fazer tudo o que querem e transferem ao soberano (o Leviatã) o poder de impor leis e garantir a paz. A segurança justifica um poder forte.\n\nPegadinhas:\n• A: Hobbes defende transferência ampla de poder, não a preservação de todos os direitos com representantes temporários.\n• C: é a ideia de Rousseau, para quem o homem natural seria bom.\n• D: fazer justiça pelas próprias mãos é característica do estado de natureza, que o contrato quer superar.\n• E: o contrato cria o Estado; não o abole.",
     "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_01",
+    "chapter": "Mutações Cromossômicas e Gametogênese",
+    "topicId": "bio_codigo_genetico_sintese",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA síndrome de Down é causada, na grande maioria dos casos, pela presença de três cópias do cromossomo 21 nas células da pessoa. Estudos mostram que o risco de ter um filho com a síndrome aumenta com a idade da mãe: é de cerca de 1 em 1 500 aos 20 anos e de cerca de 1 em 100 aos 40. Nas mulheres, os ovócitos iniciam a meiose ainda durante a vida fetal e permanecem com ela interrompida até a ovulação, anos ou décadas depois.\n\nTexto elaborado para esta questão.\n\nA relação entre a síndrome e a idade materna se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a síndrome é causada por uma mutação em um gene do cromossomo 21, que se acumula no DNA da mãe com a idade."
+      },
+      {
+        "id": "b",
+        "text": "a mãe com mais idade transmite ao filho dois cromossomos 21 porque também tem a síndrome."
+      },
+      {
+        "id": "c",
+        "text": "o espermatozoide passa a carregar o cromossomo extra quando a mulher tem mais idade."
+      },
+      {
+        "id": "d",
+        "text": "a não disjunção dos cromossomos 21 durante a meiose do ovócito, que permaneceu interrompida por muitos anos, torna-se mais frequente com a idade, originando óvulos com dois cromossomos 21."
+      },
+      {
+        "id": "e",
+        "text": "o útero de mulheres mais velhas duplica o cromossomo 21 do embrião durante a gestação."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A trissomia 21 é uma alteração cromossômica numérica. Na maioria dos casos, os dois cromossomos 21 do ovócito não se separam corretamente na meiose (não disjunção): o óvulo fica com dois, e a fecundação gera um zigoto com três. Como a meiose do ovócito fica interrompida desde a vida fetal, com a idade aumenta a chance de falhas nessa separação.\n\nPegadinhas:\n• A: a síndrome decorre de um cromossomo inteiro a mais, não de mutação em um gene.\n• B: a mãe não tem a síndrome; o erro ocorre na formação do gameta.\n• C: a idade da mãe não altera os espermatozoides; e a contribuição paterna é minoritária.\n• E: o número de cromossomos do embrião é definido na fecundação, não pelo útero.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_02",
+    "chapter": "Procariotos",
+    "topicId": "bio_microbiologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma paciente tratada com um antibiótico de amplo espectro para uma infecção urinária passou a ter diarreia intensa na segunda semana de tratamento. O exame de fezes identificou proliferação de Clostridioides difficile, bactéria que normalmente é mantida em baixa quantidade no intestino. O intestino humano abriga trilhões de bactérias, que competem por nutrientes e espaço e participam da digestão de fibras.\n\nTexto elaborado para esta questão.\n\nO quadro descrito se explica porque o antibiótico",
+    "options": [
+      {
+        "id": "a",
+        "text": "atingiu apenas as bactérias da infecção urinária, e a diarreia foi um efeito sem relação com o tratamento."
+      },
+      {
+        "id": "b",
+        "text": "eliminou também parte da microbiota intestinal, reduzindo a competição que mantinha o C. difficile em baixa quantidade e permitindo sua proliferação."
+      },
+      {
+        "id": "c",
+        "text": "transformou bactérias benéficas do intestino em C. difficile."
+      },
+      {
+        "id": "d",
+        "text": "estimulou diretamente a reprodução do C. difficile, que se alimenta do medicamento."
+      },
+      {
+        "id": "e",
+        "text": "destruiu as células do intestino da paciente, que passou a não absorver água."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Antibióticos de amplo espectro atingem bactérias de muitos grupos, inclusive as da microbiota. Com menos competidoras, espécies resistentes ao fármaco e normalmente controladas, como o C. difficile, ocupam o espaço e produzem toxinas que causam a diarreia. É um exemplo do papel protetor da microbiota.\n\nPegadinhas:\n• A: 'amplo espectro' significa justamente atingir muitos tipos de bactéria.\n• C: bactérias de uma espécie não se convertem em outra.\n• D: o antibiótico não alimenta a bactéria; a vantagem dela vem da eliminação das competidoras.\n• E: antibióticos atuam em estruturas bacterianas, não nas células humanas do intestino.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_03",
+    "chapter": "Coordenação Endócrina II",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO iodo é um componente dos hormônios tireoidianos T3 e T4. Em regiões onde o solo e a água são pobres nesse elemento, eram comuns casos de bócio, aumento do volume da glândula tireoide. Desde a década de 1950, a lei brasileira determina a adição de iodo ao sal de cozinha, o que reduziu muito a ocorrência do problema. A produção de T3 e T4 é estimulada pelo TSH, hormônio da hipófise, cuja liberação diminui quando os níveis de T3 e T4 no sangue estão altos.\n\nTexto elaborado para esta questão.\n\nNa deficiência de iodo, o aumento da tireoide se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o excesso de T3 e T4 produzidos estimula o crescimento da própria glândula."
+      },
+      {
+        "id": "b",
+        "text": "o iodo em falta é substituído por cloro, que aumenta o volume da glândula."
+      },
+      {
+        "id": "c",
+        "text": "a hipófise deixa de produzir TSH, e a tireoide cresce sem controle."
+      },
+      {
+        "id": "d",
+        "text": "a glândula acumula o sal de cozinha não utilizado."
+      },
+      {
+        "id": "e",
+        "text": "com pouco iodo, a produção de T3 e T4 cai; o baixo nível desses hormônios deixa de inibir a hipófise, que libera mais TSH, e o estímulo contínuo faz a glândula crescer."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. É uma alça de retroalimentação negativa: T3 e T4 altos inibem a liberação de TSH; baixos, a estimulam. Sem iodo, a tireoide não consegue produzir os hormônios, o TSH permanece elevado e a glândula cresce, tentando compensar — o bócio. O sal iodado fornece o elemento que falta na dieta.\n\nPegadinhas:\n• A: no bócio por falta de iodo, os hormônios estão baixos, não em excesso.\n• B: o cloro não substitui o iodo nos hormônios.\n• C: o TSH aumenta, e não diminui.\n• D: o sal não se acumula na glândula; o que importa é o iodo adicionado a ele.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_04",
+    "chapter": "Ciclos Biogeoquímicos – Ciclo do Carbono",
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDesde 1958, a concentração de CO₂ na atmosfera é medida no observatório de Mauna Loa, no Havaí. O gráfico, conhecido como curva de Keeling, mostra duas características:\n\n[Gráfico: concentração de CO₂ (ppm) de 1958 a 2024. A curva sobe de cerca de 315 ppm para mais de 420 ppm, com tendência de aumento cada vez mais rápida. Sobreposta a essa tendência, há uma oscilação anual de alguns ppm: os valores mais altos ocorrem por volta de maio, e os mais baixos, por volta de setembro e outubro.]\n\nTexto elaborado para esta questão. Valores aproximados.\n\nAs duas características do gráfico se explicam, respectivamente, por",
+    "options": [
+      {
+        "id": "a",
+        "text": "queima de combustíveis fósseis e desmatamento, que elevam a concentração ao longo das décadas; e fotossíntese mais intensa no verão do Hemisfério Norte, onde há mais vegetação terrestre, que reduz a concentração até o início do outono."
+      },
+      {
+        "id": "b",
+        "text": "respiração das plantas, que aumenta a concentração a cada década; e erupções vulcânicas no Havaí, que ocorrem todos os anos em maio."
+      },
+      {
+        "id": "c",
+        "text": "aquecimento dos oceanos, que absorvem cada vez mais CO₂; e aumento do consumo de combustíveis no inverno."
+      },
+      {
+        "id": "d",
+        "text": "diminuição da fotossíntese no planeta, que é a única causa do aumento; e variação da temperatura do observatório."
+      },
+      {
+        "id": "e",
+        "text": "fotossíntese, que libera CO₂ para a atmosfera; e decomposição, que retira CO₂ no verão."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A tendência de longo prazo reflete o carbono fóssil e o desmatamento acrescentados à atmosfera mais depressa do que oceanos e vegetação o retiram. A oscilação anual é a 'respiração' da biosfera: o Hemisfério Norte tem a maior parte das terras e das florestas; na primavera e no verão de lá, a fotossíntese retira CO₂ e a concentração cai até setembro e outubro; no outono e no inverno, predominam respiração e decomposição, e ela volta a subir.\n\nPegadinhas:\n• B: as erupções não explicam um ciclo anual regular, e o próprio observatório desconta sinais vulcânicos locais.\n• C: oceanos que absorvem mais CO₂ reduziriam a concentração; e a oscilação acompanha a vegetação, não o consumo de combustível.\n• D: a fotossíntese não é a única variável; a principal causa é a emissão fóssil.\n• E: a fotossíntese retira CO₂, e a decomposição o libera.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_05",
+    "chapter": "Dispersões",
+    "topicId": "qui_solucoes",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO soro glicosado a 5% é uma solução de glicose em água usada para hidratação e reposição de energia em pacientes internados. A concentração de 5% significa que há 5 g de glicose em cada 100 mL de solução. Um paciente recebeu uma bolsa de 500 mL desse soro.\n\nTexto elaborado para esta questão.\n\nA massa de glicose administrada ao paciente com essa bolsa foi de",
+    "options": [
+      {
+        "id": "a",
+        "text": "2,5 g."
+      },
+      {
+        "id": "b",
+        "text": "5 g."
+      },
+      {
+        "id": "c",
+        "text": "25 g."
+      },
+      {
+        "id": "d",
+        "text": "50 g."
+      },
+      {
+        "id": "e",
+        "text": "250 g."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Se 100 mL contêm 5 g, 500 mL contêm 5 × 5 = 25 g. Em outras palavras, a solução tem 50 g/L, e meio litro contém 25 g.\n\nPegadinhas:\n• A (2,5 g): divide por 2 em vez de multiplicar por 5.\n• B (5 g): toma 5% como a massa total da bolsa.\n• D (50 g): é a massa em 1 L, não em 500 mL.\n• E (250 g): erra uma casa decimal.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_06",
+    "chapter": "Eletroquímica de Processos Espontâneos",
+    "topicId": "qui_eletroquimica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nCascos de navios e tubulações de aço enterradas são protegidos da corrosão com blocos de outro metal conectados à estrutura, chamados ânodos de sacrifício, que precisam ser substituídos periodicamente.\n\nNote e adote:\nPotenciais-padrão de redução:\nMg²⁺/Mg: −2,37 V\nZn²⁺/Zn: −0,76 V\nFe²⁺/Fe: −0,44 V\nCu²⁺/Cu: +0,34 V\nAg⁺/Ag: +0,80 V\n\nTexto elaborado para esta questão.\n\nPara proteger o aço, que é formado principalmente por ferro, o ânodo de sacrifício pode ser de",
+    "options": [
+      {
+        "id": "a",
+        "text": "cobre ou prata, que têm maior potencial de redução e, por isso, se oxidam antes do ferro."
+      },
+      {
+        "id": "b",
+        "text": "cobre, que forma uma camada protetora sem se desgastar."
+      },
+      {
+        "id": "c",
+        "text": "qualquer metal, pois o simples contato com outro metal impede a corrosão."
+      },
+      {
+        "id": "d",
+        "text": "magnésio ou zinco, que têm menor potencial de redução que o ferro e, por isso, se oxidam no lugar dele, enquanto o ferro atua como cátodo."
+      },
+      {
+        "id": "e",
+        "text": "prata, que é um metal nobre e transmite essa nobreza ao ferro."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Na pilha formada entre os dois metais, oxida-se o de menor potencial de redução. Magnésio e zinco, com E° menores que −0,44 V, perdem elétrons e se desgastam (por isso são 'de sacrifício'), e o ferro, como cátodo, fica protegido. É o mesmo princípio da galvanização.\n\nPegadinhas:\n• A, B e E: cobre e prata, com potenciais maiores, fariam o ferro atuar como ânodo — acelerariam sua corrosão.\n• C: o efeito depende de quais metais estão em contato; alguns protegem, outros prejudicam.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_07",
+    "chapter": "Combustíveis Fósseis",
+    "topicId": "qui_organica_fundamentos",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA queima completa tanto do etanol quanto da gasolina libera CO₂ e água. Mesmo assim, o etanol de cana-de-açúcar é considerado um combustível que contribui menos para o aumento do efeito estufa. Estudos de ciclo de vida, porém, mostram que sua produção também emite gases, como no uso de fertilizantes, de máquinas agrícolas e no transporte.\n\nTexto elaborado para esta questão.\n\nA menor contribuição do etanol para o efeito estufa se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a queima do etanol não produz CO₂, apenas vapor de água."
+      },
+      {
+        "id": "b",
+        "text": "o CO₂ liberado na queima do etanol foi retirado recentemente da atmosfera pela fotossíntese da cana, enquanto a gasolina libera carbono fóssil que estava armazenado havia milhões de anos; o balanço, porém, não é nulo, por causa das emissões da produção."
+      },
+      {
+        "id": "c",
+        "text": "o etanol é um hidrocarboneto, e hidrocarbonetos não liberam CO₂."
+      },
+      {
+        "id": "d",
+        "text": "o CO₂ do etanol é mais denso e permanece no solo, sem chegar à atmosfera."
+      },
+      {
+        "id": "e",
+        "text": "a cana-de-açúcar absorve todo o CO₂ emitido pela gasolina."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O carbono do etanol vem do CO₂ fixado pela cana na fotossíntese; ao queimar, ele volta à atmosfera, num ciclo curto. O carbono da gasolina estava retido no subsolo e é acrescentado à atmosfera. Por isso o etanol emite menos em termos líquidos — mas, como o texto indica, a produção agrícola e industrial gera emissões, e o balanço não é zero.\n\nPegadinhas:\n• A: a combustão do etanol produz CO₂ e água.\n• C: o etanol é um álcool (C₂H₅OH), não hidrocarboneto.\n• D: o CO₂ se mistura à atmosfera.\n• E: a cana fixa carbono que será liberado na queima do próprio etanol; não compensa as emissões da gasolina.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_08",
+    "chapter": "Polaridade das Ligações e das Moléculas",
+    "topicId": "qui_polaridade_geometria",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs moléculas de dióxido de carbono (CO₂) e de água (H₂O) têm ligações polares, pois o oxigênio é mais eletronegativo que o carbono e que o hidrogênio. Mesmo assim, o CO₂ é uma molécula apolar, enquanto a água é polar, o que ajuda a explicar, por exemplo, por que a água dissolve tantas substâncias iônicas.\n\nTexto elaborado para esta questão.\n\nA diferença de polaridade entre as duas moléculas se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o CO₂ não tem ligações polares, já que carbono e oxigênio têm a mesma eletronegatividade."
+      },
+      {
+        "id": "b",
+        "text": "a água tem mais átomos que o CO₂, e moléculas maiores são sempre polares."
+      },
+      {
+        "id": "c",
+        "text": "o CO₂ é um gás e a água é líquida à temperatura ambiente, e só líquidos são polares."
+      },
+      {
+        "id": "d",
+        "text": "o carbono do CO₂ tem pares de elétrons livres que anulam a polaridade."
+      },
+      {
+        "id": "e",
+        "text": "o CO₂ é linear, e os momentos dipolares de suas duas ligações se anulam; a água é angular, e os momentos de suas ligações se somam, resultando em um polo negativo no oxigênio."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A polaridade da molécula depende da soma vetorial dos momentos dipolares das ligações. No CO₂ (O=C=O, linear), os dois vetores têm mesma intensidade e sentidos opostos: a resultante é nula. Na água, os pares de elétrons livres do oxigênio tornam a geometria angular, e os vetores das ligações O–H se somam.\n\nPegadinhas:\n• A: o oxigênio é mais eletronegativo que o carbono; as ligações são polares, como diz o texto.\n• B: o número de átomos não determina a polaridade.\n• C: o estado físico não define a polaridade (há gases polares, como o HCl).\n• D: no CO₂, o carbono não tem pares livres; são os pares do oxigênio, na água, que causam a geometria angular.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_09",
+    "chapter": "Composição de Movimentos",
+    "topicId": "fis_cinematica_vetorial",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma equipe de resgate precisa atravessar um rio de margens paralelas e 120 m de largura em um barco a motor. O barco é mantido sempre com a proa apontada perpendicularmente às margens e, em relação à água, tem velocidade de 4 m/s. A correnteza tem velocidade de 3 m/s, paralela às margens.\n\nTexto elaborado para esta questão.\n\nO tempo de travessia é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "17 s."
+      },
+      {
+        "id": "b",
+        "text": "24 s."
+      },
+      {
+        "id": "c",
+        "text": "30 s."
+      },
+      {
+        "id": "d",
+        "text": "40 s."
+      },
+      {
+        "id": "e",
+        "text": "120 s."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Os movimentos são independentes: a componente perpendicular às margens é só a do barco, 4 m/s. O tempo é 120 ÷ 4 = 30 s. Nesse tempo, a correnteza arrasta o barco 3 × 30 = 90 m rio abaixo; a velocidade resultante, de 5 m/s, determina a trajetória, mas não o tempo de travessia.\n\nPegadinhas:\n• A (17 s): soma as velocidades (4 + 3 = 7 m/s).\n• B (24 s): usa a velocidade resultante, de 5 m/s, como se ela fosse perpendicular às margens.\n• D (40 s): usa a velocidade da correnteza.\n• E (120 s): não corresponde a operação coerente com os dados.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_10",
+    "chapter": "Sistemas Conservativos e Sistemas Não Conservativos",
+    "topicId": "fis_energia",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um parque aquático, um escorregador tem 5 m de altura entre o ponto de partida e a piscina. Uma criança parte do repouso no topo. A água que escorre pela rampa torna o atrito desprezível.\n\nNote e adote:\ng = 10 m/s².\nDesconsidere a resistência do ar.\n\nTexto elaborado para esta questão.\n\nA velocidade da criança ao chegar à piscina é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "10 m/s."
+      },
+      {
+        "id": "b",
+        "text": "14 m/s."
+      },
+      {
+        "id": "c",
+        "text": "25 m/s."
+      },
+      {
+        "id": "d",
+        "text": "50 m/s."
+      },
+      {
+        "id": "e",
+        "text": "100 m/s."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Sem atrito, a energia mecânica se conserva: m·g·h = m·v²/2, logo v = √(2gh) = √(2 × 10 × 5) = √100 = 10 m/s. A massa se cancela: uma criança e um adulto chegariam com a mesma velocidade.\n\nPegadinhas:\n• B (14 m/s): usa √200, dobrando a altura ou a gravidade.\n• C (25 m/s): não corresponde a operação coerente com os dados.\n• D (50 m/s): calcula g·h, sem a raiz e sem o fator 2.\n• E (100 m/s): calcula 2gh e esquece a raiz quadrada.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_11",
+    "chapter": "Reflexão em Superfícies Esféricas",
+    "topicId": "fis_optica_geometrica",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO espelho que o dentista usa para observar os dentes é um pequeno espelho côncavo. Posicionado próximo ao dente, ele fornece uma imagem maior e direita, que facilita ver detalhes.\n\nTexto elaborado para esta questão.\n\nPara que o espelho côncavo forme esse tipo de imagem, o dente deve estar",
+    "options": [
+      {
+        "id": "a",
+        "text": "além do centro de curvatura, e a imagem é real."
+      },
+      {
+        "id": "b",
+        "text": "exatamente no foco, e a imagem se forma no infinito."
+      },
+      {
+        "id": "c",
+        "text": "sobre o centro de curvatura, e a imagem é real e do mesmo tamanho."
+      },
+      {
+        "id": "d",
+        "text": "entre o foco e o vértice do espelho, e a imagem é virtual, direita e ampliada."
+      },
+      {
+        "id": "e",
+        "text": "em qualquer posição, pois o espelho côncavo sempre amplia."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. No espelho côncavo, objetos entre o foco e o vértice produzem raios refletidos divergentes, cujos prolongamentos formam uma imagem virtual, direita e maior — o mesmo princípio do espelho de aumento para maquiagem. Para objetos além do foco, a imagem é real e invertida.\n\nPegadinhas:\n• A e C: nessas posições a imagem é real e invertida (menor ou de mesmo tamanho).\n• B: no foco, os raios refletidos saem paralelos e não formam imagem nítida.\n• E: o espelho côncavo forma imagens menores ou invertidas conforme a posição do objeto.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_12",
+    "chapter": "Leis da Gravitação",
+    "topicId": "fis_gravitacao_circular",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nOs astronautas da Estação Espacial Internacional, que orbita a cerca de 400 km de altitude, flutuam dentro dela. Nessa altitude, porém, a aceleração da gravidade é de aproximadamente 90% do valor na superfície da Terra. A estação completa uma volta ao redor do planeta a cada 90 minutos, aproximadamente.\n\nTexto elaborado para esta questão.\n\nOs astronautas flutuam porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "estão fora do alcance da gravidade terrestre."
+      },
+      {
+        "id": "b",
+        "text": "eles e a estação estão em queda livre ao redor da Terra, com a mesma aceleração, e a gravidade atua como força centrípeta da órbita; por isso, não pressionam o piso."
+      },
+      {
+        "id": "c",
+        "text": "a força centrífuga da órbita é maior que a gravidade e os empurra para cima."
+      },
+      {
+        "id": "d",
+        "text": "a estação tem motores que anulam o peso dos astronautas."
+      },
+      {
+        "id": "e",
+        "text": "no vácuo, os corpos não têm massa."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A gravidade, com 90% do valor da superfície, é justamente o que curva a trajetória da estação. Tudo dentro dela cai com a mesma aceleração, mas a velocidade horizontal faz a 'queda' contornar a Terra. Sem força de contato entre astronauta e piso, a sensação é de ausência de peso (imponderabilidade).\n\nPegadinhas:\n• A: o texto informa que a gravidade lá é cerca de 90% da superficial.\n• C: no referencial inercial, não há força centrífuga; a gravidade é a força centrípeta.\n• D: os motores fazem correções de órbita, não anulam o peso.\n• E: a massa não depende do meio; os astronautas têm a mesma massa.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_13",
+    "chapter": "Funções Trigonométricas",
+    "topicId": "mat_trigonometria",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um porto, a altura da maré, em metros, pode ser modelada pela função\n\nh(t) = 2 + 1,5 · sen(π t / 6),\n\nem que t é o tempo, em horas, contado a partir da meia-noite.\n\nTexto elaborado para esta questão.\n\nDe acordo com esse modelo, o intervalo de tempo entre duas marés altas consecutivas e a altura máxima da maré são, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "6 h e 1,5 m."
+      },
+      {
+        "id": "b",
+        "text": "6 h e 3,5 m."
+      },
+      {
+        "id": "c",
+        "text": "12 h e 2 m."
+      },
+      {
+        "id": "d",
+        "text": "π/6 h e 3,5 m."
+      },
+      {
+        "id": "e",
+        "text": "12 h e 3,5 m."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O seno varia entre −1 e 1; então h varia entre 2 − 1,5 = 0,5 m e 2 + 1,5 = 3,5 m. O período de sen(k·t) é 2π/k = 2π ÷ (π/6) = 12 h: é o intervalo entre duas marés altas.\n\nPegadinhas:\n• A: 6 h é meio período, e 1,5 m é a amplitude, não a altura máxima.\n• B: usa meio período.\n• C: 2 m é o nível médio.\n• D: π/6 é o coeficiente de t, não o período.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_14",
+    "chapter": "O Problema do Grupo",
+    "topicId": "mat_combinatoria",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm hospital precisa formar uma comissão de ética com 3 médicos, escolhidos entre 8 voluntários. Todos os membros da comissão terão a mesma função.\n\nTexto elaborado para esta questão.\n\nO número de comissões diferentes que podem ser formadas é",
+    "options": [
+      {
+        "id": "a",
+        "text": "56."
+      },
+      {
+        "id": "b",
+        "text": "112."
+      },
+      {
+        "id": "c",
+        "text": "168."
+      },
+      {
+        "id": "d",
+        "text": "336."
+      },
+      {
+        "id": "e",
+        "text": "512."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Como os membros têm a mesma função, a ordem da escolha não importa: é uma combinação. C(8, 3) = 8 · 7 · 6 ÷ (3 · 2 · 1) = 336 ÷ 6 = 56.\n\nPegadinhas:\n• B e C: dividem 336 por 3 ou por 2, sem descontar todas as ordens possíveis.\n• D (336): é o arranjo, que trataria como diferentes as mesmas três pessoas escolhidas em outra ordem.\n• E (512): é 8³, que permitiria repetir o mesmo médico.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_15",
+    "chapter": "A Geometria Métrica Plana",
+    "topicId": "mat_geometria_plana",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara resgatar uma pessoa em uma janela situada a 12 m de altura em relação ao topo do caminhão, bombeiros apoiam a extremidade de uma escada no peitoril, enquanto a base da escada fica no caminhão, a 9 m da parede, na horizontal. A parede é vertical.\n\nTexto elaborado para esta questão.\n\nO comprimento mínimo da escada é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "10,5 m."
+      },
+      {
+        "id": "b",
+        "text": "12 m."
+      },
+      {
+        "id": "c",
+        "text": "15 m."
+      },
+      {
+        "id": "d",
+        "text": "21 m."
+      },
+      {
+        "id": "e",
+        "text": "225 m."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A escada é a hipotenusa de um triângulo retângulo de catetos 12 m e 9 m: L² = 12² + 9² = 144 + 81 = 225, L = 15 m.\n\nPegadinhas:\n• A (10,5 m): faz a média dos catetos.\n• B (12 m): usa apenas a altura.\n• D (21 m): soma os catetos.\n• E (225 m): esquece a raiz quadrada.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_16",
+    "chapter": "Clima Mundial",
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo sul da Ásia, especialmente na Índia, o ano é marcado pelas monções. Entre junho e setembro, ventos úmidos vindos do Oceano Índico trazem chuvas intensas, essenciais à agricultura e ao abastecimento, mas também associadas a inundações. No inverno, os ventos sopram do continente para o oceano, e o tempo fica seco.\n\nTexto elaborado para esta questão.\n\nA inversão sazonal dos ventos se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o oceano se aquece mais que o continente no verão, formando alta pressão no continente."
+      },
+      {
+        "id": "b",
+        "text": "as correntes marinhas frias empurram as nuvens em direção ao continente no verão."
+      },
+      {
+        "id": "c",
+        "text": "a Cordilheira do Himalaia gera os ventos ao derreter suas geleiras no inverno."
+      },
+      {
+        "id": "d",
+        "text": "no verão, o continente se aquece mais que o oceano, formando uma área de baixa pressão que atrai os ventos úmidos do mar; no inverno, o continente esfria mais, forma alta pressão, e os ventos se invertem."
+      },
+      {
+        "id": "e",
+        "text": "a rotação da Terra muda de sentido duas vezes por ano, invertendo os ventos."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A terra tem menor calor específico que a água: aquece e esfria mais depressa. No verão, o ar sobre o continente aquecido sobe (baixa pressão) e é substituído pelo ar úmido do oceano, que, ao subir — inclusive contra o Himalaia —, condensa e chove. No inverno, o continente fica mais frio que o oceano, e o gradiente se inverte.\n\nPegadinhas:\n• A: inverte o aquecimento relativo e a pressão.\n• B: correntes marinhas influenciam o clima, mas não explicam a inversão sazonal dos ventos.\n• C: o Himalaia intensifica as chuvas por efeito orográfico, mas não gera os ventos.\n• E: a rotação da Terra não muda de sentido.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_17",
+    "chapter": "Geopolítica e Geoeconomia da América Latina",
+    "topicId": "geo_geopolitica_regional",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nArgentina, Bolívia e Chile concentram grande parte das reservas mundiais conhecidas de lítio, formando o chamado 'triângulo do lítio'. O metal é extraído de salmouras de grandes salares na região andina e é essencial para as baterias de celulares e de carros elétricos. Governos discutem se devem apenas exportar o minério ou atrair indústrias que agreguem valor, e comunidades locais denunciam o alto consumo de água em uma das áreas mais áridas do planeta.\n\nTexto elaborado para esta questão.\n\nO texto evidencia que a exploração do lítio na região",
+    "options": [
+      {
+        "id": "a",
+        "text": "ocorre principalmente em florestas tropicais úmidas, sem conflito pelo uso da água."
+      },
+      {
+        "id": "b",
+        "text": "valoriza o recurso com a demanda da transição energética, mas reproduz o dilema latino-americano entre exportar matéria-prima e industrializar, além de gerar disputas por água com comunidades locais."
+      },
+      {
+        "id": "c",
+        "text": "é controlada exclusivamente pelos Estados Unidos, que proíbem a participação dos países andinos."
+      },
+      {
+        "id": "d",
+        "text": "perdeu importância com o fim da produção de baterias no mundo."
+      },
+      {
+        "id": "e",
+        "text": "está localizada no litoral brasileiro, junto às reservas do pré-sal."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A transição energética elevou a demanda por lítio. Para os países do triângulo, o desafio é antigo: exportar commodity com pouco valor agregado ou desenvolver indústria. A extração em salares evapora grandes volumes de salmoura, em região árida, gerando conflitos com comunidades que dependem da pouca água disponível.\n\nPegadinhas:\n• A: os salares estão no altiplano andino e no deserto; e o texto cita conflitos pela água.\n• C: o texto discute decisões dos próprios governos da região.\n• D: o texto destaca a importância crescente das baterias.\n• E: o triângulo do lítio fica nos Andes, não no Brasil.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_18",
+    "chapter": "Projeções Cartográficas",
+    "topicId": "geo_cartografia",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm muitos mapas-múndi baseados na projeção de Mercator, a Groenlândia parece ter tamanho semelhante ao da África, embora a área africana seja cerca de 14 vezes maior. A projeção foi criada no século XVI para a navegação, pois nela uma linha de rumo constante aparece como uma reta.\n\nTexto elaborado para esta questão.\n\nA distorção descrita ocorre porque a projeção de Mercator",
+    "options": [
+      {
+        "id": "a",
+        "text": "é equivalente, preservando as áreas e distorcendo os ângulos."
+      },
+      {
+        "id": "b",
+        "text": "representa a Terra sem nenhuma distorção, e o tamanho da Groenlândia é real."
+      },
+      {
+        "id": "c",
+        "text": "foi elaborada a partir de dados de satélite imprecisos."
+      },
+      {
+        "id": "d",
+        "text": "amplia as áreas próximas ao Equador e reduz as próximas aos polos."
+      },
+      {
+        "id": "e",
+        "text": "é conforme, preservando os ângulos, mas amplia progressivamente as áreas à medida que aumenta a latitude."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Toda projeção plana da superfície esférica distorce algo. A de Mercator preserva os ângulos (é conforme), o que serve à navegação, mas estica paralelos e meridianos nas altas latitudes: regiões próximas aos polos, como a Groenlândia, aparecem muito maiores do que são.\n\nPegadinhas:\n• A: projeções equivalentes, como a de Peters, preservam áreas; a de Mercator preserva ângulos.\n• B: nenhuma projeção plana do globo é isenta de distorções.\n• C: a projeção é do século XVI, muito anterior aos satélites.\n• D: inverte o efeito; a distorção cresce em direção aos polos.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_19",
+    "chapter": "O Nazismo na Alemanha",
+    "topicId": "his_imperialismo_guerras",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1933, poucos meses após a chegada dos nazistas ao poder, a Alemanha aprovou uma lei de esterilização compulsória de pessoas com doenças consideradas hereditárias. Em 1939, teve início o programa conhecido como Aktion T4, no qual médicos e enfermeiros participaram do assassinato de dezenas de milhares de pessoas com deficiências físicas e mentais, consideradas 'vidas indignas de serem vividas'. Após a guerra, médicos foram julgados em Nuremberg.\n\nTexto elaborado para esta questão.\n\nAs políticas descritas expressam",
+    "options": [
+      {
+        "id": "a",
+        "text": "a ideologia racial e eugênica do Estado nazista, que, com participação de profissionais de saúde, buscou eliminar grupos considerados inferiores em nome de uma suposta pureza biológica."
+      },
+      {
+        "id": "b",
+        "text": "medidas de saúde pública baseadas no consentimento dos pacientes e de suas famílias."
+      },
+      {
+        "id": "c",
+        "text": "iniciativas isoladas de alguns médicos, sem apoio ou conhecimento do governo."
+      },
+      {
+        "id": "d",
+        "text": "uma política de proteção às pessoas com deficiência, que passaram a receber atendimento especializado."
+      },
+      {
+        "id": "e",
+        "text": "uma prática comum em todos os países democráticos da época, sem relação com o nazismo."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A 'higiene racial' era parte central da ideologia nazista, a mesma que conduziria ao Holocausto. As leis e o programa T4 foram políticas de Estado, executadas por médicos e enfermeiros. O julgamento dos médicos em Nuremberg deu origem ao Código de Nuremberg (1947), que exige consentimento voluntário em pesquisas com seres humanos.\n\nPegadinhas:\n• B: a esterilização era compulsória, e os assassinatos, sem consentimento.\n• C: as medidas eram leis e programas oficiais.\n• D: o programa matava as pessoas que dizia 'tratar'.\n• E: leis de esterilização existiram em outros países, mas o assassinato sistemático do T4 é próprio do regime nazista e ligado à sua ideologia racial.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_20",
+    "chapter": "A Era Vargas",
+    "topicId": "his_primeira_republica_vargas",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Código Eleitoral de 1932, promulgado no início do governo de Getúlio Vargas, instituiu o voto secreto, criou a Justiça Eleitoral e garantiu o direito de voto às mulheres. Até então, na Primeira República, o voto era aberto e marcado por fraudes e pelo controle dos coronéis sobre o eleitorado.\n\nTexto elaborado para esta questão.\n\nAs medidas do Código Eleitoral de 1932 se relacionam",
+    "options": [
+      {
+        "id": "a",
+        "text": "à manutenção do voto de cabresto, que o voto secreto tornou mais eficaz."
+      },
+      {
+        "id": "b",
+        "text": "ao fim das eleições no país, substituídas por nomeações do presidente."
+      },
+      {
+        "id": "c",
+        "text": "às críticas ao sistema eleitoral da Primeira República, como as fraudes e o voto aberto, e às lutas do movimento sufragista pelo direito das mulheres ao voto."
+      },
+      {
+        "id": "d",
+        "text": "à Constituição de 1891, que já havia garantido o voto feminino."
+      },
+      {
+        "id": "e",
+        "text": "à exigência de renda mínima para votar, que ampliou o eleitorado."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A Revolução de 1930 se apresentou como reação às fraudes e ao poder das oligarquias. O voto secreto e a Justiça Eleitoral dificultavam o controle dos eleitores pelos coronéis. O voto feminino resultou também de décadas de luta de sufragistas, como Bertha Lutz.\n\nPegadinhas:\n• A: o voto secreto dificulta, e não facilita, o voto de cabresto.\n• B: o código organizou eleições; elas seriam suspensas só no Estado Novo (1937).\n• D: a Constituição de 1891 não garantia o voto às mulheres.\n• E: o código não estabeleceu voto censitário.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_21",
+    "chapter": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+    "topicId": "his_republica_liberal_atual",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO governo de Juscelino Kubitschek (1956-1961) adotou o lema '50 anos em 5' e lançou o Plano de Metas, com investimentos em energia, transportes e indústria de base. Montadoras estrangeiras de automóveis instalaram fábricas no país, e a nova capital, Brasília, foi inaugurada em 1960. Ao fim do governo, a inflação e a dívida externa haviam crescido.\n\nTexto elaborado para esta questão.\n\nO modelo de desenvolvimento do governo JK caracterizou-se por",
+    "options": [
+      {
+        "id": "a",
+        "text": "recusa ao capital estrangeiro e estatização de todas as indústrias."
+      },
+      {
+        "id": "b",
+        "text": "prioridade à agricultura de exportação, com redução dos investimentos industriais."
+      },
+      {
+        "id": "c",
+        "text": "manutenção da capital no Rio de Janeiro e corte de gastos públicos."
+      },
+      {
+        "id": "d",
+        "text": "industrialização acelerada, com participação do Estado e do capital estrangeiro, em especial na indústria automobilística, acompanhada de aumento da inflação e do endividamento externo."
+      },
+      {
+        "id": "e",
+        "text": "estabilidade monetária e quitação da dívida externa, graças às exportações de automóveis."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O desenvolvimentismo de JK combinou Estado (energia, transportes, Brasília), capital nacional e capital estrangeiro, atraído para setores como o automobilístico. O crescimento foi acelerado, mas financiado com emissão de moeda e empréstimos externos, o que deixou inflação e dívida elevadas para os governos seguintes.\n\nPegadinhas:\n• A: o capital estrangeiro foi incentivado.\n• B: a prioridade foi a indústria.\n• C: a capital foi transferida para Brasília.\n• E: o texto afirma o crescimento da inflação e da dívida.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_22",
+    "chapter": "Concordância",
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nConsidere as frases:\n\nI. Haviam muitos pacientes na sala de espera.\nII. Faz dois anos que a clínica foi inaugurada.\nIII. Fazem três meses que ele não vem às consultas.\n\nTexto elaborado para esta questão.\n\nEstá de acordo com a norma-padrão o que se afirma em:",
+    "options": [
+      {
+        "id": "a",
+        "text": "I, apenas."
+      },
+      {
+        "id": "b",
+        "text": "II, apenas."
+      },
+      {
+        "id": "c",
+        "text": "III, apenas."
+      },
+      {
+        "id": "d",
+        "text": "I e III, apenas."
+      },
+      {
+        "id": "e",
+        "text": "I, II e III."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. 'Haver' no sentido de existir e 'fazer' indicando tempo decorrido são impessoais: não têm sujeito e ficam na 3ª pessoa do singular. Assim, o correto é 'Havia muitos pacientes' e 'Faz três meses'. Só a frase II está correta.\n\nPegadinhas:\n• A e D: em I, 'muitos pacientes' é objeto direto, não sujeito; o verbo não concorda com ele.\n• C: 'Fazem três meses' flexiona um verbo impessoal.\n• E: inclui as duas frases incorretas.\nAtenção: 'existir', ao contrário de 'haver', é pessoal — 'Existiam muitos pacientes' está correto.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_23",
+    "chapter": "Text Comprehension: Stem Cells",
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Stem cells can give rise to many different types of cells, which makes them one of the most promising areas of medical research. Bone marrow transplants, which rely on blood stem cells, have saved lives for decades. However, many clinics around the world now sell 'stem cell therapies' for conditions such as autism or Parkinson's disease without evidence from clinical trials. Scientists warn that these unproven treatments are expensive and have caused serious harm, including blindness and tumors.\"\n\nTexto elaborado para esta questão.\n\nDe acordo com o texto,",
+    "options": [
+      {
+        "id": "a",
+        "text": "todas as terapias com células-tronco são experimentais e nenhuma delas é usada na medicina atual."
+      },
+      {
+        "id": "b",
+        "text": "as clínicas mencionadas oferecem tratamentos comprovados por ensaios clínicos."
+      },
+      {
+        "id": "c",
+        "text": "os cientistas defendem a proibição de qualquer pesquisa com células-tronco."
+      },
+      {
+        "id": "d",
+        "text": "as terapias vendidas para autismo e doença de Parkinson são baratas e seguras."
+      },
+      {
+        "id": "e",
+        "text": "há usos consolidados de células-tronco, como o transplante de medula óssea, mas muitos tratamentos vendidos por clínicas não têm comprovação e já causaram danos graves."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O texto distingue o uso consolidado ('Bone marrow transplants [...] have saved lives for decades') das 'unproven treatments' vendidas sem 'evidence from clinical trials', que 'have caused serious harm'.\n\nPegadinhas:\n• A: o transplante de medula é citado como tratamento usado há décadas.\n• B: o texto diz que essas clínicas vendem terapias 'without evidence'.\n• C: os cientistas alertam contra tratamentos não comprovados, não contra a pesquisa, descrita como 'promising'.\n• D: o texto as descreve como 'expensive' e associadas a danos.\nVocabulário: 'give rise to' = originar; 'unproven' = não comprovado; 'harm' = dano.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "crivo_fuvest_f1_l6_24",
+    "chapter": "Desigualdade Racial no Brasil",
+    "topicId": "soc_estratificacao_desigualdade",
+    "subject": "Sociologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA tabela apresenta o rendimento médio por hora de trabalhadores brasileiros, segundo a cor ou raça e o nível de escolaridade.\n\n[Tabela: rendimento médio por hora (R$) — sem instrução ou fundamental incompleto: brancos 12, pretos ou pardos 10; ensino médio completo: brancos 18, pretos ou pardos 14; ensino superior completo: brancos 40, pretos ou pardos 28.]\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA leitura da tabela permite concluir que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a desigualdade de rendimento entre brancos e pretos ou pardos persiste em todos os níveis de escolaridade e é maior, em valores absolutos, no ensino superior, o que indica que fatores além da escolaridade, como a discriminação no mercado de trabalho, contribuem para a diferença."
+      },
+      {
+        "id": "b",
+        "text": "a diferença de rendimento desaparece entre os trabalhadores com ensino superior."
+      },
+      {
+        "id": "c",
+        "text": "a escolaridade explica totalmente a diferença de renda entre os grupos."
+      },
+      {
+        "id": "d",
+        "text": "trabalhadores pretos ou pardos com ensino superior ganham mais que brancos com ensino médio, o que mostra que não há desigualdade racial."
+      },
+      {
+        "id": "e",
+        "text": "o rendimento não varia com a escolaridade em nenhum dos grupos."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Comparando pessoas com a mesma escolaridade, brancos ganham mais em todos os níveis (12 × 10; 18 × 14; 40 × 28), e a diferença absoluta é maior no ensino superior (R$ 12 por hora). Se a escolaridade explicasse tudo, as diferenças sumiriam dentro de cada nível. Isso aponta para outros fatores, como discriminação, redes de contato e ocupação de cargos.\n\nPegadinhas:\n• B: no superior, a diferença é a maior em valor absoluto.\n• C: a diferença dentro de cada nível mostra que não.\n• D: a comparação mistura níveis diferentes; a desigualdade aparece na comparação entre iguais.\n• E: nos dois grupos, o rendimento cresce com a escolaridade.",
+    "difficulty": "hard"
   }
 ]
