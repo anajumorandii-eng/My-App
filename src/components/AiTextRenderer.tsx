@@ -49,14 +49,14 @@ export default function AiTextRenderer({ text, className = '' }: { text: string;
           table: ({ children }) => (
             <div role="region" aria-label="Tabela de estudo" tabIndex={0}
               className="my-3 max-w-full overflow-x-auto rounded-lg border border-[var(--line)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
-              <table className="w-full min-w-[36rem] border-collapse text-left text-sm leading-relaxed">{children}</table>
+              <table className="w-full table-fixed border-collapse text-left text-sm leading-relaxed">{children}</table>
             </div>
           ),
           th: ({ children, style }) => (
-            <th scope="col" style={style} className="border-b border-[var(--line)] bg-[var(--surface-secondary)] px-3 py-2 align-top font-semibold">{children}</th>
+            <th scope="col" style={style} className="border-b border-[var(--line)] bg-[var(--surface-secondary)] px-3 py-2 align-top font-semibold break-words [overflow-wrap:anywhere]">{children}</th>
           ),
           td: ({ children, style }) => (
-            <td style={style} className="border-b border-[var(--line)] px-3 py-2 align-top">{children}</td>
+            <td style={style} className="border-b border-[var(--line)] px-3 py-2 align-top break-words [overflow-wrap:anywhere]">{children}</td>
           ),
           p: StudyParagraph,
           strong: ({ children }) => <strong className="font-semibold">{children}</strong>,

@@ -27,3 +27,14 @@ it('recusa estrutura incompleta, números inválidos e blocos excessivos', () =>
   expect(parseStudyVisual(JSON.stringify({ ...flow, type: 'bars', unit: 'mg', data: [{ label: 'A', value: -1 }, { label: 'B', value: 2 }] }))).toBeUndefined();
   expect(parseStudyVisual('x'.repeat(8001))).toBeUndefined();
 });
+it('curvas têm eixos e valores acessíveis; PDF mantém o gráfico sem o controle interativo', () => {
+ const visual={type:'line',title:'Concentração',caption:'Dados didáticos.',question:'A queda é constante?',xLabel:'Tempo (s)',yLabel:'Concentração (mol/L)',series:[{label:'A',points:[{x:0,y:1},{x:1,y:.5},{x:2,y:.3}]},{label:'B',points:[{x:0,y:0},{x:1,y:.5},{x:2,y:.7}]}]};
+ const {container}=render(<AiTextRenderer text={'```study-visual\n'+JSON.stringify(visual)+'\n```'}/>);
+ expect(screen.getByRole('img',{name:/Concentração/})).toBeInTheDocument();
+ expect(container.querySelectorAll('polyline')).toHaveLength(2);
+ expect(container.textContent).toContain('traços longos');
+ const root=createStrategyPrintRoot(container,'Revisão');
+ expect(root.querySelector('details[data-visual-data]')).toBeNull();
+ expect(root.querySelector('polyline')).toBeTruthy();
+ expect(root.textContent).toContain('Tempo (s)');
+});

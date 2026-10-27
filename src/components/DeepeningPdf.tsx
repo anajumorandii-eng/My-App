@@ -18,7 +18,7 @@ async function capturePrintableContent(getContent: () => HTMLElement | null, sig
       const finish = (failure?: unknown) => { observer.disconnect(); signal.removeEventListener('abort', aborted); failure ? reject(failure) : resolve(); };
       const aborted = () => finish(signal.reason);
       const observer = new MutationObserver(() => { if (!content.querySelector('[data-ai-text-pending]')) finish(); });
-      observer.observe(content, { childList: true, subtree: true });
+      observer.observe(content, { childList: true, subtree: true, attributes: true, attributeFilter: ['data-ai-text-pending'] });
       signal.addEventListener('abort', aborted, { once: true });
       if (signal.aborted) aborted();
     });

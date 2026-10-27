@@ -85,3 +85,12 @@ test('recortes específicos delimitam explicações e tarefas sem ampliar para t
  const result=prompt([], {depth:'deep',topicCuts:{mat_geometria_plana:['Ângulos na circunferência','Área do círculo']}}, {chapters:'Geometria plana: Ângulos na circunferência + Área do círculo'});
  assert.match(result,/Ângulos na circunferência \+ Área do círculo/);assert.match(result,/RECORTES SOBERANOS/);assert.match(result,/pré-requisitos breves e conectados/);assert.ok(result.includes('\\alpha'));assert.ok(!result.includes('\u0000'));
 });
+test('figuras automáticas orientam estruturas e gráficos; preferência somente texto chega ao prompt',()=>{
+ const automatic=prompt([],{}, {subject:'Química',topic:'Química orgânica'});
+ assert.match(automatic,/FIGURAS AUTOMÁTICAS/);
+ assert.match(automatic,/SMILES/);
+ assert.match(automatic,/x estritamente crescente/);
+ const text=prompt([],{visualMode:'text'});
+ assert.match(text,/PREFERÊNCIA DESTA REVISÃO: somente texto/);
+ assert.throws(()=>validateAiPayload('review-tip',{...base,reviewOptions:{visualMode:'unknown'}}));
+});

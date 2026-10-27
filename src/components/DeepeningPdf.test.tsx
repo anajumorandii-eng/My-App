@@ -195,3 +195,14 @@ it('exportação pela biblioteca gera arte por padrão com matéria, tópico e s
  const sent = JSON.parse(String(fetch.mock.calls.find(([url]) => url === '/api/study-pdf')![1]?.body));
  expect(sent.html).toContain(image);
 });
+it('aguarda a remoção do marcador de figura pendente antes de exportar',async()=>{
+ const fetch=vi.fn(async(url:string)=>url==='/api/study-pdf'?pdf():Response.json({enabled:false}));
+ const {props}=setup('wait-for-chemical-figure',fetch);const content=props.getContent()!;
+ content.innerHTML='<figure data-ai-text-pending><svg role="img" aria-label="Estrutura"></svg></figure>';
+ render(<DeepeningPdf {...props} getContent={()=>content} materialLabel="Revisão"/>);
+ await waitFor(()=>expect(screen.getByRole('status')).toHaveTextContent('Preparando revisão'));
+ expect(fetch.mock.calls.some(([url])=>url==='/api/study-pdf')).toBe(false);
+ content.querySelector('figure')!.removeAttribute('data-ai-text-pending');
+ await screen.findByRole('link',{name:'Abrir PDF'});
+ expect(fetch.mock.calls.some(([url])=>url==='/api/study-pdf')).toBe(true);
+});

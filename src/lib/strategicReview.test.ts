@@ -49,3 +49,11 @@ test('trocar a origem não preserva data ou texto ocultos de outro material',()=
   const catalog=normalizeReviewOptions({...input,sourceMode:'catalog'});
   assert.equal(catalog.sourceDate,'');assert.equal(catalog.sourceText,'');assert.equal(catalog.sourceTitle,'');
 });
+test('preferência de figuras preserva compatibilidade e distingue a revisão somente texto',()=>{
+ const auto=normalizeReviewOptions({visualMode:'auto'});
+ const legacy=normalizeReviewOptions();
+ assert.deepEqual(auto,legacy);
+ const text=normalizeReviewOptions({visualMode:'text'});
+ assert.equal(text.visualMode,'text');
+ assert.notEqual(reviewSummaryKey('Química','organic','','',text),reviewSummaryKey('Química','organic','','',auto));
+});
