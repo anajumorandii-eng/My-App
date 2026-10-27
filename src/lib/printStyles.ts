@@ -122,6 +122,13 @@ export const printStyles = `${printCoverFontStyles}\n${printBodyFontStyles}\n${p
   [data-print-content] .katex-display { break-inside: avoid !important; }
   [data-print-content] figure { margin: 3mm 0; break-inside: avoid; }
   [data-print-content] figcaption { break-before: avoid; }
+  [data-print-content] [data-study-visual] { display: block !important; break-inside: avoid !important; }
+  [data-print-content] [data-study-visual] figcaption { break-after: avoid !important; }
+  [data-print-content] [data-study-molecule] { break-inside: avoid !important; }
+  [data-print-content] [data-study-visual] > p { break-before: avoid; }
+  [data-print-content] [data-study-visual] svg { break-after: avoid; }
+  [data-print-content] :has(> [data-study-visual]) { orphans: 1 !important; widows: 1 !important; }
+  [data-print-content] [data-print-visual-keep] { display: inline-block !important; vertical-align: top; width: 100%; box-sizing: border-box; break-inside: avoid !important; }
   [data-print-content] img, [data-print-content] svg { max-height: 245mm !important; object-fit: contain; }
   @page crivo-toc { size: A4; margin: 20mm 22mm; }
   [data-print-toc] { page: crivo-toc; min-height: 0; padding: 0; break-inside: auto; }

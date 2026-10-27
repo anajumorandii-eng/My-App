@@ -261,3 +261,16 @@ it('gera recortes múltiplos por tópico e restaura a seleção salva com recort
  fireEvent.click(screen.getByRole('button',{name:/Geometria Plana \+ Funções · Geral/}));fireEvent.click(screen.getByRole('button',{name:'Editar configurações desta revisão'}));
  expect(screen.getByLabelText('Área do círculo')).toBeChecked();expect(screen.getByLabelText('Meu erro em áreas compostas')).toBeChecked();expect(screen.getByLabelText('Função Quadrática')).toBeChecked();
 });
+it('salva e restaura a preferência por revisão sem figuras',async()=>{
+ mount();
+ const figures=screen.getByRole('checkbox',{name:/Incluir figuras quando ajudarem/});
+ expect(figures).toBeChecked();fireEvent.click(figures);
+ fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
+ await waitFor(()=>expect(screen.getByText('Meus resumos de revisão (1)')).toBeInTheDocument());
+ expect(mocks.generate.mock.calls[0][1].reviewOptions.visualMode).toBe('text');
+ expect(Object.values(readStrategyGuides(null))[0].reviewOptions?.visualMode).toBe('text');
+ cleanup();mount();
+ const open=screen.getByRole('button',{name:/Aritmética e Proporcionalidade/,pressed:false});fireEvent.click(open);
+ fireEvent.click(screen.getByRole('button',{name:'Editar configurações desta revisão'}));
+ expect(screen.getByRole('checkbox',{name:/Incluir figuras quando ajudarem/})).not.toBeChecked();
+});

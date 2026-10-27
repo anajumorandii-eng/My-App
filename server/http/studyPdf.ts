@@ -32,6 +32,9 @@ export async function renderStudyPdf(html: string): Promise<Uint8Array> {
       for (const unit of document.querySelectorAll<HTMLElement>('[data-print-content] table, [data-print-content] li, [data-print-step]')) {
         if (unit.getBoundingClientRect().height < usefulHeight * .35) unit.dataset.printKeep = '';
       }
+      for (const visual of document.querySelectorAll<HTMLElement>('[data-print-content] [data-study-visual]')) {
+        if (visual.getBoundingClientRect().height < usefulHeight * .8) visual.dataset.printVisualKeep = '';
+      }
       for (const row of document.querySelectorAll<HTMLElement>('[data-print-content] tr')) {
         if (row.getBoundingClientRect().height > usefulHeight) row.dataset.printSplit = '';
       }
