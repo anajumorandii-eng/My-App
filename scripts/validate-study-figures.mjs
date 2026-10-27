@@ -25,7 +25,7 @@ try{
   if(name==='computador'){
    const html=await page.evaluate(async()=>{const {createStrategyPrintRoot}=await import('/src/lib/printStrategyGuide.ts');const {printStyles}=await import('/src/lib/printStyles.ts');const root=createStrategyPrintRoot(document.querySelector('article'),'Estruturas e gráficos no resumo');for(const image of root.querySelectorAll('img')){const response=await fetch(image.src);const blob=await response.blob();image.src=await new Promise(resolve=>{const reader=new FileReader();reader.onload=()=>resolve(String(reader.result));reader.readAsDataURL(blob);});}return `<html lang="pt-BR"><meta charset="utf-8"><style>${printStyles}</style><body>${root.outerHTML}</body></html>`;});
    await fs.writeFile(`${output}/source.html`,html);
-   
+
    await fs.writeFile(`${output}/revisao-figuras.pdf`,await renderStudyPdf(html));
   }
   await page.close();
