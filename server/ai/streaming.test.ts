@@ -142,3 +142,45 @@ test('uma falha no meio do fluxo vira frame de erro, não conexão morta', async
     await fechar();
   }
 });
+
+test('cancelar HTTP aborta o provedor enquanto ele espera o próximo trecho', async () => {
+  let aborted!: () => void;
+  const upstreamAborted = new Promise<void>(resolve => { aborted = resolve; });
+  let cleaned = false;
+  const p = providerFake([]);
+  p.generateStream = async function* ({signal}): AiStream {
+    try {
+      yield 'Texto parcial';
+      await new Promise<never>((_, reject) => {
+        const cancel = () => { aborted(); reject(signal!.reason); };
+        if (signal?.aborted) cancel(); else signal?.addEventListener('abort', cancel, {once:true});
+      });
+      return {text:'não deve concluir'};
+    } finally { cleaned = true; }
+  };
+  const {url, fechar} = await servidor(p);
+  const controller = new AbortController();
+  try {
+    const response = await fetch(`${url}/api/ai/review-tip`, {method:'POST',headers:{'Content-Type':'application/json',Accept:'text/event-stream'},body:JSON.stringify({topic:'Geometria',subject:'Matemática',level:40,daysSinceReview:0}),signal:controller.signal});
+    const reader=response.body!.getReader();
+    await reader.read();
+    controller.abort();
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    try { await Promise.race([upstreamAborted,new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('provedor não foi cancelado')),1000);})]); }
+    finally { clearTimeout(timer); }
+    await new Promise(resolve=>setTimeout(resolve,10));
+    assert.equal(cleaned,true);
+  } finally { controller.abort(); await fechar(); }
+});
+
+test('resultado ausente encerra com erro controlado, sem acessar model de undefined', async () => {
+  const p=providerFake([]);
+  p.generateStream=async function* (): AiStream { yield 'Parcial'; return undefined as never; };
+  const {url,fechar}=await servidor(p);
+  try {
+    const {frames}=await lerSse(`${url}/api/ai/review-tip`,{topic:'Geometria',subject:'Matemática',level:40,daysSinceReview:0});
+    assert.equal(frames[0].delta,'Parcial');
+    assert.equal(frames.at(-1)?.code,'AI_GENERATION_FAILED');
+    assert.ok(!frames.some(frame=>frame.done));
+  }finally{await fechar();}
+});
