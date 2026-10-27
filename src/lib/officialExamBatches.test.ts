@@ -9,7 +9,7 @@ import { readOfficialAnswerKey, type OfficialBatchSource } from './officialAnswe
 import { appendReviewedQuestions } from './officialExamImport';
 
 const batches = [
-  ['unicamp-2025-qz',71], ['fuvest-2026-v1',16], ['unesp-2025-v1',12],
+  ['unicamp-2025-qz',71], ['fuvest-2026-v1',49], ['unesp-2025-v1',12],
   ['famerp-2025-v1',12], ['unifesp-2025-v1',12], ['enem-2022-d2-cd5',12],
 ] as const;
 const hash = (bytes: Uint8Array | string) => createHash('sha256').update(bytes).digest('hex');
@@ -57,7 +57,7 @@ test('preserva os registros anteriores fora da correção conferida de G6PD, sem
   assert.equal(preserved.length, 2958);
   assert.equal(bank.filter(q => q.id === 'q_real_fuvest_2022_bio').length, 1);
   assert.equal(hash(JSON.stringify(preserved.map(({ statementComplete: _complete, ...q }) => q))), '7dca5c26bac9342c1b33fb72ad47c375d67ad813e96ebb84cb457e010fc75d1e');
-  assert.equal(bank.length,3094);
+  assert.equal(bank.length,3127);
   const additions = batches.flatMap(([slug])=>{
     const {source,items,answers}=load(slug);
     return buildReviewedOfficialQuestions(items,answers,source,mockTopics);
@@ -89,7 +89,7 @@ test('Fuvest não mistura V1–V4 e importação recusa alternativas ou contexto
   assert.equal(answers.get(3),'*');
   assert.notEqual(readOfficialAnswerKey(text,{...source,version:'V2'}).get(18),answers.get(18));
   const first=items[0];
-  assert.throws(()=>buildReviewedOfficialQuestions([{...first,options:first.options.slice(1)},...items.slice(1)],answers,source,mockTopics),/Alternativas/);
+  assert.throws(()=>buildReviewedOfficialQuestions([{...first,options:first.options.slice(0,-1)},...items.slice(1)],answers,source,mockTopics),/Alternativas/);
   assert.throws(()=>buildReviewedOfficialQuestions(items,answers,{...source,media:[]},mockTopics),/preservada/);
   assert.throws(()=>readOfficialAnswerKey(text + '\n' + text.split('\n').find(line=>/^\s*18\s/.test(line)),source),/repetido/);
 });

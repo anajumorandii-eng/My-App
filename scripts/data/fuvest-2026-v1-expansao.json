@@ -1,5 +1,376 @@
 [
   {
+    "number": 4,
+    "topicId": "mat_log_exponenciais",
+    "subject": "Matemática",
+    "chapter": "Introdução aos Logaritmos",
+    "title": "Entropia de Shannon em uma sequência de letras",
+    "concept": "Logaritmo de base 2 e propriedades do produto e do quociente; pré-requisito: probabilidade de sorteio com reposição.",
+    "steps": [
+      "O enunciado define um termo P·log₂P para cada letra da sequência: com 3 azuis e 1 vermelha há quatro termos.",
+      "Em uma urna com 3 azuis e 1 vermelha, cada sorteio dá azul com 3/4 e vermelha com 1/4; os três primeiros termos usam 3/4 e o último 1/4.",
+      "E = −[3·(3/4)·log₂(3/4) + (1/4)·log₂(1/4)]. Como log₂(3/4) = log₂3 − 2 e log₂(1/4) = −2, E = −[(9/4)(log₂3 − 2) − 1/2].",
+      "Distribuindo: E = −(9/4)log₂3 + 9/2 + 1/2 = 5 − (9/4)log₂3, alternativa A.",
+      "Conferir: log₂3 ≈ 1,585 dá E ≈ 1,43, valor positivo e menor que 2, coerente com uma sequência menos equilibrada que a AAAA de duas cores iguais."
+    ],
+    "trap": "Usar 1/2 para todas as letras, copiando o exemplo, ou esquecer que há três termos azuis e somar (3/4)log₂(3/4) uma vez só.",
+    "retrieval": [
+      "Por que a probabilidade de azul passa a ser 3/4 nessa sequência?",
+      "Quanto vale log₂(3/4) em função de log₂3?"
+    ],
+    "transfer": "Exercício autoral: calcule E para uma sequência de 4 letras com 1 azul e 3 vermelhas, seguindo a mesma regra.",
+    "criteria": [
+      "Perceber que a troca de cores não muda o resultado: E = 5 − (9/4)log₂3.",
+      "Mostrar a soma com um termo (1/4)log₂(1/4) e três termos (3/4)log₂(3/4)."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "5 − (9/4)·log₂ 3"
+      },
+      {
+        "id": "b",
+        "text": "1/2 − (5/2)·log₂ 3"
+      },
+      {
+        "id": "c",
+        "text": "3/2"
+      },
+      {
+        "id": "d",
+        "text": "(9/4)·log₂ 3"
+      },
+      {
+        "id": "e",
+        "text": "3"
+      }
+    ],
+    "pages": [
+      3
+    ],
+    "statement": "O conceito de entropia permeia diversas áreas do conhecimento e foi introduzido na Teoria da Informação por Claude Shannon, que desenvolveu uma forma de calcular a entropia E de um sistema, a saber\n\nE = − Σᵢ Pᵢ(x) log₂ Pᵢ(x)\n\nem que Pᵢ(x) é a probabilidade do i-ésimo resultado para a variável x.\nPor exemplo, considere uma sequência com duas letras A coloridas, a primeira azul e a segunda vermelha (AA). Se essas duas letras fossem colocadas numa urna, a probabilidade de se retirar, sem observar, a letra azul, como na sequência original, é 1/2. Devolve-se a letra à urna e sorteia-se novamente. A probabilidade de sair vermelha é novamente 1/2, e nesse caso tem-se:\n\nE = −[(1/2)·log₂(1/2) + (1/2)·log₂(1/2)] = 1\n\nPara uma sequência com 4 letras A, as duas primeiras azuis e as duas últimas vermelhas (AAAA), colocando-as numa urna e sorteando uma, a probabilidade de sair azul é 1/2. Devolve-se a letra e sorteia-se novamente. A probabilidade da segunda letra sorteada ser azul, como na sequência original, é novamente 1/2. Procedendo dessa forma para as duas letras vermelhas, tem-se:\n\nE = −[(1/2)·log₂(1/2) + (1/2)·log₂(1/2) + (1/2)·log₂(1/2) + (1/2)·log₂(1/2)] = 2\n\nCom base nessas informações, qual o valor da entropia E, no caso de uma sequência com 4 letras A, sendo as 3 primeiras azuis e a última vermelha (AAAA)?",
+    "statementComplete": true
+  },
+  {
+    "number": 5,
+    "topicId": "qui_polaridade_geometria",
+    "subject": "Química",
+    "chapter": "Ligações Químicas e Alotropia",
+    "title": "Bingo das ligações entre metais e halogênios",
+    "concept": "Natureza da ligação pelo caráter metálico dos átomos: metal–metal metálica, metal–ametal iônica, ametal–ametal covalente.",
+    "steps": [
+      "Classifique os seis elementos: Na, K e Ca são metais (grupos 1 e 2); Cℓ, Br e I são halogênios, ametais.",
+      "Entre metais (Na–Na, Na–K, Na–Ca, K–K, K–Ca, Ca–Ca) a ligação é metálica: Δ no bloco superior esquerdo.",
+      "Entre um metal e um halogênio (NaCℓ, KBr, CaI₂ etc.) há transferência de elétrons: ligação iônica, ■.",
+      "Entre halogênios (Cℓ₂, BrCℓ, ICℓ, I₂ …) há compartilhamento: covalente, ○.",
+      "Só a alternativa E combina Δ entre metais, ■ entre metal e halogênio e ○ entre halogênios; D erra ao marcar iônica entre Na e K, por exemplo."
+    ],
+    "trap": "Marcar Na–K como iônica por terem eletronegatividades diferentes; dois metais não formam ligação iônica, e sim metálica (ligas).",
+    "retrieval": [
+      "Que tipo de ligação há entre dois átomos de metal?",
+      "Por que Br–Cℓ é covalente e não iônica?"
+    ],
+    "transfer": "Exercício autoral: monte o mesmo quadro para Mg, Aℓ, O e S e indique o tipo de cada ligação.",
+    "criteria": [
+      "Mg–Mg, Mg–Aℓ e Aℓ–Aℓ metálicas; Mg–O, Mg–S, Aℓ–O e Aℓ–S iônicas.",
+      "O–O, O–S e S–S covalentes."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Na: Δ Δ Δ Δ Δ Δ · K: ○ ○ ■ ■ ■ · Ca: ○ ○ ■ ■ · Cℓ: ○ ○ ○ · Br: ■ ○ · I: ■"
+      },
+      {
+        "id": "b",
+        "text": "Na: ○ ■ Δ ■ ○ Δ · K: ○ ■ Δ ■ ○ · Ca: ○ ■ Δ ■ · Cℓ: ○ ■ Δ · Br: ○ ■ · I: ○"
+      },
+      {
+        "id": "c",
+        "text": "Na: ○ ○ ○ Δ Δ Δ · K: ○ ○ Δ Δ Δ · Ca: ○ Δ Δ Δ · Cℓ: ■ ■ ■ · Br: ■ ■ · I: ■"
+      },
+      {
+        "id": "d",
+        "text": "Na: Δ ■ ■ ■ ■ ■ · K: Δ ■ ■ ■ ■ · Ca: Δ ■ ■ ■ · Cℓ: ○ ○ ○ · Br: ○ ○ · I: ○"
+      },
+      {
+        "id": "e",
+        "text": "Na: Δ Δ Δ ■ ■ ■ · K: Δ Δ ■ ■ ■ · Ca: Δ ■ ■ ■ · Cℓ: ○ ○ ○ · Br: ○ ○ · I: ○"
+      }
+    ],
+    "pages": [
+      3
+    ],
+    "statement": "A difusão de descobertas científicas complexas em linguagens mais acessíveis e lúdicas é uma forma de expor a importância da ciência. Um recente trabalho da Universidade de Würzburg, na Alemanha, que descreveu uma nova ligação tripla entre átomos de B (Boro) e C (Carbono), foi apresentado como se os autores estivessem jogando uma espécie de “bingo das ligações químicas”, conforme a figura a seguir:\n[Figura: à esquerda, a molécula com a ligação tripla B≡C destacada; à direita, uma tabela triangular com B, C, N e O nas linhas e colunas, em que a casa B–C, antes vazia, foi preenchida.]\n\n“No bingo das ligações químicas, os pesquisadores conseguiram completar a lacuna entre o Boro e o Carbono.”\nDisponível em https://www.tecmundo.com.br/ciencia/. Adaptado.\n\nAdaptando essa ideia, foi feito um jogo para identificar os tipos de ligações entre os elementos Na, K, Ca, Cℓ, Br e I. Assinale a alternativa que representa a melhor marcação do tipo de ligação formada por esses átomos, seguindo a legenda:\n■ – ligação iônica;\n○ – ligação covalente;\nΔ – ligação metálica.\n\nAs alternativas são tabelas triangulares; cada linha indica as ligações do elemento com ele mesmo e com os elementos seguintes, na ordem Na, K, Ca, Cℓ, Br, I.",
+    "statementComplete": true
+  },
+  {
+    "number": 7,
+    "topicId": "mat_trigonometria",
+    "subject": "Matemática",
+    "chapter": "Transformações Trigonométricas",
+    "title": "Erro no arco duplo de uma equação trigonométrica",
+    "concept": "Seno do arco duplo, sen(2x) = 2 sen x cos x, obtido do seno da soma sen(a + b) com a = b = x.",
+    "steps": [
+      "Confira as passagens: sen(π/2) = 1 e −cos π = +1 estão corretas, então A e C não apontam erro.",
+      "O erro está em escrever sen(2x) = 2 sen x; pelo seno da soma, sen(x + x) = sen x cos x + cos x sen x = 2 sen x cos x.",
+      "Corretamente: sen x = 2 sen x cos x ⇒ sen x(2cos x − 1) = 0.",
+      "Logo sen x = 0 (x = 0 ou π) ou cos x = 1/2 (x = π/3 ou 5π/3): o estudante perdeu duas soluções.",
+      "B e E não se aplicam, pois o intervalo é 0 ≤ x < 2π e a equação de fato tem mais de uma solução; alternativa D."
+    ],
+    "trap": "Tratar sen como multiplicação (sen 2x = 2 sen x). Também é erro dividir por sen x, que apagaria as raízes de sen x = 0.",
+    "retrieval": [
+      "Qual é a fórmula do seno do arco duplo?",
+      "Por que fatorar é melhor que dividir por sen x?"
+    ],
+    "transfer": "Exercício autoral: resolva cos(2x) = cos x para 0 ≤ x < 2π.",
+    "criteria": [
+      "Usar cos 2x = 2cos²x − 1 e chegar a (2cos x + 1)(cos x − 1) = 0.",
+      "Obter x = 0, 2π/3 e 4π/3."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "considerou que cos π vale 1."
+      },
+      {
+        "id": "b",
+        "text": "não considerou as infinitas voltas no ciclo trigonométrico para a resposta."
+      },
+      {
+        "id": "c",
+        "text": "considerou que sen(π/2) vale 1."
+      },
+      {
+        "id": "d",
+        "text": "não utilizou corretamente o seno da soma de dois arcos."
+      },
+      {
+        "id": "e",
+        "text": "apresentou duas respostas e não apenas uma."
+      }
+    ],
+    "pages": [
+      4
+    ],
+    "statement": "Considere a equação trigonométrica\n\nsen(π/2) + sen x = sen(2x) − cos π\n\npara x ∈ ℝ, 0 ≤ x < 2π.\n\nUm estudante resolveu essa equação da seguinte maneira:\nsen(π/2) + sen x = sen(2x) − cos π\n1 + sen x = sen(2x) + 1\nsen x = sen(2x)\nsen x = 2sen x\n2sen x − sen x = 0\nsen x = 0\nx = 0 ou x = π\n\nA resolução apresentada pelo estudante está errada, pois ele",
+    "statementComplete": true
+  },
+  {
+    "number": 10,
+    "topicId": "soc_cultura_identidade",
+    "subject": "Sociologia",
+    "chapter": "Cultura e Etnocentrismo",
+    "title": "Maria Auxiliadora e o rótulo de arte primitivista",
+    "concept": "Etnocentrismo na crítica de arte e perspectiva decolonial; pré-requisito: diferença entre descrever uma obra e hierarquizá-la por um cânone.",
+    "steps": [
+      "Junte as pistas: autodidata, mulher negra, grupo de Solano Trindade no Embu, arte de origem africana, e a crítica de Schenberg sobre “arquiteturas cromáticas”.",
+      "Schenberg vê construção e intenção, não ingenuidade: o rótulo “primitivista” mede a obra por um cânone acadêmico europeu.",
+      "D nomeia esse olhar como colonizador e reconhece a intencionalidade política e simbólica ligada a vivências negras, femininas e periféricas.",
+      "A justifica a exclusão; B nega intenção crítica; C inventa um reconhecimento imediato e contínuo; E afirma neutralidade das categorias.",
+      "A pergunta pede o debate decolonial: só D questiona o rótulo em vez de aplicá-lo."
+    ],
+    "trap": "Aceitar “naïf” como descrição técnica neutra; o enunciado pede justamente a crítica ao poder de quem classifica.",
+    "retrieval": [
+      "O que o termo “primitivista” pressupõe sobre um centro artístico?",
+      "Que elementos da obra Capoeira indicam escolha, e não ingenuidade?"
+    ],
+    "transfer": "Exercício autoral: explique, em cinco linhas, como o mesmo argumento se aplicaria a classificar a música de um terreiro como “folclore” e a de uma orquestra como “arte”.",
+    "criteria": [
+      "Identificar a hierarquia implícita entre as categorias.",
+      "Relacioná-la a uma perspectiva etnocêntrica ou colonizadora."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A obra de Maria Auxiliadora é classificada como \"naïf\" ou \"primitivista\" por apresentar um vocabulário visual simples e espontâneo, característico de artistas sem formação acadêmica, o que justifica sua exclusão dos grandes circuitos institucionais da arte contemporânea."
+      },
+      {
+        "id": "b",
+        "text": "A produção de Maria Auxiliadora deve ser compreendida como uma manifestação isolada, desprovida de intencionalidade crítica ou diálogo com os debates socioculturais e políticos do seu tempo, reforçando o lugar da arte popular como expressão puramente intuitiva."
+      },
+      {
+        "id": "c",
+        "text": "A visibilidade póstuma de Maria Auxiliadora nos museus e exposições de arte brasileira evidencia o reconhecimento institucional imediato e contínuo de artistas racializados e periféricos no país, fruto da tradição inclusiva das artes visuais brasileiras desde o século XX."
+      },
+      {
+        "id": "d",
+        "text": "A categorização da obra de Maria Auxiliadora como “primitivista” ou “ingênua” revela, muitas vezes, uma perspectiva colonizadora que desconsidera a complexidade estética, a intencionalidade política e a potência simbólica de sua produção, ligada a vivências negras, femininas e periféricas que tensionam o cânone eurocentrado da arte."
+      },
+      {
+        "id": "e",
+        "text": "A valorização da obra de Maria Auxiliadora por críticos como Mário Schenberg atesta a neutralidade das categorias da crítica de arte moderna no Brasil, demonstrando que critérios estéticos sempre foram suficientes para reconhecer artistas não brancos e mulheres no campo artístico."
+      }
+    ],
+    "pages": [
+      5
+    ],
+    "statement": "[Pintura: Capoeira, de Maria Auxiliadora da Silva — figuras negras jogando capoeira, tocando berimbau e atabaque, com cores intensas e relevo sobre a tela.]\nCapoeira, Maria Auxiliadora da Silva, técnica mista sobre tela, 69,5 x 75 x 1,5 cm, 1970. Acervo MASP.\n\n“Maria Auxiliadora nasceu em 24 de maio de 1935, em Campo Belo, MG, numa família de 18 irmãos, gerados por Dona Maria, uma humilde bordadora, que acumulava ainda as funções de dona-de-casa, escultora e pintora. (...) Auxiliadora, ainda criança, mostra uma inclinação natural para tingir os fios que a mãe borda para fora e, com 11 anos, já desenhava, com carvão, figuras nos muros. Absorta nessa atividade, esquecia muitas vezes de olhar as panelas no fogo, e a comida da família queimava. (...) Sem conhecer perspectiva ou claro-escuro, bem dentro dos princípios dos artistas autodidatas, Auxiliadora foi aprimorando sua arte. No fim dos anos 1960, juntou-se, com outros integrantes da família, como o escultor Vicente de Paula e o pintor João Cândido, ao grupo que girava em torno do músico, teatrólogo e poeta negro Solano Trindade, no Embu das Artes, SP, onde se formara um centro de artesanato, principalmente de cultura e arte de origem africana.”\nD'AMBROZIO, Oscar. Maria Auxiliadora. Um cometa das artes. Adaptado.\n\nA trajetória da artista autodidata Maria Auxiliadora da Silva desafia as estruturas convencionais do sistema de artes visuais no Brasil ao articular, em sua obra e atuação, experiências de pertencimento, identidade e resistência. Em crítica publicada no livro “Pensando a Arte”, Mário Schenberg descreve sua produção como marcada pela \"vivência autêntica da vida popular\", \"senso mágico afro-brasileiro\" e uma \"imaginação construtora de arquiteturas cromáticas e lineares\". Considerando a obra “Capoeira”, os comentários de Schenberg, o texto de Oscar D’Ambrozio e os debates contemporâneos sobre arte e decolonialidade, é correto afirmar:",
+    "statementComplete": true
+  },
+  {
+    "number": 13,
+    "topicId": "geo_populacao_urbana_brasil",
+    "subject": "Geografia",
+    "chapter": "Estrutura Ativa da População",
+    "title": "Participação feminina na força de trabalho, 2012–2024",
+    "concept": "Leitura de série temporal e variação absoluta; contexto: impacto desigual da pandemia sobre o trabalho feminino.",
+    "steps": [
+      "Localize 2020, início da pandemia: homens 73,6 → 68,6 (−5,0) e mulheres 54,6 → 47,3 (−7,3).",
+      "A é falsa: a queda feminina foi maior.",
+      "C: de 2020 a 2021 as mulheres sobem 47,3 → 52,3 (+5,0); nenhum outro intervalo passa de +1,3. Verdadeira.",
+      "B falha em 2022→2023 (53,4 → 52,3); D dá 74,5 − 51,9 = 22,6; E falha porque o máximo, 54,6, é de 2019.",
+      "Resposta C."
+    ],
+    "trap": "Confundir a diferença entre homens e Total (11,7 em 2012) com a diferença entre homens e mulheres.",
+    "retrieval": [
+      "Qual foi a variação feminina entre 2019 e 2020?",
+      "Em que ano a taxa feminina atingiu o máximo da série?"
+    ],
+    "transfer": "Exercício autoral: calcule a diferença entre homens e mulheres em 2019 e em 2024 e diga se a desigualdade aumentou ou diminuiu.",
+    "criteria": [
+      "2019: 73,6 − 54,6 = 19,0; 2024: 72,6 − 52,8 = 19,8.",
+      "Concluir que a diferença aumentou 0,8 ponto percentual."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "A queda na taxa de participação de homens na força de trabalho foi maior do que a de mulheres no terceiro trimestre do ano em que a pandemia de Covid se iniciou."
+      },
+      {
+        "id": "b",
+        "text": "A taxa de participação de mulheres na força de trabalho é crescente durante todo o período entre o terceiro trimestre do ano de início da pandemia de Covid e o terceiro trimestre de 2024."
+      },
+      {
+        "id": "c",
+        "text": "A taxa de participação de mulheres na força de trabalho teve seu maior crescimento anual do terceiro trimestre de 2020 para o terceiro trimestre de 2021."
+      },
+      {
+        "id": "d",
+        "text": "A diferença entre a taxa de participação de homens e mulheres na força de trabalho foi de 11,7 no terceiro trimestre de 2012."
+      },
+      {
+        "id": "e",
+        "text": "A taxa de participação de mulheres na força de trabalho atingiu seu maior valor após o terceiro trimestre de 2020."
+      }
+    ],
+    "pages": [
+      7
+    ],
+    "statement": "Na obra Caminho de pedras, de 1937, a autora Rachel de Queiroz aborda os desafios da personagem Noemi em busca de sua liberdade política, social e sexual, em uma sociedade conservadora. O papel da mulher na sociedade e sua inserção no mercado de trabalho são temas atuais. Em março de 2025, o governo federal lançou um boletim que tem como objetivo analisar a inserção das mulheres no mercado de trabalho brasileiro. Um dos gráficos apresentados pelo boletim trata da taxa de participação na força de trabalho no Brasil, no 3º trimestre de cada ano, no período de 2012 a 2024.\n\nTaxa de participação na força de trabalho (%), por sexo, Brasil, 3º trimestre — 2012 a 2024:\n• Homens: 74,5 · 74,4 · 74,0 · 74,0 · 73,5 · 73,6 · 73,6 · 73,6 · 68,6 · 72,2 · 72,6 · 72,0 · 72,6\n• Total: 62,8 · 62,6 · 62,3 · 62,9 · 62,5 · 63,2 · 63,3 · 63,8 · 57,6 · 61,9 · 62,7 · 61,8 · 62,4\n• Mulheres: 51,9 · 51,6 · 51,4 · 52,4 · 52,2 · 53,5 · 53,7 · 54,6 · 47,3 · 52,3 · 53,4 · 52,3 · 52,8\n(Os valores seguem a ordem dos anos, de 2012 a 2024.)\nPesquisa Nacional por Amostra de Domicílio (PNAD) Contínua. Instituto Brasileiro de Geografia e Estatística (IBGE).\n\nEm relação ao gráfico apresentado, é correto afirmar:",
+    "statementComplete": true
+  },
+  {
+    "number": 14,
+    "topicId": "geo_populacao_urbana_brasil",
+    "subject": "Geografia",
+    "chapter": "Estrutura Étnica e Fluxos Migratórios",
+    "title": "Imigrantes no Sul: CadÚnico e emprego industrial",
+    "concept": "Migração laboral recente e inserção em empregos de baixa qualificação; leitura combinada de mapa coroplético e gráfico de barras.",
+    "steps": [
+      "O mapa mostra o Sul com os maiores números de imigrantes no cadastro de renda de até meio salário-mínimo: vulnerabilidade alta.",
+      "O gráfico mostra que, nas faixas de baixa escolaridade, a maior parte dos vínculos formais está na indústria.",
+      "No Sul, essa indústria é sobretudo a agroindústria de carnes (frigoríficos), que absorveu haitianos, venezuelanos e outros.",
+      "Emprego formal com baixos salários convive com inscrição no CadÚnico: a alternativa E liga os dois dados.",
+      "B contradiz o mapa; A, C e D invertem a relação entre escolaridade, setor e renda mostrada no gráfico."
+    ],
+    "trap": "Supor que emprego formal elimina a vulnerabilidade; o cadastro de baixa renda mostra o contrário.",
+    "retrieval": [
+      "Que faixa de renda define o cadastro mostrado no mapa?",
+      "Em que níveis de escolaridade a indústria predomina?"
+    ],
+    "transfer": "Exercício autoral: explique por que a interiorização de frigoríficos no oeste catarinense atrai mão de obra imigrante.",
+    "criteria": [
+      "Citar demanda por trabalho intensivo e de baixa qualificação.",
+      "Relacionar com salários baixos e rotatividade."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A segurança social garantida por rendas maiores favorece o emprego formal no setor de serviços."
+      },
+      {
+        "id": "b",
+        "text": "Os imigrantes cadastrados nessa região têm renda superior a um salário-mínimo, demonstrando maior segurança social."
+      },
+      {
+        "id": "c",
+        "text": "O alto número de imigrantes cadastrados no CadÚnico deve-se pela empregabilidade qualificada no comércio."
+      },
+      {
+        "id": "d",
+        "text": "A redução na vulnerabilidade social dos imigrantes é resultado do alto nível de escolaridade na indústria."
+      },
+      {
+        "id": "e",
+        "text": "Os baixos salários na indústria alimentícia refletem-se na vulnerabilidade dos imigrantes estrangeiros."
+      }
+    ],
+    "pages": [
+      7
+    ],
+    "statement": "Observe o mapa e o gráfico:\n\n[Mapa: Número de imigrantes incluídos no cadastro de pessoas com renda mensal de até meio salário-mínimo, por estado. Os maiores valores (14.840 a 31.176) estão em Santa Catarina e no Rio Grande do Sul; Paraná, São Paulo, Mato Grosso do Sul, Mato Grosso, Minas Gerais e Rondônia ficam na faixa de 5.562 a 14.839; a maior parte do Norte e do Nordeste tem valores menores.]\nDisponível em https://portaldeimigracao.mj.gov.br. Adaptado.\n\n[Gráfico: Distribuição relativa dos vínculos ativos de emprego formal de imigrantes estrangeiros na região Sul (2023), por escolaridade. A indústria é a maior parte dos vínculos entre analfabetos (cerca de 90%) e pessoas com fundamental incompleto (cerca de 75%), e segue grande até o médio completo (cerca de 40%); serviços predominam entre mestres e doutores (cerca de 80%); comércio e construção civil são parcelas menores.]\nAtlas Temático do Observatório das Migrações em São Paulo. Adaptado.\n\nA partir do mapa e do gráfico, assinale a alternativa correta sobre o contexto apresentado na região Sul.",
+    "statementComplete": true
+  },
+  {
+    "number": 17,
+    "topicId": "soc_trabalho_sociedade",
+    "subject": "Sociologia",
+    "chapter": "Precarização e Uberização do Trabalho",
+    "title": "“CLT” como ofensa e os dados da PNAD",
+    "concept": "Ideologia do empreendedorismo e precarização; leitura cruzada de renda média e número de ocupados.",
+    "steps": [
+      "Os empregadores com CNPJ têm a maior renda média (≈ R$ 8.900), mas são poucos (≈ 3,5 milhões) diante de ≈ 39 milhões com carteira.",
+      "A visão das crianças se apoia nos ganhos e na independência do empresário, não na chance real de chegar lá: é o que D descreve.",
+      "A é falsa: empregados com carteira são a maior categoria.",
+      "B é falsa: sem carteira (≈ 2.300) e autônomos sem CNPJ (≈ 2.000) ganham menos que os com carteira (≈ 3.100); C inverte a proteção social da CLT.",
+      "E erra o tamanho: autônomos com CNPJ são ≈ 7 milhões, poucos perto de quem tem carteira. Resposta D."
+    ],
+    "trap": "Olhar só o gráfico de renda e esquecer o de quantidade: a média alta de uma categoria pequena não é um caminho provável.",
+    "retrieval": [
+      "Qual categoria tem a maior renda média e quantas pessoas ela reúne?",
+      "Que direitos a CLT garante que o autônomo sem CNPJ não tem?"
+    ],
+    "transfer": "Exercício autoral: escreva um parágrafo explicando por que comparar médias de renda sem olhar o número de pessoas leva a conclusões enganosas, usando os dados acima.",
+    "criteria": [
+      "Citar empregadores (renda alta, poucos) e autônomos sem CNPJ (muitos, renda baixa).",
+      "Concluir sobre viés de sobrevivência ou probabilidade real de êxito."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "os empregadores e trabalhadores autônomos são mais numerosos do que empregados com carteira assinada e, logo, seguir essas ocupações é um caminho mais seguro para a riqueza."
+      },
+      {
+        "id": "b",
+        "text": "os empregados do setor privado sem carteira e trabalhadores autônomos possuem rendimento médio maior que os empregados com carteira e, logo, estão mais protegidos da pobreza."
+      },
+      {
+        "id": "c",
+        "text": "os trabalhadores autônomos estão mais protegidos contra os riscos sociais do que aqueles com emprego formal, que tradicionalmente oferece menos direitos."
+      },
+      {
+        "id": "d",
+        "text": "os empregadores (empresários) têm maiores ganhos e autonomia, o que atrai os jovens a fugir da subordinação da relação de emprego, a qual desprezam, para constituir empresas, ainda que haja menos empregadores do que empregados."
+      },
+      {
+        "id": "e",
+        "text": "os trabalhadores autônomos com CNPJ, com ganhos superiores aos dos empregados com carteira, são muito numerosos e, logo, a ocupação parece-lhes um caminho para o êxito e a riqueza."
+      }
+    ],
+    "pages": [
+      8
+    ],
+    "statement": "Em março de 2025, postagens em redes sociais digitais discutiram uma tendência verificada entre crianças e adolescentes de utilizar o termo “CLT” como uma ofensa. Na matéria “'Crianças demonizam CLT': carteira assinada vira ofensa entre os jovens”, de Camila Corsini para o UOL, há vários depoimentos em que crianças associam o emprego com CLT a menores rendimentos, à pobreza e ao fracasso profissional, em oposição a ocupações autônomas ou por conta própria, que seriam caminhos para a riqueza. Veja os gráficos com as estimativas da Pesquisa Nacional por Amostra de Domicílios Contínua (PNAD-C) do IBGE para a distribuição da ocupação por categoria e o rendimento médio mensal real habitual das pessoas para o trimestre compreendido entre dezembro de 2024 e fevereiro de 2025 (valores aproximados lidos nos gráficos):\n\nRendimento médio mensal (R$):\n• Empregado do setor privado — com carteira ≈ 3.100; sem carteira ≈ 2.300\n• Trabalhador doméstico — com carteira ≈ 1.800; sem carteira ≈ 1.100\n• Empregador — com CNPJ ≈ 8.900; sem CNPJ ≈ 4.500\n• Trabalhador autônomo — com CNPJ ≈ 4.800; sem CNPJ ≈ 2.000\n\nPessoas ocupadas (milhões):\n• Empregado do setor privado — com carteira ≈ 39; sem carteira ≈ 14\n• Trabalhador doméstico — com carteira ≈ 1,5; sem carteira ≈ 4\n• Empregador — com CNPJ ≈ 3,5; sem CNPJ ≈ 0,8\n• Trabalhador autônomo — com CNPJ ≈ 7; sem CNPJ ≈ 19\nPesquisa Nacional por Amostra de Domicílio Contínua (PNAD-C). IBGE, maio de 2025. Adaptado.\n\nA partir dos dados apresentados no gráfico, é correto afirmar que as associações realizadas por crianças e adolescentes com diferentes formas ocupacionais são fundadas em uma visão de que",
+    "statementComplete": true
+  },
+  {
     "number": 18,
     "topicId": "mat_log_exponenciais",
     "subject": "Matemática",
@@ -50,6 +421,59 @@
       9
     ],
     "statement": "Uma startup de tecnologia está desenvolvendo um novo aplicativo e observa que o número de usuários está crescendo, em milhares, após t semanas do lançamento, de acordo com a função:\nM(t) = 200 × (1,1)ᵗ\n\nCom isso, a equipe da startup quer saber: qual é o período, em semanas, em que o número de usuários ultrapassa 300 mil?\n\nNote e adote:\nlog 3 ≅ 0,4771; log 5 ≅ 0,6990 e log 11 ≅ 1,0414",
+    "statementComplete": true
+  },
+  {
+    "number": 19,
+    "topicId": "his_republica_liberal_atual",
+    "subject": "História",
+    "chapter": "Regime Militar (1964-1985) II",
+    "title": "Zero Cruzeiro, de Cildo Meireles",
+    "concept": "Arte conceitual sob a ditadura; o dinheiro como suporte crítico e o retrato oficial como lugar de memória nacional.",
+    "steps": [
+      "Cédulas costumam trazer heróis e símbolos do Estado; Meireles põe ali um indígena e um interno de manicômio.",
+      "Grupos invisibilizados ocupam o espaço de honra de uma nota que vale “zero”: crítica ao culto oficial e à exclusão.",
+      "A assinatura é do artista, não do Banco Central (A falsa).",
+      "1978 vive inflação alta e o regime não promoveu inclusão desses grupos (B e E falsas).",
+      "D confunde: a nota de valor zero nega o valor de troca. Resposta C."
+    ],
+    "trap": "Ler o “zero” como estabilidade monetária; na obra ele é ironia sobre quem não conta na sociedade.",
+    "retrieval": [
+      "Quem aparece nas faces da nota e por que isso é provocativo?",
+      "Que relação há entre o valor zero e os retratados?"
+    ],
+    "transfer": "Exercício autoral: compare Zero Cruzeiro com as “Inserções em circuitos ideológicos” do mesmo artista (frases em garrafas de Coca-Cola e cédulas) e explique a estratégia comum.",
+    "criteria": [
+      "Usar objetos que circulam em massa como suporte.",
+      "Driblar a censura e atingir o público fora do museu."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a assinatura reproduzida na nota é a do presidente do Banco Central e confere um efeito oficial e realístico à nota Zero Cruzeiro."
+      },
+      {
+        "id": "b",
+        "text": "a indicação do valor nominal sugere a estabilização econômica promovida pelas políticas públicas da época com a diminuição da inflação."
+      },
+      {
+        "id": "c",
+        "text": "a ilustração empregada na composição subverte o culto dos heróis nacionais e introduz a presença de pessoas comuns e anônimas, com frequência desvalorizadas."
+      },
+      {
+        "id": "d",
+        "text": "a obra sugere a indistinção entre a criação artística e a nota de dinheiro, uma vez que ambas têm valor de troca."
+      },
+      {
+        "id": "e",
+        "text": "a imagem exalta a valorização de setores marginalizados que foram beneficiados com as políticas de inclusão social adotadas pelo regime militar."
+      }
+    ],
+    "pages": [
+      9
+    ],
+    "statement": "Observe e analise a obra artística de Cildo Meireles:\n[Imagem: anverso e reverso de uma cédula de “ZERO CRUZEIRO”, impressa como dinheiro do “Banco Central do Brasil”. No anverso, no lugar do retrato de um herói nacional, aparece a fotografia de um indígena; no reverso, a de um interno de hospital psiquiátrico. A assinatura no reverso é do próprio artista.]\nAnverso e reverso de Zero Cruzeiro, de Cildo Meireles. Acervo Fundação Cultural Banco Itaú.\n\nEm Zero Cruzeiro, obra criada em 1978,",
     "statementComplete": true
   },
   {
@@ -156,6 +580,59 @@
       9
     ],
     "statement": "Na documentação jesuítica quinhentista, há constantes referências ao desejo dos índios de entregarem seus filhos para que fossem ensinados pelos padres. Talvez o ensino das crianças indígenas pudesse representar, também, uma possibilidade de estabelecer alianças entre grupos indígenas e padres, revelando outra dimensão da evangelização das crianças como ‘grande meio’ para se converter o gentio. É difícil determinar ao certo qual foi a imagem a respeito dos portugueses construída pelas várias tribos indígenas e, principalmente, dos religiosos da Companhia de Jesus, mas a construção de alianças, a partir das crianças (os índios dando seus filhos), pode ter constituído uma possibilidade frutífera de relacionamento para alguns grupos.\nRafael Chambouleyron. “Jesuítas e as crianças no Brasil quinhentista”. In: Mary del Priore. História das crianças no Brasil. São Paulo: Contexto, 1999.\n\nCom base no excerto, é correto afirmar:",
+    "statementComplete": true
+  },
+  {
+    "number": 22,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Leitura de Textos Cômicos",
+    "title": "Charge sobre o marco temporal",
+    "concept": "Ironia por contraste entre texto e imagem em gêneros humorísticos; contexto: a tese do marco temporal de terras indígenas.",
+    "steps": [
+      "O casal diz que os indígenas estão “perfeitamente integrados à nossa cultura”.",
+      "A imagem mostra a família na calçada, vendendo cestos, em situação precária: a integração é marginalização.",
+      "O choque entre fala e imagem gera ironia e critica o argumento usado para negar demarcações (o marco temporal).",
+      "A atribui ao autor a posição do casal; E inverte a postura do casal; C e B leem soluções ou polarização que a charge não constrói.",
+      "Resposta D: quebra de expectativa a serviço da crítica."
+    ],
+    "trap": "Tomar a fala do personagem como opinião do chargista; na charge, o autor costuma expor o discurso que critica.",
+    "retrieval": [
+      "Que elemento da imagem desmente a fala da mulher?",
+      "O que defende a tese do marco temporal?"
+    ],
+    "transfer": "Exercício autoral: descreva uma charge que usaria o mesmo recurso (fala desmentida pela imagem) para criticar a ideia de que “não há racismo no Brasil”.",
+    "criteria": [
+      "Fala de personagem afirmando igualdade.",
+      "Imagem que mostre uma situação de desigualdade, gerando ironia."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A representação imagética dos indígenas como miseráveis é hiperbólica, reforçando o sentido da pergunta “Por que mais terras?”, o que evidencia uma atitude autoral favorável ao marco temporal."
+      },
+      {
+        "id": "b",
+        "text": "A distribuição espacial do casal e da família indígena personifica a polarização política, o que fica demarcado pela oposição “nós” contra “eles” na fala da mulher."
+      },
+      {
+        "id": "c",
+        "text": "A expressão “mais terras”, em contraste com o espaço ocupado pela família indígena, busca mostrar que já há soluções alternativas para a delimitação de terras para os povos originários no tecido urbano."
+      },
+      {
+        "id": "d",
+        "text": "Ocorre uma quebra de expectativa entre a representação da família indígena e a expressão “perfeitamente integrados”, o que colabora para o teor crítico da charge em relação ao marco temporal."
+      },
+      {
+        "id": "e",
+        "text": "A postura do casal, em relação aos indígenas, sinaliza empatia e mostra o seu interesse na derrubada do marco temporal, que tem levado indígenas à pobreza nas metrópoles brasileiras."
+      }
+    ],
+    "pages": [
+      10
+    ],
+    "statement": "[Charge de Benett, intitulada “MARCO TEMPORAL”: à esquerda, um casal de pessoas brancas, bem-vestidas; o homem pergunta “POR QUE MAIS TERRAS?” e a mulher responde “ELES JÁ ESTÃO PERFEITAMENTE INTEGRADOS À NOSSA CULTURA!”. À direita, uma família indígena empobrecida, sentada no chão de uma calçada da cidade, vende cestos de palha.]\nDisponível em https://cartum.folha.uol.com.br/charges/.\n\nEm termos da interação entre os recursos verbais e imagéticos na charge, é correto afirmar:",
     "statementComplete": true
   },
   {
@@ -318,6 +795,218 @@
     "statementComplete": true
   },
   {
+    "number": 27,
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "chapter": "Geomorfologia Mundial",
+    "title": "Energia geotérmica no Rift Valley do Quênia",
+    "concept": "Tectônica de placas: limite divergente, afinamento da crosta e calor interno próximo da superfície.",
+    "steps": [
+      "O potencial muito alto se alinha ao Rift Africano Oriental, onde está o Quênia.",
+      "Ali a placa Africana se separa (Núbia e Somali): é um limite divergente.",
+      "O estiramento afina a crosta, forma o vale em rift e aproxima o magma da superfície.",
+      "Calor raso, vulcanismo e água aquecida tornam viável a geração geotérmica.",
+      "Processos externos (B, D) não produzem calor; transcorrente e convergente (A, E) não explicam o rift. Resposta C."
+    ],
+    "trap": "Associar energia geotérmica a montanhas (convergência); no Quênia o calor vem da abertura da crosta.",
+    "retrieval": [
+      "Que placas se separam no Rift Africano Oriental?",
+      "Por que a crosta fina favorece a energia geotérmica?"
+    ],
+    "transfer": "Exercício autoral: explique por que a Islândia também tem alto potencial geotérmico, comparando com o Quênia.",
+    "criteria": [
+      "Citar a dorsal mesoatlântica, limite divergente.",
+      "Relacionar com vulcanismo e calor próximo à superfície."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "Movimento transcorrente; morros testemunhos."
+      },
+      {
+        "id": "b",
+        "text": "Intemperismo químico; formação de relevos de cuesta."
+      },
+      {
+        "id": "c",
+        "text": "Movimento divergente de placas; rift valley."
+      },
+      {
+        "id": "d",
+        "text": "Processos erosivos contínuos; formação de cânions."
+      },
+      {
+        "id": "e",
+        "text": "Movimento convergente; cadeias montanhosas."
+      }
+    ],
+    "pages": [
+      12
+    ],
+    "statement": "A África Oriental utiliza recursos geotérmicos para gerar cerca de 630 MW por ano. O Quênia é o líder africano em usinas geotérmicas em operação, totalizando mais de 40% da produção total de eletricidade do país.\n\n[Mapa do potencial geotérmico da África: as áreas de potencial muito alto e alto formam uma faixa contínua no leste do continente, do Golfo de Suez e do Mar Vermelho, passando pelo Djibuti, pelo Rift Etíope Principal e pelo Rift Queniano, até os rifts dos lagos Alberto, Kivu, Tanzânia e Malawi; manchas menores aparecem no extremo norte da África, na Libéria–Costa do Marfim, na Zâmbia, em Botsuana–África do Sul e na Namíbia. O restante do continente tem potencial baixo ou muito baixo.]\nDisponível em https://doi.org/10.1186/s40517-022-00219-1. Adaptado.\n\nAssinale a alternativa correta sobre o processo geológico e sua consequência no terreno que explica a exploração de energia geotérmica no Quênia, respectivamente:",
+    "statementComplete": true
+  },
+  {
+    "number": 28,
+    "topicId": "qui_termoquimica",
+    "subject": "Química",
+    "chapter": "Termoquímica I",
+    "title": "Pegada de carbono das imagens geradas por IA",
+    "concept": "Estequiometria com entalpia de combustão: energia → mol de C → mol de CO₂ → massa.",
+    "steps": [
+      "Energia diária: 30·10⁶ imagens × 131 kJ = 3,93·10⁹ kJ.",
+      "Cada mol de carvão queimado libera 393 kJ: n = 3,93·10⁹ / 393 = 1,0·10⁷ mol de C.",
+      "C + O₂ → CO₂: 1 mol de C forma 1 mol de CO₂, logo 1,0·10⁷ mol de CO₂.",
+      "Massa: 1,0·10⁷ × 44 g = 4,4·10⁸ g = 440 toneladas.",
+      "Resposta E; conferir a conversão 10⁶ g = 1 t."
+    ],
+    "trap": "Usar a massa do carbono (12 g/mol → 120 t) em vez da do CO₂ (44 g/mol), ou esquecer de converter gramas em toneladas.",
+    "retrieval": [
+      "Qual a relação em mol entre C queimado e CO₂ formado?",
+      "Quantos gramas há em uma tonelada?"
+    ],
+    "transfer": "Exercício autoral: se a mesma energia viesse do metano (ΔH = −890 kJ/mol), quantas toneladas de CO₂ seriam emitidas?",
+    "criteria": [
+      "n(CH₄) = 3,93·10⁹/890 ≈ 4,4·10⁶ mol, igual ao n de CO₂.",
+      "Massa ≈ 4,4·10⁶ × 44 g ≈ 194 t, menos da metade do carvão."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,2."
+      },
+      {
+        "id": "b",
+        "text": "10."
+      },
+      {
+        "id": "c",
+        "text": "150."
+      },
+      {
+        "id": "d",
+        "text": "280."
+      },
+      {
+        "id": "e",
+        "text": "440."
+      }
+    ],
+    "pages": [
+      13
+    ],
+    "statement": "[Imagem: “A formatura da capivara”, uma capivara de beca e capelo em um estádio, gerada por IA.]\nEssa imagem, chamada de “A formatura da capivara”, foi gerada por Inteligência Artificial (IA). Em 2024 estimou-se que 30 milhões de imagens foram geradas diariamente no mundo utilizando modelos de IA a um gasto energético médio de 131 kJ por imagem. O uso intenso dessa tecnologia tem levado à reativação de usinas termoelétricas e à construção de novas usinas nucleares para suportar os servidores que realizam o processamento de IA. Considerando que toda a energia para gerar essas imagens fosse proveniente da combustão completa de carvão, a pegada de carbono diária medida em toneladas de CO₂ formado, resultante da produção dessas imagens, seria de\n\nNote e adote:\nMassa molar (g/mol): C = 12; O = 16\nEntalpia de combustão completa do carvão: ΔH = −393 kJ/mol",
+    "statementComplete": true
+  },
+  {
+    "number": 30,
+    "topicId": "mat_geometria_espacial",
+    "subject": "Matemática",
+    "chapter": "Sólidos de Revolução",
+    "title": "Altura mínima de uma lata cilíndrica",
+    "concept": "Volume do cilindro V = πr²h e relação inversa entre altura e área da base para volume fixo.",
+    "steps": [
+      "350 mL = 350 cm³; V = πr²h fixo, então h = 350/(πr²).",
+      "A altura é menor quando a base é maior: diâmetro máximo de 8 cm, r = 4 cm.",
+      "h = 350/(16π) ≈ 350/50,3 ≈ 6,96 cm.",
+      "Arredondando, cerca de 7 cm: alternativa B.",
+      "Conferir: com d = 5 cm (r = 2,5) a altura seria ≈ 17,8 cm, a maior possível (alternativa D, que responde a outra pergunta)."
+    ],
+    "trap": "Usar o diâmetro como raio (r = 8) ou escolher o diâmetro mínimo, que dá a maior altura.",
+    "retrieval": [
+      "Por que o maior diâmetro dá a menor altura?",
+      "Quantos cm³ há em 1 mL?"
+    ],
+    "transfer": "Exercício autoral: para a lata de 7 cm de altura, calcule a área total de alumínio (topo, fundo e lateral).",
+    "criteria": [
+      "Área = 2πr² + 2πrh com r = 4 e h ≈ 6,96.",
+      "≈ 100,5 + 174,9 ≈ 275 cm²."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "5"
+      },
+      {
+        "id": "b",
+        "text": "7"
+      },
+      {
+        "id": "c",
+        "text": "13"
+      },
+      {
+        "id": "d",
+        "text": "18"
+      },
+      {
+        "id": "e",
+        "text": "28"
+      }
+    ],
+    "pages": [
+      13
+    ],
+    "statement": "O Brasil é o líder mundial em reciclagem de alumínio, atingindo números próximos a 99% de latas recicladas no ano de 2021. Essas latas, já utilizadas para refrigerantes, cervejas, energéticos, agora começam a trazer também água mineral em seu interior.\nConsidere que uma empresa deseja envasar 350 mL de água em uma lata de alumínio de formato cilíndrico e que, por razões práticas como manuseio e custo do material, o diâmetro da base dessa lata deve ter entre 5 cm e 8 cm.\nQual será, aproximadamente, em centímetros, a menor altura possível da lata?",
+    "statementComplete": true
+  },
+  {
+    "number": 33,
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "chapter": "Desafios Ambientais do Século XXI",
+    "title": "Impacto ambiental da indústria têxtil",
+    "concept": "Fast fashion: produção barata, consumo acelerado, descarte e pressão sobre água, solo e clima.",
+    "steps": [
+      "Os textos dão: produção +60% em 15 anos, custo −36%, consumo maior, 44 kg descartados por domicílio, uso intenso de agrotóxicos e água.",
+      "A cadeia completa — produzir mais, barato, consumir e descartar — é o mecanismo do impacto.",
+      "B reúne esses dados e conclui pela necessidade de gerir a cadeia e os resíduos.",
+      "A diz que o Brasil tem boa gestão, contra o texto (“não tem gestão”); C diz que o algodão ocupa a maior parte da área (são 2,5%).",
+      "D inventa queda do algodão; E trata água e agrotóxicos como solução. Resposta B."
+    ],
+    "trap": "Confundir 2,5% da área com “maior parte” ou ler o uso de água como benefício.",
+    "retrieval": [
+      "Que dados ligam preço baixo a mais consumo?",
+      "Por que o algodão pesa tanto no uso de agrotóxicos?"
+    ],
+    "transfer": "Exercício autoral: proponha duas medidas para reduzir o impacto da moda rápida, uma na produção e outra no descarte, e justifique cada uma.",
+    "criteria": [
+      "Medida de produção (ex.: algodão de baixo impacto, reuso de água) com justificativa.",
+      "Medida de descarte (ex.: logística reversa, reciclagem têxtil) com justificativa."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "O crescimento da indústria têxtil brasileira tem sido acompanhado por avanços significativos na gestão ambiental, como no tratamento de resíduos, uma vez que o descarte médio de 44 quilos de roupas e calçados por família favorece as iniciativas de gestão de resíduos e a redução das emissões de gases de efeito estufa."
+      },
+      {
+        "id": "b",
+        "text": "Nos últimos anos, a indústria têxtil teve um aumento significativo na produção de roupas, que resultou na diminuição no custo das peças em 36% e proporcionou o aumento do consumo no setor de vestuário em todo o mundo, tornando essencial a discussão de políticas de gestão da cadeia produtiva e de resíduos."
+      },
+      {
+        "id": "c",
+        "text": "A produção de algodão ocupa a maior parte de área cultivável do mundo e cresceu 60% nos últimos anos. Especialmente no Brasil, esse aumento vem gerando empregos no setor têxtil, tanto no campo quanto na cidade, impulsionando a capacidade de consumo da população."
+      },
+      {
+        "id": "d",
+        "text": "Nas últimas décadas, o setor têxtil brasileiro enfrentou desafios com a redução da produção de algodão, o que limitou o crescimento da indústria e restringiu o acesso da população ao consumo de roupas e calçados. Mesmo assim, o consumo está estimado em 44 quilos por família ao ano."
+      },
+      {
+        "id": "e",
+        "text": "A produção do setor têxtil, tanto no Brasil quanto no mundo, vem reduzindo o impacto ambiental devido ao uso de bilhões de litros de água no cultivo do algodão, o que dilui os herbicidas e inseticidas, consequentemente reduzindo a poluição atmosférica, do solo e dos recursos hídricos."
+      }
+    ],
+    "pages": [
+      14
+    ],
+    "statement": "Uma pesquisa realizada na Universidade de São Paulo sobre a sustentabilidade do setor têxtil destaca que “cerca de 4 milhões de resíduos têxteis são descartados todos os anos nos domicílios brasileiros, e o Brasil não tem gestão de resíduos. No ano passado, cada domicílio do País descartou cerca de 44 quilos de roupas e calçados. A estimativa é que o setor têxtil seja responsável por 2% a 8% das emissões de gases de efeito estufa em todo o mundo.”\nDisponível em https://jornal.usp.br/. Adaptado.\n\nOutro dado que corrobora com a pesquisa é o crescimento em 60% da produção de roupas nos últimos 15 anos, com custo barateado em 36%, significando um aumento considerável do consumo deste setor, no mundo. Além disso, a produção de algodão, apesar de ocupar 2,5% das áreas cultivadas no mundo, utiliza 25% dos inseticidas e 10% dos herbicidas. E, também, utiliza aproximadamente 11 bilhões de litros de água, para a lavagem e tingimento dos tecidos. Assim, segundo a Organização Mundial de Saúde, a cadeia produtiva da indústria têxtil é um setor econômico dos mais poluentes.\nGéopolitique: enjeux internationaux, 2022. Adaptado.\n\nCom base nos textos, qual alternativa explica o impacto ambiental do consumismo no setor da indústria têxtil?",
+    "statementComplete": true
+  },
+  {
     "number": 34,
     "topicId": "geo_fisica_brasil",
     "subject": "Geografia",
@@ -368,6 +1057,589 @@
       15
     ],
     "statement": "As cores das águas dos rios são resultado de transformações físico-químicas, indicando fatores como os sólidos (material inorgânico) em suspensão (SIS) e o material orgânico dissolvido (MOD). A classificação científica das águas amazônicas mais utilizada é a de Harald Sioli (1950), que identificou três tipos: Brancas (alta concentração de SIS), Pretas (alta concentração de MOD) e Claras (baixas concentrações de SIS e MOD). Pesquisas mais recentes que analisam dados hidroquímicos têm indicado uma composição química mais variada nas águas amazônicas, dividindo os rios da região também em dois tipos intermediários: A (subtipo das águas claras) e B (subtipo que está entre as águas brancas e pretas).\n[Mapa: Principais rios da Região Hidrográfica Amazônica, que ocupa 45% do território nacional. Águas Brancas: Amazonas, Solimões, Madeira, Purus, Japurá, Javari, Parauapebas e outros rios que descem do oeste e do sul. Águas Pretas: Negro e seus afluentes. Águas Claras: Branco, Trombetas, Jari, Tapajós e Xingu. Intermediárias tipo A: afluentes do Branco, do Trombetas, do Tapajós e do Xingu, como o Iriri, no norte e no leste da bacia. Intermediárias tipo B: o Içá e afluentes da margem sul do Solimões, entre o Javari e o Purus.]\nAtlas da Amazônia Brasileira, 2025. Adaptado.\n\nA partir das informações do mapa e do texto, assinale a alternativa correta.",
+    "statementComplete": true
+  },
+  {
+    "number": 35,
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "chapter": "Relevo Brasileiro",
+    "title": "Monitoramento de corridas de detritos na Serra do Mar",
+    "concept": "Corridas de detritos: deflagração pela chuva nas encostas e escoamento concentrado pelos canais até o fundo de vale.",
+    "steps": [
+      "A corrida começa nas encostas altas com chuva intensa e desce pelos canais, ganhando volume e velocidade até o fundo do vale.",
+      "No fundo do vale estão rodovia, dutos e casas: é lá que sonar de volume e sensor de impacto medem nível e força antes de atingir os alvos.",
+      "B associa corretamente o fundo de vale à medição de volume e velocidade para prevenção.",
+      "A e D põem sensores do fundo de vale “no setor mais elevado”; C põe o pluviômetro embaixo e o diz suficiente (ele está no alto e não basta sozinho).",
+      "E atribui a cabo e geofones a composição dos detritos, quando registram passagem e vibração. Resposta B."
+    ],
+    "trap": "Ler o mapa sem conferir a posição de cada símbolo: as alternativas trocam “elevado” e “fundo de vale”.",
+    "retrieval": [
+      "Onde a corrida de detritos ganha mais volume?",
+      "Por que o pluviômetro fica na parte alta?"
+    ],
+    "transfer": "Exercício autoral: explique por que ocupar margens de córregos na base de serras aumenta o risco de desastre em chuvas de verão.",
+    "criteria": [
+      "Concentração do fluxo e dos detritos nos canais e fundos de vale.",
+      "Exposição de moradias na trajetória final e pouco tempo de alerta."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "O sensor de impacto instalado próximo à estrada e no setor mais elevado do terreno permite detectar a passagem de folhas, troncos e matacões."
+      },
+      {
+        "id": "b",
+        "text": "O monitoramento na área de fundo de vale é necessário para medição do volume e velocidade da corrida de detritos, com o intuito da prevenção de riscos."
+      },
+      {
+        "id": "c",
+        "text": "O pluviômetro instalado na porção menos elevada do terreno é suficiente para emissão de alerta de risco para a população residente no local."
+      },
+      {
+        "id": "d",
+        "text": "O sonar de volume instalado próximo às residências e na parte elevada do terreno ajuda a detectar a velocidade com a qual os detritos atingem os objetos."
+      },
+      {
+        "id": "e",
+        "text": "A correlação entre cabo sensor e geofones instalados nas porções média e inferior da drenagem permite detectar a composição da corrida de detritos."
+      }
+    ],
+    "pages": [
+      15
+    ],
+    "statement": "Em regiões montanhosas e com clima tropical, é comum a ocorrência de movimentações de massa associados a volumes elevados de chuva. Pelos seus efeitos destrutivos, principalmente em áreas ocupadas de forma irregular, tornam-se foco de estudos de identificação, caracterização, monitoramento e prevenção. Observe a seguir um exemplo de sistema de monitoramento:\n\n[Mapa: Sistema de monitoramento de corrida de detritos — vertente íngreme cortada por canais de drenagem que convergem para o fundo do vale, onde passam a Rodovia Anchieta (SP-150) e uma rede de dutos e há residências. O pluviômetro fica no alto da vertente; geofones e cabos sensores, ao longo dos canais na porção média; sonares de volume e o sensor de impacto, no fundo do vale, perto da rodovia e das residências; semáforos de aviso de fechamento da via ficam na rodovia.]\n\nSensores — Função\nPluviômetro — Medir as precipitações\nGeofones — Medir as vibrações no solo\nSonar de volume — Medir o nível dos rios\nCabo sensor — Registrar a passagem de detritos\nSensor de impacto — Registrar a força da corrida de detritos\nCorridas de Detritos no Brasil, FEBRAGEO. 2022. Adaptado.\n\nSobre o motivo da localização dos sensores, assinale a alternativa correta:",
+    "statementComplete": true
+  },
+  {
+    "number": 36,
+    "topicId": "mat_trigonometria",
+    "subject": "Matemática",
+    "chapter": "Trigonometria no Triângulo Retângulo",
+    "title": "Desnível entre dois pontos com estação total",
+    "concept": "Tangente em triângulos retângulos com cateto horizontal conhecido; níveis relativos a uma referência comum.",
+    "steps": [
+      "Use como referência a linha horizontal que sai do instrumento.",
+      "Até A a visada desce 40·tan 7° = 40 × 0,122 = 4,88 m: o solo em A está 4,88 m abaixo da referência.",
+      "Até B a visada sobe 40·tan 5° = 3,48 m até o ponto lido na mira, que está 3,60 m acima do solo: o solo em B está 3,60 − 3,48 = 0,12 m abaixo da referência.",
+      "Desnível: 4,88 − 0,12 = 4,76 m ≈ 4,80 m, alternativa E.",
+      "A altura do instrumento (1,6 m) não entra, porque os dois níveis são medidos a partir da mesma linha horizontal."
+    ],
+    "trap": "Somar 1,6 m ou somar as duas tangentes sem descontar a leitura de 3,60 m na mira de B.",
+    "retrieval": [
+      "Por que a altura do instrumento se cancela?",
+      "O que representa a leitura h_B?"
+    ],
+    "transfer": "Exercício autoral: refaça o cálculo supondo que a visada para A descesse 7° mas atingisse a mira a 1,20 m do solo.",
+    "criteria": [
+      "Solo de A: 4,88 + 1,20 = 6,08 m abaixo da referência.",
+      "Desnível: 6,08 − 0,12 = 5,96 m."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "1,60"
+      },
+      {
+        "id": "b",
+        "text": "2,80"
+      },
+      {
+        "id": "c",
+        "text": "3,16"
+      },
+      {
+        "id": "d",
+        "text": "3,96"
+      },
+      {
+        "id": "e",
+        "text": "4,80"
+      }
+    ],
+    "pages": [
+      16
+    ],
+    "statement": "Para realizar o cálculo da diferença de altitude (altura) entre dois pontos A e B, localizados no terreno, um técnico utilizou uma Estação Total (ET), equipamento usado para medir a diferença entre níveis de pontos distintos. Ele posicionou o equipamento, que tem 1,6 m de altura, em um ponto M, equidistante na horizontal dos pontos A e B, a 40 m de cada um, nos quais estão os prismas de leitura (miras), conforme a figura a seguir:\n[Figura: o instrumento em M, sobre o terreno; de sua altura parte uma linha horizontal tracejada. Para a esquerda, uma visada desce com ângulo α_A até o pé da mira em A, ponto mais baixo do terreno. Para a direita, uma visada sobe com ângulo α_B até a mira em B, a uma altura h_B acima do solo em B. Imagem sem escala.]\n\nAdmitindo-se que o ângulo de inclinação descendente, α_A, é 7° e o ângulo de inclinação ascendente, α_B, é 5° e que a leitura no prisma, h_B, no ponto B foi de 3,60 m, determine a diferença de altitude (altura), em metros, entre os pontos A e B.\n\nNote e adote:\ntan(5°) ≅ 0,087 e tan(7°) ≅ 0,122",
+    "statementComplete": true
+  },
+  {
+    "number": 37,
+    "topicId": "mat_geometria_analitica",
+    "subject": "Matemática",
+    "chapter": "Lugar Geométrico e Equação da Circunferência",
+    "title": "Circunferência tangente ao lado de um quadrado",
+    "concept": "Equação reduzida da circunferência; tangência implica raio perpendicular ao lado no ponto de contato.",
+    "steps": [
+      "Lado 8: C = (8,8), D = (0,8); centro do quadrado O = (4,4).",
+      "P, ponto médio de BC, é (8,4).",
+      "O raio no ponto de tangência é perpendicular a BC (vertical), então o centro do círculo está na reta y = 4, à direita de P.",
+      "Distância 10 do centro ao ponto (4,4): centro (14,4); raio = 14 − 8 = 6.",
+      "(x − 14)² + (y − 4)² = 36, alternativa A."
+    ],
+    "trap": "Tomar 10 como raio (alternativa B) ou usar o vértice B em vez do ponto médio P.",
+    "retrieval": [
+      "Por que o centro do círculo está na reta y = 4?",
+      "Como o raio se obtém da distância 10?"
+    ],
+    "transfer": "Exercício autoral: escreva a equação do prédio tangente ao lado CD, nas mesmas condições.",
+    "criteria": [
+      "Ponto de tangência (4,8) e centro (4,14).",
+      "(x − 4)² + (y − 14)² = 36."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "(x − 14)² + (y − 4)² = 36"
+      },
+      {
+        "id": "b",
+        "text": "(x − 18)² + (y − 4)² = 100"
+      },
+      {
+        "id": "c",
+        "text": "(x − 8)² + (y − 24)² = 36"
+      },
+      {
+        "id": "d",
+        "text": "x² + y² = 36"
+      },
+      {
+        "id": "e",
+        "text": "(x − 4)² + (y − 24)² = 100"
+      }
+    ],
+    "pages": [
+      16
+    ],
+    "statement": "Engenheiros estavam mapeando um terreno para construção de um empreendimento com quatro prédios em formato cilíndrico distribuídos em torno de uma praça com o formato quadrado. Para a construção dos prédios, os engenheiros demarcaram os vértices da praça nos pontos A = (0,0), B = (8,0), C e D, em sistema de coordenadas cartesianas onde cada unidade corresponde a um metro.\nSabendo-se que a borda da seção circular de cada prédio tangencia cada lado do quadrado no seu ponto médio, qual deve ser a equação da circunferência do prédio que tem uma distância de 10 m do seu centro até o centro do quadrado e que passa pelo ponto de tangência P, conforme a figura?\n[Figura: quadrado ABCD com A(0,0) e B(8,0) embaixo e D e C em cima; quatro círculos iguais, um em cada lado, tangentes externamente ao quadrado nos pontos médios dos lados; P é o ponto médio do lado BC, à direita. Imagem sem escala.]",
+    "statementComplete": true
+  },
+  {
+    "number": 39,
+    "topicId": "his_primeira_republica_vargas",
+    "subject": "História",
+    "chapter": "A Era Vargas: o Governo Constitucional (1934-1937)",
+    "title": "Parques infantis de Mário de Andrade em São Paulo",
+    "concept": "Política cultural e higienista dos anos 1930: o Departamento de Cultura de São Paulo e os parques infantis.",
+    "steps": [
+      "O texto descreve parques com instrutoras, dentistas e educadoras sanitárias, onde as crianças aprendem “cooperativismo” e “consciência do homem social”.",
+      "Há saúde preventiva (dentistas, educação sanitária) e brincadeira orientada (instrutoras): lazer organizado e pedagógico.",
+      "B junta exatamente esses dois elementos.",
+      "Não se trata de educação profissional (C), de caridade religiosa (D), de programa escolar formal (E) nem de reflorestamento (A).",
+      "Resposta B: o parque infantil disciplina o tempo livre das crianças operárias."
+    ],
+    "trap": "Escolher E por causa do clima nacionalista da Era Vargas; o excerto fala de lazer, saúde e socialização, não de currículo escolar.",
+    "retrieval": [
+      "Que profissionais o texto põe dentro dos parques?",
+      "O que significa “disciplinar o lazer”?"
+    ],
+    "transfer": "Exercício autoral: relacione os parques infantis às políticas sanitárias da Primeira República, como a vacinação obrigatória, apontando uma semelhança e uma diferença.",
+    "criteria": [
+      "Semelhança: intervenção do Estado sobre corpos e hábitos populares.",
+      "Diferença: adesão por educação e lazer, não por imposição policial."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "substituir o ambiente degradado e nocivo dos cortiços e vilas operárias por espaços públicos marcados pela flora da Mata Atlântica."
+      },
+      {
+        "id": "b",
+        "text": "disciplinar o lazer das crianças com a introdução de noções de saúde preventiva e de atividades racionais e pedagógicas."
+      },
+      {
+        "id": "c",
+        "text": "produzir formas de ajustamento social que afastassem os jovens do ócio e dos vícios, por meio da educação profissionalizante."
+      },
+      {
+        "id": "d",
+        "text": "promover valores cristãos através da evangelização e do assistencialismo baseado na caridade e na recreação."
+      },
+      {
+        "id": "e",
+        "text": "organizar um novo programa escolar voltado para as crianças proletárias, adotando uma pedagogia pautada no nacionalismo e civismo."
+      }
+    ],
+    "pages": [
+      17
+    ],
+    "statement": "Os grotões transformaram-se em jardins cortados a meio pelas avenidas e pela sombra dos viadutos não há mais sapo. Nos jardins encontrareis recintos fechados com instrutoras, dentistas, educadoras sanitárias dentro. São os parques infantis, onde as crianças proletárias se socializam aprendendo nos brinquedos o cooperativismo e a consciência do homem social.\nMário de Andrade. “Dia de São Paulo”. Revista do Arquivo Municipal. São Paulo: Departamento de Cultura, 1936, nº 19.\n\nO excerto relata alterações na paisagem urbana paulistana com a implantação de novos equipamentos que visavam",
+    "statementComplete": true
+  },
+  {
+    "number": 40,
+    "topicId": "soc_formacao_ciencia",
+    "subject": "Sociologia",
+    "chapter": "O Contexto Histórico do Surgimento da Sociologia",
+    "title": "Simmel e a cidade em Caminho de Pedras",
+    "concept": "Simmel: caráter blasé, reserva e liberdade individual na metrópole; leitura intertextual entre sociologia e romance.",
+    "steps": [
+      "Simmel: a reserva urbana nos afasta dos outros e, ao mesmo tempo, garante liberdade pessoal.",
+      "Rachel de Queiroz: à noite cada um “corta as amarras” e vai para sua “pequenina ilha”, uma vida isolada e particular.",
+      "Isolamento + mundo próprio = a reserva que liberta, exatamente o par de Simmel: alternativa B.",
+      "A e D veem contradição onde há convergência; C nega o aspecto psíquico que Simmel descreve.",
+      "E atribui o embotamento ao lar, quando Simmel o situa na vida pública, no contato fugaz com estranhos."
+    ],
+    "trap": "Tratar a palavra “sorridentes” como prova de calor humano; é a postura profissional atrás do balcão, que some ao fim do expediente.",
+    "retrieval": [
+      "O que é o caráter blasé, segundo Simmel?",
+      "Que expressão do romance corresponde à “liberdade pessoal”?"
+    ],
+    "transfer": "Exercício autoral: dê um exemplo da vida urbana atual (transporte, elevador, redes sociais) em que a reserva descrita por Simmel aparece e explique a liberdade que ela oferece.",
+    "criteria": [
+      "Exemplo concreto de indiferença ou distância entre estranhos.",
+      "Indicar a contrapartida de liberdade ou anonimato."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "As observações de Roberto contrariam a análise de Simmel. O “sorriso” dos empregados contradiz o diagnóstico de “embotamento” e “reserva” para com os outros."
+      },
+      {
+        "id": "b",
+        "text": "A vida “isolada” e “particular” descrita por Roberto, com que todos “cortavam as amarras”, é uma expressão da mesma reserva que Simmel argumenta produzir alguma liberdade."
+      },
+      {
+        "id": "c",
+        "text": "Ainda que haja semelhanças nas leituras, o modo “abstrato” com que os empregados passavam seus dias não é um aspecto psíquico das grandes cidades, mas da necessária desconfiança em atividades comerciais."
+      },
+      {
+        "id": "d",
+        "text": "A vida doméstica e particular sobre a qual Roberto reflete contradiz o diagnóstico de “intensificação da vida nervosa”, sugerindo uma rotina de impressões repetidas e imutáveis."
+      },
+      {
+        "id": "e",
+        "text": "O retrato da cidade em Caminho de Pedras confirma a análise de Simmel ao afirmar que a individualidade e o “embotamento frente à distinção das coisas” são expressos no espaço privado dos lares dos empregados."
+      }
+    ],
+    "pages": [
+      18
+    ],
+    "statement": "Considere os dois fragmentos a seguir:\n\nO fundamento psicológico sobre o qual se eleva o tipo das individualidades da cidade grande é a intensificação da vida nervosa, que resulta da mudança rápida e ininterrupta de impressões [...]. Talvez não haja nenhum fenômeno tão característico da cidade grande como o caráter blasé. [...] A essência do caráter blasé é o embotamento frente à distinção das coisas [...]. Em parte por conta dessa situação psicológica, em parte em virtude do direito à desconfiança que temos perante os elementos da vida na cidade grande, que passam por nós em um contato fugaz, somos coagidos a uma reserva, em virtude da qual mal conhecemos os vizinhos que temos por muitos anos [...]. Ao mesmo tempo, essa reserva garante ao indivíduo uma espécie [...] de liberdade pessoal.\nSimmel, Georg. (2005). As grandes cidades e a vida do espírito. Mana, Trad. Leopoldo Waizbort. Adaptado.\n\nAs luzes da cidade se acendiam, as cortinas de aço das portas desciam com barulho e os caixeiros, os empregados que passavam o dia sorridentes ou abstratos, por trás dos balcões [...], se transformavam em homens misteriosos, individuais, que metiam um paletó, tinham uma casa, uma rua e iam comer o seu jantar, dormir o seu sono, trancar a sua porta. [...] Todos ali tinham a sua vida isolada, sua vida particular.\nE, naquela hora, cortavam as amarras, cada um procurando o seu mundo pessoal, a sua pequenina ilha.\nRachel de Queiroz. Caminho de Pedras. Adaptado.\n\nNo primeiro trecho, publicado originalmente em 1903, o sociólogo Georg Simmel procurou condensar as características fundamentais da vida psíquica nas grandes cidades. Já no segundo, com que Rachel de Queiroz inicia o capítulo 7 de Caminho de Pedras, vemos como o protagonista Roberto percebe sua cidade a bordo de um bonde. Lendo-os em conjunto, é possível afirmar:",
+    "statementComplete": true
+  },
+  {
+    "number": 42,
+    "topicId": "soc_cultura_identidade",
+    "subject": "Sociologia",
+    "chapter": "Multiculturalismo e Relativismo Cultural",
+    "title": "O circo como arte em transformação",
+    "concept": "Cultura como processo dinâmico: hibridismo e transformação contínua das linguagens artísticas.",
+    "steps": [
+      "O texto descreve o circo como mistura de saltimbancos, ciganos, Commedia dell’Arte, pantomima, acrobacia e animais.",
+      "O título fala em “arte em transformação contínua”: o circo absorve elementos de cada época.",
+      "A expressa essa apropriação contínua e o vínculo com a sociedade em que se apresenta.",
+      "B diz que o local é “similar e perene”, contra a ideia de transformação; C e D supõem ruptura total; E nega a diversão no circo tradicional.",
+      "Resposta A."
+    ],
+    "trap": "Escolher D ou C por associar “circo novo” a ruptura; o texto enfatiza continuidade com mudança, não substituição.",
+    "retrieval": [
+      "Que linguagens o circo do século XVIII misturava?",
+      "Que novidades de organização o texto aponta?"
+    ],
+    "transfer": "Exercício autoral: cite um elemento tecnológico ou cultural atual incorporado a espetáculos circenses e explique como ele confirma a tese do texto.",
+    "criteria": [
+      "Exemplo plausível (projeção, música eletrônica, dança urbana etc.).",
+      "Relacionar com apropriação contínua de elementos da época."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "bem como outras expressões artísticas, interage e se apropria, continuamente, de elementos estéticos, sociais, culturais, políticos e tecnológicos da época e da sociedade em que se apresenta, revelando, assim, sua contemporaneidade."
+      },
+      {
+        "id": "b",
+        "text": "é constituído pelas interações que estabelece com os variados elementos que o compõem, e o local de sua manifestação é similar e perene às realizações espetaculares dos séculos anteriores."
+      },
+      {
+        "id": "c",
+        "text": "presente no Brasil a partir do início do século XX promove uma ruptura do circo tradicional e início do circo novo que não se constitui com elementos antes explorados."
+      },
+      {
+        "id": "d",
+        "text": "moderno descaracteriza o modelo encontrado nos séculos XVII e XVIII e faz emergir uma nova expressão artística que ainda há de se configurar por um novo nome, diferente de circo."
+      },
+      {
+        "id": "e",
+        "text": "tradicional não tinha como principal característica divertir os espectadores, haja vista a veiculação de artistas com corpos ditos grotescos nos espetáculos; nos dias atuais reconhece-se a mudança de objetivo que traz no circo a clara representação de entretenimento e diversão a partir de corpos virtuosos."
+      }
+    ],
+    "pages": [
+      19
+    ],
+    "statement": "Os espetáculos circenses organizados ao final do século XVIII uniam o cômico e o dramático, como historicamente já faziam outras formas de espetáculo, por meio da combinação da atuação das famílias de saltimbancos, ciganos, atores da Commedia dell’Arte, e mesclavam a pantomima e o palhaço com a acrobacia, os equilíbrios, as exibições equestres e a doma de animais em um mesmo espaço. Desde aquele momento, fica visível a emergência não somente de novos modelos de espetáculos, mas também novas estruturas de organização e produção desses espetáculos, caracterizadas pela delimitação do espaço físico das apresentações, cobrança compulsória de entradas e alternância entre exibições de equilibristas, acrobatas, artistas equestres, comediantes, pantomimas e representações diversas, ou seja, um espetáculo pautado na íntima mistura de expressões e artistas originários de diferentes espaços e formações.\nLOPES, Daniel de Carvalho; SILVA, Ermínia. Circo: percursos de uma arte em transformação contínua. Cadernos do GIPE-CIT, v. 1, 2020. Adaptado.\n\nNo contexto histórico, o circo",
+    "statementComplete": true
+  },
+  {
+    "number": 43,
+    "topicId": "fil_niilismo_existencialismo",
+    "subject": "Filosofia",
+    "chapter": "A Escola de Frankfurt e a Indústria Cultural",
+    "title": "Crítica às exposições imersivas de Van Gogh",
+    "concept": "Indústria cultural e espetacularização: acesso ampliado versus perda de experiência estética reflexiva.",
+    "steps": [
+      "O texto reconhece o grande público, mas traz críticas: espetacularização, patrocínio, redes sociais.",
+      "Leirner diz que as obras viram decoração de “show de cabaré”; até um cartão-postal seria mais fiel.",
+      "A pondera os dois lados: acesso amplo, mas diluição do conteúdo crítico e histórico.",
+      "B e C defendem a tecnologia sem ressalva; E declara o museu obsoleto; D distorce a crítica.",
+      "A pergunta pede a análise “mais fundamentada” no texto: A."
+    ],
+    "trap": "Escolher C porque soa positiva e moderna; o enunciado exige incorporar as críticas apresentadas.",
+    "retrieval": [
+      "Que exemplo Leirner usa para dizer que a reprodução simples pode ser mais fiel?",
+      "Quais implicações a crítica aponta nessas exposições?"
+    ],
+    "transfer": "Exercício autoral: escreva dois argumentos, um a favor e um contra, sobre levar uma turma a uma exposição imersiva em vez de a um museu.",
+    "criteria": [
+      "Argumento a favor ligado a acesso, engajamento ou porta de entrada.",
+      "Argumento contra ligado a espetacularização ou perda de contexto da obra."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Embora promovam amplo acesso à arte, exposições imersivas tendem a diluir o conteúdo crítico e histórico das obras em favor de uma experiência sensorial voltada ao entretenimento, o que pode comprometer o potencial formativo e reflexivo da fruição estética."
+      },
+      {
+        "id": "b",
+        "text": "A tecnologia empregada nas exposições imersivas permite que o público se aproxime mais intensamente do processo criativo dos artistas, oferecendo uma reconstrução autêntica e historicamente precisa de suas intenções originais."
+      },
+      {
+        "id": "c",
+        "text": "Ao integrar projeções em alta definição, trilhas sonoras e ambientes cenográficos, as chamadas exposições imersivas potencializam a percepção visual das obras, demonstrando que a experiência estética pode ser intensificada por meios artificiais sem prejuízo de seu valor cultural."
+      },
+      {
+        "id": "d",
+        "text": "A crítica especializada, conforme mencionado, desconsidera o valor pedagógico das exposições imersivas, pois, ao recorrerem a recursos de entretenimento, essas mostras democratizam o acesso à arte e ampliam o repertório visual do público geral."
+      },
+      {
+        "id": "e",
+        "text": "O êxito de exposições imersivas no circuito internacional comprova a crescente obsolescência do modelo tradicional de museu e sinaliza uma necessária ruptura com a ideia de contemplação silenciosa e introspectiva das obras."
+      }
+    ],
+    "pages": [
+      19
+    ],
+    "statement": "[Imagem: sala de exposição imersiva com projeções de “A Noite Estrelada”, de Van Gogh, nas paredes e no chão; visitantes caminham entre as projeções.]\nImagem ilustrativa da exposição imersiva de Van Gogh.\n\nNos últimos anos, exposições imersivas têm atraído um público amplo ao proporcionar experiências sensoriais e visuais baseadas em obras de artistas consagrados, muitas delas com trilha sonora, narração de cartas e projeções em altíssima definição. Contudo, parte da crítica especializada tem problematizado essa tendência de oferecer vivências multissensoriais que buscam envolver o visitante por completo. As críticas apontam implicações relacionadas à natureza da experiência estética, à espetacularização da arte, ao patrocínio corporativo e ao sucesso de público mediado pelas redes sociais. A crítica de arte Sheila Leirner, por exemplo, comenta:\n\nFica como se O Jardim das Delícias, A Tentação de Santo Antônio (telas de Hieronymus Bosch) e outras preciosidades como as frutas de Giuseppe Arcimboldo ou as festas campestres de Brueghel fossem ilustrações ou decorações para a grandiloquência artificial e sensacionalista de um show de cabaré. Certo, pode ser muito bonito, mas será que estas maravilhas pictóricas (em si) precisam de “efeitos especiais” para que cheguemos a elas? Até mesmo uma pequena reprodução em cartão postal pode ser mais fiel à nossa percepção...\nDisponível em https://sheilaleirnerblog.wordpress.com/.\n\nCom base nas informações e discussões apresentadas, assinale a alternativa que expressa a análise crítica mais fundamentada sobre o fenômeno das exposições imersivas:",
+    "statementComplete": true
+  },
+  {
+    "number": 44,
+    "topicId": "fil_niilismo_existencialismo",
+    "subject": "Filosofia",
+    "chapter": "O Existencialismo de Sartre",
+    "title": "Merleau-Ponty e a cor em Cézanne",
+    "concept": "Fenomenologia da percepção: a pintura como restituição do mundo percebido, não cópia geométrica.",
+    "steps": [
+      "O texto diz que o desenho “deve resultar da cor” para que o mundo seja “restituído em sua espessura”.",
+      "As deformações de perspectiva deixam de ser visíveis: não se trata de explicitá-las (B) nem de fazer aparecer perspectivas (E).",
+      "Também não há sobreposição ao mundo (A) nem ausência de técnica (D): a cor é a mediação.",
+      "C repete as duas ideias centrais: espessura do mundo e ênfase na cor.",
+      "Na tela, as manchas de cor constroem os volumes da planície e da montanha. Resposta C."
+    ],
+    "trap": "E parece próxima, mas diz que a cor serve às perspectivas; para Merleau-Ponty, as perspectivas se dissolvem na visão global.",
+    "retrieval": [
+      "Por que, segundo o texto, o desenho deve resultar da cor?",
+      "O que acontece com as deformações de perspectiva no conjunto do quadro?"
+    ],
+    "transfer": "Exercício autoral: compare a pintura de Cézanne com uma fotografia da mesma montanha e explique, nos termos de Merleau-Ponty, o que a tela mostra que a foto não mostra.",
+    "criteria": [
+      "A foto aplica perspectiva geométrica de um ponto fixo.",
+      "A tela restitui a percepção vivida, com volumes construídos pela cor."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "encontrar uma forma de representação pictórica que se sobreponha ao mundo visível."
+      },
+      {
+        "id": "b",
+        "text": "retratar a realidade, explicitando suas deformações de perspectivas."
+      },
+      {
+        "id": "c",
+        "text": "fazer aparecer a espessura do mundo, especialmente pela ênfase à cor."
+      },
+      {
+        "id": "d",
+        "text": "deixar o mundo se revelar, sem o recurso técnico a qualquer mediação."
+      },
+      {
+        "id": "e",
+        "text": "destacar a cor sobre o desenho, para fazer aparecer as perspectivas."
+      }
+    ],
+    "pages": [
+      20
+    ],
+    "statement": "[Pintura: Paul Cézanne, A montanha de Sainte-Victoire, 1904 — a montanha azulada ao fundo e, à frente, uma planície construída por manchas de verde, ocre e laranja, sem contornos nítidos.]\nPaul Cézanne. A montanha de Sainte-Victoire, 1904.\n\nAssim também o gênio de Cézanne consiste em fazer com que as deformações de perspectiva, pela disposição de conjunto do quadro, deixem de ser visíveis por si mesmas na visão global e contribuam apenas, como ocorre na visão natural, para dar impressão de uma ordem nascente, de um objeto que surge a se aglomerar sob o olhar. (...) O desenho deve então resultar da cor, se se quer que o mundo seja restituído em sua espessura, pois é uma massa sem lacunas, um organismo de cores, através das quais a fuga da perspectiva, os contornos, as retas, as curvas instalam-se como linhas de força, pois é vibrando que a órbita do espaço se constitui.\nMerleau-Ponty. A dúvida de Cézanne.\n\nMerleau-Ponty, filósofo francês do século XX, dedicou um espaço importante em sua filosofia à reflexão sobre a pintura e, em particular, à obra de Paul Cézanne.\nCom base na proposição do filósofo e na observação da tela do artista, é correto afirmar que cabe à expressão por meio da pintura",
+    "statementComplete": true
+  },
+  {
+    "number": 45,
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "chapter": "Vida Urbana e Renascimento Cultural",
+    "title": "Pico della Mirandola e a dignidade do homem",
+    "concept": "Humanismo renascentista: dignidade humana, livre-arbítrio e antropocentrismo sem rompimento com Deus.",
+    "steps": [
+      "Deus (o “Artífice”) cria o homem sem lugar nem função fixos e lhe dá o livre-arbítrio.",
+      "O homem “há de predeterminar” sua compleição pela própria vontade: autonomia para construir a si mesmo.",
+      "E traduz essa ideia.",
+      "D erra porque Deus está presente no texto; o antropocentrismo renascentista não elimina o divino.",
+      "A é Weber sobre o protestantismo (posterior); B e C não aparecem no excerto. Resposta E."
+    ],
+    "trap": "Escolher D por associar Renascimento a antropocentrismo e esquecer que o próprio texto é uma fala de Deus.",
+    "retrieval": [
+      "Que diferença o texto aponta entre o homem e as outras criaturas?",
+      "Por que o antropocentrismo renascentista não significa ateísmo?"
+    ],
+    "transfer": "Exercício autoral: relacione a ideia de Pico com a pintura renascentista de figuras humanas idealizadas, dando um exemplo.",
+    "criteria": [
+      "Valorização do corpo e da capacidade humana.",
+      "Exemplo pertinente (Davi, Homem Vitruviano, Escola de Atenas etc.)."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "a ética protestante e o espírito do capitalismo."
+      },
+      {
+        "id": "b",
+        "text": "a perspectiva da evolução e do etnocentrismo."
+      },
+      {
+        "id": "c",
+        "text": "a imortalidade do ser humano como pilar da construção da vida terrena."
+      },
+      {
+        "id": "d",
+        "text": "o antropocentrismo pela ausência da referência divina."
+      },
+      {
+        "id": "e",
+        "text": "a autonomia do ser humano como construtor de sua própria trajetória de vida."
+      }
+    ],
+    "pages": [
+      20
+    ],
+    "statement": "Decretou então o ótimo Artífice que àquele ao qual nada de próprio pudera dar tivesse como privativo tudo quanto fora partilhado por cada um dos demais. Assim, pois, tomou o homem, essa obra de tipo indefinido, e, tendo-o colocado no centro do universo, falou-lhe nestes termos: ‘A ti, ó Adão, não temos dado nem uma sede determinada, nem um aspecto peculiar, nem uma função singular precisamente para que o lugar, a imagem e as tarefas que reclamas para ti, tudo isso tenhas e realizes, mas pelo mérito de tua vontade e livre consentimento. As outras criaturas já foram prefixadas em sua constituição pelas leis por nós estatuídas. Tu, porém, não estás contido por amarra nenhuma. Antes, pela decisão do arbítrio, em cujas mãos te depositei, hás de predeterminar a tua compleição pessoal. Eu te coloquei no centro do mundo, a fim de poderes inspecionar, daí, de todos os lados, da maneira mais cômoda, tudo que existe.\nPico della Mirandola. Discurso sobre a dignidade do homem. In: PICO, Giovanni, Conde de Mirândola e de Concórdia. A dignidade do homem. 2ª. ed. Campo Grande: Solivros/Uniderp, 1999. Adaptado.\n\nElaborado em 1486, na região da atual Itália, o texto do humanista Pico della Mirandola apresenta algumas características do movimento renascentista, dentre as quais",
+    "statementComplete": true
+  },
+  {
+    "number": 46,
+    "topicId": "por_lit_contemporanea",
+    "subject": "Português",
+    "chapter": "Literatura Lusófona Contemporânea",
+    "title": "Cristo Cachorro e O Cristo cigano",
+    "concept": "Barroco: dramatismo, corpo sofredor e fusão de humano e divino; leitura de O Cristo cigano, obra da lista de leituras obrigatórias da Fuvest.",
+    "steps": [
+      "O Cristo Cachorro é barroco: detalhe anatômico extremo e dor humana, com o Cristo humano e divino unido pela morte.",
+      "Em O Cristo cigano, o escultor procura o modelo para seu Cristo e o encontra na morte de um cigano; a faca e o amor movem a narrativa.",
+      "C liga corretamente a escultura à visão barroca (humano perfeito unido ao divino) e o livro a traços modernos, com objetos e afetos conduzindo a ação.",
+      "A, D e E inventam antecipação modernista no barroco ou vitória do humano sobre o divino; B nega a ligação com o divino, central no barroco.",
+      "Resposta C."
+    ],
+    "trap": "Ler o realismo anatômico como afastamento de Deus; no barroco, o sofrimento do corpo é caminho para o sagrado.",
+    "retrieval": [
+      "Que traços do barroco a escultura apresenta?",
+      "Qual o papel da faca em O Cristo cigano?"
+    ],
+    "transfer": "Exercício autoral: explique em cinco linhas como o barroco ibérico usava a escultura para mobilizar a fé dos fiéis.",
+    "criteria": [
+      "Dramaticidade e realismo do sofrimento.",
+      "Função persuasiva/religiosa no contexto da Contrarreforma."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "A escultura barroca Cristo Cachorro prenuncia os traços modernistas do livro de Sophia de Mello Breyner Andresen, uma vez que a faca, metáfora central do poema, pensada a partir de um objeto do cotidiano, está indiretamente presente na escultura como o instrumento cortante utilizado para sua criação."
+      },
+      {
+        "id": "b",
+        "text": "Tanto a escultura Cristo Cachorro, enquanto obra barroca, quanto o livro de Sophia de Mello Breyner Andresen, obra modernista, revelam, na precisão dos detalhes anatômicos e na personalização do objeto faca, respectivamente, o desaparecimento da visão da arte enquanto ligação com o divino e a concepção da morte como fim absoluto."
+      },
+      {
+        "id": "c",
+        "text": "Na precisão dos detalhes anatômicos e na concepção do Cristo como um ser humano perfeito e unido ao divino pela morte, a escultura Cristo Cachorro revela a visão barroca do mundo, enquanto o livro de Sophia de Mello Breyner Andresen revela seu traço moderno na despersonalização do humano, ao propor a faca e o amor como condutores da ação."
+      },
+      {
+        "id": "d",
+        "text": "A elaboração metonímica do corpo do Cristo no Cristo Cachorro, atenta aos detalhes, revela uma antecipação de traços modernistas nessa escultura barroca, enquanto a comparação entre amor e morte no livro de Sophia de Mello Breyner Andresen revela os traços tardiamente românticos de seu estilo poético."
+      },
+      {
+        "id": "e",
+        "text": "A precisão de detalhes anatômicos e o equilíbrio de traços alcançados pelo artista na elaboração da escultura Cristo Cachorro revelam a visão barroca da arte como vitória do humano sobre o divino, enquanto o livro de Sophia de Mello Breyner Andresen, ao ocultar a imagem do cigano e resumi-la a uma voz em agonia, revela a concepção modernista de um mundo sem Deus."
+      }
+    ],
+    "pages": [
+      21
+    ],
+    "statement": "[Escultura: crucifixo em madeira policromada, de Francisco Ruiz Gijón, com o corpo de Cristo agonizante, músculos e costelas tensos, cabeça voltada para o alto.]\nFrancisco Ruiz Gijón (1683-1720), Santíssimo Cristo da Expiação, popularmente conhecido como Cristo Cachorro. Escultura em madeira, 1682 (detalhe).\n\nA partir da comparação entre a escultura Cristo Cachorro, de Francisco Ruiz Gijón, e o livro O Cristo cigano, de Sophia de Mello Breyner Andresen, inspirado por ela, depreende-se:",
+    "statementComplete": true
+  },
+  {
+    "number": 47,
+    "topicId": "fil_niilismo_existencialismo",
+    "subject": "Filosofia",
+    "chapter": "O Existencialismo de Sartre",
+    "title": "Sophia, Heidegger e a fuga diante da morte",
+    "concept": "Heidegger: o ser-para-a-morte e a “esquivança encobridora” da existência impessoal (“a gente”).",
+    "steps": [
+      "No poema, o eu-lírico vê os caixões mas “vira o rosto”: chama a morte de pesadelo, “coisa inventada” que o vento desmente.",
+      "Heidegger descreve a “esquivança encobridora” e a “constante tranquilização” diante da morte.",
+      "Os dois textos mostram o mesmo gesto: desviar-se e tranquilizar-se, escondendo a própria mortalidade.",
+      "D nomeia isso como fuga acalmadora que encobre o sentido existencial.",
+      "A é o oposto (enfrentamento); E exagera, pois a morte é percebida e depois negada. Resposta D."
+    ],
+    "trap": "Confundir com a postura existencialista de enfrentar o absurdo (A), que é o que Heidegger considera autêntico, não o que ele descreve aqui.",
+    "retrieval": [
+      "Que verso do poema mostra o desvio do olhar?",
+      "O que Heidegger chama de “constante tranquilização”?"
+    ],
+    "transfer": "Exercício autoral: dê um exemplo atual (linguagem, rituais, hospitais) de como a sociedade evita falar da morte e explique-o com o conceito de Heidegger.",
+    "criteria": [
+      "Exemplo concreto de evitação.",
+      "Uso correto de “encobrimento” ou “tranquilização” do impessoal."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "O enfrentamento heroico do absurdo existencial contido na morte."
+      },
+      {
+        "id": "b",
+        "text": "O respeito silencioso às tradições culturais voltadas ao morrer."
+      },
+      {
+        "id": "c",
+        "text": "A empatia antecipadora com os mortos, participando de sua dissolução existencial."
+      },
+      {
+        "id": "d",
+        "text": "A fuga acalmadora, que encobre o sentido existencial da mortalidade."
+      },
+      {
+        "id": "e",
+        "text": "A perda da sensibilidade, de modo a nem mesmo poder perceber a ocorrência da morte."
+      }
+    ],
+    "pages": [
+      21
+    ],
+    "statement": "iii. Busca\n\nPelos campos fora\nCaminhava sempre\nComo se buscasse\nUma presença ausente\n\n“Onde estás tu, morte?\nNão posso te ver:\nNeste dia de Maio\nCom rosas e trigo\nÉ como se tu não\nVivesses comigo\n[...]\nÉ verdade que passas\nPela cidade às vezes\nNos caixões de chumbo:\n\nMas viro o meu rosto\nPois não te compreendo\nÉs um pesadelo\nUma coisa inventada\nQue o vento desmente\nCom suas mãos frescas\nE a luz logo apaga”\n[...]\nSophia de Mello Breyner Andresen. O Cristo cigano.\n\nÉ tão tenaz o desvio que a esquivança encobridora ante a morte exerce sobre a cotidianidade que, no ser-um-com-o-outro, seus ‘próximos’ ainda se empenham com frequência precisamente junto ao ‘moribundo’ para o persuadir de que escapa da morte e retorna em seguida à tranquila cotidianidade do mundo de suas ocupações. Tal ‘preocupação-com-o-outro’ pensa ‘consolar’ dessa maneira o ‘moribundo’. Ela quer devolvê-lo à existência, ajudando-o a encobrir ainda mais completamente sua possibilidade de ser mais própria e irremetente. A gente se ocupa dessa maneira de uma constante tranquilização sobre a morte. Mas, no fundo, ela vale tanto para o ‘moribundo’ quanto para ‘os que consolam’. E mesmo no caso do deixar de viver, a publicidade ainda não deve ser perturbada, nem inquietada pelo acontecimento na sua ocupada despreocupação. Pois não raro se vê na morte dos outros uma inconveniência social, quando não mesmo uma falta de tato, cuja publicidade deve ser poupada.\nMartin Heidegger. Ser e Tempo, §51.\n\nA escritora Sophia de Mello Breyner Andresen e o filósofo Martin Heidegger descrevem, por meio de recursos expositivos bem diferentes, uma mesma atitude geral comumente assumida por uma pessoa ante o desvelamento de sua própria mortalidade a partir da constatação da morte ou do adoecimento mortal de uma outra pessoa. Qual alternativa melhor descreve essa atitude?",
     "statementComplete": true
   },
   {
@@ -424,6 +1696,112 @@
     "statementComplete": true
   },
   {
+    "number": 52,
+    "topicId": "geo_geopolitica_regional",
+    "subject": "Geografia",
+    "chapter": "Geopolítica e Geoeconomia da Ásia",
+    "title": "Nagorno-Karabakh e o corredor turco-azerbaijano",
+    "concept": "Geopolítica do Cáucaso: hidrocarbonetos do Cáspio, dutos para a Europa e o corredor ligando o Azerbaijão a Naquichevão e à Turquia.",
+    "steps": [
+      "O Azerbaijão exporta gás e petróleo do Cáspio para a Turquia e a UE por dutos que contornam a Armênia.",
+      "Retomar Nagorno-Karabakh e controlar o sul da Armênia abre o projeto de corredor até Naquichevão e a Turquia, citado no texto e no mapa.",
+      "A reúne esses motivos: território estratégico para hidrocarbonetos e corredor de transporte ao sul.",
+      "B inverte alianças (o Azerbaijão não defende a Armênia); C atribui à Rússia uma rota que não é dela; D inventa neutralidade turca, aliada do Azerbaijão.",
+      "E diz que o corredor já escoa toda a produção, mas ele é projeto. Resposta A."
+    ],
+    "trap": "Tomar o corredor como já existente (E); o texto e a legenda o tratam como projeto.",
+    "retrieval": [
+      "Por onde passam hoje os dutos que levam o petróleo do Cáspio à Turquia?",
+      "Por que o Irã se opõe ao corredor?"
+    ],
+    "transfer": "Exercício autoral: explique por que a Rússia, tradicional protetora da Armênia, teve atuação limitada em 2023.",
+    "criteria": [
+      "Citar a guerra na Ucrânia e a falta de recursos militares disponíveis.",
+      "Mencionar a aproximação econômica da Rússia com Turquia e Azerbaijão."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "O território armênio invadido pelo Azerbaijão é estratégico para o comércio de gás e petróleo com a Turquia e a União Europeia (UE) e há um projeto estratégico de transporte, no sul do território invadido, que permitirá uma rota de petróleo, gás e fluxo comercial."
+      },
+      {
+        "id": "b",
+        "text": "O território no sul da Armênia é de interesse do Irã devido às reservas de hidrocarbonetos, causando vários conflitos com o Azerbaijão, que, ao defender a Armênia, cria enclaves de proteção territorial, resguardando as rotas comerciais até Ierevan, a capital da Armênia."
+      },
+      {
+        "id": "c",
+        "text": "As bases militares de vários países estão concentradas no território armênio, que é disputado pela Turquia, Estados Unidos da América e Rússia, sendo este último interessado na rota Nagorno-Karabakh, por ser estratégica ao escoamento de sua produção de gás e petróleo para a UE."
+      },
+      {
+        "id": "d",
+        "text": "O conflito entre Armênia e Azerbaijão força a Turquia a ter neutralidade e, ao mesmo tempo, permite o funcionamento dos gasodutos (TANAP) e oleodutos (BTC), a partir do controle que ela tem das rotas, dos pontos de passagem fechados e das bases militares."
+      },
+      {
+        "id": "e",
+        "text": "No conflito entre Armênia e Azerbaijão, o corredor de transporte estratégico ao sul do Azerbaijão, associando a ferrovia, escoa toda a sua produção de petróleo, gás e fluxo comercial, conectando o território de Nagorno-Karabakh à Turquia e à área ocupada pela Armênia."
+      }
+    ],
+    "pages": [
+      24
+    ],
+    "statement": "Em 19 de setembro de 2023, o Azerbaijão lançou uma ofensiva contra a autoproclamada República de Nagorno-Karabakh (RAHK ou Artsakh), um território povoado por armênios sob bloqueio desde dezembro de 2022. Em 28 de setembro de 2023, a RAHK anunciou sua dissolução, que entrou em vigor a partir de 1º de janeiro de 2024, após mais de três décadas de existência não reconhecida. Em agosto de 2025, o governo norte americano propôs que a rota de transporte estratégica turco-azerbaijana seja controlada pelos EUA, por 99 anos. Essa proposta ainda está em curso, devido à oposição do Irã.\n\n[Mapa: Nagorno-Karabakh — Reconfiguração geopolítica do Cáucaso (2023). Do Mar Cáspio (Baku) partem para oeste o gasoduto do Cáucaso do Sul e o oleoduto Baku–Tbilisi–Ceyhan, que passam pela Geórgia rumo à Turquia (gasoduto TANAP), contornando a Armênia. Nagorno-Karabakh fica dentro do Azerbaijão, ligado à Armênia pelo corredor de Lachin. O exclave azerbaijano de Naquichevão fica entre a Armênia e o Irã. Um projeto de corredor de transporte turco-azerbaijano corre pelo extremo sul da Armênia, ao longo da fronteira com o Irã, ligando o Azerbaijão a Naquichevão e à Turquia; há pontos de passagem fechados nessa faixa. Bases militares: russas na Armênia e na Geórgia, turca e azerbaijanas no Azerbaijão, armênias na Armênia e uma americana na Geórgia.]\nReconfiguração geopolítica do Cáucaso (2023). Atlas Géopolitique Mondial, 2025. Adaptado.\n\nCom base no texto, na legenda do mapa e em seus conhecimentos, assinale a alternativa que explica os motivos da ofensiva do Azerbaijão contra os armênios.",
+    "statementComplete": true
+  },
+  {
+    "number": 53,
+    "topicId": "geo_geopolitica_regional",
+    "subject": "Geografia",
+    "chapter": "Geopolítica e Geoeconomia da América Latina",
+    "title": "Venezuela, Guiana e a disputa do Essequibo",
+    "concept": "Princípio da integridade territorial e conflitos fronteiriços na América do Sul; o caso Essequibo.",
+    "steps": [
+      "O mapa destaca o Essequibo, área administrada pela Guiana e reivindicada pela Venezuela.",
+      "Em 2023 a Venezuela aprovou em referendo a criação de um estado venezuelano no Essequibo: anexação unilateral, vedada pela Carta da ONU.",
+      "A fronteira foi fixada por arbitragem internacional em favor da Guiana (o laudo de Paris é de 1899; a alternativa traz 1904), e a Venezuela a contesta: só E descreve uma anexação contra uma decisão que dá a área à Guiana.",
+      "A envolve o Brasil sem base; B atribui papel ao Suriname; C troca a região (Orinoco é venezuelano); D inventa acordo no Mercosul.",
+      "Resposta E."
+    ],
+    "trap": "Escolher C pelo nome Orinoco; o rio corre dentro da Venezuela, não na área disputada.",
+    "retrieval": [
+      "Que país administra hoje o Essequibo?",
+      "Por que a anexação contraria a Carta da ONU?"
+    ],
+    "transfer": "Exercício autoral: explique por que a descoberta de petróleo na costa da Guiana, a partir de 2015, intensificou a disputa.",
+    "criteria": [
+      "Relacionar o petróleo offshore à zona marítima projetada do Essequibo.",
+      "Citar o interesse econômico venezuelano e o apoio internacional à Guiana."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "à invasão das tropas venezuelanas à área que pertence a fronteira norte do Brasil, contrariando o Acordo de Genebra."
+      },
+      {
+        "id": "b",
+        "text": "à retomada de áreas da região de Essequibo, pelo Suriname, que foram invadidas pelo exército venezuelano na crescente tensão com a Guiana."
+      },
+      {
+        "id": "c",
+        "text": "à anexação da região do rio Orinoco, rico em reservas minerais, pela Venezuela, conforme preconiza o Acordo de Genebra."
+      },
+      {
+        "id": "d",
+        "text": "aos novos limites definidos para o território da Venezuela em acordos com o Mercosul em conformidade com o Protocolo Porto de Espanha."
+      },
+      {
+        "id": "e",
+        "text": "à anexação da região de Essequibo pela Venezuela, contrariando a Arbitragem de 1904 que determinou que a área deveria ficar sob jurisdição da Guiana."
+      }
+    ],
+    "pages": [
+      25
+    ],
+    "statement": "A anexação, definida como a incorporação unilateral de território de outro Estado, é proibida pela Carta das Nações Unidas e pelo direito internacional geral, que enfatizam a proibição do uso da força e o respeito à integridade territorial dos Estados (Carta da ONU, 1945).\n\n[Mapa: Venezuela, Guiana, Suriname, Guiana Francesa, Colômbia e Brasil. A região chamada Guiana Essequiba — a porção oeste da Guiana, entre a fronteira venezuelana e o rio Essequibo — aparece hachurada, contornada em vermelho, como área reivindicada pela Venezuela.]\nDisponível em https://www.parlamentomercosur.org. Adaptado.\n\nPartindo da carta da ONU e do mapa, é possível indicar que se refere",
+    "statementComplete": true
+  },
+  {
     "number": 55,
     "topicId": "mat_teoria_numeros",
     "subject": "Matemática",
@@ -474,6 +1852,59 @@
       25
     ],
     "statement": "Existem números curiosos na matemática. Os números perfeitos são alguns deles. Um número n (para n ∈ ℕ*) é perfeito se, e somente se, for igual à soma de seus divisores positivos (excluindo o próprio). Relacionando números perfeitos e números primos, Euclides escreveu uma proposição em seu famoso livro “Elementos”: se 2ⁿ − 1 é um número primo, então 2ⁿ⁻¹(2ⁿ − 1) é um número perfeito.\nConsiderando o que foi exposto, é correto afirmar:",
+    "statementComplete": true
+  },
+  {
+    "number": 58,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "James Webb e a tensão de Hubble",
+    "concept": "Compreensão de texto em inglês: localizar a ideia associada a uma expectativa (expected… to bring the answer into focus).",
+    "steps": [
+      "Localize “expected”: “Everyone expected the sharp vision of the James Webb Space Telescope to bring the answer into focus.”",
+      "“The answer” responde à pergunta anterior: as medições da expansão discordam (“disagree”).",
+      "“Sharp vision” = observações mais precisas; “bring into focus” = esclarecer.",
+      "A reúne os três elementos.",
+      "B, C, D e E não aparecem como expectativa no texto. Resposta A."
+    ],
+    "trap": "Escolher C porque o texto termina com resultados de Freedman; a expectativa inicial era resolver a divergência, não favorecer um grupo.",
+    "retrieval": [
+      "O que significa “bring the answer into focus”?",
+      "Qual é a “Hubble tension”?"
+    ],
+    "transfer": "Exercício autoral: traduza “homing in on possible sources of error” e explique o que ela diz sobre o resultado do Webb.",
+    "criteria": [
+      "Tradução próxima de “concentrando-se em possíveis fontes de erro”.",
+      "Concluir que o Webb não resolveu a divergência, mas ajudou a localizar suas causas."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "esclarecer as divergências nas medições da constante de Hubble por meio de observações mais precisas."
+      },
+      {
+        "id": "b",
+        "text": "substituir os métodos tradicionais por novas equações que descrevem a expansão do universo."
+      },
+      {
+        "id": "c",
+        "text": "comprovar a superioridade das estimativas obtidas pela equipe de Freedman."
+      },
+      {
+        "id": "d",
+        "text": "medir a distância entre galáxias utilizando parâmetros inéditos."
+      },
+      {
+        "id": "e",
+        "text": "determinar se o universo tem como característica crescer de modo infinito."
+      }
+    ],
+    "pages": [
+      26
+    ],
+    "statement": "Texto para as questões 58 e 59.\nNearly a century ago, Edwin Hubble discovered that the universe is getting larger. Modern measurements of how fast it is expanding disagree, however, suggesting that our understanding of the laws of physics might be off. Everyone expected the sharp vision of the James Webb Space Telescope to bring the answer into focus. But a long-awaited analysis of the telescope’s observations released late Monday evening once again gleans conflicting expansion rates from different types of data, while homing in on possible sources of error at the heart of the conflict.\nTwo rival teams have led the effort to measure the cosmic expansion rate, which is known as the Hubble constant, or H₀. One of these teams, led by Adam Riess of Johns Hopkins University, has consistently measured H₀ to be about 8 percent higher than the theoretical prediction for how fast space should be expanding, based on the cosmos’s known ingredients and governing equations. This discrepancy, known as the Hubble tension, suggests that the theoretical model of the cosmos might be missing something—some extra ingredient or effect that speeds up cosmic expansion.\nRiess and his team released their latest measurement of H₀ based on Webb data this spring, getting a value that agrees with their earlier estimates.\nBut for years a rival team led by Wendy Freedman of the University of Chicago has urged caution, arguing that cleaner measurements were needed. Her team’s own measurements of H₀ have invariably landed closer than Riess’ to the theoretical prediction, implying that the Hubble tension may not be real.\nSince the Webb telescope started taking data in 2022, the astrophysics community has awaited Freedman’s multipronged analysis using the telescope’s observations of three types of stars. Now, the results are in: Two types of stars yield H₀ estimates that align with the theoretical prediction, while the third—the same type of star Riess uses—matches his team’s higher H₀ value.\nDisponível em https://wired.com/. 08 Sep 2024. Adaptado.\n\nCom base no texto, a principal expectativa em relação ao telescópio James Webb estava associada a",
     "statementComplete": true
   },
   {
@@ -686,6 +2117,324 @@
       29
     ],
     "statement": "A espectrometria de massas, utilizada para a identificação das proteínas no estudo apresentado no texto, é uma técnica que permite determinar com precisão a massa molecular de moléculas carregadas. A determinação da massa exata da molécula é feita a partir do conhecimento da sua carga e da razão massa/carga (m/z), parâmetro que influencia no movimento das espécies, permitindo sua determinação. Caso a carga das moléculas seja unitária, a razão m/z é numericamente igual à massa da espécie a ser identificada. Caso a carga seja 2, a razão m/z detectada é metade da massa da molécula.\nA imagem a seguir representa, na forma de um gráfico, o resultado de uma análise por espectrometria de massas de uma amostra pura contendo apenas uma espécie intacta com fórmula molecular [C₄₄H₆₉NO₁₂Ca]²⁺ e massa exata, considerando os isótopos mais abundantes, de 843,444 g/mol, detectada como m/z 421,722.\n[Espectro — abundância (%) × m/z: picos em 421,722 (100%), 422,223 (cerca de 47%), 422,725 (cerca de 13%), 423,226 (cerca de 3%), 423,720 (cerca de 2%) e 424,221 (cerca de 1%).]\n\nA presença de outros sinais além do sinal de m/z 421,722, mesmo em uma amostra pura não contendo nenhuma outra espécie além do [C₄₄H₆₉NO₁₂Ca]²⁺, deve-se",
+    "statementComplete": true
+  },
+  {
+    "number": 71,
+    "topicId": "fis_calorimetria",
+    "subject": "Física",
+    "chapter": "Calor Sensível e Calor Latente",
+    "title": "Calor recebido por clara e gema em quatro cozimentos",
+    "concept": "Calor sensível Q = m·c·ΔT, somado para duas partes com calores específicos diferentes.",
+    "steps": [
+      "Massas: 25 g de clara e 25 g de gema; Q = 25·3,8·ΔTclara + 25·3,1·ΔTgema = 95·ΔTclara + 77,5·ΔTgema.",
+      "(1) ΔT = 80 e 80: 7600 + 6200 = 13 800 J. (2) 77 e 62: 7315 + 4805 = 12 120 J.",
+      "(3) 45 e 45: 4275 + 3487,5 = 7762,5 J. (4) 65 e 47: 6175 + 3642,5 = 9817,5 J.",
+      "Ordem crescente: Q3 < Q4 < Q2 < Q1, alternativa B.",
+      "Conferir intuitivamente: (1) é o mais quente nas duas partes e (3) o mais frio."
+    ],
+    "trap": "Somar temperaturas finais em vez de variações, ou esquecer que clara e gema têm calores específicos diferentes.",
+    "retrieval": [
+      "Por que se usa a variação de temperatura e não a temperatura final?",
+      "Qual parte do ovo exige mais calor por grau?"
+    ],
+    "transfer": "Exercício autoral: quanto calor a mais o método (4) exige em relação ao (3)? Que fração dessa diferença vem da clara?",
+    "criteria": [
+      "Diferença: 9817,5 − 7762,5 = 2055 J.",
+      "Clara: 95·20 = 1900 J, cerca de 92% da diferença."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Q4<Q1<Q3<Q2"
+      },
+      {
+        "id": "b",
+        "text": "Q3<Q4<Q2<Q1"
+      },
+      {
+        "id": "c",
+        "text": "Q1<Q3<Q2<Q4"
+      },
+      {
+        "id": "d",
+        "text": "Q3<Q2<Q4<Q1"
+      },
+      {
+        "id": "e",
+        "text": "Q4<Q3<Q1<Q2"
+      }
+    ],
+    "pages": [
+      30
+    ],
+    "statement": "Para muitas pessoas, um ovo perfeitamente cozido tem uma gema cremosa e uma clara firme. A gema atinge uma textura cremosa a 65 °C, mas a clara fica totalmente firme a 85 °C.\nMétodos comuns de cozimento frequentemente resultam em um ovo com clara e gema duras (1), um ovo com clara dura e gema cremosa (2) ou um ovo com clara e gema cremosas (3).\nPesquisadores da Universidade de Nápoles, entretanto, perceberam que alternar o cozimento dos ovos em água a 100 °C e 30 °C a cada dois minutos, totalizando 32 minutos (4), faz com que as duas regiões do ovo (clara e gema) respondam de formas diferentes às temperaturas alternadas. Aplicando o método estudado (4), a temperatura da clara oscila antes de finalmente se estabilizar em torno de 85 °C, enquanto a temperatura da gema sobe lentamente até atingir 67 °C, quando chega à consistência desejada.\nA figura a seguir compara o ovo cozido para cada um dos métodos descritos:\n• (1) clara 100 °C; gema 100 °C\n• (2) clara 97 °C; gema 82 °C\n• (3) clara 65 °C; gema 65 °C\n• (4) clara 85 °C; gema 67 °C\nDi Lorenzo, E., Romano, F., Ciriaco, L. et al. “Periodic cooking of eggs”. Commun Eng 4, 5 (2025). Adaptado.\n\nSuponha que, em cada método de cozimento, cada parte do ovo (clara e gema) seja aquecida de uma temperatura inicial de 20 ºC até as respectivas temperaturas finais apresentadas na figura. A quantidade de calor total recebida Qn pelo conjunto gema + clara para o método de cozimento (n = 1, 2, 3, 4), em ordem crescente, é:\n\nNote e adote:\nCalor específico a pressão constante: Clara: 3,8 J/g.K; Gema: 3,1 J/g.K.\nMassa do ovo = 50 g.\nAssuma que a massa da clara seja igual à da gema.",
+    "statementComplete": true
+  },
+  {
+    "number": 72,
+    "topicId": "fis_energia",
+    "subject": "Física",
+    "chapter": "Sistemas Conservativos e Sistemas Não Conservativos",
+    "title": "Altura de despejo no café coado",
+    "concept": "Conservação da energia mecânica em queda livre: v² = 2g·h, com h medida entre o bico e a superfície da água.",
+    "steps": [
+      "A água cai do bico (altura D) até a lâmina (altura H): queda h = D − H.",
+      "Sem atrito: v² = 2gh ⇒ h = v²/(2g) = 4/20 = 0,20 m = 20 cm.",
+      "D = H + h = 8 + 20 = 28 cm.",
+      "Alternativa E.",
+      "A densidade é dado irrelevante: a velocidade de queda não depende da massa."
+    ],
+    "trap": "Responder 20 cm (só a queda) ou 18 cm por arredondamento, esquecendo de somar a altura H da lâmina.",
+    "retrieval": [
+      "Por que a massa da água não aparece no cálculo?",
+      "Qual é a queda efetiva do jato?"
+    ],
+    "transfer": "Exercício autoral: se a lâmina subir para H = 12 cm durante o preparo, de quanto deve passar a ser D para manter 2 m/s?",
+    "criteria": [
+      "Queda continua 20 cm.",
+      "D = 32 cm."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "4 cm"
+      },
+      {
+        "id": "b",
+        "text": "8,2 cm"
+      },
+      {
+        "id": "c",
+        "text": "10 cm"
+      },
+      {
+        "id": "d",
+        "text": "18 cm"
+      },
+      {
+        "id": "e",
+        "text": "28 cm"
+      }
+    ],
+    "pages": [
+      31
+    ],
+    "statement": "[Figura: (a) foto de café sendo coado com água despejada de um bule; (b) esquema do filtro cônico com uma lâmina de água de altura H sobre o pó de café e o bico do bule a uma altura D, ambas medidas a partir da base do filtro.]\nPark, E. et al. “Pour-over coffee: Mixing by a water jet impinging on a granular bed with avalanche dynamics”. Phys. Fluids 37, 043332 (2025). Adaptado.\n\nUm artigo recentemente publicado na revista Physics of Fluids investigou de que modo fatores como a altura e a velocidade da água despejada na preparação de café filtrado (parte (a) da figura) influenciam no sabor da bebida pronta.\nUm dos parâmetros importantes é a velocidade do jato de água ao atingir a lâmina de água que já está no filtro. Uma das conclusões do estudo é que velocidades acima de 2 m/s levam a uma melhor mistura do pó de café com a água.\nA parte (b) da figura esquematiza a situação descrita, em que H é a altura da lâmina de água e D a altura de despejo da água do bule, medidas que têm a base do filtro como referência.\nAssumindo que seja desprezível a velocidade do jato quando a água começa a ser despejada no bico do bule, para uma altura H = 8 cm, qual a altura mínima D de despejo para que a velocidade do jato, ao atingir a água, seja de, pelo menos, 2 m/s?\n\nNote e adote:\nDensidade (massa específica) da água: d = 1000 kg/m³\nAceleração da gravidade: g = 10 m/s²",
+    "statementComplete": true
+  },
+  {
+    "number": 73,
+    "topicId": "fis_estatica",
+    "subject": "Física",
+    "chapter": "Estática",
+    "title": "Colher equilibrada sobre a xícara",
+    "concept": "Estabilidade do equilíbrio: o corpo é estável quando um pequeno deslocamento eleva o centro de massa e surge torque restaurador.",
+    "steps": [
+      "Na foto 3, o centro de massa está abaixo do ponto de apoio, como um pêndulo: girada, a colher volta. Estável.",
+      "Na foto 4, a colher se apoia em uma superfície curva da concha: deslizada, o ponto de contato muda e o centro de massa tende a subir, gerando retorno. Estável.",
+      "Nas fotos 1 e 2, deslocar a colher ao longo do cabo leva o centro de massa para fora do apoio; a tendência é cair, não voltar.",
+      "Logo, 3 e 4: alternativa D, conforme o gabarito oficial.",
+      "Critério geral: se o deslocamento abaixa o centro de massa, o equilíbrio é instável; se eleva, é estável."
+    ],
+    "trap": "Achar que toda colher “parada” está em equilíbrio estável; todas estão em equilíbrio, mas só algumas resistem a perturbações.",
+    "retrieval": [
+      "Onde está o centro de massa na situação 3 em relação ao apoio?",
+      "Que critério distingue equilíbrio estável e instável?"
+    ],
+    "transfer": "Exercício autoral: explique por que um equilibrista na corda bamba segura uma vara longa e curva para baixo.",
+    "criteria": [
+      "A vara abaixa o centro de massa do conjunto.",
+      "Aumenta o momento de inércia e dá tempo de corrigir desvios."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 e 2"
+      },
+      {
+        "id": "b",
+        "text": "2 e 4"
+      },
+      {
+        "id": "c",
+        "text": "1 e 3"
+      },
+      {
+        "id": "d",
+        "text": "3 e 4"
+      },
+      {
+        "id": "e",
+        "text": "2 e 3"
+      }
+    ],
+    "pages": [
+      31
+    ],
+    "statement": "Uma definição possível de equilíbrio mecânico estável é a seguinte:\n“Se um corpo está em uma posição de equilíbrio mecânico e, ao sofrer pequenos deslocamentos em torno dessa posição, sua tendência for retornar à posição original de equilíbrio, dizemos que o equilíbrio é estável.”\nAs imagens a seguir mostram uma colher em diferentes situações de equilíbrio mecânico em cima de uma xícara.\n[Fotos:\n1 — colher deitada sobre a borda da xícara, apoiada pela parte côncava; seta de deslocamento horizontal ao longo do cabo;\n2 — colher apoiada na borda pela parte convexa, quase horizontal; seta de deslocamento horizontal ao longo do cabo;\n3 — colher encaixada pelo cabo curvo na borda, com o cabo pendendo para fora e para baixo; seta de deslocamento em arco, girando em torno do ponto de apoio;\n4 — colher apoiada pela concha na borda, com a concha para fora; seta de deslocamento inclinada ao longo do cabo.]\n\nCom base na definição apresentada e nos seus conhecimentos, quais imagens ilustram situações em que a colher está em equilíbrio estável em relação a pequenos deslocamentos nas direções indicadas pelas setas?",
+    "statementComplete": true
+  },
+  {
+    "number": 74,
+    "topicId": "mat_funcoes",
+    "subject": "Matemática",
+    "chapter": "Transformações em Gráficos de Funções",
+    "title": "Transformações de uma parábola no plano",
+    "concept": "Translações, reflexões e mudanças de escala: f(x + a), f(x) + b, k·f(x), f(kx) e −f(x).",
+    "steps": [
+      "g tem o vértice de f com abscissa pela metade (1 → 0,5) e mesmos valores: g(x) = f(2x).",
+      "m é f deslocada 3 para a esquerda: m(x) = f(x + 3); n tem vértice (−3, −2), que é m (vértice −2, 2) deslocada 1 para a esquerda e refletida: n(x) = −m(x + 1).",
+      "Confira em pontos: m(−2) = 2 ⇒ n(−3) = −2 ✓; m(0) = −2 ⇒ n(−1) = 2 ✓; f(1) = 2 ⇒ g(0,5) = 2 ✓.",
+      "h = f − 2 e w = 2f; A, B, C e E trocam sinais, sentido do deslocamento ou o fator na variável.",
+      "Resposta D."
+    ],
+    "trap": "Inverter o sentido: f(x + 3) desloca para a esquerda, não para a direita; e f(2x) comprime, não dilata.",
+    "retrieval": [
+      "O que f(2x) faz com o gráfico de f?",
+      "Para onde f(x + 3) desloca o gráfico?"
+    ],
+    "transfer": "Exercício autoral: escreva w em função de h e g em função de m.",
+    "criteria": [
+      "w(x) = 2[h(x) + 2] = 2h(x) + 4.",
+      "g(x) = m(2x − 3)."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "w(x) = 2h(x) e n(x) = −f(x − 4)"
+      },
+      {
+        "id": "b",
+        "text": "h(x) = f(x) − 2 e m(x) = f(x − 3)"
+      },
+      {
+        "id": "c",
+        "text": "w(x) = 2f(x) e g(x) = f(x/2)"
+      },
+      {
+        "id": "d",
+        "text": "n(x) = −m(x + 1) e g(x) = f(2x)"
+      },
+      {
+        "id": "e",
+        "text": "m(x) = f(x + 3) e h(x) = f(x) + 2"
+      }
+    ],
+    "pages": [
+      32
+    ],
+    "statement": "Observe a imagem a seguir:\n[Gráfico com seis parábolas de concavidade para baixo, exceto n, em −4 ≤ x ≤ 4:\n• f (verde): vértice (1, 2); passa por (0, 1) e (3, −2).\n• g (vermelha): vértice (0,5; 2); passa por (0, 1) e (1,5; −2).\n• h (azul-clara): vértice (1, 0); passa por (0, −1) e (3, −4).\n• w (laranja): vértice (1, 4); passa por (0, 2) e (3, −4).\n• m (roxa): vértice (−2, 2); passa por (−3, 1) e (0, −2).\n• n (preta, concavidade para cima): vértice (−3, −2); passa por (−4, −1) e (−1, 2).]\n\nCom base nos gráficos das funções apresentados na imagem, é correto afirmar que:",
+    "statementComplete": true
+  },
+  {
+    "number": 75,
+    "topicId": "fis_cinematica",
+    "subject": "Física",
+    "chapter": "Movimento Uniformemente Variado",
+    "title": "Gráfico da altura de uma bolinha que quica",
+    "concept": "Movimento uniformemente variado: posição em função do tempo é parábola; a colisão inverte bruscamente a velocidade.",
+    "steps": [
+      "Na queda, a aceleração é g constante: y(t) é um arco de parábola, com inclinação nula no topo e máxima no chão.",
+      "No choque, a velocidade troca de sinal instantaneamente: o gráfico tem um bico no ponto mais baixo.",
+      "Na subida, o movimento é o inverso da queda: arco de parábola simétrico.",
+      "O gráfico b tem exatamente essa forma, conforme o gabarito oficial.",
+      "a seria velocidade constante; d não tem bico (choque suave); e começa no chão."
+    ],
+    "trap": "Confundir o gráfico de altura com o de velocidade, ou imaginar que a bolinha desacelera ao se aproximar do chão.",
+    "retrieval": [
+      "Por que o gráfico tem um bico no ponto mais baixo?",
+      "Onde a inclinação do gráfico é nula?"
+    ],
+    "transfer": "Exercício autoral: esboce em palavras o gráfico da velocidade vertical da bolinha no mesmo intervalo.",
+    "criteria": [
+      "Reta decrescente de 0 até −v na queda.",
+      "Salto para +v no choque e reta decrescente até 0 na subida."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "Gráfico a, descrito no enunciado."
+      },
+      {
+        "id": "b",
+        "text": "Gráfico b, descrito no enunciado."
+      },
+      {
+        "id": "c",
+        "text": "Gráfico c, descrito no enunciado."
+      },
+      {
+        "id": "d",
+        "text": "Gráfico d, descrito no enunciado."
+      },
+      {
+        "id": "e",
+        "text": "Gráfico e, descrito no enunciado."
+      }
+    ],
+    "pages": [
+      32
+    ],
+    "statement": "Uma criança brinca com uma bolinha, deixando-a cair em direção ao chão, onde ela quica e retorna praticamente à altura de origem. Qual dos gráficos a seguir melhor representa como a altura da bolinha varia com o tempo?\n\nAs alternativas são gráficos de altura × tempo, todos começando na altura máxima, chegando ao chão no meio do intervalo e voltando à altura máxima:\na) duas retas: a altura cai em linha reta até zero e sobe em linha reta, formando um V.\nb) dois arcos de parábola: a descida começa suave e fica cada vez mais inclinada até o chão, onde há um bico; a subida é simétrica, começando inclinada e terminando suave.\nc) curva que começa quase horizontal e desce cada vez mais rápido até o chão, onde há um bico, mas com laterais que se curvam para fora, como dois arcos de círculo.\nd) curva em forma de sino invertido, suave inclusive no ponto mais baixo, sem bico, com patamares nas pontas.\ne) curva que começa no chão, sobe até um máximo no meio e volta ao chão.",
+    "statementComplete": true
+  },
+  {
+    "number": 76,
+    "topicId": "fis_ondulatoria",
+    "subject": "Física",
+    "chapter": "Intensidade Sonora",
+    "title": "Razão de intensidades em uma audiometria",
+    "concept": "Escala de decibéis: diferença de níveis corresponde ao logaritmo da razão de intensidades.",
+    "steps": [
+      "Leitura do gráfico: α(8000) = 50 dB e α(500) = 20 dB.",
+      "α₁ − α₂ = 10·log(I₁/I₀) − 10·log(I₂/I₀) = 10·log(I₁/I₂).",
+      "50 − 20 = 30 = 10·log(I₁/I₂) ⇒ log(I₁/I₂) = 3.",
+      "I₁/I₂ = 10³, alternativa B.",
+      "Cada 10 dB a mais multiplica a intensidade por 10."
+    ],
+    "trap": "Dividir os níveis (50/20) ou achar que 30 dB significa 30 vezes mais intenso.",
+    "retrieval": [
+      "Quantas vezes muda a intensidade a cada 10 dB?",
+      "Por que I₀ se cancela na diferença?"
+    ],
+    "transfer": "Exercício autoral: um aparelho auditivo reduz o limiar em 8000 Hz de 50 dB para 20 dB. Por quanto ele amplifica a intensidade?",
+    "criteria": [
+      "Diferença de 30 dB.",
+      "Amplificação de 10³ = 1000 vezes."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "10²"
+      },
+      {
+        "id": "b",
+        "text": "10³"
+      },
+      {
+        "id": "c",
+        "text": "10⁴"
+      },
+      {
+        "id": "d",
+        "text": "10⁵"
+      },
+      {
+        "id": "e",
+        "text": "10⁶"
+      }
+    ],
+    "pages": [
+      33
+    ],
+    "statement": "Texto para as questões 76 e 77.\nO gráfico a seguir mostra o resultado do exame de audiometria tonal de um paciente. O eixo vertical refere-se ao nível de intensidade sonora α (medido em dB e aumentando de cima para baixo) necessário para que a pessoa possa ouvir o som emitido pelo audiômetro a uma dada frequência f (medida em Hz), representada no eixo horizontal.\n\nResultado do paciente — f (Hz): α (dB)\n250: 20 · 500: 20 · 1000: 15 · 2000: 25 · 3000: 35 · 4000: 45 · 6000: 45 · 8000: 50\n\nQuanto menor o valor de α(f), melhor é a resposta auditiva do paciente naquela frequência f. O uso de aparelhos auditivos pode ser uma forma de melhorar a resposta auditiva em determinadas frequências.\n\nConsiderando os valores de α registrados em 8000 Hz e 500 Hz para esse paciente, qual a razão entre as intensidades das ondas sonoras emitidas pelo audiômetro nessas duas frequências?\n\nNote e adote:\nA relação entre o nível de intensidade sonora α(f), em dB, e a intensidade I(f) da onda sonora a uma frequência f é dada por α(f) = 10·log₁₀(I(f)/I₀), onde I₀ é a intensidade do limiar da audição.\nObserve que, para I(f) = I₀, tem-se α = 10·log₁₀(1) = 0 dB.",
     "statementComplete": true
   },
   {
