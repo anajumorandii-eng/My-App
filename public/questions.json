@@ -133994,5 +133994,1655 @@
     "explanation": "Resposta A. Para Locke, o poder político é limitado pelos direitos naturais que ele deve proteger; a violação justifica a resistência. Suas ideias influenciaram as revoluções liberais.\n\nPegadinhas:\n• B: os direitos são anteriores ao governo.\n• C: é a posição de Hobbes.\n• D: Locke inclui a propriedade entre os direitos naturais.\n• E: Locke defende o direito de resistência.",
     "difficulty": "medium",
     "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_01",
+    "chapter": "Fisiologia da Coordenação Nervosa I",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo exame do reflexo patelar, o médico dá uma leve batida logo abaixo do joelho, e a perna se estende involuntariamente em uma fração de segundo. O estímulo é captado por receptores do músculo da coxa, e o impulso nervoso segue por um neurônio sensitivo até a medula espinal, onde passa diretamente para um neurônio motor, que leva a resposta ao músculo. A pessoa só percebe a batida depois que a perna já se moveu.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que o reflexo patelar",
+    "options": [
+      {
+        "id": "a",
+        "text": "depende de uma decisão consciente do encéfalo, que comanda a contração da coxa."
+      },
+      {
+        "id": "b",
+        "text": "é um ato reflexo cujo arco envolve receptor, neurônio sensitivo, medula espinal, neurônio motor e músculo, com resposta rápida e involuntária, antes mesmo da percepção consciente."
+      },
+      {
+        "id": "c",
+        "text": "ocorre sem participação de neurônios, apenas por contração direta do músculo atingido."
+      },
+      {
+        "id": "d",
+        "text": "é controlado exclusivamente por hormônios liberados na corrente sanguínea."
+      },
+      {
+        "id": "e",
+        "text": "só ocorre em pessoas que treinaram o movimento repetidas vezes."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. No arco reflexo, a integração ocorre na medula, sem passar pelo córtex; por isso é rápido e involuntário. A informação também sobe ao encéfalo, que percebe a batida depois.\n\nPegadinhas:\n• A: a resposta não depende de decisão consciente.\n• C: o texto descreve neurônios sensitivo e motor.\n• D: a coordenação é nervosa, não hormonal.\n• E: é um reflexo inato.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_02",
+    "chapter": "Coordenação Nervosa II",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDiante de um susto, como um cão que avança latindo, o coração acelera, as pupilas se dilatam, os brônquios se abrem e a digestão é inibida. Depois que o perigo passa, o coração desacelera e a digestão volta ao normal. Essas respostas são comandadas pelo sistema nervoso autônomo, que tem duas divisões com efeitos, em geral, opostos sobre os mesmos órgãos.\n\nTexto elaborado para esta questão.\n\nAs respostas ao susto e o retorno à calma são associados, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "ao sistema parassimpático e ao simpático, pois o parassimpático prepara o corpo para a ação."
+      },
+      {
+        "id": "b",
+        "text": "ao sistema nervoso somático, que controla os músculos voluntários, nas duas situações."
+      },
+      {
+        "id": "c",
+        "text": "ao sistema simpático, que prepara o organismo para situações de luta ou fuga, e ao parassimpático, que favorece funções de repouso e recuperação, como a digestão."
+      },
+      {
+        "id": "d",
+        "text": "à medula espinal apenas, sem participação do sistema nervoso autônomo."
+      },
+      {
+        "id": "e",
+        "text": "ao sistema simpático nas duas situações, que acelera e desacelera o coração."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Simpático: taquicardia, dilatação de pupilas e brônquios, inibição digestiva. Parassimpático: efeitos opostos, de repouso. O equilíbrio entre os dois ajusta o organismo.\n\nPegadinhas:\n• A: inverte as divisões.\n• B: as respostas são involuntárias, do sistema autônomo.\n• D: o texto atribui o controle ao sistema autônomo.\n• E: as divisões têm efeitos opostos.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_03",
+    "chapter": "Coordenação Endócrina II",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDurante um susto ou uma situação de perigo, as glândulas suprarrenais, localizadas sobre os rins, liberam adrenalina no sangue. Em poucos segundos, aumentam a frequência cardíaca e a pressão arterial, a glicose é liberada do fígado para o sangue, e o fluxo sanguíneo é desviado para os músculos esqueléticos. Por isso, a adrenalina também é usada em emergências médicas, como em reações alérgicas graves.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que a adrenalina",
+    "options": [
+      {
+        "id": "a",
+        "text": "é produzida pelo pâncreas e reduz a glicose no sangue, como a insulina, durante o susto."
+      },
+      {
+        "id": "b",
+        "text": "tem efeito lento, que só se manifesta dias após sua liberação."
+      },
+      {
+        "id": "c",
+        "text": "diminui a frequência cardíaca e a pressão arterial durante o susto."
+      },
+      {
+        "id": "d",
+        "text": "desvia o sangue dos músculos para o sistema digestório, favorecendo a digestão no perigo."
+      },
+      {
+        "id": "e",
+        "text": "é um hormônio das suprarrenais que prepara o corpo para a ação, elevando frequência cardíaca, pressão e glicose disponível e direcionando sangue aos músculos."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A adrenalina reforça os efeitos do sistema simpático: mais energia e oxigênio para os músculos, em resposta rápida.\n\nPegadinhas:\n• A: é produzida pelas suprarrenais e eleva a glicemia.\n• B: o texto fala em poucos segundos.\n• C: ela aumenta frequência e pressão.\n• D: o sangue vai para os músculos.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_04",
+    "chapter": "Embriologia Animal",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDurante o desenvolvimento embrionário dos vertebrados, formam-se três folhetos germinativos. A ectoderme, camada externa, origina a epiderme e o sistema nervoso; a mesoderme, intermediária, origina músculos, ossos, sangue e coração; a endoderme, interna, origina o revestimento do tubo digestório e órgãos associados, como o fígado. Substâncias tóxicas que atingem o embrião em certas semanas podem afetar um folheto mais que os outros.\n\nTexto elaborado para esta questão.\n\nUma substância que prejudicasse especificamente o desenvolvimento da ectoderme afetaria principalmente",
+    "options": [
+      {
+        "id": "a",
+        "text": "a formação do sistema nervoso e da epiderme, estruturas originadas da ectoderme."
+      },
+      {
+        "id": "b",
+        "text": "a formação dos ossos e dos músculos, que se desenvolvem a partir da camada mais externa."
+      },
+      {
+        "id": "c",
+        "text": "a formação do revestimento do intestino e do fígado, derivados da camada externa do embrião."
+      },
+      {
+        "id": "d",
+        "text": "a formação do coração e do sangue, que dependem principalmente da ectoderme."
+      },
+      {
+        "id": "e",
+        "text": "apenas a placenta, sem efeitos sobre os tecidos e órgãos do embrião em formação."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A ectoderme origina pele e sistema nervoso, incluindo o tubo neural. Por isso, deficiências na formação do tubo neural afetam encéfalo e medula.\n\nPegadinhas:\n• B: ossos e músculos vêm da mesoderme.\n• C: revestimento digestório e fígado vêm da endoderme.\n• D: coração e sangue vêm da mesoderme.\n• E: o efeito descrito é sobre um folheto do embrião.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_05",
+    "chapter": "Coração e Vasos Sanguíneos",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO músculo do coração recebe oxigênio e nutrientes por meio das artérias coronárias. Na aterosclerose, placas formadas por gordura, células e cálcio se acumulam na parede dessas artérias, estreitando-as. Se uma placa se rompe e forma um coágulo que bloqueia a artéria, parte do músculo cardíaco deixa de receber sangue e começa a morrer: é o infarto. Tabagismo, colesterol alto, hipertensão e sedentarismo aumentam o risco.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o infarto ocorre porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o coração recebe oxigênio diretamente do sangue que passa por suas cavidades, e o infarto ocorre quando esse sangue fica pobre em oxigênio."
+      },
+      {
+        "id": "b",
+        "text": "as veias do pulmão se rompem, impedindo a respiração e a oxigenação do sangue."
+      },
+      {
+        "id": "c",
+        "text": "o colesterol dissolve o músculo do coração, enfraquecendo suas paredes."
+      },
+      {
+        "id": "d",
+        "text": "a obstrução de uma artéria coronária interrompe o fornecimento de sangue a uma região do músculo cardíaco, cujas células, sem oxigênio, morrem."
+      },
+      {
+        "id": "e",
+        "text": "o excesso de exercícios físicos destrói as artérias coronárias."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O miocárdio é irrigado pelas coronárias; a interrupção do fluxo causa isquemia e necrose. Os fatores de risco favorecem a aterosclerose.\n\nPegadinhas:\n• A: o texto atribui a irrigação às coronárias.\n• B: o infarto é do músculo cardíaco.\n• C: o colesterol forma placas, sem dissolver o músculo.\n• E: o sedentarismo, não o exercício, é fator de risco.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_06",
+    "chapter": "Ciclo do Nitrogênio",
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo ciclo do nitrogênio, bactérias fixadoras transformam o N₂ do ar em amônia. Outras bactérias, nitrificantes, transformam a amônia em nitrito e depois em nitrato, forma absorvida pela maioria das plantas. Os decompositores devolvem ao solo, como amônia, o nitrogênio de restos orgânicos. Por fim, bactérias desnitrificantes, comuns em solos encharcados e pobres em oxigênio, transformam nitratos em N₂, que volta à atmosfera.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a desnitrificação transforma N₂ do ar em nitrato disponível para as plantas."
+      },
+      {
+        "id": "b",
+        "text": "as plantas absorvem principalmente o N₂ diretamente do ar."
+      },
+      {
+        "id": "c",
+        "text": "a nitrificação devolve o nitrogênio do solo à atmosfera como N₂."
+      },
+      {
+        "id": "d",
+        "text": "os decompositores retiram o nitrogênio do ciclo de forma permanente."
+      },
+      {
+        "id": "e",
+        "text": "a desnitrificação devolve nitrogênio à atmosfera, o que pode reduzir o nitrato disponível em solos encharcados, enquanto a nitrificação produz o nitrato absorvido pelas plantas."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Fixação (N₂ → NH₃), nitrificação (NH₃ → NO₂⁻ → NO₃⁻), amonificação (orgânico → NH₃) e desnitrificação (NO₃⁻ → N₂). Solos encharcados favorecem a desnitrificação e a perda de nitrato.\n\nPegadinhas:\n• A: descreve o oposto da desnitrificação.\n• B: as plantas usam principalmente nitrato.\n• C: a nitrificação produz nitrato.\n• D: os decompositores devolvem o nitrogênio ao solo.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_07",
+    "chapter": "Ciclos Biogeoquímicos – Ciclo do Carbono",
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo ciclo do carbono, as plantas retiram CO₂ da atmosfera na fotossíntese, e os seres vivos o devolvem pela respiração e pela decomposição. Parte do carbono, porém, ficou armazenada por milhões de anos em restos de seres vivos soterrados, que se transformaram em carvão, petróleo e gás natural. Desde a Revolução Industrial, a queima desses combustíveis e o desmatamento elevaram a concentração de CO₂ atmosférico de cerca de 280 ppm para mais de 420 ppm.\n\nTexto elaborado para esta questão.\n\nO aumento da concentração de CO₂ se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a queima de combustíveis fósseis libera carbono retirado do ciclo há milhões de anos, e o desmatamento reduz a absorção e libera carbono da vegetação, em ritmo maior que o da retirada natural."
+      },
+      {
+        "id": "b",
+        "text": "a respiração dos seres vivos aumentou muito desde a Revolução Industrial."
+      },
+      {
+        "id": "c",
+        "text": "a fotossíntese passou a liberar CO₂ em vez de absorvê-lo."
+      },
+      {
+        "id": "d",
+        "text": "os oceanos deixaram de existir como reservatórios de carbono."
+      },
+      {
+        "id": "e",
+        "text": "os combustíveis fósseis não contêm carbono, mas aumentam a temperatura do ar."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Carbono fóssil, fora do ciclo rápido, voltou à atmosfera em décadas; a vegetação removida deixa de absorver e libera o carbono que armazenava.\n\nPegadinhas:\n• B: a respiração não explica o aumento.\n• C: a fotossíntese absorve CO₂.\n• D: os oceanos continuam absorvendo parte do CO₂.\n• E: os combustíveis fósseis são ricos em carbono.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_08",
+    "chapter": "Ciclo Hidrológico e Poluição da Água",
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Demanda Bioquímica de Oxigênio (DBO) indica quanto oxigênio os microrganismos consomem para decompor a matéria orgânica presente na água. Em um rio, a DBO foi medida antes e depois do ponto onde uma cidade lança esgoto doméstico sem tratamento: a jusante do lançamento, a DBO era muito maior, e a concentração de oxigênio dissolvido, muito menor, com ausência de peixes em alguns trechos.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o esgoto aumenta a concentração de oxigênio dissolvido no rio."
+      },
+      {
+        "id": "b",
+        "text": "o esgoto aumenta a matéria orgânica, cuja decomposição por microrganismos consome muito oxigênio, o que reduz o oxigênio dissolvido e afeta os peixes."
+      },
+      {
+        "id": "c",
+        "text": "a DBO mede a quantidade de peixes em um rio, e valores altos indicam muitos peixes."
+      },
+      {
+        "id": "d",
+        "text": "a DBO alta indica água de excelente qualidade para consumo."
+      },
+      {
+        "id": "e",
+        "text": "a ausência de peixes se deve apenas ao aumento da temperatura da água."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Mais matéria orgânica, mais decomposição aeróbica e menos O₂. A DBO alta é sinal de poluição orgânica, e o tratamento de esgoto reduz esse impacto.\n\nPegadinhas:\n• A: o oxigênio diminui.\n• C: a DBO mede consumo de oxigênio.\n• D: DBO alta indica poluição.\n• E: o texto relaciona a ausência de peixes ao oxigênio.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_09",
+    "chapter": "Biomas Brasileiros",
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo planalto do sul do Brasil, em áreas de clima mais frio, com geadas no inverno, havia extensas florestas dominadas pela araucária, o pinheiro-do-paraná, cujas sementes, os pinhões, alimentam muitos animais. A maior parte dessa floresta foi derrubada no século XX para extração de madeira e expansão agrícola. No extremo sul, no Rio Grande do Sul, predominam campos de gramíneas, o Pampa, usados tradicionalmente para a pecuária.\n\nTexto elaborado para esta questão.\n\nO texto descreve, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "a Caatinga e o Cerrado, biomas de clima semiárido com vegetação adaptada à seca."
+      },
+      {
+        "id": "b",
+        "text": "a Amazônia e o Pantanal, biomas de clima equatorial com chuvas abundantes o ano todo."
+      },
+      {
+        "id": "c",
+        "text": "o Cerrado e a Caatinga, com vegetação adaptada ao fogo e à seca."
+      },
+      {
+        "id": "d",
+        "text": "a Mata de Araucárias, formação associada à Mata Atlântica em áreas frias do planalto meridional, e o Pampa, bioma de campos do Rio Grande do Sul."
+      },
+      {
+        "id": "e",
+        "text": "o Pampa e a Mata de Araucárias, nessa ordem, ambos situados no litoral do Sudeste."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A araucária domina florestas em altitude e clima subtropical; o Pampa tem campos de gramíneas, ameaçados pela conversão em lavouras e silvicultura.\n\nPegadinhas:\n• A: os biomas descritos são do Sul, de clima subtropical.\n• B: não são biomas equatoriais.\n• C: não correspondem à descrição.\n• E: inverte a ordem.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_10",
+    "chapter": "Determinação de Fórmulas Químicas",
+    "topicId": "qui_estequiometria",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA ureia, CO(NH₂)₂, é um dos fertilizantes nitrogenados mais usados no mundo. Agricultores comparam fertilizantes pela porcentagem de nitrogênio em massa, que indica quanto do produto efetivamente fornece esse nutriente às plantas. Um técnico quer calcular essa porcentagem para a ureia pura.\n\nNote e adote: massas molares (g/mol): H = 1; C = 12; N = 14; O = 16.\n\nTexto elaborado para esta questão.\n\nA porcentagem de nitrogênio em massa na ureia é de aproximadamente",
+    "options": [
+      {
+        "id": "a",
+        "text": "23%, pois apenas um átomo de nitrogênio, de massa 14, é considerado em 60 g/mol."
+      },
+      {
+        "id": "b",
+        "text": "30%, pois o nitrogênio corresponde a um terço dos átomos pesados da molécula."
+      },
+      {
+        "id": "c",
+        "text": "46,7%, pois a massa molar da ureia é 60 g/mol e os dois nitrogênios somam 28 g."
+      },
+      {
+        "id": "d",
+        "text": "60%, pois a porcentagem de nitrogênio é igual à massa molar da ureia."
+      },
+      {
+        "id": "e",
+        "text": "93%, pois o nitrogênio é o elemento mais abundante na fórmula."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. M = 12 + 16 + 2 × (14 + 2) = 60 g/mol; N: 28 g; 28/60 ≈ 46,7%, o que torna a ureia um fertilizante concentrado.\n\nPegadinhas:\n• A: considera só um nitrogênio.\n• B: relação inventada.\n• D: confunde porcentagem com massa molar.\n• E: confunde número de átomos com massa.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_11",
+    "chapter": "Cinética Química",
+    "topicId": "qui_cinetica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma reação de decomposição, um reagente foi consumido de modo que sua quantidade diminuiu de 1,0 mol para 0,2 mol em 20 segundos, em um recipiente de volume constante. A velocidade média de consumo do reagente é a variação da quantidade dividida pelo intervalo de tempo. Um estudante quer calcular esse valor para comparar com outra reação.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA velocidade média de consumo do reagente, em mol/s, é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,04 mol/s, pois foram consumidos 0,8 mol do reagente em 20 s."
+      },
+      {
+        "id": "b",
+        "text": "0,4 mol/s, pois a variação da quantidade é dividida por 2 s."
+      },
+      {
+        "id": "c",
+        "text": "1,6 mol/s, pois a quantidade consumida é multiplicada por 2."
+      },
+      {
+        "id": "d",
+        "text": "16 mol/s, pois a quantidade consumida é multiplicada pelo tempo."
+      },
+      {
+        "id": "e",
+        "text": "25 mol/s, pois o tempo é dividido pela quantidade consumida."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Δn = 1,0 − 0,2 = 0,8 mol; v = 0,8/20 = 0,04 mol/s.\n\nPegadinhas:\n• B: usa tempo errado.\n• C: multiplica sem justificativa.\n• D: multiplica pelo tempo.\n• E: inverte a razão.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_12",
+    "chapter": "Equilíbrios Químicos I",
+    "topicId": "qui_equilibrio",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara duas reações diferentes, a uma mesma temperatura, foram encontradas as constantes de equilíbrio: na reação I, Kc = 1 × 10¹⁰; na reação II, Kc = 1 × 10⁻⁵. A constante de equilíbrio é a razão entre o produto das concentrações dos produtos e o produto das concentrações dos reagentes, cada uma elevada ao seu coeficiente. Um estudante concluiu que a reação I é mais rápida que a reação II.\n\nTexto elaborado para esta questão.\n\nSobre as reações e a conclusão do estudante, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a conclusão está correta, pois Kc mede a rapidez da reação."
+      },
+      {
+        "id": "b",
+        "text": "as duas reações têm o mesmo rendimento no equilíbrio, pois estão à mesma temperatura."
+      },
+      {
+        "id": "c",
+        "text": "na reação II, os produtos predominam no equilíbrio, pois o Kc tem expoente negativo."
+      },
+      {
+        "id": "d",
+        "text": "na reação I, os produtos predominam no equilíbrio, e na reação II, os reagentes, mas Kc não informa a rapidez com que o equilíbrio é atingido, e a conclusão do estudante está incorreta."
+      },
+      {
+        "id": "e",
+        "text": "Kc negativo indica que a reação não ocorre, e os dois valores dados são negativos."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Kc indica a extensão da reação no equilíbrio, não sua velocidade, que depende da energia de ativação e de outros fatores.\n\nPegadinhas:\n• A: Kc não mede rapidez.\n• B: os Kc muito diferentes indicam extensões diferentes.\n• C: com Kc pequeno, os reagentes predominam.\n• E: os Kc são positivos; o expoente negativo indica valor pequeno.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_13",
+    "chapter": "Dispersões",
+    "topicId": "qui_solucoes",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo Brasil, a água de abastecimento público recebe flúor para prevenir cáries. A concentração recomendada é de cerca de 0,7 mg de íons fluoreto por litro de água. Como 1 L de água tem massa de aproximadamente 1 kg, essa concentração equivale a 0,7 parte por milhão (ppm) em massa. Uma pessoa bebe cerca de 2 L dessa água por dia.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA massa de fluoreto ingerida por dia, apenas pela água, é de aproximadamente",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,35 mg, pois a concentração deve ser dividida pelo volume ingerido."
+      },
+      {
+        "id": "b",
+        "text": "0,7 mg, pois a massa ingerida é igual à concentração, qualquer que seja o volume."
+      },
+      {
+        "id": "c",
+        "text": "1,4 mg, pois são 2 L de água, cada um com 0,7 mg de fluoreto."
+      },
+      {
+        "id": "d",
+        "text": "1,4 g, pois a concentração recomendada é de 0,7 g de fluoreto por litro."
+      },
+      {
+        "id": "e",
+        "text": "70 mg, pois 0,7 ppm corresponde a 0,7% em massa da água ingerida."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. m = 0,7 mg/L × 2 L = 1,4 mg. Em ppm, 0,7 mg em 1 kg corresponde a 0,7 parte em um milhão, não a 0,7%.\n\nPegadinhas:\n• A: divide em vez de multiplicar.\n• B: ignora o volume.\n• D: troca mg por g.\n• E: confunde ppm com porcentagem.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_14",
+    "chapter": "Radioatividade: o Estudo das Radiações",
+    "topicId": "qui_radioatividade",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO iodo-131 é usado em medicina nuclear no diagnóstico e no tratamento de doenças da tireoide, que absorve iodo. Sua meia-vida é de cerca de 8 dias. Um hospital recebe uma amostra de iodo-131 e precisa saber que fração da atividade inicial ainda restará após 16 dias, para planejar o uso e o descarte do material.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA fração restante após 16 dias é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1/32, pois em 16 dias ocorrem cinco meias-vidas do iodo-131."
+      },
+      {
+        "id": "b",
+        "text": "1/16, pois em 16 dias ocorrem quatro meias-vidas do iodo-131."
+      },
+      {
+        "id": "c",
+        "text": "1/8, pois em 16 dias ocorrem três meias-vidas do iodo-131."
+      },
+      {
+        "id": "d",
+        "text": "1/5, pois a cada 8 dias se perde uma fração fixa de 2/5 da amostra."
+      },
+      {
+        "id": "e",
+        "text": "1/4, pois em 16 dias ocorrem duas meias-vidas, e (1/2)² = 1/4."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. 16/8 = 2 meias-vidas: 1 → 1/2 → 1/4.\n\nPegadinhas:\n• A: conta meias-vidas demais.\n• B: idem.\n• C: idem.\n• D: relação inventada.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_15",
+    "chapter": "Termoquímica II",
+    "topicId": "qui_termoquimica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um diagrama de entalpia de uma reação, o nível dos produtos está acima do nível dos reagentes, e a diferença entre eles é de 50 kJ. Há também um pico entre os dois níveis, que representa o complexo ativado. Um estudante concluiu que, como o pico está acima de tudo, a reação libera muita energia.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nCom base no diagrama, é correto afirmar que a reação",
+    "options": [
+      {
+        "id": "a",
+        "text": "é exotérmica, com ΔH = −50 kJ, pois o pico representa energia liberada."
+      },
+      {
+        "id": "b",
+        "text": "é endotérmica, com ΔH = +50 kJ, pois os produtos têm mais entalpia que os reagentes, e o pico corresponde à energia de ativação, não à energia liberada."
+      },
+      {
+        "id": "c",
+        "text": "não envolve variação de entalpia, pois os níveis estão próximos."
+      },
+      {
+        "id": "d",
+        "text": "é exotérmica, pois toda reação com complexo ativado libera energia."
+      },
+      {
+        "id": "e",
+        "text": "tem ΔH igual à altura do pico em relação aos produtos, que é a energia liberada."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. ΔH = H(produtos) − H(reagentes) = +50 kJ: absorção de energia. O pico indica a barreira (energia de ativação).\n\nPegadinhas:\n• A: inverte o sinal.\n• C: há variação de 50 kJ.\n• D: toda reação tem complexo ativado, exotérmica ou não.\n• E: ΔH é a diferença entre produtos e reagentes.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_16",
+    "chapter": "Evolução dos Modelos Atômicos",
+    "topicId": "qui_modelos_atomicos",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1897, J. J. Thomson estudou os raios catódicos, feixes produzidos em tubos com gás rarefeito submetidos a alta tensão. Ele observou que os raios eram desviados por campos elétricos e magnéticos, no sentido esperado para partículas negativas, e que tinham as mesmas propriedades qualquer que fosse o metal dos eletrodos. Concluiu que existiam partículas negativas, os elétrons, presentes em todos os átomos.\n\nTexto elaborado para esta questão.\n\nA partir dessa descoberta, Thomson propôs um modelo em que o átomo",
+    "options": [
+      {
+        "id": "a",
+        "text": "é uma esfera maciça e indivisível, sem cargas elétricas."
+      },
+      {
+        "id": "b",
+        "text": "tem um núcleo pequeno e positivo, cercado por espaço vazio."
+      },
+      {
+        "id": "c",
+        "text": "é formado por uma esfera de carga positiva com elétrons distribuídos nela, de modo que o conjunto é eletricamente neutro."
+      },
+      {
+        "id": "d",
+        "text": "tem elétrons em órbitas circulares com energias definidas."
+      },
+      {
+        "id": "e",
+        "text": "é formado apenas por elétrons, sem carga positiva, e por isso é eletricamente negativo."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Se todos os átomos contêm elétrons, mas são neutros, deve haver carga positiva que os compense: o modelo do \"pudim de passas\". O núcleo seria proposto por Rutherford, e as órbitas, por Bohr.\n\nPegadinhas:\n• A: é o modelo de Dalton, que a descoberta superou.\n• B: é o modelo de Rutherford.\n• D: é o modelo de Bohr.\n• E: o átomo é neutro.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_17",
+    "chapter": "Química Ambiental",
+    "topicId": "qui_oxirreducao",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO ar seco é formado por cerca de 78% de nitrogênio, N₂, 21% de oxigênio, O₂, e quantidades menores de outros gases, como argônio, gás carbônico e metano. Os gases de efeito estufa absorvem a radiação infravermelha emitida pela superfície da Terra e a reemitem, aquecendo a baixa atmosfera. Moléculas como CO₂, CH₄ e o vapor d'água têm essa capacidade; N₂ e O₂ praticamente não absorvem infravermelho.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "os gases mais abundantes, N₂ e O₂, são os principais responsáveis pelo efeito estufa."
+      },
+      {
+        "id": "b",
+        "text": "o efeito estufa é causado apenas pelo gás carbônico emitido pelas indústrias."
+      },
+      {
+        "id": "c",
+        "text": "o vapor d'água não participa do efeito estufa, pois é transparente ao infravermelho."
+      },
+      {
+        "id": "d",
+        "text": "o efeito estufa resfria a superfície terrestre, ao refletir a radiação solar de volta ao espaço."
+      },
+      {
+        "id": "e",
+        "text": "gases presentes em pequena concentração, como CO₂ e CH₄, além do vapor d'água, são responsáveis pelo efeito estufa, pois absorvem infravermelho, enquanto N₂ e O₂, embora abundantes, quase não o fazem."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A capacidade de absorver infravermelho depende da estrutura das moléculas, não de sua abundância. Por isso, pequenas variações de CO₂ e CH₄ alteram o clima.\n\nPegadinhas:\n• A: N₂ e O₂ quase não absorvem infravermelho.\n• B: o metano e o vapor d'água também contribuem, e há efeito estufa natural.\n• C: o vapor d'água é um importante gás de efeito estufa.\n• D: o efeito estufa aquece a baixa atmosfera.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_18",
+    "chapter": "Geometria Molecular",
+    "topicId": "qui_polaridade_geometria",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA amônia, NH₃, e o trifluoreto de boro, BF₃, têm, cada um, um átomo central ligado a três outros átomos. No BF₃, o boro não tem pares de elétrons não ligantes, e a molécula é plana, com ângulos de 120°. Na amônia, o nitrogênio tem um par de elétrons não ligante, e a molécula é polar e muito solúvel em água.\n\nTexto elaborado para esta questão.\n\nA geometria da amônia e a explicação de sua polaridade são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "trigonal plana, como o BF₃, e apolar, pois os três dipolos se anulam."
+      },
+      {
+        "id": "b",
+        "text": "linear, pois o par não ligante empurra as ligações para lados opostos."
+      },
+      {
+        "id": "c",
+        "text": "tetraédrica, com quatro ligações N–H iguais distribuídas em torno do nitrogênio."
+      },
+      {
+        "id": "d",
+        "text": "piramidal, pois o par não ligante do nitrogênio repele as três ligações, que se aproximam, e os dipolos não se anulam, tornando a molécula polar."
+      },
+      {
+        "id": "e",
+        "text": "angular, como a água, pois o nitrogênio tem dois pares de elétrons não ligantes."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Quatro regiões de elétrons (três ligantes e um par livre) em arranjo tetraédrico; considerando só os átomos, a forma é piramidal. A assimetria torna a molécula polar.\n\nPegadinhas:\n• A: o par livre impede a geometria plana.\n• B: com quatro regiões, não há geometria linear.\n• C: a amônia tem três ligações N–H.\n• E: tem apenas um par não ligante.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_19",
+    "chapter": "Cinemática Escalar. Conceitos Fundamentais",
+    "topicId": "fis_cinematica",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDois trens partem no mesmo instante de duas estações separadas por 300 km, em uma ferrovia reta, um em direção ao outro, em linhas paralelas. Um deles viaja a 60 km/h e o outro a 90 km/h, ambos com velocidade constante. A empresa quer saber quanto tempo depois da partida os trens se cruzarão.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nOs trens se cruzarão após",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 hora, pois a distância é dividida pela soma das velocidades multiplicada por 2."
+      },
+      {
+        "id": "b",
+        "text": "2 horas, pois, em sentidos opostos, a velocidade relativa é 60 + 90 = 150 km/h, e 300/150 = 2."
+      },
+      {
+        "id": "c",
+        "text": "3,33 horas, pois a distância deve ser dividida pela velocidade do trem mais rápido."
+      },
+      {
+        "id": "d",
+        "text": "5 horas, pois a distância deve ser dividida pela velocidade do trem mais lento."
+      },
+      {
+        "id": "e",
+        "text": "10 horas, pois a distância é dividida pela diferença entre as velocidades."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Aproximação a 150 km/h: t = 300/150 = 2 h. O trem mais lento percorre 120 km, e o mais rápido, 180 km.\n\nPegadinhas:\n• A: relação inventada.\n• C: considera só um trem.\n• D: considera só um trem.\n• E: a diferença só vale no mesmo sentido.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_20",
+    "chapter": "Força e seus Tipos",
+    "topicId": "fis_leis_newton",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm dinamômetro de mola usado em aulas de laboratório tem constante elástica de 400 N/m. Um estudante pendura nele um objeto de 2 kg e espera até o sistema ficar em equilíbrio. Ele sabe que, pela lei de Hooke, a força elástica é proporcional à deformação da mola, F = k·x, e que, em equilíbrio, a força da mola iguala o peso do objeto.\n\nNote e adote: g = 10 m/s².\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA deformação da mola é",
+    "options": [
+      {
+        "id": "a",
+        "text": "5 cm, pois x = P/k = 20/400 = 0,05 m, com P = m·g = 20 N."
+      },
+      {
+        "id": "b",
+        "text": "8 cm, pois a deformação é a massa dividida por k em decímetros."
+      },
+      {
+        "id": "c",
+        "text": "10 cm, pois a deformação é o dobro da massa em centímetros."
+      },
+      {
+        "id": "d",
+        "text": "20 cm, pois a deformação é igual ao peso, em centímetros."
+      },
+      {
+        "id": "e",
+        "text": "50 cm, pois a deformação é k dividido pelo peso, em centímetros."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. P = 20 N; x = 20/400 = 0,05 m = 5 cm.\n\nPegadinhas:\n• B: relação inventada.\n• C: relação inventada.\n• D: confunde força com deformação.\n• E: inverte a razão.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_21",
+    "chapter": "Balística",
+    "topicId": "fis_gravitacao_circular",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma bola rola sobre uma mesa de 5 m de altura (uma plataforma elevada) e sai pela borda com velocidade horizontal de 10 m/s. Despreze a resistência do ar. O movimento pode ser analisado como a composição de um movimento uniforme na horizontal com uma queda livre na vertical, independentes entre si.\n\nNote e adote: g = 10 m/s²; h = g·t²/2.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA distância horizontal entre a borda e o ponto em que a bola toca o chão é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 m, pois a distância é igual ao tempo de queda em segundos."
+      },
+      {
+        "id": "b",
+        "text": "5 m, pois a distância horizontal é igual à altura da plataforma."
+      },
+      {
+        "id": "c",
+        "text": "7,1 m, pois a distância é a raiz quadrada da soma de altura e velocidade."
+      },
+      {
+        "id": "d",
+        "text": "10 m, pois o tempo de queda é 1 s e, nesse tempo, a bola avança 10 m/s × 1 s."
+      },
+      {
+        "id": "e",
+        "text": "20 m, pois a distância é o dobro da velocidade horizontal."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. 5 = 5t² ⇒ t = 1 s; x = 10 × 1 = 10 m.\n\nPegadinhas:\n• A: confunde tempo com distância.\n• B: relação inventada.\n• C: operação sem sentido físico.\n• E: dobra sem justificativa.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_22",
+    "chapter": "Trabalho e Energia: Trabalho de uma Força",
+    "topicId": "fis_energia",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma lâmpada incandescente de 60 W e uma lâmpada LED de cerca de 8 W produzem quantidades de luz semelhantes. Na incandescente, a maior parte da energia elétrica é convertida em calor, e só uma pequena parte vira luz visível; por isso, ela fica muito quente. A LED converte uma parcela muito maior em luz e quase não esquenta.\n\nNote e adote: rendimento = energia útil / energia total.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a lâmpada incandescente tem maior rendimento, pois consome mais energia."
+      },
+      {
+        "id": "b",
+        "text": "a lâmpada LED tem maior rendimento luminoso, pois converte em luz uma fração maior da energia elétrica, e por isso consome menos energia para a mesma iluminação."
+      },
+      {
+        "id": "c",
+        "text": "as duas lâmpadas têm o mesmo rendimento, pois produzem a mesma quantidade de luz."
+      },
+      {
+        "id": "d",
+        "text": "a energia perdida como calor na incandescente é destruída."
+      },
+      {
+        "id": "e",
+        "text": "a lâmpada LED viola a conservação da energia, pois produz luz quase sem gastar energia."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Para a mesma luz útil, a LED gasta muito menos energia; a incandescente dissipa a maior parte como calor. A energia se conserva, só muda de forma.\n\nPegadinhas:\n• A: consumir mais não significa ser mais eficiente.\n• C: os rendimentos são muito diferentes.\n• D: a energia vira calor, não é destruída.\n• E: não há violação da conservação.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_23",
+    "chapter": "Sistemas Isolados e a Conservação da Quantidade de Movimento",
+    "topicId": "fis_dinamica_impulsiva",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm goleiro segura uma bola de futebol de 0,5 kg que chega a ele a 20 m/s, fazendo-a parar em 0,01 segundo. Se ele recuar as mãos durante o contato, o tempo de parada aumenta. O impulso da força sobre a bola é igual à variação da quantidade de movimento, I = F·Δt = m·Δv.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA força média exercida pelas mãos do goleiro sobre a bola é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "1.000 N, pois a variação da quantidade de movimento, 10 kg·m/s, ocorre em 0,01 s."
+      },
+      {
+        "id": "b",
+        "text": "2.000 N, pois a força é o dobro da variação da quantidade de movimento dividida pelo tempo."
+      },
+      {
+        "id": "c",
+        "text": "10.000 N, pois a força é a velocidade dividida pelo tempo."
+      },
+      {
+        "id": "d",
+        "text": "20.000 N, pois a força é o produto da massa pelo quadrado da velocidade dividido por 0,01."
+      },
+      {
+        "id": "e",
+        "text": "100.000 N, pois a força é a quantidade de movimento dividida pelo quadrado do tempo."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. ΔQ = 0,5 × 20 = 10 kg·m/s; F = 10/0,01 = 1.000 N. Recuar as mãos aumenta Δt e reduz a força.\n\nPegadinhas:\n• B: dobra sem justificativa.\n• C: esquece a massa.\n• D: mistura energia com impulso.\n• E: relação inventada.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_24",
+    "chapter": "Reflexão, Eco, Reverberação e Refração de Ondas",
+    "topicId": "fis_ondulatoria",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNavios usam sonar para medir a profundidade do mar: emitem um pulso de som para o fundo e medem o tempo até o eco voltar. Em certo ponto, o eco foi recebido 2 segundos após a emissão. A velocidade do som na água do mar é de cerca de 1.500 m/s, muito maior que no ar.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA profundidade do mar nesse ponto é de aproximadamente",
+    "options": [
+      {
+        "id": "a",
+        "text": "750 m, pois a distância percorrida é dividida por 4, ida e volta duas vezes."
+      },
+      {
+        "id": "b",
+        "text": "1.000 m, pois a velocidade do som na água deve ser corrigida para 1.000 m/s."
+      },
+      {
+        "id": "c",
+        "text": "1.500 m, pois o som percorre 3.000 m em 2 s, ida e volta."
+      },
+      {
+        "id": "d",
+        "text": "3.000 m, pois é a distância total percorrida pelo som no intervalo de 2 s."
+      },
+      {
+        "id": "e",
+        "text": "6.000 m, pois a distância deve ser dobrada pela reflexão."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Percurso total: 1.500 × 2 = 3.000 m; profundidade: metade, 1.500 m.\n\nPegadinhas:\n• A: divide por 4 sem justificativa.\n• B: altera a velocidade dada.\n• D: esquece a ida e volta.\n• E: dobra em vez de dividir.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_25",
+    "chapter": "Refração: Fundamentos, Leis e Aplicações",
+    "topicId": "fis_optica_geometrica",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs fibras ópticas, usadas na internet e em exames médicos como a endoscopia, são fios muito finos de vidro ou plástico, com um núcleo de índice de refração maior, envolvido por uma casca de índice menor. A luz que entra na fibra incide na fronteira entre núcleo e casca com ângulo maior que o ângulo-limite e é totalmente refletida, seguindo pela fibra mesmo em curvas suaves, com pouca perda.\n\nTexto elaborado para esta questão.\n\nO funcionamento da fibra óptica baseia-se",
+    "options": [
+      {
+        "id": "a",
+        "text": "na absorção da luz pela casca, que a reemite no fim da fibra."
+      },
+      {
+        "id": "b",
+        "text": "na difração da luz, que contorna as curvas da fibra como uma onda contorna obstáculos."
+      },
+      {
+        "id": "c",
+        "text": "na reflexão da luz em espelhos metálicos ao longo do fio."
+      },
+      {
+        "id": "d",
+        "text": "na dispersão da luz branca nas cores do arco-íris, que se propagam separadas na fibra."
+      },
+      {
+        "id": "e",
+        "text": "na reflexão total, que ocorre quando a luz passa de um meio de maior índice de refração para outro de menor índice com ângulo de incidência maior que o ângulo-limite."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Do núcleo (n maior) para a casca (n menor), acima do ângulo-limite, não há refração: toda a luz é refletida e permanece no núcleo.\n\nPegadinhas:\n• A: a casca não absorve e reemite a luz.\n• B: a difração não explica a condução.\n• C: não há espelhos metálicos.\n• D: a dispersão separa cores, sem conduzir a luz.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_26",
+    "chapter": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+    "topicId": "fis_eletrostatica",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDuas placas metálicas planas e paralelas, separadas por 2 cm, estão ligadas a uma fonte que mantém entre elas uma diferença de potencial de 100 V. Na região entre as placas, longe das bordas, o campo elétrico é praticamente uniforme, e seu módulo pode ser calculado pela razão entre a diferença de potencial e a distância entre as placas.\n\nNote e adote: E = U/d.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO módulo do campo elétrico entre as placas é",
+    "options": [
+      {
+        "id": "a",
+        "text": "2 V/m, pois o campo é a distância, em centímetros, dividida pela tensão."
+      },
+      {
+        "id": "b",
+        "text": "50 V/m, pois o campo é a tensão dividida pela distância em centímetros."
+      },
+      {
+        "id": "c",
+        "text": "200 V/m, pois o campo é a tensão multiplicada pela distância em centímetros."
+      },
+      {
+        "id": "d",
+        "text": "500 V/m, pois a distância de 2 cm corresponde a 0,2 m na conversão de unidades."
+      },
+      {
+        "id": "e",
+        "text": "5.000 V/m, pois E = U/d = 100/0,02, com a distância convertida para metros."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. d = 0,02 m; E = 100/0,02 = 5.000 V/m.\n\nPegadinhas:\n• A: inverte a razão.\n• B: não converte para metros.\n• C: multiplica em vez de dividir.\n• D: erra a conversão.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_27",
+    "chapter": "Eletrodinâmica: as Leis de Kirchhoff",
+    "topicId": "fis_circuitos",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um circuito, dois resistores de 6 Ω e 3 Ω estão ligados em paralelo entre os mesmos dois pontos, submetidos à mesma tensão. Um técnico quer substituí-los por um único resistor equivalente, que faça a fonte fornecer a mesma corrente total.\n\nNote e adote: em paralelo, 1/R_eq = 1/R₁ + 1/R₂.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA resistência equivalente é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,5 Ω, pois a equivalente em paralelo é a soma dos inversos das resistências, 1/6 + 1/3."
+      },
+      {
+        "id": "b",
+        "text": "1 Ω, pois a resistência equivalente é a diferença dividida por 3."
+      },
+      {
+        "id": "c",
+        "text": "1,5 Ω, pois a resistência equivalente é a metade da menor das resistências."
+      },
+      {
+        "id": "d",
+        "text": "2 Ω, pois 1/R_eq = 1/6 + 1/3 = 1/2, e a equivalente é menor que a menor das resistências."
+      },
+      {
+        "id": "e",
+        "text": "9 Ω, pois as resistências se somam, como em qualquer associação."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. 1/R = 1/6 + 2/6 = 1/2 ⇒ R = 2 Ω. Em paralelo, a equivalente é sempre menor que cada resistência.\n\nPegadinhas:\n• A: esquece de inverter o resultado.\n• B: relação inventada.\n• C: relação inventada.\n• E: é a associação em série.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_28",
+    "chapter": "Desigualdades",
+    "topicId": "mat_equacoes",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma academia cobra matrícula de R$ 3,00 em uma promoção e R$ 2,00 por aula avulsa. Uma estudante quer gastar menos de R$ 11,00 no mês e pergunta quantas aulas pode fazer. Representando o número de aulas por x, ela escreve a inequação 2x + 3 < 11.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO conjunto de valores de x que satisfazem a inequação e o número máximo de aulas inteiras são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "x < 4, e ela pode fazer no máximo 3 aulas, pois 4 aulas custariam exatamente R$ 11,00."
+      },
+      {
+        "id": "b",
+        "text": "x > 4, e ela deve fazer pelo menos 5 aulas para gastar menos de R$ 11,00."
+      },
+      {
+        "id": "c",
+        "text": "x < 7, e ela pode fazer no máximo 6 aulas, desconsiderando a matrícula."
+      },
+      {
+        "id": "d",
+        "text": "x = 4, e ela deve fazer exatamente 4 aulas para gastar menos que o limite."
+      },
+      {
+        "id": "e",
+        "text": "x < 14, e ela pode fazer até 13 aulas, somando a matrícula ao limite."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. 2x < 8 ⇒ x < 4. Com x inteiro, no máximo 3 aulas (R$ 9,00). Com 4, o gasto seria R$ 11,00, não menor.\n\nPegadinhas:\n• B: inverte o sentido.\n• C: esquece de subtrair a matrícula.\n• D: confunde inequação com equação.\n• E: soma em vez de subtrair.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_29",
+    "chapter": "Estudo do Sinal de Funções",
+    "topicId": "mat_funcoes",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm estudante vende brigadeiros a R$ 20,00 a caixa e tem custo fixo mensal de R$ 500,00, com ingredientes e embalagens já incluídos no preço líquido. Seu lucro mensal, em reais, ao vender x caixas, é L(x) = 20x − 500. Ele quer saber a quantidade mínima inteira de caixas que precisa vender no mês para ter lucro positivo.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA quantidade mínima de caixas é",
+    "options": [
+      {
+        "id": "a",
+        "text": "20, pois o número de caixas necessário é igual ao preço de venda de cada caixa."
+      },
+      {
+        "id": "b",
+        "text": "24, pois o custo fixo de R$ 500,00 é coberto com a venda de 24 caixas."
+      },
+      {
+        "id": "c",
+        "text": "26, pois L(x) > 0 exige x > 25, e o menor inteiro maior que 25 é 26."
+      },
+      {
+        "id": "d",
+        "text": "30, pois é preciso vender 30 caixas para cobrir os custos com folga."
+      },
+      {
+        "id": "e",
+        "text": "500, pois é preciso vender uma caixa para cada real de custo fixo."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. 20x − 500 > 0 ⇒ x > 25. Com 25, o lucro é zero (ponto de equilíbrio); com 26, R$ 20,00.\n\nPegadinhas:\n• A: confunde preço com quantidade.\n• B: 24 caixas dão prejuízo de R$ 20,00.\n• D: não é o mínimo.\n• E: relação inventada.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_30",
+    "chapter": "Números Complexos",
+    "topicId": "mat_complexos_polinomios",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo conjunto dos números complexos, a unidade imaginária i satisfaz i² = −1. Calculando as potências seguintes, obtém-se i³ = −i e i⁴ = 1, e, a partir daí, os valores se repetem em ciclos de quatro. Um estudante quer calcular i¹⁰ sem multiplicar dez vezes.\n\nTexto elaborado para esta questão.\n\nO valor de i¹⁰ é",
+    "options": [
+      {
+        "id": "a",
+        "text": "10i, pois a potência multiplica a unidade imaginária pelo expoente."
+      },
+      {
+        "id": "b",
+        "text": "−1, pois 10 dividido por 4 deixa resto 2, e i¹⁰ = i² = −1."
+      },
+      {
+        "id": "c",
+        "text": "1, pois toda potência de i com expoente par é igual a 1."
+      },
+      {
+        "id": "d",
+        "text": "i, pois as potências da unidade imaginária são sempre iguais a i."
+      },
+      {
+        "id": "e",
+        "text": "−i, pois 10 dividido por 4 deixa resto 3, e i³ = −i."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. 10 = 4 × 2 + 2 ⇒ i¹⁰ = (i⁴)² · i² = −1.\n\nPegadinhas:\n• A: confunde potência com multiplicação.\n• C: i² = −1 é potência par e não vale 1.\n• D: as potências variam em ciclo.\n• E: erra o resto da divisão.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_31",
+    "chapter": "Introdução ao Estudo Analítico das Cônicas",
+    "topicId": "mat_geometria_analitica",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um projeto de irrigação, um aspersor molha uma região circular representada, em um sistema de coordenadas com unidades em metros, pela equação\n\n(x − 2)² + (y + 1)² = 9.\n\nA forma reduzida (x − a)² + (y − b)² = r² indica o centro (a, b) e o raio r da circunferência. O agricultor quer saber onde o aspersor está e qual o alcance da água.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO centro e o raio da região molhada são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "centro (2, −1) e raio 3 m, pois a equação está na forma (x − a)² + (y − b)² = r²."
+      },
+      {
+        "id": "b",
+        "text": "centro (−2, 1) e raio 3 m, pois os sinais aparecem na equação."
+      },
+      {
+        "id": "c",
+        "text": "centro (2, −1) e raio 9 m, pois o raio é o número do segundo membro."
+      },
+      {
+        "id": "d",
+        "text": "centro (2, 1) e raio 81 m, pois o raio é o quadrado de 9."
+      },
+      {
+        "id": "e",
+        "text": "centro (0, 0) e raio 3 m, pois toda circunferência tem centro na origem."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. (x − 2)² ⇒ a = 2; (y + 1)² = (y − (−1))² ⇒ b = −1; r² = 9 ⇒ r = 3 m.\n\nPegadinhas:\n• B: troca os sinais.\n• C: esquece a raiz.\n• D: erra o centro e eleva ao quadrado.\n• E: o centro não é necessariamente a origem.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_32",
+    "chapter": "Progressão Geométrica",
+    "topicId": "mat_sequencias_matrizes",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma folha de papel tem espessura de 0,1 mm. Ao ser dobrada ao meio, a espessura da pilha dobra; dobrando de novo, dobra outra vez, e assim por diante. As espessuras formam uma progressão geométrica de razão 2. Um estudante quer saber a espessura depois de 7 dobras, supondo que fosse possível dobrá-la tantas vezes.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA espessura após 7 dobras é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,7 mm, pois cada dobra acrescenta 0,1 mm à espessura da pilha."
+      },
+      {
+        "id": "b",
+        "text": "1,4 mm, pois cada dobra acrescenta o dobro da espessura inicial."
+      },
+      {
+        "id": "c",
+        "text": "12,8 mm, pois a espessura é 0,1 × 2⁷ = 0,1 × 128 depois de sete dobras."
+      },
+      {
+        "id": "d",
+        "text": "25,6 mm, pois sete dobras correspondem a oito multiplicações por 2."
+      },
+      {
+        "id": "e",
+        "text": "128 mm, pois a espessura é 2⁷ milímetros, sem considerar a espessura inicial."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. 0,1 × 2⁷ = 12,8 mm. O crescimento exponencial explica por que dobrar uma folha muitas vezes é impraticável.\n\nPegadinhas:\n• A: modelo linear.\n• B: modelo linear.\n• D: conta uma dobra a mais.\n• E: esquece a espessura inicial.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_33",
+    "chapter": "Áreas de Polígonos",
+    "topicId": "mat_geometria_plana",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma pipa tem a forma de um losango cujas diagonais medem 10 dm e 6 dm. Para comprar o papel de seda, uma criança precisa saber a área da pipa. A área de um losango é a metade do produto de suas diagonais, pois ele pode ser dividido em quatro triângulos retângulos congruentes.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA área da pipa é",
+    "options": [
+      {
+        "id": "a",
+        "text": "8 dm², pois a área do losango é a média das duas diagonais."
+      },
+      {
+        "id": "b",
+        "text": "15 dm², pois é um quarto do produto das diagonais, mais metade."
+      },
+      {
+        "id": "c",
+        "text": "16 dm², pois a área do losango é a soma das duas diagonais."
+      },
+      {
+        "id": "d",
+        "text": "24 dm², pois a área corresponde a três dos quatro triângulos que formam o losango."
+      },
+      {
+        "id": "e",
+        "text": "30 dm², pois a área do losango é o produto das diagonais dividido por 2: 10 × 6/2."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A = D·d/2 = 60/2 = 30 dm².\n\nPegadinhas:\n• A: média não é área.\n• B: relação inventada.\n• C: soma não é área.\n• D: conta só três triângulos.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_34",
+    "chapter": "Introdução às Probabilidades",
+    "topicId": "mat_dados_probabilidade",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma rifa, são sorteados números de 1 a 20, todos com a mesma chance. Uma pessoa ganha um prêmio extra se o número sorteado for múltiplo de 3. Ela quer saber sua chance antes do sorteio. Os múltiplos de 3 entre 1 e 20 são os números divisíveis por 3 nesse intervalo.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA probabilidade de sair um múltiplo de 3 é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1/5, pois há quatro múltiplos de 3 entre os números de 1 a 20."
+      },
+      {
+        "id": "b",
+        "text": "3/10, pois há seis múltiplos de 3 (3, 6, 9, 12, 15 e 18) entre 20 números."
+      },
+      {
+        "id": "c",
+        "text": "1/3, pois um em cada três números é múltiplo de 3, qualquer que seja o intervalo."
+      },
+      {
+        "id": "d",
+        "text": "1/2, pois os números são divididos entre múltiplos e não múltiplos."
+      },
+      {
+        "id": "e",
+        "text": "3/5, pois há doze múltiplos de 3 entre os números de 1 a 20."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Múltiplos de 3: 3, 6, 9, 12, 15, 18 → 6 casos; 6/20 = 3/10. Como 20 não é múltiplo de 3, a fração não é exatamente 1/3.\n\nPegadinhas:\n• A: conta menos casos.\n• C: só vale quando o total é múltiplo de 3.\n• D: as categorias não são equiprováveis.\n• E: conta casos demais.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_35",
+    "chapter": "Razão e Proporção",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma obra seria concluída por 6 pedreiros em 10 dias, trabalhando todos no mesmo ritmo. Dois pedreiros adoeceram, e a obra será feita por 4 pedreiros, no mesmo ritmo individual. O mestre de obras quer saber quantos dias serão necessários. Número de pedreiros e número de dias são grandezas inversamente proporcionais nesse caso.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO número de dias necessários é",
+    "options": [
+      {
+        "id": "a",
+        "text": "6,7 dias, pois menos pedreiros terminam a obra mais rápido."
+      },
+      {
+        "id": "b",
+        "text": "10 dias, pois o prazo não depende do número de pedreiros."
+      },
+      {
+        "id": "c",
+        "text": "12 dias, pois cada pedreiro a menos acrescenta um dia ao prazo original."
+      },
+      {
+        "id": "d",
+        "text": "15 dias, pois o trabalho total é constante: 6 × 10 = 4 × d, e d = 15."
+      },
+      {
+        "id": "e",
+        "text": "24 dias, pois o número de dias é multiplicado pelo número de pedreiros que faltam."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O trabalho total é 60 pedreiro-dias; com 4 pedreiros, 60/4 = 15 dias.\n\nPegadinhas:\n• A: trata como diretamente proporcional.\n• B: ignora a redução da equipe.\n• C: relação linear inventada.\n• E: relação inventada.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_36",
+    "chapter": "Representações Gráficas e Cartográficas",
+    "topicId": "geo_cartografia",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm cartas topográficas, o relevo é representado por curvas de nível, linhas que ligam pontos de mesma altitude. A diferença de altitude entre duas curvas consecutivas, a equidistância, é constante no mapa. Em uma carta, um grupo de excursionistas percebeu que, em um lado de um morro, as curvas estavam muito próximas umas das outras, e, no outro, bem espaçadas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "curvas muito próximas indicam terreno plano, e curvas espaçadas, terreno íngreme."
+      },
+      {
+        "id": "b",
+        "text": "o lado com curvas mais próximas é mais íngreme, pois a altitude varia mais em uma distância horizontal menor, e o lado com curvas espaçadas tem declive mais suave."
+      },
+      {
+        "id": "c",
+        "text": "as curvas de nível indicam a temperatura do terreno, mais alta onde estão próximas."
+      },
+      {
+        "id": "d",
+        "text": "a distância entre as curvas não tem relação com a declividade."
+      },
+      {
+        "id": "e",
+        "text": "curvas de nível só são usadas para representar rios e lagos nas cartas topográficas."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Com equidistância fixa, curvas próximas significam grande desnível em pouca distância: encosta íngreme, mais difícil e sujeita à erosão.\n\nPegadinhas:\n• A: inverte a relação.\n• C: as curvas representam altitude.\n• D: a proximidade indica a declividade.\n• E: representam o relevo.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_37",
+    "chapter": "Estrutura Étnica e Fluxos Migratórios",
+    "topicId": "geo_populacao_urbana_brasil",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAo longo do século XX, especialmente entre as décadas de 1950 e 1980, milhões de pessoas migraram do Nordeste para o Sudeste, sobretudo para São Paulo e Rio de Janeiro. Secas prolongadas, concentração de terras e falta de empregos no campo nordestino somaram-se à oferta de trabalho na indústria e na construção civil das metrópoles do Sudeste. Nas últimas décadas, observou-se também um fluxo de retorno de parte desses migrantes.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a migração nordestina para o Sudeste",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi motivada apenas pelas secas, sem relação com a economia do Sudeste."
+      },
+      {
+        "id": "b",
+        "text": "ocorreu no período colonial, para trabalhar na mineração."
+      },
+      {
+        "id": "c",
+        "text": "não teve nenhuma influência sobre o crescimento das metrópoles."
+      },
+      {
+        "id": "d",
+        "text": "terminou completamente na década de 1950."
+      },
+      {
+        "id": "e",
+        "text": "combinou fatores de expulsão no Nordeste, como secas, concentração fundiária e falta de emprego, com fatores de atração, como a industrialização do Sudeste, e hoje convive com fluxos de retorno."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A migração resultou de expulsão e atração, contribuiu para o crescimento das metrópoles e diminuiu com a desconcentração econômica, dando espaço a migrações de retorno.\n\nPegadinhas:\n• A: o texto cita a oferta de trabalho no Sudeste.\n• B: o texto trata do século XX.\n• C: contribuiu para o crescimento urbano.\n• D: o texto fala do período de 1950 a 1980.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_38",
+    "chapter": "Clima Mundial",
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Deserto do Atacama, no norte do Chile, é um dos lugares mais secos do mundo, embora fique junto ao Oceano Pacífico. Ao longo da costa, corre a corrente marítima fria de Humboldt, que resfria o ar sobre o mar, dificultando a formação de nuvens de chuva. A leste, a Cordilheira dos Andes bloqueia a umidade que viria do interior do continente.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a aridez do Atacama se explica",
+    "options": [
+      {
+        "id": "a",
+        "text": "pela distância em relação ao oceano, que impede a chegada de umidade."
+      },
+      {
+        "id": "b",
+        "text": "pela grande quantidade de chuvas, que lava o solo e impede a vegetação."
+      },
+      {
+        "id": "c",
+        "text": "pela influência da corrente fria de Humboldt, que estabiliza o ar e reduz a formação de nuvens de chuva, e pela barreira dos Andes à umidade do interior."
+      },
+      {
+        "id": "d",
+        "text": "pela localização no Equador, onde as altas temperaturas impedem as chuvas."
+      },
+      {
+        "id": "e",
+        "text": "pelo frio polar, que congela a umidade do ar antes que ela forme chuva."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O ar resfriado por baixo fica estável, dificultando a ascensão e a condensação. Os Andes completam o isolamento. Correntes frias explicam outros desertos costeiros, como o da Namíbia.\n\nPegadinhas:\n• A: o deserto fica junto ao mar.\n• B: a região quase não tem chuva.\n• D: fica em latitude subtropical, e as regiões equatoriais costumam ser chuvosas.\n• E: não é um deserto polar.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_39",
+    "chapter": "Geopolítica Ambiental",
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm novembro de 2025, Belém, no Pará, sediou a 30ª Conferência das Partes da Convenção-Quadro das Nações Unidas sobre Mudança do Clima, a COP30, a primeira realizada na Amazônia. Nas COPs, representantes de quase duzentos países negociam metas e mecanismos de combate às mudanças climáticas, como financiamento para países em desenvolvimento e proteção de florestas. As decisões dependem de consenso entre os participantes.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as COPs são reuniões entre poucos países ricos, sem participação dos países em desenvolvimento."
+      },
+      {
+        "id": "b",
+        "text": "as decisões das COPs são tomadas por maioria simples e impostas aos países que votam contra."
+      },
+      {
+        "id": "c",
+        "text": "a COP30 foi realizada na Europa, longe das florestas tropicais."
+      },
+      {
+        "id": "d",
+        "text": "a COP30, em Belém, deu destaque à Amazônia em negociações multilaterais que exigem consenso entre os países sobre temas como metas, financiamento e proteção das florestas."
+      },
+      {
+        "id": "e",
+        "text": "as conferências do clima não tratam de financiamento para países em desenvolvimento."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. As COPs reúnem quase todos os países e dependem de consenso, o que torna as negociações lentas. Sediar a COP30 colocou a Amazônia no centro do debate.\n\nPegadinhas:\n• A: o texto fala em quase duzentos países.\n• B: as decisões dependem de consenso.\n• C: a COP30 foi em Belém.\n• E: o texto cita o financiamento.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_40",
+    "chapter": "Geopolítica e Geoeconomia da América Latina",
+    "topicId": "geo_geopolitica_regional",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Canal do Panamá liga os oceanos Atlântico e Pacífico, encurtando rotas de navegação em milhares de quilômetros. Os navios sobem e descem por eclusas abastecidas com água doce de lagos artificiais, alimentados pelas chuvas. Em 2023, uma seca intensa reduziu o nível dos lagos, e a autoridade do canal limitou o número de travessias diárias e o calado dos navios, provocando filas e aumento de custos no transporte marítimo mundial.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a operação do canal depende da disponibilidade de água doce, e uma seca pode afetar o comércio internacional, mostrando a relação entre clima, infraestrutura e economia global."
+      },
+      {
+        "id": "b",
+        "text": "o canal funciona apenas com água do mar, sem relação com as chuvas."
+      },
+      {
+        "id": "c",
+        "text": "a seca de 2023 aumentou o número de navios que atravessaram o canal."
+      },
+      {
+        "id": "d",
+        "text": "o Canal do Panamá liga o Oceano Índico ao Pacífico, atravessando a Ásia."
+      },
+      {
+        "id": "e",
+        "text": "o canal não tem importância para o comércio mundial, pois poucos navios o atravessam."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Cada eclusagem consome grandes volumes de água doce; com os lagos baixos, o canal reduziu operações, com efeitos em cadeias globais de suprimento.\n\nPegadinhas:\n• B: as eclusas usam água doce dos lagos.\n• C: as travessias foram limitadas.\n• D: liga o Atlântico ao Pacífico.\n• E: o texto destaca sua importância.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_41",
+    "chapter": "Paisagem, Espaço Geográfico e Ciência Geográfica",
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma enchente em um bairro de uma cidade pode ser analisada em diferentes escalas. Na escala local, importam a ocupação de margens de córregos e a impermeabilização do solo no bairro. Na escala regional, a gestão da bacia hidrográfica e o desmatamento das cabeceiras. Na escala global, as mudanças climáticas, que tendem a tornar mais frequentes os eventos de chuva extrema.\n\nTexto elaborado para esta questão.\n\nO texto mostra que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a enchente deve ser explicada apenas pela escala local."
+      },
+      {
+        "id": "b",
+        "text": "as mudanças climáticas são o único fator relevante para a enchente."
+      },
+      {
+        "id": "c",
+        "text": "um mesmo fenômeno pode ser compreendido pela articulação entre escalas local, regional e global, cada uma revelando fatores diferentes."
+      },
+      {
+        "id": "d",
+        "text": "a escala geográfica não influencia a análise dos fenômenos."
+      },
+      {
+        "id": "e",
+        "text": "fenômenos locais não têm relação com processos regionais ou globais."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A escala de análise define o que se enxerga; compreender bem a enchente exige combinar fatores locais, regionais e globais.\n\nPegadinhas:\n• A: o texto apresenta várias escalas.\n• B: o texto aponta vários fatores.\n• D: a escala muda os fatores observados.\n• E: o texto relaciona as escalas.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_42",
+    "chapter": "Baixa Idade Média",
+    "topicId": "his_idade_media",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEntre o fim do século XI e o fim do século XIII, expedições militares organizadas na Europa cristã, as Cruzadas, dirigiram-se ao Oriente Médio, com o objetivo declarado de tomar Jerusalém dos muçulmanos. Além da motivação religiosa, nobres sem terras buscavam feudos, e cidades italianas, como Veneza e Gênova, ampliaram seu comércio com o Oriente. As Cruzadas contribuíram para reativar rotas comerciais no Mediterrâneo.\n\nTexto elaborado para esta questão.\n\nCom base no texto, as Cruzadas",
+    "options": [
+      {
+        "id": "a",
+        "text": "combinaram motivações religiosas com interesses econômicos e políticos, e contribuíram para a expansão do comércio no Mediterrâneo, beneficiando cidades italianas."
+      },
+      {
+        "id": "b",
+        "text": "tiveram motivação exclusivamente religiosa, sem efeitos econômicos."
+      },
+      {
+        "id": "c",
+        "text": "foram organizadas pelos muçulmanos para conquistar a Europa."
+      },
+      {
+        "id": "d",
+        "text": "reduziram o comércio entre a Europa e o Oriente, fechando as rotas do Mediterrâneo."
+      },
+      {
+        "id": "e",
+        "text": "ocorreram durante a Revolução Industrial, para garantir matérias-primas às fábricas."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Fé, busca de terras e interesses mercantis se misturaram. O contato com o Oriente favoreceu o renascimento comercial.\n\nPegadinhas:\n• B: o texto cita interesses econômicos.\n• C: foram organizadas na Europa cristã.\n• D: o comércio se ampliou.\n• E: ocorreram na Idade Média.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_43",
+    "chapter": "Antiguidade Clássica: o Mundo Romano",
+    "topicId": "his_idade_antiga",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo início da República romana, os patrícios, grandes proprietários de terras, controlavam o Senado e os principais cargos. Os plebeus, maioria da população, formada por camponeses, artesãos e comerciantes, não tinham os mesmos direitos políticos. Após revoltas e retiradas da cidade, os plebeus conquistaram, entre os séculos V e III a.C., a criação dos tribunos da plebe, que podiam vetar decisões contrárias a seus interesses, e leis escritas, como a Lei das Doze Tábuas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "patrícios e plebeus tiveram direitos iguais desde a fundação da República."
+      },
+      {
+        "id": "b",
+        "text": "os tribunos da plebe eram nomeados pelos patrícios para controlar os plebeus."
+      },
+      {
+        "id": "c",
+        "text": "a Lei das Doze Tábuas aboliu a República romana e instaurou o Império."
+      },
+      {
+        "id": "d",
+        "text": "os plebeus conquistaram direitos por meio de lutas, como a criação dos tribunos da plebe, com poder de veto, e a elaboração de leis escritas, que limitavam o arbítrio dos patrícios."
+      },
+      {
+        "id": "e",
+        "text": "os plebeus formavam uma minoria rica que controlava o Senado."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. As lutas entre as ordens ampliaram gradualmente os direitos plebeus. Leis escritas tornavam as regras conhecidas e reduziam interpretações favoráveis aos patrícios.\n\nPegadinhas:\n• A: o texto descreve desigualdade inicial.\n• B: os tribunos defendiam a plebe.\n• C: as leis organizaram a República.\n• E: os plebeus eram maioria e não controlavam o Senado.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_44",
+    "chapter": "América Espanhola",
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo início do século XIX, a invasão da Espanha pelas tropas de Napoleão enfraqueceu o controle da metrópole sobre as colônias americanas. Os criollos, descendentes de espanhóis nascidos na América, que eram ricos mas tinham acesso limitado aos altos cargos coloniais, lideraram movimentos de independência, como os de Simón Bolívar e José de San Martín. A maior parte dos novos países manteve as estruturas sociais da época colonial.\n\nTexto elaborado para esta questão.\n\nCom base no texto, as independências na América espanhola",
+    "options": [
+      {
+        "id": "a",
+        "text": "foram lideradas pela população indígena, que aboliu as desigualdades coloniais."
+      },
+      {
+        "id": "b",
+        "text": "criaram um único país unificado em toda a América do Sul."
+      },
+      {
+        "id": "c",
+        "text": "ocorreram antes da invasão napoleônica da Espanha, sem relação com ela."
+      },
+      {
+        "id": "d",
+        "text": "foram conduzidas pelos espanhóis nascidos na Europa, os chapetones."
+      },
+      {
+        "id": "e",
+        "text": "foram lideradas sobretudo pelos criollos, em um contexto de enfraquecimento da Espanha, e, em grande parte, preservaram as estruturas sociais coloniais."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A elite criolla buscou controlar o poder político, sem transformar profundamente a sociedade. A região fragmentou-se em vários países.\n\nPegadinhas:\n• A: o texto atribui a liderança aos criollos.\n• B: formaram-se vários países.\n• C: o enfraquecimento espanhol veio com a invasão.\n• D: os chapetones eram os favorecidos pela metrópole.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_45",
+    "chapter": "Primeira Guerra Mundial (1914-1918)",
+    "topicId": "his_imperialismo_guerras",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Primeira Guerra Mundial é considerada uma guerra total: os países envolvidos mobilizaram não só exércitos, mas toda a economia e a sociedade. Fábricas foram adaptadas para produzir armas e munição, alimentos foram racionados, e milhões de mulheres passaram a trabalhar na indústria e nos serviços, ocupando postos deixados pelos homens enviados à frente de batalha. Ao fim do conflito, em vários países, as mulheres conquistaram o direito de voto.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a guerra afetou apenas os soldados que lutaram nas trincheiras."
+      },
+      {
+        "id": "b",
+        "text": "o conflito mobilizou economias e sociedades inteiras e ampliou a participação das mulheres no trabalho, o que contribuiu, em vários países, para a conquista de direitos políticos."
+      },
+      {
+        "id": "c",
+        "text": "as mulheres foram proibidas de trabalhar durante a guerra."
+      },
+      {
+        "id": "d",
+        "text": "as fábricas pararam de funcionar durante o conflito, por falta de trabalhadores."
+      },
+      {
+        "id": "e",
+        "text": "a guerra terminou com a perda do direito de voto pelas mulheres."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Na guerra total, a retaguarda é tão essencial quanto a frente. A presença feminina no trabalho fortaleceu as reivindicações sufragistas.\n\nPegadinhas:\n• A: o texto descreve efeitos sobre toda a sociedade.\n• C: as mulheres ocuparam postos de trabalho.\n• D: as fábricas foram adaptadas para a guerra.\n• E: em vários países as mulheres conquistaram o voto.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_46",
+    "chapter": "A Era Vargas",
+    "topicId": "his_primeira_republica_vargas",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nApós a Revolução de 1930, Getúlio Vargas governou de forma provisória, sem Constituição e com interventores nomeados nos estados. Em 1932, setores de São Paulo, descontentes com a perda de poder e com a nomeação de interventores, iniciaram um movimento armado que exigia uma nova Constituição: a Revolução Constitucionalista. O movimento foi derrotado militarmente, mas, em 1933, foi eleita uma Assembleia Constituinte, que promulgou a Constituição de 1934.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a Revolução Constitucionalista",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi vitoriosa e derrubou Getúlio Vargas do poder, encerrando a Era Vargas."
+      },
+      {
+        "id": "b",
+        "text": "defendia a restauração da monarquia no Brasil, abolida em 1889."
+      },
+      {
+        "id": "c",
+        "text": "foi um movimento contra a convocação de uma Constituinte."
+      },
+      {
+        "id": "d",
+        "text": "foi derrotada militarmente, mas a pressão por uma Constituição contribuiu para a convocação da Constituinte e para a Constituição de 1934."
+      },
+      {
+        "id": "e",
+        "text": "ocorreu durante a Primeira República, contra a política do café com leite."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Derrotado em armas, o movimento paulista teve parte de sua principal reivindicação atendida pouco depois.\n\nPegadinhas:\n• A: o movimento foi derrotado.\n• B: o objetivo era constitucional, não monárquico.\n• C: exigia uma nova Constituição.\n• E: ocorreu após a Revolução de 1930.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_47",
+    "chapter": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+    "topicId": "his_republica_liberal_atual",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm agosto de 1961, o presidente Jânio Quadros renunciou após menos de sete meses de governo. O vice, João Goulart, estava em viagem à China, e ministros militares tentaram impedir sua posse, acusando-o de ligações com a esquerda. Após mobilizações, como a Campanha da Legalidade, liderada no Rio Grande do Sul, chegou-se a um acordo: Goulart assumiria, mas com poderes reduzidos por um sistema parlamentarista, que vigorou até um plebiscito em 1963 restabelecer o presidencialismo.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a adoção do parlamentarismo em 1961",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi uma escolha de Jânio Quadros antes de renunciar, para limitar seu sucessor."
+      },
+      {
+        "id": "b",
+        "text": "foi uma solução negociada para permitir a posse de Goulart, limitando seus poderes diante da resistência de setores militares e conservadores."
+      },
+      {
+        "id": "c",
+        "text": "foi aprovada por plebiscito popular em 1961, logo após a renúncia de Jânio."
+      },
+      {
+        "id": "d",
+        "text": "fortaleceu os poderes do presidente João Goulart, que passou a governar sem o Congresso."
+      },
+      {
+        "id": "e",
+        "text": "foi mantida até o fim do regime militar, em 1985."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O parlamentarismo foi o compromisso para evitar um golpe imediato: Jango assumiria, mas com poderes reduzidos. O plebiscito de 1963 restaurou o presidencialismo.\n\nPegadinhas:\n• A: Jânio já havia renunciado.\n• C: o plebiscito, de 1963, restabeleceu o presidencialismo.\n• D: o sistema limitou seus poderes.\n• E: vigorou até 1963.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_48",
+    "chapter": "Fatores de Textualidade",
+    "topicId": "por_texto",
+    "subject": "Português",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia o trecho, escrito para esta questão:\n\n\"A prefeitura anunciou um novo plano de ciclovias para a cidade. Segundo a secretária de Mobilidade, ele deve ser concluído em dois anos e ligará os principais bairros ao centro.\"\n\nA coesão referencial é o mecanismo pelo qual palavras como pronomes retomam termos já mencionados no texto, evitando repetições e garantindo a continuidade do sentido.\n\nTexto elaborado para esta questão.\n\nNo trecho, o pronome \"ele\" retoma",
+    "options": [
+      {
+        "id": "a",
+        "text": "\"a prefeitura\", pois o sujeito da primeira frase é sempre retomado pelo pronome seguinte."
+      },
+      {
+        "id": "b",
+        "text": "\"a secretária de Mobilidade\", pois é o termo mais próximo do pronome."
+      },
+      {
+        "id": "c",
+        "text": "\"a cidade\", pois é o último substantivo da primeira frase."
+      },
+      {
+        "id": "d",
+        "text": "\"o centro\", pois aparece na mesma frase do pronome e é masculino singular."
+      },
+      {
+        "id": "e",
+        "text": "\"um novo plano de ciclovias\", pois é o termo masculino singular que pode ser concluído e ligar bairros ao centro."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O pronome masculino \"ele\" e os predicados \"ser concluído\" e \"ligará os bairros\" só combinam com \"plano\". A concordância e o sentido guiam a retomada.\n\nPegadinhas:\n• A: \"prefeitura\" é feminino.\n• B: \"secretária\" é feminino e não \"será concluída\".\n• C: \"cidade\" é feminino.\n• D: \"centro\" é mencionado depois e não é o que será concluído.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_49",
+    "chapter": "Text Comprehension: Novels/Short Stories",
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"For years, Maria had kept the letter in a drawer, telling herself she would answer it when she was ready. That morning, without quite knowing why, she took it out, read it once more and began to write. When she finally sealed the envelope, she felt lighter, as if she had put down a suitcase she had been carrying for too long.\"\n\nTexto elaborado para esta questão.\n\nThe comparison with the suitcase suggests that Maria",
+    "options": [
+      {
+        "id": "a",
+        "text": "felt relieved after finally answering the letter, which had been a burden for a long time."
+      },
+      {
+        "id": "b",
+        "text": "regretted answering the letter and wanted to take it back."
+      },
+      {
+        "id": "c",
+        "text": "was preparing to travel and needed to carry a lighter suitcase on her trip."
+      },
+      {
+        "id": "d",
+        "text": "had never read the letter before that morning, when she opened it for the first time."
+      },
+      {
+        "id": "e",
+        "text": "decided to throw the letter away without answering it, to forget the past."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. \"She felt lighter, as if she had put down a suitcase she had been carrying for too long\" compara a carta não respondida a um peso carregado por anos; responder trouxe alívio.\n\nPegadinhas:\n• B: o texto não indica arrependimento.\n• C: a mala é figurada.\n• D: ela leu a carta \"once more\".\n• E: ela respondeu e selou o envelope.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l22_50",
+    "chapter": "Desigualdade de Gênero",
+    "topicId": "soc_estratificacao_desigualdade",
+    "subject": "Sociologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPesquisas do IBGE mostram que, no Brasil, as mulheres têm, em média, mais anos de estudo que os homens, mas recebem rendimentos menores, mesmo em ocupações semelhantes. Além disso, elas dedicam, em média, quase o dobro de horas semanais aos cuidados com a casa e com pessoas da família, como filhos e idosos, trabalho não remunerado que limita o tempo disponível para o trabalho pago e para a carreira.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a diferença de rendimento entre homens e mulheres se deve à menor escolaridade feminina."
+      },
+      {
+        "id": "b",
+        "text": "as mulheres dedicam menos horas que os homens ao trabalho doméstico."
+      },
+      {
+        "id": "c",
+        "text": "a desigualdade de rendimentos persiste mesmo com maior escolaridade feminina e se relaciona, entre outros fatores, à divisão desigual do trabalho doméstico e de cuidado, que recai sobretudo sobre as mulheres."
+      },
+      {
+        "id": "d",
+        "text": "não há desigualdade de gênero no mercado de trabalho brasileiro."
+      },
+      {
+        "id": "e",
+        "text": "o trabalho doméstico e de cuidado é remunerado e reconhecido como profissão em todos os casos."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A escolaridade maior não se converte em rendimentos iguais; a dupla jornada e outros fatores, como discriminação, explicam parte da diferença.\n\nPegadinhas:\n• A: as mulheres têm mais anos de estudo.\n• B: dedicam quase o dobro de horas.\n• D: o texto mostra desigualdade.\n• E: o texto fala em trabalho não remunerado.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   }
 ]
