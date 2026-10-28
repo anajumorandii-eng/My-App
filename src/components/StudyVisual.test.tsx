@@ -79,3 +79,40 @@ it('recusa figura geométrica que cita ponto inexistente ou não desenha nada', 
  expect(parseStudyVisual(JSON.stringify({...base,points:[{id:'A',x:0,y:0},{id:'A',x:1,y:0}],segments:[{from:'A',to:'A'}]}))).toBeUndefined();
  expect(parseStudyVisual(JSON.stringify({...base,circles:[{center:'A',radius:-1}]}))).toBeUndefined();
 });
+const block=(v:object)=>'```study-visual\n'+JSON.stringify(v)+'\n```';
+const base={caption:'Dados didáticos.',question:'O que muda?'};
+it('desenha forças com seta e esconde a ponta sem nome', () => {
+ const visual={...base,type:'geometry',title:'Bloco em repouso',points:[{id:'C',x:0,y:0},{id:'P',x:0,y:-2,hidden:true},{id:'N',x:0,y:2,hidden:true}],segments:[{from:'C',to:'P',label:'P',arrow:true},{from:'C',to:'N',label:'N',arrow:true}]};
+ const {container}=render(<AiTextRenderer text={block(visual)}/>);
+ const figure=container.querySelector('[data-study-visual="geometry"]')!;
+ expect(figure.querySelectorAll('path')).toHaveLength(2);
+ const labels=[...figure.querySelectorAll('svg text')].map(t=>t.textContent);
+ expect(labels).toEqual(expect.arrayContaining(['P','N','C']));
+ expect(labels.filter(t=>t==='P')).toHaveLength(1);
+});
+it('desenha circuito com ramo em paralelo, linha do tempo, heredograma e climograma', () => {
+ const visuals=[
+  {...base,type:'circuit',title:'Paralelo',loop:[{kind:'battery',label:'12 V'},{parallel:[{kind:'resistor',label:'6 Ω'},{kind:'lamp'}]},{kind:'ammeter'}]},
+  {...base,type:'timeline',title:'Era Vargas',events:[{year:1930,label:'Revolução de 1930'},{year:1937,label:'Estado Novo'},{year:1945,label:'Deposição'}],periods:[{start:1937,end:1945,label:'Estado Novo'}]},
+  {...base,type:'pedigree',title:'Herança recessiva',individuals:[{id:'I-1',sex:'M',generation:1,carrier:true},{id:'I-2',sex:'F',generation:1,carrier:true},{id:'II-1',sex:'F',generation:2,affected:true},{id:'II-2',sex:'M',generation:2}],couples:[{a:'I-1',b:'I-2',children:['II-1','II-2']}]},
+  {...base,type:'climate',title:'Manaus',place:'Manaus (AM)',months:'JFMAMJJASOND'.split('').map((label,i)=>({label,temp:26+(i%3),rain:300-i*20}))},
+ ];
+ const {container}=render(<AiTextRenderer text={visuals.map(block).join('\n\n')}/>);
+ expect(container.querySelector('[data-study-visual="circuit"]')?.textContent).toContain('lâmpada');
+ expect(container.querySelector('[data-study-visual="timeline"]')?.textContent).toContain('1937');
+ const pedigree=container.querySelector('[data-study-visual="pedigree"]')!;
+ expect(pedigree.querySelectorAll('rect')).toHaveLength(2);
+ expect(pedigree.textContent).toContain('II');
+ const climate=container.querySelector('[data-study-visual="climate"]')!;
+ expect(climate.querySelectorAll('rect[fill-opacity]').length).toBeGreaterThanOrEqual(12);
+ expect(container.querySelectorAll('[role="status"]')).toHaveLength(0);
+ const root=createStrategyPrintRoot(container,'Revisão');
+ expect(root.querySelectorAll('.crivo-diagram')).toHaveLength(4);
+});
+it('recusa circuito sem gerador, filho na geração errada, ano fracionário e climograma incompleto', () => {
+ expect(parseStudyVisual(JSON.stringify({...base,type:'circuit',title:'x',loop:[{kind:'resistor'},{kind:'lamp'}]}))).toBeUndefined();
+ expect(parseStudyVisual(JSON.stringify({...base,type:'circuit',title:'x',loop:[{kind:'battery'},{kind:'diodo'}]}))).toBeUndefined();
+ expect(parseStudyVisual(JSON.stringify({...base,type:'pedigree',title:'x',individuals:[{id:'A',sex:'M',generation:1},{id:'B',sex:'F',generation:1},{id:'C',sex:'F',generation:3}],couples:[{a:'A',b:'B',children:['C']}]}))).toBeUndefined();
+ expect(parseStudyVisual(JSON.stringify({...base,type:'timeline',title:'x',events:[{year:1930.5,label:'a'},{year:1940,label:'b'}]}))).toBeUndefined();
+ expect(parseStudyVisual(JSON.stringify({...base,type:'climate',title:'x',place:'p',months:[{label:'J',temp:20,rain:10}]}))).toBeUndefined();
+});

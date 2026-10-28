@@ -134,6 +134,8 @@
 .crivo-bars__label { display: flex; justify-content: space-between; gap: 12px; overflow-wrap: anywhere; }
 .crivo-bars__label b { font-family: var(--fig-serif); font-weight: 600; white-space: nowrap; }
 .crivo-bars__track { display: block; width: 100%; height: 12px; margin-top: 4px; }
+/* Circuito, linha do tempo, heredograma e climograma: o desenho é o assunto. */
+.crivo-diagram { display: block; width: 560px; max-width: 100%; height: auto; margin: 0 auto; overflow: visible; }
 /* A figura geométrica é mais larga que a curva: o desenho é o assunto. */
 .crivo-geometry { display: block; width: 520px; max-width: 100%; height: auto; margin: 0 auto; overflow: visible; }
 .crivo-chart { display: block; width: 480px; max-width: 100%; height: auto; margin: 0 auto; }

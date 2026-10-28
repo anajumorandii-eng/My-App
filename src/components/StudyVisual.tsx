@@ -3,10 +3,11 @@ import { figureInk } from '../lib/figureInk';
 import { StudyMolecule } from './StudyMolecule';
 import { StudyLineChart } from './StudyLineChart';
 import { StudyGeometry } from './StudyGeometry';
+import { StudyCircuit, StudyClimate, StudyPedigree, StudyTimeline } from './StudyDiagrams';
 import './StudyVisual.css';
 
 const KICKER: Record<Visual['type'], string> = {
-  flow: 'Esquema', bars: 'Gráfico', line: 'Gráfico', molecule: 'Estrutura', reaction: 'Reação', geometry: 'Figura',
+  flow: 'Esquema', bars: 'Gráfico', line: 'Gráfico', molecule: 'Estrutura', reaction: 'Reação', geometry: 'Figura', circuit: 'Circuito', timeline: 'Linha do tempo', pedigree: 'Heredograma', climate: 'Climograma',
 };
 
 /**
@@ -52,6 +53,10 @@ export function StudyVisual({ source }: { source: string }) {
         </li>)}
       </ol>
       : visual.type === 'geometry' ? <StudyGeometry visual={visual} />
+      : visual.type === 'circuit' ? <StudyCircuit visual={visual} />
+      : visual.type === 'timeline' ? <StudyTimeline visual={visual} />
+      : visual.type === 'pedigree' ? <StudyPedigree visual={visual} />
+      : visual.type === 'climate' ? <StudyClimate visual={visual} />
       : visual.type === 'line' ? <StudyLineChart visual={visual} />
       : visual.type === 'flow' ? <ol aria-label={visual.title} className="crivo-flow">
         {visual.steps.map((step, index) => <li key={index} className="crivo-flow__item">
