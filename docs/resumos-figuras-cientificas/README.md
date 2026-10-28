@@ -20,6 +20,18 @@ Os prompts pedem condições, legenda e interpretação, além de origem dos val
 
 As tabelas Markdown deixam de impor largura mínima de 36 rem; textos passam a quebrar dentro da coluna em telas pequenas. Expressões matemáticas continuam usando o renderizador existente.
 
+## Linguagem visual (28/10/2026)
+
+A primeira versão desenhava as estruturas no tema padrão da biblioteca — quadro branco, fonte sem serifa, vermelho e azul puros — e as setas de reação eram um "↓" de texto. Ao lado das tabelas de borda dourada, da capa em aquarela e das pranchas do Visual em tinta de caderno, a figura parecia vinda de outro aplicativo.
+
+Agora a figura segue a mesma linguagem:
+
+- **Moldura:** a borda e a faixa de título das tabelas dos resumos, com um rótulo em vinho que diz o que é a figura (Reação, Estrutura, Gráfico, Esquema).
+- **Moléculas:** tinta de caderno das pranchas, com oxigênio em vinho, nitrogênio em azul, halogênios em verde e enxofre/fósforo em ocre. Serifa Newsreader, sem fundo próprio, e nome da substância em itálico embaixo, como legenda de livro.
+- **Reações:** em linha (estrutura → seta com a condição por cima → estrutura). A seta é desenhada em SVG, com a ponta das setas de `ChemistryMechanisms`. No celular, a sequência desce, e a seta aponta para baixo.
+- **Curvas, barras e fluxos:** a mesma tinta. Grade pontilhada, eixos com ponta de seta, rótulos dos eixos em itálico e séries diferenciadas por cor e por padrão de traço.
+- **Cores por token:** cada cor é um token (`--fig-*`, em `StudyVisual.css`) com o valor claro como reserva no próprio atributo (`src/lib/figureInk.ts`). Na tela, a figura acompanha o tema, inclusive o escuro. No PDF, que recebe só `printStyles`, cai na paleta da capa: borda dourada, título verde-petróleo, rótulo em vinho.
+
 ## PDF
 
 A captura aguarda a preparação dos desenhos. Os SVGs são incorporados ao documento e exportados pelo navegador isolado do servidor, preservando texto, fórmulas, fontes e capa. Unidades visuais de altura moderada são mantidas inteiras; unidades extensas podem continuar na página seguinte. Foi necessário limitar a escala das estruturas e tratar as regras de órfãs/viúvas para evitar uma página inicial quase vazia.

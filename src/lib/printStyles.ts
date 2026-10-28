@@ -123,6 +123,37 @@ export const printStyles = `${printCoverFontStyles}\n${printBodyFontStyles}\n${p
   [data-print-content] figure { margin: 3mm 0; break-inside: avoid; }
   [data-print-content] figcaption { break-before: avoid; }
   [data-print-content] [data-study-visual] { display: block !important; break-inside: avoid !important; }
+  /* Figura no PDF: mesma borda dourada e mesmas cores de título das tabelas
+     e da capa. O CSS da tela (StudyVisual.css) não acompanha a impressão. */
+  [data-print-content] .crivo-figure { border: .5pt solid #c9b58e !important; border-radius: 2mm; margin: 4mm 0 !important; overflow: hidden !important; }
+  [data-print-content] .crivo-figure__head { display: flex !important; align-items: baseline; gap: 3mm; padding: 2mm 3.5mm !important; border-bottom: .5pt solid #c9b58e !important; }
+  [data-print-content] .crivo-figure__kicker { font: 600 6.8pt/1.2 Georgia, serif; letter-spacing: .16em; text-transform: uppercase; color: #7A1F24 !important; }
+  [data-print-content] .crivo-figure__title { font: 600 10.5pt/1.3 Georgia, serif; color: #145a60 !important; }
+  [data-print-content] .crivo-figure__body { padding: 3mm 3.5mm 1mm !important; }
+  [data-print-content] .crivo-figure__foot { padding: 0 3.5mm 2.5mm !important; font-size: 9.5pt; }
+  [data-print-content] .crivo-figure__foot p { margin: 0 0 1.2mm !important; }
+  [data-print-content] .crivo-figure__caption { color: #465d5d !important; }
+  [data-print-content] .crivo-figure__question b { color: #7A1F24 !important; }
+  [data-print-content] .crivo-molecule { text-align: center; }
+  [data-print-content] .crivo-molecule svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+  [data-print-content] .crivo-molecule__name { font: italic 9.5pt/1.3 Georgia, serif; margin: .5mm 0 0 !important; }
+  [data-print-content] .crivo-reaction { display: flex !important; flex-wrap: nowrap; align-items: center; justify-content: center; gap: 1mm; list-style: none; padding: 0 !important; margin: 0 !important; }
+  [data-print-content] .crivo-reaction__step { display: flex !important; align-items: center; gap: 1mm; flex: 1 1 0; min-width: 0; }
+  [data-print-content] .crivo-reaction__step .crivo-molecule { flex: 1 1 auto; min-width: 0; }
+  [data-print-content] .crivo-arrow { display: flex !important; flex-direction: column; align-items: center; flex: none; width: 26mm; }
+  [data-print-content] .crivo-arrow__condition { font: italic 8pt/1.2 Georgia, serif; color: #465d5d !important; text-align: center; }
+  [data-print-content] .crivo-arrow__horizontal { display: block; width: 22mm; height: 4mm; }
+  [data-print-content] .crivo-arrow__vertical { display: none !important; }
+  [data-print-content] .crivo-flow { display: grid !important; justify-items: center; gap: .5mm; list-style: none; padding: 0 !important; margin: 0 !important; }
+  [data-print-content] .crivo-flow__item { display: grid !important; justify-items: center; width: 100%; }
+  [data-print-content] .crivo-flow__step { border: .5pt solid #c9b58e !important; border-radius: 1.5mm; padding: 1.5mm 3mm !important; text-align: center; width: 80%; }
+  [data-print-content] .crivo-flow__arrow { width: 4mm; height: 6mm; }
+  [data-print-content] .crivo-bars__label { display: flex !important; justify-content: space-between; }
+  [data-print-content] .crivo-bars__track { display: block; width: 100%; height: 3mm; }
+  [data-print-content] .crivo-chart { display: block; width: 120mm; max-width: 100%; height: auto; margin: 0 auto; }
+  [data-print-content] .crivo-chart__legend { display: flex !important; flex-wrap: wrap; justify-content: center; gap: 1mm 5mm; list-style: none; padding: 0 !important; margin: 1mm 0 0 !important; font-size: 8.5pt; }
+  [data-print-content] .crivo-chart__legend li { display: inline-flex !important; align-items: center; gap: 1.5mm; }
+  [data-print-content] .crivo-figure svg text { font-family: Georgia, 'Liberation Serif', serif; }
   [data-print-content] [data-study-visual] figcaption { break-after: avoid !important; }
   [data-print-content] [data-study-molecule] { break-inside: avoid !important; }
   [data-print-content] [data-study-visual] > p { break-before: avoid; }

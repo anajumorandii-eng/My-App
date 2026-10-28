@@ -16,12 +16,12 @@ export function StudyMolecule({ molecule }: { molecule: Molecule }) {
       .catch(()=>{if(current)setState('error');});
     return () => { current = false; };
   }, [molecule.smiles, molecule.label]);
-  return <div data-study-molecule style={{breakInside:'avoid',minWidth:0}}>
-    <p style={{fontWeight:600,margin:'8px 0',overflowWrap:'anywhere'}}>{molecule.label}</p>
-    <div style={{background:'#fff',borderRadius:6,color:'#172b24',maxWidth:440,margin:'0 auto'}}>
-      <svg ref={ref} id={id} aria-label={`Estrutura de ${molecule.label}`} role="img" style={{display:state==='error'?'none':'block',width:'100%',height:220}} />
-    </div>
-    {state==='pending' && <p data-ai-text-pending role="status">Preparando estrutura química…</p>}
-    {state==='error' && <p role="status">Não foi possível desenhar esta estrutura. Confira a fórmula e a explicação no texto.</p>}
+  // O nome vem embaixo, em itálico, como legenda de estrutura no livro; em
+  // cima, em negrito, competia com o título da figura.
+  return <div data-study-molecule className="crivo-molecule">
+    <svg ref={ref} id={id} aria-label={`Estrutura de ${molecule.label}`} role="img" className="crivo-molecule__drawing" style={state==='error'?{display:'none'}:undefined} />
+    {state==='pending' && <p data-ai-text-pending role="status" className="crivo-molecule__status">Preparando estrutura química…</p>}
+    {state==='error' && <p role="status" className="crivo-molecule__status">Não foi possível desenhar esta estrutura. Confira a fórmula e a explicação no texto.</p>}
+    <p className="crivo-molecule__name">{molecule.label}</p>
   </div>;
 }
