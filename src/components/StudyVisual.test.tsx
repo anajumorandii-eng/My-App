@@ -38,3 +38,15 @@ it('curvas têm eixos e valores acessíveis; PDF mantém o gráfico sem o contro
  expect(root.querySelector('polyline')).toBeTruthy();
  expect(root.textContent).toContain('Tempo (s)');
 });
+it('desenha a figura na tinta do app: sem quadro branco, sem cor fixa e com seta de reação em SVG', () => {
+ // A primeira versão desenhava num quadro #fff, com setas "↓" de texto e
+ // cores fixas, e destoava das pranchas e das tabelas dos resumos.
+ const reaction={type:'reaction',title:'Oxidação',molecules:[{label:'Etanol',smiles:'CCO'},{label:'Etanal',smiles:'CC=O'}],conditions:['[O]'],caption:'Esquema didático.',question:'O que oxidou?'};
+ const {container}=render(<AiTextRenderer text={'```study-visual\n'+JSON.stringify(reaction)+'\n```'}/>);
+ const figure=container.querySelector('[data-study-visual="reaction"]')!;
+ expect(figure.className).toContain('crivo-figure');
+ expect(figure.textContent).not.toContain('↓');
+ expect(figure.querySelector('.crivo-arrow__horizontal path')?.getAttribute('stroke')).toMatch(/^var\(--fig-o, #[0-9a-f]{6}\)$/);
+ expect(figure.innerHTML).not.toMatch(/#fff\b|#ffffff|background:\s*white/i);
+ expect(figure.querySelector('.crivo-figure__kicker')?.textContent).toBe('Reação');
+});

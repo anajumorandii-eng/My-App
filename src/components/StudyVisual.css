@@ -1,0 +1,142 @@
+/*
+ * Figuras dos resumos e revisões na mesma tinta das pranchas do Visual.
+ *
+ * A primeira versão desenhava num quadro branco, com a fonte sem serifa e o
+ * vermelho puro da biblioteca de moléculas, e setas de texto ("↓"): ao lado
+ * das tabelas de borda dourada e das cenas em tinta de caderno, parecia
+ * colada de outro aplicativo. Os valores aqui são os de VisualAtlas.css
+ * (tinta, vinho, azul) e os da tabela dos resumos (linha, superfície).
+ *
+ * Cada cor também vai como reserva no próprio atributo do SVG
+ * (`var(--fig-o, #852636)`): o PDF só recebe printStyles, e sem a reserva a
+ * figura impressa sairia sem cor.
+ */
+.crivo-figure {
+  --fig-ink: var(--text, #29251f);
+  --fig-muted: var(--text-muted, #74695d);
+  --fig-line: var(--line, #e3dbcd);
+  --fig-paper: var(--surface-secondary, #f5efe4);
+  --fig-paper-dot: var(--surface-default, #fffdf8);
+  --fig-o: #852636;
+  --fig-n: #476e82;
+  --fig-s: #8c6847;
+  --fig-halogen: #4f6b45;
+  --fig-serif: "Newsreader", Georgia, "Liberation Serif", serif;
+  margin: 18px 0;
+  border: 1px solid var(--fig-line);
+  border-radius: 8px;
+  overflow: hidden;
+  white-space: normal;
+  color: var(--fig-ink);
+  break-inside: avoid;
+}
+.dark .crivo-figure {
+  --fig-o: #e695a5;
+  --fig-n: #98bdca;
+  --fig-s: #dbbc88;
+  --fig-halogen: #a9c79a;
+}
+.crivo-figure__head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--fig-line);
+  background: var(--fig-paper);
+}
+.crivo-figure__kicker {
+  flex: none;
+  font: 600 11px/1.2 Inter, system-ui, sans-serif;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--fig-o);
+}
+.crivo-figure__title {
+  margin: 0;
+  font: 500 1.05rem/1.3 var(--fig-serif);
+  overflow-wrap: anywhere;
+}
+.crivo-figure__body { padding: 16px; }
+.crivo-figure__foot {
+  padding: 0 16px 14px;
+  font-size: .95em;
+  line-height: 1.55;
+}
+.crivo-figure__foot p { margin: 0 0 6px; }
+.crivo-figure__caption { color: var(--fig-muted); }
+.crivo-figure__question b { color: var(--fig-o); font-weight: 600; }
+.crivo-figure svg text { font-family: var(--fig-serif); }
+
+/* Molécula: sem quadro próprio; o papel da figura aparece por trás. */
+.crivo-molecule { min-width: 0; text-align: center; break-inside: avoid; }
+/* O subscrito de CH₃ sai um pouco do viewBox que a biblioteca calcula; o PDF
+   já deixa transbordar, e a tela cortava o "3". */
+.crivo-molecule__drawing { display: block; width: 100%; height: 190px; margin: 0 auto; overflow: visible; }
+.crivo-molecule__name {
+  margin: 2px 0 0;
+  font: italic 500 .98rem/1.3 var(--fig-serif);
+  color: var(--fig-ink);
+  overflow-wrap: anywhere;
+}
+.crivo-molecule__status { margin: 8px 0; font-size: .9em; color: var(--fig-muted); }
+
+/*
+ * Reação em linha, como no livro: estrutura, seta com a condição por cima,
+ * estrutura. Abaixo de 560px a linha não cabe; a seta gira e a sequência
+ * desce, com a condição ao lado da seta.
+ */
+.crivo-reaction {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.crivo-reaction__step { display: flex; align-items: center; gap: 6px; min-width: 0; flex: 1 1 180px; max-width: 320px; }
+.crivo-reaction__step .crivo-molecule { flex: 1 1 auto; }
+.crivo-arrow { flex: none; display: flex; flex-direction: column; align-items: center; width: 118px; }
+.crivo-arrow__condition {
+  max-width: 118px;
+  font: italic 400 .86rem/1.25 var(--fig-serif);
+  color: var(--fig-muted);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.crivo-arrow__horizontal { display: block; width: 92px; height: 18px; }
+.crivo-arrow__vertical { display: none; width: 18px; height: 52px; }
+@media (max-width: 560px) {
+  .crivo-reaction { flex-direction: column; flex-wrap: nowrap; }
+  .crivo-reaction__step { flex-direction: column; max-width: none; width: 100%; }
+  .crivo-arrow { flex-direction: row; gap: 10px; width: auto; }
+  .crivo-arrow__horizontal { display: none; }
+  .crivo-arrow__vertical { display: block; }
+  .crivo-arrow__condition { order: 2; max-width: 220px; text-align: left; }
+}
+
+/* Fluxo: passos como cartões de caderno, ligados por seta de tinta. */
+.crivo-flow { display: grid; justify-items: center; gap: 2px; margin: 0; padding: 0; list-style: none; }
+.crivo-flow__item { display: grid; justify-items: center; width: 100%; }
+.crivo-flow__step {
+  width: min(100%, 520px);
+  padding: 9px 14px;
+  border: 1px solid var(--fig-line);
+  border-radius: 6px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.crivo-flow__arrow { display: block; width: 18px; height: 26px; }
+
+/* Barras e curvas leem a mesma tinta das cenas. */
+.crivo-bars__row { margin: 10px 0; break-inside: avoid; }
+.crivo-bars__label { display: flex; justify-content: space-between; gap: 12px; overflow-wrap: anywhere; }
+.crivo-bars__label b { font-family: var(--fig-serif); font-weight: 600; white-space: nowrap; }
+.crivo-bars__track { display: block; width: 100%; height: 12px; margin-top: 4px; }
+.crivo-chart { display: block; width: 480px; max-width: 100%; height: auto; margin: 0 auto; }
+.crivo-chart__legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px; margin: 8px 0 0; padding: 0; list-style: none; font-size: .92em; }
+.crivo-chart__legend li { display: inline-flex; align-items: center; gap: 6px; }
+.crivo-chart__data summary { cursor: pointer; padding: 8px 0 0; color: var(--fig-muted); }
+.crivo-chart__data table { width: 100%; table-layout: fixed; border-collapse: collapse; margin-top: 6px; }
+.crivo-chart__data :is(th, td) { padding: 4px 8px; border-bottom: 1px solid var(--fig-line); text-align: left; }
