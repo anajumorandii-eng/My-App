@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "crivo_fuvest_f1_l23_01",
+    "subject": "Biologia",
+    "topicId": "bio_estrutura_fisio_celular",
+    "chapter": "Citoplasma: Estrutura e Componentes I",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que as enzimas digestivas são produzidas no complexo golgiense, ou que ele é envolto por parede celular.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nCélulas do pâncreas que produzem enzimas digestivas foram estudadas com aminoácidos marcados radioativamente. Minutos após a marcação, a radioatividade aparecia no retículo endoplasmático rugoso; algum tempo depois, no complexo golgiense; e, por fim, em vesículas que se fundiam à membrana e liberavam as enzimas para fora da célula. As enzimas são proteínas.\n\nTexto elaborado para esta questão.\n\nCom base no experimento, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as enzimas são produzidas no complexo golgiense e armazenadas no retículo endoplasmático."
+      },
+      {
+        "id": "b",
+        "text": "as enzimas são produzidas nas mitocôndrias e liberadas diretamente pela membrana."
+      },
+      {
+        "id": "c",
+        "text": "as proteínas são sintetizadas nos ribossomos do retículo rugoso, seguem para o complexo golgiense, onde são processadas e empacotadas em vesículas, e são secretadas por exocitose."
+      },
+      {
+        "id": "d",
+        "text": "os aminoácidos marcados foram usados apenas para produzir energia na célula."
+      },
+      {
+        "id": "e",
+        "text": "o complexo golgiense sintetiza os aminoácidos que formam as enzimas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A sequência da marcação mostra a via de secreção: RER (síntese) → Golgi (modificação e empacotamento) → vesículas → exocitose.\n\nPegadinhas:\n• A: inverte o papel das organelas.\n• B: as mitocôndrias produzem ATP, não as enzimas secretadas.\n• D: os aminoácidos foram incorporados às proteínas.\n• E: o Golgi não sintetiza aminoácidos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_02",
+    "subject": "Biologia",
+    "topicId": "bio_estrutura_fisio_celular",
+    "chapter": "Composição Química Celular: Proteínas e sua Função Estrutural",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a vitamina C é componente do colágeno, e não necessária para sua formação.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO escorbuto, comum entre marinheiros em longas viagens até o século XVIII, causa sangramento nas gengivas, feridas que não cicatrizam e dores nas articulações. A doença é causada pela falta de vitamina C, encontrada em frutas cítricas, necessária para a produção adequada do colágeno, proteína que forma fibras resistentes na pele, nos vasos sanguíneos, nos tendões e nos ossos. Navios britânicos passaram a levar limões, e os casos diminuíram.\n\nTexto elaborado para esta questão.\n\nOs sintomas do escorbuto se explicam porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "sem vitamina C, o colágeno é produzido de forma defeituosa, e os tecidos que dependem dessa proteína estrutural, como vasos e pele, ficam frágeis."
+      },
+      {
+        "id": "b",
+        "text": "a vitamina C é a principal fonte de energia das células da gengiva."
+      },
+      {
+        "id": "c",
+        "text": "a falta de vitamina C aumenta a produção de colágeno, que endurece os tecidos."
+      },
+      {
+        "id": "d",
+        "text": "o escorbuto é causado por uma bactéria transmitida pelos limões."
+      },
+      {
+        "id": "e",
+        "text": "o colágeno é um carboidrato que se dissolve sem vitamina C."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A vitamina C atua como cofator na formação das fibras de colágeno; sem ela, as fibras ficam fracas, e vasos e tecidos de sustentação se rompem facilmente.\n\nPegadinhas:\n• B: vitaminas não são fonte de energia.\n• C: o colágeno fica defeituoso.\n• D: o escorbuto é carencial.\n• E: o colágeno é uma proteína.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_03",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Fisiologia da Sustentação e da Locomoção",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que os ossos têm só função de sustentação, ou que o sangue é produzido no coração.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm transplantes de medula óssea, usados no tratamento de algumas leucemias, células são retiradas do interior de ossos como os da bacia de um doador compatível e transfundidas para o paciente. A medula óssea vermelha, presente no interior de certos ossos, contém células-tronco que se dividem e originam hemácias, leucócitos e plaquetas. Ela não deve ser confundida com a medula espinal, parte do sistema nervoso.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o sangue é produzido no coração, que bombeia as células recém-formadas."
+      },
+      {
+        "id": "b",
+        "text": "a medula óssea vermelha faz parte do sistema nervoso e transmite impulsos."
+      },
+      {
+        "id": "c",
+        "text": "os ossos têm apenas função de sustentação e proteção, sem participar da formação do sangue."
+      },
+      {
+        "id": "d",
+        "text": "além de sustentar o corpo, alguns ossos abrigam a medula óssea vermelha, onde células-tronco produzem as células do sangue, o que torna possível o transplante de medula."
+      },
+      {
+        "id": "e",
+        "text": "as plaquetas são produzidas apenas no baço, e a medula forma só as hemácias."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A hematopoese ocorre na medula óssea vermelha. O transplante repõe as células-tronco formadoras do sangue.\n\nPegadinhas:\n• A: o coração bombeia, não produz células.\n• B: confunde com a medula espinal.\n• C: os ossos também participam da hematopoese.\n• E: as plaquetas vêm da medula óssea.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_04",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Coordenação Nervosa II",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que o álcool é estimulante porque causa euforia inicial.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO álcool, em doses moderadas, pode causar sensação de desinibição e euforia, mas também reduz os reflexos, a coordenação motora e a capacidade de julgamento, o que explica os acidentes de trânsito associados ao seu consumo. A cafeína, presente no café, aumenta o estado de alerta e reduz a sensação de sono. As duas substâncias atuam no sistema nervoso central, alterando a comunicação entre neurônios.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o álcool é estimulante do sistema nervoso, pois causa euforia."
+      },
+      {
+        "id": "b",
+        "text": "a cafeína é depressora do sistema nervoso, pois reduz a sensação de sono."
+      },
+      {
+        "id": "c",
+        "text": "nenhuma das duas substâncias atua no sistema nervoso, apenas nos músculos."
+      },
+      {
+        "id": "d",
+        "text": "o álcool aumenta os reflexos e melhora a coordenação motora."
+      },
+      {
+        "id": "e",
+        "text": "o álcool é depressor do sistema nervoso central, apesar da desinibição inicial, pois reduz reflexos e coordenação, enquanto a cafeína é estimulante, aumentando o estado de alerta."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A desinibição do álcool decorre da depressão de áreas de controle do comportamento; os reflexos lentos mostram o efeito depressor. A cafeína bloqueia sinais de sonolência e estimula.\n\nPegadinhas:\n• A: a euforia não o torna estimulante.\n• B: reduzir o sono é efeito estimulante.\n• C: o texto diz que atuam no sistema nervoso central.\n• D: o texto diz o contrário.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_05",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Coordenação Endócrina I",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o TSH baixo indica hipotireoidismo primário, ignorando a retroalimentação.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA hipófise produz o hormônio TSH, que estimula a tireoide a liberar seus hormônios, como a tiroxina, que regulam o metabolismo. Quando a concentração de tiroxina no sangue está alta, a hipófise reduz a liberação de TSH; quando está baixa, aumenta. Um paciente com cansaço, ganho de peso e sensação de frio fez exames: a tiroxina estava baixa, e o TSH, muito alto.\n\nTexto elaborado para esta questão.\n\nOs resultados indicam que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a hipófise do paciente parou de produzir TSH, o que explica a tiroxina baixa."
+      },
+      {
+        "id": "b",
+        "text": "a tireoide não está respondendo adequadamente ao estímulo, produzindo pouca tiroxina, e a hipófise, por retroalimentação negativa, aumenta a liberação de TSH."
+      },
+      {
+        "id": "c",
+        "text": "o paciente tem excesso de hormônios da tireoide, o que acelera o metabolismo."
+      },
+      {
+        "id": "d",
+        "text": "a tiroxina estimula a hipófise a liberar mais TSH quando está alta."
+      },
+      {
+        "id": "e",
+        "text": "o TSH alto é a causa direta do ganho de peso, independentemente da tireoide."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Pouca tiroxina retira a inibição sobre a hipófise, que eleva o TSH. O quadro é de hipotireoidismo primário, com metabolismo lento.\n\nPegadinhas:\n• A: o TSH está alto.\n• C: a tiroxina está baixa.\n• D: inverte a retroalimentação.\n• E: os sintomas decorrem da tiroxina baixa.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_06",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Embriologia Animal",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que células-tronco adultas têm o mesmo potencial das embrionárias iniciais.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNas primeiras divisões do zigoto humano, cada célula do embrião, por alguns dias, é capaz de originar um organismo inteiro, inclusive os anexos, como a placenta. Pouco depois, as células da massa interna do blastocisto podem formar todos os tecidos do corpo, mas não os anexos. No adulto, existem células-tronco em alguns tecidos, como a medula óssea, que originam apenas tipos celulares específicos.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as células-tronco adultas da medula óssea podem formar um organismo completo."
+      },
+      {
+        "id": "b",
+        "text": "todas as células do embrião, em qualquer fase, têm o mesmo potencial."
+      },
+      {
+        "id": "c",
+        "text": "o potencial de diferenciação das células nunca se modifica durante o desenvolvimento."
+      },
+      {
+        "id": "d",
+        "text": "ao longo do desenvolvimento, as células perdem gradualmente potencial de diferenciação: as primeiras são totipotentes, as da massa interna do blastocisto são pluripotentes, e as adultas têm potencial mais restrito."
+      },
+      {
+        "id": "e",
+        "text": "as células da massa interna do blastocisto formam apenas a placenta."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Totipotentes formam tudo, inclusive anexos; pluripotentes, todos os tecidos do corpo; células-tronco adultas, só alguns tipos.\n\nPegadinhas:\n• A: originam apenas tipos específicos.\n• B: o potencial diminui com o desenvolvimento.\n• C: o texto descreve a mudança.\n• E: formam os tecidos do corpo, não os anexos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_07",
+    "subject": "Biologia",
+    "topicId": "bio_ecologia",
+    "chapter": "Biomas Brasileiros",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a chuva no Centro-Sul vem só do Atlântico, sem a contribuição da floresta amazônica.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Floresta Amazônica libera enorme quantidade de vapor d'água pela transpiração das árvores. Correntes de ar levam essa umidade para o oeste até os Andes, que a desviam para o sul, formando os chamados rios voadores, que contribuem para as chuvas no Centro-Oeste, no Sudeste e no Sul do Brasil e em países vizinhos. Pesquisadores alertam que o desmatamento pode reduzir esse transporte de umidade.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a Amazônia não influencia as chuvas fora da região Norte."
+      },
+      {
+        "id": "b",
+        "text": "os rios voadores são rios subterrâneos que correm sob a floresta."
+      },
+      {
+        "id": "c",
+        "text": "o desmatamento aumenta a umidade transportada para o Sul do país."
+      },
+      {
+        "id": "d",
+        "text": "a umidade dos rios voadores vem dos oceanos Pacífico e Índico."
+      },
+      {
+        "id": "e",
+        "text": "a transpiração da floresta alimenta fluxos de umidade que contribuem para as chuvas em outras regiões, de modo que o desmatamento pode afetar o regime de chuvas e a agricultura longe da Amazônia."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A floresta funciona como bomba de umidade. Menos árvores, menos transpiração e menos vapor transportado, com possíveis efeitos sobre chuvas e reservatórios no Centro-Sul.\n\nPegadinhas:\n• A: o texto descreve a influência em outras regiões.\n• B: os rios voadores são fluxos de vapor na atmosfera.\n• C: o desmatamento tende a reduzir a umidade.\n• D: o texto atribui a umidade à transpiração da floresta.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_08",
+    "subject": "Biologia",
+    "topicId": "bio_ecologia",
+    "chapter": "Dinâmica de Populações",
+    "difficulty": "hard",
+    "skill": "interpretacao_grafico",
+    "trap": "Achar que predador e presa variam ao mesmo tempo, sem defasagem.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRegistros de peles compradas por uma companhia de comércio no Canadá, ao longo de quase um século, mostraram oscilações regulares no número de lebres e de linces, seu predador. Os picos da população de linces ocorriam pouco depois dos picos de lebres, e as quedas dos linces também seguiam as das lebres, em ciclos de cerca de dez anos. Esse padrão aparece em muitos sistemas predador-presa estudados por ecólogos.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO padrão descrito se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "as duas populações variam sempre ao mesmo tempo, sem relação de dependência."
+      },
+      {
+        "id": "b",
+        "text": "a abundância de presas favorece o aumento dos predadores, que, ao consumirem mais presas, reduzem sua população, e a falta de alimento leva, em seguida, à queda dos predadores."
+      },
+      {
+        "id": "c",
+        "text": "os predadores controlam a população de presas sem serem afetados por ela."
+      },
+      {
+        "id": "d",
+        "text": "as lebres se alimentam dos linces nos anos de escassez, invertendo a relação."
+      },
+      {
+        "id": "e",
+        "text": "as oscilações são causadas apenas pela caça humana, sem relação com a predação."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Mais presas sustentam mais predadores; mais predadores reduzem as presas; com menos presas, os predadores declinam, e o ciclo recomeça, com os predadores atrasados em relação às presas.\n\nPegadinhas:\n• A: há defasagem e dependência.\n• C: os predadores dependem das presas.\n• D: inverte a relação.\n• E: o padrão é explicado pela interação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_09",
+    "subject": "Biologia",
+    "topicId": "bio_genetica",
+    "chapter": "Segunda Lei de Mendel e Interação Gênica",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Tratar uma característica de variação contínua como se fosse determinada por um único gene.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA altura humana varia de forma contínua em uma população: há pessoas de todas as estaturas intermediárias, e, em um gráfico, a distribuição forma uma curva em sino. Estudos genéticos identificaram centenas de variantes, em muitos genes diferentes, que contribuem cada uma com um pequeno efeito sobre a altura. A nutrição na infância também influencia a estatura final.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a altura humana é um exemplo de",
+    "options": [
+      {
+        "id": "a",
+        "text": "herança monogênica com dominância completa, que produz apenas dois fenótipos."
+      },
+      {
+        "id": "b",
+        "text": "herança ligada ao cromossomo Y, transmitida apenas pelos homens."
+      },
+      {
+        "id": "c",
+        "text": "herança quantitativa (poligênica), em que muitos genes com efeitos aditivos, somados à influência ambiental, produzem variação contínua de fenótipos."
+      },
+      {
+        "id": "d",
+        "text": "codominância entre dois alelos de um único gene, que gera três fenótipos de altura."
+      },
+      {
+        "id": "e",
+        "text": "característica determinada exclusivamente pelo ambiente, sem influência genética."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Vários genes de pequeno efeito somados, mais o ambiente, geram fenótipos contínuos e distribuição em sino, como na cor da pele.\n\nPegadinhas:\n• A: produziria classes discretas.\n• B: homens e mulheres variam em altura.\n• D: um único gene não explica a variação contínua.\n• E: o texto cita variantes genéticas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_10",
+    "subject": "Química",
+    "topicId": "qui_estequiometria",
+    "chapter": "Estequiometria: Leis Ponderais",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Esquecer de aplicar o rendimento, ou dividir em vez de multiplicar.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa indústria, as reações raramente atingem 100% de rendimento, por perdas, reações paralelas ou equilíbrios. Em um processo de produção de um medicamento, os cálculos estequiométricos indicam que, a partir de certa quantidade de reagentes, seriam formados 100 g de produto. Na prática, o rendimento da reação é de 80%.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA massa de produto efetivamente obtida é",
+    "options": [
+      {
+        "id": "a",
+        "text": "80 g, pois o rendimento de 80% aplicado aos 100 g teóricos dá 0,8 × 100."
+      },
+      {
+        "id": "b",
+        "text": "100 g, pois o rendimento não altera a quantidade de produto obtida."
+      },
+      {
+        "id": "c",
+        "text": "120 g, pois o rendimento acrescenta 20% ao valor teórico."
+      },
+      {
+        "id": "d",
+        "text": "125 g, pois a massa teórica deve ser dividida pelo rendimento."
+      },
+      {
+        "id": "e",
+        "text": "180 g, pois o rendimento percentual é somado diretamente à massa teórica."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. m real = 0,80 × 100 = 80 g.\n\nPegadinhas:\n• B: ignora o rendimento.\n• C: acrescenta em vez de reduzir.\n• D: divide em vez de multiplicar.\n• E: soma porcentagem com massa.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_11",
+    "subject": "Química",
+    "topicId": "qui_inorganica",
+    "chapter": "Química Inorgânica",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o fermento químico funciona por fermentação biológica, como o fermento de pão.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO fermento químico usado em bolos contém bicarbonato de sódio, NaHCO₃, e um ácido sólido. Quando a massa é molhada e aquecida no forno, ocorre a liberação de gás carbônico, que forma bolhas e faz o bolo crescer. Diferentemente do fermento biológico do pão, o fermento químico não contém seres vivos.\n\nReação simplificada: NaHCO₃ + H⁺ → Na⁺ + H₂O + CO₂\n\nTexto elaborado para esta questão.\n\nCom base no texto, o fermento químico faz o bolo crescer porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "leveduras do fermento consomem o açúcar da massa e liberam gás carbônico."
+      },
+      {
+        "id": "b",
+        "text": "o bicarbonato evapora no forno e forma bolhas de vapor de sódio."
+      },
+      {
+        "id": "c",
+        "text": "o ácido do fermento queima e produz fumaça dentro da massa."
+      },
+      {
+        "id": "d",
+        "text": "o aquecimento transforma o bicarbonato em álcool, que se expande."
+      },
+      {
+        "id": "e",
+        "text": "o bicarbonato reage com o ácido, em presença de água e calor, liberando gás carbônico, que forma as bolhas na massa, sem participação de seres vivos."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A reação ácido-bicarbonato libera CO₂, como num antiácido efervescente. No fermento biológico, o CO₂ vem da fermentação por leveduras.\n\nPegadinhas:\n• A: descreve o fermento biológico.\n• B: o bicarbonato reage, não evapora.\n• C: não há combustão.\n• D: não se forma álcool.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_12",
+    "subject": "Química",
+    "topicId": "qui_cinetica",
+    "chapter": "Cinética Química",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Somar o efeito da temperatura em vez de multiplicá-lo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma regra aproximada usada em laboratório, conhecida como regra de van't Hoff, afirma que, para muitas reações, a velocidade dobra a cada aumento de 10 °C na temperatura, dentro de certo intervalo. Um químico realiza uma reação a 20 °C e decide repeti-la a 40 °C, mantendo as demais condições. O efeito da temperatura é especialmente importante em reações industriais e biológicas.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nSegundo essa regra, a velocidade da reação a 40 °C, em relação à velocidade a 20 °C, será",
+    "options": [
+      {
+        "id": "a",
+        "text": "2 vezes maior, pois a temperatura em graus Celsius dobrou de 20 °C para 40 °C."
+      },
+      {
+        "id": "b",
+        "text": "4 vezes maior, pois há dois aumentos de 10 °C, e a velocidade dobra em cada um: 2 × 2."
+      },
+      {
+        "id": "c",
+        "text": "6 vezes maior, pois cada grau acrescenta 30% à velocidade."
+      },
+      {
+        "id": "d",
+        "text": "10 vezes maior, pois a velocidade é proporcional à variação de temperatura."
+      },
+      {
+        "id": "e",
+        "text": "20 vezes maior, pois a velocidade aumenta uma vez para cada grau."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. 20 → 30 °C: ×2; 30 → 40 °C: ×2. Total ×4. Mais partículas superam a energia de ativação a temperaturas maiores.\n\nPegadinhas:\n• A: usa a razão das temperaturas em Celsius.\n• C: relação inventada.\n• D: modelo linear.\n• E: relação inventada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_13",
+    "subject": "Química",
+    "topicId": "qui_equilibrio",
+    "chapter": "Equilíbrios Iônicos",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Confundir a concentração com o pH, ou achar que ácido forte diluído tem pH 0.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO ácido clorídrico é um ácido forte e, em água, ioniza-se praticamente por completo: cada molécula de HCl libera um íon H⁺. Em um laboratório escolar, preparou-se uma solução de HCl de concentração 0,01 mol/L para uma titulação, e os estudantes precisavam prever seu pH antes de medi-lo com um pHmetro e conferir o resultado.\n\nNote e adote: pH = −log [H⁺].\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO pH dessa solução é",
+    "options": [
+      {
+        "id": "a",
+        "text": "2, pois a concentração de H⁺ é 10⁻² mol/L, e −log 10⁻² = 2."
+      },
+      {
+        "id": "b",
+        "text": "7, pois toda solução diluída é neutra, qualquer que seja o soluto."
+      },
+      {
+        "id": "c",
+        "text": "10, pois o pH é igual ao inverso da concentração de HCl."
+      },
+      {
+        "id": "d",
+        "text": "12, pois o pH de um ácido é 14 menos o expoente da concentração."
+      },
+      {
+        "id": "e",
+        "text": "14, pois ácidos fortes têm sempre o pH máximo da escala."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. [H⁺] = 0,01 = 10⁻² mol/L ⇒ pH = 2.\n\nPegadinhas:\n• B: a solução é ácida.\n• C: relação inventada.\n• D: confunde com o cálculo do pH de bases.\n• E: ácidos têm pH baixo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_14",
+    "subject": "Química",
+    "topicId": "qui_gases",
+    "chapter": "Composição da Matéria: Estados Físicos",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o gás de cozinha está no estado gasoso dentro do botijão, à pressão ambiente.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO gás liquefeito de petróleo, GLP, usado em fogões, é formado principalmente por propano e butano, gases à temperatura e à pressão ambientes. No botijão, porém, a maior parte do GLP está no estado líquido, o que permite armazenar grande quantidade de combustível em pequeno volume. Ao abrir a válvula do fogão, o GLP sai como gás.\n\nTexto elaborado para esta questão.\n\nO GLP fica líquido no botijão porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o botijão é resfriado a temperaturas muito baixas pela distribuidora."
+      },
+      {
+        "id": "b",
+        "text": "o propano e o butano são líquidos em qualquer condição de temperatura e pressão."
+      },
+      {
+        "id": "c",
+        "text": "o metal do botijão transforma o gás em líquido por reação química."
+      },
+      {
+        "id": "d",
+        "text": "dentro do botijão, o gás é mantido sob pressão elevada, o que favorece a passagem ao estado líquido à temperatura ambiente; ao sair pela válvula, a pressão cai, e ele volta ao estado gasoso."
+      },
+      {
+        "id": "e",
+        "text": "o gás se dissolve em água dentro do botijão e se separa ao sair pela válvula."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A pressão alta aproxima as moléculas e favorece a liquefação. Com a queda de pressão na saída, o líquido vaporiza.\n\nPegadinhas:\n• A: o botijão fica à temperatura ambiente.\n• B: o texto diz que são gases nas condições ambientes.\n• C: não há reação química.\n• E: não há água no botijão.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_15",
+    "subject": "Química",
+    "topicId": "qui_termoquimica",
+    "chapter": "Termoquímica I",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que a combustão incompleta libera mais energia, por produzir fumaça.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa combustão completa de um combustível com carbono, como o gás de cozinha, todo o carbono é transformado em gás carbônico, e a chama costuma ser azulada. Com pouco oxigênio, ocorre combustão incompleta, com formação de monóxido de carbono e fuligem, e a chama fica amarelada. O fundo das panelas fica preto quando a chama está amarela.\n\nTexto elaborado para esta questão.\n\nComparando as duas situações, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a combustão incompleta libera mais energia, pois produz fuligem."
+      },
+      {
+        "id": "b",
+        "text": "as duas combustões liberam a mesma energia por mol de combustível."
+      },
+      {
+        "id": "c",
+        "text": "a combustão completa libera mais energia por mol de combustível, pois o carbono é totalmente oxidado a CO₂, enquanto na incompleta parte dele fica como CO e fuligem, menos oxidados, e se formam substâncias nocivas."
+      },
+      {
+        "id": "d",
+        "text": "a combustão incompleta é mais segura, pois não produz gases."
+      },
+      {
+        "id": "e",
+        "text": "a cor da chama não tem relação com a disponibilidade de oxigênio."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Oxidar o carbono até CO₂ libera mais energia do que parar em CO ou C. A chama amarela indica partículas de carbono incandescentes, sinal de queima incompleta.\n\nPegadinhas:\n• A: inverte a relação.\n• B: a energia liberada difere.\n• D: produz CO, gás tóxico.\n• E: o texto relaciona a cor ao oxigênio.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_16",
+    "subject": "Química",
+    "topicId": "qui_solucoes",
+    "chapter": "Efeitos Coligativos",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a osmose reversa ocorre espontaneamente, sem pressão aplicada.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm usinas de dessalinização, como as de vários países do Oriente Médio, a água do mar é bombeada sob alta pressão contra membranas semipermeáveis. A água passa pela membrana, e os sais ficam retidos, produzindo água doce. Normalmente, na osmose, a água passa espontaneamente do meio menos concentrado para o mais concentrado.\n\nTexto elaborado para esta questão.\n\nO processo descrito é chamado de osmose reversa porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma pressão maior que a pressão osmótica é aplicada sobre a água salgada, forçando a água a passar no sentido contrário ao da osmose espontânea, do meio mais concentrado para o menos concentrado."
+      },
+      {
+        "id": "b",
+        "text": "a água passa espontaneamente do meio menos concentrado para o mais concentrado."
+      },
+      {
+        "id": "c",
+        "text": "os sais atravessam a membrana, e a água fica retida do lado da água do mar."
+      },
+      {
+        "id": "d",
+        "text": "não há membrana no processo, apenas evaporação da água do mar."
+      },
+      {
+        "id": "e",
+        "text": "a pressão aplicada impede qualquer passagem de água pela membrana."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Na osmose comum, a água iria para a água salgada. Com pressão acima da osmótica, o fluxo se inverte, e a membrana retém os sais. O processo consome muita energia.\n\nPegadinhas:\n• B: descreve a osmose comum.\n• C: a membrana retém os sais.\n• D: o texto descreve membranas.\n• E: a água atravessa a membrana.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_17",
+    "subject": "Química",
+    "topicId": "qui_radioatividade",
+    "chapter": "Radioatividade: o Estudo das Radiações",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a emissão alfa aumenta o número atômico, ou que não altera o número de massa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO urânio-238 (número atômico 92) é radioativo e decai emitindo uma partícula alfa, formada por 2 prótons e 2 nêutrons, idêntica ao núcleo do hélio-4. O núcleo resultante é de outro elemento químico. A soma dos números de massa e a soma dos números atômicos se conservam no decaimento.\n\nTexto elaborado para esta questão.\n\nO núcleo formado após a emissão alfa tem",
+    "options": [
+      {
+        "id": "a",
+        "text": "número de massa 238 e número atômico 92, pois o núcleo não se altera."
+      },
+      {
+        "id": "b",
+        "text": "número de massa 242 e número atômico 94, pois a partícula é absorvida."
+      },
+      {
+        "id": "c",
+        "text": "número de massa 238 e número atômico 93, como em uma emissão beta."
+      },
+      {
+        "id": "d",
+        "text": "número de massa 234 e número atômico 90, pois perde 4 unidades de massa e 2 de carga, e corresponde ao elemento tório."
+      },
+      {
+        "id": "e",
+        "text": "número de massa 236 e número atômico 91, pois perde 2 de massa e 1 de carga."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. ²³⁸₉₂U → ⁴₂α + ²³⁴₉₀Th. Com número atômico 90, o elemento é o tório.\n\nPegadinhas:\n• A: o núcleo muda.\n• B: a partícula é emitida, não absorvida.\n• C: descreve a emissão beta.\n• E: erra as quantidades.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_18",
+    "subject": "Química",
+    "topicId": "qui_organica_reacoes",
+    "chapter": "Acidez e Basicidade (pKa)",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que o limão disfarça o cheiro do peixe apenas pelo perfume, sem reação química.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO cheiro característico de peixe é causado, em boa parte, por aminas, como a trimetilamina, compostos orgânicos nitrogenados de caráter básico e voláteis. Uma recomendação culinária antiga é temperar o peixe com suco de limão, que contém ácido cítrico. Após o tempero, o cheiro diminui bastante.\n\nTexto elaborado para esta questão.\n\nA diminuição do cheiro se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o ácido cítrico aumenta a volatilidade das aminas, que evaporam mais rápido."
+      },
+      {
+        "id": "b",
+        "text": "as aminas são ácidas e se combinam com o açúcar do limão."
+      },
+      {
+        "id": "c",
+        "text": "as aminas, de caráter básico, reagem com o ácido do limão formando sais, pouco voláteis, que deixam de se espalhar no ar."
+      },
+      {
+        "id": "d",
+        "text": "o limão destrói as proteínas do peixe, que produzem o cheiro."
+      },
+      {
+        "id": "e",
+        "text": "o cheiro do limão apenas encobre o das aminas, sem reação química."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Reação ácido-base: a amina recebe H⁺ e forma um íon amônio, que fica na forma de sal, não volátil. Menos moléculas no ar, menos cheiro.\n\nPegadinhas:\n• A: os sais são menos voláteis.\n• B: as aminas são básicas.\n• D: o efeito é sobre as aminas.\n• E: há reação química.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_19",
+    "subject": "Física",
+    "topicId": "fis_cinematica_vetorial",
+    "chapter": "Grandezas Físicas e Operações com Vetores",
+    "difficulty": "easy",
+    "skill": "comparacao_conceitual",
+    "trap": "Classificar força ou velocidade como grandezas escalares.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAlgumas grandezas físicas ficam completamente definidas por um número e uma unidade, como a massa de um objeto ou a temperatura do ar. Outras precisam também de direção e sentido para serem descritas, como o deslocamento de um carro ou a força com que se empurra uma caixa. As primeiras são chamadas grandezas escalares, e as segundas, vetoriais.\n\nTexto elaborado para esta questão.\n\nSão exemplos, respectivamente, de grandezas escalares e vetoriais:",
+    "options": [
+      {
+        "id": "a",
+        "text": "velocidade e massa, pois a velocidade é escalar e a massa precisa de direção."
+      },
+      {
+        "id": "b",
+        "text": "tempo e temperatura, como escalares, e força e velocidade, como vetoriais, pois força e velocidade exigem direção e sentido para serem descritas."
+      },
+      {
+        "id": "c",
+        "text": "força e aceleração, como escalares, e massa e tempo, como vetoriais."
+      },
+      {
+        "id": "d",
+        "text": "deslocamento e força, como escalares, e temperatura e energia, como vetoriais."
+      },
+      {
+        "id": "e",
+        "text": "todas as grandezas físicas são vetoriais, pois têm unidade."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Tempo e temperatura não têm direção; força e velocidade sim. A distinção define como as grandezas se somam.\n\nPegadinhas:\n• A: inverte as classificações.\n• C: inverte as classificações.\n• D: inverte as classificações.\n• E: muitas grandezas são escalares.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_20",
+    "subject": "Física",
+    "topicId": "fis_leis_newton",
+    "chapter": "Resultante de um Sistema de Forças",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o paraquedista para de cair quando atinge a velocidade terminal.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm paraquedista salta de um avião e, nos primeiros segundos, sua velocidade aumenta rapidamente. À medida que a velocidade cresce, a força de resistência do ar também aumenta. Depois de algum tempo, mesmo com o paraquedas ainda fechado, ele passa a cair com velocidade constante, de cerca de 200 km/h. Ao abrir o paraquedas, a velocidade diminui até atingir um novo valor constante, bem menor.\n\nTexto elaborado para esta questão.\n\nA queda com velocidade constante ocorre porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a gravidade deixa de atuar sobre o paraquedista a partir de certa altura."
+      },
+      {
+        "id": "b",
+        "text": "o paraquedista para de cair por alguns instantes até o paraquedas abrir."
+      },
+      {
+        "id": "c",
+        "text": "a resistência do ar se torna maior que o peso, e a resultante passa a apontar para cima."
+      },
+      {
+        "id": "d",
+        "text": "o peso do paraquedista aumenta com a velocidade e equilibra a resistência do ar."
+      },
+      {
+        "id": "e",
+        "text": "a resistência do ar, que cresce com a velocidade, passa a igualar o peso, e, com resultante nula, a aceleração é zero e a velocidade se mantém constante (velocidade terminal)."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Pela primeira lei, resultante nula implica velocidade constante. Com o paraquedas aberto, a resistência aumenta, a resultante passa a ser para cima, o paraquedista desacelera até um novo equilíbrio.\n\nPegadinhas:\n• A: a gravidade continua atuando.\n• B: ele continua caindo com velocidade constante.\n• C: se fosse maior, ele desaceleraria.\n• D: o peso não muda.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_21",
+    "subject": "Física",
+    "topicId": "fis_energia",
+    "chapter": "Trabalho e Energia: o Teorema da Energia Potencial",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Esquecer de dividir pelo tempo, ou trocar watt por megawatt.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma pequena usina hidrelétrica, 1.000 kg de água passam pelas turbinas a cada segundo, após descer uma altura de 100 m. Considere que toda a energia potencial gravitacional perdida pela água seja convertida em energia elétrica, uma idealização, pois usinas reais têm perdas. A potência é a energia convertida por unidade de tempo.\n\nNote e adote: g = 10 m/s²; 1 MW = 10⁶ W.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA potência máxima da usina é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,1 MW, pois a potência é a energia potencial dividida por 10 s."
+      },
+      {
+        "id": "b",
+        "text": "1 MW, pois m·g·h/t = 1.000 × 10 × 100 / 1 = 10⁶ W a cada segundo."
+      },
+      {
+        "id": "c",
+        "text": "10 MW, pois a potência é a energia potencial multiplicada pela aceleração da gravidade."
+      },
+      {
+        "id": "d",
+        "text": "100 MW, pois a potência é a altura multiplicada pela massa em toneladas."
+      },
+      {
+        "id": "e",
+        "text": "1.000 MW, pois a potência é igual à massa de água por segundo, em megawatts."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. E por segundo = 1.000 × 10 × 100 = 10⁶ J ⇒ P = 1 MW.\n\nPegadinhas:\n• A: divide por um tempo errado.\n• C: multiplica sem justificativa.\n• D: relação inventada.\n• E: confunde unidades.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_22",
+    "subject": "Física",
+    "topicId": "fis_gravitacao_circular",
+    "chapter": "Analisando Movimentos Contidos em um Plano Vertical",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Achar que a velocidade no ponto mais baixo depende da massa do pêndulo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma criança em um balanço é solta, a partir do repouso, de um ponto 0,8 m acima do ponto mais baixo da trajetória. Despreze o atrito e a resistência do ar. Durante o movimento, a energia potencial gravitacional se converte em energia cinética e vice-versa.\n\nNote e adote: g = 10 m/s²; v = √(2gh).\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA velocidade da criança no ponto mais baixo é",
+    "options": [
+      {
+        "id": "a",
+        "text": "2 m/s, pois a velocidade é a metade da altura multiplicada por 5."
+      },
+      {
+        "id": "b",
+        "text": "3 m/s, pois a velocidade no ponto mais baixo depende da massa da criança."
+      },
+      {
+        "id": "c",
+        "text": "4 m/s, pois m·g·h = m·v²/2 dá v = √(2 × 10 × 0,8) = √16."
+      },
+      {
+        "id": "d",
+        "text": "8 m/s, pois a velocidade é a aceleração da gravidade multiplicada pela altura."
+      },
+      {
+        "id": "e",
+        "text": "16 m/s, pois a velocidade é igual a 2gh, sem a extração da raiz quadrada."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. v = √16 = 4 m/s, independentemente da massa.\n\nPegadinhas:\n• A: relação inventada.\n• B: a massa se cancela.\n• D: usa g·h.\n• E: esquece a raiz.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_23",
+    "subject": "Física",
+    "topicId": "fis_ondas_fundamentos",
+    "chapter": "Equação Fundamental da Ondulatória",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Errar a conversão de MHz ou de metros para milímetros.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm exames de ultrassonografia, aparelhos emitem ondas sonoras de frequência muito alta, inaudíveis, que se propagam pelos tecidos do corpo e são refletidas nas interfaces entre órgãos. Considere um aparelho que emite ondas de 2 MHz e que a velocidade do som nos tecidos moles seja de cerca de 1.500 m/s. Quanto menor o comprimento de onda, mais finos os detalhes que o exame consegue revelar.\n\nNote e adote: v = λ·f; 1 MHz = 10⁶ Hz.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO comprimento de onda do ultrassom nos tecidos é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,075 mm, pois λ = 1.500/(2 × 10⁷), com a frequência convertida em hertz."
+      },
+      {
+        "id": "b",
+        "text": "0,15 mm, pois λ = 1.500/10⁷, considerando a frequência de 10 MHz."
+      },
+      {
+        "id": "c",
+        "text": "0,3 mm, pois a velocidade é dividida pela frequência em kHz."
+      },
+      {
+        "id": "d",
+        "text": "0,5 mm, pois o comprimento de onda é o inverso da frequência em MHz."
+      },
+      {
+        "id": "e",
+        "text": "0,75 mm, pois λ = v/f = 1.500/(2 × 10⁶) = 7,5 × 10⁻⁴ m."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. λ = 1.500/2.000.000 = 0,00075 m = 0,75 mm.\n\nPegadinhas:\n• A: erra o expoente da frequência.\n• B: erra a frequência.\n• C: erra a conversão.\n• D: relação inventada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_24",
+    "subject": "Física",
+    "topicId": "fis_ondulatoria",
+    "chapter": "Ondulatória: Som e suas Propriedades",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Confundir altura (agudo/grave) com intensidade (forte/fraco).",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma flauta e um violino tocam a mesma nota musical, com a mesma intensidade, e ainda assim um ouvinte reconhece facilmente qual instrumento está tocando. Em seguida, o violinista toca uma nota mais aguda e, depois, a mesma nota mais forte. Os sons podem ser caracterizados por três qualidades: altura, intensidade e timbre.\n\nTexto elaborado para esta questão.\n\nA distinção entre flauta e violino na mesma nota, a nota mais aguda e o som mais forte estão relacionados, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "ao timbre, que depende da forma da onda e dos harmônicos de cada instrumento; à altura, ligada à frequência; e à intensidade, ligada à amplitude."
+      },
+      {
+        "id": "b",
+        "text": "à intensidade, ao timbre e à altura, nessa ordem, pois o timbre depende da amplitude."
+      },
+      {
+        "id": "c",
+        "text": "à altura, à intensidade e ao timbre, nessa ordem, pois a altura distingue instrumentos."
+      },
+      {
+        "id": "d",
+        "text": "à frequência, nos três casos, pois todas as qualidades do som dependem dela."
+      },
+      {
+        "id": "e",
+        "text": "à velocidade do som, que muda com o instrumento, a nota e o volume."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Mesma frequência e amplitude, formas de onda diferentes: timbre. Mais agudo: frequência maior (altura). Mais forte: amplitude maior (intensidade).\n\nPegadinhas:\n• B: troca as qualidades.\n• C: troca as qualidades.\n• D: só a altura depende da frequência.\n• E: a velocidade do som no ar não muda com o instrumento.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_25",
+    "subject": "Física",
+    "topicId": "fis_eletromagnetismo",
+    "chapter": "Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o eletroímã é um ímã permanente, ou que funciona sem corrente.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm ferros-velhos, guindastes usam grandes eletroímãs para levantar sucata de ferro e aço. O eletroímã é formado por uma bobina de fio enrolada em um núcleo de ferro. Quando a corrente é ligada, a peça atrai fortemente a sucata; quando a corrente é desligada, a sucata se solta. Aumentando a corrente ou o número de espiras, a força de atração aumenta.\n\nTexto elaborado para esta questão.\n\nO funcionamento do eletroímã se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o núcleo de ferro é um ímã permanente, que atrai a sucata o tempo todo."
+      },
+      {
+        "id": "b",
+        "text": "a corrente elétrica aquece a sucata, que se funde ao guindaste."
+      },
+      {
+        "id": "c",
+        "text": "a bobina produz campo elétrico, que atrai objetos neutros."
+      },
+      {
+        "id": "d",
+        "text": "a corrente na bobina produz um campo magnético, intensificado pelo núcleo de ferro, e esse campo existe apenas enquanto há corrente, o que permite controlar a atração."
+      },
+      {
+        "id": "e",
+        "text": "a sucata é atraída pela gravidade do guindaste, que aumenta quando a corrente passa."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Corrente gera campo magnético (Oersted). O ferro do núcleo se magnetiza e reforça o campo. Sem corrente, o campo praticamente desaparece, e a carga se solta.\n\nPegadinhas:\n• A: a atração cessa ao desligar.\n• B: não há fusão.\n• C: o efeito é magnético.\n• E: a gravidade é desprezível.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_26",
+    "subject": "Física",
+    "topicId": "fis_estatica",
+    "chapter": "Hidrostática: Densidade e Pressão",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Inverter a razão entre as áreas, achando que a força diminui no êmbolo maior.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma prensa hidráulica, como as usadas em oficinas para erguer carros, um líquido transmite a pressão de um êmbolo pequeno para um êmbolo grande, segundo o princípio de Pascal. Considere um êmbolo pequeno de área 10 cm² e um grande de área 1.000 cm². Um mecânico aplica uma força de 100 N no êmbolo pequeno.\n\nNote e adote: pressão = força/área; a pressão se transmite integralmente pelo líquido.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA força exercida pelo êmbolo grande é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 N, pois a força no êmbolo grande é dividida pela razão entre as áreas."
+      },
+      {
+        "id": "b",
+        "text": "100 N, pois a força aplicada é transmitida igual aos dois êmbolos."
+      },
+      {
+        "id": "c",
+        "text": "1.000 N, pois a força é multiplicada pela razão entre os diâmetros."
+      },
+      {
+        "id": "d",
+        "text": "10.000 N, pois F₂ = F₁ × A₂/A₁ = 100 × 1.000/10."
+      },
+      {
+        "id": "e",
+        "text": "100.000 N, pois a força é multiplicada pela área do êmbolo grande."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Mesma pressão: F₂ = 100 × 1.000/10 = 10.000 N. O êmbolo pequeno precisa percorrer distância 100 vezes maior: não há ganho de energia.\n\nPegadinhas:\n• A: inverte a razão.\n• B: a pressão é igual, não a força.\n• C: usa razão errada.\n• E: relação inventada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_27",
+    "subject": "Física",
+    "topicId": "fis_calorimetria",
+    "chapter": "Dilatação ou Contração Térmica dos Sólidos e Líquidos",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a água sempre fica mais densa ao esfriar, como a maioria dos líquidos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm lagos de regiões frias, no inverno, forma-se uma camada de gelo na superfície, enquanto a água do fundo permanece líquida, a cerca de 4 °C, o que permite a sobrevivência de peixes. Ao contrário da maioria das substâncias, a água, ao ser resfriada abaixo de 4 °C, dilata-se, e o gelo é menos denso que a água líquida.\n\nTexto elaborado para esta questão.\n\nO congelamento apenas na superfície se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a água tem densidade máxima a cerca de 4 °C, de modo que a água mais fria e o gelo, menos densos, ficam na superfície, enquanto a água a 4 °C permanece no fundo, e o gelo isola a água abaixo dele."
+      },
+      {
+        "id": "b",
+        "text": "o fundo do lago é aquecido pelo Sol, que atravessa o gelo."
+      },
+      {
+        "id": "c",
+        "text": "a água fria é mais densa e afunda, congelando o lago de baixo para cima."
+      },
+      {
+        "id": "d",
+        "text": "o gelo é mais denso que a água e afunda, liberando calor."
+      },
+      {
+        "id": "e",
+        "text": "os peixes produzem calor suficiente para impedir o congelamento do fundo."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A anomalia da água, ligada às ligações de hidrogênio, faz o gelo flutuar e a água a 4 °C ficar no fundo. O gelo, mau condutor, retarda o congelamento do restante.\n\nPegadinhas:\n• B: a explicação é a densidade, não o aquecimento solar.\n• C: abaixo de 4 °C, a água fica menos densa.\n• D: o gelo é menos denso e flutua.\n• E: o calor dos peixes é desprezível.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_28",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_espacial",
+    "chapter": "Cubos e Paralelepípedos",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Calcular o volume em vez da área total, ou somar só três faces.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma pessoa quer embrulhar um presente em uma caixa em forma de paralelepípedo retângulo, com dimensões de 30 cm, 20 cm e 10 cm. Para estimar o papel necessário, sem contar sobras e dobras, ela quer calcular a área total das seis faces da caixa.\n\nNote e adote: área total = 2·(ab + bc + ac).\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA área total da caixa é",
+    "options": [
+      {
+        "id": "a",
+        "text": "600 cm², pois é a soma das áreas de três faces diferentes divididas por 2."
+      },
+      {
+        "id": "b",
+        "text": "1.100 cm², pois é a soma das áreas de apenas três faces, uma de cada tipo."
+      },
+      {
+        "id": "c",
+        "text": "2.200 cm², pois a área total é 2 × (600 + 200 + 300), contando as seis faces."
+      },
+      {
+        "id": "d",
+        "text": "4.400 cm², pois cada uma das três faces diferentes é contada quatro vezes."
+      },
+      {
+        "id": "e",
+        "text": "6.000 cm², pois a área total é o produto das três dimensões da caixa."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Faces: 30 × 20 = 600; 20 × 10 = 200; 30 × 10 = 300. Soma 1.100, cada uma aparece duas vezes: 2.200 cm².\n\nPegadinhas:\n• A: relação inventada.\n• B: conta só três faces.\n• D: conta faces demais.\n• E: confunde área com volume.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_29",
+    "subject": "Matemática",
+    "topicId": "mat_sequencias_matrizes",
+    "chapter": "Sistemas de Equações",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Responder o número de moedas de 10 centavos quando se pergunta o de 25.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm estudante juntou 20 moedas, algumas de 10 centavos e outras de 25 centavos, que somam R$ 3,80. Ele quer descobrir quantas moedas de cada tipo tem sem contá-las de novo. Representando por x as moedas de 10 centavos e por y as de 25 centavos, ele monta um sistema com as informações.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO número de moedas de 25 centavos é",
+    "options": [
+      {
+        "id": "a",
+        "text": "4, pois a diferença entre os valores das moedas é de 15 centavos."
+      },
+      {
+        "id": "b",
+        "text": "6, pois a quantidade de moedas de 25 centavos é um terço de 20, arredondada."
+      },
+      {
+        "id": "c",
+        "text": "8, pois corresponde ao número de moedas de 10 centavos obtido no sistema."
+      },
+      {
+        "id": "d",
+        "text": "10, pois as moedas se dividem igualmente entre os dois tipos."
+      },
+      {
+        "id": "e",
+        "text": "12, pois x + y = 20 e 10x + 25y = 380 dão 15y = 180 e y = 12."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. x = 20 − y; 200 − 10y + 25y = 380 ⇒ y = 12, x = 8. Conferindo: 80 + 300 = 380 centavos.\n\nPegadinhas:\n• A: relação inventada.\n• B: relação inventada.\n• C: é o número de moedas de 10 centavos.\n• D: a divisão igual daria R$ 3,50.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_30",
+    "subject": "Matemática",
+    "topicId": "mat_trigonometria",
+    "chapter": "A Trigonometria dos Números Reais",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o seno de um ângulo do 2º quadrante é negativo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo ciclo trigonométrico, o seno de um ângulo corresponde à ordenada do ponto associado a ele na circunferência de raio 1. Ângulos do segundo quadrante, entre 90° e 180°, estão acima do eixo horizontal. Um estudante sabe que sen 30° = 1/2 e quer calcular sen 150°, observando que os pontos associados a 30° e 150° são simétricos em relação ao eixo vertical.\n\nTexto elaborado para esta questão.\n\nO valor de sen 150° é",
+    "options": [
+      {
+        "id": "a",
+        "text": "−1/2, pois todo ângulo maior que 90° tem seno negativo no ciclo."
+      },
+      {
+        "id": "b",
+        "text": "1/2, pois os pontos de 30° e 150° têm a mesma ordenada, e o seno é positivo no segundo quadrante."
+      },
+      {
+        "id": "c",
+        "text": "√3/2, pois o seno de 150° é igual ao cosseno de 30° no ciclo."
+      },
+      {
+        "id": "d",
+        "text": "−√3/2, pois o seno de 150° é o oposto do cosseno de 30°."
+      },
+      {
+        "id": "e",
+        "text": "0, pois 150° está próximo de 180°, cujo seno é nulo."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. sen(180° − x) = sen x: sen 150° = sen 30° = 1/2, positivo no segundo quadrante.\n\nPegadinhas:\n• A: o seno é positivo nos 1º e 2º quadrantes.\n• C: troca seno por cosseno.\n• D: erra sinal e função.\n• E: só sen 180° vale 0.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_31",
+    "subject": "Matemática",
+    "topicId": "mat_combinatoria",
+    "chapter": "Introdução às Técnicas de Contagem",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Usar arranjo quando a ordem dos membros da comissão não importa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma turma de 6 estudantes precisa escolher uma comissão de 3 pessoas para organizar uma festa. Todos os membros da comissão terão a mesma função, sem cargos diferentes. Um estudante calculou 6 × 5 × 4 = 120 comissões, mas a professora observou que esse cálculo considera a ordem da escolha.\n\nTexto elaborado para esta questão.\n\nO número de comissões diferentes é",
+    "options": [
+      {
+        "id": "a",
+        "text": "3, pois o número de comissões é igual ao número de membros de cada uma."
+      },
+      {
+        "id": "b",
+        "text": "6, pois cada um dos estudantes pode liderar uma comissão diferente."
+      },
+      {
+        "id": "c",
+        "text": "9, pois o número de comissões é a soma do número de estudantes com o de membros."
+      },
+      {
+        "id": "d",
+        "text": "18, pois o número de comissões é o produto do número de estudantes pelo de membros."
+      },
+      {
+        "id": "e",
+        "text": "20, pois C(6,3) = 6 × 5 × 4/(3 × 2 × 1) = 120/6, descontando a ordem."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Os 120 arranjos contam cada grupo 3! = 6 vezes. 120/6 = 20.\n\nPegadinhas:\n• A: confunde tamanho com número de comissões.\n• B: relação inventada.\n• C: soma sem fundamento.\n• D: produto sem fundamento.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_32",
+    "subject": "Matemática",
+    "topicId": "mat_dados_probabilidade",
+    "chapter": "Operações com Probabilidades",
+    "difficulty": "hard",
+    "skill": "interpretacao_grafico",
+    "trap": "Dividir pelo total geral em vez de pelo total do grupo condicionante.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma pesquisa com 200 estudantes registrou, para cada um, se pratica esporte e se dorme pelo menos 8 horas por noite:\n\n• praticam esporte e dormem 8 horas ou mais: 60;\n• praticam esporte e dormem menos de 8 horas: 40;\n• não praticam esporte e dormem 8 horas ou mais: 30;\n• não praticam esporte e dormem menos de 8 horas: 70.\n\nUm estudante que pratica esporte é escolhido ao acaso.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA probabilidade de ele dormir pelo menos 8 horas é",
+    "options": [
+      {
+        "id": "a",
+        "text": "30%, pois 60 em 200 estudantes praticam esporte e dormem bem."
+      },
+      {
+        "id": "b",
+        "text": "45%, pois 90 dos 200 estudantes pesquisados dormem 8 horas ou mais."
+      },
+      {
+        "id": "c",
+        "text": "50%, pois metade dos estudantes pesquisados pratica algum esporte."
+      },
+      {
+        "id": "d",
+        "text": "60%, pois, entre os 100 que praticam esporte, 60 dormem pelo menos 8 horas."
+      },
+      {
+        "id": "e",
+        "text": "67%, pois 60 dos 90 estudantes que dormem bem praticam esporte."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Condiciona-se aos que praticam esporte: 60 + 40 = 100. P = 60/100 = 60%.\n\nPegadinhas:\n• A: divide pelo total geral.\n• B: ignora a condição.\n• C: é P(esporte).\n• E: calcula a probabilidade inversa, P(esporte | dorme bem).",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_33",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_plana",
+    "chapter": "Área do Círculo e de suas Partes",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Usar a área do círculo no lugar do comprimento da circunferência, ou o raio no lugar do diâmetro.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA roda de uma bicicleta tem 70 cm de diâmetro. A cada volta completa, sem deslizar, a bicicleta avança uma distância igual ao comprimento da circunferência da roda. Um ciclista contou 100 voltas da roda em um trecho de ciclovia e quer estimar seu comprimento.\n\nNote e adote: comprimento da circunferência = π·d; π ≈ 3,14.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO comprimento aproximado do trecho é",
+    "options": [
+      {
+        "id": "a",
+        "text": "70 m, pois cada volta da roda corresponde ao seu diâmetro de 70 cm."
+      },
+      {
+        "id": "b",
+        "text": "220 m, pois cada volta avança π × 0,70 ≈ 2,2 m, e 100 voltas dão cerca de 220 m."
+      },
+      {
+        "id": "c",
+        "text": "440 m, pois cada volta avança 2π vezes o diâmetro da roda."
+      },
+      {
+        "id": "d",
+        "text": "700 m, pois o comprimento é o diâmetro multiplicado por 1.000."
+      },
+      {
+        "id": "e",
+        "text": "2.200 m, pois cada volta da roda avança cerca de 22 m."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. C = π × 0,7 ≈ 2,2 m; 100 × 2,2 ≈ 220 m.\n\nPegadinhas:\n• A: esquece o fator π.\n• C: usa 2πd.\n• D: relação inventada.\n• E: erra a ordem de grandeza.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_34",
+    "subject": "Matemática",
+    "topicId": "mat_log_exponenciais",
+    "chapter": "Introdução aos Logaritmos",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Multiplicar os logaritmos em vez de somá-los.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAntes das calculadoras, tabelas de logaritmos eram usadas para transformar multiplicações em somas, graças à propriedade log(a·b) = log a + log b. Astrônomos e navegadores dos séculos XVII e XVIII usavam essas tabelas para fazer, em minutos, contas que levariam horas. Um estudante sabe que log 2 ≈ 0,30 e log 3 ≈ 0,48, na base 10, e quer calcular log 6 sem calculadora.\n\nTexto elaborado para esta questão.\n\nO valor aproximado de log 6 é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,78, pois log 6 = log 2 + log 3 = 0,30 + 0,48, pela propriedade do produto."
+      },
+      {
+        "id": "b",
+        "text": "0,90, pois log 6 é o triplo de log 2, já que 6 = 3 × 2."
+      },
+      {
+        "id": "c",
+        "text": "0,96, pois log 6 é o dobro de log 3, já que 6 = 2 × 3."
+      },
+      {
+        "id": "d",
+        "text": "1,44, pois log 6 é o produto de log 3 pelo número 3."
+      },
+      {
+        "id": "e",
+        "text": "1,80, pois log 6 é seis vezes o valor de log 2."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. log 6 = log(2 × 3) = 0,78 (de fato, log 6 ≈ 0,778).\n\nPegadinhas:\n• B: 3 × log 2 = log 8.\n• C: 2 × log 3 = log 9.\n• D: relação inventada.\n• E: 6 × log 2 = log 64.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_35",
+    "subject": "Matemática",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "chapter": "Porcentagem",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Calcular o aumento sobre o valor final em vez do inicial.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO preço de um litro de gasolina em uma cidade passou de R$ 5,00 para R$ 8,00 em alguns anos. Um jornal quer informar a variação percentual do preço no período. A variação percentual é calculada dividindo o aumento pelo valor inicial e multiplicando por 100.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO aumento percentual do preço foi de",
+    "options": [
+      {
+        "id": "a",
+        "text": "30%, pois o aumento de R$ 3,00 equivale diretamente a 30 pontos percentuais."
+      },
+      {
+        "id": "b",
+        "text": "37,5%, pois o aumento de R$ 3,00 foi dividido pelo preço final, R$ 8,00."
+      },
+      {
+        "id": "c",
+        "text": "60%, pois o aumento de R$ 3,00 corresponde a 3/5 do preço inicial."
+      },
+      {
+        "id": "d",
+        "text": "80%, pois o preço final de R$ 8,00 corresponde ao aumento percentual."
+      },
+      {
+        "id": "e",
+        "text": "160%, pois o preço final corresponde a 160% do preço inicial."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Aumento: 3; 3/5 = 0,6 = 60%.\n\nPegadinhas:\n• A: confunde reais com porcentagem.\n• B: usa o valor final como base.\n• D: relação inventada.\n• E: confunde o valor final em porcentagem com o aumento.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_36",
+    "subject": "Geografia",
+    "topicId": "geo_globalizacao_economica",
+    "chapter": "Globalização e Processos Econômicos Atuais",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a deslocalização industrial ocorreu por falta de tecnologia nos países ricos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDesde a década de 1980, muitas empresas de países desenvolvidos transferiram fábricas, ou contrataram fornecedores, em países da Ásia, como China, Vietnã e Bangladesh. Entre os fatores apontados estão salários mais baixos, incentivos fiscais, legislações ambientais e trabalhistas menos rigorosas e a redução dos custos de transporte e comunicação. Nos países de origem, algumas regiões industriais perderam empregos.\n\nTexto elaborado para esta questão.\n\nO processo descrito, chamado deslocalização industrial,",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi motivado pela busca de menores custos de produção, favorecida pela redução dos custos de transporte e comunicação, e teve efeitos como a perda de empregos industriais em regiões dos países de origem."
+      },
+      {
+        "id": "b",
+        "text": "ocorreu porque os países ricos deixaram de ter tecnologia industrial."
+      },
+      {
+        "id": "c",
+        "text": "aumentou os salários industriais nos países de origem, pela maior concorrência por trabalhadores."
+      },
+      {
+        "id": "d",
+        "text": "foi motivado pela busca de legislações trabalhistas mais rígidas."
+      },
+      {
+        "id": "e",
+        "text": "concentrou toda a produção industrial nos países desenvolvidos."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A globalização reduziu barreiras e custos logísticos, e as empresas buscaram onde produzir mais barato; os países de origem passaram por desindustrialização regional.\n\nPegadinhas:\n• B: a tecnologia permaneceu nos países ricos.\n• C: houve perda de empregos.\n• D: buscaram legislações menos rigorosas.\n• E: a produção se espalhou pela Ásia.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_37",
+    "subject": "Geografia",
+    "topicId": "geo_fisica_brasil",
+    "chapter": "Políticas Ambientais Brasileiras",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o monitoramento por satélite impede sozinho o desmatamento.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDesde a década de 1980, o Instituto Nacional de Pesquisas Espaciais (INPE) monitora o desmatamento da Amazônia com imagens de satélite. O sistema PRODES calcula a taxa anual de desmatamento, e o DETER emite alertas quase diários de novas áreas desmatadas, usados por órgãos de fiscalização. Pesquisas mostram que a redução do desmatamento em alguns períodos coincidiu com o aumento das ações de fiscalização e de outras políticas públicas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o monitoramento por satélite, por si só, impede qualquer desmatamento."
+      },
+      {
+        "id": "b",
+        "text": "o INPE realiza a fiscalização e aplica multas diretamente nas áreas desmatadas."
+      },
+      {
+        "id": "c",
+        "text": "o monitoramento por satélite fornece dados que orientam a fiscalização e as políticas públicas, e sua eficácia depende de ações efetivas no território."
+      },
+      {
+        "id": "d",
+        "text": "o PRODES emite alertas diários, e o DETER calcula a taxa anual."
+      },
+      {
+        "id": "e",
+        "text": "os dados de satélite não têm relação com as políticas de combate ao desmatamento."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Os sistemas do INPE informam onde e quanto se desmata; reduzir o desmatamento exige fiscalização, punição e outras políticas.\n\nPegadinhas:\n• A: dados não impedem o desmatamento sem ação.\n• B: o INPE monitora; a fiscalização cabe a outros órgãos.\n• D: inverte as funções dos sistemas.\n• E: o texto relaciona os dados às políticas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_38",
+    "subject": "Geografia",
+    "topicId": "geo_climatologia_socioambiental",
+    "chapter": "Biogeografia Mundial",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Confundir savana com floresta tropical, ou atribuir sua vegetação a frio intenso.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm grande parte da África Oriental, como no Quênia e na Tanzânia, a paisagem é formada por extensos campos de gramíneas com árvores e arbustos espaçados, como acácias e baobás. O clima é quente, com uma estação chuvosa e outra seca bem definidas. Esse ambiente abriga grandes manadas de herbívoros, como zebras e gnus, que migram acompanhando as chuvas, e predadores como leões. Parques nacionais protegem parte dessas paisagens e atraem turistas do mundo todo.\n\nTexto elaborado para esta questão.\n\nO texto descreve",
+    "options": [
+      {
+        "id": "a",
+        "text": "a tundra, com vegetação rasteira adaptada ao frio extremo."
+      },
+      {
+        "id": "b",
+        "text": "a taiga, com florestas de coníferas e invernos rigorosos."
+      },
+      {
+        "id": "c",
+        "text": "a floresta tropical úmida, com chuvas abundantes o ano todo."
+      },
+      {
+        "id": "d",
+        "text": "o deserto, com vegetação ausente e chuvas quase nulas durante todo o ano."
+      },
+      {
+        "id": "e",
+        "text": "a savana, formação tropical de gramíneas com árvores esparsas, sob clima com estações chuvosa e seca bem marcadas, semelhante em vários aspectos ao Cerrado brasileiro."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A alternância de chuva e seca favorece o estrato de gramíneas e árvores espaçadas; as migrações acompanham a disponibilidade de pasto.\n\nPegadinhas:\n• A: a tundra é fria.\n• B: a taiga é fria e florestal.\n• C: a floresta tropical tem chuvas regulares e cobertura densa.\n• D: o texto descreve vegetação e estação chuvosa.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_39",
+    "subject": "Geografia",
+    "topicId": "geo_geopolitica_regional",
+    "chapter": "Tensões Geopolíticas na Europa",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a Catalunha é um Estado independente reconhecido, ou que o movimento é apenas econômico.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Catalunha, região do nordeste da Espanha com língua e tradições próprias, tem um forte movimento separatista. Em 2017, o governo regional realizou um referendo de independência considerado ilegal pelo governo espanhol e pela Justiça do país, e líderes do movimento foram processados. Defensores da independência destacam a identidade cultural catalã e afirmam que a região contribui mais com impostos do que recebe.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a Catalunha é um país independente, reconhecido pela União Europeia desde 2017."
+      },
+      {
+        "id": "b",
+        "text": "o separatismo catalão não tem relação com a identidade cultural da região."
+      },
+      {
+        "id": "c",
+        "text": "o referendo de 2017 foi reconhecido como legal pelo governo espanhol."
+      },
+      {
+        "id": "d",
+        "text": "o separatismo catalão combina argumentos culturais, como língua e tradições próprias, e econômicos, e enfrenta a oposição do Estado espanhol, que considerou ilegal o referendo de 2017."
+      },
+      {
+        "id": "e",
+        "text": "a Catalunha fica no sul da França, e o referendo foi organizado pelo governo francês."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Identidade nacional e questões fiscais alimentam o movimento; o Estado espanhol rejeita a secessão unilateral.\n\nPegadinhas:\n• A: a Catalunha segue parte da Espanha.\n• B: o texto destaca a identidade cultural.\n• C: o referendo foi considerado ilegal.\n• E: fica no nordeste da Espanha.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_40",
+    "subject": "Geografia",
+    "topicId": "geo_geopolitica_regional",
+    "chapter": "Geopolítica e Geoeconomia da Ásia",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o envelhecimento japonês não afeta a economia e o mercado de trabalho.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Japão tem uma das populações mais envelhecidas do mundo: cerca de 29% dos habitantes têm 65 anos ou mais, e a população total diminui desde a década de 2010. A taxa de fecundidade é baixa, e a imigração, historicamente restrita. Para lidar com a falta de trabalhadores, o país investe em automação e robótica e tem ampliado, gradualmente, a entrada de trabalhadores estrangeiros.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o Japão tem população jovem e em rápido crescimento, com fecundidade elevada."
+      },
+      {
+        "id": "b",
+        "text": "o envelhecimento e a queda da população pressionam o mercado de trabalho e a previdência, e o país responde com automação e maior abertura à imigração."
+      },
+      {
+        "id": "c",
+        "text": "o Japão sempre teve uma política de imigração muito aberta."
+      },
+      {
+        "id": "d",
+        "text": "a robótica é usada no Japão apenas para entretenimento, sem relação com o trabalho."
+      },
+      {
+        "id": "e",
+        "text": "a fecundidade alta é a causa da queda da população japonesa."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Menos jovens e mais idosos reduzem a força de trabalho e aumentam gastos com aposentadorias e saúde; automação e imigração são respostas.\n\nPegadinhas:\n• A: a população é envelhecida e em queda.\n• C: o texto diz que a imigração era restrita.\n• D: a robótica responde à falta de trabalhadores.\n• E: a fecundidade é baixa.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_41",
+    "subject": "Geografia",
+    "topicId": "geo_cartografia",
+    "chapter": "Cartografia Digital",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o sensoriamento remoto exige equipamentos no local, ou que só registra luz visível.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nSatélites de observação da Terra captam a radiação refletida ou emitida pela superfície, inclusive em faixas invisíveis ao olho humano, como o infravermelho. Esse sensoriamento remoto permite identificar focos de calor de queimadas, áreas desmatadas, a expansão urbana e a situação de lavouras, mesmo em regiões de difícil acesso. As imagens são processadas em computadores e combinadas com outros dados em sistemas de informação geográfica.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que o sensoriamento remoto",
+    "options": [
+      {
+        "id": "a",
+        "text": "exige a presença de técnicos no local para registrar as informações."
+      },
+      {
+        "id": "b",
+        "text": "obtém informações sobre a superfície a distância, por sensores que captam radiação, inclusive invisível, e permite monitorar fenômenos como queimadas e desmatamento em áreas de difícil acesso."
+      },
+      {
+        "id": "c",
+        "text": "registra apenas a luz visível, como uma fotografia comum."
+      },
+      {
+        "id": "d",
+        "text": "é utilizado apenas para fins militares, sem aplicações ambientais ou agrícolas."
+      },
+      {
+        "id": "e",
+        "text": "não permite combinar dados com outros sistemas de informação."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Sensores em satélites captam radiação em várias faixas; o infravermelho revela focos de calor. Os dados alimentam SIGs.\n\nPegadinhas:\n• A: a coleta é a distância.\n• C: o texto cita o infravermelho.\n• D: o texto cita usos ambientais e agrícolas.\n• E: o texto diz que os dados são combinados.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_42",
+    "subject": "História",
+    "topicId": "his_idade_media",
+    "chapter": "Alta Idade Média e Feudalismo",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a cultura escrita medieval era difundida entre os camponeses.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa Alta Idade Média, a maior parte da população europeia era camponesa e não sabia ler nem escrever. Nos mosteiros, monges copistas reproduziam manuscritos à mão, preservando textos religiosos e parte das obras da Antiguidade clássica. A Igreja Católica controlava as principais instituições de ensino e tinha grande influência sobre a vida cultural e as ideias da época. Muitos desses manuscritos sobreviveram até hoje em bibliotecas europeias.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a maioria dos camponeses medievais sabia ler e escrever."
+      },
+      {
+        "id": "b",
+        "text": "os livros eram impressos em grande quantidade nos mosteiros."
+      },
+      {
+        "id": "c",
+        "text": "a Igreja não tinha influência sobre o ensino e a cultura."
+      },
+      {
+        "id": "d",
+        "text": "as obras da Antiguidade clássica foram totalmente destruídas na Idade Média."
+      },
+      {
+        "id": "e",
+        "text": "a Igreja exercia grande influência cultural, e os mosteiros, com o trabalho dos copistas, tiveram papel importante na preservação de textos religiosos e de parte das obras clássicas."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Em sociedade majoritariamente analfabeta, os mosteiros concentravam a produção e a guarda de manuscritos, e a Igreja dominava o saber letrado.\n\nPegadinhas:\n• A: a maioria não sabia ler.\n• B: a imprensa só surgiria no século XV.\n• C: o texto destaca a influência da Igreja.\n• D: os copistas preservaram parte dessas obras.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_43",
+    "subject": "História",
+    "topicId": "his_idade_antiga",
+    "chapter": "Antiguidade Clássica: o Mundo Grego",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que o helenismo foi a imposição da cultura persa sobre os gregos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo século IV a.C., Alexandre, rei da Macedônia, conquistou um vasto império que se estendia da Grécia ao Egito e à Índia. Após sua morte, em 323 a.C., os reinos formados por seus generais difundiram a língua grega e elementos da cultura grega, que se misturaram às tradições locais. Cidades como Alexandria, no Egito, tornaram-se centros de estudos, com uma famosa biblioteca.\n\nTexto elaborado para esta questão.\n\nO processo descrito, chamado helenismo, caracterizou-se",
+    "options": [
+      {
+        "id": "a",
+        "text": "pela imposição da cultura persa sobre a Grécia, após a derrota de Alexandre."
+      },
+      {
+        "id": "b",
+        "text": "pelo isolamento cultural das regiões conquistadas, que mantiveram apenas suas tradições."
+      },
+      {
+        "id": "c",
+        "text": "pelo fim do uso da língua grega no Mediterrâneo, substituída pelo latim."
+      },
+      {
+        "id": "d",
+        "text": "pela fusão de elementos da cultura grega com tradições orientais e egípcias, difundida pelas conquistas de Alexandre e pelos reinos que se formaram depois delas."
+      },
+      {
+        "id": "e",
+        "text": "pela destruição de todos os centros de estudo da Antiguidade."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O helenismo combinou a cultura grega com as orientais; Alexandria e sua biblioteca simbolizam essa produção.\n\nPegadinhas:\n• A: a difusão foi da cultura grega.\n• B: houve intenso intercâmbio.\n• C: o grego se difundiu.\n• E: centros como Alexandria floresceram.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_44",
+    "subject": "História",
+    "topicId": "his_moderna_iluminismo",
+    "chapter": "Reforma Religiosa",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a Reforma anglicana teve motivação apenas teológica, como a de Lutero.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1534, o rei Henrique VIII, da Inglaterra, rompeu com a Igreja de Roma depois que o papa se recusou a anular seu casamento com Catarina de Aragão. O Parlamento inglês aprovou o Ato de Supremacia, que tornou o rei chefe da Igreja da Inglaterra. Terras e bens dos mosteiros foram confiscados pela Coroa e vendidos, em parte, a nobres e comerciantes.\n\nTexto elaborado para esta questão.\n\nA Reforma anglicana relacionou-se",
+    "options": [
+      {
+        "id": "a",
+        "text": "exclusivamente a divergências teológicas sobre a salvação, como na Reforma de Lutero."
+      },
+      {
+        "id": "b",
+        "text": "a uma aliança entre o rei inglês e o papa contra os protestantes."
+      },
+      {
+        "id": "c",
+        "text": "a interesses políticos e econômicos da monarquia inglesa, como a autonomia diante do papa e o confisco de bens da Igreja, além da questão do casamento do rei."
+      },
+      {
+        "id": "d",
+        "text": "ao fortalecimento do poder do papa sobre a Inglaterra e sobre o rei inglês."
+      },
+      {
+        "id": "e",
+        "text": "a uma revolta camponesa contra a nobreza inglesa e contra os mosteiros."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O rompimento fortaleceu o poder real e transferiu riquezas da Igreja para a Coroa e para grupos aliados.\n\nPegadinhas:\n• A: o texto destaca motivos políticos e pessoais.\n• B: houve rompimento com o papa.\n• D: o poder papal foi reduzido.\n• E: foi uma iniciativa do rei.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_45",
+    "subject": "História",
+    "topicId": "his_imperialismo_guerras",
+    "chapter": "Imperialismo e Belle Époque",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a Belle Époque foi um período de paz e bem-estar para todos, inclusive nas colônias.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEntre o fim do século XIX e 1914, a Europa viveu a chamada Belle Époque: cidades como Paris ganharam iluminação elétrica, bondes, cinemas e cafés; inovações como o telefone, o automóvel e o avião difundiam a confiança no progresso. Ao mesmo tempo, os trabalhadores enfrentavam longas jornadas, e as potências europeias exploravam colônias na África e na Ásia, enquanto disputas entre elas preparavam a Primeira Guerra.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a Belle Époque",
+    "options": [
+      {
+        "id": "a",
+        "text": "combinou otimismo e inovações tecnológicas nas cidades europeias com desigualdades sociais, exploração colonial e rivalidades que levariam à Primeira Guerra Mundial."
+      },
+      {
+        "id": "b",
+        "text": "foi um período de bem-estar igual para todos os grupos sociais e para as colônias."
+      },
+      {
+        "id": "c",
+        "text": "ocorreu após a Segunda Guerra Mundial, na reconstrução da Europa."
+      },
+      {
+        "id": "d",
+        "text": "foi marcada pela ausência de inovações tecnológicas nas cidades europeias."
+      },
+      {
+        "id": "e",
+        "text": "eliminou as rivalidades entre as potências europeias, que passaram a cooperar."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O brilho urbano convivia com a questão operária e com o imperialismo; o otimismo terminou na guerra de 1914.\n\nPegadinhas:\n• B: o texto aponta desigualdades e exploração.\n• C: ocorreu antes de 1914.\n• D: o texto cita várias inovações.\n• E: as rivalidades aumentaram.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_46",
+    "subject": "História",
+    "topicId": "his_brasil_imperio",
+    "chapter": "Brasil Império: Segundo Reinado (1840-1889)",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o café do Oeste Paulista usou apenas mão de obra escravizada, como no Vale do Paraíba.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo Segundo Reinado, o café tornou-se o principal produto de exportação do Brasil. Inicialmente cultivado no Vale do Paraíba, com mão de obra escravizada, expandiu-se depois para o Oeste Paulista, região de terras férteis. Ali, cafeicultores investiram em ferrovias, que levavam o café ao porto de Santos, e, a partir das décadas de 1870 e 1880, passaram a empregar cada vez mais imigrantes europeus.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o café foi cultivado exclusivamente no Vale do Paraíba durante todo o Segundo Reinado."
+      },
+      {
+        "id": "b",
+        "text": "as ferrovias não tiveram importância para a economia cafeeira."
+      },
+      {
+        "id": "c",
+        "text": "a expansão do café para o Oeste Paulista foi acompanhada de investimentos em ferrovias e do uso crescente de mão de obra imigrante, o que diferenciou essa região do Vale do Paraíba."
+      },
+      {
+        "id": "d",
+        "text": "o café deixou de ser o principal produto de exportação no Segundo Reinado."
+      },
+      {
+        "id": "e",
+        "text": "os imigrantes europeus trabalharam apenas nas cidades, e não nas fazendas de café."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O Oeste Paulista modernizou a logística com ferrovias e incorporou imigrantes, enquanto o Vale do Paraíba entrava em declínio.\n\nPegadinhas:\n• A: houve expansão para o Oeste.\n• B: as ferrovias levavam o café a Santos.\n• D: o café era o principal produto.\n• E: os imigrantes foram para as fazendas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_47",
+    "subject": "História",
+    "topicId": "his_republica_liberal_atual",
+    "chapter": "O Brasil Atual",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que o impeachment de Collor resultou de um golpe militar.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1992, o presidente Fernando Collor de Mello, o primeiro eleito pelo voto direto após o regime militar, foi alvo de denúncias de corrupção investigadas por uma Comissão Parlamentar de Inquérito. Milhares de estudantes, chamados caras-pintadas, foram às ruas pedir sua saída. A Câmara dos Deputados autorizou o processo de impeachment, e Collor renunciou antes do julgamento final pelo Senado, que mesmo assim suspendeu seus direitos políticos.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "Collor foi deposto por um golpe militar, como ocorreu com Goulart em 1964."
+      },
+      {
+        "id": "b",
+        "text": "o processo seguiu os mecanismos previstos na Constituição, com investigação parlamentar, mobilização popular e decisão do Congresso, sem ruptura democrática."
+      },
+      {
+        "id": "c",
+        "text": "Collor foi eleito indiretamente pelo Congresso, como os presidentes do regime militar."
+      },
+      {
+        "id": "d",
+        "text": "o Senado absolveu Collor e devolveu seus direitos políticos."
+      },
+      {
+        "id": "e",
+        "text": "não houve participação popular no processo, decidido apenas pelos parlamentares."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O impeachment é um mecanismo constitucional; o episódio mostrou o funcionamento das instituições após 1988.\n\nPegadinhas:\n• A: não houve intervenção militar.\n• C: foi eleito pelo voto direto.\n• D: o Senado suspendeu seus direitos.\n• E: o texto cita os caras-pintadas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_48",
+    "subject": "Português",
+    "topicId": "por_sintaxe",
+    "chapter": "Orações Adjetivas",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a vírgula não altera o sentido da oração adjetiva.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nCompare as frases, escritas para esta questão:\n\nI. \"Os alunos que estudaram para a prova foram aprovados.\"\nII. \"Os alunos, que estudaram para a prova, foram aprovados.\"\n\nAs duas frases têm uma oração introduzida pelo pronome relativo \"que\", referente a \"os alunos\". A diferença está apenas no uso das vírgulas.\n\nTexto elaborado para esta questão.\n\nSobre as frases, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "em I, a oração é restritiva e indica que só os alunos que estudaram foram aprovados; em II, é explicativa e indica que todos os alunos estudaram e foram aprovados."
+      },
+      {
+        "id": "b",
+        "text": "as duas frases têm exatamente o mesmo sentido, pois a vírgula é apenas uma pausa."
+      },
+      {
+        "id": "c",
+        "text": "em I, a oração é explicativa, e em II, restritiva, pois a vírgula restringe o grupo."
+      },
+      {
+        "id": "d",
+        "text": "em II, a oração indica que apenas alguns alunos estudaram."
+      },
+      {
+        "id": "e",
+        "text": "as duas orações são substantivas, pois retomam um substantivo."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Sem vírgulas, a oração restringe o grupo; com vírgulas, acrescenta uma informação sobre todos os alunos.\n\nPegadinhas:\n• B: as vírgulas mudam o sentido.\n• C: inverte as classificações.\n• D: em II, todos estudaram.\n• E: são orações adjetivas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_49",
+    "subject": "Inglês",
+    "topicId": "ing_01",
+    "chapter": "Text Comprehension: Songs and Poems",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Ler o poema literalmente, ignorando a metáfora da cidade que não dorme.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the poem, written for this question:\n\n\"The city never closes its eyes;\nits windows burn till morning,\nits streets keep talking to the dark,\nand no one hears the stars.\"\n\nTexto elaborado para esta questão.\n\nThe poem suggests that",
+    "options": [
+      {
+        "id": "a",
+        "text": "the city has no electricity at night, so the windows remain dark."
+      },
+      {
+        "id": "b",
+        "text": "people in the city spend the night looking at the stars."
+      },
+      {
+        "id": "c",
+        "text": "the streets are completely silent at night, when everyone sleeps."
+      },
+      {
+        "id": "d",
+        "text": "the city closes all its windows when it gets dark to protect its people."
+      },
+      {
+        "id": "e",
+        "text": "city life continues through the night with lights and noise, so that nature, represented by the stars, goes unnoticed."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A cidade personificada \"never closes its eyes\"; janelas acesas e ruas que \"keep talking\" indicam atividade noturna, e \"no one hears the stars\" sugere que a natureza é ignorada.\n\nPegadinhas:\n• A: as janelas \"burn till morning\".\n• B: ninguém percebe as estrelas.\n• C: as ruas \"keep talking\".\n• D: as janelas ficam acesas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l23_50",
+    "subject": "Filosofia",
+    "topicId": "fil_moderna_racionalismo_empirismo",
+    "chapter": "A Crítica de Hume à Causalidade",
+    "difficulty": "hard",
+    "skill": "interpretacao_textual",
+    "trap": "Achar que Hume afirma que a causalidade é percebida diretamente pelos sentidos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDavid Hume, no século XVIII, observou que, quando uma bola de bilhar atinge outra, vemos o primeiro movimento e, em seguida, o segundo, mas não vemos nenhuma \"conexão necessária\" entre eles. Para ele, a ideia de que um evento causa o outro vem do hábito: depois de observar muitas vezes que um acontecimento é seguido de outro, a mente passa a esperar que isso se repita.\n\nTexto elaborado para esta questão.\n\nSegundo o texto, para Hume, a ideia de causalidade",
+    "options": [
+      {
+        "id": "a",
+        "text": "é percebida diretamente pelos sentidos em cada evento observado."
+      },
+      {
+        "id": "b",
+        "text": "é uma verdade da razão, conhecida antes de qualquer experiência."
+      },
+      {
+        "id": "c",
+        "text": "garante com certeza absoluta que o futuro será igual ao passado."
+      },
+      {
+        "id": "d",
+        "text": "origina-se do hábito de observar repetidamente a sucessão de eventos, e não de uma conexão necessária percebida entre eles."
+      },
+      {
+        "id": "e",
+        "text": "foi rejeitada por ele em favor da explicação pela vontade divina."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Percebemos sucessão e conjunção constante; a necessidade é projeção da mente, baseada no hábito. A crítica abalou a pretensão de certeza nas inferências causais.\n\nPegadinhas:\n• A: Hume diz que não vemos a conexão.\n• B: a ideia vem da experiência.\n• C: o hábito não garante certeza.\n• E: Hume não recorre à vontade divina.",
+    "styleOf": "FUVEST"
+  }
+]
