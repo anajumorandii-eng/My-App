@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "crivo_fuvest_f1_l15_01",
+    "subject": "Biologia",
+    "topicId": "bio_codigo_genetico_sintese",
+    "chapter": "Divisão Celular",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o quimioterápico ataca só o tumor, ou que age sobre células que não se dividem.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAlguns medicamentos usados na quimioterapia, como o paclitaxel, extraído originalmente de uma árvore, interferem nos microtúbulos que formam o fuso mitótico, impedindo que os cromossomos sejam separados corretamente durante a divisão celular. Pacientes em tratamento costumam ter efeitos colaterais como queda de cabelo, feridas na boca e redução das células do sangue, enquanto neurônios adultos e células musculares do coração quase não são afetados.\n\nTexto elaborado para esta questão.\n\nO padrão de efeitos colaterais se explica porque o medicamento",
+    "options": [
+      {
+        "id": "a",
+        "text": "destrói apenas as células cancerosas, sem atingir nenhum tecido saudável do organismo."
+      },
+      {
+        "id": "b",
+        "text": "age sobre todas as células do corpo com a mesma intensidade, independentemente de se dividirem."
+      },
+      {
+        "id": "c",
+        "text": "impede a síntese de proteínas nos ribossomos de todas as células, inclusive dos neurônios."
+      },
+      {
+        "id": "d",
+        "text": "estimula a divisão das células do cabelo e da mucosa, que se esgotam e morrem."
+      },
+      {
+        "id": "e",
+        "text": "atua sobre células que se dividem com frequência, como as dos folículos pilosos, da mucosa e da medula óssea, além das tumorais, e quase não afeta células que raramente se dividem."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Sem fuso funcional, a mitose não se completa e a célula tende a morrer. O tumor é atingido por se dividir muito, mas também os tecidos normais de renovação rápida: folículos (queda de cabelo), mucosa (feridas) e medula óssea (menos células do sangue). Neurônios e células cardíacas adultas quase não se dividem.\n\nPegadinhas:\n• A: o próprio texto descreve efeitos em tecidos saudáveis.\n• B: neurônios e células cardíacas quase não são afetados.\n• C: o alvo descrito são os microtúbulos do fuso, não os ribossomos.\n• D: o medicamento bloqueia a divisão, em vez de estimulá-la.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_02",
+    "subject": "Biologia",
+    "topicId": "bio_codigo_genetico_sintese",
+    "chapter": "Mutações Cromossômicas e Gametogênese",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que a síndrome é causada por mutação gênica herdada dos pais, ou por erro na mitose do adulto.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA síndrome de Down, na maioria dos casos, é causada pela presença de três cromossomos 21 nas células, em vez de dois. Estatísticas mostram que a frequência de nascimentos com a síndrome aumenta com a idade materna: é de cerca de 1 em 1.500 para mães de 20 anos e de cerca de 1 em 100 para mães de 40 anos. Nas mulheres, os ovócitos começam a meiose ainda na vida fetal e ficam parados em uma de suas fases por anos ou décadas, até a ovulação.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a causa mais comum da síndrome e sua relação com a idade materna são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "a não disjunção do cromossomo 21 durante a meiose, que forma um gameta com dois cromossomos 21, e o risco maior com a idade se associa ao longo tempo em que os ovócitos permanecem com a meiose interrompida."
+      },
+      {
+        "id": "b",
+        "text": "uma mutação no gene de um cromossomo 21, transmitida sempre pelo pai."
+      },
+      {
+        "id": "c",
+        "text": "a perda de um cromossomo 21 na mitose do embrião, que resulta em monossomia."
+      },
+      {
+        "id": "d",
+        "text": "a exposição da mãe à radiação durante a gravidez, que altera o cromossomo 21 do feto."
+      },
+      {
+        "id": "e",
+        "text": "a herança de um alelo recessivo que só se manifesta em mães com mais de 40 anos."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Se os cromossomos 21 homólogos ou as cromátides não se separam na meiose, forma-se um gameta com dois 21; fecundado por um gameta normal, origina um zigoto com três (trissomia). O ovócito, parado na prófase I por décadas, fica mais sujeito a erros de separação — daí o aumento com a idade materna.\n\nPegadinhas:\n• B: é uma alteração no número de cromossomos, não em um gene, e pode vir de qualquer genitor.\n• C: a síndrome envolve um cromossomo a mais, não a menos.\n• D: a explicação não envolve radiação.\n• E: não se trata de herança de alelo recessivo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_03",
+    "subject": "Biologia",
+    "topicId": "bio_codigo_genetico_sintese",
+    "chapter": "Ácidos Nucleicos",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Achar que as quatro bases estão sempre em quantidades iguais, ou esquecer que A pareia com T.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa década de 1950, o bioquímico Erwin Chargaff observou que, no DNA de diferentes espécies, a quantidade de adenina é igual à de timina, e a de guanina é igual à de citosina, embora as proporções de A + T e de G + C variem de uma espécie para outra. Essa regularidade foi uma das evidências usadas por Watson e Crick para propor o modelo da dupla-hélice. Em uma amostra de DNA de fita dupla de certa bactéria, 30% das bases são adenina.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA porcentagem de guanina nessa amostra é",
+    "options": [
+      {
+        "id": "a",
+        "text": "10%, pois a guanina é a diferença entre as porcentagens de adenina e de timina."
+      },
+      {
+        "id": "b",
+        "text": "15%, pois a guanina corresponde à metade da porcentagem de adenina."
+      },
+      {
+        "id": "c",
+        "text": "20%, pois A = T = 30% somam 60%, e os 40% restantes se dividem igualmente entre G e C."
+      },
+      {
+        "id": "d",
+        "text": "30%, pois as quatro bases do DNA estão sempre na mesma proporção."
+      },
+      {
+        "id": "e",
+        "text": "70%, pois a guanina corresponde a todas as bases que não são adenina."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A pareia com T: se A = 30%, T = 30%. Sobram 40% para G + C, e, como G = C, G = 20%.\n\nPegadinhas:\n• A: não há base para subtrair A de T, que são iguais.\n• B: a regra não relaciona G com metade de A.\n• D: as proporções variam entre espécies; só os pares são iguais.\n• E: soma T, G e C, esquecendo que T também pareia com A.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_04",
+    "subject": "Biologia",
+    "topicId": "bio_microbiologia",
+    "chapter": "Procariotos",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que todas as bactérias são parasitas, ou que procariotos não fazem fotossíntese.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nHá cerca de 2,4 bilhões de anos, o oxigênio passou a se acumular na atmosfera da Terra. Os principais responsáveis foram as cianobactérias, organismos unicelulares sem núcleo organizado e sem organelas envoltas por membrana, que realizam fotossíntese liberando oxigênio. Até hoje, cianobactérias vivem em oceanos, lagos e solos, e algumas fixam o nitrogênio do ar, transformando-o em compostos que outros seres vivos podem usar.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que as cianobactérias",
+    "options": [
+      {
+        "id": "a",
+        "text": "são eucariontes, pois realizam fotossíntese com cloroplastos."
+      },
+      {
+        "id": "b",
+        "text": "são procariontes fotossintetizantes que tiveram papel central no acúmulo de oxigênio na atmosfera e participam de ciclos importantes, como o do nitrogênio."
+      },
+      {
+        "id": "c",
+        "text": "são vírus que se reproduzem dentro das células das plantas."
+      },
+      {
+        "id": "d",
+        "text": "consomem oxigênio da atmosfera e por isso reduziram sua concentração."
+      },
+      {
+        "id": "e",
+        "text": "são parasitas obrigatórias, que só sobrevivem dentro de outros organismos."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Sem núcleo nem organelas membranosas, são procariontes; mesmo assim, fazem fotossíntese em membranas internas e liberam O₂. Sua atividade transformou a atmosfera, e a fixação de nitrogênio as torna importantes nos ecossistemas.\n\nPegadinhas:\n• A: o texto diz que não têm organelas envoltas por membrana, como os cloroplastos.\n• C: são organismos celulares, não vírus.\n• D: inverte o papel: elas liberam oxigênio.\n• E: o texto descreve vida livre em oceanos, lagos e solos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_05",
+    "subject": "Biologia",
+    "topicId": "bio_evolucao",
+    "chapter": "Evolução Biológica: Construção Histórica",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Atribuir a Darwin a ideia de que o uso de um órgão gera características herdáveis.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara explicar o pescoço longo das girafas, duas ideias foram propostas no século XIX. Segundo uma delas, os ancestrais das girafas esticavam o pescoço para alcançar as folhas mais altas, e esse esforço alongava o pescoço, característica que passava aos filhotes. Segundo a outra, havia variação no comprimento do pescoço entre os indivíduos de uma população, e os de pescoço mais longo tinham mais acesso ao alimento em épocas de escassez, sobreviviam mais e deixavam mais descendentes.\n\nTexto elaborado para esta questão.\n\nAs duas explicações correspondem, respectivamente, às ideias de",
+    "options": [
+      {
+        "id": "a",
+        "text": "Darwin, baseada na seleção natural; e Lamarck, baseada no uso e desuso."
+      },
+      {
+        "id": "b",
+        "text": "Mendel, baseada nas leis da herança; e Darwin, baseada no uso e desuso."
+      },
+      {
+        "id": "c",
+        "text": "Lamarck, baseada na geração espontânea; e Pasteur, baseada na biogênese."
+      },
+      {
+        "id": "d",
+        "text": "Lamarck, baseada no uso e desuso e na herança de caracteres adquiridos; e Darwin, baseada na variação entre indivíduos e na seleção natural."
+      },
+      {
+        "id": "e",
+        "text": "Darwin, nas duas explicações, que apresentam a mesma ideia com palavras diferentes."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Na primeira, o esforço individual modifica o corpo, e a modificação é herdada — Lamarck. Na segunda, a variação já existe, e o ambiente seleciona os mais aptos, que se reproduzem mais — Darwin. Hoje se sabe que características adquiridas pelo uso não são transmitidas pelos genes.\n\nPegadinhas:\n• A: inverte os autores.\n• B: Mendel estudou a herança, e o uso e desuso é de Lamarck.\n• C: geração espontânea e biogênese tratam da origem da vida, não da evolução das girafas.\n• E: as duas explicações têm mecanismos diferentes.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_06",
+    "subject": "Biologia",
+    "topicId": "bio_evolucao",
+    "chapter": "Mecanismos da Evolução Biológica",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que toda mudança de frequência alélica é causada pela seleção natural.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma ilha, uma tempestade arrastou para o mar a maior parte de uma população de lagartos. Por acaso, os poucos sobreviventes eram quase todos de coloração escura, embora a cor não influenciasse a sobrevivência à tempestade. Décadas depois, a população da ilha voltou a crescer, e quase todos os lagartos eram escuros, ao contrário do que acontecia antes. Em uma ilha vizinha, maior e não atingida, a proporção de lagartos claros e escuros continuou a mesma.\n\nTexto elaborado para esta questão.\n\nA mudança observada na primeira ilha é um exemplo de",
+    "options": [
+      {
+        "id": "a",
+        "text": "seleção natural a favor dos lagartos escuros, mais resistentes a tempestades."
+      },
+      {
+        "id": "b",
+        "text": "deriva genética, isto é, mudança aleatória das frequências alélicas, mais intensa em populações pequenas, como ocorre no chamado efeito gargalo."
+      },
+      {
+        "id": "c",
+        "text": "mutação induzida pela tempestade, que escureceu os lagartos."
+      },
+      {
+        "id": "d",
+        "text": "herança de caracteres adquiridos, pois os lagartos escureceram após a tempestade."
+      },
+      {
+        "id": "e",
+        "text": "fluxo gênico vindo da ilha vizinha, que trouxe lagartos escuros."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A cor não afetava a sobrevivência: os sobreviventes eram escuros por acaso. Quando uma população passa por uma redução drástica, a composição genética dos que restam pode diferir muito da original — o gargalo de garrafa, um tipo de deriva genética.\n\nPegadinhas:\n• A: o texto diz que a cor não influenciava a sobrevivência.\n• C: a tempestade não causou mutações.\n• D: os lagartos não mudaram de cor durante a vida.\n• E: a ilha vizinha manteve a proporção original, e o texto não descreve migração.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_07",
+    "subject": "Biologia",
+    "topicId": "bio_genetica",
+    "chapter": "Introdução à Genética",
+    "difficulty": "medium",
+    "skill": "analise_evidencias",
+    "trap": "Achar que uma característica rara é necessariamente recessiva, sem analisar o heredograma.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma família, o avô tinha uma doença genética rara que causa problemas no tecido conjuntivo. Dos quatro filhos dele com uma mulher sem a doença, dois tinham a doença e dois não. Os filhos afetados, de ambos os sexos, tiveram filhos afetados mesmo casando-se com pessoas sem a doença e sem histórico familiar. Os filhos não afetados tiveram apenas filhos não afetados. A doença aparece em todas as gerações da família.\n\nTexto elaborado para esta questão.\n\nO padrão descrito é mais compatível com herança",
+    "options": [
+      {
+        "id": "a",
+        "text": "autossômica recessiva, pois a doença é rara."
+      },
+      {
+        "id": "b",
+        "text": "ligada ao cromossomo Y, pois começou no avô."
+      },
+      {
+        "id": "c",
+        "text": "mitocondrial, pois passa de geração em geração."
+      },
+      {
+        "id": "d",
+        "text": "autossômica dominante, pois afeta homens e mulheres, aparece em todas as gerações e cada afetado com parceiro não afetado tem filhos afetados, enquanto filhos não afetados não a transmitem."
+      },
+      {
+        "id": "e",
+        "text": "ligada ao X recessiva, pois atinge mais os homens."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Na herança dominante, basta um alelo: o afetado heterozigoto casado com não afetado tem 50% de chance de ter filhos afetados (2 de 4, no texto). Não afetados são homozigotos recessivos e não transmitem. Afeta ambos os sexos, sem saltar gerações.\n\nPegadinhas:\n• A: na recessiva rara, afetados com parceiros sem histórico raramente têm filhos afetados.\n• B: o texto cita filhas afetadas, o que exclui herança ligada ao Y.\n• C: herança mitocondrial passa pela mãe, e aqui o avô transmitiu a doença.\n• E: o texto não indica predomínio em homens.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_08",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Sangue e Imunologia",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Inverter quem tem antígeno e quem tem anticorpo, ou achar que o tipo AB é doador universal.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo sistema ABO, as hemácias podem ter na membrana os antígenos A, B, ambos ou nenhum, e o plasma contém anticorpos contra os antígenos que a pessoa não tem. Uma pessoa do tipo O, por exemplo, não tem antígenos A nem B nas hemácias e tem anticorpos anti-A e anti-B no plasma. Em transfusões de concentrado de hemácias, o que importa é que as hemácias doadas não tenham antígenos reconhecidos pelos anticorpos do receptor.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "hemácias do tipo O podem, em princípio, ser transfundidas para receptores de qualquer tipo ABO, pois não têm antígenos A nem B que os anticorpos do receptor reconheçam."
+      },
+      {
+        "id": "b",
+        "text": "pessoas do tipo AB têm anticorpos anti-A e anti-B no plasma."
+      },
+      {
+        "id": "c",
+        "text": "hemácias do tipo AB podem ser doadas a qualquer receptor, pois têm os dois antígenos."
+      },
+      {
+        "id": "d",
+        "text": "pessoas do tipo O só podem receber hemácias do tipo AB."
+      },
+      {
+        "id": "e",
+        "text": "os anticorpos do sistema ABO ficam na membrana das hemácias."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Sem antígenos A e B, as hemácias O não são aglutinadas pelos anti-A ou anti-B do receptor: por isso o tipo O é o doador universal de hemácias. O fator Rh e outros sistemas também precisam ser considerados na prática.\n\nPegadinhas:\n• B: o tipo AB tem os dois antígenos e, por isso, nenhum dos anticorpos.\n• C: hemácias AB seriam reconhecidas por receptores A, B ou O.\n• D: o tipo O, com anti-A e anti-B, só recebe hemácias O.\n• E: os antígenos ficam nas hemácias; os anticorpos, no plasma.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_09",
+    "subject": "Biologia",
+    "topicId": "bio_ecologia",
+    "chapter": "Espécies Invasoras e Controle Biológico",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a espécie invasora se espalha porque é mais \"forte\", sem considerar ausência de inimigos naturais.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO mexilhão-dourado, molusco originário da Ásia, chegou à América do Sul no fim da década de 1990, provavelmente na água de lastro de navios. Desde então, espalhou-se por rios das bacias do Prata e do Paraná, onde forma colônias densas que entopem tubulações de usinas hidrelétricas e de estações de tratamento de água, e altera o ambiente para as espécies nativas. Na região de origem, suas populações são controladas por predadores e doenças ausentes nos rios sul-americanos.\n\nTexto elaborado para esta questão.\n\nO sucesso do mexilhão-dourado na América do Sul se explica",
+    "options": [
+      {
+        "id": "a",
+        "text": "pela extinção de todos os moluscos nativos antes de sua chegada."
+      },
+      {
+        "id": "b",
+        "text": "pela poluição dos rios, que matou os mexilhões nativos e abriu espaço para ele."
+      },
+      {
+        "id": "c",
+        "text": "pelo fato de ele ser um animal de grande porte, que não pode ser comido por peixes."
+      },
+      {
+        "id": "d",
+        "text": "pela introdução proposital da espécie para limpar as tubulações das usinas."
+      },
+      {
+        "id": "e",
+        "text": "pela ausência, no novo ambiente, dos predadores e doenças que controlam a espécie na região de origem, somada à reprodução rápida e à disponibilidade de recursos."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Livre de seus inimigos naturais e com alimento e substrato disponíveis, a espécie cresce sem os controles que a limitavam. É o padrão de muitas invasões biológicas, e por isso o controle de água de lastro é uma medida de prevenção.\n\nPegadinhas:\n• A: o texto não fala em extinção prévia de nativos.\n• B: o texto não atribui o sucesso à poluição.\n• C: o mexilhão é pequeno; a questão são as colônias densas.\n• D: o texto diz que ele chegou provavelmente na água de lastro, e ele entope as tubulações.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_10",
+    "subject": "Química",
+    "topicId": "qui_cinetica",
+    "chapter": "Cinética Química",
+    "difficulty": "easy",
+    "skill": "analise_conceitual",
+    "trap": "Achar que triturar o comprimido aumenta a quantidade de reagente.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm estudante dissolveu dois comprimidos efervescentes idênticos em dois copos com a mesma quantidade de água, à mesma temperatura. Um dos comprimidos foi colocado inteiro, e o outro, triturado em pó. O comprimido triturado parou de borbulhar em cerca de 20 segundos; o inteiro levou mais de um minuto. Ao final, os dois copos liberaram aproximadamente a mesma quantidade de gás.\n\nTexto elaborado para esta questão.\n\nA diferença entre os tempos se explica porque, no comprimido triturado,",
+    "options": [
+      {
+        "id": "a",
+        "text": "a massa total de reagentes é maior que no comprimido inteiro."
+      },
+      {
+        "id": "b",
+        "text": "a temperatura da água aumenta por causa do atrito durante a trituração."
+      },
+      {
+        "id": "c",
+        "text": "a superfície de contato entre o sólido e a água é maior, o que aumenta a frequência de colisões entre as partículas reagentes e a rapidez da reação, sem alterar a quantidade de produto formada."
+      },
+      {
+        "id": "d",
+        "text": "forma-se um produto diferente, mais solúvel em água."
+      },
+      {
+        "id": "e",
+        "text": "a reação deixa de precisar de energia de ativação."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Triturar expõe mais área do sólido à água, e mais partículas podem reagir ao mesmo tempo. A rapidez aumenta, mas, com as mesmas quantidades, a quantidade de gás é a mesma — como o texto registra.\n\nPegadinhas:\n• A: os comprimidos são idênticos.\n• B: o texto diz que as temperaturas eram iguais.\n• D: a reação e os produtos são os mesmos.\n• E: a energia de ativação continua existindo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_11",
+    "subject": "Química",
+    "topicId": "qui_solucoes",
+    "chapter": "Dispersões",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Confundir 0,9% em massa por volume com 0,9 g por mililitro, ou esquecer de ajustar para 500 mL.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO soro fisiológico usado em hospitais é uma solução aquosa de cloreto de sódio a 0,9% (m/V), isto é, com 0,9 g de NaCl em cada 100 mL de solução. Essa concentração é próxima da dos fluidos do corpo, e por isso o soro pode ser aplicado na veia sem causar danos às hemácias por osmose. Um técnico precisa preparar 500 mL dessa solução no laboratório de uma escola.\n\nTexto elaborado para esta questão.\n\nA massa de cloreto de sódio necessária é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,45 g, pois a massa deve ser dividida por 2 para cada 100 mL de solução."
+      },
+      {
+        "id": "b",
+        "text": "0,9 g, pois a porcentagem indica a massa necessária em qualquer volume."
+      },
+      {
+        "id": "c",
+        "text": "4,5 g, pois 500 mL correspondem a cinco vezes 100 mL, e 5 × 0,9 g = 4,5 g."
+      },
+      {
+        "id": "d",
+        "text": "9 g, pois 0,9% corresponde a 9 g por litro, valor que não muda com o volume."
+      },
+      {
+        "id": "e",
+        "text": "45 g, pois 0,9% corresponde a 0,9 g por 10 mL de solução."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Em 100 mL há 0,9 g; em 500 mL, 5 × 0,9 = 4,5 g. Equivalente a 9 g/L × 0,5 L.\n\nPegadinhas:\n• A: divide em vez de multiplicar.\n• B: ignora o volume.\n• D: 9 g é a massa para 1 L, não para 500 mL.\n• E: erra a base da porcentagem.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_12",
+    "subject": "Química",
+    "topicId": "qui_equilibrio",
+    "chapter": "Deslocamento de Equilíbrio",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a mudança de cor vem de o ácido reagir com a água, sem deslocar o equilíbrio.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm solução aquosa, íons cromato, de cor amarela, e dicromato, de cor alaranjada, coexistem em equilíbrio:\n\n2 CrO₄²⁻(aq) + 2 H⁺(aq) ⇌ Cr₂O₇²⁻(aq) + H₂O(l)\n  amarelo                       alaranjado\n\nEm uma aula, o professor adicionou gotas de ácido clorídrico a um tubo com solução amarela de cromato, que ficou alaranjada. Em seguida, adicionou solução de hidróxido de sódio, e a cor voltou a ser amarela.\n\nTexto elaborado para esta questão.\n\nAs mudanças de cor se explicam porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o ácido clorídrico tem cor alaranjada e tinge a solução."
+      },
+      {
+        "id": "b",
+        "text": "o hidróxido de sódio destrói os íons dicromato, sem relação com o equilíbrio."
+      },
+      {
+        "id": "c",
+        "text": "a adição de ácido diminui a concentração de H⁺, deslocando o equilíbrio para a esquerda."
+      },
+      {
+        "id": "d",
+        "text": "a temperatura da solução muda com cada adição, e a cor depende só dela."
+      },
+      {
+        "id": "e",
+        "text": "o ácido aumenta a concentração de H⁺ e desloca o equilíbrio para a direita, formando dicromato, e a base consome H⁺ (formando água), deslocando o equilíbrio para a esquerda e regenerando o cromato."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Pelo princípio de Le Chatelier, acrescentar H⁺ favorece o consumo de H⁺, isto é, a formação de dicromato (alaranjado). O OH⁻ da base neutraliza H⁺; com menos H⁺, o equilíbrio volta para o cromato (amarelo).\n\nPegadinhas:\n• A: o ácido clorídrico é incolor.\n• B: o efeito é exatamente o deslocamento do equilíbrio.\n• C: o ácido aumenta a concentração de H⁺.\n• D: a cor muda pelo deslocamento causado pelas espécies adicionadas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_13",
+    "subject": "Química",
+    "topicId": "qui_radioatividade",
+    "chapter": "Radioatividade: o Estudo das Radiações",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que alimentos irradiados ficam radioativos, ou que a radiação alfa é a mais penetrante.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs emissões radioativas diferem em seu poder de penetração. Partículas alfa são barradas por uma folha de papel ou pela camada externa da pele; partículas beta atravessam o papel, mas são barradas por uma placa fina de alumínio; a radiação gama é muito penetrante e só é bem atenuada por camadas espessas de chumbo ou concreto. A radiação gama de fontes de cobalto-60 é usada para esterilizar materiais cirúrgicos e conservar alimentos, que não se tornam radioativos com o tratamento.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a radiação alfa é a mais penetrante e, por isso, é usada na esterilização."
+      },
+      {
+        "id": "b",
+        "text": "os alimentos irradiados se tornam radioativos e devem ser descartados."
+      },
+      {
+        "id": "c",
+        "text": "as partículas beta são barradas por uma folha de papel."
+      },
+      {
+        "id": "d",
+        "text": "a radiação gama é usada na esterilização por sua grande capacidade de penetração, que lhe permite atingir microrganismos no interior de embalagens, e os produtos tratados não se tornam fontes de radiação."
+      },
+      {
+        "id": "e",
+        "text": "o chumbo é ineficaz contra a radiação gama."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A radiação gama atravessa embalagens e destrói o material genético de microrganismos. Como o produto não absorve núcleos radioativos, não passa a emitir radiação.\n\nPegadinhas:\n• A: alfa é a menos penetrante.\n• B: o texto diz que os alimentos não se tornam radioativos.\n• C: a beta atravessa o papel.\n• E: o texto diz que camadas espessas de chumbo atenuam bem a gama.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_14",
+    "subject": "Química",
+    "topicId": "qui_termoquimica",
+    "chapter": "Termoquímica II",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a quebra de ligações libera energia.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa combustão do metano, principal componente do gás natural, as ligações C–H do metano e O=O do oxigênio são rompidas, e formam-se as ligações C=O do gás carbônico e O–H da água:\n\nCH₄ + 2 O₂ → CO₂ + 2 H₂O   ΔH ≈ −800 kJ\n\nUm estudante afirmou que a energia liberada vem da quebra das ligações do metano, que \"guardam\" energia e a soltam quando se rompem.\n\nTexto elaborado para esta questão.\n\nA afirmação do estudante está",
+    "options": [
+      {
+        "id": "a",
+        "text": "incorreta, pois a quebra de ligações sempre absorve energia; a reação é exotérmica porque a energia liberada na formação das ligações dos produtos é maior que a absorvida na quebra das ligações dos reagentes."
+      },
+      {
+        "id": "b",
+        "text": "correta, pois toda quebra de ligação libera energia."
+      },
+      {
+        "id": "c",
+        "text": "correta, pois a formação de ligações absorve energia."
+      },
+      {
+        "id": "d",
+        "text": "incorreta, pois a combustão do metano é endotérmica."
+      },
+      {
+        "id": "e",
+        "text": "incorreta, pois a energia da reação não depende das ligações químicas."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Romper ligações exige energia; formar ligações libera. ΔH = Σ(energias das ligações rompidas) − Σ(energias das ligações formadas). No metano, a formação de C=O e O–H libera mais do que se gasta para romper C–H e O=O, e o saldo é negativo.\n\nPegadinhas:\n• B: inverte o sinal da quebra de ligação.\n• C: inverte o sinal da formação de ligação.\n• D: o ΔH negativo indica reação exotérmica.\n• E: a variação de entalpia decorre justamente das ligações.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_15",
+    "subject": "Química",
+    "topicId": "qui_gases",
+    "chapter": "O Estado Gasoso",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o gás mais leve se difunde mais devagar, ou que os dois gases chegam ao mesmo tempo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um experimento clássico, coloca-se um algodão embebido em solução de amônia em uma extremidade de um tubo de vidro e, na outra, um algodão embebido em ácido clorídrico concentrado. Os gases NH₃ e HCl se difundem pelo tubo e, onde se encontram, reagem formando um anel branco de cloreto de amônio sólido, NH₄Cl. O anel não se forma no meio do tubo.\n\nNote e adote: massas molares: NH₃ = 17 g/mol; HCl = 36,5 g/mol. A velocidade de difusão de um gás é inversamente proporcional à raiz quadrada de sua massa molar.\n\nTexto elaborado para esta questão.\n\nO anel branco se forma",
+    "options": [
+      {
+        "id": "a",
+        "text": "no meio do tubo, pois os dois gases têm a mesma velocidade de difusão."
+      },
+      {
+        "id": "b",
+        "text": "mais perto da extremidade do HCl, pois a amônia, de menor massa molar, difunde-se mais rapidamente e percorre uma distância maior até o encontro."
+      },
+      {
+        "id": "c",
+        "text": "mais perto da extremidade da amônia, pois o HCl, mais pesado, difunde-se mais rapidamente."
+      },
+      {
+        "id": "d",
+        "text": "em toda a extensão do tubo ao mesmo tempo."
+      },
+      {
+        "id": "e",
+        "text": "fora do tubo, pois os gases não se encontram."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Pela lei de Graham, v(NH₃)/v(HCl) = √(36,5/17) ≈ 1,47. No mesmo tempo, a amônia percorre cerca de 1,5 vez a distância do HCl, e o encontro ocorre mais perto do HCl.\n\nPegadinhas:\n• A: as massas molares são diferentes.\n• C: inverte a relação entre massa e velocidade.\n• D: o anel se forma onde os gases se encontram.\n• E: o texto descreve o anel dentro do tubo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_16",
+    "subject": "Química",
+    "topicId": "qui_organica_fundamentos",
+    "chapter": "Introdução à Química Orgânica",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que mesma fórmula molecular significa mesma substância.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO etanol, presente nas bebidas alcoólicas e usado como combustível, e o éter dimetílico, gás usado como propelente em aerossóis, têm a mesma fórmula molecular, C₂H₆O. No entanto, o etanol é líquido à temperatura ambiente e ferve a 78 °C, enquanto o éter dimetílico ferve a −24 °C. Suas fórmulas estruturais são CH₃–CH₂–OH e CH₃–O–CH₃.\n\nTexto elaborado para esta questão.\n\nA diferença entre as duas substâncias se explica porque elas",
+    "options": [
+      {
+        "id": "a",
+        "text": "são isômeros: têm a mesma fórmula molecular, mas estruturas diferentes, e só o etanol, com o grupo –OH, forma ligações de hidrogênio entre suas moléculas, o que eleva seu ponto de ebulição."
+      },
+      {
+        "id": "b",
+        "text": "são a mesma substância, com nomes diferentes."
+      },
+      {
+        "id": "c",
+        "text": "têm massas molares diferentes, o que explica os pontos de ebulição."
+      },
+      {
+        "id": "d",
+        "text": "diferem no número de átomos de carbono."
+      },
+      {
+        "id": "e",
+        "text": "são ambas inorgânicas, pois contêm oxigênio."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Isômeros de função: álcool e éter. No etanol, o H ligado ao O permite ligações de hidrogênio entre moléculas; no éter, sem esse H, as interações são mais fracas, e ele ferve muito abaixo.\n\nPegadinhas:\n• B: as propriedades são diferentes.\n• C: com a mesma fórmula, as massas molares são iguais.\n• D: ambas têm dois carbonos.\n• E: são compostos orgânicos, de cadeia carbônica.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_17",
+    "subject": "Química",
+    "topicId": "qui_organica_reacoes",
+    "chapter": "Ácidos Graxos e Esterificação",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que a gordura trans é natural das gorduras animais, ou que saturada significa \"com mais água\".",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nÓleos vegetais, ricos em ácidos graxos insaturados, são líquidos à temperatura ambiente. Na fabricação de algumas margarinas e gorduras para frituras, a indústria fazia a hidrogenação parcial desses óleos, adicionando hidrogênio a parte das ligações duplas, o que torna o produto mais sólido. O processo também produzia gorduras trans, associadas a maior risco de doenças cardiovasculares, cujo uso foi restringido no Brasil pela Anvisa a partir de 2019.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a hidrogenação",
+    "options": [
+      {
+        "id": "a",
+        "text": "transforma os óleos em proteínas, que são sólidas."
+      },
+      {
+        "id": "b",
+        "text": "aumenta o número de ligações duplas, tornando o óleo mais líquido."
+      },
+      {
+        "id": "c",
+        "text": "reduz o número de ligações duplas, tornando as cadeias mais lineares e o produto mais sólido, mas a hidrogenação parcial pode formar isômeros trans, prejudiciais à saúde."
+      },
+      {
+        "id": "d",
+        "text": "remove o glicerol dos óleos, formando sabão."
+      },
+      {
+        "id": "e",
+        "text": "não altera a estrutura química dos óleos, apenas os resfria."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Adicionar H₂ às duplas aumenta a saturação; cadeias mais retas se empacotam melhor, e o ponto de fusão sobe. Na hidrogenação parcial, parte das duplas restantes muda de configuração cis para trans.\n\nPegadinhas:\n• A: os lipídios continuam lipídios.\n• B: a hidrogenação diminui as duplas.\n• D: o glicerol permanece; sabão vem da saponificação.\n• E: há reação química com hidrogênio.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_18",
+    "subject": "Química",
+    "topicId": "qui_polaridade_geometria",
+    "chapter": "Geometria Molecular",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o sabão dissolve gordura por ser ácido, ou que só a parte polar atua.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma molécula de sabão tem uma longa cadeia de carbonos e hidrogênios, apolar, e uma extremidade com carga, polar. Ao lavar uma panela engordurada, as moléculas de sabão envolvem as gotas de gordura e formam estruturas chamadas micelas, que se dispersam na água e são levadas no enxágue. Sem sabão, a água escorre pela gordura sem removê-la.\n\nTexto elaborado para esta questão.\n\nA ação do sabão se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o sabão é um ácido forte que dissolve a gordura por reação química."
+      },
+      {
+        "id": "b",
+        "text": "a parte polar do sabão dissolve a gordura, e a parte apolar se dissolve na água."
+      },
+      {
+        "id": "c",
+        "text": "a gordura é polar e se dissolve diretamente na água quando aquecida."
+      },
+      {
+        "id": "d",
+        "text": "o sabão aumenta a densidade da gordura, que afunda e se separa."
+      },
+      {
+        "id": "e",
+        "text": "a parte apolar do sabão interage com a gordura, apolar, e a parte polar interage com a água, formando micelas que mantêm a gordura dispersa e permitem removê-la."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O sabão é anfifílico. As caudas apolares ficam voltadas para dentro da micela, junto à gordura; as cabeças polares, para fora, em contato com a água. \"Semelhante dissolve semelhante\" vale para cada parte.\n\nPegadinhas:\n• A: o sabão é um sal de ácido graxo, de caráter básico; não dissolve a gordura por reação ácida.\n• B: inverte as interações.\n• C: a gordura é apolar.\n• D: a remoção ocorre por dispersão em micelas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_19",
+    "subject": "Física",
+    "topicId": "fis_circuitos",
+    "chapter": "Eletrodinâmica: as Leis de Kirchhoff",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Somar as correntes que saem em vez de subtraí-las da que entra.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um nó de um circuito elétrico residencial, chega uma corrente de 5 A, vinda do quadro de distribuição. Desse nó saem dois ramos: um alimenta uma geladeira e outro, um conjunto de lâmpadas. Um eletricista mediu 2 A no ramo das lâmpadas e quer saber a corrente no ramo da geladeira sem desligar nada para medi-la. Considere que não há acúmulo de carga no nó.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA corrente no ramo da geladeira é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 A, pois as correntes nos dois ramos se dividem na razão entre suas potências."
+      },
+      {
+        "id": "b",
+        "text": "2 A, pois os dois ramos recebem sempre a mesma corrente."
+      },
+      {
+        "id": "c",
+        "text": "2,5 A, pois a corrente que chega se divide igualmente entre os dois ramos."
+      },
+      {
+        "id": "d",
+        "text": "3 A, pois, pela lei dos nós, a soma das correntes que chegam é igual à soma das que saem: 5 = 2 + i."
+      },
+      {
+        "id": "e",
+        "text": "7 A, pois as correntes que saem se somam à corrente que chega ao nó."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Conservação da carga no nó: 5 = 2 + i, i = 3 A.\n\nPegadinhas:\n• B: os ramos podem ter correntes diferentes.\n• C: a divisão depende das resistências, e a medida de 2 A já a define.\n• E: soma em vez de aplicar a conservação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_20",
+    "subject": "Física",
+    "topicId": "fis_eletrostatica",
+    "chapter": "Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que as linhas de força podem se cruzar, ou que são paralelas às equipotenciais.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara representar o campo elétrico em torno de cargas, usam-se linhas de força, tangentes ao vetor campo em cada ponto, e superfícies equipotenciais, formadas por pontos de mesmo potencial. Em torno de uma carga puntiforme positiva isolada, as linhas de força são semirretas que partem da carga, e as equipotenciais são superfícies esféricas centradas nela. Um estudante desenhou duas linhas de força se cruzando em um ponto do espaço.\n\nTexto elaborado para esta questão.\n\nSobre o desenho e as representações descritas, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o desenho está correto, pois as linhas de força costumam se cruzar perto das cargas."
+      },
+      {
+        "id": "b",
+        "text": "o desenho está incorreto, pois em cada ponto o campo tem uma única direção, de modo que as linhas de força não se cruzam, e elas são sempre perpendiculares às superfícies equipotenciais."
+      },
+      {
+        "id": "c",
+        "text": "as linhas de força são paralelas às superfícies equipotenciais."
+      },
+      {
+        "id": "d",
+        "text": "as superfícies equipotenciais de uma carga puntiforme são planos paralelos."
+      },
+      {
+        "id": "e",
+        "text": "as linhas de força de uma carga positiva apontam para a carga."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Se duas linhas se cruzassem, o campo teria duas direções no mesmo ponto, o que é impossível. Como não há trabalho ao mover uma carga sobre uma equipotencial, o campo é perpendicular a ela, e as linhas de força cruzam as equipotenciais em ângulo reto.\n\nPegadinhas:\n• A: em nenhum ponto as linhas se cruzam.\n• C: são perpendiculares.\n• D: para carga puntiforme, são esferas; planos paralelos aparecem no campo uniforme.\n• E: para carga positiva, as linhas apontam para fora.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_21",
+    "subject": "Física",
+    "topicId": "fis_energia",
+    "chapter": "Trabalho e Energia: o Teorema da Energia Potencial",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Esquecer a raiz quadrada, ou achar que a massa do carrinho interfere na velocidade.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma montanha-russa, um carrinho parte praticamente do repouso do alto de uma rampa e desce até o ponto mais baixo do percurso, 20 m abaixo do ponto de partida. Os engenheiros fazem uma primeira estimativa da velocidade no ponto mais baixo desprezando o atrito e a resistência do ar, e observam que o resultado é o mesmo para o carrinho vazio ou cheio.\n\nNote e adote: g = 10 m/s²; sem forças dissipativas, a energia mecânica se conserva.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA velocidade estimada no ponto mais baixo é",
+    "options": [
+      {
+        "id": "a",
+        "text": "10 m/s, pois a velocidade é igual à metade da altura da queda."
+      },
+      {
+        "id": "b",
+        "text": "14 m/s, pois a velocidade é a raiz quadrada do produto g·h."
+      },
+      {
+        "id": "c",
+        "text": "15 m/s, pois a velocidade cresce três quartos da altura da queda."
+      },
+      {
+        "id": "d",
+        "text": "20 m/s, pois m·g·h = m·v²/2 dá v = √(2·10·20) = √400, sem depender da massa."
+      },
+      {
+        "id": "e",
+        "text": "40 m/s, pois a velocidade é o dobro da altura da queda."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A energia potencial perdida vira cinética: m·g·h = m·v²/2, e a massa se cancela. v = √(2gh) = √400 = 20 m/s.\n\nPegadinhas:\n• A: não há relação linear desse tipo.\n• B: esquece o fator 2 dentro da raiz.\n• E: usa 2h sem a raiz quadrada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_22",
+    "subject": "Física",
+    "topicId": "fis_leis_newton",
+    "chapter": "Força e seus Tipos",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Confundir massa com peso, ou supor que a massa muda na Lua.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm astronauta de 60 kg, já incluindo o traje, vai pisar na Lua, onde a aceleração da gravidade é cerca de um sexto da terrestre. Em uma entrevista, ele disse que, na Lua, \"pesaria só 10 quilos\". Um professor comentou que a frase mistura duas grandezas diferentes: a massa, que mede a quantidade de matéria e a inércia, e o peso, que é a força com que o astro atrai o corpo.\n\nNote e adote: g na Lua ≈ 1,6 m/s²; P = m·g.\n\nTexto elaborado para esta questão.\n\nNa Lua, a massa e o peso do astronauta são, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "10 kg e 16 N, pois a massa também se reduz a um sexto na Lua."
+      },
+      {
+        "id": "b",
+        "text": "60 kg e cerca de 96 N, pois a massa não depende do local, e o peso é 60 × 1,6."
+      },
+      {
+        "id": "c",
+        "text": "60 kg e 600 N, pois o peso é igual ao da Terra."
+      },
+      {
+        "id": "d",
+        "text": "10 kg e 60 N, pois massa e peso trocam de valor fora da Terra."
+      },
+      {
+        "id": "e",
+        "text": "60 kg e 960 N, pois o peso aumenta quando a gravidade diminui."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A massa, 60 kg, é a mesma em qualquer lugar. O peso é m·g = 60 × 1,6 = 96 N, cerca de um sexto dos ~600 N na Terra. \"10 quilos\" é a massa que, na Terra, teria esse peso.\n\nPegadinhas:\n• A: a massa não muda.\n• C: usa a gravidade da Terra.\n• D: troca as grandezas.\n• E: erra a multiplicação por um fator de 10 e inverte a relação com g.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_23",
+    "subject": "Física",
+    "topicId": "fis_leis_newton",
+    "chapter": "Sistema de Corpos Interagindo e os Elementos Transmissores de Força",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Atribuir ao bloco da frente toda a força aplicada, sem descontar a tração do fio.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDois blocos, A, de 4 kg, e B, de 2 kg, estão sobre uma superfície horizontal sem atrito, ligados por um fio leve e inextensível, com B atrás de A. Uma pessoa puxa o bloco A com uma força horizontal constante de 30 N, e o conjunto passa a se mover com aceleração constante. O fio permanece esticado durante todo o movimento.\n\nNote e adote: segunda lei de Newton, F_resultante = m·a.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA força resultante sobre o bloco A é",
+    "options": [
+      {
+        "id": "a",
+        "text": "5 N, pois corresponde ao valor da aceleração do conjunto."
+      },
+      {
+        "id": "b",
+        "text": "10 N, pois é a tração no fio, que atua sobre o bloco A."
+      },
+      {
+        "id": "c",
+        "text": "12 N, pois a força aplicada se divide em partes proporcionais ao inverso das massas."
+      },
+      {
+        "id": "d",
+        "text": "15 N, pois a força aplicada se divide igualmente entre os dois blocos."
+      },
+      {
+        "id": "e",
+        "text": "20 N, pois a = 30/6 = 5 m/s², e a resultante em A é 4 × 5, igual aos 30 N aplicados menos os 10 N da tração."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Para o conjunto: a = 30/(4 + 2) = 5 m/s². Em B, só a tração atua: T = 2 × 5 = 10 N. Em A: 30 − 10 = 20 N = 4 × 5.\n\nPegadinhas:\n• A: confunde aceleração com força.\n• B: a tração é só uma das forças sobre A, e é ela a resultante sobre B.\n• D: divide a força igualmente, sem considerar as massas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_24",
+    "subject": "Física",
+    "topicId": "fis_optica_geometrica",
+    "chapter": "Fundamentos da Óptica Geométrica",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Inverter a proporção entre as distâncias, ou achar que a imagem da câmara escura é direita.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma câmara escura de orifício pode ser feita com uma caixa de sapatos: um pequeno furo em um dos lados e papel vegetal no lado oposto, onde se forma a imagem. Por causa da propagação retilínea da luz, a imagem é invertida, e seu tamanho é proporcional à razão entre a profundidade da caixa e a distância do objeto ao furo. Um estudante aponta uma caixa de 20 cm de profundidade para uma árvore de 6 m de altura, a 10 m do furo.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO tamanho da imagem da árvore no papel vegetal é",
+    "options": [
+      {
+        "id": "a",
+        "text": "3 cm, pois a imagem tem metade do tamanho previsto pela semelhança de triângulos."
+      },
+      {
+        "id": "b",
+        "text": "6 cm, pois a imagem tem 1 cm para cada metro de altura da árvore."
+      },
+      {
+        "id": "c",
+        "text": "12 cm, pois i/o = p'/p dá i = 600 cm × 20 cm/1.000 cm, e a imagem é invertida."
+      },
+      {
+        "id": "d",
+        "text": "30 cm, pois a imagem é a altura da árvore dividida por 20."
+      },
+      {
+        "id": "e",
+        "text": "120 cm, pois a imagem é a altura da árvore multiplicada pela razão 10/20 em decímetros."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Triângulos semelhantes: i/o = p'/p. i = 600 × 20/1.000 = 12 cm, invertida.\n\nPegadinhas:\n• B: usa uma escala arbitrária.\n• D: divide pela profundidade sem usar a distância.\n• E: mistura unidades e inverte a razão.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_25",
+    "subject": "Física",
+    "topicId": "fis_optica_instrumental",
+    "chapter": "Equação do Fabricante de Lentes e Associação de Lentes",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Confundir dioptria com distância focal em metros, sem calcular o inverso.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm receitas de óculos, o \"grau\" das lentes é dado em dioptrias (di), unidade de vergência, que é o inverso da distância focal medida em metros. Lentes convergentes têm vergência positiva, e divergentes, negativa. Uma pessoa com presbiopia recebeu receita de óculos de leitura com lentes de +2 di.\n\nNote e adote: V = 1/f, com f em metros.\n\nTexto elaborado para esta questão.\n\nA distância focal dessas lentes é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,5 m, pois f = 1/V = 1/2, e a lente é convergente."
+      },
+      {
+        "id": "b",
+        "text": "1 m, pois toda lente de óculos tem distância focal de 1 m."
+      },
+      {
+        "id": "c",
+        "text": "2 m, pois a distância focal é igual ao número de dioptrias."
+      },
+      {
+        "id": "d",
+        "text": "5 m, pois cada dioptria corresponde a 2,5 m de distância focal."
+      },
+      {
+        "id": "e",
+        "text": "50 m, pois a distância focal em centímetros deve ser convertida em metros multiplicando por 100."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. f = 1/(+2) = 0,5 m = 50 cm, positiva: lente convergente, adequada para ajudar a focalizar objetos próximos.\n\nPegadinhas:\n• B: não há valor fixo de distância focal.\n• C: confunde vergência com distância focal.\n• D: relação inventada.\n• E: 50 cm são 0,5 m; a conversão está invertida.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_26",
+    "subject": "Física",
+    "topicId": "fis_termodinamica_gases",
+    "chapter": "Gases Ideais: Variáveis de Estado e as Transformações Gasosas",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Usar a pressão da coluna de água sem somar a atmosférica, ou inverter a relação entre pressão e volume.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nMergulhadores aprendem a nunca prender a respiração durante a subida: o ar nos pulmões se expande à medida que a pressão da água diminui, e a expansão pode lesionar os pulmões. Considere uma bolha de ar de 1 L liberada a 20 m de profundidade, onde a pressão total é de 3 atm, e que sobe até a superfície, onde a pressão é de 1 atm. Suponha que a temperatura da bolha não varie e que ela não troque ar com a água.\n\nNote e adote: para temperatura constante, p·V é constante.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO volume da bolha ao chegar à superfície é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,33 L, pois o volume diminui na mesma proporção em que a pressão diminui."
+      },
+      {
+        "id": "b",
+        "text": "3 L, pois p₁·V₁ = p₂·V₂ dá 3 × 1 = 1 × V₂, e o volume triplica quando a pressão cai a um terço."
+      },
+      {
+        "id": "c",
+        "text": "6 L, pois o volume dobra a cada 10 m de subida."
+      },
+      {
+        "id": "d",
+        "text": "20 L, pois o volume aumenta 1 L para cada metro de profundidade."
+      },
+      {
+        "id": "e",
+        "text": "21 L, pois o volume aumenta 1 L por metro além do volume inicial."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Lei de Boyle: V₂ = 3 × 1/1 = 3 L. Por isso o ar retido nos pulmões numa subida rápida se expande perigosamente.\n\nPegadinhas:\n• A: inverte a relação, que é inversamente proporcional.\n• C: a pressão vai de 3 para 1 atm, e não há regra de dobrar a cada 10 m.\n• D: não há relação desse tipo com a profundidade.\n• E: idem, somando o volume inicial.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_27",
+    "subject": "Física",
+    "topicId": "fis_ondulatoria",
+    "chapter": "Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o cancelamento de ruído funciona absorvendo o som com material isolante.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nFones de ouvido com cancelamento ativo de ruído têm microfones que captam o som do ambiente, como o ronco do motor de um avião. Um circuito eletrônico produz, no alto-falante do fone, uma onda sonora com a mesma frequência e a mesma amplitude do ruído, mas defasada de meio comprimento de onda. Assim, o passageiro ouve a música com pouco ruído de fundo, mesmo sem aumentar o volume.\n\nTexto elaborado para esta questão.\n\nO princípio físico do cancelamento ativo é",
+    "options": [
+      {
+        "id": "a",
+        "text": "a refração do som no material das almofadas do fone."
+      },
+      {
+        "id": "b",
+        "text": "a absorção do som por um material isolante muito espesso."
+      },
+      {
+        "id": "c",
+        "text": "o efeito Doppler, que reduz a frequência do ruído."
+      },
+      {
+        "id": "d",
+        "text": "a ressonância, que amplifica a música e encobre o ruído."
+      },
+      {
+        "id": "e",
+        "text": "a interferência destrutiva: a superposição de duas ondas em oposição de fase faz suas amplitudes se anularem, reduzindo o ruído percebido."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Com fase oposta, crista de uma coincide com vale da outra, e a superposição anula as amplitudes. O sistema funciona melhor para ruídos constantes e graves, como o de motores.\n\nPegadinhas:\n• A: a refração muda a direção da onda, sem cancelá-la.\n• B: isso é cancelamento passivo; o texto descreve um processo eletrônico.\n• C: não há movimento relativo entre fonte e ouvinte.\n• D: ressonância amplifica oscilações, em vez de anulá-las.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_28",
+    "subject": "Matemática",
+    "topicId": "mat_equacoes",
+    "chapter": "Técnicas Algébricas",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Esquecer o termo do meio do quadrado da soma, como em (a + b)² = a² + b².",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma competição de cálculo mental, os participantes precisam calcular 101² sem papel. Uma estudante usa o produto notável (a + b)² = a² + 2ab + b², escrevendo 101 = 100 + 1. Um colega, em vez disso, calcula 100² + 1² e afirma que o resultado é o mesmo, já que o 1 é pequeno.\n\nTexto elaborado para esta questão.\n\nO valor correto de 101² e a análise do método do colega são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "10.201, pois (100 + 1)² = 10.000 + 200 + 1, e o colega esqueceu o termo 2ab = 200."
+      },
+      {
+        "id": "b",
+        "text": "10.001, pois 100² + 1² é igual a (100 + 1)², como fez o colega."
+      },
+      {
+        "id": "c",
+        "text": "10.101, pois o termo do meio vale 100, e não 200."
+      },
+      {
+        "id": "d",
+        "text": "10.200, pois o quadrado de 1 deve ser desprezado no cálculo mental."
+      },
+      {
+        "id": "e",
+        "text": "20.201, pois o quadrado de 101 é o dobro do quadrado de 100, mais 201."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. (100 + 1)² = 10.000 + 2 × 100 × 1 + 1 = 10.201. O colega obteve 10.001, errando por 200: o quadrado de uma soma não é a soma dos quadrados.\n\nPegadinhas:\n• B: repete o erro do colega.\n• C: usa ab em vez de 2ab.\n• D: o termo b² não pode ser desprezado em cálculo exato.\n• E: relação sem fundamento.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_29",
+    "subject": "Matemática",
+    "topicId": "mat_sequencias_matrizes",
+    "chapter": "Discussão de Sistemas Lineares",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que todo sistema com duas equações e duas incógnitas tem solução única.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm estudante resolveu o sistema\n\nx + 2y = 4\n3x + 6y = 12\n\ne encontrou infinitas soluções. Um colega estranhou, afirmando que sistemas com duas equações e duas incógnitas sempre têm uma única solução. O professor pediu que os dois representassem as equações como retas no plano cartesiano e comparassem os gráficos.\n\nTexto elaborado para esta questão.\n\nO sistema é",
+    "options": [
+      {
+        "id": "a",
+        "text": "possível e determinado, pois tem duas equações e duas incógnitas."
+      },
+      {
+        "id": "b",
+        "text": "impossível, pois as retas são paralelas e distintas."
+      },
+      {
+        "id": "c",
+        "text": "possível e determinado, com solução única x = 4 e y = 0."
+      },
+      {
+        "id": "d",
+        "text": "possível e indeterminado, pois a segunda equação é o triplo da primeira, e as duas retas coincidem, com infinitos pontos em comum."
+      },
+      {
+        "id": "e",
+        "text": "impossível, pois a segunda equação contradiz a primeira."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Multiplicando a primeira por 3, obtém-se a segunda: as equações representam a mesma reta. Qualquer par (4 − 2y, y) é solução. Há solução única só quando as retas são concorrentes.\n\nPegadinhas:\n• A: o número de equações não garante solução única.\n• B: as retas são coincidentes, não paralelas distintas.\n• C: (4, 0) é uma das infinitas soluções.\n• E: as equações são equivalentes.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_30",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_analitica",
+    "chapter": "Posições Relativas entre Duas Retas",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que retas com o mesmo coeficiente linear são paralelas, ou que perpendicularidade exige coeficientes iguais.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um projeto urbanístico, três ruas retilíneas foram representadas em um plano cartesiano pelas retas\n\nr: y = 2x + 1\ns: y = 2x − 3\nt: y = −x/2 + 5\n\nO arquiteto quer saber quais ruas nunca se cruzam e quais se cruzam formando ângulo reto, para planejar os semáforos e as calçadas das esquinas.\n\nTexto elaborado para esta questão.\n\nSobre as retas, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "r e s são perpendiculares, pois têm coeficientes lineares de sinais opostos."
+      },
+      {
+        "id": "b",
+        "text": "r e t são paralelas, pois as duas têm coeficiente linear positivo."
+      },
+      {
+        "id": "c",
+        "text": "r e s são paralelas, pois têm o mesmo coeficiente angular e coeficientes lineares diferentes, e t é perpendicular a ambas, pois o produto de seu coeficiente angular pelo delas é −1."
+      },
+      {
+        "id": "d",
+        "text": "as três retas se cruzam em um único ponto."
+      },
+      {
+        "id": "e",
+        "text": "s e t são paralelas, pois o coeficiente angular de t é o inverso do de s."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Coeficientes angulares iguais (2 e 2) e lineares diferentes: paralelas distintas. 2 × (−1/2) = −1: t é perpendicular a r e a s.\n\nPegadinhas:\n• A: o coeficiente linear não define perpendicularidade.\n• B: r e t têm coeficientes angulares diferentes.\n• D: r e s nunca se cruzam.\n• E: o inverso com sinal trocado indica perpendicularidade, não paralelismo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_31",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_plana",
+    "chapter": "Áreas de Polígonos",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Calcular a área de um único triângulo, ou usar a fórmula do quadrado.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma praça tem a forma de um hexágono regular com lados de 2 m, e será coberta por grama. Um hexágono regular pode ser dividido em seis triângulos equiláteros congruentes, com um vértice comum no centro do hexágono e lados iguais ao lado do hexágono. O jardineiro precisa saber a área total para comprar a grama.\n\nNote e adote: área do triângulo equilátero de lado ℓ: ℓ²·√3/4.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA área da praça, em m², é",
+    "options": [
+      {
+        "id": "a",
+        "text": "√3, pois corresponde à área de um dos seis triângulos equiláteros."
+      },
+      {
+        "id": "b",
+        "text": "2√3, pois a área do hexágono é o dobro da área de um triângulo."
+      },
+      {
+        "id": "c",
+        "text": "3√3, pois a área do hexágono é o triplo da área de um triângulo."
+      },
+      {
+        "id": "d",
+        "text": "4√3, pois a área do hexágono é o quadrado do lado vezes √3."
+      },
+      {
+        "id": "e",
+        "text": "6√3, pois a área de cada triângulo é 2²·√3/4 = √3, e o hexágono reúne seis deles."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Cada triângulo: 4√3/4 = √3 m². Seis triângulos: 6√3 ≈ 10,4 m².\n\nPegadinhas:\n• A: é só um dos triângulos.\n• B: conta apenas dois triângulos.\n• C: conta apenas três triângulos.\n• D: fórmula inventada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_32",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_plana",
+    "chapter": "Ângulos e Circunferências",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Achar que o ângulo inscrito é igual ao central que subtende o mesmo arco.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um teatro com palco em forma de arco de circunferência, um técnico observou que, do centro da circunferência, as extremidades do palco são vistas sob um ângulo de 80°. Ele quer saber sob que ângulo uma pessoa sentada em um ponto da mesma circunferência, do lado oposto ao palco, vê as duas extremidades. O ângulo do centro é o ângulo central, e o do espectador, um ângulo inscrito que subtende o mesmo arco.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO ângulo sob o qual o espectador vê as extremidades do palco é",
+    "options": [
+      {
+        "id": "a",
+        "text": "20°, pois o ângulo inscrito é um quarto do ângulo central."
+      },
+      {
+        "id": "b",
+        "text": "40°, pois o ângulo inscrito mede metade do ângulo central que subtende o mesmo arco."
+      },
+      {
+        "id": "c",
+        "text": "80°, pois todo ângulo que subtende o mesmo arco tem a mesma medida."
+      },
+      {
+        "id": "d",
+        "text": "120°, pois o ângulo inscrito completa 200° com o central."
+      },
+      {
+        "id": "e",
+        "text": "160°, pois o ângulo inscrito é o dobro do ângulo central."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Ângulo inscrito = metade do central de mesmo arco: 80°/2 = 40°. Todos os espectadores sobre esse arco da circunferência veem o palco sob 40°.\n\nPegadinhas:\n• A: divide por 4.\n• C: iguala inscrito e central.\n• D: relação inventada.\n• E: inverte a relação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_33",
+    "subject": "Matemática",
+    "topicId": "mat_trigonometria",
+    "chapter": "A Relação Fundamental da Trigonometria",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Usar sen x + cos x = 1, ou esquecer a raiz quadrada.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA relação fundamental da trigonometria afirma que, para todo ângulo x, sen²x + cos²x = 1. Um estudante sabe que um ângulo agudo x tem seno igual a 0,6 e quer calcular o cosseno sem usar calculadora. Ele lembra que, para ângulos agudos, o cosseno é positivo. Um colega sugere simplesmente fazer 1 − 0,6.\n\nTexto elaborado para esta questão.\n\nO valor de cos x é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,4, pois o cosseno é o complemento do seno em relação a 1."
+      },
+      {
+        "id": "b",
+        "text": "0,64, pois cos²x = 1 − 0,36, e esse já é o valor do cosseno."
+      },
+      {
+        "id": "c",
+        "text": "0,8, pois cos²x = 1 − 0,36 = 0,64, e cos x = √0,64, positivo por ser agudo."
+      },
+      {
+        "id": "d",
+        "text": "1,0, pois o seno e o cosseno de um ângulo agudo somam 1,6."
+      },
+      {
+        "id": "e",
+        "text": "1,25, pois o cosseno é o inverso do seno multiplicado por 0,75."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. cos²x = 1 − 0,6² = 0,64; cos x = 0,8 (triângulo 3-4-5).\n\nPegadinhas:\n• A: aplica sen + cos = 1, que é falso.\n• B: esquece a raiz quadrada.\n• D: relação inventada.\n• E: cosseno de ângulo não passa de 1.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_34",
+    "subject": "Matemática",
+    "topicId": "mat_sequencias_matrizes",
+    "chapter": "Tabelas e Matrizes",
+    "difficulty": "easy",
+    "skill": "interpretacao_grafico",
+    "trap": "Trocar o índice de linha pelo de coluna.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma escola registrou em uma matriz A as notas de três estudantes em quatro provas: cada linha corresponde a um estudante, na ordem Ana, Bruno e Carla, e cada coluna, a uma prova, da primeira à quarta. O elemento aᵢⱼ é a nota do estudante da linha i na prova da coluna j.\n\nA = [ 7 8 6 9 ]\n    [ 5 9 8 7 ]\n    [ 9 6 7 8 ]\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO elemento a₂₃ e seu significado são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "8, a nota de Bruno na terceira prova."
+      },
+      {
+        "id": "b",
+        "text": "6, a nota de Ana na terceira prova."
+      },
+      {
+        "id": "c",
+        "text": "7, a nota de Carla na terceira prova."
+      },
+      {
+        "id": "d",
+        "text": "6, a nota de Carla na segunda prova."
+      },
+      {
+        "id": "e",
+        "text": "9, a nota de Bruno na segunda prova, por ser a maior nota da linha."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. a₂₃: linha 2 (Bruno), coluna 3 (terceira prova) = 8.\n\nPegadinhas:\n• B: lê a linha 1.\n• C: lê a linha 3.\n• D: inverte os índices, lendo linha 3 e coluna 2.\n• E: lê a coluna 2.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_35",
+    "subject": "Matemática",
+    "topicId": "mat_teoria_numeros",
+    "chapter": "O Sistema de Numeração Decimal",
+    "difficulty": "easy",
+    "skill": "analise_conceitual",
+    "trap": "Contar zeros errado ao converter milhões, ou confundir valor absoluto com relativo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma notícia informou que \"2,5 milhões de pessoas\" visitaram uma exposição. Um estudante quer escrever esse número com todos os algarismos e identificar o valor posicional do algarismo 5. No sistema de numeração decimal, cada posição vale dez vezes a posição imediatamente à direita, e o valor de um algarismo depende da posição que ele ocupa no número.\n\nTexto elaborado para esta questão.\n\nO número escrito com todos os algarismos e o valor relativo do algarismo 5 são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "250.000, e o 5 vale 50.000, pois um milhão tem cinco zeros."
+      },
+      {
+        "id": "b",
+        "text": "25.000.000, e o 5 vale 5.000.000, pois 2,5 milhões correspondem a 25 milhões."
+      },
+      {
+        "id": "c",
+        "text": "2.500, e o 5 vale 500, pois milhões equivalem a milhares."
+      },
+      {
+        "id": "d",
+        "text": "2.500.000, e o 5, na casa das centenas de milhar, vale 500.000."
+      },
+      {
+        "id": "e",
+        "text": "2.500.000, e o 5 vale 5, pois o valor de um algarismo não depende da posição."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. 2,5 × 1.000.000 = 2.500.000. O 5 ocupa a casa das centenas de milhar e vale 500.000.\n\nPegadinhas:\n• A: um milhão tem seis zeros.\n• B: multiplica por 10 a mais.\n• C: confunde milhão com milhar.\n• E: confunde valor absoluto com valor relativo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_36",
+    "subject": "Geografia",
+    "topicId": "geo_fisica_brasil",
+    "chapter": "Geologia e Geomorfologia",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o Brasil não tem nenhum terremoto, ou que os terremotos brasileiros são tão fortes quanto os andinos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Brasil registra todos os anos centenas de pequenos tremores de terra, quase todos de baixa magnitude e pouco sentidos pela população, e não tem vulcões ativos. Já no Chile e no Peru, terremotos fortes e erupções vulcânicas são frequentes. O território brasileiro está no interior da placa Sul-Americana, enquanto a costa oeste da América do Sul está na zona de convergência entre a placa de Nazca e a Sul-Americana.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o Brasil não tem nenhum tremor de terra, por estar sobre rochas antigas."
+      },
+      {
+        "id": "b",
+        "text": "os terremotos no Brasil são tão fortes quanto os do Chile, mas ocorrem em áreas desabitadas."
+      },
+      {
+        "id": "c",
+        "text": "o Brasil tem vulcões ativos na Amazônia, cobertos pela floresta."
+      },
+      {
+        "id": "d",
+        "text": "a localização no interior da placa explica a baixa atividade sísmica e a ausência de vulcanismo ativo no Brasil, enquanto a convergência de placas explica os terremotos fortes e os vulcões andinos."
+      },
+      {
+        "id": "e",
+        "text": "os tremores brasileiros são causados apenas por atividade humana, como a mineração."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Nas bordas convergentes, a subducção da placa de Nazca gera terremotos fortes e magma. No interior da placa, os esforços são menores, e os tremores, fracos, ligados a falhas antigas.\n\nPegadinhas:\n• A: o texto cita centenas de pequenos tremores.\n• B: o texto diz que são de baixa magnitude.\n• C: o texto diz que não há vulcões ativos.\n• E: a maioria tem origem natural em falhas geológicas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_37",
+    "subject": "Geografia",
+    "topicId": "geo_cartografia",
+    "chapter": "Cartografia Digital",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o GPS envia dados ao satélite, ou que um único satélite basta para a posição.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAplicativos de navegação usam o sistema GPS: o receptor do celular capta sinais de vários satélites, cada um com a hora exata de envio e a posição do satélite. A partir do tempo que cada sinal leva para chegar, o aparelho calcula sua distância a cada satélite e, combinando os sinais de pelo menos quatro deles, determina sua posição. Os dados de posição podem ser sobrepostos a camadas de informação, como ruas, relevo e trânsito, em Sistemas de Informação Geográfica (SIG).\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o receptor calcula sua posição a partir das distâncias a vários satélites, obtidas pelo tempo de chegada dos sinais, e os SIGs permitem cruzar essa posição com diferentes camadas de dados geográficos."
+      },
+      {
+        "id": "b",
+        "text": "o celular envia sua posição ao satélite, que calcula e devolve a localização."
+      },
+      {
+        "id": "c",
+        "text": "um único satélite é suficiente para determinar a posição do aparelho."
+      },
+      {
+        "id": "d",
+        "text": "os SIGs são mapas impressos que não admitem atualização."
+      },
+      {
+        "id": "e",
+        "text": "o GPS funciona apenas com conexão de internet, pois os satélites são servidores da rede."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O receptor só recebe sinais: com as distâncias a vários satélites, resolve sua posição. Os SIGs organizam dados georreferenciados em camadas que podem ser combinadas e analisadas.\n\nPegadinhas:\n• B: o receptor não envia sinal ao satélite.\n• C: o texto diz que são necessários pelo menos quatro.\n• D: SIGs são sistemas digitais e atualizáveis.\n• E: o sinal GPS vem dos satélites, independentemente da internet.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_38",
+    "subject": "Geografia",
+    "topicId": "geo_geopolitica_regional",
+    "chapter": "Tensões Geopolíticas na Europa",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Explicar a guerra apenas por fatores étnicos, ignorando a expansão da OTAN e a energia.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm fevereiro de 2022, a Rússia invadiu a Ucrânia, ampliando o conflito iniciado em 2014 com a anexação da Crimeia. O governo russo apontava como ameaça a aproximação da Ucrânia com a OTAN, aliança militar que se expandiu para o Leste Europeu após a Guerra Fria. A guerra provocou sanções contra a Rússia, uma crise de abastecimento de gás natural na Europa, muito dependente do gás russo, e milhões de refugiados ucranianos.\n\nTexto elaborado para esta questão.\n\nO conflito descrito",
+    "options": [
+      {
+        "id": "a",
+        "text": "é uma disputa exclusivamente religiosa entre católicos e ortodoxos."
+      },
+      {
+        "id": "b",
+        "text": "começou em 2022, sem antecedentes nos anos anteriores."
+      },
+      {
+        "id": "c",
+        "text": "não teve efeitos fora da Ucrânia e da Rússia."
+      },
+      {
+        "id": "d",
+        "text": "fortaleceu a dependência europeia do gás russo."
+      },
+      {
+        "id": "e",
+        "text": "envolve disputas de influência entre a Rússia e a OTAN no Leste Europeu e teve efeitos globais, como a crise energética europeia, sanções econômicas e grandes deslocamentos de refugiados."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A expansão da OTAN e a aproximação de Kiev com o Ocidente estão no centro da justificativa russa; os efeitos atingiram energia, alimentos, refugiados e a política de segurança europeia.\n\nPegadinhas:\n• A: o texto aponta fatores geopolíticos.\n• B: o texto cita a anexação da Crimeia em 2014.\n• C: o texto descreve efeitos na Europa.\n• D: a guerra levou a Europa a reduzir a dependência do gás russo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_39",
+    "subject": "Geografia",
+    "topicId": "geo_hidrogeografia",
+    "chapter": "Geopolítica dos Recursos Hídricos",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que uma barragem a montante não afeta países a jusante.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Etiópia construiu no Nilo Azul a Grande Barragem do Renascimento, uma das maiores hidrelétricas da África, para gerar energia para sua população. O Egito, a jusante, depende do Nilo para a maior parte de sua água doce e teme que o enchimento do reservatório reduza a vazão que chega a seu território, sobretudo em anos secos. O Sudão, entre os dois países, também participa das negociações.\n\nTexto elaborado para esta questão.\n\nO caso mostra que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a construção da barragem não tem relação com o abastecimento dos países a jusante."
+      },
+      {
+        "id": "b",
+        "text": "o Egito controla as nascentes do Nilo Azul."
+      },
+      {
+        "id": "c",
+        "text": "rios que atravessam vários países podem gerar disputas, pois obras a montante afetam a disponibilidade de água a jusante, o que exige acordos internacionais de gestão."
+      },
+      {
+        "id": "d",
+        "text": "a água do Nilo não é usada para irrigação no Egito."
+      },
+      {
+        "id": "e",
+        "text": "a Etiópia está a jusante do Egito no curso do Nilo."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Em bacias transfronteiriças, quem está a montante pode alterar a vazão para quem está a jusante. O ritmo de enchimento do reservatório e as regras de operação em secas são o centro da negociação.\n\nPegadinhas:\n• A: o texto descreve exatamente o temor sobre a vazão.\n• B: o Nilo Azul nasce na Etiópia.\n• D: a agricultura egípcia depende do Nilo.\n• E: o Egito está a jusante.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_40",
+    "subject": "Geografia",
+    "topicId": "geo_populacao_urbana_brasil",
+    "chapter": "As Redes de Transportes",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que o transporte rodoviário é o mais barato para longas distâncias.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo Brasil, a maior parte das cargas é transportada por caminhões em rodovias, embora o país tenha dimensões continentais. Para grandes volumes e longas distâncias, como no escoamento de soja e de minério de ferro, as ferrovias e as hidrovias costumam ter custo de frete por tonelada muito menor e consomem menos combustível. A greve dos caminhoneiros de 2018 provocou desabastecimento em várias cidades em poucos dias.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o Brasil tem uma matriz de transportes equilibrada entre rodovias, ferrovias e hidrovias."
+      },
+      {
+        "id": "b",
+        "text": "a concentração no modal rodoviário encarece o transporte de grandes volumes a longas distâncias e torna o abastecimento vulnerável a interrupções, como mostrou a greve de 2018."
+      },
+      {
+        "id": "c",
+        "text": "o transporte rodoviário é o mais barato para cargas pesadas e longas distâncias."
+      },
+      {
+        "id": "d",
+        "text": "as ferrovias brasileiras transportam a maior parte das cargas do país."
+      },
+      {
+        "id": "e",
+        "text": "a greve de 2018 não teve impacto no abastecimento."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A predominância rodoviária, consolidada a partir da segunda metade do século XX, aumenta custos e dependência. Ferrovias e hidrovias seriam mais eficientes para granéis em longas distâncias.\n\nPegadinhas:\n• A: o texto diz que a maior parte vai por rodovias.\n• C: o texto aponta frete menor em ferrovias e hidrovias.\n• D: as rodovias predominam.\n• E: o texto cita desabastecimento.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_41",
+    "subject": "Geografia",
+    "topicId": "geo_populacao_urbana_brasil",
+    "chapter": "Estrutura Étnica e Fluxos Migratórios",
+    "difficulty": "medium",
+    "skill": "interpretacao_grafico",
+    "trap": "Achar que a autodeclaração é atribuída pelo recenseador, ou que a maioria se declarou branca.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo Censo de 2022, pela primeira vez desde 1991, a população que se declarou parda foi a maior do Brasil, cerca de 45%, seguida da branca, com cerca de 43%, e da preta, com cerca de 10%. Indígenas e amarelos somaram menos de 2%. No censo, a cor ou raça é autodeclarada: cada pessoa informa como se identifica. Pesquisadores atribuem parte da mudança a uma maior valorização da identidade negra nas últimas décadas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a maioria da população brasileira se declarou branca em 2022."
+      },
+      {
+        "id": "b",
+        "text": "a cor ou raça no censo é definida pelo recenseador, com base na aparência."
+      },
+      {
+        "id": "c",
+        "text": "os dados indicam que pretos e pardos, somados, formam a maior parte da população, e a autodeclaração pode refletir mudanças na forma como as pessoas se identificam."
+      },
+      {
+        "id": "d",
+        "text": "indígenas formam o segundo maior grupo da população."
+      },
+      {
+        "id": "e",
+        "text": "a proporção de pessoas pardas diminuiu em relação aos censos anteriores."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Pardos (~45%) e pretos (~10%) somam mais da metade. Como a classificação é autodeclarada, a variação também expressa mudanças de identificação.\n\nPegadinhas:\n• A: os brancos foram cerca de 43%.\n• B: o texto diz que é autodeclarada.\n• D: indígenas e amarelos somam menos de 2%.\n• E: a população parda tornou-se a maior.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_42",
+    "subject": "História",
+    "topicId": "his_brasil_colonia",
+    "chapter": "Dinâmica Interna da Colonização",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a colonização açucareira se baseou na pequena propriedade e no trabalho livre.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNos séculos XVI e XVII, a produção de açúcar no Nordeste do Brasil organizou-se em grandes propriedades, os engenhos, com plantações de cana, moenda, casa das caldeiras e casa de purgar. O trabalho era realizado principalmente por africanos escravizados, trazidos pelo tráfico atlântico, e o açúcar era vendido na Europa. Comerciantes portugueses e holandeses participavam do financiamento, do transporte e da distribuição.\n\nTexto elaborado para esta questão.\n\nA economia açucareira colonial caracterizou-se por",
+    "options": [
+      {
+        "id": "a",
+        "text": "pequenas propriedades familiares voltadas ao consumo interno."
+      },
+      {
+        "id": "b",
+        "text": "trabalho assalariado de imigrantes europeus."
+      },
+      {
+        "id": "c",
+        "text": "produção industrial mecanizada movida a vapor."
+      },
+      {
+        "id": "d",
+        "text": "grande propriedade, monocultura voltada à exportação e trabalho escravizado de africanos, integrada ao comércio atlântico."
+      },
+      {
+        "id": "e",
+        "text": "produção de açúcar exclusivamente para os indígenas."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. É o modelo de plantation: latifúndio, monocultura exportadora e escravidão, ligado ao tráfico e aos mercados europeus.\n\nPegadinhas:\n• A: o texto descreve grandes propriedades e exportação.\n• B: o trabalho era escravizado.\n• C: a mecanização a vapor é posterior.\n• E: o açúcar era vendido na Europa.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_43",
+    "subject": "História",
+    "topicId": "his_brasil_imperio",
+    "chapter": "Brasil Império: Formação do Estado Nacional Brasileiro",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a Constituição de 1824 criou o voto universal, ou que o Poder Moderador era do Parlamento.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1824, D. Pedro I outorgou a primeira Constituição do Brasil, após dissolver a Assembleia Constituinte. O texto criou quatro poderes: Executivo, Legislativo, Judiciário e o Poder Moderador, exercido pelo imperador, que podia, entre outras atribuições, dissolver a Câmara dos Deputados e nomear senadores. O voto era censitário: para votar e ser votado, era preciso ter renda mínima, e escravizados não votavam.\n\nTexto elaborado para esta questão.\n\nA Constituição de 1824",
+    "options": [
+      {
+        "id": "a",
+        "text": "concentrou poder nas mãos do imperador, por meio do Poder Moderador, e restringiu a participação política pelo voto censitário, excluindo a maior parte da população."
+      },
+      {
+        "id": "b",
+        "text": "foi elaborada e aprovada pela Assembleia Constituinte eleita."
+      },
+      {
+        "id": "c",
+        "text": "estabeleceu o voto universal, incluindo mulheres e escravizados."
+      },
+      {
+        "id": "d",
+        "text": "criou uma república federativa, com presidentes eleitos."
+      },
+      {
+        "id": "e",
+        "text": "atribuiu o Poder Moderador ao Parlamento."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Outorgada, a Constituição deu ao imperador o Poder Moderador, acima dos demais, e limitou o voto pela renda.\n\nPegadinhas:\n• B: a Constituinte foi dissolvida, e o texto foi outorgado.\n• C: o voto era censitário e excluía escravizados.\n• D: o regime era monárquico.\n• E: o Poder Moderador era do imperador.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_44",
+    "subject": "História",
+    "topicId": "his_brasil_imperio",
+    "chapter": "Brasil Império: o Declínio do Segundo Reinado",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Atribuir a queda da monarquia a um único fator, como a abolição.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNas décadas de 1870 e 1880, o Império enfrentou atritos com a Igreja, a chamada Questão Religiosa, e com o Exército, fortalecido após a Guerra do Paraguai e descontente com o tratamento recebido do governo, a Questão Militar. A abolição da escravidão, em 1888, sem indenização, afastou da monarquia parte dos grandes proprietários. Ao mesmo tempo, cresciam o movimento republicano e a influência dos cafeicultores do Oeste Paulista, que reivindicavam mais poder político.\n\nTexto elaborado para esta questão.\n\nA Proclamação da República, em 1889, pode ser explicada",
+    "options": [
+      {
+        "id": "a",
+        "text": "exclusivamente pela abolição da escravidão."
+      },
+      {
+        "id": "b",
+        "text": "pela combinação de fatores: o desgaste com a Igreja e o Exército, a perda de apoio de proprietários após a abolição e o fortalecimento de grupos republicanos e cafeicultores que desejavam mais autonomia."
+      },
+      {
+        "id": "c",
+        "text": "por uma revolução popular que derrubou o imperador."
+      },
+      {
+        "id": "d",
+        "text": "pela invasão do Brasil por tropas estrangeiras."
+      },
+      {
+        "id": "e",
+        "text": "pelo desejo de D. Pedro II de instaurar a República."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A monarquia perdeu sucessivamente suas bases de apoio. A proclamação foi um movimento militar com apoio de civis republicanos, sem grande participação popular.\n\nPegadinhas:\n• A: a abolição foi um dos fatores, não o único.\n• C: não houve revolução popular.\n• D: não houve intervenção estrangeira.\n• E: o imperador foi deposto e exilado.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_45",
+    "subject": "História",
+    "topicId": "his_republica_liberal_atual",
+    "chapter": "Regime Militar (1964-1985) I",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que o \"milagre econômico\" reduziu a desigualdade, ou que ocorreu com liberdade de imprensa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEntre 1968 e 1973, a economia brasileira cresceu a taxas superiores a 10% ao ano, período que ficou conhecido como \"milagre econômico\". O crescimento foi impulsionado por investimentos públicos, crédito externo e expansão da indústria de bens duráveis. Na mesma época, vigorava o AI-5, que permitia a censura prévia à imprensa e a suspensão de direitos políticos. Estudos mostram que a concentração de renda aumentou no período.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o \"milagre econômico\"",
+    "options": [
+      {
+        "id": "a",
+        "text": "reduziu a desigualdade de renda no Brasil."
+      },
+      {
+        "id": "b",
+        "text": "ocorreu em um período de ampla liberdade de imprensa."
+      },
+      {
+        "id": "c",
+        "text": "foi financiado exclusivamente com recursos internos."
+      },
+      {
+        "id": "d",
+        "text": "provocou a queda imediata do regime militar."
+      },
+      {
+        "id": "e",
+        "text": "combinou crescimento acelerado, financiado em parte por crédito externo, com aumento da concentração de renda e forte repressão política."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O crescimento foi alto, mas a renda se concentrou, e o endividamento externo pesaria após os choques do petróleo. O período coincidiu com os anos mais duros de censura e repressão.\n\nPegadinhas:\n• A: o texto diz que a concentração de renda aumentou.\n• B: vigorava a censura prévia.\n• C: o texto cita crédito externo.\n• D: o regime durou até 1985.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_46",
+    "subject": "História",
+    "topicId": "his_republica_liberal_atual",
+    "chapter": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a Petrobras foi criada por JK, ou que Vargas defendia a abertura total do petróleo ao capital estrangeiro.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1953, no segundo governo de Getúlio Vargas, eleito em 1950, foi criada a Petrobras, com monopólio estatal sobre a exploração de petróleo, após a campanha popular \"O petróleo é nosso\". O governo enfrentou forte oposição de setores civis e militares, que o acusavam de corrupção e de aproximação com os trabalhadores. Em agosto de 1954, sob grave crise política, Vargas suicidou-se no Palácio do Catete.\n\nTexto elaborado para esta questão.\n\nO segundo governo Vargas caracterizou-se por",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma política nacionalista, com a criação da Petrobras e o monopólio estatal do petróleo, apoio de setores populares e forte oposição política, que culminou na crise de 1954."
+      },
+      {
+        "id": "b",
+        "text": "a abertura total da exploração de petróleo a empresas estrangeiras."
+      },
+      {
+        "id": "c",
+        "text": "um regime ditatorial, sem eleições, como o Estado Novo."
+      },
+      {
+        "id": "d",
+        "text": "a construção de Brasília e o Plano de Metas."
+      },
+      {
+        "id": "e",
+        "text": "o apoio unânime das Forças Armadas e da imprensa."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A campanha \"O petróleo é nosso\" e o monopólio estatal expressam o nacionalismo econômico. A oposição, liderada pela UDN e por setores militares, levou à crise e ao suicídio.\n\nPegadinhas:\n• B: criou-se o monopólio estatal.\n• C: Vargas foi eleito em 1950.\n• D: Brasília e o Plano de Metas são de JK.\n• E: o texto descreve forte oposição.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_47",
+    "subject": "História",
+    "topicId": "his_guerra_fria_contemporaneo",
+    "chapter": "Guerra Fria",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que o Plano Marshall foi uma ajuda militar à URSS, ou que não teve objetivo político.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1947, os Estados Unidos anunciaram a Doutrina Truman, de apoio a países ameaçados pela expansão comunista, e lançaram o Plano Marshall, que destinou bilhões de dólares à reconstrução de países da Europa Ocidental devastados pela Segunda Guerra. A União Soviética recusou a ajuda e pressionou os países do Leste Europeu a fazerem o mesmo, criando depois seu próprio programa de cooperação econômica.\n\nTexto elaborado para esta questão.\n\nO Plano Marshall pode ser entendido como",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma ajuda militar dos Estados Unidos à União Soviética."
+      },
+      {
+        "id": "b",
+        "text": "um programa de reconstrução econômica que também tinha o objetivo político de conter a influência comunista na Europa Ocidental, no início da Guerra Fria."
+      },
+      {
+        "id": "c",
+        "text": "um acordo entre Estados Unidos e União Soviética para dividir a ajuda à Europa."
+      },
+      {
+        "id": "d",
+        "text": "um plano de reconstrução destinado apenas aos países do Leste Europeu."
+      },
+      {
+        "id": "e",
+        "text": "uma iniciativa sem relação com a disputa entre capitalismo e socialismo."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Reconstruir a Europa Ocidental fortalecia economias capitalistas aliadas e reduzia o apelo comunista em sociedades empobrecidas. A recusa soviética aprofundou a divisão do continente em blocos.\n\nPegadinhas:\n• A: a URSS recusou a ajuda.\n• C: não houve acordo de divisão.\n• D: a ajuda foi para a Europa Ocidental.\n• E: o contexto é a Doutrina Truman e a contenção do comunismo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_48",
+    "subject": "Português",
+    "topicId": "por_norma_culta",
+    "chapter": "Crase",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Usar crase antes de verbo ou de palavra masculina, ou omiti-la em locução feminina.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um aviso afixado na portaria de um condomínio, lê-se:\n\n\"Informamos à todos os moradores que a entrega de encomendas será feita das 8h às 18h, e que o acesso à piscina está suspenso devido à manutenção.\"\n\nUma moradora apontou que uma das crases do aviso está empregada em desacordo com a norma-padrão. A crase indica a fusão da preposição \"a\" com o artigo feminino \"a\" (ou com o \"a\" inicial de certos pronomes).\n\nTexto elaborado para esta questão.\n\nO uso inadequado da crase ocorre em",
+    "options": [
+      {
+        "id": "a",
+        "text": "\"às 18h\", pois não se usa crase antes de numeral em indicação de horas."
+      },
+      {
+        "id": "b",
+        "text": "\"à piscina\", pois \"acesso\" não exige preposição."
+      },
+      {
+        "id": "c",
+        "text": "\"devido à manutenção\", pois a locução \"devido a\" não admite artigo."
+      },
+      {
+        "id": "d",
+        "text": "\"à todos\", pois \"todos\" é palavra masculina, sem artigo feminino \"a\" que se funda com a preposição; o correto é \"a todos\"."
+      },
+      {
+        "id": "e",
+        "text": "nenhuma das ocorrências, pois todas estão de acordo com a norma-padrão."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Antes de palavra masculina não há artigo feminino para fundir: \"Informamos a todos\". As demais estão corretas: \"às 18h\" (horas determinadas), \"acesso à piscina\" (acesso a + a piscina) e \"devido à manutenção\" (devido a + a manutenção).\n\nPegadinhas:\n• A: em horas determinadas, a crase é obrigatória.\n• B: \"acesso\" rege a preposição \"a\".\n• C: \"devido a\" seguida de palavra feminina com artigo leva crase.\n• E: \"à todos\" está inadequado.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_49",
+    "subject": "Inglês",
+    "topicId": "ing_01",
+    "chapter": "Text Comprehension: Hurricanes",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Achar que o texto afirma que haverá mais furacões, quando fala em furacões mais intensos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Hurricanes draw their energy from warm ocean water. As sea surface temperatures rise, scientists expect the strongest storms to become more intense and to carry more rain, even if the total number of hurricanes each year does not necessarily increase. Rising sea levels also make storm surges, the walls of water pushed onto the coast, more destructive for coastal cities.\"\n\nTexto elaborado para esta questão.\n\nAccording to the text,",
+    "options": [
+      {
+        "id": "a",
+        "text": "scientists are certain that the number of hurricanes will double every year."
+      },
+      {
+        "id": "b",
+        "text": "hurricanes get their energy from cold ocean water."
+      },
+      {
+        "id": "c",
+        "text": "rising sea levels make storm surges less dangerous for coastal cities."
+      },
+      {
+        "id": "d",
+        "text": "warmer oceans will stop hurricanes from forming."
+      },
+      {
+        "id": "e",
+        "text": "warmer oceans are expected to make the strongest hurricanes more intense and rainier, although the total number of storms may not increase, and higher seas worsen storm surges."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O texto liga oceanos mais quentes à intensidade e à chuva dos furacões mais fortes, ressalva que o número total \"does not necessarily increase\" e diz que o nível do mar agrava as ressacas de tempestade.\n\nPegadinhas:\n• A: o texto não fala em número dobrando.\n• B: o texto diz \"warm ocean water\".\n• C: o texto diz \"more destructive\".\n• D: o texto diz que a água quente fornece energia aos furacões.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l15_50",
+    "subject": "Filosofia",
+    "topicId": "fil_moderna_racionalismo_empirismo",
+    "chapter": "Descartes e o Método: a Dúvida Hiperbólica",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Achar que a dúvida cartesiana leva ao ceticismo definitivo, ou que a primeira certeza vem dos sentidos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNas Meditações, publicadas em 1641, René Descartes decide duvidar de tudo o que possa ser posto em dúvida, mesmo que só por hipótese: dos sentidos, que às vezes enganam; da distinção entre sono e vigília; e até das verdades matemáticas, supondo um gênio maligno que o enganasse. Mesmo assim, conclui que, enquanto duvida, pensa, e que, se pensa, existe.\n\nTexto elaborado para esta questão.\n\nA dúvida cartesiana descrita",
+    "options": [
+      {
+        "id": "a",
+        "text": "leva Descartes a concluir que nada pode ser conhecido com certeza."
+      },
+      {
+        "id": "b",
+        "text": "baseia-se na confiança nos sentidos como fonte segura de conhecimento."
+      },
+      {
+        "id": "c",
+        "text": "é um método para encontrar uma certeza indubitável, e o próprio ato de duvidar revela a existência do sujeito que pensa, expressa na fórmula \"penso, logo existo\"."
+      },
+      {
+        "id": "d",
+        "text": "considera as verdades matemáticas imunes a qualquer dúvida, mesmo hipotética."
+      },
+      {
+        "id": "e",
+        "text": "serve para provar que o mundo exterior não existe."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A dúvida é metódica e hiperbólica: radical para eliminar tudo o que não for absolutamente certo. O que resiste a ela é o cogito: duvidar já é pensar, e pensar exige um sujeito que exista.\n\nPegadinhas:\n• A: a dúvida é meio para a certeza, não conclusão cética.\n• B: os sentidos são os primeiros postos em dúvida.\n• D: o gênio maligno estende a dúvida à matemática.\n• E: Descartes depois procura reconstruir o conhecimento do mundo, não negá-lo.",
+    "styleOf": "FUVEST"
+  }
+]
