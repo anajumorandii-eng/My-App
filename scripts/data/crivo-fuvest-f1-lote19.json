@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "crivo_fuvest_f1_l19_01",
+    "subject": "Biologia",
+    "topicId": "bio_metabolismo_energetico",
+    "chapter": "Proteínas: Enzimas",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a intolerância à lactose é alergia ao leite, ou que a lactose não digerida é absorvida.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nMuitos adultos sentem gases, inchaço e diarreia após consumir leite. Na maioria dos casos, trata-se de intolerância à lactose: a produção da enzima lactase, que quebra a lactose em glicose e galactose no intestino delgado, diminui após a infância. A lactose não digerida chega ao intestino grosso, onde é fermentada por bactérias. Produtos \"sem lactose\" recebem a enzima lactase durante a fabricação.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a deficiência de lactase impede a quebra da lactose, que, fermentada pelas bactérias do intestino grosso, causa os sintomas, e o leite sem lactose já tem esse açúcar quebrado pela enzima."
+      },
+      {
+        "id": "b",
+        "text": "a intolerância à lactose é uma reação do sistema imunológico às proteínas do leite."
+      },
+      {
+        "id": "c",
+        "text": "a lactose não digerida é absorvida no intestino delgado e causa os sintomas no sangue."
+      },
+      {
+        "id": "d",
+        "text": "o leite sem lactose é obtido pela retirada de todo o açúcar e das proteínas do leite."
+      },
+      {
+        "id": "e",
+        "text": "a lactase é produzida pelas bactérias do intestino grosso, e não pelo organismo humano."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Sem lactase, a lactose segue intacta e é fermentada no intestino grosso, gerando gases e atraindo água por osmose. No leite sem lactose, a enzima já a quebrou em glicose e galactose, absorvíveis.\n\nPegadinhas:\n• B: confunde intolerância com alergia à proteína do leite.\n• C: o problema é justamente que ela não é absorvida.\n• D: o texto diz que se adiciona a enzima.\n• E: o texto atribui a produção de lactase ao organismo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_02",
+    "subject": "Biologia",
+    "topicId": "bio_metabolismo_energetico",
+    "chapter": "Bioenergética: Fermentação e Respiração",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que a fermentação produz mais energia, ou que o músculo não fermenta.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma corrida de 100 m, os músculos de um velocista trabalham tão intensamente que a oferta de oxigênio não acompanha a demanda. Parte da glicose é então degradada por fermentação lática, que produz 2 ATP por molécula de glicose, contra cerca de 30 ATP na respiração aeróbica, e gera ácido lático. Em uma maratona, de ritmo mais moderado e prolongado, predomina a respiração aeróbica.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a fermentação lática produz mais ATP por glicose que a respiração aeróbica."
+      },
+      {
+        "id": "b",
+        "text": "a maratona depende principalmente da fermentação, por durar mais tempo."
+      },
+      {
+        "id": "c",
+        "text": "o músculo humano só realiza respiração aeróbica, em qualquer situação."
+      },
+      {
+        "id": "d",
+        "text": "no esforço intenso e curto, a fermentação lática complementa a respiração quando falta oxigênio, rendendo pouco ATP, e em esforço prolongado e moderado predomina a respiração aeróbica, muito mais eficiente."
+      },
+      {
+        "id": "e",
+        "text": "o ácido lático é produzido apenas na respiração aeróbica."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A fermentação é rápida e anaeróbica, mas rende só 2 ATP; a respiração aeróbica, com O₂, rende cerca de 30. Na prova curta, a fermentação ajuda a suprir a demanda; na longa, a eficiência aeróbica é essencial.\n\nPegadinhas:\n• A: inverte os rendimentos.\n• B: a maratona depende da respiração aeróbica.\n• C: o texto descreve a fermentação no músculo.\n• E: o ácido lático vem da fermentação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_03",
+    "subject": "Biologia",
+    "topicId": "bio_metabolismo_energetico",
+    "chapter": "Bioenergética: Fotossíntese e Quimiossíntese",
+    "difficulty": "medium",
+    "skill": "interpretacao_grafico",
+    "trap": "Achar que aumentar a luz sempre aumenta a fotossíntese, sem considerar outros fatores.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm estufas de hortaliças, produtores às vezes injetam gás carbônico no ar. Medidas em plantas de tomate mostraram que, com luz intensa, a taxa de fotossíntese parava de crescer a partir de certa intensidade luminosa; quando a concentração de CO₂ no ar da estufa foi aumentada, a taxa voltou a crescer, até atingir um novo patamar. Com luz fraca, aumentar o CO₂ quase não alterava a fotossíntese.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nAs observações indicam que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a fotossíntese depende apenas da luz, e o CO₂ não influencia a taxa."
+      },
+      {
+        "id": "b",
+        "text": "a taxa de fotossíntese é limitada pelo fator que está em menor disponibilidade: com luz intensa, o CO₂ passou a ser limitante, e, com luz fraca, a própria luz limitava o processo."
+      },
+      {
+        "id": "c",
+        "text": "aumentar o CO₂ sempre aumenta a fotossíntese, qualquer que seja a luz."
+      },
+      {
+        "id": "d",
+        "text": "a fotossíntese diminui quando a concentração de CO₂ aumenta."
+      },
+      {
+        "id": "e",
+        "text": "as plantas de tomate não fazem fotossíntese em estufas."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. É o princípio dos fatores limitantes: o processo é limitado pelo recurso mais escasso. Com luz suficiente, a fixação de CO₂ limita; com pouca luz, a fase fotoquímica limita, e mais CO₂ não adianta.\n\nPegadinhas:\n• A: o aumento de CO₂ elevou a taxa com luz intensa.\n• C: com luz fraca, o CO₂ quase não alterou a taxa.\n• D: a taxa aumentou com o CO₂.\n• E: o texto mede fotossíntese nas estufas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_04",
+    "subject": "Biologia",
+    "topicId": "bio_codigo_genetico_sintese",
+    "chapter": "Ácidos Nucleicos",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que toda mutação altera a proteína, ignorando a degeneração do código genético.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO código genético é lido em trincas de bases, os códons, e cada códon corresponde a um aminoácido ou a um sinal de parada. Há 64 códons possíveis e apenas 20 aminoácidos, de modo que vários códons diferentes codificam o mesmo aminoácido. Em um gene, a troca de uma única base mudou o códon GAA para GAG; ambos codificam o aminoácido ácido glutâmico. Em outro gene, a troca de uma base transformou um códon de aminoácido em um códon de parada.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as duas mutações têm necessariamente o mesmo efeito sobre as proteínas."
+      },
+      {
+        "id": "b",
+        "text": "toda troca de base no DNA altera a sequência de aminoácidos da proteína."
+      },
+      {
+        "id": "c",
+        "text": "o código genético tem um códon para cada aminoácido, sem redundância."
+      },
+      {
+        "id": "d",
+        "text": "a primeira mutação certamente torna a proteína mais longa."
+      },
+      {
+        "id": "e",
+        "text": "a primeira mutação é silenciosa, pois o código é degenerado e o aminoácido não muda, enquanto a segunda interrompe a tradução antes do tempo e tende a produzir uma proteína incompleta."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Por haver mais códons que aminoácidos, algumas mutações não alteram a proteína (silenciosas). Uma mutação que cria códon de parada (sem sentido) encurta a proteína, geralmente com perda de função.\n\nPegadinhas:\n• A: os efeitos são muito diferentes.\n• B: a primeira mutação não muda o aminoácido.\n• C: o texto descreve 64 códons para 20 aminoácidos.\n• D: a primeira não altera o tamanho.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_05",
+    "subject": "Biologia",
+    "topicId": "bio_codigo_genetico_sintese",
+    "chapter": "Mutações Cromossômicas e Gametogênese",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que a ovogênese produz quatro óvulos, como a espermatogênese produz quatro espermatozoides.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNos homens, cada célula que inicia a meiose na espermatogênese origina quatro espermatozoides funcionais, e o processo ocorre continuamente a partir da puberdade. Nas mulheres, na ovogênese, cada célula que inicia a meiose origina um único ovócito funcional, que recebe quase todo o citoplasma, e pequenas células chamadas corpúsculos polares, que se degeneram. Além disso, as mulheres já nascem com todos os ovócitos primários que terão na vida.\n\nTexto elaborado para esta questão.\n\nCom base no texto, uma diferença entre espermatogênese e ovogênese é que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as duas originam quatro gametas funcionais de cada célula que entra em meiose."
+      },
+      {
+        "id": "b",
+        "text": "a ovogênese forma gametas diploides, e a espermatogênese, haploides."
+      },
+      {
+        "id": "c",
+        "text": "a ovogênese origina apenas um gameta funcional por meiose, com divisão desigual do citoplasma, que concentra reservas no ovócito, enquanto a espermatogênese origina quatro espermatozoides."
+      },
+      {
+        "id": "d",
+        "text": "os corpúsculos polares se transformam em óvulos após a fecundação."
+      },
+      {
+        "id": "e",
+        "text": "a espermatogênese ocorre apenas durante a vida fetal."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A divisão desigual do citoplasma na ovogênese concentra nutrientes e organelas em um só ovócito; os corpúsculos polares recebem pouco citoplasma e degeneram.\n\nPegadinhas:\n• A: a ovogênese forma um só gameta funcional.\n• B: os dois gametas são haploides.\n• D: os corpúsculos polares degeneram.\n• E: a espermatogênese é contínua a partir da puberdade.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_06",
+    "subject": "Biologia",
+    "topicId": "bio_zoologia",
+    "chapter": "Poríferos e Cnidários",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que a queimadura da água-viva é causada por calor, ou que o veneno é injetado por dentes.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo verão, banhistas do litoral brasileiro às vezes sofrem queimaduras ao encostar em águas-vivas e caravelas. Esses animais são cnidários: têm, nos tentáculos, células especializadas chamadas cnidócitos, que contêm uma cápsula com um filamento enrolado. Ao serem tocadas, essas células disparam o filamento, que penetra na pele e injeta substâncias tóxicas. Os cnidócitos também são usados para capturar presas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, as queimaduras causadas por águas-vivas resultam",
+    "options": [
+      {
+        "id": "a",
+        "text": "da temperatura elevada do corpo das águas-vivas."
+      },
+      {
+        "id": "b",
+        "text": "das mordidas dos dentes das águas-vivas, que perfuram a pele."
+      },
+      {
+        "id": "c",
+        "text": "do disparo dos filamentos dos cnidócitos, que injetam toxinas na pele, mecanismo que os cnidários também usam para capturar presas."
+      },
+      {
+        "id": "d",
+        "text": "da liberação de ácido pelo sistema digestório das águas-vivas."
+      },
+      {
+        "id": "e",
+        "text": "de uma reação alérgica à água do mar, sem participação do animal."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O cnidócito funciona como um arpão microscópico, disparado ao toque. A toxina provoca dor e lesões; o mesmo sistema imobiliza pequenas presas.\n\nPegadinhas:\n• A: não há relação com temperatura.\n• B: águas-vivas não têm dentes.\n• D: o mecanismo descrito está nos tentáculos.\n• E: o texto atribui a lesão às células do animal.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_07",
+    "subject": "Biologia",
+    "topicId": "bio_zoologia",
+    "chapter": "Arquitetura Corporal dos Animais e o Filo dos Platelmintos e dos Nematódeos",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Confundir as formas de infecção da lombriga e do amarelão.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDuas verminoses causadas por nematódeos são comuns em regiões sem saneamento básico. Na ascaridíase, causada pela lombriga, a pessoa se infecta ao ingerir ovos do verme presentes em água ou alimentos contaminados com fezes. No amarelão, causado por ancilostomídeos, larvas que vivem no solo contaminado penetram ativamente pela pele, sobretudo dos pés descalços, e os vermes adultos se fixam no intestino, sugando sangue, o que pode causar anemia.\n\nTexto elaborado para esta questão.\n\nCom base no texto, medidas eficazes de prevenção das duas doenças incluem, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "usar calçados e beber água tratada."
+      },
+      {
+        "id": "b",
+        "text": "usar repelentes contra mosquitos nas duas doenças."
+      },
+      {
+        "id": "c",
+        "text": "evitar o contato com caramujos e cozinhar bem a carne de porco."
+      },
+      {
+        "id": "d",
+        "text": "tomar vacina contra as duas verminoses."
+      },
+      {
+        "id": "e",
+        "text": "lavar bem os alimentos e beber água tratada, para não ingerir ovos de lombriga, e usar calçados, para evitar a penetração das larvas do amarelão, além de saneamento básico para ambas."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Cada medida interrompe a via de infecção: ingestão de ovos (ascaridíase) e penetração pela pele (amarelão). O saneamento evita que fezes contaminem água, alimentos e solo.\n\nPegadinhas:\n• A: inverte a ordem das medidas.\n• B: não há mosquito nesses ciclos.\n• C: são medidas para esquistossomose e teníase.\n• D: não há vacinas de uso geral contra essas verminoses.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_08",
+    "subject": "Biologia",
+    "topicId": "bio_ecologia",
+    "chapter": "Introdução à Ecologia",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Confundir mutualismo com comensalismo, ou classificar o líquen como um único organismo vegetal.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nOs liquens, comuns em troncos de árvores e rochas, são associações entre fungos e algas ou cianobactérias. O fungo fornece abrigo, retém água e absorve sais minerais; a alga ou a cianobactéria realiza fotossíntese e fornece compostos orgânicos ao fungo. Separados, muitas vezes nenhum dos dois sobrevive nos ambientes em que o líquen vive. Por serem sensíveis à poluição do ar, os liquens são usados como indicadores da qualidade do ar.\n\nTexto elaborado para esta questão.\n\nA relação entre os componentes do líquen é",
+    "options": [
+      {
+        "id": "a",
+        "text": "mutualismo, pois os dois organismos se beneficiam e, nesses ambientes, dependem um do outro para sobreviver."
+      },
+      {
+        "id": "b",
+        "text": "parasitismo, pois o fungo prejudica a alga."
+      },
+      {
+        "id": "c",
+        "text": "comensalismo, pois só o fungo se beneficia, sem afetar a alga."
+      },
+      {
+        "id": "d",
+        "text": "predação, pois o fungo se alimenta da alga."
+      },
+      {
+        "id": "e",
+        "text": "competição, pois os dois disputam os mesmos recursos."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Ambos ganham: abrigo, água e sais para a alga; alimento orgânico para o fungo. A interdependência caracteriza o mutualismo.\n\nPegadinhas:\n• B: a alga também se beneficia.\n• C: os dois se beneficiam.\n• D: o fungo não mata a alga.\n• E: os recursos são complementares.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_09",
+    "subject": "Biologia",
+    "topicId": "bio_microbiologia",
+    "chapter": "Procariotos",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que as plantas absorvem diretamente o nitrogênio do ar.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEmbora cerca de 78% do ar seja gás nitrogênio, N₂, as plantas não conseguem usá-lo diretamente. Em leguminosas como a soja e o feijão, bactérias do gênero Rhizobium vivem em nódulos nas raízes e transformam o N₂ em compostos nitrogenados assimiláveis. No Brasil, a inoculação dessas bactérias nas sementes de soja reduz drasticamente o uso de adubos nitrogenados, cuja produção industrial consome muita energia.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as plantas absorvem o N₂ do ar diretamente pelas folhas."
+      },
+      {
+        "id": "b",
+        "text": "as bactérias dos nódulos prejudicam as raízes e reduzem a produção."
+      },
+      {
+        "id": "c",
+        "text": "a inoculação aumenta a necessidade de adubos nitrogenados."
+      },
+      {
+        "id": "d",
+        "text": "bactérias fixadoras transformam o nitrogênio do ar em compostos que as leguminosas aproveitam, o que reduz a necessidade de adubos industriais."
+      },
+      {
+        "id": "e",
+        "text": "o nitrogênio é pouco abundante no ar, o que explica a necessidade de adubos."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A fixação biológica do nitrogênio, feita por procariontes, converte N₂ em amônia; em troca, a planta fornece açúcares às bactérias. É a base do baixo uso de adubo nitrogenado na soja brasileira.\n\nPegadinhas:\n• A: o texto diz que as plantas não usam o N₂ diretamente.\n• B: a relação é benéfica.\n• C: a inoculação reduz a adubação.\n• E: o nitrogênio é abundante no ar, mas inacessível às plantas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_10",
+    "subject": "Química",
+    "topicId": "qui_estequiometria",
+    "chapter": "Estequiometria: Leis Ponderais",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Somar as massas dos reagentes sem identificar o reagente limitante.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um experimento, 4 g de gás hidrogênio reagem com 40 g de gás oxigênio, formando água:\n\n2 H₂ + O₂ → 2 H₂O\n\nUm estudante somou as massas dos reagentes e previu 44 g de água. O professor lembrou que a reação ocorre em proporção fixa e que um dos reagentes pode sobrar.\n\nNote e adote: massas molares (g/mol): H₂ = 2; O₂ = 32; H₂O = 18.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA massa máxima de água formada é",
+    "options": [
+      {
+        "id": "a",
+        "text": "18 g, pois só 1 mol de água se forma, qualquer que seja a quantidade de reagentes."
+      },
+      {
+        "id": "b",
+        "text": "36 g, pois os 2 mol de H₂ consomem 1 mol (32 g) de O₂ e formam 2 mol de água, sobrando 8 g de oxigênio."
+      },
+      {
+        "id": "c",
+        "text": "40 g, pois a massa de água é igual à massa do reagente em maior quantidade."
+      },
+      {
+        "id": "d",
+        "text": "44 g, pois toda a massa dos reagentes se transforma em água."
+      },
+      {
+        "id": "e",
+        "text": "72 g, pois os 40 g de O₂ formariam 4 mol de água."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. 4 g de H₂ = 2 mol, que exigem 1 mol de O₂ = 32 g. Há 40 g de O₂: o H₂ é limitante. Forma-se 2 mol de H₂O = 36 g, e sobram 8 g de O₂. 36 + 8 = 44 g: a massa se conserva.\n\nPegadinhas:\n• A: ignora as quantidades dadas.\n• C: relação sem fundamento.\n• D: ignora o excesso de oxigênio.\n• E: supõe que todo o O₂ reage, mas falta hidrogênio.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_11",
+    "subject": "Química",
+    "topicId": "qui_oxirreducao",
+    "chapter": "Química Ambiental",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a filtração elimina microrganismos, ou que o cloro é adicionado para flocular a sujeira.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma estação de tratamento de água, a água bruta do rio recebe sulfato de alumínio, que forma flocos gelatinosos aos quais as partículas de sujeira se agregam. Em seguida, os flocos se depositam em tanques de decantação, e a água passa por filtros de areia e cascalho. Por fim, recebe cloro e flúor antes de ser distribuída. O cloro permanece em pequena quantidade na água encanada.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a filtração elimina todos os microrganismos, dispensando o cloro."
+      },
+      {
+        "id": "b",
+        "text": "o sulfato de alumínio é adicionado para matar as bactérias da água."
+      },
+      {
+        "id": "c",
+        "text": "o flúor é adicionado para formar os flocos de sujeira."
+      },
+      {
+        "id": "d",
+        "text": "a decantação ocorre antes da floculação, para separar os flocos."
+      },
+      {
+        "id": "e",
+        "text": "a floculação e a decantação removem partículas em suspensão, a filtração retém as menores, e o cloro desinfeta a água, com residual que a protege até as torneiras."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Floculação → decantação → filtração removem a sujeira; a cloração elimina microrganismos, e o residual evita recontaminação na rede. O flúor ajuda a prevenir cáries.\n\nPegadinhas:\n• A: a filtração não garante a desinfecção.\n• B: o sulfato de alumínio é o agente floculante.\n• C: o flúor tem função de saúde bucal.\n• D: a ordem é floculação e depois decantação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_12",
+    "subject": "Química",
+    "topicId": "qui_solucoes",
+    "chapter": "Dispersões",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que gases se dissolvem mais em água quente, como muitos sólidos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm dias muito quentes, podem ocorrer mortandades de peixes em lagos e tanques de criação, mesmo sem poluição. A solubilidade do gás oxigênio na água diminui com o aumento da temperatura: a 10 °C, cerca de 11 mg de O₂ se dissolvem por litro de água, e a 30 °C, cerca de 7,5 mg. Ao mesmo tempo, os peixes, que não regulam a temperatura do corpo, aumentam o metabolismo na água quente.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nCom base no texto, a mortandade em dias quentes se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a água quente dissolve mais oxigênio, o que intoxica os peixes."
+      },
+      {
+        "id": "b",
+        "text": "a água quente dissolve menos oxigênio, enquanto a demanda dos peixes por oxigênio aumenta com o metabolismo acelerado."
+      },
+      {
+        "id": "c",
+        "text": "o calor transforma o oxigênio dissolvido em gás carbônico."
+      },
+      {
+        "id": "d",
+        "text": "a solubilidade dos gases não depende da temperatura."
+      },
+      {
+        "id": "e",
+        "text": "os peixes regulam a temperatura do corpo e gastam o oxigênio no resfriamento."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Ao contrário de muitos sólidos, gases são menos solúveis em líquidos quentes. Menos oferta e mais demanda de O₂ levam à asfixia dos peixes.\n\nPegadinhas:\n• A: inverte a relação.\n• C: não há essa transformação.\n• D: o texto mostra a dependência.\n• E: o texto diz que os peixes não regulam a temperatura.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_13",
+    "subject": "Química",
+    "topicId": "qui_equilibrio",
+    "chapter": "Deslocamento de Equilíbrio",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o açúcar ataca diretamente o esmalte, sem a produção de ácidos pelas bactérias.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO esmalte dos dentes é formado principalmente por hidroxiapatita, que, em contato com a saliva, participa de um equilíbrio:\n\nCa₅(PO₄)₃OH(s) ⇌ 5 Ca²⁺(aq) + 3 PO₄³⁻(aq) + OH⁻(aq)\n\nBactérias da placa bacteriana fermentam açúcares dos alimentos e produzem ácidos. O flúor de cremes dentais substitui parte dos íons OH⁻, formando fluorapatita, menos solúvel em meio ácido.\n\nTexto elaborado para esta questão.\n\nCom base no equilíbrio, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "os ácidos deslocam o equilíbrio para a esquerda, fortalecendo o esmalte."
+      },
+      {
+        "id": "b",
+        "text": "o açúcar reage diretamente com a hidroxiapatita, sem participação de bactérias."
+      },
+      {
+        "id": "c",
+        "text": "o flúor aumenta a solubilidade do esmalte em meio ácido."
+      },
+      {
+        "id": "d",
+        "text": "os íons H⁺ dos ácidos consomem íons OH⁻ (e fosfato), deslocando o equilíbrio para a direita e dissolvendo o esmalte, e o flúor, ao formar fluorapatita, torna o esmalte mais resistente a esse processo."
+      },
+      {
+        "id": "e",
+        "text": "a saliva não participa do equilíbrio de dissolução do esmalte."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Removendo OH⁻ (H⁺ + OH⁻ → H₂O), o equilíbrio se desloca para repô-lo: mais hidroxiapatita se dissolve (desmineralização). A fluorapatita não tem OH⁻ e resiste melhor ao meio ácido.\n\nPegadinhas:\n• A: o deslocamento é para a direita, com dissolução.\n• B: o texto atribui os ácidos às bactérias.\n• C: o flúor diminui a solubilidade.\n• E: o texto diz que o esmalte está em equilíbrio com a saliva.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_14",
+    "subject": "Química",
+    "topicId": "qui_gases",
+    "chapter": "O Estado Gasoso",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o balão sobe porque o ar quente \"perde peso\" sem mudar de volume.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm balão de ar quente sobe quando o ar em seu interior é aquecido por queimadores. O balão é aberto embaixo, de modo que a pressão interna permanece praticamente igual à pressão atmosférica. Com o aquecimento, parte do ar sai do balão, e o ar que fica dentro ocupa o mesmo volume com menos massa. Ao desligar os queimadores, o ar esfria, e o balão desce.\n\nNote e adote: para pressão constante, V/T é constante; densidade = massa/volume.\n\nTexto elaborado para esta questão.\n\nO balão sobe porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o ar quente pesa mais que o ar frio e empurra o balão para cima."
+      },
+      {
+        "id": "b",
+        "text": "o aquecimento aumenta a pressão interna muito acima da atmosférica."
+      },
+      {
+        "id": "c",
+        "text": "o ar aquecido no interior se expande, e o balão passa a conter menos massa de ar no mesmo volume, ficando com densidade média menor que a do ar ao redor, e o empuxo supera o peso."
+      },
+      {
+        "id": "d",
+        "text": "o fogo dos queimadores empurra o balão para cima, como um foguete."
+      },
+      {
+        "id": "e",
+        "text": "a temperatura não afeta a densidade dos gases."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A pressão constante, aquecer o gás aumenta seu volume; parte do ar sai pela abertura. Com menos massa no mesmo volume, a densidade cai, e o empuxo do ar externo levanta o balão.\n\nPegadinhas:\n• A: o ar quente é menos denso.\n• B: a abertura mantém a pressão próxima da atmosférica.\n• D: a sustentação vem do empuxo, não da propulsão.\n• E: a densidade de um gás diminui com a temperatura, a pressão constante.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_15",
+    "subject": "Química",
+    "topicId": "qui_termoquimica",
+    "chapter": "Termoquímica I",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a condensação absorve calor, como a evaporação.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm noites frias e úmidas, forma-se orvalho sobre as folhas das plantas: o vapor d'água do ar se condensa em gotas ao entrar em contato com superfícies frias. Agricultores de algumas regiões molham as plantações em noites de risco de geada; ao congelar sobre as folhas, a água libera calor e ajuda a proteger os tecidos vegetais.\n\nTexto elaborado para esta questão.\n\nSobre as mudanças de estado citadas, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a condensação e a solidificação liberam calor para o ambiente, isto é, são exotérmicas, o que explica o efeito protetor do congelamento da água sobre as folhas."
+      },
+      {
+        "id": "b",
+        "text": "a condensação absorve calor, como a evaporação."
+      },
+      {
+        "id": "c",
+        "text": "o congelamento da água absorve calor das folhas, esfriando-as ainda mais."
+      },
+      {
+        "id": "d",
+        "text": "as mudanças de estado não envolvem troca de energia."
+      },
+      {
+        "id": "e",
+        "text": "o orvalho se forma porque as folhas aquecem o ar ao seu redor."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Passar de gás a líquido ou de líquido a sólido libera a energia absorvida no processo inverso. Ao congelar, a água libera calor latente, mantendo as folhas perto de 0 °C e evitando temperaturas mais baixas.\n\nPegadinhas:\n• B: a condensação é o inverso da evaporação e libera calor.\n• C: o congelamento libera calor.\n• D: há troca de calor latente.\n• E: o orvalho se forma em superfícies frias.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_16",
+    "subject": "Química",
+    "topicId": "qui_modelos_atomicos",
+    "chapter": "Evolução dos Modelos Atômicos",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que o modelo de Dalton incluía elétrons, ou que ele explicava a eletricidade.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo início do século XIX, John Dalton propôs que a matéria é formada por átomos indivisíveis e indestrutíveis, que os átomos de um mesmo elemento são idênticos entre si e que as reações químicas são rearranjos de átomos. Esse modelo explicava bem as leis de Lavoisier e de Proust. Décadas depois, experimentos com descargas elétricas em gases mostraram a existência de partículas negativas, os elétrons, menores que os átomos.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que o modelo de Dalton",
+    "options": [
+      {
+        "id": "a",
+        "text": "previa a existência dos elétrons e do núcleo atômico."
+      },
+      {
+        "id": "b",
+        "text": "explicava a conservação das massas e as proporções definidas, pois as reações apenas rearranjam átomos, mas foi superado quando se descobriu que os átomos têm partículas menores."
+      },
+      {
+        "id": "c",
+        "text": "afirmava que os átomos de um mesmo elemento têm massas diferentes."
+      },
+      {
+        "id": "d",
+        "text": "foi elaborado a partir da descoberta dos elétrons."
+      },
+      {
+        "id": "e",
+        "text": "considerava que os átomos se transformam em outros durante as reações químicas."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Se nas reações os átomos só se rearranjam, a massa total se conserva (Lavoisier) e as proporções são fixas (Proust). A descoberta do elétron, com Thomson, mostrou que o átomo é divisível.\n\nPegadinhas:\n• A: Dalton não previu elétrons nem núcleo.\n• C: para Dalton, átomos de um elemento eram idênticos.\n• D: o elétron foi descoberto depois.\n• E: para Dalton, os átomos não se transformam.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_17",
+    "subject": "Química",
+    "topicId": "qui_organica_reacoes",
+    "chapter": "Reações de Oxidação em Hidrocarbonetos",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Usar a proporção em massa 1 : 1 entre metano e CO₂.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO gás natural, formado principalmente por metano, é usado em fogões, indústrias e ônibus. Sua combustão completa é representada por:\n\nCH₄ + 2 O₂ → CO₂ + 2 H₂O\n\nUma empresa quer estimar quanto gás carbônico é emitido na queima de 8 g de metano, para calcular a pegada de carbono de um processo.\n\nNote e adote: massas molares (g/mol): CH₄ = 16; CO₂ = 44.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA massa de gás carbônico produzida é",
+    "options": [
+      {
+        "id": "a",
+        "text": "22 g, pois 8 g de CH₄ correspondem a 0,5 mol, que produz 0,5 mol de CO₂, isto é, 22 g."
+      },
+      {
+        "id": "b",
+        "text": "44 g, pois a combustão de qualquer massa de metano produz 1 mol de CO₂."
+      },
+      {
+        "id": "c",
+        "text": "88 g, pois cada mol de metano produz 2 mol de CO₂."
+      },
+      {
+        "id": "d",
+        "text": "176 g, pois a massa de CO₂ é o produto das massas molares por 4."
+      },
+      {
+        "id": "e",
+        "text": "352 g, pois a massa de CO₂ é 44 vezes a massa de metano."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. n(CH₄) = 8/16 = 0,5 mol; proporção 1 : 1 com CO₂; m = 0,5 × 44 = 22 g.\n\nPegadinhas:\n• B: ignora a quantidade de metano.\n• C: a proporção é 1 : 1.\n• D: relação inventada.\n• E: multiplica a massa pela massa molar.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_18",
+    "subject": "Química",
+    "topicId": "qui_organica_fundamentos",
+    "chapter": "Nomenclatura de Compostos Orgânicos",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que cis e trans são a mesma substância por terem a mesma fórmula.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO but-2-eno, CH₃–CH=CH–CH₃, existe em duas formas: em uma, os dois grupos CH₃ ficam do mesmo lado da ligação dupla (forma cis); na outra, ficam em lados opostos (forma trans). As duas formas têm a mesma fórmula molecular, C₄H₈, mas pontos de ebulição diferentes. A ligação dupla C=C impede a rotação livre dos átomos em torno dela, ao contrário das ligações simples.\n\nTexto elaborado para esta questão.\n\nAs duas formas do but-2-eno são",
+    "options": [
+      {
+        "id": "a",
+        "text": "a mesma substância, pois têm a mesma fórmula molecular."
+      },
+      {
+        "id": "b",
+        "text": "isômeros de cadeia, pois têm cadeias carbônicas diferentes."
+      },
+      {
+        "id": "c",
+        "text": "isômeros de função, pois pertencem a funções orgânicas diferentes."
+      },
+      {
+        "id": "d",
+        "text": "compostos que se convertem um no outro livremente, por rotação da dupla."
+      },
+      {
+        "id": "e",
+        "text": "isômeros geométricos (cis-trans), possíveis porque a dupla ligação impede a rotação e cada carbono da dupla tem dois ligantes diferentes."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Sem rotação em torno da dupla e com ligantes diferentes em cada carbono (H e CH₃), há dois arranjos espaciais distintos, com propriedades físicas diferentes.\n\nPegadinhas:\n• A: as propriedades diferem.\n• B: a cadeia é a mesma.\n• C: as duas são alcenos.\n• D: a dupla impede a rotação livre.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_19",
+    "subject": "Física",
+    "topicId": "fis_cinematica",
+    "chapter": "Cinemática Escalar. Conceitos Fundamentais",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Usar h = g·t, sem o fator 1/2 e o quadrado, ou confundir tempo com distância.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara estimar a profundidade de um poço seco, uma pessoa solta uma pedra a partir do repouso na boca do poço e mede o tempo até ouvir o impacto no fundo. Despreze a resistência do ar e o tempo que o som leva para subir. Ela sabe, por uma medição com trena, que o poço tem 45 m de profundidade e quer conferir o tempo de queda previsto.\n\nNote e adote: g = 10 m/s²; h = g·t²/2.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO tempo de queda da pedra é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1,5 s, pois o tempo é a raiz quadrada da metade da altura dividida por 10."
+      },
+      {
+        "id": "b",
+        "text": "2,1 s, pois o tempo é a raiz quadrada de 45 dividida por 10, sem o fator 2."
+      },
+      {
+        "id": "c",
+        "text": "3 s, pois 45 = 10·t²/2 dá t² = 9."
+      },
+      {
+        "id": "d",
+        "text": "4,5 s, pois o tempo é a altura dividida por g."
+      },
+      {
+        "id": "e",
+        "text": "9 s, pois o tempo é igual a t² na equação de queda."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. t² = 2h/g = 90/10 = 9 ⇒ t = 3 s.\n\nPegadinhas:\n• A: divide a altura por 2 duas vezes.\n• B: esquece o fator 2.\n• D: usa h = g·t.\n• E: confunde t² com t.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_20",
+    "subject": "Física",
+    "topicId": "fis_energia",
+    "chapter": "Trabalho e Energia: o Teorema da Energia Potencial",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Esquecer o quadrado da deformação ou o fator 1/2.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nBrinquedos de mola, como lançadores de bolinhas, armazenam energia ao comprimir uma mola, que é liberada no disparo. Em um lançador, a mola tem constante elástica de 200 N/m e é comprimida 10 cm antes do disparo. Despreze atritos e a massa da mola.\n\nNote e adote: energia potencial elástica = k·x²/2.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA energia armazenada na mola comprimida é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,1 J, pois a energia é k·x²/2 com x em centímetros dividido por 100 duas vezes."
+      },
+      {
+        "id": "b",
+        "text": "0,2 J, pois a energia é k·x²/10."
+      },
+      {
+        "id": "c",
+        "text": "0,5 J, pois a energia é k·x/40."
+      },
+      {
+        "id": "d",
+        "text": "1 J, pois k·x²/2 = 200 × 0,1²/2 = 1 J, com x em metros."
+      },
+      {
+        "id": "e",
+        "text": "20 J, pois a energia é k·x, sem o quadrado nem o fator 1/2."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. x = 0,1 m; E = 200 × 0,01/2 = 1 J.\n\nPegadinhas:\n• B: fator 1/10 sem justificativa.\n• C: relação inventada.\n• E: usa k·x, que é a força em newtons (20 N), não energia.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_21",
+    "subject": "Física",
+    "topicId": "fis_leis_newton",
+    "chapter": "A Força de Contato",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Achar que a balança mede sempre a massa, independentemente da aceleração.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma pessoa de 60 kg está sobre uma balança de banheiro dentro de um elevador. Quando o elevador parte do térreo e acelera para cima, a balança indica um valor maior que o habitual; quando ele freia ao chegar ao andar, indica um valor menor. A balança mede, na verdade, a força normal que exerce sobre a pessoa. Considere que, na partida, a aceleração é de 2 m/s² para cima.\n\nNote e adote: g = 10 m/s².\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nNa partida, a força normal sobre a pessoa é",
+    "options": [
+      {
+        "id": "a",
+        "text": "120 N, pois a normal é igual à massa vezes a aceleração do elevador."
+      },
+      {
+        "id": "b",
+        "text": "480 N, pois a aceleração para cima reduz a normal."
+      },
+      {
+        "id": "c",
+        "text": "600 N, pois a normal é sempre igual ao peso."
+      },
+      {
+        "id": "d",
+        "text": "720 N, pois N − m·g = m·a dá N = 60 × (10 + 2)."
+      },
+      {
+        "id": "e",
+        "text": "1.200 N, pois a aceleração dobra a força normal."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Resultante para cima: N − P = m·a ⇒ N = 60 × 12 = 720 N. A balança, calibrada em kg, mostraria 72 kg.\n\nPegadinhas:\n• A: esquece o peso.\n• B: seria o caso de aceleração para baixo.\n• C: vale só sem aceleração.\n• E: relação inventada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_22",
+    "subject": "Física",
+    "topicId": "fis_gravitacao_circular",
+    "chapter": "Balística",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o maior alcance ocorre com lançamento mais inclinado, perto de 90°.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um treino de lançamento, um atleta arremessa uma bola sempre com a mesma velocidade inicial, variando o ângulo de lançamento em relação ao chão. Despreze a resistência do ar e considere o lançamento e a aterrissagem no mesmo nível. Ele observa que, lançando muito inclinado, a bola sobe alto mas cai perto; lançando muito rasante, ela cai cedo. Em seguida, compara os lançamentos a 30° e a 60°.\n\nNote e adote: alcance A = v₀²·sen(2θ)/g.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o alcance máximo ocorre a 90°, pois a bola fica mais tempo no ar."
+      },
+      {
+        "id": "b",
+        "text": "lançamentos a 30° e a 60° têm alcances diferentes, pois os ângulos são diferentes."
+      },
+      {
+        "id": "c",
+        "text": "o alcance máximo ocorre a 45°, e lançamentos a 30° e a 60° têm o mesmo alcance, pois sen 60° = sen 120°."
+      },
+      {
+        "id": "d",
+        "text": "o alcance não depende do ângulo de lançamento."
+      },
+      {
+        "id": "e",
+        "text": "o alcance máximo ocorre a 0°, pois toda a velocidade é horizontal."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A depende de sen 2θ, máximo para 2θ = 90°, isto é, θ = 45°. Ângulos complementares dão o mesmo sen 2θ: 30° e 60° têm o mesmo alcance.\n\nPegadinhas:\n• A: a 90° a bola volta ao ponto de partida.\n• B: ângulos complementares dão o mesmo alcance.\n• D: o alcance depende de sen 2θ.\n• E: a 0° a bola não sai do chão.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_23",
+    "subject": "Física",
+    "topicId": "fis_dinamica_impulsiva",
+    "chapter": "Sistemas Isolados e a Conservação da Quantidade de Movimento",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Achar que a velocidade do conjunto é a média das velocidades.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um trilho de ar, sem atrito, um carrinho de 2 kg, a 6 m/s, colide com outro carrinho de 1 kg, inicialmente parado. Os carrinhos têm velcro nas extremidades e ficam grudados após a colisão, movendo-se juntos. Um estudante supôs que o conjunto seguiria a 3 m/s, metade da velocidade inicial.\n\nNote e adote: Q = m·v; em sistema isolado, a quantidade de movimento total se conserva.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA velocidade do conjunto após a colisão é",
+    "options": [
+      {
+        "id": "a",
+        "text": "4 m/s, pois 2 × 6 = (2 + 1)·v."
+      },
+      {
+        "id": "b",
+        "text": "6 m/s, pois a velocidade do carrinho em movimento se conserva."
+      },
+      {
+        "id": "c",
+        "text": "8 m/s, pois a energia do carrinho é transferida ao conjunto."
+      },
+      {
+        "id": "d",
+        "text": "12 m/s, pois a quantidade de movimento inicial vira velocidade."
+      },
+      {
+        "id": "e",
+        "text": "18 m/s, pois as massas se somam e multiplicam a velocidade."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Q inicial = 12 kg·m/s. Depois: 3·v = 12 ⇒ v = 4 m/s. A média das velocidades (3 m/s) não considera as massas.\n\nPegadinhas:\n• B: a massa do conjunto aumenta, e a velocidade diminui.\n• C: a energia cinética não se conserva em colisão com os corpos grudados.\n• D: confunde Q com v.\n• E: relação inventada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_24",
+    "subject": "Física",
+    "topicId": "fis_ondas_fundamentos",
+    "chapter": "Conceitos Básicos",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Confundir onda longitudinal com transversal, ou achar que a luz precisa de meio.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma mola maluca esticada sobre uma mesa, um estudante produz dois tipos de onda. No primeiro, empurra e puxa a ponta da mola na direção do seu comprimento, e regiões de compressão e rarefação percorrem a mola. No segundo, sacode a ponta para os lados, e as espiras oscilam perpendicularmente à direção em que a onda avança. O som no ar se propaga como o primeiro tipo; a luz, como o segundo.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o som e a luz são ondas transversais e precisam de um meio material para se propagar."
+      },
+      {
+        "id": "b",
+        "text": "o som é uma onda longitudinal, com vibração na direção de propagação, e a luz é uma onda transversal, com oscilação perpendicular à propagação, que pode se propagar no vácuo."
+      },
+      {
+        "id": "c",
+        "text": "o som é transversal e a luz é longitudinal."
+      },
+      {
+        "id": "d",
+        "text": "as duas são ondas longitudinais, pois avançam em linha reta."
+      },
+      {
+        "id": "e",
+        "text": "o tipo de onda depende apenas da velocidade de propagação."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. No som, as moléculas do ar oscilam na direção da propagação (compressões). Na luz, campos elétrico e magnético oscilam perpendicularmente à propagação, sem necessidade de meio.\n\nPegadinhas:\n• A: a luz se propaga no vácuo.\n• C: inverte os tipos.\n• D: avançar em linha reta não define o tipo.\n• E: o tipo depende da direção da oscilação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_25",
+    "subject": "Física",
+    "topicId": "fis_eletromagnetismo",
+    "chapter": "Análise de Força Magnética em Fios Percorridos por Correntes Contínuas",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir motor com gerador, ou achar que a força magnética sobre o fio não depende da corrente.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um motor elétrico simples, uma espira de fio, percorrida por corrente, fica entre os polos de um ímã. A força magnética sobre os lados da espira faz com que ela gire. Um dispositivo inverte o sentido da corrente a cada meia-volta, mantendo a rotação no mesmo sentido. Aumentando a corrente ou usando um ímã mais forte, a espira gira com mais força.\n\nNote e adote: força magnética sobre fio: F = B·i·L·sen θ.\n\nTexto elaborado para esta questão.\n\nO funcionamento do motor descrito se baseia",
+    "options": [
+      {
+        "id": "a",
+        "text": "na indução eletromagnética, que transforma energia mecânica em elétrica."
+      },
+      {
+        "id": "b",
+        "text": "na atração gravitacional entre a espira e o ímã."
+      },
+      {
+        "id": "c",
+        "text": "na força elétrica entre cargas paradas na espira e no ímã."
+      },
+      {
+        "id": "d",
+        "text": "na reflexão das linhas de campo magnético pela espira."
+      },
+      {
+        "id": "e",
+        "text": "na força magnética sobre condutores percorridos por corrente em um campo magnético, que produz um torque sobre a espira e transforma energia elétrica em mecânica."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Os lados opostos da espira recebem forças em sentidos contrários, gerando torque. A força cresce com B e i, como prevê F = B·i·L. O gerador faz o processo inverso.\n\nPegadinhas:\n• A: descreve o gerador.\n• B: a gravidade é desprezível.\n• C: a força é magnética sobre cargas em movimento.\n• D: não há reflexão de linhas de campo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_26",
+    "subject": "Física",
+    "topicId": "fis_circuitos",
+    "chapter": "Circuitos de Malha Única",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que as lâmpadas de uma casa estão ligadas em série.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma casa, as lâmpadas e as tomadas são ligadas à rede elétrica de modo que cada aparelho recebe a mesma tensão, de 127 V ou 220 V, e pode ser ligado ou desligado independentemente dos outros. Quando uma lâmpada queima, as demais continuam acesas. Já em alguns pisca-piscas de Natal antigos, quando uma lâmpada queimava, todas apagavam.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "na casa, os aparelhos estão em série, e no pisca-pisca antigo, em paralelo."
+      },
+      {
+        "id": "b",
+        "text": "nos dois casos, as lâmpadas estão em série."
+      },
+      {
+        "id": "c",
+        "text": "na casa, os aparelhos estão em paralelo, cada um submetido à tensão da rede, e no pisca-pisca antigo as lâmpadas estavam em série, de modo que a queima de uma interrompia a corrente para todas."
+      },
+      {
+        "id": "d",
+        "text": "nos dois casos, as lâmpadas estão em paralelo."
+      },
+      {
+        "id": "e",
+        "text": "o tipo de ligação não interfere no funcionamento das lâmpadas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Em paralelo, cada ramo recebe a mesma tensão e funciona independentemente. Em série, a corrente é única: um filamento rompido abre o circuito inteiro.\n\nPegadinhas:\n• A: inverte as ligações.\n• B: na casa, a queima de uma não apaga as outras.\n• D: no pisca-pisca, todas apagavam juntas.\n• E: o texto mostra comportamentos diferentes.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_27",
+    "subject": "Física",
+    "topicId": "fis_optica_geometrica",
+    "chapter": "Reflexão em Superfícies Esféricas",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o espelho convexo amplia a imagem, ou que mostra a distância real.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nOs retrovisores externos de muitos carros e os espelhos instalados em saídas de garagem e corredores de lojas são convexos. Eles mostram uma área bem maior do que um espelho plano do mesmo tamanho. Em muitos retrovisores, há o aviso: \"os objetos estão mais próximos do que parecem\".\n\nTexto elaborado para esta questão.\n\nO uso desses espelhos e o aviso se explicam porque o espelho convexo",
+    "options": [
+      {
+        "id": "a",
+        "text": "forma imagens reais, invertidas e ampliadas, que parecem mais próximas."
+      },
+      {
+        "id": "b",
+        "text": "forma imagens virtuais, direitas e menores que os objetos, o que amplia o campo visual, mas faz os objetos parecerem mais distantes do que estão."
+      },
+      {
+        "id": "c",
+        "text": "forma imagens do mesmo tamanho dos objetos, como o espelho plano."
+      },
+      {
+        "id": "d",
+        "text": "concentra os raios de luz em um foco real, como uma lupa."
+      },
+      {
+        "id": "e",
+        "text": "não forma imagem, apenas reflete a luz difusamente."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O espelho convexo diverge os raios; a imagem é virtual, direita e reduzida, e por isso cabe mais coisa no espelho. O cérebro interpreta a imagem menor como mais distante.\n\nPegadinhas:\n• A: imagens reais e invertidas são de espelhos côncavos.\n• C: as imagens são menores.\n• D: concentrar raios é do espelho côncavo.\n• E: o espelho forma imagem nítida.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_28",
+    "subject": "Matemática",
+    "topicId": "mat_complexos_polinomios",
+    "chapter": "Polinômios",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Comparar só o termo de maior grau, sem igualar todos os coeficientes.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDois polinômios são idênticos quando seus coeficientes correspondentes são iguais, isto é, quando têm o mesmo valor numérico para todo valor de x. Considere os polinômios\n\nP(x) = (a − 1)x² + (b + 2)x + 3\nQ(x) = 4x² − x + c\n\nUm estudante precisa encontrar os valores de a, b e c para que P(x) e Q(x) sejam idênticos.\n\nTexto elaborado para esta questão.\n\nOs valores procurados são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "a = 4, b = −1 e c = 3, pois basta copiar os coeficientes de Q em P."
+      },
+      {
+        "id": "b",
+        "text": "a = 3, b = 1 e c = 3, pois os sinais de b devem ser iguais."
+      },
+      {
+        "id": "c",
+        "text": "a = 5, b = −1 e c = 0, pois o termo independente de P deve ser zero."
+      },
+      {
+        "id": "d",
+        "text": "a = −3, b = −3 e c = −3, pois os coeficientes devem ter sinais opostos."
+      },
+      {
+        "id": "e",
+        "text": "a = 5, b = −3 e c = 3, pois a − 1 = 4, b + 2 = −1 e c = 3."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Igualando os coeficientes: a − 1 = 4 ⇒ a = 5; b + 2 = −1 ⇒ b = −3; 3 = c.\n\nPegadinhas:\n• A: esquece os ajustes −1 e +2.\n• B: erra as duas equações.\n• C: erra b e c.\n• D: inventa a regra de sinais opostos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_29",
+    "subject": "Matemática",
+    "topicId": "mat_sequencias_matrizes",
+    "chapter": "Determinantes",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que determinante nulo indica solução única.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm sistema linear de duas equações e duas incógnitas pode ser escrito na forma matricial A·X = B. Quando o determinante da matriz dos coeficientes A é diferente de zero, o sistema tem solução única. Considere o sistema\n\n2x + 4y = 6\nx + 2y = 5\n\ncuja matriz dos coeficientes tem linhas (2, 4) e (1, 2).\n\nTexto elaborado para esta questão.\n\nSobre esse sistema, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o determinante da matriz dos coeficientes é nulo, e o sistema não tem solução única; como dividir a primeira equação por 2 dá x + 2y = 3, incompatível com x + 2y = 5, o sistema é impossível."
+      },
+      {
+        "id": "b",
+        "text": "o determinante é 8, e o sistema tem solução única."
+      },
+      {
+        "id": "c",
+        "text": "o determinante é nulo, e o sistema tem solução única x = 1 e y = 1."
+      },
+      {
+        "id": "d",
+        "text": "o determinante é 4, e o sistema é possível e indeterminado."
+      },
+      {
+        "id": "e",
+        "text": "o determinante não tem relação com o número de soluções do sistema."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. det = 2·2 − 4·1 = 0: não há solução única. As retas são paralelas distintas (x + 2y = 3 e x + 2y = 5): impossível.\n\nPegadinhas:\n• B: erra o cálculo do determinante.\n• C: com determinante nulo, não há solução única, e (1,1) não satisfaz a segunda equação.\n• D: erra o determinante e a classificação.\n• E: o determinante decide se há solução única.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_30",
+    "subject": "Matemática",
+    "topicId": "mat_sequencias_matrizes",
+    "chapter": "Sistemas de Equações",
+    "difficulty": "easy",
+    "skill": "modelagem",
+    "trap": "Resolver para o sanduíche quando se pergunta o suco, ou somar as equações sem método.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma lanchonete, duas amigas fizeram pedidos diferentes. A primeira comprou 2 sanduíches e 1 suco e pagou R$ 20,00. A segunda comprou 1 sanduíche e 2 sucos e pagou R$ 16,00. Todos os sanduíches têm o mesmo preço, assim como todos os sucos. Uma terceira amiga quer saber o preço de um suco antes de fazer seu pedido.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO preço de um suco é",
+    "options": [
+      {
+        "id": "a",
+        "text": "R$ 2,00, pois o suco custa um quarto do preço de um sanduíche."
+      },
+      {
+        "id": "b",
+        "text": "R$ 3,00, pois a diferença entre os dois pedidos é dividida por dois sucos."
+      },
+      {
+        "id": "c",
+        "text": "R$ 3,50, pois o preço médio por item dos dois pedidos é de R$ 6,00, menos o sanduíche."
+      },
+      {
+        "id": "d",
+        "text": "R$ 4,00, pois 2s + j = 20 e s + 2j = 16 dão s = 8 e j = 4."
+      },
+      {
+        "id": "e",
+        "text": "R$ 8,00, pois corresponde ao preço calculado a partir do primeiro pedido."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Da 1ª, j = 20 − 2s; na 2ª, s + 40 − 4s = 16 ⇒ s = 8, j = 4. Conferindo: 16 + 4 = 20; 8 + 8 = 16.\n\nPegadinhas:\n• A: relação inventada.\n• B: a diferença dos pedidos dá s − j = 4, não o suco.\n• C: média sem fundamento.\n• E: é o preço do sanduíche.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_31",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_espacial",
+    "chapter": "Cubos e Paralelepípedos",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Achar que dobrar o volume exige dobrar a aresta.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm fabricante produz caixas cúbicas e quer lançar um modelo com o dobro do volume do modelo atual, mantendo a forma de cubo. Um funcionário sugeriu simplesmente dobrar a medida da aresta. O engenheiro respondeu que isso multiplicaria o volume por oito e propôs calcular o fator correto pelo qual a aresta deve ser multiplicada.\n\nNote e adote: ∛2 ≈ 1,26; √2 ≈ 1,41.\n\nTexto elaborado para esta questão.\n\nPara dobrar o volume, a aresta deve ser multiplicada por, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "1,26, pois o volume do cubo é a³, e (k·a)³ = 2a³ exige k = ∛2."
+      },
+      {
+        "id": "b",
+        "text": "1,41, pois o volume do cubo é proporcional ao quadrado da aresta."
+      },
+      {
+        "id": "c",
+        "text": "2, pois o volume é diretamente proporcional à aresta."
+      },
+      {
+        "id": "d",
+        "text": "4, pois dobrar o volume exige quadruplicar a aresta."
+      },
+      {
+        "id": "e",
+        "text": "8, pois o volume é multiplicado por oito quando a aresta dobra."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. V' = k³·V = 2V ⇒ k = ∛2 ≈ 1,26: um aumento de cerca de 26% na aresta dobra o volume.\n\nPegadinhas:\n• B: usa a relação de área, não de volume.\n• C: é a sugestão do funcionário, que octuplica o volume.\n• D: relação inventada.\n• E: confunde o fator do volume com o da aresta.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_32",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_plana",
+    "chapter": "Triângulo Retângulo",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Confundir as projeções dos catetos com os catetos, ou com a altura.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um triângulo retângulo, a altura relativa à hipotenusa divide-a em dois segmentos, chamados projeções dos catetos, e valem relações métricas como h² = m·n, em que h é a altura e m e n são as projeções. Um marceneiro mediu, em uma peça triangular retangular, projeções de 4 cm e 9 cm sobre a hipotenusa e quer conferir as outras medidas da peça.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA hipotenusa da peça mede",
+    "options": [
+      {
+        "id": "a",
+        "text": "6 cm, pois corresponde à altura relativa à hipotenusa, √(4 × 9)."
+      },
+      {
+        "id": "b",
+        "text": "6,5 cm, pois a hipotenusa é a média das duas projeções."
+      },
+      {
+        "id": "c",
+        "text": "9 cm, pois a hipotenusa é igual à maior das projeções."
+      },
+      {
+        "id": "d",
+        "text": "12 cm, pois a hipotenusa é o triplo da menor projeção."
+      },
+      {
+        "id": "e",
+        "text": "13 cm, pois a hipotenusa é a soma das duas projeções, 4 + 9."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. As projeções compõem a hipotenusa: 4 + 9 = 13 cm. A altura é √(4 × 9) = 6 cm, e os catetos, √(4 × 13) e √(9 × 13).\n\nPegadinhas:\n• A: é a altura, não a hipotenusa.\n• B: média sem fundamento.\n• C: a hipotenusa inclui as duas projeções.\n• D: relação inventada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_33",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_plana",
+    "chapter": "Áreas de Figuras Planas",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Esquecer de dividir por 2 ou usar só uma das bases.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm terreno tem a forma de um trapézio, com bases paralelas de 10 m e 6 m e distância de 4 m entre elas. O proprietário quer cobrir o terreno com grama e precisa saber a área para fazer o orçamento. Ele lembra que a área do trapézio é a média das bases multiplicada pela altura.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA área do terreno é",
+    "options": [
+      {
+        "id": "a",
+        "text": "16 m², pois a área é a soma das bases."
+      },
+      {
+        "id": "b",
+        "text": "24 m², pois a área é a menor base multiplicada pela altura."
+      },
+      {
+        "id": "c",
+        "text": "32 m², pois a área é (10 + 6) × 4/2."
+      },
+      {
+        "id": "d",
+        "text": "40 m², pois a área é a maior base multiplicada pela altura."
+      },
+      {
+        "id": "e",
+        "text": "64 m², pois a área é a soma das bases multiplicada pela altura, sem dividir por 2."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A = (B + b)·h/2 = 16 × 4/2 = 32 m².\n\nPegadinhas:\n• A: soma das bases não é área.\n• B: usa só a base menor.\n• D: usa só a base maior.\n• E: esquece a divisão por 2.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_34",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_plana",
+    "chapter": "Identificação de Simetrias I",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir simetria de rotação com simetria de reflexão, ou contar a rotação de 360°.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma figura tem simetria de rotação quando, girada em torno de seu centro por um ângulo menor que 360°, coincide com a posição original. Uma estudante analisou o logotipo de uma empresa, formado por três pás iguais distribuídas ao redor de um centro, como as de um ventilador, e girou o desenho até que ele coincidisse com o original.\n\nTexto elaborado para esta questão.\n\nO menor ângulo de rotação que faz o logotipo coincidir consigo mesmo é",
+    "options": [
+      {
+        "id": "a",
+        "text": "60°, pois cada pá ocupa um sexto da volta completa."
+      },
+      {
+        "id": "b",
+        "text": "90°, pois toda simetria de rotação é de um quarto de volta."
+      },
+      {
+        "id": "c",
+        "text": "180°, pois a figura é simétrica em relação ao centro."
+      },
+      {
+        "id": "d",
+        "text": "120°, pois as três pás iguais dividem a volta completa em três partes iguais, 360°/3."
+      },
+      {
+        "id": "e",
+        "text": "360°, pois só uma volta completa faz a figura coincidir consigo mesma."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Com três elementos iguais igualmente espaçados, a figura tem simetria de rotação de ordem 3: 360°/3 = 120°.\n\nPegadinhas:\n• A: seriam seis elementos.\n• B: seriam quatro elementos.\n• C: com três pás, meia-volta não faz coincidir.\n• E: a definição exige ângulo menor que 360°.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_35",
+    "subject": "Matemática",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "chapter": "Potências e Radicais",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Somar dentro do radical ou extrair a raiz de cada parcela.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAo calcular a diagonal de um quadrado de lado 5 cm, um estudante obteve √50 cm e quer simplificar o radical para expressar o resultado na forma a√b, com b o menor inteiro possível. Ele lembra que √(x·y) = √x·√y para x e y positivos, e que 50 pode ser decomposto em fatores.\n\nTexto elaborado para esta questão.\n\nA forma simplificada de √50 é",
+    "options": [
+      {
+        "id": "a",
+        "text": "2√5, pois 50 = 2 × 25, e a raiz de 25 fica dentro do radical."
+      },
+      {
+        "id": "b",
+        "text": "5√2, pois √50 = √(25 × 2) = √25·√2."
+      },
+      {
+        "id": "c",
+        "text": "10√5, pois √50 = √10 × √5."
+      },
+      {
+        "id": "d",
+        "text": "25√2, pois 50 = 25 × 2, e o 25 sai do radical sem a raiz."
+      },
+      {
+        "id": "e",
+        "text": "√5 + √45, pois a raiz de uma soma é a soma das raízes."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. 50 = 25 × 2; √50 = 5√2 ≈ 7,07 cm, a diagonal ℓ√2 do quadrado.\n\nPegadinhas:\n• A: troca o fator que sai do radical.\n• C: √10 × √5 = √50, mas não está simplificado, e o coeficiente 10 está errado.\n• D: esquece de extrair a raiz de 25.\n• E: a raiz de uma soma não é a soma das raízes, e 50 = 5 + 45 não ajuda.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_36",
+    "subject": "Geografia",
+    "topicId": "geo_climatologia_socioambiental",
+    "chapter": "Clima Mundial",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que as monções são ventos constantes o ano todo, sem inversão sazonal.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo sul e no sudeste da Ásia, como na Índia, o clima é marcado pelas monções. No verão, o continente aquece mais que o oceano, forma-se uma área de baixa pressão sobre a terra, e ventos úmidos vindos do oceano provocam chuvas intensas. No inverno, o continente esfria mais que o oceano, e os ventos sopram da terra para o mar, trazendo tempo seco. A agricultura de arroz depende do regime de chuvas de verão.\n\nTexto elaborado para esta questão.\n\nO fenômeno das monções resulta",
+    "options": [
+      {
+        "id": "a",
+        "text": "de ventos constantes que sopram sempre do oceano para o continente."
+      },
+      {
+        "id": "b",
+        "text": "da ausência de diferença de temperatura entre continente e oceano."
+      },
+      {
+        "id": "c",
+        "text": "das correntes marítimas frias, que impedem as chuvas no verão."
+      },
+      {
+        "id": "d",
+        "text": "da proximidade da Índia com o polo norte."
+      },
+      {
+        "id": "e",
+        "text": "da diferença de aquecimento entre continente e oceano, que inverte o sentido dos ventos entre verão e inverno e alterna uma estação chuvosa e outra seca."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A terra aquece e esfria mais rapidamente que a água. No verão, baixa pressão no continente atrai ar úmido do mar; no inverno, alta pressão continental empurra ar seco para o oceano.\n\nPegadinhas:\n• A: os ventos invertem de sentido.\n• B: o texto destaca a diferença de aquecimento.\n• C: o texto não fala em correntes frias.\n• D: a Índia está em baixas latitudes.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_37",
+    "subject": "Geografia",
+    "topicId": "geo_climatologia_socioambiental",
+    "chapter": "Geomorfologia Mundial",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o Himalaia se formou por erosão ou vulcanismo, sem colisão de placas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Himalaia, onde está o Monte Everest, com cerca de 8.849 m, é a cadeia montanhosa mais alta do mundo e continua a se elevar alguns milímetros por ano. Ela se formou a partir da colisão da placa Indiana com a placa Euro-Asiática, iniciada há cerca de 50 milhões de anos. Nas rochas do alto da cordilheira, encontram-se fósseis de animais marinhos.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que o Himalaia",
+    "options": [
+      {
+        "id": "a",
+        "text": "formou-se por erosão de um planalto antigo, sem relação com o movimento das placas."
+      },
+      {
+        "id": "b",
+        "text": "é uma cadeia vulcânica, formada por erupções recentes."
+      },
+      {
+        "id": "c",
+        "text": "parou de crescer há milhões de anos."
+      },
+      {
+        "id": "d",
+        "text": "é um dobramento moderno, formado pela convergência entre placas continentais, que dobrou e elevou rochas antes situadas no fundo de um antigo mar, o que explica os fósseis marinhos."
+      },
+      {
+        "id": "e",
+        "text": "formou-se no fundo do oceano e foi trazido à superfície por correntes marítimas."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Na colisão entre placas continentais, as rochas se dobram e se elevam. Sedimentos marinhos do antigo oceano entre as placas foram erguidos, e por isso há fósseis marinhos no alto.\n\nPegadinhas:\n• A: o texto atribui a formação à colisão de placas.\n• B: o Himalaia não é vulcânico.\n• C: o texto diz que continua a se elevar.\n• E: correntes marítimas não elevam montanhas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_38",
+    "subject": "Geografia",
+    "topicId": "geo_climatologia_socioambiental",
+    "chapter": "Geopolítica Ambiental",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o Protocolo de Kyoto impôs metas iguais a todos os países.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Protocolo de Kyoto, assinado em 1997, estabeleceu metas de redução de emissões de gases de efeito estufa apenas para países desenvolvidos, considerando que eles eram os principais responsáveis históricos pelas emissões. Países em desenvolvimento, como Brasil, China e Índia, não tinham metas obrigatórias. O acordo criou mecanismos como o mercado de créditos de carbono, em que projetos que reduzem emissões geram créditos que podem ser vendidos.\n\nTexto elaborado para esta questão.\n\nO texto expressa o princípio das",
+    "options": [
+      {
+        "id": "a",
+        "text": "metas iguais para todos os países, independentemente de sua história de emissões."
+      },
+      {
+        "id": "b",
+        "text": "responsabilidades comuns, porém diferenciadas, segundo o qual todos devem enfrentar o problema, mas os países que mais emitiram historicamente devem assumir compromissos maiores."
+      },
+      {
+        "id": "c",
+        "text": "proibições totais de emissões em todos os países a partir de 1997."
+      },
+      {
+        "id": "d",
+        "text": "obrigações exclusivas dos países em desenvolvimento, como Brasil e China."
+      },
+      {
+        "id": "e",
+        "text": "decisões unilaterais, tomadas por cada país sem negociação internacional."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. As emissões acumuladas desde a Revolução Industrial vieram sobretudo dos países ricos; por isso, em Kyoto, só eles tinham metas. O Acordo de Paris depois estendeu compromissos a todos, com metas nacionais.\n\nPegadinhas:\n• A: o texto diz que só os desenvolvidos tinham metas.\n• C: o acordo previa reduções, não proibição total.\n• D: inverte quem tinha metas.\n• E: o protocolo foi um acordo internacional.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_39",
+    "subject": "Geografia",
+    "topicId": "geo_geopolitica_regional",
+    "chapter": "Geografia do Oriente Médio",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a importância do Oriente Médio se deve apenas a questões religiosas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Oriente Médio concentra grande parte das reservas comprovadas de petróleo do mundo, em países como Arábia Saudita, Irã e Iraque, muitos deles membros da OPEP. Uma parcela significativa do petróleo exportado no mundo passa pelo Estreito de Ormuz, uma passagem estreita entre o Irã e a Península Arábica. Ameaças de bloqueio do estreito costumam provocar alta imediata nos preços internacionais do petróleo.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a importância geopolítica do Oriente Médio está ligada às grandes reservas de petróleo e a rotas estratégicas, como o Estreito de Ormuz, cuja instabilidade afeta os preços mundiais da energia."
+      },
+      {
+        "id": "b",
+        "text": "o Oriente Médio tem pouca importância para o mercado mundial de petróleo."
+      },
+      {
+        "id": "c",
+        "text": "o Estreito de Ormuz liga o Mar Mediterrâneo ao Oceano Atlântico."
+      },
+      {
+        "id": "d",
+        "text": "a OPEP é formada apenas por países europeus."
+      },
+      {
+        "id": "e",
+        "text": "ameaças ao Estreito de Ormuz reduzem o preço do petróleo."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Reservas, produção e rotas fazem da região um centro da geopolítica da energia; tensões ali se refletem rapidamente nos preços globais.\n\nPegadinhas:\n• B: o texto destaca grandes reservas.\n• C: Ormuz liga o Golfo Pérsico ao Golfo de Omã e ao Índico.\n• D: a OPEP reúne países exportadores, muitos do Oriente Médio.\n• E: o texto fala em alta de preços.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_40",
+    "subject": "Geografia",
+    "topicId": "geo_populacao_urbana_brasil",
+    "chapter": "Estrutura Ativa da População",
+    "difficulty": "medium",
+    "skill": "interpretacao_grafico",
+    "trap": "Achar que a maior parte dos trabalhadores brasileiros está na indústria ou na agropecuária.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nSegundo pesquisas do IBGE, a maior parte da população ocupada no Brasil trabalha no setor terciário, que inclui comércio, transportes, educação, saúde e outros serviços. A participação da agropecuária no emprego diminuiu muito desde a década de 1950, com a mecanização e a urbanização. Uma parcela grande dos trabalhadores atua na informalidade, sem carteira assinada e sem direitos como férias e aposentadoria garantidos.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a agropecuária concentra a maior parte dos trabalhadores brasileiros atualmente."
+      },
+      {
+        "id": "b",
+        "text": "a informalidade praticamente não existe no mercado de trabalho brasileiro."
+      },
+      {
+        "id": "c",
+        "text": "o setor terciário emprega a maior parte da população ocupada, e a elevada informalidade indica que muitos trabalhadores estão sem proteção social."
+      },
+      {
+        "id": "d",
+        "text": "a mecanização do campo aumentou o emprego na agropecuária."
+      },
+      {
+        "id": "e",
+        "text": "o setor industrial emprega mais pessoas que o comércio e os serviços somados."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A terciarização acompanhou a urbanização, e a informalidade, alta no Brasil, deixa muitos sem direitos trabalhistas e previdenciários.\n\nPegadinhas:\n• A: o texto diz que a participação da agropecuária diminuiu muito.\n• B: o texto destaca a informalidade.\n• D: a mecanização reduziu o emprego no campo.\n• E: o texto diz que o terciário predomina.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_41",
+    "subject": "Geografia",
+    "topicId": "geo_cartografia",
+    "chapter": "Movimentos da Terra",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Somar as horas quando se deveria subtrair, ou esquecer o sentido da rotação.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Terra gira de oeste para leste, e por isso o Sol nasce primeiro nos lugares mais a leste. O planeta foi dividido em 24 fusos horários, cada um com cerca de 15° de longitude. Brasília está no fuso de 3 horas a menos que o horário de Greenwich (UTC−3), e Londres, no inverno europeu, está no fuso de Greenwich (UTC+0). Um torcedor em Brasília quer assistir a um jogo transmitido ao vivo de Londres, que começa às 20h no horário local inglês, durante o inverno europeu.\n\nTexto elaborado para esta questão.\n\nO jogo começará em Brasília às",
+    "options": [
+      {
+        "id": "a",
+        "text": "23h, pois Brasília está três horas à frente de Londres."
+      },
+      {
+        "id": "b",
+        "text": "17h, pois Brasília está três horas atrás de Londres, por estar a oeste."
+      },
+      {
+        "id": "c",
+        "text": "20h, pois o horário é o mesmo em todo o mundo."
+      },
+      {
+        "id": "d",
+        "text": "15h, pois cada fuso corresponde a cinco horas de diferença."
+      },
+      {
+        "id": "e",
+        "text": "14h, pois Brasília está seis horas atrás de Londres."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Brasília (UTC−3) está a oeste de Greenwich: quando são 20h em Londres, são 17h em Brasília.\n\nPegadinhas:\n• A: inverte o sentido da diferença.\n• C: os fusos existem justamente porque os horários diferem.\n• D: cada fuso corresponde a uma hora.\n• E: dobra a diferença.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_42",
+    "subject": "História",
+    "topicId": "his_idade_media",
+    "chapter": "Baixa Idade Média",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o renascimento comercial fortaleceu o feudalismo, ou que os burgos eram feudos rurais.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA partir do século XI, com o aumento da produção agrícola e o fim das grandes invasões, o comércio na Europa se intensificou. Surgiram e cresceram cidades, os burgos, muitas vezes junto a castelos e mosteiros, e feiras periódicas, como as de Champagne, reuniam mercadores de várias regiões. Os habitantes das cidades, chamados burgueses, dedicavam-se ao comércio e ao artesanato, organizados em corporações de ofício.\n\nTexto elaborado para esta questão.\n\nO processo descrito contribuiu para",
+    "options": [
+      {
+        "id": "a",
+        "text": "o fortalecimento da autossuficiência dos feudos e o fim do uso de moeda."
+      },
+      {
+        "id": "b",
+        "text": "o desaparecimento das cidades na Europa."
+      },
+      {
+        "id": "c",
+        "text": "a expansão das atividades comerciais e urbanas e o surgimento da burguesia, o que, ao longo do tempo, ajudou a transformar a sociedade feudal."
+      },
+      {
+        "id": "d",
+        "text": "a proibição do comércio pela Igreja em toda a Europa."
+      },
+      {
+        "id": "e",
+        "text": "a substituição do trabalho artesanal pelas fábricas mecanizadas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O renascimento comercial e urbano dinamizou a circulação de moeda e mercadorias e fez surgir um grupo social novo, a burguesia, com interesses distintos dos senhores feudais.\n\nPegadinhas:\n• A: o comércio reduziu a autossuficiência e ampliou o uso de moeda.\n• B: as cidades cresceram.\n• D: o texto descreve feiras e comércio em expansão.\n• E: as fábricas mecanizadas são da Revolução Industrial.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_43",
+    "subject": "História",
+    "topicId": "his_idade_antiga",
+    "chapter": "Antiguidade Clássica: o Mundo Grego",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Atribuir a Esparta a democracia de Atenas, ou a Atenas a educação militar espartana.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEsparta e Atenas foram duas das mais importantes cidades-Estado gregas. Em Esparta, os meninos eram retirados das famílias aos sete anos para receber educação militar rigorosa, e o governo era controlado por uma oligarquia, com dois reis e um conselho de anciãos. Em Atenas, desenvolveu-se no século V a.C. a democracia, e a cidade se destacou na filosofia, no teatro e nas artes.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "Esparta e Atenas tinham o mesmo regime político e a mesma educação."
+      },
+      {
+        "id": "b",
+        "text": "Atenas era governada por dois reis e dedicava a educação dos meninos exclusivamente à guerra."
+      },
+      {
+        "id": "c",
+        "text": "Esparta foi o berço da democracia e da filosofia grega."
+      },
+      {
+        "id": "d",
+        "text": "Esparta se caracterizava pela organização militarista e oligárquica, enquanto Atenas desenvolveu a democracia e se destacou na produção cultural."
+      },
+      {
+        "id": "e",
+        "text": "as cidades-Estado gregas formavam um único país governado por um imperador."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. As duas pólis representam modelos distintos: Esparta, militarista e oligárquica; Atenas, democrática (para os cidadãos) e centro cultural.\n\nPegadinhas:\n• A: o texto mostra diferenças.\n• B: descreve Esparta, não Atenas.\n• C: inverte as cidades.\n• E: as pólis eram independentes.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_44",
+    "subject": "História",
+    "topicId": "his_moderna_iluminismo",
+    "chapter": "América Espanhola",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a mita era trabalho assalariado livre, ou que a exploração da prata não usou mão de obra indígena.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nApós a conquista dos impérios asteca e inca, os espanhóis organizaram a exploração das colônias americanas. Na região andina, aproveitaram a mita, sistema inca de trabalho obrigatório por turnos, para levar milhares de indígenas às minas de prata de Potosí, onde muitos morreram. A encomienda concedia a colonos o direito de exigir tributos e trabalho de grupos indígenas, em troca da obrigação de cristianizá-los.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a mita era um sistema de trabalho assalariado livre criado pelos espanhóis."
+      },
+      {
+        "id": "b",
+        "text": "a exploração da prata em Potosí dispensou o trabalho indígena."
+      },
+      {
+        "id": "c",
+        "text": "a encomienda garantia aos indígenas a posse das terras e a liberdade de trabalho."
+      },
+      {
+        "id": "d",
+        "text": "os espanhóis aboliram todas as instituições incas após a conquista."
+      },
+      {
+        "id": "e",
+        "text": "os espanhóis adaptaram instituições indígenas, como a mita, para impor trabalho compulsório nas minas, e a encomienda combinava exploração do trabalho e catequese."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A colonização espanhola apoiou-se no trabalho compulsório indígena, reaproveitando estruturas pré-existentes, e a prata de Potosí abasteceu a economia europeia.\n\nPegadinhas:\n• A: era trabalho obrigatório, de origem inca.\n• B: o texto descreve indígenas nas minas.\n• C: a encomienda concedia trabalho e tributos aos colonos.\n• D: a mita foi aproveitada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_45",
+    "subject": "História",
+    "topicId": "his_moderna_iluminismo",
+    "chapter": "Reforma Religiosa",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a Contrarreforma aceitou as teses protestantes, ou que não houve reação católica.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm resposta à Reforma Protestante, a Igreja Católica convocou o Concílio de Trento, que se reuniu entre 1545 e 1563. O concílio reafirmou dogmas como os sete sacramentos e a autoridade do papa, criou seminários para formar padres e reforçou o Índice de Livros Proibidos. A Companhia de Jesus, fundada em 1540, dedicou-se à educação e às missões, inclusive na América portuguesa.\n\nTexto elaborado para esta questão.\n\nA Contrarreforma",
+    "options": [
+      {
+        "id": "a",
+        "text": "buscou reafirmar a doutrina católica, disciplinar o clero e ampliar a influência da Igreja, com instrumentos como o Concílio de Trento, a censura de livros e a atuação missionária dos jesuítas."
+      },
+      {
+        "id": "b",
+        "text": "adotou as teses de Lutero e encerrou a autoridade do papa."
+      },
+      {
+        "id": "c",
+        "text": "aboliu os sacramentos católicos para se aproximar dos protestantes."
+      },
+      {
+        "id": "d",
+        "text": "foi um movimento protestante contra a Igreja Católica."
+      },
+      {
+        "id": "e",
+        "text": "não teve nenhuma relação com a colonização da América."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Trento reafirmou a doutrina e reformou a Igreja internamente; o Índice e a Inquisição controlavam ideias; os jesuítas atuaram na educação e na catequese, inclusive no Brasil.\n\nPegadinhas:\n• B: o concílio reafirmou a autoridade papal.\n• C: reafirmou os sete sacramentos.\n• D: foi a reação católica.\n• E: os jesuítas atuaram na América portuguesa.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_46",
+    "subject": "História",
+    "topicId": "his_imperialismo_guerras",
+    "chapter": "Imperialismo e Belle Époque",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que as justificativas imperialistas eram científicas e humanitárias de fato.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo fim do século XIX, potências europeias ampliaram seu domínio sobre a África e a Ásia. Para justificar a expansão, difundiu-se a ideia de que os europeus teriam a missão de \"civilizar\" outros povos, expressa no poema \"O fardo do homem branco\", de Rudyard Kipling, publicado em 1899, e em teorias do chamado darwinismo social, que aplicavam de forma distorcida a ideia de seleção natural às sociedades humanas. Ao mesmo tempo, as potências buscavam matérias-primas e mercados para suas indústrias.\n\nTexto elaborado para esta questão.\n\nCom base no texto, as justificativas do imperialismo",
+    "options": [
+      {
+        "id": "a",
+        "text": "eram baseadas em estudos científicos que comprovavam a superioridade europeia."
+      },
+      {
+        "id": "b",
+        "text": "visavam exclusivamente ao bem-estar dos povos colonizados."
+      },
+      {
+        "id": "c",
+        "text": "não tinham relação com interesses econômicos."
+      },
+      {
+        "id": "d",
+        "text": "apresentavam a dominação como missão civilizadora e se apoiavam em uma leitura racista e distorcida da teoria da evolução, encobrindo interesses econômicos como a busca de matérias-primas e mercados."
+      },
+      {
+        "id": "e",
+        "text": "eram rejeitadas pelos governos europeus da época."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O discurso da \"missão civilizadora\" e o darwinismo social legitimavam a dominação. Por trás deles estavam os interesses do capitalismo industrial.\n\nPegadinhas:\n• A: o darwinismo social distorcia a biologia e não tem base científica.\n• B: o texto aponta interesses econômicos.\n• C: o texto cita matérias-primas e mercados.\n• E: essas ideias eram amplamente difundidas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_47",
+    "subject": "História",
+    "topicId": "his_republica_liberal_atual",
+    "chapter": "Regime Militar (1964-1985) I",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o golpe de 1964 foi um movimento isolado de militares, sem apoio civil ou contexto internacional.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo início da década de 1960, o presidente João Goulart defendia as chamadas reformas de base, como a reforma agrária e a ampliação do direito de voto aos analfabetos. Setores do empresariado, grandes proprietários de terras, parte da classe média, da imprensa e da Igreja, além das Forças Armadas, viam nessas propostas uma ameaça, no contexto da Guerra Fria. Em março de 1964, um golpe militar depôs Goulart, com apoio de setores civis e respaldo do governo dos Estados Unidos.\n\nTexto elaborado para esta questão.\n\nO golpe de 1964",
+    "options": [
+      {
+        "id": "a",
+        "text": "ocorreu em um contexto de polarização política e de Guerra Fria, com oposição de setores civis e militares às reformas de base, e contou com apoio de parte da sociedade civil e dos Estados Unidos."
+      },
+      {
+        "id": "b",
+        "text": "foi um movimento popular que defendia a reforma agrária."
+      },
+      {
+        "id": "c",
+        "text": "ocorreu sem nenhum apoio de setores civis."
+      },
+      {
+        "id": "d",
+        "text": "teve como objetivo acelerar as reformas de base de Goulart."
+      },
+      {
+        "id": "e",
+        "text": "não teve relação com o contexto internacional da Guerra Fria."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. As reformas de base eram vistas por opositores como ameaça comunista. O golpe foi civil-militar e teve apoio norte-americano.\n\nPegadinhas:\n• B: o golpe se opunha à reforma agrária de Goulart.\n• C: o texto cita apoio civil.\n• D: o golpe interrompeu as reformas.\n• E: o texto situa o golpe na Guerra Fria.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_48",
+    "subject": "Português",
+    "topicId": "por_texto",
+    "chapter": "Os Dois Níveis da Leitura",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Confundir o que o texto pressupõe com o que afirma explicitamente.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia a frase, escrita para esta questão, dita por um técnico após uma partida:\n\n\"O time ainda não venceu fora de casa neste campeonato.\"\n\nNa leitura de um enunciado, distingue-se o que é dito explicitamente do que é pressuposto, isto é, das informações que o enunciado dá como já aceitas, marcadas por palavras como \"ainda\", \"já\", \"parar de\" e \"continuar\".\n\nTexto elaborado para esta questão.\n\nA palavra \"ainda\" permite inferir, como pressuposto, que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o time nunca jogará fora de casa no campeonato."
+      },
+      {
+        "id": "b",
+        "text": "o time venceu todos os jogos fora de casa."
+      },
+      {
+        "id": "c",
+        "text": "há a expectativa de que o time venha a vencer fora de casa em algum momento do campeonato, que ainda não terminou."
+      },
+      {
+        "id": "d",
+        "text": "o técnico considera impossível vencer fora de casa."
+      },
+      {
+        "id": "e",
+        "text": "o time já foi eliminado do campeonato."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. \"Ainda não\" pressupõe que o fato pode vir a acontecer e que o período considerado continua em curso. Sem \"ainda\", a frase apenas constataria a ausência de vitórias.\n\nPegadinhas:\n• A: a frase pressupõe jogos fora de casa.\n• B: contradiz o que é dito.\n• D: \"ainda\" sugere possibilidade, não impossibilidade.\n• E: a frase indica que o campeonato continua.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_49",
+    "subject": "Inglês",
+    "topicId": "ing_01",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Achar que nomes populares são precisos, ou que o texto desvaloriza os nomes populares.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"The word 'robin' refers to a small orange-breasted bird in Britain, but to a much larger thrush in North America: two different species with the same common name. Scientific names solve this problem. Each species receives a unique two-part Latin name, used by scientists in every country. This system does not replace common names in everyday life, but it allows researchers to know exactly which organism is being discussed.\"\n\nTexto elaborado para esta questão.\n\nAccording to the text,",
+    "options": [
+      {
+        "id": "a",
+        "text": "common names should be eliminated from everyday language."
+      },
+      {
+        "id": "b",
+        "text": "scientific names make it possible to identify each species unambiguously across countries, since a single common name may refer to different species."
+      },
+      {
+        "id": "c",
+        "text": "the British robin and the American robin are the same species."
+      },
+      {
+        "id": "d",
+        "text": "scientific names change from one country to another."
+      },
+      {
+        "id": "e",
+        "text": "scientific names have three parts written in English."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O exemplo do \"robin\" mostra a ambiguidade dos nomes populares; o nome científico binomial é único e internacional, sem substituir os nomes do dia a dia.\n\nPegadinhas:\n• A: o texto diz que o sistema não substitui os nomes comuns.\n• C: o texto diz que são espécies diferentes.\n• D: são usados em todos os países.\n• E: são dois nomes, em latim.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l19_50",
+    "subject": "Sociologia",
+    "topicId": "soc_formacao_ciencia",
+    "chapter": "O que é o Fato Social",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que fato social é qualquer acontecimento individual, ou que depende da vontade de cada pessoa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara Émile Durkheim, fatos sociais são maneiras de agir, pensar e sentir que existem fora das consciências individuais e se impõem a elas. A língua que falamos, as regras de etiqueta e o sistema monetário, por exemplo, já existiam antes de nascermos e continuam a existir independentemente de cada pessoa. Quem tenta ignorá-los, como recusar-se a usar a moeda oficial, sofre resistências e sanções.\n\nTexto elaborado para esta questão.\n\nSegundo o texto, fatos sociais caracterizam-se por serem",
+    "options": [
+      {
+        "id": "a",
+        "text": "escolhas individuais, que dependem apenas da vontade de cada pessoa."
+      },
+      {
+        "id": "b",
+        "text": "fenômenos biológicos, transmitidos geneticamente."
+      },
+      {
+        "id": "c",
+        "text": "acontecimentos raros, que afetam apenas uma pessoa."
+      },
+      {
+        "id": "d",
+        "text": "invenções recentes, que desaparecem com cada geração."
+      },
+      {
+        "id": "e",
+        "text": "exteriores aos indivíduos, coercitivos e gerais, pois existem antes deles, se impõem a eles e são compartilhados pela coletividade."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Exterioridade (existem fora e antes do indivíduo), coercitividade (se impõem, sob sanção) e generalidade (são coletivos) definem o fato social para Durkheim.\n\nPegadinhas:\n• A: o texto diz que se impõem às pessoas.\n• B: são sociais, não biológicos.\n• C: são gerais.\n• D: existem antes e depois de cada geração.",
+    "styleOf": "FUVEST"
+  }
+]
