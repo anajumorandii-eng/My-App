@@ -170,4 +170,38 @@ export const printStyles = `${printCoverFontStyles}\n${printBodyFontStyles}\n${p
   [data-print-toc] li[data-toc-level="1"]:has(+ li[data-toc-level="2"]) { break-after: avoid; }
   [data-print-toc] a { flex: 1; }
   [data-toc-page] { flex: none; width: 9mm; text-align: right; font-variant-numeric: tabular-nums; }
+
+  /* Review layout: one native A4 page, unchanged body type, full useful width. */
+  [data-print-review-compact] [data-print-toc],
+  [data-print-review-compact] [data-print-layout] { page: auto; }
+  [data-print-review-compact] [data-print-toc] { padding: 0; margin: 0 0 4mm; min-height: 0; break-after: auto; }
+  [data-print-review-compact] [data-print-toc] h2 { font-size: 18pt; margin: 0 0 2mm; }
+  [data-print-review-compact] [data-print-toc] > p { margin: 0 0 2mm; }
+  [data-print-review-compact] [data-print-toc] ol { columns: auto; margin: 0; padding: 0; }
+  [data-print-review-compact] [data-print-toc] li { font-size: 10pt; line-height: 1.15; margin: 0 0 .8mm; }
+  [data-print-review-compact] [data-print-toc] li[data-toc-level="2"] { font-size: 9.5pt; padding-left: 4mm; }
+  [data-print-review-compact] [data-print-layout] { width: 210mm !important; }
+  [data-print-review-compact] [data-print-layout] > thead > tr > td { height: 14mm; }
+  [data-print-review-compact] [data-print-layout] > tfoot > tr > td { height: 14mm; }
+  [data-print-review-compact] [data-print-layout] > tbody > tr > td { padding: 0 14mm !important; }
+  [data-print-review-compact] [data-print-content] p,
+  [data-print-review-compact] [data-print-content] li { line-height: 1.3 !important; orphans: 2; widows: 2; }
+  [data-print-review-compact] [data-print-content] p { margin: 0 0 1.6mm !important; }
+  [data-print-review-compact] [data-print-content] h1 { margin: 0 0 3mm !important; }
+  [data-print-review-compact] [data-print-content] h2,
+  [data-print-review-compact] [data-print-content] h3 { margin: 3mm 0 1.5mm !important; }
+  [data-print-review-compact] [data-print-content] h4,
+  [data-print-review-compact] [data-print-content] summary { margin: 2.5mm 0 1mm !important; }
+  [data-print-review-compact] [data-print-content] ul,
+  [data-print-review-compact] [data-print-content] ol { margin: 1.5mm 0 2mm !important; }
+  [data-print-review-compact] [data-print-content] li { margin-bottom: .8mm; }
+  [data-print-review-compact] [data-print-content] section,
+  [data-print-review-compact] [data-print-content] details { margin-bottom: 2mm !important; }
+  [data-print-review-compact] [data-print-content] th,
+  [data-print-review-compact] [data-print-content] td { padding: 1.3mm 1.6mm; }
+  [data-print-review-compact] [data-print-content] .katex-display { margin: 1.5mm 0 !important; }
+  [data-print-review-compact] [data-print-content] figure,
+  [data-print-review-compact] [data-print-content] .crivo-figure { margin: 2mm 0 !important; }
+  [data-print-review-compact] [data-print-content] [data-print-answer-key] { break-before: auto !important; }
+  [data-print-review-compact] [data-print-content] .space-y-2 > :not([hidden]) ~ :not([hidden]) { margin-top: 0 !important; }
 }`;
