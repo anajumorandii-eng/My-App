@@ -63,8 +63,12 @@ export function StudyGeometry({ visual }: { visual: Geometry }) {
       const mid = { x: mx + nx * 12, y: my + ny * 12 };
       const anchor = nx > .35 ? 'start' : nx < -.35 ? 'end' : 'middle';
       return <g key={`s${i}`}>
-        <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={figureInk.ink} strokeWidth="1.8" strokeLinecap="round" strokeDasharray={segment.dashed ? '6 5' : undefined} />
-        {segment.label && <text x={mid.x} y={mid.y + 5 + ny * 4} textAnchor={anchor} fontStyle="italic" {...label} fill={figureInk.nitrogen}>{segment.label}</text>}
+        <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={segment.arrow ? figureInk.oxygen : figureInk.ink} strokeWidth={segment.arrow ? 2.2 : 1.8} strokeLinecap="round" strokeDasharray={segment.dashed ? '6 5' : undefined} />
+        {/* Seta para força, velocidade, campo e raio de luz: sem ela o
+            diagrama de corpo livre vira um traço sem sentido. */}
+        {segment.arrow && (() => { const ux = (b.x - a.x) / len, uy = (b.y - a.y) / len, h = 11;
+          return <path d={`M${b.x - ux * h - uy * h * .5} ${b.y - uy * h + ux * h * .5}L${b.x} ${b.y}L${b.x - ux * h + uy * h * .5} ${b.y - uy * h - ux * h * .5}`} fill="none" stroke={figureInk.oxygen} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />; })()}
+        {segment.label && <text x={mid.x} y={mid.y + 5 + ny * 4} textAnchor={anchor} fontStyle="italic" {...label} fill={segment.arrow ? figureInk.oxygen : figureInk.nitrogen}>{segment.label}</text>}
       </g>;
     })}
     {(visual.angles ?? []).map((angle, i) => {
@@ -81,7 +85,7 @@ export function StudyGeometry({ visual }: { visual: Geometry }) {
         {angle.label && <text x={text.x} y={text.y + 5} textAnchor="middle" fontStyle="italic" {...label} fill={figureInk.oxygen}>{angle.label}</text>}
       </g>;
     })}
-    {visual.points.map(point => { const p = at(point.id), t = away(p.x, p.y, 16); return <g key={point.id}>
+    {visual.points.filter(point => !point.hidden).map(point => { const p = at(point.id), t = away(p.x, p.y, 16); return <g key={point.id}>
       <circle cx={p.x} cy={p.y} r="3" fill={figureInk.ink} />
       <text x={t.x} y={t.y + 5} textAnchor="middle" fontWeight="600" {...label}>{point.id}</text>
     </g>; })}

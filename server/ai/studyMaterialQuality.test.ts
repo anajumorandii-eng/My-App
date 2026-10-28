@@ -17,3 +17,7 @@ test('geometria pede a própria figura, nunca um gráfico no lugar dela', () => 
   assert.match(STUDY_MATERIAL_QUALITY, /desenhe a própria figura com geometry/);
   assert.match(STUDY_MATERIAL_QUALITY, /nunca troque a figura por gráfico/);
 });
+test('cada matéria tem o tipo de figura do próprio objeto', () => {
+  for (const type of ['circuit', 'timeline', 'pedigree', 'climate', 'arrow:true']) assert.ok(STUDY_MATERIAL_QUALITY.includes(type), type);
+  assert.match(STUDY_MATERIAL_QUALITY, /Não desenhe mapas, anatomia/);
+});
