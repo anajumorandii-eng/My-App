@@ -134,6 +134,8 @@
 .crivo-bars__label { display: flex; justify-content: space-between; gap: 12px; overflow-wrap: anywhere; }
 .crivo-bars__label b { font-family: var(--fig-serif); font-weight: 600; white-space: nowrap; }
 .crivo-bars__track { display: block; width: 100%; height: 12px; margin-top: 4px; }
+/* A figura geométrica é mais larga que a curva: o desenho é o assunto. */
+.crivo-geometry { display: block; width: 520px; max-width: 100%; height: auto; margin: 0 auto; overflow: visible; }
 .crivo-chart { display: block; width: 480px; max-width: 100%; height: auto; margin: 0 auto; }
 .crivo-chart__legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px; margin: 8px 0 0; padding: 0; list-style: none; font-size: .92em; }
 .crivo-chart__legend li { display: inline-flex; align-items: center; gap: 6px; }

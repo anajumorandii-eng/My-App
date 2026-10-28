@@ -150,6 +150,7 @@ export const printStyles = `${printCoverFontStyles}\n${printBodyFontStyles}\n${p
   [data-print-content] .crivo-flow__arrow { width: 4mm; height: 6mm; }
   [data-print-content] .crivo-bars__label { display: flex !important; justify-content: space-between; }
   [data-print-content] .crivo-bars__track { display: block; width: 100%; height: 3mm; }
+  [data-print-content] .crivo-geometry { display: block; width: 130mm; max-width: 100%; height: auto; margin: 0 auto; overflow: visible; }
   [data-print-content] .crivo-chart { display: block; width: 120mm; max-width: 100%; height: auto; margin: 0 auto; }
   [data-print-content] .crivo-chart__legend { display: flex !important; flex-wrap: wrap; justify-content: center; gap: 1mm 5mm; list-style: none; padding: 0 !important; margin: 1mm 0 0 !important; font-size: 8.5pt; }
   [data-print-content] .crivo-chart__legend li { display: inline-flex !important; align-items: center; gap: 1.5mm; }
