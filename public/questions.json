@@ -117494,5 +117494,1655 @@
     "explanation": "Resposta C. Informar riscos e benefícios, permitir perguntas, obter consentimento livre e garantir a possibilidade de desistir são exigências da autonomia: a pessoa é tratada como sujeito capaz de decidir, não como objeto da pesquisa.\n\nPegadinhas:\n• A: decidir pelo paciente sem consultá-lo é paternalismo, que a autonomia limita.\n• B: justiça diz respeito à distribuição equitativa de riscos e benefícios; o texto não fala em pagamento.\n• D: o termo informa os riscos; não os elimina.\n• E: a relevância do estudo não dispensa o consentimento.",
     "difficulty": "medium",
     "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_01",
+    "chapter": "Poluição do Ar",
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa cidade de São Paulo, as concentrações de poluentes como o monóxido de carbono e o material particulado costumam ser maiores entre maio e setembro, embora a frota de veículos e as indústrias emitam quantidades semelhantes ao longo do ano. Nesses meses, são frequentes as manhãs frias, sem vento e sem chuva, em que se observa, do alto de prédios, uma camada acinzentada sobre a cidade. Nessas condições, o atendimento por doenças respiratórias nos hospitais aumenta, sobretudo entre crianças e idosos.\n\nTexto elaborado para esta questão.\n\nO fenômeno que melhor explica a piora da qualidade do ar nesses meses é",
+    "options": [
+      {
+        "id": "a",
+        "text": "o aumento do buraco na camada de ozônio sobre a cidade, que concentra os poluentes."
+      },
+      {
+        "id": "b",
+        "text": "o efeito estufa, que aquece o ar próximo ao solo e impede a chuva."
+      },
+      {
+        "id": "c",
+        "text": "a chuva ácida, que transforma os gases em material particulado."
+      },
+      {
+        "id": "d",
+        "text": "a inversão térmica: uma camada de ar mais quente acima de uma camada fria, junto ao solo, impede a subida do ar e a dispersão dos poluentes, que se acumulam perto da superfície."
+      },
+      {
+        "id": "e",
+        "text": "o aumento das emissões das indústrias nos meses frios, para aquecer as residências."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Normalmente o ar junto ao solo é mais quente e sobe, levando os poluentes. Em noites frias e sem vento, o solo perde calor e esfria o ar logo acima; uma camada mais quente fica por cima e funciona como tampa. Sem convecção, sem vento e sem chuva para remover os poluentes, eles se acumulam, mesmo com emissões semelhantes.\n\nPegadinhas:\n• A: o buraco de ozônio é estratosférico e não concentra poluentes urbanos.\n• B: o efeito estufa não explica a variação sazonal descrita.\n• C: chuva ácida exige chuva, e o texto descreve dias secos.\n• E: o texto afirma que as emissões são semelhantes ao longo do ano.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_02",
+    "chapter": "Introdução à Ecologia",
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma mesma árvore de uma floresta tropical vivem várias espécies de aves insetívoras. Observações de campo mostraram que uma delas se alimenta principalmente de insetos no alto da copa; outra, de insetos sob a casca do tronco; e uma terceira, de insetos que voam perto do chão da mata. Além disso, as três têm horários de maior atividade ligeiramente diferentes ao longo do dia. Apesar de ocuparem a mesma árvore, as populações das três espécies se mantêm estáveis há anos.\n\nTexto elaborado para esta questão.\n\nA coexistência das três espécies se explica porque elas",
+    "options": [
+      {
+        "id": "a",
+        "text": "compartilham o mesmo habitat, mas ocupam nichos ecológicos diferentes, o que reduz a competição pelos mesmos recursos."
+      },
+      {
+        "id": "b",
+        "text": "ocupam o mesmo nicho ecológico, e por isso não competem entre si."
+      },
+      {
+        "id": "c",
+        "text": "vivem em habitats diferentes, pois cada uma ocupa uma árvore."
+      },
+      {
+        "id": "d",
+        "text": "pertencem à mesma população, que se divide em grupos de alimentação."
+      },
+      {
+        "id": "e",
+        "text": "são predadoras umas das outras, mantendo as populações em equilíbrio."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O habitat é o lugar onde a espécie vive (a mesma árvore). O nicho é o papel da espécie: o que come, onde e quando busca alimento. Explorando partes diferentes da árvore e horários diferentes, as aves dividem os recursos, o que diminui a competição interespecífica e permite a coexistência — o princípio de Gause diz que duas espécies com o mesmo nicho não coexistem por muito tempo.\n\nPegadinhas:\n• B: nicho igual levaria à competição intensa, não à ausência dela.\n• C: o texto diz que elas vivem na mesma árvore.\n• D: são espécies diferentes, não uma população.\n• E: o texto fala de aves insetívoras, que se alimentam de insetos.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_03",
+    "chapter": "Núcleo Celular",
+    "topicId": "bio_estrutura_fisio_celular",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAo microscópio, células do pâncreas que secretam grandes quantidades de enzimas digestivas mostram núcleos com nucléolos grandes e bem visíveis, além de citoplasma rico em ribossomos e em retículo endoplasmático rugoso. Já em células com pouca síntese de proteínas, o nucléolo é pequeno ou pouco evidente. O nucléolo não é envolto por membrana e corresponde a uma região do núcleo associada a certos trechos dos cromossomos.\n\nTexto elaborado para esta questão.\n\nA relação entre o tamanho do nucléolo e a atividade da célula se explica porque o nucléolo",
+    "options": [
+      {
+        "id": "a",
+        "text": "é o local onde as enzimas digestivas são produzidas e armazenadas."
+      },
+      {
+        "id": "b",
+        "text": "armazena a energia necessária para a secreção das enzimas."
+      },
+      {
+        "id": "c",
+        "text": "é o local de síntese do RNA ribossômico e de montagem das subunidades dos ribossomos, e células com intensa síntese de proteínas precisam de muitos ribossomos."
+      },
+      {
+        "id": "d",
+        "text": "é uma organela envolta por membrana dupla que controla a divisão celular."
+      },
+      {
+        "id": "e",
+        "text": "contém todo o DNA da célula, que se condensa durante a secreção."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. No nucléolo, trechos de DNA que codificam RNA ribossômico são transcritos intensamente, e esse RNA se associa a proteínas formando as subunidades dos ribossomos, que saem pelos poros nucleares. Uma célula secretora de proteínas precisa de muitos ribossomos — daí nucléolos grandes e citoplasma rico em RER.\n\nPegadinhas:\n• A: as proteínas são sintetizadas nos ribossomos do citoplasma, não no nucléolo.\n• B: a energia vem do ATP, produzido principalmente nas mitocôndrias.\n• D: o texto diz que o nucléolo não tem membrana.\n• E: o DNA está nos cromossomos, e o nucléolo corresponde a apenas certos trechos.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_04",
+    "chapter": "Origem da Vida e as Primeiras Células",
+    "topicId": "bio_estrutura_fisio_celular",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1953, Stanley Miller montou um aparelho em que uma mistura de metano, amônia, hidrogênio e vapor d'água, gases que se supunha compor a atmosfera primitiva da Terra, era submetida a descargas elétricas que simulavam relâmpagos. A água era aquecida e resfriada em ciclos. Após cerca de uma semana, a análise do líquido acumulado revelou a presença de vários aminoácidos. Hoje se discute se a composição da atmosfera primitiva era de fato essa.\n\nTexto elaborado para esta questão.\n\nO experimento de Miller",
+    "options": [
+      {
+        "id": "a",
+        "text": "criou as primeiras células vivas em laboratório."
+      },
+      {
+        "id": "b",
+        "text": "provou que a vida surgiu na Terra trazida por meteoritos."
+      },
+      {
+        "id": "c",
+        "text": "demonstrou que a vida só pode surgir de outro ser vivo, como defende a biogênese."
+      },
+      {
+        "id": "d",
+        "text": "mostrou que a atmosfera primitiva tinha oxigênio abundante."
+      },
+      {
+        "id": "e",
+        "text": "mostrou que moléculas orgânicas, como aminoácidos, podem se formar a partir de substâncias inorgânicas simples, sob condições que se supunha existirem na Terra primitiva, sem a participação de seres vivos."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O experimento testou uma etapa da hipótese de Oparin e Haldane: a síntese abiótica de moléculas orgânicas. Obteve aminoácidos, não vida. A discussão atual sobre a composição da atmosfera não anula o resultado, mas limita sua aplicação direta à Terra primitiva.\n\nPegadinhas:\n• A: formaram-se moléculas, não células.\n• B: o experimento não testa a origem extraterrestre.\n• C: o resultado vai no sentido oposto: a formação de moléculas orgânicas sem seres vivos.\n• D: a mistura não tinha oxigênio livre.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_05",
+    "chapter": "Algas",
+    "topicId": "bio_botanica",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAlgas microscópicas, como diatomáceas e dinoflagelados, formam grande parte do fitoplâncton dos oceanos. Estima-se que o fitoplâncton seja responsável por cerca de metade da fotossíntese do planeta. Em certas condições, como águas quentes e ricas em nutrientes, populações de dinoflagelados crescem muito e podem colorir a água, fenômeno conhecido como maré vermelha; algumas espécies produzem toxinas que se acumulam em mariscos, tornando seu consumo perigoso.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que as algas do fitoplâncton",
+    "options": [
+      {
+        "id": "a",
+        "text": "são plantas terrestres adaptadas à vida no mar, com raízes e vasos condutores."
+      },
+      {
+        "id": "b",
+        "text": "são a base de muitas cadeias alimentares marinhas e importantes produtoras de oxigênio, mas sua proliferação excessiva pode trazer riscos à saúde humana."
+      },
+      {
+        "id": "c",
+        "text": "não fazem fotossíntese, pois vivem na água."
+      },
+      {
+        "id": "d",
+        "text": "eliminam as toxinas dos mariscos, tornando-os seguros para o consumo."
+      },
+      {
+        "id": "e",
+        "text": "só existem em águas frias e pobres em nutrientes."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O fitoplâncton é produtor nos oceanos: sustenta o zooplâncton e, por meio dele, peixes e outros animais, e libera oxigênio. Florações de dinoflagelados tóxicos causam a maré vermelha; as toxinas, concentradas por moluscos filtradores, podem intoxicar quem os consome.\n\nPegadinhas:\n• A: algas não têm raízes nem vasos condutores, e não são plantas terrestres.\n• C: o texto destaca a fotossíntese do fitoplâncton.\n• D: as toxinas são produzidas pelas algas e se acumulam nos mariscos.\n• E: o texto associa as florações a águas quentes e ricas em nutrientes.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_06",
+    "chapter": "Reprodução Humana e Métodos Contraceptivos",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA pílula anticoncepcional combinada contém versões sintéticas dos hormônios estrogênio e progesterona. Tomada diariamente, mantém níveis desses hormônios elevados no sangue, o que, por retroalimentação negativa, reduz a liberação de FSH e de LH pela hipófise. Em campanhas de saúde, profissionais lembram que, embora seja muito eficaz para evitar gravidez quando usada corretamente, a pílula deve ser combinada a outro método em certas situações.\n\nTexto elaborado para esta questão.\n\nO principal mecanismo de ação da pílula e a situação que justifica combinar outro método são, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "a destruição dos espermatozoides na vagina; e a prática de exercícios físicos."
+      },
+      {
+        "id": "b",
+        "text": "a inibição da ovulação, pela redução de FSH e LH; e a proteção contra infecções sexualmente transmissíveis, que só métodos de barreira, como o preservativo, oferecem."
+      },
+      {
+        "id": "c",
+        "text": "o bloqueio das tubas uterinas; e o uso de antibióticos."
+      },
+      {
+        "id": "d",
+        "text": "o aumento da produção de FSH e LH; e a prevenção da menopausa."
+      },
+      {
+        "id": "e",
+        "text": "a eliminação do útero do ciclo menstrual; e a amamentação."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O FSH estimula o desenvolvimento dos folículos, e o pico de LH desencadeia a ovulação. Com esses hormônios baixos, não há ovulação. A pílula não forma barreira física e, por isso, não protege contra ISTs, como HIV, sífilis e HPV; para isso, é preciso o preservativo.\n\nPegadinhas:\n• A: espermicida é outro método; a pílula age no eixo hormonal.\n• C: bloqueio das tubas é a laqueadura, método cirúrgico.\n• D: o texto diz que a pílula reduz FSH e LH.\n• E: o útero não é eliminado do ciclo, e a amamentação não é o motivo destacado.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_07",
+    "chapter": "Sistemas Sensoriais: Visão e Audição",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPessoas míopes enxergam bem objetos próximos, mas veem desfocados os distantes, como a lousa da sala de aula. Na maioria dos casos, o globo ocular é um pouco mais longo que o normal, e o sistema formado pela córnea e pelo cristalino forma a imagem de objetos distantes antes da retina, e não sobre ela. Estudos recentes associam o aumento de casos de miopia entre crianças a mais tempo em atividades de perto e menos tempo ao ar livre.\n\nTexto elaborado para esta questão.\n\nPara corrigir a miopia, usam-se lentes",
+    "options": [
+      {
+        "id": "a",
+        "text": "convergentes, que aproximam a imagem do cristalino."
+      },
+      {
+        "id": "b",
+        "text": "convergentes, que aumentam o tamanho do globo ocular."
+      },
+      {
+        "id": "c",
+        "text": "cilíndricas, que corrigem a curvatura irregular da córnea."
+      },
+      {
+        "id": "d",
+        "text": "bifocais, obrigatoriamente, pois o míope não enxerga de perto."
+      },
+      {
+        "id": "e",
+        "text": "divergentes, que afastam os raios uns dos outros antes de chegarem ao olho, fazendo a imagem se formar mais para trás, sobre a retina."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Se a imagem se forma antes da retina, o olho é \"convergente demais\" para o seu comprimento. Uma lente divergente reduz a convergência total e desloca a imagem para trás, até a retina.\n\nPegadinhas:\n• A: lente convergente agravaria a miopia, aproximando ainda mais a imagem; é usada na hipermetropia.\n• B: lente nenhuma altera o tamanho do olho.\n• C: lente cilíndrica corrige o astigmatismo.\n• D: o texto diz que o míope enxerga bem de perto.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_08",
+    "chapter": "Fisiologia da Sustentação e da Locomoção",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA osteoporose é uma doença em que os ossos perdem massa e se tornam mais frágeis, o que aumenta o risco de fraturas, sobretudo em mulheres após a menopausa. Médicos recomendam, para preveni-la, alimentação rica em cálcio, exposição moderada ao sol e atividade física regular, especialmente exercícios com carga, como caminhada e musculação. Astronautas que passam meses em órbita também perdem massa óssea, mesmo jovens e saudáveis.\n\nTexto elaborado para esta questão.\n\nAs recomendações e o caso dos astronautas indicam que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o osso é um tecido inerte, formado apenas por minerais, que não se renova na vida adulta."
+      },
+      {
+        "id": "b",
+        "text": "a exposição ao sol fornece cálcio diretamente aos ossos."
+      },
+      {
+        "id": "c",
+        "text": "os ossos se fortalecem com o repouso prolongado."
+      },
+      {
+        "id": "d",
+        "text": "o osso é um tecido vivo, em constante remodelação: células formam e reabsorvem matriz óssea, e o equilíbrio depende de cálcio, de vitamina D (cuja produção na pele é estimulada pelo sol) e de estímulos mecânicos, que faltam em órbita."
+      },
+      {
+        "id": "e",
+        "text": "a perda óssea dos astronautas é causada pela radiação solar intensa no espaço."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Osteoblastos produzem matriz, e osteoclastos a reabsorvem. Cálcio e vitamina D, que favorece sua absorção intestinal, são matéria-prima; a carga mecânica estimula a formação de osso. Sem o peso do corpo em órbita, a reabsorção supera a formação. Na menopausa, a queda do estrogênio também favorece a reabsorção.\n\nPegadinhas:\n• A: o próprio texto mostra mudança de massa óssea em adultos.\n• B: o sol estimula a síntese de vitamina D na pele, não fornece cálcio.\n• C: a falta de carga, como em órbita, enfraquece os ossos.\n• E: o texto associa a perda à falta de carga, e a radiação não é o fator indicado.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_09",
+    "chapter": "Ciclos de Vida",
+    "topicId": "bio_botanica",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNos animais, a meiose ocorre na formação dos gametas, que são haploides; a fecundação forma o zigoto diploide, que origina o organismo adulto, também diploide. Nas plantas, o ciclo de vida apresenta alternância de gerações: o esporófito, diploide, produz esporos por meiose; o esporo germina e forma o gametófito, haploide, que produz gametas por mitose. Nas samambaias, o esporófito é a planta duradoura e visível.\n\nTexto elaborado para esta questão.\n\nUma diferença entre o ciclo de vida das plantas e o dos animais é que, nas plantas,",
+    "options": [
+      {
+        "id": "a",
+        "text": "a meiose origina esporos, e os gametas são formados por mitose em um organismo haploide, enquanto nos animais a meiose origina diretamente os gametas."
+      },
+      {
+        "id": "b",
+        "text": "não ocorre meiose, apenas mitose."
+      },
+      {
+        "id": "c",
+        "text": "a meiose origina gametas, como nos animais, e os esporos são formados por mitose."
+      },
+      {
+        "id": "d",
+        "text": "o zigoto é haploide, e o adulto é diploide."
+      },
+      {
+        "id": "e",
+        "text": "a fecundação forma o gametófito."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A meiose nas plantas é espórica: o esporófito 2n forma esporos n, que se dividem por mitose e formam o gametófito n; este produz gametas por mitose. A fecundação forma o zigoto 2n, que origina o novo esporófito. Nos animais, a meiose é gamética.\n\nPegadinhas:\n• B: há meiose, na formação dos esporos.\n• C: inverte os papéis da meiose e da mitose.\n• D: o zigoto é diploide.\n• E: a fecundação forma o zigoto, que origina o esporófito.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_10",
+    "chapter": "Cinética Química",
+    "topicId": "qui_cinetica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nOs conversores catalíticos instalados no escapamento dos automóveis contêm metais como platina, paládio e ródio, distribuídos sobre uma superfície com milhares de pequenos canais. Os gases que saem do motor, como monóxido de carbono, hidrocarbonetos não queimados e óxidos de nitrogênio, passam por essa superfície e são convertidos em gás carbônico, água e nitrogênio. Os metais não são consumidos no processo e duram muitos anos.\n\nTexto elaborado para esta questão.\n\nO papel dos metais no conversor é",
+    "options": [
+      {
+        "id": "a",
+        "text": "fornecer calor para que as reações, endotérmicas, aconteçam."
+      },
+      {
+        "id": "b",
+        "text": "ser oxidados no lugar do monóxido de carbono."
+      },
+      {
+        "id": "c",
+        "text": "acelerar as reações, por oferecer um caminho com menor energia de ativação, sem alterar a variação de entalpia das reações e sem ser consumidos."
+      },
+      {
+        "id": "d",
+        "text": "aumentar a variação de entalpia das reações, tornando-as mais exotérmicas."
+      },
+      {
+        "id": "e",
+        "text": "deslocar o equilíbrio para os produtos, aumentando o rendimento máximo possível."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Catalisadores participam de etapas intermediárias e são regenerados: por isso não se consomem. O novo mecanismo tem energia de ativação menor, e a reação fica mais rápida nas condições do escapamento. A entalpia de reagentes e produtos não muda, logo ΔH também não.\n\nPegadinhas:\n• A: a oxidação do CO é exotérmica, e o catalisador não fornece calor.\n• B: o texto diz que os metais não são consumidos.\n• D: o catalisador não altera ΔH.\n• E: o catalisador acelera igualmente as reações direta e inversa; não muda a posição do equilíbrio.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_11",
+    "chapter": "Deslocamento de Equilíbrio",
+    "topicId": "qui_equilibrio",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA síntese da amônia, base da produção de fertilizantes nitrogenados, é feita pelo processo Haber-Bosch:\n\nN₂(g) + 3 H₂(g) ⇌ 2 NH₃(g)   ΔH = −92 kJ\n\nNa indústria, a reação é conduzida sob pressões muito altas, de 150 a 300 atm, e temperaturas em torno de 450 °C, com catalisador de ferro. Engenheiros explicam que temperaturas mais baixas aumentariam a proporção de amônia no equilíbrio, mas tornariam a reação lenta demais.\n\nTexto elaborado para esta questão.\n\nSobre as condições industriais, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a alta pressão desloca o equilíbrio para os reagentes, que ocupam menos volume."
+      },
+      {
+        "id": "b",
+        "text": "a temperatura elevada aumenta a proporção de amônia no equilíbrio, pois a reação é endotérmica."
+      },
+      {
+        "id": "c",
+        "text": "o catalisador aumenta a proporção de amônia no equilíbrio."
+      },
+      {
+        "id": "d",
+        "text": "a pressão não influencia o equilíbrio, pois todas as substâncias são gases."
+      },
+      {
+        "id": "e",
+        "text": "a alta pressão favorece a amônia, pois há menos mols de gás nos produtos (2) que nos reagentes (4), e a temperatura de 450 °C é um compromisso entre rapidez e rendimento, já que a reação é exotérmica."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Pelo princípio de Le Chatelier, aumentar a pressão desloca o equilíbrio para o lado com menos mols de gás: de 4 para 2, os produtos. Como a reação direta é exotérmica, temperatura alta desloca o equilíbrio para os reagentes; mas, a frio, a reação seria lenta. A temperatura intermediária, com catalisador, é o compromisso.\n\nPegadinhas:\n• A: inverte o efeito da pressão.\n• B: ΔH negativo indica reação exotérmica.\n• C: o catalisador acelera, sem deslocar o equilíbrio.\n• D: justamente por serem gases, com quantidades diferentes de mols nos dois lados, a pressão influencia.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_12",
+    "chapter": "Efeitos Coligativos",
+    "topicId": "qui_solucoes",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm países com inverno rigoroso, joga-se sal grosso, NaCl, nas estradas para evitar a formação de gelo. Um estudante propôs substituir o sal por açúcar comum, a sacarose, por ser menos corrosivo. Considere duas soluções aquosas com a mesma concentração em quantidade de matéria, 1 mol de soluto por quilograma de água: uma de NaCl, que se dissocia totalmente em Na⁺ e Cl⁻, e outra de sacarose, que não se dissocia.\n\nTexto elaborado para esta questão.\n\nComparando as duas soluções, espera-se que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as duas congelem na mesma temperatura, pois têm a mesma concentração."
+      },
+      {
+        "id": "b",
+        "text": "a solução de sacarose congele em temperatura mais baixa, pois sua molécula é maior."
+      },
+      {
+        "id": "c",
+        "text": "a solução de NaCl congele em temperatura mais baixa, pois tem cerca do dobro de partículas dissolvidas, e o abaixamento do ponto de congelamento depende do número de partículas, não de sua natureza."
+      },
+      {
+        "id": "d",
+        "text": "a solução de NaCl congele a 0 °C, pois o sal não altera o ponto de congelamento."
+      },
+      {
+        "id": "e",
+        "text": "a solução de sacarose congele em temperatura mais alta que a da água pura."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Efeitos coligativos dependem da quantidade de partículas de soluto. 1 mol de NaCl gera cerca de 2 mol de íons; 1 mol de sacarose, 1 mol de moléculas. O abaixamento crioscópico da solução salina é aproximadamente o dobro.\n\nPegadinhas:\n• A: concentração igual de soluto não significa número igual de partículas.\n• B: o tamanho da molécula não importa nos efeitos coligativos.\n• D: o sal abaixa o ponto de congelamento, por isso é usado.\n• E: todo soluto não volátil abaixa o ponto de congelamento.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_13",
+    "chapter": "Radioatividade: o Estudo das Radiações",
+    "topicId": "qui_radioatividade",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA datação por carbono-14 permite estimar a idade de restos orgânicos. Enquanto o organismo está vivo, a proporção de carbono-14 em seus tecidos se mantém igual à da atmosfera. Após a morte, o carbono-14 deixa de ser reposto e decai, com meia-vida de cerca de 5.730 anos. Em um sítio arqueológico, um pedaço de carvão de uma fogueira antiga apresentou 25% da proporção de carbono-14 encontrada em organismos vivos.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA idade aproximada do carvão é",
+    "options": [
+      {
+        "id": "a",
+        "text": "5.730 anos"
+      },
+      {
+        "id": "b",
+        "text": "11.460 anos"
+      },
+      {
+        "id": "c",
+        "text": "17.190 anos"
+      },
+      {
+        "id": "d",
+        "text": "22.920 anos"
+      },
+      {
+        "id": "e",
+        "text": "28.650 anos"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. 100% → 50% → 25%: duas meias-vidas. Idade ≈ 2 × 5.730 = 11.460 anos.\n\nPegadinhas:\n• A: corresponde a uma meia-vida, quando restaria 50%.\n• C: três meias-vidas deixariam 12,5%.\n• D: quatro meias-vidas, como se cada 25% perdidos valesse uma meia-vida.\n• E: cinco meias-vidas.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_14",
+    "chapter": "Termoquímica I",
+    "topicId": "qui_termoquimica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nBolsas instantâneas usadas para tratar contusões em atletas contêm um saco interno de água e um sólido, como o nitrato de amônio. Ao apertar a bolsa, o saco interno se rompe, o sólido se dissolve e a bolsa fica gelada em poucos segundos. Existem também bolsas quentes, em que a mistura de reagentes libera energia e a bolsa esquenta, usadas para aquecer as mãos no inverno.\n\nTexto elaborado para esta questão.\n\nSobre a bolsa fria, é correto afirmar que a dissolução do nitrato de amônio",
+    "options": [
+      {
+        "id": "a",
+        "text": "libera calor, pois toda dissolução é exotérmica."
+      },
+      {
+        "id": "b",
+        "text": "produz frio, uma forma de energia que se transfere para a pele."
+      },
+      {
+        "id": "c",
+        "text": "não envolve troca de energia, pois é um processo físico."
+      },
+      {
+        "id": "d",
+        "text": "é endotérmica: absorve calor do próprio sistema e da vizinhança, como a região lesionada, e por isso a temperatura da bolsa diminui."
+      },
+      {
+        "id": "e",
+        "text": "tem ΔH negativo, como na bolsa quente."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Em processo endotérmico, ΔH > 0: a energia necessária para separar os íons do retículo cristalino é maior que a liberada na hidratação. O sistema retira calor da água da bolsa e do que estiver em contato com ela. \"Frio\" não é energia: é a sensação de perder calor.\n\nPegadinhas:\n• A: há dissoluções endotérmicas, como essa.\n• B: frio não é forma de energia que se transfere.\n• C: processos físicos também envolvem trocas de energia, como a fusão.\n• E: ΔH negativo é o da bolsa quente, exotérmica.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_15",
+    "chapter": "Processos de Oxirredução",
+    "topicId": "qui_oxirreducao",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPregos, telhas e postes de ferro costumam receber uma camada de zinco, processo chamado galvanização. Mesmo quando a camada é riscada e o ferro fica exposto ao ar úmido, ele demora a enferrujar enquanto houver zinco em contato com ele. Em navios, placas de zinco ou magnésio são presas ao casco de aço e precisam ser trocadas periodicamente, pois se desgastam.\n\nNote e adote: potenciais padrão de redução: Zn²⁺/Zn = −0,76 V; Fe²⁺/Fe = −0,44 V; Mg²⁺/Mg = −2,37 V.\n\nTexto elaborado para esta questão.\n\nA proteção descrita ocorre porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o zinco e o magnésio têm menor potencial de redução que o ferro e, por isso, oxidam-se no lugar dele, cedendo elétrons e funcionando como metal de sacrifício."
+      },
+      {
+        "id": "b",
+        "text": "o ferro tem menor potencial de redução e por isso se oxida antes do zinco."
+      },
+      {
+        "id": "c",
+        "text": "o zinco impede a passagem de oxigênio apenas onde não há riscos, sem efeito químico."
+      },
+      {
+        "id": "d",
+        "text": "o zinco se reduz, retirando elétrons do ferro."
+      },
+      {
+        "id": "e",
+        "text": "o magnésio torna o aço do casco mais nobre que o ouro."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Quanto menor o potencial de redução, maior a tendência de oxidar. Zn e Mg oxidam-se preferencialmente e fornecem elétrons ao ferro, que fica protegido como cátodo. Por isso as placas se desgastam e precisam ser trocadas — e o ferro riscado resiste enquanto houver zinco.\n\nPegadinhas:\n• B: o ferro tem potencial maior (−0,44 V) que o zinco (−0,76 V).\n• C: a proteção continua mesmo com risco, o que prova o efeito eletroquímico.\n• D: o zinco se oxida, cedendo elétrons.\n• E: o aço não muda de natureza; apenas deixa de ser oxidado enquanto há metal de sacrifício.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_16",
+    "chapter": "Evolução dos Modelos Atômicos",
+    "topicId": "qui_modelos_atomicos",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo início do século XX, a equipe de Ernest Rutherford bombardeou uma lâmina muito fina de ouro com partículas alfa, que têm carga positiva. A maior parte das partículas atravessou a lâmina sem sofrer desvio; uma pequena fração foi desviada; e um número muito pequeno de partículas voltou na direção de onde viera. Na época, o modelo mais aceito era o de Thomson, em que o átomo seria uma esfera positiva maciça com elétrons distribuídos nela.\n\nTexto elaborado para esta questão.\n\nOs resultados levaram Rutherford a propor que o átomo",
+    "options": [
+      {
+        "id": "a",
+        "text": "tem um núcleo muito pequeno, denso e positivo, que concentra quase toda a massa, cercado por uma região muito maior em que estão os elétrons e que é, em grande parte, espaço vazio."
+      },
+      {
+        "id": "b",
+        "text": "é uma esfera maciça e indivisível, como propunha Dalton."
+      },
+      {
+        "id": "c",
+        "text": "é uma esfera positiva com elétrons incrustados, confirmando Thomson."
+      },
+      {
+        "id": "d",
+        "text": "tem os elétrons concentrados no núcleo e as cargas positivas na periferia."
+      },
+      {
+        "id": "e",
+        "text": "não tem carga elétrica, pois as partículas alfa não foram desviadas."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Se quase todas atravessam, o átomo é principalmente espaço vazio. Os poucos desvios grandes e os retornos exigem uma região muito pequena, positiva e massiva, que repele a partícula alfa: o núcleo. No modelo de Thomson, a carga positiva espalhada não produziria retornos.\n\nPegadinhas:\n• B: um átomo maciço não deixaria a maioria das partículas passar.\n• C: o modelo de Thomson não explica os desvios grandes.\n• D: a repulsão das partículas alfa indica núcleo positivo.\n• E: houve desvios, e a repulsão indica carga positiva concentrada.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_17",
+    "chapter": "Álcoois",
+    "topicId": "qui_organica_reacoes",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nOs bafômetros químicos mais antigos usavam uma solução ácida de dicromato de potássio, de cor alaranjada. Quando o ar expirado por um motorista que ingeriu bebida alcoólica passava pela solução, o etanol reagia com o dicromato, e a solução ficava verde, cor dos íons crômio(III), Cr³⁺. A intensidade da mudança de cor permitia estimar a quantidade de álcool no ar expirado.\n\nTexto elaborado para esta questão.\n\nNessa reação,",
+    "options": [
+      {
+        "id": "a",
+        "text": "o etanol é reduzido a etano, e o crômio é oxidado."
+      },
+      {
+        "id": "b",
+        "text": "o etanol muda de cor ao reagir com o ar."
+      },
+      {
+        "id": "c",
+        "text": "não há transferência de elétrons, apenas mudança de cor do indicador."
+      },
+      {
+        "id": "d",
+        "text": "o etanol é oxidado, formando acetaldeído e depois ácido acético, enquanto o crômio do dicromato, com número de oxidação +6, é reduzido a Cr³⁺, de cor verde."
+      },
+      {
+        "id": "e",
+        "text": "o etanol é desidratado, formando eteno."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Álcoois primários oxidam-se a aldeídos e, em seguida, a ácidos carboxílicos. O oxidante, dicromato (Cr com NOx +6, alaranjado), recebe elétrons e vira Cr³⁺, verde. É uma reação de oxirredução, e a cor é do crômio, não do etanol.\n\nPegadinhas:\n• A: inverte os papéis de oxidante e redutor.\n• B: a cor vem dos compostos de crômio.\n• C: o NOx do crômio muda de +6 para +3: há transferência de elétrons.\n• E: a desidratação a eteno exige outras condições, como ácido sulfúrico concentrado a quente.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_18",
+    "chapter": "Dispersões",
+    "topicId": "qui_solucoes",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm noites de neblina, os faróis dos carros formam feixes de luz bem visíveis no ar, o que não acontece em noites secas e limpas. Fenômeno parecido se observa quando um laser atravessa um copo de leite diluído em água ou de gelatina dissolvida: o caminho da luz fica visível. Já em um copo de água com açúcar bem dissolvido, o feixe do laser atravessa o líquido sem ser visto lateralmente.\n\nTexto elaborado para esta questão.\n\nAs observações indicam que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o açúcar dissolvido absorve toda a luz do laser."
+      },
+      {
+        "id": "b",
+        "text": "a neblina, o leite diluído e a água com açúcar são soluções verdadeiras."
+      },
+      {
+        "id": "c",
+        "text": "o feixe de luz só aparece quando há poluentes no ar."
+      },
+      {
+        "id": "d",
+        "text": "a água com açúcar é um coloide, e o leite é uma solução."
+      },
+      {
+        "id": "e",
+        "text": "a neblina, o leite diluído e a gelatina são coloides, cujas partículas dispersas são grandes o suficiente para espalhar a luz (efeito Tyndall), enquanto na solução de açúcar as partículas são pequenas demais para isso."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Em coloides, as partículas dispersas, como gotículas na neblina, gotas de gordura e proteínas no leite ou macromoléculas na gelatina, têm tamanho intermediário, entre cerca de 1 e 1.000 nm, e espalham a luz. Em solução verdadeira, as moléculas de sacarose são pequenas demais.\n\nPegadinhas:\n• A: o feixe atravessa a água com açúcar, o que mostra que não é absorvido.\n• B: só a água com açúcar é solução verdadeira.\n• C: na neblina, a dispersão é de gotículas de água.\n• D: inverte as classificações.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_19",
+    "chapter": "Velocidade Vetorial",
+    "topicId": "fis_cinematica_vetorial",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm barqueiro atravessa um rio de margens retas e paralelas, com 100 m de largura. Ele mantém o barco sempre apontado perpendicularmente às margens, com velocidade de 4 m/s em relação à água. A correnteza tem velocidade constante de 3 m/s, paralela às margens. Por isso, o barco chega à outra margem em um ponto rio abaixo do ponto exatamente em frente ao de partida, e sua velocidade em relação às margens tem módulo de 5 m/s.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO tempo gasto na travessia é",
+    "options": [
+      {
+        "id": "a",
+        "text": "20 s"
+      },
+      {
+        "id": "b",
+        "text": "25 s"
+      },
+      {
+        "id": "c",
+        "text": "33 s"
+      },
+      {
+        "id": "d",
+        "text": "100 s"
+      },
+      {
+        "id": "e",
+        "text": "300 s"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Os movimentos são independentes: a correnteza desloca o barco rio abaixo, mas não altera a componente perpendicular, de 4 m/s. t = 100/4 = 25 s. Nesse tempo, ele desce 3 × 25 = 75 m, e a trajetória tem 125 m, percorridos a 5 m/s — o mesmo tempo.\n\nPegadinhas:\n• A: divide a largura pela velocidade resultante (5 m/s), mas a distância percorrida a 5 m/s é 125 m, não 100 m.\n• C: usa a velocidade da correnteza.\n• D: subtrai as velocidades (4 − 3 = 1 m/s), como se a correnteza fosse contrária ao barco.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_20",
+    "chapter": "O Movimento Circular",
+    "topicId": "fis_cinematica",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma bicicleta, a coroa, engrenagem presa aos pedais, tem 48 dentes e está ligada pela corrente a uma catraca, presa à roda traseira, de 16 dentes. A corrente não desliza, de modo que os pontos da corrente e das bordas das duas engrenagens têm a mesma velocidade linear. Um ciclista pedala com frequência constante de 1 volta por segundo.\n\nTexto elaborado para esta questão.\n\nA frequência de rotação da roda traseira é, em voltas por segundo,",
+    "options": [
+      {
+        "id": "a",
+        "text": "1/3"
+      },
+      {
+        "id": "b",
+        "text": "1"
+      },
+      {
+        "id": "c",
+        "text": "3"
+      },
+      {
+        "id": "d",
+        "text": "16"
+      },
+      {
+        "id": "e",
+        "text": "48"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A corrente transmite a mesma velocidade linear: v = 2πR·f é igual nas duas engrenagens. Como o raio é proporcional ao número de dentes, f_coroa × 48 = f_catraca × 16, e f_catraca = 3 voltas/s. Catraca e roda giram juntas.\n\nPegadinhas:\n• A: inverte a razão, como se a engrenagem menor girasse mais devagar.\n• B: supõe a mesma frequência, em vez da mesma velocidade linear.\n• D: confunde frequência com número de dentes da catraca.\n• E: confunde frequência com número de dentes da coroa.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_21",
+    "chapter": "Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações",
+    "topicId": "fis_eletromagnetismo",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1820, Hans Christian Oersted observou que a agulha de uma bússola colocada perto de um fio se desviava quando uma corrente elétrica passava por ele, e voltava à posição original quando a corrente era interrompida. Em uma montagem escolar, um fio longo e retilíneo é colocado na vertical, e bússolas são dispostas sobre uma mesa horizontal, em pontos a diferentes distâncias do fio.\n\nNote e adote: o campo de um fio retilíneo longo tem módulo B = μ₀·i/(2π·d).\n\nTexto elaborado para esta questão.\n\nCom corrente constante no fio, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o campo magnético aponta paralelo ao fio, para cima."
+      },
+      {
+        "id": "b",
+        "text": "o campo magnético é o mesmo em qualquer ponto da mesa."
+      },
+      {
+        "id": "c",
+        "text": "as linhas de campo são circunferências concêntricas ao fio, e o módulo do campo cai à metade quando a distância ao fio dobra."
+      },
+      {
+        "id": "d",
+        "text": "o campo magnético só existe enquanto a bússola está perto do fio."
+      },
+      {
+        "id": "e",
+        "text": "a corrente cria um campo elétrico que gira a agulha da bússola."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O campo de um fio reto forma circunferências em planos perpendiculares ao fio, com sentido dado pela regra da mão direita; as bússolas, na mesa horizontal, alinham-se tangentes a essas circunferências. Como B é inversamente proporcional a d, dobrar a distância reduz o campo à metade.\n\nPegadinhas:\n• A: o campo é perpendicular ao fio e à distância radial.\n• B: B diminui com a distância.\n• D: o campo existe com ou sem bússola; ela apenas o revela.\n• E: o efeito observado por Oersted é magnético.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_22",
+    "chapter": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+    "topicId": "fis_eletromagnetismo",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um experimento, as extremidades de uma bobina são ligadas a um galvanômetro, aparelho que indica a passagem de corrente. Um estudante registrou: (I) com o ímã parado dentro da bobina, o ponteiro fica no zero; (II) ao aproximar o ímã, o ponteiro se desloca para um lado; (III) ao afastá-lo, desloca-se para o lado oposto; (IV) quanto mais rápido o movimento, maior o desvio. Esse é o princípio de funcionamento dos geradores das usinas.\n\nTexto elaborado para esta questão.\n\nAs observações mostram que a corrente induzida",
+    "options": [
+      {
+        "id": "a",
+        "text": "surge sempre que um ímã está dentro de uma bobina, mesmo parado."
+      },
+      {
+        "id": "b",
+        "text": "depende da variação do fluxo magnético através da bobina: só existe enquanto o fluxo varia, inverte de sentido quando a variação se inverte e é maior quanto mais rápida for a variação."
+      },
+      {
+        "id": "c",
+        "text": "tem o mesmo sentido ao aproximar e ao afastar o ímã."
+      },
+      {
+        "id": "d",
+        "text": "independe da velocidade do movimento do ímã."
+      },
+      {
+        "id": "e",
+        "text": "é produzida pela bateria do galvanômetro."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Pela lei de Faraday, a força eletromotriz induzida é proporcional à taxa de variação do fluxo. Ímã parado: fluxo constante, sem corrente (I). Aproximar e afastar produzem variações opostas e correntes opostas, como prevê a lei de Lenz (II e III). Movimento mais rápido, variação mais rápida, corrente maior (IV).\n\nPegadinhas:\n• A: contradiz a observação I.\n• C: contradiz as observações II e III.\n• D: contradiz a observação IV.\n• E: o galvanômetro mede corrente; não a produz.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_23",
+    "chapter": "Energia Potencial e Potencial Elétrico",
+    "topicId": "fis_eletrostatica",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm antigos televisores de tubo e em aparelhos de raios X, elétrons são acelerados entre dois eletrodos submetidos a uma diferença de potencial. Considere um elétron que parte do repouso e é acelerado por uma diferença de potencial de 100 V, no vácuo. A energia que ele ganha costuma ser expressa em uma unidade própria, o elétron-volt (eV), que corresponde à energia de uma carga elementar acelerada por 1 V.\n\nNote e adote: carga elementar e = 1,6 × 10⁻¹⁹ C; o trabalho da força elétrica é W = q·U.\n\nTexto elaborado para esta questão.\n\nA energia cinética adquirida pelo elétron é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1,6 × 10⁻¹⁷ J"
+      },
+      {
+        "id": "b",
+        "text": "1,6 × 10⁻¹⁶ J"
+      },
+      {
+        "id": "c",
+        "text": "1,6 × 10⁻¹⁵ J"
+      },
+      {
+        "id": "d",
+        "text": "100 J"
+      },
+      {
+        "id": "e",
+        "text": "6,25 × 10²⁰ J"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Sem perdas, a energia cinética é igual ao trabalho da força elétrica: E = e·U = 1,6 × 10⁻¹⁹ × 100 = 1,6 × 10⁻¹⁷ J, ou 100 eV.\n\nPegadinhas:\n• B: usa diferença de potencial de 1.000 V, dez vezes maior.\n• D: confunde 100 V com 100 J, esquecendo a carga.\n• E: divide U pela carga em vez de multiplicar.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_24",
+    "chapter": "Equivalência Massa-Energia",
+    "topicId": "fis_energia",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma reação nuclear de fissão, a soma das massas dos produtos é ligeiramente menor que a soma das massas dos reagentes. Essa diferença, chamada defeito de massa, corresponde à energia liberada, segundo a relação proposta por Einstein em 1905. Considere uma situação em que o defeito de massa total, após a fissão de certa quantidade de urânio em um reator, seja de 1 grama.\n\nNote e adote: E = m·c²; velocidade da luz no vácuo c = 3 × 10⁸ m/s.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA energia correspondente a esse defeito de massa é, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "3 × 10⁵ J"
+      },
+      {
+        "id": "b",
+        "text": "9 × 10⁷ J"
+      },
+      {
+        "id": "c",
+        "text": "3 × 10⁸ J"
+      },
+      {
+        "id": "d",
+        "text": "9 × 10¹⁰ J"
+      },
+      {
+        "id": "e",
+        "text": "9 × 10¹³ J"
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. m = 1 g = 10⁻³ kg. E = 10⁻³ × (3 × 10⁸)² = 10⁻³ × 9 × 10¹⁶ = 9 × 10¹³ J — energia comparável à de dezenas de quilotons de TNT, que mostra por que quantidades pequenas de combustível nuclear liberam tanta energia.\n\nPegadinhas:\n• A: usa m·c, sem o quadrado.\n• B: usa c em km/s (3 × 10⁵) ao quadrado com m em kg.\n• C: usa m·c com m em gramas.\n• D: usa c em km/s e m em gramas.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_25",
+    "chapter": "Lentes Esféricas: Estudo Gráfico",
+    "topicId": "fis_optica_geometrica",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma lupa é uma lente convergente. Para ler as letras miúdas de uma bula, uma pessoa aproxima a lupa do papel até que as letras apareçam maiores e nítidas, na mesma orientação em que estão impressas. Se ela afasta muito a lupa do papel, a imagem das letras pode aparecer invertida. A distância focal da lupa é de 10 cm.\n\nTexto elaborado para esta questão.\n\nPara funcionar como na primeira situação, o papel deve estar",
+    "options": [
+      {
+        "id": "a",
+        "text": "além do dobro da distância focal, e a imagem é real, invertida e menor."
+      },
+      {
+        "id": "b",
+        "text": "exatamente no foco, e a imagem é real e do mesmo tamanho."
+      },
+      {
+        "id": "c",
+        "text": "entre o foco e o dobro da distância focal, e a imagem é real, invertida e maior."
+      },
+      {
+        "id": "d",
+        "text": "entre a lente e o foco, a menos de 10 cm dela, e a imagem é virtual, direita e maior que o objeto."
+      },
+      {
+        "id": "e",
+        "text": "em qualquer posição, pois a lupa sempre amplia sem inverter."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Com o objeto entre o foco e a lente, os raios refratados divergem; seus prolongamentos se encontram do mesmo lado do objeto, formando imagem virtual, direita e ampliada — o uso de lupa. Além do foco, a imagem passa a ser real e invertida, como na segunda situação.\n\nPegadinhas:\n• A: descreve a imagem de uma câmera fotográfica, invertida.\n• B: com o objeto no foco, os raios saem paralelos e a imagem vai para o infinito.\n• C: descreve um projetor, com imagem invertida.\n• E: o próprio texto mostra que, afastando a lupa, a imagem inverte.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_26",
+    "chapter": "Ondulatória: Ondas Eletromagnéticas",
+    "topicId": "fis_ondulatoria",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO espectro eletromagnético inclui ondas de rádio, micro-ondas, infravermelho, luz visível, ultravioleta, raios X e raios gama. O sinal de um celular, a luz de uma lâmpada e os raios X de um exame de imagem são, portanto, ondas da mesma natureza. Ainda assim, há limites de exposição muito mais rigorosos para raios X e gama do que para o sinal dos celulares, e profissionais de radiologia usam aventais de chumbo.\n\nTexto elaborado para esta questão.\n\nA diferença de cuidados se justifica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "os raios X são ondas mecânicas, e o sinal de celular é eletromagnético."
+      },
+      {
+        "id": "b",
+        "text": "o sinal do celular viaja mais devagar no vácuo do que os raios X."
+      },
+      {
+        "id": "c",
+        "text": "os raios X têm comprimento de onda maior e, por isso, menos energia."
+      },
+      {
+        "id": "d",
+        "text": "o sinal do celular é ionizante, e os raios X não."
+      },
+      {
+        "id": "e",
+        "text": "todas viajam no vácuo à mesma velocidade, mas os raios X têm frequência muito maior e, portanto, fótons com energia suficiente para ionizar átomos e danificar o DNA, o que não ocorre com as frequências usadas pelos celulares."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Todas as ondas eletromagnéticas se propagam no vácuo a c ≈ 3 × 10⁸ m/s. O que as distingue é a frequência (e o comprimento de onda). A energia de cada fóton é proporcional à frequência (E = h·f): raios X e gama ionizam; ondas de rádio e micro-ondas, não.\n\nPegadinhas:\n• A: todas as citadas são eletromagnéticas.\n• B: todas têm a mesma velocidade no vácuo.\n• C: os raios X têm comprimento de onda menor e mais energia.\n• D: inverte quem é ionizante.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_27",
+    "chapter": "Balística",
+    "topicId": "fis_gravitacao_circular",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDo alto de uma mesa, um estudante empurra uma bolinha, que sai da borda com velocidade horizontal, e, no mesmo instante, solta outra bolinha a partir do repouso, da mesma altura. Ele grava o experimento em câmera lenta. Despreze a resistência do ar e considere o chão plano e horizontal.\n\nTexto elaborado para esta questão.\n\nO vídeo deve mostrar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as duas bolinhas chegam ao chão ao mesmo tempo, pois o movimento vertical das duas é igual — queda livre a partir do repouso vertical —, e a velocidade horizontal não interfere nele."
+      },
+      {
+        "id": "b",
+        "text": "a bolinha empurrada chega antes, pois tem mais velocidade."
+      },
+      {
+        "id": "c",
+        "text": "a bolinha solta chega antes, pois percorre um caminho mais curto."
+      },
+      {
+        "id": "d",
+        "text": "a bolinha empurrada cai em linha reta inclinada até o chão."
+      },
+      {
+        "id": "e",
+        "text": "a bolinha empurrada chega depois, porque a velocidade horizontal a sustenta no ar."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Os movimentos horizontal e vertical são independentes. As duas começam com velocidade vertical nula e sofrem a mesma aceleração g: o tempo de queda, t = √(2h/g), é igual. A empurrada apenas avança horizontalmente enquanto cai, descrevendo uma parábola.\n\nPegadinhas:\n• B: a velocidade horizontal não acelera a queda.\n• C: o caminho maior é percorrido com velocidade maior; o tempo depende só do movimento vertical.\n• D: a trajetória é parabólica.\n• E: a velocidade horizontal não gera sustentação, sem ar.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_28",
+    "chapter": "Equações Polinomiais",
+    "topicId": "mat_complexos_polinomios",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs relações de Girard ligam as raízes de um polinômio a seus coeficientes. Para x³ + b·x² + c·x + d = 0, com raízes r₁, r₂ e r₃, valem r₁ + r₂ + r₃ = −b e r₁r₂ + r₁r₃ + r₂r₃ = c. Considere a equação\n\nx³ − 6x² + 11x − 6 = 0.\n\nUm estudante quer calcular r₁² + r₂² + r₃² sem resolver a equação, usando a identidade (r₁ + r₂ + r₃)² = r₁² + r₂² + r₃² + 2(r₁r₂ + r₁r₃ + r₂r₃).\n\nTexto elaborado para esta questão.\n\nO valor de r₁² + r₂² + r₃² é",
+    "options": [
+      {
+        "id": "a",
+        "text": "6"
+      },
+      {
+        "id": "b",
+        "text": "11"
+      },
+      {
+        "id": "c",
+        "text": "12"
+      },
+      {
+        "id": "d",
+        "text": "14"
+      },
+      {
+        "id": "e",
+        "text": "36"
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Soma = 6 e soma dos produtos dois a dois = 11. Então r₁² + r₂² + r₃² = 6² − 2 × 11 = 36 − 22 = 14. Conferindo: as raízes são 1, 2 e 3, e 1 + 4 + 9 = 14.\n\nPegadinhas:\n• A: é a soma das raízes.\n• B: é a soma dos produtos dois a dois.\n• C: subtrai só 2 × 11 de 34, ou usa 36 − 24, errando o coeficiente.\n• E: é o quadrado da soma, sem subtrair o dobro dos produtos.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_29",
+    "chapter": "Números Complexos",
+    "topicId": "mat_complexos_polinomios",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm softwares de computação gráfica, rotações de figuras planas podem ser feitas com números complexos. Cada ponto (a, b) do plano é representado pelo número z = a + b·i. Um programador observou que multiplicar z por i transforma o ponto (3, 4) no ponto (−4, 3), e que o ponto obtido continua à mesma distância da origem.\n\nTexto elaborado para esta questão.\n\nA multiplicação de um número complexo por i corresponde, no plano, a",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma reflexão em relação ao eixo real."
+      },
+      {
+        "id": "b",
+        "text": "uma translação de uma unidade no sentido do eixo imaginário."
+      },
+      {
+        "id": "c",
+        "text": "uma rotação de 90° no sentido anti-horário em torno da origem, sem alterar o módulo."
+      },
+      {
+        "id": "d",
+        "text": "uma rotação de 180°, que troca o sinal das coordenadas."
+      },
+      {
+        "id": "e",
+        "text": "uma ampliação que dobra a distância do ponto à origem."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. i·(3 + 4i) = 3i + 4i² = −4 + 3i. Como |i| = 1 e o argumento de i é 90°, multiplicar por i soma 90° ao argumento e mantém o módulo: |3 + 4i| = |−4 + 3i| = 5.\n\nPegadinhas:\n• A: a reflexão no eixo real é o conjugado, (3, −4).\n• B: somar i, e não multiplicar, levaria a (3, 5).\n• D: rotação de 180° é multiplicar por −1, dando (−3, −4).\n• E: o texto diz que a distância se mantém.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_30",
+    "chapter": "Composição de Funções",
+    "topicId": "mat_funcoes",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma loja aplicou a um produto de R$ 100,00 um desconto de 10%. Uma semana depois, aumentou o novo preço em 10%. Um cliente, que comprou o produto depois do aumento, achou que pagou exatamente o preço original. Representando o desconto pela função g(x) = 0,9x e o aumento pela função f(x) = 1,1x, o preço final é dado pela composição f(g(x)).\n\nTexto elaborado para esta questão.\n\nO preço pago pelo cliente foi",
+    "options": [
+      {
+        "id": "a",
+        "text": "R$ 90,00"
+      },
+      {
+        "id": "b",
+        "text": "R$ 99,00"
+      },
+      {
+        "id": "c",
+        "text": "R$ 100,00"
+      },
+      {
+        "id": "d",
+        "text": "R$ 101,00"
+      },
+      {
+        "id": "e",
+        "text": "R$ 110,00"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. g(100) = 90; f(90) = 99. Ou: f(g(x)) = 1,1 × 0,9 × x = 0,99x. O aumento incide sobre uma base menor, e o preço final fica 1% abaixo do original.\n\nPegadinhas:\n• A: aplica só o desconto.\n• C: é a crença do cliente de que as porcentagens se anulam.\n• D: supõe que o aumento sobre o preço menor resulta em valor maior.\n• E: aplica só o aumento.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_31",
+    "chapter": "Determinantes",
+    "topicId": "mat_sequencias_matrizes",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm geometria analítica, a área de um triângulo de vértices (x₁, y₁), (x₂, y₂) e (x₃, y₃) pode ser calculada como a metade do módulo do determinante da matriz cujas linhas são (x₁, y₁, 1), (x₂, y₂, 1) e (x₃, y₃, 1). Um terreno triangular foi representado em um mapa com vértices nos pontos A(0, 0), B(4, 0) e C(0, 3), em que cada unidade corresponde a 1 metro.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA área do terreno, em metros quadrados, é",
+    "options": [
+      {
+        "id": "a",
+        "text": "3"
+      },
+      {
+        "id": "b",
+        "text": "6"
+      },
+      {
+        "id": "c",
+        "text": "7"
+      },
+      {
+        "id": "d",
+        "text": "12"
+      },
+      {
+        "id": "e",
+        "text": "24"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O determinante vale 0·(0 − 3) − 0·(4 − 0) + 1·(4·3 − 0·0) = 12. A área é |12|/2 = 6 m². Conferindo: triângulo retângulo de catetos 4 e 3, área 4 × 3/2 = 6.\n\nPegadinhas:\n• A: divide por 4 em vez de 2.\n• C: soma as coordenadas não nulas (4 + 3).\n• D: esquece de dividir o determinante por 2.\n• E: dobra o determinante em vez de dividi-lo.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_32",
+    "chapter": "Distância entre um Ponto e uma Reta",
+    "topicId": "mat_geometria_analitica",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm farol está na origem de um sistema de coordenadas, em que cada unidade corresponde a 1 quilômetro. Um navio navega em linha reta, ao longo da reta de equação 3x + 4y − 10 = 0. A guarda costeira quer saber a menor distância entre o navio e o farol durante a viagem.\n\nNote e adote: a distância do ponto (x₀, y₀) à reta ax + by + c = 0 é |a·x₀ + b·y₀ + c| / √(a² + b²).\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA menor distância entre o navio e o farol é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,4 km"
+      },
+      {
+        "id": "b",
+        "text": "1 km"
+      },
+      {
+        "id": "c",
+        "text": "2 km"
+      },
+      {
+        "id": "d",
+        "text": "2,5 km"
+      },
+      {
+        "id": "e",
+        "text": "10 km"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. d = |3·0 + 4·0 − 10| / √(9 + 16) = 10/5 = 2 km.\n\nPegadinhas:\n• A: divide 10 por 25, sem a raiz.\n• D: divide 10 por 4, usando só o coeficiente b.\n• E: esquece de dividir por √(a² + b²).",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_33",
+    "chapter": "Sequências",
+    "topicId": "mat_sequencias_matrizes",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nCom palitos de fósforo, uma criança monta uma fileira de quadrados encostados lado a lado: a figura 1 tem um quadrado, a figura 2 tem dois quadrados, e assim por diante. Ela observa que a figura 1 usa 4 palitos, a figura 2 usa 7, e a figura 3 usa 10, pois cada novo quadrado aproveita um lado do anterior. A criança quer saber quantos palitos serão necessários para montar a figura 20.\n\nTexto elaborado para esta questão.\n\nO número de palitos da figura 20 é",
+    "options": [
+      {
+        "id": "a",
+        "text": "21"
+      },
+      {
+        "id": "b",
+        "text": "40"
+      },
+      {
+        "id": "c",
+        "text": "57"
+      },
+      {
+        "id": "d",
+        "text": "60"
+      },
+      {
+        "id": "e",
+        "text": "61"
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Os números 4, 7, 10, … formam uma PA de razão 3: aₙ = 4 + 3(n − 1) = 3n + 1. a₂₀ = 61. O primeiro quadrado usa 4 palitos, e cada um dos outros 19 acrescenta 3.\n\nPegadinhas:\n• A: soma 1 a n, sem usar a razão.\n• B: usa 2n.\n• D: usa 3n, esquecendo o palito inicial.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_34",
+    "chapter": "Desigualdades",
+    "topicId": "mat_equacoes",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma operadora oferece dois planos de telefonia. No plano A, o cliente paga uma taxa fixa mensal de R$ 30,00 mais R$ 0,50 por minuto de ligação. No plano B, não há taxa fixa, e cada minuto custa R$ 0,80. Uma cliente quer saber a partir de quantos minutos mensais de ligação o plano A passa a ser mais vantajoso, isto é, mais barato que o B.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO plano A é mais barato que o plano B quando o tempo mensal de ligação é",
+    "options": [
+      {
+        "id": "a",
+        "text": "menor que 37,5 minutos."
+      },
+      {
+        "id": "b",
+        "text": "menor que 60 minutos."
+      },
+      {
+        "id": "c",
+        "text": "exatamente 100 minutos, e nunca em outro caso."
+      },
+      {
+        "id": "d",
+        "text": "maior que 100 minutos."
+      },
+      {
+        "id": "e",
+        "text": "maior que 60 minutos."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A < B: 30 + 0,5t < 0,8t ⇒ 30 < 0,3t ⇒ t > 100. Em 100 minutos, os planos custam igual (R$ 80,00); acima disso, a tarifa menor do A compensa a taxa fixa.\n\nPegadinhas:\n• A: divide 30 por 0,8 e inverte o sentido.\n• B: divide 30 por 0,5 e inverte o sentido.\n• C: em 100 minutos os planos se igualam; A não é mais barato.\n• E: divide 30 por 0,5, ignorando a tarifa do B.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_35",
+    "chapter": "Razões entre Áreas de Figuras Planas",
+    "topicId": "mat_geometria_plana",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma gráfica precisa reduzir um cartaz retangular para fazer folhetos. Cada lado do folheto terá metade do comprimento do lado correspondente do cartaz, mantendo a mesma proporção entre largura e altura. O dono da gráfica estima que, como os lados ficam pela metade, o folheto gastará metade do papel e metade da tinta do cartaz, considerando a mesma densidade de impressão por área.\n\nTexto elaborado para esta questão.\n\nNa verdade, a área do folheto, em relação à do cartaz, será",
+    "options": [
+      {
+        "id": "a",
+        "text": "1/4"
+      },
+      {
+        "id": "b",
+        "text": "1/2"
+      },
+      {
+        "id": "c",
+        "text": "igual"
+      },
+      {
+        "id": "d",
+        "text": "o dobro"
+      },
+      {
+        "id": "e",
+        "text": "o quádruplo"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Em figuras semelhantes, a razão das áreas é o quadrado da razão de semelhança: (1/2)² = 1/4. Com lados L e A, a área vai de L·A para (L/2)·(A/2) = L·A/4.\n\nPegadinhas:\n• B: é a estimativa do dono, que usa a razão linear.\n• C: a área muda com as dimensões.\n• D: inverte o sentido da variação.\n• E: inverte a razão quadrática.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_36",
+    "chapter": "Representações Gráficas e Cartográficas",
+    "topicId": "geo_cartografia",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm grupo de estudantes planeja uma caminhada em um parque estadual usando uma carta topográfica na escala 1:50.000. No mapa, a distância em linha reta entre a portaria do parque e uma cachoeira é de 4 cm. Os estudantes sabem que a trilha real é mais longa que essa distância, pois contorna morros e vales, mas querem uma primeira estimativa.\n\nTexto elaborado para esta questão.\n\nA distância real em linha reta entre a portaria e a cachoeira é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,02 km"
+      },
+      {
+        "id": "b",
+        "text": "0,2 km"
+      },
+      {
+        "id": "c",
+        "text": "1,25 km"
+      },
+      {
+        "id": "d",
+        "text": "2 km"
+      },
+      {
+        "id": "e",
+        "text": "20 km"
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. 1 cm no mapa equivale a 50.000 cm no terreno, isto é, 500 m. 4 cm equivalem a 200.000 cm = 2.000 m = 2 km.\n\nPegadinhas:\n• B: erra a conversão por um fator de 10.\n• C: divide 50.000 por 4, em vez de multiplicar.\n• E: erra a conversão por um fator de 10 para mais.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_37",
+    "chapter": "Água na Superfície Terrestre",
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nCerca de 97,5% da água da Terra está nos oceanos e é salgada. Dos 2,5% de água doce, cerca de 69% estão em geleiras e calotas polares, cerca de 30% são água subterrânea, e menos de 1% está em rios, lagos, na umidade do solo e na atmosfera. O Brasil concentra uma parcela importante da água doce superficial do planeta e abriga parte do Aquífero Guarani, mas enfrenta crises hídricas em regiões como o Sudeste.\n\nTexto elaborado para esta questão.\n\nCom base nesses dados, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a maior parte da água doce do planeta está em rios e lagos."
+      },
+      {
+        "id": "b",
+        "text": "a água subterrânea é a menor reserva de água doce."
+      },
+      {
+        "id": "c",
+        "text": "o Brasil não enfrenta crises hídricas, pois tem muita água doce."
+      },
+      {
+        "id": "d",
+        "text": "a água salgada corresponde a cerca de 2,5% do total."
+      },
+      {
+        "id": "e",
+        "text": "a água doce de acesso mais fácil, em rios e lagos, é uma fração muito pequena do total, e a abundância nacional não impede crises, pois a distribuição da água e a demanda são desiguais entre as regiões."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Rios e lagos guardam menos de 1% dos 2,5% de água doce. No Brasil, grande parte da água superficial está na Amazônia, longe das maiores concentrações de população e indústria, no Sudeste — onde ocorrem crises, como a de 2014–2015 em São Paulo.\n\nPegadinhas:\n• A: rios e lagos guardam menos de 1% da água doce.\n• B: a subterrânea é a segunda maior reserva, cerca de 30%.\n• C: o texto cita crises no Sudeste.\n• D: 2,5% é a água doce; a salgada é 97,5%.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_38",
+    "chapter": "Relevo Brasileiro",
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO relevo brasileiro tem altitudes modestas: o ponto mais alto, o Pico da Neblina, tem cerca de 3.000 m, muito menos que os quase 7.000 m do Aconcágua, nos Andes. Grande parte do território está sobre estruturas geológicas antigas, como escudos cristalinos e bacias sedimentares, longe das bordas das placas tectônicas. Na classificação de Jurandyr Ross, o relevo é dividido em planaltos, planícies e depressões.\n\nTexto elaborado para esta questão.\n\nAs altitudes modestas do relevo brasileiro se explicam porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o Brasil está em uma borda de placas, onde as montanhas são destruídas por terremotos."
+      },
+      {
+        "id": "b",
+        "text": "o território está sobre estruturas antigas e tectonicamente estáveis, no interior da placa Sul-Americana, e passou por longos períodos de erosão, sem a formação recente de cadeias montanhosas como os Andes."
+      },
+      {
+        "id": "c",
+        "text": "a vegetação densa impede o crescimento das montanhas."
+      },
+      {
+        "id": "d",
+        "text": "o relevo brasileiro é formado apenas por planícies."
+      },
+      {
+        "id": "e",
+        "text": "as chuvas tropicais causam o afundamento das rochas cristalinas."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Os Andes são jovens e se formam na convergência entre as placas de Nazca e Sul-Americana. O Brasil está no interior da placa, sobre estruturas pré-cambrianas e bacias sedimentares, desgastadas por erosão durante centenas de milhões de anos.\n\nPegadinhas:\n• A: o Brasil está no interior da placa, não na borda.\n• C: a vegetação não determina a altitude.\n• D: o texto cita planaltos e depressões.\n• E: as chuvas favorecem a erosão, não o afundamento das rochas.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_39",
+    "chapter": "Energia Elétrica no Mundo",
+    "topicId": "geo_economica_brasil",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo mundo, a maior parte da eletricidade é gerada em usinas termelétricas, sobretudo a carvão e a gás natural. No Brasil, a matriz elétrica é predominantemente renovável, com destaque para as hidrelétricas e, nos últimos anos, para a expansão das usinas eólicas no Nordeste e da energia solar. Em anos de seca, porém, o país aciona mais termelétricas, e a conta de luz fica mais cara, com as chamadas bandeiras tarifárias.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a matriz elétrica brasileira é mais renovável que a média mundial, mas a dependência da água deixa o sistema vulnerável a secas, compensadas por termelétricas, mais caras e emissoras."
+      },
+      {
+        "id": "b",
+        "text": "o Brasil gera a maior parte de sua eletricidade em usinas a carvão."
+      },
+      {
+        "id": "c",
+        "text": "a energia eólica é concentrada na região Sul, por causa do frio."
+      },
+      {
+        "id": "d",
+        "text": "as hidrelétricas não causam impactos ambientais, pois usam fonte renovável."
+      },
+      {
+        "id": "e",
+        "text": "em anos de seca, o Brasil reduz o uso de termelétricas."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Hidrelétricas, eólicas e solares fazem a matriz elétrica brasileira muito mais renovável que a mundial. Mas, com reservatórios baixos, é preciso despachar termelétricas, mais caras e emissoras, e as bandeiras tarifárias repassam esse custo.\n\nPegadinhas:\n• B: o carvão é marginal na matriz brasileira.\n• C: o texto destaca as eólicas no Nordeste.\n• D: hidrelétricas alagam áreas, deslocam populações e alteram rios.\n• E: o texto diz que se acionam mais termelétricas na seca.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_40",
+    "chapter": "União Europeia",
+    "topicId": "geo_globalizacao_economica",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA União Europeia é um bloco econômico e político com livre circulação de mercadorias, serviços, capitais e pessoas entre os países-membros. Em 2016, o Reino Unido aprovou em referendo a saída do bloco, concretizada em 2020. Nem todos os membros usam o euro: a Dinamarca e a Suécia, por exemplo, mantêm moedas próprias. Além disso, alguns países que não fazem parte da União, como a Noruega e a Suíça, participam do espaço de livre circulação de pessoas, o Espaço Schengen.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "todos os membros da União Europeia adotam o euro."
+      },
+      {
+        "id": "b",
+        "text": "o Espaço Schengen é formado apenas por membros da União Europeia."
+      },
+      {
+        "id": "c",
+        "text": "a União Europeia, a Zona do Euro e o Espaço Schengen são arranjos que não coincidem exatamente, e a saída do Reino Unido mostrou que a integração pode ser revertida."
+      },
+      {
+        "id": "d",
+        "text": "o Reino Unido continua sendo membro pleno da União Europeia."
+      },
+      {
+        "id": "e",
+        "text": "a União Europeia é apenas uma zona de livre-comércio, sem livre circulação de pessoas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Há membros da UE fora do euro (Dinamarca, Suécia) e países de fora da UE no Schengen (Noruega, Suíça). O Brexit foi a primeira saída de um membro, prova de que a integração não é irreversível.\n\nPegadinhas:\n• A: o texto cita membros com moedas próprias.\n• B: o texto cita Noruega e Suíça no Schengen.\n• D: a saída foi concretizada em 2020.\n• E: o texto descreve a livre circulação de pessoas, um mercado comum.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_41",
+    "chapter": "África no Mundo Atual",
+    "topicId": "geo_geopolitica_regional",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa Conferência de Berlim, realizada entre 1884 e 1885, potências europeias estabeleceram regras para a ocupação do continente africano. Nos anos seguintes, muitas fronteiras foram traçadas segundo interesses coloniais, às vezes em linhas retas sobre mapas, separando povos com a mesma língua e cultura ou reunindo, em um mesmo território, grupos rivais. Após as independências, a maior parte dos novos Estados manteve essas fronteiras.\n\nTexto elaborado para esta questão.\n\nO texto ajuda a compreender que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as fronteiras africanas foram definidas pelos próprios povos africanos, segundo suas culturas."
+      },
+      {
+        "id": "b",
+        "text": "a África não foi colonizada, apenas visitada por comerciantes."
+      },
+      {
+        "id": "c",
+        "text": "muitas fronteiras atuais resultam da partilha colonial e não acompanham a distribuição dos povos, o que contribuiu para tensões e conflitos em vários países após as independências."
+      },
+      {
+        "id": "d",
+        "text": "os conflitos africanos se explicam apenas por rivalidades naturais entre os povos, sem relação com a colonização."
+      },
+      {
+        "id": "e",
+        "text": "as independências redesenharam todas as fronteiras de acordo com as etnias."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. As fronteiras coloniais refletiam a disputa europeia, não a geografia humana africana. Ao mantê-las após as independências, muitos Estados herdaram populações divididas ou rivais reunidas, um dos fatores de guerras civis e movimentos separatistas.\n\nPegadinhas:\n• A: o texto diz que foram definidas por potências europeias.\n• B: o texto descreve a ocupação do continente.\n• D: ignora o papel da partilha colonial, central no texto.\n• E: o texto diz que a maior parte das fronteiras foi mantida.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_42",
+    "chapter": "A Independência do Brasil",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1822, o Brasil se separou de Portugal, tendo como imperador o príncipe D. Pedro, herdeiro do trono português. Diferentemente da maior parte da América espanhola, onde surgiram repúblicas, o Brasil manteve a monarquia, e a unidade do território foi preservada, com repressão a movimentos que resistiram ao novo governo, como na Bahia. A escravidão continuou existindo por mais de seis décadas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a independência do Brasil",
+    "options": [
+      {
+        "id": "a",
+        "text": "instaurou uma república federativa, como nos países vizinhos."
+      },
+      {
+        "id": "b",
+        "text": "aboliu a escravidão, por pressão dos escravizados."
+      },
+      {
+        "id": "c",
+        "text": "dividiu o território em vários países, como na América espanhola."
+      },
+      {
+        "id": "d",
+        "text": "teve caráter conservador em vários aspectos: manteve a monarquia sob um príncipe português, preservou a escravidão e a unidade territorial, atendendo aos interesses das elites agrárias."
+      },
+      {
+        "id": "e",
+        "text": "foi pacífica em todo o território, sem conflitos armados."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A separação política, conduzida pelo herdeiro da Coroa, garantiu a continuidade da ordem social: grandes proprietários mantiveram a escravidão e a estrutura agrária, e a monarquia ajudou a manter a unidade do território.\n\nPegadinhas:\n• A: o Brasil manteve a monarquia.\n• B: a escravidão continuou até 1888.\n• C: o texto diz que a unidade foi preservada.\n• E: houve resistência armada, como na Bahia, até 1823.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_43",
+    "chapter": "Disputas Europeias no Brasil Colonial",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEntre 1630 e 1654, a Companhia das Índias Ocidentais, empresa holandesa, ocupou parte do Nordeste brasileiro, com centro em Pernambuco. Durante o governo de Maurício de Nassau, entre 1637 e 1644, houve concessão de crédito a senhores de engenho, relativa tolerância religiosa e obras urbanas no Recife, além da vinda de artistas e cientistas. Após a expulsão dos holandeses, a produção de açúcar nas Antilhas cresceu e passou a concorrer com o açúcar brasileiro.\n\nTexto elaborado para esta questão.\n\nA ocupação holandesa relaciona-se principalmente",
+    "options": [
+      {
+        "id": "a",
+        "text": "ao interesse na produção e no comércio do açúcar, que os holandeses já financiavam e distribuíam na Europa, e cuja técnica levaram depois para as Antilhas."
+      },
+      {
+        "id": "b",
+        "text": "à busca de ouro em Minas Gerais."
+      },
+      {
+        "id": "c",
+        "text": "à catequese dos indígenas, objetivo principal da companhia."
+      },
+      {
+        "id": "d",
+        "text": "à ocupação de todo o território da colônia portuguesa."
+      },
+      {
+        "id": "e",
+        "text": "à defesa de Portugal contra a Espanha, como aliados."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Os holandeses participavam do refino e da distribuição do açúcar brasileiro; com a União Ibérica, os negócios foram ameaçados, e a WIC ocupou a área produtora. Expulsos, levaram capital e conhecimento para as Antilhas, concorrência que contribuiu para a crise do açúcar nordestino.\n\nPegadinhas:\n• B: o ouro de Minas só foi descoberto no fim do século XVII.\n• C: a WIC era uma companhia comercial; o texto cita tolerância religiosa.\n• D: a ocupação concentrou-se no Nordeste.\n• E: os holandeses eram inimigos da Espanha, que governava Portugal durante a União Ibérica.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_44",
+    "chapter": "Vida Urbana e Renascimento Cultural",
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNas cidades italianas dos séculos XV e XVI, como Florença, ricas famílias de banqueiros e comerciantes, como os Médici, financiavam pintores, escultores e arquitetos. As obras retomavam modelos da Antiguidade greco-romana, usavam a perspectiva para representar o espaço e davam destaque ao corpo humano e à observação da natureza. Muitas delas, porém, continuavam tendo temas religiosos, como as pinturas para igrejas e capelas.\n\nTexto elaborado para esta questão.\n\nO texto permite caracterizar o Renascimento como",
+    "options": [
+      {
+        "id": "a",
+        "text": "um movimento que abandonou completamente os temas religiosos."
+      },
+      {
+        "id": "b",
+        "text": "um movimento urbano, financiado pelo mecenato, que valorizou o ser humano e a Antiguidade clássica, sem romper totalmente com a religiosidade."
+      },
+      {
+        "id": "c",
+        "text": "uma reação do campo contra o crescimento das cidades."
+      },
+      {
+        "id": "d",
+        "text": "uma arte financiada exclusivamente pela nobreza feudal."
+      },
+      {
+        "id": "e",
+        "text": "uma rejeição da Antiguidade clássica em favor da arte gótica medieval."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O enriquecimento de cidades mercantis criou o mecenato. O humanismo valorizou o ser humano, a razão e os clássicos, e a perspectiva e o estudo anatômico expressam esse interesse. Mas o antropocentrismo convivia com a fé: igrejas e o papado também foram grandes mecenas.\n\nPegadinhas:\n• A: o texto diz que temas religiosos continuavam.\n• C: o texto situa o movimento nas cidades.\n• D: o texto cita banqueiros e comerciantes.\n• E: o texto diz que se retomavam modelos greco-romanos.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_45",
+    "chapter": "Segunda Guerra Mundial (1939-1945)",
+    "topicId": "his_imperialismo_guerras",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Brasil declarou guerra à Alemanha e à Itália em 1942, após o afundamento de navios mercantes brasileiros por submarinos do Eixo. Os Estados Unidos ofereceram financiamento para a construção da Companhia Siderúrgica Nacional, em Volta Redonda, e usaram bases no Nordeste. Em 1944, a Força Expedicionária Brasileira foi enviada para lutar na Itália. Críticos da época apontavam uma contradição: o país combatia regimes autoritários na Europa enquanto vivia sob a ditadura do Estado Novo.\n\nTexto elaborado para esta questão.\n\nA participação brasileira na guerra",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi ao lado do Eixo, por afinidade ideológica com o Estado Novo."
+      },
+      {
+        "id": "b",
+        "text": "não teve consequência na política interna brasileira."
+      },
+      {
+        "id": "c",
+        "text": "foi apenas simbólica, sem envio de tropas."
+      },
+      {
+        "id": "d",
+        "text": "ocorreu antes de qualquer ataque a navios brasileiros."
+      },
+      {
+        "id": "e",
+        "text": "envolveu alinhamento com os Aliados em troca de vantagens econômicas, como a siderúrgica de Volta Redonda, e a contradição entre lutar contra o fascismo e manter uma ditadura contribuiu para o desgaste do Estado Novo."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Após oscilar entre as potências, Vargas alinhou o Brasil aos EUA, negociando financiamento para a CSN e cedendo bases. A FEB combateu na Itália. Com a vitória aliada, ficou difícil sustentar o Estado Novo, que caiu em 1945.\n\nPegadinhas:\n• A: o Brasil declarou guerra ao Eixo.\n• B: a contradição apontada contribuiu para o fim do Estado Novo.\n• C: a FEB lutou na Itália.\n• D: o texto diz que a declaração veio após os afundamentos.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_46",
+    "chapter": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+    "topicId": "his_primeira_republica_vargas",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa década de 1920, a Primeira República enfrentou revoltas de jovens oficiais do Exército, os tenentes, que criticavam as fraudes eleitorais e o domínio das oligarquias. Em 1929, a quebra da Bolsa de Nova York derrubou o preço do café, principal produto de exportação. No mesmo ano, São Paulo indicou outro paulista, Júlio Prestes, para a sucessão presidencial, rompendo o acordo com Minas Gerais. Prestes venceu as eleições de 1930, mas um movimento armado levou Getúlio Vargas ao poder.\n\nTexto elaborado para esta questão.\n\nA Revolução de 1930 resultou da combinação de",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma revolta exclusivamente operária, liderada pelo Partido Comunista."
+      },
+      {
+        "id": "b",
+        "text": "um golpe dos cafeicultores paulistas, para manter Júlio Prestes no poder."
+      },
+      {
+        "id": "c",
+        "text": "um movimento de independência do Rio Grande do Sul."
+      },
+      {
+        "id": "d",
+        "text": "uma intervenção militar estrangeira, por causa da crise de 1929."
+      },
+      {
+        "id": "e",
+        "text": "insatisfação com as fraudes e com o domínio oligárquico, expressa pelo tenentismo, crise econômica do café e ruptura entre as oligarquias de São Paulo e Minas, que se aliou ao Rio Grande do Sul e à Paraíba na Aliança Liberal."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A ruptura da política do café com leite levou Minas a apoiar o gaúcho Vargas, com o paraibano João Pessoa na vice. A crise do café enfraqueceu a oligarquia paulista, e os tenentes deram força militar ao movimento. Após a derrota eleitoral e o assassinato de João Pessoa, o movimento armado depôs Washington Luís.\n\nPegadinhas:\n• A: a revolução foi conduzida por oligarquias dissidentes e militares.\n• B: o movimento impediu a posse de Júlio Prestes.\n• C: não houve separatismo; Vargas assumiu a presidência do país.\n• D: não houve intervenção estrangeira.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_47",
+    "chapter": "República Liberal (1945-1964): Democracia em Tempos de Guerra Fria",
+    "topicId": "his_republica_liberal_atual",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO governo de Juscelino Kubitschek, entre 1956 e 1961, lançou o Plano de Metas, com o lema \"50 anos em 5\". O plano priorizou energia, transportes e indústria de base, atraiu montadoras de automóveis estrangeiras e construiu a nova capital, Brasília, inaugurada em 1960. Ao fim do governo, o país havia crescido rapidamente, mas a inflação e a dívida externa tinham aumentado.\n\nTexto elaborado para esta questão.\n\nO modelo de desenvolvimento de JK caracterizou-se por",
+    "options": [
+      {
+        "id": "a",
+        "text": "recusar o capital estrangeiro e estatizar todas as indústrias."
+      },
+      {
+        "id": "b",
+        "text": "combinar investimento do Estado em infraestrutura com abertura ao capital estrangeiro, sobretudo na indústria automobilística, acelerando o crescimento, com custos como inflação e endividamento."
+      },
+      {
+        "id": "c",
+        "text": "priorizar a agricultura de exportação, abandonando a indústria."
+      },
+      {
+        "id": "d",
+        "text": "reduzir os gastos públicos para controlar a inflação."
+      },
+      {
+        "id": "e",
+        "text": "transferir a capital para Brasília sem custos para o Estado."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O desenvolvimentismo de JK uniu Estado, que investia em energia e estradas, e capital estrangeiro, com montadoras no ABC paulista. O crescimento foi alto, mas financiado com emissão de moeda e empréstimos externos, o que gerou inflação e dívida.\n\nPegadinhas:\n• A: o plano atraiu capital estrangeiro.\n• C: a prioridade foi industrial.\n• D: os gastos públicos aumentaram.\n• E: Brasília teve custo altíssimo, que contribuiu para a inflação.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_48",
+    "chapter": "Intertextualidade e Interdiscursividade",
+    "topicId": "por_texto",
+    "subject": "Português",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia os versos iniciais de um poema do Romantismo brasileiro:\n\n\"Minha terra tem palmeiras,\nOnde canta o Sabiá;\"\nGonçalves Dias, \"Canção do Exílio\", 1843.\n\nAgora leia versos escritos para esta questão:\n\n\"Minha terra tem palmeiras\nonde o asfalto se espalhou;\no Sabiá, sem ter onde,\npara o poste se mudou.\"\n\nTexto elaborado para esta questão.\n\nA relação entre os dois textos é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "paródia: o segundo texto retoma a forma e as imagens do primeiro para produzir sentido diferente, crítico ou irônico, contrapondo a natureza idealizada à paisagem urbana."
+      },
+      {
+        "id": "b",
+        "text": "paráfrase: o segundo texto repete o sentido do primeiro com outras palavras, mantendo a exaltação da natureza."
+      },
+      {
+        "id": "c",
+        "text": "plágio: o segundo texto copia o primeiro sem modificar o conteúdo."
+      },
+      {
+        "id": "d",
+        "text": "tradução: o segundo texto transpõe o primeiro para outra língua."
+      },
+      {
+        "id": "e",
+        "text": "ausência de relação: os dois textos tratam de assuntos diferentes."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O segundo texto reproduz o primeiro verso e o ritmo da \"Canção do Exílio\", mas inverte o sentido: a terra idealizada, de natureza exuberante, aparece urbanizada, e o sabiá, símbolo nacional, perde seu lugar. A retomada com deslocamento crítico ou humorístico caracteriza a paródia.\n\nPegadinhas:\n• B: a paráfrase manteria o sentido; aqui ele é invertido.\n• C: a paródia transforma o texto de origem, de modo declarado.\n• D: os dois estão em português.\n• E: o segundo texto só faz sentido pela relação com o primeiro.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_49",
+    "chapter": "Text Comprehension: Calories and Energy",
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"A can of regular soda contains about 35 grams of added sugar and roughly 140 calories, but almost no vitamins, minerals, protein or fibre. Nutritionists often call these 'empty calories': they provide energy without the nutrients the body needs. Because liquid sugar does not make people feel as full as solid food, it is easy to consume large amounts without noticing. This does not mean that a soda now and then is dangerous; the problem is regular, high consumption.\"\n\nTexto elaborado para esta questão.\n\nAccording to the text,",
+    "options": [
+      {
+        "id": "a",
+        "text": "soda has no calories because its sugar is dissolved in liquid."
+      },
+      {
+        "id": "b",
+        "text": "\"empty calories\" means that the food provides no energy at all."
+      },
+      {
+        "id": "c",
+        "text": "drinking any amount of soda is dangerous to health."
+      },
+      {
+        "id": "d",
+        "text": "soda provides energy but few nutrients, and because it does not cause the same feeling of fullness as solid food, frequent consumption can easily lead to excess sugar intake."
+      },
+      {
+        "id": "e",
+        "text": "liquid sugar makes people feel fuller than solid food."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O texto define \"empty calories\" como energia sem nutrientes, explica que o açúcar líquido sacia pouco e ressalva que o problema é o consumo regular e alto (\"regular, high consumption\").\n\nPegadinhas:\n• A: o texto informa cerca de 140 calorias por lata.\n• B: \"empty\" refere-se à falta de nutrientes, não de energia.\n• C: o texto diz que um refrigerante ocasional não é perigoso.\n• E: inverte a afirmação sobre a saciedade.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l12_50",
+    "chapter": "Precarização e Uberização do Trabalho",
+    "topicId": "soc_trabalho_sociedade",
+    "subject": "Sociologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nMilhões de brasileiros trabalham como entregadores ou motoristas por meio de aplicativos. As empresas os chamam de parceiros ou empreendedores, e não de empregados: eles podem escolher quando se conectar, mas o preço das corridas, a distribuição dos pedidos e as punições são definidos por algoritmos da plataforma. Muitos trabalham mais de dez horas por dia, arcam com os custos do veículo e do combustível e não têm férias remuneradas nem cobertura em caso de acidente.\n\nTexto elaborado para esta questão.\n\nO fenômeno descrito, chamado por estudiosos de uberização do trabalho, caracteriza-se por",
+    "options": [
+      {
+        "id": "a",
+        "text": "relações de trabalho com todos os direitos garantidos pela CLT."
+      },
+      {
+        "id": "b",
+        "text": "autonomia completa do trabalhador, que define preços e regras do serviço."
+      },
+      {
+        "id": "c",
+        "text": "transferência de custos e riscos ao trabalhador, sob a forma de autonomia, enquanto a plataforma controla a organização do trabalho por algoritmos, sem os direitos de um vínculo empregatício."
+      },
+      {
+        "id": "d",
+        "text": "redução da jornada de trabalho, graças à tecnologia."
+      },
+      {
+        "id": "e",
+        "text": "fim da dependência do trabalhador em relação às empresas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A flexibilidade de horário convive com controle algorítmico de preços, pedidos e punições. O trabalhador assume custos (veículo, combustível) e riscos (acidentes, doença), sem férias, previdência ou proteção típicas do emprego formal — traços da precarização.\n\nPegadinhas:\n• A: o texto diz que não há férias remuneradas nem cobertura.\n• B: preços e regras são definidos pela plataforma.\n• D: o texto cita jornadas acima de dez horas.\n• E: a renda depende da plataforma, que controla o acesso aos pedidos.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   }
 ]
