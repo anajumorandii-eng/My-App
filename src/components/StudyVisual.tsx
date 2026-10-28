@@ -2,10 +2,11 @@ import { parseStudyVisual, type StudyVisual as Visual } from '../lib/studyVisual
 import { figureInk } from '../lib/figureInk';
 import { StudyMolecule } from './StudyMolecule';
 import { StudyLineChart } from './StudyLineChart';
+import { StudyGeometry } from './StudyGeometry';
 import './StudyVisual.css';
 
 const KICKER: Record<Visual['type'], string> = {
-  flow: 'Esquema', bars: 'Gráfico', line: 'Gráfico', molecule: 'Estrutura', reaction: 'Reação',
+  flow: 'Esquema', bars: 'Gráfico', line: 'Gráfico', molecule: 'Estrutura', reaction: 'Reação', geometry: 'Figura',
 };
 
 /**
@@ -50,6 +51,7 @@ export function StudyVisual({ source }: { source: string }) {
           <StudyMolecule molecule={molecule} />
         </li>)}
       </ol>
+      : visual.type === 'geometry' ? <StudyGeometry visual={visual} />
       : visual.type === 'line' ? <StudyLineChart visual={visual} />
       : visual.type === 'flow' ? <ol aria-label={visual.title} className="crivo-flow">
         {visual.steps.map((step, index) => <li key={index} className="crivo-flow__item">

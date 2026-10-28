@@ -11,7 +11,10 @@ const MAX_HTML_BYTES = 12 * 1024 * 1024;
 export async function renderStudyPdf(html: string): Promise<Uint8Array> {
   const executablePath = process.env.CHROMIUM_PATH || ['/usr/bin/chromium', '/usr/bin/google-chrome'].find(existsSync);
   if (!executablePath) throw new Error('PDF renderer unavailable');
-  const browser = await launch({ executablePath, headless: true, timeout: 15_000,
+  // 15 s não bastava para o primeiro Chrome de um runner frio do CI: a
+  // abertura estourou duas vezes seguidas antes de qualquer página, enquanto
+  // o teste seguinte, com o navegador já em cache, passava.
+  const browser = await launch({ executablePath, headless: true, timeout: 45_000,
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-background-networking'] });
   try {
     const page = await browser.newPage();

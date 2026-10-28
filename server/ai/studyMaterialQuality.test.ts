@@ -13,3 +13,7 @@ test('aprofundamentos e todos os níveis de revisão recebem o mesmo contrato pe
     }
   }
 });
+test('geometria pede a própria figura, nunca um gráfico no lugar dela', () => {
+  assert.match(STUDY_MATERIAL_QUALITY, /desenhe a própria figura com geometry/);
+  assert.match(STUDY_MATERIAL_QUALITY, /nunca troque a figura por gráfico/);
+});

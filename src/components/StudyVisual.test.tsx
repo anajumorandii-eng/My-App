@@ -50,3 +50,32 @@ it('desenha a figura na tinta do app: sem quadro branco, sem cor fixa e com seta
  expect(figure.innerHTML).not.toMatch(/#fff\b|#ffffff|background:\s*white/i);
  expect(figure.querySelector('.crivo-figure__kicker')?.textContent).toBe('Reação');
 });
+it('desenha a figura geométrica com vértices, medidas e ângulo reto, também no PDF', () => {
+ // Em Geometria o modelo só tinha curva, barra ou fluxo, e o resumo trazia
+ // um gráfico sem relação com o triângulo em vez da figura.
+ const visual={type:'geometry',title:'Triângulo 3-4-5',points:[{id:'A',x:0,y:0},{id:'B',x:4,y:0},{id:'C',x:0,y:3}],polygons:[{vertices:['A','B','C']}],segments:[{from:'A',to:'B',label:'4'},{from:'A',to:'C',label:'3'},{from:'B',to:'C',label:'5',dashed:true}],angles:[{vertex:'A',from:'B',to:'C',right:true}],caption:'Catetos 3 e 4.',question:'Qual é o seno de B?'};
+ const {container}=render(<AiTextRenderer text={'```study-visual\n'+JSON.stringify(visual)+'\n```'}/>);
+ const figure=container.querySelector('[data-study-visual="geometry"]')!;
+ expect(figure.querySelector('.crivo-figure__kicker')?.textContent).toBe('Figura');
+ expect(figure.querySelectorAll('polygon')).toHaveLength(1);
+ expect(figure.querySelector('line[stroke-dasharray]')).toBeTruthy();
+ // B–C é lado do triângulo e segmento tracejado: não pode haver traço
+ // contínuo por baixo dele, senão o tracejado some.
+ const solid=[...figure.querySelectorAll('line:not([stroke-dasharray])')].map(l=>[l.getAttribute('x1'),l.getAttribute('y1'),l.getAttribute('x2'),l.getAttribute('y2')].join());
+ const dashed=figure.querySelector('line[stroke-dasharray]')!;
+ const bc=[dashed.getAttribute('x1'),dashed.getAttribute('y1'),dashed.getAttribute('x2'),dashed.getAttribute('y2')];
+ expect(solid).not.toContain(bc.join());
+ expect(solid).not.toContain([bc[2],bc[3],bc[0],bc[1]].join());
+ expect(figure.querySelector('polygon')?.getAttribute('stroke')).toBe('none');
+ for (const text of ['A','B','C','3','4','5']) expect([...figure.querySelectorAll('svg text')].map(t=>t.textContent)).toContain(text);
+ const root=createStrategyPrintRoot(container,'Revisão');
+ expect(root.querySelector('.crivo-geometry polygon')).toBeTruthy();
+});
+it('recusa figura geométrica que cita ponto inexistente ou não desenha nada', () => {
+ const base={type:'geometry',title:'T',caption:'c',question:'q',points:[{id:'A',x:0,y:0},{id:'B',x:1,y:0}]};
+ expect(parseStudyVisual(JSON.stringify({...base,segments:[{from:'A',to:'B'}]}))).toBeDefined();
+ expect(parseStudyVisual(JSON.stringify({...base,segments:[{from:'A',to:'Z'}]}))).toBeUndefined();
+ expect(parseStudyVisual(JSON.stringify(base))).toBeUndefined();
+ expect(parseStudyVisual(JSON.stringify({...base,points:[{id:'A',x:0,y:0},{id:'A',x:1,y:0}],segments:[{from:'A',to:'A'}]}))).toBeUndefined();
+ expect(parseStudyVisual(JSON.stringify({...base,circles:[{center:'A',radius:-1}]}))).toBeUndefined();
+});
