@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "crivo_fuvest_f1_l14_01",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_vegetal",
+    "chapter": "Histologia e Morfologia Vegetal",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a árvore morre por falta de água, confundindo floema com xilema.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma antiga técnica de manejo, chamada anelamento, retira-se um anel completo da casca do tronco de uma árvore, sem atingir a madeira. Nas semanas seguintes, observa-se um inchaço da casca logo acima do corte, e as folhas continuam verdes e hidratadas por algum tempo. Meses depois, porém, as raízes deixam de crescer e a árvore morre. A casca retirada inclui o floema; a madeira, que fica intacta, é formada principalmente pelo xilema.\n\nTexto elaborado para esta questão.\n\nA morte da árvore se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o corte interrompe o xilema, e as folhas deixam imediatamente de receber água."
+      },
+      {
+        "id": "b",
+        "text": "a retirada da casca expõe as folhas ao sol forte e impede que elas façam fotossíntese."
+      },
+      {
+        "id": "c",
+        "text": "a interrupção do floema impede que os açúcares produzidos nas folhas cheguem às raízes, que, sem energia, param de funcionar e deixam de absorver água e sais."
+      },
+      {
+        "id": "d",
+        "text": "o anel libera toxinas produzidas pela casca ferida, que sobem até as folhas pela madeira."
+      },
+      {
+        "id": "e",
+        "text": "a madeira passa a conduzir seiva elaborada no lugar do floema."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O floema conduz a seiva elaborada, com açúcares, das folhas para o resto da planta. Interrompido, os açúcares se acumulam acima do corte (o inchaço) e faltam às raízes. O xilema, intacto, continua levando água por um tempo, por isso as folhas ficam verdes; mas, sem energia, as raízes morrem e a absorção cessa.\n\nPegadinhas:\n• A: o xilema fica intacto, e as folhas continuam hidratadas por algum tempo.\n• B: as folhas continuam fazendo fotossíntese.\n• D: não há liberação de toxinas.\n• E: o xilema não substitui o floema.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_02",
+    "subject": "Biologia",
+    "topicId": "bio_zoologia",
+    "chapter": "Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética",
+    "difficulty": "easy",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o segundo nome do binômio é o gênero, ou escrever o epíteto com maiúscula.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO sistema de nomenclatura binomial, proposto por Lineu no século XVIII, dá a cada espécie um nome científico formado por duas palavras em latim ou latinizadas. Assim, o ser humano é Homo sapiens, e o mosquito transmissor da dengue é Aedes aegypti. Os nomes científicos permitem que pesquisadores de países diferentes se refiram à mesma espécie sem confusão, já que nomes populares, como \"onça\" ou \"lambari\", variam de região para região.\n\nTexto elaborado para esta questão.\n\nSobre a nomenclatura binomial, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a primeira palavra indica a espécie, e a segunda, o gênero."
+      },
+      {
+        "id": "b",
+        "text": "as duas palavras devem ser escritas com inicial maiúscula."
+      },
+      {
+        "id": "c",
+        "text": "duas espécies diferentes podem ter o mesmo nome científico, desde que vivam em continentes distintos."
+      },
+      {
+        "id": "d",
+        "text": "o nome científico muda de acordo com o idioma do país em que a espécie é estudada."
+      },
+      {
+        "id": "e",
+        "text": "a primeira palavra, com inicial maiúscula, indica o gênero, e a segunda, com inicial minúscula, é o epíteto específico; juntas, designam uma única espécie, e o nome é destacado no texto, em geral em itálico."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Em Homo sapiens, Homo é o gênero e sapiens, o epíteto específico; a espécie é o binômio inteiro. A grafia segue regras: gênero com maiúscula, epíteto com minúscula, ambos destacados, em geral em itálico.\n\nPegadinhas:\n• A: inverte gênero e epíteto.\n• B: o epíteto tem inicial minúscula.\n• C: cada nome científico designa uma única espécie.\n• D: o nome científico é universal.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_03",
+    "subject": "Biologia",
+    "topicId": "bio_zoologia",
+    "chapter": "Equinodermos",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que a semelhança externa com cnidários indica parentesco próximo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEstrelas-do-mar e ouriços-do-mar são equinodermos: animais exclusivamente marinhos, com esqueleto interno de placas calcárias e um sistema de canais cheios de água, o sistema ambulacral, que movimenta os pés usados na locomoção. Embora os adultos tenham simetria radial, como as águas-vivas, suas larvas têm simetria bilateral. Estudos de desenvolvimento embrionário mostram que, como nos cordados, o blastóporo origina o ânus.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que os equinodermos",
+    "options": [
+      {
+        "id": "a",
+        "text": "são parentes próximos das águas-vivas, pois os adultos têm simetria radial."
+      },
+      {
+        "id": "b",
+        "text": "são deuterostômios, como os cordados, e por isso são considerados mais aparentados aos vertebrados do que a grupos como os moluscos e os artrópodes."
+      },
+      {
+        "id": "c",
+        "text": "têm exoesqueleto de quitina e patas articuladas, como os insetos e os crustáceos."
+      },
+      {
+        "id": "d",
+        "text": "vivem tanto em água doce quanto no mar, o que explica sua ampla distribuição."
+      },
+      {
+        "id": "e",
+        "text": "não têm esqueleto, pois o sistema ambulacral os sustenta."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Deuterostômios são animais em que o blastóporo origina o ânus, e a boca se forma depois. Esse caráter embrionário, compartilhado com os cordados, indica ancestralidade comum. A simetria radial dos adultos é secundária, já que a larva é bilateral.\n\nPegadinhas:\n• A: a semelhança é de simetria, não de parentesco; cnidários não são deuterostômios.\n• C: o esqueleto é interno e calcário.\n• D: o texto diz que são exclusivamente marinhos.\n• E: o texto cita o esqueleto de placas calcárias.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_04",
+    "subject": "Biologia",
+    "topicId": "bio_zoologia",
+    "chapter": "Introdução aos Cordados e os Peixes",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que só vertebrados são cordados, ou que a notocorda é a coluna vertebral.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO anfioxo é um pequeno animal marinho, de poucos centímetros, que vive enterrado na areia. Não tem coluna vertebral nem crânio, mas, ao longo de toda a vida, apresenta uma estrutura flexível de sustentação ao longo do dorso, a notocorda, um tubo nervoso dorsal e fendas na faringe, por onde passa a água que ele filtra para se alimentar. Esses caracteres também aparecem, pelo menos no embrião, em peixes, aves e no ser humano.\n\nTexto elaborado para esta questão.\n\nO anfioxo é classificado como",
+    "options": [
+      {
+        "id": "a",
+        "text": "cordado, pois possui notocorda, tubo nervoso dorsal e fendas faringianas, caracteres que definem o filo e aparecem, ao menos no embrião, também nos vertebrados."
+      },
+      {
+        "id": "b",
+        "text": "vertebrado, pois a notocorda é uma coluna vertebral flexível, formada por vértebras pequenas."
+      },
+      {
+        "id": "c",
+        "text": "invertebrado sem relação com os vertebrados, pois não tem crânio."
+      },
+      {
+        "id": "d",
+        "text": "molusco, pois vive enterrado na areia e filtra a água, como os mexilhões e as ostras."
+      },
+      {
+        "id": "e",
+        "text": "peixe cartilaginoso, como os tubarões, pois sua estrutura de sustentação é flexível."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O filo Chordata reúne animais que apresentam, em alguma fase, notocorda, tubo nervoso dorsal e fendas faringianas. Os vertebrados são um subgrupo, em que a notocorda é substituída pela coluna no adulto. O anfioxo é um cordado não vertebrado.\n\nPegadinhas:\n• B: notocorda não é coluna vertebral.\n• C: ele compartilha os caracteres dos cordados.\n• D: o modo de vida não define o filo.\n• E: tubarões têm crânio e vértebras.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_05",
+    "subject": "Biologia",
+    "topicId": "bio_zoologia",
+    "chapter": "Moluscos",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o mexilhão produz a toxina, ou que cozinhar destrói qualquer contaminante.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nMexilhões, ostras e mariscos são moluscos bivalves que se alimentam filtrando a água: um único mexilhão pode filtrar vários litros de água por hora, retendo partículas e microrganismos. Por isso, autoridades sanitárias proíbem temporariamente a coleta desses animais em áreas com esgoto, metais pesados ou florações de algas tóxicas, mesmo quando os moluscos parecem saudáveis. Muitas dessas toxinas resistem ao cozimento.\n\nTexto elaborado para esta questão.\n\nA proibição se justifica porque os bivalves",
+    "options": [
+      {
+        "id": "a",
+        "text": "produzem toxinas próprias quando a água está poluída, como forma de defesa contra predadores."
+      },
+      {
+        "id": "b",
+        "text": "transmitem doenças apenas quando estão mortos, e por isso os vivos podem ser consumidos."
+      },
+      {
+        "id": "c",
+        "text": "ficam imunes aos poluentes, que passam a não oferecer risco a quem os consome."
+      },
+      {
+        "id": "d",
+        "text": "acumulam em seus tecidos substâncias e microrganismos retidos na filtração, em concentrações que podem ser maiores que as da água, o que torna seu consumo perigoso."
+      },
+      {
+        "id": "e",
+        "text": "eliminam totalmente os contaminantes da água, tornando-se seguros para consumo."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Filtrando grandes volumes, os bivalves concentram o que está na água — bioacumulação. Podem parecer saudáveis e ainda assim carregar bactérias, vírus, metais ou toxinas de algas, muitas resistentes ao calor.\n\nPegadinhas:\n• A: as toxinas vêm das algas ou da poluição, não do molusco.\n• B: o risco existe nos animais vivos e coletados.\n• C: o problema é justamente o acúmulo do contaminante.\n• E: o que é retido fica nos tecidos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_06",
+    "subject": "Biologia",
+    "topicId": "bio_zoologia",
+    "chapter": "Arquitetura Corporal dos Animais e o Filo dos Platelmintos e dos Nematódeos",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que a esquistossomose é transmitida pela ingestão de água ou pela picada de insetos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA esquistossomose, causada pelo verme Schistosoma mansoni, é comum em regiões sem saneamento básico. Os ovos do verme saem com as fezes de pessoas infectadas e, na água doce, originam larvas que penetram em caramujos do gênero Biomphalaria. Dos caramujos saem outras larvas, as cercárias, que nadam e penetram ativamente pela pele de pessoas que entram na água, por exemplo para tomar banho, pescar ou lavar roupas.\n\nTexto elaborado para esta questão.\n\nCom base no ciclo descrito, a medida mais eficaz para interromper a transmissão é",
+    "options": [
+      {
+        "id": "a",
+        "text": "a implantação de saneamento básico, que impede que fezes contaminadas cheguem à água, somada ao tratamento dos doentes e ao controle dos caramujos."
+      },
+      {
+        "id": "b",
+        "text": "o uso de repelentes contra mosquitos, que picam as pessoas e injetam as larvas do verme."
+      },
+      {
+        "id": "c",
+        "text": "ferver a água antes de bebê-la, pois a infecção ocorre pela ingestão."
+      },
+      {
+        "id": "d",
+        "text": "eliminar os cães e gatos da região, que são os hospedeiros definitivos do verme."
+      },
+      {
+        "id": "e",
+        "text": "cozinhar bem a carne de porco, pois a larva do verme se aloja nos músculos do animal."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O ciclo depende de fezes humanas chegarem à água com caramujos. Saneamento interrompe esse elo; tratar os doentes reduz os ovos eliminados; controlar os caramujos remove o hospedeiro intermediário. Evitar contato com água contaminada protege contra a penetração das cercárias.\n\nPegadinhas:\n• B: não há inseto no ciclo.\n• C: a infecção é pela pele, não pela ingestão.\n• D: cães e gatos não participam do ciclo descrito.\n• E: carne de porco mal cozida está ligada à teníase.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_07",
+    "subject": "Biologia",
+    "topicId": "bio_ecologia",
+    "chapter": "Poluição: Aquecimento Global, POPs e Biorremediação",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o poluente se dilui ao longo da cadeia, ou que afeta mais os produtores.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNas décadas de 1950 e 1960, o inseticida DDT foi usado em larga escala. Pesquisadores observaram, anos depois, que aves de rapina, como águias e falcões, punham ovos de casca muito fina, que se quebravam durante a incubação, e suas populações diminuíram muito. Análises mostraram concentrações de DDT muito maiores nos tecidos dessas aves do que na água, no plâncton e nos peixes da mesma região. O DDT é solúvel em gorduras e pouco degradável.\n\nTexto elaborado para esta questão.\n\nAs observações se explicam porque o DDT",
+    "options": [
+      {
+        "id": "a",
+        "text": "se decompõe rapidamente nos organismos, sem acumular, e por isso não causa efeitos duradouros."
+      },
+      {
+        "id": "b",
+        "text": "afeta apenas os insetos, que são o alvo do inseticida, sem alcançar os outros animais."
+      },
+      {
+        "id": "c",
+        "text": "se dilui a cada nível da cadeia alimentar, ficando menos concentrado nos predadores."
+      },
+      {
+        "id": "d",
+        "text": "se acumula nos tecidos gordurosos e é pouco eliminado, de modo que sua concentração aumenta a cada nível trófico, chegando aos valores mais altos nos predadores do topo."
+      },
+      {
+        "id": "e",
+        "text": "é absorvido apenas pelas plantas, que não são consumidas pelas aves."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Cada predador consome muitas presas ao longo da vida, e o DDT, lipossolúvel e persistente, fica retido. A concentração cresce ao longo da cadeia — magnificação trófica. Nas aves de rapina, no topo, o DDT e seus derivados interferiram na deposição de cálcio na casca dos ovos.\n\nPegadinhas:\n• A: o texto o descreve como pouco degradável.\n• B: as aves, que não eram o alvo, foram afetadas.\n• C: inverte o efeito: a concentração aumenta.\n• E: o texto mostra DDT no plâncton, nos peixes e nas aves.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_08",
+    "subject": "Biologia",
+    "topicId": "bio_microbiologia",
+    "chapter": "Vírus",
+    "difficulty": "easy",
+    "skill": "analise_conceitual",
+    "trap": "Achar que antibióticos combatem vírus.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm consultas por gripe e resfriado, é comum que pacientes peçam antibióticos ao médico. Profissionais de saúde explicam que esses medicamentos atuam sobre estruturas e processos de bactérias, como a parede celular e os ribossomos bacterianos. Os vírus não têm metabolismo próprio: só se reproduzem dentro de células vivas, usando os ribossomos e a energia da célula hospedeira.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o antibiótico não é indicado para tratar uma gripe porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "os vírus são bactérias muito pequenas, resistentes a qualquer antibiótico."
+      },
+      {
+        "id": "b",
+        "text": "a gripe é causada por um fungo, contra o qual são necessários medicamentos antifúngicos."
+      },
+      {
+        "id": "c",
+        "text": "os antibióticos só funcionam quando injetados, e na gripe costumam ser tomados em comprimidos."
+      },
+      {
+        "id": "d",
+        "text": "os vírus têm parede celular mais grossa que a das bactérias."
+      },
+      {
+        "id": "e",
+        "text": "os vírus não têm as estruturas bacterianas que os antibióticos atingem, pois são parasitas intracelulares obrigatórios que usam a maquinaria da célula hospedeira."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Sem parede celular, ribossomos ou metabolismo próprios, o vírus não oferece os alvos do antibiótico. Usá-lo à toa não ajuda contra a gripe e favorece a seleção de bactérias resistentes. Contra alguns vírus, existem antivirais específicos e vacinas.\n\nPegadinhas:\n• A: vírus não são bactérias.\n• B: a gripe é causada pelo vírus influenza.\n• C: a via de administração não é o problema.\n• D: vírus não têm parede celular.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_09",
+    "subject": "Biologia",
+    "topicId": "bio_biotecnologia",
+    "chapter": "Biotecnologia",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a bactéria fabrica insulina naturalmente, ou que o gene inserido é bacteriano.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAté a década de 1980, a insulina usada por pessoas com diabetes era extraída do pâncreas de bois e porcos, e algumas pacientes desenvolviam reações alérgicas. Hoje, a maior parte da insulina é produzida por bactérias ou leveduras modificadas: o gene humano da insulina é inserido em um plasmídeo, que é introduzido nos microrganismos. Cultivados em grandes tanques, eles produzem a proteína, que é purificada.\n\nTexto elaborado para esta questão.\n\nA técnica descrita é possível porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "as bactérias produzem insulina naturalmente, sem modificação."
+      },
+      {
+        "id": "b",
+        "text": "o gene da insulina é retirado do DNA da bactéria e inserido nas células humanas."
+      },
+      {
+        "id": "c",
+        "text": "o código genético é praticamente universal, e o microrganismo transcreve e traduz o gene humano inserido, produzindo a mesma sequência de aminoácidos da insulina humana."
+      },
+      {
+        "id": "d",
+        "text": "a insulina é um carboidrato fácil de sintetizar em laboratório."
+      },
+      {
+        "id": "e",
+        "text": "os plasmídeos são vírus que destroem as bactérias e liberam a insulina."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Com o mesmo código genético, as trincas do gene humano são lidas pelos ribossomos do microrganismo, que produz a proteína humana, sem os problemas de alergia da insulina animal. Plasmídeos são pequenos DNAs circulares usados como vetores.\n\nPegadinhas:\n• A: a produção depende do gene humano inserido.\n• B: inverte a direção da transferência.\n• D: a insulina é uma proteína.\n• E: plasmídeos são moléculas de DNA bacteriano, não vírus.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_10",
+    "subject": "Química",
+    "topicId": "qui_equilibrio",
+    "chapter": "Equilíbrios Iônicos II",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o tampão impede qualquer variação de pH, ou que o CO₂ não interfere na acidez do sangue.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO pH do sangue humano é mantido entre 7,35 e 7,45, em grande parte pelo sistema formado pelo ácido carbônico e pelo íon bicarbonato:\n\nCO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻\n\nQuando uma pessoa hiperventila, respirando muito rápido, por exemplo em uma crise de ansiedade, elimina CO₂ em excesso pelos pulmões. Em situações de insuficiência respiratória, ao contrário, o CO₂ se acumula no sangue.\n\nTexto elaborado para esta questão.\n\nCom base no equilíbrio, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a hiperventilação aumenta a concentração de H⁺ e diminui o pH do sangue."
+      },
+      {
+        "id": "b",
+        "text": "a hiperventilação desloca o equilíbrio para a esquerda, consumindo H⁺ e elevando o pH (alcalose), enquanto o acúmulo de CO₂ desloca o equilíbrio para a direita e diminui o pH (acidose)."
+      },
+      {
+        "id": "c",
+        "text": "o sistema tampão impede qualquer alteração de pH, independentemente da respiração."
+      },
+      {
+        "id": "d",
+        "text": "o acúmulo de CO₂ eleva o pH do sangue, pois o gás carbônico reage com os íons H⁺."
+      },
+      {
+        "id": "e",
+        "text": "o CO₂ não participa do equilíbrio ácido-base do sangue."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Retirar CO₂ desloca o equilíbrio no sentido de repô-lo: H⁺ e HCO₃⁻ se combinam, [H⁺] cai e o pH sobe. Acumular CO₂ produz mais H₂CO₃ e H⁺, e o pH cai. O tampão atenua as variações, mas tem limite.\n\nPegadinhas:\n• A: inverte o efeito da hiperventilação.\n• C: o tampão reduz as variações, sem anulá-las.\n• D: o acúmulo de CO₂ diminui o pH.\n• E: o CO₂ está no próprio equilíbrio.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_11",
+    "subject": "Química",
+    "topicId": "qui_inorganica",
+    "chapter": "Química Inorgânica",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a cal corrige o solo por ser ácida, ou confundir óxido básico com ácido.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA cal virgem, óxido de cálcio (CaO), é obtida pelo aquecimento do calcário. Ao ser misturada com água, reage liberando muito calor e forma a cal hidratada, hidróxido de cálcio, Ca(OH)₂, usada na construção civil e na agricultura. Em solos ácidos, comuns no Brasil, a aplicação de compostos de cálcio eleva o pH, o que melhora a disponibilidade de nutrientes para as plantas.\n\nTexto elaborado para esta questão.\n\nO óxido de cálcio é classificado como",
+    "options": [
+      {
+        "id": "a",
+        "text": "óxido ácido, pois reage com água formando um ácido que corrói o solo e as construções."
+      },
+      {
+        "id": "b",
+        "text": "óxido neutro, pois não reage com água e apenas se mistura a ela, sem liberar calor."
+      },
+      {
+        "id": "c",
+        "text": "sal, pois é formado pela união de um metal com um ametal, como o cloreto de sódio."
+      },
+      {
+        "id": "d",
+        "text": "óxido básico, pois reage com água formando uma base, o Ca(OH)₂, capaz de neutralizar a acidez do solo."
+      },
+      {
+        "id": "e",
+        "text": "hidrocarboneto, pois é extraído de rochas sedimentares, como o petróleo e o gás natural."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Óxidos de metais alcalinos e alcalino-terrosos são básicos: CaO + H₂O → Ca(OH)₂. A base neutraliza os íons H⁺ do solo, elevando o pH.\n\nPegadinhas:\n• A: óxidos ácidos, como CO₂ e SO₃, formam ácidos com a água.\n• B: o texto descreve a reação com água.\n• C: CaO é um óxido, não um sal.\n• E: não há carbono e hidrogênio formando cadeia.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_12",
+    "subject": "Química",
+    "topicId": "qui_gases",
+    "chapter": "Estudo dos Gases II",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Usar a porcentagem do gás como se fosse a pressão parcial, sem multiplicar pela pressão total.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nMergulhadores recreativos usam cilindros de ar comprimido, com cerca de 21% de oxigênio em quantidade de matéria. À medida que descem, a pressão do ar que respiram aumenta para se igualar à da água ao redor. Pressões parciais de oxigênio muito altas, acima de cerca de 1,4 atm, podem causar intoxicação por oxigênio, com convulsões. Considere um mergulhador a uma profundidade em que a pressão total do ar respirado é 5 atm.\n\nNote e adote: lei de Dalton: pressão parcial = fração em quantidade de matéria × pressão total.\n\nTexto elaborado para esta questão.\n\nA pressão parcial de oxigênio no ar respirado nessa profundidade é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,21 atm, pois a pressão parcial do oxigênio não depende da profundidade."
+      },
+      {
+        "id": "b",
+        "text": "1,05 atm, pois corresponde a 21% da pressão total de 5 atm."
+      },
+      {
+        "id": "c",
+        "text": "4,2 atm, pois o oxigênio responde por 21 vezes a pressão de 0,2 atm."
+      },
+      {
+        "id": "d",
+        "text": "5 atm, pois todos os gases da mistura estão à pressão total."
+      },
+      {
+        "id": "e",
+        "text": "21 atm, pois a porcentagem de oxigênio se converte diretamente em pressão."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. p(O₂) = 0,21 × 5 = 1,05 atm, abaixo do limite de 1,4 atm. Com o aumento da pressão total, a pressão parcial cresce na mesma proporção, o que limita a profundidade segura com ar comum.\n\nPegadinhas:\n• A: a pressão parcial cresce com a pressão total.\n• C: a operação não tem base na lei de Dalton.\n• D: cada gás contribui com uma parte da pressão total.\n• E: a porcentagem é uma fração, não uma pressão.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_13",
+    "subject": "Química",
+    "topicId": "qui_equilibrio",
+    "chapter": "Equilíbrios Químicos I",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que no equilíbrio a reação para, ou que as concentrações de reagentes e produtos são iguais.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma garrafa de refrigerante fechada, parte do gás carbônico está dissolvida no líquido e parte ocupa o espaço acima dele. Mesmo que nada pareça mudar com a garrafa fechada e à temperatura constante, moléculas de CO₂ continuam passando do líquido para o gás e do gás para o líquido. Ao abrir a garrafa, a pressão do gás cai, e forma-se grande quantidade de bolhas.\n\nTexto elaborado para esta questão.\n\nNa garrafa fechada, em equilíbrio, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "os processos de saída e entrada de CO₂ no líquido continuam ocorrendo com a mesma velocidade, de modo que as quantidades em cada fase permanecem constantes; trata-se de um equilíbrio dinâmico."
+      },
+      {
+        "id": "b",
+        "text": "não há mais passagem de moléculas entre o líquido e o gás."
+      },
+      {
+        "id": "c",
+        "text": "a quantidade de CO₂ dissolvido é necessariamente igual à quantidade de CO₂ no gás."
+      },
+      {
+        "id": "d",
+        "text": "o equilíbrio só existe enquanto a garrafa é agitada, pois o movimento mistura as fases."
+      },
+      {
+        "id": "e",
+        "text": "a abertura da garrafa aumenta a pressão do gás e dissolve mais CO₂."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Equilíbrio é dinâmico: os dois processos opostos continuam, com velocidades iguais, e as quantidades não variam. Ao abrir, a pressão do CO₂ gasoso cai, o equilíbrio se desloca para a saída do gás e surgem as bolhas.\n\nPegadinhas:\n• B: o texto diz que a passagem continua.\n• C: constantes não significa iguais.\n• D: o equilíbrio se mantém com a garrafa parada.\n• E: abrir reduz a pressão e faz o gás sair.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_14",
+    "subject": "Química",
+    "topicId": "qui_termoquimica",
+    "chapter": "Termoquímica I",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Comparar o preço por litro sem considerar que o etanol libera menos energia por litro.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPostos de combustível e aplicativos costumam recomendar abastecer com etanol quando seu preço for até cerca de 70% do da gasolina. A regra decorre da energia liberada na combustão: considere que 1 L de gasolina libera cerca de 32 MJ e 1 L de etanol, cerca de 21 MJ, e que o motor aproveita as duas energias com a mesma eficiência. Um motorista quer saber quantos litros de etanol fornecem a mesma energia que 1 L de gasolina.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO volume de etanol que fornece a mesma energia que 1 L de gasolina é, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,66 L, pois o etanol libera mais energia por litro que a gasolina."
+      },
+      {
+        "id": "b",
+        "text": "1,0 L, pois os dois combustíveis liberam a mesma energia por litro."
+      },
+      {
+        "id": "c",
+        "text": "1,2 L, pois a diferença de energia corresponde a 20% do volume."
+      },
+      {
+        "id": "d",
+        "text": "1,3 L, pois a diferença entre as energias, 11 MJ, corresponde a 30% do volume."
+      },
+      {
+        "id": "e",
+        "text": "1,5 L, pois são necessários 32/21 litros de etanol para liberar os 32 MJ de 1 L de gasolina."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. V = 32/21 ≈ 1,5 L. Por isso o etanol só compensa se o litro custar até cerca de 21/32 ≈ 66% a 70% do preço da gasolina.\n\nPegadinhas:\n• A: inverte a razão.\n• B: ignora a diferença de energia.\n• D: soma ao volume a diferença relativa, sem fazer a divisão.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_15",
+    "subject": "Química",
+    "topicId": "qui_modelos_atomicos",
+    "chapter": "Organização da Tabela Periódica dos Elementos",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que a eletronegatividade cresce para baixo no grupo, ou que os gases nobres são os mais eletronegativos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA eletronegatividade mede a tendência de um átomo atrair os elétrons de uma ligação química. Na tabela periódica, ela tende a aumentar da esquerda para a direita em um período e de baixo para cima em um grupo, desconsiderando os gases nobres, que raramente formam ligações. Na molécula de fluoreto de hidrogênio, HF, os elétrons da ligação ficam mais próximos do flúor, que adquire carga parcial negativa.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o elemento mais eletronegativo da tabela periódica é",
+    "options": [
+      {
+        "id": "a",
+        "text": "o césio, pois está no canto inferior esquerdo da tabela."
+      },
+      {
+        "id": "b",
+        "text": "o hidrogênio, pois atrai os elétrons na molécula de HF."
+      },
+      {
+        "id": "c",
+        "text": "o flúor, pois está no alto e à direita da tabela, excluídos os gases nobres, o que explica a carga parcial negativa que adquire no HF."
+      },
+      {
+        "id": "d",
+        "text": "o hélio, pois é o gás nobre de menor raio e, por isso, atrai mais os elétrons das ligações."
+      },
+      {
+        "id": "e",
+        "text": "o ferro, pois é o metal mais abundante no núcleo terrestre e forma muitos compostos."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Pelas tendências descritas, o máximo fica no canto superior direito, excluídos os gases nobres: o flúor, com raio pequeno e carga nuclear efetiva alta. No HF, ele atrai o par de elétrons, e a ligação é polar.\n\nPegadinhas:\n• A: o césio está entre os menos eletronegativos.\n• B: no HF é o flúor que atrai os elétrons.\n• D: o texto exclui os gases nobres.\n• E: abundância não tem relação com eletronegatividade.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_16",
+    "subject": "Química",
+    "topicId": "qui_oxirreducao",
+    "chapter": "Processos de Oxirredução",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que misturar produtos de limpeza aumenta a eficiência sem risco.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA água sanitária contém hipoclorito de sódio, NaClO, que remove manchas e elimina microrganismos por ser um forte agente oxidante. Os rótulos alertam que o produto não deve ser misturado com outros, como limpadores ácidos ou produtos com amoníaco. Em meio ácido, por exemplo, o hipoclorito reage com íons cloreto e libera gás cloro, Cl₂, que é tóxico e irrita os olhos e as vias respiratórias.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o hipoclorito atua como redutor, perdendo elétrons para as manchas."
+      },
+      {
+        "id": "b",
+        "text": "misturar água sanitária com produtos ácidos aumenta a limpeza sem riscos."
+      },
+      {
+        "id": "c",
+        "text": "o gás cloro é inofensivo, pois é usado no tratamento de água."
+      },
+      {
+        "id": "d",
+        "text": "a água sanitária não reage com nenhuma outra substância."
+      },
+      {
+        "id": "e",
+        "text": "o hipoclorito oxida as substâncias responsáveis pelas manchas e os microrganismos, e, em meio ácido, sua reação com cloreto forma gás cloro, cuja toxicidade justifica o alerta dos rótulos."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. No ClO⁻, o cloro tem NOx +1 e tende a receber elétrons, oxidando corantes e componentes celulares. Em meio ácido, ClO⁻ + Cl⁻ + 2 H⁺ → Cl₂ + H₂O, liberando um gás tóxico.\n\nPegadinhas:\n• A: o hipoclorito é oxidante: recebe elétrons.\n• B: o texto descreve a formação de gás tóxico.\n• C: no tratamento de água, o cloro é usado em doses controladas; o gás inalado é tóxico.\n• D: o texto descreve reações com ácidos e amoníaco.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_17",
+    "subject": "Química",
+    "topicId": "qui_modelos_atomicos",
+    "chapter": "Evolução dos Modelos Atômicos",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que a cor vem da temperatura da chama, igual para todos os elementos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs cores dos fogos de artifício dependem dos sais adicionados à pólvora: compostos de estrôncio produzem vermelho; de bário, verde; de sódio, amarelo; e de cobre, azul. No laboratório, o mesmo fenômeno é observado no teste de chama, em que uma amostra de sal levada à chama de um bico de gás produz uma cor característica do elemento metálico presente, permitindo identificá-lo.\n\nTexto elaborado para esta questão.\n\nO modelo atômico de Bohr explica as cores observadas porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "os átomos queimam e se transformam em outros elementos."
+      },
+      {
+        "id": "b",
+        "text": "a cor depende apenas da temperatura da chama, igual para todos os sais."
+      },
+      {
+        "id": "c",
+        "text": "os elétrons, excitados pelo calor, passam a níveis de energia mais altos e, ao retornarem a níveis mais baixos, emitem luz com energias definidas, que dependem dos níveis de cada elemento e correspondem a cores específicas."
+      },
+      {
+        "id": "d",
+        "text": "o núcleo do átomo emite luz ao ser aquecido, e cada núcleo emite uma cor diferente."
+      },
+      {
+        "id": "e",
+        "text": "os elétrons escapam do átomo e se transformam em luz, que se espalha com a cor da chama."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. No modelo de Bohr, os elétrons ocupam níveis de energia quantizados. A energia absorvida promove um salto para nível mais alto; o retorno libera um fóton com energia igual à diferença entre os níveis. Cada elemento tem níveis próprios, por isso cores próprias.\n\nPegadinhas:\n• A: não há transmutação; a reação é química e física, não nuclear.\n• B: sais diferentes, na mesma chama, dão cores diferentes.\n• D: a emissão vem dos elétrons, não do núcleo.\n• E: os elétrons emitem luz ao mudar de nível, sem se transformar nela.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_18",
+    "subject": "Química",
+    "topicId": "qui_inorganica",
+    "chapter": "Equações Iônicas e outras Teorias para Ácidos e Bases",
+    "difficulty": "hard",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que só substâncias com OH⁻ podem ser bases.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nSegundo Arrhenius, bases são substâncias que, em água, liberam íons OH⁻ provenientes de sua própria fórmula, como o NaOH. A amônia, NH₃, não tem o grupo OH em sua fórmula, mas sua solução aquosa é básica e muda a cor de indicadores como a fenolftaleína. A teoria de Brønsted-Lowry, proposta em 1923, define ácido como espécie que doa próton (H⁺) e base como espécie que recebe próton.\n\nReação: NH₃ + H₂O ⇌ NH₄⁺ + OH⁻\n\nTexto elaborado para esta questão.\n\nNa reação, segundo Brønsted-Lowry,",
+    "options": [
+      {
+        "id": "a",
+        "text": "a amônia é ácido, pois forma o íon amônio, que tem carga positiva, como o íon H⁺."
+      },
+      {
+        "id": "b",
+        "text": "a água é base, pois recebe um próton da amônia e se transforma no íon hidróxido."
+      },
+      {
+        "id": "c",
+        "text": "a amônia não é ácido nem base, pois não tem OH em sua fórmula."
+      },
+      {
+        "id": "d",
+        "text": "a amônia é base, pois recebe um próton da água, e a água atua como ácido; o OH⁻ formado explica o caráter básico da solução."
+      },
+      {
+        "id": "e",
+        "text": "nenhuma das espécies transfere prótons, pois a amônia apenas se dissolve na água."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O NH₃ recebe H⁺ da água e vira NH₄⁺; a água doa H⁺ e vira OH⁻. A amônia é base de Brønsted-Lowry, mesmo sem OH na fórmula, e a água age como ácido — mostrando que ela pode atuar como ácido ou base.\n\nPegadinhas:\n• A: a amônia recebe o próton, não o doa.\n• B: a água doa o próton.\n• C: a definição de Brønsted-Lowry não exige OH na fórmula.\n• E: há transferência de H⁺ da água para a amônia.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_19",
+    "subject": "Física",
+    "topicId": "fis_calorimetria",
+    "chapter": "Calor Sensível e Calor Latente",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Somar o calor latente de vaporização quando a pergunta é só até a fervura.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara preparar um café, uma pessoa aquece 1 kg de água, inicialmente a 20 °C, até a água começar a ferver, a 100 °C, ao nível do mar. Ela se pergunta quanta energia precisaria a mais se deixasse toda a água evaporar. Considere desprezíveis as perdas de calor para o ambiente e o calor absorvido pela chaleira.\n\nNote e adote: calor específico da água = 1 cal/(g·°C); calor latente de vaporização da água = 540 cal/g.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO calor necessário para levar a água de 20 °C até o início da fervura é",
+    "options": [
+      {
+        "id": "a",
+        "text": "20 kcal, pois o calor depende apenas da temperatura inicial da água."
+      },
+      {
+        "id": "b",
+        "text": "80 kcal, pois Q = m·c·ΔT = 1.000 g × 1 cal/(g·°C) × 80 °C."
+      },
+      {
+        "id": "c",
+        "text": "100 kcal, pois o calor depende da temperatura final da água."
+      },
+      {
+        "id": "d",
+        "text": "540 kcal, pois é o calor necessário para vaporizar toda a água."
+      },
+      {
+        "id": "e",
+        "text": "620 kcal, pois inclui o aquecimento e a vaporização completa da água."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Q = 1.000 × 1 × (100 − 20) = 80.000 cal = 80 kcal. Para evaporar toda a água, seriam necessárias mais 540 kcal — quase sete vezes mais, o que mostra quanto o calor latente é grande.\n\nPegadinhas:\n• A: usa a temperatura inicial no lugar da variação.\n• C: usa a temperatura final no lugar da variação.\n• D: é só o calor de vaporização.\n• E: soma a vaporização, que não foi pedida.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_20",
+    "subject": "Física",
+    "topicId": "fis_calorimetria",
+    "chapter": "Dilatação ou Contração Térmica dos Sólidos e Líquidos",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Esquecer de converter metros em milímetros, ou usar a temperatura final em vez da variação.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nTrilhos de ferrovia antigos eram instalados com pequenos espaços entre suas barras, as juntas de dilatação, para evitar que o aço se deformasse nos dias quentes. Considere uma barra de trilho de aço com 10 m de comprimento, instalada a 10 °C, em uma região onde a temperatura do trilho pode chegar a 50 °C no verão, sob sol forte.\n\nNote e adote: coeficiente de dilatação linear do aço α = 1,2 × 10⁻⁵ °C⁻¹; ΔL = L₀·α·ΔT.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO aumento de comprimento da barra entre as duas temperaturas é",
+    "options": [
+      {
+        "id": "a",
+        "text": "4,8 mm, pois ΔL = 10 m × 1,2 × 10⁻⁵ °C⁻¹ × 40 °C = 4,8 × 10⁻³ m."
+      },
+      {
+        "id": "b",
+        "text": "12 mm, pois a dilatação depende só da temperatura de instalação, 10 °C."
+      },
+      {
+        "id": "c",
+        "text": "48 mm, pois o resultado em metros deve ser multiplicado por 10⁴ para obter milímetros."
+      },
+      {
+        "id": "d",
+        "text": "0,48 m, pois o coeficiente deve ser multiplicado por 10³."
+      },
+      {
+        "id": "e",
+        "text": "4,8 m, pois a barra dilata metade do seu comprimento em 40 °C."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. ΔT = 40 °C. ΔL = 10 × 1,2 × 10⁻⁵ × 40 = 4,8 × 10⁻³ m = 4,8 mm. Parece pouco, mas sem folga a barra impedida de dilatar sofre grandes tensões.\n\nPegadinhas:\n• B: usa a temperatura de instalação no lugar da variação.\n• C: erra a conversão por um fator de 10.\n• D: erra a ordem de grandeza do coeficiente.\n• E: resultado absurdo para um sólido.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_21",
+    "subject": "Física",
+    "topicId": "fis_calorimetria",
+    "chapter": "Temperatura, Calor e seus Mecanismos de Transferência",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o vácuo impede a radiação, ou que o espelhamento impede a condução.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma garrafa térmica tem paredes duplas de vidro, com vácuo entre elas, e as faces internas das paredes são espelhadas. A tampa é feita de plástico ou cortiça e mantém a garrafa fechada. Com isso, um café quente se conserva aquecido por muitas horas, e uma bebida gelada também se mantém fria por bastante tempo.\n\nTexto elaborado para esta questão.\n\nCada elemento da garrafa reduz um mecanismo de transferência de calor:",
+    "options": [
+      {
+        "id": "a",
+        "text": "o vácuo reduz a radiação; o espelhamento reduz a condução; a tampa reduz a convecção."
+      },
+      {
+        "id": "b",
+        "text": "o vácuo reduz a condução e a convecção, que precisam de um meio material; o espelhamento reflete a radiação térmica; a tampa impede trocas por convecção com o ar exterior e é feita de material mau condutor."
+      },
+      {
+        "id": "c",
+        "text": "o vácuo aumenta a condução de calor para dentro da garrafa."
+      },
+      {
+        "id": "d",
+        "text": "o espelhamento produz calor por reflexão da luz, mantendo o café quente por mais tempo."
+      },
+      {
+        "id": "e",
+        "text": "a tampa serve apenas para impedir que o líquido derrame."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Condução e convecção dependem de matéria; o vácuo as reduz. A radiação atravessa o vácuo, e por isso as paredes são espelhadas, para refleti-la. A tampa isolante evita a saída do ar quente e a condução pela boca.\n\nPegadinhas:\n• A: inverte os papéis do vácuo e do espelhamento.\n• C: o vácuo reduz a condução.\n• D: o espelhamento não produz calor.\n• E: a tampa também isola termicamente.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_22",
+    "subject": "Física",
+    "topicId": "fis_estatica",
+    "chapter": "Hidrostática: Densidade e Pressão",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Esquecer a pressão atmosférica na superfície, ou supor 1 atm por metro.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nMergulhadores aprendem que, na água do mar, a pressão aumenta cerca de 1 atm a cada 10 m de profundidade, por causa do peso da coluna de água acima deles. Por isso, as orelhas doem na descida, e é preciso equalizar a pressão. Na superfície, a pressão é de 1 atm, devida à atmosfera. Um mergulhador desce até 20 m de profundidade.\n\nNote e adote: pressão total = pressão atmosférica + pressão da coluna de água.\n\nTexto elaborado para esta questão.\n\nA pressão total sobre o mergulhador nessa profundidade é, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "3 atm, pois à pressão atmosférica de 1 atm somam-se 2 atm da coluna de 20 m de água."
+      },
+      {
+        "id": "b",
+        "text": "4 atm, pois a pressão dobra a cada 10 m de profundidade."
+      },
+      {
+        "id": "c",
+        "text": "20 atm, pois a pressão aumenta 1 atm a cada metro de profundidade."
+      },
+      {
+        "id": "d",
+        "text": "21 atm, pois somam-se 1 atm da atmosfera e 1 atm por metro de água."
+      },
+      {
+        "id": "e",
+        "text": "200 atm, pois a pressão é proporcional ao quadrado da profundidade."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A coluna de 20 m acrescenta 2 atm; somada à atmosfera, dá 3 atm. A pressão cresce linearmente com a profundidade: p = p₀ + d·g·h.\n\nPegadinhas:\n• B: a pressão cresce linearmente, não dobra.\n• C: usa 1 atm por metro e esquece a atmosfera.\n• D: usa 1 atm por metro.\n• E: não há dependência quadrática.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_23",
+    "subject": "Física",
+    "topicId": "fis_estatica",
+    "chapter": "Estática",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a força necessária não depende da distância ao eixo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara soltar o parafuso de uma roda de carro muito apertado, um motorista não consegue girar a chave de roda segurando-a perto do parafuso. Um mecânico sugere encaixar um cano na extremidade do cabo, aumentando o comprimento da chave, e empurrar na ponta do cano. Com isso, o motorista consegue soltar o parafuso aplicando uma força menor do que antes.\n\nNote e adote: o momento (torque) de uma força em relação a um eixo é M = F·d, em que d é a distância entre o eixo e a linha de ação da força.\n\nTexto elaborado para esta questão.\n\nA sugestão do mecânico funciona porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o cano diminui o atrito entre o parafuso e a roda, o que facilita girar a chave."
+      },
+      {
+        "id": "b",
+        "text": "o comprimento da chave não influencia o efeito de rotação."
+      },
+      {
+        "id": "c",
+        "text": "o cano aumenta a massa da chave, e o peso maior faz a chave girar o parafuso sozinha."
+      },
+      {
+        "id": "d",
+        "text": "a força aplicada na ponta do cano é transmitida inteira ao parafuso, sem relação com a distância."
+      },
+      {
+        "id": "e",
+        "text": "ao aumentar a distância entre o ponto de aplicação da força e o eixo de rotação, obtém-se o mesmo momento necessário para girar o parafuso com uma força menor."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O que solta o parafuso é o momento, M = F·d. Dobrando d, basta metade da força para o mesmo momento — o princípio da alavanca.\n\nPegadinhas:\n• A: o cano não altera o atrito do parafuso.\n• B: o momento depende diretamente da distância.\n• C: a massa do cano é irrelevante.\n• D: o efeito de rotação depende da distância.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_24",
+    "subject": "Física",
+    "topicId": "fis_fisica_moderna",
+    "chapter": "Noções Básicas de Física Quântica",
+    "difficulty": "hard",
+    "skill": "analise_evidencias",
+    "trap": "Achar que luz mais intensa sempre arranca elétrons, como previa a física clássica.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo efeito fotoelétrico, luz incidindo sobre uma placa metálica pode arrancar elétrons dela. Em um experimento com certo metal, observou-se que a luz vermelha, mesmo muito intensa, não arrancava nenhum elétron; já a luz ultravioleta, mesmo fraca, arrancava elétrons imediatamente. Aumentar a intensidade da luz ultravioleta aumentava o número de elétrons emitidos, mas não a energia máxima de cada um.\n\nNote e adote: energia de um fóton: E = h·f.\n\nTexto elaborado para esta questão.\n\nAs observações são explicadas pela proposta de Einstein, de 1905, segundo a qual",
+    "options": [
+      {
+        "id": "a",
+        "text": "a luz é uma onda contínua, e sua energia depende só da intensidade."
+      },
+      {
+        "id": "b",
+        "text": "a luz vermelha tem frequência maior que a ultravioleta."
+      },
+      {
+        "id": "c",
+        "text": "os elétrons só são arrancados por luz de alta intensidade, qualquer que seja a cor."
+      },
+      {
+        "id": "d",
+        "text": "a luz é formada por fótons cuja energia depende da frequência: cada elétron é arrancado por um único fóton, que precisa ter energia acima de um mínimo característico do metal; a intensidade altera apenas o número de fótons."
+      },
+      {
+        "id": "e",
+        "text": "o metal emite elétrons apenas quando aquecido pela luz."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Fótons de luz vermelha, de baixa frequência, não têm energia suficiente, por mais numerosos que sejam. Fótons ultravioleta superam o limiar e arrancam elétrons imediatamente; mais intensidade significa mais fótons e mais elétrons, mas a energia de cada um continua a mesma.\n\nPegadinhas:\n• A: é a previsão clássica, contrariada pelo experimento.\n• B: a ultravioleta tem frequência maior.\n• C: contradiz a observação com a luz vermelha.\n• E: a emissão é imediata e depende da frequência, não do aquecimento.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_25",
+    "subject": "Física",
+    "topicId": "fis_ondas_fundamentos",
+    "chapter": "Equação Fundamental da Ondulatória",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Errar a potência de 10 do mega-hertz.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma emissora de rádio FM transmite na frequência de 100 MHz. As ondas de rádio são ondas eletromagnéticas e, no ar, propagam-se praticamente com a velocidade da luz no vácuo. Um estudante quer estimar o comprimento de onda dessa transmissão para entender por que as antenas de rádio FM costumam ter da ordem de um metro de comprimento.\n\nNote e adote: v = λ·f; c = 3 × 10⁸ m/s; 1 MHz = 10⁶ Hz.\n\nTexto elaborado para esta questão.\n\nO comprimento de onda da transmissão é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,3 m, pois 1 MHz corresponde a 10⁹ Hz, e a frequência da emissora é 10¹¹ Hz."
+      },
+      {
+        "id": "b",
+        "text": "1 m, pois o comprimento de onda é igual ao tamanho da antena."
+      },
+      {
+        "id": "c",
+        "text": "3 m, pois a frequência é 10⁸ Hz, e λ = (3 × 10⁸ m/s)/(10⁸ Hz) = 3 m."
+      },
+      {
+        "id": "d",
+        "text": "30 m, pois 1 MHz corresponde a 10⁵ Hz, e a frequência da emissora é 10⁷ Hz."
+      },
+      {
+        "id": "e",
+        "text": "300 m, pois 1 MHz corresponde a 10⁴ Hz, e a frequência da emissora é 10⁶ Hz."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. f = 100 × 10⁶ = 10⁸ Hz; λ = 3 × 10⁸ / 10⁸ = 3 m. Antenas eficientes costumam ter frações do comprimento de onda, como meia onda ou um quarto de onda, da ordem de um metro.\n\nPegadinhas:\n• A: erra a conversão do prefixo mega.\n• B: confunde a antena com o comprimento de onda.\n• D: erra a conversão por um fator de 10.\n• E: erra a conversão por um fator de 100.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_26",
+    "subject": "Física",
+    "topicId": "fis_ondas_fundamentos",
+    "chapter": "Conceitos Básicos",
+    "difficulty": "easy",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a onda transporta matéria junto com a energia.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm estádios de futebol, torcedores às vezes fazem a \"ola\": cada pessoa se levanta e se senta no seu lugar, logo depois do vizinho, e uma perturbação percorre as arquibancadas, dando a volta no estádio. Fenômeno parecido ocorre quando uma pedra cai em um lago: pequenas folhas boiando sobem e descem, mas praticamente não se deslocam na direção em que as ondas se espalham.\n\nTexto elaborado para esta questão.\n\nOs dois exemplos ilustram que uma onda",
+    "options": [
+      {
+        "id": "a",
+        "text": "transporta as pessoas e as folhas de um lugar para outro."
+      },
+      {
+        "id": "b",
+        "text": "só se propaga se o meio se deslocar junto com ela, na direção em que ela avança."
+      },
+      {
+        "id": "c",
+        "text": "é formada por matéria que viaja em alta velocidade, levando partículas de um ponto a outro."
+      },
+      {
+        "id": "d",
+        "text": "transporta energia de um ponto a outro do meio sem transportar matéria: cada parte do meio oscila em torno de sua posição."
+      },
+      {
+        "id": "e",
+        "text": "só existe no vácuo, pois a presença de matéria impede que a perturbação se propague."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Na ola, cada torcedor fica no seu lugar; a perturbação é que se propaga. No lago, as folhas oscilam e quase não avançam. A onda transfere energia e quantidade de movimento, não o material do meio.\n\nPegadinhas:\n• A: pessoas e folhas permanecem em suas posições médias.\n• B: o meio oscila, sem se deslocar com a onda.\n• C: a onda é uma perturbação, não matéria em movimento.\n• E: ondas mecânicas, como as do lago, precisam de meio material.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_27",
+    "subject": "Física",
+    "topicId": "fis_cinematica_vetorial",
+    "chapter": "Aceleração Vetorial",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que velocidade de módulo constante significa aceleração nula.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma pista de testes circular, um carro percorre a curva com o velocímetro marcando sempre 60 km/h. O piloto sente o corpo pressionado contra a porta do lado de fora da curva. Um estudante afirma que, como o velocímetro não varia, o carro não tem aceleração e, portanto, a resultante das forças sobre ele é nula.\n\nTexto elaborado para esta questão.\n\nA afirmação do estudante está",
+    "options": [
+      {
+        "id": "a",
+        "text": "correta, pois aceleração só existe quando o módulo da velocidade varia."
+      },
+      {
+        "id": "b",
+        "text": "correta, pois o carro está em movimento uniforme, com velocidade de módulo constante."
+      },
+      {
+        "id": "c",
+        "text": "incorreta, pois a direção da velocidade muda continuamente na curva, o que exige uma aceleração centrípeta, voltada para o centro, e uma resultante não nula nesse sentido."
+      },
+      {
+        "id": "d",
+        "text": "incorreta, pois o carro tem aceleração tangencial que aumenta a velocidade."
+      },
+      {
+        "id": "e",
+        "text": "incorreta, pois a aceleração aponta para fora da curva, empurrando o piloto."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A velocidade é um vetor; mudar sua direção é acelerar. Na curva, a aceleração centrípeta, a_c = v²/R, aponta para o centro, produzida pelo atrito dos pneus. O piloto, por inércia, tende a seguir em linha reta e é pressionado contra a porta, que o empurra para dentro.\n\nPegadinhas:\n• A: ignora a variação de direção.\n• B: o movimento é uniforme no módulo, mas não retilíneo.\n• D: o módulo da velocidade é constante, logo não há aceleração tangencial.\n• E: a aceleração aponta para o centro; a sensação de ser jogado para fora é inércia.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_28",
+    "subject": "Matemática",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "chapter": "Porcentagem",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Achar que um desconto de mesma porcentagem desfaz o aumento.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDurante um período de alta, o preço de um produto subiu 25%. Algumas semanas depois, a loja anunciou que voltaria a vender o produto exatamente pelo preço de antes do aumento. Um funcionário sugeriu aplicar um desconto de 25% sobre o preço atual, mas o gerente disse que esse desconto deixaria o preço abaixo do original e pediu o desconto correto.\n\nTexto elaborado para esta questão.\n\nO desconto que faz o preço voltar ao valor original é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "20%, pois o preço atual é 1,25 vez o original, e 1/1,25 = 0,8."
+      },
+      {
+        "id": "b",
+        "text": "25%, pois desconto e aumento de mesma porcentagem se anulam."
+      },
+      {
+        "id": "c",
+        "text": "30%, pois é preciso descontar o aumento e uma margem de 5%."
+      },
+      {
+        "id": "d",
+        "text": "33%, pois o desconto deve ser um terço do preço atual para anular o aumento."
+      },
+      {
+        "id": "e",
+        "text": "50%, pois o desconto deve ser o dobro do aumento para compensar a base maior."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Com preço original P, o atual é 1,25P. Para voltar a P, multiplica-se por 1/1,25 = 0,8, um desconto de 20%. Um desconto de 25% levaria a 1,25 × 0,75 = 0,9375P.\n\nPegadinhas:\n• B: o desconto incide sobre uma base maior.\n• C: a margem extra não tem justificativa.\n• D: um terço levaria a 0,83P.\n• E: levaria o preço a 0,625P.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_29",
+    "subject": "Matemática",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "chapter": "Razão e Proporção",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Dividir pela quantidade de componentes em vez de somar as partes da razão.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm traço de concreto muito usado em obras pequenas é 1 : 2 : 3, isto é, para cada parte de cimento, misturam-se duas partes de areia e três de brita, em massa. Um pedreiro precisa preparar 600 kg dessa mistura seca para concretar uma laje pequena e quer saber quanto cimento comprar. Considere desprezível a massa da água e de aditivos.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA massa de cimento necessária é",
+    "options": [
+      {
+        "id": "a",
+        "text": "50 kg, pois o cimento corresponde a 1/12 da mistura, somando-se o dobro das partes."
+      },
+      {
+        "id": "b",
+        "text": "100 kg, pois o cimento é 1 das 6 partes da mistura, e 600/6 = 100."
+      },
+      {
+        "id": "c",
+        "text": "150 kg, pois o cimento corresponde a 1/4 da mistura, que tem quatro partes ao todo."
+      },
+      {
+        "id": "d",
+        "text": "200 kg, pois são três componentes, e cada um corresponde a um terço da mistura."
+      },
+      {
+        "id": "e",
+        "text": "300 kg, pois o cimento corresponde à metade da mistura."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. 1 + 2 + 3 = 6 partes; cada parte vale 600/6 = 100 kg. Cimento 100 kg, areia 200 kg, brita 300 kg.\n\nPegadinhas:\n• A: divide por 12 sem base na razão.\n• C: usa 4 partes no lugar de 6.\n• D: divide igualmente entre os três componentes.\n• E: é a massa de brita, não de cimento, dobrada ao ser lida como metade.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_30",
+    "subject": "Matemática",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "chapter": "Potências e Radicais",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Errar a soma dos expoentes ao multiplicar potências de 10.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA estrela mais próxima do Sol, Proxima Centauri, está a cerca de 4,2 anos-luz da Terra. Um ano-luz é a distância que a luz percorre no vácuo em um ano, aproximadamente 9,5 × 10¹² km. Um estudante quer expressar a distância até Proxima Centauri em quilômetros, em notação científica, com um algarismo significativo, para comparar com a distância da Terra ao Sol, de cerca de 1,5 × 10⁸ km.\n\nTexto elaborado para esta questão.\n\nA distância até Proxima Centauri é, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "4 × 10⁹ km, pois os expoentes de 10 devem ser subtraídos."
+      },
+      {
+        "id": "b",
+        "text": "4 × 10¹⁰ km, pois o produto em quilômetros deve ser dividido por 100 para obter a ordem."
+      },
+      {
+        "id": "c",
+        "text": "4 × 10¹¹ km, pois o resultado deve ser dividido por 100, como na conversão de anos em meses."
+      },
+      {
+        "id": "d",
+        "text": "4 × 10¹² km, pois a multiplicação por 4,2 não altera a ordem de grandeza."
+      },
+      {
+        "id": "e",
+        "text": "4 × 10¹³ km, pois 4,2 × 9,5 × 10¹² ≈ 40 × 10¹² = 4 × 10¹³."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. 4,2 × 9,5 ≈ 40; 40 × 10¹² = 4 × 10¹³ km, cerca de 270 mil vezes a distância Terra–Sol.\n\nPegadinhas:\n• A: subtrai expoentes sem justificativa.\n• B: divide sem razão para isso.\n• D: esquece que 40 = 4 × 10, o que soma 1 ao expoente.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_31",
+    "subject": "Matemática",
+    "topicId": "mat_funcoes",
+    "chapter": "Transformações em Gráficos de Funções",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que f(x − 2) desloca o gráfico para a esquerda.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um programa de gráficos, uma estudante desenhou a parábola de f(x) = x², com vértice na origem. Em seguida, desenhou g(x) = (x − 2)² + 3 e observou que a nova parábola tinha a mesma abertura, mas estava em outra posição do plano. Ela quer descrever com precisão a transformação que leva o gráfico de f ao de g, para aplicar a mesma ideia a outras funções.\n\nTexto elaborado para esta questão.\n\nO gráfico de g é obtido do gráfico de f por",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma translação de 2 unidades para a direita e de 3 unidades para cima, e o vértice passa a ser o ponto (2, 3)."
+      },
+      {
+        "id": "b",
+        "text": "uma translação de 2 unidades para a esquerda e de 3 unidades para cima, e o vértice passa a ser (−2, 3)."
+      },
+      {
+        "id": "c",
+        "text": "uma translação de 2 unidades para a direita e de 3 unidades para baixo, e o vértice passa a ser (2, −3)."
+      },
+      {
+        "id": "d",
+        "text": "uma reflexão em relação ao eixo x, seguida de uma translação para cima."
+      },
+      {
+        "id": "e",
+        "text": "uma ampliação que torna a parábola três vezes mais aberta."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Trocar x por x − 2 desloca o gráfico 2 unidades para a direita (o valor que era assumido em x = 0 passa a ser assumido em x = 2); somar 3 desloca 3 unidades para cima. O vértice vai de (0, 0) para (2, 3).\n\nPegadinhas:\n• B: inverte o sentido do deslocamento horizontal.\n• C: inverte o sentido do deslocamento vertical.\n• D: não há sinal negativo multiplicando a função.\n• E: o coeficiente de x² continua 1, e a abertura é a mesma.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_32",
+    "subject": "Matemática",
+    "topicId": "mat_funcoes",
+    "chapter": "Estudo do Sinal de Funções",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Confundir o intervalo entre as raízes com o exterior dele, ou tomar o vértice pela resposta.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma pequena fábrica estima que seu lucro mensal, em milhares de reais, ao produzir x centenas de peças, é dado por\n\nL(x) = −x² + 10x − 16.\n\nPara quantidades muito pequenas, os custos fixos não são cobertos; para quantidades muito grandes, os custos de produção aumentam mais que a receita. A direção quer saber para quais quantidades de produção a empresa tem lucro positivo.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA empresa tem lucro positivo quando produz",
+    "options": [
+      {
+        "id": "a",
+        "text": "menos de 2 centenas de peças, pois a parábola é positiva antes da menor raiz."
+      },
+      {
+        "id": "b",
+        "text": "mais de 8 centenas de peças, pois a parábola é positiva depois da maior raiz."
+      },
+      {
+        "id": "c",
+        "text": "exatamente 5 centenas de peças, pois só no vértice o lucro é positivo."
+      },
+      {
+        "id": "d",
+        "text": "menos de 2 ou mais de 8 centenas de peças, fora do intervalo entre as raízes."
+      },
+      {
+        "id": "e",
+        "text": "entre 2 e 8 centenas de peças, pois a parábola tem concavidade para baixo e é positiva entre as raízes."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. As raízes de −x² + 10x − 16 = 0 são x = 2 e x = 8 (soma 10, produto 16). Com coeficiente de x² negativo, a parábola é positiva entre as raízes: 2 < x < 8. O lucro máximo ocorre no vértice, x = 5, com L = 9 mil reais.\n\nPegadinhas:\n• A: antes da menor raiz, o lucro é negativo.\n• B: depois da maior raiz, o lucro é negativo.\n• C: o vértice é o máximo, mas há lucro em todo o intervalo.\n• D: seria a resposta para concavidade para cima.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_33",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_analitica",
+    "chapter": "Introdução ao Estudo Analítico das Cônicas",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o Sol está no centro da elipse, ou que as órbitas são circunferências perfeitas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nSegundo a primeira lei de Kepler, os planetas descrevem órbitas elípticas, com o Sol em um dos focos. A órbita da Terra é muito próxima de uma circunferência, com excentricidade de cerca de 0,017; a de Mercúrio é mais alongada, com cerca de 0,21; e a de cometas como o Halley chega a cerca de 0,97. A excentricidade de uma elipse é a razão entre a distância do centro a um foco e o semieixo maior.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o Sol está no centro de todas as órbitas elípticas, à mesma distância das duas extremidades."
+      },
+      {
+        "id": "b",
+        "text": "quanto maior a excentricidade, mais a órbita se aproxima de uma circunferência."
+      },
+      {
+        "id": "c",
+        "text": "a excentricidade de uma elipse pode ser maior que 1 quando a órbita é muito alongada."
+      },
+      {
+        "id": "d",
+        "text": "a órbita do Halley é muito alongada, com o Sol bem mais próximo de uma extremidade do eixo maior, enquanto a da Terra, de excentricidade próxima de zero, é quase circular."
+      },
+      {
+        "id": "e",
+        "text": "a órbita da Terra é mais alongada que a de Mercúrio, pois a Terra está mais longe do Sol."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Na elipse, 0 ≤ e < 1. Com e próximo de 0, os focos quase coincidem com o centro e a curva se aproxima de uma circunferência (Terra). Com e próximo de 1, a elipse é alongada, e o foco fica perto de uma das extremidades do eixo maior (Halley).\n\nPegadinhas:\n• A: o Sol ocupa um dos focos.\n• B: inverte a relação.\n• C: excentricidade maior ou igual a 1 corresponde a parábola ou hipérbole.\n• E: 0,017 < 0,21.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_34",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_analitica",
+    "chapter": "Posições Relativas entre uma Reta e uma Circunferência",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Comparar a distância com o diâmetro, ou concluir tangência só porque a reta é horizontal.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm aplicativo de mapas representa a área de cobertura de uma antena de celular por um círculo de raio 5 km, centrado na origem de um sistema de coordenadas, com unidades em quilômetros. Uma estrada retilínea é representada pela reta de equação y = 3. A empresa quer saber se a estrada atravessa a área de cobertura, apenas a tangencia ou passa fora dela.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA reta e a circunferência são",
+    "options": [
+      {
+        "id": "a",
+        "text": "exteriores, pois a distância do centro à reta é maior que o raio."
+      },
+      {
+        "id": "b",
+        "text": "tangentes, pois a reta é horizontal e toca a circunferência em um só ponto."
+      },
+      {
+        "id": "c",
+        "text": "secantes, pois a distância do centro à reta, 3 km, é menor que o raio, 5 km, e a estrada cruza a circunferência nos pontos (−4, 3) e (4, 3)."
+      },
+      {
+        "id": "d",
+        "text": "coincidentes, pois a reta passa pelo centro da circunferência."
+      },
+      {
+        "id": "e",
+        "text": "tangentes, pois a distância do centro à reta, 3 km, é menor que o diâmetro, 10 km."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A distância da origem à reta y = 3 é 3 < 5: secante. Substituindo y = 3 em x² + y² = 25, x² = 16, x = ±4, e a estrada percorre 8 km dentro da cobertura.\n\nPegadinhas:\n• A: 3 é menor que 5.\n• B: ser horizontal não implica tangência.\n• D: a reta y = 3 não passa por (0, 0).\n• E: compara com o diâmetro, e tangência exigiria distância igual ao raio.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_35",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_plana",
+    "chapter": "O Ponto Médio e o Baricentro de um Triângulo",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o baricentro divide a mediana ao meio, ou que é o centro da circunferência circunscrita.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma oficina de artesanato, uma placa fina e homogênea de madeira em forma de triângulo deve ser pendurada por um único fio, de modo que fique equilibrada na horizontal. A artesã traça as três medianas do triângulo, segmentos que ligam cada vértice ao ponto médio do lado oposto, e observa que elas se cruzam em um único ponto, o baricentro.\n\nTexto elaborado para esta questão.\n\nSobre o baricentro, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "divide cada mediana em duas partes iguais, pois é o ponto médio de cada uma delas."
+      },
+      {
+        "id": "b",
+        "text": "é o centro de massa da placa homogênea e divide cada mediana na razão 2 : 1, com a parte maior do lado do vértice."
+      },
+      {
+        "id": "c",
+        "text": "é sempre o centro da circunferência que passa pelos três vértices."
+      },
+      {
+        "id": "d",
+        "text": "fica fora do triângulo quando o triângulo é obtusângulo."
+      },
+      {
+        "id": "e",
+        "text": "coincide com o ponto médio do maior lado, onde o triângulo concentra a maior parte da massa."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Em placa homogênea, o centro de massa coincide com o baricentro, por isso o ponto de suspensão funciona. A distância do vértice ao baricentro é 2/3 da mediana, e do baricentro ao lado, 1/3.\n\nPegadinhas:\n• A: a razão é 2 : 1, não 1 : 1.\n• C: o centro da circunscrita é o circuncentro.\n• D: o baricentro é sempre interior; o circuncentro e o ortocentro é que podem ficar fora.\n• E: o ponto médio do lado é a extremidade de uma mediana.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_36",
+    "subject": "Geografia",
+    "topicId": "geo_fisica_brasil",
+    "chapter": "Biogeografia do Brasil II",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que o Cerrado é vegetação pobre sem importância hídrica, ou que suas árvores são tortas por falta de chuva.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Cerrado ocupa o Brasil central, com estações chuvosa e seca bem marcadas. Suas árvores têm troncos tortuosos e casca grossa, que protegem contra o fogo, frequente na estação seca, e muitas plantas têm raízes muito profundas, que alcançam a água do subsolo. O bioma abriga nascentes de rios de grandes bacias hidrográficas, como a do São Francisco e a do Paraná. Desde a década de 1970, grande parte de sua área foi convertida em lavouras de soja e pastagens.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que o Cerrado",
+    "options": [
+      {
+        "id": "a",
+        "text": "é um bioma sem importância para os recursos hídricos, pois tem estação seca."
+      },
+      {
+        "id": "b",
+        "text": "tem vegetação adaptada ao frio intenso, como o Pampa, com campos de gramíneas baixas."
+      },
+      {
+        "id": "c",
+        "text": "tem plantas adaptadas ao fogo e à seca sazonal, cumpre papel importante na formação de rios de várias bacias e vem sendo intensamente convertido pela expansão agropecuária."
+      },
+      {
+        "id": "d",
+        "text": "é uma floresta densa e perene, como a Amazônia, com chuvas regulares durante todo o ano."
+      },
+      {
+        "id": "e",
+        "text": "permanece quase intocado, pois seus solos impedem a agricultura."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Casca grossa e raízes profundas são adaptações ao fogo e à seca. As raízes e o solo permeável favorecem a recarga de aquíferos, e daí o apelido de \"berço das águas\". Com calagem e tecnologia, os solos ácidos foram ocupados pela soja.\n\nPegadinhas:\n• A: o texto destaca as nascentes de grandes bacias.\n• B: o clima é tropical, com estação seca.\n• D: é uma savana, não floresta densa.\n• E: o texto descreve a conversão em lavouras.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_37",
+    "subject": "Geografia",
+    "topicId": "geo_fisica_brasil",
+    "chapter": "Políticas Ambientais Brasileiras",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir Área de Preservação Permanente com Reserva Legal.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Código Florestal brasileiro, em vigor desde 2012, estabelece dois instrumentos de proteção em propriedades rurais. As Áreas de Preservação Permanente, como margens de rios, topos de morros e encostas íngremes, devem ser mantidas com vegetação por sua função na proteção da água e do solo. A Reserva Legal é uma porcentagem da propriedade que deve manter vegetação nativa, com uso sustentável permitido; na Amazônia Legal, em áreas de floresta, essa porcentagem é de 80%.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a Reserva Legal corresponde apenas às margens de rios, e o restante da propriedade é livre."
+      },
+      {
+        "id": "b",
+        "text": "as APPs protegem áreas sensíveis, como margens de rios e encostas, enquanto a Reserva Legal exige que uma parcela da propriedade mantenha vegetação nativa, maior em áreas de floresta da Amazônia."
+      },
+      {
+        "id": "c",
+        "text": "o Código Florestal proíbe qualquer uso econômico das propriedades rurais."
+      },
+      {
+        "id": "d",
+        "text": "a porcentagem de Reserva Legal é igual em todo o Brasil."
+      },
+      {
+        "id": "e",
+        "text": "as APPs podem ser desmatadas desde que haja Reserva Legal."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. As APPs são definidas pela localização e função ambiental; a Reserva Legal, por porcentagem da área. Os dois se somam, e a porcentagem varia conforme o bioma e a região.\n\nPegadinhas:\n• A: margens de rios são APPs.\n• C: a Reserva Legal admite uso sustentável, e o restante pode ser explorado.\n• D: o texto destaca os 80% na Amazônia em áreas de floresta.\n• E: são exigências independentes.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_38",
+    "subject": "Geografia",
+    "topicId": "geo_geopolitica_regional",
+    "chapter": "Conflitos no Mundo Árabe",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Atribuir os conflitos apenas à religião, sem fatores políticos, econômicos e externos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA partir de dezembro de 2010, protestos contra governos autoritários se espalharam por vários países árabes, como Tunísia, Egito, Líbia e Síria, no movimento conhecido como Primavera Árabe. Desemprego entre jovens, alta dos preços dos alimentos, corrupção e repressão estavam entre as motivações. Na Síria, a repressão aos protestos levou a uma guerra civil, com participação de grupos armados diversos e de potências estrangeiras, e milhões de pessoas deixaram o país como refugiadas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a Primavera Árabe foi um movimento exclusivamente religioso."
+      },
+      {
+        "id": "b",
+        "text": "todos os países envolvidos se tornaram democracias estáveis."
+      },
+      {
+        "id": "c",
+        "text": "a guerra na Síria envolveu apenas forças sírias, sem interferência externa."
+      },
+      {
+        "id": "d",
+        "text": "os protestos não tiveram relação com problemas econômicos."
+      },
+      {
+        "id": "e",
+        "text": "os protestos tiveram motivações políticas e socioeconômicas, e, na Síria, a repressão resultou em guerra civil com interferência de potências estrangeiras e grave crise de refugiados."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O texto aponta causas econômicas e políticas. Os resultados variaram: a Tunísia teve uma transição, o Egito voltou a um governo militar, e Líbia e Síria mergulharam em guerras com participação estrangeira.\n\nPegadinhas:\n• A: o texto cita desemprego, preços, corrupção e repressão.\n• B: os desfechos foram diversos, incluindo guerras.\n• C: o texto cita potências estrangeiras.\n• D: o texto cita desemprego e alta dos alimentos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_39",
+    "subject": "Geografia",
+    "topicId": "geo_geopolitica_regional",
+    "chapter": "Geografia das Religiões",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a divisão foi pacífica, ou que Índia e Paquistão têm a mesma maioria religiosa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1947, a independência do subcontinente indiano em relação ao Reino Unido foi acompanhada de sua divisão em dois Estados: a Índia, de maioria hindu, e o Paquistão, de maioria muçulmana, que incluía também o território que, em 1971, se tornaria Bangladesh. A partilha provocou um dos maiores deslocamentos populacionais do século XX, com milhões de pessoas cruzando as novas fronteiras e violência entre comunidades. A região da Caxemira continua disputada pelos dois países.\n\nTexto elaborado para esta questão.\n\nO texto indica que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a religião foi um critério central na partilha do subcontinente, que provocou grandes migrações forçadas e conflitos que ainda hoje se refletem em disputas territoriais, como a da Caxemira."
+      },
+      {
+        "id": "b",
+        "text": "a partilha de 1947 foi pacífica e sem deslocamentos populacionais."
+      },
+      {
+        "id": "c",
+        "text": "Índia e Paquistão têm a mesma maioria religiosa, e a partilha seguiu critérios linguísticos."
+      },
+      {
+        "id": "d",
+        "text": "Bangladesh fazia parte da Índia até 1971, quando se separou após uma guerra civil."
+      },
+      {
+        "id": "e",
+        "text": "a independência foi concedida pela França, que governava o subcontinente desde o século XVIII."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A divisão seguiu majoritariamente a distribuição religiosa e provocou migrações em massa e violência. A Caxemira, de maioria muçulmana mas incorporada à Índia, segue em disputa.\n\nPegadinhas:\n• B: o texto descreve violência e deslocamentos.\n• C: a Índia é de maioria hindu; o Paquistão, muçulmana.\n• D: o território de Bangladesh fazia parte do Paquistão.\n• E: a metrópole era o Reino Unido.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_40",
+    "subject": "Geografia",
+    "topicId": "geo_populacao_urbana_brasil",
+    "chapter": "Dinâmica Demográfica",
+    "difficulty": "medium",
+    "skill": "interpretacao_grafico",
+    "trap": "Achar que a população brasileira continua crescendo no ritmo dos anos 1960, ou que o envelhecimento não afeta a previdência.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa década de 1960, a taxa de fecundidade no Brasil era de cerca de 6 filhos por mulher. Em 2022, havia caído para cerca de 1,6, abaixo do nível de reposição da população, de cerca de 2,1. No mesmo período, a esperança de vida ao nascer aumentou mais de vinte anos. O Censo de 2022 registrou crescimento populacional muito menor que o das décadas anteriores e aumento da proporção de pessoas com 60 anos ou mais.\n\nTexto elaborado para esta questão.\n\nOs dados indicam que o Brasil",
+    "options": [
+      {
+        "id": "a",
+        "text": "mantém alto crescimento populacional, com predomínio de crianças na população."
+      },
+      {
+        "id": "b",
+        "text": "tem fecundidade acima do nível de reposição, o que garante crescimento contínuo."
+      },
+      {
+        "id": "c",
+        "text": "voltou à situação demográfica da década de 1960, com altas taxas de natalidade e mortalidade."
+      },
+      {
+        "id": "d",
+        "text": "está em fase avançada da transição demográfica, com queda da fecundidade e aumento da longevidade, o que leva ao envelhecimento da população e traz desafios para a previdência e a saúde."
+      },
+      {
+        "id": "e",
+        "text": "não teve alteração na esperança de vida desde 1960, apesar da queda da fecundidade."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Fecundidade abaixo de 2,1 e maior longevidade estreitam a base e alargam o topo da pirâmide etária. A proporção de idosos cresce, o que pressiona aposentadorias e sistemas de saúde, e o crescimento populacional desacelera.\n\nPegadinhas:\n• A: o texto descreve crescimento menor e envelhecimento.\n• B: 1,6 está abaixo de 2,1.\n• C: os indicadores mudaram muito.\n• E: o texto diz que aumentou mais de vinte anos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_41",
+    "subject": "Geografia",
+    "topicId": "geo_populacao_urbana_brasil",
+    "chapter": "O Espaço Urbano I",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a valorização de um bairro beneficia igualmente todos os moradores antigos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm várias metrópoles, bairros centrais antes degradados passam por reformas de ruas e praças, chegada de restaurantes, galerias e novos prédios. Com a valorização, os aluguéis e o custo de vida sobem, e muitos moradores antigos, de renda mais baixa, mudam-se para bairros mais distantes, com menos infraestrutura e mais tempo de deslocamento até o trabalho. Estudiosos chamam esse processo de gentrificação.\n\nTexto elaborado para esta questão.\n\nO processo descrito",
+    "options": [
+      {
+        "id": "a",
+        "text": "beneficia igualmente todos os moradores antigos, que passam a viver em um bairro mais valorizado."
+      },
+      {
+        "id": "b",
+        "text": "reduz o custo de vida no bairro reformado, pois a chegada de novos comércios aumenta a concorrência."
+      },
+      {
+        "id": "c",
+        "text": "ocorre apenas em cidades pequenas, onde a valorização de um bairro afeta toda a população."
+      },
+      {
+        "id": "d",
+        "text": "aproxima a população de baixa renda dos centros de emprego."
+      },
+      {
+        "id": "e",
+        "text": "pode aprofundar a segregação socioespacial, pois a valorização expulsa moradores de menor renda para as periferias, enquanto grupos de maior renda ocupam as áreas requalificadas."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A requalificação valoriza o solo, e o aumento dos preços seleciona quem pode permanecer. Os moradores antigos são deslocados para áreas periféricas, o que reproduz a segregação. Políticas como habitação social em áreas centrais tentam reduzir esse efeito.\n\nPegadinhas:\n• A: muitos antigos moradores são forçados a sair.\n• B: o custo de vida sobe.\n• C: o texto fala de metrópoles.\n• D: os deslocados vão para longe dos centros de emprego.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_42",
+    "subject": "História",
+    "topicId": "his_brasil_imperio",
+    "chapter": "Brasil Império: o Período Regencial (1831-1840)",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que as revoltas regenciais buscavam a volta de D. Pedro I, ou que foram todas lideradas pela elite.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nApós a abdicação de D. Pedro I, em 1831, o Brasil foi governado por regentes até a maioridade de D. Pedro II. O período foi marcado por revoltas em várias províncias, como a Cabanagem, no Pará, a Farroupilha, no Rio Grande do Sul, a Sabinada, na Bahia, e a Balaiada, no Maranhão, algumas com ampla participação popular. Em 1840, o Congresso antecipou a maioridade do imperador, então com 14 anos, no chamado Golpe da Maioridade.\n\nTexto elaborado para esta questão.\n\nO Golpe da Maioridade pode ser entendido como",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma tentativa de restaurar D. Pedro I no trono, defendida pelos grupos restauradores."
+      },
+      {
+        "id": "b",
+        "text": "o resultado da vitória das revoltas provinciais sobre o governo central."
+      },
+      {
+        "id": "c",
+        "text": "a proclamação da República no Brasil, liderada pelos revoltosos das províncias."
+      },
+      {
+        "id": "d",
+        "text": "uma estratégia das elites para fortalecer a autoridade central, com o imperador como símbolo de unidade, diante da instabilidade política e das revoltas provinciais."
+      },
+      {
+        "id": "e",
+        "text": "a abolição da escravidão no Império, exigida pelas revoltas com participação popular."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. As revoltas, com motivações diversas — autonomia provincial, questões fiscais, condições de vida —, ameaçavam a ordem e a unidade do território. Antecipar a maioridade buscava dar ao governo central a legitimidade da Coroa, e o Segundo Reinado reprimiu as revoltas remanescentes.\n\nPegadinhas:\n• A: D. Pedro I havia abdicado e morreu em 1834.\n• B: o governo central reprimiu as revoltas.\n• C: a República é de 1889.\n• E: a abolição é de 1888.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_43",
+    "subject": "História",
+    "topicId": "his_brasil_imperio",
+    "chapter": "Brasil Império: Segundo Reinado (1840-1889)",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o fim do tráfico encerrou a escravidão, ou que a imigração não tem relação com o café.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1850, sob pressão britânica, o Brasil aprovou a Lei Eusébio de Queirós, que proibiu o tráfico de africanos escravizados para o país. Nas décadas seguintes, a escravidão continuou, e cresceu o tráfico interno de escravizados do Nordeste para as fazendas de café do Sudeste. A partir dos anos 1870 e 1880, cafeicultores paulistas passaram a atrair imigrantes europeus, sobretudo italianos, com subsídios do governo provincial.\n\nTexto elaborado para esta questão.\n\nO texto permite concluir que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a Lei Eusébio de Queirós aboliu imediatamente a escravidão no Brasil."
+      },
+      {
+        "id": "b",
+        "text": "o fim do tráfico externo restringiu a oferta de mão de obra escravizada e, junto com a expansão do café, contribuiu para o tráfico interno e, depois, para a política de imigração."
+      },
+      {
+        "id": "c",
+        "text": "os imigrantes europeus chegaram para trabalhar nos engenhos do Nordeste."
+      },
+      {
+        "id": "d",
+        "text": "o café deixou de ser cultivado no Sudeste após 1850, por falta de trabalhadores escravizados."
+      },
+      {
+        "id": "e",
+        "text": "a Inglaterra apoiava a continuidade do tráfico de escravizados."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Sem novas entradas de africanos, o preço dos escravizados subiu e eles foram deslocados para as áreas mais lucrativas, o café do Sudeste. Prevendo o fim da escravidão, cafeicultores investiram na imigração subsidiada.\n\nPegadinhas:\n• A: a lei proibiu o tráfico; a abolição é de 1888.\n• C: os imigrantes foram para o café do Sudeste.\n• D: o café se expandiu no Sudeste.\n• E: a Inglaterra pressionava pelo fim do tráfico.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_44",
+    "subject": "História",
+    "topicId": "his_republica_liberal_atual",
+    "chapter": "Regime Militar (1964-1985) II",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a redemocratização foi imediata ou que as Diretas Já aprovaram a eleição direta em 1984.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo fim da década de 1970, o regime militar iniciou uma abertura \"lenta, gradual e segura\". Em 1979, a Lei da Anistia permitiu a volta de exilados políticos, mas também beneficiou agentes do Estado acusados de tortura. Em 1984, milhões de pessoas participaram da campanha das Diretas Já, pela eleição direta para presidente. A emenda constitucional foi rejeitada no Congresso, e, em 1985, Tancredo Neves foi eleito por um colégio eleitoral.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a transição para a democracia",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi imediata, com eleições diretas para presidente em 1984."
+      },
+      {
+        "id": "b",
+        "text": "foi conduzida exclusivamente pelos movimentos populares, sem negociação."
+      },
+      {
+        "id": "c",
+        "text": "foi gradual e negociada, com mobilização popular expressiva, mas com a primeira eleição presidencial civil realizada de forma indireta e com uma anistia que também beneficiou agentes da repressão."
+      },
+      {
+        "id": "d",
+        "text": "terminou com a aprovação da emenda das Diretas Já, que permitiu a eleição direta em 1985."
+      },
+      {
+        "id": "e",
+        "text": "começou com o Ato Institucional nº 5, que restabeleceu as liberdades políticas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O controle do ritmo pelo regime, a anistia ampla e a eleição indireta de 1985 mostram uma transição negociada. A eleição direta para presidente só ocorreria em 1989, após a Constituição de 1988.\n\nPegadinhas:\n• A: a emenda das Diretas foi rejeitada.\n• B: o texto mostra a condução gradual pelo regime.\n• D: a emenda foi rejeitada no Congresso.\n• E: o AI-5, de 1968, endureceu o regime.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_45",
+    "subject": "História",
+    "topicId": "his_guerra_fria_contemporaneo",
+    "chapter": "Descolonização Afro-Asiática",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que todas as independências foram conquistadas por guerras, ou que os novos países se alinharam automaticamente a um bloco.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA independência da Índia, em 1947, é associada à liderança de Mohandas Gandhi, que defendia a desobediência civil e a resistência não violenta, como boicotes a produtos britânicos e a Marcha do Sal, em 1930. Em 1955, representantes de países recém-independentes da Ásia e da África reuniram-se na Conferência de Bandung, na Indonésia, e defenderam a autonomia em relação aos blocos liderados pelos Estados Unidos e pela União Soviética.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a descolonização envolveu diferentes estratégias, incluindo a resistência não violenta, e muitos dos novos países buscaram uma posição própria na Guerra Fria, sem alinhamento automático aos blocos."
+      },
+      {
+        "id": "b",
+        "text": "todas as independências afro-asiáticas foram obtidas por guerras longas."
+      },
+      {
+        "id": "c",
+        "text": "a Conferência de Bandung propôs a adesão de todos os países ao bloco soviético."
+      },
+      {
+        "id": "d",
+        "text": "Gandhi defendia a luta armada contra o domínio britânico."
+      },
+      {
+        "id": "e",
+        "text": "a Índia tornou-se independente da França, depois de uma longa guerra de libertação."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Houve independências por negociação e resistência não violenta, como a indiana, e por guerra, como a da Argélia. Bandung lançou as bases do movimento dos não alinhados e do chamado Terceiro Mundo.\n\nPegadinhas:\n• B: a Índia é exemplo de outro caminho.\n• C: Bandung defendeu a autonomia diante dos dois blocos.\n• D: o texto destaca a não violência.\n• E: a Índia era colônia britânica.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_46",
+    "subject": "História",
+    "topicId": "his_guerra_fria_contemporaneo",
+    "chapter": "O Fim da Guerra Fria",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a queda do Muro resultou de uma guerra entre EUA e URSS.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1985, Mikhail Gorbachev assumiu o governo da União Soviética e lançou reformas: a perestroika, de reestruturação econômica, e a glasnost, de transparência e maior liberdade de expressão. Nos anos seguintes, a URSS deixou de intervir militarmente para sustentar os governos comunistas do Leste Europeu. Em novembro de 1989, o Muro de Berlim caiu; em 1990, a Alemanha foi reunificada; e, em 1991, a própria União Soviética se dissolveu.\n\nTexto elaborado para esta questão.\n\nO processo descrito se relaciona",
+    "options": [
+      {
+        "id": "a",
+        "text": "a uma guerra direta entre Estados Unidos e União Soviética, vencida pelos norte-americanos."
+      },
+      {
+        "id": "b",
+        "text": "às crises econômicas e políticas do bloco soviético, às reformas de Gorbachev e ao fim do apoio militar soviético aos governos do Leste Europeu, que perderam sustentação diante de movimentos populares."
+      },
+      {
+        "id": "c",
+        "text": "à expansão do comunismo para a Europa Ocidental, com a vitória dos partidos socialistas."
+      },
+      {
+        "id": "d",
+        "text": "ao fortalecimento do Pacto de Varsóvia, que passou a incluir a Alemanha reunificada."
+      },
+      {
+        "id": "e",
+        "text": "à divisão definitiva da Alemanha em dois Estados, reconhecida pelas superpotências."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A estagnação econômica e as reformas que ampliaram a liberdade de crítica, somadas à recusa de Moscou em reprimir os protestos, levaram à queda dos regimes do Leste. Não houve guerra direta entre as superpotências.\n\nPegadinhas:\n• A: a Guerra Fria terminou sem confronto direto.\n• C: o comunismo recuou no Leste.\n• D: o Pacto de Varsóvia foi dissolvido em 1991.\n• E: a Alemanha foi reunificada em 1990.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_47",
+    "subject": "História",
+    "topicId": "his_guerra_fria_contemporaneo",
+    "chapter": "América Latina no Século XX",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a crise dos mísseis foi um conflito armado direto, ou que Cuba permaneceu aliada dos EUA após 1959.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1959, a Revolução Cubana derrubou o ditador Fulgencio Batista, aliado dos Estados Unidos. O novo governo, liderado por Fidel Castro, nacionalizou empresas norte-americanas e, nos anos seguintes, aproximou-se da União Soviética. Em 1962, a descoberta de bases de mísseis soviéticos em Cuba levou a uma grave crise, resolvida por negociação: a URSS retirou os mísseis, e os EUA se comprometeram a não invadir a ilha e, em acordo não divulgado na época, a retirar mísseis da Turquia.\n\nTexto elaborado para esta questão.\n\nA Revolução Cubana e a crise de 1962 mostram que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a Guerra Fria também se manifestou na América Latina, e a crise dos mísseis levou o mundo perto de um confronto nuclear, evitado por negociação entre as superpotências."
+      },
+      {
+        "id": "b",
+        "text": "Cuba manteve-se aliada dos Estados Unidos após 1959, rompendo com a União Soviética."
+      },
+      {
+        "id": "c",
+        "text": "a crise de 1962 terminou com a invasão norte-americana de Cuba."
+      },
+      {
+        "id": "d",
+        "text": "a União Soviética não teve interesse na América Latina."
+      },
+      {
+        "id": "e",
+        "text": "a revolução foi liderada por Batista contra Fidel Castro."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A aproximação de Cuba com a URSS levou a disputa bipolar ao continente. Os mísseis a poucas centenas de quilômetros dos EUA produziram o momento mais tenso da Guerra Fria, resolvido por concessões mútuas.\n\nPegadinhas:\n• B: Cuba se aproximou da URSS.\n• C: os EUA se comprometeram a não invadir.\n• D: a URSS instalou mísseis na ilha.\n• E: inverte os papéis: Batista foi derrubado.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_48",
+    "subject": "Português",
+    "topicId": "por_sintaxe",
+    "chapter": "Orações Adverbiais",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Trocar a concessão por causa ou condição, alterando o sentido.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia a frase, escrita para esta questão:\n\n\"Embora a cidade tenha investido em ciclovias, o número de ciclistas cresceu pouco no último ano.\"\n\nUm aluno precisa reescrevê-la começando por \"O número de ciclistas cresceu pouco no último ano\" e mantendo o sentido original, isto é, a relação de contraste entre o investimento e o resultado esperado. Ele considerou várias conjunções e locuções para ligar as duas orações.\n\nTexto elaborado para esta questão.\n\nMantém o sentido original a reescrita:",
+    "options": [
+      {
+        "id": "a",
+        "text": "\"O número de ciclistas cresceu pouco no último ano porque a cidade investiu em ciclovias.\""
+      },
+      {
+        "id": "b",
+        "text": "\"O número de ciclistas cresceu pouco no último ano se a cidade investiu em ciclovias.\""
+      },
+      {
+        "id": "c",
+        "text": "\"O número de ciclistas cresceu pouco no último ano, ainda que a cidade tenha investido em ciclovias.\""
+      },
+      {
+        "id": "d",
+        "text": "\"O número de ciclistas cresceu pouco no último ano para que a cidade investisse em ciclovias.\""
+      },
+      {
+        "id": "e",
+        "text": "\"O número de ciclistas cresceu pouco no último ano, portanto a cidade investiu em ciclovias.\""
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. \"Embora\" introduz uma concessão: um fato que se esperaria levar a outro resultado. \"Ainda que\" também é concessivo e exige o subjuntivo, mantendo o sentido.\n\nPegadinhas:\n• A: \"porque\" transforma o investimento em causa do pouco crescimento.\n• B: \"se\" cria uma condição, inexistente no original.\n• D: \"para que\" introduz finalidade.\n• E: \"portanto\" transforma o investimento em consequência.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_49",
+    "subject": "Inglês",
+    "topicId": "ing_01",
+    "chapter": "Text Comprehension: Pollution",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Achar que o texto afirma que os microplásticos já se mostraram seguros ou que vêm só de garrafas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Microplastics, pieces of plastic smaller than five millimetres, have now been found almost everywhere scientists look: in the deep ocean, in Arctic snow, in drinking water and even in human blood. They come from the breakdown of larger items, such as bags and bottles, but also from synthetic clothes and car tyres. Researchers stress that the effects on human health are still not well understood, and that more studies are needed before firm conclusions can be drawn.\"\n\nTexto elaborado para esta questão.\n\nAccording to the text,",
+    "options": [
+      {
+        "id": "a",
+        "text": "microplastics have been proved to be harmless to human health."
+      },
+      {
+        "id": "b",
+        "text": "microplastics come only from plastic bottles thrown into rivers and seas."
+      },
+      {
+        "id": "c",
+        "text": "microplastics have not yet been found in the human body."
+      },
+      {
+        "id": "d",
+        "text": "microplastics are larger than five centimetres and can be easily removed from water."
+      },
+      {
+        "id": "e",
+        "text": "microplastics are widespread in the environment and have various sources, but their effects on human health still need further research."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O texto cita a presença dos microplásticos em vários ambientes e até no sangue, lista fontes diversas e diz que os efeitos na saúde \"are still not well understood\".\n\nPegadinhas:\n• A: o texto diz que os efeitos ainda não são bem compreendidos.\n• B: o texto cita roupas sintéticas e pneus.\n• C: o texto menciona \"human blood\".\n• D: o texto fala em menos de cinco milímetros.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l14_50",
+    "subject": "Sociologia",
+    "topicId": "soc_cultura_identidade",
+    "chapter": "Cultura e Etnocentrismo",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir etnocentrismo com relativismo, ou tomar a crítica do autor como defesa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo ensaio \"Dos canibais\", de 1580, o filósofo francês Michel de Montaigne comentou relatos sobre povos indígenas do Brasil e afirmou que cada um chama de barbárie aquilo que não é do seu costume. Antropólogos usam o termo etnocentrismo para designar a atitude de julgar outras culturas a partir dos valores da própria, tomada como medida do que é correto ou civilizado.\n\nTexto elaborado para esta questão.\n\nA observação de Montaigne",
+    "options": [
+      {
+        "id": "a",
+        "text": "defende que os costumes europeus são superiores aos indígenas."
+      },
+      {
+        "id": "b",
+        "text": "afirma que os povos indígenas não têm cultura, pois não seguem os costumes europeus."
+      },
+      {
+        "id": "c",
+        "text": "mostra que o etnocentrismo é uma atitude exclusiva dos povos indígenas."
+      },
+      {
+        "id": "d",
+        "text": "critica o etnocentrismo, ao apontar que a classificação de outros povos como bárbaros resulta de julgá-los pelos costumes próprios."
+      },
+      {
+        "id": "e",
+        "text": "propõe que todas as culturas sejam eliminadas em favor de uma cultura única."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Montaigne inverte o olhar: o \"bárbaro\" é só o diferente, visto com os critérios de quem observa. A ideia antecipa a crítica ao etnocentrismo e a postura relativista da antropologia.\n\nPegadinhas:\n• A: a frase questiona essa superioridade.\n• B: o texto trata dos costumes dos indígenas, isto é, de sua cultura.\n• C: o etnocentrismo pode ocorrer em qualquer sociedade; o texto critica o olhar europeu.\n• E: nada no texto sugere eliminar culturas.",
+    "styleOf": "FUVEST"
+  }
+]
