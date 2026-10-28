@@ -138944,5 +138944,1985 @@
     "explanation": "Resposta E. A alienação decorre da separação entre trabalhador, meios de produção e produto, e da fragmentação do trabalho.\n\nPegadinhas:\n• A: mais-valia é o valor excedente apropriado pelo capitalista.\n• B: é conceito de Durkheim.\n• C: é conceito de Weber.\n• D: para Marx, ideologia mascara a realidade.",
     "difficulty": "medium",
     "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_01",
+    "chapter": "Membranas Celulares",
+    "topicId": "bio_estrutura_fisio_celular",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs células nervosas mantêm, em seu interior, concentração de íons potássio muito maior que a do meio externo, e concentração de íons sódio muito menor. Essa diferença é mantida por uma proteína da membrana, a bomba de sódio e potássio, que expulsa três íons sódio e coloca dois íons potássio para dentro a cada ciclo, consumindo ATP. Quando a produção de ATP é bloqueada por um veneno, a diferença de concentração vai desaparecendo aos poucos.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que a bomba de sódio e potássio",
+    "options": [
+      {
+        "id": "a",
+        "text": "realiza difusão simples, deslocando os íons a favor do gradiente sem gasto de energia."
+      },
+      {
+        "id": "b",
+        "text": "realiza transporte ativo, movendo íons contra o gradiente de concentração com gasto de ATP, o que explica por que a diferença some quando o ATP falta."
+      },
+      {
+        "id": "c",
+        "text": "transporta apenas água, por osmose, entre o interior e o exterior da célula."
+      },
+      {
+        "id": "d",
+        "text": "funciona igualmente bem com ou sem ATP, pois depende só da temperatura."
+      },
+      {
+        "id": "e",
+        "text": "iguala as concentrações de sódio e potássio dentro e fora da célula nervosa."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Mover íons do meio menos para o mais concentrado exige energia; sem ATP, a difusão passiva desfaz o gradiente.\n\nPegadinhas:\n• A: difusão segue o gradiente, sem gasto.\n• C: a bomba transporta íons.\n• D: o texto mostra a dependência do ATP.\n• E: ela mantém a diferença.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_02",
+    "chapter": "Núcleo Celular",
+    "topicId": "bio_estrutura_fisio_celular",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs hemácias humanas perdem o núcleo durante o amadurecimento na medula óssea. Com isso, ganham espaço para mais hemoglobina, a proteína que transporta oxigênio, e adquirem formato bicôncavo, que aumenta a superfície de trocas gasosas. Em compensação, uma hemácia madura vive cerca de 120 dias e não consegue se dividir nem produzir novas proteínas para reparar danos, sendo continuamente substituída por novas células formadas na medula.\n\nTexto elaborado para esta questão.\n\nA ausência de núcleo explica que as hemácias maduras",
+    "options": [
+      {
+        "id": "a",
+        "text": "se dividam rapidamente na corrente sanguínea para repor as células velhas do sangue."
+      },
+      {
+        "id": "b",
+        "text": "produzam grande quantidade de novas proteínas ao longo de toda a vida."
+      },
+      {
+        "id": "c",
+        "text": "vivam indefinidamente, pois, sem núcleo, não envelhecem nem sofrem danos."
+      },
+      {
+        "id": "d",
+        "text": "tenham vida limitada e não se dividam, pois não possuem o DNA necessário para comandar a síntese de novas proteínas e a divisão celular."
+      },
+      {
+        "id": "e",
+        "text": "não transportem oxigênio, pois a hemoglobina depende de material genético para funcionar."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O núcleo guarda o DNA que comanda a síntese proteica e a divisão; sem ele, a célula não se renova e é substituída.\n\nPegadinhas:\n• A: a reposição vem da medula.\n• B: sem núcleo não há novos RNAm.\n• C: vivem cerca de 120 dias.\n• E: transportam oxigênio pela hemoglobina.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_03",
+    "chapter": "Histologia e Morfologia Vegetal",
+    "topicId": "bio_fisio_vegetal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um experimento escolar, um ramo de aipo foi colocado em água com corante azul. Depois de algumas horas, ao cortar o caule transversalmente, os estudantes viram pontos azuis distribuídos em feixes. Em outro experimento clássico, retirou-se um anel de casca de uma árvore, incluindo o floema; com o tempo, a região logo acima do corte inchou, enquanto as raízes, privadas de açúcar, acabaram morrendo.\n\nTexto elaborado para esta questão.\n\nOs dois experimentos indicam que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o xilema transporta água e sais das raízes para as folhas, como mostra o corante, e o floema leva açúcares das folhas ao restante da planta, como mostra o anel."
+      },
+      {
+        "id": "b",
+        "text": "o floema transporta a água com corante, e o xilema leva os açúcares das folhas."
+      },
+      {
+        "id": "c",
+        "text": "a água sobe pela casca da árvore, e o açúcar desce pelo interior do caule, até as raízes."
+      },
+      {
+        "id": "d",
+        "text": "as raízes produzem açúcar por fotossíntese e não dependem das folhas para se nutrir."
+      },
+      {
+        "id": "e",
+        "text": "o corante subiu por difusão no ar do laboratório, sem participação dos vasos do caule."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O corante segue o xilema; o anel de Malpighi interrompe o floema, acumulando seiva elaborada acima do corte e matando as raízes de fome.\n\nPegadinhas:\n• B: inverte os tecidos.\n• C: a casca contém o floema, que leva açúcar.\n• D: raízes não fazem fotossíntese.\n• E: o corante subiu pelos vasos.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_04",
+    "chapter": "Coordenação Endócrina II",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDepois de uma refeição rica em carboidratos, a glicose do sangue sobe, e o pâncreas libera insulina, que facilita a entrada de glicose nas células e seu armazenamento como glicogênio no fígado e nos músculos. Em jejum prolongado, quando a glicemia cai, o pâncreas libera glucagon, que estimula o fígado a quebrar glicogênio e liberar glicose no sangue. No diabetes tipo 1, as células que produzem insulina são destruídas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a insulina eleva a glicemia depois das refeições, e o glucagon a reduz durante o jejum prolongado."
+      },
+      {
+        "id": "b",
+        "text": "insulina e glucagon têm efeitos iguais sobre a glicemia, ambos favorecendo o armazenamento de glicose."
+      },
+      {
+        "id": "c",
+        "text": "no diabetes tipo 1, falta glucagon, e a glicemia fica baixa."
+      },
+      {
+        "id": "d",
+        "text": "o glucagon é liberado logo após as refeições ricas em açúcar."
+      },
+      {
+        "id": "e",
+        "text": "insulina e glucagon têm efeitos opostos, a primeira reduzindo e o segundo elevando a glicemia, e no diabetes tipo 1 a falta de insulina mantém a glicose alta no sangue."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. É um par antagônico que mantém a glicemia em faixa estreita; sem insulina, a glicose não entra nas células e se acumula no sangue.\n\nPegadinhas:\n• A: inverte os efeitos.\n• B: os efeitos são opostos.\n• C: falta insulina, e a glicemia sobe.\n• D: o glucagon age no jejum.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_05",
+    "chapter": "Coração e Vasos Sanguíneos",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo coração humano, o lado direito recebe sangue pobre em oxigênio vindo do corpo e o envia aos pulmões pela artéria pulmonar; o lado esquerdo recebe sangue oxigenado vindo dos pulmões pelas veias pulmonares e o bombeia para o corpo pela artéria aorta. Artérias são os vasos que saem do coração, e veias, os que chegam a ele, independentemente da quantidade de oxigênio do sangue que transportam.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "todas as artérias transportam sangue rico em oxigênio, inclusive a artéria pulmonar, que sai do lado direito."
+      },
+      {
+        "id": "b",
+        "text": "as veias pulmonares transportam sangue pobre em oxigênio para o coração."
+      },
+      {
+        "id": "c",
+        "text": "a artéria pulmonar transporta sangue pobre em oxigênio, e as veias pulmonares, sangue oxigenado, pois artéria e veia se definem pelo sentido do fluxo em relação ao coração."
+      },
+      {
+        "id": "d",
+        "text": "o lado direito do coração bombeia sangue oxigenado para o corpo."
+      },
+      {
+        "id": "e",
+        "text": "a aorta leva sangue pobre em oxigênio do corpo de volta para o lado esquerdo do coração."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A definição é anatômica: artéria sai, veia chega. Na circulação pulmonar, a regra do oxigênio se inverte.\n\nPegadinhas:\n• A: a artéria pulmonar é exceção.\n• B: as veias pulmonares trazem sangue oxigenado.\n• D: o direito envia sangue aos pulmões.\n• E: a aorta sai do coração.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_06",
+    "chapter": "Fisiologia da Digestão",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA bile, produzida pelo fígado e armazenada na vesícula biliar, é lançada no duodeno quando chega alimento gorduroso. Ela não contém enzimas digestivas: seus sais biliares fragmentam grandes gotas de gordura em gotículas menores, processo chamado emulsificação. Pessoas que retiraram a vesícula costumam ser orientadas a evitar refeições muito gordurosas, pois a bile passa a chegar ao intestino de forma contínua e em menor quantidade.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a bile contribui para a digestão das gorduras porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "é uma enzima que quebra as gorduras diretamente em ácidos graxos."
+      },
+      {
+        "id": "b",
+        "text": "é produzida pela vesícula biliar e digere proteínas por meio de enzimas presentes nos sais biliares."
+      },
+      {
+        "id": "c",
+        "text": "neutraliza a acidez do estômago, que é sua única função, sem nenhum efeito sobre as gotas de gordura."
+      },
+      {
+        "id": "d",
+        "text": "emulsifica as gorduras, aumentando a superfície de contato sobre a qual age a lipase, a enzima que efetivamente as digere."
+      },
+      {
+        "id": "e",
+        "text": "impede a absorção de gorduras pelo intestino, razão pela qual a vesícula costuma ser retirada."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Gotículas menores expõem mais área à lipase pancreática; sem vesícula, a oferta de bile não acompanha refeições muito gordurosas.\n\nPegadinhas:\n• A: a bile não tem enzimas.\n• B: é produzida pelo fígado e age sobre gorduras.\n• C: sua ação principal é a emulsificação.\n• E: ela facilita a digestão e a absorção.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_07",
+    "chapter": "Sistemas Sensoriais: Visão e Audição",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo olho míope, em geral mais alongado que o normal, a imagem de objetos distantes se forma antes da retina, e a pessoa vê mal de longe. No olho hipermetrope, mais curto, a imagem de objetos próximos se formaria depois da retina, e a pessoa tem dificuldade de enxergar de perto. Óculos com lentes divergentes afastam o ponto de formação da imagem; lentes convergentes o aproximam.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a correção da miopia é feita com lentes",
+    "options": [
+      {
+        "id": "a",
+        "text": "divergentes, que afastam o ponto de formação da imagem, levando-a da frente da retina para cima dela."
+      },
+      {
+        "id": "b",
+        "text": "convergentes, que aproximam a imagem formada depois da retina."
+      },
+      {
+        "id": "c",
+        "text": "convergentes, pois o olho míope é mais curto que o normal e forma a imagem depois da retina."
+      },
+      {
+        "id": "d",
+        "text": "planas, pois a miopia não altera a formação da imagem, apenas a nitidez percebida pelo cérebro."
+      },
+      {
+        "id": "e",
+        "text": "divergentes, pois o míope vê mal de perto."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A imagem se forma antes da retina; a lente divergente a empurra para trás, até a retina.\n\nPegadinhas:\n• B: descreve a correção da hipermetropia.\n• C: o míope tem olho mais longo.\n• D: a imagem fica fora da retina.\n• E: o míope vê mal de longe.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_08",
+    "chapter": "Ciclo do Nitrogênio",
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO ar é composto por cerca de 78% de gás nitrogênio, N₂, mas a maioria dos seres vivos não consegue usá-lo nessa forma. Bactérias que vivem em nódulos das raízes de leguminosas, como feijão e soja, transformam o N₂ em compostos nitrogenados que a planta aproveita para produzir proteínas. Por isso, agricultores alternam o cultivo de leguminosas com o de outras plantas, e a soja brasileira recebe pouco adubo nitrogenado.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as plantas absorvem o gás nitrogênio diretamente do ar pelas folhas."
+      },
+      {
+        "id": "b",
+        "text": "o nitrogênio não é necessário para a produção de proteínas, por isso as leguminosas dispensam adubo."
+      },
+      {
+        "id": "c",
+        "text": "as bactérias dos nódulos prejudicam as leguminosas, consumindo seu nitrogênio."
+      },
+      {
+        "id": "d",
+        "text": "a rotação com leguminosas empobrece o solo em nitrogênio, por isso exige mais adubo na safra seguinte."
+      },
+      {
+        "id": "e",
+        "text": "bactérias associadas às raízes de leguminosas fixam o nitrogênio do ar em formas utilizáveis, o que reduz a necessidade de adubo nitrogenado e enriquece o solo."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. É a fixação biológica, um mutualismo: a planta fornece açúcares, e as bactérias, compostos nitrogenados.\n\nPegadinhas:\n• A: o N₂ não é utilizável pelas plantas.\n• B: proteínas contêm nitrogênio.\n• C: a relação é mutualística.\n• D: a rotação enriquece o solo.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_09",
+    "chapter": "Dinâmica de Populações",
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um experimento, alguns protozoários foram colocados em um tubo com quantidade fixa de alimento renovado diariamente. No início, a população cresceu devagar; depois, muito rapidamente; por fim, o crescimento desacelerou, e o número de indivíduos se estabilizou em torno de um valor máximo, apesar de o alimento continuar sendo fornecido na mesma quantidade. Os ecólogos chamam esse valor de capacidade de suporte do meio.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a estabilização da população ocorreu porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "os protozoários pararam de se reproduzir por envelhecimento, sem relação com o alimento."
+      },
+      {
+        "id": "b",
+        "text": "a resistência do meio, como a competição pelo alimento limitado, passou a equilibrar nascimentos e mortes no nível da capacidade de suporte."
+      },
+      {
+        "id": "c",
+        "text": "o alimento fornecido passou a ser maior a cada dia, compensando o aumento do número de protozoários."
+      },
+      {
+        "id": "d",
+        "text": "as populações sempre crescem indefinidamente quando há alimento renovado todos os dias."
+      },
+      {
+        "id": "e",
+        "text": "todos os protozoários morreram ao atingir a capacidade de suporte, e outros os substituíram."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. É a curva sigmoide: com recursos fixos, a competição freia o crescimento até que natalidade e mortalidade se igualem.\n\nPegadinhas:\n• A: a reprodução continua, equilibrada pelas mortes.\n• C: a quantidade era fixa.\n• D: recursos limitados impedem o crescimento indefinido.\n• E: a população se estabilizou.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_10",
+    "chapter": "Biomas Brasileiros",
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Cerrado, segundo maior bioma do Brasil, tem árvores de troncos tortuosos e casca grossa, além de raízes muito profundas que alcançam a água do subsolo na estação seca. A casca espessa protege as plantas do fogo, que ocorre naturalmente no bioma. O Cerrado abriga nascentes de grandes bacias hidrográficas e uma enorme diversidade de espécies, mas boa parte de sua área original foi convertida em pastagens e lavouras.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que o Cerrado",
+    "options": [
+      {
+        "id": "a",
+        "text": "é um bioma pobre em espécies e sem importância hidrográfica, por causa das árvores baixas e tortas."
+      },
+      {
+        "id": "b",
+        "text": "não sofre com o fogo, pois suas plantas não têm adaptações a ele."
+      },
+      {
+        "id": "c",
+        "text": "tem plantas adaptadas à seca e ao fogo, abriga nascentes de grandes bacias e grande biodiversidade, e está ameaçado pela expansão agropecuária."
+      },
+      {
+        "id": "d",
+        "text": "tem raízes superficiais, pois a água está sempre disponível na superfície."
+      },
+      {
+        "id": "e",
+        "text": "manteve praticamente intacta sua vegetação original, por estar longe das áreas agrícolas do país."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Raízes profundas e casca grossa são adaptações; o bioma é chamado de \"berço das águas\" e sofre grande conversão.\n\nPegadinhas:\n• A: o texto destaca sua diversidade.\n• B: a casca protege do fogo.\n• D: as raízes são profundas.\n• E: boa parte foi convertida.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_11",
+    "chapter": "Ciclos Biogeoquímicos – Ciclo do Carbono",
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO carbono circula entre a atmosfera, os seres vivos, os oceanos e as rochas. A fotossíntese retira gás carbônico do ar, e a respiração e a decomposição o devolvem. O petróleo e o carvão guardam carbono retirado da atmosfera por organismos há milhões de anos. Ao queimá-los, devolvemos à atmosfera, em poucas décadas, carbono que estava fora do ciclo rápido, e a concentração de CO₂ no ar subiu de cerca de 280 ppm, antes da Revolução Industrial, para mais de 420 ppm.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a queima de combustíveis fósseis aumenta o CO₂ atmosférico porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "libera, em pouco tempo, carbono que esteve armazenado por milhões de anos fora do ciclo rápido, mais depressa do que fotossíntese e oceanos conseguem absorver."
+      },
+      {
+        "id": "b",
+        "text": "o carbono dos combustíveis fósseis é diferente do carbono dos seres vivos e não é absorvido."
+      },
+      {
+        "id": "c",
+        "text": "a fotossíntese deixou de existir após a Revolução Industrial por causa da poluição."
+      },
+      {
+        "id": "d",
+        "text": "a respiração dos seres vivos aumentou dez vezes nos últimos séculos com o crescimento populacional."
+      },
+      {
+        "id": "e",
+        "text": "o petróleo é produzido continuamente pelas plantas atuais e devolve à atmosfera carbono recente."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O desequilíbrio vem do ritmo: carbono fóssil entra no ciclo rápido muito mais depressa do que é retirado.\n\nPegadinhas:\n• B: o CO₂ é o mesmo; o problema é a quantidade.\n• C: a fotossíntese continua.\n• D: não é a respiração que explica o aumento.\n• E: o petróleo se formou há milhões de anos.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_12",
+    "chapter": "Cinética Química",
+    "topicId": "qui_cinetica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm comprimido efervescente inteiro colocado em água leva cerca de um minuto para se dissolver completamente, liberando bolhas de gás carbônico. O mesmo comprimido, triturado em pó antes de ser colocado na água, termina de reagir em poucos segundos. Em ambos os casos, a temperatura da água e a quantidade de comprimido eram as mesmas.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA diferença de tempo se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o comprimido triturado tem mais massa que o inteiro, pois o pó absorve umidade do ar."
+      },
+      {
+        "id": "b",
+        "text": "a trituração muda a composição química do comprimido, formando substâncias mais reativas."
+      },
+      {
+        "id": "c",
+        "text": "o pó reage mais devagar, pois as partículas se juntam no fundo."
+      },
+      {
+        "id": "d",
+        "text": "a temperatura da água aumenta quando o comprimido é triturado."
+      },
+      {
+        "id": "e",
+        "text": "a trituração aumenta a superfície de contato entre o sólido e a água, elevando o número de colisões efetivas por segundo e, portanto, a velocidade da reação."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Mesma massa, mais superfície exposta: mais partículas reagem ao mesmo tempo.\n\nPegadinhas:\n• A: a massa é a mesma.\n• B: a composição não muda.\n• C: o pó reagiu mais rápido.\n• D: a temperatura era a mesma.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_13",
+    "chapter": "Equilíbrios Iônicos II",
+    "topicId": "qui_equilibrio",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO refrigerante é engarrafado sob pressão de gás carbônico, parte do qual fica dissolvido na bebida, em equilíbrio:\n\nCO₂(g) ⇌ CO₂(aq)\n\nQuando a garrafa é aberta, a pressão de CO₂ sobre o líquido cai, e formam-se bolhas. Um refrigerante gelado também conserva o gás por mais tempo que um morno, porque a solubilidade dos gases em água diminui com o aumento da temperatura.\n\nTexto elaborado para esta questão.\n\nCom base no texto e no princípio de Le Chatelier, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "abrir a garrafa desloca o equilíbrio para o lado do gás dissolvido."
+      },
+      {
+        "id": "b",
+        "text": "a redução da pressão sobre o líquido desloca o equilíbrio no sentido de liberar CO₂ gasoso, e o aquecimento favorece o mesmo sentido, diminuindo a quantidade de gás dissolvido."
+      },
+      {
+        "id": "c",
+        "text": "o aquecimento aumenta a solubilidade do CO₂ na bebida, por isso o refrigerante morno tem mais gás."
+      },
+      {
+        "id": "d",
+        "text": "as bolhas são de vapor de água, e não de gás carbônico, formadas pela queda de pressão."
+      },
+      {
+        "id": "e",
+        "text": "a pressão não influencia a solubilidade dos gases."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Menor pressão favorece o lado gasoso; maior temperatura reduz a solubilidade do gás.\n\nPegadinhas:\n• A: inverte o sentido.\n• C: o aquecimento reduz a solubilidade.\n• D: as bolhas são de CO₂.\n• E: a pressão influencia (lei de Henry).",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_14",
+    "chapter": "O Estado Gasoso",
+    "topicId": "qui_gases",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm pneu foi calibrado de manhã, a 27 °C, com pressão de 30 libras por polegada quadrada. Depois de uma longa viagem, a temperatura do ar no pneu chegou a 57 °C. Considere que o volume do pneu e a quantidade de ar permaneceram constantes.\n\nNote e adote: T(K) = T(°C) + 273; a volume constante, p/T é constante.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA pressão do pneu ao final da viagem é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "30 libras, pois a pressão de um gás em recipiente fechado não depende da temperatura."
+      },
+      {
+        "id": "b",
+        "text": "33 libras, pois 30 × 330/300 = 33."
+      },
+      {
+        "id": "c",
+        "text": "36 libras, pois a pressão aumenta 20% sempre que a temperatura sobe 30 graus."
+      },
+      {
+        "id": "d",
+        "text": "63 libras, pois a pressão é proporcional à temperatura em graus Celsius: 30 × 57/27."
+      },
+      {
+        "id": "e",
+        "text": "27 libras, pois o aquecimento dilata o ar e, assim, diminui a pressão dentro do pneu."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. 27 °C = 300 K; 57 °C = 330 K; p = 30 × 330/300 = 33.\n\nPegadinhas:\n• A: a pressão sobe.\n• C: proporção inventada.\n• D: usa Celsius em vez de kelvin.\n• E: a pressão aumenta.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_15",
+    "chapter": "Termoquímica II",
+    "topicId": "qui_termoquimica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nBolsas instantâneas de frio, usadas em primeiros socorros, contêm água e nitrato de amônio separados. Ao apertar a bolsa, o sal se dissolve na água, e a bolsa fica gelada. Bolsas instantâneas de calor funcionam de modo parecido, mas com substâncias cuja dissolução ou reação aquece o conteúdo, como o cloreto de cálcio em água.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a dissolução do nitrato de amônio é exotérmica, pois libera calor."
+      },
+      {
+        "id": "b",
+        "text": "as duas bolsas funcionam com processos endotérmicos, que diferem apenas na intensidade."
+      },
+      {
+        "id": "c",
+        "text": "a dissolução do nitrato de amônio é endotérmica, absorvendo calor do meio e resfriando a bolsa, enquanto a bolsa quente usa um processo exotérmico."
+      },
+      {
+        "id": "d",
+        "text": "a bolsa fria funciona por evaporação da água, que retira calor ao passar para o estado gasoso."
+      },
+      {
+        "id": "e",
+        "text": "nenhuma das bolsas envolve troca de calor com o meio."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Processo endotérmico retira calor das vizinhanças (ΔH > 0); o exotérmico libera (ΔH < 0).\n\nPegadinhas:\n• A: se esfria, absorve calor.\n• B: a quente é exotérmica.\n• D: o efeito vem da dissolução.\n• E: ambas trocam calor.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_16",
+    "chapter": "Organização da Tabela Periódica dos Elementos",
+    "topicId": "qui_modelos_atomicos",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa tabela periódica, os elementos estão organizados em ordem crescente de número atômico. As colunas, chamadas grupos ou famílias, reúnem elementos com o mesmo número de elétrons na camada de valência e, por isso, com propriedades químicas semelhantes. Sódio e potássio, por exemplo, estão no grupo 1 e reagem vigorosamente com a água. As linhas, chamadas períodos, indicam o número de camadas eletrônicas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "elementos de um mesmo período têm propriedades químicas semelhantes, pois têm as mesmas camadas."
+      },
+      {
+        "id": "b",
+        "text": "sódio e potássio têm números diferentes de elétrons de valência, mas a mesma reatividade por acaso."
+      },
+      {
+        "id": "c",
+        "text": "os grupos indicam o número de camadas eletrônicas do átomo, e os períodos, os elétrons de valência."
+      },
+      {
+        "id": "d",
+        "text": "sódio e potássio reagem de modo semelhante com a água por terem o mesmo número de elétrons na camada de valência, característica dos elementos de um mesmo grupo."
+      },
+      {
+        "id": "e",
+        "text": "a tabela é organizada em ordem crescente de massa atômica, sem exceções."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Propriedades químicas dependem dos elétrons de valência, iguais em um grupo.\n\nPegadinhas:\n• A: semelhança é por grupo.\n• B: ambos têm 1 elétron de valência.\n• C: são os períodos que indicam camadas.\n• E: a ordem é pelo número atômico.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_17",
+    "chapter": "Equações Iônicas e outras Teorias para Ácidos e Bases",
+    "topicId": "qui_inorganica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAntiácidos vendidos em farmácias, como o hidróxido de magnésio e o bicarbonato de sódio, aliviam a azia, sensação de queimação causada por excesso de ácido clorídrico no estômago ou por seu refluxo para o esôfago. Ao serem ingeridos, essas substâncias reagem com parte do ácido estomacal. O bicarbonato, além disso, libera gás carbônico, o que pode provocar arrotos.\n\nTexto elaborado para esta questão.\n\nCom base no texto, os antiácidos aliviam a azia porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "são bases ou sais de caráter básico que neutralizam parte do ácido clorídrico, elevando o pH do conteúdo estomacal."
+      },
+      {
+        "id": "b",
+        "text": "aumentam a quantidade de ácido clorídrico no estômago, acelerando a digestão do alimento."
+      },
+      {
+        "id": "c",
+        "text": "são ácidos fortes que reagem com o ácido clorídrico e o transformam em água pura."
+      },
+      {
+        "id": "d",
+        "text": "dissolvem a parede do estômago onde está a queimação, eliminando a área irritada."
+      },
+      {
+        "id": "e",
+        "text": "impedem a produção de qualquer suco digestivo."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Mg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂O; NaHCO₃ + HCl → NaCl + H₂O + CO₂.\n\nPegadinhas:\n• B: reduzem a acidez.\n• C: são básicos.\n• D: não atacam a parede gástrica.\n• E: só neutralizam parte do ácido.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_18",
+    "chapter": "Processos de Oxirredução",
+    "topicId": "qui_oxirreducao",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um experimento, três pregos de ferro foram deixados por uma semana em tubos diferentes: um com água fervida coberta por óleo, que impede a entrada de ar; outro com ar seco, mantido por um secante; e um terceiro com água em contato com o ar. Apenas o prego do terceiro tubo enferrujou de forma visível. A ferrugem é formada principalmente por óxidos de ferro hidratados.\n\nTexto elaborado para esta questão.\n\nO resultado do experimento indica que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a ferrugem se forma apenas na presença de óleo, que fornece oxigênio ao ferro."
+      },
+      {
+        "id": "b",
+        "text": "o ferro enferruja mais rapidamente no ar seco, pois a água protege sua superfície."
+      },
+      {
+        "id": "c",
+        "text": "a água sozinha, sem oxigênio, é suficiente para formar ferrugem."
+      },
+      {
+        "id": "d",
+        "text": "o ferro não sofre nenhuma reação de oxidação."
+      },
+      {
+        "id": "e",
+        "text": "a corrosão do ferro exige a presença simultânea de água e oxigênio, e o ferro se oxida ao perder elétrons."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Só o tubo com água e ar enferrujou; o ferro passa a Fe²⁺/Fe³⁺, e o O₂ se reduz.\n\nPegadinhas:\n• A: o óleo isolava do ar.\n• B: o ar seco não enferrujou.\n• C: a água sem ar não enferrujou.\n• D: a ferrugem é oxidação.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_19",
+    "chapter": "Nomenclatura de Compostos Orgânicos",
+    "topicId": "qui_organica_fundamentos",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO etanol, CH₃–CH₂–OH, presente nas bebidas alcoólicas e usado como combustível, pertence à função álcool, caracterizada pelo grupo –OH ligado a carbono saturado. Quando o vinho fica exposto ao ar, bactérias transformam o etanol em ácido acético, CH₃–COOH, o principal componente do vinagre, que pertence à função ácido carboxílico, caracterizada pelo grupo –COOH.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a transformação do vinho em vinagre corresponde",
+    "options": [
+      {
+        "id": "a",
+        "text": "à conversão de um ácido carboxílico, o vinho, em um álcool, o vinagre, pela ação do ar."
+      },
+      {
+        "id": "b",
+        "text": "à formação de um hidrocarboneto a partir de um álcool, com perda do átomo de oxigênio."
+      },
+      {
+        "id": "c",
+        "text": "à conversão de um álcool, com grupo –OH, em um ácido carboxílico, com grupo –COOH, por ação de bactérias na presença de ar."
+      },
+      {
+        "id": "d",
+        "text": "à transformação de um álcool em outro álcool com mais carbonos."
+      },
+      {
+        "id": "e",
+        "text": "a uma mudança apenas física, sem reação química."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O etanol é oxidado a ácido acético (fermentação acética).\n\nPegadinhas:\n• A: inverte o sentido.\n• B: o produto é um ácido.\n• D: ambos têm dois carbonos.\n• E: há reação química.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_20",
+    "chapter": "Reações de Oxidação em Hidrocarbonetos",
+    "topicId": "qui_organica_reacoes",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm ambientes fechados, aquecedores e fogões a gás com pouca ventilação podem provocar intoxicação. Quando há oxigênio suficiente, a queima do gás produz gás carbônico e água. Com pouco oxigênio, a combustão é incompleta e forma monóxido de carbono, CO, gás incolor e inodoro que se liga à hemoglobina com afinidade muito maior que a do oxigênio, e também fuligem, que deixa a chama amarelada.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a combustão incompleta produz apenas gás carbônico e água."
+      },
+      {
+        "id": "b",
+        "text": "o monóxido de carbono tem cheiro forte, o que facilita sua detecção."
+      },
+      {
+        "id": "c",
+        "text": "a falta de oxigênio torna a combustão incompleta, formando monóxido de carbono, que se liga à hemoglobina e impede o transporte de oxigênio, por isso a ventilação é essencial."
+      },
+      {
+        "id": "d",
+        "text": "o monóxido de carbono não tem afinidade pela hemoglobina, e por isso é eliminado pela respiração."
+      },
+      {
+        "id": "e",
+        "text": "a chama amarelada indica combustão completa, com bastante oxigênio disponível no ambiente."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Com pouco O₂, sobra carbono parcialmente oxidado (CO) ou não oxidado (fuligem).\n\nPegadinhas:\n• A: descreve a completa.\n• B: o CO é inodoro.\n• D: sua afinidade é muito maior.\n• E: amarela indica fuligem, combustão incompleta.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_21",
+    "chapter": "Cinética Química",
+    "topicId": "qui_cinetica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAlimentos guardados na geladeira duram mais que os deixados à temperatura ambiente. Isso ocorre porque o apodrecimento envolve reações químicas, muitas delas catalisadas por enzimas de microrganismos e do próprio alimento. A baixa temperatura não esteriliza o alimento: retirado da geladeira e deixado ao ar, ele volta a se deteriorar no ritmo habitual.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a refrigeração conserva os alimentos porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "elimina todos os microrganismos presentes nos alimentos."
+      },
+      {
+        "id": "b",
+        "text": "aumenta a energia das moléculas, acelerando as reações que eliminam os microrganismos."
+      },
+      {
+        "id": "c",
+        "text": "transforma as enzimas em substâncias tóxicas aos microrganismos."
+      },
+      {
+        "id": "d",
+        "text": "a baixa temperatura reduz a velocidade das reações químicas e da atividade enzimática e microbiana, retardando a deterioração sem esterilizar o alimento."
+      },
+      {
+        "id": "e",
+        "text": "impede definitivamente qualquer deterioração, mesmo fora da geladeira."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Menos energia cinética, menos colisões efetivas e menor atividade enzimática.\n\nPegadinhas:\n• A: o texto diz que não esteriliza.\n• B: inverte o efeito.\n• C: não há essa transformação.\n• E: fora da geladeira, volta a deteriorar.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_22",
+    "chapter": "Equilíbrios Iônicos II",
+    "topicId": "qui_equilibrio",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nMesmo em regiões sem poluição, a água da chuva tem pH próximo de 5,6, levemente ácido, porque o gás carbônico do ar se dissolve nela e forma ácido carbônico. A chamada chuva ácida, com pH abaixo desse valor, resulta principalmente de óxidos de enxofre e de nitrogênio emitidos pela queima de combustíveis, que formam ácidos mais fortes, como o sulfúrico e o nítrico, e corroem monumentos de mármore.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a chuva natural tem pH 7, pois a água pura é neutra."
+      },
+      {
+        "id": "b",
+        "text": "a chuva ácida é causada principalmente pelo gás carbônico emitido pelas plantas."
+      },
+      {
+        "id": "c",
+        "text": "o mármore resiste à chuva ácida por ser uma rocha muito dura."
+      },
+      {
+        "id": "d",
+        "text": "óxidos de enxofre e nitrogênio deixam a chuva mais básica, neutralizando o ácido carbônico."
+      },
+      {
+        "id": "e",
+        "text": "a chuva natural já é levemente ácida pelo CO₂ dissolvido, e a chuva ácida resulta de óxidos de enxofre e nitrogênio que formam ácidos mais fortes, capazes de corroer o mármore."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. pH 5,6 é o natural; abaixo disso, a acidez vem de SOₓ e NOₓ; o mármore (CaCO₃) reage com ácidos.\n\nPegadinhas:\n• A: o CO₂ acidifica a chuva.\n• B: os principais agentes são SOₓ e NOₓ.\n• C: o mármore é corroído.\n• D: deixam a chuva mais ácida.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_23",
+    "chapter": "O Movimento Circular",
+    "topicId": "fis_cinematica",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma bicicleta, a coroa, ligada aos pedais, transmite o movimento à catraca, presa à roda traseira, por meio de uma corrente. Como a corrente não escorrega, os dentes da coroa e da catraca têm a mesma velocidade linear. Já todos os pontos de uma mesma roda giram com a mesma velocidade angular, mas os pontos mais distantes do eixo percorrem uma circunferência maior no mesmo tempo.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "pontos da mesma roda, a distâncias diferentes do eixo, têm a mesma velocidade linear."
+      },
+      {
+        "id": "b",
+        "text": "a coroa e a catraca giram sempre com a mesma velocidade angular, qualquer que seja o raio de cada uma."
+      },
+      {
+        "id": "c",
+        "text": "a borda do pneu tem maior velocidade linear que um ponto próximo ao eixo da mesma roda, pois ambos têm a mesma velocidade angular e v = ω·R."
+      },
+      {
+        "id": "d",
+        "text": "a corrente faz a coroa e a catraca terem velocidades lineares diferentes."
+      },
+      {
+        "id": "e",
+        "text": "a velocidade angular depende da distância ao eixo, sendo maior na borda do pneu do que no centro."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Na mesma roda, ω é igual e v cresce com R; na transmissão por corrente, v é igual e ω muda com o raio.\n\nPegadinhas:\n• A: v depende de R.\n• B: com raios diferentes, ω difere.\n• D: a corrente iguala as velocidades lineares.\n• E: na mesma roda, ω é igual.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_24",
+    "chapter": "Velocidade Vetorial",
+    "topicId": "fis_cinematica_vetorial",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm barco atravessa um rio mantendo o motor apontado perpendicularmente às margens, com velocidade de 4 m/s em relação à água. A correnteza tem velocidade de 3 m/s, paralela às margens. Um observador parado na margem vê o barco se mover em diagonal.\n\nNote e adote: as velocidades se compõem vetorialmente.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO módulo da velocidade do barco em relação à margem é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 m/s, pois a correnteza é subtraída da velocidade do barco."
+      },
+      {
+        "id": "b",
+        "text": "3,5 m/s, pois a velocidade em relação à margem é a média das duas velocidades."
+      },
+      {
+        "id": "c",
+        "text": "5 m/s, pois as velocidades são perpendiculares, e √(4² + 3²) = 5."
+      },
+      {
+        "id": "d",
+        "text": "7 m/s, pois as velocidades do barco e da correnteza se somam algebricamente."
+      },
+      {
+        "id": "e",
+        "text": "12 m/s, pois as velocidades se multiplicam."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Composição perpendicular: teorema de Pitágoras, 5 m/s.\n\nPegadinhas:\n• A: subtração vale para sentidos opostos.\n• B: média sem sentido físico.\n• D: soma algébrica vale para mesmo sentido.\n• E: relação inventada.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_25",
+    "chapter": "Sistema de Corpos Interagindo e os Elementos Transmissores de Força",
+    "topicId": "fis_leis_newton",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm estudante afirmou: \"Se, pela terceira lei de Newton, o cavalo puxa a carroça e a carroça puxa o cavalo com forças de mesma intensidade e sentidos opostos, essas forças se anulam, e o conjunto nunca poderia sair do lugar\". O professor explicou que o raciocínio tem um erro, pois o cavalo consegue, sim, mover a carroça ao empurrar o chão com os cascos.\n\nTexto elaborado para esta questão.\n\nO erro do estudante está em",
+    "options": [
+      {
+        "id": "a",
+        "text": "não perceber que a carroça puxa o cavalo com força maior."
+      },
+      {
+        "id": "b",
+        "text": "achar que a terceira lei de Newton vale para cavalos, quando ela só vale para corpos inanimados."
+      },
+      {
+        "id": "c",
+        "text": "esquecer que o cavalo não exerce força sobre a carroça."
+      },
+      {
+        "id": "d",
+        "text": "esquecer que o cavalo é mais pesado que a carroça e, por isso, exerce sobre ela força maior."
+      },
+      {
+        "id": "e",
+        "text": "somar forças que atuam em corpos diferentes: ação e reação nunca se anulam, e o movimento de cada corpo depende só das forças sobre ele, como a do chão sobre os cascos do cavalo."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Forças só se anulam no mesmo corpo; o chão empurra o cavalo para a frente, e a resultante sobre o sistema pode ser não nula.\n\nPegadinhas:\n• A: as forças têm mesma intensidade.\n• B: a lei vale para qualquer corpo.\n• C: o cavalo puxa a carroça.\n• D: o peso não resolve o paradoxo.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_26",
+    "chapter": "Trabalho e Energia: o Teorema da Energia Potencial",
+    "topicId": "fis_energia",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma bola de 0,5 kg é solta do repouso de uma altura de 20 m. Despreze a resistência do ar. Um estudante quer calcular a velocidade da bola ao chegar ao chão usando a conservação da energia mecânica: toda a energia potencial gravitacional se converte em energia cinética.\n\nNote e adote: g = 10 m/s²; Ep = m·g·h; Ec = m·v²/2.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA velocidade da bola ao atingir o chão é",
+    "options": [
+      {
+        "id": "a",
+        "text": "10 m/s, pois v = g·h/20."
+      },
+      {
+        "id": "b",
+        "text": "20 m/s, pois m·g·h = m·v²/2 dá v = √(2·g·h) = √400."
+      },
+      {
+        "id": "c",
+        "text": "200 m/s, pois v = g·h."
+      },
+      {
+        "id": "d",
+        "text": "400 m/s, pois v = 2·g·h."
+      },
+      {
+        "id": "e",
+        "text": "14 m/s, pois v = √(g·h), sem o fator 2."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. v = √(2 × 10 × 20) = 20 m/s, independentemente da massa.\n\nPegadinhas:\n• A: relação inventada.\n• C: esquece a raiz e o fator 2.\n• D: esquece a raiz.\n• E: esquece o fator 2.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_27",
+    "chapter": "Órbitas",
+    "topicId": "fis_gravitacao_circular",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa Estação Espacial Internacional, a cerca de 400 km de altitude, a aceleração da gravidade ainda é cerca de 90% da registrada na superfície terrestre. Mesmo assim, os astronautas flutuam dentro da estação. Isso ocorre porque a estação e tudo o que está dentro dela estão em queda livre contínua em direção à Terra, enquanto se deslocam horizontalmente tão rápido que nunca chegam ao chão.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a flutuação dos astronautas se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "não há gravidade a 400 km de altitude."
+      },
+      {
+        "id": "b",
+        "text": "a estação está fora do campo gravitacional da Terra, que se anula acima de 100 km."
+      },
+      {
+        "id": "c",
+        "text": "os astronautas usam roupas especiais que anulam o próprio peso dentro da estação."
+      },
+      {
+        "id": "d",
+        "text": "estação e astronautas caem juntos com a mesma aceleração, de modo que não há força de contato entre eles, o que produz a sensação de imponderabilidade."
+      },
+      {
+        "id": "e",
+        "text": "a gravidade da Lua cancela a da Terra na órbita da estação."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A gravidade atua como força centrípeta; todos caem juntos, e o piso não empurra ninguém.\n\nPegadinhas:\n• A: a gravidade é cerca de 90% da superficial.\n• B: a estação está no campo terrestre.\n• C: não há roupas assim.\n• E: a Lua não cancela a gravidade terrestre.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_28",
+    "chapter": "Sistemas Isolados e a Conservação da Quantidade de Movimento",
+    "topicId": "fis_dinamica_impulsiva",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma colisão, o passageiro de um carro precisa passar de sua velocidade até o repouso. O airbag e o cinto de segurança não mudam essa variação de velocidade, mas aumentam o tempo em que ela ocorre. Pelo teorema do impulso, a força média sobre o corpo multiplicada pelo tempo de contato é igual à variação da quantidade de movimento.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o airbag reduz os ferimentos porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "diminui a variação da quantidade de movimento do passageiro."
+      },
+      {
+        "id": "b",
+        "text": "aumenta o tempo de desaceleração, o que, para a mesma variação da quantidade de movimento, reduz a força média sobre o corpo."
+      },
+      {
+        "id": "c",
+        "text": "aumenta a velocidade do passageiro na colisão, afastando-o do volante."
+      },
+      {
+        "id": "d",
+        "text": "elimina o impulso sofrido pelo passageiro."
+      },
+      {
+        "id": "e",
+        "text": "reduz a massa do passageiro durante o impacto, diminuindo sua quantidade de movimento."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. F·Δt = ΔQ: com ΔQ fixo, Δt maior significa F menor.\n\nPegadinhas:\n• A: o texto diz que a variação não muda.\n• C: o objetivo é parar o passageiro.\n• D: o impulso é o mesmo.\n• E: a massa não muda.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_29",
+    "chapter": "Ondulatória: Ondas Eletromagnéticas",
+    "topicId": "fis_ondulatoria",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma rádio FM transmite na frequência de 100 MHz, isto é, 100 milhões de hertz. As ondas de rádio são eletromagnéticas e se propagam no ar praticamente com a velocidade da luz. Um estudante quer saber qual é o comprimento de onda dessa transmissão.\n\nNote e adote: v = λ·f; velocidade da luz: 3 × 10⁸ m/s.\n\nTexto elaborado para esta questão.\n\nO comprimento de onda da transmissão é",
+    "options": [
+      {
+        "id": "a",
+        "text": "3 m, pois λ = v/f = 3 × 10⁸/10⁸."
+      },
+      {
+        "id": "b",
+        "text": "0,3 m, pois λ = f/v multiplicado por 10."
+      },
+      {
+        "id": "c",
+        "text": "30 m, pois λ = v/f com f em kHz."
+      },
+      {
+        "id": "d",
+        "text": "300 m, pois λ = v/f com f em MHz sem conversão."
+      },
+      {
+        "id": "e",
+        "text": "3 × 10¹⁶ m, pois λ = v·f."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. 100 MHz = 10⁸ Hz; λ = 3 m.\n\nPegadinhas:\n• B: relação inventada.\n• C: unidade errada.\n• D: não converte MHz.\n• E: multiplica em vez de dividir.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_30",
+    "chapter": "Equação do Fabricante de Lentes e Associação de Lentes",
+    "topicId": "fis_optica_instrumental",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma receita de óculos indica −2,5 di para uma pessoa míope. A vergência negativa indica lente divergente, e a distância focal é o inverso da vergência, com f em metros. O oftalmologista explicou que, quanto maior o módulo da vergência, mais \"forte\" é a lente.\n\nNote e adote: V = 1/f.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA distância focal da lente receitada é",
+    "options": [
+      {
+        "id": "a",
+        "text": "−2,5 m, pois a distância focal é igual à vergência."
+      },
+      {
+        "id": "b",
+        "text": "+0,4 m, pois a lente é convergente."
+      },
+      {
+        "id": "c",
+        "text": "+2,5 m, pois o sinal negativo não tem significado."
+      },
+      {
+        "id": "d",
+        "text": "−4 m, pois f = 10/V."
+      },
+      {
+        "id": "e",
+        "text": "−0,4 m, pois f = 1/(−2,5), o sinal negativo indicando lente divergente, adequada à miopia."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. f = −0,4 m = −40 cm.\n\nPegadinhas:\n• A: confunde f com V.\n• B: troca o tipo de lente.\n• C: o sinal indica lente divergente.\n• D: relação inventada.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_31",
+    "chapter": "Energia Potencial e Potencial Elétrico",
+    "topicId": "fis_eletrostatica",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nÉ comum ouvir que o interior de um carro é um lugar relativamente seguro durante uma tempestade com raios. Em um condutor em equilíbrio eletrostático, as cargas em excesso se distribuem pela superfície externa, e o campo elétrico no interior é nulo; o efeito é conhecido como gaiola de Faraday. O mesmo princípio explica por que aparelhos sensíveis são guardados em caixas metálicas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a segurança no interior do carro se deve",
+    "options": [
+      {
+        "id": "a",
+        "text": "aos pneus de borracha, que isolam totalmente o carro do solo."
+      },
+      {
+        "id": "b",
+        "text": "à carroceria metálica, que conduz as cargas pela superfície externa e mantém o interior praticamente livre de campo elétrico, como uma gaiola de Faraday."
+      },
+      {
+        "id": "c",
+        "text": "ao fato de raios nunca atingirem automóveis, por serem objetos baixos em relação ao solo."
+      },
+      {
+        "id": "d",
+        "text": "ao campo elétrico intenso no interior, que repele as descargas."
+      },
+      {
+        "id": "e",
+        "text": "às janelas de vidro, que atraem as cargas do raio e as dissipam no ar."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. As cargas correm pela lataria externa até o solo; o interior fica blindado.\n\nPegadinhas:\n• A: o raio atravessaria alguns centímetros de borracha.\n• C: raios podem atingir carros.\n• D: o campo interno é nulo.\n• E: o vidro não conduz as cargas.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_32",
+    "chapter": "O Movimento Circular",
+    "topicId": "fis_cinematica",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO ponteiro dos segundos de um relógio dá uma volta completa a cada 60 segundos. Um estudante quer calcular o período e a frequência desse movimento, considerando que o ponteiro gira com velocidade angular constante.\n\nNote e adote: f = 1/T.\n\nTexto elaborado para esta questão.\n\nO período e a frequência do ponteiro dos segundos são, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 s e 60 Hz, pois o ponteiro avança um segundo por vez."
+      },
+      {
+        "id": "b",
+        "text": "60 s e 60 Hz, pois período e frequência são iguais."
+      },
+      {
+        "id": "c",
+        "text": "1/60 s e 60 Hz, pois o período é o inverso do tempo de uma volta."
+      },
+      {
+        "id": "d",
+        "text": "60 s e 1/60 Hz, pois o período é o tempo de uma volta, e a frequência, seu inverso."
+      },
+      {
+        "id": "e",
+        "text": "3.600 s e 1/3.600 Hz, pois o ponteiro completa uma volta por hora."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. T = 60 s; f = 1/60 Hz ≈ 0,017 Hz.\n\nPegadinhas:\n• A: confunde o tique com a volta.\n• B: f = 1/T.\n• C: inverte as grandezas.\n• E: descreve o ponteiro dos minutos.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_33",
+    "chapter": "Trabalho e Energia: o Teorema da Energia Potencial",
+    "topicId": "fis_energia",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm guindaste ergue uma carga de 200 kg a uma altura de 15 m, com velocidade constante, em 10 segundos. Com velocidade constante, o trabalho realizado pelo motor é igual ao aumento da energia potencial gravitacional da carga. A potência útil é o trabalho dividido pelo tempo.\n\nNote e adote: g = 10 m/s²; P = W/Δt.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA potência útil do guindaste é",
+    "options": [
+      {
+        "id": "a",
+        "text": "300 W, pois a potência é o peso dividido pelo tempo."
+      },
+      {
+        "id": "b",
+        "text": "2.000 W, pois a potência é igual ao peso da carga."
+      },
+      {
+        "id": "c",
+        "text": "3.000 W, pois o trabalho de 30.000 J dividido por 10 s dá 3.000 W."
+      },
+      {
+        "id": "d",
+        "text": "30.000 W, pois a potência é igual ao trabalho realizado."
+      },
+      {
+        "id": "e",
+        "text": "300.000 W, pois a potência é o trabalho multiplicado pelo tempo."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. W = 200 × 10 × 15 = 30.000 J; P = 3.000 W.\n\nPegadinhas:\n• A: relação inventada.\n• B: confunde peso com potência.\n• D: confunde trabalho com potência.\n• E: multiplica em vez de dividir.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_34",
+    "chapter": "Igualdades",
+    "topicId": "mat_equacoes",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA soma das idades de uma mãe e de sua filha é 50 anos. A mãe tem 26 anos a mais que a filha. Um estudante representou a idade da filha por x e escreveu a equação x + (x + 26) = 50 para descobrir as duas idades.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nAs idades da filha e da mãe são, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "12 e 38 anos, pois 2x + 26 = 50 dá x = 12, e a mãe tem 12 + 26 = 38 anos."
+      },
+      {
+        "id": "b",
+        "text": "24 e 26 anos, pois as idades diferem de 2 anos e somam 50, como diz o enunciado."
+      },
+      {
+        "id": "c",
+        "text": "25 e 25 anos, pois a soma de 50 anos é dividida igualmente entre mãe e filha."
+      },
+      {
+        "id": "d",
+        "text": "13 e 37 anos, pois x = 50/2 − 12."
+      },
+      {
+        "id": "e",
+        "text": "26 e 24 anos, pois a mãe tem 26 anos."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. 2x = 24 ⇒ x = 12; mãe: 38. Conferência: 12 + 38 = 50 e 38 − 12 = 26.\n\nPegadinhas:\n• B: ignora a diferença de 26.\n• C: ignora a diferença.\n• D: conta errada.\n• E: confunde a diferença com a idade.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_35",
+    "chapter": "Polinômios",
+    "topicId": "mat_complexos_polinomios",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPelo teorema do resto, o resto da divisão de um polinômio P(x) por (x − a) é igual a P(a). Um estudante precisa calcular o resto da divisão de\n\nP(x) = x³ − 3x² + 4x − 5\n\npor (x − 2), sem fazer a divisão completa, e quer conferir se o polinômio é divisível por esse binômio.\n\nTexto elaborado para esta questão.\n\nO resto da divisão é",
+    "options": [
+      {
+        "id": "a",
+        "text": "−25, pois corresponde a P(−2)."
+      },
+      {
+        "id": "b",
+        "text": "0, pois P(x) é divisível por (x − 2)."
+      },
+      {
+        "id": "c",
+        "text": "−5, pois é o termo independente do polinômio."
+      },
+      {
+        "id": "d",
+        "text": "3, pois é o coeficiente de x² com o sinal trocado."
+      },
+      {
+        "id": "e",
+        "text": "−1, pois P(2) = 8 − 12 + 8 − 5 = −1."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. P(2) = −1 ≠ 0: não é divisível.\n\nPegadinhas:\n• A: troca o sinal de a.\n• B: o resto não é nulo.\n• C: é P(0).\n• D: relação inventada.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_36",
+    "chapter": "Introdução à Geometria Analítica",
+    "topicId": "mat_geometria_analitica",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um mapa quadriculado, cada unidade corresponde a 1 km. A escola de uma cidade está no ponto (1, 2) e o hospital, no ponto (7, 10). Um estudante quer saber a distância em linha reta entre os dois locais.\n\nNote e adote: d = √[(x₂ − x₁)² + (y₂ − y₁)²].\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA distância em linha reta entre a escola e o hospital é",
+    "options": [
+      {
+        "id": "a",
+        "text": "14 km, pois é a soma das diferenças das coordenadas, 6 + 8."
+      },
+      {
+        "id": "b",
+        "text": "10 km, pois √(6² + 8²) = √100 = 10."
+      },
+      {
+        "id": "c",
+        "text": "7 km, pois é a média das diferenças das coordenadas."
+      },
+      {
+        "id": "d",
+        "text": "100 km, pois é a soma dos quadrados das diferenças, sem a raiz."
+      },
+      {
+        "id": "e",
+        "text": "√14 km, pois é a raiz da soma das diferenças."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Δx = 6, Δy = 8; d = 10 km (triângulo 6-8-10).\n\nPegadinhas:\n• A: é a distância pelas quadras.\n• C: relação inventada.\n• D: esquece a raiz.\n• E: esquece os quadrados.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_37",
+    "chapter": "Introdução às Sequências",
+    "topicId": "mat_sequencias_matrizes",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma bactéria se divide a cada 20 minutos, e cada divisão dobra o número de indivíduos. Em um experimento, uma cultura começou com 100 bactérias. Considere que não houve mortes nem falta de nutrientes durante as duas primeiras horas.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO número de bactérias ao fim de 2 horas é",
+    "options": [
+      {
+        "id": "a",
+        "text": "700, pois a população aumenta 100 bactérias a cada divisão."
+      },
+      {
+        "id": "b",
+        "text": "1.200, pois a população dobra a cada hora, durante duas horas."
+      },
+      {
+        "id": "c",
+        "text": "6.400, pois em 2 horas ocorrem 6 divisões, e 100 × 2⁶ = 6.400."
+      },
+      {
+        "id": "d",
+        "text": "12.800, pois em 2 horas ocorrem 7 divisões."
+      },
+      {
+        "id": "e",
+        "text": "600, pois a população é multiplicada pelo número de divisões."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. 120 min/20 = 6 divisões; PG de razão 2: 100 × 64.\n\nPegadinhas:\n• A: trata como PA.\n• B: erra o intervalo.\n• D: conta divisões a mais.\n• E: multiplica em vez de elevar.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_38",
+    "chapter": "Estatística Descritiva",
+    "topicId": "mat_dados_probabilidade",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma pequena empresa, nove funcionários ganham R$ 2.000,00 por mês, e o dono ganha R$ 32.000,00. Em um anúncio de emprego, a empresa afirmou que o \"salário médio\" é de R$ 5.000,00. Um candidato desconfiou e calculou também a mediana dos dez salários.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nComparando as medidas, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a média de R$ 5.000,00 representa bem o salário típico da empresa, como afirma o anúncio."
+      },
+      {
+        "id": "b",
+        "text": "a mediana também é de R$ 5.000,00, igual à média, pois as duas medidas sempre coincidem."
+      },
+      {
+        "id": "c",
+        "text": "a média é menor que a mediana, pois há muitos salários baixos que puxam a média para baixo."
+      },
+      {
+        "id": "d",
+        "text": "a moda dos salários é de R$ 32.000,00."
+      },
+      {
+        "id": "e",
+        "text": "a mediana, de R$ 2.000,00, representa melhor o salário típico, pois a média é inflada pelo valor extremo do salário do dono."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Média: (9 × 2.000 + 32.000)/10 = 5.000; mediana: 2.000; a média é sensível ao valor extremo.\n\nPegadinhas:\n• A: nove de dez ganham 2.000.\n• B: a mediana é 2.000.\n• C: a média é maior.\n• D: a moda é 2.000.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_39",
+    "chapter": "Eventos Disjuntos e Eventos Independentes",
+    "topicId": "mat_dados_probabilidade",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm aluno faz uma prova com duas questões de múltipla escolha, cada uma com cinco alternativas e apenas uma correta. Ele não estudou e vai chutar as duas respostas de forma independente, escolhendo ao acaso uma alternativa em cada questão.\n\nTexto elaborado para esta questão.\n\nA probabilidade de ele acertar as duas questões é",
+    "options": [
+      {
+        "id": "a",
+        "text": "2/5, pois as probabilidades de cada acerto se somam."
+      },
+      {
+        "id": "b",
+        "text": "1/5, pois a probabilidade é a mesma de acertar uma questão."
+      },
+      {
+        "id": "c",
+        "text": "1/10, pois há dez alternativas no total."
+      },
+      {
+        "id": "d",
+        "text": "1/25, pois os eventos são independentes, e (1/5) × (1/5) = 1/25."
+      },
+      {
+        "id": "e",
+        "text": "4/25, pois é a probabilidade de errar as duas."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Independência: multiplicam-se as probabilidades.\n\nPegadinhas:\n• A: soma vale para eventos disjuntos (\"ou\").\n• B: ignora a segunda questão.\n• C: relação inventada.\n• E: errar as duas é 16/25.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_40",
+    "chapter": "Ângulos em Polígonos",
+    "topicId": "mat_geometria_plana",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA soma dos ângulos internos de um polígono convexo de n lados é (n − 2) × 180°, pois ele pode ser dividido em n − 2 triângulos a partir de um vértice. Em um pentágono regular, todos os ângulos internos são iguais. Um arquiteto precisa saber a medida de cada ângulo interno para projetar o piso de um pátio pentagonal.\n\nTexto elaborado para esta questão.\n\nCada ângulo interno do pentágono regular mede",
+    "options": [
+      {
+        "id": "a",
+        "text": "72°, pois 360° divididos por 5 lados."
+      },
+      {
+        "id": "b",
+        "text": "108°, pois a soma é 3 × 180° = 540°, e 540°/5 = 108°."
+      },
+      {
+        "id": "c",
+        "text": "90°, pois todo polígono regular tem ângulos retos."
+      },
+      {
+        "id": "d",
+        "text": "120°, pois é o ângulo interno do hexágono regular."
+      },
+      {
+        "id": "e",
+        "text": "180°, pois a soma dos ângulos de um triângulo é 180°."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. (5 − 2) × 180° = 540°; 540°/5 = 108°.\n\nPegadinhas:\n• A: é o ângulo externo.\n• C: só o quadrado tem ângulos retos.\n• D: é o do hexágono.\n• E: é a soma de um triângulo.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_41",
+    "chapter": "Trigonometria no Triângulo Retângulo",
+    "topicId": "mat_trigonometria",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara medir a altura de um prédio, uma estudante ficou a 30 m de sua base, em terreno plano, e mediu com um aparelho o ângulo entre o chão e a linha que vai até o topo do prédio: 45°. Considere desprezível a altura dos olhos da estudante.\n\nNote e adote: tg 45° = 1; sen 45° = cos 45° ≈ 0,71.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA altura do prédio é de aproximadamente",
+    "options": [
+      {
+        "id": "a",
+        "text": "21 m, pois a altura é 30 × sen 45°."
+      },
+      {
+        "id": "b",
+        "text": "15 m, pois a altura é metade da distância."
+      },
+      {
+        "id": "c",
+        "text": "30 m, pois a altura é o cateto oposto, e tg 45° = altura/30 = 1."
+      },
+      {
+        "id": "d",
+        "text": "42 m, pois a altura é 30 dividido por cos 45°."
+      },
+      {
+        "id": "e",
+        "text": "60 m, pois a altura é o dobro da distância."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Com 45°, os catetos são iguais: 30 m.\n\nPegadinhas:\n• A: usa seno com o cateto adjacente.\n• B: relação inventada.\n• D: calcula a hipotenusa.\n• E: relação inventada.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_42",
+    "chapter": "Potências e Radicais",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA distância média da Terra ao Sol é de cerca de 1,5 × 10¹¹ m, e a luz viaja a cerca de 3 × 10⁸ m/s. Um estudante quer calcular quanto tempo a luz do Sol leva para chegar à Terra, dividindo a distância pela velocidade e expressando o resultado em segundos.\n\nTexto elaborado para esta questão.\n\nO tempo aproximado gasto pela luz é",
+    "options": [
+      {
+        "id": "a",
+        "text": "4,5 × 10¹⁹ s, pois a distância é multiplicada pela velocidade."
+      },
+      {
+        "id": "b",
+        "text": "5 × 10² s, isto é, cerca de 500 segundos, pouco mais de 8 minutos."
+      },
+      {
+        "id": "c",
+        "text": "2 × 10⁻³ s, pois a velocidade é dividida pela distância."
+      },
+      {
+        "id": "d",
+        "text": "5 × 10¹⁹ s, pois os expoentes se somam na divisão."
+      },
+      {
+        "id": "e",
+        "text": "0,5 s, pois a luz é praticamente instantânea."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. 1,5 × 10¹¹/3 × 10⁸ = 0,5 × 10³ = 500 s ≈ 8 min 20 s.\n\nPegadinhas:\n• A: multiplica em vez de dividir.\n• C: inverte a divisão.\n• D: soma expoentes na divisão.\n• E: ignora as potências.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_43",
+    "chapter": "Operações com Probabilidades",
+    "topicId": "mat_dados_probabilidade",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma turma de 40 alunos, 24 praticam futebol, 16 praticam vôlei e 8 praticam os dois esportes. Um aluno será sorteado ao acaso para representar a turma em um evento esportivo.\n\nNote e adote: P(A ∪ B) = P(A) + P(B) − P(A ∩ B).\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA probabilidade de o aluno sorteado praticar futebol ou vôlei é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1, pois 24 + 16 = 40, e todos praticam algum esporte."
+      },
+      {
+        "id": "b",
+        "text": "1/5, pois 8 alunos praticam os dois esportes."
+      },
+      {
+        "id": "c",
+        "text": "4/5, pois (24 + 16 − 8)/40 = 32/40."
+      },
+      {
+        "id": "d",
+        "text": "3/5, pois é a probabilidade de praticar futebol."
+      },
+      {
+        "id": "e",
+        "text": "2/5, pois é a probabilidade de praticar vôlei."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. 32 praticam pelo menos um; 8 não praticam nenhum.\n\nPegadinhas:\n• A: conta duas vezes os 8.\n• B: é a interseção.\n• D: só futebol.\n• E: só vôlei.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_44",
+    "chapter": "Dinâmica Climática",
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo inverno, a Amazônia ocidental, como Rondônia e o Acre, pode registrar quedas bruscas de temperatura, de mais de 10 °C em poucas horas, fenômeno chamado regionalmente de friagem. Ele ocorre quando massas de ar frio vindas do sul do continente avançam pelo interior da América do Sul, ao longo da depressão entre os Andes e o Planalto Brasileiro, chegando até latitudes próximas ao Equador.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a friagem resulta",
+    "options": [
+      {
+        "id": "a",
+        "text": "da chegada da massa Equatorial Continental, quente e úmida."
+      },
+      {
+        "id": "b",
+        "text": "do avanço de massas polares pelo interior do continente, facilitado pelo relevo, o que provoca quedas bruscas de temperatura mesmo em baixas latitudes."
+      },
+      {
+        "id": "c",
+        "text": "do aumento da insolação no inverno amazônico, que resfria o solo durante a noite."
+      },
+      {
+        "id": "d",
+        "text": "da influência de correntes marinhas quentes no interior da floresta."
+      },
+      {
+        "id": "e",
+        "text": "do desmatamento, que transforma o clima da região em temperado."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A massa Polar Atlântica avança pelo corredor de terras baixas até a Amazônia.\n\nPegadinhas:\n• A: a mEc é quente.\n• C: o fenômeno é de resfriamento.\n• D: correntes marinhas não atuam no interior.\n• E: o fenômeno é natural.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_45",
+    "chapter": "Biogeografia do Brasil II",
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Mata Atlântica originalmente se estendia por grande parte do litoral brasileiro e por áreas do interior, do Rio Grande do Norte ao Rio Grande do Sul. Hoje restam cerca de 12% de sua cobertura original em fragmentos bem preservados. Nessa área vive a maior parte da população brasileira, e as florestas remanescentes protegem nascentes que abastecem grandes cidades. Mesmo reduzido, o bioma abriga muitas espécies endêmicas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que a Mata Atlântica",
+    "options": [
+      {
+        "id": "a",
+        "text": "está praticamente intacta, com mais de 90% de sua cobertura original preservada por lei."
+      },
+      {
+        "id": "b",
+        "text": "ocupa apenas o interior do país, longe das áreas urbanas e do litoral densamente povoado."
+      },
+      {
+        "id": "c",
+        "text": "não tem importância para o abastecimento de água das cidades, abastecidas pelo Aquífero Guarani."
+      },
+      {
+        "id": "d",
+        "text": "não abriga espécies endêmicas por estar fragmentada, pois as espécies migraram para a Amazônia."
+      },
+      {
+        "id": "e",
+        "text": "foi muito reduzida pela ocupação histórica do litoral, mas seus fragmentos ainda protegem mananciais urbanos e grande biodiversidade."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O bioma acompanhou a história de ocupação do país; os remanescentes são essenciais para água e biodiversidade.\n\nPegadinhas:\n• A: restam cerca de 12%.\n• B: estende-se pelo litoral.\n• C: protege nascentes.\n• D: o texto cita endemismos.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_46",
+    "chapter": "Unilateralismo e Multilateralismo",
+    "topicId": "geo_globalizacao_economica",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Mercosul, criado em 1991 pelo Tratado de Assunção, reúne Brasil, Argentina, Paraguai e Uruguai como membros fundadores. Além de eliminar grande parte das tarifas entre os países-membros, o bloco adotou uma tarifa externa comum, aplicada às importações vindas de países de fora. Por isso, é classificado como uma união aduaneira, ainda que imperfeita, pois há exceções à tarifa comum.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o Mercosul",
+    "options": [
+      {
+        "id": "a",
+        "text": "é apenas uma zona de livre comércio, sem política tarifária comum para terceiros."
+      },
+      {
+        "id": "b",
+        "text": "tem moeda única, como a zona do euro."
+      },
+      {
+        "id": "c",
+        "text": "busca funcionar como união aduaneira, com redução das tarifas internas e tarifa externa comum, embora com exceções."
+      },
+      {
+        "id": "d",
+        "text": "proíbe o comércio entre seus membros."
+      },
+      {
+        "id": "e",
+        "text": "foi criado no século XIX pelos países sul-americanos recém-independentes da Espanha e de Portugal."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A tarifa externa comum diferencia a união aduaneira da zona de livre comércio.\n\nPegadinhas:\n• A: há tarifa comum.\n• B: não há moeda única.\n• D: o bloco facilita o comércio.\n• E: foi criado em 1991.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_47",
+    "chapter": "Geopolítica e Geoeconomia da América Latina",
+    "topicId": "geo_geopolitica_regional",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Canal do Panamá, inaugurado em 1914, liga os oceanos Atlântico e Pacífico, evitando que navios contornem o extremo sul da América do Sul. Por ele passa uma parcela importante do comércio marítimo mundial. Em 2023, uma seca reduziu o nível dos lagos que abastecem as eclusas, e as autoridades limitaram o número de travessias diárias, o que provocou filas de navios e aumento dos custos de frete.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o canal tem importância apenas para o comércio interno do Panamá, sem efeito sobre o frete mundial."
+      },
+      {
+        "id": "b",
+        "text": "a seca de 2023 não teve efeito sobre a navegação, pois as eclusas usam água do mar."
+      },
+      {
+        "id": "c",
+        "text": "os navios preferem contornar a América do Sul por ser um trajeto mais curto."
+      },
+      {
+        "id": "d",
+        "text": "o canal encurta rotas entre os dois oceanos e é estratégico para o comércio mundial, e sua dependência de água doce torna a navegação vulnerável a secas."
+      },
+      {
+        "id": "e",
+        "text": "o canal foi inaugurado no século XXI."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. As eclusas usam água dos lagos; a seca expôs a vulnerabilidade de uma rota global.\n\nPegadinhas:\n• A: o comércio é mundial.\n• B: as travessias foram limitadas.\n• C: contornar é muito mais longo.\n• E: foi inaugurado em 1914.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_48",
+    "chapter": "Dinâmica Demográfica",
+    "topicId": "geo_populacao_urbana_brasil",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA taxa de fecundidade no Brasil caiu de cerca de 6 filhos por mulher em 1960 para menos de 2 nas últimas décadas, abaixo do nível de reposição, de cerca de 2,1. Mesmo assim, a população continuou crescendo por algum tempo, porque havia muitas mulheres em idade reprodutiva, nascidas nas décadas de fecundidade alta. As projeções indicam que a população deve começar a diminuir nas próximas décadas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a população diminuiu imediatamente quando a fecundidade ficou abaixo de 2,1."
+      },
+      {
+        "id": "b",
+        "text": "a população continuou crescendo por um tempo pela inércia demográfica, mas tende a diminuir com a fecundidade abaixo do nível de reposição."
+      },
+      {
+        "id": "c",
+        "text": "a fecundidade brasileira aumentou desde 1960, o que explica o crescimento da população."
+      },
+      {
+        "id": "d",
+        "text": "o nível de reposição é de 6 filhos por mulher, valor registrado no Brasil em 1960."
+      },
+      {
+        "id": "e",
+        "text": "a população brasileira deve crescer indefinidamente."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Gerações numerosas em idade fértil mantêm o crescimento por um período, mesmo com poucos filhos por mulher.\n\nPegadinhas:\n• A: o texto diz que continuou crescendo.\n• C: caiu.\n• D: é cerca de 2,1.\n• E: as projeções indicam queda.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_49",
+    "chapter": "Geopolítica dos Recursos Hídricos",
+    "topicId": "geo_hidrogeografia",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Aquífero Guarani é uma das maiores reservas de água subterrânea do mundo e se estende sob o território de Brasil, Argentina, Paraguai e Uruguai. A água fica armazenada nos poros de rochas, principalmente arenitos, e é recarregada lentamente pela infiltração da chuva em áreas onde a rocha aflora. Especialistas alertam para a contaminação por agrotóxicos nessas áreas de recarga e para a extração excessiva em algumas cidades.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que o Aquífero Guarani",
+    "options": [
+      {
+        "id": "a",
+        "text": "é um grande rio subterrâneo que corre por túneis sob a terra."
+      },
+      {
+        "id": "b",
+        "text": "é inesgotável, pois sua recarga pela chuva é muito rápida em todo o território."
+      },
+      {
+        "id": "c",
+        "text": "pertence apenas ao Brasil."
+      },
+      {
+        "id": "d",
+        "text": "armazena água nos poros de rochas, sob quatro países, e sua recarga lenta torna-o vulnerável à contaminação nas áreas de afloramento e à extração excessiva."
+      },
+      {
+        "id": "e",
+        "text": "não pode ser contaminado, por estar protegido pelas rochas."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Água em rocha porosa, de recarga lenta; o uso compartilhado exige gestão internacional.\n\nPegadinhas:\n• A: a água está nos poros.\n• B: a recarga é lenta.\n• C: estende-se por quatro países.\n• E: as áreas de recarga são vulneráveis.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_50",
+    "chapter": "Desafios Ambientais do Século XXI",
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nMedições mostram que regiões centrais de grandes cidades podem ficar vários graus mais quentes que áreas rurais vizinhas, especialmente à noite. O fenômeno, chamado ilha de calor, está associado à substituição da vegetação por asfalto e concreto, que absorvem e armazenam calor, à menor evaporação de água, à verticalização, que dificulta a circulação do vento, e ao calor liberado por veículos e aparelhos.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a ilha de calor resulta",
+    "options": [
+      {
+        "id": "a",
+        "text": "da substituição da vegetação por superfícies que armazenam calor, da menor evaporação, da dificuldade de ventilação e do calor liberado pelas atividades urbanas."
+      },
+      {
+        "id": "b",
+        "text": "exclusivamente da poluição do ar por partículas."
+      },
+      {
+        "id": "c",
+        "text": "do aumento da vegetação nos centros urbanos, que retém calor sob as copas das árvores."
+      },
+      {
+        "id": "d",
+        "text": "da maior evaporação de água nas áreas centrais, que aquece o ar das cidades."
+      },
+      {
+        "id": "e",
+        "text": "de fenômenos climáticos que ocorrem apenas no campo."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Materiais urbanos, falta de verde e de evaporação, barreiras ao vento e fontes de calor somam-se.\n\nPegadinhas:\n• B: o texto aponta vários fatores.\n• C: a vegetação foi substituída.\n• D: a evaporação diminui.\n• E: o fenômeno é urbano.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_51",
+    "chapter": "Dinâmica Interna da Colonização",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo século XVII, expedições partidas da vila de São Paulo, as bandeiras, percorreram o interior do território em busca de indígenas para escravizar e de metais preciosos. Atacaram aldeias e missões jesuíticas, capturando milhares de pessoas. No fim do século, encontraram ouro na região das Minas. Durante muito tempo, os bandeirantes foram celebrados como heróis da expansão territorial, imagem hoje questionada por historiadores.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que as bandeiras",
+    "options": [
+      {
+        "id": "a",
+        "text": "foram expedições pacíficas de estudo da natureza do interior, organizadas por naturalistas."
+      },
+      {
+        "id": "b",
+        "text": "tiveram como objetivo proteger as missões jesuíticas dos ataques dos colonos espanhóis."
+      },
+      {
+        "id": "c",
+        "text": "não tiveram relação com a descoberta do ouro, encontrado pela Coroa no litoral fluminense."
+      },
+      {
+        "id": "d",
+        "text": "eram organizadas pela Coroa espanhola."
+      },
+      {
+        "id": "e",
+        "text": "contribuíram para a expansão territorial e a descoberta do ouro, mas também escravizaram indígenas e atacaram missões, o que explica a revisão de sua imagem heroica."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A expansão teve custo humano alto; a historiografia atual destaca a violência contra os indígenas.\n\nPegadinhas:\n• A: atacavam aldeias.\n• B: atacavam as missões.\n• C: encontraram o ouro.\n• D: partiam de São Paulo, na América portuguesa.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_52",
+    "chapter": "Brasil Império: o Período Regencial (1831-1840)",
+    "topicId": "his_brasil_imperio",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Revolução Farroupilha, entre 1835 e 1845, opôs estancieiros do Rio Grande do Sul ao governo central. Entre as queixas estavam os impostos sobre o charque gaúcho, que sofria concorrência do produto platino, e a pouca autonomia da província. Os rebeldes chegaram a proclamar uma república. O conflito terminou com um acordo que concedeu anistia aos revoltosos e incorporou parte de seus oficiais ao Exército imperial.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a Revolução Farroupilha",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi motivada principalmente pela defesa da abolição da escravidão."
+      },
+      {
+        "id": "b",
+        "text": "expressou interesses de estancieiros gaúchos contra a política fiscal e a centralização do Império, e terminou em acordo com anistia."
+      },
+      {
+        "id": "c",
+        "text": "foi rapidamente derrotada, sem negociações."
+      },
+      {
+        "id": "d",
+        "text": "foi uma revolta de escravizados contra os senhores de engenho do litoral gaúcho."
+      },
+      {
+        "id": "e",
+        "text": "ocorreu no Segundo Reinado, após 1870."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Charque, impostos e autonomia; o acordo de Ponche Verde encerrou a guerra.\n\nPegadinhas:\n• A: a questão central era econômica e política.\n• C: durou dez anos e terminou em acordo.\n• D: foi liderada por estancieiros.\n• E: ocorreu de 1835 a 1845.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_53",
+    "chapter": "Iluminismo",
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm O espírito das leis, de 1748, Montesquieu argumentou que, quando o poder de fazer leis, o de executá-las e o de julgar estão concentrados nas mãos de uma mesma pessoa ou grupo, não há liberdade, pois quem faz as leis pode aplicá-las de forma tirânica. Por isso, defendeu que esses poderes fossem exercidos por órgãos diferentes, que se limitassem mutuamente.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a proposta de Montesquieu",
+    "options": [
+      {
+        "id": "a",
+        "text": "defendia a concentração dos poderes nas mãos do rei para garantir a ordem."
+      },
+      {
+        "id": "b",
+        "text": "propunha a extinção do Poder Judiciário, cujas funções passariam ao Legislativo."
+      },
+      {
+        "id": "c",
+        "text": "defendia a separação entre Legislativo, Executivo e Judiciário, com limites recíprocos, como forma de evitar a tirania e proteger a liberdade."
+      },
+      {
+        "id": "d",
+        "text": "era a mesma teoria do contrato social de Rousseau, baseada na soberania da vontade geral."
+      },
+      {
+        "id": "e",
+        "text": "defendia o poder absoluto da Igreja sobre o Estado, como forma de limitar a tirania dos reis."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. É a origem da tripartição dos poderes, adotada em constituições modernas.\n\nPegadinhas:\n• A: é o oposto.\n• B: o Judiciário é um dos poderes.\n• D: Rousseau trata da vontade geral.\n• E: o texto não trata da Igreja.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_54",
+    "chapter": "Grandes Revoluções do Século XX",
+    "topicId": "his_imperialismo_guerras",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1917, a Rússia estava envolvida na Primeira Guerra Mundial, com derrotas militares, falta de alimentos nas cidades e greves. A maioria da população era camponesa, e a industrialização se concentrava em poucas cidades. Em fevereiro, o czar Nicolau II abdicou; em outubro, os bolcheviques, liderados por Lênin, tomaram o poder com o lema \"paz, terra e pão\" e retiraram o país da guerra no ano seguinte.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a Revolução Russa ocorreu em um país industrializado e próspero, com maioria operária."
+      },
+      {
+        "id": "b",
+        "text": "o czar continuou governando após a revolução de outubro, como monarca constitucional."
+      },
+      {
+        "id": "c",
+        "text": "a Rússia permaneceu na Primeira Guerra até 1918 por decisão dos bolcheviques, que queriam vencê-la."
+      },
+      {
+        "id": "d",
+        "text": "a crise causada pela guerra, a fome e o descontentamento social contribuíram para a queda do czarismo e para a tomada do poder pelos bolcheviques, que prometiam paz, terra e pão."
+      },
+      {
+        "id": "e",
+        "text": "os bolcheviques eram defensores da monarquia e queriam devolver o trono ao czar."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Guerra, fome e um campesinato numeroso deram força ao lema bolchevique.\n\nPegadinhas:\n• A: era majoritariamente agrária.\n• B: o czar abdicou em fevereiro.\n• C: os bolcheviques retiraram o país da guerra.\n• E: eram revolucionários socialistas.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_55",
+    "chapter": "Descolonização Afro-Asiática",
+    "topicId": "his_guerra_fria_contemporaneo",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA independência da Índia, em 1947, teve como uma de suas principais lideranças Mahatma Gandhi, que defendia a resistência não violenta e a desobediência civil, como o boicote a produtos britânicos e a Marcha do Sal, de 1930, contra o monopólio britânico do sal. A independência foi acompanhada da divisão do território em Índia e Paquistão, com violência entre comunidades religiosas e milhões de deslocados.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a independência da Índia foi conquistada principalmente por uma guerra armada contra os britânicos."
+      },
+      {
+        "id": "b",
+        "text": "Gandhi defendia a luta armada como único caminho para expulsar os britânicos."
+      },
+      {
+        "id": "c",
+        "text": "a independência ocorreu sem nenhum conflito entre comunidades religiosas."
+      },
+      {
+        "id": "d",
+        "text": "a Marcha do Sal defendia o monopólio britânico do sal."
+      },
+      {
+        "id": "e",
+        "text": "a resistência não violenta liderada por Gandhi foi central no processo, mas a independência veio acompanhada da partição e de violência religiosa em larga escala."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Desobediência civil e boicotes pressionaram o domínio britânico; a partição gerou violência e deslocamentos.\n\nPegadinhas:\n• A: o texto destaca a não violência.\n• B: Gandhi defendia a não violência.\n• C: houve violência intercomunitária.\n• D: a marcha era contra o monopólio.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_56",
+    "chapter": "Dinâmica Interna da Colonização",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNos séculos XVI e XVII, o açúcar foi o principal produto da economia colonial. Os engenhos, concentrados no litoral de Pernambuco e da Bahia, combinavam grandes propriedades, trabalho de africanos escravizados e produção voltada à exportação para a Europa. Os holandeses, que participavam do refino e da distribuição do produto, chegaram a ocupar parte do Nordeste entre 1630 e 1654.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a economia açucareira colonial",
+    "options": [
+      {
+        "id": "a",
+        "text": "baseava-se em grandes propriedades, trabalho escravizado e produção para exportação, inserindo a colônia no comércio europeu."
+      },
+      {
+        "id": "b",
+        "text": "era voltada principalmente para o consumo interno da colônia, com pouco comércio exterior."
+      },
+      {
+        "id": "c",
+        "text": "utilizava sobretudo mão de obra assalariada europeia, trazida de Portugal e da Holanda."
+      },
+      {
+        "id": "d",
+        "text": "não despertou interesse de outros países europeus, que não consumiam açúcar na época."
+      },
+      {
+        "id": "e",
+        "text": "concentrava-se no interior de Minas Gerais, nas mesmas regiões da mineração do ouro."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. É o modelo de plantation; o interesse holandês mostra o valor do açúcar no mercado europeu.\n\nPegadinhas:\n• B: era para exportação.\n• C: o trabalho era escravizado.\n• D: os holandeses ocuparam o Nordeste.\n• E: concentrava-se no litoral nordestino.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_57",
+    "chapter": "Grandes Revoluções do Século XX",
+    "topicId": "his_imperialismo_guerras",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1949, após décadas de guerra civil e de luta contra a invasão japonesa, o Partido Comunista Chinês, liderado por Mao Tsé-tung, proclamou a República Popular da China. A base de apoio dos comunistas estava sobretudo entre os camponeses, maioria da população. Os nacionalistas, liderados por Chiang Kai-shek, derrotados, refugiaram-se em Taiwan.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que a Revolução Chinesa",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi liderada pelos nacionalistas de Chiang Kai-shek, que se estabeleceram em Pequim."
+      },
+      {
+        "id": "b",
+        "text": "teve base principalmente operária, como a Revolução Russa nas cidades."
+      },
+      {
+        "id": "c",
+        "text": "foi liderada pelo Partido Comunista, com forte base camponesa, e levou os nacionalistas derrotados a se refugiar em Taiwan."
+      },
+      {
+        "id": "d",
+        "text": "ocorreu antes da Primeira Guerra Mundial, com a derrubada do último imperador em 1911."
+      },
+      {
+        "id": "e",
+        "text": "foi uma revolução para restaurar o poder imperial, derrubado pelos japoneses na guerra."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A estratégia maoísta mobilizou o campesinato; a divisão China–Taiwan vem desse desfecho.\n\nPegadinhas:\n• A: os nacionalistas foram derrotados.\n• B: a base era camponesa.\n• D: ocorreu em 1949.\n• E: proclamou uma república popular.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_58",
+    "chapter": "Pronomes",
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia a frase de uma redação:\n\n\"Vivemos uma época onde as redes sociais influenciam as eleições.\"\n\nPela norma-padrão, o pronome relativo \"onde\" deve ser usado apenas para indicar lugar físico, como em \"A cidade onde nasci\". Para retomar termos que indicam tempo ou situação, recomenda-se \"em que\" ou \"na qual\".\n\nTexto elaborado para esta questão.\n\nDe acordo com a norma-padrão, a frase deve ser reescrita como:",
+    "options": [
+      {
+        "id": "a",
+        "text": "\"Vivemos uma época aonde as redes sociais influenciam as eleições.\""
+      },
+      {
+        "id": "b",
+        "text": "\"Vivemos uma época donde as redes sociais influenciam as eleições.\""
+      },
+      {
+        "id": "c",
+        "text": "\"Vivemos uma época que as redes sociais influenciam nela as eleições.\""
+      },
+      {
+        "id": "d",
+        "text": "\"Vivemos uma época em que as redes sociais influenciam as eleições.\""
+      },
+      {
+        "id": "e",
+        "text": "\"Vivemos uma época cuja as redes sociais influenciam as eleições.\""
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. \"Época\" indica tempo: \"em que\" (ou \"na qual\").\n\nPegadinhas:\n• A: \"aonde\" indica movimento para lugar.\n• B: \"donde\" indica origem.\n• C: pleonasmo e construção inadequada.\n• E: \"cuja\" indica posse e não admite artigo depois.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_59",
+    "chapter": "Text Comprehension: The Human Brain",
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Students often stay up late before exams, believing that extra hours of study will improve their results. However, research shows that sleep plays an active role in learning: during deep sleep, the brain replays and strengthens memories formed during the day. Cutting sleep may therefore reduce how much of the studied material is actually remembered.\"\n\nTexto elaborado para esta questão.\n\nAccording to the text,",
+    "options": [
+      {
+        "id": "a",
+        "text": "staying up late always improves exam results."
+      },
+      {
+        "id": "b",
+        "text": "sleep has no effect on learning and memory."
+      },
+      {
+        "id": "c",
+        "text": "the brain stops working completely during deep sleep, so memories are not affected."
+      },
+      {
+        "id": "d",
+        "text": "students should avoid studying before exams and rely only on a good night's sleep."
+      },
+      {
+        "id": "e",
+        "text": "sleep helps consolidate memories, so sacrificing it to study more may reduce what is remembered."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O texto contrapõe a crença comum à pesquisa: o sono profundo fortalece memórias.\n\nPegadinhas:\n• A: é a crença contestada.\n• B: o sono tem papel ativo.\n• C: o cérebro trabalha durante o sono.\n• D: o texto não diz para não estudar.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l25_60",
+    "chapter": "Ideologia e Alienação",
+    "topicId": "soc_marx_sociologia",
+    "subject": "Sociologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara Marx e Engels, as ideias dominantes de uma época são, em geral, as ideias da classe dominante. Esse conjunto de ideias, a ideologia, apresenta interesses particulares como se fossem interesses de toda a sociedade e faz relações sociais históricas parecerem naturais e eternas, como quando se afirma que a desigualdade sempre existiu e sempre existirá.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a ideologia, no sentido marxista,",
+    "options": [
+      {
+        "id": "a",
+        "text": "é o conhecimento científico que revela a realidade social sem distorções."
+      },
+      {
+        "id": "b",
+        "text": "é qualquer opinião política expressa por um cidadão em eleições ou debates públicos."
+      },
+      {
+        "id": "c",
+        "text": "é um conjunto de ideias que tende a mascarar as relações de dominação, apresentando interesses da classe dominante como universais e relações históricas como naturais."
+      },
+      {
+        "id": "d",
+        "text": "é o conceito de Durkheim para os fatos sociais, exteriores e coercitivos aos indivíduos."
+      },
+      {
+        "id": "e",
+        "text": "defende que a desigualdade é resultado de escolhas individuais e do mérito de cada um."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A ideologia naturaliza o que é histórico e universaliza o que é particular.\n\nPegadinhas:\n• A: para Marx, ela distorce a realidade.\n• B: o conceito é mais específico.\n• D: fato social é de Durkheim.\n• E: o texto trata de naturalização, não de escolha individual.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   }
 ]
