@@ -59,6 +59,14 @@ it('desenha a figura geométrica com vértices, medidas e ângulo reto, também 
  expect(figure.querySelector('.crivo-figure__kicker')?.textContent).toBe('Figura');
  expect(figure.querySelectorAll('polygon')).toHaveLength(1);
  expect(figure.querySelector('line[stroke-dasharray]')).toBeTruthy();
+ // B–C é lado do triângulo e segmento tracejado: não pode haver traço
+ // contínuo por baixo dele, senão o tracejado some.
+ const solid=[...figure.querySelectorAll('line:not([stroke-dasharray])')].map(l=>[l.getAttribute('x1'),l.getAttribute('y1'),l.getAttribute('x2'),l.getAttribute('y2')].join());
+ const dashed=figure.querySelector('line[stroke-dasharray]')!;
+ const bc=[dashed.getAttribute('x1'),dashed.getAttribute('y1'),dashed.getAttribute('x2'),dashed.getAttribute('y2')];
+ expect(solid).not.toContain(bc.join());
+ expect(solid).not.toContain([bc[2],bc[3],bc[0],bc[1]].join());
+ expect(figure.querySelector('polygon')?.getAttribute('stroke')).toBe('none');
  for (const text of ['A','B','C','3','4','5']) expect([...figure.querySelectorAll('svg text')].map(t=>t.textContent)).toContain(text);
  const root=createStrategyPrintRoot(container,'Revisão');
  expect(root.querySelector('.crivo-geometry polygon')).toBeTruthy();

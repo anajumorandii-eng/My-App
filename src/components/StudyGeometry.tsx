@@ -27,13 +27,24 @@ export function StudyGeometry({ visual }: { visual: Geometry }) {
     const dx = x - center.x, dy = y - center.y, len = Math.hypot(dx, dy) || 1;
     return { x: x + dx / len * distance, y: y + dy / len * distance };
   };
+  const edgeKey = (a: string, b: string) => a < b ? `${a}|${b}` : `${b}|${a}`;
+  const segmentEdges = new Set((visual.segments ?? []).map(s => edgeKey(s.from, s.to)));
+  const polygonEdges = [...new Map((visual.polygons ?? []).flatMap(p => p.vertices.map((v, i) => [v, p.vertices[(i + 1) % p.vertices.length]] as const))
+    .filter(([a, b]) => !segmentEdges.has(edgeKey(a, b)))
+    .map(edge => [edgeKey(...edge), edge] as const)).values()];
   const label = { fontSize: 15, fill: figureInk.ink } as const;
 
   return <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby={`${id}-title ${id}-description`} className="crivo-geometry">
     <title id={`${id}-title`}>{visual.title}</title><desc id={`${id}-description`}>{visual.caption}</desc>
     {(visual.polygons ?? []).map((polygon, i) => <polygon key={`p${i}`}
       points={polygon.vertices.map(v => { const p = at(v); return `${p.x},${p.y}`; }).join(' ')}
-      fill={figureInk.line} fillOpacity=".45" stroke={figureInk.ink} strokeWidth="1.8" strokeLinejoin="round" />)}
+      fill={figureInk.line} fillOpacity=".45" stroke="none" />)}
+    {/* O contorno vai lado a lado, e o lado que também é segmento fica só com
+        o segmento: com o contorno inteiro por baixo, o lado tracejado (aresta
+        oculta, construção auxiliar) saía contínuo, porque o traço sólido
+        preenchia as falhas do tracejado. */}
+    {polygonEdges.map(([from, to], i) => { const a = at(from), b = at(to); return <line key={`e${i}`}
+      x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={figureInk.ink} strokeWidth="1.8" strokeLinecap="round" />; })}
     {circles.map((circle, i) => { const o = at(circle.center), r = circle.radius * scale; return <g key={`c${i}`}>
       <circle cx={o.x} cy={o.y} r={r} fill="none" stroke={figureInk.ink} strokeWidth="1.8" />
       {circle.label && <>
