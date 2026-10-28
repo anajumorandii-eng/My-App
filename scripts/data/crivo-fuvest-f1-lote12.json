@@ -431,23 +431,23 @@
     "options": [
       {
         "id": "a",
-        "text": "5.730 anos"
+        "text": "5.730 anos, pois restar 25% do carbono-14 corresponde a uma meia-vida."
       },
       {
         "id": "b",
-        "text": "11.460 anos"
+        "text": "11.460 anos, pois de 100% a 25% transcorrem duas meias-vidas."
       },
       {
         "id": "c",
-        "text": "17.190 anos"
+        "text": "17.190 anos, pois de 100% a 25% transcorrem três meias-vidas."
       },
       {
         "id": "d",
-        "text": "22.920 anos"
+        "text": "22.920 anos, pois cada 25% perdidos correspondem a uma meia-vida."
       },
       {
         "id": "e",
-        "text": "28.650 anos"
+        "text": "28.650 anos, pois de 100% a 25% transcorrem cinco meias-vidas."
       }
     ],
     "correctOptionId": "b",
@@ -641,23 +641,23 @@
     "options": [
       {
         "id": "a",
-        "text": "20 s"
+        "text": "20 s, pois o tempo é a largura dividida pela velocidade de 5 m/s em relação às margens."
       },
       {
         "id": "b",
-        "text": "25 s"
+        "text": "25 s, pois o tempo depende só da componente da velocidade perpendicular às margens."
       },
       {
         "id": "c",
-        "text": "33 s"
+        "text": "33 s, pois o tempo é a largura dividida pela velocidade da correnteza."
       },
       {
         "id": "d",
-        "text": "100 s"
+        "text": "100 s, pois a correnteza, contrária ao barco, reduz sua velocidade a 1 m/s."
       },
       {
         "id": "e",
-        "text": "300 s"
+        "text": "300 s, pois o barco precisa percorrer também o deslocamento rio abaixo."
       }
     ],
     "correctOptionId": "b",
@@ -676,23 +676,23 @@
     "options": [
       {
         "id": "a",
-        "text": "1/3"
+        "text": "1/3, pois a catraca, menor, gira mais devagar que a coroa."
       },
       {
         "id": "b",
-        "text": "1"
+        "text": "1, pois coroa e catraca, ligadas pela corrente, giram com a mesma frequência."
       },
       {
         "id": "c",
-        "text": "3"
+        "text": "3, pois a corrente transmite a mesma velocidade linear, e a catraca tem um terço dos dentes da coroa."
       },
       {
         "id": "d",
-        "text": "16"
+        "text": "16, pois a frequência da roda é igual ao número de dentes da catraca."
       },
       {
         "id": "e",
-        "text": "48"
+        "text": "48, pois a frequência da roda é igual ao número de dentes da coroa."
       }
     ],
     "correctOptionId": "c",
@@ -816,23 +816,23 @@
     "options": [
       {
         "id": "a",
-        "text": "3 × 10⁵ J"
+        "text": "3 × 10⁵ J, pois a energia é o produto da massa, em kg, pela velocidade da luz."
       },
       {
         "id": "b",
-        "text": "9 × 10⁷ J"
+        "text": "9 × 10⁷ J, pois c deve ser usada em km/s, e a massa em kg."
       },
       {
         "id": "c",
-        "text": "3 × 10⁸ J"
+        "text": "3 × 10⁸ J, pois a energia é o produto da massa, em gramas, pela velocidade da luz."
       },
       {
         "id": "d",
-        "text": "9 × 10¹⁰ J"
+        "text": "9 × 10¹⁰ J, pois c deve ser usada em km/s, e a massa em gramas."
       },
       {
         "id": "e",
-        "text": "9 × 10¹³ J"
+        "text": "9 × 10¹³ J, pois 10⁻³ kg multiplicados por (3 × 10⁸ m/s)² dão 9 × 10¹³ J."
       }
     ],
     "correctOptionId": "e",
@@ -956,23 +956,23 @@
     "options": [
       {
         "id": "a",
-        "text": "6"
+        "text": "6, pois a soma dos quadrados é igual à soma das raízes."
       },
       {
         "id": "b",
-        "text": "11"
+        "text": "11, pois a soma dos quadrados é igual à soma dos produtos dois a dois."
       },
       {
         "id": "c",
-        "text": "12"
+        "text": "12, pois a soma dos quadrados é o dobro da soma das raízes."
       },
       {
         "id": "d",
-        "text": "14"
+        "text": "14, pois é o quadrado da soma, 36, menos o dobro da soma dos produtos, 22."
       },
       {
         "id": "e",
-        "text": "36"
+        "text": "36, pois a soma dos quadrados é igual ao quadrado da soma das raízes."
       }
     ],
     "correctOptionId": "d",
@@ -1026,23 +1026,23 @@
     "options": [
       {
         "id": "a",
-        "text": "R$ 90,00"
+        "text": "R$ 90,00, pois o aumento posterior não altera o preço com desconto."
       },
       {
         "id": "b",
-        "text": "R$ 99,00"
+        "text": "R$ 99,00, pois o aumento de 10% incide sobre o preço já reduzido de R$ 90,00."
       },
       {
         "id": "c",
-        "text": "R$ 100,00"
+        "text": "R$ 100,00, pois um desconto e um aumento de mesma porcentagem se anulam."
       },
       {
         "id": "d",
-        "text": "R$ 101,00"
+        "text": "R$ 101,00, pois o aumento incide sobre o preço original e o desconto, sobre o reduzido."
       },
       {
         "id": "e",
-        "text": "R$ 110,00"
+        "text": "R$ 110,00, pois o desconto não incide sobre o preço reajustado."
       }
     ],
     "correctOptionId": "b",
@@ -1061,23 +1061,23 @@
     "options": [
       {
         "id": "a",
-        "text": "3"
+        "text": "3, pois a área é um quarto do determinante."
       },
       {
         "id": "b",
-        "text": "6"
+        "text": "6, pois a área é a metade do módulo do determinante, que vale 12."
       },
       {
         "id": "c",
-        "text": "7"
+        "text": "7, pois a área é a soma das coordenadas não nulas dos vértices."
       },
       {
         "id": "d",
-        "text": "12"
+        "text": "12, pois a área é igual ao módulo do determinante."
       },
       {
         "id": "e",
-        "text": "24"
+        "text": "24, pois a área é o dobro do módulo do determinante."
       }
     ],
     "correctOptionId": "b",

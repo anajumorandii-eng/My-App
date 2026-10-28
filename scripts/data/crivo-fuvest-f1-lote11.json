@@ -431,23 +431,23 @@
     "options": [
       {
         "id": "a",
-        "text": "27 g"
+        "text": "27 g, pois 3 mol de elétrons reduzem 1 mol de íons Al³⁺."
       },
       {
         "id": "b",
-        "text": "40,5 g"
+        "text": "40,5 g, pois cada íon de alumínio recebe 2 elétrons ao ser reduzido."
       },
       {
         "id": "c",
-        "text": "54 g"
+        "text": "54 g, pois 3 mol de elétrons produzem os 2 mol de Al da fórmula Al₂O₃."
       },
       {
         "id": "d",
-        "text": "81 g"
+        "text": "81 g, pois cada mol de elétrons produz 1 mol de alumínio."
       },
       {
         "id": "e",
-        "text": "162 g"
+        "text": "162 g, pois cada mol de elétrons produz os 2 mol de Al da fórmula Al₂O₃."
       }
     ],
     "correctOptionId": "a",
@@ -641,23 +641,23 @@
     "options": [
       {
         "id": "a",
-        "text": "25 J"
+        "text": "25 J, pois a energia armazenada diminui quando a tensão aumenta."
       },
       {
         "id": "b",
-        "text": "50 J"
+        "text": "50 J, pois a energia depende só da capacitância, que não mudou."
       },
       {
         "id": "c",
-        "text": "70,7 J"
+        "text": "70,7 J, pois a energia é proporcional à raiz quadrada da tensão."
       },
       {
         "id": "d",
-        "text": "100 J"
+        "text": "100 J, pois a energia é diretamente proporcional à tensão."
       },
       {
         "id": "e",
-        "text": "200 J"
+        "text": "200 J, pois a energia é proporcional ao quadrado da tensão, e dobrar a tensão a quadruplica."
       }
     ],
     "correctOptionId": "e",
@@ -676,23 +676,23 @@
     "options": [
       {
         "id": "a",
-        "text": "10 V"
+        "text": "10 V, pois a resistência interna consome 0,5 × 4 = 2 V da força eletromotriz."
       },
       {
         "id": "b",
-        "text": "12 V"
+        "text": "12 V, pois a tensão nos terminais é sempre igual à força eletromotriz."
       },
       {
         "id": "c",
-        "text": "14 V"
+        "text": "14 V, pois a queda na resistência interna se soma à força eletromotriz."
       },
       {
         "id": "d",
-        "text": "24 V"
+        "text": "24 V, pois a corrente nos faróis dobra a tensão da bateria."
       },
       {
         "id": "e",
-        "text": "48 V"
+        "text": "48 V, pois a tensão é o produto da força eletromotriz pela corrente."
       }
     ],
     "correctOptionId": "a",
@@ -781,23 +781,23 @@
     "options": [
       {
         "id": "a",
-        "text": "85 Hz"
+        "text": "85 Hz, pois o comprimento de onda do fundamental é oito vezes a altura da coluna."
       },
       {
         "id": "b",
-        "text": "170 Hz"
+        "text": "170 Hz, pois no tubo fechado o comprimento de onda do fundamental é quatro vezes a altura da coluna."
       },
       {
         "id": "c",
-        "text": "340 Hz"
+        "text": "340 Hz, pois o comprimento de onda do fundamental é o dobro da altura da coluna."
       },
       {
         "id": "d",
-        "text": "510 Hz"
+        "text": "510 Hz, pois o fundamental do tubo fechado tem três quartos de onda na coluna."
       },
       {
         "id": "e",
-        "text": "680 Hz"
+        "text": "680 Hz, pois o comprimento de onda do fundamental é metade da altura da coluna."
       }
     ],
     "correctOptionId": "b",
@@ -956,23 +956,23 @@
     "options": [
       {
         "id": "a",
-        "text": "1/36"
+        "text": "1/36, pois só um dos 36 pares de resultados tem soma 7."
       },
       {
         "id": "b",
-        "text": "1/18"
+        "text": "1/18, pois só dois dos 36 pares de resultados têm soma 7."
       },
       {
         "id": "c",
-        "text": "1/12"
+        "text": "1/12, pois três pares não ordenados, entre 36, têm soma 7."
       },
       {
         "id": "d",
-        "text": "1/11"
+        "text": "1/11, pois as somas possíveis vão de 2 a 12 e são igualmente prováveis."
       },
       {
         "id": "e",
-        "text": "1/6"
+        "text": "1/6, pois seis dos 36 pares ordenados igualmente prováveis têm soma 7."
       }
     ],
     "correctOptionId": "e",
@@ -991,23 +991,23 @@
     "options": [
       {
         "id": "a",
-        "text": "3,125%"
+        "text": "3,125%, pois em 24 horas ocorrem cinco reduções à metade."
       },
       {
         "id": "b",
-        "text": "6,25%"
+        "text": "6,25%, pois em 24 horas ocorrem quatro reduções à metade."
       },
       {
         "id": "c",
-        "text": "12,5%"
+        "text": "12,5%, pois em 24 horas ocorrem três reduções à metade."
       },
       {
         "id": "d",
-        "text": "25%"
+        "text": "25%, pois em 24 horas ocorrem duas reduções à metade."
       },
       {
         "id": "e",
-        "text": "50%"
+        "text": "50%, pois a meia-vida reduz a quantidade à metade uma única vez."
       }
     ],
     "correctOptionId": "b",

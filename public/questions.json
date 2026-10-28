@@ -116250,23 +116250,23 @@
     "options": [
       {
         "id": "a",
-        "text": "27 g"
+        "text": "27 g, pois 3 mol de elétrons reduzem 1 mol de íons Al³⁺."
       },
       {
         "id": "b",
-        "text": "40,5 g"
+        "text": "40,5 g, pois cada íon de alumínio recebe 2 elétrons ao ser reduzido."
       },
       {
         "id": "c",
-        "text": "54 g"
+        "text": "54 g, pois 3 mol de elétrons produzem os 2 mol de Al da fórmula Al₂O₃."
       },
       {
         "id": "d",
-        "text": "81 g"
+        "text": "81 g, pois cada mol de elétrons produz 1 mol de alumínio."
       },
       {
         "id": "e",
-        "text": "162 g"
+        "text": "162 g, pois cada mol de elétrons produz os 2 mol de Al da fórmula Al₂O₃."
       }
     ],
     "correctOptionId": "a",
@@ -116448,23 +116448,23 @@
     "options": [
       {
         "id": "a",
-        "text": "25 J"
+        "text": "25 J, pois a energia armazenada diminui quando a tensão aumenta."
       },
       {
         "id": "b",
-        "text": "50 J"
+        "text": "50 J, pois a energia depende só da capacitância, que não mudou."
       },
       {
         "id": "c",
-        "text": "70,7 J"
+        "text": "70,7 J, pois a energia é proporcional à raiz quadrada da tensão."
       },
       {
         "id": "d",
-        "text": "100 J"
+        "text": "100 J, pois a energia é diretamente proporcional à tensão."
       },
       {
         "id": "e",
-        "text": "200 J"
+        "text": "200 J, pois a energia é proporcional ao quadrado da tensão, e dobrar a tensão a quadruplica."
       }
     ],
     "correctOptionId": "e",
@@ -116481,23 +116481,23 @@
     "options": [
       {
         "id": "a",
-        "text": "10 V"
+        "text": "10 V, pois a resistência interna consome 0,5 × 4 = 2 V da força eletromotriz."
       },
       {
         "id": "b",
-        "text": "12 V"
+        "text": "12 V, pois a tensão nos terminais é sempre igual à força eletromotriz."
       },
       {
         "id": "c",
-        "text": "14 V"
+        "text": "14 V, pois a queda na resistência interna se soma à força eletromotriz."
       },
       {
         "id": "d",
-        "text": "24 V"
+        "text": "24 V, pois a corrente nos faróis dobra a tensão da bateria."
       },
       {
         "id": "e",
-        "text": "48 V"
+        "text": "48 V, pois a tensão é o produto da força eletromotriz pela corrente."
       }
     ],
     "correctOptionId": "a",
@@ -116580,23 +116580,23 @@
     "options": [
       {
         "id": "a",
-        "text": "85 Hz"
+        "text": "85 Hz, pois o comprimento de onda do fundamental é oito vezes a altura da coluna."
       },
       {
         "id": "b",
-        "text": "170 Hz"
+        "text": "170 Hz, pois no tubo fechado o comprimento de onda do fundamental é quatro vezes a altura da coluna."
       },
       {
         "id": "c",
-        "text": "340 Hz"
+        "text": "340 Hz, pois o comprimento de onda do fundamental é o dobro da altura da coluna."
       },
       {
         "id": "d",
-        "text": "510 Hz"
+        "text": "510 Hz, pois o fundamental do tubo fechado tem três quartos de onda na coluna."
       },
       {
         "id": "e",
-        "text": "680 Hz"
+        "text": "680 Hz, pois o comprimento de onda do fundamental é metade da altura da coluna."
       }
     ],
     "correctOptionId": "b",
@@ -116745,23 +116745,23 @@
     "options": [
       {
         "id": "a",
-        "text": "1/36"
+        "text": "1/36, pois só um dos 36 pares de resultados tem soma 7."
       },
       {
         "id": "b",
-        "text": "1/18"
+        "text": "1/18, pois só dois dos 36 pares de resultados têm soma 7."
       },
       {
         "id": "c",
-        "text": "1/12"
+        "text": "1/12, pois três pares não ordenados, entre 36, têm soma 7."
       },
       {
         "id": "d",
-        "text": "1/11"
+        "text": "1/11, pois as somas possíveis vão de 2 a 12 e são igualmente prováveis."
       },
       {
         "id": "e",
-        "text": "1/6"
+        "text": "1/6, pois seis dos 36 pares ordenados igualmente prováveis têm soma 7."
       }
     ],
     "correctOptionId": "e",
@@ -116778,23 +116778,23 @@
     "options": [
       {
         "id": "a",
-        "text": "3,125%"
+        "text": "3,125%, pois em 24 horas ocorrem cinco reduções à metade."
       },
       {
         "id": "b",
-        "text": "6,25%"
+        "text": "6,25%, pois em 24 horas ocorrem quatro reduções à metade."
       },
       {
         "id": "c",
-        "text": "12,5%"
+        "text": "12,5%, pois em 24 horas ocorrem três reduções à metade."
       },
       {
         "id": "d",
-        "text": "25%"
+        "text": "25%, pois em 24 horas ocorrem duas reduções à metade."
       },
       {
         "id": "e",
-        "text": "50%"
+        "text": "50%, pois a meia-vida reduz a quantidade à metade uma única vez."
       }
     ],
     "correctOptionId": "b",
@@ -117900,23 +117900,23 @@
     "options": [
       {
         "id": "a",
-        "text": "5.730 anos"
+        "text": "5.730 anos, pois restar 25% do carbono-14 corresponde a uma meia-vida."
       },
       {
         "id": "b",
-        "text": "11.460 anos"
+        "text": "11.460 anos, pois de 100% a 25% transcorrem duas meias-vidas."
       },
       {
         "id": "c",
-        "text": "17.190 anos"
+        "text": "17.190 anos, pois de 100% a 25% transcorrem três meias-vidas."
       },
       {
         "id": "d",
-        "text": "22.920 anos"
+        "text": "22.920 anos, pois cada 25% perdidos correspondem a uma meia-vida."
       },
       {
         "id": "e",
-        "text": "28.650 anos"
+        "text": "28.650 anos, pois de 100% a 25% transcorrem cinco meias-vidas."
       }
     ],
     "correctOptionId": "b",
@@ -118098,23 +118098,23 @@
     "options": [
       {
         "id": "a",
-        "text": "20 s"
+        "text": "20 s, pois o tempo é a largura dividida pela velocidade de 5 m/s em relação às margens."
       },
       {
         "id": "b",
-        "text": "25 s"
+        "text": "25 s, pois o tempo depende só da componente da velocidade perpendicular às margens."
       },
       {
         "id": "c",
-        "text": "33 s"
+        "text": "33 s, pois o tempo é a largura dividida pela velocidade da correnteza."
       },
       {
         "id": "d",
-        "text": "100 s"
+        "text": "100 s, pois a correnteza, contrária ao barco, reduz sua velocidade a 1 m/s."
       },
       {
         "id": "e",
-        "text": "300 s"
+        "text": "300 s, pois o barco precisa percorrer também o deslocamento rio abaixo."
       }
     ],
     "correctOptionId": "b",
@@ -118131,23 +118131,23 @@
     "options": [
       {
         "id": "a",
-        "text": "1/3"
+        "text": "1/3, pois a catraca, menor, gira mais devagar que a coroa."
       },
       {
         "id": "b",
-        "text": "1"
+        "text": "1, pois coroa e catraca, ligadas pela corrente, giram com a mesma frequência."
       },
       {
         "id": "c",
-        "text": "3"
+        "text": "3, pois a corrente transmite a mesma velocidade linear, e a catraca tem um terço dos dentes da coroa."
       },
       {
         "id": "d",
-        "text": "16"
+        "text": "16, pois a frequência da roda é igual ao número de dentes da catraca."
       },
       {
         "id": "e",
-        "text": "48"
+        "text": "48, pois a frequência da roda é igual ao número de dentes da coroa."
       }
     ],
     "correctOptionId": "c",
@@ -118263,23 +118263,23 @@
     "options": [
       {
         "id": "a",
-        "text": "3 × 10⁵ J"
+        "text": "3 × 10⁵ J, pois a energia é o produto da massa, em kg, pela velocidade da luz."
       },
       {
         "id": "b",
-        "text": "9 × 10⁷ J"
+        "text": "9 × 10⁷ J, pois c deve ser usada em km/s, e a massa em kg."
       },
       {
         "id": "c",
-        "text": "3 × 10⁸ J"
+        "text": "3 × 10⁸ J, pois a energia é o produto da massa, em gramas, pela velocidade da luz."
       },
       {
         "id": "d",
-        "text": "9 × 10¹⁰ J"
+        "text": "9 × 10¹⁰ J, pois c deve ser usada em km/s, e a massa em gramas."
       },
       {
         "id": "e",
-        "text": "9 × 10¹³ J"
+        "text": "9 × 10¹³ J, pois 10⁻³ kg multiplicados por (3 × 10⁸ m/s)² dão 9 × 10¹³ J."
       }
     ],
     "correctOptionId": "e",
@@ -118395,23 +118395,23 @@
     "options": [
       {
         "id": "a",
-        "text": "6"
+        "text": "6, pois a soma dos quadrados é igual à soma das raízes."
       },
       {
         "id": "b",
-        "text": "11"
+        "text": "11, pois a soma dos quadrados é igual à soma dos produtos dois a dois."
       },
       {
         "id": "c",
-        "text": "12"
+        "text": "12, pois a soma dos quadrados é o dobro da soma das raízes."
       },
       {
         "id": "d",
-        "text": "14"
+        "text": "14, pois é o quadrado da soma, 36, menos o dobro da soma dos produtos, 22."
       },
       {
         "id": "e",
-        "text": "36"
+        "text": "36, pois a soma dos quadrados é igual ao quadrado da soma das raízes."
       }
     ],
     "correctOptionId": "d",
@@ -118461,23 +118461,23 @@
     "options": [
       {
         "id": "a",
-        "text": "R$ 90,00"
+        "text": "R$ 90,00, pois o aumento posterior não altera o preço com desconto."
       },
       {
         "id": "b",
-        "text": "R$ 99,00"
+        "text": "R$ 99,00, pois o aumento de 10% incide sobre o preço já reduzido de R$ 90,00."
       },
       {
         "id": "c",
-        "text": "R$ 100,00"
+        "text": "R$ 100,00, pois um desconto e um aumento de mesma porcentagem se anulam."
       },
       {
         "id": "d",
-        "text": "R$ 101,00"
+        "text": "R$ 101,00, pois o aumento incide sobre o preço original e o desconto, sobre o reduzido."
       },
       {
         "id": "e",
-        "text": "R$ 110,00"
+        "text": "R$ 110,00, pois o desconto não incide sobre o preço reajustado."
       }
     ],
     "correctOptionId": "b",
@@ -118494,23 +118494,23 @@
     "options": [
       {
         "id": "a",
-        "text": "3"
+        "text": "3, pois a área é um quarto do determinante."
       },
       {
         "id": "b",
-        "text": "6"
+        "text": "6, pois a área é a metade do módulo do determinante, que vale 12."
       },
       {
         "id": "c",
-        "text": "7"
+        "text": "7, pois a área é a soma das coordenadas não nulas dos vértices."
       },
       {
         "id": "d",
-        "text": "12"
+        "text": "12, pois a área é igual ao módulo do determinante."
       },
       {
         "id": "e",
-        "text": "24"
+        "text": "24, pois a área é o dobro do módulo do determinante."
       }
     ],
     "correctOptionId": "b",
@@ -119142,6 +119142,1656 @@
     ],
     "correctOptionId": "c",
     "explanation": "Resposta C. A flexibilidade de horário convive com controle algorítmico de preços, pedidos e punições. O trabalhador assume custos (veículo, combustível) e riscos (acidentes, doença), sem férias, previdência ou proteção típicas do emprego formal — traços da precarização.\n\nPegadinhas:\n• A: o texto diz que não há férias remuneradas nem cobertura.\n• B: preços e regras são definidos pela plataforma.\n• D: o texto cita jornadas acima de dez horas.\n• E: a renda depende da plataforma, que controla o acesso aos pedidos.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_01",
+    "chapter": "Segunda Lei de Mendel e Interação Gênica",
+    "topicId": "bio_genetica",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm ervilhas, a cor amarela da semente (V) domina a verde (v), e a forma lisa (R) domina a rugosa (r). Os dois genes estão em cromossomos diferentes e segregam de forma independente. Um pesquisador cruzou duas plantas duplo-heterozigotas, VvRr × VvRr, e obteve 1.600 sementes. Ele quer prever a fração de sementes verdes e rugosas, que só aparecem quando a planta é homozigota recessiva para os dois genes, para conferir se os resultados confirmam a segunda lei de Mendel.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA fração esperada de sementes verdes e rugosas é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1/32, pois cada gene contribui com 1/4, e o resultado deve ser dividido pelos dois genes."
+      },
+      {
+        "id": "b",
+        "text": "1/16, pois os genes segregam de forma independente, e 1/4 × 1/4 = 1/16."
+      },
+      {
+        "id": "c",
+        "text": "1/8, pois as probabilidades de 1/16 de cada gene recessivo se somam."
+      },
+      {
+        "id": "d",
+        "text": "3/16, pois é a fração das sementes que têm um único caráter recessivo."
+      },
+      {
+        "id": "e",
+        "text": "1/4, pois basta considerar a probabilidade de homozigose de um dos genes."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Para cada gene, Aa × Aa dá 1/4 de homozigotos recessivos. Como os genes segregam de forma independente, multiplicam-se as probabilidades: vv e rr = 1/4 × 1/4 = 1/16, cerca de 100 das 1.600 sementes. É a menor classe da proporção 9 : 3 : 3 : 1.\n\nPegadinhas:\n• C: soma as probabilidades (1/16 + 1/16), em vez de multiplicar.\n• D: é a fração de uma das classes intermediárias, como amarela-rugosa.\n• E: considera só um dos genes.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_02",
+    "chapter": "Bioenergética: Fotossíntese e Quimiossíntese",
+    "topicId": "bio_metabolismo_energetico",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa década de 1940, pesquisadores forneceram a algas água marcada com o isótopo pesado oxigênio-18, H₂¹⁸O, e gás carbônico com oxigênio comum. O oxigênio liberado pelas algas era ¹⁸O₂. Em um segundo experimento, com CO₂ marcado (C¹⁸O₂) e água comum, o oxigênio liberado era comum, e o isótopo pesado aparecia nos açúcares produzidos.\n\nNote e adote: equação global simplificada: 6 CO₂ + 12 H₂O → C₆H₁₂O₆ + 6 O₂ + 6 H₂O.\n\nTexto elaborado para esta questão.\n\nOs experimentos permitem concluir que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o oxigênio liberado vem do gás carbônico, que é quebrado na fase clara."
+      },
+      {
+        "id": "b",
+        "text": "o oxigênio liberado vem igualmente da água e do gás carbônico."
+      },
+      {
+        "id": "c",
+        "text": "a fotossíntese não libera oxigênio, apenas consome."
+      },
+      {
+        "id": "d",
+        "text": "o oxigênio liberado provém da quebra da água, a fotólise, e o oxigênio do gás carbônico é incorporado aos açúcares."
+      },
+      {
+        "id": "e",
+        "text": "o isótopo pesado é tóxico e impede a fotossíntese."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Só quando a água estava marcada o O₂ saiu marcado: o oxigênio vem da fotólise da água, na fase clara. O oxigênio do CO₂ foi para a glicose, fixada no ciclo de Calvin. Por isso a equação usa 12 H₂O: são necessárias 12 moléculas para fornecer os 12 átomos de oxigênio do O₂.\n\nPegadinhas:\n• A: contradiz o segundo experimento.\n• B: o O₂ só saiu marcado no primeiro experimento.\n• C: os dois experimentos registram liberação de oxigênio.\n• E: as algas fizeram fotossíntese nos dois casos.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_03",
+    "chapter": "Composição Química Celular: Carboidratos e Lipídios",
+    "topicId": "bio_estrutura_fisio_celular",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAves migratórias que atravessam o oceano sem pousar acumulam, antes da viagem, grande quantidade de gordura sob a pele e entre os órgãos, chegando a dobrar a massa corporal. Também armazenam glicogênio no fígado e nos músculos, mas em quantidade muito menor. Cada grama de lipídio fornece cerca de 9 kcal, contra cerca de 4 kcal por grama de carboidrato; além disso, o glicogênio é armazenado junto com bastante água, que aumenta a massa carregada.\n\nTexto elaborado para esta questão.\n\nO predomínio da gordura como reserva para a migração se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "os lipídios armazenam mais que o dobro de energia por grama e são estocados com pouca água, o que reduz a massa transportada para a mesma quantidade de energia."
+      },
+      {
+        "id": "b",
+        "text": "o glicogênio não pode ser usado como fonte de energia durante o voo."
+      },
+      {
+        "id": "c",
+        "text": "a gordura é uma proteína de reserva, mais resistente que os carboidratos."
+      },
+      {
+        "id": "d",
+        "text": "os lipídios são solúveis em água e circulam livremente no sangue."
+      },
+      {
+        "id": "e",
+        "text": "o glicogênio fornece mais energia por grama que a gordura."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Para a mesma energia, a gordura pesa menos que a metade do carboidrato seco, e o glicogênio ainda vem acompanhado de água. Para uma ave que carrega o próprio combustível, a reserva lipídica é muito mais eficiente.\n\nPegadinhas:\n• B: o glicogênio é usado, sobretudo no início do esforço.\n• C: gordura é lipídio, não proteína.\n• D: lipídios são insolúveis em água e são transportados ligados a proteínas.\n• E: inverte os valores dados no texto.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_04",
+    "chapter": "Composição Química Celular: Compostos Inorgânicos",
+    "topicId": "bio_estrutura_fisio_celular",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm dias quentes ou durante exercícios intensos, o corpo humano produz suor, que se espalha pela pele e evapora. Pessoas que correm em ambientes muito úmidos, porém, sentem mais calor, pois o suor escorre sem evaporar. A água tem calor específico e calor latente de vaporização muito altos em comparação com a maioria das substâncias, propriedades associadas às ligações de hidrogênio entre suas moléculas.\n\nTexto elaborado para esta questão.\n\nO papel do suor na regulação da temperatura corporal se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o suor é mais frio que a pele e a resfria por contato."
+      },
+      {
+        "id": "b",
+        "text": "o sal do suor absorve o calor do corpo."
+      },
+      {
+        "id": "c",
+        "text": "a umidade do ar aumenta a evaporação do suor."
+      },
+      {
+        "id": "d",
+        "text": "o suor impede a entrada de calor por bloquear os poros."
+      },
+      {
+        "id": "e",
+        "text": "a evaporação da água retira da pele uma grande quantidade de calor, por causa do alto calor latente de vaporização, e esse processo é menos eficiente quando o ar já está muito úmido."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Para evaporar, a água precisa romper ligações de hidrogênio, o que consome muita energia, retirada da pele. Com o ar úmido, a evaporação é lenta, e o suor escorre sem resfriar. O alto calor específico também ajuda a estabilizar a temperatura do corpo, rico em água.\n\nPegadinhas:\n• A: o suor sai na temperatura do corpo; o resfriamento vem da evaporação.\n• B: os sais não são o agente do resfriamento.\n• C: a umidade reduz a evaporação, como o texto mostra.\n• D: o suor sai pelos poros, e não os bloqueia.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_05",
+    "chapter": "Citoplasma: Estrutura e Componentes II",
+    "topicId": "bio_estrutura_fisio_celular",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA doença de Tay-Sachs é uma condição genética rara em que falta uma enzima digestiva específica no interior de certas organelas das células nervosas. Sem essa enzima, um tipo de lipídio que deveria ser degradado se acumula dentro das organelas, que incham, e os neurônios deixam de funcionar adequadamente. A doença faz parte de um grupo de condições chamadas doenças de depósito.\n\nTexto elaborado para esta questão.\n\nA organela afetada e sua função são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "mitocôndria, responsável pela respiração celular."
+      },
+      {
+        "id": "b",
+        "text": "ribossomo, responsável pela síntese de lipídios."
+      },
+      {
+        "id": "c",
+        "text": "lisossomo, que contém enzimas hidrolíticas responsáveis pela digestão intracelular de moléculas e estruturas da própria célula ou captadas por ela."
+      },
+      {
+        "id": "d",
+        "text": "complexo golgiense, responsável pela síntese de DNA."
+      },
+      {
+        "id": "e",
+        "text": "centríolo, responsável pela organização dos cromossomos."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Lisossomos são vesículas com enzimas digestivas, formadas a partir do complexo golgiense. Sem uma enzima específica, o substrato correspondente não é digerido e se acumula: é o mecanismo das doenças de depósito lisossômico.\n\nPegadinhas:\n• A: mitocôndrias fazem respiração, não digestão intracelular.\n• B: ribossomos sintetizam proteínas.\n• D: o Golgi processa e empacota substâncias, e não sintetiza DNA.\n• E: centríolos participam da organização do fuso e de cílios.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_06",
+    "chapter": "Morfofisiologia Vegetal: Caules e Folhas",
+    "topicId": "bio_fisio_vegetal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm períodos de seca, muitas plantas fecham os estômatos nas horas mais quentes do dia. Medidas feitas em uma plantação de milho durante uma estiagem mostraram que, nesse horário, a perda de água pelas folhas diminuiu muito, mas a taxa de fotossíntese também caiu, e o crescimento das plantas foi menor que em anos de chuva regular. Os estômatos são estruturas das folhas formadas por duas células-guarda, que delimitam uma abertura.\n\nTexto elaborado para esta questão.\n\nA queda da fotossíntese com os estômatos fechados se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "os estômatos produzem a clorofila necessária à fotossíntese."
+      },
+      {
+        "id": "b",
+        "text": "a luz deixa de chegar ao interior da folha."
+      },
+      {
+        "id": "c",
+        "text": "o fechamento libera o oxigênio acumulado nas folhas."
+      },
+      {
+        "id": "d",
+        "text": "as raízes param de funcionar quando os estômatos fecham."
+      },
+      {
+        "id": "e",
+        "text": "a mesma abertura que permite a saída de vapor d'água é a principal via de entrada do gás carbônico; fechá-la reduz a transpiração, mas também a entrada de CO₂, necessário à fotossíntese."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Há um compromisso: estômatos abertos permitem a entrada de CO₂ e a saída de vapor d'água. Na seca, fechá-los poupa água, mas limita o CO₂ disponível e a fotossíntese, e a planta cresce menos.\n\nPegadinhas:\n• A: a clorofila está nos cloroplastos, inclusive das células do mesofilo.\n• B: a luz atravessa a epiderme normalmente.\n• C: o fechamento reduz as trocas gasosas, em vez de liberar gases.\n• D: o fechamento não interrompe o funcionamento das raízes.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_07",
+    "chapter": "Artrópodes: Aracnídeos",
+    "topicId": "bio_zoologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm aluno trouxe para a aula fotos de uma aranha-armadeira, de um escorpião-amarelo e de uma formiga, e afirmou que os três são insetos, pois são pequenos, têm exoesqueleto e patas articuladas. A professora explicou que os três são artrópodes, mas que pertencem a grupos diferentes, e pediu que a turma observasse o número de patas, a divisão do corpo e a presença de antenas em cada animal.\n\nTexto elaborado para esta questão.\n\nA observação pedida permite separar os grupos porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "insetos têm oito patas, e aracnídeos, seis."
+      },
+      {
+        "id": "b",
+        "text": "aranhas e escorpiões têm antenas, e formigas não têm."
+      },
+      {
+        "id": "c",
+        "text": "aracnídeos, como aranhas e escorpiões, têm quatro pares de patas, corpo dividido em cefalotórax e abdome e não têm antenas, enquanto os insetos têm três pares de patas, corpo dividido em cabeça, tórax e abdome e um par de antenas."
+      },
+      {
+        "id": "d",
+        "text": "aracnídeos não têm exoesqueleto, ao contrário dos insetos."
+      },
+      {
+        "id": "e",
+        "text": "os três animais têm o corpo dividido em cabeça, tórax e abdome."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Os caracteres pedidos separam bem as classes: insetos são hexápodes, com três tagmas e antenas; aracnídeos têm oito patas, dois tagmas e quelíceras no lugar de antenas.\n\nPegadinhas:\n• A: inverte os números de patas.\n• B: aracnídeos não têm antenas.\n• D: todos os artrópodes têm exoesqueleto de quitina.\n• E: aracnídeos têm cefalotórax e abdome.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_08",
+    "chapter": "Protozoários e Protozooses",
+    "topicId": "bio_zoologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA doença de Chagas é causada pelo protozoário Trypanosoma cruzi. A forma clássica de transmissão ocorre quando o barbeiro, inseto que se alimenta de sangue, defeca durante a picada, e as fezes contaminadas entram em contato com a pele ferida ou com mucosas. Nas últimas décadas, porém, a maior parte dos casos novos no Brasil, sobretudo na região Norte, tem sido associada à ingestão de alimentos, como suco de açaí ou de cana, preparados com barbeiros triturados junto com os frutos.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o protozoário pode infectar o ser humano pelas fezes do barbeiro em contato com feridas e também pela via oral, e o controle inclui a higiene no processamento dos alimentos, além do combate ao inseto."
+      },
+      {
+        "id": "b",
+        "text": "o barbeiro transmite o protozoário pela saliva, como o mosquito da malária."
+      },
+      {
+        "id": "c",
+        "text": "o açaí produz o protozoário naturalmente e deve ser evitado."
+      },
+      {
+        "id": "d",
+        "text": "a doença é causada por uma bactéria transmitida pelo inseto."
+      },
+      {
+        "id": "e",
+        "text": "basta eliminar os barbeiros das casas para impedir todos os casos."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Na transmissão vetorial, o protozoário está nas fezes do barbeiro, não na saliva. Na oral, insetos ou suas fezes são triturados com os frutos. Por isso, a prevenção inclui boas práticas no processamento do açaí, como o branqueamento, além do controle do vetor.\n\nPegadinhas:\n• B: o texto diz que a transmissão é pelas fezes.\n• C: o açaí é contaminado por barbeiros triturados, e não produz o protozoário.\n• D: o agente é um protozoário.\n• E: a via oral exige outros cuidados.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_09",
+    "chapter": "Poríferos e Cnidários",
+    "topicId": "bio_zoologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 2024, a agência de oceanos dos Estados Unidos anunciou um evento global de branqueamento de corais, associado ao aquecimento das águas. Os corais são cnidários que vivem em associação com algas microscópicas, as zooxantelas, alojadas em seus tecidos. As algas fazem fotossíntese e fornecem ao coral grande parte de seu alimento, além de lhe dar cor. Com a água muito quente por semanas, os corais expulsam as algas e ficam brancos; se a temperatura não baixar, podem morrer.\n\nTexto elaborado para esta questão.\n\nO branqueamento ameaça os corais porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "as algas são parasitas que, ao sair, levam nutrientes do coral."
+      },
+      {
+        "id": "b",
+        "text": "a perda das zooxantelas rompe uma relação mutualística em que as algas fornecem ao coral alimento produzido pela fotossíntese, e sem elas o coral passa fome."
+      },
+      {
+        "id": "c",
+        "text": "a cor branca reflete o calor e congela o coral."
+      },
+      {
+        "id": "d",
+        "text": "os corais são plantas que deixam de fazer fotossíntese."
+      },
+      {
+        "id": "e",
+        "text": "a água quente dissolve imediatamente o esqueleto do coral."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Coral e zooxantelas formam um mutualismo: o coral oferece abrigo e nutrientes como CO₂ e compostos nitrogenados, e as algas devolvem açúcares da fotossíntese. Sem elas, o coral fica sem a principal fonte de energia e pode morrer se o estresse persistir.\n\nPegadinhas:\n• A: a relação é mutualística, como o texto descreve.\n• C: a cor branca é o esqueleto aparente, sem algas; não há congelamento.\n• D: corais são animais cnidários.\n• E: a dissolução do esqueleto está associada à acidificação, não ao branqueamento imediato.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_10",
+    "chapter": "O Estado Gasoso",
+    "topicId": "qui_gases",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nFabricantes recomendam calibrar os pneus com eles frios, antes de rodar. Um motorista calibrou os pneus a 30 psi pela manhã, com temperatura de 27 °C. Após uma longa viagem por estrada quente, a temperatura do ar dentro dos pneus chegou a 57 °C. Considere que o volume do pneu praticamente não varia, que não há vazamento e que o ar se comporta como gás ideal.\n\nNote e adote: T(K) = T(°C) + 273; para volume e quantidade de gás constantes, p/T é constante.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA pressão indicada pelo calibrador ao fim da viagem seria de aproximadamente",
+    "options": [
+      {
+        "id": "a",
+        "text": "27,3 psi, pois a pressão diminui quando a temperatura absoluta aumenta."
+      },
+      {
+        "id": "b",
+        "text": "30 psi, pois a pressão do pneu depende apenas da calibragem inicial."
+      },
+      {
+        "id": "c",
+        "text": "31,5 psi, pois a pressão aumenta 5% a cada aumento de 30 °C."
+      },
+      {
+        "id": "d",
+        "text": "33 psi, pois, com volume constante, a pressão é proporcional à temperatura absoluta, que passou de 300 K para 330 K."
+      },
+      {
+        "id": "e",
+        "text": "63,3 psi, pois a pressão é proporcional à temperatura em graus Celsius, que passou de 27 °C para 57 °C."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Em kelvins, T₁ = 300 K e T₂ = 330 K. p₂ = 30 × 330/300 = 33 psi. Por isso calibrar com o pneu quente dá leitura maior e leva a pneus vazios quando esfriam.\n\nPegadinhas:\n• A: inverte a razão entre as temperaturas.\n• B: supõe que a pressão não depende da temperatura.\n• E: usa graus Celsius (30 × 57/27), o que só vale na escala absoluta.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_11",
+    "chapter": "Equilíbrios Iônicos",
+    "topicId": "qui_equilibrio",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA água da chuva é naturalmente um pouco ácida, com pH próximo de 5,6, porque dissolve gás carbônico do ar. Em regiões industriais, óxidos de enxofre e de nitrogênio tornam a chuva mais ácida. Em uma cidade, o monitoramento registrou chuvas com pH 5 em um ano e com pH 4 alguns anos depois, após a instalação de uma usina termelétrica a carvão nas proximidades.\n\nNote e adote: pH = −log [H⁺].\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA concentração de íons H⁺ na chuva de pH 4, em relação à de pH 5, é maior",
+    "options": [
+      {
+        "id": "a",
+        "text": "1,25 vez, pois a concentração de H⁺ é proporcional ao valor do pH."
+      },
+      {
+        "id": "b",
+        "text": "2 vezes, pois cada unidade a menos no pH dobra a concentração de H⁺."
+      },
+      {
+        "id": "c",
+        "text": "10 vezes, pois o pH é logarítmico e cada unidade a menos corresponde a dez vezes mais H⁺."
+      },
+      {
+        "id": "d",
+        "text": "100 vezes, pois a diferença de uma unidade de pH corresponde a um fator de 10²."
+      },
+      {
+        "id": "e",
+        "text": "1.000 vezes, pois a acidez cresce com o cubo da variação do pH."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. [H⁺] = 10⁻ᵖᴴ: 10⁻⁴ / 10⁻⁵ = 10. Cada unidade a menos no pH corresponde a dez vezes mais H⁺.\n\nPegadinhas:\n• A: divide os valores de pH (5/4).\n• B: supõe que cada unidade dobra a concentração.\n• D: conta duas unidades de pH.\n• E: conta três unidades de pH.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_12",
+    "chapter": "Química Ambiental",
+    "topicId": "qui_oxirreducao",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1987, o Protocolo de Montreal estabeleceu a eliminação gradual dos clorofluorcarbonetos (CFCs), usados em geladeiras e aerossóis. Na estratosfera, a radiação ultravioleta quebra os CFCs e libera átomos de cloro, que destroem o ozônio em reações em cadeia. Já perto do solo, nas grandes cidades, o ozônio é considerado poluente: forma-se a partir de gases emitidos por veículos, sob luz solar, e irrita as vias respiratórias.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o ozônio é benéfico na estratosfera, onde absorve radiação ultravioleta, e prejudicial na troposfera, onde é poluente, e os CFCs ameaçam a camada estratosférica ao liberar cloro que atua como catalisador de sua destruição."
+      },
+      {
+        "id": "b",
+        "text": "o buraco na camada de ozônio é a principal causa do efeito estufa."
+      },
+      {
+        "id": "c",
+        "text": "o ozônio é sempre poluente, em qualquer altitude."
+      },
+      {
+        "id": "d",
+        "text": "os CFCs destroem o ozônio das cidades, melhorando a qualidade do ar."
+      },
+      {
+        "id": "e",
+        "text": "o Protocolo de Montreal incentivou o uso de CFCs em geladeiras."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A mesma substância tem papéis opostos conforme a altitude. Na estratosfera, filtra o UV; perto do solo, é oxidante e irritante. O cloro dos CFCs não é consumido na destruição do ozônio, e um átomo destrói milhares de moléculas.\n\nPegadinhas:\n• B: são problemas distintos, embora alguns gases participem de ambos.\n• C: o ozônio estratosférico protege a vida.\n• D: os CFCs agem na estratosfera.\n• E: o protocolo eliminou os CFCs.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_13",
+    "chapter": "Ácidos Graxos e Esterificação",
+    "topicId": "qui_organica_reacoes",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO aroma de banana usado em balas e refrigerantes pode ser obtido em laboratório pela reação entre o ácido acético, presente no vinagre, e o álcool isoamílico, com ácido sulfúrico como catalisador. Forma-se o acetato de isoamila, um éster de cheiro característico. A reação é reversível e chega a um equilíbrio; para aumentar o rendimento, usa-se excesso de um dos reagentes ou retira-se um dos produtos.\n\nTexto elaborado para esta questão.\n\nA reação descrita e o outro produto formado são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "neutralização; e um sal."
+      },
+      {
+        "id": "b",
+        "text": "combustão; e gás carbônico."
+      },
+      {
+        "id": "c",
+        "text": "saponificação; e glicerol."
+      },
+      {
+        "id": "d",
+        "text": "oxidação; e hidrogênio."
+      },
+      {
+        "id": "e",
+        "text": "esterificação de Fischer, entre um ácido carboxílico e um álcool; e água."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Ácido carboxílico + álcool ⇌ éster + água, catalisado por ácido. Retirar a água ou usar excesso de reagente desloca o equilíbrio no sentido do éster.\n\nPegadinhas:\n• A: neutralização é entre ácido e base, formando sal e água.\n• B: não há queima.\n• C: saponificação é a hidrólise básica de ésteres de glicerol.\n• D: não há liberação de hidrogênio.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_14",
+    "chapter": "Reações de Substituição",
+    "topicId": "qui_organica_reacoes",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAo misturar gás metano, CH₄, e gás cloro, Cl₂, no escuro, praticamente nada acontece. Sob luz ultravioleta, a reação ocorre rapidamente, formando clorometano, CH₃Cl, e cloreto de hidrogênio, HCl. Se a reação continuar com excesso de cloro, formam-se também CH₂Cl₂, CHCl₃ e CCl₄. Os alcanos, por terem apenas ligações simples, não sofrem reações de adição.\n\nTexto elaborado para esta questão.\n\nA reação descrita é",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma adição, em que o cloro se soma a uma ligação dupla do metano."
+      },
+      {
+        "id": "b",
+        "text": "uma substituição radicalar, em que um átomo de hidrogênio do alcano é trocado por um átomo de cloro, e a luz fornece energia para formar os radicais de cloro."
+      },
+      {
+        "id": "c",
+        "text": "uma eliminação, em que o metano perde átomos e forma uma ligação dupla."
+      },
+      {
+        "id": "d",
+        "text": "uma combustão, em que o cloro atua como combustível."
+      },
+      {
+        "id": "e",
+        "text": "uma neutralização entre um ácido e uma base."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A luz rompe Cl–Cl, formando radicais Cl·, que retiram hidrogênio do metano; o radical metila reage com outro Cl₂, e a cadeia continua. Cada etapa troca um H por Cl, o que explica os produtos sucessivos até o CCl₄.\n\nPegadinhas:\n• A: o metano não tem ligação dupla.\n• C: não se forma ligação dupla.\n• D: o cloro não é combustível, e não há oxigênio.\n• E: não há ácido e base reagindo.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_15",
+    "chapter": "Termoquímica II",
+    "topicId": "qui_termoquimica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA combustão incompleta do carvão forma monóxido de carbono, cuja entalpia de formação é difícil de medir diretamente, pois parte do CO formado continua a queimar. Usa-se então a lei de Hess, a partir das equações:\n\nC(s) + O₂(g) → CO₂(g)   ΔH = −394 kJ\nCO(g) + ½ O₂(g) → CO₂(g)   ΔH = −283 kJ\n\nTexto elaborado para esta questão.\n\nA variação de entalpia da reação C(s) + ½ O₂(g) → CO(g) é",
+    "options": [
+      {
+        "id": "a",
+        "text": "−677 kJ, obtido somando-se as entalpias das duas equações dadas."
+      },
+      {
+        "id": "b",
+        "text": "−394 kJ, pois a formação de CO libera a mesma energia que a de CO₂."
+      },
+      {
+        "id": "c",
+        "text": "−283 kJ, pois corresponde à combustão do CO, que é a reação pedida."
+      },
+      {
+        "id": "d",
+        "text": "−111 kJ, obtido somando-se a primeira equação ao inverso da segunda."
+      },
+      {
+        "id": "e",
+        "text": "+111 kJ, pois a formação de CO é o inverso da combustão do carbono."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Mantém-se a primeira equação e inverte-se a segunda (CO₂ → CO + ½ O₂, ΔH = +283 kJ). Somando: C + ½ O₂ → CO, ΔH = −394 + 283 = −111 kJ.\n\nPegadinhas:\n• A: soma as duas entalpias sem inverter a segunda.\n• B: usa só a combustão completa.\n• C: usa só a segunda equação.\n• E: inverte o sinal do resultado.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_16",
+    "chapter": "Organização da Tabela Periódica dos Elementos",
+    "topicId": "qui_modelos_atomicos",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO lítio, usado nas baterias de celulares e carros elétricos, e o sódio, presente no sal de cozinha, são metais macios que reagem vigorosamente com a água, formando hidróxidos e liberando hidrogênio. Por isso, ambos são guardados imersos em óleo nos laboratórios. Pesquisas recentes buscam baterias de sódio como alternativa às de lítio, metal mais escasso.\n\nNote e adote: números atômicos: Li = 3; Na = 11.\n\nTexto elaborado para esta questão.\n\nA semelhança de comportamento entre lítio e sódio se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "ambos estão no mesmo período, com o mesmo número de camadas eletrônicas."
+      },
+      {
+        "id": "b",
+        "text": "ambos têm o mesmo número atômico."
+      },
+      {
+        "id": "c",
+        "text": "ambos são gases nobres, com a camada de valência completa."
+      },
+      {
+        "id": "d",
+        "text": "ambos estão no grupo 1, dos metais alcalinos, com um elétron na camada de valência, que tendem a perder, formando íons +1."
+      },
+      {
+        "id": "e",
+        "text": "o sódio é um isótopo do lítio."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Li: 2, 1; Na: 2, 8, 1. Ambos têm um elétron de valência e o perdem com facilidade, por isso reagem vigorosamente com água. Elementos do mesmo grupo têm configurações de valência semelhantes, e daí propriedades parecidas.\n\nPegadinhas:\n• A: Li está no 2º período e Na no 3º.\n• B: os números atômicos são 3 e 11.\n• C: gases nobres não reagem desse modo.\n• E: isótopos têm o mesmo número atômico.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_17",
+    "chapter": "Equações Iônicas e outras Teorias para Ácidos e Bases",
+    "topicId": "qui_inorganica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPessoas com azia costumam tomar leite de magnésia, uma suspensão de hidróxido de magnésio, Mg(OH)₂. O ácido do estômago é principalmente ácido clorídrico, HCl. Ao reagir, o antiácido eleva o pH do conteúdo do estômago e alivia a queimação. Médicos alertam, no entanto, que o uso frequente sem orientação pode mascarar doenças que precisam de tratamento.\n\nTexto elaborado para esta questão.\n\nA reação que alivia a azia pode ser representada por",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂, com liberação de hidrogênio."
+      },
+      {
+        "id": "b",
+        "text": "Mg(OH)₂ + 2 HCl → MgCl₂ + 2 H₂O, uma neutralização em que os íons OH⁻ da base reagem com os íons H⁺ do ácido, formando água."
+      },
+      {
+        "id": "c",
+        "text": "Mg(OH)₂ + HCl → Mg + Cl₂ + H₂O, com formação de magnésio metálico."
+      },
+      {
+        "id": "d",
+        "text": "Mg(OH)₂ → Mg + O₂ + H₂, uma decomposição sem participação do ácido."
+      },
+      {
+        "id": "e",
+        "text": "HCl + H₂O → H₃O⁺ + Cl⁻, que torna o meio mais ácido."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Base + ácido → sal + água. Na forma iônica essencial, H⁺ + OH⁻ → H₂O: a diminuição de H⁺ eleva o pH. O sal formado, MgCl₂, permanece dissolvido.\n\nPegadinhas:\n• A: não há liberação de H₂; o H do ácido vai para a água.\n• C: não há redução do magnésio nem formação de Cl₂.\n• D: não há decomposição.\n• E: é a ionização do HCl, que torna o meio ácido.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_18",
+    "chapter": "Composição da Matéria: Estados Físicos",
+    "topicId": "qui_gases",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm La Paz, na Bolívia, a cerca de 3.600 m de altitude, a água ferve a aproximadamente 88 °C. Por isso, alimentos como feijão e macarrão demoram mais para cozinhar do que em cidades ao nível do mar, mesmo com a panela borbulhando intensamente. A panela de pressão é muito usada nessas regiões, porque, com a tampa fechada, a água ferve a temperaturas acima de 100 °C.\n\nTexto elaborado para esta questão.\n\nO comportamento descrito se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a água de La Paz tem mais sais dissolvidos, que abaixam o ponto de ebulição."
+      },
+      {
+        "id": "b",
+        "text": "aumentar a chama aumenta a temperatura da água fervente acima de 88 °C."
+      },
+      {
+        "id": "c",
+        "text": "a temperatura de ebulição depende da pressão externa: com menor pressão atmosférica, a água ferve a temperatura mais baixa, e a panela de pressão eleva a pressão sobre o líquido e, com ela, a temperatura de ebulição."
+      },
+      {
+        "id": "d",
+        "text": "no alto das montanhas, a água ferve mais quente, o que acelera o cozimento."
+      },
+      {
+        "id": "e",
+        "text": "o ar rarefeito impede a formação de bolhas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A água ferve quando sua pressão de vapor iguala a pressão externa. Em La Paz, a pressão é menor, e isso ocorre a ~88 °C; o cozimento, que depende da temperatura, fica mais lento. Na panela de pressão, a pressão maior eleva a temperatura de ebulição.\n\nPegadinhas:\n• A: solutos elevam o ponto de ebulição, em vez de abaixá-lo.\n• B: durante a ebulição a temperatura se mantém; mais chama só acelera a vaporização.\n• D: inverte o efeito da altitude.\n• E: o texto descreve a panela borbulhando.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_19",
+    "chapter": "Circuitos de Malha Única",
+    "topicId": "fis_circuitos",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma luminária de decoração é ligada a uma fonte de 12 V. Seu circuito tem dois resistores em série, de 2 Ω e de 4 Ω, que aquecem filamentos de cores diferentes. Considere a fonte ideal e despreze a resistência dos fios. Um técnico quer saber a corrente que percorre o circuito para escolher um fusível adequado, que deve suportar essa corrente sem queimar.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA corrente elétrica no circuito é",
+    "options": [
+      {
+        "id": "a",
+        "text": "2 A, pois a resistência equivalente dos resistores em série é 6 Ω."
+      },
+      {
+        "id": "b",
+        "text": "3 A, pois a corrente é determinada pelo resistor de maior resistência."
+      },
+      {
+        "id": "c",
+        "text": "4,5 A, pois a corrente é a média das correntes de cada resistor isolado."
+      },
+      {
+        "id": "d",
+        "text": "6 A, pois a corrente é determinada pelo resistor de menor resistência."
+      },
+      {
+        "id": "e",
+        "text": "9 A, pois a resistência equivalente dos dois resistores é 4/3 Ω."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Em série, R_eq = 2 + 4 = 6 Ω, e i = U/R_eq = 12/6 = 2 A, a mesma em todo o circuito. As tensões são 4 V e 8 V, que somam 12 V.\n\nPegadinhas:\n• B: usa só o resistor de 4 Ω.\n• D: usa só o resistor de 2 Ω.\n• E: calcula como se os resistores estivessem em paralelo (R_eq = 4/3 Ω).",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_20",
+    "chapter": "Receptores",
+    "topicId": "fis_circuitos",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm pequeno motor elétrico de um brinquedo funciona como receptor: converte energia elétrica em energia mecânica, mas parte da energia se dissipa por efeito Joule em seus enrolamentos. O motor tem força contraeletromotriz de 10 V e resistência interna de 1 Ω, e funciona com corrente de 2 A. Um estudante quer saber qual tensão a fonte precisa fornecer entre os terminais do motor.\n\nNote e adote: para um receptor, U = ε' + r'·i.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA tensão entre os terminais do motor é",
+    "options": [
+      {
+        "id": "a",
+        "text": "2 V, pois a fonte só precisa compensar a perda na resistência interna."
+      },
+      {
+        "id": "b",
+        "text": "8 V, pois a perda na resistência interna é subtraída da força contraeletromotriz."
+      },
+      {
+        "id": "c",
+        "text": "10 V, pois a tensão no receptor é igual à sua força contraeletromotriz."
+      },
+      {
+        "id": "d",
+        "text": "11 V, pois a resistência interna acrescenta 1 V à força contraeletromotriz."
+      },
+      {
+        "id": "e",
+        "text": "12 V, pois a tensão deve vencer a força contraeletromotriz e a queda de 2 V na resistência interna."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. U = 10 + 1 × 2 = 12 V. Da potência recebida, 24 W, 20 W viram trabalho mecânico (ε'·i) e 4 W se dissipam (r'·i²).\n\nPegadinhas:\n• A: é só a queda na resistência interna.\n• B: subtrai r'·i, como num gerador.\n• C: ignora a resistência interna.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_21",
+    "chapter": "Análise de Força Magnética em Fios Percorridos por Correntes Contínuas",
+    "topicId": "fis_eletromagnetismo",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1820, pouco depois do experimento de Oersted, André-Marie Ampère mostrou que dois fios retilíneos e paralelos percorridos por corrente elétrica exercem forças um sobre o outro. Em uma montagem, dois fios longos, flexíveis e paralelos são presos nas extremidades e percorridos por correntes intensas. Quando as correntes têm o mesmo sentido, os fios se curvam um em direção ao outro; quando têm sentidos opostos, afastam-se.\n\nTexto elaborado para esta questão.\n\nO comportamento dos fios se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "cada fio cria um campo magnético na região do outro, e a força magnética sobre um fio percorrido por corrente nesse campo resulta em atração para correntes de mesmo sentido e repulsão para correntes opostas."
+      },
+      {
+        "id": "b",
+        "text": "os fios ficam eletrizados com cargas opostas, que se atraem."
+      },
+      {
+        "id": "c",
+        "text": "correntes de mesmo sentido se repelem, como cargas de mesmo sinal."
+      },
+      {
+        "id": "d",
+        "text": "a força entre os fios é gravitacional, aumentada pela corrente."
+      },
+      {
+        "id": "e",
+        "text": "a força só aparece se os fios forem de ferro."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O campo de cada fio circula em torno dele; no outro fio, a força F = B·i·L, pela regra da mão direita, aponta para o primeiro quando as correntes têm o mesmo sentido. É a interação usada na antiga definição do ampère.\n\nPegadinhas:\n• B: fios com corrente são neutros; a força é magnética.\n• C: inverte o resultado do experimento.\n• D: a gravidade entre os fios é desprezível.\n• E: a força existe para qualquer condutor, como cobre.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_22",
+    "chapter": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+    "topicId": "fis_eletromagnetismo",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm aceleradores de partículas e em espectrômetros de massa, partículas carregadas são desviadas por campos magnéticos. Considere um próton lançado com velocidade de módulo v perpendicularmente às linhas de um campo magnético uniforme, no vácuo. Despreze a gravidade. Observa-se que o próton passa a descrever uma trajetória curva, sempre no mesmo plano.\n\nNote e adote: força magnética F = |q|·v·B·sen θ, perpendicular à velocidade e ao campo.\n\nTexto elaborado para esta questão.\n\nSobre o movimento do próton, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a força magnética aumenta o módulo da velocidade a cada volta."
+      },
+      {
+        "id": "b",
+        "text": "o próton segue em linha reta, pois a força é perpendicular ao movimento."
+      },
+      {
+        "id": "c",
+        "text": "o próton é freado até parar."
+      },
+      {
+        "id": "d",
+        "text": "a trajetória é uma parábola, como no lançamento horizontal."
+      },
+      {
+        "id": "e",
+        "text": "a trajetória é uma circunferência, percorrida em movimento uniforme: por ser sempre perpendicular à velocidade, a força magnética muda apenas a direção do movimento e não realiza trabalho."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A força perpendicular à velocidade é centrípeta: |q|·v·B = m·v²/R, e R = m·v/(|q|·B), constante. Sem trabalho, a energia cinética e o módulo da velocidade não mudam.\n\nPegadinhas:\n• A: a força magnética não realiza trabalho.\n• B: uma força perpendicular curva a trajetória.\n• C: o módulo da velocidade é constante.\n• D: a parábola surge com força constante em módulo e direção, como o peso.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_23",
+    "chapter": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+    "topicId": "fis_eletrostatica",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo início do século XX, Robert Millikan mediu a carga do elétron observando minúsculas gotas de óleo eletrizadas entre duas placas horizontais, paralelas, ligadas a uma fonte. Entre as placas há um campo elétrico praticamente uniforme e vertical. Ajustando a tensão, ele conseguia manter uma gota parada no ar. Comparando muitas gotas, observou que as cargas eram sempre múltiplos inteiros de um mesmo valor.\n\nTexto elaborado para esta questão.\n\nPara a gota ficar em equilíbrio,",
+    "options": [
+      {
+        "id": "a",
+        "text": "seu peso deve ser nulo entre as placas."
+      },
+      {
+        "id": "b",
+        "text": "a força elétrica deve ter o mesmo sentido do peso, somando-se a ele."
+      },
+      {
+        "id": "c",
+        "text": "o campo elétrico deve ser horizontal."
+      },
+      {
+        "id": "d",
+        "text": "a força elétrica sobre ela, q·E, deve ter o mesmo módulo do peso, m·g, e sentido para cima; os resultados mostraram que a carga elétrica é quantizada."
+      },
+      {
+        "id": "e",
+        "text": "a carga da gota deve ser nula."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Em equilíbrio, a resultante é nula: |q|·E = m·g, com a força elétrica para cima. Conhecendo E e m, obtém-se q. Como todas as cargas eram múltiplos inteiros de ~1,6 × 10⁻¹⁹ C, concluiu-se que a carga é quantizada.\n\nPegadinhas:\n• A: o peso continua atuando.\n• B: as duas forças somadas acelerariam a gota para baixo.\n• C: um campo horizontal não equilibraria o peso.\n• E: sem carga, não haveria força elétrica para equilibrar o peso.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_24",
+    "chapter": "Trabalho e Energia: Trabalho de uma Força",
+    "topicId": "fis_energia",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm entregador carrega uma caixa de 10 kg, segurando-a sempre à mesma altura, enquanto caminha 20 m em linha reta por um corredor plano e horizontal, com velocidade constante. Ao final, ele se sente cansado e afirma que \"realizou muito trabalho\" sobre a caixa. Um colega, estudante de Física, discorda e afirma que, do ponto de vista da Física, a força que ele aplicou na caixa não realizou trabalho nesse trecho.\n\nNote e adote: trabalho de uma força constante: W = F·d·cos θ.\n\nTexto elaborado para esta questão.\n\nO argumento do colega está",
+    "options": [
+      {
+        "id": "a",
+        "text": "incorreto, pois o trabalho do peso foi 2.000 J."
+      },
+      {
+        "id": "b",
+        "text": "incorreto, pois toda força aplicada realiza trabalho."
+      },
+      {
+        "id": "c",
+        "text": "correto, pois a força para sustentar a caixa é vertical e o deslocamento é horizontal; com ângulo de 90°, o trabalho é nulo, e o cansaço vem do gasto de energia nos músculos, que não se transfere à caixa como trabalho mecânico."
+      },
+      {
+        "id": "d",
+        "text": "correto, pois a caixa não tem massa durante o movimento."
+      },
+      {
+        "id": "e",
+        "text": "incorreto, pois o trabalho realizado foi de 200 J, igual ao peso."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A força de sustentação equilibra o peso: ambas são verticais, perpendiculares ao deslocamento, e cos 90° = 0. A energia mecânica da caixa não muda (mesma altura, mesma velocidade). O cansaço vem das contrações musculares, que consomem energia química e a dissipam.\n\nPegadinhas:\n• A: multiplica peso por deslocamento, ignorando o ângulo.\n• B: forças perpendiculares ao deslocamento não realizam trabalho.\n• D: a massa não muda.\n• E: 200 J não corresponde a trabalho nenhum aqui, e peso é força, não trabalho.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_25",
+    "chapter": "Sistemas Isolados e a Conservação da Quantidade de Movimento",
+    "topicId": "fis_dinamica_impulsiva",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDois patinadores, inicialmente parados sobre uma pista de gelo horizontal, empurram-se mutuamente com as mãos. Um deles tem 50 kg e o outro, 75 kg. Após o empurrão, o patinador de 75 kg desliza com velocidade de 2 m/s. Considere desprezível o atrito com o gelo e a resistência do ar durante o empurrão, de modo que o sistema formado pelos dois patinadores possa ser tratado como isolado.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO módulo da velocidade do patinador de 50 kg logo após o empurrão é",
+    "options": [
+      {
+        "id": "a",
+        "text": "2 m/s, pois os dois patinadores recebem forças de mesmo módulo."
+      },
+      {
+        "id": "b",
+        "text": "3 m/s, pois a quantidade de movimento total, nula antes do empurrão, deve continuar nula."
+      },
+      {
+        "id": "c",
+        "text": "4,5 m/s, pois a velocidade é inversamente proporcional ao quadrado da massa."
+      },
+      {
+        "id": "d",
+        "text": "5 m/s, pois a velocidade é proporcional à soma das massas."
+      },
+      {
+        "id": "e",
+        "text": "6 m/s, pois o patinador mais leve recebe o dobro da força."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A quantidade de movimento inicial é nula: 50·v + 75·(−2) = 0 ⇒ v = 3 m/s, em sentido oposto. O mais leve sai mais rápido; as forças trocadas têm o mesmo módulo (3ª lei).\n\nPegadinhas:\n• A: supõe velocidades iguais.\n• C: usa a razão das massas ao quadrado (2 × 1,5²).\n• D: soma as massas e divide por 25, sem sentido físico.\n• E: dobra a velocidade correta.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_26",
+    "chapter": "A Força de Contato",
+    "topicId": "fis_leis_newton",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nOs freios ABS, obrigatórios em carros novos no Brasil, impedem que as rodas travem durante uma frenagem brusca: o sistema alivia e reaplica a pressão do freio várias vezes por segundo. Com rodas travadas, o pneu desliza sobre o asfalto, e o motorista também perde o controle da direção. Testes mostram que, em asfalto seco, a distância de frenagem com ABS é, em geral, menor.\n\nTexto elaborado para esta questão.\n\nA vantagem do ABS se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o atrito cinético é sempre maior que o estático, e o ABS mantém o pneu deslizando."
+      },
+      {
+        "id": "b",
+        "text": "o ABS elimina o atrito entre o pneu e o asfalto."
+      },
+      {
+        "id": "c",
+        "text": "com a roda girando sem deslizar, o atrito entre pneu e asfalto é estático, cujo valor máximo é maior que o atrito cinético da roda travada, e a roda que gira mantém a capacidade de direcionar o carro."
+      },
+      {
+        "id": "d",
+        "text": "o ABS aumenta a massa do carro durante a frenagem."
+      },
+      {
+        "id": "e",
+        "text": "com as rodas travadas, a força normal do asfalto desaparece."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. No ponto de contato de uma roda que rola sem deslizar, não há movimento relativo: o atrito é estático e pode chegar a μₑ·N, maior que μc·N. Mantendo-se perto desse limite sem travar, o carro freia mais e continua dirigível.\n\nPegadinhas:\n• A: inverte a relação entre os coeficientes.\n• B: sem atrito o carro não frearia.\n• D: a massa não muda.\n• E: a normal continua equilibrando o peso.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_27",
+    "chapter": "Trabalho da Força de Pressão do Gás",
+    "topicId": "fis_termodinamica_gases",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma seringa vedada, um gás é aquecido lentamente e empurra o êmbolo, expandindo-se à pressão constante de 1,0 × 10⁵ Pa, igual à atmosférica. Durante o aquecimento, o volume do gás aumenta de 1 L para 3 L. Despreze o atrito entre o êmbolo e a seringa.\n\nNote e adote: em transformação isobárica, W = p·ΔV; 1 L = 10⁻³ m³.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO trabalho realizado pelo gás nessa expansão é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,2 J, pois o volume em litros deve ser dividido por 10⁴ para obter m³."
+      },
+      {
+        "id": "b",
+        "text": "2 J, pois 1 L corresponde a 10⁻⁵ m³."
+      },
+      {
+        "id": "c",
+        "text": "20 J, pois 1 L corresponde a 10⁻⁴ m³."
+      },
+      {
+        "id": "d",
+        "text": "200 J, pois o trabalho é o produto da pressão pela variação de volume de 2 × 10⁻³ m³."
+      },
+      {
+        "id": "e",
+        "text": "2 × 10⁵ J, pois o trabalho é o produto da pressão pela variação de volume de 2 L."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. ΔV = 2 L = 2 × 10⁻³ m³. W = 1,0 × 10⁵ × 2 × 10⁻³ = 200 J.\n\nPegadinhas:\n• A: erra a conversão de unidades em três ordens de grandeza.\n• C: erra a conversão por um fator de 10.\n• E: não converte litros em m³, usando ΔV = 2.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_28",
+    "chapter": "Introdução aos Logaritmos",
+    "topicId": "mat_log_exponenciais",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA magnitude de um terremoto na escala Richter é calculada a partir do logaritmo decimal da amplitude máxima das ondas registradas pelo sismógrafo: cada aumento de 1 unidade na magnitude corresponde a uma amplitude 10 vezes maior. Em 2023, terremotos de magnitudes próximas de 7,8 atingiram a Turquia e a Síria, causando enorme destruição. Considere dois tremores, um de magnitude 5 e outro de magnitude 7, registrados pelo mesmo sismógrafo, à mesma distância.\n\nTexto elaborado para esta questão.\n\nA amplitude registrada no tremor de magnitude 7, em relação à do de magnitude 5, é maior",
+    "options": [
+      {
+        "id": "a",
+        "text": "2 vezes, pois a amplitude é proporcional à magnitude."
+      },
+      {
+        "id": "b",
+        "text": "100 vezes, pois cada unidade de magnitude multiplica a amplitude por 10."
+      },
+      {
+        "id": "c",
+        "text": "200 vezes, pois cada unidade de magnitude multiplica a amplitude por 100."
+      },
+      {
+        "id": "d",
+        "text": "1.000 vezes, pois a diferença de magnitudes corresponde a três potências de 10."
+      },
+      {
+        "id": "e",
+        "text": "100.000 vezes, pois a amplitude é 10 elevado à menor das magnitudes."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. M = log A + constante. ΔM = 2 ⇒ A₇/A₅ = 10² = 100.\n\nPegadinhas:\n• A: lê a diferença de magnitudes como fator.\n• C: multiplica 100 por 2, contando a diferença duas vezes.\n• D: conta três unidades.\n• E: eleva 10 a 5, uma das magnitudes.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_29",
+    "chapter": "Polinômios",
+    "topicId": "mat_complexos_polinomios",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPelo teorema do resto, o resto da divisão de um polinômio P(x) por (x − a) é igual a P(a). Um estudante precisa encontrar o resto da divisão de\n\nP(x) = 2x³ − 5x + 3\n\npor (x − 2), mas não quer fazer a divisão completa pelo método da chave nem pelo dispositivo de Briot-Ruffini. Ele lembra que, se o resto fosse zero, o número 2 seria raiz de P(x).\n\nTexto elaborado para esta questão.\n\nO resto da divisão é",
+    "options": [
+      {
+        "id": "a",
+        "text": "−3, pois o resto da divisão por (x − 2) é o valor de P(−2)."
+      },
+      {
+        "id": "b",
+        "text": "0, pois o resto é a soma dos coeficientes de P(x)."
+      },
+      {
+        "id": "c",
+        "text": "3, pois o resto é igual ao termo independente do polinômio."
+      },
+      {
+        "id": "d",
+        "text": "6, pois o resto é o dobro do termo independente."
+      },
+      {
+        "id": "e",
+        "text": "9, pois, pelo teorema do resto, o resto é P(2) = 16 − 10 + 3."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. P(2) = 2·8 − 5·2 + 3 = 16 − 10 + 3 = 9. Como o resto não é zero, 2 não é raiz.\n\nPegadinhas:\n• A: calcula P(−2) = −16 + 10 + 3.\n• B: calcula P(1), a soma dos coeficientes.\n• C: calcula P(0), o termo independente.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_30",
+    "chapter": "Trigonometria no Triângulo Retângulo",
+    "topicId": "mat_trigonometria",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm eletricista apoia uma escada de 5 m de comprimento em uma parede vertical, com o pé da escada a 3 m da base da parede, sobre um piso horizontal. Ele quer saber a que altura da parede está o topo da escada, para verificar se alcança a caixa de luz instalada a 4,5 m do chão. A parede, o chão e a escada formam um triângulo retângulo.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA altura alcançada pelo topo da escada é",
+    "options": [
+      {
+        "id": "a",
+        "text": "4 m, pois a altura é o cateto que completa o triângulo de hipotenusa 5 m e cateto 3 m."
+      },
+      {
+        "id": "b",
+        "text": "5 m, pois a altura alcançada é igual ao comprimento da escada."
+      },
+      {
+        "id": "c",
+        "text": "5,8 m, pois a altura é a hipotenusa do triângulo de catetos 5 m e 3 m."
+      },
+      {
+        "id": "d",
+        "text": "7 m, pois a altura é a média entre o comprimento da escada e o dobro da distância."
+      },
+      {
+        "id": "e",
+        "text": "8 m, pois a altura é a soma do comprimento da escada com a distância à parede."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Pitágoras: h² + 3² = 5² ⇒ h² = 16 ⇒ h = 4 m. A escada não alcança a caixa de luz a 4,5 m.\n\nPegadinhas:\n• B: supõe a altura igual ao comprimento da escada.\n• C: soma os quadrados (√34), tratando 5 como cateto.\n• E: soma 5 e 3.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_31",
+    "chapter": "Pirâmides",
+    "topicId": "mat_geometria_espacial",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma barraca de acampamento tem forma de pirâmide de base quadrada, com 6 m de lado na base e 4 m de altura, medida do centro da base até o vértice. O fabricante quer informar no catálogo o volume interno da barraca, para comparar com um modelo em forma de prisma, que tem a mesma base e a mesma altura.\n\nNote e adote: volume da pirâmide = (área da base × altura)/3.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO volume da barraca piramidal é",
+    "options": [
+      {
+        "id": "a",
+        "text": "16 m³, pois o volume da pirâmide é um nono do produto da base pela altura."
+      },
+      {
+        "id": "b",
+        "text": "24 m³, pois o volume da pirâmide é um sexto do produto da base pela altura."
+      },
+      {
+        "id": "c",
+        "text": "48 m³, pois o volume da pirâmide é um terço do produto da área da base pela altura."
+      },
+      {
+        "id": "d",
+        "text": "72 m³, pois o volume da pirâmide é metade do produto da base pela altura."
+      },
+      {
+        "id": "e",
+        "text": "144 m³, pois o volume da pirâmide é o produto da área da base pela altura."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Área da base = 36 m². V = 36 × 4/3 = 48 m³, um terço do prisma de mesma base e altura (144 m³).\n\nPegadinhas:\n• A: divide por 3 duas vezes.\n• B: usa 1/6 do produto, ou base × altura com a altura pela metade e o fator 1/3.\n• D: divide por 2, como na área do triângulo.\n• E: é o volume do prisma.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_32",
+    "chapter": "Ângulos em Polígonos",
+    "topicId": "mat_geometria_plana",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nOs favos das colmeias têm forma de hexágonos regulares, que se encaixam sem deixar espaços. Esse encaixe é possível porque três ângulos internos, ao redor de cada vértice, somam 360°. Ladrilhos em forma de pentágono regular, por outro lado, não cobrem um piso sem deixar frestas. A soma dos ângulos internos de um polígono convexo de n lados é (n − 2) × 180°.\n\nTexto elaborado para esta questão.\n\nA medida de cada ângulo interno do hexágono regular é",
+    "options": [
+      {
+        "id": "a",
+        "text": "120°, pois a soma dos ângulos internos, 720°, dividida pelos 6 ângulos iguais dá 120°."
+      },
+      {
+        "id": "b",
+        "text": "135°, pois é a medida do ângulo interno de todo polígono regular."
+      },
+      {
+        "id": "c",
+        "text": "144°, pois cada ângulo é a soma dos ângulos internos dividida por 5."
+      },
+      {
+        "id": "d",
+        "text": "180°, pois os ângulos ao redor de um vértice do favo somam 360°."
+      },
+      {
+        "id": "e",
+        "text": "720°, pois cada ângulo interno é igual à soma dos ângulos internos."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Soma = (6 − 2) × 180° = 720°; cada ângulo = 720°/6 = 120°, e 3 × 120° = 360°. No pentágono, cada ângulo vale 108°, e 360/108 não é inteiro — daí as frestas.\n\nPegadinhas:\n• B: é o ângulo do octógono regular.\n• C: é o ângulo do decágono regular.\n• E: é a soma dos ângulos, não cada um.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_33",
+    "chapter": "Cubos e Paralelepípedos",
+    "topicId": "mat_geometria_espacial",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma família quer instalar uma caixa-d'água em forma de paralelepípedo retângulo, com dimensões internas de 2 m de comprimento, 1 m de largura e 0,5 m de altura. Para saber se ela atende ao consumo da casa, estimado em 700 litros por dia, a família quer calcular a capacidade da caixa em litros.\n\nNote e adote: 1 m³ = 1.000 L.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA capacidade da caixa-d'água é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 L, pois o volume de 1 m³ corresponde a 1 litro."
+      },
+      {
+        "id": "b",
+        "text": "10 L, pois 1 m³ corresponde a 10 litros."
+      },
+      {
+        "id": "c",
+        "text": "100 L, pois 1 m³ corresponde a 100 litros."
+      },
+      {
+        "id": "d",
+        "text": "350 L, pois a capacidade é a soma das dimensões multiplicada por 100."
+      },
+      {
+        "id": "e",
+        "text": "1.000 L, pois o volume interno é 2 × 1 × 0,5 = 1 m³, e 1 m³ equivale a 1.000 litros."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. V = 2 × 1 × 0,5 = 1 m³ = 1.000 L, suficiente para o consumo de um dia.\n\nPegadinhas:\n• A: não converte m³ em litros.\n• B: erra a conversão por um fator de 100.\n• C: erra a conversão por um fator de 10.\n• D: soma as dimensões e confunde com volume.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_34",
+    "chapter": "Módulo de um Número Real",
+    "topicId": "mat_complexos_polinomios",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma fábrica de alimentos produz pacotes de arroz rotulados com 500 g. A norma de controle de qualidade aceita pacotes cuja massa x, em gramas, satisfaça a condição\n\n|x − 500| ≤ 2.\n\nPacotes fora dessa faixa são separados para reembalagem. Um fiscal pesou cinco pacotes e encontrou as massas 497 g, 499 g, 500 g, 502 g e 503 g.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA condição significa que são aceitos os pacotes com massa",
+    "options": [
+      {
+        "id": "a",
+        "text": "de no máximo 502 g, qualquer que seja o mínimo."
+      },
+      {
+        "id": "b",
+        "text": "entre 498 g e 502 g, inclusive, e por isso apenas os pacotes de 499 g, 500 g e 502 g são aceitos."
+      },
+      {
+        "id": "c",
+        "text": "exatamente igual a 500 g ou 502 g."
+      },
+      {
+        "id": "d",
+        "text": "de pelo menos 498 g, qualquer que seja o máximo."
+      },
+      {
+        "id": "e",
+        "text": "entre 496 g e 504 g, e por isso todos os pacotes são aceitos."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. |x − 500| ≤ 2 ⇔ −2 ≤ x − 500 ≤ 2 ⇔ 498 ≤ x ≤ 502: a distância até 500 g é de no máximo 2 g. 497 g e 503 g ficam de fora.\n\nPegadinhas:\n• A: esquece o limite inferior.\n• C: lê o módulo como uma igualdade.\n• D: esquece o limite superior.\n• E: dobra a tolerância.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_35",
+    "chapter": "Multiplicação de Matrizes",
+    "topicId": "mat_sequencias_matrizes",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma loja registra em uma matriz A, de ordem 2 × 3, as quantidades vendidas de três produtos em duas filiais: cada linha é uma filial, e cada coluna, um produto. Em uma matriz B, de ordem 3 × 4, registra o preço de cada produto em quatro meses diferentes: cada linha é um produto, e cada coluna, um mês. Um estagiário quer calcular os produtos A·B e B·A.\n\nNote e adote: o produto de uma matriz m × n por uma matriz p × q só existe quando n = p, e resulta em uma matriz m × q.\n\nTexto elaborado para esta questão.\n\nSobre esses produtos, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "A·B e B·A existem e são iguais."
+      },
+      {
+        "id": "b",
+        "text": "nenhum dos produtos existe, pois as matrizes têm ordens diferentes."
+      },
+      {
+        "id": "c",
+        "text": "A·B não existe, e B·A tem ordem 3 × 3."
+      },
+      {
+        "id": "d",
+        "text": "A·B existe e tem ordem 2 × 4, dando, por exemplo, a quantidade de produtos vendidos vezes o preço em cada filial e mês, enquanto B·A não existe, pois B tem 4 colunas e A tem 2 linhas."
+      },
+      {
+        "id": "e",
+        "text": "A·B tem ordem 3 × 3, pois as matrizes compartilham a dimensão 3."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A (2 × 3) · B (3 × 4): 3 = 3, o produto existe e é 2 × 4 — o faturamento de cada filial em cada mês. B (3 × 4) · A (2 × 3): 4 ≠ 2, não existe. O exemplo mostra que a multiplicação de matrizes não é comutativa.\n\nPegadinhas:\n• A: B·A não existe.\n• B: A·B existe, pois as colunas de A igualam as linhas de B.\n• C: inverte qual produto existe.\n• E: a ordem resultante é linhas de A por colunas de B.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_36",
+    "chapter": "Biogeografia do Brasil I",
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo sertão nordestino, a vegetação predominante perde quase todas as folhas na estação seca, quando a paisagem fica acinzentada; com as primeiras chuvas, o verde retorna em poucos dias. Muitas plantas têm espinhos, folhas pequenas e raízes que armazenam água, e há cactos como o mandacaru e o xique-xique. As chuvas são escassas e irregulares, concentradas em poucos meses do ano, e as temperaturas são altas durante todo o ano.\n\nTexto elaborado para esta questão.\n\nO texto descreve",
+    "options": [
+      {
+        "id": "a",
+        "text": "a Mata Atlântica, com vegetação perene adaptada à umidade."
+      },
+      {
+        "id": "b",
+        "text": "a Caatinga, com vegetação xerófila e caducifólia adaptada ao clima semiárido, com estratégias para reduzir a perda de água e armazená-la."
+      },
+      {
+        "id": "c",
+        "text": "o Pampa, com campos de gramíneas adaptados ao frio."
+      },
+      {
+        "id": "d",
+        "text": "a Amazônia, com floresta densa e chuvas regulares."
+      },
+      {
+        "id": "e",
+        "text": "o Pantanal, com vegetação adaptada a inundações periódicas."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Perda de folhas na seca (caducifolia), espinhos, folhas pequenas e órgãos que armazenam água são adaptações à escassez hídrica (xeromorfismo). O nome Caatinga, \"mata branca\" em tupi, refere-se ao aspecto da vegetação na seca.\n\nPegadinhas:\n• A: a Mata Atlântica é úmida e perene.\n• C: o Pampa fica no Sul, com campos.\n• D: a Amazônia tem chuvas abundantes e regulares.\n• E: o Pantanal é uma planície inundável.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_37",
+    "chapter": "Produção Mineral",
+    "topicId": "geo_economica_brasil",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 2015, o rompimento de uma barragem de rejeitos de mineração de ferro em Mariana (MG) lançou lama no rio Doce, que atingiu o oceano no Espírito Santo. Em 2019, em Brumadinho (MG), outro rompimento matou 272 pessoas, a maioria trabalhadores da mineradora. As duas barragens eram do tipo a montante, mais barata e mais sujeita a falhas, cuja construção foi proibida no Brasil após o segundo desastre.\n\nTexto elaborado para esta questão.\n\nOs episódios mostram que",
+    "options": [
+      {
+        "id": "a",
+        "text": "os desastres foram causados apenas por chuvas fortes, sem relação com a atividade mineradora."
+      },
+      {
+        "id": "b",
+        "text": "a mineração de ferro no Brasil ocorre principalmente na Amazônia, longe de cidades."
+      },
+      {
+        "id": "c",
+        "text": "a atividade mineradora, importante para a economia de Minas Gerais e para as exportações do país, gera riscos socioambientais que dependem de escolhas técnicas e de fiscalização, como o tipo de barragem de rejeitos."
+      },
+      {
+        "id": "d",
+        "text": "os rejeitos de mineração são inofensivos ao meio ambiente."
+      },
+      {
+        "id": "e",
+        "text": "a proibição das barragens a montante encerrou a mineração de ferro no Brasil."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O Quadrilátero Ferrífero é uma das principais áreas de extração de minério de ferro. O modelo a montante, mais barato, empilha os alteamentos sobre o próprio rejeito, o que é mais instável. Os desastres revelaram falhas de segurança e de fiscalização, e a legislação mudou.\n\nPegadinhas:\n• A: o texto aponta o tipo de barragem.\n• B: as barragens citadas ficam em Minas Gerais, perto de cidades.\n• D: a lama contaminou o rio Doce até o oceano.\n• E: proibiu-se um tipo de barragem, não a mineração.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_38",
+    "chapter": "Terrorismo Internacional",
+    "topicId": "geo_geopolitica_regional",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nApós os atentados de 11 de setembro de 2001 nos Estados Unidos, organizados pela rede Al-Qaeda, o governo norte-americano lançou a chamada \"guerra ao terror\", que incluiu as invasões do Afeganistão, em 2001, e do Iraque, em 2003. Especialistas apontam que o terrorismo contemporâneo envolve frequentemente grupos que não são Estados, organizados em redes transnacionais, o que torna o combate por meios militares tradicionais difícil.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o terrorismo é praticado exclusivamente por exércitos nacionais em guerras declaradas."
+      },
+      {
+        "id": "b",
+        "text": "a guerra ao terror se limitou a ações policiais dentro dos Estados Unidos."
+      },
+      {
+        "id": "c",
+        "text": "o terrorismo está associado a uma única religião em todo o mundo."
+      },
+      {
+        "id": "d",
+        "text": "os atentados de 2001 foram organizados pelo governo do Iraque."
+      },
+      {
+        "id": "e",
+        "text": "o terrorismo contemporâneo envolve atores não estatais organizados em redes transnacionais, e a resposta norte-americana incluiu intervenções militares em outros países, com resultados controversos."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Grupos como a Al-Qaeda atuam em vários países sem um território próprio a defender, o que torna limitadas as estratégias convencionais. As invasões do Afeganistão e do Iraque foram parte da resposta, com longas ocupações e debates sobre sua eficácia.\n\nPegadinhas:\n• A: o texto destaca grupos que não são Estados.\n• B: o texto cita invasões no exterior.\n• C: generaliza indevidamente; há terrorismo de diferentes motivações.\n• D: o texto atribui os atentados à Al-Qaeda.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_39",
+    "chapter": "Geografia do Turismo",
+    "topicId": "geo_globalizacao_economica",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nCidades como Veneza e Barcelona recebem milhões de turistas por ano. Moradores protestam contra o aumento dos aluguéis, causado em parte pela conversão de apartamentos em hospedagens de curta temporada, e contra a lotação de ruas e transportes. Veneza passou a cobrar uma taxa de entrada de visitantes de um dia em certas datas, a partir de 2024. O fenômeno é chamado de sobreturismo.\n\nTexto elaborado para esta questão.\n\nO texto indica que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o turismo de massa traz renda, mas pode encarecer a moradia, sobrecarregar a infraestrutura e expulsar moradores, levando governos a criar medidas de controle."
+      },
+      {
+        "id": "b",
+        "text": "o turismo não interfere no preço da moradia nas cidades."
+      },
+      {
+        "id": "c",
+        "text": "os moradores de Veneza e Barcelona defendem o aumento ilimitado de turistas."
+      },
+      {
+        "id": "d",
+        "text": "a taxa de Veneza tem como objetivo atrair mais visitantes de um dia."
+      },
+      {
+        "id": "e",
+        "text": "o sobreturismo ocorre apenas em cidades pequenas e isoladas."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A demanda turística valoriza imóveis e converte moradias em hospedagem, o que encarece o aluguel e desloca moradores. A lotação afeta o cotidiano, e taxas e limites tentam controlar o fluxo.\n\nPegadinhas:\n• B: o texto relaciona a hospedagem de curta temporada aos aluguéis.\n• C: o texto descreve protestos.\n• D: a taxa busca controlar o fluxo, não ampliá-lo.\n• E: os exemplos são grandes cidades.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_40",
+    "chapter": "Geografia das Redes Mundiais",
+    "topicId": "geo_globalizacao_economica",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nMais de 95% do tráfego internacional de dados da internet passa por cabos submarinos de fibra óptica, que cruzam oceanos e chegam ao litoral em pontos específicos. Fortaleza, no Ceará, é um dos principais pontos de chegada desses cabos na América do Sul, com ligações para a Europa, a África e os Estados Unidos. Danos a esses cabos, causados por âncoras ou sabotagem, podem afetar a conexão de países inteiros.\n\nTexto elaborado para esta questão.\n\nO texto permite concluir que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a internet internacional depende principalmente de satélites, e os cabos são reserva."
+      },
+      {
+        "id": "b",
+        "text": "os cabos submarinos são distribuídos de forma igual por todo o litoral."
+      },
+      {
+        "id": "c",
+        "text": "a localização dos cabos não tem importância estratégica."
+      },
+      {
+        "id": "d",
+        "text": "a infraestrutura física da internet, concentrada em cabos submarinos e em pontos de conexão, tem importância econômica e geopolítica, e sua distribuição desigual valoriza certas cidades, como Fortaleza."
+      },
+      {
+        "id": "e",
+        "text": "a fibra óptica transmite dados mais lentamente que os satélites."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A rede mundial tem base material: cabos e estações de conexão. Os pontos de chegada atraem data centers e investimentos, e a vulnerabilidade dos cabos tornou-os assunto de segurança.\n\nPegadinhas:\n• A: o texto atribui mais de 95% do tráfego aos cabos.\n• B: os cabos chegam a pontos específicos.\n• C: o texto aponta riscos de sabotagem e efeitos sobre países.\n• E: a fibra tem maior capacidade e menor latência que os satélites geoestacionários.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_41",
+    "chapter": "Do Mundo Bipolar ao Multipolar",
+    "topicId": "geo_globalizacao_economica",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nCom o fim da União Soviética, em 1991, terminou a Guerra Fria, que opunha dois blocos liderados por Estados Unidos e URSS. Nos anos seguintes, os Estados Unidos tornaram-se a única superpotência militar global. Nas décadas seguintes, porém, a China tornou-se a segunda maior economia do mundo, e grupos como o BRICS, criado com Brasil, Rússia, Índia e China, ampliaram a atuação de países emergentes nas negociações internacionais.\n\nTexto elaborado para esta questão.\n\nO texto descreve a transição",
+    "options": [
+      {
+        "id": "a",
+        "text": "para um novo mundo bipolar entre Brasil e Índia."
+      },
+      {
+        "id": "b",
+        "text": "para uma ordem em que a União Soviética voltou a liderar um bloco."
+      },
+      {
+        "id": "c",
+        "text": "para o isolamento total dos Estados Unidos."
+      },
+      {
+        "id": "d",
+        "text": "de uma ordem bipolar para um período de hegemonia norte-americana e, depois, para um cenário mais multipolar, com a ascensão econômica da China e de outros polos."
+      },
+      {
+        "id": "e",
+        "text": "do capitalismo para o socialismo em todo o mundo."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A bipolaridade terminou com a URSS. Seguiu-se a hegemonia militar dos EUA (unipolaridade), e, com o crescimento da China e a articulação de emergentes, o poder econômico e político se distribuiu entre mais polos.\n\nPegadinhas:\n• A: Brasil e Índia não formam uma bipolaridade.\n• B: a URSS deixou de existir em 1991.\n• C: os EUA continuam superpotência.\n• E: o fim da Guerra Fria ampliou o capitalismo.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_42",
+    "chapter": "A Interiorização da Colonização",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNos séculos XVII e XVIII, a ocupação portuguesa avançou para além do litoral. A criação de gado, inicialmente proibida perto dos engenhos para não destruir as plantações de cana, expandiu-se pelo sertão, ao longo do rio São Francisco. Expedições partidas de São Paulo, as bandeiras, buscavam indígenas para escravizar e metais preciosos, e, no fim do século XVII, encontraram ouro na região das Minas. Essa expansão ultrapassou a linha de Tordesilhas.\n\nTexto elaborado para esta questão.\n\nA interiorização da colonização resultou",
+    "options": [
+      {
+        "id": "a",
+        "text": "de um plano da Coroa portuguesa de respeitar a linha de Tordesilhas."
+      },
+      {
+        "id": "b",
+        "text": "da proibição da pecuária em todo o território da colônia."
+      },
+      {
+        "id": "c",
+        "text": "exclusivamente da ação de missionários jesuítas."
+      },
+      {
+        "id": "d",
+        "text": "da chegada de imigrantes europeus no século XIX."
+      },
+      {
+        "id": "e",
+        "text": "de atividades econômicas como a pecuária, o apresamento de indígenas e a busca de metais, que levaram a ocupação para além da linha de Tordesilhas."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O gado, afastado do litoral açucareiro, abriu caminhos no sertão; as bandeiras escravizaram indígenas e encontraram ouro. Essa ocupação de fato foi reconhecida depois pelo Tratado de Madri (1750), baseado no uti possidetis.\n\nPegadinhas:\n• A: o texto diz que a expansão ultrapassou a linha.\n• B: a pecuária foi proibida perto dos engenhos e se expandiu para o interior.\n• C: os jesuítas participaram, mas o texto destaca gado e bandeiras.\n• D: o processo descrito é dos séculos XVII e XVIII.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_43",
+    "chapter": "Europa no Século XIX",
+    "topicId": "his_imperialismo_guerras",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1871, após vencer a França em uma guerra, o rei da Prússia foi proclamado imperador da Alemanha no Palácio de Versalhes, completando a unificação alemã conduzida pelo chanceler Otto von Bismarck. Na mesma época, a Itália completava sua unificação, com a anexação de Roma. Bismarck afirmava que as grandes questões da época seriam decididas \"pelo ferro e pelo sangue\", e não por discursos.\n\nTexto elaborado para esta questão.\n\nAs unificações italiana e alemã estão relacionadas",
+    "options": [
+      {
+        "id": "a",
+        "text": "ao enfraquecimento do nacionalismo europeu no século XIX."
+      },
+      {
+        "id": "b",
+        "text": "ao nacionalismo e à ação de Estados que lideraram os processos, como a Prússia, com guerras e diplomacia, o que alterou o equilíbrio de poder na Europa."
+      },
+      {
+        "id": "c",
+        "text": "à criação da União Europeia."
+      },
+      {
+        "id": "d",
+        "text": "à vitória da França sobre a Prússia em 1871."
+      },
+      {
+        "id": "e",
+        "text": "a movimentos exclusivamente populares, sem participação de governos."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A Prússia unificou os Estados alemães por meio de guerras contra Dinamarca, Áustria e França. A proclamação em Versalhes humilhou a França e alimentou rivalidades que pesariam na Primeira Guerra.\n\nPegadinhas:\n• A: o nacionalismo se fortaleceu.\n• C: a UE é do século XX.\n• D: a Prússia venceu.\n• E: o texto destaca o papel de Bismarck e da Prússia.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_44",
+    "chapter": "Grandes Revoluções do Século XX",
+    "topicId": "his_imperialismo_guerras",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1917, a Rússia vivia grave crise: derrotas na Primeira Guerra Mundial, falta de alimentos nas cidades e camponeses sem terra. Em fevereiro, o czar abdicou, e um governo provisório assumiu, mas manteve o país na guerra. Em outubro, os bolcheviques, liderados por Lênin, tomaram o poder com o lema \"Paz, terra e pão\". No ano seguinte, a Rússia assinou um acordo de paz com a Alemanha.\n\nTexto elaborado para esta questão.\n\nO lema bolchevique expressava",
+    "options": [
+      {
+        "id": "a",
+        "text": "o apoio à continuidade da guerra até a vitória sobre a Alemanha."
+      },
+      {
+        "id": "b",
+        "text": "a defesa da monarquia czarista e da aristocracia."
+      },
+      {
+        "id": "c",
+        "text": "as demandas populares da época — saída da guerra, redistribuição de terras aos camponeses e abastecimento das cidades —, que o governo provisório não havia atendido."
+      },
+      {
+        "id": "d",
+        "text": "a defesa de um governo liberal, com eleições e livre mercado."
+      },
+      {
+        "id": "e",
+        "text": "o objetivo de expandir o território russo sobre a Europa."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Cada palavra do lema respondia a uma crise do texto: guerra, terra, fome. Os bolcheviques retiraram a Rússia da guerra (Brest-Litovsk, 1918) e decretaram a distribuição de terras.\n\nPegadinhas:\n• A: o lema pedia paz.\n• B: o czar já havia abdicado.\n• D: os bolcheviques eram socialistas.\n• E: a paz de 1918 implicou perda de territórios.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_45",
+    "chapter": "América no Século XIX",
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia o trecho:\n\n\"Os continentes americanos, pela condição livre e independente que assumiram e mantêm, não devem doravante ser considerados como objeto de futura colonização por qualquer potência europeia.\"\nMensagem do presidente James Monroe ao Congresso dos Estados Unidos, 1823.\n\nA mensagem foi divulgada no período das independências na América espanhola, quando potências europeias discutiam ajudar a Espanha a recuperar as colônias. A frase \"América para os americanos\" passou a resumir a chamada Doutrina Monroe.\n\nA Doutrina Monroe",
+    "options": [
+      {
+        "id": "a",
+        "text": "opunha-se à recolonização europeia da América e, ao longo do século XIX e XX, também serviu de justificativa para a ampliação da influência dos Estados Unidos sobre o continente."
+      },
+      {
+        "id": "b",
+        "text": "estabeleceu uma aliança militar entre todos os países americanos."
+      },
+      {
+        "id": "c",
+        "text": "defendia a recolonização das Américas pela Espanha."
+      },
+      {
+        "id": "d",
+        "text": "previa a anexação imediata do Brasil pelos Estados Unidos."
+      },
+      {
+        "id": "e",
+        "text": "foi uma declaração de guerra contra a Inglaterra."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A mensagem respondia à ameaça da Santa Aliança de restaurar o domínio espanhol. Com o tempo, a ideia de excluir a Europa do continente foi usada para afirmar a primazia norte-americana, como no Corolário Roosevelt e nas intervenções no Caribe.\n\nPegadinhas:\n• B: não criou aliança militar continental.\n• C: era contrária à recolonização.\n• D: não há nada semelhante na doutrina.\n• E: não foi declaração de guerra; a Inglaterra até apoiava o fim do monopólio espanhol.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_46",
+    "chapter": "Introdução à História e Primeiras Civilizações",
+    "topicId": "his_idade_antiga",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs primeiras cidades da Mesopotâmia surgiram entre os rios Tigre e Eufrates, onde as cheias irregulares exigiam canais de irrigação e diques. Os templos e palácios controlavam o armazenamento de cereais e a cobrança de tributos. Os registros escritos mais antigos encontrados na região, em tábuas de argila, são principalmente contas de grãos, animais e trabalhadores; textos literários e religiosos surgiram depois.\n\nTexto elaborado para esta questão.\n\nO texto permite relacionar o surgimento da escrita",
+    "options": [
+      {
+        "id": "a",
+        "text": "às necessidades de administração de sociedades complexas, que controlavam a produção agrícola, as obras hidráulicas e os tributos."
+      },
+      {
+        "id": "b",
+        "text": "ao desejo de registrar poemas épicos antes de qualquer outra atividade."
+      },
+      {
+        "id": "c",
+        "text": "ao comércio marítimo com a América."
+      },
+      {
+        "id": "d",
+        "text": "à ausência de governo centralizado nas cidades mesopotâmicas."
+      },
+      {
+        "id": "e",
+        "text": "à escassez de água, que impedia a agricultura."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Controlar irrigação, estoques e tributos exigia registrar quantidades, prazos e responsáveis. Por isso os textos mais antigos são contábeis; a literatura, como a Epopeia de Gilgamesh, veio depois.\n\nPegadinhas:\n• B: o texto diz que os textos literários são posteriores.\n• C: não havia contato com a América.\n• D: templos e palácios centralizavam a administração.\n• E: os rios permitiam a agricultura, com obras de irrigação.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_47",
+    "chapter": "A Primeira Globalização",
+    "topicId": "his_idade_media",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm meados do século XIV, a Peste Negra, causada pela bactéria Yersinia pestis, transmitida principalmente por pulgas de ratos, matou de um terço à metade da população europeia em poucos anos. A doença chegou à Europa por portos do Mar Negro e do Mediterrâneo, como os italianos, depois de percorrer as rotas comerciais que ligavam a Ásia à Europa, como a Rota da Seda. Com a falta de trabalhadores, em algumas regiões os camponeses passaram a exigir melhores condições.\n\nTexto elaborado para esta questão.\n\nO texto permite concluir que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a Peste Negra atingiu apenas a Ásia, sem chegar à Europa."
+      },
+      {
+        "id": "b",
+        "text": "as rotas comerciais que integravam a Ásia e a Europa também facilitaram a difusão da doença, e a mortalidade alterou as relações de trabalho no campo."
+      },
+      {
+        "id": "c",
+        "text": "a doença era causada por um vírus transmitido pelo ar."
+      },
+      {
+        "id": "d",
+        "text": "a Peste Negra fortaleceu a servidão, pois sobraram muitos trabalhadores."
+      },
+      {
+        "id": "e",
+        "text": "a doença chegou à Europa pelas Américas."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Ratos e pulgas viajavam com mercadorias e caravanas; os portos italianos foram as portas de entrada. A morte em massa tornou a mão de obra escassa, o que fortaleceu a posição de negociação dos camponeses e contribuiu para revoltas e para o declínio da servidão em partes da Europa.\n\nPegadinhas:\n• A: o texto descreve a mortalidade europeia.\n• C: o agente é uma bactéria, transmitida principalmente por pulgas.\n• D: inverte o efeito da escassez de trabalhadores.\n• E: as Américas não tinham contato com a Europa no século XIV.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_48",
+    "chapter": "Variação Linguística",
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma entrevista, uma agricultora do interior diz: \"Nós vai plantar o feijão quando as chuva chegar\". Um ouvinte comenta, nas redes sociais, que ela \"não sabe falar português\". Uma linguista responde que a frase segue uma regra regular de concordância, comum em muitas variedades do português brasileiro: a marca de plural aparece em uma só palavra do grupo, como em \"as chuva\", e o verbo pode ficar no singular com \"nós\".\n\nTexto elaborado para esta questão.\n\nA resposta da linguista indica que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a frase da agricultora não segue nenhuma regra gramatical."
+      },
+      {
+        "id": "b",
+        "text": "só a norma-padrão constitui língua portuguesa."
+      },
+      {
+        "id": "c",
+        "text": "a variação linguística ocorre apenas entre países diferentes."
+      },
+      {
+        "id": "d",
+        "text": "a variedade usada pela agricultora tem regras próprias, e considerá-la incapaz de falar português é preconceito linguístico, embora em certas situações formais se espere o uso da norma-padrão."
+      },
+      {
+        "id": "e",
+        "text": "a frase deve ser corrigida em qualquer situação de comunicação."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A concordância com marca única de plural é sistemática, não aleatória. Desvalorizar a fala de alguém por sua variedade é preconceito linguístico. A norma-padrão é esperada em contextos formais, como uma redação de vestibular, mas não é a única forma legítima da língua.\n\nPegadinhas:\n• A: a linguista mostra justamente a regra que a frase segue.\n• B: o português abrange muitas variedades.\n• C: há variação regional, social e situacional dentro de um mesmo país.\n• E: a adequação depende da situação.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_49",
+    "chapter": "Text Comprehension: Earthquakes",
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Scientists cannot yet predict exactly when or where a major earthquake will strike. What they can do is estimate the probability of a strong earthquake in a region over several decades, based on the history of past events and the movement of tectonic plates. For this reason, experts argue that the most effective way to save lives is not prediction, but preparation: stricter building codes, early warning systems that give a few seconds of notice, and public drills.\"\n\nTexto elaborado para esta questão.\n\nAccording to the text,",
+    "options": [
+      {
+        "id": "a",
+        "text": "scientists can now predict the exact day of a major earthquake."
+      },
+      {
+        "id": "b",
+        "text": "early warning systems give people several days to leave a region."
+      },
+      {
+        "id": "c",
+        "text": "earthquakes happen randomly and cannot be studied."
+      },
+      {
+        "id": "d",
+        "text": "building codes are less important than precise predictions."
+      },
+      {
+        "id": "e",
+        "text": "since exact prediction is not yet possible, preparation measures such as safer buildings, early warnings and drills are considered the best way to reduce deaths."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O texto diz que não é possível prever com exatidão (\"cannot yet predict exactly\"), apenas estimar probabilidades em décadas, e defende a preparação (\"not prediction, but preparation\").\n\nPegadinhas:\n• A: contradiz a primeira frase.\n• B: os alertas dão \"a few seconds\", não dias.\n• C: o texto cita o estudo do histórico e das placas.\n• D: inverte a prioridade defendida.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l13_50",
+    "chapter": "O Mito da Caverna",
+    "topicId": "fil_socrates_platao",
+    "subject": "Filosofia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa alegoria da caverna, apresentada por Platão no livro VII da República, prisioneiros acorrentados desde a infância veem apenas sombras projetadas na parede e as tomam pela realidade. Um deles é libertado, sobe até a saída e, depois de ter os olhos ofuscados, contempla os objetos reais e o Sol. Ao voltar para contar o que viu, é ridicularizado pelos antigos companheiros, que preferem as sombras.\n\nTexto elaborado para esta questão.\n\nNa interpretação mais comum, a alegoria representa",
+    "options": [
+      {
+        "id": "a",
+        "text": "a superioridade das sensações sobre a razão no conhecimento da verdade."
+      },
+      {
+        "id": "b",
+        "text": "a defesa de que as sombras são a verdadeira realidade, que o filósofo deve aceitar."
+      },
+      {
+        "id": "c",
+        "text": "a passagem da opinião, baseada nas aparências sensíveis, ao conhecimento das Ideias, alcançado pela razão, e a dificuldade de quem conhece a verdade em ser aceito pelos que vivem presos às aparências."
+      },
+      {
+        "id": "d",
+        "text": "um relato histórico sobre prisioneiros de guerra na Grécia antiga."
+      },
+      {
+        "id": "e",
+        "text": "a ideia de que todo conhecimento é impossível e que a verdade não existe."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. As sombras simbolizam a opinião (dóxa), presa ao mundo sensível; a saída e o Sol representam o conhecimento das Ideias e do Bem pela razão. A recepção hostil ao libertado alude ao filósofo — e à condenação de Sócrates.\n\nPegadinhas:\n• A: inverte a hierarquia platônica: as sensações enganam.\n• B: as sombras são aparências.\n• D: é uma alegoria filosófica, não um relato histórico.\n• E: Platão afirma a existência da verdade e a possibilidade de conhecê-la.",
     "difficulty": "medium",
     "styleOf": "FUVEST"
   }
