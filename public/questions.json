@@ -130694,5 +130694,1655 @@
     "explanation": "Resposta E. Exterioridade (existem fora e antes do indivíduo), coercitividade (se impõem, sob sanção) e generalidade (são coletivos) definem o fato social para Durkheim.\n\nPegadinhas:\n• A: o texto diz que se impõem às pessoas.\n• B: são sociais, não biológicos.\n• C: são gerais.\n• D: existem antes e depois de cada geração.",
     "difficulty": "medium",
     "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_01",
+    "chapter": "Origem da Vida e as Primeiras Células",
+    "topicId": "bio_estrutura_fisio_celular",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa década de 1860, Louis Pasteur colocou caldo nutritivo em frascos com gargalo longo e curvado, em forma de pescoço de cisne, e ferveu o caldo. O ar podia entrar pelo gargalo, mas as partículas de poeira ficavam retidas na curva. O caldo permaneceu sem microrganismos por muito tempo. Quando o gargalo foi quebrado, permitindo a entrada direta de poeira, o caldo logo se encheu de microrganismos.\n\nTexto elaborado para esta questão.\n\nO experimento contribuiu para",
+    "options": [
+      {
+        "id": "a",
+        "text": "confirmar a geração espontânea, pois os microrganismos surgiram do caldo."
+      },
+      {
+        "id": "b",
+        "text": "mostrar que o ar, por si só, produz microrganismos no caldo nutritivo."
+      },
+      {
+        "id": "c",
+        "text": "provar que a fervura cria microrganismos resistentes ao calor."
+      },
+      {
+        "id": "d",
+        "text": "demonstrar que o caldo nutritivo não serve de alimento para microrganismos."
+      },
+      {
+        "id": "e",
+        "text": "refutar a geração espontânea, pois os microrganismos só apareceram quando partículas vindas do ambiente, que os transportavam, puderam chegar ao caldo, o que apoia a biogênese."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O ar entrava nos dois casos; o que mudou foi a chegada de partículas com microrganismos. Com o pescoço de cisne intacto, nada surgiu: a vida veio de vida preexistente (biogênese).\n\nPegadinhas:\n• A: o resultado contradiz a geração espontânea.\n• B: com ar e sem poeira, o caldo continuou estéril.\n• C: a fervura eliminou os microrganismos.\n• D: o caldo foi colonizado quando o gargalo foi quebrado.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_02",
+    "chapter": "Núcleo Celular",
+    "topicId": "bio_estrutura_fisio_celular",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO cariótipo é o conjunto de cromossomos de uma célula, organizado por tamanho e forma, e é usado no diagnóstico de alterações cromossômicas. Em células humanas como as da pele, observam-se 46 cromossomos: 22 pares de autossomos e um par de cromossomos sexuais, XX nas mulheres e XY nos homens. Para montar o cariótipo, as células são observadas durante a divisão celular, quando os cromossomos estão mais condensados.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as células da pele humana têm 23 cromossomos, organizados em 46 pares."
+      },
+      {
+        "id": "b",
+        "text": "os cromossomos sexuais estão ausentes nas células da pele."
+      },
+      {
+        "id": "c",
+        "text": "as células somáticas humanas são diploides, com 23 pares de cromossomos, e os gametas, formados por meiose, têm 23 cromossomos, um de cada par."
+      },
+      {
+        "id": "d",
+        "text": "os cromossomos são mais visíveis quando a célula não está se dividindo."
+      },
+      {
+        "id": "e",
+        "text": "homens e mulheres têm o mesmo par de cromossomos sexuais."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. 46 cromossomos = 23 pares (2n). A meiose reduz a 23 nos gametas (n); a fecundação restabelece 46. A condensação na divisão permite visualizar os cromossomos.\n\nPegadinhas:\n• A: são 46 cromossomos em 23 pares.\n• B: o texto cita o par sexual nas células da pele.\n• D: o texto diz que ficam mais condensados na divisão.\n• E: XX nas mulheres e XY nos homens.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_03",
+    "chapter": "Composição Química Celular: Compostos Inorgânicos",
+    "topicId": "bio_estrutura_fisio_celular",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA anemia por deficiência de ferro é a mais comum no mundo e atinge especialmente crianças pequenas e gestantes. O ferro faz parte da hemoglobina, proteína das hemácias que transporta oxigênio dos pulmões aos tecidos. Pessoas com essa anemia sentem cansaço, palidez e falta de ar aos esforços. No Brasil, as farinhas de trigo e de milho são enriquecidas com ferro por lei, e alimentos ricos em vitamina C favorecem a absorção do ferro de origem vegetal.\n\nTexto elaborado para esta questão.\n\nOs sintomas da anemia por falta de ferro se explicam porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "sem ferro suficiente, forma-se menos hemoglobina, e o sangue transporta menos oxigênio aos tecidos, o que reduz a produção de energia pela respiração celular."
+      },
+      {
+        "id": "b",
+        "text": "o ferro é a principal fonte de energia das células, como a glicose."
+      },
+      {
+        "id": "c",
+        "text": "a falta de ferro aumenta a quantidade de hemoglobina no sangue."
+      },
+      {
+        "id": "d",
+        "text": "o ferro é necessário apenas para a formação dos ossos, e sua falta causa fraturas frequentes."
+      },
+      {
+        "id": "e",
+        "text": "a vitamina C impede a absorção de ferro no intestino, e por isso deve ser evitada nas refeições."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Menos hemoglobina, menos O₂ nos tecidos; com menos O₂, a respiração celular produz menos ATP, e surgem cansaço e falta de ar. O enriquecimento das farinhas é uma estratégia de saúde pública.\n\nPegadinhas:\n• B: o ferro não é fonte de energia.\n• C: a hemoglobina diminui.\n• D: o texto relaciona o ferro à hemoglobina.\n• E: o texto diz que a vitamina C favorece a absorção.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_04",
+    "chapter": "Morfofisiologia Vegetal: Caules e Folhas",
+    "topicId": "bio_fisio_vegetal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nJardineiros que querem uma planta mais cheia e ramificada costumam cortar a ponta dos ramos principais. Sabe-se que a gema apical, no ápice do caule, produz auxina, que desce pelo caule e inibe o desenvolvimento das gemas laterais, fenômeno chamado dominância apical. Após a poda do ápice, várias gemas laterais começam a crescer e formam novos ramos.\n\nTexto elaborado para esta questão.\n\nO efeito da poda se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a remoção do ápice estimula a produção de auxina pelas raízes, que fortalece o caule."
+      },
+      {
+        "id": "b",
+        "text": "a poda impede qualquer crescimento da planta, que passa a apenas engrossar."
+      },
+      {
+        "id": "c",
+        "text": "as gemas laterais não são influenciadas por hormônios vegetais."
+      },
+      {
+        "id": "d",
+        "text": "a retirada da gema apical reduz a auxina que inibia as gemas laterais, que deixam de estar sob dominância apical e passam a se desenvolver em ramos."
+      },
+      {
+        "id": "e",
+        "text": "a poda aumenta a quantidade de auxina nas gemas laterais, que crescem por estímulo."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A auxina vinda do ápice mantém as gemas laterais dormentes. Sem o ápice, a inibição cessa, e a planta se ramifica.\n\nPegadinhas:\n• A: a fonte de auxina retirada é o ápice.\n• B: as gemas laterais crescem após a poda.\n• C: elas respondem à auxina.\n• E: a poda reduz a auxina que chega às gemas.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_05",
+    "chapter": "Fisiologia da Respiração",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNos pulmões, as trocas gasosas ocorrem nos alvéolos, pequenas bolsas de paredes finas envolvidas por capilares sanguíneos. O oxigênio passa do ar alveolar para o sangue, e o gás carbônico faz o caminho inverso, por difusão. Somados, os alvéolos de um adulto têm uma área de dezenas de metros quadrados. No enfisema pulmonar, frequentemente associado ao tabagismo, as paredes de muitos alvéolos se rompem, e eles se fundem em bolsas maiores.\n\nTexto elaborado para esta questão.\n\nA falta de ar no enfisema se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o sangue deixa de ter hemoglobina para transportar o oxigênio."
+      },
+      {
+        "id": "b",
+        "text": "a fusão dos alvéolos reduz a área total disponível para a difusão dos gases, diminuindo a quantidade de oxigênio que passa para o sangue."
+      },
+      {
+        "id": "c",
+        "text": "os alvéolos passam a produzir gás carbônico em excesso."
+      },
+      {
+        "id": "d",
+        "text": "as trocas gasosas passam a ocorrer por transporte ativo, que é mais lento."
+      },
+      {
+        "id": "e",
+        "text": "o oxigênio deixa de se dissolver no ar alveolar, que passa a conter apenas gás carbônico."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A difusão depende da área de troca. Bolsas maiores têm menos área para o mesmo volume, e menos O₂ chega ao sangue por unidade de tempo.\n\nPegadinhas:\n• A: a hemoglobina não é afetada pelo enfisema.\n• C: o CO₂ vem dos tecidos, não dos alvéolos.\n• D: as trocas continuam por difusão.\n• E: o problema é a área de troca, não a dissolução.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_06",
+    "chapter": "Sangue e Imunologia",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO coração humano tem quatro cavidades: dois átrios e dois ventrículos. O lado direito recebe sangue pobre em oxigênio do corpo e o bombeia para os pulmões; o lado esquerdo recebe sangue oxigenado dos pulmões e o bombeia para o restante do corpo. Uma parede muscular, o septo, separa os dois lados. Em algumas malformações congênitas, há uma comunicação no septo.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o sangue passa apenas uma vez pelo coração a cada volta completa pelo corpo."
+      },
+      {
+        "id": "b",
+        "text": "a circulação humana é dupla e completa: há um circuito pulmonar e um sistêmico, e o septo impede a mistura do sangue oxigenado com o pouco oxigenado, o que uma comunicação no septo comprometeria."
+      },
+      {
+        "id": "c",
+        "text": "o lado direito do coração bombeia sangue oxigenado para o corpo."
+      },
+      {
+        "id": "d",
+        "text": "o septo serve para misturar o sangue dos dois lados do coração."
+      },
+      {
+        "id": "e",
+        "text": "os pulmões recebem sangue do ventrículo esquerdo, que bombeia o sangue já oxigenado."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Pequena circulação: ventrículo direito → pulmões → átrio esquerdo. Grande circulação: ventrículo esquerdo → corpo → átrio direito. Sem mistura, o sangue enviado ao corpo é rico em O₂.\n\nPegadinhas:\n• A: na circulação dupla, o sangue passa duas vezes pelo coração.\n• C: o lado direito leva sangue pouco oxigenado aos pulmões.\n• D: o septo separa os lados.\n• E: os pulmões recebem sangue do ventrículo direito.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_07",
+    "chapter": "Reprodução Humana e Métodos Contraceptivos",
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um ciclo menstrual típico de 28 dias, o hormônio FSH estimula o desenvolvimento de um folículo no ovário, que produz estrogênio, responsável por espessar o endométrio. Por volta do 14º dia, um pico de LH provoca a ovulação. O folículo rompido forma o corpo lúteo, que produz progesterona e mantém o endométrio preparado para uma possível gravidez. Se não houver fecundação, o corpo lúteo regride, a progesterona cai e o endométrio descama.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a menstruação ocorre porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a queda da progesterona, com a regressão do corpo lúteo na ausência de fecundação, deixa de manter o endométrio, que descama."
+      },
+      {
+        "id": "b",
+        "text": "o pico de LH provoca a descamação do endométrio no momento da ovulação."
+      },
+      {
+        "id": "c",
+        "text": "o estrogênio destrói o endométrio no início do ciclo, quando sua concentração é máxima."
+      },
+      {
+        "id": "d",
+        "text": "a progesterona aumenta muito no fim do ciclo, eliminando o endométrio."
+      },
+      {
+        "id": "e",
+        "text": "o FSH impede a formação do corpo lúteo, e o óvulo é eliminado com o sangue."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A progesterona do corpo lúteo sustenta o endométrio. Sem gravidez, o corpo lúteo regride, os hormônios caem e o endométrio descama — início de um novo ciclo.\n\nPegadinhas:\n• B: o LH provoca a ovulação, não a menstruação.\n• C: o estrogênio espessa o endométrio.\n• D: a progesterona cai.\n• E: o texto descreve a formação do corpo lúteo após a ovulação.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_08",
+    "chapter": "Introdução à Ecologia",
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma floresta, folhas, galhos e animais mortos acumulam-se sobre o solo formando a serapilheira. Fungos e bactérias decompõem esse material, liberando gás carbônico para o ar e nutrientes minerais, como nitrogênio e fósforo, para o solo, onde são reabsorvidos pelas raízes das plantas. A energia contida na matéria orgânica, porém, é dissipada como calor ao longo das cadeias alimentares e não retorna aos produtores.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a energia e a matéria são recicladas da mesma forma nos ecossistemas."
+      },
+      {
+        "id": "b",
+        "text": "os decompositores consomem os nutrientes minerais e impedem seu retorno às plantas."
+      },
+      {
+        "id": "c",
+        "text": "a serapilheira não tem função no ecossistema, pois é formada por matéria morta."
+      },
+      {
+        "id": "d",
+        "text": "a matéria circula entre os seres vivos e o ambiente, com papel essencial dos decompositores, enquanto a energia tem fluxo unidirecional e se dissipa como calor."
+      },
+      {
+        "id": "e",
+        "text": "os produtores obtêm a energia de que precisam a partir da decomposição."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Carbono, nitrogênio e fósforo são reciclados pela decomposição. A energia entra como luz, passa pelas cadeias e sai como calor: não é reciclada.\n\nPegadinhas:\n• A: a energia não é reciclada.\n• B: os decompositores liberam os nutrientes.\n• C: a serapilheira é a matéria-prima da decomposição.\n• E: os produtores obtêm energia da luz.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_09",
+    "chapter": "Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética",
+    "topicId": "bio_zoologia",
+    "subject": "Biologia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm cladograma representa relações de parentesco entre grupos: cada ramificação indica um ancestral comum. Considere um cladograma descrito assim: de um ancestral comum partem dois ramos; um leva aos peixes ósseos, e o outro se divide novamente; desse segundo ponto, um ramo leva aos anfíbios, e o outro se divide em dois, um para os mamíferos e outro para répteis e aves, que se separam em seguida.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nCom base nesse cladograma, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "os anfíbios são mais aparentados aos peixes do que aos mamíferos."
+      },
+      {
+        "id": "b",
+        "text": "as aves são mais aparentadas aos anfíbios do que aos répteis."
+      },
+      {
+        "id": "c",
+        "text": "os mamíferos compartilham um ancestral comum mais recente com répteis e aves do que com os anfíbios."
+      },
+      {
+        "id": "d",
+        "text": "os peixes ósseos são os ancestrais diretos dos mamíferos atuais."
+      },
+      {
+        "id": "e",
+        "text": "o cladograma indica que répteis e aves não têm ancestral comum."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Mamíferos e o grupo répteis + aves se separam depois da separação dos anfíbios: seu ancestral comum é mais recente. No cladograma, parentesco se lê pelos nós, não pela posição dos nomes.\n\nPegadinhas:\n• A: anfíbios e mamíferos têm ancestral comum mais recente que anfíbios e peixes.\n• B: aves e répteis se separam por último.\n• D: grupos atuais não são ancestrais uns dos outros; compartilham ancestrais.\n• E: répteis e aves saem do mesmo nó.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_10",
+    "chapter": "Cinética Química",
+    "topicId": "qui_cinetica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA cabeça de um palito de fósforo contém substâncias que reagem liberando muito calor, mas o palito não se acende espontaneamente na caixa. Ele só pega fogo quando é riscado na lixa lateral da caixa, onde há fósforo vermelho e vidro moído. Uma vez iniciada, a reação continua sozinha até consumir os reagentes da cabeça do palito.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o atrito na lixa é necessário porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a reação da cabeça do palito é endotérmica e precisa de calor o tempo todo."
+      },
+      {
+        "id": "b",
+        "text": "o atrito cria os reagentes que estavam ausentes na cabeça do palito."
+      },
+      {
+        "id": "c",
+        "text": "o vidro moído é o combustível da reação, que só queima quando aquecido pelo atrito."
+      },
+      {
+        "id": "d",
+        "text": "a lixa funciona como catalisador que é consumido na reação."
+      },
+      {
+        "id": "e",
+        "text": "fornece a energia de ativação necessária para iniciar a reação, que, por ser exotérmica, libera calor suficiente para continuar sozinha."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Mesmo reações exotérmicas precisam superar uma barreira de energia. O atrito aquece e inicia a reação; o calor liberado mantém o processo.\n\nPegadinhas:\n• A: o texto diz que a reação libera calor e continua sozinha.\n• B: os reagentes já estão na cabeça do palito.\n• C: o vidro aumenta o atrito.\n• D: catalisadores não são consumidos, e a lixa fornece energia.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_11",
+    "chapter": "Equilíbrios Iônicos",
+    "topicId": "qui_equilibrio",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nProdutos de limpeza com amoníaco são básicos. Em uma análise, uma solução de limpeza apresentou concentração de íons hidróxido [OH⁻] = 1 × 10⁻³ mol/L, a 25 °C. Um estudante calculou o pOH e quer, a partir dele, obter o pH da solução para conferir com a leitura de um medidor.\n\nNote e adote: pOH = −log [OH⁻]; a 25 °C, pH + pOH = 14.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO pH da solução é",
+    "options": [
+      {
+        "id": "a",
+        "text": "3, pois o pH é igual ao expoente da concentração de OH⁻."
+      },
+      {
+        "id": "b",
+        "text": "7, pois toda solução de produto de limpeza é neutra, como a água destilada."
+      },
+      {
+        "id": "c",
+        "text": "10, pois o pH é 14 menos 4, considerando o pOH igual a 4."
+      },
+      {
+        "id": "d",
+        "text": "11, pois o pOH é −log 10⁻³ = 3, e pH = 14 − 3 a 25 °C."
+      },
+      {
+        "id": "e",
+        "text": "14, pois soluções básicas têm sempre o pH máximo da escala, qualquer que seja a concentração."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. pOH = −log 10⁻³ = 3; pH = 14 − 3 = 11, básico.\n\nPegadinhas:\n• A: 3 é o pOH, não o pH.\n• B: a solução é básica.\n• C: erra o pOH.\n• E: o pH depende da concentração.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_12",
+    "chapter": "Efeitos Coligativos",
+    "topicId": "qui_solucoes",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm países de inverno rigoroso, adiciona-se ao radiador dos carros um líquido anticongelante, geralmente à base de etilenoglicol, misturado à água. A mistura não congela mesmo em temperaturas abaixo de −20 °C, o que evita que a água se expanda ao congelar e rompa o motor. No verão, a mesma mistura também ajuda a evitar a fervura do líquido de arrefecimento.\n\nTexto elaborado para esta questão.\n\nO funcionamento do anticongelante se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o etilenoglicol reage com a água e forma um composto que não congela."
+      },
+      {
+        "id": "b",
+        "text": "o etilenoglicol eleva o ponto de congelamento da água, tornando-a sólida."
+      },
+      {
+        "id": "c",
+        "text": "o soluto aquece o radiador por reação exotérmica com a água."
+      },
+      {
+        "id": "d",
+        "text": "o etilenoglicol evapora no inverno e forma uma camada de vapor que protege o motor do frio."
+      },
+      {
+        "id": "e",
+        "text": "o soluto dissolvido diminui a pressão de vapor da água, o que abaixa o ponto de congelamento e eleva o ponto de ebulição da mistura."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Efeitos coligativos: crioscopia (congela a temperatura menor) e ebulioscopia (ferve a temperatura maior), proporcionais à quantidade de partículas dissolvidas.\n\nPegadinhas:\n• A: o efeito é físico, coligativo.\n• B: o ponto de congelamento diminui.\n• C: não há reação exotérmica.\n• D: o etilenoglicol permanece dissolvido.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_13",
+    "chapter": "Radioatividade: o Estudo das Radiações",
+    "topicId": "qui_radioatividade",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1987, em Goiânia, catadores abriram um aparelho de radioterapia abandonado e encontraram uma cápsula com cloreto de césio-137, um pó que brilhava em azul no escuro. O material foi manuseado e distribuído entre várias pessoas, contaminando casas, roupas e alimentos. Quatro pessoas morreram nos meses seguintes, e centenas foram contaminadas. O césio-137 tem meia-vida de cerca de 30 anos, e os rejeitos foram armazenados em depósito especial.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o césio-137 deixou de ser radioativo poucos dias após o acidente."
+      },
+      {
+        "id": "b",
+        "text": "o acidente foi grave porque o material radioativo foi manuseado e espalhado, causando contaminação e exposição prolongada, e, com meia-vida de cerca de 30 anos, os rejeitos exigem armazenamento seguro por muito tempo."
+      },
+      {
+        "id": "c",
+        "text": "a radiação do césio só é perigosa quando há uma explosão."
+      },
+      {
+        "id": "d",
+        "text": "a contaminação ocorreu apenas por breve contato com o aparelho fechado."
+      },
+      {
+        "id": "e",
+        "text": "o brilho azul indicava que o material era inofensivo, pois a radiação perigosa é invisível."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Ingestão, inalação e contato prolongado ampliaram a exposição. Em 30 anos, só metade do césio decai; após 90 anos, ainda resta 1/8 — por isso o depósito de longo prazo.\n\nPegadinhas:\n• A: a meia-vida é de décadas.\n• C: não houve explosão; o perigo veio do material espalhado.\n• D: o problema começou quando a cápsula foi aberta.\n• E: o brilho não indica segurança.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_14",
+    "chapter": "Termoquímica II",
+    "topicId": "qui_termoquimica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs tabelas de entalpia de formação padrão listam a variação de entalpia para formar 1 mol de uma substância a partir das substâncias simples de seus elementos, no estado padrão. Por convenção, substâncias simples na forma mais estável, como O₂(g), H₂(g) e C(grafite), têm entalpia de formação igual a zero. A água líquida, por exemplo, tem entalpia de formação de cerca de −286 kJ/mol.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as substâncias simples na forma mais estável têm entalpia de formação igual a zero por convenção, e a entalpia de formação negativa da água indica que sua formação a partir de H₂ e O₂ libera energia."
+      },
+      {
+        "id": "b",
+        "text": "o gás oxigênio tem entalpia de formação negativa, pois é muito reativo."
+      },
+      {
+        "id": "c",
+        "text": "a entalpia de formação da água é zero, pois ela é uma substância comum."
+      },
+      {
+        "id": "d",
+        "text": "o diamante e o grafite têm a mesma entalpia de formação, igual a zero."
+      },
+      {
+        "id": "e",
+        "text": "a entalpia de formação positiva indica reação exotérmica."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O zero é a referência para as substâncias simples mais estáveis. ΔHf negativo para a água: a reação H₂ + ½ O₂ → H₂O é exotérmica.\n\nPegadinhas:\n• B: por convenção, ΔHf do O₂(g) é zero.\n• C: a água é composta; seu ΔHf é −286 kJ/mol.\n• D: só a forma mais estável (grafite) tem ΔHf zero.\n• E: ΔH positivo indica reação endotérmica.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_15",
+    "chapter": "Organização da Tabela Periódica dos Elementos",
+    "topicId": "qui_modelos_atomicos",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA primeira energia de ionização é a energia necessária para retirar um elétron de um átomo isolado no estado gasoso. Em um gráfico dessa energia em função do número atômico, os valores mais altos aparecem nos gases nobres, como hélio, neônio e argônio, e os mais baixos, nos metais alcalinos, como lítio, sódio e potássio, que vêm logo depois de cada gás nobre.\n\nTexto elaborado para esta questão.\n\nO padrão descrito se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "os metais alcalinos têm a camada de valência completa e não perdem elétrons."
+      },
+      {
+        "id": "b",
+        "text": "os gases nobres têm um único elétron na camada de valência, fácil de retirar."
+      },
+      {
+        "id": "c",
+        "text": "os gases nobres têm a camada de valência completa, configuração muito estável, e os metais alcalinos têm um único elétron de valência, mais afastado do núcleo e fácil de retirar."
+      },
+      {
+        "id": "d",
+        "text": "a energia de ionização depende apenas da massa do átomo."
+      },
+      {
+        "id": "e",
+        "text": "os metais alcalinos têm mais prótons que os gases nobres anteriores, o que dificulta a retirada de elétrons."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Camada completa dos gases nobres: difícil retirar elétron. Nos alcalinos, o elétron extra inicia uma nova camada, mais distante e blindada: fácil de retirar, o que explica sua reatividade.\n\nPegadinhas:\n• A: descreve os gases nobres, não os alcalinos.\n• B: inverte as configurações.\n• D: depende da configuração eletrônica.\n• E: o próton a mais não compensa o elétron em camada nova.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_16",
+    "chapter": "Química Inorgânica",
+    "topicId": "qui_inorganica",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma aula, uma lâmpada ligada a dois eletrodos foi usada para testar soluções aquosas de mesma concentração. Com a solução de ácido clorídrico, HCl, a lâmpada brilhou intensamente. Com a solução de ácido acético, presente no vinagre, a lâmpada brilhou fracamente. Com a água destilada, praticamente não acendeu.\n\nTexto elaborado para esta questão.\n\nOs resultados se explicam porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o ácido clorídrico é um ácido forte, quase totalmente ionizado em água, e gera muitos íons, enquanto o ácido acético é fraco e se ioniza pouco, produzindo menos íons para conduzir a corrente."
+      },
+      {
+        "id": "b",
+        "text": "o ácido acético tem mais íons que o ácido clorídrico, mas eles são maiores."
+      },
+      {
+        "id": "c",
+        "text": "a água destilada é ótima condutora de eletricidade, e os ácidos atrapalham a condução."
+      },
+      {
+        "id": "d",
+        "text": "a intensidade do brilho depende apenas da cor da solução."
+      },
+      {
+        "id": "e",
+        "text": "os dois ácidos estão igualmente ionizados, e a diferença se deve ao cheiro."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A condução em solução depende da quantidade de íons livres. Ácidos fortes ionizam quase totalmente; fracos, só em pequena fração. Água pura tem pouquíssimos íons.\n\nPegadinhas:\n• B: o ácido acético produz menos íons.\n• C: a água destilada praticamente não conduz.\n• D: a cor não determina a condutividade.\n• E: os graus de ionização são diferentes.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_17",
+    "chapter": "Processos de Oxirredução",
+    "topicId": "qui_oxirreducao",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma feira de ciências, estudantes espetaram uma placa de zinco e uma de cobre em um limão e as ligaram a um pequeno relógio digital, que funcionou. O zinco tem maior tendência a se oxidar que o cobre. O suco de limão, ácido, contém íons dissolvidos que permitem a passagem de corrente entre as placas. Com o tempo, a placa de zinco ficou desgastada.\n\nTexto elaborado para esta questão.\n\nNa pilha descrita,",
+    "options": [
+      {
+        "id": "a",
+        "text": "o cobre se oxida e envia elétrons ao zinco pelo fio, que por isso se desgasta."
+      },
+      {
+        "id": "b",
+        "text": "o zinco é o ânodo, onde ocorre oxidação, e os elétrons fluem pelo fio do zinco para o cobre, onde ocorre redução, enquanto o suco de limão atua como eletrólito."
+      },
+      {
+        "id": "c",
+        "text": "o limão produz a energia elétrica sozinho, sem participação das placas metálicas."
+      },
+      {
+        "id": "d",
+        "text": "não há reação química, apenas a passagem da corrente do limão para o relógio."
+      },
+      {
+        "id": "e",
+        "text": "o zinco é o cátodo, onde ocorre redução, e por isso não deveria sofrer desgaste."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Zn → Zn²⁺ + 2 e⁻ no ânodo (desgaste da placa). Os elétrons vão pelo circuito até o cobre, onde H⁺ do suco é reduzido. O eletrólito fecha o circuito interno.\n\nPegadinhas:\n• A: o zinco é que se oxida.\n• C: a energia vem da reação entre os metais e o meio.\n• D: há reação de oxirredução.\n• E: o zinco é o ânodo e se desgasta.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_18",
+    "chapter": "Ácidos Graxos e Esterificação",
+    "topicId": "qui_organica_reacoes",
+    "subject": "Química",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa fabricação artesanal de sabão, óleo usado de cozinha é aquecido com solução de soda cáustica, hidróxido de sódio, NaOH. Os triglicerídeos do óleo reagem com a base e formam sais de ácidos graxos, que constituem o sabão, e glicerol. O processo exige cuidado, pois a soda cáustica é corrosiva e pode causar queimaduras graves.\n\nTexto elaborado para esta questão.\n\nA reação descrita é",
+    "options": [
+      {
+        "id": "a",
+        "text": "a esterificação, entre um ácido carboxílico e um álcool, que forma éster e água."
+      },
+      {
+        "id": "b",
+        "text": "a combustão do óleo, que forma gás carbônico e água ao reagir com o oxigênio do ar."
+      },
+      {
+        "id": "c",
+        "text": "a saponificação, hidrólise básica dos triglicerídeos, que forma sais de ácidos graxos (sabão) e glicerol."
+      },
+      {
+        "id": "d",
+        "text": "a hidrogenação do óleo, que adiciona hidrogênio às ligações duplas e forma gordura sólida."
+      },
+      {
+        "id": "e",
+        "text": "a neutralização do sabão pelo glicerol, que reduz a corrosividade da soda cáustica."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Triglicerídeo + NaOH → sabão (sais de sódio de ácidos graxos) + glicerol: a quebra das ligações éster em meio básico.\n\nPegadinhas:\n• A: a esterificação forma ésteres, não os quebra.\n• B: não há queima.\n• D: hidrogenação adiciona H₂ às duplas.\n• E: o glicerol é produto, não reagente.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_19",
+    "chapter": "O Movimento Circular",
+    "topicId": "fis_cinematica",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um carrossel, uma criança senta em um cavalinho na borda e outra, em um banco perto do centro. O carrossel gira com velocidade constante, dando uma volta completa a cada 20 segundos. A criança da borda sente o vento mais forte no rosto e diz que está \"girando mais rápido\" que a outra.\n\nTexto elaborado para esta questão.\n\nSobre o movimento das duas crianças, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as duas têm a mesma velocidade linear, pois estão no mesmo carrossel."
+      },
+      {
+        "id": "b",
+        "text": "a criança perto do centro tem maior velocidade angular, pois percorre uma circunferência menor."
+      },
+      {
+        "id": "c",
+        "text": "a criança da borda completa mais voltas por minuto, pois percorre uma distância maior."
+      },
+      {
+        "id": "d",
+        "text": "as duas têm velocidades angular e linear diferentes, pois estão em posições diferentes."
+      },
+      {
+        "id": "e",
+        "text": "as duas têm a mesma velocidade angular e o mesmo período, mas a criança da borda tem maior velocidade linear, pois percorre uma circunferência maior no mesmo tempo."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Todos os pontos de um corpo rígido em rotação têm o mesmo ω e o mesmo período. v = ω·R: quanto maior o raio, maior a velocidade linear — daí o vento mais forte na borda.\n\nPegadinhas:\n• A: a velocidade linear depende do raio.\n• B: a velocidade angular é a mesma.\n• C: as duas completam as mesmas voltas.\n• D: só a velocidade linear difere.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_20",
+    "chapter": "Velocidade Vetorial",
+    "topicId": "fis_cinematica_vetorial",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma rodovia reta, um carro A trafega a 80 km/h e, à sua frente, no mesmo sentido, um carro B trafega a 60 km/h. O motorista do carro A quer estimar a velocidade com que se aproxima do carro B para planejar a ultrapassagem com segurança. Considere as velocidades constantes, medidas em relação à rodovia.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA velocidade do carro A em relação ao carro B é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "0 km/h, pois os dois carros se movem no mesmo sentido e, por isso, não se aproximam."
+      },
+      {
+        "id": "b",
+        "text": "10 km/h, pois a velocidade relativa é metade da diferença."
+      },
+      {
+        "id": "c",
+        "text": "14 km/h, pois a velocidade relativa é a raiz da diferença dos quadrados."
+      },
+      {
+        "id": "d",
+        "text": "20 km/h, pois, no mesmo sentido, a velocidade relativa é a diferença entre as velocidades, 80 − 60."
+      },
+      {
+        "id": "e",
+        "text": "140 km/h, pois as velocidades dos dois carros se somam, qualquer que seja o sentido."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. No mesmo sentido, v_rel = 80 − 60 = 20 km/h. Em sentidos opostos, seria 140 km/h.\n\nPegadinhas:\n• A: os carros têm velocidades diferentes.\n• B: relação inventada.\n• C: usa composição de vetores perpendiculares.\n• E: só vale para sentidos opostos.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_21",
+    "chapter": "Trabalho e Energia: Trabalho de uma Força",
+    "topicId": "fis_energia",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nCampanhas de segurança no trânsito alertam que pequenas reduções de velocidade diminuem muito a gravidade dos acidentes. A energia cinética de um carro, que precisa ser dissipada para pará-lo ou é transferida em uma colisão, depende do quadrado da velocidade. Considere um carro que passa de 40 km/h para 80 km/h, mantendo a mesma massa.\n\nNote e adote: Ec = m·v²/2.\n\nTexto elaborado para esta questão.\n\nAo dobrar a velocidade, a energia cinética do carro",
+    "options": [
+      {
+        "id": "a",
+        "text": "permanece a mesma, pois a massa não mudou, e a energia cinética depende apenas dela."
+      },
+      {
+        "id": "b",
+        "text": "dobra, pois a energia cinética é proporcional à velocidade."
+      },
+      {
+        "id": "c",
+        "text": "quadruplica, pois a energia cinética é proporcional ao quadrado da velocidade, e por isso a energia a ser dissipada na frenagem ou em uma colisão aumenta muito."
+      },
+      {
+        "id": "d",
+        "text": "aumenta oito vezes, pois a energia é proporcional ao cubo da velocidade."
+      },
+      {
+        "id": "e",
+        "text": "diminui pela metade, pois o carro passa menos tempo na via."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Ec ∝ v²: (80/40)² = 4. Com a mesma força de frenagem, a distância de parada também quadruplica.\n\nPegadinhas:\n• A: a velocidade mudou.\n• B: modelo linear.\n• D: não há dependência cúbica.\n• E: o tempo na via não altera a energia cinética.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_22",
+    "chapter": "Resultante de um Sistema de Forças",
+    "topicId": "fis_leis_newton",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma caixa desliza a partir do repouso por uma rampa lisa, sem atrito, inclinada 30° em relação à horizontal. As forças sobre a caixa são o peso e a força normal da rampa. A componente do peso paralela à rampa acelera a caixa, enquanto a componente perpendicular é equilibrada pela normal.\n\nNote e adote: g = 10 m/s²; sen 30° = 0,5; cos 30° ≈ 0,87.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA aceleração da caixa ao longo da rampa é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 m/s², pois a aceleração em qualquer rampa é um décimo da aceleração da gravidade."
+      },
+      {
+        "id": "b",
+        "text": "2,5 m/s², pois a aceleração é g·sen 30° dividida por 2."
+      },
+      {
+        "id": "c",
+        "text": "3 m/s², pois a aceleração é g dividido pelo ângulo em graus, multiplicado por 9."
+      },
+      {
+        "id": "d",
+        "text": "5 m/s², pois a resultante é m·g·sen 30°, e a = g·sen 30° = 10 × 0,5."
+      },
+      {
+        "id": "e",
+        "text": "10 m/s², pois, sem atrito, a caixa cai em queda livre ao longo da rampa."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A resultante é a componente do peso paralela à rampa: m·g·sen θ. Dividindo pela massa: a = 5 m/s², independentemente da massa.\n\nPegadinhas:\n• A: relação inventada.\n• B: divide por 2 sem justificativa.\n• C: relação inventada.\n• E: a rampa reduz a aceleração em relação à queda livre.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_23",
+    "chapter": "Órbitas",
+    "topicId": "fis_gravitacao_circular",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nSegundo a lei da gravitação universal, a força com que a Terra atrai um corpo é inversamente proporcional ao quadrado da distância entre o corpo e o centro da Terra. Na superfície, essa distância é igual ao raio terrestre, R. Um estudante quer saber a que distância do centro da Terra o peso de um satélite seria um quarto do seu valor na superfície.\n\nTexto elaborado para esta questão.\n\nEssa distância é",
+    "options": [
+      {
+        "id": "a",
+        "text": "R/4, pois o peso diminui quando o corpo se aproxima do centro."
+      },
+      {
+        "id": "b",
+        "text": "R/2, pois a distância ao centro deve ser reduzida à metade para que o peso diminua."
+      },
+      {
+        "id": "c",
+        "text": "R, pois o peso não depende da distância ao centro da Terra, apenas da massa do satélite."
+      },
+      {
+        "id": "d",
+        "text": "√2·R, pois o peso é inversamente proporcional à distância."
+      },
+      {
+        "id": "e",
+        "text": "2R, pois, com F ∝ 1/d², dobrar a distância ao centro reduz a força a 1/2² = 1/4."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. P'/P = (R/d)² = 1/4 ⇒ d = 2R, isto é, a uma altitude igual a um raio terrestre.\n\nPegadinhas:\n• A: aproximar-se do centro não reduz o peso dessa forma, e o resultado é absurdo.\n• B: idem.\n• C: o peso depende da distância.\n• D: usa dependência errada.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_24",
+    "chapter": "Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento",
+    "topicId": "fis_ondulatoria",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara afinar um violão, um músico toca a corda junto com um diapasão de 440 Hz. Ele ouve um som que aumenta e diminui de intensidade periodicamente, o batimento, cuja frequência é igual à diferença entre as frequências dos dois sons. A corda está vibrando a 444 Hz. À medida que o músico ajusta a tensão, os batimentos ficam mais lentos, até desaparecer.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA frequência dos batimentos ouvidos inicialmente é",
+    "options": [
+      {
+        "id": "a",
+        "text": "2 Hz, pois a frequência de batimento é metade da diferença."
+      },
+      {
+        "id": "b",
+        "text": "4 Hz, pois é a diferença entre 444 Hz e 440 Hz, e os batimentos desaparecem quando as frequências se igualam."
+      },
+      {
+        "id": "c",
+        "text": "8 Hz, pois a frequência de batimento é o dobro da diferença."
+      },
+      {
+        "id": "d",
+        "text": "442 Hz, pois a frequência dos batimentos é a média das duas frequências."
+      },
+      {
+        "id": "e",
+        "text": "884 Hz, pois a frequência dos batimentos é a soma das duas frequências."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. f_bat = |444 − 440| = 4 Hz: quatro máximos de intensidade por segundo. Com as frequências iguais, não há batimento — e a corda está afinada.\n\nPegadinhas:\n• A: divide por 2 indevidamente.\n• C: dobra indevidamente.\n• D: a média é a frequência do som percebido, não a dos batimentos.\n• E: a soma não corresponde ao batimento.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_25",
+    "chapter": "Força Elétrica: Lei de Coulomb",
+    "topicId": "fis_eletrostatica",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDuas pequenas esferas metálicas idênticas, presas a suportes isolantes, são usadas em um experimento. A esfera A tem carga +Q, e a esfera B está neutra. O estudante encosta uma esfera na outra e depois as separa. Como as esferas são idênticas e condutoras, a carga se distribui igualmente entre elas durante o contato.\n\nTexto elaborado para esta questão.\n\nApós a separação, cada esfera terá carga",
+    "options": [
+      {
+        "id": "a",
+        "text": "+Q/2, pois a carga se divide igualmente entre as esferas idênticas, e a carga total, +Q, se conserva."
+      },
+      {
+        "id": "b",
+        "text": "+Q na esfera B e zero na esfera A, pois a carga passa toda para a esfera neutra."
+      },
+      {
+        "id": "c",
+        "text": "+Q em cada esfera, pois a carga se duplica no contato entre condutores idênticos."
+      },
+      {
+        "id": "d",
+        "text": "zero em ambas, pois a carga da esfera A se anula ao encostar na esfera neutra."
+      },
+      {
+        "id": "e",
+        "text": "−Q/2 em cada esfera, pois o contato inverte o sinal da carga."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Com esferas idênticas, a carga total se divide igualmente: +Q/2 em cada uma, conservando +Q no total.\n\nPegadinhas:\n• B: a distribuição é igual entre esferas idênticas.\n• C: a carga não se cria.\n• D: não havia carga negativa para anular.\n• E: o sinal não se inverte.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_26",
+    "chapter": "Geradores",
+    "topicId": "fis_circuitos",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm controle remoto usa duas pilhas comuns de 1,5 V, colocadas uma após a outra, com o polo positivo de uma encostado no polo negativo da outra. O manual indica que o aparelho precisa de 3 V para funcionar. Se uma das pilhas for colocada invertida, o controle deixa de funcionar.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as pilhas estão em paralelo, e a tensão total é de 1,5 V."
+      },
+      {
+        "id": "b",
+        "text": "as pilhas estão associadas em série, e suas forças eletromotrizes se somam, fornecendo 3 V; com uma pilha invertida, as tensões se subtraem e a tensão total fica nula."
+      },
+      {
+        "id": "c",
+        "text": "as pilhas em série somam a corrente, e não a tensão, que permanece igual a 1,5 V."
+      },
+      {
+        "id": "d",
+        "text": "a tensão total não depende da forma como as pilhas são ligadas."
+      },
+      {
+        "id": "e",
+        "text": "com uma pilha invertida, a tensão total passa a ser de 4,5 V."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Em série, 1,5 + 1,5 = 3 V. Invertida, uma pilha se opõe à outra: 1,5 − 1,5 = 0 V.\n\nPegadinhas:\n• A: a ligação descrita é em série.\n• C: em série somam-se as tensões.\n• D: a ligação determina a tensão.\n• E: a inversão reduz a tensão.",
+    "difficulty": "easy",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_27",
+    "chapter": "Estudo Analítico das Lentes Esféricas",
+    "topicId": "fis_optica_instrumental",
+    "subject": "Física",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um microscópio óptico escolar, a imagem é formada por duas lentes: a objetiva, próxima da amostra, e a ocular, próxima do olho. O aumento total do microscópio é o produto dos aumentos das duas lentes. Uma estudante usa uma ocular de aumento 10× e uma objetiva de aumento 40× para observar células da mucosa da boca.\n\nTexto elaborado para esta questão.\n\nO aumento total obtido é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "4 vezes, pois o aumento total é a razão entre os aumentos das lentes."
+      },
+      {
+        "id": "b",
+        "text": "30 vezes, pois o aumento total é a diferença entre os aumentos."
+      },
+      {
+        "id": "c",
+        "text": "40 vezes, pois só a objetiva amplia a imagem, e a ocular apenas a focaliza."
+      },
+      {
+        "id": "d",
+        "text": "50 vezes, pois os aumentos da ocular e da objetiva se somam."
+      },
+      {
+        "id": "e",
+        "text": "400 vezes, pois o aumento total é o produto 10 × 40, já que a ocular amplia a imagem formada pela objetiva."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A objetiva forma uma imagem ampliada 40×; a ocular amplia essa imagem 10×: 400×.\n\nPegadinhas:\n• A: divide os aumentos.\n• B: subtrai os aumentos.\n• C: a ocular também amplia.\n• D: soma os aumentos.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_28",
+    "chapter": "Igualdades",
+    "topicId": "mat_equacoes",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm jardim retangular tem comprimento 3 m maior que a largura e área de 40 m². Para comprar a cerca, o proprietário precisa conhecer as dimensões. Representando a largura por x, ele montou a equação x(x + 3) = 40 e encontrou duas soluções, uma delas negativa.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA largura do jardim é",
+    "options": [
+      {
+        "id": "a",
+        "text": "3 m, pois corresponde à diferença entre o comprimento e a largura."
+      },
+      {
+        "id": "b",
+        "text": "4 m, pois x(x + 3) = 40 dá x = 4, com comprimento de 7 m."
+      },
+      {
+        "id": "c",
+        "text": "5 m, pois x² + 3x − 40 = 0 tem raízes 5 e −8, e só a positiva serve como medida."
+      },
+      {
+        "id": "d",
+        "text": "8 m, pois a largura é o valor absoluto da raiz negativa."
+      },
+      {
+        "id": "e",
+        "text": "13 m, pois a largura é a soma das duas raízes da equação, tomadas em módulo."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. x² + 3x − 40 = 0 ⇒ x = 5 ou x = −8. Medidas são positivas: largura 5 m e comprimento 8 m (5 × 8 = 40).\n\nPegadinhas:\n• A: confunde a diferença com a largura.\n• B: 4 × 7 = 28, não 40.\n• D: o módulo da raiz negativa é o comprimento, não a largura.\n• E: relação inventada.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_29",
+    "chapter": "Composição de Funções",
+    "topicId": "mat_funcoes",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nConsidere as funções f(x) = 2x + 1 e g(x) = x². Uma estudante precisa calcular f(g(2)) e g(f(2)) e comparar os resultados. Ela lembra que, em f(g(x)), primeiro se aplica g a x e depois f ao resultado, enquanto em g(f(x)) a ordem é a inversa.\n\nTexto elaborado para esta questão.\n\nOs valores de f(g(2)) e g(f(2)) são, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "9 e 25, pois g(2) = 4 e f(4) = 9, enquanto f(2) = 5 e g(5) = 25, o que mostra que a composição não é comutativa."
+      },
+      {
+        "id": "b",
+        "text": "25 e 9, pois em f(g(x)) se aplica primeiro f e depois g ao resultado."
+      },
+      {
+        "id": "c",
+        "text": "9 e 9, pois a composição de funções é comutativa, e a ordem não altera o resultado."
+      },
+      {
+        "id": "d",
+        "text": "5 e 4, pois a composição apenas aplica uma das funções."
+      },
+      {
+        "id": "e",
+        "text": "16 e 25, pois f(g(2)) é igual a (2 × 2)², aplicando-se as duas funções ao mesmo tempo."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. f(g(2)) = f(4) = 9; g(f(2)) = g(5) = 25. Os resultados diferem.\n\nPegadinhas:\n• B: inverte a ordem.\n• C: a composição não é comutativa em geral.\n• D: aplica uma só função.\n• E: calcula errado.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_30",
+    "chapter": "Introdução aos Logaritmos",
+    "topicId": "mat_log_exponenciais",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma aplicação financeira rende juros compostos de 10% ao ano. Um investidor quer saber em quantos anos, aproximadamente, o valor aplicado dobrará, sem novos depósitos nem saques. Ele monta a equação 1,1ⁿ = 2 e resolve com logaritmos.\n\nNote e adote: log 2 ≈ 0,301; log 1,1 ≈ 0,041.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO número aproximado de anos para dobrar o valor é",
+    "options": [
+      {
+        "id": "a",
+        "text": "2, pois o valor aplicado dobra quando os juros acumulados somam 20%."
+      },
+      {
+        "id": "b",
+        "text": "5, pois metade do tempo do crescimento linear é suficiente."
+      },
+      {
+        "id": "c",
+        "text": "6, pois o valor dobra a cada 6 anos em qualquer aplicação."
+      },
+      {
+        "id": "d",
+        "text": "7,3, pois 1,1ⁿ = 2 dá n = log 2 / log 1,1 ≈ 0,301/0,041."
+      },
+      {
+        "id": "e",
+        "text": "10, pois, com 10% ao ano, são necessários 10 anos para acumular 100% de juros."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. n = 0,301/0,041 ≈ 7,3 anos. Pelos juros sobre juros, dobra antes dos 10 anos do cálculo linear.\n\nPegadinhas:\n• A: 20% não dobra o valor.\n• B: relação inventada.\n• C: o tempo depende da taxa.\n• E: é o raciocínio de juros simples.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_31",
+    "chapter": "Eventos Disjuntos e Eventos Independentes",
+    "topicId": "mat_dados_probabilidade",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma cidade, a probabilidade de chover em certo dia é de 30%, e a probabilidade de haver congestionamento grave é de 50%. Considere que, nesse modelo, os dois eventos são independentes. Um motorista quer saber a probabilidade de, nesse dia, ocorrer chuva ou congestionamento grave, isto é, pelo menos um dos dois.\n\nNote e adote: P(A ou B) = P(A) + P(B) − P(A e B); para eventos independentes, P(A e B) = P(A)·P(B).\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA probabilidade procurada é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,15, pois é a probabilidade de ocorrerem os dois eventos ao mesmo tempo."
+      },
+      {
+        "id": "b",
+        "text": "0,2, pois é a diferença entre as probabilidades dos dois eventos."
+      },
+      {
+        "id": "c",
+        "text": "0,5, pois a probabilidade de pelo menos um dos eventos é a maior das duas probabilidades."
+      },
+      {
+        "id": "d",
+        "text": "0,65, pois P(A ou B) = 0,3 + 0,5 − 0,3 × 0,5 = 0,65."
+      },
+      {
+        "id": "e",
+        "text": "0,8, pois a probabilidade de pelo menos um dos eventos é a soma das duas probabilidades."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. P(A e B) = 0,15; P(A ou B) = 0,8 − 0,15 = 0,65. Somar diretamente conta duas vezes os dias com chuva e congestionamento.\n\nPegadinhas:\n• A: é P(A e B).\n• B: relação inventada.\n• C: ignora o outro evento.\n• E: os eventos não são disjuntos.",
+    "difficulty": "hard",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_32",
+    "chapter": "Estatística Descritiva",
+    "topicId": "mat_dados_probabilidade",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDuas turmas fizeram a mesma prova. Na turma A, as notas foram 5, 5, 6, 6 e 8; na turma B, foram 1, 3, 6, 9 e 11. As duas turmas tiveram média 6. Um professor afirmou que, por terem a mesma média, as turmas tiveram desempenho igualmente homogêneo, sem diferenças entre os alunos.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nSobre a afirmação do professor, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "está incorreta, pois, apesar da mesma média, as notas da turma B estão muito mais dispersas em torno dela, o que um desvio padrão maior indicaria."
+      },
+      {
+        "id": "b",
+        "text": "está correta, pois a média resume completamente o desempenho das turmas."
+      },
+      {
+        "id": "c",
+        "text": "está correta, pois as duas turmas têm as mesmas notas mínima e máxima."
+      },
+      {
+        "id": "d",
+        "text": "está incorreta, pois a turma A teve média maior que a B."
+      },
+      {
+        "id": "e",
+        "text": "está incorreta, pois a turma B tem notas menos dispersas que a A."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Na turma A, as notas ficam entre 5 e 8; na B, entre 1 e 11. Medidas de dispersão, como amplitude e desvio padrão, mostram a diferença que a média esconde.\n\nPegadinhas:\n• B: a média não descreve a variabilidade.\n• C: os extremos são diferentes.\n• D: as médias são iguais.\n• E: inverte as dispersões.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_33",
+    "chapter": "Identificação de Simetrias II",
+    "topicId": "mat_geometria_plana",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma calçada, um padrão de ladrilhos repete o mesmo desenho, um peixe estilizado sempre voltado para a direita, ao longo de toda a faixa. Cada desenho pode ser obtido do anterior deslizando-o 30 cm para a direita, sem girá-lo nem espelhá-lo. Uma estudante quer identificar a transformação geométrica que gera o padrão.\n\nTexto elaborado para esta questão.\n\nA transformação que gera o padrão é",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma reflexão em relação a um eixo vertical, que espelha o peixe a cada repetição."
+      },
+      {
+        "id": "b",
+        "text": "uma rotação de 180° em torno do centro de cada ladrilho."
+      },
+      {
+        "id": "c",
+        "text": "uma homotetia, que amplia o peixe a cada repetição, mantendo sua orientação."
+      },
+      {
+        "id": "d",
+        "text": "uma rotação de 90°, que gira o peixe a cada ladrilho em torno do seu centro."
+      },
+      {
+        "id": "e",
+        "text": "uma translação de 30 cm para a direita, que desloca o desenho sem alterar sua forma, tamanho ou orientação."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Deslizar sem girar nem espelhar é transladar. Forma, tamanho e orientação se mantêm.\n\nPegadinhas:\n• A: a reflexão inverteria o sentido do peixe.\n• B: a rotação de 180° o deixaria de cabeça para baixo.\n• C: o tamanho é mantido.\n• D: o peixe continua voltado para a direita.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_34",
+    "chapter": "O Universo Tridimensional",
+    "topicId": "mat_geometria_espacial",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma lata cilíndrica de extrato de tomate tem 6 cm de diâmetro e 10 cm de altura, medidas internas. A fábrica quer informar no rótulo o volume interno da lata. O volume de um cilindro é a área da base, um círculo, multiplicada pela altura.\n\nNote e adote: área do círculo = π·r².\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO volume interno da lata é",
+    "options": [
+      {
+        "id": "a",
+        "text": "30π cm³, pois o volume é o raio multiplicado pela altura e por π."
+      },
+      {
+        "id": "b",
+        "text": "60π cm³, pois o volume é o diâmetro multiplicado pela altura e por π."
+      },
+      {
+        "id": "c",
+        "text": "90π cm³, pois o raio é metade do diâmetro, 3 cm, e V = π × 3² × 10."
+      },
+      {
+        "id": "d",
+        "text": "180π cm³, pois o volume é o dobro da área da base vezes a altura."
+      },
+      {
+        "id": "e",
+        "text": "900π cm³, pois o volume é o quadrado do diâmetro vezes a altura, sem dividir por 4, multiplicado por 2,5."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. r = 3 cm; V = π × 9 × 10 = 90π ≈ 283 cm³.\n\nPegadinhas:\n• A: esquece o quadrado do raio.\n• B: usa o diâmetro sem o quadrado.\n• D: dobra o volume sem justificativa.\n• E: operação sem fundamento.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_35",
+    "chapter": "Trigonometria no Triângulo Retângulo",
+    "topicId": "mat_trigonometria",
+    "subject": "Matemática",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara estimar a altura de uma torre, um estudante se posiciona a 30 m da sua base, em terreno plano, e mede, com um aplicativo, o ângulo de 30° entre a horizontal e a linha que vai de seus olhos até o topo. Considere desprezível a altura dos olhos do estudante em relação ao chão.\n\nNote e adote: sen 30° = 0,5; cos 30° ≈ 0,87; tg 30° ≈ 0,58.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA altura estimada da torre é de aproximadamente",
+    "options": [
+      {
+        "id": "a",
+        "text": "15 m, pois a altura é a distância multiplicada pelo seno de 30°."
+      },
+      {
+        "id": "b",
+        "text": "17,4 m, pois a tangente de 30° é a altura dividida pela distância: h = 30 × 0,58."
+      },
+      {
+        "id": "c",
+        "text": "26 m, pois a altura é a distância multiplicada pelo cosseno de 30°."
+      },
+      {
+        "id": "d",
+        "text": "30 m, pois a altura da torre é sempre igual à distância do observador até a base."
+      },
+      {
+        "id": "e",
+        "text": "52 m, pois a altura é a distância dividida pela tangente de 30°."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Cateto oposto (altura) / cateto adjacente (distância) = tg 30°. h = 30 × 0,58 ≈ 17,4 m.\n\nPegadinhas:\n• A: o seno relaciona o oposto à hipotenusa.\n• C: o cosseno relaciona o adjacente à hipotenusa.\n• D: só valeria para 45°.\n• E: divide em vez de multiplicar.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_36",
+    "chapter": "Biogeografia do Brasil I",
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Pantanal, uma das maiores planícies alagáveis do mundo, ocupa partes de Mato Grosso, Mato Grosso do Sul, Bolívia e Paraguai. Durante a estação chuvosa, rios transbordam e grandes áreas ficam inundadas por meses; na seca, as águas recuam, formando lagoas e pastagens naturais. Esse pulso de inundação renova nutrientes, regula a reprodução de peixes e sustenta enorme diversidade de aves, jacarés e mamíferos. Nos últimos anos, secas extremas e incêndios afetaram o bioma.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as cheias são prejudiciais ao Pantanal e deveriam ser contidas por barragens."
+      },
+      {
+        "id": "b",
+        "text": "o Pantanal é uma floresta densa e perene, sem alternância de estações."
+      },
+      {
+        "id": "c",
+        "text": "a alternância entre cheias e secas é fundamental para o funcionamento do Pantanal, e alterações nesse ciclo, como secas extremas, ameaçam sua biodiversidade."
+      },
+      {
+        "id": "d",
+        "text": "o bioma ocupa principalmente o litoral do Nordeste, onde as marés provocam as cheias."
+      },
+      {
+        "id": "e",
+        "text": "a biodiversidade do Pantanal é baixa, pois o solo fica alagado."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O pulso de inundação é o motor ecológico do Pantanal. Mudanças no regime hídrico, por clima, desmatamento nas cabeceiras ou obras, ameaçam o equilíbrio.\n\nPegadinhas:\n• A: as cheias são essenciais ao bioma.\n• B: o Pantanal é uma planície com vegetação variada e estações marcadas.\n• D: localiza-se no Centro-Oeste.\n• E: o texto destaca a enorme diversidade.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_37",
+    "chapter": "O Espaço Urbano II",
+    "topicId": "geo_populacao_urbana_brasil",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO IBGE estuda a rede urbana brasileira identificando a área de influência das cidades: para onde as pessoas vão em busca de serviços de saúde especializados, ensino superior, comércio e empresas. São Paulo aparece como a principal metrópole, cuja influência alcança todo o país; outras metrópoles, como Rio de Janeiro, Brasília, Belo Horizonte e Recife, polarizam grandes regiões, e cidades médias atendem áreas menores.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "todas as cidades brasileiras têm a mesma influência sobre o território."
+      },
+      {
+        "id": "b",
+        "text": "a rede urbana é hierarquizada, com cidades que oferecem serviços e funções de diferentes níveis e polarizam áreas de tamanhos distintos, com São Paulo no topo."
+      },
+      {
+        "id": "c",
+        "text": "a influência de uma cidade depende apenas do número de habitantes."
+      },
+      {
+        "id": "d",
+        "text": "as cidades médias não exercem nenhuma influência regional."
+      },
+      {
+        "id": "e",
+        "text": "Brasília exerce influência maior que São Paulo sobre todo o país."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A hierarquia urbana reflete a concentração de serviços e funções. São Paulo é a grande metrópole nacional; as demais metrópoles e capitais regionais organizam suas regiões.\n\nPegadinhas:\n• A: o texto descreve níveis diferentes.\n• C: a influência depende das funções oferecidas.\n• D: o texto diz que atendem áreas menores.\n• E: o texto coloca São Paulo como principal.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_38",
+    "chapter": "Produção Agrícola Mundial",
+    "topicId": "geo_globalizacao_economica",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo Brasil, grandes propriedades altamente mecanizadas produzem principalmente commodities para exportação, como soja, milho e carne, e respondem por boa parte das exportações do país. A agricultura familiar, com propriedades menores e uso intenso de mão de obra da própria família, responde por grande parte dos estabelecimentos rurais e tem papel importante na produção de alimentos para o mercado interno, como feijão, mandioca, leite e hortaliças.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o campo brasileiro reúne modelos distintos: o agronegócio exportador, mecanizado e voltado a commodities, e a agricultura familiar, importante na produção de alimentos para o mercado interno."
+      },
+      {
+        "id": "b",
+        "text": "a agricultura familiar é responsável pela maior parte das exportações de soja."
+      },
+      {
+        "id": "c",
+        "text": "o agronegócio produz apenas alimentos para o consumo interno."
+      },
+      {
+        "id": "d",
+        "text": "a agricultura familiar utiliza exclusivamente máquinas, sem mão de obra."
+      },
+      {
+        "id": "e",
+        "text": "não há diferença entre os modelos de produção agrícola no Brasil."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Os dois modelos coexistem com papéis diferentes: divisas e commodities, de um lado; abastecimento interno e emprego no campo, de outro.\n\nPegadinhas:\n• B: as exportações de soja vêm sobretudo das grandes propriedades.\n• C: o texto diz que o agronegócio produz para exportação.\n• D: o texto destaca a mão de obra familiar.\n• E: o texto descreve diferenças claras.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_39",
+    "chapter": "Geopolítica e Geoeconomia da Ásia",
+    "topicId": "geo_geopolitica_regional",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nApós a Segunda Guerra Mundial, a Península Coreana foi dividida no paralelo 38: o norte ficou sob influência soviética, e o sul, sob influência norte-americana. Em 1950, tropas do norte invadiram o sul, dando início à Guerra da Coreia, com participação dos Estados Unidos e da China. Em 1953, um armistício interrompeu os combates, mas nenhum tratado de paz foi assinado. A fronteira, perto do paralelo 38, é uma das mais militarizadas do mundo.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a Guerra da Coreia terminou com um tratado de paz e a reunificação do país."
+      },
+      {
+        "id": "b",
+        "text": "a divisão da Coreia não teve relação com a Guerra Fria."
+      },
+      {
+        "id": "c",
+        "text": "o armistício de 1953 eliminou toda a tensão militar na península."
+      },
+      {
+        "id": "d",
+        "text": "a divisão da península reflete a disputa entre os blocos da Guerra Fria, e a ausência de um tratado de paz mantém, até hoje, uma das fronteiras mais tensas do mundo."
+      },
+      {
+        "id": "e",
+        "text": "a China e os Estados Unidos lutaram do mesmo lado na guerra."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A divisão nasceu das zonas de ocupação de EUA e URSS. Com o armistício, os combates pararam, mas a guerra nunca terminou formalmente.\n\nPegadinhas:\n• A: houve armistício, sem tratado nem reunificação.\n• B: o texto relaciona a divisão às superpotências.\n• C: a fronteira é altamente militarizada.\n• E: China e EUA lutaram em lados opostos.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_40",
+    "chapter": "Desafios Ambientais do Século XXI",
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nMedições feitas em uma grande cidade mostraram que, à noite, a temperatura no centro, com muitos prédios, asfalto e pouca vegetação, chegou a ficar 5 °C acima da de áreas arborizadas da periferia. Materiais como asfalto e concreto absorvem muita radiação solar durante o dia e a liberam à noite; a falta de vegetação reduz a evaporação e a sombra; e o calor de veículos e aparelhos de ar-condicionado também contribui.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO fenômeno descrito é chamado",
+    "options": [
+      {
+        "id": "a",
+        "text": "inversão térmica, pois uma camada de ar quente fica acima de ar frio."
+      },
+      {
+        "id": "b",
+        "text": "efeito estufa natural, pois depende apenas dos gases da atmosfera."
+      },
+      {
+        "id": "c",
+        "text": "chuva ácida, pois os poluentes aquecem o centro da cidade."
+      },
+      {
+        "id": "d",
+        "text": "El Niño, pois decorre do aquecimento do Oceano Pacífico."
+      },
+      {
+        "id": "e",
+        "text": "ilha de calor, causada pelas características do espaço urbano, como materiais que armazenam calor, impermeabilização, pouca vegetação e calor das atividades humanas, e pode ser atenuada com arborização e telhados verdes."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. As temperaturas mais altas nas áreas mais construídas e menos arborizadas caracterizam a ilha de calor, um fenômeno local, ligado à forma da cidade.\n\nPegadinhas:\n• A: inversão térmica é outro fenômeno, de estratificação do ar.\n• B: o efeito descrito é local e urbano.\n• C: chuva ácida não aquece a cidade.\n• D: El Niño é um fenômeno oceânico-atmosférico de grande escala.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_41",
+    "chapter": "Hidrogeografia Mundial",
+    "topicId": "geo_hidrogeografia",
+    "subject": "Geografia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma bacia hidrográfica é a área drenada por um rio principal e seus afluentes, delimitada pelos divisores de águas, as partes mais altas do relevo. A obra de transposição do rio São Francisco, inaugurada em etapas a partir de 2017, leva parte da água do rio, por canais e estações de bombeamento, para bacias de outras regiões do semiárido nordestino, onde muitos rios secam durante parte do ano.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as bacias hidrográficas são definidas pelos limites entre os estados."
+      },
+      {
+        "id": "b",
+        "text": "a transposição cria nova água no semiárido, independentemente do rio São Francisco."
+      },
+      {
+        "id": "c",
+        "text": "os divisores de águas são as partes mais baixas do relevo, onde a água se acumula."
+      },
+      {
+        "id": "d",
+        "text": "a transposição dispensa bombeamento, pois a água corre naturalmente para bacias mais altas."
+      },
+      {
+        "id": "e",
+        "text": "a transposição transfere água da bacia do São Francisco para outras bacias, separadas por divisores de águas, para ampliar a oferta hídrica em áreas do semiárido onde os rios são intermitentes."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A água transferida vem de uma bacia para outras, atravessando divisores de águas, o que exige canais e bombeamento.\n\nPegadinhas:\n• A: as bacias são definidas pelo relevo.\n• B: a água vem do São Francisco.\n• C: os divisores são as partes mais altas.\n• D: o texto cita estações de bombeamento.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_42",
+    "chapter": "Dinâmica Interna da Colonização",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo fim do século XVII, a descoberta de ouro na região das Minas atraiu milhares de pessoas, vindas de outras partes da colônia e de Portugal, e grande número de africanos escravizados. A Coroa portuguesa criou mecanismos de controle, como as casas de fundição e a cobrança do quinto, a quinta parte do ouro. Cidades como Vila Rica cresceram, e, em 1763, a capital da colônia foi transferida de Salvador para o Rio de Janeiro, porto de saída do ouro.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a mineração",
+    "options": [
+      {
+        "id": "a",
+        "text": "manteve o centro da economia colonial no Nordeste açucareiro."
+      },
+      {
+        "id": "b",
+        "text": "foi realizada sem controle fiscal da Coroa portuguesa, que não cobrava impostos sobre o ouro."
+      },
+      {
+        "id": "c",
+        "text": "dispensou o trabalho de africanos escravizados, substituído pelo de imigrantes europeus."
+      },
+      {
+        "id": "d",
+        "text": "deslocou o eixo econômico e político da colônia para o Centro-Sul, estimulou a urbanização e foi acompanhada de forte controle fiscal da Coroa, como a cobrança do quinto."
+      },
+      {
+        "id": "e",
+        "text": "levou à transferência da capital do Rio de Janeiro para Salvador."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O ouro atraiu população e recursos para as Minas e para o Rio de Janeiro. A Coroa intensificou a fiscalização, o que gerou tensões como a Inconfidência Mineira.\n\nPegadinhas:\n• A: o eixo se deslocou para o Centro-Sul.\n• B: o texto descreve o quinto e as casas de fundição.\n• C: o texto cita grande número de escravizados.\n• E: a capital foi de Salvador para o Rio.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_43",
+    "chapter": "Grandes Navegações e Conquista Colonial",
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPortugal foi pioneiro na expansão marítima europeia no século XV. O reino tinha uma monarquia centralizada desde a Revolução de Avis, de 1385, que aproximou a Coroa de comerciantes interessados em novas rotas. A posição voltada para o Atlântico, a experiência com a pesca e o comércio marítimo e o desenvolvimento de técnicas náuticas, como a caravela e o uso de instrumentos de orientação, também contribuíram. O objetivo central era alcançar as especiarias do Oriente sem depender dos intermediários do Mediterrâneo.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o pioneirismo português resultou",
+    "options": [
+      {
+        "id": "a",
+        "text": "apenas da posição geográfica do reino, voltado para o Atlântico."
+      },
+      {
+        "id": "b",
+        "text": "da fragmentação política do reino, que estimulava aventuras individuais."
+      },
+      {
+        "id": "c",
+        "text": "da combinação de centralização política, interesses comerciais da burguesia, posição geográfica favorável e avanços técnicos, com o objetivo de alcançar as especiarias do Oriente."
+      },
+      {
+        "id": "d",
+        "text": "do desejo de colonizar a América, já conhecida pelos portugueses no século XIV."
+      },
+      {
+        "id": "e",
+        "text": "do domínio português sobre o comércio do Mediterrâneo, controlado por Lisboa desde o século XIII."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O texto reúne fatores políticos, econômicos, geográficos e técnicos. A busca por rotas diretas às especiarias, contornando a África, era o motor comercial.\n\nPegadinhas:\n• A: a posição era só um dos fatores.\n• B: o reino era centralizado.\n• D: a América não era conhecida pelos europeus no século XIV.\n• E: o Mediterrâneo era dominado por outros intermediários.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_44",
+    "chapter": "Revolução Industrial",
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Inglaterra foi a primeira a se industrializar, a partir da segunda metade do século XVIII. Contribuíram para isso o acúmulo de capital obtido no comércio colonial e no tráfico de escravizados, a disponibilidade de carvão e ferro, um mercado consumidor interno e externo em expansão, uma monarquia parlamentar favorável aos interesses da burguesia e os cercamentos, que expulsaram camponeses do campo e formaram uma grande oferta de mão de obra nas cidades.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o pioneirismo inglês na Revolução Industrial",
+    "options": [
+      {
+        "id": "a",
+        "text": "resultou de um conjunto de fatores econômicos, sociais e políticos, como capital acumulado, recursos minerais, mercados, governo favorável à burguesia e mão de obra liberada pelos cercamentos."
+      },
+      {
+        "id": "b",
+        "text": "deveu-se exclusivamente à invenção da máquina a vapor, sem relação com fatores econômicos."
+      },
+      {
+        "id": "c",
+        "text": "ocorreu porque a Inglaterra não tinha colônias nem comércio externo."
+      },
+      {
+        "id": "d",
+        "text": "foi impedido pela monarquia parlamentar, que protegia a nobreza feudal."
+      },
+      {
+        "id": "e",
+        "text": "dependeu da escassez de mão de obra nas cidades inglesas."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A máquina a vapor foi importante, mas a industrialização exigiu capital, energia, mercados, instituições e trabalhadores disponíveis.\n\nPegadinhas:\n• B: o texto enumera vários fatores.\n• C: o comércio colonial foi fonte de capital.\n• D: o governo era favorável à burguesia.\n• E: os cercamentos geraram abundância de mão de obra.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_45",
+    "chapter": "Revolução Francesa",
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1789, Luís XVI convocou os Estados Gerais para resolver a crise financeira da França. Os deputados representavam três ordens: o clero (Primeiro Estado), a nobreza (Segundo Estado) e o Terceiro Estado, que reunia a burguesia, os trabalhadores urbanos e os camponeses, a imensa maioria da população. A votação tradicional era por ordem: cada Estado tinha um voto. O Terceiro Estado exigiu a votação por cabeça e, diante da recusa, declarou-se Assembleia Nacional.\n\nTexto elaborado para esta questão.\n\nA exigência de votação por cabeça se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o Terceiro Estado era minoria e queria reduzir sua própria influência."
+      },
+      {
+        "id": "b",
+        "text": "a votação por ordem permitia ao clero e à nobreza, somados, vencer o Terceiro Estado por 2 votos a 1, embora este representasse a maioria da população e tivesse muitos deputados."
+      },
+      {
+        "id": "c",
+        "text": "o rei já havia aprovado a votação por cabeça antes da reunião."
+      },
+      {
+        "id": "d",
+        "text": "o clero e a nobreza pagavam a maior parte dos impostos."
+      },
+      {
+        "id": "e",
+        "text": "o Terceiro Estado era formado apenas pelos grandes proprietários de terras."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Com um voto por ordem, os privilegiados formavam maioria. A votação por cabeça daria peso à representação do Terceiro Estado, que tinha mais deputados — e o impasse abriu o processo revolucionário.\n\nPegadinhas:\n• A: o Terceiro Estado era a imensa maioria.\n• C: houve recusa, segundo o texto.\n• D: o Terceiro Estado sustentava a carga tributária.\n• E: reunia burguesia, trabalhadores e camponeses.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_46",
+    "chapter": "Segunda Guerra Mundial (1939-1945)",
+    "topicId": "his_imperialismo_guerras",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm agosto de 1945, os Estados Unidos lançaram bombas atômicas sobre as cidades japonesas de Hiroshima e Nagasaki, matando dezenas de milhares de pessoas imediatamente e muitas outras nos anos seguintes, pelos efeitos da radiação. O Japão se rendeu poucos dias depois. Historiadores debatem até hoje se o uso das bombas foi necessário para encerrar a guerra e discutem seu papel como demonstração de poder diante da União Soviética.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o uso das bombas atômicas contribuiu para o fim da guerra no Pacífico, causou enorme número de vítimas civis e é objeto de debate histórico, inclusive sobre seu significado na disputa com a União Soviética que daria origem à Guerra Fria."
+      },
+      {
+        "id": "b",
+        "text": "as bombas atômicas foram lançadas sobre a Alemanha nazista."
+      },
+      {
+        "id": "c",
+        "text": "o Japão se rendeu antes do lançamento das bombas, que foram usadas apenas como demonstração."
+      },
+      {
+        "id": "d",
+        "text": "os efeitos da radiação se limitaram ao dia das explosões."
+      },
+      {
+        "id": "e",
+        "text": "não há debate entre historiadores sobre o uso das bombas."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Hiroshima e Nagasaki encerraram a guerra no Pacífico e inauguraram a era nuclear; o debate envolve tanto a necessidade militar quanto a mensagem a Moscou.\n\nPegadinhas:\n• B: as bombas foram lançadas no Japão.\n• C: a rendição veio poucos dias depois.\n• D: houve mortes nos anos seguintes.\n• E: o texto descreve o debate.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_47",
+    "chapter": "América Latina no Século XX",
+    "topicId": "his_guerra_fria_contemporaneo",
+    "subject": "História",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNas décadas de 1960 e 1970, ditaduras militares se instalaram em vários países da América do Sul, como Brasil, Argentina, Chile, Uruguai, Paraguai e Bolívia. Documentos revelaram que seus serviços de repressão cooperaram na chamada Operação Condor, trocando informações e realizando sequestros e assassinatos de opositores fora de seus próprios territórios. Esses regimes justificavam a repressão com a doutrina de segurança nacional, no contexto da Guerra Fria.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as ditaduras sul-americanas atuaram de forma isolada, sem qualquer cooperação."
+      },
+      {
+        "id": "b",
+        "text": "a Operação Condor foi um acordo de paz entre os países sul-americanos."
+      },
+      {
+        "id": "c",
+        "text": "as ditaduras do Cone Sul cooperaram na repressão a opositores além de suas fronteiras, justificando-a pela doutrina de segurança nacional no contexto da Guerra Fria."
+      },
+      {
+        "id": "d",
+        "text": "a repressão das ditaduras não atingiu opositores fora dos países de origem."
+      },
+      {
+        "id": "e",
+        "text": "os regimes militares foram estabelecidos para combater a influência dos Estados Unidos."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A Operação Condor mostra a dimensão transnacional da repressão. A doutrina de segurança nacional via opositores como \"inimigos internos\" na lógica da Guerra Fria.\n\nPegadinhas:\n• A: o texto descreve cooperação.\n• B: era uma rede de repressão.\n• D: houve ações fora dos territórios.\n• E: os regimes eram alinhados aos EUA.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_48",
+    "chapter": "Concordância",
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia a frase publicada em uma reportagem:\n\n\"Fazem dois anos que a obra está parada, e haviam muitas reclamações dos moradores.\"\n\nPela norma-padrão, os verbos \"fazer\", quando indica tempo decorrido, e \"haver\", no sentido de \"existir\", são impessoais: não têm sujeito e ficam na terceira pessoa do singular. Já o verbo \"existir\" concorda normalmente com o sujeito, como em \"existiam muitas reclamações\".\n\nTexto elaborado para esta questão.\n\nDe acordo com a norma-padrão, a frase deveria ser reescrita como:",
+    "options": [
+      {
+        "id": "a",
+        "text": "\"Fazem dois anos que a obra está parada, e havia muitas reclamações dos moradores.\""
+      },
+      {
+        "id": "b",
+        "text": "\"Faz dois anos que a obra está parada, e havia muitas reclamações dos moradores.\""
+      },
+      {
+        "id": "c",
+        "text": "\"Faz dois anos que a obra está parada, e haviam muitas reclamações dos moradores.\""
+      },
+      {
+        "id": "d",
+        "text": "\"Fazem dois anos que a obra está parada, e existia muitas reclamações dos moradores.\""
+      },
+      {
+        "id": "e",
+        "text": "\"Faz dois anos que a obra está parada, e existia muitas reclamações dos moradores.\""
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. \"Faz\" (tempo decorrido) e \"havia\" (existir) são impessoais e ficam no singular.\n\nPegadinhas:\n• A: corrige só o \"haver\".\n• C: corrige só o \"fazer\".\n• D: mantém \"fazem\" e erra a concordância de \"existir\".\n• E: \"existir\" é pessoal e deveria concordar com \"reclamações\": \"existiam\".",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_49",
+    "chapter": "Text Comprehension: Bacteria",
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"The human gut is home to trillions of bacteria, collectively known as the gut microbiota. Far from being harmful, most of these microbes help us digest fibre, produce some vitamins and protect against disease-causing organisms. A course of antibiotics, however, can kill many of these helpful bacteria along with the harmful ones, and the community may take weeks or months to recover.\"\n\nTexto elaborado para esta questão.\n\nAccording to the text,",
+    "options": [
+      {
+        "id": "a",
+        "text": "all bacteria in the human body are harmful and should be eliminated."
+      },
+      {
+        "id": "b",
+        "text": "the gut microbiota is made up of only a few hundred bacteria."
+      },
+      {
+        "id": "c",
+        "text": "antibiotics kill only harmful bacteria and leave helpful ones untouched."
+      },
+      {
+        "id": "d",
+        "text": "the gut microbiota recovers in a few hours after a course of antibiotics."
+      },
+      {
+        "id": "e",
+        "text": "most gut bacteria are beneficial, helping with digestion, vitamin production and protection, but antibiotics can also kill them, and recovery may take a long time."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O texto descreve benefícios da microbiota (\"far from being harmful\") e alerta que antibióticos matam também bactérias úteis, com recuperação de semanas ou meses.\n\nPegadinhas:\n• A: contradiz \"far from being harmful\".\n• B: o texto fala em trilhões.\n• C: o texto diz que os antibióticos matam também as úteis.\n• D: o texto fala em semanas ou meses.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l20_50",
+    "chapter": "O Nascimento da Filosofia: do Mito ao Logos",
+    "topicId": "fil_origem_pre_socraticos",
+    "subject": "Filosofia",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa Grécia antiga, fenômenos como raios, estações do ano e a origem do mundo eram explicados por narrativas míticas que atribuíam os acontecimentos à vontade de deuses, como Zeus, que lançava raios. A partir do século VI a.C., pensadores como Tales de Mileto passaram a buscar explicações baseadas em princípios naturais, como a água, e em argumentos que pudessem ser discutidos e criticados racionalmente.\n\nTexto elaborado para esta questão.\n\nA passagem descrita pode ser caracterizada como",
+    "options": [
+      {
+        "id": "a",
+        "text": "a substituição da razão pelo mito na explicação da natureza."
+      },
+      {
+        "id": "b",
+        "text": "a criação de novos deuses para explicar os fenômenos naturais."
+      },
+      {
+        "id": "c",
+        "text": "o abandono de qualquer tentativa de explicar a origem do mundo."
+      },
+      {
+        "id": "d",
+        "text": "a busca de explicações racionais para a natureza, baseadas em princípios naturais e abertas à argumentação e à crítica, em contraste com as explicações míticas baseadas na vontade dos deuses."
+      },
+      {
+        "id": "e",
+        "text": "a defesa de que somente os sacerdotes podiam explicar a natureza."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Os primeiros filósofos procuraram a arché, o princípio de todas as coisas, com argumentos que podiam ser discutidos — a passagem do mito ao logos.\n\nPegadinhas:\n• A: inverte o processo.\n• B: as explicações deixam de recorrer à vontade divina.\n• C: os filósofos continuaram a investigar a origem do mundo.\n• E: as explicações filosóficas eram abertas ao debate público.",
+    "difficulty": "medium",
+    "styleOf": "FUVEST"
   }
 ]
