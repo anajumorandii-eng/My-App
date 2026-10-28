@@ -110,3 +110,19 @@ it('preserva a arte gerada sem sobrepor pontos aleatórios do modelo padrão', a
  expect(root.querySelector('[data-print-cover]')).toHaveAttribute('data-print-generated');
  expect(root.querySelectorAll('[data-print-cover-base] circle[fill="#31546a"]')).toHaveLength(0);
 });
+it('revisão usa sumário e conteúdo no mesmo layout sem mudar a fonte ou o conteúdo',()=>{
+ const content=document.createElement('article');content.dataset.printPurpose='Revisão aprofundada';content.innerHTML='<h2>Seção</h2><p>Explicação integral.</p><details data-review-answer-key><summary>Gabarito</summary><p>Resposta integral.</p></details>';
+ const root=createStrategyPrintRoot(content,'Revisão');
+ expect(root).toHaveAttribute('data-print-review-compact');
+ const cell=root.querySelector('[data-print-layout] > tbody > tr > td')!;
+ expect(cell.firstElementChild).toHaveAttribute('data-print-toc');
+ expect(cell.lastElementChild).toHaveAttribute('data-print-content');
+ expect(root.querySelector('[data-print-cover]')).toBeTruthy();
+ expect(root.textContent).toContain('Explicação integral.');expect(root.textContent).toContain('Resposta integral.');
+ expect(content.querySelector('[data-print-toc]')).toBeNull();
+});
+it('aprofundamento conserva a organização anterior',()=>{
+ const content=document.createElement('article');content.dataset.printPurpose='Aprofundamento';content.innerHTML='<h2>Seção</h2><p>Texto.</p>';
+ const root=createStrategyPrintRoot(content,'Guia');expect(root).not.toHaveAttribute('data-print-review-compact');
+ expect(root.children[1]).toHaveAttribute('data-print-toc');
+});
