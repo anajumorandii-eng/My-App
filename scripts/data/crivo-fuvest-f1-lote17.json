@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "crivo_fuvest_f1_l17_01",
+    "subject": "Biologia",
+    "topicId": "bio_estrutura_fisio_celular",
+    "chapter": "Citoplasma: Estrutura e Componentes II",
+    "difficulty": "hard",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que o DNA mitocondrial vem dos dois genitores, como o nuclear.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs mitocôndrias têm DNA próprio, circular, semelhante ao das bactérias. No momento da fecundação, as mitocôndrias do espermatozoide, concentradas na peça intermediária, praticamente não contribuem para o zigoto, que recebe as mitocôndrias do ovócito. Por isso, pesquisadores usam o DNA mitocondrial para rastrear linhagens ao longo de gerações, como em estudos sobre a origem das populações humanas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que o DNA mitocondrial",
+    "options": [
+      {
+        "id": "a",
+        "text": "é herdado igualmente do pai e da mãe, como os cromossomos do núcleo."
+      },
+      {
+        "id": "b",
+        "text": "é transmitido quase exclusivamente pela mãe, o que permite rastrear linhagens maternas, e sua semelhança com o DNA bacteriano apoia a hipótese de que as mitocôndrias se originaram de bactérias englobadas por células ancestrais."
+      },
+      {
+        "id": "c",
+        "text": "é herdado apenas do pai, pois o espermatozoide tem mais mitocôndrias."
+      },
+      {
+        "id": "d",
+        "text": "não existe, pois todo o DNA da célula está no núcleo."
+      },
+      {
+        "id": "e",
+        "text": "é idêntico em todas as pessoas, pois não sofre mutações."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O zigoto recebe as mitocôndrias do ovócito: herança materna. O DNA circular, semelhante ao bacteriano, é uma das evidências da teoria endossimbiótica. As mutações acumuladas ao longo das gerações permitem comparar linhagens.\n\nPegadinhas:\n• A: o texto diz que o espermatozoide praticamente não contribui com mitocôndrias.\n• C: inverte a herança.\n• D: o texto descreve DNA próprio das mitocôndrias.\n• E: se fosse idêntico, não serviria para rastrear linhagens.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_02",
+    "subject": "Biologia",
+    "topicId": "bio_estrutura_fisio_celular",
+    "chapter": "Composição Química Celular: Carboidratos e Lipídios",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que todo colesterol é prejudicial, ou que ele é um carboidrato.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO colesterol é um lipídio encontrado nas membranas das células animais, onde ajuda a regular sua fluidez, e é matéria-prima para a síntese de hormônios como estrogênio, testosterona e cortisol, além da vitamina D. No sangue, é transportado por lipoproteínas: as de baixa densidade (LDL), quando em excesso, favorecem depósitos nas paredes das artérias; as de alta densidade (HDL) levam o excesso de colesterol ao fígado.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que o colesterol",
+    "options": [
+      {
+        "id": "a",
+        "text": "é um carboidrato de reserva energética, como o amido."
+      },
+      {
+        "id": "b",
+        "text": "é sempre prejudicial à saúde e deveria estar ausente do organismo."
+      },
+      {
+        "id": "c",
+        "text": "é produzido apenas pelas plantas e obtido exclusivamente pela dieta."
+      },
+      {
+        "id": "d",
+        "text": "é transportado livremente no sangue, sem associação com proteínas."
+      },
+      {
+        "id": "e",
+        "text": "tem funções essenciais nas membranas e na síntese de hormônios esteroides, e o risco cardiovascular depende sobretudo do excesso de colesterol transportado pela LDL."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O colesterol é um esteroide indispensável. O problema é o desequilíbrio: LDL elevada favorece placas de ateroma; HDL ajuda a remover o excesso.\n\nPegadinhas:\n• A: é um lipídio, não carboidrato.\n• B: o texto descreve suas funções essenciais.\n• C: o texto o situa em células animais; o fígado também o produz.\n• D: o texto diz que ele é transportado por lipoproteínas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_03",
+    "subject": "Biologia",
+    "topicId": "bio_genetica",
+    "chapter": "Introdução à Genética",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que um alelo causador de doença nunca pode trazer vantagem.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA anemia falciforme é causada por um alelo que altera a hemoglobina. Pessoas homozigotas para esse alelo têm hemácias que assumem forma de foice e desenvolvem anemia grave. Heterozigotas raramente têm sintomas graves e, em regiões onde a malária é comum, como partes da África, têm maior resistência à infecção pelo parasita da malária do que homozigotas para o alelo normal. Nessas regiões, o alelo da anemia falciforme é mais frequente que em outras partes do mundo.\n\nTexto elaborado para esta questão.\n\nA maior frequência do alelo nessas regiões se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o parasita da malária provoca a mutação que origina o alelo."
+      },
+      {
+        "id": "b",
+        "text": "os homozigotos para o alelo da anemia são os mais resistentes e deixam mais descendentes."
+      },
+      {
+        "id": "c",
+        "text": "o alelo não sofre seleção natural, pois é recessivo."
+      },
+      {
+        "id": "d",
+        "text": "os heterozigotos têm vantagem de sobrevivência onde há malária, e a seleção natural a favor deles mantém o alelo na população, apesar dos efeitos graves nos homozigotos."
+      },
+      {
+        "id": "e",
+        "text": "o clima quente aumenta a taxa de mutação do gene da hemoglobina."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. É um caso de vantagem do heterozigoto: em área de malária, os heterozigotos sobrevivem mais que os dois homozigotos — o normal, mais vulnerável à malária, e o falcêmico, com anemia grave. A seleção mantém os dois alelos.\n\nPegadinhas:\n• A: o parasita não causa a mutação; o ambiente seleciona alelos já existentes.\n• B: os homozigotos falcêmicos têm anemia grave.\n• C: o alelo sofre seleção, inclusive nos heterozigotos.\n• E: não há relação entre clima e taxa de mutação no texto.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_04",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Sangue e Imunologia",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que a coagulação depende só das hemácias, ou que a hemofilia é causada por falta de plaquetas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nQuando um vaso sanguíneo é lesionado, as plaquetas aderem ao local e formam um tampão inicial. Em seguida, uma cascata de reações envolvendo proteínas do plasma, os fatores de coagulação, transforma o fibrinogênio em fibrina, uma rede de fios que prende as células do sangue e forma o coágulo. Pessoas com hemofilia têm deficiência de um desses fatores e sangram por mais tempo, mesmo com número normal de plaquetas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a coagulação depende apenas das hemácias, que se agrupam no local da lesão."
+      },
+      {
+        "id": "b",
+        "text": "a hemofilia é causada pela falta de plaquetas no sangue."
+      },
+      {
+        "id": "c",
+        "text": "a coagulação envolve as plaquetas e uma cascata de fatores do plasma que forma a rede de fibrina, e a deficiência de um desses fatores, como na hemofilia, prejudica a formação do coágulo."
+      },
+      {
+        "id": "d",
+        "text": "o fibrinogênio é uma célula do sangue que forma o tampão inicial."
+      },
+      {
+        "id": "e",
+        "text": "a fibrina impede a formação do coágulo, dissolvendo as plaquetas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Tampão plaquetário e cascata de coagulação atuam juntos. Na hemofilia, falta um fator (por exemplo, o VIII), e a fibrina se forma de modo insuficiente.\n\nPegadinhas:\n• A: as hemácias são presas na rede, mas não a formam.\n• B: o texto diz que as plaquetas são normais na hemofilia.\n• D: o fibrinogênio é uma proteína do plasma.\n• E: a fibrina forma a rede do coágulo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_05",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Fisiologia da Respiração",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o estímulo para respirar é a falta de oxigênio, e não o acúmulo de CO₂.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nQuando uma pessoa prende a respiração, depois de algum tempo sente uma necessidade incontrolável de voltar a respirar. Centros nervosos no bulbo, na base do encéfalo, ajustam a frequência respiratória principalmente de acordo com a concentração de gás carbônico no sangue, percebida pelas mudanças de pH que ele provoca. Por isso, mergulhadores que hiperventilam antes de mergulhar, eliminando muito CO₂, correm o risco de desmaiar debaixo da água antes de sentir a necessidade de respirar.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o principal estímulo para a respiração é o aumento da concentração de CO₂ no sangue, que acidifica o meio e é detectado pelo bulbo, e, ao reduzir o CO₂ antes do mergulho, a pessoa retarda esse aviso enquanto o oxigênio continua a cair."
+      },
+      {
+        "id": "b",
+        "text": "a hiperventilação aumenta o estoque de CO₂, o que prolonga o mergulho com segurança."
+      },
+      {
+        "id": "c",
+        "text": "o bulbo responde apenas à falta de oxigênio, sem relação com o CO₂."
+      },
+      {
+        "id": "d",
+        "text": "prender a respiração diminui a concentração de CO₂ no sangue."
+      },
+      {
+        "id": "e",
+        "text": "a respiração é controlada exclusivamente pela vontade da pessoa."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O CO₂ forma ácido carbônico e reduz o pH, o que os quimiorreceptores percebem. Hiperventilar reduz o CO₂: o alarme demora, mas o O₂ cai durante o mergulho, e o desmaio pode ocorrer sem aviso.\n\nPegadinhas:\n• B: a hiperventilação elimina CO₂, e o texto mostra o risco.\n• C: o texto atribui o controle principalmente ao CO₂.\n• D: prender a respiração acumula CO₂.\n• E: o controle é automático, ainda que se possa alterá-lo voluntariamente por um tempo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_06",
+    "subject": "Biologia",
+    "topicId": "bio_microbiologia",
+    "chapter": "Vírus",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o HIV destrói as hemácias, ou que antibióticos combatem o vírus.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO HIV, causador da aids, é um retrovírus: seu material genético é RNA, e ele possui a enzima transcriptase reversa, que produz DNA a partir desse RNA. O DNA viral se integra ao DNA da célula hospedeira, principalmente linfócitos T auxiliares, que coordenam a resposta imunológica. Os medicamentos antirretrovirais usados no tratamento incluem inibidores da transcriptase reversa e permitem que a pessoa viva muitos anos com o vírus controlado.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o HIV tem DNA como material genético e infecta principalmente as hemácias."
+      },
+      {
+        "id": "b",
+        "text": "a transcriptase reversa produz RNA a partir do DNA da célula hospedeira."
+      },
+      {
+        "id": "c",
+        "text": "os antibióticos são o principal tratamento contra o HIV."
+      },
+      {
+        "id": "d",
+        "text": "o HIV, por ser retrovírus, usa a transcriptase reversa para produzir DNA a partir de seu RNA, e a infecção de linfócitos T auxiliares compromete a coordenação da resposta imune, o que os inibidores dessa enzima ajudam a evitar."
+      },
+      {
+        "id": "e",
+        "text": "a integração do DNA viral à célula elimina o vírus do organismo."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O fluxo RNA → DNA, ao contrário do usual, caracteriza os retrovírus. Com os linfócitos T auxiliares destruídos, a imunidade enfraquece, abrindo espaço para infecções oportunistas. Bloquear a transcriptase reversa impede a replicação.\n\nPegadinhas:\n• A: o material genético é RNA, e o alvo são linfócitos.\n• B: inverte a direção da transcrição.\n• C: antibióticos não atuam sobre vírus.\n• E: a integração mantém o vírus no organismo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_07",
+    "subject": "Biologia",
+    "topicId": "bio_zoologia",
+    "chapter": "Introdução aos Cordados e os Peixes",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que tubarões e peixes ósseos flutuam pelo mesmo mecanismo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA maioria dos peixes ósseos, como a tilápia, tem uma bexiga natatória, um saco com gás cujo volume pode ser ajustado, o que permite ao peixe permanecer em diferentes profundidades sem gastar muita energia nadando. Tubarões, peixes cartilaginosos, não têm bexiga natatória: muitos precisam nadar continuamente para não afundar e contam com um fígado grande, rico em óleo, menos denso que a água.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a bexiga natatória permite aos peixes ósseos regular a flutuação ajustando o volume de gás, enquanto tubarões compensam sua ausência com o fígado rico em óleo e o nado contínuo."
+      },
+      {
+        "id": "b",
+        "text": "tubarões têm bexiga natatória maior que a dos peixes ósseos."
+      },
+      {
+        "id": "c",
+        "text": "a bexiga natatória serve para a respiração dos peixes cartilaginosos."
+      },
+      {
+        "id": "d",
+        "text": "o fígado dos tubarões é mais denso que a água e os ajuda a afundar."
+      },
+      {
+        "id": "e",
+        "text": "todos os peixes precisam nadar continuamente para não afundar."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Ajustando o gás, o peixe ósseo muda sua densidade média e flutua em equilíbrio. Sem bexiga, o tubarão usa o óleo do fígado e a sustentação gerada pelo nado.\n\nPegadinhas:\n• B: o texto diz que tubarões não têm bexiga natatória.\n• C: a respiração dos peixes é branquial.\n• D: o óleo é menos denso que a água.\n• E: peixes ósseos com bexiga natatória podem ficar parados na água.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_08",
+    "subject": "Biologia",
+    "topicId": "bio_botanica",
+    "chapter": "Ciclos de Vida",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o endosperma vem da fusão de dois gametas comuns, sendo diploide.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNas angiospermas, o grão de pólen forma um tubo que leva dois núcleos espermáticos até o óvulo. Um deles fecunda a oosfera, formando o zigoto, que origina o embrião. O outro se une aos dois núcleos polares do saco embrionário, formando um tecido de reserva que nutre o embrião, chamado endosperma. Esse processo, exclusivo das angiospermas, é chamado de dupla fecundação.\n\nTexto elaborado para esta questão.\n\nSobre a dupla fecundação, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "os dois núcleos espermáticos fecundam a oosfera, formando um embrião tetraploide."
+      },
+      {
+        "id": "b",
+        "text": "o endosperma é diploide, pois resulta da união de dois núcleos."
+      },
+      {
+        "id": "c",
+        "text": "um núcleo espermático origina o zigoto, diploide, e o outro, ao se unir aos dois núcleos polares, forma o endosperma, triploide, tecido de reserva da semente."
+      },
+      {
+        "id": "d",
+        "text": "o endosperma origina as raízes da nova planta, enquanto o embrião forma apenas as folhas."
+      },
+      {
+        "id": "e",
+        "text": "a dupla fecundação ocorre também nas gimnospermas, como os pinheiros."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Núcleo espermático (n) + oosfera (n) = zigoto 2n. Núcleo espermático (n) + dois núcleos polares (n + n) = endosperma 3n.\n\nPegadinhas:\n• A: cada núcleo espermático participa de uma fusão diferente.\n• B: são três núcleos haploides: 3n.\n• D: o endosperma nutre o embrião; é o embrião que forma a raiz.\n• E: o texto diz que é exclusiva das angiospermas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_09",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_vegetal",
+    "chapter": "Histologia e Morfologia Vegetal",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a raiz empurra a água até o topo, ou que a água sobe por capilaridade apenas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm árvores de dezenas de metros, a água sobe das raízes até as folhas pelos vasos do xilema. A explicação mais aceita é a teoria da coesão-tensão: a transpiração nas folhas retira água das células, o que cria uma tensão que puxa a coluna de água no xilema. A coluna não se rompe porque as moléculas de água se atraem fortemente umas às outras e às paredes dos vasos. Em dias quentes e secos, com mais transpiração, a água sobe mais rapidamente.\n\nTexto elaborado para esta questão.\n\nSegundo a teoria descrita, a subida da água",
+    "options": [
+      {
+        "id": "a",
+        "text": "é causada principalmente pela pressão exercida pelas raízes, que empurram a água para cima."
+      },
+      {
+        "id": "b",
+        "text": "depende da transpiração, que gera tensão nas folhas, e da coesão entre as moléculas de água, que mantém a coluna contínua no xilema."
+      },
+      {
+        "id": "c",
+        "text": "ocorre pelo floema, junto com os açúcares produzidos na fotossíntese."
+      },
+      {
+        "id": "d",
+        "text": "é mais lenta em dias quentes e secos, pois as folhas perdem menos água."
+      },
+      {
+        "id": "e",
+        "text": "acontece apenas à noite, quando os estômatos estão fechados."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A força motora vem de cima: a transpiração puxa a água. A coesão, pelas ligações de hidrogênio, e a adesão às paredes mantêm a coluna. Mais transpiração, maior tensão e subida mais rápida.\n\nPegadinhas:\n• A: a pressão de raiz existe, mas não explica a subida em árvores altas.\n• C: a água sobe pelo xilema.\n• D: o texto diz o contrário.\n• E: com estômatos fechados, a transpiração diminui.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_10",
+    "subject": "Química",
+    "topicId": "qui_cinetica",
+    "chapter": "Cinética Química",
+    "difficulty": "easy",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a geladeira mata os microrganismos, ou que o frio não afeta reações químicas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAlimentos guardados na geladeira demoram muito mais para estragar do que os deixados sobre a mesa, e os guardados no congelador duram ainda mais. A deterioração envolve a ação de microrganismos e reações químicas, como a oxidação de gorduras e a ação de enzimas do próprio alimento. Ao ser retirado da geladeira, porém, o alimento volta a se deteriorar no ritmo normal.\n\nTexto elaborado para esta questão.\n\nA conservação pela refrigeração se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o frio mata todos os microrganismos do alimento, que deixa de se deteriorar definitivamente."
+      },
+      {
+        "id": "b",
+        "text": "a geladeira retira o oxigênio do alimento, impedindo qualquer reação."
+      },
+      {
+        "id": "c",
+        "text": "o frio altera a composição química do alimento, tornando-o resistente."
+      },
+      {
+        "id": "d",
+        "text": "a refrigeração funciona como catalisador das reações de conservação."
+      },
+      {
+        "id": "e",
+        "text": "a temperatura mais baixa reduz a energia das partículas e a frequência de colisões efetivas, diminuindo a rapidez das reações químicas e o metabolismo dos microrganismos, sem eliminá-los."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Em temperatura menor, menos partículas têm energia para superar a energia de ativação, e reações químicas e enzimáticas ficam mais lentas. Os microrganismos sobrevivem, mas se multiplicam devagar — por isso o alimento volta a estragar fora da geladeira.\n\nPegadinhas:\n• A: o texto mostra que a deterioração volta ao normal.\n• B: a geladeira não retira oxigênio.\n• C: a composição não muda.\n• D: o frio não é catalisador; ele reduz a rapidez das reações.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_11",
+    "subject": "Química",
+    "topicId": "qui_equilibrio",
+    "chapter": "Equilíbrios Iônicos II",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que todo sal é neutro em solução aquosa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma aula, três soluções aquosas de mesma concentração foram testadas com um indicador. A solução de cloreto de sódio, NaCl, mostrou pH próximo de 7. A de bicarbonato de sódio, NaHCO₃, usada como antiácido, mostrou pH acima de 7. A de cloreto de amônio, NH₄Cl, usada em alguns fertilizantes, mostrou pH abaixo de 7.\n\nTexto elaborado para esta questão.\n\nOs resultados se explicam porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "os íons de alguns sais reagem com a água (hidrólise): o bicarbonato, derivado de ácido fraco, gera OH⁻ e torna o meio básico, enquanto o amônio, derivado de base fraca, gera H⁺ e torna o meio ácido; o NaCl, derivado de ácido e base fortes, não sofre hidrólise relevante."
+      },
+      {
+        "id": "b",
+        "text": "todos os sais formam soluções neutras, e o indicador estava com defeito."
+      },
+      {
+        "id": "c",
+        "text": "o NH₄Cl é básico porque contém nitrogênio, como a amônia."
+      },
+      {
+        "id": "d",
+        "text": "o NaHCO₃ é ácido porque contém hidrogênio na fórmula."
+      },
+      {
+        "id": "e",
+        "text": "o pH de uma solução salina depende apenas da massa do sal dissolvido."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. HCO₃⁻ + H₂O ⇌ H₂CO₃ + OH⁻ (meio básico). NH₄⁺ + H₂O ⇌ NH₃ + H₃O⁺ (meio ácido). Na⁺ e Cl⁻ vêm de base e ácido fortes e praticamente não reagem com a água.\n\nPegadinhas:\n• B: os resultados são coerentes com a hidrólise.\n• C: o íon amônio libera H⁺, tornando o meio ácido.\n• D: o bicarbonato gera meio básico.\n• E: as soluções tinham a mesma concentração e pHs diferentes.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_12",
+    "subject": "Química",
+    "topicId": "qui_gases",
+    "chapter": "Estudo dos Gases II",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Usar a massa do gás como se fosse o volume, ou esquecer de calcular a quantidade de matéria.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm condições normais de temperatura e pressão (CNTP: 0 °C e 1 atm), 1 mol de qualquer gás ideal ocupa aproximadamente 22,4 L, segundo a hipótese de Avogadro. Um laboratório precisa estimar o volume ocupado por 88 g de gás carbônico, CO₂, produzido em uma fermentação, nessas condições, para escolher o recipiente de coleta.\n\nNote e adote: massas molares (g/mol): C = 12; O = 16.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO volume ocupado pelo gás carbônico nas CNTP é de aproximadamente",
+    "options": [
+      {
+        "id": "a",
+        "text": "11,2 L, pois 88 g de CO₂ correspondem a meio mol, considerando a massa molar de 176 g/mol."
+      },
+      {
+        "id": "b",
+        "text": "22,4 L, pois qualquer massa de gás ocupa 22,4 L nas CNTP."
+      },
+      {
+        "id": "c",
+        "text": "33,6 L, pois 88 g de CO₂ correspondem a 1,5 mol, e cada mol ocupa 22,4 L nas CNTP."
+      },
+      {
+        "id": "d",
+        "text": "44,8 L, pois 88 g de CO₂ correspondem a 2 mol (massa molar 44 g/mol), e 2 × 22,4 L = 44,8 L."
+      },
+      {
+        "id": "e",
+        "text": "89,6 L, pois 88 g de CO₂ correspondem a 4 mol, considerando a massa molar de 22 g/mol."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. M(CO₂) = 12 + 2 × 16 = 44 g/mol; n = 88/44 = 2 mol; V = 2 × 22,4 = 44,8 L.\n\nPegadinhas:\n• A: erra a massa molar, usando 176 g/mol.\n• B: confunde o volume molar com o volume de qualquer massa.\n• C: erra a quantidade de matéria.\n• E: usa a massa molar 22 g/mol.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_13",
+    "subject": "Química",
+    "topicId": "qui_inorganica",
+    "chapter": "Equações Iônicas e outras Teorias para Ácidos e Bases",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o precipitado é formado pelos íons nitrato, ou que a reação não ocorre por serem sais.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara verificar se uma amostra de água contém íons cloreto, Cl⁻, um técnico adicionou algumas gotas de solução de nitrato de prata, AgNO₃. Formou-se imediatamente um sólido branco, que turvou a água e se depositou no fundo do tubo. Na água destilada usada como controle, nada aconteceu.\n\nNote e adote: o cloreto de prata, AgCl, é muito pouco solúvel em água; os nitratos são solúveis.\n\nTexto elaborado para esta questão.\n\nO sólido branco formado e a equação iônica que representa sua formação são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "nitrato de sódio, formado na reação Na⁺ + NO₃⁻ → NaNO₃(s), que é pouco solúvel em água."
+      },
+      {
+        "id": "b",
+        "text": "prata metálica, formada pela redução Ag⁺ + e⁻ → Ag(s) provocada pelos íons cloreto."
+      },
+      {
+        "id": "c",
+        "text": "cloro gasoso, formado pela oxidação 2 Cl⁻ → Cl₂(g) + 2 e⁻, que deixa a água turva."
+      },
+      {
+        "id": "d",
+        "text": "nitrato de prata, que volta a se formar pela reação Ag⁺ + NO₃⁻ → AgNO₃(s) na água da amostra."
+      },
+      {
+        "id": "e",
+        "text": "cloreto de prata; Ag⁺(aq) + Cl⁻(aq) → AgCl(s), o que indica a presença de cloreto na amostra."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Ag⁺ e Cl⁻ formam AgCl, pouco solúvel, que precipita. Os nitratos permanecem dissolvidos. O controle sem precipitado mostra que o cloreto estava na amostra.\n\nPegadinhas:\n• A: nitratos são solúveis.\n• B: não há redução da prata.\n• C: não há oxidação do cloreto.\n• D: o nitrato de prata é solúvel; foi o reagente.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_14",
+    "subject": "Química",
+    "topicId": "qui_modelos_atomicos",
+    "chapter": "Organização da Tabela Periódica dos Elementos",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que metais conduzem eletricidade porque têm íons livres, como as soluções.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nFios elétricos são feitos de cobre, e panelas, de alumínio, metais que conduzem bem a eletricidade e o calor, podem ser dobrados e estirados sem se quebrar. Já o sal de cozinha sólido não conduz eletricidade e se quebra quando martelado, embora conduza quando fundido ou dissolvido em água. A diferença está no tipo de ligação química de cada material.\n\nTexto elaborado para esta questão.\n\nAs propriedades dos metais se explicam porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "eles são formados por moléculas que se movem livremente, como em um gás."
+      },
+      {
+        "id": "b",
+        "text": "na ligação metálica, os elétrons de valência ficam deslocalizados e móveis entre os cátions do retículo, o que permite a condução de eletricidade e calor e o deslizamento das camadas de átomos sem ruptura."
+      },
+      {
+        "id": "c",
+        "text": "seus átomos compartilham pares de elétrons fixos entre dois núcleos, como na água."
+      },
+      {
+        "id": "d",
+        "text": "os metais formam íons positivos e negativos que se atraem, como no sal."
+      },
+      {
+        "id": "e",
+        "text": "os metais não têm elétrons, apenas prótons e nêutrons."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O \"mar de elétrons\" deslocalizados conduz corrente e calor; como a ligação não é direcional, as camadas deslizam (maleabilidade e ductilidade). No sal sólido, os íons estão presos no retículo; conduzem só quando livres.\n\nPegadinhas:\n• A: metais não são formados por moléculas soltas.\n• C: descreve a ligação covalente.\n• D: descreve a ligação iônica.\n• E: átomos metálicos têm elétrons.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_15",
+    "subject": "Química",
+    "topicId": "qui_oxirreducao",
+    "chapter": "Processos de Oxirredução",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Esquecer a carga dos oxigênios, ou atribuir carga zero ao manganês.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO permanganato de potássio, KMnO₄, é usado em solução diluída como antisséptico e como oxidante em laboratório, com sua característica cor violeta. Em reações de oxirredução, o manganês do permanganato recebe elétrons e passa a ter número de oxidação menor. Para calcular o número de oxidação (NOx) de um elemento em um composto, usa-se o fato de que a soma dos NOx de todos os átomos de uma substância neutra é zero.\n\nNote e adote: NOx do K = +1; NOx do O = −2.\n\nTexto elaborado para esta questão.\n\nO número de oxidação do manganês no KMnO₄ é",
+    "options": [
+      {
+        "id": "a",
+        "text": "+1, pois o manganês tem a mesma carga do potássio."
+      },
+      {
+        "id": "b",
+        "text": "+4, pois o manganês compensa só dois dos oxigênios."
+      },
+      {
+        "id": "c",
+        "text": "+7, pois a soma +1 + x + 4 × (−2) deve ser igual a zero, o que dá x = +7."
+      },
+      {
+        "id": "d",
+        "text": "+8, pois o manganês compensa os quatro oxigênios sem considerar o potássio."
+      },
+      {
+        "id": "e",
+        "text": "+9, pois o potássio também tem NOx negativo e precisa ser compensado pelo manganês."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. +1 + x − 8 = 0 ⇒ x = +7, o NOx máximo do manganês, o que explica seu forte poder oxidante.\n\nPegadinhas:\n• A: atribui ao manganês o NOx do potássio.\n• B: considera só dois oxigênios.\n• D: esquece o +1 do potássio.\n• E: inverte o sinal do NOx do potássio.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_16",
+    "subject": "Química",
+    "topicId": "qui_organica_reacoes",
+    "chapter": "Álcoois",
+    "difficulty": "hard",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que o metanol é tóxico por si mesmo, e não por seus produtos de oxidação.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO metanol, usado como solvente e combustível, é muito tóxico quando ingerido, e casos de intoxicação ocorrem com bebidas adulteradas. No fígado, a mesma enzima que oxida o etanol transforma o metanol em formaldeído e, depois, em ácido fórmico, que causa acidose e pode levar à cegueira e à morte. Um dos tratamentos de emergência consiste em administrar etanol ao paciente, sob controle médico, ou um medicamento que bloqueia essa enzima.\n\nTexto elaborado para esta questão.\n\nO tratamento com etanol funciona porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o etanol neutraliza o ácido fórmico, formando um sal inofensivo."
+      },
+      {
+        "id": "b",
+        "text": "o etanol transforma o metanol em água por reação direta no estômago."
+      },
+      {
+        "id": "c",
+        "text": "o etanol compete com o metanol pela mesma enzima, retardando sua oxidação a produtos tóxicos e dando tempo para que o metanol seja eliminado sem ser metabolizado."
+      },
+      {
+        "id": "d",
+        "text": "o etanol acelera a produção de formaldeído, que é eliminado mais rapidamente."
+      },
+      {
+        "id": "e",
+        "text": "o etanol aumenta a toxicidade do metanol, o que ativa o sistema imunológico."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A enzima tem maior afinidade pelo etanol; ocupada com ele, oxida pouco metanol. O metanol não transformado é eliminado pela urina e pela respiração, e menos ácido fórmico se forma.\n\nPegadinhas:\n• A: o etanol não reage com o ácido fórmico.\n• B: não há essa reação no estômago.\n• D: o objetivo é reduzir a produção de formaldeído.\n• E: o tratamento reduz a formação dos produtos tóxicos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_17",
+    "subject": "Química",
+    "topicId": "qui_termoquimica",
+    "chapter": "Termoquímica I",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Comparar entalpias por mol, sem considerar a energia por unidade de massa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nCombustíveis para foguetes e para veículos precisam liberar muita energia por unidade de massa, pois a massa transportada é limitada. A combustão de 1 mol de hidrogênio, H₂, libera cerca de 286 kJ; a de 1 mol de metano, CH₄, cerca de 890 kJ. Um estudante concluiu que o metano é o melhor combustível por liberar mais energia.\n\nNote e adote: massas molares: H₂ = 2 g/mol; CH₄ = 16 g/mol.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nConsiderando a energia por unidade de massa, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o metano libera mais energia por grama, cerca de 890 kJ/g."
+      },
+      {
+        "id": "b",
+        "text": "o hidrogênio libera cerca de 143 kJ/g, mais que o dobro dos cerca de 56 kJ/g do metano, e por isso é vantajoso quando a massa do combustível é limitante."
+      },
+      {
+        "id": "c",
+        "text": "os dois combustíveis liberam a mesma energia por grama."
+      },
+      {
+        "id": "d",
+        "text": "o hidrogênio libera menos energia por grama, pois libera menos energia por mol."
+      },
+      {
+        "id": "e",
+        "text": "a energia por grama não depende da massa molar do combustível."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. H₂: 286/2 = 143 kJ/g. CH₄: 890/16 ≈ 56 kJ/g. Por mol, o metano libera mais; por massa, o hidrogênio é muito superior — o critério que importa num foguete.\n\nPegadinhas:\n• A: 890 kJ é por mol, não por grama.\n• C: os valores por grama são bem diferentes.\n• D: conclusão do estudante, que ignora a massa molar.\n• E: a energia por grama depende da massa molar.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_18",
+    "subject": "Química",
+    "topicId": "qui_solucoes",
+    "chapter": "Dispersões",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Achar que a concentração não muda com a diluição, ou multiplicar pelo fator em vez de dividir.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um laboratório escolar, uma estudante precisa preparar uma solução diluída de um reagente. Ela pega 100 mL de uma solução estoque de concentração 2 mol/L e acrescenta água até completar 500 mL, misturando bem. Ela sabe que, na diluição, a quantidade de soluto não muda; apenas o volume da solução aumenta.\n\nNote e adote: C₁·V₁ = C₂·V₂.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA concentração da solução final é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,4 mol/L, pois a quantidade de soluto, 0,2 mol, passa a ocupar 0,5 L."
+      },
+      {
+        "id": "b",
+        "text": "1 mol/L, pois a concentração cai pela metade em qualquer diluição."
+      },
+      {
+        "id": "c",
+        "text": "2,5 mol/L, pois o volume foi multiplicado por 5 e a concentração aumenta 25%."
+      },
+      {
+        "id": "d",
+        "text": "10 mol/L, pois a concentração é multiplicada pelo fator de diluição."
+      },
+      {
+        "id": "e",
+        "text": "1.000 mol/L, pois a concentração é a quantidade de soluto multiplicada pelo volume em mL."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. n = 2 × 0,1 = 0,2 mol; C₂ = 0,2/0,5 = 0,4 mol/L. O volume quintuplicou, a concentração caiu a um quinto.\n\nPegadinhas:\n• B: o fator de diluição é 5, não 2.\n• C: relação inventada.\n• D: inverte o efeito da diluição.\n• E: confunde unidades.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_19",
+    "subject": "Física",
+    "topicId": "fis_cinematica",
+    "chapter": "O Movimento Circular",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o satélite geoestacionário está parado no espaço.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nSatélites de televisão e de meteorologia geoestacionários parecem fixos no céu para um observador na Terra, e por isso as antenas parabólicas residenciais podem ficar apontadas sempre para a mesma direção. Esses satélites orbitam a cerca de 36.000 km de altitude, sobre a linha do equador, no mesmo sentido da rotação da Terra.\n\nTexto elaborado para esta questão.\n\nO satélite parece parado porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "está de fato parado no espaço, sem orbitar a Terra."
+      },
+      {
+        "id": "b",
+        "text": "não sofre a ação da gravidade terrestre a essa altitude."
+      },
+      {
+        "id": "c",
+        "text": "gira em sentido contrário ao da rotação da Terra, com velocidade que anula o movimento aparente."
+      },
+      {
+        "id": "d",
+        "text": "tem velocidade linear igual à de um ponto do equador na superfície."
+      },
+      {
+        "id": "e",
+        "text": "tem período orbital de cerca de 24 horas, igual ao de rotação da Terra, e portanto a mesma velocidade angular que a superfície terrestre abaixo dele."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Com o mesmo período e sentido da rotação da Terra, o satélite acompanha o ponto do equador abaixo dele. Sua velocidade linear é muito maior, porque o raio da órbita é maior: v = ω·R.\n\nPegadinhas:\n• A: o satélite está em movimento orbital.\n• B: a gravidade é a força centrípeta da órbita.\n• C: o sentido é o mesmo da rotação.\n• D: a velocidade angular é igual; a linear, não.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_20",
+    "subject": "Física",
+    "topicId": "fis_cinematica_vetorial",
+    "chapter": "Grandezas Físicas e Operações com Vetores",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Confundir distância percorrida com deslocamento.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm ciclista sai de casa, percorre 3 km para o leste em uma rua reta e, em seguida, 4 km para o norte em outra rua reta, perpendicular à primeira, chegando à escola. Na volta, ele pretende pegar um atalho em linha reta da escola até a casa, por um parque. Ele quer comparar a distância percorrida na ida com o módulo do deslocamento.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO módulo do deslocamento entre a casa e a escola é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 km, pois o deslocamento é a diferença entre os trechos."
+      },
+      {
+        "id": "b",
+        "text": "3 km, pois o deslocamento corresponde apenas ao primeiro trecho percorrido, para o leste."
+      },
+      {
+        "id": "c",
+        "text": "4 km, pois o deslocamento corresponde ao maior dos dois trechos percorridos pelo ciclista."
+      },
+      {
+        "id": "d",
+        "text": "5 km, pois o deslocamento é a hipotenusa do triângulo de catetos 3 km e 4 km, enquanto a distância percorrida foi de 7 km."
+      },
+      {
+        "id": "e",
+        "text": "7 km, pois o deslocamento é a soma dos trechos percorridos."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Deslocamento é vetor: √(3² + 4²) = 5 km. A distância percorrida, 7 km, é a soma dos trechos.\n\nPegadinhas:\n• A: subtrai os módulos.\n• B: considera só um trecho.\n• C: considera só um trecho.\n• E: confunde deslocamento com distância percorrida.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_21",
+    "subject": "Física",
+    "topicId": "fis_dinamica_impulsiva",
+    "chapter": "Sistemas Isolados e a Conservação da Quantidade de Movimento",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o airbag reduz a variação da quantidade de movimento do passageiro.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma colisão frontal, o passageiro de um carro passa de cerca de 60 km/h ao repouso em uma fração de segundo. O airbag infla rapidamente e se deforma ao receber o impacto, o que faz o passageiro levar mais tempo para parar do que se batesse diretamente contra o volante ou o painel. Os cintos de segurança, que também se esticam um pouco, cumprem papel semelhante.\n\nNote e adote: impulso I = F·Δt = ΔQ.\n\nTexto elaborado para esta questão.\n\nO airbag protege o passageiro porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "diminui a velocidade inicial do carro antes da colisão."
+      },
+      {
+        "id": "b",
+        "text": "anula a quantidade de movimento do passageiro sem que nenhuma força atue sobre ele."
+      },
+      {
+        "id": "c",
+        "text": "reduz a variação da quantidade de movimento do passageiro."
+      },
+      {
+        "id": "d",
+        "text": "aumenta a massa do passageiro, que se torna mais resistente ao impacto."
+      },
+      {
+        "id": "e",
+        "text": "aumenta o tempo de interação, de modo que a mesma variação da quantidade de movimento ocorre com força média menor sobre o corpo."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A variação da quantidade de movimento é a mesma (de 60 km/h até zero). Como F·Δt = ΔQ, aumentar Δt reduz a força média e as lesões.\n\nPegadinhas:\n• A: o airbag atua durante a colisão.\n• B: uma força é necessária para parar o passageiro.\n• C: a variação é a mesma; o que muda é o tempo.\n• D: a massa não muda.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_22",
+    "subject": "Física",
+    "topicId": "fis_ondulatoria",
+    "chapter": "Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a frequência muda quando a onda passa para outro meio.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDuas cordas de densidades diferentes são emendadas: uma fina e leve e outra grossa e pesada, sob a mesma tensão. Um estudante produz pulsos periódicos na corda fina, que se propagam até a junção. Parte da onda é refletida, e parte é transmitida para a corda grossa, onde a velocidade de propagação é menor. A fonte continua oscilando sempre com a mesma frequência.\n\nNote e adote: v = λ·f.\n\nTexto elaborado para esta questão.\n\nNa corda grossa, a onda transmitida tem",
+    "options": [
+      {
+        "id": "a",
+        "text": "maior frequência e maior comprimento de onda, pois a corda grossa armazena mais energia."
+      },
+      {
+        "id": "b",
+        "text": "menor frequência e o mesmo comprimento de onda, pois a corda grossa oscila mais devagar."
+      },
+      {
+        "id": "c",
+        "text": "a mesma frequência da fonte e comprimento de onda menor, pois a velocidade é menor."
+      },
+      {
+        "id": "d",
+        "text": "a mesma frequência e comprimento de onda maior, pois a onda se alonga na corda pesada."
+      },
+      {
+        "id": "e",
+        "text": "velocidade maior, pois a corda grossa é mais resistente."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A frequência é imposta pela fonte e não muda na refração. Com v menor, λ = v/f também diminui. É o mesmo princípio da luz passando do ar para o vidro.\n\nPegadinhas:\n• A: a frequência não muda.\n• B: a frequência não muda, e o comprimento de onda varia.\n• D: com v menor e f igual, λ diminui.\n• E: o texto diz que a velocidade é menor.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_23",
+    "subject": "Física",
+    "topicId": "fis_ondulatoria",
+    "chapter": "Um Caso Particular de Interferência: Onda Estacionária",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Usar o comprimento de onda inteiro como distância entre nós consecutivos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um forno de micro-ondas sem prato giratório, as ondas eletromagnéticas refletidas pelas paredes formam ondas estacionárias. Nos nós, a intensidade é mínima, e o alimento quase não esquenta; por isso, uma barra de chocolate deixada parada derrete em manchas regularmente espaçadas. A frequência típica dos fornos é de 2,45 GHz.\n\nNote e adote: c = 3 × 10⁸ m/s; v = λ·f; a distância entre dois nós consecutivos de uma onda estacionária é λ/2.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA distância aproximada entre o centro de duas manchas derretidas consecutivas é",
+    "options": [
+      {
+        "id": "a",
+        "text": "3 cm, pois corresponde a um quarto do comprimento de onda."
+      },
+      {
+        "id": "b",
+        "text": "6 cm, pois λ = 3 × 10⁸ / 2,45 × 10⁹ ≈ 12 cm, e os ventres consecutivos estão a λ/2."
+      },
+      {
+        "id": "c",
+        "text": "12 cm, pois corresponde ao comprimento de onda inteiro."
+      },
+      {
+        "id": "d",
+        "text": "24 cm, pois corresponde ao dobro do comprimento de onda."
+      },
+      {
+        "id": "e",
+        "text": "245 cm, pois a distância é igual à frequência em centenas de megahertz."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. λ ≈ 0,122 m. As manchas derretidas estão nos ventres, consecutivos a λ/2 ≈ 6 cm. Medir essa distância é um experimento clássico para estimar a velocidade da luz.\n\nPegadinhas:\n• A: usa λ/4, a distância entre nó e ventre.\n• C: usa λ inteiro.\n• D: usa 2λ.\n• E: relação sem sentido.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_24",
+    "subject": "Física",
+    "topicId": "fis_estatica",
+    "chapter": "Hidrostática: Densidade e Pressão",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que objetos de aço sempre afundam, sem considerar a densidade média.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm prego de aço afunda na água, mas um navio de milhares de toneladas, feito principalmente de aço, flutua. O casco do navio tem grande volume, preenchido em boa parte por ar, e desloca uma enorme quantidade de água. Se o casco for perfurado e a água entrar, o navio pode afundar.\n\nNote e adote: empuxo = densidade do líquido × volume deslocado × g.\n\nTexto elaborado para esta questão.\n\nO navio flutua porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "sua densidade média, considerando o aço e o ar do casco, é menor que a da água, e o empuxo, igual ao peso da água deslocada, consegue equilibrar seu peso."
+      },
+      {
+        "id": "b",
+        "text": "o aço do navio é diferente do aço do prego e é menos denso que a água."
+      },
+      {
+        "id": "c",
+        "text": "a água do mar empurra o navio para cima por causa das ondas."
+      },
+      {
+        "id": "d",
+        "text": "o navio é muito pesado, e a água não consegue puxá-lo para o fundo."
+      },
+      {
+        "id": "e",
+        "text": "o empuxo depende apenas da massa do objeto, e não do volume deslocado."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O casco oco desloca grande volume de água. Pelo princípio de Arquimedes, o empuxo cresce com o volume deslocado até igualar o peso. Com água dentro do casco, a densidade média aumenta e o navio afunda.\n\nPegadinhas:\n• B: o aço tem densidade semelhante.\n• C: as ondas não explicam a flutuação.\n• D: o peso puxa para baixo; o que equilibra é o empuxo.\n• E: o empuxo depende do volume deslocado.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_25",
+    "subject": "Física",
+    "topicId": "fis_eletrostatica",
+    "chapter": "Dinâmica das Cargas Elétricas",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a parede precisa estar eletrizada para atrair o balão.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAo esfregar um balão de borracha no cabelo seco, ele fica eletrizado e pode ser encostado em uma parede, onde permanece grudado por algum tempo. A parede, no entanto, não foi eletrizada e é neutra. Pedacinhos de papel também são atraídos por uma régua de plástico esfregada em um tecido de lã. Em dias úmidos, os efeitos são mais fracos e duram menos.\n\nTexto elaborado para esta questão.\n\nA atração entre o balão eletrizado e a parede neutra se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a parede também foi eletrizada pelo atrito com o ar."
+      },
+      {
+        "id": "b",
+        "text": "corpos neutros não podem ser atraídos por corpos eletrizados."
+      },
+      {
+        "id": "c",
+        "text": "o balão perde toda a sua carga ao tocar a parede e passa a ser atraído pela gravidade dela."
+      },
+      {
+        "id": "d",
+        "text": "o balão eletrizado induz uma separação de cargas na superfície da parede (polarização), aproximando cargas de sinal oposto e afastando as de mesmo sinal, e a atração das cargas mais próximas supera a repulsão das mais distantes."
+      },
+      {
+        "id": "e",
+        "text": "a umidade do ar aumenta a carga do balão e, com isso, a força de atração sobre a parede."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A indução polariza o material neutro: cargas opostas ficam mais próximas do balão. Como a força elétrica diminui com a distância, a atração prevalece. A umidade facilita a perda de carga, enfraquecendo o efeito.\n\nPegadinhas:\n• A: o texto diz que a parede é neutra.\n• B: o próprio texto mostra a atração de corpos neutros.\n• C: se perdesse toda a carga, o balão cairia logo.\n• E: o texto diz que os efeitos são mais fracos em dias úmidos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_26",
+    "subject": "Física",
+    "topicId": "fis_optica_geometrica",
+    "chapter": "Fundamentos da Óptica Geométrica",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o eclipse total do Sol é visto em toda a Terra, ou confundir sombra com penumbra.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDurante um eclipse solar, a Lua passa entre o Sol e a Terra. Na região da Terra atingida pela sombra da Lua, o eclipse é total: o Sol fica completamente encoberto por alguns minutos. Em uma faixa mais ampla ao redor, atingida pela penumbra, o eclipse é parcial: só parte do disco solar fica encoberta. No restante do lado iluminado do planeta, não se observa o eclipse.\n\nTexto elaborado para esta questão.\n\nO fenômeno se explica",
+    "options": [
+      {
+        "id": "a",
+        "text": "pela propagação retilínea da luz e pelo fato de o Sol ser uma fonte extensa: na sombra nenhum raio do Sol chega, e na penumbra chegam raios de apenas parte do disco solar."
+      },
+      {
+        "id": "b",
+        "text": "pela refração da luz na atmosfera lunar, que desvia os raios do Sol para longe da Terra."
+      },
+      {
+        "id": "c",
+        "text": "pela reflexão da luz do Sol na superfície da Terra."
+      },
+      {
+        "id": "d",
+        "text": "pelo fato de o Sol ser uma fonte puntiforme, o que produz apenas sombra."
+      },
+      {
+        "id": "e",
+        "text": "pela absorção completa da luz solar pela atmosfera terrestre."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Com fonte extensa, um obstáculo produz sombra (nenhum ponto do Sol visível) e penumbra (parte do Sol visível). Essas regiões existem porque a luz se propaga em linha reta.\n\nPegadinhas:\n• B: a Lua praticamente não tem atmosfera.\n• C: o eclipse decorre de bloqueio, não de reflexão.\n• D: fonte puntiforme não produziria penumbra.\n• E: o eclipse não é causado pela atmosfera terrestre.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_27",
+    "subject": "Física",
+    "topicId": "fis_termodinamica_gases",
+    "chapter": "Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a bomba esquenta só por atrito, sem considerar a compressão do gás.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAo encher rapidamente o pneu de uma bicicleta com uma bomba manual, a parte de baixo da bomba fica quente. Nessa situação, o ar é comprimido tão depressa que quase não há tempo para trocar calor com o ambiente durante cada compressão. O atrito do êmbolo contribui pouco para o aquecimento observado.\n\nNote e adote: ΔU = Q − W; para um gás ideal, a energia interna depende apenas da temperatura.\n\nTexto elaborado para esta questão.\n\nO aquecimento do ar na bomba se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o ar recebe calor do ambiente durante a compressão."
+      },
+      {
+        "id": "b",
+        "text": "a compressão rápida é isotérmica, e a temperatura não muda."
+      },
+      {
+        "id": "c",
+        "text": "o gás realiza trabalho positivo sobre o êmbolo, o que aumenta sua energia interna."
+      },
+      {
+        "id": "d",
+        "text": "o pneu transfere calor para a bomba, pois o ar dentro dele está mais quente que o ambiente."
+      },
+      {
+        "id": "e",
+        "text": "a compressão é praticamente adiabática (Q ≈ 0), e o trabalho realizado sobre o gás aumenta sua energia interna e, portanto, sua temperatura."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Com Q ≈ 0, ΔU = −W. Na compressão, o trabalho do gás é negativo (o êmbolo trabalha sobre o gás), então ΔU > 0 e a temperatura sobe.\n\nPegadinhas:\n• A: a compressão é rápida demais para haver troca de calor relevante.\n• B: se fosse isotérmica, a bomba não esquentaria.\n• C: na compressão, é o êmbolo que realiza trabalho sobre o gás.\n• D: o aquecimento ocorre no ar comprimido na bomba.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_28",
+    "subject": "Matemática",
+    "topicId": "mat_equacoes",
+    "chapter": "Igualdades",
+    "difficulty": "easy",
+    "skill": "modelagem",
+    "trap": "Montar a equação sem somar os 10 anos às duas idades.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nHoje, a idade de um pai é o triplo da idade de seu filho. Daqui a 10 anos, a idade do pai será o dobro da idade do filho. Uma estudante representou a idade atual do filho por x e a do pai por 3x, e montou uma equação para a situação futura, lembrando que os dois envelhecem o mesmo número de anos.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA idade atual do filho é",
+    "options": [
+      {
+        "id": "a",
+        "text": "5 anos, pois a equação 3x = 2x + 5 representa a situação futura das idades do pai e do filho."
+      },
+      {
+        "id": "b",
+        "text": "8 anos, pois a diferença de idades se divide por três."
+      },
+      {
+        "id": "c",
+        "text": "10 anos, pois 3x + 10 = 2(x + 10) dá x = 10, e o pai tem hoje 30 anos."
+      },
+      {
+        "id": "d",
+        "text": "15 anos, pois a idade do filho é a metade da do pai daqui a 10 anos."
+      },
+      {
+        "id": "e",
+        "text": "20 anos, pois o pai terá o dobro da idade do filho daqui a 10 anos."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. 3x + 10 = 2x + 20 ⇒ x = 10. Hoje: 10 e 30; daqui a 10 anos: 20 e 40.\n\nPegadinhas:\n• A: soma 10 só a um dos lados e divide por 2.\n• B: relação inventada.\n• D: confunde a idade futura com a atual.\n• E: é a idade futura do filho.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_29",
+    "subject": "Matemática",
+    "topicId": "mat_equacoes",
+    "chapter": "Modelagem Algébrica de Problemas II",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Somar os tempos ou fazer a média, em vez de somar as vazões.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma caixa-d'água pode ser enchida por uma torneira A em 3 horas ou por uma torneira B em 6 horas, cada uma funcionando sozinha com vazão constante. O zelador decidiu abrir as duas torneiras ao mesmo tempo, com a caixa inicialmente vazia, e quer saber quanto tempo levará para enchê-la.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO tempo necessário para encher a caixa com as duas torneiras abertas é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 hora, pois as duas torneiras juntas são três vezes mais rápidas."
+      },
+      {
+        "id": "b",
+        "text": "1,5 hora, pois o tempo é metade do tempo da torneira mais rápida."
+      },
+      {
+        "id": "c",
+        "text": "1,8 hora, pois o tempo é a média harmônica dos dois tempos dividida por 2,5."
+      },
+      {
+        "id": "d",
+        "text": "2 horas, pois em 1 hora A enche 1/3 e B enche 1/6 da caixa, juntas 1/2, e a caixa fica cheia em 2 horas."
+      },
+      {
+        "id": "e",
+        "text": "4,5 horas, pois o tempo é a média aritmética dos dois tempos."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Vazões: 1/3 + 1/6 = 1/2 de caixa por hora. Tempo: 1/(1/2) = 2 h.\n\nPegadinhas:\n• A: superestima a vazão conjunta.\n• B: supõe que juntas dobram a vazão da mais rápida.\n• C: fórmula inventada.\n• E: média aritmética não se aplica.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_30",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_analitica",
+    "chapter": "Representação Geométrica de Inequações",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Inverter o lado do semiplano, ou achar que a região é ilimitada.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm agricultor representa em um plano cartesiano, com unidades em hectares, as possíveis áreas x e y que pode plantar de milho e de feijão. As restrições são: x ≥ 0, y ≥ 0 (as áreas não podem ser negativas) e x + y ≤ 4 (ele tem no máximo 4 hectares disponíveis). Ele quer identificar a região do plano que contém todas as combinações possíveis.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA região que satisfaz as três condições é",
+    "options": [
+      {
+        "id": "a",
+        "text": "o semiplano acima da reta x + y = 4, ilimitado, pois a desigualdade inclui todos os valores maiores."
+      },
+      {
+        "id": "b",
+        "text": "o triângulo de vértices (0, 0), (4, 0) e (0, 4), incluindo seus lados, com área de 8 unidades."
+      },
+      {
+        "id": "c",
+        "text": "apenas a reta x + y = 4, pois só os pontos sobre ela satisfazem a restrição de área."
+      },
+      {
+        "id": "d",
+        "text": "o quadrado de vértices (0, 0), (4, 0), (4, 4) e (0, 4)."
+      },
+      {
+        "id": "e",
+        "text": "o triângulo de vértices (0, 0), (4, 0) e (0, 4), com área de 16 unidades."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. x ≥ 0 e y ≥ 0 restringem ao primeiro quadrante; x + y ≤ 4 é o semiplano abaixo da reta (o ponto (0,0) satisfaz). A interseção é o triângulo com catetos 4: área 4 × 4/2 = 8.\n\nPegadinhas:\n• A: inverte o semiplano.\n• C: a desigualdade inclui pontos abaixo da reta.\n• D: o ponto (4, 4) não satisfaz x + y ≤ 4.\n• E: esquece de dividir a área por 2.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_31",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_analitica",
+    "chapter": "A Geometria dos Números Complexos",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir o conjugado com o oposto, ou o módulo com a soma das partes.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo plano de Argand-Gauss, cada número complexo z = a + bi é representado pelo ponto (a, b). Considere z = 3 + 4i. Uma estudante representou também o conjugado de z, z̄ = 3 − 4i, e calculou a distância de z até a origem, que é o módulo de z. Ela observou uma relação geométrica entre os pontos de z e de z̄.\n\nTexto elaborado para esta questão.\n\nSobre essa representação, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o módulo de z é 7, a soma das partes real e imaginária."
+      },
+      {
+        "id": "b",
+        "text": "z̄ é o ponto (−3, −4), simétrico de z em relação à origem."
+      },
+      {
+        "id": "c",
+        "text": "o módulo de z é 25, a soma dos quadrados das partes."
+      },
+      {
+        "id": "d",
+        "text": "o módulo de z é 5, e z̄ é o simétrico de z em relação ao eixo real, com o mesmo módulo."
+      },
+      {
+        "id": "e",
+        "text": "z e z̄ estão sempre sobre o eixo imaginário, pois ambos têm parte imaginária diferente de zero."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. |z| = √(3² + 4²) = 5. O conjugado troca o sinal da parte imaginária: (3, −4), reflexão no eixo real, mesma distância à origem.\n\nPegadinhas:\n• A: soma as partes, sem Pitágoras.\n• B: (−3, −4) é −z, o oposto.\n• C: esquece a raiz.\n• E: z tem parte real 3, fora do eixo imaginário.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_32",
+    "subject": "Matemática",
+    "topicId": "mat_trigonometria",
+    "chapter": "A Trigonometria dos Números Reais",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Confundir período com amplitude, ou ler o período em vez de metade dele.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma cidade litorânea, a altura da maré, em metros, ao longo do dia pode ser modelada pela função\n\nh(t) = 2 + 1,5·sen(πt/6),\n\nem que t é o tempo em horas a partir da meia-noite. Pescadores usam o modelo para planejar a saída dos barcos, que precisam de maré alta para deixar o porto.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nSegundo o modelo, a altura máxima da maré e o intervalo entre duas marés altas consecutivas são, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "1,5 m e 6 horas, pois a amplitude é a altura máxima e o período é 6."
+      },
+      {
+        "id": "b",
+        "text": "3,5 m e 12 horas, pois o seno varia até 1, dando 2 + 1,5 = 3,5, e o período é 2π/(π/6) = 12."
+      },
+      {
+        "id": "c",
+        "text": "2 m e 24 horas, pois a altura média é a máxima e o período é de um dia."
+      },
+      {
+        "id": "d",
+        "text": "3,5 m e 6 horas, pois o período é o denominador de πt/6."
+      },
+      {
+        "id": "e",
+        "text": "0,5 m e 12 horas, pois a altura máxima é 2 − 1,5 e o período é 2π dividido por π/6."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Máximo: 2 + 1,5 × 1 = 3,5 m; mínimo: 0,5 m. Período: 2π/(π/6) = 12 h, duas marés altas por dia.\n\nPegadinhas:\n• A: confunde amplitude com valor máximo e erra o período.\n• C: a média é 2 m, não o máximo.\n• D: erra o período.\n• E: 0,5 m é o mínimo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_33",
+    "subject": "Matemática",
+    "topicId": "mat_trigonometria",
+    "chapter": "Outras Razões Trigonométricas",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Confundir inclinação em porcentagem com ângulo em graus.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm placas de estrada, a inclinação de uma rampa é dada em porcentagem: é a razão entre a subida vertical e o avanço horizontal, multiplicada por 100. Uma rua muito íngreme tem inclinação de 100%. Um estudante achou que, por ser 100%, a rua seria vertical, isto é, teria 90° de inclinação.\n\nNote e adote: tg 30° ≈ 0,58; tg 45° = 1; tg 60° ≈ 1,73.\n\nTexto elaborado para esta questão.\n\nO ângulo de inclinação dessa rua com a horizontal é",
+    "options": [
+      {
+        "id": "a",
+        "text": "10°, pois cada 10% de inclinação correspondem a 1° de ângulo com a horizontal."
+      },
+      {
+        "id": "b",
+        "text": "30°, pois 100% corresponde a um terço do ângulo reto."
+      },
+      {
+        "id": "c",
+        "text": "60°, pois a tangente de 60° é a maior entre as dadas."
+      },
+      {
+        "id": "d",
+        "text": "90°, pois uma inclinação de 100% indica que a rua é vertical, como supôs o estudante."
+      },
+      {
+        "id": "e",
+        "text": "45°, pois a inclinação de 100% significa subida igual ao avanço horizontal, e tg θ = 1 corresponde a 45°."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Inclinação = tg θ. 100% ⇒ tg θ = 1 ⇒ θ = 45°. Uma rua vertical teria inclinação infinita.\n\nPegadinhas:\n• A: relação inventada.\n• B: tg 30° ≈ 0,58, ou 58%.\n• C: tg 60° ≈ 173%.\n• D: é o equívoco do estudante.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_34",
+    "subject": "Matemática",
+    "topicId": "mat_trigonometria",
+    "chapter": "Transformações Trigonométricas",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Achar que sen 2x = 2·sen x.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm estudante sabe que, para certo ângulo agudo x, sen x = 0,6 e cos x = 0,8. Ele precisa calcular sen 2x para resolver um problema sobre o alcance de um projétil lançado com ângulo x, e lembra a fórmula do seno do arco duplo: sen 2x = 2·sen x·cos x. Um colega sugeriu apenas dobrar o seno de x.\n\nTexto elaborado para esta questão.\n\nO valor de sen 2x é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,96, pois, pela fórmula do arco duplo, sen 2x = 2 × 0,6 × 0,8 = 0,96."
+      },
+      {
+        "id": "b",
+        "text": "1,2, pois o seno do arco duplo é simplesmente o dobro do seno do arco, 2 × 0,6."
+      },
+      {
+        "id": "c",
+        "text": "1,4, pois o seno do arco duplo é a soma do seno e do cosseno do arco, 0,6 + 0,8."
+      },
+      {
+        "id": "d",
+        "text": "1,6, pois o seno do arco duplo é o dobro do cosseno do arco, 2 × 0,8."
+      },
+      {
+        "id": "e",
+        "text": "1,92, pois sen 2x é o quádruplo do produto de sen x por cos x."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. 2 × 0,6 × 0,8 = 0,96. A sugestão do colega daria 1,2, impossível para um seno.\n\nPegadinhas:\n• B: seno não passa de 1, e a fórmula exige o cosseno.\n• C: soma sem fundamento.\n• D: idem.\n• E: usa fator 4.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_35",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_plana",
+    "chapter": "Ângulos em Triângulos",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Somar o ângulo externo ao adjacente em vez de usar a propriedade do ângulo externo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um triângulo ABC, os ângulos internos em A e em B medem 50° e 60°. Um estudante prolongou o lado BC além de C e quer saber a medida do ângulo externo formado em C, isto é, o ângulo entre o prolongamento de BC e o lado AC. Ele lembra que a soma dos ângulos internos de um triângulo é 180°.\n\nTexto elaborado para esta questão.\n\nO ângulo externo em C mede",
+    "options": [
+      {
+        "id": "a",
+        "text": "50°, pois o ângulo externo é sempre igual ao menor dos ângulos internos do triângulo."
+      },
+      {
+        "id": "b",
+        "text": "70°, pois o ângulo externo em C é igual ao ângulo interno no mesmo vértice."
+      },
+      {
+        "id": "c",
+        "text": "110°, pois o ângulo externo é a soma dos dois ângulos internos não adjacentes, 50° + 60°."
+      },
+      {
+        "id": "d",
+        "text": "180°, pois o ângulo externo é formado pelo prolongamento do lado e, por isso, é raso."
+      },
+      {
+        "id": "e",
+        "text": "250°, pois é a soma de todos os ângulos internos com o ângulo interno em C."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Interno em C = 180° − 110° = 70°; externo = 180° − 70° = 110° = 50° + 60°.\n\nPegadinhas:\n• A: relação inventada.\n• B: é o ângulo interno, não o externo.\n• D: o ângulo raso é a soma do interno com o externo.\n• E: soma sem fundamento.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_36",
+    "subject": "Geografia",
+    "topicId": "geo_fisica_brasil",
+    "chapter": "Biogeografia do Brasil I",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que a Mata Atlântica está preservada por ser floresta tropical, ou que fica no interior do país.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Mata Atlântica se estendia originalmente ao longo de quase todo o litoral brasileiro e avançava pelo interior em vários estados. Hoje restam cerca de 12% de sua cobertura original em fragmentos de mata nativa mais conservados, segundo levantamentos de organizações ambientais. Apesar disso, o bioma abriga enorme biodiversidade, com muitas espécies endêmicas, e protege mananciais que abastecem grandes cidades, onde vive a maior parte da população brasileira.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que a Mata Atlântica",
+    "options": [
+      {
+        "id": "a",
+        "text": "é o bioma mais preservado do Brasil, por estar longe das cidades."
+      },
+      {
+        "id": "b",
+        "text": "foi intensamente desmatada ao longo da ocupação do território, concentrada no litoral, e seus fragmentos têm grande importância para a biodiversidade e para o abastecimento de água das cidades."
+      },
+      {
+        "id": "c",
+        "text": "ocupa principalmente o interior do Centro-Oeste, longe das áreas mais populosas do país."
+      },
+      {
+        "id": "d",
+        "text": "tem baixa biodiversidade, pois a fragmentação eliminou as espécies endêmicas do bioma."
+      },
+      {
+        "id": "e",
+        "text": "não tem relação com o abastecimento das grandes cidades."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Ciclos econômicos, urbanização e agropecuária reduziram o bioma a fragmentos. Ainda assim, é um dos hotspots de biodiversidade do planeta e protege nascentes de regiões metropolitanas.\n\nPegadinhas:\n• A: o texto diz que restam cerca de 12%.\n• C: o bioma acompanha o litoral.\n• D: o texto destaca a enorme biodiversidade.\n• E: o texto cita a proteção de mananciais.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_37",
+    "subject": "Geografia",
+    "topicId": "geo_fisica_brasil",
+    "chapter": "Paisagem, Espaço Geográfico e Ciência Geográfica",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir paisagem com território, ou achar que o lugar é definido só pela localização.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa Geografia, alguns conceitos ajudam a analisar o espaço. A paisagem é o que se percebe de um recorte do espaço, como formas naturais e construídas. O território é um espaço definido e delimitado a partir de relações de poder, como o de um país ou o de uma comunidade indígena. O lugar é o espaço vivido, com o qual as pessoas criam vínculos afetivos e de identidade, como o bairro onde alguém cresceu.\n\nTexto elaborado para esta questão.\n\nUma comunidade quilombola que luta pelo reconhecimento oficial da área que ocupa há gerações e que considera aquele espaço parte de sua identidade mobiliza principalmente os conceitos de",
+    "options": [
+      {
+        "id": "a",
+        "text": "paisagem e escala, pois a disputa envolve apenas a aparência da área."
+      },
+      {
+        "id": "b",
+        "text": "região e paisagem, pois a área é homogênea do ponto de vista natural."
+      },
+      {
+        "id": "c",
+        "text": "escala e região, pois a disputa envolve apenas o tamanho da área."
+      },
+      {
+        "id": "d",
+        "text": "território e lugar, pois a luta pelo reconhecimento envolve relações de poder sobre a área, e o vínculo de identidade construído ao longo de gerações faz dela um espaço vivido."
+      },
+      {
+        "id": "e",
+        "text": "paisagem e região, pois a comunidade quer apenas preservar o aspecto visual."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A demanda por titulação é disputa de poder sobre uma área: território. A identidade e a memória coletiva ligadas ao espaço o tornam lugar.\n\nPegadinhas:\n• A: a disputa não é sobre aparência.\n• B: o texto não define região, e a questão não é a homogeneidade natural.\n• C: a disputa não se reduz à dimensão da área.\n• E: o foco não é a paisagem.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_38",
+    "subject": "Geografia",
+    "topicId": "geo_globalizacao_economica",
+    "chapter": "Globalização e Processos Econômicos Atuais",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que um produto global é fabricado inteiramente em um só país.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm smartphone vendido no Brasil pode ter sido projetado nos Estados Unidos, ter chips fabricados em Taiwan, telas produzidas na Coreia do Sul e montagem final na China ou na Índia, com minerais extraídos em países da África e da América do Sul. A empresa que vende o aparelho controla a marca e o projeto, que concentram a maior parte do lucro, enquanto a montagem, com mão de obra numerosa, fica com uma parcela pequena do valor.\n\nTexto elaborado para esta questão.\n\nO exemplo ilustra",
+    "options": [
+      {
+        "id": "a",
+        "text": "as cadeias globais de valor, em que etapas da produção se distribuem por vários países, e as etapas de projeto e marca concentram mais valor que a montagem."
+      },
+      {
+        "id": "b",
+        "text": "a produção integral de bens em um único país, como no início da industrialização."
+      },
+      {
+        "id": "c",
+        "text": "a distribuição igual dos lucros entre todos os países envolvidos."
+      },
+      {
+        "id": "d",
+        "text": "o fim do comércio internacional, substituído pela produção local."
+      },
+      {
+        "id": "e",
+        "text": "a concentração da montagem nos países que projetam os produtos."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A fragmentação da produção aproveita custos e competências de cada lugar. O valor se concentra nas pontas (pesquisa, design, marca) e é menor na montagem.\n\nPegadinhas:\n• B: o exemplo envolve vários países.\n• C: o texto descreve distribuição desigual.\n• D: a cadeia depende do comércio internacional.\n• E: a montagem fica em outros países.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_39",
+    "subject": "Geografia",
+    "topicId": "geo_globalizacao_economica",
+    "chapter": "Unilateralismo e Multilateralismo",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Confundir multilateralismo com alianças militares de um único país.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Acordo de Paris, de 2015, reuniu quase todos os países do mundo no compromisso de limitar o aquecimento global. Os Estados Unidos anunciaram sua saída em 2017, voltaram ao acordo em 2021 e anunciaram nova saída em 2025. Organizações como a ONU e a Organização Mundial do Comércio funcionam com base em negociações entre muitos países, enquanto decisões tomadas por uma potência sem consultar os demais são chamadas de unilaterais.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o Acordo de Paris é um exemplo de unilateralismo, pois foi imposto pelos Estados Unidos."
+      },
+      {
+        "id": "b",
+        "text": "a ONU e a OMC tomam decisões sem a participação dos países-membros."
+      },
+      {
+        "id": "c",
+        "text": "a saída de um país de um acordo multilateral não tem efeito sobre sua eficácia."
+      },
+      {
+        "id": "d",
+        "text": "unilateralismo e multilateralismo são sinônimos, pois ambos descrevem acordos entre países."
+      },
+      {
+        "id": "e",
+        "text": "acordos multilaterais, como o de Paris, dependem da adesão de muitos países, e as saídas e retornos dos Estados Unidos mostram a tensão entre decisões unilaterais e compromissos coletivos."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O multilateralismo busca soluções negociadas entre muitos Estados para problemas comuns, como o clima. Decisões de uma potência isolada, como sair de um acordo, enfraquecem esses arranjos.\n\nPegadinhas:\n• A: o acordo reuniu quase todos os países.\n• B: o texto diz que funcionam com negociações entre países.\n• C: a saída de um grande emissor afeta o alcance do acordo.\n• D: o texto os apresenta como opostos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_40",
+    "subject": "Geografia",
+    "topicId": "geo_globalizacao_economica",
+    "chapter": "Indústria II",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a automação elimina todo o emprego, ou que não altera as qualificações exigidas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA chamada Indústria 4.0 combina robôs, sensores conectados à internet, análise de grandes volumes de dados e inteligência artificial na produção. Fábricas desse tipo produzem mais com menos trabalhadores na linha, mas passam a exigir profissionais capazes de programar, operar e manter sistemas complexos. Estudos apontam que funções repetitivas tendem a ser automatizadas, enquanto cresce a demanda por qualificação técnica.\n\nTexto elaborado para esta questão.\n\nO texto indica que a Indústria 4.0",
+    "options": [
+      {
+        "id": "a",
+        "text": "elimina completamente a necessidade de trabalho humano."
+      },
+      {
+        "id": "b",
+        "text": "não altera as qualificações exigidas dos trabalhadores."
+      },
+      {
+        "id": "c",
+        "text": "aumenta a produtividade e transforma o mercado de trabalho, reduzindo funções repetitivas e ampliando a demanda por qualificação técnica."
+      },
+      {
+        "id": "d",
+        "text": "reduz a produtividade das fábricas por causa dos robôs."
+      },
+      {
+        "id": "e",
+        "text": "baseia-se apenas em trabalho manual e em grandes estoques."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A automação substitui tarefas repetitivas e cria funções que exigem formação técnica, o que pode ampliar desigualdades se a qualificação não acompanhar.\n\nPegadinhas:\n• A: o texto cita profissionais necessários.\n• B: o texto aponta mudança nas qualificações.\n• D: o texto diz que se produz mais.\n• E: descreve outro modelo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_41",
+    "subject": "Geografia",
+    "topicId": "geo_cartografia",
+    "chapter": "Representações Gráficas e Cartográficas",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a projeção de Mercator representa corretamente as áreas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo mapa-múndi na projeção de Mercator, muito usado em escolas e em aplicativos de mapas, a Groenlândia parece ter tamanho semelhante ao da África. Na realidade, a África tem área cerca de catorze vezes maior. A projeção de Mercator foi criada no século XVI para a navegação, pois preserva os ângulos e as formas de pequenas áreas, mas amplia as áreas próximas aos polos.\n\nTexto elaborado para esta questão.\n\nO texto permite concluir que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a projeção de Mercator representa corretamente as áreas de todos os continentes."
+      },
+      {
+        "id": "b",
+        "text": "a Groenlândia e a África têm áreas semelhantes, como mostra corretamente o mapa de Mercator."
+      },
+      {
+        "id": "c",
+        "text": "toda projeção cartográfica envolve distorções, e a de Mercator preserva ângulos à custa de exagerar as áreas em altas latitudes."
+      },
+      {
+        "id": "d",
+        "text": "a projeção de Mercator foi criada para comparar áreas de países."
+      },
+      {
+        "id": "e",
+        "text": "as distorções da projeção de Mercator ocorrem apenas perto do equador, onde as áreas encolhem."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Planificar a superfície esférica sempre distorce algo. Mercator é conforme (preserva ângulos), útil para rotas de navegação, mas não equivalente: as áreas crescem com a latitude.\n\nPegadinhas:\n• A: o texto aponta a ampliação das áreas perto dos polos.\n• B: a África é muito maior.\n• D: foi criada para a navegação.\n• E: as distorções aumentam perto dos polos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_42",
+    "subject": "História",
+    "topicId": "his_idade_antiga",
+    "chapter": "Introdução à História e Primeiras Civilizações",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a democracia ateniense incluía toda a população, como nas democracias atuais.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm Atenas, no século V a.C., os cidadãos participavam diretamente das decisões políticas na Eclésia, a assembleia, onde podiam falar e votar leis e decisões sobre guerra e paz. Eram considerados cidadãos apenas os homens adultos, livres, filhos de pais atenienses. Mulheres, estrangeiros residentes, chamados metecos, e escravizados, que eram numerosos, não participavam.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a democracia ateniense",
+    "options": [
+      {
+        "id": "a",
+        "text": "era direta, mas restrita a uma parcela da população, pois excluía mulheres, estrangeiros e escravizados."
+      },
+      {
+        "id": "b",
+        "text": "garantia o voto a todos os habitantes da cidade, inclusive escravizados."
+      },
+      {
+        "id": "c",
+        "text": "funcionava por meio de representantes eleitos, como os parlamentos atuais."
+      },
+      {
+        "id": "d",
+        "text": "permitia a participação das mulheres nas assembleias."
+      },
+      {
+        "id": "e",
+        "text": "concedia cidadania automática aos estrangeiros residentes."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A participação era direta na assembleia, mas apenas uma minoria era cidadã. A ideia de cidadania universal é muito posterior.\n\nPegadinhas:\n• B: os escravizados eram excluídos.\n• C: a participação era direta.\n• D: as mulheres não participavam.\n• E: os metecos não eram cidadãos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_43",
+    "subject": "História",
+    "topicId": "his_moderna_iluminismo",
+    "chapter": "Vida Urbana e Renascimento Cultural",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a Reforma foi apenas religiosa, sem relação com a imprensa e com interesses políticos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1517, o monge alemão Martinho Lutero divulgou 95 teses criticando a venda de indulgências pela Igreja Católica. Suas ideias, como a salvação pela fé e a leitura direta da Bíblia, se espalharam rapidamente graças à imprensa de tipos móveis, desenvolvida por Gutenberg poucas décadas antes. Príncipes alemães apoiaram Lutero, interessados, entre outras coisas, em reduzir o poder do papa e em se apropriar de terras da Igreja.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a Reforma Protestante",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi um movimento exclusivamente religioso, sem relação com interesses políticos."
+      },
+      {
+        "id": "b",
+        "text": "se espalhou lentamente, pois os textos eram copiados à mão."
+      },
+      {
+        "id": "c",
+        "text": "foi apoiada pelo papa, que concordava com as críticas."
+      },
+      {
+        "id": "d",
+        "text": "articulou críticas religiosas, difundidas com o auxílio da imprensa, e interesses políticos e econômicos de príncipes que buscavam autonomia em relação a Roma."
+      },
+      {
+        "id": "e",
+        "text": "defendia a venda de indulgências como meio de salvação."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A imprensa acelerou a circulação das teses e da Bíblia traduzida. O apoio dos príncipes deu sustentação política ao movimento, que rompeu a unidade cristã ocidental.\n\nPegadinhas:\n• A: o texto cita interesses dos príncipes.\n• B: o texto destaca a imprensa.\n• C: o papa condenou Lutero.\n• E: Lutero criticava a venda de indulgências.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_44",
+    "subject": "História",
+    "topicId": "his_moderna_iluminismo",
+    "chapter": "Absolutismo",
+    "difficulty": "hard",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a Revolução Gloriosa instaurou uma república ou fortaleceu o absolutismo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1688, na Inglaterra, o rei Jaime II, católico e acusado de governar de forma absolutista, foi deposto, e o trono foi oferecido a Guilherme de Orange e Maria. Em 1689, os novos monarcas aceitaram a Declaração de Direitos (Bill of Rights), que estabelecia, entre outros pontos, que o rei não poderia criar impostos nem manter exército em tempo de paz sem a autorização do Parlamento.\n\nTexto elaborado para esta questão.\n\nA Revolução Gloriosa resultou",
+    "options": [
+      {
+        "id": "a",
+        "text": "no fortalecimento do absolutismo, com o rei acima das leis."
+      },
+      {
+        "id": "b",
+        "text": "na proclamação de uma república na Inglaterra, com o fim definitivo da monarquia."
+      },
+      {
+        "id": "c",
+        "text": "na abolição do Parlamento inglês, cujas funções passaram a ser exercidas pelo rei."
+      },
+      {
+        "id": "d",
+        "text": "na restauração do poder da Igreja Católica sobre a Coroa."
+      },
+      {
+        "id": "e",
+        "text": "na limitação do poder real pelo Parlamento, base da monarquia parlamentar inglesa, já que impostos e exércitos passaram a depender de sua autorização."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O Bill of Rights subordinou decisões centrais do rei ao Parlamento, inaugurando a monarquia parlamentar e influenciando ideias liberais, como as de Locke.\n\nPegadinhas:\n• A: o resultado foi o contrário.\n• B: a monarquia foi mantida.\n• C: o Parlamento saiu fortalecido.\n• D: o rei católico foi deposto.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_45",
+    "subject": "História",
+    "topicId": "his_imperialismo_guerras",
+    "chapter": "Grandes Revoluções do Século XX",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a Revolução Chinesa foi liderada por operários urbanos, como a russa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1949, após uma longa guerra civil contra os nacionalistas do Kuomintang, os comunistas liderados por Mao Tsé-tung proclamaram a República Popular da China. Diferentemente da Revolução Russa, cuja base inicial foram os operários e soldados das cidades, a revolução chinesa teve como principal força os camponeses, que formavam a maioria da população. Os nacionalistas derrotados se refugiaram na ilha de Taiwan.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a Revolução Chinesa",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi liderada pelos operários das grandes cidades, como a Revolução Russa."
+      },
+      {
+        "id": "b",
+        "text": "teve os camponeses como principal base social e resultou na República Popular da China, enquanto os nacionalistas se estabeleceram em Taiwan."
+      },
+      {
+        "id": "c",
+        "text": "foi vencida pelos nacionalistas do Kuomintang, que expulsaram os comunistas para Taiwan."
+      },
+      {
+        "id": "d",
+        "text": "ocorreu sem conflito armado, por meio de eleições."
+      },
+      {
+        "id": "e",
+        "text": "restaurou a monarquia imperial na China, derrubada no início do século XX."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Mao adaptou o marxismo à realidade agrária chinesa, mobilizando os camponeses. A divisão entre a República Popular e Taiwan permanece até hoje como questão geopolítica.\n\nPegadinhas:\n• A: o texto contrasta com a base operária russa.\n• C: os comunistas venceram.\n• D: houve guerra civil.\n• E: proclamou-se uma república popular.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_46",
+    "subject": "História",
+    "topicId": "his_guerra_fria_contemporaneo",
+    "chapter": "Guerra Fria",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a corrida espacial foi apenas científica, sem relação com a disputa militar.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1957, a União Soviética lançou o Sputnik, primeiro satélite artificial, e, em 1961, Iuri Gagarin tornou-se o primeiro ser humano a orbitar a Terra. Os Estados Unidos reagiram com grandes investimentos em ciência e educação e criaram a NASA, chegando à Lua em 1969. Os foguetes usados nas missões eram derivados de mísseis capazes de transportar armas nucleares a outros continentes.\n\nTexto elaborado para esta questão.\n\nA corrida espacial deve ser entendida",
+    "options": [
+      {
+        "id": "a",
+        "text": "como uma cooperação científica entre Estados Unidos e União Soviética."
+      },
+      {
+        "id": "b",
+        "text": "como uma competição sem relação com a Guerra Fria."
+      },
+      {
+        "id": "c",
+        "text": "como uma iniciativa exclusivamente norte-americana."
+      },
+      {
+        "id": "d",
+        "text": "como uma disputa que terminou com a vitória soviética na chegada à Lua."
+      },
+      {
+        "id": "e",
+        "text": "como parte da Guerra Fria, envolvendo prestígio político, demonstração de capacidade tecnológica e militar, já que os foguetes derivavam de mísseis intercontinentais."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Cada conquista espacial era propaganda do sistema e sinal de poder militar: quem lança satélites pode lançar ogivas. O impacto do Sputnik levou os EUA a investir fortemente em ciência.\n\nPegadinhas:\n• A: o contexto era de competição.\n• B: o texto relaciona os foguetes aos mísseis.\n• C: os soviéticos tiveram as primeiras conquistas.\n• D: os norte-americanos chegaram à Lua em 1969.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_47",
+    "subject": "História",
+    "topicId": "his_brasil_imperio",
+    "chapter": "Brasil Império: Segundo Reinado (1840-1889)",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a Guerra do Paraguai não teve efeitos sobre a política interna brasileira.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEntre 1864 e 1870, Brasil, Argentina e Uruguai, unidos na Tríplice Aliança, enfrentaram o Paraguai em uma guerra que devastou o país vizinho e matou grande parte de sua população. No Brasil, a guerra aumentou a dívida externa, e o Exército, antes pouco prestigiado, cresceu e ganhou importância política. Muitos escravizados lutaram no conflito, alguns em troca da promessa de liberdade.\n\nTexto elaborado para esta questão.\n\nCom base no texto, uma consequência da Guerra do Paraguai para o Brasil foi",
+    "options": [
+      {
+        "id": "a",
+        "text": "a redução da dívida externa, graças às indenizações paraguaias."
+      },
+      {
+        "id": "b",
+        "text": "o enfraquecimento definitivo do Exército, que perdeu importância política."
+      },
+      {
+        "id": "c",
+        "text": "o fortalecimento político do Exército, que passaria a ter papel importante na crise da monarquia, e o aumento do endividamento do Império."
+      },
+      {
+        "id": "d",
+        "text": "a imediata abolição da escravidão em todo o território."
+      },
+      {
+        "id": "e",
+        "text": "a anexação do território paraguaio pelo Brasil, que dobrou de tamanho após a guerra."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O Exército saiu fortalecido e insatisfeito com o tratamento dado pelo governo civil, o que alimentaria a Questão Militar e a participação militar na Proclamação da República. A guerra também elevou a dívida externa.\n\nPegadinhas:\n• A: a dívida aumentou.\n• B: o texto diz que o Exército ganhou importância.\n• D: a abolição ocorreu em 1888.\n• E: o Paraguai não foi anexado.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_48",
+    "subject": "Português",
+    "topicId": "por_sintaxe",
+    "chapter": "Vozes Verbais",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o \"se\" indica sujeito indeterminado em toda frase, mesmo com verbo transitivo direto.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm anúncios, é comum encontrar frases como \"Vende-se casas\" e \"Aluga-se apartamentos\". Pela norma-padrão, com verbos transitivos diretos acompanhados do pronome \"se\", a construção é considerada voz passiva sintética: o termo que acompanha o verbo é o sujeito paciente, e o verbo concorda com ele. Já em \"Precisa-se de vendedores\", o verbo exige preposição, e o sujeito é indeterminado.\n\nTexto elaborado para esta questão.\n\nDe acordo com a norma-padrão, a forma adequada do primeiro anúncio é",
+    "options": [
+      {
+        "id": "a",
+        "text": "\"Vende-se casas\", pois o \"se\" indetermina o sujeito, e o verbo fica no singular."
+      },
+      {
+        "id": "b",
+        "text": "\"Vendem-se casas\", pois a construção é passiva sintética, \"casas\" é o sujeito paciente, e o verbo concorda com ele no plural."
+      },
+      {
+        "id": "c",
+        "text": "\"Vendem-se de casas\", pois o verbo vender exige preposição."
+      },
+      {
+        "id": "d",
+        "text": "\"Se vende casas\", pois o pronome deve vir antes do verbo."
+      },
+      {
+        "id": "e",
+        "text": "\"Vende-se das casas\", pois o sujeito é indeterminado."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. \"Vender\" é transitivo direto: \"casas são vendidas\". \"Casas\" é sujeito, e o verbo vai para o plural. Em \"Precisa-se de vendedores\", com preposição, o verbo fica no singular.\n\nPegadinhas:\n• A: aplica a regra do sujeito indeterminado a verbo transitivo direto.\n• C: \"vender\" não exige preposição.\n• D: começar frase com pronome oblíquo contraria a norma-padrão, e a concordância continua errada.\n• E: não há preposição nem sujeito indeterminado.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_49",
+    "subject": "Inglês",
+    "topicId": "ing_01",
+    "chapter": "Text Comprehension: Viruses",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Achar que as vacinas de mRNA alteram o DNA da pessoa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"mRNA vaccines work by giving cells temporary instructions to make a harmless piece of a viral protein. The immune system recognises this protein as foreign and learns to respond to it, so it is ready if the real virus appears. The mRNA never enters the nucleus, where DNA is kept, and it is broken down by the cell within a few days. This technology was used on a large scale for the first time during the COVID-19 pandemic.\"\n\nTexto elaborado para esta questão.\n\nAccording to the text,",
+    "options": [
+      {
+        "id": "a",
+        "text": "mRNA vaccines change the DNA in the nucleus of human cells."
+      },
+      {
+        "id": "b",
+        "text": "mRNA vaccines contain the complete live virus, which is weakened before the injection."
+      },
+      {
+        "id": "c",
+        "text": "the mRNA stays in the body permanently after vaccination."
+      },
+      {
+        "id": "d",
+        "text": "mRNA vaccines provide temporary instructions for cells to make a harmless viral protein, which trains the immune system without altering DNA."
+      },
+      {
+        "id": "e",
+        "text": "mRNA technology had been widely used before the COVID-19 pandemic."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O texto diz que o mRNA dá instruções temporárias para fabricar um pedaço inofensivo de proteína viral, não entra no núcleo e é degradado em poucos dias.\n\nPegadinhas:\n• A: o texto afirma que o mRNA não entra no núcleo.\n• B: produz-se só um pedaço inofensivo de proteína.\n• C: é degradado \"within a few days\".\n• E: o texto diz que foi usado em grande escala pela primeira vez na pandemia.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l17_50",
+    "subject": "Filosofia",
+    "topicId": "fil_niilismo_existencialismo",
+    "chapter": "O Existencialismo de Sartre",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Achar que Sartre defende uma natureza humana fixa, determinada antes da existência.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa conferência \"O existencialismo é um humanismo\", de 1945, Jean-Paul Sartre afirmou que, no ser humano, \"a existência precede a essência\": o homem primeiro existe, se encontra no mundo, e só depois se define pelo que faz. Por isso, segundo ele, o ser humano está \"condenado a ser livre\" e é responsável por suas escolhas, sem poder atribuí-las a uma natureza humana dada de antemão.\n\nTexto elaborado para esta questão.\n\nSegundo o texto, para Sartre,",
+    "options": [
+      {
+        "id": "a",
+        "text": "o ser humano não tem uma essência definida previamente: ele se constrói por suas escolhas e ações, e por isso é inteiramente responsável pelo que se torna."
+      },
+      {
+        "id": "b",
+        "text": "a natureza humana é fixa e determina todas as escolhas de cada pessoa."
+      },
+      {
+        "id": "c",
+        "text": "a liberdade é uma ilusão, pois tudo está predeterminado."
+      },
+      {
+        "id": "d",
+        "text": "o ser humano não é responsável por suas escolhas, que dependem da natureza."
+      },
+      {
+        "id": "e",
+        "text": "a essência do ser humano é definida antes de seu nascimento por uma divindade."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Se a existência precede a essência, não há modelo prévio de ser humano; cada um se faz pelo que escolhe. A liberdade é inescapável, e com ela vem a responsabilidade.\n\nPegadinhas:\n• B: Sartre recusa uma natureza humana dada.\n• C: a liberdade é central em sua filosofia.\n• D: contradiz a responsabilidade afirmada.\n• E: Sartre recusa essência definida previamente, inclusive por uma divindade.",
+    "styleOf": "FUVEST"
+  }
+]
