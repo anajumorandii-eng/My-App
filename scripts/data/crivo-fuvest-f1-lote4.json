@@ -1,0 +1,842 @@
+[
+  {
+    "id": "crivo_fuvest_f1_l4_01",
+    "subject": "Biologia",
+    "topicId": "bio_genetica",
+    "chapter": "Segunda Lei de Mendel",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Somar as probabilidades das duas doenças, ou responder a chance de ter as duas quando se pede pelo menos uma.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm casal procurou aconselhamento genético. Os dois são heterozigotos para o albinismo e também para a fibrose cística, duas condições autossômicas recessivas determinadas por genes localizados em cromossomos diferentes. Nenhum dos dois manifesta qualquer das condições.\n\nTexto elaborado para esta questão.\n\nA probabilidade de um filho desse casal manifestar pelo menos uma das duas condições é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "1/16."
+      },
+      {
+        "id": "b",
+        "text": "7/16."
+      },
+      {
+        "id": "c",
+        "text": "1/2."
+      },
+      {
+        "id": "d",
+        "text": "9/16."
+      },
+      {
+        "id": "e",
+        "text": "3/4."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Para cada gene, Aa × Aa dá 1/4 de chance de aa. Como os genes segregam de forma independente (segunda lei de Mendel), a chance de não manifestar nenhuma condição é 3/4 × 3/4 = 9/16. Logo, pelo menos uma: 1 − 9/16 = 7/16.\n\nPegadinhas:\n• A (1/16): é a chance de manifestar as duas ao mesmo tempo.\n• C (1/2): soma 1/4 + 1/4, contando duas vezes o caso em que as duas ocorrem.\n• D (9/16): é a chance de não manifestar nenhuma.\n• E (3/4): é a chance de não manifestar uma condição específica.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_02",
+    "subject": "Biologia",
+    "topicId": "bio_metabolismo_energetico",
+    "chapter": "Bioenergética: Fermentação e Respiração",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a fermentação produz mais ATP que a respiração, ou que o lactato é produzido por falta de glicose.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma corrida de 400 m em velocidade máxima, os músculos das pernas passam a produzir grande quantidade de lactato, que se acumula no sangue. Em uma caminhada longa e leve, isso praticamente não ocorre. Em atividade intensa, a demanda de ATP das fibras musculares supera a capacidade do sistema circulatório de fornecer oxigênio às mitocôndrias.\n\nTexto elaborado para esta questão.\n\nA produção de lactato na corrida intensa se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a fermentação produz mais ATP por molécula de glicose do que a respiração aeróbica."
+      },
+      {
+        "id": "b",
+        "text": "a glicose se esgota nas primeiras dezenas de metros, e o lactato passa a ser produzido a partir de gorduras."
+      },
+      {
+        "id": "c",
+        "text": "o lactato é o produto final obrigatório da respiração aeróbica nas fibras musculares."
+      },
+      {
+        "id": "d",
+        "text": "com oxigênio insuficiente, o piruvato é reduzido a lactato, o que regenera o NAD⁺ e permite que a glicólise continue produzindo ATP, ainda que com baixo rendimento."
+      },
+      {
+        "id": "e",
+        "text": "a fermentação lática ocorre nas mitocôndrias e depende de oxigênio em excesso."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A glicólise, no citoplasma, gera 2 ATP por glicose e consome NAD⁺. Com oxigênio suficiente, o NADH é reoxidado na cadeia respiratória; sem ele, a célula reduz o piruvato a lactato, regenerando NAD⁺ para manter a glicólise. É uma via rápida, mas de baixo rendimento — cerca de 2 ATP, contra aproximadamente 30 na respiração aeróbica.\n\nPegadinhas:\n• A: inverte os rendimentos.\n• B: a glicose (e o glicogênio muscular) não se esgota em segundos; e gorduras não originam lactato.\n• C: o produto final da respiração aeróbica é CO₂ e água.\n• E: a fermentação ocorre no citoplasma e justamente quando falta oxigênio.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_03",
+    "subject": "Biologia",
+    "topicId": "bio_evolucao",
+    "chapter": "Evolução Biológica: Construção Histórica",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a nova espécie surge por necessidade ou que basta a separação geográfica, sem isolamento reprodutivo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nHá cerca de 3 milhões de anos, a formação do istmo do Panamá separou populações de camarões-de-estalo que antes viviam no mesmo mar. Hoje, pares de populações aparentadas vivem de um lado e de outro do istmo, no Pacífico e no Caribe. Em laboratório, quando indivíduos dos dois lados são colocados juntos, raramente se acasalam, e os cruzamentos produzem poucos descendentes viáveis.\n\nTexto elaborado para esta questão.\n\nO processo descrito é explicado corretamente por:",
+    "options": [
+      {
+        "id": "a",
+        "text": "A barreira geográfica interrompeu o fluxo gênico; mutações, seleção natural e deriva atuaram de forma independente em cada lado, até surgir isolamento reprodutivo."
+      },
+      {
+        "id": "b",
+        "text": "Os camarões desenvolveram diferenças porque precisavam se adaptar a mares distintos, e essas diferenças foram transmitidas à prole."
+      },
+      {
+        "id": "c",
+        "text": "A separação geográfica, por si só, transformou imediatamente cada população em espécie nova."
+      },
+      {
+        "id": "d",
+        "text": "As populações dos dois lados continuam a trocar genes por meio de cruzamentos frequentes no istmo."
+      },
+      {
+        "id": "e",
+        "text": "Os camarões passaram a evitar o acasalamento por decisão consciente, para preservar suas características."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. É a especiação alopátrica: o istmo impede o fluxo gênico, e cada população acumula mudanças próprias por mutação, seleção (ambientes diferentes) e deriva. Com o tempo, as diferenças tornam-se tão grandes que, mesmo reunidas, as populações não se cruzam com sucesso — isolamento reprodutivo, critério de espécies distintas.\n\nPegadinhas:\n• B: é raciocínio de herança de caracteres adquiridos por necessidade.\n• C: a barreira inicia o processo, mas a especiação exige acúmulo de diferenças ao longo de muitas gerações.\n• D: o istmo é terra firme; separa as populações marinhas.\n• E: o isolamento reprodutivo resulta de diferenças genéticas, não de decisão.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_04",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Fisiologia da Coordenação Nervosa I",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o anestésico local age no cérebro ou que destrói os nervos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAntes de uma extração dentária, o dentista injeta lidocaína perto do nervo que inerva o dente. Minutos depois, o paciente deixa de sentir dor na região, embora continue consciente e capaz de falar. O efeito passa após algumas horas. A lidocaína bloqueia canais de sódio dependentes de voltagem na membrana dos neurônios.\n\nTexto elaborado para esta questão.\n\nO efeito anestésico se explica porque, com os canais de sódio bloqueados,",
+    "options": [
+      {
+        "id": "a",
+        "text": "o cérebro deixa de produzir a sensação de dor, pois a lidocaína age diretamente sobre o córtex."
+      },
+      {
+        "id": "b",
+        "text": "os neurônios da região são destruídos, e o nervo se regenera algumas horas depois."
+      },
+      {
+        "id": "c",
+        "text": "a bomba de sódio e potássio para de funcionar, e o neurônio fica permanentemente despolarizado."
+      },
+      {
+        "id": "d",
+        "text": "os neurotransmissores passam a ser liberados em excesso, saturando os receptores da dor."
+      },
+      {
+        "id": "e",
+        "text": "a entrada de Na⁺ que gera a despolarização do potencial de ação não ocorre, e o impulso não se propaga do local da lesão até o sistema nervoso central."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O potencial de ação depende da abertura dos canais de Na⁺ voltagem-dependentes: o sódio entra, a membrana se despolariza, e a onda se propaga ao longo do axônio. Bloqueados os canais no trecho do nervo, o sinal gerado no dente não atravessa essa região e não chega ao encéfalo. Como o bloqueio é local e reversível, a consciência se mantém e o efeito acaba quando o fármaco é removido.\n\nPegadinhas:\n• A: a ação é local, no nervo periférico — por isso o paciente segue consciente.\n• B: o efeito é reversível em horas; não há destruição de neurônios.\n• C: o fármaco age nos canais de sódio, não na bomba, e o efeito não é permanente.\n• D: sem potencial de ação, a liberação de neurotransmissores na sinapse seguinte não ocorre.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_05",
+    "subject": "Química",
+    "topicId": "qui_gases",
+    "chapter": "O Estado Gasoso",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Ignorar a pressão atmosférica na superfície, achando que a pressão a 20 m é de 2 atm.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nInstrutores de mergulho alertam: quem respira ar comprimido no fundo nunca deve subir prendendo a respiração. A cada 10 m de profundidade na água do mar, a pressão aumenta cerca de 1 atm, que se soma à pressão atmosférica de 1 atm na superfície. Considere um mergulhador a 20 m de profundidade que encha os pulmões e suba até a superfície sem expirar.\n\nNote e adote:\nConsidere a temperatura constante e o ar como gás ideal.\n\nTexto elaborado para esta questão.\n\nSe os pulmões pudessem se expandir livremente, o volume do ar neles contido, ao chegar à superfície, seria",
+    "options": [
+      {
+        "id": "a",
+        "text": "o mesmo, pois a quantidade de ar não varia."
+      },
+      {
+        "id": "b",
+        "text": "o dobro do volume no fundo."
+      },
+      {
+        "id": "c",
+        "text": "o triplo do volume no fundo."
+      },
+      {
+        "id": "d",
+        "text": "um terço do volume no fundo."
+      },
+      {
+        "id": "e",
+        "text": "metade do volume no fundo."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A 20 m, a pressão é 1 atm (ar) + 2 atm (água) = 3 atm; na superfície, 1 atm. Com temperatura e quantidade de gás constantes, p₁V₁ = p₂V₂ (lei de Boyle): 3 · V = 1 · V₂ → V₂ = 3V. Como os pulmões não se expandem tanto, prender a respiração na subida pode romper alvéolos.\n\nPegadinhas:\n• A: a quantidade de gás é constante, mas o volume depende da pressão.\n• B: usa 2 atm no fundo, esquecendo a pressão atmosférica.\n• D e E: invertem a relação; pressão menor implica volume maior.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_06",
+    "subject": "Química",
+    "topicId": "qui_oxirreducao",
+    "chapter": "Processos de Oxirredução",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a espuma é gás carbônico, ou que o oxigênio do H₂O₂ apenas se oxida.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAo aplicar água oxigenada (solução de peróxido de hidrogênio, H₂O₂) sobre um ferimento, observa-se intensa formação de espuma. Isso ocorre porque a catalase, enzima presente no sangue e nos tecidos, acelera a decomposição:\n\n2 H₂O₂(aq) → 2 H₂O(l) + O₂(g)\n\nTexto elaborado para esta questão.\n\nSobre essa reação, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o gás que forma a espuma é o CO₂, produzido pela respiração das células do ferimento."
+      },
+      {
+        "id": "b",
+        "text": "o oxigênio do H₂O₂, com número de oxidação −1, sofre ao mesmo tempo oxidação (a 0, no O₂) e redução (a −2, na H₂O)."
+      },
+      {
+        "id": "c",
+        "text": "o hidrogênio é o elemento que se oxida, passando de +1 a 0."
+      },
+      {
+        "id": "d",
+        "text": "a catalase é consumida na reação, pois é ela que fornece o oxigênio liberado."
+      },
+      {
+        "id": "e",
+        "text": "não há oxirredução, pois não ocorre troca de elétrons entre espécies diferentes."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. No H₂O₂, cada oxigênio tem NOX −1. Na reação, parte dos átomos vai a 0 (O₂, oxidação) e parte a −2 (H₂O, redução): é uma auto-oxirredução (desproporcionamento), com o mesmo reagente atuando como oxidante e redutor. O O₂ liberado forma a espuma.\n\nPegadinhas:\n• A: o gás é O₂, como mostra a equação.\n• C: o hidrogênio mantém NOX +1 nos dois lados.\n• D: catalisador não é consumido; a enzima apenas acelera a reação.\n• E: há transferência de elétrons entre átomos de oxigênio de moléculas diferentes de H₂O₂.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_07",
+    "subject": "Química",
+    "topicId": "qui_estequiometria",
+    "chapter": "Massa Atômica, Mol e Massa Molar",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Confundir massa de sal com massa de sódio.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Organização Mundial da Saúde recomenda que adultos consumam menos de 5 g de sal de cozinha por dia, para reduzir o risco de hipertensão. Rótulos de alimentos, porém, informam a quantidade de sódio, e não de sal, o que confunde muitos consumidores. Considere que o sal de cozinha seja composto apenas por cloreto de sódio.\n\nNote e adote:\nMassas molares: Na = 23 g/mol; Cl = 35,5 g/mol.\n\nTexto elaborado para esta questão.\n\nA massa de sódio contida em 5 g de sal de cozinha é de, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,4 g."
+      },
+      {
+        "id": "b",
+        "text": "1,0 g."
+      },
+      {
+        "id": "c",
+        "text": "1,5 g."
+      },
+      {
+        "id": "d",
+        "text": "2,0 g."
+      },
+      {
+        "id": "e",
+        "text": "3,0 g."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Massa molar do NaCl: 23 + 35,5 = 58,5 g/mol. A fração de sódio em massa é 23/58,5 ≈ 0,39. Em 5 g de sal: 5 × 0,39 ≈ 2,0 g de sódio — o limite de cerca de 2 g de sódio por dia que corresponde à recomendação.\n\nPegadinhas:\n• A (0,4 g): usa a fração 0,39 sem multiplicar pelos 5 g, e arredonda.\n• B e C: não correspondem a cálculos coerentes com os dados.\n• E (3,0 g): é aproximadamente a massa de cloro, não a de sódio.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_08",
+    "subject": "Química",
+    "topicId": "qui_organica_fundamentos",
+    "chapter": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+    "difficulty": "medium",
+    "skill": "leitura_de_estrutura_organica",
+    "trap": "Chamar de álcool o –OH ligado ao anel aromático, ou de amina o nitrogênio ligado à carbonila.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO paracetamol, analgésico e antitérmico muito usado, tem fórmula molecular C₈H₉NO₂. Sua estrutura é formada por um anel benzênico ligado, em posições opostas, a um grupo –OH e a um grupo –NH–CO–CH₃, em que o nitrogênio está ligado ao carbono de uma carbonila (C=O).\n\nTexto elaborado para esta questão.\n\nAs funções orgânicas presentes no paracetamol são",
+    "options": [
+      {
+        "id": "a",
+        "text": "fenol e amida."
+      },
+      {
+        "id": "b",
+        "text": "álcool e amina."
+      },
+      {
+        "id": "c",
+        "text": "ácido carboxílico e éster."
+      },
+      {
+        "id": "d",
+        "text": "fenol e amina."
+      },
+      {
+        "id": "e",
+        "text": "álcool e cetona."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Hidroxila ligada diretamente a carbono de anel aromático caracteriza fenol (e não álcool). Nitrogênio ligado a uma carbonila (–NH–CO–) caracteriza amida — o nome químico do paracetamol é N-(4-hidroxifenil)acetamida.\n\nPegadinhas:\n• B e E: álcool exige –OH em carbono saturado, fora do anel aromático; cetona exige carbonila entre dois carbonos, e aqui ela está ligada ao nitrogênio.\n• C: não há –COOH nem –COO– ligando dois carbonos.\n• D: amina não tem carbonila ligada ao nitrogênio; a presença da C=O muda a função para amida.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_09",
+    "subject": "Física",
+    "topicId": "fis_leis_newton",
+    "chapter": "As Leis de Newton",
+    "difficulty": "easy",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o passageiro é 'jogado para a frente' por uma força, e não que continua em movimento.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma colisão frontal a 60 km/h, o carro para em uma fração de segundo. Um passageiro sem cinto de segurança continua se deslocando para a frente até ser detido pelo painel ou pelo para-brisa. Com o cinto, ele é freado junto com o veículo, com lesões muito menos graves.\n\nTexto elaborado para esta questão.\n\nO movimento do passageiro sem cinto é explicado",
+    "options": [
+      {
+        "id": "a",
+        "text": "pela terceira lei de Newton: o painel empurra o passageiro para a frente."
+      },
+      {
+        "id": "b",
+        "text": "pela gravidade, que puxa o passageiro em direção ao para-brisa."
+      },
+      {
+        "id": "c",
+        "text": "por uma força que surge no momento da colisão e lança o corpo para a frente."
+      },
+      {
+        "id": "d",
+        "text": "pela lei da conservação da energia, que impede o passageiro de parar."
+      },
+      {
+        "id": "e",
+        "text": "pela primeira lei de Newton: sem força resultante que o freie, o corpo tende a manter a velocidade que tinha antes da colisão."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Pela inércia, um corpo mantém sua velocidade se a força resultante sobre ele for nula. Quando o carro para, nada está freando o passageiro sem cinto: ele segue a 60 km/h até que o painel ou o para-brisa apliquem a força que o detém. O cinto aplica essa força antes, ao longo de uma distância maior e sobre regiões mais resistentes do corpo.\n\nPegadinhas:\n• A: o painel exerce força para trás no passageiro, para detê-lo, e não para a frente.\n• B: a gravidade é vertical e não explica o deslocamento horizontal.\n• C: não existe força que o 'lance'; ele apenas continua o movimento que já tinha.\n• D: a explicação adequada é a inércia; a energia do passageiro é dissipada no impacto.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_10",
+    "subject": "Física",
+    "topicId": "fis_dinamica_impulsiva",
+    "chapter": "Impulso e Quantidade de Movimento",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Achar que o airbag reduz a variação da quantidade de movimento, e não a força média.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma colisão, a cabeça de um motorista passa de 15 m/s a zero. Sem airbag, ao bater no volante, ela para em cerca de 0,01 s; com o airbag, que infla e se esvazia de modo controlado, a parada leva cerca de 0,1 s.\n\nOs airbags inflam em cerca de 30 milésimos de segundo após o impacto e têm orifícios por onde o gás escapa quando a cabeça os comprime. Eles complementam o cinto de segurança, que continua obrigatório.\n\nTexto elaborado para esta questão.\n\nO airbag reduz o risco de lesão porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "diminui a variação da quantidade de movimento da cabeça, já que a velocidade final é maior que zero."
+      },
+      {
+        "id": "b",
+        "text": "aumenta a força média sobre a cabeça, compensando o impacto do volante."
+      },
+      {
+        "id": "c",
+        "text": "mantém a mesma variação da quantidade de movimento, mas a distribui por um intervalo de tempo cerca de dez vezes maior, reduzindo a força média na mesma proporção."
+      },
+      {
+        "id": "d",
+        "text": "anula o impulso da colisão, pois o ar do airbag empurra a cabeça para trás com a mesma força do impacto."
+      },
+      {
+        "id": "e",
+        "text": "aumenta a massa da cabeça, reduzindo sua velocidade."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Pelo teorema do impulso, F_média · Δt = Δp. A cabeça vai de 15 m/s a zero com ou sem airbag, então Δp é o mesmo. Se Δt passa de 0,01 s para 0,1 s, a força média cai a um décimo. A área maior de contato também distribui essa força.\n\nPegadinhas:\n• A: nos dois casos a cabeça para; a velocidade final é zero.\n• B: o efeito é o oposto — a força média diminui.\n• D: o impulso total é o mesmo, pois a cabeça precisa parar; o airbag não o anula.\n• E: a massa da cabeça não muda.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_11",
+    "subject": "Física",
+    "topicId": "fis_ondas_fundamentos",
+    "chapter": "Equação Fundamental da Ondulatória",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Esquecer o prefixo mega (10⁶) ou multiplicar velocidade por frequência.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAparelhos de ultrassom usados em exames abdominais operam com frequências de alguns megahertz. Quanto menor o comprimento de onda, menores os detalhes que podem ser distinguidos na imagem. Nos tecidos moles do corpo humano, o som se propaga com velocidade de cerca de 1 540 m/s.\n\nTexto elaborado para esta questão.\n\nO comprimento de onda de um ultrassom de 5 MHz nesses tecidos é de, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,03 mm."
+      },
+      {
+        "id": "b",
+        "text": "0,3 mm."
+      },
+      {
+        "id": "c",
+        "text": "3 mm."
+      },
+      {
+        "id": "d",
+        "text": "30 mm."
+      },
+      {
+        "id": "e",
+        "text": "308 m."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. v = λ · f → λ = 1 540 ÷ (5 × 10⁶) = 3,08 × 10⁻⁴ m ≈ 0,3 mm. Por isso o ultrassom distingue estruturas de frações de milímetro.\n\nPegadinhas:\n• A e C: erram uma potência de 10 na conversão de metros para milímetros.\n• D: erra duas potências de 10.\n• E (308 m): divide 1 540 por 5, sem o prefixo mega.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_12",
+    "subject": "Física",
+    "topicId": "fis_fisica_moderna",
+    "chapter": "Noções Básicas de Física Quântica",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a luz visível intensa causaria o mesmo dano que a UV, só por ser mais intensa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA radiação ultravioleta B (UVB), com frequência maior que a da luz visível, é a principal responsável por queimaduras solares e por lesões no DNA das células da pele que podem levar ao câncer. Uma lâmpada de luz visível, mesmo muito intensa, não provoca esse tipo de lesão no DNA.\n\nNote e adote:\nA energia de um fóton é E = h · f, em que h é a constante de Planck e f, a frequência.\n\nTexto elaborado para esta questão.\n\nA diferença de efeito se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a luz visível intensa tem mais fótons, e o dano ao DNA depende apenas da quantidade de fótons."
+      },
+      {
+        "id": "b",
+        "text": "a radiação UVB tem comprimento de onda maior que a luz visível, o que a torna mais penetrante."
+      },
+      {
+        "id": "c",
+        "text": "a radiação UVB é uma onda mecânica, enquanto a luz visível é eletromagnética."
+      },
+      {
+        "id": "d",
+        "text": "cada fóton de UVB, por ter frequência maior, transporta energia suficiente para alterar ligações químicas no DNA, o que fótons de luz visível, individualmente, não conseguem."
+      },
+      {
+        "id": "e",
+        "text": "a luz visível se propaga mais devagar no ar, e perde energia antes de chegar à pele."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A luz interage com a matéria fóton a fóton. A energia de cada fóton depende só da frequência (E = hf): os de UVB têm energia capaz de excitar e alterar ligações do DNA, formando lesões. Aumentar a intensidade da luz visível aumenta o número de fótons, mas nenhum deles tem, sozinho, energia suficiente para esse efeito.\n\nPegadinhas:\n• A: é o erro que o modelo de fótons corrigiu — o efeito depende da energia de cada fóton, não só da quantidade.\n• B: frequência maior significa comprimento de onda menor.\n• C: ambas são ondas eletromagnéticas.\n• E: no ar, ambas se propagam praticamente com a mesma velocidade.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_13",
+    "subject": "Matemática",
+    "topicId": "mat_equacoes",
+    "chapter": "Modelagem Algébrica de Problemas I",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Esquecer de converter a dose em mg para volume em mL.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara crianças, a dose de muitos medicamentos é calculada pelo peso corporal. Um pediatra prescreveu um antitérmico na dose de 15 mg por quilograma de peso para uma criança de 20 kg. O medicamento disponível é um xarope com concentração de 200 mg a cada 5 mL.\n\nTexto elaborado para esta questão.\n\nO volume de xarope a ser administrado em cada dose é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "7,5 mL."
+      },
+      {
+        "id": "b",
+        "text": "10 mL."
+      },
+      {
+        "id": "c",
+        "text": "15 mL."
+      },
+      {
+        "id": "d",
+        "text": "30 mL."
+      },
+      {
+        "id": "e",
+        "text": "75 mL."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Dose: 15 mg/kg × 20 kg = 300 mg. Concentração: 200 mg / 5 mL = 40 mg/mL. Volume: 300 ÷ 40 = 7,5 mL.\n\nPegadinhas:\n• B (10 mL): usa a concentração de 30 mg/mL, sem fundamento nos dados.\n• C (15 mL): toma a dose em mg/kg como volume em mL.\n• D (30 mL): divide 300 por 10, como se houvesse 10 mg/mL.\n• E (75 mL): erra uma casa decimal.\nNa prática, erro de unidade em dose pediátrica é causa conhecida de intoxicação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_14",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_analitica",
+    "chapter": "Estudo Analítico da Reta",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Dividir o custo fixo pelo preço da consulta, esquecendo o custo variável.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma clínica popular tem custo fixo mensal de R$ 12 000,00 (aluguel, salários e equipamentos). Cada consulta realizada gera um custo adicional de R$ 30,00 com materiais e cobra do paciente R$ 90,00. O custo total e a receita mensais podem ser representados por retas em função do número x de consultas.\n\nTexto elaborado para esta questão.\n\nO número mínimo de consultas por mês para que a clínica não tenha prejuízo é",
+    "options": [
+      {
+        "id": "a",
+        "text": "100."
+      },
+      {
+        "id": "b",
+        "text": "133."
+      },
+      {
+        "id": "c",
+        "text": "150."
+      },
+      {
+        "id": "d",
+        "text": "160."
+      },
+      {
+        "id": "e",
+        "text": "200."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Custo: C(x) = 12 000 + 30x. Receita: R(x) = 90x. O ponto de equilíbrio é a interseção das retas: 90x = 12 000 + 30x → 60x = 12 000 → x = 200. Cada consulta contribui com 90 − 30 = 60 reais para cobrir o custo fixo.\n\nPegadinhas:\n• A, C e D: não correspondem à interseção das retas com os dados do enunciado.\n• B (133): divide o custo fixo pelo preço (12 000 ÷ 90), ignorando o custo de cada consulta.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_15",
+    "subject": "Matemática",
+    "topicId": "mat_teoria_numeros",
+    "chapter": "Introdução à Teoria dos Números Inteiros",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Multiplicar os intervalos em vez de usar o mínimo múltiplo comum.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma paciente toma o medicamento A a cada 6 horas e o medicamento B a cada 8 horas. Ela tomou os dois juntos às 8 h de uma segunda-feira e manterá os horários regularmente.\n\nComo os dois medicamentos causam sonolência, o médico orientou que, nos horários em que coincidissem, a paciente evitasse dirigir. Ela decidiu marcar na agenda esses momentos.\n\nTexto elaborado para esta questão.\n\nA próxima vez em que ela tomará os dois medicamentos ao mesmo tempo será às",
+    "options": [
+      {
+        "id": "a",
+        "text": "14 h de segunda-feira."
+      },
+      {
+        "id": "b",
+        "text": "22 h de segunda-feira."
+      },
+      {
+        "id": "c",
+        "text": "2 h de terça-feira."
+      },
+      {
+        "id": "d",
+        "text": "8 h de terça-feira."
+      },
+      {
+        "id": "e",
+        "text": "8 h de quarta-feira."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Os horários coincidem a cada mmc(6, 8) horas. 6 = 2 × 3 e 8 = 2³, então mmc = 2³ × 3 = 24. Vinte e quatro horas depois das 8 h de segunda: 8 h de terça.\n\nPegadinhas:\n• A (14 h): considera só o intervalo de 6 h.\n• B (22 h): soma os intervalos (6 + 8 = 14 h).\n• C (2 h): usa 18 h, que é múltiplo de 6, mas não de 8.\n• E (8 h de quarta): multiplica os intervalos (6 × 8 = 48 h), que é um múltiplo comum, mas não o mínimo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_16",
+    "subject": "Geografia",
+    "topicId": "geo_climatologia_socioambiental",
+    "chapter": "Geopolítica Ambiental",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o Acordo de Paris impõe metas iguais e obrigatórias definidas pela ONU.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Acordo de Paris, adotado em 2015, tem como objetivo manter o aumento da temperatura média global bem abaixo de 2 °C em relação aos níveis pré-industriais, buscando limitá-lo a 1,5 °C. Diferentemente do Protocolo de Kyoto, que fixava metas apenas para países desenvolvidos, o acordo prevê que todos os signatários apresentem suas próprias metas, as Contribuições Nacionalmente Determinadas, revistas periodicamente.\n\nTexto elaborado para esta questão.\n\nUma característica do Acordo de Paris é",
+    "options": [
+      {
+        "id": "a",
+        "text": "impor a todos os países a mesma meta de redução de emissões, definida pela ONU."
+      },
+      {
+        "id": "b",
+        "text": "basear-se em metas definidas pelos próprios países, com revisão periódica, envolvendo países desenvolvidos e em desenvolvimento."
+      },
+      {
+        "id": "c",
+        "text": "eximir os países em desenvolvimento de qualquer compromisso climático."
+      },
+      {
+        "id": "d",
+        "text": "proibir imediatamente o uso de combustíveis fósseis em todos os países signatários."
+      },
+      {
+        "id": "e",
+        "text": "estabelecer multas automáticas para os países que não cumprirem suas metas."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O acordo troca metas impostas por compromissos nacionais (as NDCs), que cada país define e deve tornar mais ambiciosos a cada ciclo. Ao incluir países em desenvolvimento, amplia a participação em relação a Kyoto, mantendo o princípio de responsabilidades comuns, porém diferenciadas.\n\nPegadinhas:\n• A: as metas são nacionalmente determinadas, não uniformes.\n• C: o texto diz que todos os signatários apresentam metas.\n• D: o acordo não proíbe combustíveis fósseis; estabelece metas de redução.\n• E: o mecanismo se baseia em transparência e revisão, não em multas automáticas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_17",
+    "subject": "Geografia",
+    "topicId": "geo_populacao_urbana_brasil",
+    "chapter": "Estrutura Étnica e Fluxos Migratórios",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que os migrantes venezuelanos se concentram onde chegam por escolha econômica, ou que a fronteira é marítima.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDesde 2017, centenas de milhares de venezuelanos entraram no Brasil, fugindo da crise econômica e política em seu país. A maioria chega por Pacaraima, em Roraima, estado com pequena população e economia limitada. Para evitar a sobrecarga dos serviços públicos locais, o governo federal criou a Operação Acolhida, que inclui abrigos e um programa de interiorização, levando migrantes voluntariamente para outras cidades do país.\n\nTexto elaborado para esta questão.\n\nO programa de interiorização busca",
+    "options": [
+      {
+        "id": "a",
+        "text": "impedir a entrada de novos migrantes, fechando a fronteira com a Venezuela."
+      },
+      {
+        "id": "b",
+        "text": "transferir os migrantes para a Região Norte, onde há mais oferta de emprego industrial."
+      },
+      {
+        "id": "c",
+        "text": "devolver os migrantes à Venezuela, assim que a crise for superada."
+      },
+      {
+        "id": "d",
+        "text": "distribuir os migrantes por cidades com mais oportunidades de trabalho e capacidade de atendimento, reduzindo a pressão sobre Roraima."
+      },
+      {
+        "id": "e",
+        "text": "concentrar todos os migrantes em abrigos permanentes na fronteira."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Roraima é a porta de entrada terrestre, mas tem população pequena e mercado de trabalho limitado; a chegada concentrada sobrecarregou saúde, educação e assistência. A interiorização leva migrantes, voluntariamente, para cidades com mais vagas e serviços, favorecendo a integração e aliviando o estado de entrada.\n\nPegadinhas:\n• A e C: o programa é de acolhimento e redistribuição, não de fechamento ou devolução.\n• B: Roraima já está na Região Norte; a interiorização leva sobretudo a outras regiões.\n• E: os abrigos são temporários; o objetivo é a integração em outras cidades.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_18",
+    "subject": "Geografia",
+    "topicId": "geo_economica_brasil",
+    "chapter": "O Espaço Agrário Brasileiro",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que a expansão ocorreu na Amazônia ou que não gera conflitos por terra e água.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA sigla MATOPIBA reúne áreas do Maranhão, do Tocantins, do Piauí e da Bahia, que se tornaram, nas últimas décadas, uma das principais fronteiras de expansão da soja e de outras culturas de exportação no Brasil. Grande parte dessa região é coberta pelo Cerrado. A expansão é acompanhada por grandes investimentos em máquinas, irrigação e logística, e também por denúncias de desmatamento e de conflitos com comunidades tradicionais.\n\nTexto elaborado para esta questão.\n\nA expansão agrícola no MATOPIBA caracteriza-se por",
+    "options": [
+      {
+        "id": "a",
+        "text": "avanço da agricultura mecanizada de exportação sobre o Cerrado, com aumento da produção e pressão sobre a vegetação nativa, os recursos hídricos e os territórios de comunidades tradicionais."
+      },
+      {
+        "id": "b",
+        "text": "predomínio da agricultura familiar de subsistência, com baixo uso de máquinas."
+      },
+      {
+        "id": "c",
+        "text": "recuperação de áreas degradadas da Mata Atlântica, sem novos desmatamentos."
+      },
+      {
+        "id": "d",
+        "text": "expansão restrita à Floresta Amazônica, em áreas de terra firme do Pará."
+      },
+      {
+        "id": "e",
+        "text": "substituição da soja por culturas de abastecimento interno, como feijão e mandioca."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O MATOPIBA concentra a fronteira agrícola recente no Cerrado: terras planas, mais baratas, com chuvas sazonais, ocupadas por soja e algodão com alto uso de capital. A expansão eleva a produção, mas pressiona a vegetação nativa (o 'berço das águas'), a disponibilidade hídrica e os territórios de povos e comunidades tradicionais.\n\nPegadinhas:\n• B: o texto destaca máquinas, irrigação e culturas de exportação.\n• C: a região é de Cerrado, não de Mata Atlântica, e o texto menciona desmatamento.\n• D: os quatro estados citados ficam majoritariamente fora do bioma amazônico.\n• E: o texto fala da expansão da soja e de culturas de exportação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_19",
+    "subject": "História",
+    "topicId": "his_idade_media",
+    "chapter": "Baixa Idade Média",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a peste fortaleceu a servidão por causa do medo, ou que a mortalidade foi baixa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Peste Negra, que atingiu a Europa a partir de 1347, matou, segundo estimativas, entre um terço e metade da população do continente em poucos anos. Em muitas regiões, faltaram braços para cultivar a terra. Na década seguinte, houve revoltas camponesas, como a Jacquerie, na França, em 1358, e os senhores tentaram, por meio de leis, fixar salários e impedir o deslocamento dos trabalhadores.\n\nTexto elaborado para esta questão.\n\nEntre as consequências da Peste Negra, destaca-se",
+    "options": [
+      {
+        "id": "a",
+        "text": "o fortalecimento da servidão, pois os camponeses sobreviventes aceitaram obrigações maiores para garantir proteção."
+      },
+      {
+        "id": "b",
+        "text": "o crescimento rápido da população europeia, impulsionado pela abundância de terras."
+      },
+      {
+        "id": "c",
+        "text": "o fim imediato do feudalismo e a instalação de repúblicas em toda a Europa."
+      },
+      {
+        "id": "d",
+        "text": "a redução das tensões sociais, pois os senhores renunciaram a seus privilégios."
+      },
+      {
+        "id": "e",
+        "text": "a escassez de mão de obra, que fortaleceu a posição de negociação dos camponeses e acirrou os conflitos com os senhores, contribuindo para a crise do sistema feudal."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Com tantas mortes, o trabalhador tornou-se escasso: os camponeses passaram a exigir melhores condições e a deixar as terras em busca de salários. Os senhores reagiram com leis e repressão, e as revoltas mostram o acirramento do conflito. O processo integra a crise do século XIV, que enfraqueceu as relações feudais.\n\nPegadinhas:\n• A: o texto mostra o contrário — revoltas e tentativas dos senhores de conter a mobilidade.\n• B: a população caiu drasticamente; a recuperação levou décadas.\n• C: a crise do feudalismo foi longa; não houve ruptura imediata nem repúblicas generalizadas.\n• D: as revoltas e as leis senhoriais indicam aumento, e não redução, das tensões.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_20",
+    "subject": "História",
+    "topicId": "his_brasil_imperio",
+    "chapter": "Brasil Império: o Declínio do Segundo Reinado",
+    "difficulty": "medium",
+    "skill": "leitura_fontes_historicas",
+    "trap": "Ler as leis graduais como generosas ou como causa direta do fim da escravidão.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Lei do Ventre Livre (1871) declarou livres os filhos de mulheres escravizadas nascidos a partir de então, mas permitia que permanecessem sob a guarda dos senhores até os 21 anos, prestando serviços. A Lei dos Sexagenários (1885) libertou os escravizados com mais de 60 anos, idade que poucos atingiam, obrigando-os ainda a prestar serviços por alguns anos. A Lei Áurea, de 1888, aboliu a escravidão sem indenização aos proprietários e sem medidas de acesso à terra ou à educação para os libertos.\n\nTexto elaborado para esta questão.\n\nO conjunto dessas leis mostra que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a abolição foi conduzida desde 1871 por uma política de integração dos libertos à sociedade."
+      },
+      {
+        "id": "b",
+        "text": "a Lei do Ventre Livre extinguiu imediatamente o trabalho escravo no Império."
+      },
+      {
+        "id": "c",
+        "text": "as leis graduais adiaram a abolição e preservaram por anos o controle dos senhores sobre o trabalho, e a Lei Áurea encerrou a escravidão sem políticas de integração dos libertos."
+      },
+      {
+        "id": "d",
+        "text": "os proprietários foram indenizados pela Lei Áurea, o que garantiu sua aprovação."
+      },
+      {
+        "id": "e",
+        "text": "a Lei dos Sexagenários libertou a maior parte da população escravizada do país."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. As leis do Ventre Livre e dos Sexagenários respondiam às pressões abolicionistas sem romper de imediato com a escravidão: os 'ingênuos' serviam aos senhores até os 21 anos, e poucos escravizados chegavam aos 60. A Lei Áurea extinguiu a escravidão, mas não ofereceu terra, educação ou trabalho aos libertos — lacuna ligada às desigualdades raciais posteriores.\n\nPegadinhas:\n• A: o texto mostra justamente a ausência de medidas de integração.\n• B: a lei libertava apenas os que nasceriam, e ainda os mantinha sob serviço.\n• D: o texto diz que não houve indenização.\n• E: o texto afirma que poucos atingiam os 60 anos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_21",
+    "subject": "História",
+    "topicId": "his_guerra_fria_contemporaneo",
+    "chapter": "Descolonização Afro-Asiática",
+    "difficulty": "medium",
+    "skill": "contextualizacao_historica",
+    "trap": "Ler Bandung como alinhamento a um dos blocos da Guerra Fria.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1955, representantes de 29 países da Ásia e da África, muitos deles recém-independentes, reuniram-se na cidade de Bandung, na Indonésia. A conferência condenou o colonialismo, defendeu a soberania e a igualdade entre as nações e a cooperação econômica entre seus membros. O encontro é considerado um marco na formação do que depois se chamaria Movimento dos Países Não Alinhados.\n\nTexto elaborado para esta questão.\n\nA Conferência de Bandung expressou",
+    "options": [
+      {
+        "id": "a",
+        "text": "a adesão dos países afro-asiáticos à OTAN, em troca de ajuda econômica dos Estados Unidos."
+      },
+      {
+        "id": "b",
+        "text": "a busca de autonomia dos novos Estados afro-asiáticos diante das potências coloniais e da bipolaridade entre Estados Unidos e União Soviética."
+      },
+      {
+        "id": "c",
+        "text": "o apoio dos países participantes à manutenção dos impérios coloniais europeus."
+      },
+      {
+        "id": "d",
+        "text": "a criação de um bloco militar comunista liderado pela China."
+      },
+      {
+        "id": "e",
+        "text": "a formação de uma união monetária entre os países da Ásia e da África."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Em plena Guerra Fria, Bandung reuniu países que queriam afirmar soberania sem se submeter a Washington ou a Moscou, e que denunciavam o colonialismo ainda existente. Daí a ideia de não alinhamento e de um 'Terceiro Mundo' com voz própria.\n\nPegadinhas:\n• A e D: o espírito da conferência era de não alinhamento a qualquer bloco militar.\n• C: a conferência condenou o colonialismo.\n• E: falou-se em cooperação econômica, não em moeda comum.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_22",
+    "subject": "Português",
+    "topicId": "por_norma_culta",
+    "chapter": "Ambiguidade: Duplicidade no Léxico e na Sintaxe",
+    "difficulty": "medium",
+    "skill": "analise_linguistica",
+    "trap": "Achar que o pronome possessivo 'sua' sempre se refere ao sujeito da frase.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um relatório de atendimento domiciliar, um agente de saúde registrou a frase abaixo. Ao ler o documento, a coordenação não soube dizer onde a visita havia ocorrido.\n\nConsidere a frase:\n\n\"O médico visitou o paciente em sua casa.\"\n\nTexto elaborado para esta questão.\n\nA frase é ambígua, pois não deixa claro de quem é a casa. Uma reescrita que elimina a ambiguidade, indicando que a visita ocorreu na casa do paciente, é:",
+    "options": [
+      {
+        "id": "a",
+        "text": "\"O médico, em sua casa, visitou o paciente.\""
+      },
+      {
+        "id": "b",
+        "text": "\"Em sua casa, o médico visitou o paciente.\""
+      },
+      {
+        "id": "c",
+        "text": "\"O médico visitou, em sua casa, o paciente.\""
+      },
+      {
+        "id": "d",
+        "text": "\"O médico visitou o paciente na casa deste.\""
+      },
+      {
+        "id": "e",
+        "text": "\"O médico visitou o paciente em casa.\""
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O possessivo 'sua' pode remeter tanto ao médico quanto ao paciente. 'Deste' retoma o termo mais próximo — o paciente —, eliminando a dúvida. Outra solução seria 'na casa do paciente'.\n\nPegadinhas:\n• A, B e C: apenas deslocam 'em sua casa', mas o possessivo continua podendo se referir a qualquer um dos dois.\n• E: 'em casa' continua sem indicar de quem é a casa.\nNa FUVEST, ambiguidade costuma ser cobrada com pronome possessivo, adjunto deslocado ou termo que pode se ligar a dois núcleos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_23",
+    "subject": "Inglês",
+    "topicId": "ing_01",
+    "chapter": "Text Comprehension: Global Warming",
+    "difficulty": "medium",
+    "skill": "inferencia_em_ingles",
+    "trap": "Concluir que o texto afirma que o mosquito se tornou mais agressivo, ou que o aquecimento é a única causa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Aedes aegypti, the mosquito that transmits dengue, used to be rare in cities at high altitudes, where cold nights limited its survival. As average temperatures rise, the mosquito is now found in places where it was once absent, and the season in which it can breed is getting longer. Experts warn, however, that warming is not the whole story: unplanned urban growth, water stored in open containers and the movement of people also help the virus spread.\"\n\nTexto elaborado para esta questão.\n\nDe acordo com o texto,",
+    "options": [
+      {
+        "id": "a",
+        "text": "a elevação das temperaturas ampliou as áreas e o período favoráveis ao mosquito, mas não é o único fator na disseminação da dengue."
+      },
+      {
+        "id": "b",
+        "text": "o aquecimento global é a única causa do aumento dos casos de dengue."
+      },
+      {
+        "id": "c",
+        "text": "o mosquito tornou-se mais agressivo e passou a picar apenas à noite."
+      },
+      {
+        "id": "d",
+        "text": "as cidades de altitude continuam livres do mosquito, graças às noites frias."
+      },
+      {
+        "id": "e",
+        "text": "o armazenamento de água em recipientes abertos reduz a população do mosquito."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O texto atribui ao aumento das temperaturas a chegada do mosquito a lugares onde 'it was once absent' e uma estação de reprodução 'getting longer', mas ressalva: 'warming is not the whole story'.\n\nPegadinhas:\n• B: contradiz a ressalva final do texto.\n• C: o texto não fala de comportamento agressivo nem de horário de picada.\n• D: o texto diz que o mosquito 'used to be rare' nesses lugares — isso mudou.\n• E: a água parada em recipientes abertos aparece como fator que ajuda a disseminação.\nVocabulário: 'used to be' = costumava ser; 'breed' = reproduzir-se; 'the whole story' = toda a explicação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l4_24",
+    "subject": "Sociologia",
+    "topicId": "soc_durkheim",
+    "chapter": "Anomia e Coesão Social",
+    "difficulty": "hard",
+    "skill": "aplicacao_conceitual",
+    "trap": "Explicar o suicídio como fato apenas individual, ignorando a abordagem de Durkheim por taxas sociais.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm O suicídio (1897), Émile Durkheim observou que as taxas de suicídio variavam de forma regular entre grupos sociais e aumentavam em períodos de crise econômica, mas também em fases de enriquecimento súbito. Para ele, nesses momentos, as normas que regulam desejos e expectativas se enfraquecem, e os indivíduos ficam sem referências sobre o que podem legitimamente esperar.\n\nTexto elaborado para esta questão.\n\nO fenômeno descrito corresponde, na teoria de Durkheim, ao suicídio",
+    "options": [
+      {
+        "id": "a",
+        "text": "altruísta, causado pela integração excessiva do indivíduo ao grupo."
+      },
+      {
+        "id": "b",
+        "text": "egoísta, provocado exclusivamente por problemas psicológicos individuais."
+      },
+      {
+        "id": "c",
+        "text": "fatalista, resultante do excesso de regras e de controle sobre o indivíduo."
+      },
+      {
+        "id": "d",
+        "text": "biológico, transmitido hereditariamente entre gerações."
+      },
+      {
+        "id": "e",
+        "text": "anômico, associado ao enfraquecimento das normas sociais em momentos de mudança brusca, seja de crise, seja de prosperidade."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Durkheim trata o suicídio como fato social, medido por taxas que variam conforme a integração e a regulação dos grupos. A anomia é a ausência ou o enfraquecimento das normas: em crises ou em enriquecimentos súbitos, as expectativas perdem limite, e a taxa sobe. Por isso o aumento também na prosperidade é o dado decisivo.\n\nPegadinhas:\n• A: o altruísta liga-se ao excesso de integração, não à falta de regulação.\n• B: o egoísta, em Durkheim, vem da fraca integração ao grupo — e a abordagem dele é sociológica, não individual.\n• C: o fatalista é o oposto da anomia: regulação excessiva.\n• D: o método de Durkheim busca causas sociais, não hereditárias.",
+    "styleOf": "FUVEST"
+  }
+]

@@ -31,7 +31,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. O metilmercúrio é pouco excretado e se acumula nos tecidos. Como cada predador ingere ao longo da vida uma biomassa muito maior que a sua, retém o metal de todas as presas: a concentração cresce a cada nível (0,05 → 0,2 → 0,8 → 3,0 ppm). Quem come peixe herbívoro se coloca um nível acima do pacu; quem come tucunaré, dois níveis acima do onívoro.\n\nPegadinhas:\n• A: a tabela mostra a água com concentração dezenas de milhares de vezes menor que a dos peixes; a via principal é a dieta.\n• B: o metilmercúrio está ligado às proteínas do músculo; cozinhar não o remove.\n• C: inverte os dados — o tucunaré tem 16 vezes mais mercúrio que o pacu. Massa maior não dilui um poluente que se acumula pela dieta.\n• E: contradiz a tabela; o mercúrio aumenta, e não diminui, ao longo da cadeia. Quem diminui a cada nível é a energia disponível."
+    "explanation": "Resposta D. O metilmercúrio é pouco excretado e se acumula nos tecidos. Como cada predador ingere ao longo da vida uma biomassa muito maior que a sua, retém o metal de todas as presas: a concentração cresce a cada nível (0,05 → 0,2 → 0,8 → 3,0 ppm). Quem come peixe herbívoro se coloca um nível acima do pacu; quem come tucunaré, dois níveis acima do onívoro.\n\nPegadinhas:\n• A: a tabela mostra a água com concentração dezenas de milhares de vezes menor que a dos peixes; a via principal é a dieta.\n• B: o metilmercúrio está ligado às proteínas do músculo; cozinhar não o remove.\n• C: inverte os dados — o tucunaré tem 16 vezes mais mercúrio que o pacu. Massa maior não dilui um poluente que se acumula pela dieta.\n• E: contradiz a tabela; o mercúrio aumenta, e não diminui, ao longo da cadeia. Quem diminui a cada nível é a energia disponível.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_02",
@@ -65,7 +66,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. Na sístole, o ventrículo esquerdo gera pressão bem maior que o direito (cerca de 120 mmHg contra 25 mmHg). O sangue segue o gradiente, do esquerdo para o direito: sangue já oxigenado volta aos pulmões. Daí a ausência de cianose, o excesso de fluxo pulmonar (respiração acelerada, congestão, infecções) e, com os anos, o aumento da pressão pulmonar.\n\nPegadinhas:\n• B: descreve o sentido contrário, que só ocorre tardiamente, se a pressão pulmonar superar a sistêmica; nesse caso surgiria a cianose que o texto diz não haver.\n• C: valvas atrioventriculares separam átrio de ventrículo; o defeito descrito é no septo.\n• D: o desvio aumenta, e não reduz, o volume que chega aos pulmões.\n• E: o fluxo tem sentido definido pela diferença de pressão; e o texto descreve sobrecarga pulmonar."
+    "explanation": "Resposta A. Na sístole, o ventrículo esquerdo gera pressão bem maior que o direito (cerca de 120 mmHg contra 25 mmHg). O sangue segue o gradiente, do esquerdo para o direito: sangue já oxigenado volta aos pulmões. Daí a ausência de cianose, o excesso de fluxo pulmonar (respiração acelerada, congestão, infecções) e, com os anos, o aumento da pressão pulmonar.\n\nPegadinhas:\n• B: descreve o sentido contrário, que só ocorre tardiamente, se a pressão pulmonar superar a sistêmica; nesse caso surgiria a cianose que o texto diz não haver.\n• C: valvas atrioventriculares separam átrio de ventrículo; o defeito descrito é no septo.\n• D: o desvio aumenta, e não reduz, o volume que chega aos pulmões.\n• E: o fluxo tem sentido definido pela diferença de pressão; e o texto descreve sobrecarga pulmonar.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_03",
@@ -99,7 +101,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. O irmão hemofílico (XʰY) recebeu o Xʰ da mãe, que tem coagulação normal: ela é portadora (XᴴXʰ). Rita, filha de XᴴXʰ com XᴴY e de coagulação normal, pode ser XᴴXᴴ ou XᴴXʰ, cada um com chance 1/2. Para nascer um menino hemofílico: Rita ser portadora (1/2) × a criança ser menino (1/2) × receber o Xʰ (1/2) = 1/8.\n\nPegadinhas:\n• A (1/16): multiplica um fator 1/2 sem evento correspondente.\n• C (1/4): supõe que Rita é portadora com certeza.\n• D (1/2): é a chance de um filho homem de uma portadora ser hemofílico — responde a outra pergunta.\n• E: o menino recebe o X da mãe; o fenótipo de Paulo não protege os filhos homens."
+    "explanation": "Resposta B. O irmão hemofílico (XʰY) recebeu o Xʰ da mãe, que tem coagulação normal: ela é portadora (XᴴXʰ). Rita, filha de XᴴXʰ com XᴴY e de coagulação normal, pode ser XᴴXᴴ ou XᴴXʰ, cada um com chance 1/2. Para nascer um menino hemofílico: Rita ser portadora (1/2) × a criança ser menino (1/2) × receber o Xʰ (1/2) = 1/8.\n\nPegadinhas:\n• A (1/16): multiplica um fator 1/2 sem evento correspondente.\n• C (1/4): supõe que Rita é portadora com certeza.\n• D (1/2): é a chance de um filho homem de uma portadora ser hemofílico — responde a outra pergunta.\n• E: o menino recebe o X da mãe; o fenótipo de Paulo não protege os filhos homens.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_04",
@@ -133,7 +136,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. A variação genética (mutação e transferência horizontal de genes, por plasmídeos) existe antes e independentemente do fármaco. O antibiótico é o agente seletivo: elimina as sensíveis e deixa as resistentes se multiplicarem. Interromper o tratamento cedo poupa justamente as mais resistentes; usar antibiótico contra vírus seleciona bactérias sem tratar a doença.\n\nPegadinhas:\n• A: quem se torna resistente é a população bacteriana, não o paciente.\n• B e D: são formulações de herança do adquirido e de uso e desuso (Lamarck).\n• C: mutações não são dirigidas pela necessidade; o antibiótico não escolhe qual gene muda."
+    "explanation": "Resposta E. A variação genética (mutação e transferência horizontal de genes, por plasmídeos) existe antes e independentemente do fármaco. O antibiótico é o agente seletivo: elimina as sensíveis e deixa as resistentes se multiplicarem. Interromper o tratamento cedo poupa justamente as mais resistentes; usar antibiótico contra vírus seleciona bactérias sem tratar a doença.\n\nPegadinhas:\n• A: quem se torna resistente é a população bacteriana, não o paciente.\n• B e D: são formulações de herança do adquirido e de uso e desuso (Lamarck).\n• C: mutações não são dirigidas pela necessidade; o antibiótico não escolhe qual gene muda.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_05",
@@ -167,7 +171,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. ABA e abertura estomática variam em sentidos opostos, e a fotossíntese acompanha a abertura. O mecanismo: o ABA, sinal de déficit hídrico, faz as células-guarda perderem K⁺ e água, e o ostíolo se fecha. Como água sai e CO₂ entra pelo mesmo poro, poupar água custa carbono.\n\nPegadinhas:\n• B: contradiz os dados; a fotossíntese cai enquanto o ABA sobe.\n• C: a fotossíntese cai junto com a abertura (de 100% a 25%); ela depende também do CO₂ que entra pelos estômatos.\n• D: os dados mostram correlação, mas não autorizam essa direção causal, e o ABA não é produzido de açúcares excedentes.\n• E: a tabela mostra fechamento progressivo (de 100% a 20%), não abertura."
+    "explanation": "Resposta A. ABA e abertura estomática variam em sentidos opostos, e a fotossíntese acompanha a abertura. O mecanismo: o ABA, sinal de déficit hídrico, faz as células-guarda perderem K⁺ e água, e o ostíolo se fecha. Como água sai e CO₂ entra pelo mesmo poro, poupar água custa carbono.\n\nPegadinhas:\n• B: contradiz os dados; a fotossíntese cai enquanto o ABA sobe.\n• C: a fotossíntese cai junto com a abertura (de 100% a 25%); ela depende também do CO₂ que entra pelos estômatos.\n• D: os dados mostram correlação, mas não autorizam essa direção causal, e o ABA não é produzido de açúcares excedentes.\n• E: a tabela mostra fechamento progressivo (de 100% a 20%), não abertura.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_06",
@@ -201,7 +206,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. Mols de bicarbonato: 0,84 g ÷ 84 g/mol = 0,010 mol. A proporção é 1:1, então são neutralizados 0,010 mol de HCl. pH = 1 significa [H⁺] = 10⁻¹ mol/L = 0,1 mol/L. Volume: 0,010 mol ÷ 0,1 mol/L = 0,1 L = 100 mL. O CO₂ liberado explica a distensão e a eructação citadas no texto, mas não entra no cálculo.\n\nPegadinhas:\n• A (10 mL): toma pH 1 como [H⁺] = 1 mol/L.\n• B (50 mL): usa uma proporção 2 HCl : 1 NaHCO₃ que a equação não tem.\n• D (200 mL): usa a proporção inversa, 1 HCl : 2 NaHCO₃.\n• E (1 L): toma [H⁺] = 0,01 mol/L, que corresponderia a pH 2."
+    "explanation": "Resposta C. Mols de bicarbonato: 0,84 g ÷ 84 g/mol = 0,010 mol. A proporção é 1:1, então são neutralizados 0,010 mol de HCl. pH = 1 significa [H⁺] = 10⁻¹ mol/L = 0,1 mol/L. Volume: 0,010 mol ÷ 0,1 mol/L = 0,1 L = 100 mL. O CO₂ liberado explica a distensão e a eructação citadas no texto, mas não entra no cálculo.\n\nPegadinhas:\n• A (10 mL): toma pH 1 como [H⁺] = 1 mol/L.\n• B (50 mL): usa uma proporção 2 HCl : 1 NaHCO₃ que a equação não tem.\n• D (200 mL): usa a proporção inversa, 1 HCl : 2 NaHCO₃.\n• E (1 L): toma [H⁺] = 0,01 mol/L, que corresponderia a pH 2.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_07",
@@ -235,7 +241,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. A porcentagem de O₂ é a mesma, mas a pressão total é menor, e portanto a pressão parcial de O₂ também: há menos O₂ dissolvido no sangue. O equilíbrio se desloca para a esquerda, menos HbO₂ se forma e menos oxigênio chega aos tecidos (cansaço). A aclimatação, estimulada pela eritropoetina, aumenta a concentração de Hb, que desloca o equilíbrio para a direita e recompõe a quantidade de HbO₂.\n\nPegadinhas:\n• A e C: a constante de equilíbrio depende só da temperatura. Concentrações e pressões mudam a posição do equilíbrio, não o valor de K.\n• B: usa a porcentagem no lugar da pressão parcial, que é o que determina a quantidade de O₂ dissolvida.\n• E: o sentido está invertido; menos reagente favorece a reação inversa."
+    "explanation": "Resposta D. A porcentagem de O₂ é a mesma, mas a pressão total é menor, e portanto a pressão parcial de O₂ também: há menos O₂ dissolvido no sangue. O equilíbrio se desloca para a esquerda, menos HbO₂ se forma e menos oxigênio chega aos tecidos (cansaço). A aclimatação, estimulada pela eritropoetina, aumenta a concentração de Hb, que desloca o equilíbrio para a direita e recompõe a quantidade de HbO₂.\n\nPegadinhas:\n• A e C: a constante de equilíbrio depende só da temperatura. Concentrações e pressões mudam a posição do equilíbrio, não o valor de K.\n• B: usa a porcentagem no lugar da pressão parcial, que é o que determina a quantidade de O₂ dissolvida.\n• E: o sentido está invertido; menos reagente favorece a reação inversa.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_08",
@@ -269,7 +276,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. Enantiômeros são imagens especulares não sobreponíveis, com a mesma fórmula e as mesmas ligações. Em meio aquiral (ponto de fusão, densidade, solubilidade em água), comportam-se igual — por isso métodos comuns não os separam e é preciso recorrer a agentes quirais, o que encarece a produção. Diferem diante de algo também quiral: a luz polarizada e os receptores e enzimas do organismo, formados por aminoácidos L.\n\nPegadinhas:\n• A e B: enantiômeros têm a mesma fórmula molecular e a mesma função; diferem só no arranjo espacial.\n• C: se tivessem pontos de fusão e ebulição diferentes, a separação seria simples e barata.\n• D: alguns compostos racemizam em certas condições, mas isso não é regra; o próprio texto descreve a venda de uma forma isolada."
+    "explanation": "Resposta E. Enantiômeros são imagens especulares não sobreponíveis, com a mesma fórmula e as mesmas ligações. Em meio aquiral (ponto de fusão, densidade, solubilidade em água), comportam-se igual — por isso métodos comuns não os separam e é preciso recorrer a agentes quirais, o que encarece a produção. Diferem diante de algo também quiral: a luz polarizada e os receptores e enzimas do organismo, formados por aminoácidos L.\n\nPegadinhas:\n• A e B: enantiômeros têm a mesma fórmula molecular e a mesma função; diferem só no arranjo espacial.\n• C: se tivessem pontos de fusão e ebulição diferentes, a separação seria simples e barata.\n• D: alguns compostos racemizam em certas condições, mas isso não é regra; o próprio texto descreve a venda de uma forma isolada.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_09",
@@ -303,7 +311,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Por grama: 2 800 kJ ÷ 180 g ≈ 15,6 kJ/g. Em kcal: 15,6 ÷ 4,2 ≈ 3,7 kcal/g, que arredondado dá o valor de 4 kcal/g dos rótulos.\n\nPegadinhas:\n• A: o valor não resulta dos dados, e o ΔH já é a energia liberada como calor — não há 'perda' a descontar.\n• C: 4,2 é o fator de conversão, não o resultado.\n• D: 15,6 é o valor em kJ/g, sem a conversão pedida.\n• E: converte a energia de 1 mol (2 800 ÷ 4,2) sem dividir pela massa molar."
+    "explanation": "Resposta B. Por grama: 2 800 kJ ÷ 180 g ≈ 15,6 kJ/g. Em kcal: 15,6 ÷ 4,2 ≈ 3,7 kcal/g, que arredondado dá o valor de 4 kcal/g dos rótulos.\n\nPegadinhas:\n• A: o valor não resulta dos dados, e o ΔH já é a energia liberada como calor — não há 'perda' a descontar.\n• C: 4,2 é o fator de conversão, não o resultado.\n• D: 15,6 é o valor em kJ/g, sem a conversão pedida.\n• E: converte a energia de 1 mol (2 800 ÷ 4,2) sem dividir pela massa molar.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_10",
@@ -337,7 +346,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. Desnível: 10 × 3 m = 30 m. Trabalho útil: m·g·h = 60 × 10 × 30 = 18 000 J = 18 kJ. Com rendimento de 25%, a energia consumida é 18 kJ ÷ 0,25 = 72 kJ. Em kcal: 72 ÷ 4,2 ≈ 17 kcal.\n\nPegadinhas:\n• A (4,3 kcal): é só o trabalho útil (18 kJ ÷ 4,2), sem o rendimento.\n• B (7,2 kcal): divide 72 kJ por 10 em vez de por 4,2.\n• D (72): é o valor em kJ apresentado como kcal.\n• E (300 kcal): multiplica 72 kJ por 4,2 em vez de dividir."
+    "explanation": "Resposta C. Desnível: 10 × 3 m = 30 m. Trabalho útil: m·g·h = 60 × 10 × 30 = 18 000 J = 18 kJ. Com rendimento de 25%, a energia consumida é 18 kJ ÷ 0,25 = 72 kJ. Em kcal: 72 ÷ 4,2 ≈ 17 kcal.\n\nPegadinhas:\n• A (4,3 kcal): é só o trabalho útil (18 kJ ÷ 4,2), sem o rendimento.\n• B (7,2 kcal): divide 72 kJ por 10 em vez de por 4,2.\n• D (72): é o valor em kJ apresentado como kcal.\n• E (300 kcal): multiplica 72 kJ por 4,2 em vez de dividir.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_11",
@@ -371,7 +381,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. A compressão rápida é aproximadamente adiabática (Q ≈ 0). Pela primeira lei, ΔU = Q − W; na compressão, o trabalho do gás é negativo (o êmbolo realiza trabalho sobre ele), então ΔU = −W > 0. Para um gás ideal, energia interna maior significa temperatura maior.\n\nPegadinhas:\n• B: o texto descarta o atrito como causa principal, e o aquecimento ocorre no interior, onde o ar é comprimido.\n• C: Q = 0 não implica ΔU = 0, porque há trabalho. E num gás ideal a temperatura só muda se a energia interna mudar.\n• D: na compressão é o êmbolo que realiza trabalho sobre o ar, e não o contrário.\n• E: a ponta está vedada; a quantidade de ar é constante."
+    "explanation": "Resposta A. A compressão rápida é aproximadamente adiabática (Q ≈ 0). Pela primeira lei, ΔU = Q − W; na compressão, o trabalho do gás é negativo (o êmbolo realiza trabalho sobre ele), então ΔU = −W > 0. Para um gás ideal, energia interna maior significa temperatura maior.\n\nPegadinhas:\n• B: o texto descarta o atrito como causa principal, e o aquecimento ocorre no interior, onde o ar é comprimido.\n• C: Q = 0 não implica ΔU = 0, porque há trabalho. E num gás ideal a temperatura só muda se a energia interna mudar.\n• D: na compressão é o êmbolo que realiza trabalho sobre o ar, e não o contrário.\n• E: a ponta está vedada; a quantidade de ar é constante.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_12",
@@ -405,7 +416,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. No olho míope, a imagem de um objeto distante se forma antes da retina; a lente corretiva precisa fazer os raios divergirem. Ela deve formar, de um objeto no infinito, uma imagem virtual no ponto remoto (50 cm). Assim, f = −50 cm = −0,5 m e V = 1/f = −2,0 di.\n\nPegadinhas:\n• A e B: lentes convergentes corrigem hipermetropia e presbiopia, não miopia.\n• C (−0,5 di): usa a distância focal no lugar da vergência.\n• E (−50 di): divide por 50 sem converter centímetros em metros."
+    "explanation": "Resposta D. No olho míope, a imagem de um objeto distante se forma antes da retina; a lente corretiva precisa fazer os raios divergirem. Ela deve formar, de um objeto no infinito, uma imagem virtual no ponto remoto (50 cm). Assim, f = −50 cm = −0,5 m e V = 1/f = −2,0 di.\n\nPegadinhas:\n• A e B: lentes convergentes corrigem hipermetropia e presbiopia, não miopia.\n• C (−0,5 di): usa a distância focal no lugar da vergência.\n• E (−50 di): divide por 50 sem converter centímetros em metros.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_13",
@@ -439,7 +451,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. O que não muda é a resistência: R = V²/P = 220² ÷ 5 500 = 48 400 ÷ 5 500 = 8,8 Ω. Em 110 V: P = 110² ÷ 8,8 = 12 100 ÷ 8,8 = 1 375 W. Como P = V²/R, reduzir a tensão à metade reduz a potência a um quarto — daí a água morna.\n\nPegadinhas:\n• A (687,5 W): divide a potência por oito, como se a dependência fosse cúbica.\n• C (2 750 W): supõe proporção direta entre potência e tensão.\n• D (5 500 W): supõe que a potência nominal vale em qualquer tensão.\n• E (11 000 W): supõe que a corrente se mantém e que a potência dobra."
+    "explanation": "Resposta B. O que não muda é a resistência: R = V²/P = 220² ÷ 5 500 = 48 400 ÷ 5 500 = 8,8 Ω. Em 110 V: P = 110² ÷ 8,8 = 12 100 ÷ 8,8 = 1 375 W. Como P = V²/R, reduzir a tensão à metade reduz a potência a um quarto — daí a água morna.\n\nPegadinhas:\n• A (687,5 W): divide a potência por oito, como se a dependência fosse cúbica.\n• C (2 750 W): supõe proporção direta entre potência e tensão.\n• D (5 500 W): supõe que a potência nominal vale em qualquer tensão.\n• E (11 000 W): supõe que a corrente se mantém e que a potência dobra.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_14",
@@ -473,7 +486,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. O aquecimento do Pacífico desloca a célula de Walker: sobre a Amazônia e o norte do Nordeste predomina ar descendente, que inibe a formação de nuvens (estiagem, rios baixos). No Sul, o jato subtropical mais intenso funciona como bloqueio e mantém as frentes frias estacionadas, com chuvas persistentes.\n\nPegadinhas:\n• A: o efeito é redistribuir a chuva, e o texto mostra seca na Amazônia.\n• B: massas polares não explicam a seca amazônica, e o El Niño tende a elevar as temperaturas no Norte — o texto cita lagos aquecidos.\n• C: as enchentes de 2024 se deveram ao volume de chuva; a elevação do mar não tem essa magnitude.\n• D: os Andes barram massas de ar em baixos níveis, mas a teleconexão atua pela circulação de altitude."
+    "explanation": "Resposta E. O aquecimento do Pacífico desloca a célula de Walker: sobre a Amazônia e o norte do Nordeste predomina ar descendente, que inibe a formação de nuvens (estiagem, rios baixos). No Sul, o jato subtropical mais intenso funciona como bloqueio e mantém as frentes frias estacionadas, com chuvas persistentes.\n\nPegadinhas:\n• A: o efeito é redistribuir a chuva, e o texto mostra seca na Amazônia.\n• B: massas polares não explicam a seca amazônica, e o El Niño tende a elevar as temperaturas no Norte — o texto cita lagos aquecidos.\n• C: as enchentes de 2024 se deveram ao volume de chuva; a elevação do mar não tem essa magnitude.\n• D: os Andes barram massas de ar em baixos níveis, mas a teleconexão atua pela circulação de altitude.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_15",
@@ -507,7 +521,8 @@
       }
     ],
     "correctOptionId": "d",
-    "explanation": "Resposta D. A queda da fecundidade reduz primeiro a base da pirâmide: em 2020, dependentes jovens e idosos somam 31%, contra 42% em 1980. Mas os adultos envelhecem e, com fecundidade abaixo da reposição e vida mais longa, os idosos passam de 10% para 25% na projeção: os dependentes voltam a 40%.\n\nPegadinhas:\n• A: a projeção para 2060 contradiz a ideia de permanência.\n• B: a natalidade caiu; o bônus decorre justamente dessa queda.\n• C: a imigração não é a causa principal da mudança na estrutura etária brasileira.\n• E: a tabela traz proporções, não totais; a população brasileira cresceu de cerca de 120 para mais de 200 milhões no período."
+    "explanation": "Resposta D. A queda da fecundidade reduz primeiro a base da pirâmide: em 2020, dependentes jovens e idosos somam 31%, contra 42% em 1980. Mas os adultos envelhecem e, com fecundidade abaixo da reposição e vida mais longa, os idosos passam de 10% para 25% na projeção: os dependentes voltam a 40%.\n\nPegadinhas:\n• A: a projeção para 2060 contradiz a ideia de permanência.\n• B: a natalidade caiu; o bônus decorre justamente dessa queda.\n• C: a imigração não é a causa principal da mudança na estrutura etária brasileira.\n• E: a tabela traz proporções, não totais; a população brasileira cresceu de cerca de 120 para mais de 200 milhões no período.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_16",
@@ -541,7 +556,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Na escala 1 : 250 000, 1 cm do mapa corresponde a 250 000 cm = 2,5 km. Então 6 cm valem 15 km. A 60 km/h (1 km por minuto), o percurso leva 15 minutos.\n\nPegadinhas:\n• A (6 min): toma 1 cm como 1 km, ignorando a escala.\n• C (25 min): corresponde a 25 km, como se cada centímetro valesse cerca de 4 km.\n• D (1 hora): toma a distância como 60 km, confundindo o dado da velocidade com o do percurso.\n• E (2 h 30 min): erra uma casa decimal e chega a 150 km.\nAtalho: na escala 1 : 250 000, cortar cinco zeros passa de cm para km (2,5 km por cm)."
+    "explanation": "Resposta B. Na escala 1 : 250 000, 1 cm do mapa corresponde a 250 000 cm = 2,5 km. Então 6 cm valem 15 km. A 60 km/h (1 km por minuto), o percurso leva 15 minutos.\n\nPegadinhas:\n• A (6 min): toma 1 cm como 1 km, ignorando a escala.\n• C (25 min): corresponde a 25 km, como se cada centímetro valesse cerca de 4 km.\n• D (1 hora): toma a distância como 60 km, confundindo o dado da velocidade com o do percurso.\n• E (2 h 30 min): erra uma casa decimal e chega a 150 km.\nAtalho: na escala 1 : 250 000, cortar cinco zeros passa de cm para km (2,5 km por cm).",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_17",
@@ -575,7 +591,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Considere 10 000 pessoas. Doentes: 200, das quais 90% testam positivo: 180. Saudáveis: 9 800, das quais 5% testam positivo: 490. Total de positivos: 670. Entre eles, doentes são 180/670 ≈ 27%. Quando a doença é rara, os falsos positivos de um grande grupo de saudáveis superam os verdadeiros positivos — o motivo do exame de confirmação citado no texto.\n\nPegadinhas:\n• A (2%): é a probabilidade antes do exame; o resultado positivo a altera.\n• C (50%): é um palpite que trata os dois resultados como igualmente prováveis.\n• D (90%): é a sensibilidade, P(positivo | doente), e não P(doente | positivo).\n• E (95%): é a especificidade, a chance de uma pessoa saudável ter resultado negativo."
+    "explanation": "Resposta B. Considere 10 000 pessoas. Doentes: 200, das quais 90% testam positivo: 180. Saudáveis: 9 800, das quais 5% testam positivo: 490. Total de positivos: 670. Entre eles, doentes são 180/670 ≈ 27%. Quando a doença é rara, os falsos positivos de um grande grupo de saudáveis superam os verdadeiros positivos — o motivo do exame de confirmação citado no texto.\n\nPegadinhas:\n• A (2%): é a probabilidade antes do exame; o resultado positivo a altera.\n• C (50%): é um palpite que trata os dois resultados como igualmente prováveis.\n• D (90%): é a sensibilidade, P(positivo | doente), e não P(doente | positivo).\n• E (95%): é a especificidade, a chance de uma pessoa saudável ter resultado negativo.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_18",
@@ -609,7 +626,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Em 24 h cabem 24 ÷ 6 = 4 meias-vidas: 400 × (1/2)⁴ = 400 ÷ 16 = 25 mg. Em geral, Q(t) = Q₀ · (1/2)^(t/T), em que T é a meia-vida.\n\nPegadinhas:\n• A: modela a queda como linear (100 mg a cada 6 h); no modelo exponencial a quantidade nunca chega a zero.\n• C (50 mg): corresponde a três meias-vidas (18 h).\n• D (100 mg): divide 400 por 4, o número de meias-vidas, em vez de por 2⁴.\n• E (200 mg): corresponde a uma única meia-vida."
+    "explanation": "Resposta B. Em 24 h cabem 24 ÷ 6 = 4 meias-vidas: 400 × (1/2)⁴ = 400 ÷ 16 = 25 mg. Em geral, Q(t) = Q₀ · (1/2)^(t/T), em que T é a meia-vida.\n\nPegadinhas:\n• A: modela a queda como linear (100 mg a cada 6 h); no modelo exponencial a quantidade nunca chega a zero.\n• C (50 mg): corresponde a três meias-vidas (18 h).\n• D (100 mg): divide 400 por 4, o número de meias-vidas, em vez de por 2⁴.\n• E (200 mg): corresponde a uma única meia-vida.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_19",
@@ -643,7 +661,8 @@
       }
     ],
     "correctOptionId": "b",
-    "explanation": "Resposta B. Se o preço era 100, passou a 125. Para voltar a 100, o desconto é de 25 sobre 125: 25/125 = 20%. Algebricamente, 1,25 × (1 − d) = 1, logo d = 0,2.\n\nPegadinhas:\n• A (15%) e D (30%): não resultam de nenhuma operação coerente com os dados.\n• C (25%): o desconto incide sobre uma base maior (125); 25% de desconto levaria a 93,75, abaixo do preço original.\n• E (125%): confunde o fator do preço aumentado com a porcentagem de desconto."
+    "explanation": "Resposta B. Se o preço era 100, passou a 125. Para voltar a 100, o desconto é de 25 sobre 125: 25/125 = 20%. Algebricamente, 1,25 × (1 − d) = 1, logo d = 0,2.\n\nPegadinhas:\n• A (15%) e D (30%): não resultam de nenhuma operação coerente com os dados.\n• C (25%): o desconto incide sobre uma base maior (125); 25% de desconto levaria a 93,75, abaixo do preço original.\n• E (125%): confunde o fator do preço aumentado com a porcentagem de desconto.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_20",
@@ -677,7 +696,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. Sem o tráfico, a elite agrária previa a escassez de trabalhadores e passou a contar com imigrantes e, depois, libertos. Exigir compra para obter terra devoluta impedia que pessoas sem capital se tornassem pequenos proprietários: restava-lhes trabalhar nas fazendas. O próprio texto indica a lógica — a venda da terra financiaria a vinda de colonos, que chegariam sem recursos para comprá-la.\n\nPegadinhas:\n• A e B: são o oposto do efeito da lei; não houve distribuição gratuita nem reforma agrária.\n• D: a pressão inglesa se dirigia ao tráfico (Bill Aberdeen, 1845), não à venda de terras.\n• E: o Segundo Reinado manteve a economia agroexportadora, centrada no café."
+    "explanation": "Resposta C. Sem o tráfico, a elite agrária previa a escassez de trabalhadores e passou a contar com imigrantes e, depois, libertos. Exigir compra para obter terra devoluta impedia que pessoas sem capital se tornassem pequenos proprietários: restava-lhes trabalhar nas fazendas. O próprio texto indica a lógica — a venda da terra financiaria a vinda de colonos, que chegariam sem recursos para comprá-la.\n\nPegadinhas:\n• A e B: são o oposto do efeito da lei; não houve distribuição gratuita nem reforma agrária.\n• D: a pressão inglesa se dirigia ao tráfico (Bill Aberdeen, 1845), não à venda de terras.\n• E: o Segundo Reinado manteve a economia agroexportadora, centrada no café.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_21",
@@ -687,7 +707,7 @@
     "difficulty": "medium",
     "skill": "analise_de_evidencias",
     "trap": "Tratar a CLT como universalização de direitos para todos os trabalhadores.",
-    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\n\"Art. 7º Os preceitos constantes da presente Consolidação, salvo quando for, em cada caso, expressamente determinado em contrário, não se aplicam:\na) aos empregados domésticos [...];\nb) aos trabalhadores rurais [...].\"\n\nDecreto-Lei nº 5.452, de 1º de maio de 1943 (Consolidação das Leis do Trabalho), redação original.\n\nA Consolidação das Leis do Trabalho reuniu direitos criados durante o governo Vargas, como a jornada de oito horas, as férias remuneradas e o salário mínimo. Considerando o artigo citado e o contexto de sua promulgação, a CLT",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\n\"Art. 7º Os preceitos constantes da presente Consolidação, salvo quando for, em cada caso, expressamente determinado em contrário, não se aplicam:\na) aos empregados domésticos [...];\nb) aos trabalhadores rurais [...].\"\n\nDecreto-Lei nº 5.452 (Consolidação das Leis do Trabalho), redação original, 1º de maio de 1943.\n\nA Consolidação das Leis do Trabalho reuniu direitos criados durante o governo Vargas, como a jornada de oito horas, as férias remuneradas e o salário mínimo. Considerando o artigo citado e o contexto de sua promulgação, a CLT",
     "options": [
       {
         "id": "a",
@@ -711,7 +731,8 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. O próprio artigo exclui domésticos e rurais — num país em que a maioria da população ainda vivia no campo. A CLT veio por decreto-lei, durante o Estado Novo, e o modelo corporativista atrelava os sindicatos ao Ministério do Trabalho (reconhecimento oficial, imposto sindical), dando ao governo controle sobre o movimento operário.\n\nPegadinhas:\n• A: o artigo citado desmente a universalidade; os rurais só tiveram estatuto próprio em 1963, e as domésticas, equiparação ampla em 2013.\n• B: em 1943 não havia Congresso funcionando; a CLT é um decreto-lei.\n• C: a Constituição de 1937 declarava a greve 'recurso antissocial'; o modelo era de tutela estatal.\n• D: a CLT reuniu e sistematizou direitos, não os revogou."
+    "explanation": "Resposta E. O próprio artigo exclui domésticos e rurais — num país em que a maioria da população ainda vivia no campo. A CLT veio por decreto-lei, durante o Estado Novo, e o modelo corporativista atrelava os sindicatos ao Ministério do Trabalho (reconhecimento oficial, imposto sindical), dando ao governo controle sobre o movimento operário.\n\nPegadinhas:\n• A: o artigo citado desmente a universalidade; os rurais só tiveram estatuto próprio em 1963, e as domésticas, equiparação ampla em 2013.\n• B: em 1943 não havia Congresso funcionando; a CLT é um decreto-lei.\n• C: a Constituição de 1937 declarava a greve 'recurso antissocial'; o modelo era de tutela estatal.\n• D: a CLT reuniu e sistematizou direitos, não os revogou.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_22",
@@ -745,7 +766,8 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Resposta C. O texto apresenta uma crença ('bastava informar'), declara que a experiência a desmentiu 'em parte' e formula a tese: a informação é 'necessária, mas raramente suficiente'. A enumeração com 'pesa' lista os outros fatores: confiança, exemplo, preço, horário, distância.\n\nPegadinhas:\n• A: generaliza demais; 'em parte' e 'necessária' mostram que o autor não considera a informação inútil.\n• B: é justamente a crença que o texto refuta.\n• D: o preço é apenas um entre vários fatores; 'exclusivamente' contradiz a enumeração.\n• E: o 'cidadão imaginário' é a figura que a campanha mal planejada supõe, não uma pessoa real criticada pelo autor.\nNa FUVEST, alternativas que repetem palavras do texto com o sentido invertido são distratores frequentes."
+    "explanation": "Resposta C. O texto apresenta uma crença ('bastava informar'), declara que a experiência a desmentiu 'em parte' e formula a tese: a informação é 'necessária, mas raramente suficiente'. A enumeração com 'pesa' lista os outros fatores: confiança, exemplo, preço, horário, distância.\n\nPegadinhas:\n• A: generaliza demais; 'em parte' e 'necessária' mostram que o autor não considera a informação inútil.\n• B: é justamente a crença que o texto refuta.\n• D: o preço é apenas um entre vários fatores; 'exclusivamente' contradiz a enumeração.\n• E: o 'cidadão imaginário' é a figura que a campanha mal planejada supõe, não uma pessoa real criticada pelo autor.\nNa FUVEST, alternativas que repetem palavras do texto com o sentido invertido são distratores frequentes.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_23",
@@ -779,7 +801,8 @@
       }
     ],
     "correctOptionId": "a",
-    "explanation": "Resposta A. 'Embora' introduz oração subordinada adverbial concessiva: um fato que poderia impedir a ação principal, mas não a impede. 'Ainda que' tem o mesmo valor e também exige o subjuntivo ('sejam').\n\nPegadinhas:\n• B (Porque): transforma o obstáculo em causa — a divulgação ocorreria por serem os dados preliminares.\n• C (Desde que): com subjuntivo, exprime condição; o período diria que só divulgariam se os dados fossem preliminares.\n• D (À medida que): exprime proporção e pede indicativo.\n• E (Tão logo): exprime tempo e mudaria a relação lógica.\nConfira sempre o modo verbal depois de trocar o conectivo: sentido e correção são cobrados juntos."
+    "explanation": "Resposta A. 'Embora' introduz oração subordinada adverbial concessiva: um fato que poderia impedir a ação principal, mas não a impede. 'Ainda que' tem o mesmo valor e também exige o subjuntivo ('sejam').\n\nPegadinhas:\n• B (Porque): transforma o obstáculo em causa — a divulgação ocorreria por serem os dados preliminares.\n• C (Desde que): com subjuntivo, exprime condição; o período diria que só divulgariam se os dados fossem preliminares.\n• D (À medida que): exprime proporção e pede indicativo.\n• E (Tão logo): exprime tempo e mudaria a relação lógica.\nConfira sempre o modo verbal depois de trocar o conectivo: sentido e correção são cobrados juntos.",
+    "styleOf": "FUVEST"
   },
   {
     "id": "crivo_fuvest_f1_l1_24",
@@ -813,6 +836,7 @@
       }
     ],
     "correctOptionId": "e",
-    "explanation": "Resposta E. O texto afirma que antibióticos 'have no effect' contra vírus e que, nesses casos e na interrupção precoce, 'the hardiest bacteria are left behind to multiply'.\n\nPegadinhas:\n• A: o texto termina com 'not to abandon them'; pede uso criterioso.\n• B: quem se torna resistente é a bactéria, não o paciente.\n• C: a interrupção precoce é apresentada como causa do problema.\n• D: inverte o texto; as mais resistentes são as que sobram ('are left behind').\nVocabulário: 'hardiest' = mais resistentes; 'left behind' = deixadas para trás; 'therefore' = portanto."
+    "explanation": "Resposta E. O texto afirma que antibióticos 'have no effect' contra vírus e que, nesses casos e na interrupção precoce, 'the hardiest bacteria are left behind to multiply'.\n\nPegadinhas:\n• A: o texto termina com 'not to abandon them'; pede uso criterioso.\n• B: quem se torna resistente é a bactéria, não o paciente.\n• C: a interrupção precoce é apresentada como causa do problema.\n• D: inverte o texto; as mais resistentes são as que sobram ('are left behind').\nVocabulário: 'hardiest' = mais resistentes; 'left behind' = deixadas para trás; 'therefore' = portanto.",
+    "styleOf": "FUVEST"
   }
 ]

@@ -95,3 +95,17 @@ Biologia 5, Química 4, Física 4, Geografia 3, Matemática 3, História 2,
 Português 2, Inglês 1 — com ênfase nos assuntos de Medicina (fisiologia,
 genética, farmacologia em contexto de química e matemática). Gabarito: A 4,
 B 7, C 4, D 4, E 5.
+
+## Lotes 2 a 10 (216 questões)
+
+Mesmo padrão, com assuntos que não se repetem entre lotes. Total autoral:
+240 questões — Biologia 40, Química 39, Física 38, Matemática 32, Geografia 30, História 29, Português 11, Inglês 10, Sociologia 6, Filosofia 5.
+Gabarito no conjunto: A 47, B 52, C 43, D 48, E 50.
+
+Do lote 2 ao 8, a mediana dos enunciados caiu até 380 caracteres sem que o
+teste, que media só o conjunto, acusasse. Os enunciados mais curtos ganharam
+contexto, e o teste passou a exigir a mediana de 450 caracteres em cada lote.
+Fontes primárias reais entram citadas com o ano (Declaração de 1789, AI-5,
+art. 196 da Constituição, Kant, Hobbes, Montesquieu); o restante declara
+"Texto elaborado para esta questão." e, quando os números são hipotéticos,
+"Dados ilustrativos."

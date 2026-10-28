@@ -216,6 +216,9 @@ export interface Question {
   /** Só os desenhos da questão (mapa, gráfico, esquema), recortados da página por scripts/extrair-figuras.py. */
   figures?: { url: string }[];
   sourceMaterial?: { file: string; page: number; questionNumber: number; answerPage?: number };
+  /** Banca cujo estilo a questão autoral imita (ex.: 'FUVEST'). Nunca junto de
+   * examSource: questão autoral não foi aplicada pela banca. */
+  styleOf?: string;
   id: string;
   topicId: string;
   subject: string;

@@ -10,7 +10,8 @@ lote inteiro se uma questão estiver malformada, em vez de gravar metade:
 - comentário que não abre com "Resposta X." ou que aponta pegadinha na
   própria alternativa correta (sinal de letra trocada ao embaralhar);
 - `examSource`: questão autoral não é prova real, e o filtro "provas reais"
-  da tela passaria a mostrá-la como se fosse.
+  da tela passaria a mostrá-la como se fosse. A banca imitada vai em
+  `styleOf`, que o filtro de banca aceita só fora do "provas reais".
 
 Uso: python3 scripts/aplicar-questoes-autorais.py scripts/data/crivo-<lote>.json
 """
@@ -23,7 +24,7 @@ import sys
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 BANCO = RAIZ / "public" / "questions.json"
-CAMPOS = ("id", "chapter", "topicId", "subject", "prompt", "options", "correctOptionId", "explanation", "difficulty")
+CAMPOS = ("id", "chapter", "topicId", "subject", "prompt", "options", "correctOptionId", "explanation", "difficulty", "styleOf")
 
 
 def problemas(q: dict) -> list[str]:
@@ -32,6 +33,8 @@ def problemas(q: dict) -> list[str]:
         erros.append("id sem prefixo crivo_")
     if "examSource" in q:
         erros.append("questão autoral com examSource")
+    if not q.get("styleOf"):
+        erros.append("sem styleOf: o filtro de banca não a encontraria")
     ids = [o.get("id") for o in q.get("options", [])]
     if ids != list("abcde") or any(not o.get("text", "").strip() for o in q["options"]):
         erros.append(f"alternativas {ids}")
@@ -45,7 +48,7 @@ def problemas(q: dict) -> list[str]:
     texto = q.get("explanation", "")
     if certa and not texto.startswith(f"Resposta {certa.upper()}."):
         erros.append("comentário não abre com a resposta do gabarito")
-    apontadas = "".join(re.findall(r"^• ([A-E](?: e [A-E])*)", texto, re.M)).replace(" e ", "")
+    apontadas = re.sub(r"[^A-E]", "", "".join(re.findall(r"^• ([A-E](?:(?:, | e )[A-E])*)", texto, re.M)))
     if certa and certa.upper() in apontadas:
         erros.append("pegadinha atribuída à alternativa correta")
     for campo in ("topicId", "subject", "chapter", "prompt"):

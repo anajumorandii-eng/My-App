@@ -17,3 +17,10 @@ test('ano desconhecido exige procedência e não inventa ano para questões de a
   assert.equal(matchesExamFilters(item({ board: 'UNICAMP', year: 2025 }), 'UNICAMP', '2026'), false);
   assert.equal(matchesExamFilters(item(), 'all', 'all'), true);
 });
+test('questão autoral entra no filtro da banca que imita, mas nunca num ano', () => {
+  const autoral = { styleOf: 'FUVEST' } as Question;
+  assert.equal(matchesExamFilters(autoral, 'FUVEST', 'all'), true);
+  assert.equal(matchesExamFilters(autoral, 'UNICAMP', 'all'), false);
+  assert.equal(matchesExamFilters(autoral, 'FUVEST', '2026'), false);
+  assert.equal(matchesExamFilters(autoral, 'FUVEST', 'unknown'), false);
+});
