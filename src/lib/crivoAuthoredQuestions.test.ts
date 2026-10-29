@@ -65,6 +65,9 @@ test('o lote acompanha o formato medido nas questões oficiais da FUVEST', () =>
   // caracteres sem que a média geral denunciasse a tempo.
   for (const { arquivo, questoes } of lotes) {
     assert.ok(mediana(questoes.map(q => corpo(q).length)) >= 450, arquivo);
+    // Os lotes 11 a 13 encheram-se de alternativas só numéricas ("27 g") e
+    // derrubaram a mediana geral para 67 antes de o teste do conjunto acusar.
+    assert.ok(mediana(questoes.flatMap(q => q.options.map(o => o.text.length))) >= 60, `${arquivo}: alternativas curtas`);
   }
   const enunciados = lote.map(corpo);
   assert.ok(mediana(lote.flatMap(q => q.options.map(o => o.text.length))) >= 70);

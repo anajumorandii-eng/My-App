@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "crivo_fuvest_f1_l24_01",
+    "subject": "Biologia",
+    "topicId": "bio_estrutura_fisio_celular",
+    "chapter": "Membranas Celulares",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que as hemácias em água destilada murcham, invertendo o sentido da osmose.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um experimento de laboratório, gotas de sangue foram colocadas em três tubos: um com solução de cloreto de sódio a 0,9%, isotônica em relação ao sangue; outro com água destilada; e um terceiro com solução salina muito concentrada. Ao microscópio, as hemácias do primeiro tubo mantiveram a forma; as do segundo incharam até se romper; as do terceiro ficaram murchas e enrugadas. A membrana das hemácias deixa a água passar livremente, mas não o sal.\n\nTexto elaborado para esta questão.\n\nO comportamento das hemácias na água destilada se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o sal da água destilada entrou nas hemácias e as fez explodir por reação química."
+      },
+      {
+        "id": "b",
+        "text": "a água saiu das hemácias por osmose, e elas se romperam ao murchar."
+      },
+      {
+        "id": "c",
+        "text": "a água destilada dissolveu a membrana das hemácias por ser um solvente forte."
+      },
+      {
+        "id": "d",
+        "text": "as hemácias absorveram oxigênio da água destilada até estourar."
+      },
+      {
+        "id": "e",
+        "text": "o meio externo, sem sais, era hipotônico em relação ao interior das hemácias, e a água entrou nas células por osmose até provocar sua ruptura (hemólise)."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A água se desloca para o meio mais concentrado em solutos. Na água destilada, ela entra nas hemácias, que, sem parede celular, incham e se rompem. No meio concentrado, ocorre o inverso, e as células murcham.\n\nPegadinhas:\n• A: a água destilada não tem sal.\n• B: inverte o sentido do fluxo de água.\n• C: a água não dissolve a membrana; o rompimento é osmótico.\n• D: o efeito é osmótico, não de oxigênio.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_02",
+    "subject": "Biologia",
+    "topicId": "bio_estrutura_fisio_celular",
+    "chapter": "Núcleo Celular",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que os cromossomos estão sempre condensados, ou que o DNA fica solto no núcleo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nSe o DNA de uma única célula humana fosse esticado, teria cerca de 2 metros de comprimento, mas ele cabe em um núcleo com poucos micrômetros de diâmetro. Isso é possível porque o DNA se enrola em torno de proteínas chamadas histonas, formando a cromatina. Durante a maior parte da vida da célula, a cromatina fica menos condensada, permitindo que os genes sejam lidos; durante a divisão celular, ela se condensa ao máximo, formando os cromossomos visíveis ao microscópio.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o DNA fica solto e esticado no interior do núcleo durante toda a vida da célula."
+      },
+      {
+        "id": "b",
+        "text": "os cromossomos estão sempre condensados e visíveis ao microscópio comum."
+      },
+      {
+        "id": "c",
+        "text": "as histonas são moléculas de DNA que formam a cromatina."
+      },
+      {
+        "id": "d",
+        "text": "o DNA associado às histonas forma a cromatina, que fica menos condensada na interfase, facilitando a leitura dos genes, e se condensa na divisão, o que facilita a separação dos cromossomos."
+      },
+      {
+        "id": "e",
+        "text": "a condensação do DNA impede a divisão celular."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A compactação permite guardar o DNA no núcleo; o grau de condensação muda conforme a fase: frouxo para a transcrição, compacto para a divisão.\n\nPegadinhas:\n• A: o DNA está associado a histonas.\n• B: só ficam visíveis na divisão.\n• C: histonas são proteínas.\n• E: a condensação facilita a divisão.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_03",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_vegetal",
+    "chapter": "Histologia e Morfologia Vegetal",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que a cutícula e os pelos servem para absorver água da chuva.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPlantas de ambientes secos, como cactos e muitas espécies da Caatinga, costumam ter folhas reduzidas ou transformadas em espinhos, caules suculentos que armazenam água e uma epiderme coberta por uma cutícula espessa, formada por substâncias cerosas impermeáveis. Muitas também têm estômatos em reentrâncias da epiderme, protegidos do vento por pelos.\n\nTexto elaborado para esta questão.\n\nAs características descritas estão relacionadas",
+    "options": [
+      {
+        "id": "a",
+        "text": "à absorção de água pela epiderme das folhas durante as chuvas."
+      },
+      {
+        "id": "b",
+        "text": "ao aumento da transpiração, que resfria a planta em dias quentes."
+      },
+      {
+        "id": "c",
+        "text": "à redução da perda de água, pois a cutícula espessa é impermeável, as folhas reduzidas diminuem a superfície de transpiração e os estômatos protegidos perdem menos vapor."
+      },
+      {
+        "id": "d",
+        "text": "à produção de sementes em maior quantidade nas estações secas."
+      },
+      {
+        "id": "e",
+        "text": "à facilitação das trocas gasosas, aumentando a entrada de gás carbônico."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. São adaptações xeromórficas: impermeabilização, menos área exposta e estômatos abrigados reduzem a transpiração; caules suculentos armazenam água.\n\nPegadinhas:\n• A: a cutícula é impermeável.\n• B: as adaptações reduzem a transpiração.\n• D: o texto não trata de sementes.\n• E: as adaptações tendem a limitar as trocas gasosas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_04",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Coordenação Endócrina II",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir a ocitocina com a prolactina, ou achar que a ocitocina age na produção do leite.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo parto, a ocitocina, hormônio liberado pela neuro-hipófise, estimula as contrações do útero; quanto mais o bebê pressiona o colo do útero, mais ocitocina é liberada, e as contrações se intensificam. Após o nascimento, durante a amamentação, a sucção do bebê estimula novamente a liberação de ocitocina, que provoca a ejeção do leite pelas glândulas mamárias. A produção do leite, por sua vez, é estimulada por outro hormônio, a prolactina.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que a ocitocina",
+    "options": [
+      {
+        "id": "a",
+        "text": "estimula as contrações uterinas no parto e a ejeção do leite na amamentação, e sua liberação no parto é um exemplo de retroalimentação positiva."
+      },
+      {
+        "id": "b",
+        "text": "é responsável pela produção do leite nas glândulas mamárias."
+      },
+      {
+        "id": "c",
+        "text": "inibe as contrações do útero, prolongando a gestação."
+      },
+      {
+        "id": "d",
+        "text": "é produzida pelo pâncreas e controla a glicemia da mãe."
+      },
+      {
+        "id": "e",
+        "text": "tem sua liberação diminuída pela sucção do bebê."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. No parto, a resposta reforça o estímulo (retroalimentação positiva) até o nascimento. Na amamentação, a ocitocina ejeta o leite produzido sob ação da prolactina.\n\nPegadinhas:\n• B: a produção é estimulada pela prolactina.\n• C: a ocitocina estimula as contrações.\n• D: é liberada pela neuro-hipófise.\n• E: a sucção estimula a liberação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_05",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Coração e Vasos Sanguíneos",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Inverter sístole e diástole, ou achar que \"12 por 8\" se refere a batimentos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAo medir a pressão arterial, o médico pode informar que ela é \"12 por 8\", isto é, 120 por 80 milímetros de mercúrio. O primeiro valor corresponde à pressão nas artérias quando o ventrículo esquerdo se contrai e lança o sangue, a sístole; o segundo, à pressão quando o coração relaxa e se enche de sangue, a diástole. A hipertensão arterial, quando persistente, sobrecarrega o coração e danifica vasos sanguíneos.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "\"12 por 8\" indica 12 batimentos cardíacos a cada 8 segundos."
+      },
+      {
+        "id": "b",
+        "text": "o valor maior corresponde à pressão durante a sístole, quando o ventrículo esquerdo se contrai, e o menor, à pressão durante a diástole, quando o coração relaxa."
+      },
+      {
+        "id": "c",
+        "text": "o valor maior corresponde à diástole, e o menor, à sístole."
+      },
+      {
+        "id": "d",
+        "text": "a pressão arterial é a mesma durante todo o ciclo cardíaco."
+      },
+      {
+        "id": "e",
+        "text": "a hipertensão não tem efeitos sobre o coração e os vasos."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A contração eleva a pressão arterial ao máximo (sistólica); no relaxamento, ela cai, mas não a zero, graças à elasticidade das artérias (diastólica).\n\nPegadinhas:\n• A: os valores são pressões, não batimentos.\n• C: inverte as fases.\n• D: a pressão varia no ciclo.\n• E: o texto descreve os danos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_06",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Fisiologia da Digestão",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o suco pancreático é ácido como o gástrico.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO alimento que sai do estômago chega ao duodeno, a primeira porção do intestino delgado, misturado ao suco gástrico, muito ácido. Ali, recebe o suco pancreático, que contém bicarbonato e enzimas que digerem carboidratos, proteínas e gorduras. As enzimas do intestino funcionam melhor em pH próximo da neutralidade ou levemente básico. Pessoas com problemas na produção do suco pancreático podem ter má digestão de gorduras.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o bicarbonato do suco pancreático é importante porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "neutraliza a acidez do conteúdo vindo do estômago, criando um pH adequado à ação das enzimas pancreáticas e intestinais e protegendo a mucosa do duodeno."
+      },
+      {
+        "id": "b",
+        "text": "acidifica ainda mais o conteúdo do duodeno, ativando a pepsina."
+      },
+      {
+        "id": "c",
+        "text": "digere diretamente as gorduras, sem participação de enzimas."
+      },
+      {
+        "id": "d",
+        "text": "transforma os carboidratos em proteínas."
+      },
+      {
+        "id": "e",
+        "text": "impede a absorção de nutrientes no intestino delgado."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O bicarbonato eleva o pH; as enzimas pancreáticas, como a lipase e a tripsina, atuam melhor nesse meio.\n\nPegadinhas:\n• B: o bicarbonato é básico.\n• C: a digestão é enzimática.\n• D: não há essa conversão.\n• E: o pH adequado favorece a digestão e a absorção.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_07",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Sistemas Sensoriais: Visão e Audição",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a orelha interna serve só para ouvir, ou que os ossículos ficam na orelha externa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa orelha, as ondas sonoras fazem vibrar o tímpano, e três pequenos ossos da orelha média, o martelo, a bigorna e o estribo, transmitem e amplificam essas vibrações até a cóclea, na orelha interna, onde são convertidas em impulsos nervosos. Também na orelha interna, os canais semicirculares contêm líquido e receptores que detectam os movimentos da cabeça. Infecções na orelha interna podem causar tontura.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "os ossículos ficam na orelha externa e captam o som diretamente do ar."
+      },
+      {
+        "id": "b",
+        "text": "a orelha média transmite e amplifica as vibrações por meio dos ossículos, e a orelha interna participa tanto da audição, na cóclea, quanto do equilíbrio, nos canais semicirculares."
+      },
+      {
+        "id": "c",
+        "text": "a cóclea é responsável apenas pelo equilíbrio do corpo."
+      },
+      {
+        "id": "d",
+        "text": "a tontura causada por infecções na orelha interna não tem relação com o equilíbrio."
+      },
+      {
+        "id": "e",
+        "text": "o tímpano transforma as ondas sonoras diretamente em impulsos nervosos."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Ossículos na orelha média; cóclea e canais semicirculares na interna, com funções auditiva e de equilíbrio, o que explica a tontura.\n\nPegadinhas:\n• A: os ossículos estão na orelha média.\n• C: a cóclea é auditiva.\n• D: os canais semicirculares detectam movimentos.\n• E: a conversão ocorre na cóclea.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_08",
+    "subject": "Biologia",
+    "topicId": "bio_ecologia",
+    "chapter": "Biomagnificação",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que peixes pequenos têm mais mercúrio que os grandes predadores.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAutoridades de saúde de vários países recomendam que gestantes limitem o consumo de peixes predadores de grande porte, como atum e cação, e prefiram espécies menores, como a sardinha. O metilmercúrio, forma orgânica do mercúrio presente em ambientes aquáticos, é absorvido pelos organismos e eliminado lentamente. Ele pode atravessar a placenta e prejudicar o desenvolvimento do sistema nervoso do feto.\n\nTexto elaborado para esta questão.\n\nA recomendação se justifica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "os peixes pequenos acumulam mais mercúrio que os predadores, pois comem algas."
+      },
+      {
+        "id": "b",
+        "text": "o mercúrio é eliminado rapidamente pelos peixes grandes."
+      },
+      {
+        "id": "c",
+        "text": "o metilmercúrio é destruído pelo cozimento."
+      },
+      {
+        "id": "d",
+        "text": "o mercúrio está presente apenas nas espinhas dos peixes, que não são consumidas."
+      },
+      {
+        "id": "e",
+        "text": "o metilmercúrio, pouco eliminado, acumula-se nos tecidos e se concentra ao longo da cadeia alimentar, atingindo níveis mais altos nos predadores do topo, como atum e cação."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Cada predador consome muitas presas ao longo da vida, e o metilmercúrio se acumula: é a biomagnificação. Peixes pequenos, de níveis tróficos baixos, têm menos.\n\nPegadinhas:\n• A: inverte a concentração.\n• B: o texto diz que é eliminado lentamente.\n• C: o cozimento não elimina o metilmercúrio.\n• D: ele se acumula nos músculos, a parte consumida.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_09",
+    "subject": "Biologia",
+    "topicId": "bio_ecologia",
+    "chapter": "Espécies Invasoras e Controle Biológico",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o controle biológico usa inseticida químico, ou que a vespa ataca a cana.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNos canaviais brasileiros, uma das principais pragas é a broca-da-cana, lagarta de uma mariposa que perfura os colmos e reduz a produção. Desde a década de 1970, usinas e produtores liberam nas lavouras uma pequena vespa, Cotesia flavipes, que deposita seus ovos dentro das lagartas; as larvas da vespa se desenvolvem alimentando-se da lagarta, que acaba morrendo. A técnica reduziu o uso de inseticidas químicos.\n\nTexto elaborado para esta questão.\n\nA técnica descrita é um exemplo de",
+    "options": [
+      {
+        "id": "a",
+        "text": "controle químico de pragas, com a vespa funcionando como inseticida sintético."
+      },
+      {
+        "id": "b",
+        "text": "competição entre a vespa e a cana-de-açúcar pelos nutrientes do solo."
+      },
+      {
+        "id": "c",
+        "text": "mutualismo entre a vespa e a broca-da-cana."
+      },
+      {
+        "id": "d",
+        "text": "controle biológico, em que um inimigo natural da praga, a vespa parasitoide, é usado para reduzir sua população, com menor dependência de inseticidas."
+      },
+      {
+        "id": "e",
+        "text": "introdução de uma espécie invasora que destrói a lavoura."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A vespa parasita e mata a lagarta, controlando a praga. Exige conhecimento ecológico para que o agente não se torne um problema.\n\nPegadinhas:\n• A: o controle é biológico.\n• B: a vespa não compete com a cana.\n• C: a relação prejudica a lagarta.\n• E: a vespa controla a praga.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_10",
+    "subject": "Química",
+    "topicId": "qui_cinetica",
+    "chapter": "Cinética Química",
+    "difficulty": "easy",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o frasco escuro serve apenas para esconder o líquido.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA água oxigenada, solução de peróxido de hidrogênio, H₂O₂, decompõe-se lentamente em água e oxigênio. Por isso, é vendida em frascos escuros e opacos, e os rótulos recomendam guardá-la em local fresco e longe da luz. Quando aplicada em um ferimento, a decomposição é muito rápida, com intensa formação de bolhas, por causa de uma enzima presente no sangue e nos tecidos, a catalase.\n\nReação: 2 H₂O₂ → 2 H₂O + O₂\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o frasco escuro serve apenas para esconder a cor do líquido."
+      },
+      {
+        "id": "b",
+        "text": "a catalase é consumida na reação e precisa ser reposta continuamente."
+      },
+      {
+        "id": "c",
+        "text": "a luz e o calor aceleram a decomposição do peróxido, por isso o frasco escuro e o local fresco conservam o produto, e a catalase acelera a reação no ferimento."
+      },
+      {
+        "id": "d",
+        "text": "as bolhas no ferimento são de gás carbônico, liberado pela pele."
+      },
+      {
+        "id": "e",
+        "text": "a decomposição da água oxigenada não depende de nenhum fator externo."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Luz fornece energia para romper ligações, e o calor aumenta as colisões efetivas. A catalase, catalisador biológico, acelera muito a decomposição, liberando O₂.\n\nPegadinhas:\n• A: o frasco protege da luz.\n• B: catalisadores não são consumidos.\n• D: as bolhas são de oxigênio.\n• E: luz, calor e catalisadores influenciam.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_11",
+    "subject": "Química",
+    "topicId": "qui_equilibrio",
+    "chapter": "Equilíbrios Iônicos II",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que todo composto de bário é tóxico na mesma medida, sem considerar a solubilidade.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm exames de raios X do tubo digestório, o paciente ingere uma suspensão de sulfato de bário, BaSO₄, que torna os órgãos visíveis nas imagens. Íons bário, Ba²⁺, dissolvidos no organismo são tóxicos. O sulfato de bário, porém, tem solubilidade muito baixa em água: sua constante de solubilidade, Kps, é da ordem de 10⁻¹⁰. Já o carbonato de bário, BaCO₃, reage com o ácido do estômago, liberando íons Ba²⁺, e por isso não pode ser usado.\n\nTexto elaborado para esta questão.\n\nO uso seguro do sulfato de bário se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o bário é inofensivo em qualquer forma química."
+      },
+      {
+        "id": "b",
+        "text": "o sulfato de bário se dissolve completamente e é eliminado pela urina."
+      },
+      {
+        "id": "c",
+        "text": "o sulfato de bário é um gás que não é absorvido pelo intestino."
+      },
+      {
+        "id": "d",
+        "text": "o carbonato de bário é menos solúvel no estômago do que o sulfato."
+      },
+      {
+        "id": "e",
+        "text": "o sulfato de bário é tão pouco solúvel que libera quantidade muito pequena de íons Ba²⁺, insuficiente para causar intoxicação, enquanto o carbonato, ao reagir com o ácido gástrico, liberaria íons tóxicos."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Com Kps tão baixo, a concentração de Ba²⁺ em equilíbrio é mínima. O carbonato, ao reagir com H⁺, desloca o equilíbrio e solubiliza o bário.\n\nPegadinhas:\n• A: o íon Ba²⁺ é tóxico.\n• B: o BaSO₄ é muito pouco solúvel.\n• C: é um sólido em suspensão.\n• D: o carbonato é solubilizado pelo ácido.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_12",
+    "subject": "Química",
+    "topicId": "qui_gases",
+    "chapter": "O Estado Gasoso",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o perigo da lata aquecida vem só da inflamabilidade, sem o aumento da pressão.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEmbalagens de aerossóis, como desodorantes e inseticidas, trazem o aviso: \"Não exponha a temperaturas superiores a 50 °C nem perfure a embalagem, mesmo vazia\". Dentro da lata, gases estão sob pressão. Considere uma lata fechada, de volume praticamente constante, contendo uma quantidade fixa de gás.\n\nNote e adote: para volume e quantidade de gás constantes, a pressão é proporcional à temperatura absoluta.\n\nTexto elaborado para esta questão.\n\nO aviso se justifica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o aquecimento diminui a pressão do gás e a lata implode."
+      },
+      {
+        "id": "b",
+        "text": "a temperatura não influencia a pressão de um gás em recipiente fechado."
+      },
+      {
+        "id": "c",
+        "text": "o aumento da temperatura eleva a pressão do gás dentro da lata, que pode ultrapassar a resistência da embalagem e provocar seu rompimento."
+      },
+      {
+        "id": "d",
+        "text": "a lata vazia não contém gás e, por isso, não oferece risco ao ser perfurada."
+      },
+      {
+        "id": "e",
+        "text": "o calor transforma o gás em sólido, que rompe a lata."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Com V constante, p/T constante: mais temperatura, mais pressão. Mesmo \"vazia\", a lata contém gás residual sob pressão.\n\nPegadinhas:\n• A: a pressão aumenta.\n• B: a pressão depende da temperatura.\n• D: o texto adverte justamente sobre a lata vazia.\n• E: o aquecimento não solidifica o gás.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_13",
+    "subject": "Química",
+    "topicId": "qui_termoquimica",
+    "chapter": "Termoquímica II",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o catalisador muda a energia liberada pela reação.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um diagrama de entalpia, uma reação exotérmica foi representada por dois caminhos entre os mesmos reagentes e produtos: um sem catalisador, com um pico de energia elevado, e outro com catalisador, com um pico mais baixo. Os níveis de entalpia dos reagentes e dos produtos eram os mesmos nos dois caminhos. Um estudante afirmou que, com o catalisador, a reação libera mais calor.\n\nTexto elaborado para esta questão.\n\nSobre a afirmação do estudante, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "está incorreta, pois o catalisador diminui a energia de ativação, tornando a reação mais rápida, mas não altera as entalpias de reagentes e produtos nem, portanto, o ΔH da reação."
+      },
+      {
+        "id": "b",
+        "text": "está correta, pois o catalisador aumenta a energia liberada pela reação."
+      },
+      {
+        "id": "c",
+        "text": "está correta, pois o pico mais baixo indica produtos com menos energia."
+      },
+      {
+        "id": "d",
+        "text": "está incorreta, pois o catalisador torna a reação endotérmica."
+      },
+      {
+        "id": "e",
+        "text": "está incorreta, pois o catalisador aumenta a energia de ativação."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O catalisador oferece um caminho com barreira menor; os estados inicial e final são os mesmos, e o ΔH também.\n\nPegadinhas:\n• B: o ΔH não muda.\n• C: os níveis de produtos são iguais.\n• D: a reação continua exotérmica.\n• E: o catalisador diminui a energia de ativação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_14",
+    "subject": "Química",
+    "topicId": "qui_modelos_atomicos",
+    "chapter": "Organização da Tabela Periódica dos Elementos",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que o silício é um metal, ou que os semimetais conduzem como os metais.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa tabela periódica, os elementos podem ser classificados como metais, ametais e semimetais. Os metais, como o cobre e o alumínio, são bons condutores de eletricidade e calor e têm brilho característico. Os ametais, como o enxofre e o oxigênio, em geral não conduzem eletricidade. O silício, um semimetal, tem condutividade intermediária, que pode ser controlada pela adição de pequenas quantidades de outros elementos, o que o torna a base dos chips de computadores.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que o silício",
+    "options": [
+      {
+        "id": "a",
+        "text": "é um metal, bom condutor, usado como os fios de cobre."
+      },
+      {
+        "id": "b",
+        "text": "é um semimetal, de condutividade intermediária e controlável, o que o torna adequado à fabricação de componentes eletrônicos, como os chips."
+      },
+      {
+        "id": "c",
+        "text": "é um ametal isolante, incapaz de conduzir eletricidade."
+      },
+      {
+        "id": "d",
+        "text": "é um gás nobre, que não forma ligações químicas."
+      },
+      {
+        "id": "e",
+        "text": "tem as mesmas propriedades do oxigênio, por estar no mesmo grupo."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A condutividade intermediária, ajustada por dopagem, é o que permite usar o silício em semicondutores.\n\nPegadinhas:\n• A: o silício não é um metal.\n• C: ele conduz em grau intermediário.\n• D: não é gás nobre.\n• E: silício e oxigênio são de grupos diferentes.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_15",
+    "subject": "Química",
+    "topicId": "qui_inorganica",
+    "chapter": "Equações Iônicas e outras Teorias para Ácidos e Bases",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que o HCl puro conduz eletricidade como a solução aquosa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO cloreto de hidrogênio, HCl, é um gás formado por moléculas. Em um experimento, o gás seco foi testado em um aparelho de condutividade e não conduziu corrente elétrica. Quando o gás foi borbulhado em água, a solução formada, o ácido clorídrico, conduziu muito bem a corrente e tornou vermelho o papel de tornassol azul.\n\nTexto elaborado para esta questão.\n\nCom base na teoria de Arrhenius, os resultados se explicam porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o gás HCl já é formado por íons, que conduzem em qualquer situação."
+      },
+      {
+        "id": "b",
+        "text": "a água pura é ótima condutora, independentemente do soluto."
+      },
+      {
+        "id": "c",
+        "text": "o HCl é uma base, que libera íons OH⁻ em água."
+      },
+      {
+        "id": "d",
+        "text": "o HCl é um sal, formado por um metal e um ametal."
+      },
+      {
+        "id": "e",
+        "text": "o HCl é molecular e não conduz quando puro, mas, em água, ioniza-se liberando íons H⁺ e Cl⁻, que conduzem a corrente e conferem caráter ácido à solução."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Ionização: HCl + H₂O → H₃O⁺ + Cl⁻. Os íons livres conduzem; o H⁺ (H₃O⁺) caracteriza o ácido de Arrhenius.\n\nPegadinhas:\n• A: o gás é molecular e não conduziu.\n• B: a água pura conduz muito pouco.\n• C: o HCl é ácido.\n• D: o hidrogênio não é metal, e o HCl é um ácido.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_16",
+    "subject": "Química",
+    "topicId": "qui_oxirreducao",
+    "chapter": "Processos de Oxirredução",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a limpeza da prata com alumínio é apenas abrasão, sem reação química.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nObjetos de prata escurecem com o tempo porque a prata reage com compostos de enxofre do ar, formando sulfeto de prata, Ag₂S, de cor escura. Uma técnica caseira de limpeza consiste em colocar o objeto em uma panela de alumínio com água quente e bicarbonato de sódio. Depois de alguns minutos, a prata volta a brilhar, sem ser esfregada, e o alumínio sofre leve desgaste.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a limpeza ocorre porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o bicarbonato dissolve a camada de prata do objeto."
+      },
+      {
+        "id": "b",
+        "text": "o alumínio, mais reativo, se oxida e cede elétrons aos íons prata do sulfeto, que são reduzidos a prata metálica, devolvendo o brilho ao objeto."
+      },
+      {
+        "id": "c",
+        "text": "a água quente arranca a camada escura por atrito."
+      },
+      {
+        "id": "d",
+        "text": "a prata se oxida e passa para a água, deixando o objeto mais fino."
+      },
+      {
+        "id": "e",
+        "text": "o alumínio é reduzido, e a prata é oxidada."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Ag₂S + Al → Ag + compostos de alumínio: a prata (Ag⁺) recebe elétrons e volta ao estado metálico, enquanto o alumínio se oxida.\n\nPegadinhas:\n• A: a prata é recuperada.\n• C: não há esfregação.\n• D: a prata é reduzida.\n• E: inverte os papéis.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_17",
+    "subject": "Química",
+    "topicId": "qui_organica_fundamentos",
+    "chapter": "Nomenclatura de Compostos Orgânicos",
+    "difficulty": "easy",
+    "skill": "analise_conceitual",
+    "trap": "Confundir os prefixos que indicam o número de carbonos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa nomenclatura dos compostos orgânicos, o prefixo indica o número de átomos de carbono da cadeia principal: met- (1), et- (2), prop- (3), but- (4), pent- (5). O infixo indica o tipo de ligação: -an- para ligações simples, -en- para dupla e -in- para tripla; e o sufixo -o indica hidrocarboneto. O gás de cozinha contém principalmente propano e butano.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o propano e o butano são hidrocarbonetos",
+    "options": [
+      {
+        "id": "a",
+        "text": "de dois e três carbonos, com ligações duplas entre os carbonos."
+      },
+      {
+        "id": "b",
+        "text": "de um e dois carbonos, com ligações triplas entre os carbonos."
+      },
+      {
+        "id": "c",
+        "text": "de cinco carbonos, com ligações simples entre os carbonos."
+      },
+      {
+        "id": "d",
+        "text": "com ligações duplas, pois o infixo -an- indica dupla ligação."
+      },
+      {
+        "id": "e",
+        "text": "de três e quatro carbonos, respectivamente, com apenas ligações simples entre os carbonos, como indica o infixo -an-."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Prop- = 3, but- = 4; -an- = ligações simples: CH₃–CH₂–CH₃ e CH₃–CH₂–CH₂–CH₃.\n\nPegadinhas:\n• A: erra os prefixos e o infixo.\n• B: erra os prefixos e o infixo.\n• C: pent- seria 5 carbonos.\n• D: -an- indica ligação simples.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_18",
+    "subject": "Química",
+    "topicId": "qui_organica_reacoes",
+    "chapter": "Reações de Oxidação em Hidrocarbonetos",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o ranço é causado por bactérias apenas, sem oxidação das gorduras.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nÓleos e gorduras ricos em ácidos graxos insaturados, como o azeite e o óleo de linhaça, podem ficar rançosos quando expostos ao ar, à luz e ao calor por muito tempo, adquirindo cheiro e sabor desagradáveis. O oxigênio do ar reage com as ligações duplas das cadeias, formando compostos menores, como aldeídos. Por isso, muitos alimentos industrializados recebem antioxidantes, e os óleos devem ser guardados fechados e longe da luz.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o ranço dos óleos resulta",
+    "options": [
+      {
+        "id": "a",
+        "text": "da hidrogenação das ligações duplas, que torna o óleo sólido."
+      },
+      {
+        "id": "b",
+        "text": "da perda de água do óleo, que concentra o sabor."
+      },
+      {
+        "id": "c",
+        "text": "da reação dos óleos com o gás carbônico do ar, que forma ácidos fortes."
+      },
+      {
+        "id": "d",
+        "text": "da oxidação das ligações duplas dos ácidos graxos pelo oxigênio do ar, favorecida pela luz e pelo calor, com formação de compostos de odor desagradável, como aldeídos."
+      },
+      {
+        "id": "e",
+        "text": "do aumento do número de ligações duplas nas cadeias carbônicas."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. As insaturações são o ponto vulnerável; antioxidantes e embalagens fechadas e escuras retardam a reação.\n\nPegadinhas:\n• A: hidrogenação adiciona hidrogênio, não oxigênio.\n• B: o texto atribui o ranço à reação com oxigênio.\n• C: o reagente é o oxigênio.\n• E: as duplas são consumidas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_19",
+    "subject": "Física",
+    "topicId": "fis_cinematica",
+    "chapter": "O Movimento Circular",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Esquecer de dividir por 60 ao converter rotações por minuto em hertz.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO tambor de uma máquina de lavar gira a 1.200 rotações por minuto (rpm) durante a centrifugação. Um estudante quer expressar essa frequência em hertz (Hz), isto é, em rotações por segundo, para comparar com outros movimentos periódicos estudados na escola.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA frequência de rotação do tambor, em hertz, é",
+    "options": [
+      {
+        "id": "a",
+        "text": "2 Hz, pois 1.200 rpm devem ser divididos por 600."
+      },
+      {
+        "id": "b",
+        "text": "12 Hz, pois 1.200 rpm devem ser divididos por 100."
+      },
+      {
+        "id": "c",
+        "text": "20 Hz, pois 1.200 rotações em 60 segundos correspondem a 20 rotações por segundo."
+      },
+      {
+        "id": "d",
+        "text": "120 Hz, pois 1.200 rpm devem ser divididos por 10."
+      },
+      {
+        "id": "e",
+        "text": "1.200 Hz, pois rpm e hertz são a mesma unidade."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. 1.200/60 = 20 Hz; o período é 1/20 = 0,05 s.\n\nPegadinhas:\n• A: divisor errado.\n• B: divisor errado.\n• D: divisor errado.\n• E: rpm e Hz diferem por um fator 60.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_20",
+    "subject": "Física",
+    "topicId": "fis_cinematica_vetorial",
+    "chapter": "Velocidade Vetorial",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a chuva muda de direção por causa do vento criado pelo carro.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um dia sem vento, a chuva cai verticalmente para um observador parado na calçada. Um passageiro dentro de um carro em movimento retilíneo e uniforme, porém, vê as gotas riscando o vidro lateral inclinadas, como se viessem da frente do carro. Quanto mais rápido o carro, mais inclinados parecem os riscos.\n\nTexto elaborado para esta questão.\n\nA inclinação percebida pelo passageiro se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a velocidade da chuva em relação ao carro é a composição da velocidade vertical das gotas com uma componente horizontal oposta à velocidade do carro, o que inclina a trajetória observada."
+      },
+      {
+        "id": "b",
+        "text": "o vento produzido pelo carro empurra as gotas para trás, mudando sua trajetória real."
+      },
+      {
+        "id": "c",
+        "text": "as gotas de chuva mudam de direção ao se aproximar de objetos em movimento."
+      },
+      {
+        "id": "d",
+        "text": "a velocidade das gotas em relação ao solo aumenta quando o carro acelera."
+      },
+      {
+        "id": "e",
+        "text": "o vidro do carro refrata a luz e cria a ilusão de inclinação."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. v(chuva em relação ao carro) = v(chuva) − v(carro). Somando a vertical com uma horizontal oposta ao movimento, a trajetória fica inclinada, mais ainda com maior velocidade do carro.\n\nPegadinhas:\n• B: o efeito é de referencial, não de vento.\n• C: as gotas não mudam de direção.\n• D: a velocidade das gotas em relação ao solo não muda.\n• E: não é efeito óptico.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_21",
+    "subject": "Física",
+    "topicId": "fis_leis_newton",
+    "chapter": "Sistema de Corpos Interagindo e os Elementos Transmissores de Força",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Usar apenas uma das massas no cálculo da aceleração do sistema.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma máquina de Atwood, dois blocos estão pendurados nas extremidades de um fio leve e inextensível que passa por uma polia leve e sem atrito. Um bloco tem 3 kg e o outro, 2 kg. Ao serem soltos a partir do repouso, o bloco mais pesado desce e o mais leve sobe, com aceleração constante.\n\nNote e adote: g = 10 m/s²; para o sistema, a resultante é a diferença dos pesos.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO módulo da aceleração dos blocos é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,5 m/s², pois a aceleração é a diferença das massas dividida por 2."
+      },
+      {
+        "id": "b",
+        "text": "1 m/s², pois a aceleração é a diferença das massas."
+      },
+      {
+        "id": "c",
+        "text": "2 m/s², pois a resultante, (3 − 2) × 10 = 10 N, acelera a massa total de 5 kg."
+      },
+      {
+        "id": "d",
+        "text": "5 m/s², pois a aceleração é metade da aceleração da gravidade."
+      },
+      {
+        "id": "e",
+        "text": "10 m/s², pois os blocos caem em queda livre."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. a = (m₁ − m₂)·g/(m₁ + m₂) = 10/5 = 2 m/s².\n\nPegadinhas:\n• A: relação inventada.\n• B: esquece g e a massa total.\n• D: relação inventada.\n• E: o fio conecta os blocos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_22",
+    "subject": "Física",
+    "topicId": "fis_energia",
+    "chapter": "Trabalho e Energia: o Teorema da Energia Potencial",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Achar que toda a energia potencial vira cinética mesmo com atrito.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma criança de 30 kg parte do repouso do alto de um escorregador, 3 m acima do chão, e chega à parte de baixo com velocidade de 6 m/s. Parte da energia mecânica foi dissipada pelo atrito entre a roupa e o escorregador. A energia dissipada é a diferença entre a energia mecânica inicial e a final.\n\nNote e adote: g = 10 m/s²; Ep = m·g·h; Ec = m·v²/2.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA energia dissipada pelo atrito é",
+    "options": [
+      {
+        "id": "a",
+        "text": "360 J, pois a energia potencial inicial, 900 J, menos a cinética final, 540 J, dá 360 J."
+      },
+      {
+        "id": "b",
+        "text": "540 J, pois corresponde à energia cinética da criança na parte de baixo."
+      },
+      {
+        "id": "c",
+        "text": "900 J, pois toda a energia potencial é dissipada pelo atrito."
+      },
+      {
+        "id": "d",
+        "text": "1.440 J, pois é a soma das energias potencial e cinética."
+      },
+      {
+        "id": "e",
+        "text": "9.000 J, pois a energia dissipada é a massa multiplicada pela altura e por 100."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Ep = 30 × 10 × 3 = 900 J; Ec = 30 × 36/2 = 540 J; dissipada: 360 J, convertida em calor.\n\nPegadinhas:\n• B: é a energia que restou.\n• C: parte da energia virou cinética.\n• D: soma sem sentido.\n• E: erra a ordem de grandeza.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_23",
+    "subject": "Física",
+    "topicId": "fis_gravitacao_circular",
+    "chapter": "Órbitas",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que satélites mais pesados precisam de mais velocidade para manter a mesma órbita.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa órbita circular de um satélite, a força gravitacional da Terra atua como força centrípeta: G·M·m/r² = m·v²/r, em que M é a massa da Terra, m a do satélite e r o raio da órbita. Um engenheiro comparou dois satélites na mesma órbita, um de 500 kg e outro de 5.000 kg, e um terceiro satélite em uma órbita mais distante.\n\nTexto elaborado para esta questão.\n\nCom base na relação, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o satélite de 5.000 kg precisa de velocidade dez vezes maior que o de 500 kg."
+      },
+      {
+        "id": "b",
+        "text": "a velocidade orbital não depende da massa do satélite, pois m se cancela, e é menor em órbitas mais distantes, pois v² = G·M/r."
+      },
+      {
+        "id": "c",
+        "text": "o satélite mais distante tem velocidade orbital maior."
+      },
+      {
+        "id": "d",
+        "text": "a velocidade orbital depende apenas da massa do satélite."
+      },
+      {
+        "id": "e",
+        "text": "satélites mais leves caem mais rápido para a Terra."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Cancelando m: v = √(GM/r). Mesma órbita, mesma velocidade; raio maior, velocidade menor.\n\nPegadinhas:\n• A: a massa se cancela.\n• C: a velocidade diminui com r.\n• D: não depende da massa do satélite.\n• E: a massa não altera a queda livre.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_24",
+    "subject": "Física",
+    "topicId": "fis_dinamica_impulsiva",
+    "chapter": "Sistemas Isolados e a Conservação da Quantidade de Movimento",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Achar que o canhão recua com a mesma velocidade do projétil.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm canhão de 1.000 kg, inicialmente em repouso sobre trilhos horizontais sem atrito, dispara horizontalmente um projétil de 10 kg com velocidade de 500 m/s. Considere o sistema canhão + projétil isolado na direção horizontal durante o disparo e despreze a massa dos gases.\n\nNote e adote: a quantidade de movimento total se conserva.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA velocidade de recuo do canhão é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,05 m/s, pois a velocidade do projétil é dividida pela massa total ao quadrado."
+      },
+      {
+        "id": "b",
+        "text": "0,5 m/s, pois a velocidade de recuo é 1/1.000 da velocidade do projétil."
+      },
+      {
+        "id": "c",
+        "text": "1 m/s, pois o recuo é sempre de 1 m/s em disparos horizontais."
+      },
+      {
+        "id": "d",
+        "text": "2 m/s, pois a velocidade de recuo é a massa do projétil dividida por 5."
+      },
+      {
+        "id": "e",
+        "text": "5 m/s, pois 10 × 500 = 1.000 × v, e o canhão recua em sentido oposto."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Q inicial nula: 10 × 500 = 1.000 × v ⇒ v = 5 m/s, oposta ao projétil.\n\nPegadinhas:\n• A: relação inventada.\n• B: ignora a massa do projétil.\n• C: relação inventada.\n• D: relação inventada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_25",
+    "subject": "Física",
+    "topicId": "fis_ondulatoria",
+    "chapter": "Ondulatória: Ondas Eletromagnéticas",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que o protetor solar bloqueia o infravermelho, ou que o UV é a radiação que aquece.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nProtetores solares protegem a pele principalmente da radiação ultravioleta (UV), invisível, emitida pelo Sol, que pode causar queimaduras e aumentar o risco de câncer de pele. Já a sensação de calor ao tomar sol vem principalmente da radiação infravermelha. A luz visível está entre o infravermelho e o ultravioleta no espectro eletromagnético: o infravermelho tem frequência menor que a do vermelho, e o ultravioleta, maior que a do violeta.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o ultravioleta tem frequência menor que a luz visível e é o principal responsável pela sensação de calor."
+      },
+      {
+        "id": "b",
+        "text": "o infravermelho tem frequência maior que o ultravioleta."
+      },
+      {
+        "id": "c",
+        "text": "o protetor solar bloqueia principalmente o infravermelho."
+      },
+      {
+        "id": "d",
+        "text": "o ultravioleta, de frequência maior que a da luz visível, tem fótons mais energéticos, capazes de danificar o DNA das células da pele, por isso o protetor solar é dirigido sobretudo a ele."
+      },
+      {
+        "id": "e",
+        "text": "a radiação ultravioleta é visível como luz roxa intensa."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Maior frequência, maior energia por fóton (E = h·f): o UV causa lesões celulares; o infravermelho, de baixa frequência, produz principalmente aquecimento.\n\nPegadinhas:\n• A: o UV tem frequência maior.\n• B: inverte a ordem.\n• C: o protetor visa o UV.\n• E: o UV é invisível.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_26",
+    "subject": "Física",
+    "topicId": "fis_optica_instrumental",
+    "chapter": "Equação do Fabricante de Lentes e Associação de Lentes",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Somar as distâncias focais em vez das vergências.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nQuando duas lentes delgadas são justapostas, isto é, colocadas encostadas uma na outra, a vergência do conjunto é a soma das vergências das lentes. Um óptico associou uma lente de +2 di a outra de +3 di para testar uma combinação de óculos de leitura.\n\nNote e adote: V = 1/f, com f em metros.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA distância focal do conjunto é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,2 m, pois a vergência total é +5 di, e f = 1/5."
+      },
+      {
+        "id": "b",
+        "text": "0,5 m, pois a distância focal do conjunto é a da lente de +2 di."
+      },
+      {
+        "id": "c",
+        "text": "1 m, pois a distância focal é a média das distâncias focais das lentes."
+      },
+      {
+        "id": "d",
+        "text": "2,5 m, pois a distância focal é a média das vergências."
+      },
+      {
+        "id": "e",
+        "text": "5 m, pois a distância focal é igual à soma das vergências."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. V = 2 + 3 = 5 di ⇒ f = 0,2 m = 20 cm: o conjunto converge mais que cada lente.\n\nPegadinhas:\n• B: ignora a outra lente.\n• C: relação inventada.\n• D: confunde vergência com distância focal.\n• E: esquece o inverso.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_27",
+    "subject": "Física",
+    "topicId": "fis_eletrostatica",
+    "chapter": "Energia Potencial e Potencial Elétrico",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o para-raios atrai raios para longe do prédio, ou que funciona sem ligação à terra.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO para-raios, inventado por Benjamin Franklin no século XVIII, é uma haste metálica pontiaguda instalada no ponto mais alto de um edifício e ligada ao solo por um cabo condutor. Em condutores eletrizados, as cargas se concentram nas regiões pontiagudas, onde o campo elétrico é mais intenso, fenômeno chamado poder das pontas. Quando um raio atinge a região, a descarga é conduzida pela haste e pelo cabo até o solo.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o para-raios protege o edifício porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "repele os raios, desviando-os para outros edifícios distantes."
+      },
+      {
+        "id": "b",
+        "text": "impede completamente a formação de raios nas nuvens."
+      },
+      {
+        "id": "c",
+        "text": "isola o edifício do solo, impedindo a passagem de corrente."
+      },
+      {
+        "id": "d",
+        "text": "armazena a energia do raio em uma bateria para uso posterior."
+      },
+      {
+        "id": "e",
+        "text": "oferece, pela ponta, um caminho preferencial para a descarga, que é conduzida pelo cabo até o solo sem atravessar a estrutura do edifício."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O poder das pontas intensifica o campo e favorece a descarga na haste; o aterramento escoa a corrente para a terra.\n\nPegadinhas:\n• A: o para-raios não repele raios.\n• B: não impede a formação de raios.\n• C: é ligado ao solo.\n• D: a energia é escoada, não armazenada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_28",
+    "subject": "Matemática",
+    "topicId": "mat_equacoes",
+    "chapter": "Igualdades",
+    "difficulty": "easy",
+    "skill": "modelagem",
+    "trap": "Somar o desconto ao preço final em vez de dividir por 0,8.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma liquidação, uma loja aplicou 20% de desconto sobre o preço original de uma blusa, que passou a custar R$ 72,00. Uma cliente quer saber qual era o preço antes do desconto e montou a equação 0,8·x = 72, em que x é o preço original. Uma amiga sugeriu simplesmente somar 20% de R$ 72,00 ao preço com desconto.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO preço original da blusa era",
+    "options": [
+      {
+        "id": "a",
+        "text": "R$ 57,60, pois o preço original é 80% do preço com desconto."
+      },
+      {
+        "id": "b",
+        "text": "R$ 72,00, pois o desconto não altera o preço original."
+      },
+      {
+        "id": "c",
+        "text": "R$ 86,40, pois o preço original é o preço com desconto mais 20% dele."
+      },
+      {
+        "id": "d",
+        "text": "R$ 90,00, pois 0,8·x = 72 dá x = 72/0,8."
+      },
+      {
+        "id": "e",
+        "text": "R$ 92,00, pois o preço original é o preço com desconto mais R$ 20,00."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. x = 72/0,8 = 90. A sugestão da amiga (86,40) erra a base: os 20% incidem sobre o preço original.\n\nPegadinhas:\n• A: aplica o desconto de novo.\n• B: ignora o desconto.\n• C: base errada.\n• E: confunde porcentagem com valor em reais.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_29",
+    "subject": "Matemática",
+    "topicId": "mat_complexos_polinomios",
+    "chapter": "Polinômios",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Somar apenas os coeficientes não nulos de maior grau, ou calcular P(0).",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA soma dos coeficientes de um polinômio P(x) é igual ao valor numérico P(1), pois, ao substituir x por 1, todas as potências de x valem 1. Considere o polinômio\n\nP(x) = (2x − 1)⁵.\n\nUm estudante quer calcular a soma de todos os seus coeficientes sem desenvolver a potência, o que exigiria muitas contas.\n\nTexto elaborado para esta questão.\n\nA soma dos coeficientes de P(x) é",
+    "options": [
+      {
+        "id": "a",
+        "text": "−1, pois corresponde a P(0) = (−1)⁵."
+      },
+      {
+        "id": "b",
+        "text": "1, pois P(1) = (2 × 1 − 1)⁵ = 1⁵ = 1."
+      },
+      {
+        "id": "c",
+        "text": "5, pois é o grau do polinômio."
+      },
+      {
+        "id": "d",
+        "text": "32, pois é o coeficiente do termo de maior grau, 2⁵."
+      },
+      {
+        "id": "e",
+        "text": "243, pois corresponde a P(2) = 3⁵."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Soma dos coeficientes = P(1) = 1⁵ = 1.\n\nPegadinhas:\n• A: P(0) é o termo independente.\n• C: confunde grau com soma.\n• D: é só o coeficiente líder.\n• E: calcula P(2).",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_30",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_analitica",
+    "chapter": "Introdução à Geometria Analítica",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Inverter a razão entre variação de y e de x no coeficiente angular.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm táxi cobra um valor fixo mais uma tarifa por quilômetro. Em um gráfico do preço (y, em reais) em função da distância (x, em km), a reta passa pelos pontos (0, 2) e (4, 10). Um passageiro quer encontrar a equação da reta e interpretar o coeficiente angular.\n\nNote e adote: coeficiente angular m = Δy/Δx.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA equação da reta e o significado do coeficiente angular são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "y = 4x + 2, pois o coeficiente angular é a abscissa do segundo ponto."
+      },
+      {
+        "id": "b",
+        "text": "y = 0,5x + 2, pois m = Δx/Δy = 4/8."
+      },
+      {
+        "id": "c",
+        "text": "y = 2x + 2, pois m = (10 − 2)/(4 − 0) = 2, que representa o preço de R$ 2,00 por quilômetro."
+      },
+      {
+        "id": "d",
+        "text": "y = 10x + 4, pois os coeficientes são as coordenadas do segundo ponto."
+      },
+      {
+        "id": "e",
+        "text": "y = 2x + 10, pois o coeficiente linear é a maior ordenada."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. m = 8/4 = 2 reais/km; o ponto (0, 2) dá o coeficiente linear, a bandeirada de R$ 2,00.\n\nPegadinhas:\n• A: confunde m com a abscissa.\n• B: inverte a razão.\n• D: relação inventada.\n• E: erra o coeficiente linear.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_31",
+    "subject": "Matemática",
+    "topicId": "mat_sequencias_matrizes",
+    "chapter": "Introdução às Sequências",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Aplicar só a multiplicação por 2, esquecendo o +1 da regra.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma sequência é definida por recorrência: o primeiro termo é a₁ = 1, e cada termo seguinte é obtido multiplicando o anterior por 2 e somando 1, isto é, aₙ₊₁ = 2·aₙ + 1. Essa sequência aparece, por exemplo, no número mínimo de movimentos para resolver o quebra-cabeça da Torre de Hanói com n discos.\n\nTexto elaborado para esta questão.\n\nO quinto termo da sequência é",
+    "options": [
+      {
+        "id": "a",
+        "text": "9, pois cada termo é o anterior somado com 2."
+      },
+      {
+        "id": "b",
+        "text": "15, pois é o quarto termo da sequência."
+      },
+      {
+        "id": "c",
+        "text": "16, pois cada termo é o anterior multiplicado por 2, sem o acréscimo."
+      },
+      {
+        "id": "d",
+        "text": "31, pois os termos são 1, 3, 7, 15 e 31."
+      },
+      {
+        "id": "e",
+        "text": "63, pois é o sexto termo da sequência."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. a₂ = 3, a₃ = 7, a₄ = 15, a₅ = 31 (aₙ = 2ⁿ − 1).\n\nPegadinhas:\n• A: usa PA de razão 2.\n• B: é o quarto termo.\n• C: esquece o +1.\n• E: é o sexto termo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_32",
+    "subject": "Matemática",
+    "topicId": "mat_dados_probabilidade",
+    "chapter": "Estatística Descritiva",
+    "difficulty": "easy",
+    "skill": "interpretacao_grafico",
+    "trap": "Confundir moda com média, ou escolher o maior valor da tabela.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma loja de calçados registrou os números vendidos em uma semana: 35 (8 pares), 36 (15 pares), 37 (22 pares), 38 (18 pares), 39 (10 pares) e 40 (5 pares). O gerente quer saber qual número deve ter mais estoque e decide usar a medida estatística que indica o valor mais frequente.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO número que corresponde à medida escolhida pelo gerente é",
+    "options": [
+      {
+        "id": "a",
+        "text": "35, pois é o menor número vendido."
+      },
+      {
+        "id": "b",
+        "text": "37, pois é a moda, o valor com maior frequência, 22 pares."
+      },
+      {
+        "id": "c",
+        "text": "37,5, pois é a média entre o menor e o maior número."
+      },
+      {
+        "id": "d",
+        "text": "38, pois é o número central da lista de 35 a 40."
+      },
+      {
+        "id": "e",
+        "text": "40, pois é o maior número vendido."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A moda é o valor mais frequente: 37 (22 pares), o mais indicado para o estoque.\n\nPegadinhas:\n• A: menor valor não é moda.\n• C: média entre extremos não é moda.\n• D: confunde com mediana da lista de números.\n• E: maior valor não é moda.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_33",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_plana",
+    "chapter": "Ângulos em Polígonos",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Contar também os lados como diagonais, ou não dividir por 2.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um hexágono convexo, uma diagonal é um segmento que liga dois vértices não consecutivos. De cada vértice, partem diagonais para todos os vértices, exceto ele próprio e os dois vizinhos. Como cada diagonal liga dois vértices, ao contar a partir de todos eles cada diagonal é contada duas vezes. O número de diagonais de um polígono de n lados é n(n − 3)/2.\n\nTexto elaborado para esta questão.\n\nO número de diagonais do hexágono é",
+    "options": [
+      {
+        "id": "a",
+        "text": "3, pois cada vértice tem uma diagonal oposta."
+      },
+      {
+        "id": "b",
+        "text": "6, pois o hexágono tem seis lados."
+      },
+      {
+        "id": "c",
+        "text": "9, pois 6 × (6 − 3)/2 = 9."
+      },
+      {
+        "id": "d",
+        "text": "12, pois cada vértice tem duas diagonais."
+      },
+      {
+        "id": "e",
+        "text": "18, pois é o número de diagonais contadas a partir de cada vértice, sem dividir por 2."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. De cada vértice, 3 diagonais; 6 × 3 = 18, contadas em dobro: 9.\n\nPegadinhas:\n• A: conta só as diagonais maiores.\n• B: confunde lados com diagonais.\n• D: relação inventada.\n• E: esquece de dividir por 2.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_34",
+    "subject": "Matemática",
+    "topicId": "mat_trigonometria",
+    "chapter": "Trigonometria no Triângulo Retângulo",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Usar o cosseno para a altura, ou o ângulo com a parede em vez do ângulo com o chão.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma escada de 10 m de comprimento está apoiada em uma parede vertical, formando um ângulo de 60° com o chão horizontal. Um bombeiro quer saber a que altura da parede está o topo da escada, para decidir se alcança uma janela a 8 m do chão.\n\nNote e adote: sen 60° ≈ 0,87; cos 60° = 0,5.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA altura alcançada pelo topo da escada é de aproximadamente",
+    "options": [
+      {
+        "id": "a",
+        "text": "5 m, pois a altura é o comprimento da escada multiplicado pelo cosseno de 60°."
+      },
+      {
+        "id": "b",
+        "text": "5,8 m, pois a altura é o comprimento dividido por √3."
+      },
+      {
+        "id": "c",
+        "text": "7 m, pois a altura é 70% do comprimento da escada."
+      },
+      {
+        "id": "d",
+        "text": "8 m, pois a escada alcança exatamente a altura da janela."
+      },
+      {
+        "id": "e",
+        "text": "8,7 m, pois a altura é o cateto oposto ao ângulo de 60°: 10 × sen 60°."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. h = 10 × 0,87 ≈ 8,7 m: alcança a janela. A distância do pé à parede é 10 × cos 60° = 5 m.\n\nPegadinhas:\n• A: calcula a distância ao pé da parede.\n• B: relação inventada.\n• C: relação inventada.\n• D: valor sem cálculo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_35",
+    "subject": "Matemática",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "chapter": "Potências e Radicais",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Errar o expoente ao converter nanômetros em metros.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nVírus como o da gripe têm diâmetro da ordem de 100 nanômetros, muito menor que o de uma bactéria típica, de cerca de 1 micrômetro. Um nanômetro corresponde a 10⁻⁹ metro, e um micrômetro, a 10⁻⁶ metro. Um estudante quer expressar o tamanho do vírus em metros, em notação científica, para comparar os dois microrganismos.\n\nTexto elaborado para esta questão.\n\nO diâmetro do vírus, em metros, e a comparação com a bactéria são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "10⁻⁷ m, cerca de dez vezes menor que a bactéria de 10⁻⁶ m."
+      },
+      {
+        "id": "b",
+        "text": "10⁻⁹ m, mil vezes menor que a bactéria."
+      },
+      {
+        "id": "c",
+        "text": "10⁻¹¹ m, cem mil vezes menor que a bactéria."
+      },
+      {
+        "id": "d",
+        "text": "10⁻⁵ m, dez vezes maior que a bactéria."
+      },
+      {
+        "id": "e",
+        "text": "10² m, pois 100 nanômetros correspondem a 100 metros."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. 100 nm = 10² × 10⁻⁹ = 10⁻⁷ m; a bactéria, 10⁻⁶ m, é cerca de dez vezes maior.\n\nPegadinhas:\n• B: esquece o fator 100.\n• C: subtrai em vez de somar os expoentes.\n• D: erra o sinal do expoente.\n• E: ignora a conversão.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_36",
+    "subject": "Geografia",
+    "topicId": "geo_climatologia_socioambiental",
+    "chapter": "Dinâmica Climática",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que as chuvas do Norte do Nordeste dependem apenas das massas polares.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Zona de Convergência Intertropical (ZCIT) é uma faixa de nuvens e chuvas próxima ao Equador, onde se encontram os ventos alísios dos dois hemisférios. Ao longo do ano, ela se desloca para o norte e para o sul. Entre março e abril, a ZCIT atinge sua posição mais ao sul, sobre o norte do Nordeste brasileiro, e é a principal responsável pelas chuvas no Ceará e em estados vizinhos. Em anos em que ela permanece mais ao norte, o sertão tende a ter secas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as chuvas do norte do Nordeste são causadas principalmente pela chegada de massas polares."
+      },
+      {
+        "id": "b",
+        "text": "a ZCIT permanece sempre na mesma posição ao longo do ano."
+      },
+      {
+        "id": "c",
+        "text": "a ZCIT provoca secas quando se aproxima do Ceará."
+      },
+      {
+        "id": "d",
+        "text": "o deslocamento da ZCIT não tem relação com as chuvas no Brasil."
+      },
+      {
+        "id": "e",
+        "text": "o deslocamento sazonal da ZCIT para o sul, no início do ano, traz a estação chuvosa ao norte do Nordeste, e sua permanência mais ao norte pode causar secas no sertão."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A convergência dos alísios produz ascensão do ar e chuvas; a posição da ZCIT define a estação chuvosa e a ocorrência de secas na região.\n\nPegadinhas:\n• A: o texto atribui as chuvas à ZCIT.\n• B: ela se desloca.\n• C: ela traz chuvas.\n• D: o texto relaciona a ZCIT às chuvas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_37",
+    "subject": "Geografia",
+    "topicId": "geo_fisica_brasil",
+    "chapter": "Biogeografia do Brasil II",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que o manguezal é um ambiente sem valor ecológico, por ter lama e pouca diversidade de árvores.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nOs manguezais ocupam áreas litorâneas onde rios encontram o mar, com solo lamacento, pobre em oxigênio e alagado periodicamente pelas marés. Suas árvores têm raízes aéreas e adaptações à água salobra. Embora tenham poucas espécies de árvores, os manguezais são considerados berçários: muitos peixes, crustáceos e moluscos de importância econômica se reproduzem ali. Também protegem a costa da erosão e retêm sedimentos.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que os manguezais",
+    "options": [
+      {
+        "id": "a",
+        "text": "são ambientes sem importância ecológica, por terem poucas espécies de árvores."
+      },
+      {
+        "id": "b",
+        "text": "ocorrem no interior do continente, longe da influência das marés."
+      },
+      {
+        "id": "c",
+        "text": "são ecossistemas costeiros adaptados à água salobra e ao solo alagado, que funcionam como berçário de espécies marinhas e protegem a costa da erosão."
+      },
+      {
+        "id": "d",
+        "text": "têm solo rico em oxigênio, o que dispensa adaptações nas raízes."
+      },
+      {
+        "id": "e",
+        "text": "devem ser aterrados para evitar a proliferação de animais."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. As raízes aéreas e a tolerância ao sal são adaptações; a importância está na reprodução de espécies, na pesca e na proteção costeira.\n\nPegadinhas:\n• A: o texto destaca sua importância.\n• B: ficam no litoral.\n• D: o solo é pobre em oxigênio.\n• E: aterrar destrói o ecossistema.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_38",
+    "subject": "Geografia",
+    "topicId": "geo_globalizacao_economica",
+    "chapter": "Unilateralismo e Multilateralismo",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o Conselho de Segurança decide por maioria simples sem poder de veto.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Conselho de Segurança da ONU é responsável por decisões sobre paz e segurança internacionais, como sanções e autorização do uso da força. Tem 15 membros: 10 rotativos e 5 permanentes, Estados Unidos, Rússia, China, Reino Unido e França, que têm poder de veto. O Brasil e outros países defendem uma reforma do Conselho, argumentando que sua composição reflete a ordem mundial de 1945.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o poder de veto dos cinco membros permanentes permite que um deles bloqueie decisões, e a demanda por reforma questiona uma composição herdada do fim da Segunda Guerra."
+      },
+      {
+        "id": "b",
+        "text": "todos os membros do Conselho de Segurança têm poder de veto."
+      },
+      {
+        "id": "c",
+        "text": "o Brasil é membro permanente do Conselho de Segurança."
+      },
+      {
+        "id": "d",
+        "text": "o Conselho de Segurança não tem papel nas decisões sobre conflitos."
+      },
+      {
+        "id": "e",
+        "text": "a composição do Conselho foi definida no século XXI."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O veto dá a cada membro permanente capacidade de paralisar o Conselho; países emergentes pedem representação mais ampla.\n\nPegadinhas:\n• B: só os permanentes têm veto.\n• C: o Brasil não é membro permanente.\n• D: o texto descreve seu papel.\n• E: a composição vem de 1945.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_39",
+    "subject": "Geografia",
+    "topicId": "geo_geopolitica_regional",
+    "chapter": "Geopolítica e Geoeconomia da América Latina",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que grandes reservas de petróleo garantem estabilidade econômica.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Venezuela tem as maiores reservas comprovadas de petróleo do mundo, e o produto chegou a representar mais de 90% de suas exportações. Com a queda dos preços internacionais do petróleo a partir de 2014, somada a problemas de gestão, à redução da produção e a sanções internacionais, o país enfrentou grave crise econômica, com hiperinflação e falta de alimentos e remédios, e milhões de venezuelanos emigraram.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as grandes reservas de petróleo protegeram a Venezuela de crises econômicas."
+      },
+      {
+        "id": "b",
+        "text": "a forte dependência das exportações de petróleo tornou a economia venezuelana vulnerável à queda dos preços, o que, somado a outros fatores, contribuiu para a crise e a emigração em massa."
+      },
+      {
+        "id": "c",
+        "text": "a Venezuela tem economia diversificada, com pouca dependência do petróleo."
+      },
+      {
+        "id": "d",
+        "text": "a queda dos preços do petróleo aumentou as receitas da Venezuela."
+      },
+      {
+        "id": "e",
+        "text": "a crise venezuelana não provocou emigração."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Economias dependentes de uma commodity sofrem com a volatilidade de preços; com outros fatores internos e externos, a crise se aprofundou.\n\nPegadinhas:\n• A: o texto descreve grave crise.\n• C: o petróleo dominava as exportações.\n• D: as receitas caíram.\n• E: milhões emigraram.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_40",
+    "subject": "Geografia",
+    "topicId": "geo_populacao_urbana_brasil",
+    "chapter": "Dinâmica Demográfica",
+    "difficulty": "hard",
+    "skill": "interpretacao_grafico",
+    "trap": "Achar que o bônus demográfico dura para sempre, ou que se refere à população idosa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDemógrafos chamam de bônus demográfico o período em que a proporção de pessoas em idade ativa, de 15 a 64 anos, é alta em relação à de crianças e idosos. Isso ocorre quando a fecundidade cai, reduzindo o número de crianças, mas a população ainda não envelheceu muito. No Brasil, esse período começou nas últimas décadas do século XX e tende a terminar nas próximas décadas, com o aumento da proporção de idosos.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que o bônus demográfico",
+    "options": [
+      {
+        "id": "a",
+        "text": "é permanente, pois a população em idade ativa só tende a crescer."
+      },
+      {
+        "id": "b",
+        "text": "corresponde ao período em que há mais idosos do que adultos."
+      },
+      {
+        "id": "c",
+        "text": "ocorre quando a fecundidade é muito alta."
+      },
+      {
+        "id": "d",
+        "text": "é uma fase temporária da transição demográfica, com muitos adultos em idade de trabalhar em relação a dependentes, e representa uma oportunidade de crescimento econômico se houver emprego e investimento em educação."
+      },
+      {
+        "id": "e",
+        "text": "não tem relação com a queda da fecundidade."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Menos dependentes por trabalhador favorecem poupança e crescimento; com o envelhecimento, a janela se fecha.\n\nPegadinhas:\n• A: o texto diz que tende a terminar.\n• B: é o oposto.\n• C: ocorre com fecundidade em queda.\n• E: o texto relaciona as duas coisas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_41",
+    "subject": "Geografia",
+    "topicId": "geo_hidrogeografia",
+    "chapter": "Geopolítica dos Recursos Hídricos",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Atribuir a crise hídrica apenas à falta de chuva, ignorando demanda e gestão.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 2014 e 2015, a região metropolitana de São Paulo enfrentou uma grave crise hídrica, e o Sistema Cantareira, principal fonte de abastecimento, chegou a níveis muito baixos. Além das chuvas abaixo da média, especialistas apontaram a alta concentração de população e de consumo, as perdas na rede de distribuição, a degradação de mananciais e a falta de obras de reserva planejadas com antecedência.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a crise hídrica",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi causada exclusivamente pela falta de chuvas."
+      },
+      {
+        "id": "b",
+        "text": "resultou da combinação de fatores climáticos com alta demanda, perdas, degradação de mananciais e falhas de planejamento, o que mostra que a escassez também é um problema de gestão."
+      },
+      {
+        "id": "c",
+        "text": "não teve relação com o consumo de água da população."
+      },
+      {
+        "id": "d",
+        "text": "ocorreu porque o Brasil não tem rios suficientes."
+      },
+      {
+        "id": "e",
+        "text": "foi resolvida definitivamente com uma única chuva forte."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A seca expôs vulnerabilidades: demanda concentrada, perdas e falta de reservas. Gestão e infraestrutura são tão importantes quanto o clima.\n\nPegadinhas:\n• A: o texto aponta vários fatores.\n• C: o texto cita o consumo.\n• D: o Brasil tem muitos rios; a questão é a distribuição e a gestão.\n• E: a recuperação foi lenta.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_42",
+    "subject": "História",
+    "topicId": "his_brasil_colonia",
+    "chapter": "Dinâmica Interna da Colonização",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que os escravizados aceitaram passivamente a escravidão, ou que os quilombos eram poucos e efêmeros.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Quilombo dos Palmares, formado no século XVII na Serra da Barriga, no atual estado de Alagoas, reuniu milhares de pessoas, principalmente africanos e seus descendentes que fugiam da escravidão, e resistiu por quase um século a expedições militares. Seu líder mais conhecido, Zumbi, foi morto em 20 de novembro de 1695, data hoje lembrada como Dia Nacional de Zumbi e da Consciência Negra.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que Palmares",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi uma das mais importantes formas de resistência à escravidão no Brasil colonial, reunindo milhares de pessoas e resistindo por décadas às expedições militares."
+      },
+      {
+        "id": "b",
+        "text": "foi um povoado fundado pelos portugueses para controlar os escravizados."
+      },
+      {
+        "id": "c",
+        "text": "existiu por poucos meses e não teve importância histórica."
+      },
+      {
+        "id": "d",
+        "text": "foi destruído logo após sua formação, sem resistência."
+      },
+      {
+        "id": "e",
+        "text": "foi uma colônia holandesa no litoral nordestino."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Os quilombos expressam a resistência ativa; Palmares, pela dimensão e duração, tornou-se símbolo dessa luta.\n\nPegadinhas:\n• B: foi formado por fugitivos da escravidão.\n• C: durou quase um século.\n• D: resistiu por décadas.\n• E: ficava na Serra da Barriga e era quilombola.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_43",
+    "subject": "História",
+    "topicId": "his_brasil_colonia",
+    "chapter": "Dinâmica Interna da Colonização",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a Inconfidência Mineira queria abolir a escravidão ou foi um movimento popular amplo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1789, membros da elite de Vila Rica, como proprietários, militares, padres e intelectuais, planejaram uma conspiração contra o domínio português, a Inconfidência Mineira. O estopim seria a derrama, cobrança forçada de impostos atrasados sobre o ouro, numa época em que a produção das minas já havia diminuído. Influenciados por ideias iluministas e pela independência dos Estados Unidos, os inconfidentes foram denunciados antes de agir, e Tiradentes foi executado em 1792.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a Inconfidência Mineira",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi um levante de escravizados pela abolição imediata da escravidão."
+      },
+      {
+        "id": "b",
+        "text": "foi apoiada pela Coroa portuguesa para reduzir os impostos."
+      },
+      {
+        "id": "c",
+        "text": "ocorreu no auge da produção de ouro, quando os impostos eram baixos."
+      },
+      {
+        "id": "d",
+        "text": "foi vitoriosa e proclamou a independência de Minas Gerais."
+      },
+      {
+        "id": "e",
+        "text": "foi uma conspiração de setores da elite mineira, motivada pela pressão fiscal sobre o ouro em declínio e inspirada por ideias iluministas, desarticulada antes de se concretizar."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A ameaça da derrama sobre uma economia aurífera em crise mobilizou a elite local, inspirada pelo Iluminismo; a denúncia frustrou o movimento.\n\nPegadinhas:\n• A: foi organizada pela elite.\n• B: era contra o domínio português.\n• C: a produção já havia caído.\n• D: os conspiradores foram presos antes de agir.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_44",
+    "subject": "História",
+    "topicId": "his_brasil_imperio",
+    "chapter": "Brasil Império: o Período Regencial (1831-1840)",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a Revolta dos Malês foi um movimento das elites baianas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm janeiro de 1835, em Salvador, africanos escravizados e libertos, muitos deles muçulmanos, chamados malês, organizaram uma revolta. Vários sabiam ler e escrever em árabe, e documentos apreendidos mostram a organização do movimento. A revolta foi reprimida em poucas horas; houve mortes, prisões, deportações e açoites. Depois dela, as autoridades aumentaram o controle sobre a população africana de Salvador.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a Revolta dos Malês",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi organizada pela elite baiana contra o governo regencial."
+      },
+      {
+        "id": "b",
+        "text": "foi uma revolta de africanos escravizados e libertos, muitos muçulmanos e letrados, duramente reprimida, o que levou ao aumento do controle sobre a população africana."
+      },
+      {
+        "id": "c",
+        "text": "foi vitoriosa e libertou todos os escravizados da Bahia."
+      },
+      {
+        "id": "d",
+        "text": "não teve organização, sendo um tumulto espontâneo."
+      },
+      {
+        "id": "e",
+        "text": "ocorreu durante o Segundo Reinado, após 1840."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O movimento mostra a organização e a diversidade cultural dos africanos na Bahia e a reação repressiva das autoridades.\n\nPegadinhas:\n• A: foi organizada por africanos.\n• C: foi derrotada.\n• D: os documentos mostram organização.\n• E: ocorreu em 1835, no Período Regencial.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_45",
+    "subject": "História",
+    "topicId": "his_moderna_iluminismo",
+    "chapter": "Iluminismo",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a independência dos EUA não teve relação com ideias iluministas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 4 de julho de 1776, representantes das Treze Colônias inglesas da América do Norte aprovaram a Declaração de Independência, que afirmava que todos os homens são criados iguais e têm direitos inalienáveis, como a vida, a liberdade e a busca da felicidade, e que os governos devem derivar seus poderes do consentimento dos governados. A escravidão, porém, continuou existindo no novo país.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a Declaração de Independência dos Estados Unidos",
+    "options": [
+      {
+        "id": "a",
+        "text": "defendia o poder absoluto do rei da Inglaterra sobre as colônias."
+      },
+      {
+        "id": "b",
+        "text": "aboliu imediatamente a escravidão nos Estados Unidos."
+      },
+      {
+        "id": "c",
+        "text": "incorporou ideias iluministas, como direitos naturais e governo baseado no consentimento dos governados, embora esses princípios convivessem com a manutenção da escravidão."
+      },
+      {
+        "id": "d",
+        "text": "foi elaborada após a Revolução Francesa, inspirada por ela."
+      },
+      {
+        "id": "e",
+        "text": "não fazia referência a direitos dos indivíduos."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Os princípios lembram Locke; a contradição com a escravidão perduraria até a Guerra Civil.\n\nPegadinhas:\n• A: a Declaração rompia com o rei.\n• B: a escravidão continuou.\n• D: é anterior a 1789.\n• E: o texto cita direitos inalienáveis.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_46",
+    "subject": "História",
+    "topicId": "his_imperialismo_guerras",
+    "chapter": "Grandes Revoluções do Século XX",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a Revolução Mexicana foi socialista, liderada por operários como a russa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Revolução Mexicana começou em 1910, contra o longo governo de Porfirio Díaz, marcado pela concentração de terras em grandes fazendas e pela presença de empresas estrangeiras. Líderes camponeses, como Emiliano Zapata, com o lema \"terra e liberdade\", e Pancho Villa mobilizaram a população rural. A Constituição de 1917 previu a reforma agrária e o controle nacional sobre os recursos do subsolo.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a Revolução Mexicana",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi um movimento operário socialista, semelhante ao russo."
+      },
+      {
+        "id": "b",
+        "text": "manteve intacta a concentração de terras do período de Porfirio Díaz."
+      },
+      {
+        "id": "c",
+        "text": "teve forte participação camponesa e reivindicações agrárias, e sua Constituição de 1917 previu a reforma agrária e o controle nacional dos recursos do subsolo."
+      },
+      {
+        "id": "d",
+        "text": "foi liderada por empresas estrangeiras interessadas no petróleo."
+      },
+      {
+        "id": "e",
+        "text": "ocorreu após a Segunda Guerra Mundial."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A questão agrária estava no centro; a Constituição de 1917 também foi pioneira em direitos sociais.\n\nPegadinhas:\n• A: a base foi camponesa.\n• B: a revolução questionou a concentração.\n• D: o movimento se opunha à dominação estrangeira.\n• E: começou em 1910.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_47",
+    "subject": "História",
+    "topicId": "his_guerra_fria_contemporaneo",
+    "chapter": "Descolonização Afro-Asiática",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que o apartheid terminou com a independência sul-africana, ou que Mandela governou durante o regime.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa África do Sul, entre 1948 e o início da década de 1990, vigorou o apartheid, sistema de segregação racial imposto por lei pela minoria branca: a população negra era impedida de votar, tinha a circulação controlada e era excluída de bairros, escolas e empregos. Nelson Mandela, líder da luta contra o regime, ficou preso por 27 anos. Após negociações e pressão internacional, foram realizadas, em 1994, eleições com participação de toda a população, e Mandela tornou-se presidente.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o apartheid foi um sistema de igualdade racial garantido por lei."
+      },
+      {
+        "id": "b",
+        "text": "Mandela governou a África do Sul durante todo o apartheid."
+      },
+      {
+        "id": "c",
+        "text": "o fim do apartheid ocorreu sem negociações nem pressão internacional."
+      },
+      {
+        "id": "d",
+        "text": "o apartheid foi um regime de segregação racial legalizada, encerrado após luta interna, negociações e pressão internacional, culminando nas eleições de 1994, vencidas por Mandela."
+      },
+      {
+        "id": "e",
+        "text": "a população negra tinha direito de voto durante o apartheid."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A segregação era institucional; seu fim combinou resistência, negociação e sanções, e as eleições de 1994 inauguraram a democracia multirracial.\n\nPegadinhas:\n• A: era segregação.\n• B: Mandela esteve preso.\n• C: houve negociações e pressão.\n• E: a população negra não votava.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_48",
+    "subject": "Português",
+    "topicId": "por_norma_culta",
+    "chapter": "Pronomes",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que \"para mim fazer\" segue a norma-padrão por ser comum na fala.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia a frase escrita por um estudante em uma redação:\n\n\"O professor deixou o livro para mim ler durante as férias.\"\n\nPela norma-padrão, quando o pronome é sujeito de um verbo no infinitivo, usa-se o pronome reto \"eu\", e não o oblíquo \"mim\". O pronome \"mim\" é usado como complemento, depois de preposição, sem ser sujeito de verbo, como em \"O livro é para mim\".\n\nTexto elaborado para esta questão.\n\nDe acordo com a norma-padrão, a frase deve ser reescrita como:",
+    "options": [
+      {
+        "id": "a",
+        "text": "\"O professor deixou o livro para mim lerem durante as férias.\""
+      },
+      {
+        "id": "b",
+        "text": "\"O professor deixou o livro para eu ler durante as férias.\""
+      },
+      {
+        "id": "c",
+        "text": "\"O professor deixou o livro pra mim ler durante as férias.\""
+      },
+      {
+        "id": "d",
+        "text": "\"O professor deixou o livro para me ler durante as férias.\""
+      },
+      {
+        "id": "e",
+        "text": "\"O professor deixou o livro para comigo ler durante as férias.\""
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. \"Eu\" é o sujeito de \"ler\": \"para eu ler\". Em \"o livro é para mim\", \"mim\" é complemento da preposição.\n\nPegadinhas:\n• A: erra o pronome e a concordância.\n• C: só abrevia a preposição, mantendo \"mim\".\n• D: \"me\" não pode ser sujeito.\n• E: construção inadequada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_49",
+    "subject": "Inglês",
+    "topicId": "ing_01",
+    "chapter": "Text Comprehension: Calories and Energy",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Achar que o texto afirma que o metabolismo de repouso é desprezível.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Most people think that exercise is where most of our daily calories go. In fact, for a typical adult, around 60 to 70 percent of the energy used each day is spent at rest, keeping the heart beating, the brain working and the body warm. Physical activity usually accounts for a smaller share. This does not make exercise unimportant: it strengthens the heart and muscles and brings many other health benefits.\"\n\nTexto elaborado para esta questão.\n\nAccording to the text,",
+    "options": [
+      {
+        "id": "a",
+        "text": "most of the energy a typical adult uses each day is spent on basic body functions at rest, although exercise still brings important health benefits."
+      },
+      {
+        "id": "b",
+        "text": "exercise accounts for most of the calories used each day."
+      },
+      {
+        "id": "c",
+        "text": "the body uses almost no energy while resting."
+      },
+      {
+        "id": "d",
+        "text": "exercise has no benefits for health."
+      },
+      {
+        "id": "e",
+        "text": "the brain does not need energy at rest."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O texto atribui 60% a 70% do gasto diário ao repouso e ressalva os benefícios do exercício.\n\nPegadinhas:\n• B: é a crença que o texto contesta.\n• C: o repouso consome a maior parte.\n• D: o texto cita benefícios.\n• E: o texto menciona o cérebro funcionando.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l24_50",
+    "subject": "Sociologia",
+    "topicId": "soc_marx_sociologia",
+    "chapter": "Ideologia e Alienação",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir alienação com falta de informação ou com desinteresse pessoal.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara Karl Marx, no trabalho assalariado da fábrica capitalista, o operário não controla o processo de produção nem o produto que fabrica: executa tarefas parciais e repetitivas, definidas por outros, e o resultado pertence ao dono dos meios de produção. Em vez de expressar suas capacidades, o trabalho torna-se algo estranho ao trabalhador, apenas um meio de obter salário.\n\nTexto elaborado para esta questão.\n\nO processo descrito corresponde ao conceito marxista de",
+    "options": [
+      {
+        "id": "a",
+        "text": "mais-valia, entendida como o salário recebido pelo trabalhador."
+      },
+      {
+        "id": "b",
+        "text": "solidariedade orgânica, formulada por Durkheim."
+      },
+      {
+        "id": "c",
+        "text": "dominação carismática, formulada por Weber."
+      },
+      {
+        "id": "d",
+        "text": "ideologia, entendida como conhecimento científico da realidade."
+      },
+      {
+        "id": "e",
+        "text": "alienação, em que o trabalhador se torna estranho ao processo e ao produto de seu trabalho, que não controla e que pertence a outro."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A alienação decorre da separação entre trabalhador, meios de produção e produto, e da fragmentação do trabalho.\n\nPegadinhas:\n• A: mais-valia é o valor excedente apropriado pelo capitalista.\n• B: é conceito de Durkheim.\n• C: é conceito de Weber.\n• D: para Marx, ideologia mascara a realidade.",
+    "styleOf": "FUVEST"
+  }
+]

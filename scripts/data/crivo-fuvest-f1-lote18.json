@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "crivo_fuvest_f1_l18_01",
+    "subject": "Biologia",
+    "topicId": "bio_codigo_genetico_sintese",
+    "chapter": "Ácidos Nucleicos",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que o RNA tem timina, ou que tem dupla fita como o DNA.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma análise de laboratório, dois tipos de ácido nucleico foram extraídos de células e separados. O primeiro tinha duas fitas pareadas, o açúcar desoxirribose e as bases adenina, guanina, citosina e timina. O segundo tinha, em geral, uma única fita, o açúcar ribose e a base uracila no lugar da timina. Durante a síntese de proteínas, uma molécula do segundo tipo é produzida a partir de um trecho do primeiro e levada até os ribossomos.\n\nTexto elaborado para esta questão.\n\nCom base no texto, os dois ácidos nucleicos e o processo citado são, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "RNA, DNA e replicação, pois a molécula de fita dupla é copiada nos ribossomos."
+      },
+      {
+        "id": "b",
+        "text": "DNA, RNA e tradução, pois a síntese de RNA ocorre nos ribossomos a partir de aminoácidos."
+      },
+      {
+        "id": "c",
+        "text": "DNA, RNA e transcrição, pois o RNA mensageiro é sintetizado a partir de um trecho do DNA e levado aos ribossomos, onde orienta a síntese de proteínas."
+      },
+      {
+        "id": "d",
+        "text": "RNA, DNA e transcrição, pois a uracila é exclusiva do DNA."
+      },
+      {
+        "id": "e",
+        "text": "DNA, DNA e mutação, pois as duas moléculas são idênticas, mudando apenas o número de fitas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Fita dupla, desoxirribose e timina: DNA. Fita simples, ribose e uracila: RNA. A síntese de RNA a partir do DNA é a transcrição; a leitura do RNAm nos ribossomos, a tradução.\n\nPegadinhas:\n• A: inverte as moléculas e confunde replicação (DNA → DNA) com transcrição.\n• B: a síntese do RNA é a transcrição, que ocorre no núcleo.\n• D: a uracila é exclusiva do RNA.\n• E: as moléculas diferem em açúcar, bases e estrutura.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_02",
+    "subject": "Biologia",
+    "topicId": "bio_codigo_genetico_sintese",
+    "chapter": "Divisão Celular",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que a mitose gera variabilidade, ou que a meiose produz células idênticas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma muda de violeta-africana obtida a partir de uma folha cortada e plantada na terra origina uma planta geneticamente idêntica à planta-mãe. Já sementes obtidas por polinização entre duas plantas originam descendentes diferentes entre si e dos pais. Na formação dos gametas, ocorre a meiose, com permutação (crossing-over) entre cromossomos homólogos e distribuição independente desses cromossomos para as células-filhas.\n\nTexto elaborado para esta questão.\n\nA diferença entre as duas formas de reprodução se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a muda se forma por mitoses, que produzem células geneticamente iguais, enquanto a meiose e a fecundação combinam material genético de dois genitores e geram variabilidade."
+      },
+      {
+        "id": "b",
+        "text": "a mitose produz gametas com metade dos cromossomos, que se unem formando a muda."
+      },
+      {
+        "id": "c",
+        "text": "a meiose produz células idênticas à célula-mãe, e a fecundação não altera o material genético."
+      },
+      {
+        "id": "d",
+        "text": "o crossing-over ocorre na mitose das folhas, gerando mudas diferentes."
+      },
+      {
+        "id": "e",
+        "text": "a reprodução por sementes é assexuada, e por isso os descendentes variam."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Na propagação vegetativa, as células se dividem por mitose e mantêm o genoma: formam-se clones. Na reprodução sexuada, crossing-over, segregação independente e a união de gametas de dois indivíduos criam combinações novas.\n\nPegadinhas:\n• B: a mitose mantém o número de cromossomos e não forma gametas.\n• C: a meiose gera células haploides e diferentes entre si.\n• D: o crossing-over é da meiose.\n• E: a reprodução por sementes descrita é sexuada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_03",
+    "subject": "Biologia",
+    "topicId": "bio_evolucao",
+    "chapter": "Mecanismos da Evolução Biológica",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a fuligem escureceu as mariposas, ou que elas mudaram de cor por necessidade.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa Inglaterra do século XIX, antes da industrialização, a maioria das mariposas da espécie Biston betularia era clara, e indivíduos escuros eram raros. Com a fuligem das fábricas escurecendo os troncos das árvores, a forma escura tornou-se predominante em regiões industriais em poucas décadas. Experimentos mostraram que aves predadoras encontravam mais facilmente as mariposas que contrastavam com o tronco. Com leis de controle da poluição no século XX, a forma clara voltou a predominar.\n\nTexto elaborado para esta questão.\n\nA mudança na frequência das formas se explica",
+    "options": [
+      {
+        "id": "a",
+        "text": "pela fuligem, que pintou as asas das mariposas claras de escuro."
+      },
+      {
+        "id": "b",
+        "text": "pela necessidade das mariposas de se camuflarem, que as fez mudar de cor durante a vida."
+      },
+      {
+        "id": "c",
+        "text": "por mutações causadas pela poluição em todas as mariposas claras."
+      },
+      {
+        "id": "d",
+        "text": "pela migração de mariposas escuras de outros continentes."
+      },
+      {
+        "id": "e",
+        "text": "pela seleção natural: com troncos escuros, as mariposas escuras eram menos predadas e deixavam mais descendentes, e, com a redução da poluição, a vantagem se inverteu."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. As duas formas já existiam; o ambiente mudou e alterou qual delas sobrevivia mais. A frequência acompanhou a mudança do ambiente nos dois sentidos — um exemplo clássico de seleção natural observada.\n\nPegadinhas:\n• A: a cor é hereditária, não pintura.\n• B: atribui intenção e herança de característica adquirida.\n• C: a forma escura já existia antes, rara.\n• D: o texto não menciona migração.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_04",
+    "subject": "Biologia",
+    "topicId": "bio_evolucao",
+    "chapter": "Evolução Biológica: Construção Histórica",
+    "difficulty": "medium",
+    "skill": "analise_evidencias",
+    "trap": "Achar que um fóssil de transição é o ancestral direto de todos os animais terrestres.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 2004, pesquisadores encontraram no Ártico canadense fósseis de Tiktaalik roseae, animal que viveu há cerca de 375 milhões de anos. Ele tinha escamas, nadadeiras e brânquias, como os peixes, mas também pescoço móvel, costelas robustas e ossos nas nadadeiras semelhantes aos de um braço, como os primeiros tetrápodes. Os pesquisadores procuraram fósseis em rochas daquela idade justamente por preverem que formas intermediárias desse tipo teriam vivido nesse período.\n\nTexto elaborado para esta questão.\n\nA descoberta é importante para a teoria da evolução porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "prova que os peixes descendem dos anfíbios atuais, que voltaram para a água ao longo do tempo."
+      },
+      {
+        "id": "b",
+        "text": "mostra que as espécies não mudam ao longo do tempo, pois o fóssil é idêntico aos peixes atuais."
+      },
+      {
+        "id": "c",
+        "text": "indica que os animais terrestres surgiram antes dos peixes."
+      },
+      {
+        "id": "d",
+        "text": "reúne características de peixes e de tetrápodes, como seria esperado em uma forma de transição, e foi encontrada em rochas da idade prevista a partir da teoria."
+      },
+      {
+        "id": "e",
+        "text": "demonstra que a evolução ocorre em poucos anos, pois o fóssil foi formado em uma única geração."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Formas com mosaico de características documentam a transição da água para a terra. A previsão de onde e em que idade procurar, confirmada pelo achado, mostra o poder explicativo da teoria.\n\nPegadinhas:\n• A: inverte a relação de ancestralidade.\n• B: o fóssil documenta mudança.\n• C: os peixes são anteriores.\n• E: a escala é de milhões de anos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_05",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Fisiologia da Digestão",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que as fibras são digeridas pelas enzimas humanas, ou que não têm função por não fornecerem energia.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNutricionistas recomendam o consumo diário de fibras alimentares, presentes em frutas, verduras, cereais integrais e leguminosas. As fibras são formadas principalmente por polissacarídeos, como a celulose, que as enzimas digestivas humanas não conseguem quebrar. Elas aumentam o volume do bolo fecal, facilitam o trânsito intestinal e servem de alimento para bactérias que vivem no intestino grosso, cuja fermentação produz substâncias benéficas à mucosa intestinal.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que as fibras",
+    "options": [
+      {
+        "id": "a",
+        "text": "são totalmente digeridas no estômago e absorvidas como glicose."
+      },
+      {
+        "id": "b",
+        "text": "não são digeridas pelas enzimas humanas, mas favorecem o funcionamento intestinal e nutrem a microbiota do intestino grosso."
+      },
+      {
+        "id": "c",
+        "text": "devem ser evitadas, pois não fornecem nenhum benefício ao organismo."
+      },
+      {
+        "id": "d",
+        "text": "são proteínas que reforçam a musculatura do intestino."
+      },
+      {
+        "id": "e",
+        "text": "são digeridas pela saliva e absorvidas na boca, antes mesmo de chegarem ao estômago."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Sem celulase, os humanos não quebram a celulose; as fibras passam pelo intestino delgado, retêm água e dão volume às fezes. No intestino grosso, bactérias as fermentam, produzindo ácidos graxos de cadeia curta.\n\nPegadinhas:\n• A: o texto diz que as enzimas humanas não as quebram.\n• C: o texto descreve vários benefícios.\n• D: são polissacarídeos.\n• E: a saliva digere amido, não celulose.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_06",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Fisiologia da Excreção",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a glicose não é filtrada no rim saudável, ou que a glicosúria indica lesão do glomérulo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNos néfrons, o sangue é filtrado no glomérulo, e o filtrado contém água, sais, ureia e também glicose. Ao longo do túbulo, a glicose é reabsorvida para o sangue por proteínas transportadoras. Em uma pessoa saudável, praticamente não há glicose na urina. Em pessoas com diabetes não controlado, com glicemia muito alta, aparece glicose na urina, que também fica mais volumosa.\n\nTexto elaborado para esta questão.\n\nA presença de glicose na urina dos diabéticos se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o glomérulo deixa de filtrar a glicose, que se acumula na urina."
+      },
+      {
+        "id": "b",
+        "text": "a glicose é produzida pelos rins de pessoas diabéticas."
+      },
+      {
+        "id": "c",
+        "text": "o diabetes destrói a bexiga, que passa a liberar glicose."
+      },
+      {
+        "id": "d",
+        "text": "a urina mais volumosa dilui a glicose, tornando-a visível nos exames."
+      },
+      {
+        "id": "e",
+        "text": "a quantidade de glicose filtrada ultrapassa a capacidade de reabsorção dos transportadores do túbulo, e o excesso permanece no filtrado, arrastando água por osmose."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A reabsorção tem limite (limiar renal). Com glicemia alta, o filtrado carrega mais glicose do que os transportadores conseguem devolver; a glicose restante retém água no túbulo, e a urina aumenta.\n\nPegadinhas:\n• A: a glicose é filtrada normalmente.\n• B: a glicose vem do sangue.\n• C: a bexiga apenas armazena a urina.\n• D: a diluição não explica a presença de glicose.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_07",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Sistemas Sensoriais: Visão e Audição",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Inverter as funções de cones e bastonetes.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAo entrar em um quarto escuro, de início não se enxerga quase nada; depois de alguns minutos, os contornos dos objetos aparecem, mas é difícil distinguir as cores. A retina humana tem dois tipos principais de fotorreceptores: os cones, concentrados no centro da retina e de três tipos, sensíveis a diferentes faixas de cor, e os bastonetes, mais numerosos na periferia e muito mais sensíveis à luz fraca.\n\nTexto elaborado para esta questão.\n\nA dificuldade de distinguir cores no escuro se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "os cones são mais sensíveis à luz fraca e enxergam apenas em preto e branco."
+      },
+      {
+        "id": "b",
+        "text": "os bastonetes, responsáveis pela visão colorida, deixam de funcionar no escuro."
+      },
+      {
+        "id": "c",
+        "text": "o cristalino fica opaco no escuro e filtra as cores."
+      },
+      {
+        "id": "d",
+        "text": "sob luz fraca, a visão depende sobretudo dos bastonetes, muito sensíveis mas incapazes de distinguir cores, enquanto os cones, responsáveis pela visão das cores, precisam de mais luz."
+      },
+      {
+        "id": "e",
+        "text": "a pupila se fecha no escuro, impedindo a passagem de luz colorida."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Bastonetes funcionam com pouca luz e dão visão monocromática; cones, menos sensíveis, permitem distinguir cores. Por isso, à noite, \"todos os gatos são pardos\".\n\nPegadinhas:\n• A: inverte as funções.\n• B: inverte as funções.\n• C: o cristalino não fica opaco no escuro.\n• E: a pupila se dilata no escuro.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_08",
+    "subject": "Biologia",
+    "topicId": "bio_ecologia",
+    "chapter": "Poluição: Aquecimento Global, POPs e Biorremediação",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a biorremediação usa produtos químicos, ou que as bactérias \"absorvem\" o petróleo sem transformá-lo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nApós vazamentos de petróleo no mar ou no solo, uma das técnicas de recuperação é a biorremediação: o uso de microrganismos, como certas bactérias e fungos, capazes de degradar hidrocarbonetos, transformando-os em substâncias menos tóxicas, como gás carbônico e água. Muitas vezes, adicionam-se nutrientes, como nitrogênio e fósforo, para estimular o crescimento dessas populações já presentes no ambiente.\n\nTexto elaborado para esta questão.\n\nA biorremediação descrita",
+    "options": [
+      {
+        "id": "a",
+        "text": "usa produtos químicos sintéticos para dissolver o petróleo."
+      },
+      {
+        "id": "b",
+        "text": "utiliza o metabolismo de microrganismos que decompõem os hidrocarbonetos, e a adição de nutrientes acelera o processo ao favorecer o crescimento dessas populações."
+      },
+      {
+        "id": "c",
+        "text": "consiste em queimar o petróleo derramado na superfície da água."
+      },
+      {
+        "id": "d",
+        "text": "transforma o petróleo em metais pesados menos tóxicos."
+      },
+      {
+        "id": "e",
+        "text": "impede a ação dos decompositores, para que o petróleo não se espalhe."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Os microrganismos usam os hidrocarbonetos como fonte de carbono e energia. Nitrogênio e fósforo costumam ser limitantes; adicioná-los aumenta a decomposição.\n\nPegadinhas:\n• A: a técnica é biológica.\n• C: queima é outra técnica, com poluição do ar.\n• D: os produtos são CO₂ e água, não metais.\n• E: a técnica depende dos decompositores.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_09",
+    "subject": "Biologia",
+    "topicId": "bio_metabolismo_energetico",
+    "chapter": "Bioenergética: Fermentação e Respiração",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que a massa cresce por causa do álcool, ou que o fermento faz respiração aeróbica no forno.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa produção de pão, o fermento biológico, formado por leveduras, é misturado à farinha e à água, e a massa descansa antes de ir ao forno. Nesse período, as leveduras degradam açúcares da farinha por fermentação alcoólica, produzindo etanol e gás carbônico. A massa aumenta de volume e fica cheia de pequenas bolhas. No forno, as leveduras morrem, e o etanol evapora.\n\nTexto elaborado para esta questão.\n\nO crescimento da massa se deve",
+    "options": [
+      {
+        "id": "a",
+        "text": "ao gás carbônico produzido na fermentação alcoólica, que fica retido na massa e forma as bolhas."
+      },
+      {
+        "id": "b",
+        "text": "ao etanol, que se expande e estufa a massa durante o descanso."
+      },
+      {
+        "id": "c",
+        "text": "ao oxigênio liberado pelas leveduras na fotossíntese."
+      },
+      {
+        "id": "d",
+        "text": "à multiplicação das células da farinha, que crescem com a água."
+      },
+      {
+        "id": "e",
+        "text": "ao vapor d'água produzido pelas leveduras na respiração aeróbica."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Glicose → etanol + CO₂. O CO₂ fica preso na rede de glúten e forma bolhas; no forno, o gás se expande, as leveduras morrem e o etanol evapora.\n\nPegadinhas:\n• B: o etanol é líquido e evapora no forno; não é o que estufa a massa.\n• C: leveduras são fungos e não fazem fotossíntese.\n• D: a farinha não tem células vivas que se multipliquem.\n• E: o processo descrito é a fermentação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_10",
+    "subject": "Química",
+    "topicId": "qui_cinetica",
+    "chapter": "Cinética Química",
+    "difficulty": "hard",
+    "skill": "modelagem",
+    "trap": "Achar que a velocidade da reação não depende da concentração, ou que dobra ao quadrado em qualquer reação.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um experimento, mediu-se a rapidez da decomposição de uma substância A em solução, A → produtos, a temperatura constante, em diferentes concentrações iniciais. Os dados obtidos foram:\n\n• [A] = 0,10 mol/L: velocidade = 2,0 × 10⁻³ mol/(L·s)\n• [A] = 0,20 mol/L: velocidade = 4,0 × 10⁻³ mol/(L·s)\n• [A] = 0,40 mol/L: velocidade = 8,0 × 10⁻³ mol/(L·s)\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nOs dados indicam que a velocidade da reação",
+    "options": [
+      {
+        "id": "a",
+        "text": "não depende da concentração de A, pois a temperatura é constante."
+      },
+      {
+        "id": "b",
+        "text": "é proporcional ao quadrado da concentração de A, o que caracteriza uma reação de segunda ordem."
+      },
+      {
+        "id": "c",
+        "text": "é diretamente proporcional à concentração de A, pois dobrar [A] dobra a velocidade, o que caracteriza uma reação de primeira ordem em relação a A."
+      },
+      {
+        "id": "d",
+        "text": "diminui quando a concentração de A aumenta, pois as moléculas passam a se atrapalhar."
+      },
+      {
+        "id": "e",
+        "text": "é inversamente proporcional à concentração de A, pois cai à metade quando [A] dobra."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. De 0,10 para 0,20 mol/L, a velocidade dobra; de 0,20 para 0,40, dobra de novo: v = k·[A], com k = 2,0 × 10⁻² s⁻¹. Se fosse de segunda ordem, dobrar [A] quadruplicaria v.\n\nPegadinhas:\n• A: os dados mostram que a velocidade varia com [A].\n• B: dobrar [A] quadruplicaria a velocidade.\n• D: a velocidade aumenta.\n• E: a velocidade aumenta com [A].",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_11",
+    "subject": "Química",
+    "topicId": "qui_equilibrio",
+    "chapter": "Equilíbrios Químicos I",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Inverter produtos e reagentes na expressão, ou esquecer o expoente do coeficiente.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO tetróxido de dinitrogênio, N₂O₄, gás incolor, decompõe-se em dióxido de nitrogênio, NO₂, gás castanho, em uma reação reversível que atinge o equilíbrio em recipiente fechado:\n\nN₂O₄(g) ⇌ 2 NO₂(g)\n\nAo aquecer o recipiente, a cor castanha se intensifica; ao resfriá-lo, ela se atenua. A constante de equilíbrio em termos de concentrações, Kc, relaciona as concentrações das espécies no equilíbrio.\n\nTexto elaborado para esta questão.\n\nA expressão de Kc e a interpretação da mudança de cor são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "Kc = [N₂O₄]/[NO₂]², e a reação direta é exotérmica, pois o aquecimento favorece o N₂O₄."
+      },
+      {
+        "id": "b",
+        "text": "Kc = [NO₂]²/[N₂O₄], e a reação direta é endotérmica, pois o aquecimento desloca o equilíbrio para a formação de NO₂, mais castanho."
+      },
+      {
+        "id": "c",
+        "text": "Kc = 2[NO₂]/[N₂O₄], e a temperatura não influencia o equilíbrio."
+      },
+      {
+        "id": "d",
+        "text": "Kc = [NO₂]/[N₂O₄], e o resfriamento favorece a formação de NO₂."
+      },
+      {
+        "id": "e",
+        "text": "Kc = [N₂O₄]·[NO₂]², e a cor não depende do equilíbrio."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Produtos no numerador, elevados aos coeficientes: [NO₂]²/[N₂O₄]. Se aquecer favorece o NO₂ (mais castanho), a reação direta absorve calor: endotérmica.\n\nPegadinhas:\n• A: inverte a expressão e o sinal de ΔH.\n• C: o coeficiente é expoente, não fator.\n• D: falta o expoente, e o resfriamento favorece o N₂O₄.\n• E: Kc é razão, e a cor revela o deslocamento.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_12",
+    "subject": "Química",
+    "topicId": "qui_solucoes",
+    "chapter": "Efeitos Coligativos",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o sal faz a água ferver mais rápido.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm ditado popular diz que colocar sal na água faz o macarrão cozinhar mais rápido, porque a água \"ferveria antes\". Um estudante mediu a temperatura de ebulição da água pura e de uma solução com bastante sal, ao nível do mar, e encontrou valores um pouco maiores para a solução. Ele também observou que a água salgada demorou um pouco mais para começar a ferver.\n\nTexto elaborado para esta questão.\n\nAs observações se explicam porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o sal aumenta a pressão de vapor da água, que ferve a temperatura menor."
+      },
+      {
+        "id": "b",
+        "text": "o sal reage com a água e libera calor, acelerando a fervura."
+      },
+      {
+        "id": "c",
+        "text": "a presença de um soluto não volátil diminui a pressão de vapor do solvente, e a solução precisa atingir temperatura mais alta para que sua pressão de vapor iguale a pressão atmosférica."
+      },
+      {
+        "id": "d",
+        "text": "o sal não altera a temperatura de ebulição, apenas o sabor."
+      },
+      {
+        "id": "e",
+        "text": "a água salgada ferve a temperatura menor, mas demora mais por ser mais densa."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. É a ebulioscopia: as partículas de soluto reduzem a pressão de vapor, e a ebulição ocorre a temperatura maior. Nas quantidades usadas na cozinha, o efeito é pequeno, e o sal serve mesmo para o sabor.\n\nPegadinhas:\n• A: o soluto diminui a pressão de vapor.\n• B: a dissolução do sal não acelera a fervura.\n• D: as medidas mostram aumento da temperatura de ebulição.\n• E: a temperatura de ebulição aumenta.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_13",
+    "subject": "Química",
+    "topicId": "qui_radioatividade",
+    "chapter": "Radioatividade: o Estudo das Radiações",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Confundir fissão com fusão, ou achar que as usinas nucleares usam fusão.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs usinas nucleares, como as de Angra dos Reis, geram energia pela fissão de núcleos de urânio-235: atingido por um nêutron, o núcleo se divide em núcleos menores e libera mais nêutrons e grande quantidade de energia. No Sol, a energia vem de outro processo: núcleos de hidrogênio se unem, formando hélio, sob temperaturas de milhões de graus. Pesquisadores buscam há décadas reproduzir esse segundo processo de forma controlada na Terra.\n\nTexto elaborado para esta questão.\n\nOs dois processos descritos são, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "fissão nuclear, em que um núcleo pesado se divide, e fusão nuclear, em que núcleos leves se unem, e nos dois casos a energia liberada está associada à diferença de massa entre reagentes e produtos."
+      },
+      {
+        "id": "b",
+        "text": "fusão nuclear nas usinas de Angra e fissão nuclear no Sol, que divide núcleos de hidrogênio."
+      },
+      {
+        "id": "c",
+        "text": "reações químicas de combustão do urânio e do hidrogênio."
+      },
+      {
+        "id": "d",
+        "text": "decaimento alfa nas usinas e decaimento beta no Sol."
+      },
+      {
+        "id": "e",
+        "text": "fissão nuclear nos dois casos, com núcleos diferentes."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Fissão: núcleo pesado se parte; fusão: núcleos leves se unem. Em ambos, a massa dos produtos é menor, e a diferença vira energia (E = mc²). A fusão exige temperaturas altíssimas, o que dificulta seu controle.\n\nPegadinhas:\n• B: inverte os processos.\n• C: são reações nucleares, não combustão.\n• D: não são decaimentos espontâneos.\n• E: no Sol há fusão.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_14",
+    "subject": "Química",
+    "topicId": "qui_termoquimica",
+    "chapter": "Termoquímica II",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Esquecer a contribuição das gorduras ou usar 4 kcal por grama para todos os nutrientes.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRótulos de alimentos informam o valor energético a partir das quantidades de carboidratos, proteínas e gorduras. Usam-se, em média, 4 kcal por grama de carboidrato, 4 kcal por grama de proteína e 9 kcal por grama de gordura. Uma porção de um biscoito contém 20 g de carboidratos, 2 g de proteínas e 5 g de gorduras. Um estudante quer conferir o valor energético informado no rótulo.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO valor energético aproximado da porção é",
+    "options": [
+      {
+        "id": "a",
+        "text": "27 kcal, pois o valor é a soma das massas dos nutrientes."
+      },
+      {
+        "id": "b",
+        "text": "45 kcal, pois apenas as gorduras fornecem energia, 5 × 9."
+      },
+      {
+        "id": "c",
+        "text": "88 kcal, pois o valor é calculado apenas a partir de carboidratos e proteínas."
+      },
+      {
+        "id": "d",
+        "text": "108 kcal, pois todos os nutrientes fornecem 4 kcal por grama."
+      },
+      {
+        "id": "e",
+        "text": "133 kcal, pois 20 × 4 + 2 × 4 + 5 × 9 = 80 + 8 + 45."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Carboidratos 80 kcal + proteínas 8 kcal + gorduras 45 kcal = 133 kcal. As gorduras, com 9 kcal/g, pesam mais que sua massa sugere.\n\nPegadinhas:\n• A: soma massas, não energias.\n• B: ignora carboidratos e proteínas.\n• C: ignora as gorduras.\n• D: usa 4 kcal/g para as gorduras.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_15",
+    "subject": "Química",
+    "topicId": "qui_polaridade_geometria",
+    "chapter": "Geometria Molecular",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que todas as vitaminas se dissolvem em água, ou que a polaridade não afeta a absorção.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA vitamina C, ácido ascórbico, tem vários grupos –OH em sua molécula e é hidrossolúvel: o excesso ingerido costuma ser eliminado pela urina. A vitamina A, por outro lado, tem uma longa cadeia de carbonos e hidrogênios e apenas um grupo –OH, e é lipossolúvel: acumula-se no fígado e no tecido adiposo, podendo causar intoxicação se consumida em excesso por suplementos. Por isso, a vitamina A é mais bem absorvida quando ingerida com alguma gordura.\n\nTexto elaborado para esta questão.\n\nA diferença de comportamento entre as duas vitaminas se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a vitamina A tem mais grupos –OH, o que a torna solúvel em água."
+      },
+      {
+        "id": "b",
+        "text": "as duas vitaminas são igualmente solúveis em água e em gordura."
+      },
+      {
+        "id": "c",
+        "text": "a vitamina C é apolar e, por isso, acumula-se no tecido adiposo."
+      },
+      {
+        "id": "d",
+        "text": "a vitamina C, com vários grupos –OH, forma ligações de hidrogênio com a água e é polar, enquanto a vitamina A, com cadeia carbônica longa, é predominantemente apolar e se dissolve em gorduras."
+      },
+      {
+        "id": "e",
+        "text": "a solubilidade das vitaminas não depende de sua estrutura molecular."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. \"Semelhante dissolve semelhante\": grupos –OH tornam a vitamina C polar e solúvel em água; a longa cadeia apolar da vitamina A a torna solúvel em lipídios.\n\nPegadinhas:\n• A: a vitamina A tem um só –OH.\n• B: o texto mostra comportamentos diferentes.\n• C: a vitamina C é polar e eliminada pela urina.\n• E: a estrutura determina a polaridade e a solubilidade.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_16",
+    "subject": "Química",
+    "topicId": "qui_gases",
+    "chapter": "Composição da Matéria: Estados Físicos",
+    "difficulty": "easy",
+    "skill": "analise_conceitual",
+    "trap": "Confundir sublimação com fusão ou evaporação.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO gelo-seco, gás carbônico sólido, é usado para conservar alimentos e produzir efeitos de fumaça em shows. À pressão ambiente, ele passa diretamente do estado sólido para o gasoso, sem formar líquido. Bolinhas de naftalina, antigamente usadas em armários, também diminuem de tamanho com o tempo sem deixar líquido. A \"fumaça\" branca dos shows é formada por gotículas de água do ar condensadas pelo frio do gás.\n\nTexto elaborado para esta questão.\n\nA mudança de estado sofrida pelo gelo-seco e pela naftalina é a",
+    "options": [
+      {
+        "id": "a",
+        "text": "fusão, pois os sólidos se transformam em líquidos antes de se tornarem gases invisíveis."
+      },
+      {
+        "id": "b",
+        "text": "solidificação, pois os gases se transformam em sólidos."
+      },
+      {
+        "id": "c",
+        "text": "condensação, pois os sólidos se transformam em gases."
+      },
+      {
+        "id": "d",
+        "text": "sublimação, pois as substâncias passam diretamente do estado sólido ao gasoso, e a fumaça visível é água do ar condensada pelo frio, não o CO₂."
+      },
+      {
+        "id": "e",
+        "text": "ebulição, pois os sólidos fervem à temperatura ambiente."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Passagem direta de sólido a gás é sublimação. O CO₂ gasoso é invisível; a névoa é vapor d'água do ar que se condensa em gotículas.\n\nPegadinhas:\n• A: não há formação de líquido.\n• B: é o sentido oposto.\n• C: condensação é de gás para líquido.\n• E: ebulição é de líquido para gás.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_17",
+    "subject": "Química",
+    "topicId": "qui_organica_reacoes",
+    "chapter": "Acidez e Basicidade (pKa)",
+    "difficulty": "hard",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que todo composto com –OH é ácido na mesma intensidade.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO etanol, o fenol e o ácido acético têm, todos, um grupo –OH. Seus valores aproximados de pKa em água são, respectivamente, 16, 10 e 4,8. Quanto menor o pKa, mais ácido é o composto. Em um teste, o ácido acético reagiu com bicarbonato de sódio liberando gás, enquanto o etanol e o fenol não produziram efervescência visível.\n\nTexto elaborado para esta questão.\n\nCom base nos dados, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "os três compostos têm a mesma acidez, pois todos têm grupo –OH."
+      },
+      {
+        "id": "b",
+        "text": "o etanol é o mais ácido, pois tem o maior pKa entre os três compostos comparados."
+      },
+      {
+        "id": "c",
+        "text": "o fenol é mais ácido que o ácido acético, pois tem anel aromático."
+      },
+      {
+        "id": "d",
+        "text": "nenhum dos três compostos tem caráter ácido, pois todos têm o grupo –OH, típico das bases."
+      },
+      {
+        "id": "e",
+        "text": "a acidez segue a ordem ácido acético > fenol > etanol, e só o ácido acético é forte o suficiente para reagir com o bicarbonato liberando CO₂."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Menor pKa, mais ácido: 4,8 < 10 < 16. No ácido carboxílico e no fenol, a carga do ânion se distribui por ressonância, o que estabiliza a base conjugada; no etanol, não. Só o ácido acético é ácido o bastante para liberar CO₂ do bicarbonato.\n\nPegadinhas:\n• A: os pKa são muito diferentes.\n• B: maior pKa significa menor acidez.\n• C: o fenol tem pKa maior que o ácido acético.\n• D: os três têm algum caráter ácido, em graus diferentes.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_18",
+    "subject": "Química",
+    "topicId": "qui_organica_fundamentos",
+    "chapter": "Introdução à Química Orgânica",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que cadeias ramificadas e normais têm o mesmo comportamento no motor.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA octanagem de uma gasolina indica sua resistência à detonação, explosão antecipada da mistura no cilindro do motor, que causa perda de potência e danos. O iso-octano, de cadeia ramificada, recebe o valor 100 na escala, e o heptano, de cadeia normal, o valor 0. Hidrocarbonetos de cadeia ramificada tendem a resistir melhor à compressão sem detonar.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o heptano é mais resistente à detonação, por ter cadeia normal."
+      },
+      {
+        "id": "b",
+        "text": "a octanagem mede a quantidade de oxigênio da gasolina."
+      },
+      {
+        "id": "c",
+        "text": "a estrutura da cadeia carbônica influencia o desempenho do combustível, e cadeias ramificadas, como a do iso-octano, resistem melhor à detonação que cadeias normais, como a do heptano."
+      },
+      {
+        "id": "d",
+        "text": "iso-octano e heptano têm a mesma fórmula molecular e o mesmo comportamento no motor."
+      },
+      {
+        "id": "e",
+        "text": "a octanagem depende apenas do número de carbonos, e não da forma da cadeia."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A escala é definida por esses dois padrões: ramificado (100) e normal (0). Cadeias ramificadas resistem melhor à detonação. Iso-octano (C₈H₁₈) e heptano (C₇H₁₆) nem têm a mesma fórmula.\n\nPegadinhas:\n• A: o heptano tem octanagem 0.\n• B: a octanagem mede resistência à detonação.\n• D: as fórmulas e os comportamentos diferem.\n• E: o texto atribui o efeito à ramificação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_19",
+    "subject": "Física",
+    "topicId": "fis_cinematica",
+    "chapter": "Cinemática Escalar. Conceitos Fundamentais",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Usar a fórmula da velocidade média com velocidade constante, ou esquecer o fator 2.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm motorista dirige a 72 km/h, isto é, 20 m/s, quando vê um obstáculo e aciona os freios. A partir desse instante, o carro desacelera uniformemente, com aceleração de módulo 5 m/s², até parar. Desconsidere o tempo de reação do motorista e considere a pista plana e horizontal.\n\nNote e adote: v² = v₀² − 2·a·d.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA distância percorrida durante a frenagem é",
+    "options": [
+      {
+        "id": "a",
+        "text": "4 m, pois a distância é o tempo de frenagem, em segundos, convertido em metros."
+      },
+      {
+        "id": "b",
+        "text": "40 m, pois, com v = 0 ao parar, 0 = 20² − 2 × 5 × d, e d = 400/10."
+      },
+      {
+        "id": "c",
+        "text": "80 m, pois a distância é o produto da velocidade inicial pelo tempo de frenagem, sem descontar a desaceleração."
+      },
+      {
+        "id": "d",
+        "text": "100 m, pois a distância de frenagem é o quadrado da velocidade dividido por 4."
+      },
+      {
+        "id": "e",
+        "text": "400 m, pois a distância é o quadrado da velocidade inicial."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. d = v₀²/(2a) = 400/10 = 40 m. Como a distância depende de v², dobrar a velocidade quadruplica a distância de frenagem.\n\nPegadinhas:\n• A: confunde tempo (4 s) com distância.\n• C: usa velocidade constante de 20 m/s durante 4 s.\n• D: usa fator 4 sem justificativa.\n• E: esquece de dividir por 2a.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_20",
+    "subject": "Física",
+    "topicId": "fis_leis_newton",
+    "chapter": "Força e seus Tipos",
+    "difficulty": "easy",
+    "skill": "analise_conceitual",
+    "trap": "Achar que uma força empurra o passageiro para a frente quando o ônibus freia.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nQuando um ônibus freia bruscamente, os passageiros em pé são projetados para a frente; quando arranca de repente, tendem a ser jogados para trás. Por isso, é importante segurar nas barras. Um passageiro afirmou que, na freada, \"uma força empurrou todo mundo para a frente\".\n\nTexto elaborado para esta questão.\n\nO comportamento dos passageiros se explica",
+    "options": [
+      {
+        "id": "a",
+        "text": "pela inércia: na freada, os passageiros tendem a manter a velocidade que tinham, enquanto o ônibus diminui a sua, e por isso parecem ser projetados para a frente, sem que nenhuma força os empurre nesse sentido."
+      },
+      {
+        "id": "b",
+        "text": "por uma força para a frente exercida pelo motor sobre os passageiros."
+      },
+      {
+        "id": "c",
+        "text": "pela gravidade, que puxa os passageiros para a frente na freada."
+      },
+      {
+        "id": "d",
+        "text": "pela força de atrito do ar dentro do ônibus, que empurra os passageiros para a frente."
+      },
+      {
+        "id": "e",
+        "text": "pela terceira lei de Newton, pois o ônibus empurra os passageiros para a frente."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Pela primeira lei, um corpo mantém seu estado de movimento se a resultante for nula. Os pés freiam com o ônibus, mas o tronco continua em movimento: é o ônibus que muda de velocidade sob o passageiro.\n\nPegadinhas:\n• B: o motor não atua sobre os passageiros.\n• C: a gravidade é vertical.\n• D: o ar não explica o efeito.\n• E: não há força para a frente atuando sobre eles.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_21",
+    "subject": "Física",
+    "topicId": "fis_leis_newton",
+    "chapter": "Força e seus Tipos",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o foguete precisa do ar para se impulsionar.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm foguete funciona mesmo no espaço, onde praticamente não há ar. Seus motores queimam combustível e expelem gases em alta velocidade pela parte de trás. Um estudante argumentou que, sem ar para \"empurrar\", o foguete não deveria conseguir acelerar fora da atmosfera.\n\nTexto elaborado para esta questão.\n\nO argumento do estudante está",
+    "options": [
+      {
+        "id": "a",
+        "text": "incorreto, pois o foguete exerce força sobre os gases para expeli-los e, pela terceira lei de Newton, os gases exercem sobre o foguete uma força de mesmo módulo e sentido oposto, que o acelera, sem necessidade de ar."
+      },
+      {
+        "id": "b",
+        "text": "correto, pois o foguete só acelera empurrando o ar atrás dele."
+      },
+      {
+        "id": "c",
+        "text": "correto, pois no espaço não há gravidade, e o foguete fica parado."
+      },
+      {
+        "id": "d",
+        "text": "incorreto, pois o foguete é puxado pela gravidade do Sol no espaço."
+      },
+      {
+        "id": "e",
+        "text": "incorreto, pois os gases empurram o ar à frente do foguete."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Ação e reação entre foguete e gases ejetados: não é preciso apoio externo. Em termos de quantidade de movimento, os gases ganham momento para trás e o foguete, para a frente.\n\nPegadinhas:\n• B: a propulsão não depende do ar.\n• C: há gravidade no espaço, e o foguete acelera.\n• D: a gravidade não é o que impulsiona o foguete.\n• E: não há ar no espaço.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_22",
+    "subject": "Física",
+    "topicId": "fis_gravitacao_circular",
+    "chapter": "Órbitas",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Achar que o período é proporcional ao raio da órbita.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPela terceira lei de Kepler, para corpos que orbitam um mesmo astro, o quadrado do período orbital é proporcional ao cubo do raio médio da órbita: T² ∝ r³. Considere dois satélites artificiais em órbitas circulares em torno da Terra. O raio da órbita do satélite B é quatro vezes o raio da órbita do satélite A.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO período do satélite B, em relação ao do satélite A, é",
+    "options": [
+      {
+        "id": "a",
+        "text": "2 vezes maior, pois o período é proporcional à raiz quadrada do raio."
+      },
+      {
+        "id": "b",
+        "text": "8 vezes maior, pois T_B²/T_A² = 4³ = 64, e T_B/T_A = 8."
+      },
+      {
+        "id": "c",
+        "text": "16 vezes maior, pois o período é proporcional ao quadrado do raio."
+      },
+      {
+        "id": "d",
+        "text": "32 vezes maior, pois o período é proporcional ao raio elevado a 2,5."
+      },
+      {
+        "id": "e",
+        "text": "64 vezes maior, pois o período é proporcional ao cubo do raio."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. (T_B/T_A)² = (r_B/r_A)³ = 64; T_B/T_A = 8.\n\nPegadinhas:\n• A: usa raiz quadrada, sem o cubo.\n• C: usa r².\n• D: expoente sem fundamento.\n• E: esquece a raiz quadrada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_23",
+    "subject": "Física",
+    "topicId": "fis_estatica",
+    "chapter": "Estática",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que um corpo inclinado cai sempre, independentemente do centro de gravidade.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Torre de Pisa, na Itália, está inclinada há séculos e não cai. Engenheiros estabilizaram o solo e reduziram levemente a inclinação no fim do século XX. Um corpo apoiado sobre uma base permanece em equilíbrio enquanto a vertical que passa por seu centro de gravidade cair dentro da base de apoio. Caminhões muito carregados em cima, por exemplo, tombam com mais facilidade em curvas.\n\nTexto elaborado para esta questão.\n\nA torre permanece de pé porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "sua massa é muito grande, e corpos de grande massa não tombam, qualquer que seja a inclinação."
+      },
+      {
+        "id": "b",
+        "text": "a gravidade não atua sobre construções antigas, que se acomodaram ao solo com o tempo."
+      },
+      {
+        "id": "c",
+        "text": "o vento sopra sempre do lado oposto à inclinação e compensa o peso da torre."
+      },
+      {
+        "id": "d",
+        "text": "a vertical que passa por seu centro de gravidade ainda cai dentro da base de apoio, e, se a inclinação aumentasse até essa vertical sair da base, o peso produziria um momento que a derrubaria."
+      },
+      {
+        "id": "e",
+        "text": "as torres inclinadas nunca caem, qualquer que seja o ângulo."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Enquanto a linha de ação do peso passa pela base, o momento do peso tende a manter o corpo apoiado. Se passar para fora, o momento passa a tombá-lo — o mesmo vale para caminhões com carga alta, cujo centro de gravidade se desloca na curva.\n\nPegadinhas:\n• A: massa grande não impede o tombamento.\n• B: a gravidade atua sobre tudo.\n• C: o vento não explica o equilíbrio.\n• E: há um ângulo-limite.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_24",
+    "subject": "Física",
+    "topicId": "fis_eletrostatica",
+    "chapter": "Energia Potencial e Potencial Elétrico",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que os pneus de borracha protegem os ocupantes do carro durante um raio.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nSe um raio atingir um carro com carroceria metálica, os ocupantes, em geral, ficam protegidos, desde que não toquem nas partes metálicas. É comum ouvir que isso se deve aos pneus de borracha, que isolariam o carro do solo. Físicos explicam que a proteção se deve ao fato de que, em um condutor em equilíbrio eletrostático, as cargas se distribuem pela superfície externa, e o campo elétrico no interior da cavidade é nulo, efeito conhecido como gaiola de Faraday.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a proteção dos ocupantes",
+    "options": [
+      {
+        "id": "a",
+        "text": "deve-se aos pneus, que impedem a passagem de qualquer corrente elétrica."
+      },
+      {
+        "id": "b",
+        "text": "deve-se ao vidro das janelas, que repele as cargas elétricas."
+      },
+      {
+        "id": "c",
+        "text": "deve-se à carroceria metálica, que conduz as cargas por sua superfície externa até o solo e mantém o interior praticamente livre de campo elétrico."
+      },
+      {
+        "id": "d",
+        "text": "não existe, pois os carros atraem os raios e conduzem a descarga até os ocupantes."
+      },
+      {
+        "id": "e",
+        "text": "deve-se ao ar dentro do carro, que é melhor condutor que o metal."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. As cargas do raio percorrem a superfície externa do condutor; no interior, o campo é nulo. Os poucos centímetros de borracha não isolariam uma descarga que atravessou quilômetros de ar.\n\nPegadinhas:\n• A: é o mito que o texto desfaz.\n• B: o vidro não é o responsável.\n• D: o texto descreve a proteção.\n• E: o ar é isolante.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_25",
+    "subject": "Física",
+    "topicId": "fis_circuitos",
+    "chapter": "Circuitos de Malha Única",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Usar watts em vez de quilowatts, ou esquecer de converter minutos em horas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm chuveiro elétrico de 5.500 W é usado em uma casa durante 15 minutos por dia, todos os dias de um mês de 30 dias. A conta de energia elétrica é calculada em quilowatts-hora (kWh): a energia consumida é o produto da potência, em quilowatts, pelo tempo de uso, em horas. A família quer estimar quanto do consumo mensal se deve ao chuveiro.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA energia consumida pelo chuveiro no mês é, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,8 kWh, pois o tempo de uso deve ser considerado só uma vez no mês."
+      },
+      {
+        "id": "b",
+        "text": "2,75 kWh, pois a energia é a potência multiplicada por meio dia de uso."
+      },
+      {
+        "id": "c",
+        "text": "5,5 kWh, pois a energia é igual à potência do chuveiro em quilowatts."
+      },
+      {
+        "id": "d",
+        "text": "20,6 kWh, pois o tempo de uso diário é de 7,5 minutos em média."
+      },
+      {
+        "id": "e",
+        "text": "41,25 kWh, pois 5,5 kW × 0,25 h × 30 dias = 41,25 kWh."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. 5,5 kW × 0,25 h = 1,375 kWh por dia; × 30 = 41,25 kWh.\n\nPegadinhas:\n• B: relação inventada.\n• C: confunde potência com energia.\n• D: usa metade do tempo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_26",
+    "subject": "Física",
+    "topicId": "fis_optica_geometrica",
+    "chapter": "Refração: Fundamentos, Leis e Aplicações",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a piscina parece rasa por reflexão, ou que a luz não muda de direção ao mudar de meio.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nQuem olha para o fundo de uma piscina de fora da água tem a impressão de que ela é mais rasa do que realmente é. Do mesmo modo, um lápis parcialmente mergulhado em um copo d'água parece \"quebrado\" na superfície. A luz se propaga mais devagar na água do que no ar, e o índice de refração da água é cerca de 1,33.\n\nTexto elaborado para esta questão.\n\nOs dois fenômenos se explicam",
+    "options": [
+      {
+        "id": "a",
+        "text": "pela reflexão total da luz na superfície da água, que devolve a imagem do fundo."
+      },
+      {
+        "id": "b",
+        "text": "pela absorção da luz pela água, que escurece o fundo."
+      },
+      {
+        "id": "c",
+        "text": "pela difração da luz nas moléculas de água, que espalham os raios em todas as direções."
+      },
+      {
+        "id": "d",
+        "text": "pela dispersão da luz branca em cores, que desloca a imagem do objeto para cima."
+      },
+      {
+        "id": "e",
+        "text": "pela refração: ao passar da água para o ar, a luz muda de velocidade e de direção, e o observador vê a imagem do objeto em posição diferente da real, mais próxima da superfície."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Os raios que saem da água se afastam da normal; o cérebro os prolonga em linha reta e localiza o objeto mais acima. O fundo parece mais raso, e a parte submersa do lápis parece deslocada.\n\nPegadinhas:\n• A: reflexão total ocorre só acima do ângulo-limite e não explica o efeito.\n• B: a absorção não altera a posição aparente.\n• C: a difração não é o fenômeno central aqui.\n• D: a dispersão separa cores, sem explicar a profundidade aparente.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_27",
+    "subject": "Física",
+    "topicId": "fis_ondulatoria",
+    "chapter": "Ondulatória: Som e suas Propriedades",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a sirene muda de som porque o motorista a ajusta, ou que a frequência emitida muda.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nQuando uma ambulância com a sirene ligada se aproxima de um pedestre parado, o som parece mais agudo; quando ela passa e se afasta, parece mais grave. O motorista, dentro da ambulância, ouve sempre o mesmo som. Esse fenômeno, chamado efeito Doppler, também é usado em radares de velocidade e em exames de ultrassom que medem o fluxo de sangue.\n\nTexto elaborado para esta questão.\n\nA mudança percebida pelo pedestre se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a sirene emite sons de frequências diferentes na ida e na volta."
+      },
+      {
+        "id": "b",
+        "text": "o vento leva o som mais rápido quando a ambulância se aproxima."
+      },
+      {
+        "id": "c",
+        "text": "o movimento da fonte em relação ao observador comprime as frentes de onda à frente dela e as espaça atrás, o que faz o observador perceber frequência maior na aproximação e menor no afastamento."
+      },
+      {
+        "id": "d",
+        "text": "a intensidade do som aumenta, e o ouvido interpreta isso como som mais agudo."
+      },
+      {
+        "id": "e",
+        "text": "a velocidade do som no ar aumenta quando a fonte se aproxima."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A frequência emitida é a mesma; o que muda é a frequência recebida, porque a distância entre frentes de onda diminui à frente da fonte em movimento e aumenta atrás. O motorista, que se move com a fonte, não percebe mudança.\n\nPegadinhas:\n• A: o motorista ouve sempre o mesmo som.\n• B: o fenômeno ocorre sem vento.\n• D: intensidade e altura são grandezas diferentes.\n• E: a velocidade do som depende do meio, não da fonte.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_28",
+    "subject": "Matemática",
+    "topicId": "mat_complexos_polinomios",
+    "chapter": "Equações Polinomiais",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a outra raiz complexa é −2 + i, ou que coeficientes reais não impõem nada.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm polinômio P(x), de grau 3 e coeficientes reais, tem como raízes o número real 1 e o número complexo 2 + i. Um estudante afirmou que, para conhecer todas as raízes de P(x), seria preciso ter mais informações. Uma colega lembrou um teorema: se um polinômio de coeficientes reais tem uma raiz complexa não real a + bi, então o conjugado a − bi também é raiz.\n\nTexto elaborado para esta questão.\n\nCom base nesse teorema, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a terceira raiz é 2 − i, e P(x) pode ser escrito como a·(x − 1)(x² − 4x + 5), com a real e não nulo."
+      },
+      {
+        "id": "b",
+        "text": "a terceira raiz é −2 + i, o oposto da parte real da raiz complexa dada."
+      },
+      {
+        "id": "c",
+        "text": "a terceira raiz é −1, o oposto da raiz real, pois as raízes aparecem aos pares."
+      },
+      {
+        "id": "d",
+        "text": "a terceira raiz é necessariamente real, pois o polinômio tem coeficientes reais."
+      },
+      {
+        "id": "e",
+        "text": "não é possível determinar a terceira raiz sem conhecer todos os coeficientes."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A raiz conjugada de 2 + i é 2 − i. (x − (2 + i))(x − (2 − i)) = x² − 4x + 5, de coeficientes reais. Com a raiz 1, P(x) = a(x − 1)(x² − 4x + 5).\n\nPegadinhas:\n• B: o teorema fala em conjugado, não em oposto.\n• C: a raiz real não obriga outra raiz real.\n• D: a terceira raiz é complexa.\n• E: o teorema determina a terceira raiz.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_29",
+    "subject": "Matemática",
+    "topicId": "mat_sequencias_matrizes",
+    "chapter": "Progressão Geométrica",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Achar que a soma de infinitos termos positivos é sempre infinita.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm paradoxo atribuído a Zenão de Eleia afirma que, para atravessar uma sala, uma pessoa precisa primeiro percorrer metade da distância, depois metade do que falta, depois metade do restante, e assim indefinidamente, de modo que nunca chegaria ao outro lado. Considere uma sala de 1 m: os trechos percorridos são 1/2, 1/4, 1/8, ... metros.\n\nNote e adote: a soma dos infinitos termos de uma PG de primeiro termo a₁ e razão q, com |q| < 1, é a₁/(1 − q).\n\nTexto elaborado para esta questão.\n\nA soma de todos esses trechos é",
+    "options": [
+      {
+        "id": "a",
+        "text": "infinita, pois a soma de infinitos trechos positivos nunca pode ser um número finito."
+      },
+      {
+        "id": "b",
+        "text": "1 m, pois a soma da PG de primeiro termo 1/2 e razão 1/2 é (1/2)/(1 − 1/2) = 1."
+      },
+      {
+        "id": "c",
+        "text": "1/2 m, pois a soma de uma progressão geométrica infinita é igual ao seu primeiro termo."
+      },
+      {
+        "id": "d",
+        "text": "2 m, pois a soma de uma progressão geométrica de razão 1/2 é o dobro da distância."
+      },
+      {
+        "id": "e",
+        "text": "3/4 m, pois só os dois primeiros trechos têm comprimento mensurável."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A soma converge para 1 m: infinitos termos podem ter soma finita quando decrescem rapidamente. O paradoxo se desfaz porque os tempos também formam uma série convergente.\n\nPegadinhas:\n• A: infinitos termos podem ter soma finita.\n• C: considera só o primeiro trecho.\n• D: usa a fórmula com erro de sinal.\n• E: considera só dois trechos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_30",
+    "subject": "Matemática",
+    "topicId": "mat_sequencias_matrizes",
+    "chapter": "Introdução às Sequências",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Somar só os extremos ou multiplicar 100 por 100.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nConta-se que, quando criança, o matemático Carl Friedrich Gauss calculou rapidamente a soma 1 + 2 + 3 + ... + 100 proposta pelo professor. Ele percebeu que, somando o primeiro termo ao último, o segundo ao penúltimo, e assim por diante, sempre se obtém 101, e que há 50 desses pares. A mesma ideia leva à fórmula da soma dos termos de uma progressão aritmética.\n\nNote e adote: Sₙ = (a₁ + aₙ)·n/2.\n\nTexto elaborado para esta questão.\n\nO valor da soma é",
+    "options": [
+      {
+        "id": "a",
+        "text": "2.500, pois a soma dos números de 1 a 100 é igual ao quadrado de 50."
+      },
+      {
+        "id": "b",
+        "text": "4.950, pois a soma considera apenas os números de 1 a 99, sem o último termo."
+      },
+      {
+        "id": "c",
+        "text": "5.000, pois a soma é a metade do produto de 100 por 100."
+      },
+      {
+        "id": "d",
+        "text": "5.050, pois os termos formam 50 pares de soma 101, e 50 × 101 = 5.050."
+      },
+      {
+        "id": "e",
+        "text": "10.100, pois os termos formam 100 pares de soma 101, um para cada número."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. (1 + 100) × 100/2 = 5.050.\n\nPegadinhas:\n• A: 2.500 é a soma dos 50 primeiros ímpares.\n• B: esquece o termo 100.\n• C: aproxima 101 por 100.\n• E: conta cada par duas vezes.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_31",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_espacial",
+    "chapter": "Cubos e Paralelepípedos",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Confundir a diagonal do cubo com a diagonal da face.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma loja quer guardar varetas rígidas dentro de caixas cúbicas de 2 m de aresta, apoiando cada vareta de um canto do fundo até o canto oposto do topo, isto é, ao longo da diagonal do cubo. Um funcionário calculou o comprimento máximo da vareta usando apenas a diagonal de uma face, de medida 2√2 m.\n\nNote e adote: a diagonal de um cubo de aresta a mede a√3.\n\nTexto elaborado para esta questão.\n\nO comprimento máximo da vareta que cabe nessa posição é",
+    "options": [
+      {
+        "id": "a",
+        "text": "2 m, pois a vareta deve ter o comprimento da aresta."
+      },
+      {
+        "id": "b",
+        "text": "2√2 m, pois corresponde à diagonal de uma face do cubo."
+      },
+      {
+        "id": "c",
+        "text": "2√3 m, cerca de 3,46 m, pois a diagonal do cubo é a hipotenusa do triângulo formado pela diagonal da face e por uma aresta."
+      },
+      {
+        "id": "d",
+        "text": "4 m, pois a vareta deve ter o dobro da aresta para atravessar o cubo de canto a canto."
+      },
+      {
+        "id": "e",
+        "text": "6 m, pois a vareta deve ter a soma das três arestas que ligam os cantos opostos."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. D² = (2√2)² + 2² = 8 + 4 = 12 ⇒ D = 2√3 ≈ 3,46 m.\n\nPegadinhas:\n• A: a aresta é menor que a diagonal.\n• B: é o cálculo do funcionário, que usa a face.\n• D: relação inventada.\n• E: soma das arestas não é distância em linha reta.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_32",
+    "subject": "Matemática",
+    "topicId": "mat_dados_probabilidade",
+    "chapter": "Operações com Probabilidades",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Somar probabilidades em vez de usar o evento complementar.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma moeda não viciada é lançada três vezes. Um jogador ganha um prêmio se obtiver pelo menos uma cara nos três lançamentos. Um colega tentou calcular a probabilidade somando 1/2 + 1/2 + 1/2, o que daria um valor maior que 1. Outra colega sugeriu calcular primeiro a probabilidade de o jogador não ganhar o prêmio.\n\nTexto elaborado para esta questão.\n\nA probabilidade de o jogador ganhar o prêmio é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1/8, pois só uma sequência de resultados dá o prêmio."
+      },
+      {
+        "id": "b",
+        "text": "3/8, pois há três sequências com exatamente uma cara."
+      },
+      {
+        "id": "c",
+        "text": "1/2, pois cada lançamento tem probabilidade 1/2 de dar cara, independentemente dos demais."
+      },
+      {
+        "id": "d",
+        "text": "3/4, pois há três lançamentos com probabilidade 1/4 cada."
+      },
+      {
+        "id": "e",
+        "text": "7/8, pois a probabilidade de não sair nenhuma cara é (1/2)³ = 1/8, e a de sair pelo menos uma é 1 − 1/8."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O complementar de \"pelo menos uma cara\" é \"três coroas\": P = 1/8. Logo, 1 − 1/8 = 7/8.\n\nPegadinhas:\n• A: é a probabilidade de três coroas (ou três caras).\n• B: considera só exatamente uma cara.\n• C: considera um único lançamento.\n• D: relação inventada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_33",
+    "subject": "Matemática",
+    "topicId": "mat_combinatoria",
+    "chapter": "Introdução às Técnicas de Contagem",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Usar arranjo com repetição ou somar as letras.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma brincadeira, crianças devem formar todos os anagramas da palavra AMOR, isto é, todas as sequências que usam exatamente as quatro letras A, M, O e R, cada uma uma única vez, tenham ou não significado, como MORA, ROMA e RAMO. A professora quer saber quantos anagramas existem para preparar cartões suficientes.\n\nTexto elaborado para esta questão.\n\nO número de anagramas da palavra AMOR é",
+    "options": [
+      {
+        "id": "a",
+        "text": "12, pois cada letra pode ocupar três posições diferentes."
+      },
+      {
+        "id": "b",
+        "text": "24, pois é o número de permutações de quatro letras distintas: 4! = 4 × 3 × 2 × 1."
+      },
+      {
+        "id": "c",
+        "text": "64, pois cada posição pode receber quatro letras, com repetição."
+      },
+      {
+        "id": "d",
+        "text": "120, pois é o número de permutações de cinco letras."
+      },
+      {
+        "id": "e",
+        "text": "256, pois cada uma das quatro posições tem quatro opções, elevadas à quarta potência."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Há 4 opções para a 1ª posição, 3 para a 2ª, 2 para a 3ª e 1 para a última: 4! = 24.\n\nPegadinhas:\n• A: relação inventada.\n• C: permite repetição e usa só três posições.\n• D: 5! não corresponde a quatro letras.\n• E: 4⁴ permite repetição.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_34",
+    "subject": "Matemática",
+    "topicId": "mat_funcoes",
+    "chapter": "Composição de Funções",
+    "difficulty": "easy",
+    "skill": "modelagem",
+    "trap": "Esquecer a bandeirada fixa, ou somá-la a cada quilômetro.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma cidade, o preço de uma corrida de táxi é composto por uma bandeirada fixa de R$ 4,00 mais R$ 2,50 por quilômetro rodado. Uma passageira quer prever quanto pagará em uma corrida de 10 km, sem considerar o tempo parado no trânsito. O preço pode ser representado por uma função afim do número de quilômetros.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO valor da corrida de 10 km é",
+    "options": [
+      {
+        "id": "a",
+        "text": "R$ 14,00, pois a bandeirada é somada ao número de quilômetros."
+      },
+      {
+        "id": "b",
+        "text": "R$ 25,00, pois só se paga o valor por quilômetro, sem a bandeirada."
+      },
+      {
+        "id": "c",
+        "text": "R$ 26,50, pois a bandeirada é somada a uma única tarifa por quilômetro."
+      },
+      {
+        "id": "d",
+        "text": "R$ 29,00, pois o preço é dado por P(x) = 4 + 2,5x, e P(10) = 4 + 25."
+      },
+      {
+        "id": "e",
+        "text": "R$ 65,00, pois a bandeirada é cobrada a cada quilômetro, junto com a tarifa."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. P(10) = 4 + 2,5 × 10 = 29 reais. A bandeirada é o coeficiente linear; a tarifa por km, o angular.\n\nPegadinhas:\n• A: soma reais com quilômetros.\n• B: esquece a bandeirada.\n• C: soma a bandeirada a 22,50, sem fundamento.\n• E: cobra a bandeirada a cada quilômetro.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_35",
+    "subject": "Matemática",
+    "topicId": "mat_dados_probabilidade",
+    "chapter": "Estatística Descritiva",
+    "difficulty": "medium",
+    "skill": "interpretacao_grafico",
+    "trap": "Achar que a média sempre representa bem o valor típico, mesmo com valor extremo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma pequena empresa, os salários mensais de cinco funcionários são: R$ 2.000, R$ 2.200, R$ 2.400, R$ 2.600 e R$ 20.800, este último do diretor. Um anúncio de vagas afirma que \"o salário médio na empresa é de R$ 6.000\". Um candidato desconfiou de que esse valor não representava o salário típico dos funcionários.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nSobre os dados, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a média é R$ 6.000, mas a mediana, R$ 2.400, representa melhor o salário típico, pois a média é fortemente influenciada pelo valor extremo do diretor."
+      },
+      {
+        "id": "b",
+        "text": "a média e a mediana são iguais, pois os salários estão em ordem crescente."
+      },
+      {
+        "id": "c",
+        "text": "a mediana é R$ 6.000, igual à média, pois o conjunto tem cinco valores."
+      },
+      {
+        "id": "d",
+        "text": "a média é R$ 2.400, pois corresponde ao salário do meio."
+      },
+      {
+        "id": "e",
+        "text": "a moda é R$ 20.800, pois é o maior salário e o que mais influencia a média."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Soma = 30.000; média = 6.000. Em ordem, o valor central é 2.400: a mediana. Com um valor muito afastado, a mediana descreve melhor o centro.\n\nPegadinhas:\n• B: a ordem não iguala média e mediana.\n• C: a mediana é o termo central, 2.400.\n• D: confunde média com mediana.\n• E: não há moda, pois nenhum valor se repete.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_36",
+    "subject": "Geografia",
+    "topicId": "geo_fisica_brasil",
+    "chapter": "Políticas Ambientais Brasileiras",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que todas as Unidades de Conservação proíbem moradores e qualquer uso dos recursos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Sistema Nacional de Unidades de Conservação (SNUC), criado por lei em 2000, divide as áreas protegidas em dois grupos. As de proteção integral, como parques nacionais e estações ecológicas, admitem apenas o uso indireto dos recursos naturais, como pesquisa e turismo. As de uso sustentável, como as reservas extrativistas, permitem que populações tradicionais vivam na área e explorem recursos, como castanha e látex, de forma compatível com a conservação.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as Unidades de Conservação conciliam objetivos diferentes: algumas priorizam a preservação, com uso apenas indireto, e outras combinam conservação e uso sustentável por populações tradicionais."
+      },
+      {
+        "id": "b",
+        "text": "todas as Unidades de Conservação proíbem qualquer presença humana."
+      },
+      {
+        "id": "c",
+        "text": "as reservas extrativistas permitem o desmatamento para pastagens."
+      },
+      {
+        "id": "d",
+        "text": "os parques nacionais permitem a extração comercial de madeira."
+      },
+      {
+        "id": "e",
+        "text": "o SNUC foi criado para substituir as terras indígenas."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O SNUC prevê categorias com graus distintos de restrição. As reservas extrativistas, ligadas à luta de seringueiros como Chico Mendes, unem proteção florestal e sustento das comunidades.\n\nPegadinhas:\n• B: as de uso sustentável admitem moradores.\n• C: o uso deve ser compatível com a conservação.\n• D: parques admitem apenas uso indireto.\n• E: terras indígenas são outra categoria jurídica.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_37",
+    "subject": "Geografia",
+    "topicId": "geo_fisica_brasil",
+    "chapter": "Geologia e Geomorfologia",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que petróleo se forma em rochas magmáticas, ou confundir os tipos de rocha.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs rochas são classificadas pela forma como se formam. As magmáticas, como o granito e o basalto, resultam do resfriamento do magma. As sedimentares, como o arenito e o calcário, formam-se pelo acúmulo e compactação de sedimentos, muitas vezes com restos de seres vivos. As metamórficas, como o mármore e a ardósia, resultam da transformação de outras rochas por pressão e temperatura elevadas, sem fusão completa.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o petróleo e o gás natural, formados a partir de matéria orgânica soterrada, são encontrados principalmente em",
+    "options": [
+      {
+        "id": "a",
+        "text": "rochas magmáticas, pois o calor do magma forma o petróleo."
+      },
+      {
+        "id": "b",
+        "text": "rochas metamórficas, pois a pressão transforma o mármore em petróleo."
+      },
+      {
+        "id": "c",
+        "text": "qualquer tipo de rocha, indistintamente, pois a origem do petróleo não depende do tipo de rocha."
+      },
+      {
+        "id": "d",
+        "text": "bacias sedimentares, pois a matéria orgânica se acumula com os sedimentos e, soterrada e submetida a pressão e temperatura, transforma-se em hidrocarbonetos."
+      },
+      {
+        "id": "e",
+        "text": "rochas vulcânicas recentes, como o basalto, formadas pelo resfriamento rápido da lava."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Restos orgânicos acumulados em bacias, sem oxigênio, transformam-se em hidrocarbonetos ao longo de milhões de anos, e o petróleo fica retido em rochas sedimentares porosas, como o arenito — inclusive no pré-sal.\n\nPegadinhas:\n• A: o magma destruiria a matéria orgânica.\n• B: o mármore é calcário metamorfizado.\n• C: a ocorrência é característica das bacias sedimentares.\n• E: o basalto é magmático.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_38",
+    "subject": "Geografia",
+    "topicId": "geo_geopolitica_regional",
+    "chapter": "Geopolítica e Geoeconomia da Ásia",
+    "difficulty": "medium",
+    "skill": "interpretacao_grafico",
+    "trap": "Achar que a China continua sendo o país mais populoso do mundo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 2023, segundo estimativas da ONU, a Índia ultrapassou a China como o país mais populoso do mundo, com mais de 1,4 bilhão de habitantes. A população chinesa começou a diminuir, em parte por causa da baixa fecundidade, influenciada por décadas da política do filho único, encerrada em 2015. A Índia tem população mais jovem e uma economia em rápido crescimento, com destaque para serviços de tecnologia da informação.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a China continua sendo o país mais populoso, com população em rápido crescimento."
+      },
+      {
+        "id": "b",
+        "text": "a política do filho único foi adotada pela Índia e ainda está em vigor."
+      },
+      {
+        "id": "c",
+        "text": "a Índia tem população mais envelhecida que a chinesa."
+      },
+      {
+        "id": "d",
+        "text": "a população da Índia está diminuindo por causa da emigração."
+      },
+      {
+        "id": "e",
+        "text": "a Índia tornou-se o país mais populoso, com população mais jovem, enquanto a China, com fecundidade baixa, começou a perder população."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A diferença de estrutura etária pesa no futuro: a Índia tem mais jovens em idade ativa, e a China enfrenta envelhecimento e redução da força de trabalho.\n\nPegadinhas:\n• A: o texto diz que a população chinesa começou a diminuir.\n• B: a política foi chinesa e terminou em 2015.\n• C: o texto diz que a indiana é mais jovem.\n• D: o texto descreve crescimento indiano.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_39",
+    "subject": "Geografia",
+    "topicId": "geo_climatologia_socioambiental",
+    "chapter": "Dinâmica Climática",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a amplitude térmica depende só da latitude, ignorando a distância do mar.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDuas cidades estão em latitudes semelhantes: uma no litoral, outra no interior do continente, a centenas de quilômetros do mar. Ao longo do ano, a cidade litorânea registra diferença pequena entre as temperaturas do verão e do inverno, e também entre o dia e a noite. A cidade do interior tem verões mais quentes, invernos mais frios e grande diferença entre dia e noite.\n\nTexto elaborado para esta questão.\n\nA diferença de amplitude térmica se explica principalmente",
+    "options": [
+      {
+        "id": "a",
+        "text": "pela altitude, pois cidades litorâneas estão sempre mais altas."
+      },
+      {
+        "id": "b",
+        "text": "pela latitude, pois as cidades estão em latitudes muito diferentes."
+      },
+      {
+        "id": "c",
+        "text": "pela maritimidade: a água tem calor específico alto e aquece e esfria mais lentamente que o continente, o que suaviza as variações no litoral, enquanto o interior sofre continentalidade."
+      },
+      {
+        "id": "d",
+        "text": "pela maior poluição do ar nas cidades do interior, que retém o calor durante o verão."
+      },
+      {
+        "id": "e",
+        "text": "pela vegetação, que só existe nas cidades do interior."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O oceano armazena e libera calor devagar e fornece umidade, amenizando extremos. Longe do mar, a terra aquece e esfria depressa, e o ar mais seco favorece perdas noturnas de calor.\n\nPegadinhas:\n• A: cidades litorâneas costumam estar em baixa altitude.\n• B: o texto diz que as latitudes são semelhantes.\n• D: a poluição não é o fator apresentado.\n• E: a vegetação não é exclusividade do interior.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_40",
+    "subject": "Geografia",
+    "topicId": "geo_climatologia_socioambiental",
+    "chapter": "Desafios Ambientais do Século XXI",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a desertificação é só a expansão natural de desertos, sem ação humana.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nSegundo a Convenção das Nações Unidas de Combate à Desertificação, desertificação é a degradação da terra em regiões áridas, semiáridas e subúmidas secas, resultante de vários fatores, incluindo variações climáticas e atividades humanas. No Brasil, áreas do semiárido nordestino, como Gilbués, no Piauí, e o Seridó, no Rio Grande do Norte, apresentam solos expostos e erodidos, associados a desmatamento, sobrepastoreio e manejo inadequado do solo.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que a desertificação",
+    "options": [
+      {
+        "id": "a",
+        "text": "é apenas a expansão natural dos desertos, sem relação com atividades humanas."
+      },
+      {
+        "id": "b",
+        "text": "resulta da combinação de fatores climáticos e humanos, como desmatamento e sobrepastoreio, e degrada solos em regiões secas, inclusive no semiárido brasileiro."
+      },
+      {
+        "id": "c",
+        "text": "ocorre apenas em regiões de clima polar, onde o gelo impede o crescimento da vegetação."
+      },
+      {
+        "id": "d",
+        "text": "é causada exclusivamente pelo aumento das chuvas, que lavam os nutrientes do solo."
+      },
+      {
+        "id": "e",
+        "text": "não ocorre no Brasil, pois o país não tem desertos em seu território."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A definição inclui clima e uso humano. Solo exposto pelo desmatamento e pisoteado pelo gado perde matéria orgânica e se erode, reduzindo a produtividade.\n\nPegadinhas:\n• A: a definição inclui atividades humanas.\n• C: o texto fala de regiões secas.\n• D: o problema está ligado à aridez.\n• E: o texto cita áreas brasileiras.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_41",
+    "subject": "Geografia",
+    "topicId": "geo_geopolitica_regional",
+    "chapter": "Geopolítica e Geoeconomia da América Latina",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir união aduaneira com mercado comum pleno ou com zona de livre-comércio.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Mercosul foi criado em 1991 pelo Tratado de Assunção, reunindo Brasil, Argentina, Paraguai e Uruguai. Além de reduzir tarifas sobre o comércio entre os membros, adota uma Tarifa Externa Comum (TEC) sobre importações de fora do bloco, embora com muitas exceções. A livre circulação de trabalhadores e a coordenação de políticas econômicas, características de um mercado comum, ainda são limitadas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o Mercosul pode ser classificado como",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma união monetária com moeda única, como a Zona do Euro."
+      },
+      {
+        "id": "b",
+        "text": "uma união aduaneira imperfeita, com redução de tarifas internas e tarifa externa comum, mas com exceções e integração ainda incompleta."
+      },
+      {
+        "id": "c",
+        "text": "uma simples zona de livre-comércio, sem tarifa externa comum."
+      },
+      {
+        "id": "d",
+        "text": "um mercado comum pleno, com livre circulação total de pessoas e coordenação econômica."
+      },
+      {
+        "id": "e",
+        "text": "uma aliança militar entre os países da América do Sul."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A TEC caracteriza a união aduaneira; as exceções e a falta de plena circulação de fatores a tornam imperfeita.\n\nPegadinhas:\n• A: o Mercosul não tem moeda única.\n• C: há tarifa externa comum.\n• D: o texto diz que esses elementos são limitados.\n• E: é um bloco econômico.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_42",
+    "subject": "História",
+    "topicId": "his_idade_media",
+    "chapter": "Alta Idade Média e Feudalismo",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir a relação entre senhor e servo com a relação entre suserano e vassalo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa Europa feudal, um nobre que recebia terras (o feudo) de outro nobre mais poderoso tornava-se seu vassalo, devendo-lhe fidelidade e ajuda militar, enquanto o doador, o suserano, devia-lhe proteção. Nas terras do feudo, trabalhavam os servos, camponeses presos à terra que deviam ao senhor parte da produção e dias de trabalho nas terras senhoriais, em troca de proteção e do direito de cultivar parcelas para si.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a relação entre suserano e vassalo era um vínculo entre nobres, baseado na concessão de terras e em obrigações militares, enquanto a relação entre senhor e servo envolvia obrigações de trabalho e de produção dos camponeses."
+      },
+      {
+        "id": "b",
+        "text": "servos e vassalos tinham as mesmas obrigações e eram da mesma camada social."
+      },
+      {
+        "id": "c",
+        "text": "os servos podiam abandonar a terra livremente, como trabalhadores assalariados."
+      },
+      {
+        "id": "d",
+        "text": "o suserano devia ao vassalo parte da produção agrícola."
+      },
+      {
+        "id": "e",
+        "text": "o feudalismo era baseado no trabalho assalariado nas cidades."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Suserania e vassalagem ligavam nobres entre si; a servidão ligava camponeses aos senhores, com corveia (trabalho) e talha (parte da produção).\n\nPegadinhas:\n• B: vassalos eram nobres; servos, camponeses.\n• C: os servos estavam presos à terra.\n• D: inverte as obrigações.\n• E: a base era agrária e servil.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_43",
+    "subject": "História",
+    "topicId": "his_idade_antiga",
+    "chapter": "Antiguidade Clássica: o Mundo Romano",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a política de \"pão e circo\" era assistência sem objetivo político.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa Roma imperial, o governo distribuía trigo a parte da população pobre da capital e promovia espetáculos públicos gratuitos, como corridas de carros e combates de gladiadores no Coliseu. O poeta satírico Juvenal, no início do século II, criticou o povo romano por desejar apenas \"pão e circo\" (panem et circenses), em vez de se interessar pela política.\n\nTexto elaborado para esta questão.\n\nA política de \"pão e circo\" pode ser interpretada como",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma forma de garantir a participação direta da plebe nas decisões do Senado."
+      },
+      {
+        "id": "b",
+        "text": "uma política de educação pública voltada à formação de cidadãos críticos."
+      },
+      {
+        "id": "c",
+        "text": "um meio de controle social, que buscava evitar revoltas da população pobre de Roma por meio da distribuição de alimentos e de entretenimento."
+      },
+      {
+        "id": "d",
+        "text": "uma prática exclusiva da Grécia, sem paralelo em Roma."
+      },
+      {
+        "id": "e",
+        "text": "uma iniciativa dos escravizados para obter a liberdade."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Alimentar e entreter a plebe urbana ajudava a manter a ordem e a popularidade dos governantes. A crítica de Juvenal aponta a despolitização que a prática favorecia.\n\nPegadinhas:\n• A: a plebe não decidia no Senado.\n• B: o objetivo não era formar cidadãos críticos.\n• D: o texto trata de Roma.\n• E: era uma política do governo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_44",
+    "subject": "História",
+    "topicId": "his_moderna_iluminismo",
+    "chapter": "Iluminismo",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que Montesquieu defendia a concentração dos poderes no rei.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm O Espírito das Leis, de 1748, o pensador francês Montesquieu argumentou que, quando o mesmo homem ou o mesmo grupo reúne o poder de fazer as leis, o de executá-las e o de julgar, não há liberdade, pois quem governa pode abusar de sua autoridade. Por isso, propôs que esses poderes fossem exercidos por órgãos diferentes, que se limitassem mutuamente.\n\nTexto elaborado para esta questão.\n\nA proposta de Montesquieu",
+    "options": [
+      {
+        "id": "a",
+        "text": "defendia a concentração dos três poderes nas mãos do monarca absoluto."
+      },
+      {
+        "id": "b",
+        "text": "propunha que a Igreja exercesse o poder de julgar, em nome da moral cristã."
+      },
+      {
+        "id": "c",
+        "text": "rejeitava a existência de leis escritas, que deveriam ser substituídas pelos costumes."
+      },
+      {
+        "id": "d",
+        "text": "foi elaborada para justificar o absolutismo francês."
+      },
+      {
+        "id": "e",
+        "text": "defendia a separação dos poderes Legislativo, Executivo e Judiciário como forma de evitar o abuso de autoridade, ideia incorporada a várias constituições modernas, inclusive a brasileira."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A separação e o equilíbrio entre poderes (\"o poder freia o poder\") foram adotados pela Constituição dos EUA e por muitas outras.\n\nPegadinhas:\n• A: é o oposto da proposta.\n• B: a proposta não atribui o Judiciário à Igreja.\n• C: Montesquieu discute justamente as leis.\n• D: a proposta critica o poder concentrado.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_45",
+    "subject": "História",
+    "topicId": "his_moderna_iluminismo",
+    "chapter": "Revolução Francesa",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o Período do Terror foi conduzido pelos girondinos, ou que não houve repressão.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEntre 1793 e 1794, durante a Revolução Francesa, a França enfrentava guerra contra monarquias europeias e revoltas internas. O governo jacobino, liderado por Robespierre, adotou medidas como o controle de preços de produtos básicos e a criação de tribunais revolucionários que condenaram milhares de pessoas à guilhotina, acusadas de inimigas da Revolução. Em 1794, Robespierre foi derrubado e executado.\n\nTexto elaborado para esta questão.\n\nO período descrito, conhecido como Terror,",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi um período de paz e estabilidade, sem guerras externas."
+      },
+      {
+        "id": "b",
+        "text": "foi conduzido pelos girondinos, aliados da nobreza, contra os jacobinos e os sans-culottes."
+      },
+      {
+        "id": "c",
+        "text": "restaurou a monarquia absolutista na França, com o retorno de Luís XVI ao trono."
+      },
+      {
+        "id": "d",
+        "text": "combinou medidas populares, como o controle de preços, com forte repressão política aos considerados inimigos da Revolução, em um contexto de guerra externa e revoltas internas."
+      },
+      {
+        "id": "e",
+        "text": "foi marcado pela abolição de todos os tribunais e pelo fim das execuções políticas."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Em meio à ameaça externa e interna, os jacobinos, apoiados pelos sans-culottes, radicalizaram: tabelamento de preços e execuções em massa. A queda de Robespierre abriu a fase do Diretório.\n\nPegadinhas:\n• A: o texto cita guerra e revoltas.\n• B: o governo era jacobino.\n• C: a monarquia havia sido abolida em 1792.\n• E: foram criados tribunais revolucionários.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_46",
+    "subject": "História",
+    "topicId": "his_imperialismo_guerras",
+    "chapter": "Primeira Guerra Mundial (1914-1918)",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Atribuir a guerra apenas ao atentado de Sarajevo, sem as rivalidades e alianças.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm junho de 1914, o herdeiro do trono austro-húngaro, Francisco Ferdinando, foi assassinado em Sarajevo por um nacionalista sérvio. Em poucas semanas, o conflito entre Áustria-Hungria e Sérvia envolveu as grandes potências europeias, divididas em dois blocos de alianças, a Tríplice Entente e a Tríplice Aliança. Nas décadas anteriores, as potências haviam disputado colônias e mercados e ampliado seus exércitos.\n\nTexto elaborado para esta questão.\n\nA rápida generalização do conflito se explica",
+    "options": [
+      {
+        "id": "a",
+        "text": "pelo atentado de Sarajevo, sem relação com tensões anteriores."
+      },
+      {
+        "id": "b",
+        "text": "pela ausência de alianças militares entre os países europeus."
+      },
+      {
+        "id": "c",
+        "text": "pela disputa entre Estados Unidos e União Soviética."
+      },
+      {
+        "id": "d",
+        "text": "pelo sistema de alianças, que arrastou as potências para o conflito, em um contexto de rivalidades imperialistas, nacionalismos e corrida armamentista, para o qual o atentado foi o estopim."
+      },
+      {
+        "id": "e",
+        "text": "pela crise econômica de 1929, que levou as potências europeias a disputar mercados."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O atentado foi o estopim; as causas profundas eram as rivalidades coloniais e econômicas, os nacionalismos e o militarismo. As alianças transformaram um conflito regional em guerra geral.\n\nPegadinhas:\n• A: o texto cita tensões anteriores.\n• B: o texto cita dois blocos de alianças.\n• C: essa disputa é da Guerra Fria.\n• E: a crise de 1929 é posterior.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_47",
+    "subject": "História",
+    "topicId": "his_imperialismo_guerras",
+    "chapter": "O Nazismo na Alemanha",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a perseguição aos judeus começou só durante a guerra.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1935, poucos anos após Hitler chegar ao poder, a Alemanha aprovou as Leis de Nuremberg, que retiraram a cidadania alemã dos judeus e proibiram casamentos entre judeus e não judeus. Nos anos seguintes, os judeus foram excluídos de profissões e escolas, e em 1938, na chamada Noite dos Cristais, sinagogas e lojas foram destruídas. A propaganda oficial, dirigida por Joseph Goebbels, difundia o antissemitismo pela imprensa, pelo rádio e pelo cinema.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a perseguição aos judeus começou apenas após o início da Segunda Guerra Mundial."
+      },
+      {
+        "id": "b",
+        "text": "a perseguição aos judeus foi institucionalizada por leis e intensificada por violência e propaganda antes mesmo da guerra, em um processo que culminaria no Holocausto."
+      },
+      {
+        "id": "c",
+        "text": "as Leis de Nuremberg ampliaram os direitos dos judeus na Alemanha."
+      },
+      {
+        "id": "d",
+        "text": "o regime nazista não utilizava propaganda, apoiando-se apenas na força policial."
+      },
+      {
+        "id": "e",
+        "text": "a Noite dos Cristais foi um protesto dos judeus contra o governo."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Leis discriminatórias, exclusão social, violência e propaganda prepararam o caminho para o genocídio sistemático durante a guerra.\n\nPegadinhas:\n• A: as leis são de 1935, antes da guerra.\n• C: retiraram a cidadania dos judeus.\n• D: o texto cita a propaganda de Goebbels.\n• E: foi violência contra os judeus.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_48",
+    "subject": "Português",
+    "topicId": "por_texto",
+    "chapter": "Gêneros Textuais",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que a charge é neutra como a notícia, ou que a notícia emite opinião explícita.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia a descrição de dois textos publicados no mesmo jornal, no mesmo dia, sobre o aumento da tarifa do transporte público:\n\nTexto 1: \"A prefeitura anunciou ontem o reajuste da tarifa de ônibus de R$ 4,40 para R$ 5,00, válido a partir de segunda-feira. Segundo a secretaria, o aumento se deve ao custo do diesel.\"\n\nTexto 2: um desenho mostra um passageiro espremido em um ônibus lotado segurando uma placa: \"Agora mais caro e o mesmo aperto!\".\n\nTexto elaborado para esta questão.\n\nOs textos 1 e 2 pertencem, respectivamente, aos gêneros",
+    "options": [
+      {
+        "id": "a",
+        "text": "charge e notícia, pois o texto 1 critica a prefeitura com humor."
+      },
+      {
+        "id": "b",
+        "text": "crônica e editorial, pois os dois apresentam a opinião do jornal."
+      },
+      {
+        "id": "c",
+        "text": "anúncio publicitário e reportagem, pois ambos vendem um serviço."
+      },
+      {
+        "id": "d",
+        "text": "notícia e anúncio, pois o desenho divulga o novo preço."
+      },
+      {
+        "id": "e",
+        "text": "notícia, que relata o fato com informações objetivas e atribui a justificativa à fonte, e charge, que comenta o fato de forma crítica e humorística por meio do desenho."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A notícia informa o fato, com dados e fonte (\"segundo a secretaria\"). A charge usa desenho e humor para criticar um acontecimento atual.\n\nPegadinhas:\n• A: inverte os gêneros.\n• B: o texto 1 não opina.\n• C: nenhum dos dois vende serviço.\n• D: o desenho critica, não anuncia.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_49",
+    "subject": "Inglês",
+    "topicId": "ing_01",
+    "chapter": "Text Comprehension: Ecology (Greenhouse Gases)",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Achar que o metano é menos preocupante por ser emitido em menor quantidade, ou que dura mais que o CO₂.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Methane is released in much smaller quantities than carbon dioxide, but it traps far more heat: over twenty years, one tonne of methane warms the planet about eighty times more than one tonne of carbon dioxide. On the other hand, methane breaks down in the atmosphere in about a decade, while carbon dioxide can remain for centuries. That is why cutting methane emissions, for example from landfills and livestock, is seen as a fast way to slow warming in the short term.\"\n\nTexto elaborado para esta questão.\n\nAccording to the text,",
+    "options": [
+      {
+        "id": "a",
+        "text": "methane traps more heat per tonne than carbon dioxide but stays in the atmosphere for a much shorter time, so reducing it can slow warming quickly."
+      },
+      {
+        "id": "b",
+        "text": "methane is released in larger quantities than carbon dioxide."
+      },
+      {
+        "id": "c",
+        "text": "methane remains in the atmosphere for centuries, much longer than carbon dioxide."
+      },
+      {
+        "id": "d",
+        "text": "reducing methane has no effect on global warming, since it is released in small amounts."
+      },
+      {
+        "id": "e",
+        "text": "carbon dioxide traps eighty times more heat than methane."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O texto contrasta o poder de aquecimento do metano (cerca de 80 vezes em 20 anos) com sua curta permanência (cerca de uma década) e conclui que reduzi-lo é uma forma rápida de frear o aquecimento.\n\nPegadinhas:\n• B: o texto diz \"much smaller quantities\".\n• C: quem permanece por séculos é o CO₂.\n• D: o texto diz o contrário.\n• E: inverte a comparação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l18_50",
+    "subject": "Filosofia",
+    "topicId": "fil_aristoteles",
+    "chapter": "A Ética a Nicômaco e a Doutrina do Meio-Termo",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Achar que o meio-termo é a média matemática exata, ou que a virtude é inata.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa Ética a Nicômaco, Aristóteles define a virtude moral como uma disposição adquirida pelo hábito, situada em um meio-termo entre dois vícios, um por excesso e outro por falta. A coragem, por exemplo, está entre a temeridade, que enfrenta perigos sem medida, e a covardia, que foge de qualquer perigo. Esse meio-termo não é igual para todos: depende das circunstâncias e é determinado pela razão prática.\n\nTexto elaborado para esta questão.\n\nSegundo o texto, para Aristóteles,",
+    "options": [
+      {
+        "id": "a",
+        "text": "a virtude é inata e não pode ser adquirida pela prática."
+      },
+      {
+        "id": "b",
+        "text": "o meio-termo é sempre a média aritmética exata entre dois extremos, igual para todos."
+      },
+      {
+        "id": "c",
+        "text": "a virtude moral é uma disposição adquirida pelo hábito, situada entre o excesso e a falta, e o meio-termo adequado é definido pela razão conforme as circunstâncias."
+      },
+      {
+        "id": "d",
+        "text": "a coragem é o extremo oposto da covardia, sem relação com a temeridade."
+      },
+      {
+        "id": "e",
+        "text": "todo excesso é virtuoso, pois indica força de caráter."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A virtude se forma praticando atos virtuosos; o meio-termo é \"relativo a nós\", não uma média fixa. A coragem é o meio entre temeridade e covardia.\n\nPegadinhas:\n• A: o texto diz que é adquirida pelo hábito.\n• B: o texto diz que não é igual para todos.\n• D: a coragem é o meio, não um extremo.\n• E: o excesso é vício.",
+    "styleOf": "FUVEST"
+  }
+]

@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "crivo_fuvest_f1_l11_01",
+    "subject": "Biologia",
+    "topicId": "bio_ecologia",
+    "chapter": "Eutrofização",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que os peixes morrem por envenenamento direto pelo fertilizante, ou que as algas consomem o oxigênio durante o dia.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nApós semanas de chuvas fortes, moradores de uma cidade às margens de uma represa notaram que a água ficou verde e com cheiro forte. Dias depois, centenas de peixes apareceram mortos na superfície. Análises mostraram concentrações elevadas de fosfato e nitrato, vindos de lavouras adubadas e de esgoto sem tratamento lançado em córregos que deságuam na represa. As medidas de oxigênio dissolvido feitas de madrugada, perto do fundo, foram as mais baixas já registradas no local.\n\nTexto elaborado para esta questão.\n\nA sequência de eventos que melhor explica a mortandade é:",
+    "options": [
+      {
+        "id": "a",
+        "text": "excesso de nutrientes, proliferação de algas, morte das algas e decomposição aeróbica intensa da matéria orgânica, que consome o oxigênio dissolvido."
+      },
+      {
+        "id": "b",
+        "text": "intoxicação direta dos peixes pelo nitrato e pelo fosfato, que são venenosos em qualquer concentração."
+      },
+      {
+        "id": "c",
+        "text": "aumento da fotossíntese das algas, que retira o oxigênio da água durante o dia para produzir glicose."
+      },
+      {
+        "id": "d",
+        "text": "aquecimento da água pelas chuvas, que dissolve mais oxigênio e provoca embolia nos peixes."
+      },
+      {
+        "id": "e",
+        "text": "redução das algas pela turbidez da chuva, que eliminou os produtores e a base da cadeia alimentar."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Fósforo e nitrogênio são nutrientes limitantes; em excesso, causam a proliferação de algas e cianobactérias. Quando elas morrem, a matéria orgânica serve de alimento a decompositores aeróbicos, cuja respiração consome o oxigênio dissolvido — sobretudo no fundo e à noite, quando não há fotossíntese. Por isso as medidas de madrugada, perto do fundo, são as mais baixas.\n\nPegadinhas:\n• B: nas concentrações típicas, o problema não é toxicidade direta, e sim o efeito em cadeia sobre o oxigênio.\n• C: a fotossíntese libera oxigênio; durante o dia, a camada superficial pode até ficar supersaturada.\n• D: água mais quente dissolve menos oxigênio, não mais.\n• E: o texto descreve a água verde, isto é, aumento das algas, não redução.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_02",
+    "subject": "Biologia",
+    "topicId": "bio_ecologia",
+    "chapter": "Sucessão Ecológica",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que a comunidade clímax é a de maior produtividade líquida, ou que a biodiversidade diminui ao longo da sucessão.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma área de mineração desativada no Quadrilátero Ferrífero, o solo foi recoberto por uma camada fina de terra, e o local foi deixado para regeneração. Nos primeiros anos, surgiram gramíneas e arbustos de crescimento rápido, tolerantes à luz intensa e à baixa fertilidade. Décadas depois, arbustos e árvores de crescimento mais lento passaram a predominar, o solo acumulou matéria orgânica e a temperatura sob a copa ficou mais estável.\n\nTexto elaborado para esta questão.\n\nNesse processo de sucessão ecológica, é esperado que, com o tempo,",
+    "options": [
+      {
+        "id": "a",
+        "text": "a biodiversidade diminua, pois as espécies pioneiras eliminam todas as demais."
+      },
+      {
+        "id": "b",
+        "text": "a produtividade líquida aumente indefinidamente, pois a biomassa nunca para de crescer."
+      },
+      {
+        "id": "c",
+        "text": "a biomassa e a diversidade aumentem, e a razão entre produção bruta e respiração da comunidade se aproxime de 1, com quase toda a energia fixada sendo consumida pela própria comunidade."
+      },
+      {
+        "id": "d",
+        "text": "as espécies pioneiras se tornem dominantes, pois toleram melhor a sombra formada pelas árvores."
+      },
+      {
+        "id": "e",
+        "text": "o solo perca matéria orgânica, pois as árvores retiram mais nutrientes do que devolvem."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. As pioneiras modificam o ambiente — acumulam matéria orgânica, sombreiam o solo — e facilitam a chegada de espécies mais exigentes. A biomassa e o número de nichos crescem. Na comunidade madura, quase tudo o que é produzido é gasto na respiração de produtores, consumidores e decompositores: a produção líquida da comunidade tende a zero e P/R tende a 1.\n\nPegadinhas:\n• A: a diversidade tende a aumentar, não a cair.\n• B: a produtividade líquida é maior nas fases iniciais e diminui no clímax.\n• D: pioneiras são tolerantes à luz intensa; a sombra favorece as espécies tardias.\n• E: o texto descreve o acúmulo de matéria orgânica, pela queda de folhas e pela decomposição.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_03",
+    "subject": "Biologia",
+    "topicId": "bio_ecologia",
+    "chapter": "Espécies Invasoras e Controle Biológico",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Confundir o método com um inseticida ou com uma alteração genética que extermina a espécie.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm algumas cidades brasileiras, como Niterói (RJ), foram soltos mosquitos Aedes aegypti portadores da bactéria Wolbachia. Nos mosquitos que a carregam, essa bactéria reduz a capacidade de os vírus da dengue, da zika e da chikungunya se multiplicarem e serem transmitidos. A bactéria passa da fêmea para os ovos, e, quando um macho com Wolbachia se acasala com uma fêmea sem ela, os ovos não se desenvolvem. Com o tempo, a maior parte da população local de mosquitos passa a carregar a bactéria.\n\nTexto elaborado para esta questão.\n\nA partir do texto, é correto afirmar que o método",
+    "options": [
+      {
+        "id": "a",
+        "text": "elimina a população de Aedes aegypti da cidade, pois todos os mosquitos soltos são estéreis."
+      },
+      {
+        "id": "b",
+        "text": "é um inseticida biológico que mata os mosquitos ao entrar em contato com eles."
+      },
+      {
+        "id": "c",
+        "text": "altera o DNA dos vírus, tornando-os incapazes de infectar seres humanos."
+      },
+      {
+        "id": "d",
+        "text": "dispensa outras medidas, como a eliminação de criadouros, já que os mosquitos deixam de picar."
+      },
+      {
+        "id": "e",
+        "text": "reduz a transmissão das doenças sem exterminar o mosquito, porque a bactéria se espalha pela população por transmissão materna e pela vantagem reprodutiva das fêmeas portadoras."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A estratégia é substituir a população, não suprimi-la. Fêmeas com Wolbachia geram descendentes viáveis com qualquer macho; fêmeas sem a bactéria só geram ovos viáveis com machos também sem ela. Essa vantagem reprodutiva, somada à transmissão da mãe para os ovos, faz a bactéria se espalhar. Os mosquitos continuam existindo e picando, mas transmitem menos vírus.\n\nPegadinhas:\n• A: os mosquitos soltos não são estéreis; o objetivo é que se reproduzam e espalhem a bactéria.\n• B: a Wolbachia não mata o mosquito.\n• C: a bactéria atua no mosquito, dificultando a multiplicação do vírus; não altera o DNA viral.\n• D: os mosquitos continuam picando, e eliminar criadouros continua necessário.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_04",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Fisiologia da Respiração",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que no alto da montanha o ar tem menor porcentagem de oxigênio, ou que a adaptação é imediata.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAtletas que vão competir em La Paz, na Bolívia, a cerca de 3.600 m de altitude, costumam chegar com semanas de antecedência. Nessa altitude, a pressão atmosférica é cerca de dois terços da pressão ao nível do mar, embora a proporção de oxigênio no ar continue próxima de 21%. Nos primeiros dias, os visitantes sentem falta de ar e cansaço; depois de algumas semanas, exames mostram aumento da quantidade de hemácias no sangue.\n\nTexto elaborado para esta questão.\n\nOs sintomas iniciais e a adaptação observada explicam-se, respectivamente, por",
+    "options": [
+      {
+        "id": "a",
+        "text": "menor porcentagem de oxigênio no ar; e redução da frequência respiratória."
+      },
+      {
+        "id": "b",
+        "text": "menor pressão parcial de oxigênio, que reduz a saturação da hemoglobina; e maior produção de eritropoetina pelos rins, que estimula a medula óssea a produzir mais hemácias."
+      },
+      {
+        "id": "c",
+        "text": "excesso de gás carbônico no ar rarefeito; e destruição das hemácias antigas pelo baço."
+      },
+      {
+        "id": "d",
+        "text": "aumento da pressão do ar nos pulmões; e produção de hemácias pelo fígado."
+      },
+      {
+        "id": "e",
+        "text": "menor temperatura do ar, que impede as trocas gasosas; e aumento do tamanho dos pulmões."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O que diminui com a altitude é a pressão total e, com ela, a pressão parcial de O₂ (cerca de 21% de uma pressão menor). Com menos O₂ chegando aos alvéolos, a hemoglobina satura menos e os tecidos recebem menos oxigênio. A hipóxia estimula os rins a liberar eritropoetina, que leva a medula óssea vermelha a produzir mais hemácias — processo que leva semanas.\n\nPegadinhas:\n• A: o texto diz que a proporção de O₂ continua ~21%; a frequência respiratória aumenta, não diminui.\n• C: o ar não tem excesso de CO₂ na altitude.\n• D: a pressão do ar é menor; no adulto, hemácias são produzidas na medula óssea.\n• E: o frio não impede as trocas gasosas, e o pulmão adulto não cresce em semanas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_05",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Fisiologia da Excreção",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que o álcool aumenta a filtração no glomérulo, ou confundir o ADH com a aldosterona.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nÉ comum que a ingestão de bebidas alcoólicas aumente o volume de urina e, horas depois, cause sede e boca seca. Parte do efeito se deve à ação do etanol sobre a hipófise, que passa a liberar menos hormônio antidiurético (ADH). Esse hormônio atua nos túbulos coletores dos néfrons, tornando suas paredes mais permeáveis à água por meio de canais chamados aquaporinas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o aumento do volume de urina após a ingestão de álcool ocorre porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o etanol aumenta a pressão nos glomérulos, filtrando mais sangue."
+      },
+      {
+        "id": "b",
+        "text": "o etanol estimula a produção de ADH, que elimina água pela urina."
+      },
+      {
+        "id": "c",
+        "text": "o etanol bloqueia a filtração glomerular, acumulando água nos túbulos."
+      },
+      {
+        "id": "d",
+        "text": "com menos ADH, os túbulos coletores reabsorvem menos água, e a urina sai mais abundante e diluída, o que contribui para a desidratação e a sede."
+      },
+      {
+        "id": "e",
+        "text": "a bexiga passa a produzir urina diretamente a partir do álcool ingerido."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O ADH aumenta a inserção de aquaporinas nas células do túbulo coletor; a água passa para o interstício, concentrado, e volta ao sangue. Com a liberação de ADH inibida, menos água é reabsorvida: o volume de urina aumenta, ela fica mais diluída e o corpo perde água — daí a sede.\n\nPegadinhas:\n• A: o texto atribui o efeito à redução de ADH, não à filtração.\n• B: inverte o efeito: o álcool inibe a liberação de ADH, e o ADH retém água.\n• C: se a filtração fosse bloqueada, haveria menos urina, não mais.\n• E: a bexiga apenas armazena a urina produzida pelos rins.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_06",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Sangue e Imunologia",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Confundir imunização passiva (soro) com ativa (vacina), ou achar que o soro gera memória.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma pessoa picada por uma jararaca foi levada ao hospital e recebeu soro antibotrópico, produzido a partir do plasma de cavalos que receberam pequenas doses do veneno. No mesmo mês, ela tomou a vacina contra o tétano, porque sua última dose havia sido aplicada há mais de dez anos. O médico explicou que, se fosse picada de novo meses depois, precisaria receber soro outra vez, mas que a proteção contra o tétano duraria anos.\n\nTexto elaborado para esta questão.\n\nA explicação do médico se justifica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o soro estimula a produção de memória imunológica, e a vacina fornece anticorpos prontos."
+      },
+      {
+        "id": "b",
+        "text": "o soro e a vacina são idênticos, mudando apenas a via de aplicação."
+      },
+      {
+        "id": "c",
+        "text": "o veneno de serpente destrói a memória imunológica, o que não acontece com o tétano."
+      },
+      {
+        "id": "d",
+        "text": "o soro fornece anticorpos prontos, de ação imediata e duração curta, sem formar memória; a vacina estimula o próprio organismo a produzir anticorpos e células de memória."
+      },
+      {
+        "id": "e",
+        "text": "a vacina contém anticorpos de cavalo, que permanecem no sangue por toda a vida."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O soro é imunização passiva: os anticorpos vêm prontos do cavalo, neutralizam o veneno rapidamente — necessário numa emergência — e são degradados em semanas, sem que o paciente produza memória. A vacina é imunização ativa: o antígeno (o toxoide tetânico) leva os linfócitos do próprio organismo a produzir anticorpos e células de memória, que respondem depressa a exposições futuras.\n\nPegadinhas:\n• A: inverte o papel de soro e vacina.\n• B: têm composição e mecanismo diferentes.\n• C: o veneno não destrói memória; o soro é que não a produz.\n• E: anticorpos de cavalo estão no soro e duram pouco.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_07",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Fisiologia da Digestão",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a bile contém enzimas que digerem gorduras, ou que é produzida pela vesícula.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nApós a retirada da vesícula biliar, uma cirurgia comum em pessoas com cálculos, muitos pacientes recebem a orientação de evitar refeições muito gordurosas, principalmente nos primeiros meses. Sem a vesícula, a bile continua a ser produzida, mas passa a escorrer continuamente para o duodeno, em vez de ser liberada em maior quantidade logo após as refeições. Refeições ricas em gordura podem então causar desconforto e diarreia.\n\nTexto elaborado para esta questão.\n\nA orientação se explica porque a bile",
+    "options": [
+      {
+        "id": "a",
+        "text": "é produzida pela vesícula e, sem ela, deixa de existir."
+      },
+      {
+        "id": "b",
+        "text": "emulsifica as gorduras, dividindo-as em gotículas menores e aumentando a superfície de ação da lipase pancreática; sem a liberação concentrada após a refeição, uma refeição muito gordurosa é digerida de forma menos eficiente."
+      },
+      {
+        "id": "c",
+        "text": "contém a lipase, a principal enzima que quebra gorduras em ácidos graxos e glicerol."
+      },
+      {
+        "id": "d",
+        "text": "digere proteínas no estômago, e as gorduras passam a ser digeridas no intestino grosso."
+      },
+      {
+        "id": "e",
+        "text": "neutraliza o ácido do intestino grosso, onde ocorre a absorção das gorduras."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A bile é produzida no fígado e armazenada e concentrada na vesícula. Seus sais biliares não são enzimas: atuam como detergentes, emulsificando a gordura e facilitando a ação da lipase pancreática. Sem a vesícula, falta a liberação de maior volume no momento da refeição gordurosa.\n\nPegadinhas:\n• A: o fígado continua produzindo a bile, como diz o texto.\n• C: a lipase vem do pâncreas; a bile não tem enzima digestiva relevante.\n• D: a bile atua no duodeno, não no estômago; a gordura é digerida e absorvida no intestino delgado.\n• E: a bile atua no delgado; a absorção de gorduras ocorre no intestino delgado.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_08",
+    "subject": "Biologia",
+    "topicId": "bio_genetica",
+    "chapter": "Ligação Gênica",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Somar distâncias sem conferir a ordem dos genes, ou tratar genes ligados como se segregassem independentemente.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma espécie de inseto, três genes, A, B e C, localizam-se no mesmo cromossomo. Cruzamentos-teste forneceram as seguintes frequências de recombinação entre pares de genes:\n\n• entre A e B: 12%;\n• entre B e C: 5%;\n• entre A e C: 17%.\n\nSabe-se que, para distâncias pequenas, a frequência de recombinação entre dois genes é aproximadamente proporcional à distância entre eles no cromossomo, e 1% de recombinação corresponde a 1 unidade de mapa (centimorgan).\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nCom base nesses dados, a ordem dos genes no cromossomo e a distância entre os genes das extremidades são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "A – C – B, com 12 unidades de mapa entre A e B."
+      },
+      {
+        "id": "b",
+        "text": "B – A – C, com 17 unidades de mapa entre B e C."
+      },
+      {
+        "id": "c",
+        "text": "C – A – B, com 29 unidades de mapa entre C e B."
+      },
+      {
+        "id": "d",
+        "text": "A – B – C, com 5 unidades de mapa entre A e C."
+      },
+      {
+        "id": "e",
+        "text": "A – B – C, com 17 unidades de mapa entre A e C, pois a distância A–C é a soma das distâncias A–B e B–C."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Os genes mais distantes são os que mostram maior recombinação: A e C, com 17%. B fica entre eles, porque 12 + 5 = 17. A ordem é A – B – C, com A e C nas extremidades, separados por 17 unidades de mapa.\n\nPegadinhas:\n• A: se C estivesse no meio, A–B seria a maior distância, mas A–B (12) é menor que A–C (17).\n• B: com A no meio, B–C seria a soma das outras duas, mas B–C vale só 5.\n• C: soma as duas maiores frequências sem conferir que 12 + 17 não aparece nos dados.\n• D: acerta a ordem, mas atribui às extremidades a distância de B a C.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_09",
+    "subject": "Biologia",
+    "topicId": "bio_botanica",
+    "chapter": "Plantas Terrestres I: Briófitas e Pteridófitas",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Atribuir o pequeno porte dos musgos à falta de luz, ou achar que a fase duradoura dos musgos é o esporófito.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm trilhas de Mata Atlântica, é comum encontrar musgos formando tapetes de poucos centímetros sobre pedras e troncos úmidos, e samambaias de vários tamanhos — algumas, como os xaxins, chegam a vários metros de altura. Nos musgos, a planta verde que se vê é o gametófito, e o esporófito cresce sobre ele; nas samambaias, a planta verde é o esporófito, e o gametófito é uma estrutura pequena e de vida curta.\n\nTexto elaborado para esta questão.\n\nA diferença de porte entre musgos e samambaias relaciona-se principalmente ao fato de que",
+    "options": [
+      {
+        "id": "a",
+        "text": "os musgos não têm tecidos condutores de seiva, e o transporte de água de célula em célula limita sua altura, enquanto as samambaias têm xilema e floema, que permitem conduzir água e nutrientes por distâncias maiores."
+      },
+      {
+        "id": "b",
+        "text": "os musgos vivem em ambientes sem luz e não conseguem fazer fotossíntese."
+      },
+      {
+        "id": "c",
+        "text": "as samambaias produzem sementes, que armazenam nutrientes para o crescimento."
+      },
+      {
+        "id": "d",
+        "text": "os musgos têm flores pequenas, e as samambaias têm flores grandes."
+      },
+      {
+        "id": "e",
+        "text": "as samambaias dispensam água para a reprodução, enquanto os musgos dependem dela."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Briófitas são avasculares: água e sais passam de célula em célula, por difusão e osmose, o que só funciona em distâncias curtas. Pteridófitas são as primeiras plantas vasculares, com xilema e floema e lignina dando sustentação, o que permite porte maior.\n\nPegadinhas:\n• B: musgos fazem fotossíntese; o próprio texto diz que a planta é verde.\n• C: pteridófitas não produzem sementes; reproduzem-se por esporos.\n• D: nenhum dos dois grupos tem flores.\n• E: nos dois grupos, o anterozoide precisa de água para chegar à oosfera.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_10",
+    "subject": "Química",
+    "topicId": "qui_estequiometria",
+    "chapter": "Determinação de Fórmulas Químicas",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Parar na fórmula mínima, ou dividir as porcentagens diretamente sem convertê-las em mols.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma substância orgânica extraída do mel foi analisada em laboratório. A análise elementar indicou, em massa, 40,0% de carbono, 6,7% de hidrogênio e 53,3% de oxigênio. Por espectrometria de massas, determinou-se que sua massa molar é 180 g/mol. A mesma composição percentual é encontrada em outras substâncias, como o formaldeído e o ácido acético, que têm massas molares diferentes.\n\nNote e adote: massas molares (g/mol): H = 1; C = 12; O = 16.\n\nTexto elaborado para esta questão.\n\nA fórmula molecular da substância e a explicação de por que ela tem a mesma composição percentual do ácido acético são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "CH₂O, pois toda substância com essa composição tem a mesma fórmula molecular."
+      },
+      {
+        "id": "b",
+        "text": "C₂H₄O₂, pois a massa molar não influencia a fórmula molecular."
+      },
+      {
+        "id": "c",
+        "text": "C₆H₁₂O₆, pois a fórmula mínima CH₂O (30 g/mol) se repete seis vezes, e substâncias com fórmulas moleculares múltiplas da mesma fórmula mínima têm a mesma composição percentual."
+      },
+      {
+        "id": "d",
+        "text": "C₄H₇O₃, pois a proporção 40 : 6,7 : 53,3 corresponde ao número de átomos."
+      },
+      {
+        "id": "e",
+        "text": "C₁₂H₂₂O₁₁, pois o açúcar do mel é a sacarose."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Em 100 g: C = 40/12 ≈ 3,33 mol; H = 6,7/1 = 6,7 mol; O = 53,3/16 ≈ 3,33 mol. A proporção é 1 : 2 : 1, fórmula mínima CH₂O, de massa 30 g/mol. Como 180/30 = 6, a fórmula molecular é C₆H₁₂O₆. O ácido acético, C₂H₄O₂, e o formaldeído, CH₂O, têm a mesma fórmula mínima e, portanto, a mesma composição percentual.\n\nPegadinhas:\n• A: CH₂O é só a fórmula mínima; é a massa molar que decide o múltiplo.\n• B: C₂H₄O₂ tem 60 g/mol, não 180.\n• D: as porcentagens são em massa; é preciso dividir pelas massas molares.\n• E: a sacarose tem outra composição percentual (cerca de 42% de C) e 342 g/mol.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_11",
+    "subject": "Química",
+    "topicId": "qui_organica_reacoes",
+    "chapter": "Transesterificação (Alcoólise)",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o biodiesel é o óleo vegetal puro, ou confundir o subproduto com água.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo Brasil, o óleo diesel vendido nos postos contém uma porcentagem de biodiesel, produzido principalmente a partir de óleo de soja e sebo bovino. Na indústria, o óleo é misturado a metanol ou etanol na presença de um catalisador básico. Obtém-se uma mistura de ésteres, menos viscosa que o óleo original e adequada aos motores, e um subproduto que se separa no fundo do reator e é vendido para a indústria de cosméticos.\n\nTexto elaborado para esta questão.\n\nA reação descrita e o subproduto obtido são, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "hidrogenação do óleo; e água."
+      },
+      {
+        "id": "b",
+        "text": "saponificação do óleo; e sabão."
+      },
+      {
+        "id": "c",
+        "text": "transesterificação dos triglicerídeos com o álcool, que forma ésteres de cadeia longa e libera glicerol, também chamado glicerina."
+      },
+      {
+        "id": "d",
+        "text": "combustão do óleo; e gás carbônico."
+      },
+      {
+        "id": "e",
+        "text": "polimerização dos ácidos graxos; e etileno."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O triglicerídeo é um triéster do glicerol. Na transesterificação, o álcool (metanol ou etanol) substitui o glicerol: cada molécula de óleo origina três moléculas de éster metílico ou etílico de ácidos graxos — o biodiesel — e libera uma de glicerol, que, mais denso, se separa no fundo e tem uso em cosméticos.\n\nPegadinhas:\n• A: hidrogenação adiciona H₂ às duplas ligações e produz gordura mais sólida, não biodiesel.\n• B: saponificação usa base em quantidade e forma sais de ácidos graxos (sabão), não ésteres.\n• D: combustão é o que ocorre no motor, não na produção.\n• E: não há formação de polímero.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_12",
+    "subject": "Química",
+    "topicId": "qui_organica_reacoes",
+    "chapter": "Acidez e Basicidade (pKa)",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a forma ionizada atravessa melhor as membranas, ou inverter a relação entre pH e pKa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO ácido acetilsalicílico, princípio ativo da aspirina, é um ácido fraco com pKa ≈ 3,5. Moléculas sem carga atravessam com mais facilidade as membranas das células, formadas principalmente por lipídios, do que íons. O pH do suco gástrico é próximo de 1,5, e o do sangue, de 7,4.\n\nNote e adote: para um ácido fraco HA, quando pH < pKa predomina a forma não ionizada (HA), e quando pH > pKa predomina a forma ionizada (A⁻); cada unidade de diferença entre pH e pKa corresponde a um fator de 10 na razão entre as formas.\n\nTexto elaborado para esta questão.\n\nCom base nessas informações, é correto afirmar que, no estômago, o ácido acetilsalicílico",
+    "options": [
+      {
+        "id": "a",
+        "text": "está quase todo ionizado e, por isso, é absorvido rapidamente."
+      },
+      {
+        "id": "b",
+        "text": "está ionizado e não é absorvido em nenhum órgão."
+      },
+      {
+        "id": "c",
+        "text": "tem a mesma proporção entre as formas ionizada e não ionizada que no sangue."
+      },
+      {
+        "id": "d",
+        "text": "é transformado em base, pois o pH do estômago é ácido."
+      },
+      {
+        "id": "e",
+        "text": "está predominantemente na forma não ionizada, cerca de 100 moléculas para cada íon, o que favorece sua passagem pela mucosa; no sangue, de pH maior que o pKa, passa a predominar a forma ionizada."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. No estômago, pH 1,5 está duas unidades abaixo do pKa 3,5: a razão HA/A⁻ é cerca de 10² = 100. A forma neutra atravessa a bicamada lipídica com facilidade. No sangue, pH 7,4 fica quase quatro unidades acima do pKa, e predomina o íon — que tende a ficar retido ali.\n\nPegadinhas:\n• A: inverte o predomínio: com pH abaixo do pKa, predomina a forma não ionizada.\n• B: no estômago ele está pouco ionizado e pode ser absorvido.\n• C: a proporção depende do pH, muito diferente nos dois meios.\n• D: o meio ácido não transforma o ácido em base; apenas desloca o equilíbrio para HA.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_13",
+    "subject": "Química",
+    "topicId": "qui_eletroquimica",
+    "chapter": "Eletroquímica de Processos não Espontâneos",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Associar um mol de elétrons a um mol de alumínio, sem considerar a carga +3 do íon.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO alumínio é obtido pela eletrólise da alumina, Al₂O₃, dissolvida em criolita fundida, a cerca de 960 °C. O processo consome grande quantidade de energia elétrica, e por isso as fábricas costumam ficar perto de usinas hidrelétricas — razão pela qual a reciclagem de latas economiza tanta energia. No cátodo, ocorre a redução dos íons alumínio: Al³⁺ + 3 e⁻ → Al.\n\nNote e adote: carga de 1 mol de elétrons ≈ 96.500 C (constante de Faraday); massa molar do Al = 27 g/mol.\n\nTexto elaborado para esta questão.\n\nUma cuba eletrolítica em que circula uma carga total de 2,9 × 10⁵ C produz, aproximadamente, a seguinte massa de alumínio:",
+    "options": [
+      {
+        "id": "a",
+        "text": "27 g, pois 3 mol de elétrons reduzem 1 mol de íons Al³⁺."
+      },
+      {
+        "id": "b",
+        "text": "40,5 g, pois cada íon de alumínio recebe 2 elétrons ao ser reduzido."
+      },
+      {
+        "id": "c",
+        "text": "54 g, pois 3 mol de elétrons produzem os 2 mol de Al da fórmula Al₂O₃."
+      },
+      {
+        "id": "d",
+        "text": "81 g, pois cada mol de elétrons produz 1 mol de alumínio."
+      },
+      {
+        "id": "e",
+        "text": "162 g, pois cada mol de elétrons produz os 2 mol de Al da fórmula Al₂O₃."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. n(e⁻) = 2,9 × 10⁵ / 9,65 × 10⁴ ≈ 3 mol de elétrons. Cada Al³⁺ precisa de 3 elétrons: 3 mol de e⁻ produzem 1 mol de Al, isto é, 27 g.\n\nPegadinhas:\n• B: corresponde a íons Al²⁺ (1,5 mol de Al), carga que o alumínio não tem nessa reação.\n• C: seria contar que os 3 mol de elétrons produzem a fórmula inteira Al₂O₃, com 2 Al.\n• D: considera 1 elétron por átomo de alumínio (3 mol de Al).\n• E: dobra o erro anterior, contando 2 Al por elétron, como na fórmula Al₂O₃.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_14",
+    "subject": "Química",
+    "topicId": "qui_organica_reacoes",
+    "chapter": "Reações de Oxidação em Hidrocarbonetos",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o perigo é o CO₂ ou que o CO é perceptível pelo cheiro.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nTodos os anos há registros de intoxicação em banheiros com aquecedores a gás instalados sem ventilação adequada. O gás de cozinha é formado principalmente por propano e butano. Com pouco oxigênio disponível, parte do combustível sofre combustão incompleta. Um dos produtos é incolor e inodoro e se liga à hemoglobina com afinidade cerca de 200 vezes maior que a do oxigênio, formando a carboxi-hemoglobina.\n\nTexto elaborado para esta questão.\n\nO produto descrito no texto e o motivo de ser perigoso são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "gás carbônico, CO₂, que é tóxico por ter mais oxigênio que o CO."
+      },
+      {
+        "id": "b",
+        "text": "vapor d'água, que ocupa o lugar do oxigênio nos alvéolos."
+      },
+      {
+        "id": "c",
+        "text": "fuligem, que é inalada e se dissolve no sangue."
+      },
+      {
+        "id": "d",
+        "text": "monóxido de carbono, CO, que ocupa os sítios de ligação da hemoglobina e reduz o transporte de oxigênio aos tecidos, sem ser percebido pelo olfato."
+      },
+      {
+        "id": "e",
+        "text": "propano não queimado, que tem cheiro forte e irrita a pele."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Na combustão completa de propano, C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O. Com oxigênio insuficiente, forma-se CO (e até fuligem, C). O CO se liga ao ferro da hemoglobina muito mais fortemente que o O₂, e o sangue transporta menos oxigênio. Por não ter cor nem cheiro, a intoxicação passa despercebida.\n\nPegadinhas:\n• A: CO₂ é produto da combustão completa e não forma carboxi-hemoglobina.\n• B: vapor d'água não tem esse efeito.\n• C: fuligem é sólida e não se liga à hemoglobina.\n• E: o produto descrito é inodoro, e o cheiro do gás de cozinha vem de um aditivo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_15",
+    "subject": "Química",
+    "topicId": "qui_polaridade_geometria",
+    "chapter": "Geometria Molecular",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que molécula com ligações polares é sempre polar, ou que a geometria depende só do número de átomos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA água e o gás carbônico são moléculas triatômicas formadas por um átomo central e dois átomos iguais ligados a ele. Ambas têm ligações polares, pois o oxigênio é mais eletronegativo que o hidrogênio e que o carbono. No entanto, a água é um ótimo solvente de sais e tem ponto de ebulição de 100 °C, enquanto o gás carbônico é pouco solúvel em água e, à pressão ambiente, passa do sólido diretamente ao gás a −78 °C.\n\nTexto elaborado para esta questão.\n\nA diferença entre as duas substâncias deve-se ao fato de que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o CO₂ tem ligações apolares, e a água tem ligações polares."
+      },
+      {
+        "id": "b",
+        "text": "a água é angular, por causa dos dois pares de elétrons não ligantes do oxigênio, e seus dipolos de ligação não se anulam, enquanto o CO₂ é linear, e seus dipolos se anulam, resultando em molécula apolar."
+      },
+      {
+        "id": "c",
+        "text": "as duas moléculas são lineares, mas a água é mais pesada."
+      },
+      {
+        "id": "d",
+        "text": "o CO₂ é angular e polar, e a água é linear e apolar."
+      },
+      {
+        "id": "e",
+        "text": "a água forma ligações iônicas entre as moléculas, e o CO₂, ligações covalentes."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. No CO₂, o carbono não tem pares livres: os dois pares de elétrons ligantes (duplas) se afastam a 180°, e os dipolos C=O, iguais e opostos, se cancelam. Na água, os dois pares não ligantes do oxigênio empurram as ligações O–H para um ângulo de ~104,5°; os dipolos se somam e a molécula é polar, com ligações de hidrogênio entre moléculas — daí o alto ponto de ebulição e a capacidade de dissolver sais.\n\nPegadinhas:\n• A: o texto afirma que as ligações C=O são polares.\n• C: a água é angular; e é mais leve (18 g/mol) que o CO₂ (44 g/mol).\n• D: inverte as geometrias.\n• E: entre moléculas de água há ligações de hidrogênio, não ligações iônicas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_16",
+    "subject": "Química",
+    "topicId": "qui_organica_fundamentos",
+    "chapter": "Introdução à Química Orgânica",
+    "difficulty": "easy",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a química orgânica estuda apenas substâncias produzidas por seres vivos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAté o início do século XIX, muitos químicos acreditavam que as substâncias encontradas nos seres vivos só poderiam ser produzidas por eles, graças a uma \"força vital\". Em 1828, o químico alemão Friedrich Wöhler aqueceu cianato de amônio, uma substância considerada inorgânica, e obteve ureia, composto até então conhecido apenas na urina de animais. O resultado, somado a outras sínteses feitas nas décadas seguintes, contribuiu para mudar a definição dessa área da química.\n\nTexto elaborado para esta questão.\n\nA partir do texto, conclui-se que a síntese de Wöhler",
+    "options": [
+      {
+        "id": "a",
+        "text": "provou que a ureia não é uma substância orgânica."
+      },
+      {
+        "id": "b",
+        "text": "contribuiu para o abandono da teoria da força vital, e a química orgânica passou a ser entendida como a química dos compostos de carbono, sejam eles naturais ou sintéticos."
+      },
+      {
+        "id": "c",
+        "text": "mostrou que a ureia só pode ser obtida a partir da urina."
+      },
+      {
+        "id": "d",
+        "text": "confirmou que apenas organismos vivos produzem compostos de carbono."
+      },
+      {
+        "id": "e",
+        "text": "demonstrou que o cianato de amônio é produzido pelos rins dos animais."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Ao obter em laboratório, a partir de um composto inorgânico, uma substância antes associada só a seres vivos, Wöhler abalou o vitalismo. Hoje, química orgânica é a química dos compostos de carbono, com milhões de substâncias sintéticas, como plásticos e medicamentos.\n\nPegadinhas:\n• A: a ureia continua sendo composto orgânico; o que mudou foi a ideia de que só seres vivos a produzem.\n• C: o experimento mostra justamente o contrário.\n• D: inverte a conclusão.\n• E: o cianato de amônio foi o reagente do laboratório, não um produto dos rins.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_17",
+    "subject": "Química",
+    "topicId": "qui_organica_fundamentos",
+    "chapter": "Nomenclatura de Compostos Orgânicos",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Contar a cadeia principal pela linha desenhada em vez de pela maior sequência com o grupo funcional, ou numerar pelo lado errado.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm álcool usado como solvente em tintas e vernizes tem a fórmula estrutural condensada a seguir:\n\nCH₃ – CH(CH₃) – CH₂ – OH\n\nPelas regras da IUPAC, a cadeia principal é a maior sequência de carbonos que contém o carbono ligado ao grupo –OH, e a numeração começa pela extremidade mais próxima desse grupo. Ramificações recebem o número do carbono a que estão ligadas. O mesmo composto também é conhecido pelo nome usual de álcool isobutílico, e é isômero do butan-1-ol, de cadeia normal.\n\nTexto elaborado para esta questão.\n\nO nome IUPAC desse álcool é:",
+    "options": [
+      {
+        "id": "a",
+        "text": "butan-2-ol, pois a cadeia tem quatro carbonos e o –OH fica no carbono 2."
+      },
+      {
+        "id": "b",
+        "text": "2-metilbutan-1-ol, pois há uma ramificação metil em uma cadeia de quatro carbonos."
+      },
+      {
+        "id": "c",
+        "text": "1-metilpropan-2-ol, pois a numeração começa pela ramificação."
+      },
+      {
+        "id": "d",
+        "text": "2-metilpropan-1-ol, pois a cadeia principal tem três carbonos, com o –OH no carbono 1 e uma ramificação metil no carbono 2."
+      },
+      {
+        "id": "e",
+        "text": "pentan-1-ol, pois o composto tem cinco carbonos no total."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O composto tem quatro carbonos ao todo. A maior cadeia que contém o carbono do –OH tem três carbonos (propan-); numerando a partir do –OH, ele fica no C1 e o metil no C2: 2-metilpropan-1-ol (C₄H₁₀O), isômero do butan-1-ol.\n\nPegadinhas:\n• A: butan-2-ol é outro isômero, CH₃–CH(OH)–CH₂–CH₃, de cadeia normal.\n• B: soma o metil à cadeia de quatro carbonos e conta cinco carbonos, um a mais que a molécula tem.\n• C: a numeração começa pela extremidade mais próxima do grupo funcional.\n• E: a fórmula tem quatro carbonos, não cinco.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_18",
+    "subject": "Química",
+    "topicId": "qui_estequiometria",
+    "chapter": "Estequiometria: Leis Ponderais",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Tomar a variação de massa em sistema aberto como violação da lei de Lavoisier.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma aula prática, dois experimentos foram feitos sobre balanças:\n\nI. Uma porção de palha de aço foi queimada em um prato aberto. Ao final, a massa do material no prato era maior que a da palha de aço inicial.\n\nII. Um comprimido efervescente foi colocado em água, em um copo aberto. Ao final da efervescência, a massa do conjunto era menor que a inicial.\n\nUm estudante concluiu que os dois experimentos contradizem a lei da conservação das massas, formulada por Lavoisier no século XVIII.\n\nTexto elaborado para esta questão.\n\nA conclusão do estudante está",
+    "options": [
+      {
+        "id": "a",
+        "text": "correta, pois a massa só se conserva em reações nucleares."
+      },
+      {
+        "id": "b",
+        "text": "correta, pois na reação I houve criação de matéria a partir do calor."
+      },
+      {
+        "id": "c",
+        "text": "incorreta, pois em I o ferro se combinou com o oxigênio do ar, que não havia sido pesado, e em II o gás carbônico formado escapou do copo; em sistema fechado, as massas totais antes e depois seriam iguais."
+      },
+      {
+        "id": "d",
+        "text": "incorreta, pois nas duas reações a massa diminuiu, como prevê Lavoisier."
+      },
+      {
+        "id": "e",
+        "text": "incorreta, pois a lei de Lavoisier só vale para reações em solução aquosa."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A lei vale para sistema fechado. Em I, o ferro reagiu com O₂ do ar, formando óxido; a massa do oxigênio incorporado explica o aumento. Em II, o bicarbonato reagiu com o ácido do comprimido e liberou CO₂, que saiu para o ambiente. Pesando-se reagentes e produtos, incluindo os gases, a massa total se conserva.\n\nPegadinhas:\n• A: inverte o domínio: em reações químicas comuns a conservação vale; é nas nucleares que a variação de massa se torna perceptível.\n• B: o calor não cria matéria; a massa extra veio do oxigênio.\n• D: em I a massa aumentou.\n• E: a lei vale para qualquer reação química em sistema fechado.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_19",
+    "subject": "Física",
+    "topicId": "fis_circuitos",
+    "chapter": "Capacitores",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Achar que a energia do capacitor cresce linearmente com a tensão.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDesfibriladores externos automáticos, encontrados em aeroportos e estádios, armazenam energia em um capacitor antes de aplicar o choque no paciente. Em um aparelho de teste, quando o capacitor é carregado sob tensão de 1.000 V, ele armazena 50 J de energia. O técnico pretende aumentar a tensão de carga para 2.000 V, mantendo o mesmo capacitor.\n\nNote e adote: a energia armazenada em um capacitor de capacitância C, carregado sob tensão U, é E = C·U²/2.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA energia armazenada no capacitor carregado a 2.000 V será",
+    "options": [
+      {
+        "id": "a",
+        "text": "25 J, pois a energia armazenada diminui quando a tensão aumenta."
+      },
+      {
+        "id": "b",
+        "text": "50 J, pois a energia depende só da capacitância, que não mudou."
+      },
+      {
+        "id": "c",
+        "text": "70,7 J, pois a energia é proporcional à raiz quadrada da tensão."
+      },
+      {
+        "id": "d",
+        "text": "100 J, pois a energia é diretamente proporcional à tensão."
+      },
+      {
+        "id": "e",
+        "text": "200 J, pois a energia é proporcional ao quadrado da tensão, e dobrar a tensão a quadruplica."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Com C constante, a energia é proporcional ao quadrado da tensão. Dobrar U multiplica E por 2² = 4: 50 J × 4 = 200 J. (Com os dados, C = 2E/U² = 100/10⁶ = 10⁻⁴ F = 100 μF.)\n\nPegadinhas:\n• A: inverte a proporção, como se mais tensão reduzisse a energia.\n• B: supõe que a energia depende só do capacitor, não da tensão.\n• C: multiplica por √2, como se E fosse proporcional à raiz da tensão.\n• D: é o modelo linear, a pegadinha principal: E dobra só se U aumenta √2 vezes.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_20",
+    "subject": "Física",
+    "topicId": "fis_circuitos",
+    "chapter": "Geradores",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Esquecer a queda de tensão na resistência interna do gerador.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm carro com a bateria já envelhecida tem dificuldade para dar a partida em manhãs frias. Um mecânico mediu a força eletromotriz da bateria com o carro desligado e encontrou 12 V. Em seguida, ligou os faróis, que exigem corrente de 4 A, e mediu novamente a tensão entre os terminais da bateria. A diferença entre as duas medidas se deve à resistência interna da bateria, que aumenta com o envelhecimento e com a temperatura baixa.\n\nNote e adote: para um gerador real, U = ε − r·i; resistência interna da bateria: r = 0,5 Ω.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA tensão medida entre os terminais com os faróis ligados é",
+    "options": [
+      {
+        "id": "a",
+        "text": "10 V, pois a resistência interna consome 0,5 × 4 = 2 V da força eletromotriz."
+      },
+      {
+        "id": "b",
+        "text": "12 V, pois a tensão nos terminais é sempre igual à força eletromotriz."
+      },
+      {
+        "id": "c",
+        "text": "14 V, pois a queda na resistência interna se soma à força eletromotriz."
+      },
+      {
+        "id": "d",
+        "text": "24 V, pois a corrente nos faróis dobra a tensão da bateria."
+      },
+      {
+        "id": "e",
+        "text": "48 V, pois a tensão é o produto da força eletromotriz pela corrente."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. U = ε − r·i = 12 − 0,5 × 4 = 12 − 2 = 10 V. Parte da força eletromotriz se perde na própria bateria; quanto maior a corrente ou a resistência interna, menor a tensão útil — por isso a partida, que exige correntes muito maiores, falha com a bateria velha.\n\nPegadinhas:\n• B: ignora a resistência interna e trata a bateria como ideal.\n• C: soma r·i em vez de subtrair, como num receptor.\n• D: dobra ε, como se houvesse duas baterias.\n• E: calcula ε·i = 48, que é potência (W), não tensão.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_21",
+    "subject": "Física",
+    "topicId": "fis_circuitos",
+    "chapter": "Medidores Elétricos",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Inverter as ligações: amperímetro em paralelo e voltímetro em série.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma aula de laboratório, um estudante deve medir a corrente que atravessa uma lâmpada e a tensão entre os terminais dela, alimentada por uma fonte. O professor alerta que um amperímetro ligado de forma errada pode queimar o fusível do aparelho, e que um voltímetro ligado de forma errada faz a lâmpada apagar, embora ele próprio não se danifique. Explica ainda que os medidores bons quase não alteram o circuito em que são inseridos.\n\nTexto elaborado para esta questão.\n\nPara medir corretamente, os aparelhos devem ser ligados e ter as seguintes características:",
+    "options": [
+      {
+        "id": "a",
+        "text": "amperímetro em paralelo com a lâmpada e resistência interna muito alta; voltímetro em série e resistência muito baixa."
+      },
+      {
+        "id": "b",
+        "text": "os dois aparelhos em série com a lâmpada, ambos de resistência muito alta."
+      },
+      {
+        "id": "c",
+        "text": "os dois aparelhos em paralelo com a lâmpada, ambos de resistência muito baixa."
+      },
+      {
+        "id": "d",
+        "text": "amperímetro em série com resistência muito alta; voltímetro em paralelo com resistência muito baixa."
+      },
+      {
+        "id": "e",
+        "text": "amperímetro em série com a lâmpada e resistência interna muito baixa; voltímetro em paralelo com a lâmpada e resistência interna muito alta."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O amperímetro precisa ser atravessado pela mesma corrente da lâmpada, logo em série; com resistência quase nula, não reduz essa corrente. O voltímetro mede a diferença de potencial entre dois pontos, logo em paralelo; com resistência altíssima, quase não desvia corrente. Ligado em paralelo, o amperímetro curto-circuita a lâmpada e recebe corrente alta (o fusível queima); em série, o voltímetro bloqueia a corrente e a lâmpada apaga — exatamente os alertas do professor.\n\nPegadinhas:\n• A: inverte as duas ligações, que levam aos dois acidentes descritos.\n• B: um voltímetro em série impede a passagem de corrente.\n• C: um amperímetro em paralelo curto-circuita a lâmpada.\n• D: acerta as ligações, mas troca as resistências ideais.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_22",
+    "subject": "Física",
+    "topicId": "fis_eletrostatica",
+    "chapter": "Força Elétrica: Lei de Coulomb",
+    "difficulty": "easy",
+    "skill": "modelagem",
+    "trap": "Usar a proporção inversa simples em vez do inverso do quadrado.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDuas pequenas esferas eletrizadas, mantidas fixas em suportes isolantes, interagem com uma força de módulo F. Em um experimento, a distância entre os centros das esferas é triplicada, sem alterar as cargas e sem que elas troquem cargas com o ambiente. O mesmo tipo de dependência com a distância aparece na lei da gravitação universal de Newton, em que a força entre massas também é proporcional ao produto das massas.\n\nNote e adote: lei de Coulomb, F = k·|Q₁|·|Q₂| / d².\n\nTexto elaborado para esta questão.\n\nApós o aumento da distância, o módulo da força passa a ser",
+    "options": [
+      {
+        "id": "a",
+        "text": "F/9"
+      },
+      {
+        "id": "b",
+        "text": "F/3"
+      },
+      {
+        "id": "c",
+        "text": "F"
+      },
+      {
+        "id": "d",
+        "text": "3F"
+      },
+      {
+        "id": "e",
+        "text": "9F"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A força é inversamente proporcional ao quadrado da distância: com d' = 3d, F' = F/3² = F/9.\n\nPegadinhas:\n• B: usa proporção inversa simples (1/d), sem o quadrado.\n• C: supõe que só as cargas importam.\n• D: considera a força proporcional à distância.\n• E: acerta o quadrado, mas inverte o sentido da variação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_23",
+    "subject": "Física",
+    "topicId": "fis_ondulatoria",
+    "chapter": "Ondas Estacionárias em Tubos",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Usar a relação do tubo aberto (λ = 2L) em um tubo fechado.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAo soprar sobre a boca de uma garrafa vazia, produz-se um som grave. A coluna de ar dentro da garrafa se comporta, de modo aproximado, como um tubo fechado em uma das extremidades, o fundo, e aberto na outra, o gargalo. Na extremidade fechada forma-se um nó de deslocamento do ar, e na aberta, um ventre. Considere uma coluna de ar de 50 cm de altura, vibrando em seu modo fundamental, isto é, no harmônico de menor frequência.\n\nNote e adote: velocidade do som no ar = 340 m/s; v = λ·f.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA frequência do som emitido é, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "85 Hz, pois o comprimento de onda do fundamental é oito vezes a altura da coluna."
+      },
+      {
+        "id": "b",
+        "text": "170 Hz, pois no tubo fechado o comprimento de onda do fundamental é quatro vezes a altura da coluna."
+      },
+      {
+        "id": "c",
+        "text": "340 Hz, pois o comprimento de onda do fundamental é o dobro da altura da coluna."
+      },
+      {
+        "id": "d",
+        "text": "510 Hz, pois o fundamental do tubo fechado tem três quartos de onda na coluna."
+      },
+      {
+        "id": "e",
+        "text": "680 Hz, pois o comprimento de onda do fundamental é metade da altura da coluna."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Entre um nó e o ventre seguinte cabe um quarto de comprimento de onda: no fundamental do tubo fechado, L = λ/4, então λ = 4 × 0,5 = 2 m e f = 340/2 = 170 Hz.\n\nPegadinhas:\n• A: usa λ = 8L, dividindo por 2 a mais.\n• C: usa a relação do tubo aberto nas duas pontas (λ = 2L).\n• D: é o 3º harmônico do tubo fechado (3 × 170), não o fundamental.\n• E: usa λ = L/2.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_24",
+    "subject": "Física",
+    "topicId": "fis_ondulatoria",
+    "chapter": "Ondulatória: Som e suas Propriedades",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Tratar o decibel como escala linear.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO nível sonoro, medido em decibels (dB), é uma escala logarítmica: a cada aumento de 10 dB, a intensidade do som, isto é, a potência por unidade de área que chega ao ouvido, é multiplicada por 10. Uma conversa normal tem cerca de 60 dB; uma rua com trânsito intenso, cerca de 80 dB; e a exposição prolongada a níveis acima de 85 dB pode causar perda auditiva permanente, razão pela qual há limites de exposição para trabalhadores.\n\nTexto elaborado para esta questão.\n\nA intensidade sonora da rua com trânsito intenso é maior que a da conversa normal por um fator de, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "1,3"
+      },
+      {
+        "id": "b",
+        "text": "2"
+      },
+      {
+        "id": "c",
+        "text": "20"
+      },
+      {
+        "id": "d",
+        "text": "100"
+      },
+      {
+        "id": "e",
+        "text": "1.000"
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. De 60 para 80 dB, são dois aumentos de 10 dB: a intensidade é multiplicada por 10 × 10 = 100. O ouvido percebe essa variação como bem menor que 100 vezes, o que justifica a escala logarítmica.\n\nPegadinhas:\n• A: divide os níveis (80/60), como se fossem proporcionais à intensidade.\n• B: soma os fatores de 10 dB como se cada um dobrasse a intensidade.\n• C: diz \"20 dB a mais, 20 vezes\", leitura linear da escala.\n• E: conta três aumentos de 10 dB.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_25",
+    "subject": "Física",
+    "topicId": "fis_optica_geometrica",
+    "chapter": "Reflexão em Superfícies Planas",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Achar que o tamanho necessário do espelho depende da distância da pessoa a ele.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma loja de roupas quer instalar, em seus provadores, espelhos planos verticais nos quais os clientes possam ver o próprio corpo inteiro, dos pés ao topo da cabeça. O dono da loja acredita que, como os provadores são pequenos e os clientes ficam muito perto do espelho, ele precisará de espelhos maiores que a altura das pessoas. Considere um cliente de 1,70 m de altura, de pé diante do espelho, com o espelho posicionado na altura adequada.\n\nTexto elaborado para esta questão.\n\nA altura mínima do espelho para que esse cliente se veja por inteiro é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,43 m, porque a imagem fica a uma distância igual à do objeto e se reduz à metade."
+      },
+      {
+        "id": "b",
+        "text": "0,60 m, porque o espelho deve corresponder ao tronco do cliente."
+      },
+      {
+        "id": "c",
+        "text": "0,85 m, metade da altura do cliente, independentemente da distância entre ele e o espelho."
+      },
+      {
+        "id": "d",
+        "text": "1,70 m, porque o espelho deve ter o mesmo tamanho da imagem."
+      },
+      {
+        "id": "e",
+        "text": "3,40 m, porque a imagem fica atrás do espelho, a uma distância dobrada."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Os raios que vão do topo da cabeça e dos pés até os olhos refletem no espelho em pontos situados à meia altura entre esses pontos e os olhos (por semelhança de triângulos, já que a imagem está tão atrás do espelho quanto a pessoa está à frente). O trecho necessário é metade da altura, 0,85 m, qualquer que seja a distância.\n\nPegadinhas:\n• A: divide por 4, sem justificativa geométrica.\n• B: valor arbitrário, sem relação com a reflexão.\n• D: confunde o tamanho da imagem (1,70 m) com o do espelho necessário.\n• E: dobra a altura por confundir a distância da imagem com seu tamanho.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_26",
+    "subject": "Física",
+    "topicId": "fis_gravitacao_circular",
+    "chapter": "Órbitas",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que os astronautas flutuam porque não há gravidade na órbita.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nVídeos gravados na Estação Espacial Internacional mostram astronautas e objetos flutuando dentro da cabine. A estação orbita a cerca de 400 km de altitude, onde a aceleração da gravidade ainda vale aproximadamente 90% do valor na superfície da Terra. Ela completa uma volta em torno do planeta a cada 90 minutos, aproximadamente, com velocidade próxima de 28.000 km/h.\n\nTexto elaborado para esta questão.\n\nA sensação de imponderabilidade dos astronautas se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a estação e tudo o que está dentro dela estão em queda livre em torno da Terra, com a mesma aceleração; a gravidade age como força centrípeta, e não há força de contato do piso sobre os astronautas."
+      },
+      {
+        "id": "b",
+        "text": "a 400 km de altitude não existe mais atração gravitacional da Terra."
+      },
+      {
+        "id": "c",
+        "text": "a gravidade da Lua anula a da Terra na órbita da estação."
+      },
+      {
+        "id": "d",
+        "text": "a velocidade da estação gera uma força centrífuga que destrói a gravidade."
+      },
+      {
+        "id": "e",
+        "text": "a estação está acima da atmosfera, e a gravidade depende da presença de ar."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Gravidade de ~90% do valor da superfície é a força que curva a trajetória da estação. Estação e astronautas caem juntos, com a mesma aceleração, e por isso o piso não precisa empurrá-los: sem força normal, não há sensação de peso. A velocidade horizontal é tão grande que, enquanto caem, eles contornam a Terra.\n\nPegadinhas:\n• B: o texto informa que a gravidade ainda é cerca de 90% da superficial.\n• C: a atração da Lua sobre a estação é muito menor que a da Terra.\n• D: no referencial inercial não há força centrífuga; a gravidade é a própria resultante centrípeta.\n• E: a gravitação não depende do ar.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_27",
+    "subject": "Física",
+    "topicId": "fis_termodinamica_gases",
+    "chapter": "Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que, se a temperatura não muda, o gás não troca calor.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm gás ideal está em um cilindro com êmbolo móvel, em contato com um grande reservatório de água à temperatura constante. O gás se expande lentamente, empurrando o êmbolo, de modo que sua temperatura permanece igual à do reservatório durante todo o processo. Um estudante afirma que, como a temperatura não variou, o gás não trocou calor com o reservatório.\n\nNote e adote: primeira lei da termodinâmica, ΔU = Q − W; para um gás ideal, a energia interna depende apenas da temperatura.\n\nTexto elaborado para esta questão.\n\nSobre essa expansão, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "ΔU = 0 e Q = 0, como afirma o estudante, pois a temperatura é constante."
+      },
+      {
+        "id": "b",
+        "text": "a energia interna aumentou, pois o gás realizou trabalho."
+      },
+      {
+        "id": "c",
+        "text": "ΔU = 0, e o gás recebeu do reservatório uma quantidade de calor igual ao trabalho que realizou sobre o êmbolo, Q = W."
+      },
+      {
+        "id": "d",
+        "text": "o gás cedeu calor ao reservatório, pois sua pressão diminuiu."
+      },
+      {
+        "id": "e",
+        "text": "o trabalho é nulo, pois a expansão foi lenta."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Na transformação isotérmica de um gás ideal, ΔU = 0. Pela primeira lei, Q = W: como o gás realiza trabalho positivo ao se expandir, precisa receber a mesma quantidade de energia na forma de calor. Temperatura constante não significa ausência de calor; calor e temperatura são grandezas diferentes.\n\nPegadinhas:\n• A: confunde temperatura constante com processo adiabático.\n• B: com T constante, a energia interna do gás ideal não muda.\n• D: na expansão isotérmica, o gás recebe calor; cederia na compressão.\n• E: houve deslocamento do êmbolo sob pressão; a lentidão não anula o trabalho.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_28",
+    "subject": "Matemática",
+    "topicId": "mat_dados_probabilidade",
+    "chapter": "Introdução às Probabilidades",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Tratar as somas de 2 a 12 como igualmente prováveis.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um jogo de tabuleiro, cada jogador lança dois dados comuns de seis faces, não viciados, e avança o número de casas correspondente à soma dos resultados. Uma casa especial, que dá direito a uma rodada extra, fica exatamente sete casas à frente de um jogador. Um colega argumenta que, como as somas possíveis vão de 2 a 12, isto é, onze valores, a chance de obter soma 7 é de uma em onze.\n\nTexto elaborado para esta questão.\n\nA probabilidade de o jogador cair exatamente na casa especial nesse lançamento é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1/36, pois só um dos 36 pares de resultados tem soma 7."
+      },
+      {
+        "id": "b",
+        "text": "1/18, pois só dois dos 36 pares de resultados têm soma 7."
+      },
+      {
+        "id": "c",
+        "text": "1/12, pois três pares não ordenados, entre 36, têm soma 7."
+      },
+      {
+        "id": "d",
+        "text": "1/11, pois as somas possíveis vão de 2 a 12 e são igualmente prováveis."
+      },
+      {
+        "id": "e",
+        "text": "1/6, pois seis dos 36 pares ordenados igualmente prováveis têm soma 7."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Os 36 pares ordenados (d₁, d₂) são igualmente prováveis. Somam 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) — 6 casos. P = 6/36 = 1/6, a soma mais provável.\n\nPegadinhas:\n• A: conta apenas um par, por exemplo (3,4).\n• B: conta só dois dos seis pares, como (3,4) e (4,3).\n• C: conta só três dos seis pares, esquecendo a ordem.\n• D: é o argumento do colega: as onze somas não são igualmente prováveis.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_29",
+    "subject": "Matemática",
+    "topicId": "mat_sequencias_matrizes",
+    "chapter": "Progressão Geométrica",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Usar decaimento linear ou contar o número de meias-vidas errado.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm medicamento tem meia-vida de 6 horas no organismo: a cada 6 horas, a quantidade dele no sangue cai para metade do valor anterior. Um paciente tomou uma única dose às 8 h de segunda-feira e não tomou outras doses. O médico informou que o efeito terapêutico depende de a quantidade no sangue estar acima de certo nível, e quis saber quanto restaria da dose às 8 h de terça-feira.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA quantidade restante às 8 h de terça-feira, em relação à dose inicial, é",
+    "options": [
+      {
+        "id": "a",
+        "text": "3,125%, pois em 24 horas ocorrem cinco reduções à metade."
+      },
+      {
+        "id": "b",
+        "text": "6,25%, pois em 24 horas ocorrem quatro reduções à metade."
+      },
+      {
+        "id": "c",
+        "text": "12,5%, pois em 24 horas ocorrem três reduções à metade."
+      },
+      {
+        "id": "d",
+        "text": "25%, pois em 24 horas ocorrem duas reduções à metade."
+      },
+      {
+        "id": "e",
+        "text": "50%, pois a meia-vida reduz a quantidade à metade uma única vez."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Em 24 horas há 24/6 = 4 meias-vidas. As quantidades formam uma PG de razão 1/2: 100%, 50%, 25%, 12,5%, 6,25%. Após 4 termos, resta (1/2)⁴ = 1/16 = 6,25%.\n\nPegadinhas:\n• A: aplica cinco meias-vidas, contando o instante inicial como uma.\n• C: aplica só três meias-vidas.\n• D: usa meia-vida de 12 horas, ou divide 24 por 12.\n• E: aplica uma única meia-vida.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_30",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_plana",
+    "chapter": "Semelhança de Triângulos",
+    "difficulty": "easy",
+    "skill": "modelagem",
+    "trap": "Inverter a razão entre altura e sombra.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara estimar a altura de um prédio sem subir nele, um grupo de estudantes fincou verticalmente no chão uma vara de 1,0 m de altura. Num mesmo instante de uma manhã ensolarada, mediram a sombra da vara, de 0,8 m, e a sombra do prédio, de 20 m, ambas sobre um terreno plano e horizontal. Os raios de sol podem ser considerados paralelos, de modo que os triângulos formados por cada objeto, sua sombra e o raio de sol são semelhantes.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA altura estimada do prédio é",
+    "options": [
+      {
+        "id": "a",
+        "text": "12,8 m"
+      },
+      {
+        "id": "b",
+        "text": "16 m"
+      },
+      {
+        "id": "c",
+        "text": "20 m"
+      },
+      {
+        "id": "d",
+        "text": "25 m"
+      },
+      {
+        "id": "e",
+        "text": "40 m"
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Com raios paralelos, altura/sombra é a mesma para a vara e o prédio: 1,0/0,8 = h/20, logo h = 20 × 1,25 = 25 m.\n\nPegadinhas:\n• A: multiplica a sombra por 0,8 duas vezes.\n• B: inverte a razão (h = 20 × 0,8).\n• C: supõe altura igual à sombra.\n• E: dobra a sombra sem usar a proporção.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_31",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_plana",
+    "chapter": "Área do Círculo e de suas Partes",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Comparar diâmetros como se a área fosse proporcional a eles.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma pizzaria oferece, pelo mesmo preço, duas opções: uma pizza grande, de 40 cm de diâmetro, ou duas pizzas médias, de 28 cm de diâmetro cada. Um cliente raciocina que duas pizzas de 28 cm somam 56 cm, mais que os 40 cm da grande, e que, portanto, as duas médias dão mais comida. Suponha que todas as pizzas tenham a mesma espessura e a mesma cobertura por unidade de área.\n\nTexto elaborado para esta questão.\n\nSobre a escolha do cliente, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "as duas médias dão mais pizza, como ele concluiu, pois 56 cm > 40 cm."
+      },
+      {
+        "id": "b",
+        "text": "as duas opções dão a mesma quantidade, pois o preço é igual."
+      },
+      {
+        "id": "c",
+        "text": "as duas médias dão cerca de 40% a mais, pois a área cresce com o diâmetro."
+      },
+      {
+        "id": "d",
+        "text": "a grande dá mais pizza: sua área é proporcional a 20² = 400, enquanto a soma das médias é proporcional a 2 × 14² = 392, já que a área do círculo depende do quadrado do raio."
+      },
+      {
+        "id": "e",
+        "text": "a grande dá o dobro de pizza, pois seu diâmetro é quase o dobro do das médias."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Área = π·r². Grande: π·20² = 400π cm². Médias: 2·π·14² = 392π cm². A grande é ligeiramente maior. O erro do cliente é somar diâmetros: a área cresce com o quadrado da dimensão linear.\n\nPegadinhas:\n• A: soma diâmetros, medida linear, para comparar áreas.\n• B: o preço não define a quantidade.\n• C: aplica proporção linear com os diâmetros.\n• E: 40 cm não é o dobro de 28 cm, e mesmo o diâmetro dobrado quadruplicaria a área de uma pizza, não a de duas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_32",
+    "subject": "Matemática",
+    "topicId": "mat_sequencias_matrizes",
+    "chapter": "Sistemas de Equações",
+    "difficulty": "easy",
+    "skill": "modelagem",
+    "trap": "Responder o número de ingressos inteiros quando se pergunta o de meias-entradas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm teatro vendeu 300 ingressos para uma sessão. O ingresso inteiro custava R$ 40,00, e a meia-entrada, garantida por lei a estudantes, idosos e pessoas com deficiência, entre outros grupos, custava R$ 20,00. A bilheteria arrecadou ao todo R$ 10.000,00 com essa sessão, e não houve cortesias nem ingressos com outros valores. A administração quer saber quantas meias-entradas foram vendidas, para planejar as próximas sessões.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO número de meias-entradas vendidas foi",
+    "options": [
+      {
+        "id": "a",
+        "text": "50"
+      },
+      {
+        "id": "b",
+        "text": "100"
+      },
+      {
+        "id": "c",
+        "text": "150"
+      },
+      {
+        "id": "d",
+        "text": "200"
+      },
+      {
+        "id": "e",
+        "text": "250"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Sejam x inteiras e y meias: x + y = 300 e 40x + 20y = 10.000. Da primeira, y = 300 − x; então 40x + 6.000 − 20x = 10.000, 20x = 4.000, x = 200 e y = 100.\n\nPegadinhas:\n• C: divide igualmente os 300 ingressos, sem usar a arrecadação.\n• D: é o número de inteiras, não de meias.\n• E: calcula 10.000/40, como se todos fossem inteiros.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_33",
+    "subject": "Matemática",
+    "topicId": "mat_trigonometria",
+    "chapter": "Trigonometria no Triângulo Retângulo",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Multiplicar a altura pela inclinação em vez de dividir.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara garantir acessibilidade a usuários de cadeiras de rodas, rampas devem ter inclinação baixa. Uma regra muito usada no Brasil limita a inclinação a 1:12, isto é, cerca de 8,33%: para cada 1 cm de subida, a rampa precisa avançar 12 cm na horizontal. Uma escola quer construir uma rampa para vencer um desnível de 50 cm entre o pátio e a entrada do prédio, respeitando exatamente a inclinação máxima.\n\nTexto elaborado para esta questão.\n\nO comprimento horizontal mínimo dessa rampa é",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,04 m"
+      },
+      {
+        "id": "b",
+        "text": "0,6 m"
+      },
+      {
+        "id": "c",
+        "text": "4,2 m"
+      },
+      {
+        "id": "d",
+        "text": "5 m"
+      },
+      {
+        "id": "e",
+        "text": "6 m"
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Inclinação = desnível/horizontal = 1/12. Com desnível de 0,5 m, horizontal = 0,5 × 12 = 6 m. (Equivale a 0,5/0,0833 ≈ 6 m.)\n\nPegadinhas:\n• A: multiplica a altura pela inclinação (0,5 × 0,0833).\n• B: usa 12 em centímetros como se fosse o resultado em decímetros.\n• C: multiplica 0,5 por 8,33, misturando porcentagem e razão.\n• D: usa inclinação de 10%.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_34",
+    "subject": "Matemática",
+    "topicId": "mat_funcoes",
+    "chapter": "Inversão de Funções",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Inverter as operações na ordem errada (dividir antes de subtrair).",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um laboratório que recebe equipamentos importados, um termômetro informa a temperatura em graus Fahrenheit. A relação entre as escalas é F = 1,8·C + 32, em que C é a temperatura em graus Celsius. Um técnico quer programar uma planilha que converta automaticamente qualquer leitura do termômetro para Celsius, isto é, deseja obter a função inversa, que associa a cada F o valor de C correspondente.\n\nTexto elaborado para esta questão.\n\nA função inversa procurada e a temperatura em Celsius correspondente a 98,6 °F são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "C = (F − 32)/1,8; e 37 °C."
+      },
+      {
+        "id": "b",
+        "text": "C = F/1,8 − 32; e 22,8 °C."
+      },
+      {
+        "id": "c",
+        "text": "C = 1,8·F − 32; e 145,5 °C."
+      },
+      {
+        "id": "d",
+        "text": "C = (F + 32)/1,8; e 72,6 °C."
+      },
+      {
+        "id": "e",
+        "text": "C = F − 32·1,8; e 41 °C."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Desfazendo as operações na ordem inversa: subtrai-se 32 e depois divide-se por 1,8. C = (98,6 − 32)/1,8 = 66,6/1,8 = 37 °C, a temperatura corporal típica.\n\nPegadinhas:\n• B: divide antes de subtrair, sem desfazer na ordem inversa.\n• C: aplica de novo a função original com o sinal trocado.\n• D: soma 32 em vez de subtrair.\n• E: subtrai 32·1,8 = 57,6, valor sem sentido nessa conversão.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_35",
+    "subject": "Matemática",
+    "topicId": "mat_combinatoria",
+    "chapter": "Introdução às Técnicas de Contagem",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Somar possibilidades em vez de multiplicar, ou usar arranjo sem repetição.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo padrão de placas de veículos adotado no Brasil a partir de 2018, cada placa tem sete caracteres na sequência letra, letra, letra, algarismo, letra, algarismo, algarismo, como em ABC1D23. Considere que podem ser usadas as 26 letras do alfabeto e os 10 algarismos, com repetição permitida em todas as posições, e que não há restrições adicionais de combinações.\n\nTexto elaborado para esta questão.\n\nO número de placas diferentes que podem ser formadas nesse padrão é",
+    "options": [
+      {
+        "id": "a",
+        "text": "4·26 + 3·10"
+      },
+      {
+        "id": "b",
+        "text": "26·25·24·23·10·9·8"
+      },
+      {
+        "id": "c",
+        "text": "26⁴·10³"
+      },
+      {
+        "id": "d",
+        "text": "(26 + 10)⁷"
+      },
+      {
+        "id": "e",
+        "text": "26³·10⁴"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Pelo princípio multiplicativo, há 26 escolhas para cada uma das 4 posições de letra e 10 para cada uma das 3 de algarismo: 26⁴·10³ ≈ 457 milhões.\n\nPegadinhas:\n• A: soma as possibilidades em vez de multiplicá-las.\n• B: proíbe repetição, o que o enunciado permite.\n• D: permite letra ou algarismo em qualquer posição, ignorando o padrão.\n• E: troca a quantidade de letras e algarismos (o padrão antigo tinha três letras e quatro algarismos).",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_36",
+    "subject": "Geografia",
+    "topicId": "geo_cartografia",
+    "chapter": "Movimentos da Terra",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Atribuir as estações à variação da distância entre a Terra e o Sol.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo início de janeiro, a Terra passa pelo periélio, o ponto de sua órbita mais próximo do Sol. Nessa época, é verão no Brasil e inverno na Europa e nos Estados Unidos. No início de julho, no afélio, a Terra está no ponto mais distante do Sol, e as estações se invertem entre os hemisférios. A diferença entre a menor e a maior distância Terra–Sol é de cerca de 3%.\n\nTexto elaborado para esta questão.\n\nO texto permite concluir que as estações do ano",
+    "options": [
+      {
+        "id": "a",
+        "text": "são causadas pela variação da distância entre a Terra e o Sol."
+      },
+      {
+        "id": "b",
+        "text": "ocorrem ao mesmo tempo nos dois hemisférios."
+      },
+      {
+        "id": "c",
+        "text": "decorrem da inclinação do eixo de rotação da Terra, de cerca de 23,5°, que faz cada hemisfério receber os raios solares de modo mais direto, e por mais horas, em uma metade do ano."
+      },
+      {
+        "id": "d",
+        "text": "são causadas pela rotação da Terra, que alterna dia e noite."
+      },
+      {
+        "id": "e",
+        "text": "só existem nas regiões próximas ao Equador."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Se a distância fosse a causa, os dois hemisférios teriam verão juntos, em janeiro. Como as estações se invertem entre eles, a causa é a inclinação do eixo, que se mantém em direção fixa ao longo da translação: um hemisfério recebe insolação mais perpendicular e dias mais longos enquanto o outro recebe menos.\n\nPegadinhas:\n• A: o próprio texto mostra que o verão do Sul ocorre no periélio e o do Norte, no afélio.\n• B: o texto diz que as estações se invertem.\n• D: a rotação explica dia e noite, não as estações.\n• E: as estações são mais marcadas nas latitudes médias e altas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_37",
+    "subject": "Geografia",
+    "topicId": "geo_fisica_brasil",
+    "chapter": "Pedologia",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que solo de floresta exuberante é necessariamente fértil, ou que a calagem fertiliza diretamente.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm grande parte do território brasileiro, sob clima quente e úmido, os solos são profundos, avermelhados e ricos em óxidos de ferro e alumínio, mas pobres em nutrientes como cálcio, magnésio e potássio. Muitas vezes, florestas exuberantes se desenvolvem sobre esses solos, porque os nutrientes circulam rapidamente entre a vegetação e a camada superficial. Para cultivá-los, agricultores costumam aplicar calcário antes do plantio.\n\nTexto elaborado para esta questão.\n\nAs características descritas resultam",
+    "options": [
+      {
+        "id": "a",
+        "text": "do clima frio, que impede a decomposição das rochas."
+      },
+      {
+        "id": "b",
+        "text": "do excesso de cálcio, que torna o solo alcalino."
+      },
+      {
+        "id": "c",
+        "text": "da baixa precipitação, que concentra os nutrientes na superfície."
+      },
+      {
+        "id": "d",
+        "text": "da ausência de matéria orgânica nas florestas tropicais."
+      },
+      {
+        "id": "e",
+        "text": "do intemperismo químico intenso e da lixiviação, que removem nutrientes solúveis e deixam o solo ácido e rico em óxidos; o calcário corrige a acidez e fornece cálcio e magnésio."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Calor e chuva aceleram o intemperismo químico, que aprofunda o solo, e a água infiltrada carrega as bases solúveis (lixiviação), concentrando óxidos de ferro e alumínio — a laterização. O solo fica ácido e pobre. A floresta se mantém pela ciclagem rápida de nutrientes da serapilheira. A calagem eleva o pH e fornece Ca e Mg.\n\nPegadinhas:\n• A: o clima descrito é quente e úmido.\n• B: o solo é pobre em cálcio e ácido, por isso recebe calcário.\n• C: a lixiviação depende de chuva abundante, não escassa.\n• D: o texto fala da camada superficial em que os nutrientes circulam, com matéria orgânica.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_38",
+    "subject": "Geografia",
+    "topicId": "geo_economica_brasil",
+    "chapter": "Combustíveis Fósseis e Biocombustíveis no Brasil",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o etanol substituiu o petróleo na matriz brasileira, ou que o pré-sal fica em terra.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDesde a década de 2010, a produção de petróleo no Brasil cresceu fortemente com a exploração das reservas do pré-sal, localizadas em águas profundas e ultraprofundas, sob uma espessa camada de sal, principalmente nas bacias de Santos e de Campos. Ao mesmo tempo, o país mantém uma das maiores produções mundiais de etanol de cana-de-açúcar, e boa parte da frota de automóveis é flex, podendo usar gasolina, etanol ou qualquer mistura dos dois.\n\nTexto elaborado para esta questão.\n\nCom base no texto e em seus conhecimentos, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o Brasil combina a expansão do petróleo do pré-sal, extraído no mar, com o uso de biocombustíveis, e os derivados de petróleo continuam tendo papel importante na matriz de transportes."
+      },
+      {
+        "id": "b",
+        "text": "o etanol substituiu completamente a gasolina, e o pré-sal é destinado só à exportação."
+      },
+      {
+        "id": "c",
+        "text": "o pré-sal está localizado no interior do continente, sob a bacia amazônica."
+      },
+      {
+        "id": "d",
+        "text": "os carros flex funcionam apenas com etanol puro."
+      },
+      {
+        "id": "e",
+        "text": "a produção de etanol de cana dispensa terras agrícolas, pois é feita no mar."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O pré-sal fica no litoral Sudeste, em águas ultraprofundas, e responde pela maior parte da produção nacional de petróleo. O etanol de cana e a frota flex dão ao Brasil participação alta de renováveis nos transportes, mas gasolina e diesel continuam muito usados, sobretudo no transporte de cargas.\n\nPegadinhas:\n• B: a gasolina continua sendo usada, e o petróleo também abastece o mercado interno.\n• C: o texto situa o pré-sal em águas profundas, nas bacias de Santos e Campos.\n• D: o texto diz que os carros flex aceitam qualquer mistura.\n• E: a cana é cultivada em terra, o que gera debates sobre uso do solo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_39",
+    "subject": "Geografia",
+    "topicId": "geo_geopolitica_regional",
+    "chapter": "Questão Palestina",
+    "difficulty": "hard",
+    "skill": "leitura_fontes",
+    "trap": "Achar que os Acordos de Oslo criaram um Estado palestino plenamente soberano.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1947, a Assembleia Geral da ONU aprovou um plano de partilha da Palestina, então sob mandato britânico, em um Estado judeu e um Estado árabe. Israel declarou independência em 1948, e a guerra que se seguiu levou centenas de milhares de palestinos a deixarem suas casas. Em 1967, Israel ocupou a Cisjordânia e a Faixa de Gaza. Nos Acordos de Oslo, assinados na década de 1990, criou-se a Autoridade Nacional Palestina, com autogoverno limitado em parte desses territórios.\n\nTexto elaborado para esta questão.\n\nA partir do texto e de seus conhecimentos, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "os Acordos de Oslo estabeleceram um Estado palestino plenamente soberano, com fronteiras definidas."
+      },
+      {
+        "id": "b",
+        "text": "o plano de 1947 foi aplicado integralmente, e os dois Estados surgiram em 1948."
+      },
+      {
+        "id": "c",
+        "text": "a Faixa de Gaza e a Cisjordânia sempre fizeram parte do território israelense reconhecido pela ONU."
+      },
+      {
+        "id": "d",
+        "text": "a questão envolve disputas sobre território, refugiados, assentamentos e o status de Jerusalém, e o autogoverno criado em Oslo foi limitado e não resultou em um Estado palestino plenamente soberano."
+      },
+      {
+        "id": "e",
+        "text": "o conflito começou com os Acordos de Oslo."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O plano de partilha não se concretizou como previsto: Israel surgiu em 1948, mas o Estado árabe não. Desde 1967, a ocupação da Cisjordânia e de Gaza, os assentamentos israelenses, o destino dos refugiados e o status de Jerusalém estão no centro das negociações. Oslo criou a ANP com poderes limitados, sem resolver essas questões.\n\nPegadinhas:\n• A: o texto fala em autogoverno limitado.\n• B: o Estado árabe previsto em 1947 não foi criado.\n• C: o texto diz que esses territórios foram ocupados em 1967.\n• E: Oslo é da década de 1990; o conflito vem pelo menos de 1947–1948.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_40",
+    "subject": "Geografia",
+    "topicId": "geo_globalizacao_economica",
+    "chapter": "Mobilidade Populacional",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a interiorização visa enviar os migrantes de volta ao país de origem.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA partir de 2017, centenas de milhares de venezuelanos entraram no Brasil, a maior parte pela fronteira terrestre em Pacaraima, em Roraima, fugindo da crise econômica e política em seu país. Como Roraima tem população pequena e infraestrutura limitada, os serviços de saúde, educação e abrigo do estado ficaram sobrecarregados. O governo federal, com agências da ONU, criou uma operação que inclui acolhimento na fronteira e a interiorização: o deslocamento voluntário dos migrantes para outras cidades do país, onde há mais oportunidades de emprego.\n\nTexto elaborado para esta questão.\n\nA estratégia de interiorização tem como objetivo",
+    "options": [
+      {
+        "id": "a",
+        "text": "devolver os migrantes à Venezuela pelo interior do país."
+      },
+      {
+        "id": "b",
+        "text": "distribuir os migrantes por regiões com maior capacidade de absorção, aliviando a pressão sobre os serviços de Roraima e ampliando as chances de inserção no mercado de trabalho."
+      },
+      {
+        "id": "c",
+        "text": "concentrar todos os migrantes em Pacaraima, para facilitar o controle."
+      },
+      {
+        "id": "d",
+        "text": "impedir a entrada de novos migrantes pela fronteira norte."
+      },
+      {
+        "id": "e",
+        "text": "transferir os migrantes para áreas rurais da Amazônia, onde há maior oferta de empregos industriais."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O fluxo se concentrou em um estado pequeno, mas o emprego e os serviços estão em outras regiões. A interiorização voluntária distribui as pessoas para onde há mais vagas e infraestrutura, aliviando Roraima e favorecendo a integração.\n\nPegadinhas:\n• A: o objetivo é integração no Brasil, não retorno.\n• C: concentrar em Pacaraima agravaria a sobrecarga descrita.\n• D: a operação inclui acolhimento na fronteira, não fechamento.\n• E: as áreas rurais da Amazônia não concentram empregos industriais.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_41",
+    "subject": "Geografia",
+    "topicId": "geo_globalizacao_economica",
+    "chapter": "Produção Agrícola Mundial",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que a Revolução Verde eliminou a fome ou foi ambientalmente neutra.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA partir da década de 1960, um conjunto de mudanças conhecido como Revolução Verde difundiu em países como México, Índia e Filipinas variedades de trigo e arroz de alta produtividade, associadas ao uso intensivo de fertilizantes químicos, agrotóxicos, irrigação e máquinas. A produção de grãos aumentou rapidamente nessas regiões. Estudos posteriores, porém, apontaram efeitos como concentração de terras, endividamento de pequenos produtores e contaminação de solos e de águas.\n\nTexto elaborado para esta questão.\n\nSobre a Revolução Verde, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "eliminou a fome no mundo, pois a produção passou a superar o consumo."
+      },
+      {
+        "id": "b",
+        "text": "elevou a produtividade com um pacote tecnológico dependente de insumos industriais, mas teve custos sociais e ambientais, e beneficiou mais quem tinha capital para adotá-lo."
+      },
+      {
+        "id": "c",
+        "text": "baseou-se na agricultura orgânica, sem uso de produtos químicos."
+      },
+      {
+        "id": "d",
+        "text": "reduziu a mecanização no campo, valorizando o trabalho manual."
+      },
+      {
+        "id": "e",
+        "text": "foi aplicada apenas em países desenvolvidos, como Estados Unidos e França."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. As novas variedades só rendiam com fertilizantes, irrigação e defensivos — um pacote caro. A produção cresceu, mas produtores sem capital se endividaram ou perderam a terra, e o uso intensivo de químicos contaminou solos e águas. A fome persistiu porque depende também de renda e acesso ao alimento.\n\nPegadinhas:\n• A: aumentar a produção não elimina a fome, que depende de acesso.\n• C: o pacote era baseado em insumos químicos.\n• D: o texto cita o uso de máquinas.\n• E: o texto cita México, Índia e Filipinas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_42",
+    "subject": "História",
+    "topicId": "his_brasil_colonia",
+    "chapter": "Grandes Navegações e Conquista Colonial",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que o tratado foi mediado entre Portugal e Inglaterra, ou que definiu o litoral brasileiro já ocupado.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1494, Portugal e Espanha assinaram o Tratado de Tordesilhas, que estabelecia uma linha imaginária a 370 léguas a oeste do arquipélago de Cabo Verde: as terras a leste caberiam a Portugal e as terras a oeste, à Espanha. O rei da França, Francisco I, teria ironizado o acordo, perguntando em que cláusula do testamento de Adão ele havia sido excluído da partilha do mundo.\n\nTexto elaborado para esta questão.\n\nO tratado e a reação atribuída ao rei francês indicam que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o tratado foi aceito por todas as potências europeias, que reconheciam o monopólio ibérico."
+      },
+      {
+        "id": "b",
+        "text": "o tratado dividia o mundo entre Portugal e Inglaterra."
+      },
+      {
+        "id": "c",
+        "text": "a França foi a principal beneficiada pela linha de Tordesilhas."
+      },
+      {
+        "id": "d",
+        "text": "Portugal e Espanha buscaram garantir para si as terras descobertas e por descobrir, e outras monarquias, excluídas da partilha, contestaram o acordo, o que se manifestou depois em incursões estrangeiras, como as francesas no litoral do Brasil."
+      },
+      {
+        "id": "e",
+        "text": "o tratado foi assinado depois da ocupação efetiva de todo o território brasileiro."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Tordesilhas expressa a disputa ibérica pelas rotas e terras ultramarinas, num momento em que Portugal e Espanha lideravam a expansão. França, Inglaterra e, depois, Holanda não o reconheciam: a ironia de Francisco I resume isso. No Brasil, a presença de franceses traficando pau-brasil e, mais tarde, a França Antártica mostram a contestação.\n\nPegadinhas:\n• A: o texto mostra justamente uma contestação.\n• B: os signatários foram Portugal e Espanha.\n• C: a França ficou de fora da partilha.\n• E: o tratado é de 1494, anterior à chegada de Cabral (1500).",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_43",
+    "subject": "História",
+    "topicId": "his_moderna_iluminismo",
+    "chapter": "Absolutismo",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Confundir absolutismo com governo constitucional, ou o mercantilismo com livre-comércio.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDurante o reinado de Luís XIV, na França, entre 1643 e 1715, a corte foi transferida para o Palácio de Versalhes, onde a alta nobreza passou a viver sob os olhos do rei, disputando cargos, pensões e lugares nas cerimônias. O ministro Colbert estimulou manufaturas, criou companhias de comércio e adotou tarifas sobre produtos estrangeiros, buscando aumentar as exportações e o acúmulo de metais preciosos no reino.\n\nTexto elaborado para esta questão.\n\nAs práticas descritas revelam características do Estado absolutista francês, como",
+    "options": [
+      {
+        "id": "a",
+        "text": "a divisão dos poderes entre Executivo, Legislativo e Judiciário."
+      },
+      {
+        "id": "b",
+        "text": "o livre-comércio, sem interferência do Estado na economia."
+      },
+      {
+        "id": "c",
+        "text": "a centralização do poder no rei, com a nobreza atraída e controlada na corte, e uma política mercantilista de intervenção econômica para fortalecer o Estado."
+      },
+      {
+        "id": "d",
+        "text": "a transferência do poder político para a burguesia, por meio de eleições."
+      },
+      {
+        "id": "e",
+        "text": "o enfraquecimento do rei diante de uma nobreza independente e armada."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Versalhes domesticou a nobreza: em vez de poder local e militar, ela passou a depender dos favores do rei. O colbertismo é mercantilismo: protecionismo, manufaturas e balança comercial favorável, para acumular metais e fortalecer o Estado.\n\nPegadinhas:\n• A: a separação de poderes é a crítica iluminista ao absolutismo, posterior.\n• B: o mercantilismo é intervencionista.\n• D: não havia eleição; a burguesia ganhava com o comércio, mas não detinha o poder.\n• E: o texto mostra a nobreza dependente do rei.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_44",
+    "subject": "História",
+    "topicId": "his_moderna_iluminismo",
+    "chapter": "Revolução Industrial",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que os ludistas eram contra a tecnologia em si, sem relação com as condições de trabalho.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa Inglaterra do início do século XIX, grupos de trabalhadores conhecidos como ludistas invadiram oficinas e destruíram máquinas de tecelagem. Muitos eram artesãos qualificados que viam seus salários caírem com a difusão de máquinas operadas por mão de obra menos qualificada, inclusive mulheres e crianças, em jornadas de até 14 horas. O Parlamento respondeu tornando a destruição de máquinas um crime punido com a morte.\n\nTexto elaborado para esta questão.\n\nO movimento ludista deve ser entendido como",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma revolta religiosa contra a Igreja Anglicana."
+      },
+      {
+        "id": "b",
+        "text": "um movimento da burguesia industrial contra o Parlamento."
+      },
+      {
+        "id": "c",
+        "text": "uma rejeição irracional de qualquer avanço técnico, sem motivação econômica."
+      },
+      {
+        "id": "d",
+        "text": "um movimento agrário pela reforma das terras cercadas."
+      },
+      {
+        "id": "e",
+        "text": "uma reação de trabalhadores às transformações do trabalho na indústria, como a perda de qualificação, a queda dos salários e as longas jornadas, num período em que não havia direitos trabalhistas organizados."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A máquina era o símbolo concreto de uma mudança que rebaixava salários e substituía o artesão qualificado por mão de obra barata. Sem sindicatos legais nem legislação trabalhista, a destruição das máquinas foi uma forma de protesto — duramente reprimida pelo Estado.\n\nPegadinhas:\n• A: não há conteúdo religioso no movimento.\n• B: os ludistas eram trabalhadores, e a burguesia foi a favorecida pela mecanização.\n• C: o texto indica motivações econômicas claras.\n• D: os cercamentos são anteriores e de outro contexto, agrário.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_45",
+    "subject": "História",
+    "topicId": "his_imperialismo_guerras",
+    "chapter": "O Período Entreguerras (1918-1939)",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Explicar a ascensão nazista só pela personalidade de Hitler, sem crise e ressentimento.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nApós a Primeira Guerra Mundial, o Tratado de Versalhes, de 1919, impôs à Alemanha a perda de territórios, a redução de suas forças armadas e o pagamento de pesadas indenizações. Nos anos seguintes, o país enfrentou hiperinflação. A partir de 1929, a crise iniciada nos Estados Unidos fez o desemprego alemão passar de 6 milhões de pessoas. Nas eleições de julho de 1932, o Partido Nazista tornou-se o maior partido do Parlamento.\n\nTexto elaborado para esta questão.\n\nO crescimento do nazismo nesse contexto relaciona-se",
+    "options": [
+      {
+        "id": "a",
+        "text": "à crise econômica e social e ao ressentimento com Versalhes, que o nazismo explorou com nacionalismo agressivo, anticomunismo e antissemitismo, apresentando-se como solução para a instabilidade."
+      },
+      {
+        "id": "b",
+        "text": "ao apoio dos Estados Unidos, que financiaram a campanha nazista para enfraquecer a França."
+      },
+      {
+        "id": "c",
+        "text": "à vitória alemã na Primeira Guerra, que fortaleceu o militarismo."
+      },
+      {
+        "id": "d",
+        "text": "a um golpe militar que suspendeu todas as eleições antes de 1932."
+      },
+      {
+        "id": "e",
+        "text": "ao sucesso do liberalismo econômico, que gerou pleno emprego na Alemanha."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Derrota, humilhação de Versalhes, hiperinflação e o desemprego após 1929 desacreditaram a República de Weimar. O nazismo canalizou o ressentimento com promessas de ordem, revanche e emprego, culpando judeus e comunistas. Ganhou espaço também pelas eleições, antes de destruir a democracia.\n\nPegadinhas:\n• B: não há base para essa afirmação, e a crise americana agravou a situação alemã.\n• C: a Alemanha foi derrotada.\n• D: o texto cita eleições em 1932.\n• E: o texto descreve desemprego em massa.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_46",
+    "subject": "História",
+    "topicId": "his_primeira_republica_vargas",
+    "chapter": "A República da Espada",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que o Encilhamento foi uma política de controle da inflação, ou atribuir a Revolta da Armada a escravizados.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nOs primeiros anos da República no Brasil, entre 1889 e 1894, foram governados por militares: o marechal Deodoro da Fonseca e, depois, o marechal Floriano Peixoto. A política econômica do Encilhamento, conduzida pelo ministro Rui Barbosa, facilitou a emissão de dinheiro por bancos para estimular a indústria, mas foi seguida de especulação, falências e inflação. Floriano enfrentou a Revolta da Armada, de oficiais da Marinha, e a Revolução Federalista, no Sul do país.\n\nTexto elaborado para esta questão.\n\nEsse período ficou marcado por",
+    "options": [
+      {
+        "id": "a",
+        "text": "estabilidade econômica e consenso político em torno do novo regime."
+      },
+      {
+        "id": "b",
+        "text": "eleições diretas para presidente desde 1889, com voto feminino."
+      },
+      {
+        "id": "c",
+        "text": "governo de cafeicultores civis, sem participação militar."
+      },
+      {
+        "id": "d",
+        "text": "uma política monetária restritiva, que reduziu a quantidade de moeda em circulação."
+      },
+      {
+        "id": "e",
+        "text": "instabilidade econômica e conflitos armados, com governos militares que enfrentaram revoltas e consolidaram o novo regime pela força."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O Encilhamento expandiu o crédito e a moeda, mas gerou especulação e inflação. Deodoro renunciou em 1891, e Floriano reprimiu duramente a Revolta da Armada e os federalistas, ganhando o apelido de \"Marechal de Ferro\". O regime se consolidou com uso da força antes da transição para presidentes civis, com Prudente de Morais em 1894.\n\nPegadinhas:\n• A: o texto relata crise e revoltas.\n• B: Deodoro foi eleito indiretamente pelo Congresso, e não havia voto feminino.\n• C: os dois presidentes eram marechais.\n• D: o Encilhamento foi expansionista.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_47",
+    "subject": "História",
+    "topicId": "his_primeira_republica_vargas",
+    "chapter": "A Era Vargas: o Governo Constitucional (1934-1937)",
+    "difficulty": "hard",
+    "skill": "leitura_fontes",
+    "trap": "Achar que o Estado Novo resultou de um levante comunista vitorioso, ou que a Constituição de 1934 durou até 1945.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1934, uma Assembleia Constituinte promulgou nova Constituição e elegeu Getúlio Vargas presidente. O texto incorporou direitos trabalhistas, como salário mínimo e jornada de oito horas, e confirmou o voto secreto e o voto feminino. Em 1935, um levante organizado por militares ligados à Aliança Nacional Libertadora e ao Partido Comunista foi derrotado. Em 1937, o governo divulgou o chamado Plano Cohen, apresentado como plano comunista de tomada do poder, e Vargas fechou o Congresso.\n\nTexto elaborado para esta questão.\n\nO período descrito pode ser caracterizado como",
+    "options": [
+      {
+        "id": "a",
+        "text": "um intervalo constitucional com ampliação de direitos, encerrado em 1937, quando o medo do comunismo, alimentado por um plano depois reconhecido como forjado, serviu de justificativa para o golpe do Estado Novo."
+      },
+      {
+        "id": "b",
+        "text": "a fase mais democrática da Era Vargas, que durou até 1945 sem interrupções."
+      },
+      {
+        "id": "c",
+        "text": "o período em que os comunistas assumiram o poder após o levante de 1935."
+      },
+      {
+        "id": "d",
+        "text": "uma época de redução dos direitos trabalhistas, revogados pela Constituição de 1934."
+      },
+      {
+        "id": "e",
+        "text": "um governo eleito diretamente pelo voto popular em 1934."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A Constituição de 1934 trouxe direitos sociais e eleitorais, mas a radicalização política (integralistas e ANL) e a derrota do levante de 1935 abriram espaço para medidas repressivas. O Plano Cohen, forjado, foi o pretexto para o golpe de novembro de 1937 e o Estado Novo.\n\nPegadinhas:\n• B: o regime constitucional terminou em 1937.\n• C: o levante foi derrotado.\n• D: a Constituição incorporou direitos trabalhistas.\n• E: Vargas foi eleito pela Assembleia Constituinte, indiretamente.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_48",
+    "subject": "Português",
+    "topicId": "por_texto",
+    "chapter": "Funções da Linguagem",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Confundir a função metalinguística com a referencial, ou com a conativa por haver instruções.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia o verbete adaptado de um dicionário escolar:\n\n\"bula (bu.la) sf. 1. Impresso que acompanha um medicamento, com informações sobre composição, indicações, contraindicações, modo de usar e efeitos adversos. 2. Por extensão, conjunto de instruções sobre algo. Ex.: Ele leu a bula do novo jogo antes de começar. [Do latim bulla, 'selo'.]\"\n\nNo verbete, a palavra bula é explicada, classificada gramaticalmente, separada em sílabas e acompanhada de um exemplo de uso e de sua origem.\n\nTexto elaborado para esta questão.\n\nPredomina no verbete a função da linguagem",
+    "options": [
+      {
+        "id": "a",
+        "text": "emotiva, pois o verbete expressa a opinião do dicionarista sobre bulas."
+      },
+      {
+        "id": "b",
+        "text": "metalinguística, pois o código, a língua, é usado para explicar o próprio código, isto é, o sentido e o funcionamento de uma palavra."
+      },
+      {
+        "id": "c",
+        "text": "conativa, pois o verbete dá ordens ao leitor sobre como usar medicamentos."
+      },
+      {
+        "id": "d",
+        "text": "poética, pois o verbete explora a sonoridade da palavra."
+      },
+      {
+        "id": "e",
+        "text": "fática, pois o verbete serve apenas para manter o contato com o leitor."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O dicionário usa palavras para definir uma palavra: classe gramatical, separação silábica, sentidos, exemplo e etimologia. É o caso típico de metalinguagem. A bula de remédio, ela sim, teria passagens conativas, com instruções ao paciente; o verbete apenas descreve o que é uma bula.\n\nPegadinhas:\n• A: não há expressão de sentimento ou opinião.\n• C: confunde o conteúdo de uma bula com o do verbete que a define.\n• D: a separação silábica é informação sobre a palavra, não exploração estética.\n• E: não há intenção de testar ou manter o canal.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_49",
+    "subject": "Inglês",
+    "topicId": "ing_01",
+    "chapter": "Text Comprehension: Bacteria",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Achar que os antibióticos tornam as pessoas resistentes, ou que o texto recomenda interromper o tratamento.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Antibiotic resistance happens when bacteria, not people, change in response to the use of these medicines. Every time antibiotics are used, sensitive bacteria are killed, while resistant ones may survive and multiply. Taking antibiotics for viral infections such as colds, or stopping a prescribed course too early, increases the chance that resistant strains will spread. As a result, common infections may become harder, or even impossible, to treat.\"\n\nTexto elaborado para esta questão.\n\nAccording to the text,",
+    "options": [
+      {
+        "id": "a",
+        "text": "people become resistant to antibiotics after using them many times."
+      },
+      {
+        "id": "b",
+        "text": "antibiotics are an effective treatment for colds and other viral infections."
+      },
+      {
+        "id": "c",
+        "text": "patients should stop taking antibiotics as soon as they feel better."
+      },
+      {
+        "id": "d",
+        "text": "the use of antibiotics favours the survival and multiplication of resistant bacteria, and inappropriate use makes this problem worse."
+      },
+      {
+        "id": "e",
+        "text": "resistant bacteria are killed first, so sensitive bacteria become more common."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O texto afirma que são as bactérias que mudam (\"bacteria, not people\"): o antibiótico mata as sensíveis e as resistentes sobrevivem e se multiplicam — uma seleção. Usar antibiótico para vírus ou interromper o tratamento cedo (\"stopping a prescribed course too early\") aumenta a disseminação de cepas resistentes.\n\nPegadinhas:\n• A: o texto diz explicitamente que não são as pessoas que se tornam resistentes.\n• B: o texto cita o uso em resfriados como uso inadequado.\n• C: interromper cedo é apontado como fator de risco.\n• E: inverte quem sobrevive: as sensíveis são mortas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l11_50",
+    "subject": "Filosofia",
+    "topicId": "fil_etica_politica_contemporanea",
+    "chapter": "Ética Aplicada e Bioética",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir autonomia com a decisão do médico, ou achar que o consentimento autoriza qualquer procedimento.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm pesquisas com seres humanos e na prática médica, a bioética contemporânea costuma se apoiar em princípios como autonomia, beneficência, não maleficência e justiça. Antes de participar de um estudo clínico, por exemplo, o voluntário recebe informações sobre objetivos, riscos e benefícios, pode fazer perguntas e assina um termo de consentimento livre e esclarecido, podendo desistir a qualquer momento, sem prejuízo de seu atendimento.\n\nTexto elaborado para esta questão.\n\nO procedimento descrito expressa sobretudo o princípio da",
+    "options": [
+      {
+        "id": "a",
+        "text": "beneficência, entendida como o direito do médico de decidir o que é melhor para o paciente sem consultá-lo."
+      },
+      {
+        "id": "b",
+        "text": "justiça, pois todos os voluntários recebem o mesmo pagamento pela participação."
+      },
+      {
+        "id": "c",
+        "text": "autonomia, pois respeita a capacidade da pessoa de decidir sobre o próprio corpo de forma informada e voluntária, inclusive de retirar o consentimento."
+      },
+      {
+        "id": "d",
+        "text": "não maleficência, pois o termo de consentimento garante que nenhum risco existe."
+      },
+      {
+        "id": "e",
+        "text": "autoridade científica, segundo a qual o pesquisador pode dispensar o consentimento quando o estudo é relevante."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Informar riscos e benefícios, permitir perguntas, obter consentimento livre e garantir a possibilidade de desistir são exigências da autonomia: a pessoa é tratada como sujeito capaz de decidir, não como objeto da pesquisa.\n\nPegadinhas:\n• A: decidir pelo paciente sem consultá-lo é paternalismo, que a autonomia limita.\n• B: justiça diz respeito à distribuição equitativa de riscos e benefícios; o texto não fala em pagamento.\n• D: o termo informa os riscos; não os elimina.\n• E: a relevância do estudo não dispensa o consentimento.",
+    "styleOf": "FUVEST"
+  }
+]

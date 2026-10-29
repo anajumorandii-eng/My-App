@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "crivo_fuvest_f1_l16_01",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Fisiologia da Digestão",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o ácido do estômago é produzido pelo próprio alimento, ou que inibir o ácido não afeta a digestão.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nMedicamentos como o omeprazol são usados no tratamento de gastrite e de refluxo. Eles inibem a chamada bomba de prótons, proteína das células da parede do estômago que bombeia íons H⁺ para o interior do órgão. Com isso, o pH do suco gástrico, normalmente entre 1 e 3, aumenta. Médicos alertam que o uso prolongado sem orientação pode prejudicar a digestão de proteínas e a absorção de alguns nutrientes.\n\nTexto elaborado para esta questão.\n\nO alerta dos médicos se justifica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o ácido gástrico é produzido pelo alimento ingerido e não depende das células do estômago."
+      },
+      {
+        "id": "b",
+        "text": "o pH ácido do estômago destrói todas as enzimas digestivas, e reduzi-lo melhora a digestão."
+      },
+      {
+        "id": "c",
+        "text": "o omeprazol bloqueia a produção de bile no fígado, necessária à digestão de proteínas."
+      },
+      {
+        "id": "d",
+        "text": "a pepsina, enzima que inicia a digestão de proteínas no estômago, atua melhor em pH muito ácido e é ativada pelo ácido, de modo que menos acidez reduz sua ação."
+      },
+      {
+        "id": "e",
+        "text": "a acidez do estômago é necessária para digerir carboidratos, que não são digeridos em outro órgão."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A pepsina é liberada como pepsinogênio e ativada em meio ácido; seu ótimo é próximo de pH 2. Com menos H⁺, a digestão de proteínas no estômago diminui, e a absorção de nutrientes que dependem da acidez, como ferro e vitamina B12, pode ser prejudicada.\n\nPegadinhas:\n• A: o texto atribui o H⁺ às células da parede do estômago.\n• B: a pepsina depende do meio ácido; outras enzimas atuam no intestino, em pH diferente.\n• C: a bile é produzida no fígado, e o omeprazol age no estômago.\n• E: os carboidratos são digeridos sobretudo na boca e no intestino delgado.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_02",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Fisiologia da Excreção",
+    "difficulty": "hard",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que todos os animais excretam ureia, ou que o ácido úrico é mais tóxico e por isso exige mais água.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPeixes ósseos de água doce eliminam a maior parte de seus resíduos nitrogenados na forma de amônia, muito tóxica e solúvel, que se difunde diretamente para a água. Mamíferos excretam ureia, menos tóxica, dissolvida na urina. Aves e répteis excretam ácido úrico, pouco solúvel e de baixa toxicidade, eliminado como uma pasta esbranquiçada junto com as fezes. Os ovos de aves e répteis têm casca, e o embrião se desenvolve sem contato com água externa.\n\nTexto elaborado para esta questão.\n\nA excreção de ácido úrico por aves e répteis é vantajosa porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o ácido úrico é mais tóxico que a amônia e precisa ser eliminado rapidamente."
+      },
+      {
+        "id": "b",
+        "text": "o ácido úrico, por ser pouco tóxico e pouco solúvel, pode ser eliminado com muito pouca água e acumulado dentro do ovo sem intoxicar o embrião."
+      },
+      {
+        "id": "c",
+        "text": "aves e répteis vivem sempre em ambientes aquáticos, onde a água é abundante."
+      },
+      {
+        "id": "d",
+        "text": "o ácido úrico se difunde pelas brânquias diretamente para a água."
+      },
+      {
+        "id": "e",
+        "text": "aves e répteis não produzem resíduos nitrogenados."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A amônia exige muita água para ser diluída; a ureia, menos; o ácido úrico, quase nenhuma. Economizar água é vantajoso em ambientes secos e no ovo com casca, onde o resíduo fica armazenado até a eclosão.\n\nPegadinhas:\n• A: o ácido úrico é o menos tóxico dos três.\n• C: a vantagem é justamente em ambientes com pouca água.\n• D: quem elimina amônia pelas brânquias são os peixes.\n• E: todos produzem resíduos nitrogenados ao degradar proteínas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_03",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Sistemas Sensoriais: Visão e Audição",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a perda auditiva por ruído afeta o tímpano apenas, ou que é sempre reversível.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA exposição frequente a sons muito intensos, como em fones de ouvido em volume máximo ou em shows, pode causar perda auditiva permanente. Na cóclea, estrutura do ouvido interno, as células ciliadas transformam as vibrações do som em impulsos nervosos levados ao cérebro pelo nervo auditivo. Nos seres humanos, essas células, quando lesionadas por excesso de estímulo, não são repostas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a perda auditiva por ruído é sempre temporária, pois as células da cóclea se regeneram em poucos dias."
+      },
+      {
+        "id": "b",
+        "text": "o som intenso danifica apenas o tímpano, que pode ser substituído."
+      },
+      {
+        "id": "c",
+        "text": "o nervo auditivo transforma as vibrações em som, e as células ciliadas apenas o protegem."
+      },
+      {
+        "id": "d",
+        "text": "a perda auditiva só ocorre em pessoas idosas, independentemente da exposição ao ruído."
+      },
+      {
+        "id": "e",
+        "text": "o excesso de estímulo pode lesar as células ciliadas da cóclea, responsáveis por converter vibrações em impulsos nervosos, e, como elas não se regeneram em humanos, a perda pode ser permanente."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. As células ciliadas são os receptores da audição; ao serem destruídas, a transdução do som naquela faixa de frequência deixa de ocorrer. Sem regeneração, o dano é irreversível — daí a prevenção com volume moderado e protetores.\n\nPegadinhas:\n• A: o texto diz que as células não são repostas.\n• B: o texto localiza o dano na cóclea.\n• C: inverte os papéis: as células ciliadas fazem a transdução.\n• D: o ruído causa perda em qualquer idade.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_04",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Fisiologia da Sustentação e da Locomoção",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o ATP é necessário só para a contração, e não para o relaxamento.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA contração muscular ocorre quando filamentos de miosina se ligam aos de actina e os puxam, em ciclos que consomem ATP. O cálcio liberado no interior da célula muscular permite essa ligação. Para que o músculo relaxe, a miosina precisa se soltar da actina, o que também depende de ATP. Algumas horas após a morte, ocorre o rigor mortis: os músculos ficam rígidos e só amolecem dias depois, quando as proteínas começam a se degradar.\n\nTexto elaborado para esta questão.\n\nO rigor mortis se explica porque, após a morte,",
+    "options": [
+      {
+        "id": "a",
+        "text": "a produção de ATP cessa, e, sem ATP, as pontes entre miosina e actina não se desfazem, mantendo os músculos contraídos e rígidos."
+      },
+      {
+        "id": "b",
+        "text": "o cálcio desaparece da célula, e os filamentos se separam definitivamente."
+      },
+      {
+        "id": "c",
+        "text": "os músculos produzem ATP em excesso, que os mantém contraídos."
+      },
+      {
+        "id": "d",
+        "text": "os ossos se fundem às fibras musculares."
+      },
+      {
+        "id": "e",
+        "text": "o sistema nervoso continua enviando impulsos aos músculos."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Sem respiração, o ATP se esgota. A miosina, já ligada à actina, não consegue se soltar, e o músculo fica travado. A rigidez desaparece só com a degradação das proteínas.\n\nPegadinhas:\n• B: se os filamentos se separassem, o músculo ficaria flácido.\n• C: a produção de ATP cessa com a morte.\n• D: não há fusão entre ossos e músculos.\n• E: o sistema nervoso para de funcionar.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_05",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Reprodução Humana e Métodos Contraceptivos",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que gêmeos fraternos são geneticamente idênticos, ou que gêmeos univitelinos podem ter sexos diferentes.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nGêmeos podem se formar de duas maneiras. Em um caso, dois ovócitos são liberados no mesmo ciclo e fecundados por espermatozoides diferentes. No outro, um único zigoto, formado por um ovócito e um espermatozoide, divide-se nas primeiras etapas do desenvolvimento e origina dois embriões. Pesquisadores usam gêmeos dos dois tipos para estimar quanto da variação de uma característica, como a altura, se deve à genética e quanto ao ambiente.\n\nTexto elaborado para esta questão.\n\nSobre os dois tipos de gêmeos, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "os dois tipos são geneticamente idênticos, pois se desenvolvem no mesmo útero."
+      },
+      {
+        "id": "b",
+        "text": "gêmeos formados de dois ovócitos são sempre do mesmo sexo."
+      },
+      {
+        "id": "c",
+        "text": "os gêmeos de um único zigoto (univitelinos) têm o mesmo material genético e o mesmo sexo, enquanto os de dois zigotos (fraternos) são geneticamente tão parecidos quanto irmãos comuns."
+      },
+      {
+        "id": "d",
+        "text": "gêmeos univitelinos podem ter sexos diferentes, pois o zigoto se divide."
+      },
+      {
+        "id": "e",
+        "text": "comparar os dois tipos não permite separar influências genéticas e ambientais."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Univitelinos vêm do mesmo zigoto, logo do mesmo genoma; fraternos, de dois zigotos, compartilham em média metade dos alelos, como irmãos. Se univitelinos são mais semelhantes que fraternos para uma característica, há indício de influência genética.\n\nPegadinhas:\n• A: o útero comum não torna os genomas iguais.\n• B: fraternos podem ter sexos diferentes.\n• D: univitelinos têm o mesmo cromossomo sexual.\n• E: é justamente essa comparação que permite estimar as influências.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_06",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_vegetal",
+    "chapter": "Morfofisiologia Vegetal: Caules e Folhas",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que a planta se curva \"procurando\" a luz por vontade, ou que a auxina se acumula no lado iluminado.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um experimento, plantas jovens de feijão foram colocadas em uma caixa escura com uma única abertura lateral, por onde entrava luz. Depois de alguns dias, os caules estavam curvados em direção à abertura. Quando o ápice dos caules foi coberto com uma capa opaca, a curvatura não ocorreu. Sabe-se que o hormônio auxina, produzido no ápice, estimula o alongamento das células do caule e, sob luz lateral, desloca-se para o lado menos iluminado.\n\nTexto elaborado para esta questão.\n\nA curvatura dos caules em direção à luz se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a luz destrói as células do lado iluminado, que encolhem."
+      },
+      {
+        "id": "b",
+        "text": "a planta escolhe crescer em direção à luz para obter mais energia."
+      },
+      {
+        "id": "c",
+        "text": "a auxina se acumula no lado sombreado do caule, onde as células se alongam mais, e o caule se curva para o lado iluminado; o ápice, coberto, não percebe a direção da luz."
+      },
+      {
+        "id": "d",
+        "text": "a auxina se acumula no lado iluminado, que cresce mais e empurra o caule para a luz."
+      },
+      {
+        "id": "e",
+        "text": "a gravidade puxa o caule para o lado da abertura."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Com a luz lateral, a auxina migra para o lado escuro; as células desse lado se alongam mais, e o caule se curva em direção à luz — fototropismo positivo. Com o ápice coberto, a percepção da direção da luz é bloqueada.\n\nPegadinhas:\n• A: não há destruição de células.\n• B: atribui intenção a uma resposta fisiológica.\n• D: inverte o lado de acúmulo da auxina.\n• E: a resposta descrita é à luz, não à gravidade.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_07",
+    "subject": "Biologia",
+    "topicId": "bio_ecologia",
+    "chapter": "Introdução à Ecologia",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Achar que a energia se mantém ao longo da cadeia, ou que se perde metade a cada nível.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm ecossistemas, apenas uma pequena fração da energia de um nível trófico é incorporada pelo nível seguinte: o restante é gasto na respiração, perdido como calor ou não aproveitado, como fezes e partes não consumidas. Em média, considera-se que cerca de 10% da energia passa de um nível para o próximo. Considere uma cadeia alimentar em que os produtores fixam 100.000 kcal por metro quadrado por ano.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA energia disponível para os consumidores terciários dessa cadeia é, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "100 kcal/m² por ano, pois de produtores a consumidores terciários há três transferências de 10%."
+      },
+      {
+        "id": "b",
+        "text": "1.000 kcal/m² por ano, pois há duas transferências de 10% até os consumidores terciários."
+      },
+      {
+        "id": "c",
+        "text": "10.000 kcal/m² por ano, pois só há perda de energia na passagem para os consumidores primários."
+      },
+      {
+        "id": "d",
+        "text": "12.500 kcal/m² por ano, pois metade da energia se perde em cada uma das três transferências."
+      },
+      {
+        "id": "e",
+        "text": "100.000 kcal/m² por ano, pois a energia se conserva ao longo da cadeia alimentar."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Produtores 100.000 → primários 10.000 → secundários 1.000 → terciários 100 kcal/m²·ano. Por isso as cadeias raramente têm mais de quatro ou cinco níveis.\n\nPegadinhas:\n• B: para nos consumidores secundários.\n• C: aplica só uma transferência.\n• D: usa perda de 50%.\n• E: ignora as perdas por respiração e calor.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_08",
+    "subject": "Biologia",
+    "topicId": "bio_genetica",
+    "chapter": "Introdução à Genética",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o pai daltônico transmite o alelo ao filho homem.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO daltonismo mais comum, que dificulta distinguir verde e vermelho, é causado por um alelo recessivo localizado no cromossomo X. Homens têm um cromossomo X e um Y; mulheres, dois X. Um homem daltônico tem filhos com uma mulher de visão normal, que não carrega o alelo. Eles têm dúvidas sobre a chance de seus filhos e filhas serem daltônicos e sobre quem poderá transmitir o alelo para os netos.\n\nTexto elaborado para esta questão.\n\nSobre os filhos desse casal, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "todos os filhos homens serão daltônicos, pois herdam o cromossomo X do pai."
+      },
+      {
+        "id": "b",
+        "text": "metade dos filhos e metade das filhas serão daltônicos."
+      },
+      {
+        "id": "c",
+        "text": "as filhas serão daltônicas, pois recebem o X do pai."
+      },
+      {
+        "id": "d",
+        "text": "nenhum filho terá daltonismo, mas todas as filhas serão portadoras do alelo, pois recebem o X do pai, enquanto os filhos homens recebem do pai o cromossomo Y."
+      },
+      {
+        "id": "e",
+        "text": "o daltonismo não pode ser transmitido, pois o pai é o afetado."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O pai passa o X (com o alelo) às filhas e o Y aos filhos. As filhas recebem um X normal da mãe: são heterozigotas, portadoras, com visão normal. Os filhos recebem o X normal da mãe: não são daltônicos. As filhas poderão ter filhos daltônicos.\n\nPegadinhas:\n• A: o filho homem recebe o Y do pai.\n• B: com mãe não portadora, nenhum filho será afetado.\n• C: as filhas têm um alelo normal da mãe, que domina.\n• E: o alelo é transmitido às filhas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_09",
+    "subject": "Biologia",
+    "topicId": "bio_biotecnologia",
+    "chapter": "Biotecnologia",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o teste de DNA compara o genoma inteiro, ou que bastaria uma única célula sem amplificação.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm investigações criminais e testes de paternidade, compara-se o DNA de amostras como sangue, saliva ou fios de cabelo com raiz. Como as amostras muitas vezes têm quantidades muito pequenas de DNA, usa-se primeiro a reação em cadeia da polimerase, a PCR, que produz milhões de cópias de trechos específicos. Em seguida, analisam-se regiões do DNA cujo número de repetições varia muito entre as pessoas, gerando um perfil característico de cada indivíduo.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o teste compara todos os genes do genoma das duas pessoas, base por base."
+      },
+      {
+        "id": "b",
+        "text": "a PCR serve para destruir o DNA contaminante da amostra."
+      },
+      {
+        "id": "c",
+        "text": "pessoas da mesma família têm perfis de DNA idênticos."
+      },
+      {
+        "id": "d",
+        "text": "regiões repetitivas do DNA são iguais em todas as pessoas e, por isso, servem de referência."
+      },
+      {
+        "id": "e",
+        "text": "a PCR amplifica trechos específicos do DNA, permitindo analisar amostras pequenas, e a comparação de regiões muito variáveis entre pessoas gera perfis que identificam indivíduos e relações de parentesco."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A PCR multiplica os trechos de interesse; as regiões repetitivas variáveis (STRs) diferem muito entre pessoas, e o conjunto delas forma um perfil. Na paternidade, metade dos alelos do filho deve vir do pai.\n\nPegadinhas:\n• A: analisam-se poucas regiões selecionadas.\n• B: a PCR copia o DNA, não o destrói.\n• C: parentes compartilham parte dos alelos; só gêmeos univitelinos têm perfis iguais.\n• D: o texto diz que essas regiões variam muito entre pessoas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_10",
+    "subject": "Química",
+    "topicId": "qui_estequiometria",
+    "chapter": "Estequiometria: Leis Ponderais",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Usar a proporção em quantidade de matéria (2 : 1) como se fosse proporção em massa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nSegundo a lei das proporções definidas, de Proust, uma substância composta tem sempre a mesma proporção em massa entre seus elementos. Na água, por exemplo, 2 g de hidrogênio combinam-se com 16 g de oxigênio, formando 18 g de água, qualquer que seja a origem da amostra. Um estudante quer saber quanto hidrogênio é necessário para reagir completamente com 16 g de oxigênio em um novo experimento, e, a seguir, com o dobro dessa massa.\n\nTexto elaborado para esta questão.\n\nA massa de hidrogênio que reage com 16 g de oxigênio é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 g, pois a proporção em massa entre hidrogênio e oxigênio é de 1 : 16."
+      },
+      {
+        "id": "b",
+        "text": "2 g, pois a proporção em massa na água é fixa, 2 : 16, ou 1 : 8; com 32 g de oxigênio, seriam necessários 4 g."
+      },
+      {
+        "id": "c",
+        "text": "4 g, pois a água tem dois átomos de hidrogênio para cada átomo de oxigênio."
+      },
+      {
+        "id": "d",
+        "text": "8 g, pois a massa de hidrogênio é a metade da massa de oxigênio."
+      },
+      {
+        "id": "e",
+        "text": "16 g, pois os elementos reagem sempre em massas iguais."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A proporção em massa é 2 g de H para 16 g de O (1 : 8). Com 16 g de O, 2 g de H; com o dobro de O, o dobro de H, 4 g.\n\nPegadinhas:\n• A: reduz a proporção pela metade sem justificativa.\n• C: usa a proporção entre átomos (2 : 1), não entre massas.\n• D: relação inventada.\n• E: as massas reagentes não são iguais.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_11",
+    "subject": "Química",
+    "topicId": "qui_oxirreducao",
+    "chapter": "Química Ambiental",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a chuva ácida é causada pelo CO₂ natural, ou que não afeta construções.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEstátuas e fachadas de mármore e calcário de cidades industriais têm sofrido desgaste acelerado nas últimas décadas. Esses materiais são formados principalmente por carbonato de cálcio, CaCO₃. Usinas que queimam carvão e combustíveis com enxofre liberam dióxido de enxofre, SO₂, que, na atmosfera, forma ácido sulfúrico, H₂SO₄, presente na chuva da região.\n\nReação: CaCO₃ + H₂SO₄ → CaSO₄ + H₂O + CO₂\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o desgaste é causado apenas pelo vento, sem relação com a composição da chuva."
+      },
+      {
+        "id": "b",
+        "text": "a chuva ácida, formada a partir de poluentes como o SO₂, reage com o carbonato de cálcio, consumindo o material das estátuas e liberando gás carbônico."
+      },
+      {
+        "id": "c",
+        "text": "o gás carbônico natural da atmosfera é o principal responsável pelo desgaste acelerado."
+      },
+      {
+        "id": "d",
+        "text": "o mármore protege as estátuas porque é inerte a ácidos."
+      },
+      {
+        "id": "e",
+        "text": "a reação forma carbonato de cálcio, que reforça as estátuas."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O SO₂ é oxidado e dissolvido na água da chuva, formando H₂SO₄, que reage com o CaCO₃: o material se transforma em sulfato, que se desprende, e libera CO₂. A redução do enxofre nos combustíveis diminui o problema.\n\nPegadinhas:\n• A: o texto relaciona o desgaste à chuva ácida.\n• C: o CO₂ natural deixa a chuva levemente ácida, mas o texto aponta o SO₂.\n• D: o carbonato reage com ácidos, como mostra a equação.\n• E: o carbonato é consumido, não formado.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_12",
+    "subject": "Química",
+    "topicId": "qui_inorganica",
+    "chapter": "Química Inorgânica",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que o iodo do sal é o elemento livre, ou que o bócio é causado por excesso de iodo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDesde a década de 1950, o Brasil exige a adição de compostos de iodo, como o iodato de potássio, KIO₃, ao sal de cozinha. A medida foi adotada porque a deficiência de iodo na alimentação, comum em regiões afastadas do litoral, causava bócio, o aumento da glândula tireoide, e problemas no desenvolvimento de crianças. O iodo é necessário para a produção dos hormônios da tireoide, que regulam o metabolismo.\n\nTexto elaborado para esta questão.\n\nA adição de iodato ao sal",
+    "options": [
+      {
+        "id": "a",
+        "text": "fornece iodo livre, I₂, que dá cor ao sal."
+      },
+      {
+        "id": "b",
+        "text": "tem como objetivo deixar o sal mais branco e solto."
+      },
+      {
+        "id": "c",
+        "text": "causa bócio quando o sal é consumido diariamente."
+      },
+      {
+        "id": "d",
+        "text": "substitui o cloreto de sódio no sal de cozinha."
+      },
+      {
+        "id": "e",
+        "text": "é uma medida de saúde pública que, por meio de um alimento de consumo generalizado, fornece o iodo necessário à produção dos hormônios tireoidianos e previne o bócio por deficiência."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O sal é consumido por quase todos, em quantidades regulares, e é um veículo eficiente para corrigir a deficiência de iodo. O iodato é um sal estável; o iodo está combinado, não livre.\n\nPegadinhas:\n• A: o iodo está na forma de iodato, não de I₂.\n• B: o objetivo descrito é de saúde.\n• C: o bócio descrito no texto é causado pela falta de iodo.\n• D: o iodato é adicionado em pequena quantidade ao NaCl.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_13",
+    "subject": "Química",
+    "topicId": "qui_modelos_atomicos",
+    "chapter": "Evolução dos Modelos Atômicos",
+    "difficulty": "easy",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que isótopos são elementos diferentes, ou que diferem no número de prótons.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO carbono-12 e o carbono-14 são formas do mesmo elemento químico encontradas na natureza. O carbono-12 é estável e corresponde a quase todo o carbono da Terra; o carbono-14 é radioativo e usado na datação de restos orgânicos. Os dois participam das mesmas reações químicas: estão no gás carbônico absorvido pelas plantas e nas moléculas dos seres vivos.\n\nNote e adote: número atômico do carbono = 6.\n\nTexto elaborado para esta questão.\n\nCarbono-12 e carbono-14 são",
+    "options": [
+      {
+        "id": "a",
+        "text": "isótopos: têm 6 prótons, o que define o elemento e seu comportamento químico, e diferem no número de nêutrons, 6 e 8, o que altera a massa e a estabilidade do núcleo."
+      },
+      {
+        "id": "b",
+        "text": "elementos diferentes, pois têm números de massa diferentes."
+      },
+      {
+        "id": "c",
+        "text": "isóbaros, pois têm o mesmo número de massa."
+      },
+      {
+        "id": "d",
+        "text": "isótonos, pois têm o mesmo número de nêutrons."
+      },
+      {
+        "id": "e",
+        "text": "íons do carbono, pois têm cargas elétricas diferentes."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Mesmo número atômico (6): mesmo elemento e mesma química. Números de massa 12 e 14: 6 e 8 nêutrons. O excesso de nêutrons torna o carbono-14 instável.\n\nPegadinhas:\n• B: o elemento é definido pelos prótons, não pela massa.\n• C: isóbaros têm o mesmo número de massa, o que não é o caso.\n• D: isótonos têm o mesmo número de nêutrons, e aqui são diferentes.\n• E: ambos são átomos neutros.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_14",
+    "subject": "Química",
+    "topicId": "qui_eletroquimica",
+    "chapter": "Eletroquímica de Processos não Espontâneos",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a peça a ser revestida deve ser o ânodo, ou que a reação é espontânea.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa cromação e na niquelação de peças metálicas, como torneiras e para-choques, usa-se a galvanoplastia: a peça é mergulhada em uma solução que contém íons do metal de revestimento e ligada a um polo de um gerador. Uma placa do metal de revestimento é ligada ao outro polo. Com a passagem de corrente, forma-se uma camada fina e brilhante do metal sobre a peça.\n\nTexto elaborado para esta questão.\n\nNa galvanoplastia descrita,",
+    "options": [
+      {
+        "id": "a",
+        "text": "a peça é o ânodo, onde os íons metálicos sofrem oxidação."
+      },
+      {
+        "id": "b",
+        "text": "a reação é espontânea e funciona como uma pilha, gerando energia elétrica."
+      },
+      {
+        "id": "c",
+        "text": "a peça é o cátodo, onde os íons metálicos da solução recebem elétrons e se depositam como metal, enquanto a placa do metal de revestimento, no ânodo, se oxida e repõe os íons na solução."
+      },
+      {
+        "id": "d",
+        "text": "a corrente elétrica dissolve a peça, que passa a fazer parte da solução."
+      },
+      {
+        "id": "e",
+        "text": "os íons metálicos se depositam na placa ligada ao polo positivo."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. É uma eletrólise: o gerador força a redução Mⁿ⁺ + n e⁻ → M sobre a peça (cátodo, polo negativo). No ânodo, M → Mⁿ⁺ + n e⁻, e a concentração de íons se mantém.\n\nPegadinhas:\n• A: no ânodo ocorre oxidação; a deposição ocorre no cátodo.\n• B: o processo exige gerador; não é espontâneo.\n• D: a peça recebe a camada metálica.\n• E: o depósito ocorre no polo negativo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_15",
+    "subject": "Química",
+    "topicId": "qui_equilibrio",
+    "chapter": "Equilíbrios Iônicos",
+    "difficulty": "easy",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que a cor do indicador depende da quantidade de líquido, e não do pH.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO suco de repolho roxo pode ser usado como indicador ácido-base caseiro: em meio ácido fica avermelhado; próximo da neutralidade, roxo; e em meio básico, verde ou amarelado. Em uma aula, estudantes pingaram o suco em amostras de vinagre, água destilada e uma solução de produto de limpeza com amoníaco, que apresentaram, respectivamente, cores avermelhada, roxa e verde.\n\nTexto elaborado para esta questão.\n\nCom base nas cores, a ordem crescente de pH das amostras é:",
+    "options": [
+      {
+        "id": "a",
+        "text": "produto de limpeza, água destilada, vinagre."
+      },
+      {
+        "id": "b",
+        "text": "água destilada, vinagre, produto de limpeza."
+      },
+      {
+        "id": "c",
+        "text": "vinagre, produto de limpeza, água destilada."
+      },
+      {
+        "id": "d",
+        "text": "vinagre, água destilada, produto de limpeza, pois o vinagre é ácido (pH < 7), a água é neutra (pH ≈ 7) e o produto com amoníaco é básico (pH > 7)."
+      },
+      {
+        "id": "e",
+        "text": "as três amostras têm o mesmo pH, pois o indicador muda de cor sozinho."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Vermelho indica meio ácido, roxo, neutro, e verde, básico. Logo, pH(vinagre) < pH(água) < pH(produto de limpeza).\n\nPegadinhas:\n• A: inverte a ordem.\n• B: coloca a água, neutra, abaixo do vinagre, ácido.\n• C: coloca o produto básico antes da água neutra.\n• E: as cores diferentes indicam pHs diferentes.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_16",
+    "subject": "Química",
+    "topicId": "qui_solucoes",
+    "chapter": "Efeitos Coligativos",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o sal \"queima\" as folhas, ou que a água entra nas células da alface.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma salada de alface temperada com sal e deixada na mesa por meia hora fica murcha, e forma-se um líquido no fundo da tigela. Já folhas de alface mergulhadas em água pura ficam mais firmes. Em hospitais, soluções aplicadas na veia precisam ter concentração próxima à do sangue; caso contrário, as hemácias podem murchar ou inchar e se romper.\n\nTexto elaborado para esta questão.\n\nO comportamento da alface temperada se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o sal reage quimicamente com as folhas e as decompõe."
+      },
+      {
+        "id": "b",
+        "text": "a água do tempero entra nas células da alface e as rompe."
+      },
+      {
+        "id": "c",
+        "text": "o sal fecha os estômatos da folha, impedindo a respiração."
+      },
+      {
+        "id": "d",
+        "text": "o sal aquece as folhas, que perdem água por evaporação."
+      },
+      {
+        "id": "e",
+        "text": "o meio externo com sal fica mais concentrado que o interior das células, e a água sai das células por osmose, fazendo as folhas murcharem; em água pura, ocorre o contrário."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A osmose leva o solvente do meio menos concentrado para o mais concentrado através da membrana semipermeável. O tempero salgado é hipertônico: as células perdem água. Em água pura, hipotônica, as células ganham água e ficam túrgidas — o mesmo princípio vale para as hemácias.\n\nPegadinhas:\n• A: não há reação química de decomposição.\n• B: inverte o sentido do fluxo de água.\n• C: o efeito é osmótico, não de estômatos.\n• D: o sal não aquece as folhas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_17",
+    "subject": "Química",
+    "topicId": "qui_organica_fundamentos",
+    "chapter": "Nomenclatura de Compostos Orgânicos",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir fenol com álcool, ou amida com amina.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO paracetamol, um dos analgésicos mais usados no mundo, tem a fórmula estrutural simplificada a seguir:\n\nHO–C₆H₄–NH–CO–CH₃\n\nNela, o grupo –OH está ligado diretamente a um anel aromático (benzênico), e o nitrogênio está ligado a um carbono que tem um oxigênio por ligação dupla (C=O). Reconhecer as funções orgânicas ajuda a entender a solubilidade e a forma como o medicamento é metabolizado pelo fígado.\n\nTexto elaborado para esta questão.\n\nAs funções orgânicas presentes no paracetamol são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "álcool e amina, pois há –OH e nitrogênio na molécula."
+      },
+      {
+        "id": "b",
+        "text": "ácido carboxílico e éster, pois há grupos com oxigênio."
+      },
+      {
+        "id": "c",
+        "text": "aldeído e cetona, pois há carbono ligado a oxigênio por dupla."
+      },
+      {
+        "id": "d",
+        "text": "fenol, pois o –OH está ligado diretamente ao anel aromático, e amida, pois o nitrogênio está ligado a um carbono de carbonila (C=O)."
+      },
+      {
+        "id": "e",
+        "text": "éter e amina, pois o oxigênio está entre dois carbonos."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. –OH em anel aromático é fenol, não álcool. N ligado a C=O caracteriza amida (–NH–CO–), não amina.\n\nPegadinhas:\n• A: álcool exige –OH em carbono saturado, e amina não tem carbonila ligada ao N.\n• B: não há –COOH nem –COO–C.\n• C: a carbonila está ligada ao nitrogênio, o que caracteriza amida.\n• E: o oxigênio do –OH não está entre dois carbonos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_18",
+    "subject": "Química",
+    "topicId": "qui_polaridade_geometria",
+    "chapter": "Geometria Molecular",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o metano é plano, com ângulos de 90°.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO metano, CH₄, principal componente do gás natural e do biogás, tem um átomo de carbono ligado a quatro átomos de hidrogênio. Segundo a teoria da repulsão dos pares eletrônicos, os pares de elétrons ao redor do átomo central se afastam o máximo possível. No metano, o carbono não tem pares de elétrons não ligantes, e as quatro ligações C–H são iguais.\n\nTexto elaborado para esta questão.\n\nA geometria da molécula de metano e o ângulo entre as ligações são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "quadrada plana, com ângulos de 90°, pois as quatro ligações ficam no mesmo plano."
+      },
+      {
+        "id": "b",
+        "text": "linear, com ângulo de 180°, pois o carbono tem quatro ligações."
+      },
+      {
+        "id": "c",
+        "text": "tetraédrica, com ângulos de aproximadamente 109,5°, pois quatro pares de elétrons ligantes se afastam ao máximo no espaço tridimensional."
+      },
+      {
+        "id": "d",
+        "text": "angular, com ângulo de 104,5°, como a água."
+      },
+      {
+        "id": "e",
+        "text": "trigonal plana, com ângulos de 120°, pois o carbono tem três vizinhos."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Quatro regiões de elétrons, todas ligantes, se distribuem nos vértices de um tetraedro, com ângulos de ~109,5°. No espaço, esse arranjo afasta mais os pares do que o quadrado plano.\n\nPegadinhas:\n• A: o arranjo plano deixaria os pares mais próximos.\n• B: geometria linear exige duas regiões de elétrons.\n• D: a água é angular por ter dois pares não ligantes.\n• E: o carbono tem quatro vizinhos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_19",
+    "subject": "Física",
+    "topicId": "fis_cinematica",
+    "chapter": "Cinemática Escalar. Conceitos Fundamentais",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Calcular a média das velocidades em vez de dividir a distância total pelo tempo total.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma família viajou de carro 120 km entre duas cidades. O motorista percorreu os primeiros 60 km em 30 minutos, em uma rodovia livre, e os outros 60 km em 1 hora, em um trecho de serra com trânsito lento. Ao chegar, uma das crianças calculou a média entre as velocidades dos dois trechos, 120 km/h e 60 km/h, e afirmou que a velocidade média da viagem foi de 90 km/h.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA velocidade média da viagem foi",
+    "options": [
+      {
+        "id": "a",
+        "text": "60 km/h, pois é a velocidade do trecho mais longo em tempo."
+      },
+      {
+        "id": "b",
+        "text": "80 km/h, pois a velocidade média é a distância total, 120 km, dividida pelo tempo total, 1,5 h."
+      },
+      {
+        "id": "c",
+        "text": "90 km/h, pois é a média aritmética das velocidades dos dois trechos."
+      },
+      {
+        "id": "d",
+        "text": "100 km/h, pois a velocidade média é a soma das velocidades dividida por 1,8."
+      },
+      {
+        "id": "e",
+        "text": "180 km/h, pois as velocidades dos dois trechos devem ser somadas."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. vₘ = Δs/Δt = 120/1,5 = 80 km/h. A média aritmética só valeria se os tempos fossem iguais; o trecho lento durou mais e pesa mais.\n\nPegadinhas:\n• A: considera só um trecho.\n• C: é o raciocínio da criança, que ignora os tempos diferentes.\n• D: fórmula inventada.\n• E: soma velocidades, o que não tem sentido físico.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_20",
+    "subject": "Física",
+    "topicId": "fis_ondulatoria",
+    "chapter": "Reflexão, Eco, Reverberação e Refração de Ondas",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Esquecer que o som percorre a ida e a volta até o obstáculo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm excursionista grita diante de um paredão rochoso e ouve o eco 2 segundos depois. Ele quer estimar a que distância está o paredão, sabendo que o som percorre o caminho até a rocha, é refletido e volta até ele. Considere que o ar está parado e que a velocidade do som no ar é de 340 m/s.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA distância entre o excursionista e o paredão é",
+    "options": [
+      {
+        "id": "a",
+        "text": "340 m, pois em 2 s o som percorre 680 m, que correspondem à ida e à volta."
+      },
+      {
+        "id": "b",
+        "text": "510 m, pois o som percorre um terço a mais na volta."
+      },
+      {
+        "id": "c",
+        "text": "680 m, pois é a distância percorrida pelo som em 2 s."
+      },
+      {
+        "id": "d",
+        "text": "1.020 m, pois o som percorre três vezes a distância até o paredão."
+      },
+      {
+        "id": "e",
+        "text": "1.360 m, pois é preciso dobrar a distância percorrida pelo som."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Em 2 s, o som percorre 340 × 2 = 680 m, ida e volta. A distância ao paredão é metade: 340 m.\n\nPegadinhas:\n• B: relação inventada.\n• C: esquece de dividir por 2.\n• D: relação inventada.\n• E: dobra em vez de dividir.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_21",
+    "subject": "Física",
+    "topicId": "fis_ondulatoria",
+    "chapter": "Ondas Estacionárias em Cordas",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que encurtar a corda torna o som mais grave.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAo tocar violão, o músico pressiona a corda contra o braço do instrumento em diferentes casas, encurtando a parte da corda que vibra. A corda vibra presa nas duas extremidades, formando ondas estacionárias; no modo fundamental, o comprimento da parte vibrante corresponde a meio comprimento de onda. A velocidade da onda na corda depende da tensão e da densidade da corda, e não muda quando o músico troca de casa.\n\nNote e adote: v = λ·f.\n\nTexto elaborado para esta questão.\n\nAo pressionar a corda em uma casa mais próxima do corpo do violão, o som fica",
+    "options": [
+      {
+        "id": "a",
+        "text": "mais grave, pois a corda mais curta tem comprimento de onda maior."
+      },
+      {
+        "id": "b",
+        "text": "igual, pois a velocidade da onda não muda."
+      },
+      {
+        "id": "c",
+        "text": "mais agudo, pois a parte vibrante fica mais curta, o comprimento de onda do fundamental diminui e, com a mesma velocidade, a frequência aumenta."
+      },
+      {
+        "id": "d",
+        "text": "mais forte, pois a amplitude aumenta, sem mudança de frequência."
+      },
+      {
+        "id": "e",
+        "text": "mais grave, pois a tensão da corda diminui ao ser pressionada."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. λ = 2L; com L menor, λ menor; com v fixa, f = v/(2L) maior: som mais agudo.\n\nPegadinhas:\n• A: inverte a relação entre comprimento e λ.\n• B: a frequência muda mesmo com v constante.\n• D: a mudança descrita é de altura, não de intensidade.\n• E: o texto diz que a velocidade, que depende da tensão, não muda.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_22",
+    "subject": "Física",
+    "topicId": "fis_gravitacao_circular",
+    "chapter": "Analisando Movimentos Contidos em um Plano Vertical",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Usar v = √(2gR), da queda livre, em vez da condição de força centrípeta no topo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um brinquedo de parque, um carrinho percorre um loop circular vertical de 10 m de raio. No ponto mais alto, os passageiros ficam de cabeça para baixo. Para que o carrinho complete o loop sem perder contato com os trilhos, a velocidade no topo precisa ter um valor mínimo, para o qual a força normal dos trilhos se anula e o peso sozinho fornece a força centrípeta.\n\nNote e adote: g = 10 m/s²; força centrípeta = m·v²/R.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA velocidade mínima do carrinho no topo do loop é",
+    "options": [
+      {
+        "id": "a",
+        "text": "5 m/s, pois é a metade de √(g·R)."
+      },
+      {
+        "id": "b",
+        "text": "10 m/s, pois m·g = m·v²/R dá v = √(g·R) = √100."
+      },
+      {
+        "id": "c",
+        "text": "14 m/s, pois v = √(2·g·R), como na queda livre de uma altura R."
+      },
+      {
+        "id": "d",
+        "text": "20 m/s, pois v = √(2·g·2R), como se o carrinho caísse de uma altura igual ao diâmetro."
+      },
+      {
+        "id": "e",
+        "text": "100 m/s, pois v = g·R."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. No limite, N = 0 e P = m·v²/R: v = √(gR) = √(10 × 10) = 10 m/s, independente da massa.\n\nPegadinhas:\n• A: divide sem justificativa.\n• C: usa a relação da queda livre, sem a condição centrípeta.\n• D: idem, com a altura do diâmetro.\n• E: esquece a raiz quadrada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_23",
+    "subject": "Física",
+    "topicId": "fis_leis_newton",
+    "chapter": "Resultante de um Sistema de Forças",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Somar módulos de forças perpendiculares, ou achar que a resultante é sempre a soma.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDuas pessoas puxam uma caixa sobre um piso horizontal com cordas, aplicando forças horizontais de módulos 6 N e 8 N. Elas experimentam diferentes ângulos entre as cordas para entender como a força resultante depende da direção de cada força. Despreze o atrito e considere apenas essas duas forças horizontais.\n\nNote e adote: para forças perpendiculares, R = √(F₁² + F₂²).\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nSobre a força resultante nessa situação, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "é sempre 14 N, pois a resultante é a soma dos módulos das forças."
+      },
+      {
+        "id": "b",
+        "text": "é sempre 2 N, pois a resultante é a diferença entre os módulos."
+      },
+      {
+        "id": "c",
+        "text": "é 10 N em qualquer ângulo, pois 6, 8 e 10 formam um triângulo retângulo."
+      },
+      {
+        "id": "d",
+        "text": "é nula quando as forças são perpendiculares."
+      },
+      {
+        "id": "e",
+        "text": "pode variar entre 2 N, com as forças em sentidos opostos, e 14 N, com as forças no mesmo sentido, e vale 10 N quando as forças são perpendiculares."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Forças são vetores: a resultante depende do ângulo. Mesmo sentido: 14 N; opostos: 2 N; perpendiculares: √(36 + 64) = 10 N.\n\nPegadinhas:\n• A: só vale para forças de mesma direção e sentido.\n• B: só vale para sentidos opostos.\n• C: 10 N só vale para o ângulo reto.\n• D: forças perpendiculares não se anulam.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_24",
+    "subject": "Física",
+    "topicId": "fis_optica_instrumental",
+    "chapter": "Estudo Analítico das Lentes Esféricas",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Somar distâncias em vez de aplicar a equação dos pontos conjugados.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm projetor de slides usa uma lente convergente de distância focal 10 cm. O slide é colocado a 12 cm da lente, e a imagem nítida se forma em uma tela, ampliada e invertida. O professor quer saber a que distância da lente a tela deve ser colocada para que a imagem fique nítida.\n\nNote e adote: equação de Gauss: 1/f = 1/p + 1/p'.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA distância entre a lente e a tela deve ser de",
+    "options": [
+      {
+        "id": "a",
+        "text": "5 cm, pois a imagem se forma antes do foco."
+      },
+      {
+        "id": "b",
+        "text": "10 cm, pois a imagem se forma sempre no foco da lente."
+      },
+      {
+        "id": "c",
+        "text": "22 cm, pois a distância da tela é a soma da distância focal com a distância do slide."
+      },
+      {
+        "id": "d",
+        "text": "60 cm, pois 1/p' = 1/10 − 1/12 = 1/60."
+      },
+      {
+        "id": "e",
+        "text": "120 cm, pois p' = f × p."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. 1/p' = 1/10 − 1/12 = (6 − 5)/60 = 1/60 ⇒ p' = 60 cm. O aumento é −p'/p = −5: imagem invertida e cinco vezes maior.\n\nPegadinhas:\n• A: imagem real de objeto além do foco forma-se além do foco do outro lado.\n• B: só objetos no infinito formam imagem no foco.\n• C: soma distâncias.\n• E: multiplica sem a equação.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_25",
+    "subject": "Física",
+    "topicId": "fis_eletromagnetismo",
+    "chapter": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Inverter a razão de espiras, ou achar que o transformador funciona com corrente contínua.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nCarregadores de celulares antigos tinham um transformador que reduzia a tensão alternada da tomada, de 220 V, para cerca de 11 V. Em um transformador ideal, a razão entre as tensões do primário e do secundário é igual à razão entre os números de espiras das duas bobinas. Considere um transformador desse tipo com 1.000 espiras no primário.\n\nNote e adote: U₁/U₂ = N₁/N₂.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO número de espiras do secundário é",
+    "options": [
+      {
+        "id": "a",
+        "text": "5, pois o número de espiras é proporcional ao quadrado da tensão."
+      },
+      {
+        "id": "b",
+        "text": "10, pois o número de espiras do secundário é um centésimo do primário."
+      },
+      {
+        "id": "c",
+        "text": "20, pois a razão entre as tensões, 20, corresponde ao número de espiras do secundário."
+      },
+      {
+        "id": "d",
+        "text": "25, pois a razão entre espiras é a raiz quadrada da razão entre tensões."
+      },
+      {
+        "id": "e",
+        "text": "50, pois N₂ = N₁ × U₂/U₁ = 1.000 × 11/220."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. N₂ = 1.000 × 11/220 = 50 espiras. O transformador funciona por indução, que exige variação de fluxo: só opera com corrente alternada.\n\nPegadinhas:\n• B: relação inventada.\n• C: confunde a razão de transformação com o número de espiras.\n• D: aplica raiz sem fundamento.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_26",
+    "subject": "Física",
+    "topicId": "fis_energia",
+    "chapter": "Trabalho e Energia: Trabalho de uma Força",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Confundir trabalho com potência, ou esquecer de dividir pelo tempo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO motor de um elevador de carga ergue uma caixa de 500 kg a uma altura de 10 m em 10 segundos, com velocidade constante. Os engenheiros querem saber a potência mínima que o motor precisa fornecer nessa operação, desprezando atritos e a massa da cabine. A potência média é o trabalho realizado dividido pelo intervalo de tempo.\n\nNote e adote: g = 10 m/s².\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA potência mínima do motor é",
+    "options": [
+      {
+        "id": "a",
+        "text": "500 W, pois a potência é igual à massa da carga."
+      },
+      {
+        "id": "b",
+        "text": "2.500 W, pois a potência é metade do trabalho dividida pelo tempo."
+      },
+      {
+        "id": "c",
+        "text": "5.000 W, pois o trabalho é m·g·h = 50.000 J, realizado em 10 s."
+      },
+      {
+        "id": "d",
+        "text": "50.000 W, pois a potência é igual ao trabalho realizado."
+      },
+      {
+        "id": "e",
+        "text": "500.000 W, pois o trabalho deve ser multiplicado pelo tempo."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. W = m·g·h = 500 × 10 × 10 = 50.000 J; P = 50.000/10 = 5.000 W = 5 kW.\n\nPegadinhas:\n• A: confunde massa com potência.\n• B: fator 1/2 sem justificativa.\n• D: confunde trabalho (J) com potência (W).\n• E: multiplica pelo tempo em vez de dividir.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_27",
+    "subject": "Física",
+    "topicId": "fis_calorimetria",
+    "chapter": "Temperatura, Calor e seus Mecanismos de Transferência",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o metal está mais frio que a madeira, quando ambos estão à mesma temperatura.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDe manhã, em uma cozinha fria, uma pessoa toca a maçaneta metálica da porta e a mesa de madeira, que estão no mesmo ambiente há horas. A maçaneta parece muito mais fria que a mesa. Um termômetro de contato, no entanto, indica a mesma temperatura para os dois objetos, igual à do ar da cozinha.\n\nTexto elaborado para esta questão.\n\nA sensação diferente se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a maçaneta está, na verdade, mais fria que a mesa, e o termômetro está errado."
+      },
+      {
+        "id": "b",
+        "text": "a madeira produz calor próprio e se mantém aquecida."
+      },
+      {
+        "id": "c",
+        "text": "o metal absorve o frio do ambiente com mais facilidade."
+      },
+      {
+        "id": "d",
+        "text": "a mesa de madeira está sempre a uma temperatura maior que o ar."
+      },
+      {
+        "id": "e",
+        "text": "o metal conduz calor muito melhor que a madeira e retira calor da mão mais rapidamente, e a sensação térmica depende dessa rapidez, e não só da temperatura do objeto."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Em equilíbrio térmico, os dois estão à mesma temperatura. O metal, bom condutor, transfere calor da mão para longe do ponto de contato rapidamente; a madeira, isolante, não. A pele percebe a taxa de perda de calor.\n\nPegadinhas:\n• A: o termômetro confirma o equilíbrio térmico.\n• B: a madeira não gera calor.\n• C: \"frio\" não é algo que se absorve.\n• D: em equilíbrio, as temperaturas se igualam.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_28",
+    "subject": "Matemática",
+    "topicId": "mat_dados_probabilidade",
+    "chapter": "Introdução às Probabilidades",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Confundir a sensibilidade do teste com a probabilidade de estar doente dado um resultado positivo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma doença atinge 1% de uma população. Um teste detecta a doença em 90% das pessoas doentes, mas dá resultado positivo, por engano, em 9% das pessoas saudáveis. Considere um grupo de 10.000 pessoas dessa população, todas testadas. Um médico quer saber qual a probabilidade de uma pessoa com resultado positivo estar de fato doente.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nEssa probabilidade é, aproximadamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,9%, pois a probabilidade é o produto da prevalência pela sensibilidade."
+      },
+      {
+        "id": "b",
+        "text": "1%, pois a probabilidade é igual à frequência da doença na população."
+      },
+      {
+        "id": "c",
+        "text": "5%, pois metade dos positivos se deve a erro do teste."
+      },
+      {
+        "id": "d",
+        "text": "9%, pois entre os cerca de 981 positivos, 90 são doentes e 891 são falsos positivos."
+      },
+      {
+        "id": "e",
+        "text": "90%, pois o teste detecta a doença em 90% dos doentes."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Doentes: 100; positivos entre eles: 90. Saudáveis: 9.900; falsos positivos: 891. Total de positivos: 981. P(doente | positivo) = 90/981 ≈ 9%. Com doença rara, a maioria dos positivos é falsa.\n\nPegadinhas:\n• A: 0,9% é a fração da população que é doente e positiva.\n• B: ignora a informação do teste.\n• C: proporção inventada.\n• E: confunde P(positivo | doente) com P(doente | positivo).",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_29",
+    "subject": "Matemática",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "chapter": "Porcentagem",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Somar as taxas mensais, ignorando juros sobre juros.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma pessoa deixou de pagar a fatura do cartão de crédito, de R$ 1.000,00, e a dívida passou a crescer com juros compostos de 10% ao mês. Após dois meses sem nenhum pagamento, ela quer saber de quanto, em porcentagem, a dívida aumentou em relação ao valor inicial. Um amigo calculou 10% + 10% = 20%.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO aumento da dívida após dois meses foi de",
+    "options": [
+      {
+        "id": "a",
+        "text": "21%, pois a dívida foi multiplicada por 1,1 duas vezes: 1,1² = 1,21."
+      },
+      {
+        "id": "b",
+        "text": "22%, pois os juros do segundo mês dobram em relação aos do primeiro."
+      },
+      {
+        "id": "c",
+        "text": "25%, pois os juros compostos acrescentam 5% a cada mês."
+      },
+      {
+        "id": "d",
+        "text": "40%, pois os juros compostos dobram a taxa a cada mês."
+      },
+      {
+        "id": "e",
+        "text": "121%, pois a dívida final é 121% do valor inicial."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. 1.000 × 1,1 = 1.100; 1.100 × 1,1 = 1.210. Aumento de 21%: os juros do segundo mês incidem sobre 1.100.\n\nPegadinhas:\n• B: os juros do segundo mês são 110, não 200.\n• C: relação inventada.\n• D: relação inventada.\n• E: confunde o valor final (121% do inicial) com o aumento.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_30",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_espacial",
+    "chapter": "O Universo Tridimensional",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Contar cada aresta duas vezes, sem dividir por 2.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO dodecaedro regular é um poliedro convexo com 12 faces, todas pentágonos regulares. Cada aresta é compartilhada por exatamente duas faces, e em cada vértice se encontram três faces. Para todo poliedro convexo, vale a relação de Euler: V − A + F = 2, em que V é o número de vértices, A o de arestas e F o de faces.\n\nTexto elaborado para esta questão.\n\nO número de arestas e o de vértices do dodecaedro são, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "20 e 30, pois as arestas são 12 × 5/3 e os vértices completam a relação de Euler."
+      },
+      {
+        "id": "b",
+        "text": "30 e 20, pois as arestas são 12 × 5/2 = 30, e, por Euler, V = 2 + 30 − 12 = 20."
+      },
+      {
+        "id": "c",
+        "text": "48 e 38, pois as arestas são 12 × 4."
+      },
+      {
+        "id": "d",
+        "text": "60 e 50, pois cada face tem 5 arestas, e 12 × 5 = 60."
+      },
+      {
+        "id": "e",
+        "text": "62 e 52, pois as arestas são 60 mais as duas da relação de Euler."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. 12 faces × 5 lados = 60, mas cada aresta pertence a 2 faces: A = 30. Euler: V = 2 + A − F = 20. Confere: 3 faces por vértice, V = 60/3 = 20.\n\nPegadinhas:\n• A: inverte arestas e vértices.\n• C: usa quatro lados por face.\n• D: não divide por 2.\n• E: soma 2 indevidamente.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_31",
+    "subject": "Matemática",
+    "topicId": "mat_combinatoria",
+    "chapter": "Introdução às Técnicas de Contagem",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Contar cada aperto de mão duas vezes, ou usar permutação.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma reunião com 10 pessoas, cada uma cumprimentou todas as outras com um aperto de mão, exatamente uma vez. Um participante afirmou que houve 90 apertos de mão, pois cada uma das 10 pessoas cumprimentou 9 outras. Outra participante discordou, dizendo que essa conta considera cada aperto duas vezes.\n\nTexto elaborado para esta questão.\n\nO número total de apertos de mão foi",
+    "options": [
+      {
+        "id": "a",
+        "text": "20, pois cada pessoa deu dois apertos de mão."
+      },
+      {
+        "id": "b",
+        "text": "45, pois são combinações de 10 pessoas tomadas 2 a 2: 10 × 9/2."
+      },
+      {
+        "id": "c",
+        "text": "90, pois cada uma das 10 pessoas cumprimentou 9 outras."
+      },
+      {
+        "id": "d",
+        "text": "100, pois são 10 × 10 combinações de pessoas."
+      },
+      {
+        "id": "e",
+        "text": "3.628.800, pois é o número de permutações das 10 pessoas."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Um aperto é um par não ordenado: C(10,2) = 10 × 9/2 = 45. O argumento dos 90 conta (A,B) e (B,A) como diferentes.\n\nPegadinhas:\n• A: relação inventada.\n• C: conta cada aperto duas vezes.\n• D: inclui cada pessoa consigo mesma e conta em dobro.\n• E: permutação não se aplica.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_32",
+    "subject": "Matemática",
+    "topicId": "mat_log_exponenciais",
+    "chapter": "Introdução aos Logaritmos",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Usar crescimento linear (multiplicar pelo número de períodos) em vez de exponencial.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm condições ideais de laboratório, uma população de bactérias dobra a cada 20 minutos. Um pesquisador iniciou uma cultura com certa quantidade de bactérias e quer saber por qual fator a população terá sido multiplicada após 2 horas, mantidas as condições. Ele também pretende, depois, usar logaritmos para calcular o tempo necessário para atingir uma população mil vezes maior.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nApós 2 horas, a população terá sido multiplicada por",
+    "options": [
+      {
+        "id": "a",
+        "text": "6, pois em 2 horas há seis períodos de 20 minutos."
+      },
+      {
+        "id": "b",
+        "text": "12, pois a população dobra seis vezes, e 6 × 2 = 12."
+      },
+      {
+        "id": "c",
+        "text": "32, pois a população dobra cinco vezes em 2 horas."
+      },
+      {
+        "id": "d",
+        "text": "64, pois em 2 horas há seis períodos de 20 minutos, e 2⁶ = 64."
+      },
+      {
+        "id": "e",
+        "text": "120, pois a população aumenta uma unidade por minuto."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. 120 min / 20 min = 6 duplicações: 2⁶ = 64. Para mil vezes, 2ⁿ = 1.000, n = log 1.000 / log 2 ≈ 10 duplicações, cerca de 3h20.\n\nPegadinhas:\n• A: conta os períodos sem aplicar a potência.\n• B: multiplica em vez de elevar.\n• C: conta cinco duplicações.\n• E: confunde com o tempo em minutos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_33",
+    "subject": "Matemática",
+    "topicId": "mat_funcoes",
+    "chapter": "Funções Bijetoras",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que toda função tem inversa, sem verificar se é injetora e sobrejetora.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um teatro com 200 lugares numerados, cada ingresso vendido corresponde a exatamente um lugar, e todos os lugares foram vendidos para uma sessão, cada um para uma pessoa diferente. A administração definiu a função f que associa cada espectador ao seu lugar. Em outra sessão, só 150 lugares foram vendidos, também um por pessoa.\n\nTexto elaborado para esta questão.\n\nSobre a função f, considerando como contradomínio o conjunto dos 200 lugares, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "na sessão lotada, f é bijetora: cada espectador ocupa um lugar diferente (injetora) e todos os lugares são ocupados (sobrejetora), e por isso f admite inversa, que associa cada lugar ao seu espectador."
+      },
+      {
+        "id": "b",
+        "text": "na sessão com 150 espectadores, f é sobrejetora, pois todos os espectadores têm lugar."
+      },
+      {
+        "id": "c",
+        "text": "na sessão lotada, f não é injetora, pois há mais lugares que espectadores."
+      },
+      {
+        "id": "d",
+        "text": "toda função admite inversa, qualquer que seja sua classificação."
+      },
+      {
+        "id": "e",
+        "text": "na sessão lotada, f não é função, pois associa pessoas a números."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Lotação completa: correspondência um a um entre espectadores e lugares — bijeção, com inversa. Com 150 espectadores, f é injetora, mas não sobrejetora: 50 lugares ficam sem imagem inversa.\n\nPegadinhas:\n• B: sobrejetora exigiria todos os 200 lugares ocupados.\n• C: na sessão lotada, há o mesmo número de lugares e espectadores, e cada um tem um lugar diferente.\n• D: só funções bijetoras admitem inversa.\n• E: funções podem associar quaisquer conjuntos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_34",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_analitica",
+    "chapter": "Introdução à Geometria Analítica",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Somar as diferenças das coordenadas em vez de aplicar Pitágoras.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um videogame, a posição de cada personagem é dada por coordenadas em um plano cartesiano, com unidades em metros. Um personagem está no ponto A(1, 2), e um tesouro, no ponto B(4, 6). O programador quer calcular a distância em linha reta entre o personagem e o tesouro para decidir se ele já está no alcance de um ímã que atrai objetos a até 6 m.\n\nNote e adote: d = √((x₂ − x₁)² + (y₂ − y₁)²).\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA distância entre A e B é",
+    "options": [
+      {
+        "id": "a",
+        "text": "3 m, pois é a diferença entre as abscissas."
+      },
+      {
+        "id": "b",
+        "text": "4 m, pois é a diferença entre as ordenadas."
+      },
+      {
+        "id": "c",
+        "text": "5 m, pois √(3² + 4²) = √25, e o tesouro está ao alcance do ímã."
+      },
+      {
+        "id": "d",
+        "text": "7 m, pois é a soma das diferenças entre as coordenadas."
+      },
+      {
+        "id": "e",
+        "text": "25 m, pois é a soma dos quadrados das diferenças."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Δx = 3, Δy = 4: d = √(9 + 16) = 5 m < 6 m.\n\nPegadinhas:\n• A: usa só Δx.\n• B: usa só Δy.\n• D: soma os catetos.\n• E: esquece a raiz.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_35",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_plana",
+    "chapter": "Simetrias e Congruências",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o retângulo tem quatro eixos de simetria como o quadrado.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma aula de artes, os estudantes recortaram figuras e as dobraram para encontrar os eixos de simetria, isto é, as retas que dividem a figura em duas partes que coincidem quando dobradas. Eles recortaram um quadrado, um retângulo que não é quadrado, um triângulo equilátero e um hexágono regular, e anotaram o número de eixos de cada figura.\n\nTexto elaborado para esta questão.\n\nOs números de eixos de simetria encontrados devem ser, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "4, 4, 3 e 6, pois quadrado e retângulo têm as mesmas simetrias."
+      },
+      {
+        "id": "b",
+        "text": "2, 2, 1 e 3, pois só os eixos que passam por vértices contam."
+      },
+      {
+        "id": "c",
+        "text": "4, 2, 1 e 6, pois o triângulo equilátero tem apenas um eixo vertical."
+      },
+      {
+        "id": "d",
+        "text": "8, 4, 6 e 12, pois cada eixo conta duas vezes."
+      },
+      {
+        "id": "e",
+        "text": "4, 2, 3 e 6, pois os polígonos regulares de n lados têm n eixos, e o retângulo tem apenas os dois que passam pelos pontos médios dos lados opostos."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Quadrado: 2 diagonais e 2 medianas = 4. Retângulo: só as 2 medianas (as diagonais não funcionam). Triângulo equilátero: 3. Hexágono regular: 6.\n\nPegadinhas:\n• A: as diagonais do retângulo não são eixos de simetria.\n• B: no quadrado, os eixos que passam pelos pontos médios também contam.\n• C: o triângulo equilátero tem três eixos.\n• D: cada eixo conta uma vez.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_36",
+    "subject": "Geografia",
+    "topicId": "geo_climatologia_socioambiental",
+    "chapter": "Biogeografia Mundial",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Confundir tundra com taiga, ou achar que o degelo do permafrost não afeta o clima.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo extremo norte da América, da Europa e da Ásia, o solo permanece congelado durante todo o ano a partir de certa profundidade, formando o permafrost. A vegetação é rasteira, com musgos, liquens e pequenos arbustos, e o verão é curto. Mais ao sul, extensas florestas de coníferas, como pinheiros e abetos, ocupam áreas com invernos longos e rigorosos. Com o aquecimento global, o permafrost tem degelado, liberando metano e gás carbônico antes retidos no solo.\n\nTexto elaborado para esta questão.\n\nO texto descreve, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "a taiga e a tundra, e o degelo do permafrost reduz a emissão de gases de efeito estufa."
+      },
+      {
+        "id": "b",
+        "text": "a savana e a estepe, típicas de climas tropicais."
+      },
+      {
+        "id": "c",
+        "text": "a floresta temperada decídua e a floresta tropical."
+      },
+      {
+        "id": "d",
+        "text": "o deserto e a pradaria, pois a vegetação é rasteira."
+      },
+      {
+        "id": "e",
+        "text": "a tundra e a taiga, e o degelo do permafrost pode intensificar o aquecimento global ao liberar gases de efeito estufa."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A tundra, com permafrost e vegetação rasteira, fica nas latitudes mais altas; a taiga, floresta de coníferas, logo ao sul. O degelo libera carbono armazenado, o que acelera o aquecimento — um ciclo de retroalimentação positiva.\n\nPegadinhas:\n• A: inverte a ordem e o efeito do degelo.\n• B: savana e estepe não ocorrem nessas latitudes.\n• C: os biomas descritos são de climas frios.\n• D: a vegetação rasteira da tundra decorre do frio, não da aridez.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_37",
+    "subject": "Geografia",
+    "topicId": "geo_economica_brasil",
+    "chapter": "O Espaço Industrial Brasileiro II",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a desconcentração industrial eliminou a primazia do Sudeste.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA partir da década de 1970, parte das indústrias brasileiras deixou a região metropolitana de São Paulo e instalou-se no interior paulista e em outros estados, como Minas Gerais, Paraná, Bahia e Ceará. Entre os fatores apontados estão incentivos fiscais oferecidos pelos estados, a chamada guerra fiscal, mão de obra mais barata, menor sindicalização e custos mais baixos de terrenos e de congestionamento. Ainda assim, o Sudeste continua concentrando a maior parte da produção industrial do país.\n\nTexto elaborado para esta questão.\n\nO processo descrito é a",
+    "options": [
+      {
+        "id": "a",
+        "text": "desconcentração industrial, motivada por incentivos fiscais e custos menores fora da metrópole, sem eliminar o predomínio do Sudeste na produção industrial."
+      },
+      {
+        "id": "b",
+        "text": "desindustrialização total do país, com o fechamento das fábricas."
+      },
+      {
+        "id": "c",
+        "text": "concentração da indústria na capital paulista, motivada pela guerra fiscal."
+      },
+      {
+        "id": "d",
+        "text": "transferência de todas as indústrias para a região Norte."
+      },
+      {
+        "id": "e",
+        "text": "substituição da indústria pela agricultura no Sudeste."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. As empresas buscaram reduzir custos e aproveitar incentivos; a indústria se espalhou, mas o Sudeste segue liderando. A guerra fiscal é criticada por reduzir a arrecadação dos estados.\n\nPegadinhas:\n• B: o texto descreve deslocamento, não fechamento geral.\n• C: o movimento é de saída da metrópole.\n• D: o texto cita vários estados de outras regiões.\n• E: o texto não descreve substituição por agricultura.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_38",
+    "subject": "Geografia",
+    "topicId": "geo_globalizacao_economica",
+    "chapter": "Indústria I",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Confundir o fordismo com o toyotismo, ou achar que o just-in-time aumenta os estoques.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo início do século XX, a fábrica de automóveis de Henry Ford introduziu a linha de montagem, com trabalhadores realizando tarefas repetitivas e padronizadas, produção em massa e grandes estoques. A partir da segunda metade do século, a Toyota, no Japão, desenvolveu um sistema de produção com estoques mínimos, em que as peças chegam \"no momento certo\" (just-in-time), trabalhadores multifuncionais e produção ajustada à demanda.\n\nTexto elaborado para esta questão.\n\nComparando os dois modelos, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o toyotismo baseia-se na produção em massa de produtos idênticos e em grandes estoques."
+      },
+      {
+        "id": "b",
+        "text": "o fordismo adota o just-in-time e trabalhadores multifuncionais."
+      },
+      {
+        "id": "c",
+        "text": "o fordismo se caracteriza pela produção em massa padronizada, com grandes estoques e tarefas repetitivas, enquanto o toyotismo busca produção flexível, ajustada à demanda e com estoques reduzidos."
+      },
+      {
+        "id": "d",
+        "text": "os dois modelos são idênticos, mudando apenas o país de origem."
+      },
+      {
+        "id": "e",
+        "text": "o toyotismo eliminou a necessidade de trabalhadores nas fábricas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Fordismo: rigidez, escala e estoques. Toyotismo: flexibilidade, estoques mínimos, controle de qualidade e trabalhadores que exercem várias funções.\n\nPegadinhas:\n• A: descreve o fordismo.\n• B: troca os modelos.\n• D: as diferenças estão no próprio texto.\n• E: o toyotismo reorganiza o trabalho, sem eliminá-lo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_39",
+    "subject": "Geografia",
+    "topicId": "geo_populacao_urbana_brasil",
+    "chapter": "Os Fluxos do Comércio Externo",
+    "difficulty": "medium",
+    "skill": "interpretacao_grafico",
+    "trap": "Achar que o Brasil exporta principalmente produtos industrializados de alta tecnologia.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNas últimas décadas, a China tornou-se o maior parceiro comercial do Brasil. As exportações brasileiras para o país asiático concentram-se em soja, minério de ferro, petróleo bruto e carnes, enquanto as importações vindas de lá incluem sobretudo máquinas, equipamentos eletrônicos e produtos manufaturados. Alguns economistas chamam a tendência de aumento da participação de produtos primários nas exportações de reprimarização da pauta.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o Brasil exporta para a China principalmente produtos de alta tecnologia."
+      },
+      {
+        "id": "b",
+        "text": "a pauta de exportações brasileiras para a China é dominada por commodities, e as importações, por bens industrializados, o que expressa uma inserção do Brasil no comércio mundial baseada em produtos primários."
+      },
+      {
+        "id": "c",
+        "text": "os Estados Unidos são hoje o maior parceiro comercial do Brasil."
+      },
+      {
+        "id": "d",
+        "text": "o comércio com a China é equilibrado entre produtos primários e industrializados nos dois sentidos."
+      },
+      {
+        "id": "e",
+        "text": "a reprimarização significa o aumento da exportação de produtos industrializados."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O Brasil vende matérias-primas e alimentos e compra manufaturados, padrão que gera receitas expressivas, mas dependentes dos preços das commodities.\n\nPegadinhas:\n• A: o texto cita soja, minério, petróleo e carnes.\n• C: o texto diz que a China é o maior parceiro.\n• D: os fluxos são assimétricos.\n• E: reprimarização é o aumento dos produtos primários.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_40",
+    "subject": "Geografia",
+    "topicId": "geo_hidrogeografia",
+    "chapter": "Hidrogeografia Mundial",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir o Aquífero Guarani com um rio subterrâneo, ou achar que a água subterrânea é inesgotável.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO Sistema Aquífero Guarani se estende sob partes do Brasil, da Argentina, do Paraguai e do Uruguai. Não é um rio subterrâneo, mas um conjunto de rochas porosas, principalmente arenitos, encharcadas de água, que se infiltrou ao longo de milhares de anos. Em áreas onde o arenito aflora à superfície, a água da chuva recarrega o aquífero; nessas áreas, a contaminação do solo por agrotóxicos pode chegar à água subterrânea.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o aquífero é um grande rio que corre sob o solo."
+      },
+      {
+        "id": "b",
+        "text": "a água do aquífero é inesgotável, pois não depende da chuva."
+      },
+      {
+        "id": "c",
+        "text": "o aquífero pertence apenas ao Brasil."
+      },
+      {
+        "id": "d",
+        "text": "o aquífero é formado por rochas porosas saturadas de água, recarregadas em áreas de afloramento, onde a contaminação do solo pode atingir a água subterrânea, o que exige gestão compartilhada entre os países."
+      },
+      {
+        "id": "e",
+        "text": "as áreas de recarga são protegidas naturalmente de qualquer contaminação."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Aquíferos armazenam água nos poros e fraturas das rochas. As áreas de recarga são vulneráveis e estratégicas, e, por ser transfronteiriço, o Guarani exige cooperação.\n\nPegadinhas:\n• A: o texto diz que não é rio subterrâneo.\n• B: a recarga depende da chuva, e a extração excessiva pode esgotá-lo localmente.\n• C: estende-se por quatro países.\n• E: o texto diz que a contaminação pode chegar à água.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_41",
+    "subject": "Geografia",
+    "topicId": "geo_populacao_urbana_brasil",
+    "chapter": "O Espaço Urbano II",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir conurbação com metropolização, ou achar que limites municipais impedem a integração.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm várias regiões brasileiras, cidades vizinhas cresceram a ponto de suas áreas urbanizadas se encontrarem, e hoje não é possível perceber, na paisagem, onde termina um município e começa outro. Milhões de pessoas moram em um município e trabalham ou estudam em outro, usando transportes que atravessam limites municipais. Para planejar serviços comuns, como transporte, saneamento e destinação do lixo, foram criadas regiões metropolitanas.\n\nTexto elaborado para esta questão.\n\nO fenômeno descrito no início do texto é chamado",
+    "options": [
+      {
+        "id": "a",
+        "text": "êxodo rural, pois a população deixa o campo."
+      },
+      {
+        "id": "b",
+        "text": "gentrificação, pois os bairros centrais se valorizam."
+      },
+      {
+        "id": "c",
+        "text": "desmetropolização, pois as metrópoles perdem população."
+      },
+      {
+        "id": "d",
+        "text": "conurbação, isto é, a junção das manchas urbanas de municípios vizinhos, o que intensifica os deslocamentos diários e exige planejamento integrado nas regiões metropolitanas."
+      },
+      {
+        "id": "e",
+        "text": "segregação socioespacial, pois os municípios se separam."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A conurbação une as manchas urbanas; os movimentos pendulares entre municípios tornam necessários serviços planejados em conjunto, função das regiões metropolitanas.\n\nPegadinhas:\n• A: o texto trata de cidades, não da saída do campo.\n• B: gentrificação é a valorização de bairros com expulsão de moradores.\n• C: o texto descreve crescimento.\n• E: as cidades se unem, não se separam.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_42",
+    "subject": "História",
+    "topicId": "his_brasil_colonia",
+    "chapter": "A História e o Brasil",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a história do território brasileiro começa em 1500, ou que só documentos escritos são fontes.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa Ilha de Marajó, no Pará, arqueólogos encontraram grandes aterros artificiais e cerâmicas elaboradamente decoradas, produzidas por povos indígenas entre cerca de 400 e 1400 d.C. Esses vestígios indicam sociedades numerosas e organizadas, com produção artística e manejo do ambiente, muito antes da chegada dos europeus. Como esses povos não deixaram registros escritos, seu estudo depende de fontes materiais.\n\nTexto elaborado para esta questão.\n\nO texto permite concluir que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a história do território brasileiro começa com a chegada de Cabral, em 1500."
+      },
+      {
+        "id": "b",
+        "text": "os povos indígenas que viviam no território eram pequenos grupos nômades, sem organização social."
+      },
+      {
+        "id": "c",
+        "text": "vestígios materiais, como cerâmicas e aterros, são fontes históricas que permitem estudar sociedades indígenas complexas anteriores à chegada dos europeus."
+      },
+      {
+        "id": "d",
+        "text": "só documentos escritos podem ser usados como fontes históricas."
+      },
+      {
+        "id": "e",
+        "text": "a cerâmica marajoara foi produzida por colonizadores portugueses."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Fontes não são só escritas: objetos, construções e paisagens transformadas são documentos. A cultura marajoara mostra sociedades complexas séculos antes de 1500.\n\nPegadinhas:\n• A: o texto descreve sociedades anteriores.\n• B: o texto indica sociedades numerosas e organizadas.\n• D: o texto afirma o uso de fontes materiais.\n• E: o texto data a cerâmica de 400 a 1400 d.C., antes dos portugueses.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_43",
+    "subject": "História",
+    "topicId": "his_imperialismo_guerras",
+    "chapter": "O Período Entreguerras (1918-1939)",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o New Deal foi uma política de corte de gastos e de não intervenção do Estado.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nApós a quebra da Bolsa de Nova York, em 1929, os Estados Unidos enfrentaram a Grande Depressão, com falências e desemprego que chegou a cerca de um quarto da força de trabalho. A partir de 1933, o governo de Franklin Roosevelt adotou o New Deal, que incluiu grandes obras públicas, como estradas e hidrelétricas, a criação de um sistema de seguridade social e maior regulação dos bancos.\n\nTexto elaborado para esta questão.\n\nO New Deal representou",
+    "options": [
+      {
+        "id": "a",
+        "text": "o abandono da intervenção estatal, deixando que o mercado resolvesse a crise sozinho."
+      },
+      {
+        "id": "b",
+        "text": "a adoção do socialismo nos Estados Unidos, com a estatização de todas as empresas."
+      },
+      {
+        "id": "c",
+        "text": "a redução dos gastos públicos para equilibrar o orçamento."
+      },
+      {
+        "id": "d",
+        "text": "o fim do sistema bancário norte-americano."
+      },
+      {
+        "id": "e",
+        "text": "uma ampliação do papel do Estado na economia, com investimentos públicos, regulação e proteção social, para combater o desemprego e a crise."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Diante do fracasso do liberalismo em conter a depressão, o Estado passou a investir, gerar empregos e regular, ideias associadas a Keynes, mantendo o capitalismo.\n\nPegadinhas:\n• A: o New Deal é o contrário do laissez-faire.\n• B: não houve estatização geral.\n• C: os gastos públicos aumentaram.\n• D: os bancos passaram a ser regulados, não extintos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_44",
+    "subject": "História",
+    "topicId": "his_moderna_iluminismo",
+    "chapter": "América no Século XIX",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a independência do Haiti foi liderada pela elite branca, como as das colônias espanholas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1791, na colônia francesa de São Domingos, no Caribe, então a maior produtora de açúcar do mundo, os africanos escravizados se rebelaram. Liderados por Toussaint Louverture e, depois, por Jean-Jacques Dessalines, derrotaram tropas francesas, espanholas e britânicas. Em 1804, proclamaram a independência do Haiti, que aboliu a escravidão. O episódio causou temor entre senhores de escravizados de toda a América, inclusive no Brasil.\n\nTexto elaborado para esta questão.\n\nA independência do Haiti",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi conduzida pela elite branca colonial, que manteve a escravidão."
+      },
+      {
+        "id": "b",
+        "text": "foi resultado de uma revolução de escravizados, que aboliu a escravidão e criou o primeiro Estado independente da América Latina, o que espalhou temor entre as elites escravistas do continente."
+      },
+      {
+        "id": "c",
+        "text": "foi concedida pacificamente pela França."
+      },
+      {
+        "id": "d",
+        "text": "ocorreu em uma colônia espanhola produtora de prata."
+      },
+      {
+        "id": "e",
+        "text": "não teve repercussão fora do Caribe."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Única revolução de escravizados vitoriosa nas Américas, inaugurou um Estado independente sem escravidão. O medo do \"haitianismo\" influenciou as elites brasileiras.\n\nPegadinhas:\n• A: os protagonistas foram os escravizados.\n• C: houve guerra contra tropas europeias.\n• D: era colônia francesa produtora de açúcar.\n• E: o texto cita o temor em toda a América.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_45",
+    "subject": "História",
+    "topicId": "his_republica_liberal_atual",
+    "chapter": "O Brasil Atual",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a saúde pública universal existia antes de 1988, ou que o SUS atende só a quem contribui.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA Constituição de 1988, chamada de \"Constituição Cidadã\", foi elaborada após o fim do regime militar. Entre outros pontos, garantiu o voto facultativo aos analfabetos e aos jovens de 16 e 17 anos, reconheceu direitos dos povos indígenas sobre as terras que tradicionalmente ocupam e estabeleceu a saúde como direito de todos e dever do Estado, base da criação do Sistema Único de Saúde (SUS). Antes, o atendimento público de saúde era ligado sobretudo aos trabalhadores com carteira assinada.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a Constituição de 1988",
+    "options": [
+      {
+        "id": "a",
+        "text": "ampliou direitos políticos e sociais, como a saúde universal, que deixou de depender do vínculo formal de trabalho, e reconheceu direitos indígenas."
+      },
+      {
+        "id": "b",
+        "text": "restringiu o voto aos alfabetizados maiores de 18 anos."
+      },
+      {
+        "id": "c",
+        "text": "manteve o atendimento de saúde restrito a quem tinha carteira assinada."
+      },
+      {
+        "id": "d",
+        "text": "foi elaborada durante o regime militar, sem participação civil."
+      },
+      {
+        "id": "e",
+        "text": "aboliu os direitos dos povos indígenas sobre suas terras."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O texto lista a ampliação do voto, o reconhecimento de direitos indígenas e a saúde universal, que deu origem ao SUS.\n\nPegadinhas:\n• B: o voto foi ampliado a analfabetos e a jovens de 16 e 17 anos.\n• C: a saúde passou a ser direito de todos.\n• D: foi elaborada após o fim do regime militar.\n• E: os direitos indígenas foram reconhecidos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_46",
+    "subject": "História",
+    "topicId": "his_republica_liberal_atual",
+    "chapter": "O Brasil Atual",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o Plano Real apenas trocou o nome da moeda, sem mecanismos de transição.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo início da década de 1990, a inflação no Brasil chegou a ultrapassar 2.000% ao ano, e os preços nos supermercados mudavam quase todos os dias. Planos anteriores haviam congelado preços e fracassado. Em 1994, o Plano Real criou uma unidade de referência, a URV, que passou a corrigir preços e salários diariamente antes da introdução da nova moeda, o real, acompanhada de ajuste das contas públicas e de juros altos.\n\nTexto elaborado para esta questão.\n\nO Plano Real diferenciou-se de planos anteriores por",
+    "options": [
+      {
+        "id": "a",
+        "text": "adotar uma transição gradual com a URV, que alinhou preços e salários antes da troca da moeda, combinada a medidas fiscais e monetárias, sem congelamento de preços."
+      },
+      {
+        "id": "b",
+        "text": "congelar todos os preços e salários por tempo indeterminado."
+      },
+      {
+        "id": "c",
+        "text": "apenas mudar o nome da moeda, sem outras medidas econômicas."
+      },
+      {
+        "id": "d",
+        "text": "provocar o aumento imediato da inflação para mais de 5.000% ao ano."
+      },
+      {
+        "id": "e",
+        "text": "abolir o uso de moeda no Brasil."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A URV funcionou como ponte: indexou a economia a uma unidade estável e permitiu converter preços e salários de modo coordenado. Sem congelamento, o plano reduziu a inflação de forma duradoura.\n\nPegadinhas:\n• B: o congelamento foi o que fracassou nos planos anteriores.\n• C: o texto cita URV, ajuste fiscal e juros.\n• D: a inflação caiu fortemente.\n• E: o plano criou uma nova moeda.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_47",
+    "subject": "História",
+    "topicId": "his_primeira_republica_vargas",
+    "chapter": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a revolta foi contra a vacinação, ou que foi conduzida por oficiais.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1910, marinheiros, em sua maioria negros e pobres, rebelaram-se nos navios de guerra ancorados na baía de Guanabara, no Rio de Janeiro. Liderados por João Cândido, apontaram os canhões para a capital e exigiram o fim dos castigos físicos com chibata, ainda aplicados pelos oficiais mais de vinte anos depois da abolição, além de melhores condições de trabalho. O governo aprovou a anistia, mas, depois, muitos revoltosos foram presos, expulsos ou mortos.\n\nTexto elaborado para esta questão.\n\nA Revolta da Chibata",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi uma reação popular contra a vacinação obrigatória."
+      },
+      {
+        "id": "b",
+        "text": "foi liderada por oficiais da Marinha contra o presidente."
+      },
+      {
+        "id": "c",
+        "text": "pretendia restaurar a monarquia no Brasil."
+      },
+      {
+        "id": "d",
+        "text": "terminou com o reconhecimento pleno dos direitos dos marinheiros, sem punições."
+      },
+      {
+        "id": "e",
+        "text": "denunciou a permanência de práticas herdadas da escravidão, como os castigos físicos, aplicados a marinheiros em sua maioria negros, e foi seguida de repressão, apesar da anistia."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A chibata expressava a continuidade da violência escravista nas relações de trabalho. Após a anistia, houve repressão, prisões e mortes — e João Cândido foi expulso da Marinha.\n\nPegadinhas:\n• A: confunde com a Revolta da Vacina, de 1904.\n• B: foi liderada por marinheiros contra os oficiais.\n• C: não tinha objetivo monarquista.\n• D: o texto descreve a repressão posterior.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_48",
+    "subject": "Português",
+    "topicId": "por_texto",
+    "chapter": "Figuras de Linguagem",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Ler a ironia literalmente, ou confundi-la com eufemismo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nLeia a postagem, escrita para esta questão, publicada por um usuário em uma rede social:\n\n\"Que maravilha o transporte público da minha cidade: esperei só uma hora e meia pelo ônibus, viajei em pé, espremido, e ainda cheguei atrasado ao trabalho. Um verdadeiro luxo!\"\n\nA postagem recebeu muitos comentários de outros moradores, que relataram experiências semelhantes.\n\nTexto elaborado para esta questão.\n\nO efeito de sentido da postagem decorre principalmente do uso de",
+    "options": [
+      {
+        "id": "a",
+        "text": "eufemismo, pois o autor suaviza os problemas do transporte para não ofender a prefeitura."
+      },
+      {
+        "id": "b",
+        "text": "ironia, pois expressões elogiosas, como \"que maravilha\" e \"um verdadeiro luxo\", são usadas para criticar uma situação ruim, dizendo o contrário do que se pensa."
+      },
+      {
+        "id": "c",
+        "text": "hipérbole, pois o autor exagera a qualidade do transporte para elogiá-lo."
+      },
+      {
+        "id": "d",
+        "text": "metonímia, pois o ônibus representa todos os meios de transporte."
+      },
+      {
+        "id": "e",
+        "text": "comparação, pois o transporte é comparado a um carro de luxo."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O contraste entre os elogios e os fatos relatados (espera longa, superlotação, atraso) revela a crítica: diz-se o contrário do que se pensa.\n\nPegadinhas:\n• A: o autor não suaviza; critica.\n• C: a qualidade não é exaltada a sério.\n• D: o efeito central não é a substituição de termos.\n• E: não há comparação explícita com conectivo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_49",
+    "subject": "Inglês",
+    "topicId": "ing_01",
+    "chapter": "Text Comprehension: The Human Brain",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Achar que o texto recomenda estudar a noite toda, ou que o cérebro fica inativo durante o sono.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Sleep is not a time when the brain simply switches off. During deep sleep, the brain replays and strengthens connections formed during the day, helping to move new information into long-term memory. Studies show that students who sleep after learning remember more than those who stay awake all night studying. In other words, cutting sleep to study more may actually reduce how much you remember.\"\n\nTexto elaborado para esta questão.\n\nAccording to the text,",
+    "options": [
+      {
+        "id": "a",
+        "text": "the brain is completely inactive during sleep."
+      },
+      {
+        "id": "b",
+        "text": "studying all night is the best strategy to remember more."
+      },
+      {
+        "id": "c",
+        "text": "sleep has no effect on memory."
+      },
+      {
+        "id": "d",
+        "text": "sleep helps consolidate what was learned during the day, so giving up sleep to study more can reduce how much is remembered."
+      },
+      {
+        "id": "e",
+        "text": "new information goes directly to long-term memory while we are awake."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O texto afirma que o sono profundo reforça conexões e ajuda a consolidar a memória, e conclui que cortar o sono para estudar pode prejudicar a lembrança.\n\nPegadinhas:\n• A: o texto diz que o cérebro não \"switches off\".\n• B: o texto diz o contrário.\n• C: o texto relaciona sono e memória.\n• E: o texto atribui a consolidação ao sono.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l16_50",
+    "subject": "Sociologia",
+    "topicId": "soc_weber",
+    "chapter": "Dominação e Poder em Weber",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir dominação carismática com tradicional, ou achar que a legal-racional depende da pessoa do líder.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nMax Weber distinguiu três tipos puros de dominação legítima, segundo o fundamento da obediência. Em uma delas, obedece-se porque as coisas \"sempre foram assim\", como em monarquias hereditárias. Em outra, obedece-se a um líder por suas qualidades extraordinárias, reais ou atribuídas, como profetas e heróis. Na terceira, obedece-se a regras impessoais, estabelecidas por procedimentos legais, e não à pessoa que ocupa o cargo, como na burocracia moderna.\n\nTexto elaborado para esta questão.\n\nOs três tipos descritos são, na ordem, as dominações",
+    "options": [
+      {
+        "id": "a",
+        "text": "carismática, tradicional e legal-racional."
+      },
+      {
+        "id": "b",
+        "text": "legal-racional, carismática e tradicional."
+      },
+      {
+        "id": "c",
+        "text": "tradicional, carismática e legal-racional, e na última a autoridade decorre das regras e do cargo, e não das qualidades de quem o ocupa."
+      },
+      {
+        "id": "d",
+        "text": "tradicional, legal-racional e carismática."
+      },
+      {
+        "id": "e",
+        "text": "econômica, religiosa e militar."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Tradicional: costume e herança. Carismática: qualidades excepcionais do líder. Legal-racional: normas impessoais e procedimentos, típica do Estado burocrático moderno. Os tipos são ideais e aparecem combinados na realidade.\n\nPegadinhas:\n• A: troca as duas primeiras.\n• B: inverte a ordem.\n• D: troca as duas últimas.\n• E: não são os tipos weberianos de dominação legítima.",
+    "styleOf": "FUVEST"
+  }
+]

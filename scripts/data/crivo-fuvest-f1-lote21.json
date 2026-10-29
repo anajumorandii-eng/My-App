@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "crivo_fuvest_f1_l21_01",
+    "subject": "Biologia",
+    "topicId": "bio_estrutura_fisio_celular",
+    "chapter": "Membranas Celulares",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que todo transporte pela membrana ocorre a favor do gradiente, sem gasto de energia.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs células humanas mantêm concentração de íons potássio muito maior no interior do que no exterior, e concentração de sódio muito maior no exterior. Essa diferença é mantida por uma proteína da membrana, a bomba de sódio e potássio, que, a cada ciclo, expulsa três íons sódio e introduz dois íons potássio, consumindo ATP. Venenos que bloqueiam a produção de ATP fazem as concentrações dos dois íons se igualarem aos poucos.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a bomba de sódio e potássio realiza",
+    "options": [
+      {
+        "id": "a",
+        "text": "difusão simples, pois os íons atravessam a bicamada lipídica livremente, a favor do gradiente."
+      },
+      {
+        "id": "b",
+        "text": "osmose, pois a água é o principal componente transportado através da membrana."
+      },
+      {
+        "id": "c",
+        "text": "difusão facilitada, pois a proteína apenas acelera a passagem dos íons a favor do gradiente."
+      },
+      {
+        "id": "d",
+        "text": "transporte ativo, pois move os íons contra seus gradientes de concentração com gasto de ATP, e, sem energia, os íons tendem a se redistribuir até as concentrações se igualarem."
+      },
+      {
+        "id": "e",
+        "text": "fagocitose, pois a célula englobaria os íons em vesículas formadas pela membrana."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Mover íons do lado menos concentrado para o mais concentrado exige energia. Sem ATP, a bomba para, e a difusão passiva iguala as concentrações — exatamente o efeito dos venenos.\n\nPegadinhas:\n• A: íons não atravessam livremente a bicamada, e o movimento é contra o gradiente.\n• B: osmose é a passagem de água.\n• C: difusão facilitada ocorre a favor do gradiente, sem ATP.\n• E: fagocitose engloba partículas grandes, não íons.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_02",
+    "subject": "Biologia",
+    "topicId": "bio_evolucao",
+    "chapter": "Evolução Biológica: Construção Histórica",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que os bicos mudaram porque as aves se esforçaram para comer, ou que Darwin observou a evolução ocorrendo em uma viagem.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAo visitar as ilhas Galápagos, em 1835, Charles Darwin coletou várias espécies de tentilhões muito parecidos entre si, mas com bicos de formatos diferentes: alguns grossos e fortes, adequados para quebrar sementes duras; outros finos, adequados para capturar insetos. Mais tarde, ele concluiu que as espécies descendiam de um ancestral comum vindo do continente. Estudos do século XX mostraram que, em anos de seca, quando só restavam sementes duras, a média do tamanho do bico aumentava na geração seguinte.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a diversidade dos bicos dos tentilhões é explicada",
+    "options": [
+      {
+        "id": "a",
+        "text": "pelo esforço de cada ave para alcançar o alimento, que alongava o bico e era transmitido aos filhotes."
+      },
+      {
+        "id": "b",
+        "text": "pela criação independente de cada espécie em sua ilha, sem parentesco entre elas."
+      },
+      {
+        "id": "c",
+        "text": "pela mistura de espécies de aves de vários continentes que chegaram às ilhas ao mesmo tempo."
+      },
+      {
+        "id": "d",
+        "text": "pela ausência de variação entre os indivíduos, já que todos os tentilhões nascem iguais."
+      },
+      {
+        "id": "e",
+        "text": "pela descendência a partir de um ancestral comum, com seleção natural de variações hereditárias no bico, favorecidas de acordo com o alimento disponível em cada ambiente."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Variações no bico já existiam; o alimento disponível favorecia umas ou outras, e a população mudava ao longo das gerações, como medido em anos de seca. A diversificação a partir de um ancestral comum é a irradiação adaptativa.\n\nPegadinhas:\n• A: é a explicação lamarckista.\n• B: o texto aponta um ancestral comum.\n• C: o texto fala de um ancestral vindo do continente.\n• D: sem variação, não haveria seleção.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_03",
+    "subject": "Biologia",
+    "topicId": "bio_evolucao",
+    "chapter": "Mecanismos da Evolução Biológica",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a barreira geográfica sozinha cria as espécies, sem o acúmulo de diferenças e o isolamento reprodutivo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nHá cerca de 3 milhões de anos, a formação do istmo do Panamá separou populações de camarões marinhos que viviam no Pacífico e no Atlântico. Hoje, pares de espécies muito semelhantes vivem um de cada lado do istmo. Em experimentos de laboratório, quando indivíduos dos dois lados são colocados juntos, muitos casais não se formam, e, quando se formam, os ovos frequentemente não se desenvolvem.\n\nTexto elaborado para esta questão.\n\nO processo descrito é um exemplo de",
+    "options": [
+      {
+        "id": "a",
+        "text": "especiação alopátrica: a barreira geográfica interrompeu o fluxo gênico, as populações acumularam diferenças ao longo do tempo e desenvolveram isolamento reprodutivo, tornando-se espécies distintas."
+      },
+      {
+        "id": "b",
+        "text": "deriva genética causada por uma tempestade, sem relação com barreiras geográficas."
+      },
+      {
+        "id": "c",
+        "text": "hibridização entre espécies diferentes, que formou uma única nova espécie no istmo."
+      },
+      {
+        "id": "d",
+        "text": "convergência evolutiva, pois espécies de origens diferentes ficaram parecidas."
+      },
+      {
+        "id": "e",
+        "text": "seleção artificial, realizada por pesquisadores em laboratório."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Separadas, as populações evoluíram de forma independente (mutação, seleção, deriva). O isolamento reprodutivo observado em laboratório indica que já são espécies diferentes.\n\nPegadinhas:\n• B: o texto aponta uma barreira geográfica.\n• C: não houve fusão de espécies.\n• D: as espécies têm origem comum; a semelhança é por parentesco.\n• E: o processo ocorreu na natureza; o laboratório só testou o isolamento.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_04",
+    "subject": "Biologia",
+    "topicId": "bio_genetica",
+    "chapter": "Introdução à Genética",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que pais dos tipos A e B não podem ter filho do tipo O.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO sistema sanguíneo ABO é determinado por três alelos: Iᴬ e Iᴮ, codominantes entre si, e i, recessivo em relação aos outros dois. Pessoas do tipo A podem ter genótipo IᴬIᴬ ou Iᴬi; do tipo B, IᴮIᴮ ou Iᴮi; do tipo AB, IᴬIᴮ; e do tipo O, ii. Um casal formado por uma mulher do tipo A e um homem do tipo B teve um filho do tipo O, e alguns parentes duvidaram da paternidade.\n\nTexto elaborado para esta questão.\n\nSobre essa situação, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o filho do tipo O prova que o homem não é o pai biológico."
+      },
+      {
+        "id": "b",
+        "text": "pais A e B só podem ter filhos do tipo AB."
+      },
+      {
+        "id": "c",
+        "text": "o resultado é possível se a mãe tiver genótipo Iᴬi e o pai, Iᴮi, pois cada um pode transmitir o alelo i, e o casal pode ter filhos dos quatro tipos sanguíneos."
+      },
+      {
+        "id": "d",
+        "text": "o tipo sanguíneo O resulta de mutação em todos os casos."
+      },
+      {
+        "id": "e",
+        "text": "o alelo i é dominante sobre Iᴬ e Iᴮ."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Iᴬi × Iᴮi gera IᴬIᴮ (AB), Iᴬi (A), Iᴮi (B) e ii (O), cada um com 1/4 de probabilidade. O tipo sanguíneo, sozinho, não exclui a paternidade nesse caso.\n\nPegadinhas:\n• A: o resultado é compatível com heterozigotos.\n• B: há quatro possibilidades.\n• D: basta a herança de dois alelos i.\n• E: o alelo i é recessivo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_05",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Coordenação Endócrina I",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Inverter os papéis da insulina e do glucagon.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nApós uma refeição rica em carboidratos, a glicose no sangue aumenta, e o pâncreas libera insulina, que favorece a entrada de glicose nas células e seu armazenamento como glicogênio no fígado e nos músculos. Em jejum, quando a glicose no sangue cai, o pâncreas libera glucagon, que estimula o fígado a quebrar glicogênio e liberar glicose. No diabetes tipo 1, as células que produzem insulina são destruídas pelo próprio sistema imunológico.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a insulina eleva a glicemia, e o glucagon a reduz."
+      },
+      {
+        "id": "b",
+        "text": "a insulina e o glucagon têm efeitos opostos sobre a glicemia, e, no diabetes tipo 1, a falta de insulina mantém a glicose elevada no sangue, pois ela entra menos nas células."
+      },
+      {
+        "id": "c",
+        "text": "o glucagon é liberado logo após as refeições, para armazenar glicose."
+      },
+      {
+        "id": "d",
+        "text": "o diabetes tipo 1 é causado pelo excesso de insulina no sangue."
+      },
+      {
+        "id": "e",
+        "text": "a glicose é armazenada no fígado na forma de amido."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Insulina baixa a glicemia (entrada nas células e síntese de glicogênio); glucagon a eleva (quebra de glicogênio). Sem insulina, a glicose se acumula no sangue.\n\nPegadinhas:\n• A: inverte os efeitos.\n• C: o glucagon age no jejum.\n• D: no tipo 1 falta insulina.\n• E: nos animais, a reserva é o glicogênio.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_06",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Fisiologia da Excreção",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a hemodiálise cura os rins, ou que filtra apenas a água.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPacientes com insuficiência renal grave podem fazer hemodiálise, geralmente três vezes por semana. O sangue é levado a uma máquina, onde passa por um filtro com membranas semipermeáveis, em contato com uma solução de composição controlada. Ureia, excesso de potássio e outras substâncias passam do sangue para a solução, e o sangue limpo retorna ao paciente. Entre as sessões, o paciente precisa controlar a ingestão de água e sal.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a hemodiálise",
+    "options": [
+      {
+        "id": "a",
+        "text": "substitui parte da função de filtração dos rins, removendo do sangue resíduos como a ureia e o excesso de íons por difusão através de membranas semipermeáveis."
+      },
+      {
+        "id": "b",
+        "text": "cura definitivamente os rins, que voltam a funcionar após algumas sessões."
+      },
+      {
+        "id": "c",
+        "text": "retira do sangue apenas a água, sem remover resíduos dissolvidos."
+      },
+      {
+        "id": "d",
+        "text": "adiciona ureia ao sangue para equilibrar sua concentração."
+      },
+      {
+        "id": "e",
+        "text": "dispensa qualquer controle da dieta, pois a máquina funciona continuamente."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A máquina faz o que o glomérulo e os túbulos fariam em parte: retirar resíduos e regular íons. Como é intermitente, o paciente controla a ingestão entre as sessões.\n\nPegadinhas:\n• B: o tratamento não recupera os rins.\n• C: o texto cita ureia e potássio.\n• D: a ureia é retirada.\n• E: o texto diz que é preciso controlar a dieta.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_07",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Sangue e Imunologia",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a vacinação só protege quem é vacinado.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO sarampo é uma doença viral muito contagiosa: uma pessoa infectada pode transmiti-la a muitas outras em uma população sem imunidade. Especialistas estimam que é preciso vacinar cerca de 95% da população para interromper a circulação do vírus. Bebês muito pequenos e pessoas com o sistema imunológico comprometido, que não podem receber a vacina, também ficam protegidos quando a cobertura vacinal é alta. Com a queda da vacinação, o Brasil voltou a registrar surtos de sarampo a partir de 2018.\n\nTexto elaborado para esta questão.\n\nO texto ilustra o conceito de",
+    "options": [
+      {
+        "id": "a",
+        "text": "imunidade passiva, pois os bebês recebem anticorpos prontos do vírus."
+      },
+      {
+        "id": "b",
+        "text": "resistência natural, pois o vírus do sarampo não infecta seres humanos."
+      },
+      {
+        "id": "c",
+        "text": "imunidade coletiva (de rebanho): com alta cobertura vacinal, o vírus encontra poucas pessoas suscetíveis e deixa de circular, o que protege também quem não pode ser vacinado."
+      },
+      {
+        "id": "d",
+        "text": "seleção natural, pois os vacinados eliminam os não vacinados da população."
+      },
+      {
+        "id": "e",
+        "text": "autoimunidade, pois a vacina faz o organismo atacar suas próprias células."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Quando quase todos estão imunes, cadeias de transmissão se interrompem. Cobertura abaixo do limite permite o retorno de surtos, como ocorreu no Brasil.\n\nPegadinhas:\n• A: o texto trata da proteção pela baixa circulação do vírus.\n• B: o sarampo infecta humanos.\n• D: não há seleção natural envolvida.\n• E: a vacina estimula a defesa contra o vírus.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_08",
+    "subject": "Biologia",
+    "topicId": "bio_ecologia",
+    "chapter": "Dinâmica de Populações",
+    "difficulty": "medium",
+    "skill": "interpretacao_grafico",
+    "trap": "Achar que a população cresce indefinidamente, sem limite imposto pelo ambiente.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um experimento, algumas dezenas de leveduras foram colocadas em um meio de cultura com quantidade fixa de nutrientes, renovado periodicamente. A população cresceu lentamente no início, depois muito rápido e, por fim, estabilizou-se em torno de um valor máximo, formando uma curva em forma de S. A partir desse ponto, o número de nascimentos passou a ser aproximadamente igual ao de mortes.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO valor em torno do qual a população se estabilizou corresponde",
+    "options": [
+      {
+        "id": "a",
+        "text": "ao potencial biótico, isto é, ao crescimento máximo sem nenhuma limitação."
+      },
+      {
+        "id": "b",
+        "text": "à extinção da população, pois as leveduras deixaram de se reproduzir."
+      },
+      {
+        "id": "c",
+        "text": "ao número inicial de leveduras colocadas no meio."
+      },
+      {
+        "id": "d",
+        "text": "a um erro do experimento, pois as populações crescem sempre exponencialmente."
+      },
+      {
+        "id": "e",
+        "text": "à capacidade de suporte do meio, determinada pela resistência ambiental, como a limitação de nutrientes e de espaço e o acúmulo de resíduos."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O crescimento logístico se aproxima da capacidade de suporte, quando a resistência ambiental equilibra nascimentos e mortes.\n\nPegadinhas:\n• A: o potencial biótico é o crescimento sem limites, que a curva em S não mostra.\n• B: a população continua existindo.\n• C: o valor final é muito maior que o inicial.\n• D: em ambientes limitados, o crescimento não é exponencial indefinidamente.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_09",
+    "subject": "Biologia",
+    "topicId": "bio_botanica",
+    "chapter": "Plantas Terrestres I: Briófitas e Pteridófitas",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir os pontos marrons das folhas de samambaia com doença ou com sementes.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa face inferior das folhas de muitas samambaias aparecem pequenos pontos marrons, que algumas pessoas confundem com doenças ou pragas. Esses pontos, chamados soros, são conjuntos de esporângios, estruturas que produzem esporos. Liberados e levados pelo vento, os esporos que caem em local úmido germinam e originam uma pequena estrutura, o protalo, onde se formam os gametas.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que os soros",
+    "options": [
+      {
+        "id": "a",
+        "text": "são sementes que darão origem a novas samambaias."
+      },
+      {
+        "id": "b",
+        "text": "produzem esporos, e cada esporo pode originar um protalo, o gametófito, no qual se formam os gametas que, após a fecundação, geram uma nova planta."
+      },
+      {
+        "id": "c",
+        "text": "são fungos parasitas que devem ser eliminados com fungicida."
+      },
+      {
+        "id": "d",
+        "text": "são flores pequenas, responsáveis pela polinização."
+      },
+      {
+        "id": "e",
+        "text": "são frutos que protegem os óvulos fecundados."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A samambaia verde é o esporófito; os soros produzem esporos por meiose, que originam o protalo (gametófito). A fecundação, dependente de água, forma um novo esporófito.\n\nPegadinhas:\n• A: pteridófitas não têm sementes.\n• C: os soros são estruturas da própria planta.\n• D: pteridófitas não têm flores.\n• E: não há frutos nas pteridófitas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_10",
+    "subject": "Química",
+    "topicId": "qui_estequiometria",
+    "chapter": "Estequiometria: Leis Ponderais",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Esquecer de descontar as impurezas, ou confundir massa com volume molar.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa produção de cal virgem, o calcário é aquecido em fornos, e o carbonato de cálcio se decompõe:\n\nCaCO₃(s) → CaO(s) + CO₂(g)\n\nUma amostra de 100 g de calcário contém 80% de CaCO₃ em massa; o restante são impurezas que não se decompõem. A indústria quer estimar a massa de gás carbônico liberada por amostra, para calcular suas emissões.\n\nNote e adote: massas molares (g/mol): CaCO₃ = 100; CO₂ = 44.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA massa de CO₂ liberada é",
+    "options": [
+      {
+        "id": "a",
+        "text": "8,8 g, pois apenas 20% da amostra se decompõe, formando 0,2 mol de CO₂."
+      },
+      {
+        "id": "b",
+        "text": "17,6 g, pois cada mol de CaCO₃ libera meio mol de CO₂."
+      },
+      {
+        "id": "c",
+        "text": "22,4 g, pois o CO₂ ocupa 22,4 L por mol nas condições normais."
+      },
+      {
+        "id": "d",
+        "text": "35,2 g, pois os 80 g de CaCO₃ (0,8 mol) liberam 0,8 mol de CO₂, isto é, 0,8 × 44 g."
+      },
+      {
+        "id": "e",
+        "text": "44 g, pois toda a amostra de 100 g é considerada carbonato de cálcio puro."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. 80 g de CaCO₃ = 0,8 mol; proporção 1 : 1; m(CO₂) = 0,8 × 44 = 35,2 g.\n\nPegadinhas:\n• A: usa a fração de impurezas.\n• B: a proporção é 1 : 1.\n• C: confunde volume molar com massa.\n• E: ignora as impurezas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_11",
+    "subject": "Química",
+    "topicId": "qui_modelos_atomicos",
+    "chapter": "Organização da Tabela Periódica dos Elementos",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que o raio atômico aumenta da esquerda para a direita no período.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa tabela periódica, o raio atômico tende a aumentar de cima para baixo em um grupo, porque os átomos têm mais camadas eletrônicas. Ao longo de um período, da esquerda para a direita, o número de camadas é o mesmo, mas a carga do núcleo aumenta, atraindo mais fortemente os elétrons. Considere os elementos sódio (Na), cloro (Cl), ambos do 3º período, e potássio (K), do 4º período e do mesmo grupo do sódio.\n\nTexto elaborado para esta questão.\n\nA ordem crescente de raio atômico desses elementos é",
+    "options": [
+      {
+        "id": "a",
+        "text": "K < Na < Cl, pois o potássio, com mais prótons, atrai mais os elétrons."
+      },
+      {
+        "id": "b",
+        "text": "Na < Cl < K, pois o raio aumenta da esquerda para a direita no período."
+      },
+      {
+        "id": "c",
+        "text": "Cl < Na < K, pois, no período, o raio diminui com o aumento da carga nuclear, e, no grupo, aumenta com o número de camadas."
+      },
+      {
+        "id": "d",
+        "text": "Na < K < Cl, pois o cloro é um gás e tem átomos maiores."
+      },
+      {
+        "id": "e",
+        "text": "os três têm o mesmo raio atômico, pois estão em períodos próximos."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Cl e Na têm três camadas, mas o Cl tem mais prótons: é menor. O K tem quatro camadas: é o maior.\n\nPegadinhas:\n• A: o K tem uma camada a mais e é o maior.\n• B: inverte a tendência no período.\n• D: o estado físico não determina o raio.\n• E: os raios são diferentes.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_12",
+    "subject": "Química",
+    "topicId": "qui_gases",
+    "chapter": "Estudo dos Gases II",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que volumes iguais de gases diferentes têm a mesma massa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1811, Amedeo Avogadro propôs que volumes iguais de gases diferentes, nas mesmas condições de temperatura e pressão, contêm o mesmo número de moléculas. Um estudante encheu dois balões idênticos, à mesma temperatura e pressão, um com gás hélio e outro com gás carbônico. O balão de hélio subiu, e o de gás carbônico caiu.\n\nNote e adote: massas molares (g/mol): He = 4; CO₂ = 44.\n\nTexto elaborado para esta questão.\n\nCom base na hipótese de Avogadro, é correto afirmar que os dois balões",
+    "options": [
+      {
+        "id": "a",
+        "text": "contêm a mesma massa de gás, pois têm o mesmo volume."
+      },
+      {
+        "id": "b",
+        "text": "contêm o mesmo número de moléculas, mas o de gás carbônico tem massa cerca de onze vezes maior, por isso é mais denso que o ar e cai, enquanto o de hélio, menos denso, sobe."
+      },
+      {
+        "id": "c",
+        "text": "contêm números diferentes de moléculas, pois os gases são diferentes."
+      },
+      {
+        "id": "d",
+        "text": "têm densidades iguais, pois estão à mesma temperatura."
+      },
+      {
+        "id": "e",
+        "text": "contêm mais moléculas de hélio, pois seus átomos são menores."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Mesmo T, P e V: mesmo número de mols. A massa é n·M: 44/4 = 11 vezes maior no balão de CO₂. A densidade em relação ao ar (M ≈ 29 g/mol) explica subir ou cair.\n\nPegadinhas:\n• A: massas diferem com a massa molar.\n• C: a hipótese afirma o mesmo número de moléculas.\n• D: as densidades diferem.\n• E: o tamanho das moléculas não altera o número.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_13",
+    "subject": "Química",
+    "topicId": "qui_termoquimica",
+    "chapter": "Termoquímica I",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a fotossíntese libera energia, como a respiração.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa fotossíntese, as plantas usam a energia da luz para transformar gás carbônico e água em glicose e oxigênio:\n\n6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂   ΔH ≈ +2.800 kJ\n\nNa respiração celular, ocorre o processo inverso, e a energia armazenada na glicose é liberada e usada pelas células. Os combustíveis fósseis, formados a partir de restos de seres vivos, também guardam energia de origem solar.\n\nTexto elaborado para esta questão.\n\nCom base na equação, é correto afirmar que a fotossíntese",
+    "options": [
+      {
+        "id": "a",
+        "text": "é exotérmica, pois libera oxigênio para a atmosfera."
+      },
+      {
+        "id": "b",
+        "text": "não envolve variação de energia, pois apenas rearranja átomos."
+      },
+      {
+        "id": "c",
+        "text": "libera a energia que as plantas usam para crescer."
+      },
+      {
+        "id": "d",
+        "text": "é endotérmica: absorve energia luminosa e a armazena nas ligações da glicose, energia que é liberada na respiração e, indiretamente, na queima de combustíveis fósseis."
+      },
+      {
+        "id": "e",
+        "text": "tem a mesma variação de entalpia que a respiração, com o mesmo sinal."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. ΔH positivo: a energia luminosa é armazenada como energia química. A respiração, inversa, tem ΔH ≈ −2.800 kJ e libera essa energia.\n\nPegadinhas:\n• A: liberar O₂ não torna a reação exotérmica.\n• B: o ΔH indica absorção de energia.\n• C: a energia para o crescimento vem da respiração.\n• E: os sinais são opostos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_14",
+    "subject": "Química",
+    "topicId": "qui_cinetica",
+    "chapter": "Cinética Química",
+    "difficulty": "easy",
+    "skill": "inferencia_causal",
+    "trap": "Achar que soprar apaga o fogo sempre, ou que o oxigênio não influencia a rapidez da combustão.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAo acender uma churrasqueira, é comum abanar ou soprar as brasas para que o carvão queime mais rápido e mais forte. Por outro lado, quando se fecha a tampa de uma churrasqueira com tampa, as brasas diminuem até quase se apagar. O carvão reage com o oxigênio do ar, liberando calor.\n\nTexto elaborado para esta questão.\n\nO efeito de abanar as brasas se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o vento resfria o carvão e diminui a energia de ativação da reação."
+      },
+      {
+        "id": "b",
+        "text": "o ar soprado contém mais carvão, que se soma ao combustível."
+      },
+      {
+        "id": "c",
+        "text": "abanar diminui a concentração de oxigênio junto às brasas."
+      },
+      {
+        "id": "d",
+        "text": "o movimento do ar transforma o carvão em um combustível diferente."
+      },
+      {
+        "id": "e",
+        "text": "abanar renova o ar junto às brasas e aumenta a disponibilidade de oxigênio, o que eleva a frequência de colisões entre os reagentes e acelera a combustão; fechar a tampa reduz o oxigênio e retarda a reação."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A rapidez de uma reação depende da concentração dos reagentes. Abanar remove os produtos (CO₂) e traz O₂; tampar limita o O₂.\n\nPegadinhas:\n• A: o resfriamento retardaria a reação, e a energia de ativação não muda.\n• B: o ar não contém carvão.\n• C: inverte o efeito.\n• D: o combustível é o mesmo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_15",
+    "subject": "Química",
+    "topicId": "qui_solucoes",
+    "chapter": "Dispersões",
+    "difficulty": "easy",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que água e óleo formam mistura homogênea depois de agitados.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma aula, foram preparadas três misturas: água com sal de cozinha bem dissolvido; água com óleo de cozinha, agitada vigorosamente; e areia com limalha de ferro. Após alguns minutos em repouso, a primeira continuava transparente e com aspecto uniforme; na segunda, o óleo formou uma camada sobre a água; na terceira, era possível ver os grãos de cada componente, e um ímã separou o ferro.\n\nTexto elaborado para esta questão.\n\nAs três misturas são classificadas, respectivamente, como",
+    "options": [
+      {
+        "id": "a",
+        "text": "homogênea, heterogênea e heterogênea, pois só na primeira não se distinguem os componentes."
+      },
+      {
+        "id": "b",
+        "text": "heterogênea, homogênea e homogênea, pois o óleo se dissolve após a agitação."
+      },
+      {
+        "id": "c",
+        "text": "homogênea, homogênea e heterogênea, pois a agitação mistura completamente a água e o óleo."
+      },
+      {
+        "id": "d",
+        "text": "heterogênea, heterogênea e homogênea, pois o ímã une os componentes da areia."
+      },
+      {
+        "id": "e",
+        "text": "as três são substâncias puras, pois cada uma tem dois componentes."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A solução salina tem uma só fase; água e óleo, imiscíveis, formam duas fases; areia e ferro também são distinguíveis e separáveis por imantação.\n\nPegadinhas:\n• B: inverte as classificações.\n• C: o óleo não se dissolve na água.\n• D: o ímã separa os componentes.\n• E: são misturas.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_16",
+    "subject": "Química",
+    "topicId": "qui_equilibrio",
+    "chapter": "Deslocamento de Equilíbrio",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Achar que as estalactites se formam por resfriamento da água, sem perda de CO₂.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm cavernas de calcário, a água da chuva, enriquecida em gás carbônico ao passar pelo solo, dissolve o carbonato de cálcio das rochas, formando bicarbonato de cálcio solúvel:\n\nCaCO₃(s) + CO₂(aq) + H₂O(l) ⇌ Ca²⁺(aq) + 2 HCO₃⁻(aq)\n\nQuando essa água goteja do teto da caverna, parte do CO₂ dissolvido escapa para o ar da caverna, e o carbonato de cálcio se deposita, formando, ao longo de milhares de anos, estalactites e estalagmites.\n\nTexto elaborado para esta questão.\n\nA formação das estalactites se explica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a água congela no teto da caverna, formando colunas de gelo."
+      },
+      {
+        "id": "b",
+        "text": "o aumento do CO₂ dissolvido desloca o equilíbrio para a direita, dissolvendo mais calcário."
+      },
+      {
+        "id": "c",
+        "text": "o carbonato de cálcio é produzido por bactérias que vivem no teto."
+      },
+      {
+        "id": "d",
+        "text": "a temperatura da caverna aumenta, tornando o carbonato mais solúvel."
+      },
+      {
+        "id": "e",
+        "text": "a saída do CO₂ da água desloca o equilíbrio para a esquerda, no sentido de repor o gás, o que precipita o carbonato de cálcio."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Retirar um reagente (CO₂) desloca o equilíbrio para formá-lo: Ca²⁺ e HCO₃⁻ voltam a formar CaCO₃, que se deposita. O mesmo equilíbrio, deslocado para a direita, explica a dissolução que abre a caverna.\n\nPegadinhas:\n• A: as estruturas são de calcário, não de gelo.\n• B: descreve a dissolução, não a deposição.\n• C: o processo descrito é químico.\n• D: o texto atribui o efeito à saída do CO₂.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_17",
+    "subject": "Química",
+    "topicId": "qui_oxirreducao",
+    "chapter": "Processos de Oxirredução",
+    "difficulty": "medium",
+    "skill": "analise_evidencias",
+    "trap": "Achar que o ferro enferruja apenas com água ou apenas com ar.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um experimento, três pregos de ferro foram colocados em tubos de ensaio: no tubo 1, com água da torneira exposta ao ar; no tubo 2, com água fervida e coberta por uma camada de óleo, que impede a entrada de ar; no tubo 3, seco, com um material que absorve a umidade, fechado. Após uma semana, apenas o prego do tubo 1 apresentava ferrugem.\n\nTexto elaborado para esta questão.\n\nOs resultados indicam que a ferrugem",
+    "options": [
+      {
+        "id": "a",
+        "text": "exige a presença simultânea de água e de oxigênio, pois o ferro não enferrujou na ausência de qualquer um deles."
+      },
+      {
+        "id": "b",
+        "text": "ocorre apenas na presença de água, independentemente do oxigênio."
+      },
+      {
+        "id": "c",
+        "text": "ocorre apenas na presença de oxigênio, independentemente da água."
+      },
+      {
+        "id": "d",
+        "text": "é causada pelo óleo, que protege o ferro da corrosão."
+      },
+      {
+        "id": "e",
+        "text": "não depende das condições do ambiente, apenas do tipo de ferro."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O tubo 2 tinha água sem O₂ (fervida e coberta); o 3, ar sem umidade. Só com os dois (tubo 1) houve ferrugem: a oxidação do ferro pelo O₂ ocorre em meio aquoso.\n\nPegadinhas:\n• B: no tubo 2 havia água e não houve ferrugem.\n• C: no tubo 3 havia ar e não houve ferrugem.\n• D: o óleo impediu a entrada de ar.\n• E: os resultados mostram que as condições importam.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_18",
+    "subject": "Química",
+    "topicId": "qui_organica_fundamentos",
+    "chapter": "Introdução à Química Orgânica",
+    "difficulty": "easy",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o carbono forma poucos compostos por ter só quatro elétrons de valência.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nConhecem-se dezenas de milhões de compostos orgânicos, muito mais do que compostos de todos os outros elementos juntos. O carbono tem quatro elétrons na camada de valência e forma quatro ligações covalentes, que podem ser simples, duplas ou triplas. Átomos de carbono podem ainda se ligar uns aos outros formando cadeias longas, ramificadas ou fechadas em anéis.\n\nTexto elaborado para esta questão.\n\nA enorme variedade de compostos orgânicos se explica porque o carbono",
+    "options": [
+      {
+        "id": "a",
+        "text": "forma ligações iônicas com todos os elementos da tabela periódica."
+      },
+      {
+        "id": "b",
+        "text": "é tetravalente e capaz de formar cadeias carbônicas de diferentes tamanhos e formas, com ligações simples, duplas ou triplas, o que permite um número imenso de estruturas."
+      },
+      {
+        "id": "c",
+        "text": "forma apenas uma ligação por átomo, o que facilita combinações."
+      },
+      {
+        "id": "d",
+        "text": "é um gás nobre e não reage com outros elementos."
+      },
+      {
+        "id": "e",
+        "text": "só existe em seres vivos, que produzem compostos diferentes."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Tetravalência, encadeamento e variedade de ligações geram combinações praticamente ilimitadas, base da química orgânica.\n\nPegadinhas:\n• A: as ligações típicas do carbono são covalentes.\n• C: o carbono forma quatro ligações.\n• D: o carbono não é gás nobre.\n• E: há compostos de carbono sintéticos e inorgânicos.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_19",
+    "subject": "Física",
+    "topicId": "fis_leis_newton",
+    "chapter": "Força e seus Tipos",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Achar que qualquer força, por menor que seja, move a caixa.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma pessoa empurra horizontalmente uma caixa de 20 kg sobre um piso horizontal. Com forças de até 50 N, a caixa permanece parada; quando a força ultrapassa esse valor, a caixa começa a deslizar. Enquanto a caixa está parada, o atrito estático equilibra exatamente a força aplicada.\n\nNote e adote: g = 10 m/s²; força de atrito estático máxima = μₑ·N.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO coeficiente de atrito estático entre a caixa e o piso e a força de atrito quando a pessoa empurra com 30 N são, respectivamente,",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,15 e 50 N, pois o atrito estático é sempre igual ao valor máximo."
+      },
+      {
+        "id": "b",
+        "text": "0,2 e 0 N, pois a caixa parada não sofre atrito."
+      },
+      {
+        "id": "c",
+        "text": "2,5 e 30 N, pois o coeficiente é a força máxima dividida pela massa."
+      },
+      {
+        "id": "d",
+        "text": "0,25 e 30 N, pois μₑ = 50/200 e, com a caixa parada, o atrito estático iguala a força aplicada."
+      },
+      {
+        "id": "e",
+        "text": "0,5 e 20 N, pois o atrito é a diferença entre a força máxima e a aplicada."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. N = m·g = 200 N; μₑ = 50/200 = 0,25. Abaixo do máximo, o atrito estático se ajusta à força aplicada: 30 N.\n\nPegadinhas:\n• A: o atrito estático só atinge o máximo no limite.\n• B: há atrito equilibrando a força.\n• C: divide pela massa, não pela normal.\n• E: relação inventada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_20",
+    "subject": "Física",
+    "topicId": "fis_estatica",
+    "chapter": "Hidrostática: Densidade e Pressão",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a pressão no fundo depende da quantidade total de água ou da forma do recipiente.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um prédio, a caixa-d'água fica no alto para que a água chegue às torneiras com pressão. Um morador comparou dois recipientes com água até a mesma altura, 1 m: um balde largo, com 50 litros, e um cano fino vertical, com apenas 1 litro. Ele achou que o fundo do balde teria pressão muito maior, por conter mais água.\n\nNote e adote: pressão hidrostática = d·g·h.\n\nTexto elaborado para esta questão.\n\nSobre a pressão da água no fundo dos dois recipientes, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "é maior no balde, pois contém mais água."
+      },
+      {
+        "id": "b",
+        "text": "é maior no cano, pois a água fica mais concentrada em uma área menor."
+      },
+      {
+        "id": "c",
+        "text": "é igual nos dois, pois depende da densidade da água, da gravidade e da altura da coluna, e não da quantidade total de água nem da forma do recipiente."
+      },
+      {
+        "id": "d",
+        "text": "é nula nos dois, pois a água está parada."
+      },
+      {
+        "id": "e",
+        "text": "depende apenas do diâmetro do recipiente."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Com a mesma altura, a pressão no fundo é a mesma — o paradoxo hidrostático. A força no fundo é que difere, porque a área é diferente.\n\nPegadinhas:\n• A: a quantidade total não define a pressão.\n• B: a forma não altera a pressão.\n• D: há pressão hidrostática com a água parada.\n• E: depende da altura.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_21",
+    "subject": "Física",
+    "topicId": "fis_ondulatoria",
+    "chapter": "Ondulatória: Ondas Eletromagnéticas",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Errar a potência de 10 ao dividir a distância pela velocidade da luz.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA luz do Sol leva certo tempo para chegar à Terra: ao olhar para o Sol (com proteção adequada), vemos a luz que saiu dele alguns minutos antes. A distância média entre a Terra e o Sol é de cerca de 1,5 × 10¹¹ m, e a luz se propaga no vácuo a cerca de 3 × 10⁸ m/s.\n\nTexto elaborado para esta questão.\n\nO tempo que a luz do Sol leva para chegar à Terra é de aproximadamente",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,5 s, pois a luz percorre a distância Terra–Sol quase instantaneamente."
+      },
+      {
+        "id": "b",
+        "text": "500 s, isto é, cerca de 8 minutos, pois t = 1,5 × 10¹¹ / 3 × 10⁸."
+      },
+      {
+        "id": "c",
+        "text": "5.000 s, cerca de 1 hora e 20 minutos, pois a divisão resulta em 5 × 10³."
+      },
+      {
+        "id": "d",
+        "text": "8 horas, pois a luz percorre cerca de 5 × 10⁹ m por hora."
+      },
+      {
+        "id": "e",
+        "text": "1 ano, pois é o tempo de uma volta da Terra em torno do Sol."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. t = 1,5 × 10¹¹ / 3 × 10⁸ = 5 × 10² s ≈ 8,3 min.\n\nPegadinhas:\n• A: erra a ordem de grandeza.\n• C: erra a potência de 10.\n• D: erra a conversão.\n• E: confunde com o período orbital.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_22",
+    "subject": "Física",
+    "topicId": "fis_termodinamica_gases",
+    "chapter": "Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Achar que uma máquina térmica pode ter rendimento de 100%, ou usar temperaturas em Celsius.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma máquina térmica funciona retirando calor de uma fonte quente, convertendo parte dele em trabalho e rejeitando o restante para uma fonte fria. Segundo a segunda lei da termodinâmica, nenhuma máquina operando entre duas temperaturas pode ter rendimento maior que o de uma máquina ideal de Carnot, dado por 1 − T_fria/T_quente, com temperaturas em kelvin. Considere fontes a 600 K e 300 K.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO rendimento máximo possível dessa máquina é",
+    "options": [
+      {
+        "id": "a",
+        "text": "25%, pois o rendimento é a razão entre as temperaturas dividida por 2."
+      },
+      {
+        "id": "b",
+        "text": "33%, pois o rendimento é T_fria dividida pela soma das temperaturas."
+      },
+      {
+        "id": "c",
+        "text": "40%, pois o rendimento das máquinas reais é sempre de 40%."
+      },
+      {
+        "id": "d",
+        "text": "50%, pois 1 − 300/600 = 0,5, e nenhuma máquina real atinge esse valor."
+      },
+      {
+        "id": "e",
+        "text": "100%, pois uma máquina ideal converte todo o calor em trabalho."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. η = 1 − 300/600 = 0,5. Mesmo idealmente, metade do calor é rejeitada; máquinas reais rendem menos.\n\nPegadinhas:\n• A: fórmula inventada.\n• B: fórmula inventada.\n• C: o rendimento depende das temperaturas.\n• E: a segunda lei impede rendimento de 100%.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_23",
+    "subject": "Física",
+    "topicId": "fis_optica_geometrica",
+    "chapter": "Reflexão em Superfícies Planas",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o ângulo de reflexão é diferente do de incidência, ou medido em relação ao espelho de forma inconsistente.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUm periscópio simples pode ser construído com um tubo e dois espelhos planos paralelos, inclinados 45° em relação ao eixo do tubo. A luz que entra pela abertura superior, horizontalmente, é refletida para baixo pelo primeiro espelho e, depois, horizontalmente pelo segundo, chegando ao olho do observador. Submarinos usam periscópios para observar a superfície sem emergir.\n\nTexto elaborado para esta questão.\n\nO funcionamento do periscópio baseia-se em que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a luz atravessa os espelhos e muda de cor ao passar por eles."
+      },
+      {
+        "id": "b",
+        "text": "os espelhos planos ampliam a imagem e permitem ver objetos distantes."
+      },
+      {
+        "id": "c",
+        "text": "na reflexão, o ângulo de reflexão é igual ao de incidência, e, com espelhos a 45°, cada reflexão desvia a luz em 90°, levando-a da abertura superior ao olho."
+      },
+      {
+        "id": "d",
+        "text": "a luz se curva naturalmente dentro do tubo, sem precisar dos espelhos."
+      },
+      {
+        "id": "e",
+        "text": "o primeiro espelho absorve a luz e o segundo a emite novamente."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Incidindo a 45° da normal, a luz sai também a 45°, um desvio de 90°. Duas reflexões trazem a luz para o observador, deslocada verticalmente.\n\nPegadinhas:\n• A: espelhos refletem a luz, sem mudar sua cor.\n• B: espelhos planos não ampliam.\n• D: a luz se propaga em linha reta no tubo.\n• E: o espelho reflete, não absorve e reemite.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_24",
+    "subject": "Física",
+    "topicId": "fis_eletromagnetismo",
+    "chapter": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que as auroras são reflexo da luz do Sol no gelo, ou que o campo magnético atrai a luz.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAs auroras polares, faixas luminosas coloridas observadas em altas latitudes, ocorrem quando partículas eletricamente carregadas emitidas pelo Sol chegam à Terra. O campo magnético terrestre desvia essas partículas, que se movem em espiral ao longo das linhas de campo e são conduzidas para as regiões próximas aos polos. Ali, colidem com átomos e moléculas da alta atmosfera, que emitem luz.\n\nTexto elaborado para esta questão.\n\nCom base no texto, as auroras ocorrem principalmente perto dos polos porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "o campo magnético terrestre exerce força sobre as partículas carregadas em movimento, guiando-as ao longo das linhas de campo, que convergem para as regiões polares."
+      },
+      {
+        "id": "b",
+        "text": "o gelo dos polos reflete a luz do Sol, formando as cores do céu."
+      },
+      {
+        "id": "c",
+        "text": "o campo magnético atrai a luz do Sol para os polos."
+      },
+      {
+        "id": "d",
+        "text": "as partículas solares são neutras e caem por gravidade sobre os polos."
+      },
+      {
+        "id": "e",
+        "text": "os polos são as regiões mais próximas do Sol."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Partículas carregadas em movimento sofrem força magnética e espiralam ao longo das linhas de campo, que mergulham na atmosfera perto dos polos magnéticos.\n\nPegadinhas:\n• B: a luz das auroras vem da excitação de gases da atmosfera.\n• C: o campo magnético não desvia a luz.\n• D: o texto diz que as partículas são carregadas.\n• E: os polos não são as regiões mais próximas do Sol.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_25",
+    "subject": "Física",
+    "topicId": "fis_calorimetria",
+    "chapter": "Calor Sensível e Calor Latente",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Calcular a média simples das temperaturas, ignorando as massas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nPara preparar um banho morno para um bebê, uma pessoa mistura 300 g de água a 80 °C com 100 g de água a 20 °C em uma banheira de material isolante. Considere que só as duas porções de água trocam calor entre si, até atingirem o equilíbrio térmico.\n\nNote e adote: calor específico da água = 1 cal/(g·°C); a soma dos calores trocados é nula.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nA temperatura final da mistura é",
+    "options": [
+      {
+        "id": "a",
+        "text": "35 °C, pois a água fria predomina na mistura e determina a temperatura."
+      },
+      {
+        "id": "b",
+        "text": "50 °C, pois a temperatura final é a média simples das duas temperaturas."
+      },
+      {
+        "id": "c",
+        "text": "55 °C, pois a temperatura final é a média ponderada com pesos invertidos."
+      },
+      {
+        "id": "d",
+        "text": "60 °C, pois a água quente perde um terço de sua temperatura."
+      },
+      {
+        "id": "e",
+        "text": "65 °C, pois 300·(T − 80) + 100·(T − 20) = 0 dá T = 65 °C."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. 300T − 24.000 + 100T − 2.000 = 0 ⇒ 400T = 26.000 ⇒ T = 65 °C, mais perto de 80 °C porque há mais água quente.\n\nPegadinhas:\n• A: inverte as massas (seria o caso de 100 g quentes e 300 g frias).\n• B: média simples, sem as massas.\n• C: ponderação errada.\n• D: relação inventada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_26",
+    "subject": "Física",
+    "topicId": "fis_cinematica",
+    "chapter": "Cinemática Escalar. Conceitos Fundamentais",
+    "difficulty": "medium",
+    "skill": "interpretacao_grafico",
+    "trap": "Ler a velocidade final como deslocamento, sem calcular a área sob o gráfico.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO gráfico da velocidade de um carro em função do tempo é descrito assim: a velocidade aumenta uniformemente de 0 a 20 m/s nos primeiros 10 s; permanece constante em 20 m/s dos 10 s aos 30 s; e diminui uniformemente até zero dos 30 s aos 40 s. Em gráficos v × t, a área sob a curva corresponde ao deslocamento.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO deslocamento total do carro nos 40 s é",
+    "options": [
+      {
+        "id": "a",
+        "text": "600 m, pois somam-se 100 m na aceleração, 400 m na velocidade constante e 100 m na frenagem."
+      },
+      {
+        "id": "b",
+        "text": "800 m, pois a velocidade foi de 20 m/s durante todos os 40 s."
+      },
+      {
+        "id": "c",
+        "text": "400 m, pois só conta o trecho de velocidade constante."
+      },
+      {
+        "id": "d",
+        "text": "20 m, pois é a velocidade máxima atingida."
+      },
+      {
+        "id": "e",
+        "text": "200 m, pois o deslocamento é a velocidade máxima multiplicada pelo tempo de aceleração."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Áreas: triângulo 10 × 20/2 = 100 m; retângulo 20 × 20 = 400 m; triângulo 10 × 20/2 = 100 m. Total: 600 m.\n\nPegadinhas:\n• B: supõe velocidade constante o tempo todo.\n• C: ignora os trechos de aceleração e frenagem.\n• D: confunde velocidade com deslocamento.\n• E: conta só parte do movimento.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_27",
+    "subject": "Física",
+    "topicId": "fis_circuitos",
+    "chapter": "Circuitos de Malha Única",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o perigo do choque depende só da tensão, sem a resistência do corpo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nChoques elétricos são mais perigosos quando a pessoa está molhada ou descalça sobre piso úmido. A pele seca tem resistência elétrica relativamente alta, mas, molhada, essa resistência cai muito. Os efeitos de um choque sobre o corpo, como contrações musculares e alterações no ritmo do coração, dependem principalmente da intensidade da corrente que atravessa o organismo. Por isso, recomenda-se não mexer em aparelhos elétricos com as mãos molhadas.\n\nNote e adote: U = R·i.\n\nTexto elaborado para esta questão.\n\nA recomendação se justifica porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "a água aumenta a tensão da rede elétrica da casa."
+      },
+      {
+        "id": "b",
+        "text": "a pele molhada tem resistência maior, o que aumenta a corrente."
+      },
+      {
+        "id": "c",
+        "text": "a água impede a passagem de corrente pelo corpo."
+      },
+      {
+        "id": "d",
+        "text": "a corrente não depende da resistência do corpo, apenas da tensão."
+      },
+      {
+        "id": "e",
+        "text": "com a pele molhada, a resistência do corpo diminui e, para a mesma tensão, a corrente que atravessa o organismo aumenta, tornando o choque mais perigoso."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. i = U/R: com a mesma tensão da rede, R menor implica corrente maior, que causa os efeitos graves.\n\nPegadinhas:\n• A: a tensão da rede não muda.\n• B: a pele molhada tem resistência menor.\n• C: a água facilita a passagem de corrente.\n• D: a corrente depende da resistência.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_28",
+    "subject": "Matemática",
+    "topicId": "mat_sequencias_matrizes",
+    "chapter": "Sequências",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Usar o último termo como total, ou multiplicar o primeiro termo por 12.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma estudante decide economizar para uma viagem: no primeiro mês guarda R$ 100,00 e, a cada mês seguinte, guarda R$ 50,00 a mais do que no mês anterior. Os valores guardados formam uma progressão aritmética. Ela quer saber quanto terá acumulado ao fim de 12 meses, sem considerar rendimentos.\n\nNote e adote: aₙ = a₁ + (n − 1)·r; Sₙ = (a₁ + aₙ)·n/2.\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nO total acumulado ao fim de 12 meses é",
+    "options": [
+      {
+        "id": "a",
+        "text": "R$ 650,00, pois corresponde ao valor guardado no 12º mês."
+      },
+      {
+        "id": "b",
+        "text": "R$ 4.500,00, pois a₁₂ = 100 + 11 × 50 = 650 e S₁₂ = (100 + 650) × 12/2."
+      },
+      {
+        "id": "c",
+        "text": "R$ 5.000,00, pois o total é a média entre o primeiro e o último mês vezes 12, arredondada."
+      },
+      {
+        "id": "d",
+        "text": "R$ 7.800,00, pois o total é o último valor multiplicado por 12."
+      },
+      {
+        "id": "e",
+        "text": "R$ 9.000,00, pois a razão é somada a cada mês ao total acumulado."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. a₁₂ = 650; S₁₂ = 750 × 6 = 4.500 reais.\n\nPegadinhas:\n• A: é só o valor do último mês.\n• C: arredondamento sem fundamento.\n• D: supõe que todos os meses tiveram o maior valor.\n• E: relação inventada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_29",
+    "subject": "Matemática",
+    "topicId": "mat_funcoes",
+    "chapter": "Inversão de Funções",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que logaritmo e exponencial são a mesma função, ou que a inversa é o recíproco.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um modelo de crescimento, a quantidade de bactérias após t horas é dada por N(t) = 2ᵗ, em milhares. Um pesquisador precisa responder à pergunta inversa: dado o número de bactérias, quanto tempo se passou? Para isso, ele usa a função inversa de N, que associa a cada quantidade N o tempo correspondente.\n\nTexto elaborado para esta questão.\n\nA função inversa e o tempo correspondente a 32 mil bactérias são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "t = 1/2ᴺ, e o tempo é de 1/32 hora."
+      },
+      {
+        "id": "b",
+        "text": "t = N/2, e o tempo é de 16 horas."
+      },
+      {
+        "id": "c",
+        "text": "t = log₂ N, e o tempo é de 5 horas, pois 2⁵ = 32."
+      },
+      {
+        "id": "d",
+        "text": "t = N², e o tempo é de 1.024 horas."
+      },
+      {
+        "id": "e",
+        "text": "t = 2ᴺ, e o tempo é de 2³² horas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A inversa da exponencial de base 2 é o logaritmo de base 2: t = log₂ 32 = 5 h. Os gráficos são simétricos em relação à reta y = x.\n\nPegadinhas:\n• A: confunde inversa com recíproco.\n• B: trata a exponencial como linear.\n• D: usa a função quadrática.\n• E: repete a própria exponencial.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_30",
+    "subject": "Matemática",
+    "topicId": "mat_combinatoria",
+    "chapter": "Introdução às Técnicas de Contagem",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Usar combinação, quando a ordem importa, ou permitir repetição de atletas.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma final de corrida com 8 atletas, serão distribuídas medalhas de ouro, prata e bronze aos três primeiros colocados. Não há empates, e um atleta não pode receber mais de uma medalha. Um organizador quer saber de quantas maneiras diferentes o pódio pode ser formado, considerando a ordem de chegada.\n\nTexto elaborado para esta questão.\n\nO número de pódios possíveis é",
+    "options": [
+      {
+        "id": "a",
+        "text": "24, pois é o número de permutações das três medalhas."
+      },
+      {
+        "id": "b",
+        "text": "56, pois é o número de grupos de três atletas, sem considerar a ordem."
+      },
+      {
+        "id": "c",
+        "text": "112, pois é o dobro do número de combinações de 8 atletas três a três."
+      },
+      {
+        "id": "d",
+        "text": "336, pois há 8 opções para o ouro, 7 para a prata e 6 para o bronze."
+      },
+      {
+        "id": "e",
+        "text": "512, pois cada medalha pode ir para qualquer um dos 8 atletas, com repetição."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A ordem importa e não há repetição: arranjo A(8,3) = 8 × 7 × 6 = 336.\n\nPegadinhas:\n• A: considera só a ordem das medalhas.\n• B: é C(8,3), sem considerar a ordem.\n• C: relação inventada.\n• E: permite repetição.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_31",
+    "subject": "Matemática",
+    "topicId": "mat_dados_probabilidade",
+    "chapter": "Eventos Disjuntos e Eventos Independentes",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Tratar as retiradas sem reposição como independentes, mantendo 3/5 na segunda.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nUma urna contém 5 bolas idênticas, exceto pela cor: 3 vermelhas e 2 azuis. Duas bolas são retiradas ao acaso, uma após a outra, sem reposição. Um estudante quer calcular a probabilidade de as duas bolas serem vermelhas e percebe que a segunda retirada depende do resultado da primeira.\n\nTexto elaborado para esta questão.\n\nA probabilidade de retirar duas bolas vermelhas é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1/5, pois só uma das combinações é de duas vermelhas."
+      },
+      {
+        "id": "b",
+        "text": "6/25, pois as probabilidades são 3/5 e 2/5."
+      },
+      {
+        "id": "c",
+        "text": "3/10, pois 3/5 × 2/4 = 6/20."
+      },
+      {
+        "id": "d",
+        "text": "9/25, pois as retiradas são tratadas como independentes: 3/5 × 3/5."
+      },
+      {
+        "id": "e",
+        "text": "3/5, pois a probabilidade é a mesma da primeira retirada."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Primeira vermelha: 3/5. Restam 2 vermelhas em 4: 2/4. Produto: 6/20 = 3/10.\n\nPegadinhas:\n• A: conta errado as combinações.\n• B: usa 2/5 sem considerar a redução do total.\n• D: é o caso com reposição.\n• E: ignora a segunda retirada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_32",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_analitica",
+    "chapter": "Introdução à Geometria Analítica",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Subtrair as coordenadas em vez de calcular a média.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm um mapa quadriculado de um parque, a entrada está no ponto A(2, 4) e o lago, no ponto B(8, 10), com unidades em centenas de metros. A administração quer instalar um quiosque exatamente no ponto médio do caminho retilíneo entre a entrada e o lago.\n\nNote e adote: o ponto médio de (x₁, y₁) e (x₂, y₂) é ((x₁ + x₂)/2, (y₁ + y₂)/2).\n\nTexto elaborado para esta questão. Dados ilustrativos.\n\nAs coordenadas do quiosque são",
+    "options": [
+      {
+        "id": "a",
+        "text": "(5, 7), pois são as médias das abscissas e das ordenadas dos dois pontos."
+      },
+      {
+        "id": "b",
+        "text": "(6, 6), pois são as diferenças entre as coordenadas dos pontos."
+      },
+      {
+        "id": "c",
+        "text": "(10, 14), pois são as somas das coordenadas, sem dividir por 2."
+      },
+      {
+        "id": "d",
+        "text": "(3, 3), pois são metade das diferenças entre as coordenadas."
+      },
+      {
+        "id": "e",
+        "text": "(4, 8), pois são o dobro das coordenadas da entrada."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. ((2 + 8)/2, (4 + 10)/2) = (5, 7).\n\nPegadinhas:\n• B: as diferenças dão o deslocamento, não o ponto médio.\n• C: esquece a divisão por 2.\n• D: é metade do deslocamento, sem somar o ponto de partida.\n• E: relação inventada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_33",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_plana",
+    "chapter": "Semelhança de Triângulos",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a razão entre as áreas é igual à razão de semelhança.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDois triângulos são semelhantes, com razão de semelhança 3, isto é, cada lado do maior mede o triplo do lado correspondente do menor. Um estudante afirmou que, por isso, o perímetro e a área do triângulo maior também seriam o triplo dos do menor. A professora pediu que ele conferisse com um exemplo: um triângulo retângulo de catetos 3 cm e 4 cm e outro de catetos 9 cm e 12 cm.\n\nTexto elaborado para esta questão.\n\nSobre a afirmação do estudante, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "está correta para o perímetro e para a área, que triplicam."
+      },
+      {
+        "id": "b",
+        "text": "está incorreta para o perímetro, que fica nove vezes maior."
+      },
+      {
+        "id": "c",
+        "text": "está incorreta, pois perímetro e área não mudam em triângulos semelhantes."
+      },
+      {
+        "id": "d",
+        "text": "está correta para o perímetro, que triplica, mas incorreta para a área, que fica nove vezes maior, pois a razão das áreas é o quadrado da razão de semelhança."
+      },
+      {
+        "id": "e",
+        "text": "está incorreta, pois a área fica 27 vezes maior."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Perímetros: 12 cm e 36 cm (×3). Áreas: 6 cm² e 54 cm² (×9 = 3²).\n\nPegadinhas:\n• A: a área não triplica.\n• B: o perímetro triplica.\n• C: os dois mudam.\n• E: 27 = 3³ seria a razão de volumes.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_34",
+    "subject": "Matemática",
+    "topicId": "mat_trigonometria",
+    "chapter": "A Trigonometria dos Números Reais",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Confundir radianos com graus, ou usar π = 360°.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm calculadoras científicas e em muitos softwares, os ângulos podem ser medidos em graus ou em radianos. Uma volta completa corresponde a 360° ou a 2π rad, e, portanto, meia-volta corresponde a 180° ou a π rad. Um estudante obteve um resultado estranho ao calcular o seno de 60 com a calculadora no modo radianos e percebeu que precisava converter o ângulo.\n\nTexto elaborado para esta questão.\n\nO ângulo de 60°, em radianos, é",
+    "options": [
+      {
+        "id": "a",
+        "text": "π/6, pois 60° é a sexta parte de 360°."
+      },
+      {
+        "id": "b",
+        "text": "π/3, pois 60° é a terceira parte de 180°, que corresponde a π rad."
+      },
+      {
+        "id": "c",
+        "text": "π/2, pois 60° é a metade de 120°."
+      },
+      {
+        "id": "d",
+        "text": "60π, pois cada grau corresponde a π radianos."
+      },
+      {
+        "id": "e",
+        "text": "3π, pois a conversão multiplica o ângulo por π/20."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. 60° × π/180° = π/3 rad.\n\nPegadinhas:\n• A: π/6 corresponde a 30°.\n• C: π/2 corresponde a 90°.\n• D: um grau é π/180 rad.\n• E: fator de conversão inventado.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_35",
+    "subject": "Matemática",
+    "topicId": "mat_sequencias_matrizes",
+    "chapter": "Determinantes",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que trocar duas linhas não altera o determinante.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma aula sobre determinantes, a professora mostrou que o determinante da matriz de linhas (2, 1) e (3, 4) é 2 × 4 − 1 × 3 = 5. Em seguida, trocou as duas linhas de lugar, obtendo a matriz de linhas (3, 4) e (2, 1), e pediu que os estudantes calculassem o novo determinante e enunciassem a propriedade observada.\n\nTexto elaborado para esta questão.\n\nO novo determinante e a propriedade observada são:",
+    "options": [
+      {
+        "id": "a",
+        "text": "5, pois trocar linhas não altera o determinante."
+      },
+      {
+        "id": "b",
+        "text": "10, pois trocar linhas dobra o valor do determinante."
+      },
+      {
+        "id": "c",
+        "text": "0, pois matrizes com linhas trocadas têm determinante nulo."
+      },
+      {
+        "id": "d",
+        "text": "25, pois o determinante é elevado ao quadrado."
+      },
+      {
+        "id": "e",
+        "text": "−5, pois 3 × 1 − 4 × 2 = −5: trocar duas linhas de uma matriz troca o sinal de seu determinante."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. 3·1 − 4·2 = −5. Permutar duas linhas (ou colunas) inverte o sinal do determinante.\n\nPegadinhas:\n• A: o valor muda de sinal.\n• B: relação inventada.\n• C: o determinante só é nulo com linhas proporcionais.\n• D: relação inventada.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_36",
+    "subject": "Geografia",
+    "topicId": "geo_fisica_brasil",
+    "chapter": "Geologia e Geomorfologia",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Achar que o intemperismo químico predomina em climas secos e frios.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nO intemperismo é o conjunto de processos que desagregam e decompõem as rochas na superfície terrestre. No intemperismo físico, as rochas se fragmentam sem mudar sua composição, por exemplo pela variação de temperatura entre dia e noite, que dilata e contrai os minerais. No intemperismo químico, os minerais reagem com a água, o oxigênio e ácidos, e transformam-se em outros. A intensidade de cada tipo varia conforme o clima.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "o intemperismo químico predomina em desertos, onde há pouca água."
+      },
+      {
+        "id": "b",
+        "text": "o intemperismo físico altera a composição química das rochas."
+      },
+      {
+        "id": "c",
+        "text": "o clima não influencia o tipo de intemperismo predominante."
+      },
+      {
+        "id": "d",
+        "text": "em climas quentes e úmidos, como no Brasil tropical, predomina o intemperismo químico, favorecido pela água e pelo calor, enquanto em desertos, com grande amplitude térmica, o intemperismo físico é mais importante."
+      },
+      {
+        "id": "e",
+        "text": "o intemperismo ocorre apenas em rochas sedimentares."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Água e calor aceleram reações; por isso os solos tropicais são profundos e intemperizados. Em desertos, a variação térmica fragmenta as rochas.\n\nPegadinhas:\n• A: o químico depende da água.\n• B: o físico só fragmenta.\n• C: o texto diz que o clima influencia.\n• E: todas as rochas sofrem intemperismo.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_37",
+    "subject": "Geografia",
+    "topicId": "geo_fisica_brasil",
+    "chapter": "Relevo Brasileiro",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que voçorocas são formadas apenas por chuvas, sem o papel do desmatamento e do manejo do solo.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm várias regiões do Brasil, como no noroeste do Paraná e em partes do Centro-Oeste, formam-se voçorocas: grandes fendas no solo, que podem ter dezenas de metros de profundidade. Elas surgem quando a água das chuvas escoa concentrada sobre solos frágeis, muitas vezes arenosos, removidos de sua vegetação para pastagens, lavouras ou loteamentos, sem obras adequadas de drenagem.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que as voçorocas",
+    "options": [
+      {
+        "id": "a",
+        "text": "são formadas por terremotos, que abrem fendas no solo."
+      },
+      {
+        "id": "b",
+        "text": "resultam da erosão acelerada pela ação da água concentrada sobre solos frágeis desprotegidos pela retirada da vegetação e pela falta de drenagem adequada."
+      },
+      {
+        "id": "c",
+        "text": "são formas de relevo antigas, sem relação com a ocupação humana."
+      },
+      {
+        "id": "d",
+        "text": "ocorrem apenas em solos argilosos e bem protegidos pela vegetação."
+      },
+      {
+        "id": "e",
+        "text": "são produzidas pelo vento em regiões desérticas."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A vegetação protege o solo e favorece a infiltração. Sem ela, a água escoa com força, abre sulcos e ravinas que evoluem para voçorocas.\n\nPegadinhas:\n• A: o processo é erosivo, não sísmico.\n• C: o texto relaciona as voçorocas ao uso do solo.\n• D: o texto cita solos arenosos e desprotegidos.\n• E: o agente é a água.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_38",
+    "subject": "Geografia",
+    "topicId": "geo_climatologia_socioambiental",
+    "chapter": "Dinâmica Climática",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a friagem amazônica é causada por altitude, ou pela massa equatorial.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm alguns dias de inverno, cidades do sul da Amazônia, como Rio Branco e Porto Velho, registram quedas bruscas de temperatura, para valores próximos de 10 °C, fenômeno chamado friagem. Ele ocorre quando uma massa de ar frio, formada sobre o oceano próximo da Antártida e da Patagônia, avança para o norte pelo interior do continente, favorecida pelo relevo baixo da planície do Chaco e do Pantanal.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a friagem é causada",
+    "options": [
+      {
+        "id": "a",
+        "text": "pela massa equatorial continental, que é fria e seca."
+      },
+      {
+        "id": "b",
+        "text": "pela altitude elevada das cidades amazônicas."
+      },
+      {
+        "id": "c",
+        "text": "pela chegada de massas de ar quente vindas do Atlântico."
+      },
+      {
+        "id": "d",
+        "text": "pelo desmatamento, que esfria o ar da floresta."
+      },
+      {
+        "id": "e",
+        "text": "pelo avanço da massa polar atlântica para o norte, pelo interior do continente, facilitado pelo relevo baixo, que leva ar frio até o sul da Amazônia."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A massa polar, de origem subantártica, avança pelas terras baixas do interior e alcança latitudes tropicais, provocando quedas bruscas de temperatura.\n\nPegadinhas:\n• A: a massa equatorial continental é quente e úmida.\n• B: as cidades citadas têm baixa altitude.\n• C: o fenômeno é de resfriamento.\n• D: o texto atribui a friagem a uma massa de ar.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_39",
+    "subject": "Geografia",
+    "topicId": "geo_geopolitica_regional",
+    "chapter": "Geopolítica e Geoeconomia da América Latina",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que Itaipu pertence só ao Brasil, ou que a usina não envolve acordos internacionais.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nA usina de Itaipu, no rio Paraná, na fronteira entre Brasil e Paraguai, foi construída a partir de um tratado assinado em 1973 e é administrada pelos dois países. A energia produzida é dividida igualmente, e o Paraguai, que consome apenas parte da sua metade, vendia o excedente ao Brasil por preços definidos em acordo, revisados após longas negociações. Itaipu está entre as maiores hidrelétricas do mundo em produção de energia.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que Itaipu",
+    "options": [
+      {
+        "id": "a",
+        "text": "pertence exclusivamente ao Brasil, que cede parte da energia ao Paraguai."
+      },
+      {
+        "id": "b",
+        "text": "foi construída sem acordos internacionais, por decisão brasileira."
+      },
+      {
+        "id": "c",
+        "text": "é um empreendimento binacional, com energia dividida entre os dois países, e exemplo de integração e de negociação de interesses energéticos na América do Sul."
+      },
+      {
+        "id": "d",
+        "text": "fica no rio Amazonas, na fronteira com a Bolívia."
+      },
+      {
+        "id": "e",
+        "text": "não produz energia para o Brasil, apenas para o Paraguai."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Itaipu é binacional desde o tratado de 1973; a divisão e o preço da energia são temas permanentes de negociação entre os dois países.\n\nPegadinhas:\n• A: a usina é dos dois países.\n• B: o texto cita o tratado de 1973.\n• D: fica no rio Paraná, na fronteira com o Paraguai.\n• E: o Brasil recebe sua metade e compra excedentes.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_40",
+    "subject": "Geografia",
+    "topicId": "geo_geopolitica_regional",
+    "chapter": "África no Mundo Atual",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a presença chinesa na África é apenas humanitária, sem interesses econômicos.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNas últimas décadas, a China tornou-se o maior parceiro comercial de muitos países africanos. Empresas chinesas financiaram e construíram ferrovias, portos, estradas e usinas, em troca, muitas vezes, de acesso a petróleo, minérios e outros recursos, ou de empréstimos a serem pagos. Críticos apontam o risco de endividamento dos países africanos; defensores destacam a ampliação da infraestrutura.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que a presença chinesa na África",
+    "options": [
+      {
+        "id": "a",
+        "text": "combina investimentos em infraestrutura com interesse em recursos naturais e mercados, e gera debates sobre desenvolvimento e endividamento."
+      },
+      {
+        "id": "b",
+        "text": "é exclusivamente humanitária, sem interesses econômicos."
+      },
+      {
+        "id": "c",
+        "text": "é inexistente, pois a China não mantém relações comerciais com a África."
+      },
+      {
+        "id": "d",
+        "text": "substituiu a exploração de recursos naturais por indústrias de alta tecnologia em todo o continente."
+      },
+      {
+        "id": "e",
+        "text": "eliminou a dívida externa de todos os países africanos."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Infraestrutura e financiamento caminham com acesso a recursos e mercados; os efeitos são debatidos, especialmente quanto à dívida.\n\nPegadinhas:\n• B: o texto aponta interesses em recursos.\n• C: a China é o maior parceiro de muitos países.\n• D: o texto destaca recursos naturais.\n• E: o texto aponta risco de endividamento.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_41",
+    "subject": "Geografia",
+    "topicId": "geo_geopolitica_regional",
+    "chapter": "Geografia do Oriente Médio",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que os curdos têm um Estado próprio reconhecido, ou que vivem em um único país.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nOs curdos são um dos maiores povos do mundo sem Estado nacional próprio: estima-se que somem entre 30 e 40 milhões de pessoas, distribuídas principalmente pela Turquia, pelo Iraque, pela Síria e pelo Irã. Após a Primeira Guerra Mundial, acordos entre potências chegaram a prever um território curdo, que não foi criado. Desde então, movimentos curdos reivindicam autonomia ou independência, enfrentando repressão em diversos países.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que os curdos",
+    "options": [
+      {
+        "id": "a",
+        "text": "possuem um Estado reconhecido internacionalmente desde a Primeira Guerra Mundial."
+      },
+      {
+        "id": "b",
+        "text": "vivem concentrados em um único país do Oriente Médio."
+      },
+      {
+        "id": "c",
+        "text": "são um povo pequeno, de poucos milhares de pessoas."
+      },
+      {
+        "id": "d",
+        "text": "abandonaram as reivindicações de autonomia após a Primeira Guerra Mundial."
+      },
+      {
+        "id": "e",
+        "text": "constituem um grande povo sem Estado próprio, distribuído entre vários países, cujas reivindicações de autonomia ou independência geram tensões na região."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Divididos por fronteiras traçadas após a queda do Império Otomano, os curdos seguem buscando autonomia, o que envolve conflitos com os Estados onde vivem.\n\nPegadinhas:\n• A: o território previsto não foi criado.\n• B: vivem em vários países.\n• C: são dezenas de milhões.\n• D: as reivindicações continuam.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_42",
+    "subject": "História",
+    "topicId": "his_brasil_colonia",
+    "chapter": "Disputas Europeias no Brasil Colonial",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a França Antártica foi uma colônia duradoura, ou que se instalou no Nordeste.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1555, franceses liderados por Nicolau Durand de Villegaignon fundaram, na baía de Guanabara, uma colônia chamada França Antártica, com o apoio de alguns grupos indígenas, como os tamoios. Os portugueses, aliados a outros grupos indígenas, combateram os franceses e os expulsaram definitivamente em 1567. Durante esse conflito, foi fundada a cidade de São Sebastião do Rio de Janeiro, em 1565.\n\nTexto elaborado para esta questão.\n\nCom base no texto, é correto afirmar que",
+    "options": [
+      {
+        "id": "a",
+        "text": "a França Antártica foi a primeira capital da colônia portuguesa."
+      },
+      {
+        "id": "b",
+        "text": "os franceses se estabeleceram no Nordeste, de onde foram expulsos pelos holandeses."
+      },
+      {
+        "id": "c",
+        "text": "a presença francesa na Guanabara contestou o domínio português, envolveu alianças com grupos indígenas e motivou a fundação do Rio de Janeiro durante a luta para expulsar os franceses."
+      },
+      {
+        "id": "d",
+        "text": "os indígenas não participaram dos conflitos entre franceses e portugueses."
+      },
+      {
+        "id": "e",
+        "text": "a colônia francesa durou até a independência do Brasil."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A disputa envolveu europeus e indígenas aliados a cada lado. A fundação do Rio de Janeiro integrou a estratégia portuguesa de ocupação da Guanabara.\n\nPegadinhas:\n• A: a capital era Salvador.\n• B: a França Antártica ficava na Guanabara.\n• D: tamoios e outros grupos participaram.\n• E: os franceses foram expulsos em 1567.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_43",
+    "subject": "História",
+    "topicId": "his_brasil_imperio",
+    "chapter": "Brasil Império: Formação do Estado Nacional Brasileiro",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a Confederação do Equador foi um movimento a favor da centralização imperial.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm 1824, logo após D. Pedro I outorgar uma Constituição que concentrava poderes no imperador, eclodiu em Pernambuco a Confederação do Equador, movimento que defendia maior autonomia das províncias e propôs uma república, com adesão de outras províncias do Nordeste. O movimento foi duramente reprimido, e alguns líderes, como Frei Caneca, foram executados.\n\nTexto elaborado para esta questão.\n\nA Confederação do Equador",
+    "options": [
+      {
+        "id": "a",
+        "text": "expressou a oposição de setores do Nordeste à centralização do poder imperial e ao autoritarismo da Constituição de 1824, propondo autonomia provincial e regime republicano."
+      },
+      {
+        "id": "b",
+        "text": "defendia o fortalecimento do Poder Moderador do imperador."
+      },
+      {
+        "id": "c",
+        "text": "foi um movimento pela volta do Brasil à condição de colônia de Portugal."
+      },
+      {
+        "id": "d",
+        "text": "foi vitoriosa e criou uma república independente no Nordeste."
+      },
+      {
+        "id": "e",
+        "text": "não teve relação com a Constituição outorgada por D. Pedro I."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O movimento reagiu à concentração de poder no Rio de Janeiro e ao Poder Moderador, e foi reprimido pelo governo imperial.\n\nPegadinhas:\n• B: o movimento se opunha à centralização.\n• C: não defendia a recolonização.\n• D: foi derrotado.\n• E: eclodiu logo após a outorga da Constituição.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_44",
+    "subject": "História",
+    "topicId": "his_brasil_imperio",
+    "chapter": "Brasil Império: o Declínio do Segundo Reinado",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que as leis graduais aboliram a escravidão imediatamente.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nAntes da abolição de 1888, o Império aprovou leis graduais. A Lei do Ventre Livre, de 1871, declarava livres os filhos de escravizadas nascidos a partir daquela data, mas permitia que permanecessem sob a guarda dos senhores até os 21 anos. A Lei dos Sexagenários, de 1885, libertava os escravizados com 60 anos ou mais, exigindo ainda alguns anos de trabalho como indenização. Abolicionistas criticavam essas leis como medidas para adiar o fim da escravidão.\n\nTexto elaborado para esta questão.\n\nCom base no texto, as leis de 1871 e 1885",
+    "options": [
+      {
+        "id": "a",
+        "text": "aboliram imediatamente a escravidão no Brasil."
+      },
+      {
+        "id": "b",
+        "text": "foram propostas pelos próprios escravizados e aprovadas sem resistência."
+      },
+      {
+        "id": "c",
+        "text": "garantiram indenização aos escravizados libertos."
+      },
+      {
+        "id": "d",
+        "text": "foram medidas graduais, com efeitos limitados, que mantinham vínculos de trabalho com os senhores e eram vistas por abolicionistas como forma de retardar a abolição."
+      },
+      {
+        "id": "e",
+        "text": "não tiveram relação com o debate sobre o fim da escravidão."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. As leis libertavam grupos específicos e preservavam controles dos senhores; a abolição completa só veio com a Lei Áurea, em 1888, sem indenização ou políticas para os libertos.\n\nPegadinhas:\n• A: a abolição foi em 1888.\n• B: o texto não diz isso, e havia resistência de senhores.\n• C: a indenização em trabalho era devida aos senhores.\n• E: fazem parte do processo abolicionista.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_45",
+    "subject": "História",
+    "topicId": "his_primeira_republica_vargas",
+    "chapter": "Ascensão e Domínio das Oligarquias",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que o voto na Primeira República era secreto e livre de pressões.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNa Primeira República, o voto não era secreto, e, no interior do país, chefes políticos locais, os coronéis, geralmente grandes proprietários de terras, controlavam o voto de trabalhadores e dependentes, prática conhecida como voto de cabresto. Por meio da política dos governadores, o presidente apoiava as oligarquias estaduais, e estas garantiam a eleição de deputados aliados ao governo federal.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o sistema político da Primeira República",
+    "options": [
+      {
+        "id": "a",
+        "text": "garantia eleições livres e secretas em todo o país."
+      },
+      {
+        "id": "b",
+        "text": "apoiava-se no poder dos coronéis sobre o voto local e em acordos entre o governo federal e as oligarquias estaduais, o que mantinha as elites no poder."
+      },
+      {
+        "id": "c",
+        "text": "eliminou a influência dos grandes proprietários de terras na política."
+      },
+      {
+        "id": "d",
+        "text": "permitia o voto feminino e o dos analfabetos."
+      },
+      {
+        "id": "e",
+        "text": "era controlado por partidos nacionais operários."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Coronelismo, voto de cabresto e política dos governadores formavam uma cadeia de favores que garantia a continuidade das oligarquias.\n\nPegadinhas:\n• A: o voto não era secreto.\n• C: o texto mostra o contrário.\n• D: mulheres e analfabetos não votavam.\n• E: o poder estava com as oligarquias.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_46",
+    "subject": "História",
+    "topicId": "his_primeira_republica_vargas",
+    "chapter": "A Era Vargas: o Estado Novo",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que a CLT foi aprovada em regime democrático, ou que o Estado Novo não usou propaganda.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nDurante o Estado Novo, entre 1937 e 1945, Getúlio Vargas governou sem Congresso, com censura à imprensa exercida pelo Departamento de Imprensa e Propaganda, o DIP, que também promovia a imagem do presidente como \"pai dos pobres\". Em 1943, foi promulgada a Consolidação das Leis do Trabalho, a CLT, que reuniu direitos trabalhistas. Os sindicatos, porém, ficaram sob controle do Ministério do Trabalho.\n\nTexto elaborado para esta questão.\n\nCom base no texto, o Estado Novo",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi um período democrático, com Congresso eleito e imprensa livre."
+      },
+      {
+        "id": "b",
+        "text": "combinou autoritarismo, censura e propaganda com a ampliação de direitos trabalhistas, mantendo os sindicatos sob controle do Estado."
+      },
+      {
+        "id": "c",
+        "text": "aboliu todos os direitos dos trabalhadores urbanos."
+      },
+      {
+        "id": "d",
+        "text": "deu total autonomia aos sindicatos, sem interferência do governo."
+      },
+      {
+        "id": "e",
+        "text": "não utilizou meios de comunicação para promover o governo."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Direitos trabalhistas conviveram com repressão e controle sindical, característica do trabalhismo varguista.\n\nPegadinhas:\n• A: não havia Congresso e havia censura.\n• C: a CLT reuniu direitos.\n• D: os sindicatos eram controlados.\n• E: o DIP fazia propaganda.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_47",
+    "subject": "História",
+    "topicId": "his_guerra_fria_contemporaneo",
+    "chapter": "Guerra Fria",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Achar que o Muro de Berlim foi construído pelos Estados Unidos ou para impedir a entrada de ocidentais.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nApós a Segunda Guerra Mundial, Berlim, localizada dentro da Alemanha Oriental, foi dividida em setores. Milhões de pessoas deixaram o lado oriental, socialista, em direção ao ocidental, capitalista, muitas delas jovens e qualificadas. Em 1961, o governo da Alemanha Oriental construiu um muro separando as duas partes da cidade, apresentando-o como proteção contra o Ocidente. O muro só caiu em 1989.\n\nTexto elaborado para esta questão.\n\nCom base no texto, a construção do Muro de Berlim",
+    "options": [
+      {
+        "id": "a",
+        "text": "foi uma iniciativa dos Estados Unidos para impedir a entrada de comunistas."
+      },
+      {
+        "id": "b",
+        "text": "teve como objetivo facilitar a circulação entre as duas partes da cidade."
+      },
+      {
+        "id": "c",
+        "text": "ocorreu logo após o fim da Primeira Guerra Mundial."
+      },
+      {
+        "id": "d",
+        "text": "teve como efeito principal conter a saída de pessoas do lado oriental para o ocidental, tornando-se um dos maiores símbolos da divisão da Guerra Fria."
+      },
+      {
+        "id": "e",
+        "text": "foi derrubada pela própria Alemanha Oriental logo após sua construção."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Apresentado como defesa, o muro serviu para conter a fuga de população. Sua queda, em 1989, simbolizou o fim da Guerra Fria.\n\nPegadinhas:\n• A: foi construído pela Alemanha Oriental.\n• B: impediu a circulação.\n• C: foi construído em 1961.\n• E: durou até 1989.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_48",
+    "subject": "Português",
+    "topicId": "por_norma_culta",
+    "chapter": "Mecanismo de Regência",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Usar \"preferir mais... do que\" ou \"assistir o filme\" como se fossem da norma-padrão.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nEm uma redação, um estudante escreveu:\n\n\"Os jovens preferem mais as redes sociais do que os livros, mas ainda assistem os filmes recomendados pela escola.\"\n\nPela norma-padrão, o verbo \"preferir\" rege a preposição \"a\" (prefere-se algo a outra coisa) e não admite \"mais\" nem \"do que\"; o verbo \"assistir\", no sentido de \"ver\", também exige a preposição \"a\".\n\nTexto elaborado para esta questão.\n\nA reescrita de acordo com a norma-padrão é:",
+    "options": [
+      {
+        "id": "a",
+        "text": "\"Os jovens preferem mais as redes sociais aos livros, mas ainda assistem os filmes recomendados pela escola.\""
+      },
+      {
+        "id": "b",
+        "text": "\"Os jovens preferem as redes sociais do que os livros, mas ainda assistem aos filmes recomendados pela escola.\""
+      },
+      {
+        "id": "c",
+        "text": "\"Os jovens preferem as redes sociais aos livros, mas ainda assistem aos filmes recomendados pela escola.\""
+      },
+      {
+        "id": "d",
+        "text": "\"Os jovens preferem as redes sociais aos livros, mas ainda assistem os filmes recomendados pela escola.\""
+      },
+      {
+        "id": "e",
+        "text": "\"Os jovens preferem mais as redes sociais que os livros, mas ainda assistem a os filmes recomendados pela escola.\""
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. \"Preferir X a Y\", sem \"mais\" nem \"do que\"; \"assistir a\" no sentido de ver: \"assistem aos filmes\".\n\nPegadinhas:\n• A: mantém \"mais\" e \"assistem os\".\n• B: mantém \"do que\".\n• D: mantém \"assistem os\".\n• E: mantém \"mais\" e \"que\", e não faz a contração \"aos\".",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_49",
+    "subject": "Inglês",
+    "topicId": "ing_01",
+    "chapter": "Text Comprehension: Global Warming",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Achar que um ponto de não retorno pode ser revertido facilmente, ou que o texto afirma que ele já foi atingido.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nRead the text:\n\n\"Scientists warn that parts of the Amazon rainforest could be approaching a tipping point. If deforestation and warming continue, large areas may no longer produce enough rainfall to sustain themselves and could gradually turn into a drier, savanna-like landscape. Once such a threshold is crossed, the change may be difficult or impossible to reverse, even if deforestation stops. Reducing deforestation now is therefore seen as essential.\"\n\nTexto elaborado para esta questão.\n\nAccording to the text,",
+    "options": [
+      {
+        "id": "a",
+        "text": "the Amazon has already turned completely into a savanna."
+      },
+      {
+        "id": "b",
+        "text": "a tipping point can be easily reversed by planting a few trees."
+      },
+      {
+        "id": "c",
+        "text": "deforestation has no effect on rainfall in the Amazon."
+      },
+      {
+        "id": "d",
+        "text": "scientists recommend increasing deforestation to prevent a tipping point."
+      },
+      {
+        "id": "e",
+        "text": "continued deforestation and warming could push parts of the Amazon past a threshold, turning them into drier landscapes in a change that may be hard to reverse, so cutting deforestation now is crucial."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O texto fala de um possível ponto de não retorno (\"could be approaching\"), descreve a transformação em paisagem mais seca e afirma que a mudança pode ser difícil de reverter, defendendo a redução imediata do desmatamento.\n\nPegadinhas:\n• A: o texto fala em risco, não em transformação completa.\n• B: o texto diz \"difficult or impossible to reverse\".\n• C: o texto relaciona desmatamento e chuva.\n• D: o texto recomenda reduzir o desmatamento.",
+    "styleOf": "FUVEST"
+  },
+  {
+    "id": "crivo_fuvest_f1_l21_50",
+    "subject": "Filosofia",
+    "topicId": "fil_contratualismo_iluminismo",
+    "chapter": "Locke e os Direitos Naturais",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Confundir Locke com Hobbes, atribuindo-lhe a defesa de um poder absoluto.",
+    "prompt": "Questão autoral CRIVO · estilo FUVEST, 1ª fase.\n\nNo Segundo Tratado sobre o Governo, publicado em 1689, John Locke afirmou que os seres humanos têm, por natureza, direitos à vida, à liberdade e à propriedade, que existem antes de qualquer governo. Os indivíduos criariam a sociedade política por meio de um contrato, justamente para proteger melhor esses direitos. Se o governo violasse esses direitos, o povo teria o direito de resistir e de substituí-lo.\n\nTexto elaborado para esta questão.\n\nSegundo o texto, para Locke,",
+    "options": [
+      {
+        "id": "a",
+        "text": "o governo existe para proteger direitos naturais anteriores a ele, e, se os violar, perde sua legitimidade, podendo o povo resistir e substituí-lo."
+      },
+      {
+        "id": "b",
+        "text": "os direitos são criados pelo governo e podem ser retirados a qualquer momento."
+      },
+      {
+        "id": "c",
+        "text": "o soberano deve ter poder absoluto, sem limites, para evitar a guerra de todos contra todos."
+      },
+      {
+        "id": "d",
+        "text": "a propriedade privada não é um direito natural, e deve ser abolida."
+      },
+      {
+        "id": "e",
+        "text": "o povo não pode, em hipótese alguma, resistir ao governo estabelecido."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Para Locke, o poder político é limitado pelos direitos naturais que ele deve proteger; a violação justifica a resistência. Suas ideias influenciaram as revoluções liberais.\n\nPegadinhas:\n• B: os direitos são anteriores ao governo.\n• C: é a posição de Hobbes.\n• D: Locke inclui a propriedade entre os direitos naturais.\n• E: Locke defende o direito de resistência.",
+    "styleOf": "FUVEST"
+  }
+]

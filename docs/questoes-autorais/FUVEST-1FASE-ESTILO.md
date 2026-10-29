@@ -109,3 +109,16 @@ Fontes primárias reais entram citadas com o ano (Declaração de 1789, AI-5,
 art. 196 da Constituição, Kant, Hobbes, Montesquieu); o restante declara
 "Texto elaborado para esta questão." e, quando os números são hipotéticos,
 "Dados ilustrativos."
+
+## Lotes 11 a 25 (760 questões)
+
+Lotes de 50 (o 25º, de 60) fecham 1.000 questões autorais — Biologia 177,
+Química 176, Física 175, Matemática 154, Geografia 121, História 120,
+Português 26, Inglês 25, Sociologia 13, Filosofia 13. Gabarito no conjunto:
+A 194, B 206, C 198, D 197, E 205.
+
+Os lotes 11 a 13 encheram-se de alternativas só numéricas ("27 g") e
+derrubaram a mediana geral das alternativas para 67 antes de o teste do
+conjunto acusar; o teste passou a exigir mediana de 60 caracteres por lote,
+e os distratores de conta passaram a trazer o raciocínio errado que os gera
+("0,5 m/s, pois ..."), que é também o que a pegadinha comenta.
