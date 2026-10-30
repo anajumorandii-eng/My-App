@@ -43,6 +43,38 @@ import { canonicalExamBoard, matchesExamFilters } from '../lib/questionExamFilte
 import { matchesQuestionSearch } from '../lib/questionSearch';
 import { questionExamIdentity } from '../lib/questionExamIdentity';
 
+function matchesSelectedExams(question: Question, boards: string[], year: string) {
+  return boards.length === 0
+    ? matchesExamFilters(question, 'all', year)
+    : boards.some(board => matchesExamFilters(question, board, year));
+}
+
+function QuestionMultiFilter({ label, allLabel, selected, groups, onChange }: {
+  label: string;
+  allLabel: string;
+  selected: string[];
+  groups: { label: string | null; options: { id: string; label: string }[] }[];
+  onChange: (values: string[]) => void;
+}) {
+  return <fieldset className="crivo-topic-filter crivo-question-multi">
+    <legend>{label}</legend>
+    <div className="crivo-question-multi-options">
+      <label className="crivo-question-multi-choice">
+        <input type="checkbox" checked={selected.length === 0} onChange={() => onChange([])} />
+        <span>{allLabel}</span>
+      </label>
+      {groups.map((group, index) => <div key={group.label ?? index}>
+        {group.label && <p className="crivo-question-multi-heading">{group.label}</p>}
+        {group.options.map(option => <label key={option.id} className="crivo-question-multi-choice">
+          <input type="checkbox" value={option.id} checked={selected.includes(option.id)}
+            onChange={() => onChange(selected.includes(option.id) ? selected.filter(id => id !== option.id) : [...selected, option.id])} />
+          <span>{option.label}</span>
+        </label>)}
+      </div>)}
+    </div>
+  </fieldset>;
+}
+
 function Metric({
   label,
   value,
@@ -93,20 +125,20 @@ export default function Questoes() {
   // A matéria filtrada dá a cor da tela, como nos Resumos e no Visual.
   const ambiente = useMemo(() => (subjectFilter !== 'Todas' ? ambienteDaMateria(subjectFilter) : null), [subjectFilter]);
   useAmbienteDaTela(ambiente);
-  const [topicFilter, setTopicFilter] = useState<string>(requestedTopic?.id ?? ALL);
+  const [topicFilters, setTopicFilters] = useState<string[]>(requestedTopic ? [requestedTopic.id] : []);
   const [subtopicFilter, setSubtopicFilter] = useState<string>(requestedTopic?.chapters?.includes(requestScope.get('chapter') ?? '') ? requestScope.get('chapter')! : ALL);
   const [onlyRealExams, setOnlyRealExams] = useState(requestedBoard !== 'all');
-  const [boardFilter, setBoardFilter] = useState(requestedBoard);
+  const [boardFilters, setBoardFilters] = useState<string[]>(requestedBoard !== 'all' ? [requestedBoard] : []);
   const [yearFilter, setYearFilter] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const examBoards = useMemo(() => [...new Set([...(requestedBoard !== 'all' ? [requestedBoard] : []), ...mockQuestions.flatMap(q => q.examSource ? [canonicalExamBoard(q.examSource.board)] : [])])].sort(), [mockQuestions, requestedBoard]);
   const examYears = useMemo(() => {
-    const questions = mockQuestions.filter(q => q.examSource && matchesExamFilters(q, boardFilter, 'all'));
+    const questions = mockQuestions.filter(q => q.examSource && matchesSelectedExams(q, boardFilters, 'all'));
     return {
       years: [...new Set(questions.flatMap(q => q.examSource?.year ? [q.examSource.year] : []))].sort((a, b) => b - a),
       hasUnknown: questions.some(q => !q.examSource?.year),
     };
-  }, [mockQuestions, boardFilter]);
+  }, [mockQuestions, boardFilters]);
   const [index, setIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [history, setHistory] = useState<{ questionId: string; correct: boolean }[]>([]);
@@ -144,9 +176,9 @@ export default function Questoes() {
   // de tópico e subtópico reflitam o que o filtro vai realmente entregar. Se
   // fosse depois, um tópico apareceria com 40 questões e abriria com zero.
   const scoped = useMemo(() => {
-    const base = mockQuestions.filter(q => (!onlyRealExams || q.examSource) && matchesExamFilters(q, boardFilter, yearFilter) && matchesQuestionSearch(q, searchQuery));
+    const base = mockQuestions.filter(q => (!onlyRealExams || q.examSource) && matchesSelectedExams(q, boardFilters, yearFilter) && matchesQuestionSearch(q, searchQuery));
     return subjectFilter === 'Todas' ? base : base.filter((q) => q.subject === subjectFilter);
-  }, [mockQuestions, subjectFilter, onlyRealExams, boardFilter, yearFilter, searchQuery]);
+  }, [mockQuestions, subjectFilter, onlyRealExams, boardFilters, yearFilter, searchQuery]);
 
   // Quantas questões reais existem na matéria selecionada. Vai no rótulo do
   // botão porque, sem o número, um banco desatualizado e um filtro quebrado
@@ -155,10 +187,16 @@ export default function Questoes() {
     const base = subjectFilter === 'Todas'
       ? mockQuestions
       : mockQuestions.filter((q) => q.subject === subjectFilter);
-    return base.filter((q) => q.examSource && matchesExamFilters(q, boardFilter, yearFilter) && matchesQuestionSearch(q, searchQuery)).length;
-  }, [mockQuestions, subjectFilter, boardFilter, yearFilter, searchQuery]);
+    return base.filter((q) => q.examSource && matchesSelectedExams(q, boardFilters, yearFilter) && matchesQuestionSearch(q, searchQuery)).length;
+  }, [mockQuestions, subjectFilter, boardFilters, yearFilter, searchQuery]);
 
-  const topicTree = useMemo(() => buildTopicHierarchy(scoped, mockTopics), [scoped]);
+  const topicTree = useMemo(() => {
+    const available = buildTopicHierarchy(scoped, mockTopics);
+    const selected = buildTopicHierarchy(mockQuestions.filter(q => subjectFilter === 'Todas' || q.subject === subjectFilter), mockTopics)
+      .filter(node => topicFilters.includes(node.id) && !available.some(other => other.id === node.id))
+      .map(node => ({ ...node, count: 0, subtopics: [] }));
+    return [...available, ...selected];
+  }, [scoped, mockQuestions, subjectFilter, topicFilters]);
 
   // Em "Todas" os tópicos de todas as matérias vinham numa lista só. Agrupar
   // pela matéria devolve o nível que a hierarquia já tinha nos dados e que a
@@ -176,15 +214,23 @@ export default function Questoes() {
     return [...porMateria].map(([subject, nodes]) => ({ subject, nodes }));
   }, [topicTree, subjectFilter]);
 
-  const subtopicOptions = useMemo(
-    () => (topicFilter === ALL ? [] : topicTree.find((node) => node.id === topicFilter)?.subtopics ?? []),
-    [topicFilter, topicTree],
-  );
+  const subtopicOptions = useMemo(() => {
+    const options = new Map<string, { id: string; label: string; count: number }>();
+    for (const node of topicTree.filter(node => topicFilters.includes(node.id))) {
+      for (const sub of node.subtopics) {
+        const previous = options.get(sub.id);
+        options.set(sub.id, { ...sub, count: (previous?.count ?? 0) + sub.count });
+      }
+    }
+    return [...options.values()];
+  }, [topicFilters, topicTree]);
 
-  const pool = useMemo(
-    () => filterByHierarchy(scoped, { topicId: topicFilter, subtopicId: subtopicFilter }, mockTopics),
-    [scoped, topicFilter, subtopicFilter],
-  );
+  const pool = useMemo(() => {
+    if (!topicFilters.length) return scoped;
+    const selected = new Set(topicFilters.flatMap(topicId =>
+      filterByHierarchy(scoped, { topicId, subtopicId: subtopicFilter }, mockTopics).map(q => q.id)));
+    return scoped.filter(q => selected.has(q.id));
+  }, [scoped, topicFilters, subtopicFilter]);
 
   const question = pool.length > 0 ? pool[index % pool.length] : null;
   useEffect(() => {
@@ -216,9 +262,9 @@ export default function Questoes() {
   useEffect(() => {
     setSearchQuery('');
     setSubjectFilter(requestedTopic?.subject ?? 'Todas');
-    setTopicFilter(requestedTopic?.id ?? ALL);
+    setTopicFilters(requestedTopic ? [requestedTopic.id] : []);
     setSubtopicFilter(requestedTopic?.chapters?.includes(requestScope.get('chapter') ?? '') ? requestScope.get('chapter')! : ALL);
-    setBoardFilter(requestedBoard);
+    setBoardFilters(requestedBoard !== 'all' ? [requestedBoard] : []);
     setYearFilter('all');
     setOnlyRealExams(requestedBoard !== 'all');
     resetQuestionState();
@@ -227,13 +273,13 @@ export default function Questoes() {
   const changeSubject = (subject: string) => {
     setSubjectFilter(subject);
     // Trocar de matéria invalida o tópico escolhido: ele pertencia à anterior.
-    setTopicFilter(ALL);
+    setTopicFilters([]);
     setSubtopicFilter(ALL);
     resetQuestionState();
   };
 
-  const changeTopic = (topicId: string) => {
-    setTopicFilter(topicId);
+  const changeTopics = (topics: string[]) => {
+    setTopicFilters(topics);
     setSubtopicFilter(ALL);
     resetQuestionState();
   };
@@ -251,18 +297,17 @@ export default function Questoes() {
     // O recorte de provas reais é bem menor que o banco inteiro, então o tópico
     // que estava selecionado pode nem existir nele. Voltar ao topo evita a tela
     // vazia sem explicação.
-    setTopicFilter(ALL);
+    setTopicFilters([]);
     setSubtopicFilter(ALL);
     resetQuestionState();
   };
 
-  const changeExam = (board: string, year: string) => {
-    setBoardFilter(board);
+  const changeExam = (boards: string[], year: string) => {
+    setBoardFilters(boards);
     setYearFilter(year);
     // Só o ano obriga a prova real. Escolher a banca ligava "só reais" e
     // escondia as autorais no estilo dela, sem a estudante pedir.
     if (year !== 'all') setOnlyRealExams(true);
-    setTopicFilter(ALL);
     setSubtopicFilter(ALL);
     resetQuestionState();
   };
@@ -560,11 +605,6 @@ export default function Questoes() {
         </button>
       </div>
 
-      {/* Tópico e subtópico. Antes eram duas fileiras de chips: em "Todas" isso
-          desenhava mais de sessenta tópicos de todas as matérias de uma vez,
-          uma parede de texto que estourava a largura da tela no retrato. Agora
-          são dois campos, e em "Todas" os tópicos vêm agrupados pela matéria a
-          que pertencem, então a hierarquia fica visível em vez de achatada. */}
       <div className="mb-4 space-y-2">
         <label className="crivo-topic-filter">
           <span>Buscar questões</span>
@@ -579,40 +619,20 @@ export default function Questoes() {
         {searchQuery && <button type="button" className="ni-link text-sm" onClick={() => { setSearchQuery(''); resetQuestionState(); }}>Limpar busca</button>}
       </div>
       <div className="crivo-topic-filters">
-        <label className="crivo-topic-filter">
-          <span>Banca</span>
-          <select value={boardFilter} onChange={e => changeExam(e.target.value, 'all')}>
-            <option value="all">Todas as bancas</option>
-            {examBoards.map(board => <option key={board} value={board}>{board}</option>)}
-          </select>
-        </label>
+        <QuestionMultiFilter label="Bancas" allLabel="Todas as bancas" selected={boardFilters}
+          groups={[{ label: null, options: examBoards.map(board => ({ id: board, label: board })) }]}
+          onChange={boards => changeExam(boards, 'all')} />
         <label className="crivo-topic-filter">
           <span>Ano da prova</span>
-          <select value={yearFilter} onChange={e => changeExam(boardFilter, e.target.value)}>
+          <select value={yearFilter} onChange={e => changeExam(boardFilters, e.target.value)}>
             <option value="all">Todos os anos</option>
             {examYears.years.map(year => <option key={year} value={String(year)}>{year}</option>)}
             {examYears.hasUnknown && <option value="unknown">Ano não identificado</option>}
           </select>
         </label>
-        <label className="crivo-topic-filter">
-          <span>Tópico</span>
-          <select value={topicFilter} onChange={(e) => changeTopic(e.target.value)}>
-            <option value={ALL}>Todos os tópicos ({pool.length === 0 && topicFilter === ALL ? 0 : scoped.length})</option>
-            {topicGroups.map((grupo) => (
-              grupo.subject === null ? (
-                grupo.nodes.map((node) => (
-                  <option key={node.id} value={node.id}>{node.label} ({node.count})</option>
-                ))
-              ) : (
-                <optgroup key={grupo.subject} label={grupo.subject}>
-                  {grupo.nodes.map((node) => (
-                    <option key={node.id} value={node.id}>{node.label} ({node.count})</option>
-                  ))}
-                </optgroup>
-              )
-            ))}
-          </select>
-        </label>
+        <QuestionMultiFilter label="Tópicos" allLabel={`Todos os tópicos (${scoped.length})`} selected={topicFilters}
+          groups={topicGroups.map(group => ({ label: group.subject, options: group.nodes.map(node => ({ id: node.id, label: `${node.label} (${node.count})` })) }))}
+          onChange={changeTopics} />
 
         <label className="crivo-topic-filter" data-disabled={subtopicOptions.length === 0 ? 'true' : undefined}>
           <span>Subtópico</span>
@@ -631,7 +651,7 @@ export default function Questoes() {
         </label>
       </div>
 
-      {boardFilter === 'UNICAMP' && yearFilter === '2026' && (
+      {boardFilters.includes('UNICAMP') && yearFilter === '2026' && (
         <p className="mb-4 text-xs">
           <a href="/real-exams/unicamp-2026.pdf" download className="ni-link">
             Caderno Unicamp 2026 — baixar PDF com prova, gabarito e resoluções · 99 páginas

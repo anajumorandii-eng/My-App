@@ -444,3 +444,12 @@
 .crivo-topic-filter select:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 .crivo-topic-filter select:disabled { color: var(--dim); opacity: .65; }
 .crivo-topic-filter option, .crivo-topic-filter optgroup { background: var(--surface); color: var(--text); }
+
+/* Question filters use native checkboxes for multiple selections on touch and keyboard. */
+.crivo-question-multi { margin: 0; padding: 0; border: 0; }
+.crivo-question-multi legend { padding: 0 0 5px; color: var(--faint); font: 9px ui-monospace, SFMono-Regular, monospace; letter-spacing: .14em; text-transform: uppercase; }
+.crivo-question-multi-options { max-height: 190px; overflow-y: auto; border: 1px solid var(--line); border-radius: 10px; background: color-mix(in srgb, var(--surface) 82%, transparent); padding: 4px; }
+.crivo-question-multi-choice { display: flex; align-items: center; gap: 9px; min-height: 44px; padding: 6px; color: var(--text); font-size: 12px; cursor: pointer; }
+.crivo-question-multi-choice input { width: 17px; height: 17px; flex-shrink: 0; accent-color: var(--primary); }
+.crivo-question-multi-choice:focus-within { outline: 2px solid var(--primary); outline-offset: -2px; border-radius: 6px; }
+.crivo-question-multi-heading { margin: 8px 6px 0; color: var(--dim); font-size: 11px; font-weight: 600; }
