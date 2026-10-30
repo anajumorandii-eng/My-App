@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {
   buildFlashcardTopicIndex,
+  combineFlashcardTopicSummaries,
   selectDueCards,
 } from './flashcardCatalog';
 import { Flashcard, FlashcardReview, Topic } from '../types';
@@ -206,4 +207,21 @@ test('selectDueCards restringe ao subtópico quando ele é informado', () => {
     now,
   );
   assert.equal(inteiro.length, 2);
+});
+
+
+test('seleção múltipla reúne tópicos e Outros sem duplicar nem antecipar revisões', () => {
+  const cards = [card({ id: 'p' }), card({ id: 'b', topicId: 'topic-biology' }),
+    card({ id: 'orphan', topicId: 'removed' }), card({ id: 'future', topicId: 'topic-biology' })];
+  const reviews = { future: review('future', '2099-01-01T00:00:00Z') };
+  const selection = { topicId: null, topicIds: ['topic-physics', 'topic-biology', 'topic-physics'], allDueForTopic: true };
+  assert.deepEqual(selectDueCards(cards, topics, selection, reviews, now).map(c => c.id), ['p', 'b']);
+  assert.deepEqual(selectDueCards(cards, topics, { ...selection, topicIds: ['topic-physics', null] }, reviews, now).map(c => c.id), ['p', 'orphan']);
+  assert.equal(selectDueCards(cards, topics, { ...selection, topicIds: [] }, reviews, now).length, 0);
+  const index = buildFlashcardTopicIndex(cards, topics, reviews, now);
+  const combined = combineFlashcardTopicSummaries(index, 'Todos');
+  assert.equal(combined.total, 4); assert.equal(combined.due, 3);
+  assert.equal(combined.subtopics[0].total, 4); assert.equal(combined.subtopics[0].due, 3);
+  assert.equal(combined.buckets.regular.objetivos.total, 4);
+  assert.equal(index[0].total, 1, 'catálogo original permanece intacto');
 });

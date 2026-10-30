@@ -1,5 +1,5 @@
 import { Link, MemoryRouter } from 'react-router-dom';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { Question } from '../types';
@@ -109,12 +109,12 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     expect(screen.getByText('Onde ocorre a fotossíntese?')).toBeInTheDocument();
     expect(screen.queryByText(QUESTION.explanation)).not.toBeInTheDocument();
     expect(screen.getByRole('status')).toHaveTextContent('1 questão encontrada');
-    await user.selectOptions(screen.getByLabelText('Banca'), 'UNICAMP');
+    await user.click(screen.getByRole('checkbox', { name: 'UNICAMP' }));
     expect(screen.getByText('Nenhuma questão encontrada para este filtro.')).toBeInTheDocument();
     expect(screen.queryByText(/O banco carregado não tem nenhuma questão de prova real/)).not.toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: 'Limpar busca' }));
     expect(screen.getByText(QUESTION.prompt)).toBeInTheDocument();
-    expect(screen.getByLabelText('Banca')).toHaveValue('UNICAMP');
+    expect(screen.getByRole('checkbox', { name: 'UNICAMP' })).toBeChecked();
   });
 
   it('combina banca/ano e recalcula tópicos, contagens e resposta ao trocar a prova', async () => {
@@ -125,20 +125,20 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     ], syncError: null });
     const user = userEvent.setup();
     render(<Questoes />);
-    await user.selectOptions(screen.getByLabelText('Banca'), 'UNICAMP');
+    await user.click(screen.getByRole('checkbox', { name: 'UNICAMP' }));
     expect(screen.getByText(/Questão 1 de 2/)).toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: /Citoplasma/ }));
     expect(screen.getByText(QUESTION.explanation)).toBeInTheDocument();
     await user.selectOptions(screen.getByLabelText('Ano da prova'), '2026');
     expect(screen.getByText('Prova de 2026')).toBeInTheDocument();
     expect(screen.queryByText(QUESTION.explanation)).not.toBeInTheDocument();
-    expect(screen.getByLabelText('Tópico')).toHaveTextContent('Genética (1)');
+    expect(screen.getByRole('group', { name: 'Tópicos' })).toHaveTextContent('Genética (1)');
     expect(screen.getByRole('link', { name: /Caderno Unicamp 2026/ })).toHaveAttribute('href', '/real-exams/unicamp-2026.pdf');
     expect(screen.getByRole('button', { name: /Só Questões Reais \(1\)/ })).toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: /Só Questões Reais/ }));
     // Desligar "só reais" mantém a banca e limpa só o ano: a banca sem o
     // recorte de prova real passa a incluir as autorais no estilo dela.
-    expect(screen.getByLabelText('Banca')).toHaveValue('UNICAMP');
+    expect(screen.getByRole('checkbox', { name: 'UNICAMP' })).toBeChecked();
     expect(screen.getByLabelText('Ano da prova')).toHaveValue('all');
     expect(screen.queryByRole('link', { name: /Caderno Unicamp 2026/ })).not.toBeInTheDocument();
     expect(screen.getByText(/Questão 1 de 2/)).toBeInTheDocument();
@@ -152,7 +152,7 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     ], syncError: null });
     const user = userEvent.setup();
     render(<Questoes />);
-    await user.selectOptions(screen.getByLabelText('Banca'), 'FUVEST');
+    await user.click(screen.getByRole('checkbox', { name: 'FUVEST' }));
     expect(screen.getByText(/Questão 1 de 2/)).toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: /Só Questões Reais/ }));
     expect(screen.getByText(/Questão 1 de 1/)).toBeInTheDocument();
@@ -335,17 +335,15 @@ describe('Questoes — navegação por tópico e subtópico', () => {
     questionsHook.mockReturnValue({ questions: bank, syncError: null });
   });
 
-  const seletorTopico = () => screen.getByLabelText(/^Tópico$/) as HTMLSelectElement;
+  const seletorTopico = () => screen.getByRole('group', { name: 'Tópicos' });
   const escolherTopico = async (user: ReturnType<typeof userEvent.setup>, prefixo: string) => {
-    const alvo = [...seletorTopico().querySelectorAll('option')]
-      .find((o) => o.textContent?.startsWith(prefixo));
-    await user.selectOptions(seletorTopico(), alvo!.value);
+    await user.click(within(seletorTopico()).getByRole('checkbox', { name: new RegExp(`^${prefixo}`) }));
   };
   const seletorSubtopico = () => screen.getByLabelText(/^Subtópico$/) as HTMLSelectElement;
 
   it('lista os tópicos presentes no banco com a contagem de questões', () => {
     render(<Questoes />);
-    const rotulos = [...seletorTopico().querySelectorAll('option')].map((o) => o.textContent);
+    const rotulos = [...seletorTopico().querySelectorAll('label')].map((o) => o.textContent);
     expect(rotulos).toContain('Estrutura e Fisiologia Celular (3)');
     expect(rotulos).toContain('Metabolismo Energético (1)');
   });
@@ -386,7 +384,7 @@ describe('Questoes — navegação por tópico e subtópico', () => {
 
     await user.click(screen.getByRole('button', { name: /^Biologia$/ }));
 
-    expect(seletorTopico().value).toBe('Todas');
+    expect(within(seletorTopico()).getByRole('checkbox', { name: /^Todos os tópicos/ })).toBeChecked();
     expect(seletorSubtopico()).toBeDisabled();
   });
 });
@@ -456,12 +454,9 @@ describe('Questoes — visibilidade do filtro de questões reais', () => {
 
   it('agrupa os tópicos por matéria em vez de listar todos de uma vez', async () => {
     render(<Questoes />);
-    const seletor = (await screen.findByLabelText(/Tópico/)) as HTMLSelectElement;
-    // Com "Todas" selecionado, o primeiro nível do seletor são as matérias:
-    // antes eram mais de sessenta tópicos numa fileira única de chips.
-    const grupos = [...seletor.children].filter((filho) => filho.tagName === 'OPTGROUP');
-    expect(grupos.length).toBeGreaterThan(0);
-    expect(grupos.every((grupo) => (grupo as HTMLOptGroupElement).children.length > 0)).toBe(true);
+    const seletor = screen.getByRole('group', { name: 'Tópicos' });
+    expect(within(seletor).getByText('Fora do currículo', { selector: 'p' })).toBeInTheDocument();
+    expect(within(seletor).getAllByRole('checkbox').length).toBeGreaterThan(1);
   });
 });
 
@@ -477,7 +472,7 @@ it('abre o tópico encaminhado por Prioridades sem trocar o recorte', () => {
   window.history.pushState({}, '', '/questoes?topic=bio_genetica');
   questionsHook.mockReturnValue({ questions: [{ ...QUESTION, topicId: 'bio_genetica' }], syncError: null });
   render(<Questoes />);
-  expect(screen.getByRole('combobox', { name: 'Tópico' })).toHaveValue('bio_genetica');
+  expect(screen.getByRole('checkbox', { name: /^Genética/ })).toBeChecked();
   expect(screen.getByText(QUESTION.prompt)).toBeInTheDocument();
   window.history.replaceState({}, '', '/');
 });
@@ -486,7 +481,7 @@ it('mantém a banca e o tópico encaminhados por Prioridades', () => {
   window.history.pushState({}, '', '/questoes?topic=bio_genetica&board=FUVEST');
   questionsHook.mockReturnValue({ questions: [{ ...QUESTION, id: 'fuvest', topicId: 'bio_genetica', prompt: 'Treino Fuvest encaminhado', examSource: { board: 'FUVEST', year: 2026 } }, { ...QUESTION, id: 'comvest', topicId: 'bio_genetica', prompt: 'Questão de outra banca', examSource: { board: 'COMVEST', year: 2026 } }], syncError: null });
   render(<Questoes />);
-  expect(screen.getByRole('combobox', { name: 'Banca' })).toHaveValue('FUVEST');
+  expect(screen.getByRole('checkbox', { name: 'FUVEST' })).toBeChecked();
   expect(screen.getByText('Treino Fuvest encaminhado')).toBeInTheDocument();
   expect(screen.queryByText('Questão de outra banca')).toBeNull();
   window.history.replaceState({}, '', '/');
@@ -496,7 +491,7 @@ it('usa a banca da navegação local da central, preservando o endereço externo
  const {MemoryRouter}=await import('react-router-dom');
  questionsHook.mockReturnValue({questions:[{...QUESTION,id:'local-unicamp',prompt:'Questão da central',examSource:{board:'UNICAMP',year:2026}}],syncError:null});
  render(<MemoryRouter initialEntries={['/questoes?board=UNICAMP']}><Questoes/></MemoryRouter>);
- expect(screen.getByRole('combobox',{name:'Banca'})).toHaveValue('UNICAMP');
+ expect(screen.getByRole('checkbox',{name:'UNICAMP'})).toBeChecked();
 });
 
 
@@ -510,4 +505,68 @@ it('acompanha tópico e capítulo de um novo link com a tela já aberta', async 
   fireEvent.click(screen.getByRole('link', { name: 'Trocar assunto pela navegação' }));
   expect(await screen.findByText('Enunciado de genética.')).toBeInTheDocument();
   expect(screen.getByLabelText('Subtópico')).toHaveValue('Herança Sexual');
+});
+
+
+describe('Questoes — seleção múltipla', () => {
+  const real = (id: string, topicId: string, board: string, chapter: string): Question => ({
+    ...QUESTION, id, topicId, chapter, prompt: `Enunciado ${id}`,
+    examSource: { board, year: board === 'ENEM' ? 2025 : 2026 },
+  });
+  beforeEach(() => questionsHook.mockReturnValue({ questions: [
+    real('cell-fuvest', 'bio_estrutura_fisio_celular', 'FUVEST', 'Membranas Celulares'),
+    real('gen-enem', 'bio_genetica', 'ENEM', 'Herança Sexual'),
+    real('gen-unicamp', 'bio_genetica', 'COMVEST', 'Herança Sexual'),
+    real('eco-enem', 'bio_ecologia', 'ENEM', 'Populações'),
+  ], syncError: null }));
+
+  it('combina dois tópicos e duas bancas, permite desmarcar e voltar a todos', async () => {
+    const user = userEvent.setup(); render(<Questoes />);
+    await user.click(screen.getByRole('button', { name: /^Biologia$/ }));
+    await user.click(screen.getByRole('checkbox', { name: /^Estrutura e Fisiologia Celular/ }));
+    await user.click(screen.getByRole('checkbox', { name: /^Genética/ }));
+    expect(screen.getByRole('status')).toHaveTextContent('3 questões encontradas');
+    expect(screen.getByLabelText('Subtópico')).toHaveTextContent('Membranas Celulares (1)');
+    expect(screen.getByLabelText('Subtópico')).toHaveTextContent('Herança Sexual (2)');
+    await user.click(screen.getByRole('button', { name: /Citoplasma/ }));
+    await user.click(screen.getByRole('checkbox', { name: 'FUVEST' }));
+    expect(screen.queryByText(QUESTION.explanation)).not.toBeInTheDocument();
+    await user.click(screen.getByRole('checkbox', { name: 'ENEM' }));
+    expect(screen.getByRole('status')).toHaveTextContent('2 questões encontradas');
+    await user.selectOptions(screen.getByLabelText('Subtópico'), 'Herança Sexual');
+    expect(screen.getByText('Enunciado gen-enem')).toBeInTheDocument();
+    await user.click(screen.getByRole('checkbox', { name: /^Todos os tópicos/ }));
+    expect(screen.getByLabelText('Subtópico')).toBeDisabled();
+    expect(screen.getByRole('status')).toHaveTextContent('3 questões encontradas');
+    await user.click(screen.getByRole('checkbox', { name: 'FUVEST' }));
+    expect(screen.getByRole('status')).toHaveTextContent('2 questões encontradas');
+    await user.click(screen.getByRole('checkbox', { name: 'Todas as bancas' }));
+    expect(screen.getByRole('status')).toHaveTextContent('4 questões encontradas');
+  });
+
+  it('preserva tópico sem correspondência para permitir desfazer o filtro vazio', async () => {
+    const user = userEvent.setup(); render(<Questoes />);
+    await user.click(screen.getByRole('checkbox', { name: /^Estrutura e Fisiologia Celular/ }));
+    await user.click(screen.getByRole('checkbox', { name: 'ENEM' }));
+    expect(screen.getByRole('status')).toHaveTextContent('0 questões encontradas');
+    const selected = screen.getByRole('checkbox', { name: 'Estrutura e Fisiologia Celular (0)' });
+    expect(selected).toBeChecked();
+    await user.click(selected);
+    expect(screen.getByRole('status')).toHaveTextContent('2 questões encontradas');
+  });
+
+  it('reúne os anos das bancas e limpa tópicos ao trocar de matéria', async () => {
+    const user = userEvent.setup(); render(<Questoes />);
+    await user.click(screen.getByRole('checkbox', { name: 'ENEM' }));
+    await user.click(screen.getByRole('checkbox', { name: 'UNICAMP' }));
+    expect(screen.getByLabelText('Ano da prova')).toHaveTextContent('2025');
+    expect(screen.getByLabelText('Ano da prova')).toHaveTextContent('2026');
+    await user.selectOptions(screen.getByLabelText('Ano da prova'), '2026');
+    expect(screen.getByText('Enunciado gen-unicamp')).toBeInTheDocument();
+    await user.click(screen.getByRole('checkbox', { name: /^Genética/ }));
+    await user.click(screen.getByRole('button', { name: /^Biologia$/ }));
+    expect(screen.getByRole('checkbox', { name: /^Todos os tópicos/ })).toBeChecked();
+    expect(screen.getByRole('checkbox', { name: 'ENEM' })).toBeChecked();
+    expect(screen.getByRole('checkbox', { name: 'UNICAMP' })).toBeChecked();
+  });
 });
