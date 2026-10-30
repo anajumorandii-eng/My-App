@@ -287,3 +287,11 @@ it('salva e restaura a preferência por revisão sem figuras',async()=>{
  fireEvent.click(screen.getByRole('button',{name:'Editar configurações desta revisão'}));
  expect(screen.getByRole('checkbox',{name:/Incluir figuras quando ajudarem/})).not.toBeChecked();
 });
+
+it('texto informado mantém a escolha de matéria', () => {
+  mount();
+  fireEvent.change(screen.getByLabelText('Material de origem'),{target:{value:'provided'}});
+  fireEvent.change(screen.getByLabelText('Matéria do resumo'),{target:{value:'Biologia'}});
+  expect(screen.getByLabelText('Matéria do resumo')).toHaveValue('Biologia');
+  expect(screen.getByLabelText('Material de origem')).toHaveValue('provided');
+});

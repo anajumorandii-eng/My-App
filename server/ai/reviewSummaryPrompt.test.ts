@@ -111,3 +111,13 @@ test('obra literária segue o método da tutora de obras: seções próprias e p
 test('conteúdo disciplinar não recebe as seções de obra', () => {
   assert.doesNotMatch(prompt(['FUVEST']), /Pergunta central da obra|Treino com trecho|protocolo F\.O\.R\.M\.A\./);
 });
+test('obra literária respeita a etapa escolhida', () => {
+  const work = { topic: 'A Paixão Segundo G.H.', subject: 'Literatura', chapter: undefined };
+  const first = prompt(['FUVEST'], { materialKind: 'literature', sourceMode: 'work', scopes: { FUVEST: 'first' } }, work);
+  assert.match(first, /FUVEST 1ª fase/);
+  assert.doesNotMatch(first, /F\.O\.R\.M\.A\.|FUVEST 2ª fase|Diferencie 1ª e 2ª fase/);
+  const second = prompt(['FUVEST'], { materialKind: 'literature', sourceMode: 'work', scopes: { FUVEST: 'second' } }, work);
+  assert.match(second, /F\.O\.R\.M\.A\./); assert.doesNotMatch(second, /FUVEST 1ª fase/);
+  const enem = prompt(['ENEM'], { materialKind: 'literature', sourceMode: 'work' }, work);
+  assert.doesNotMatch(enem, /uma discursiva de 2ª fase|Diferencie 1ª e 2ª fase/);
+});

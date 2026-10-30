@@ -185,11 +185,11 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
       <h3 className="font-semibold">Conteúdo</h3>
       <fieldset disabled={working} className="grid gap-3 sm:grid-cols-2">
         <legend className="sr-only">Conteúdo da revisão</legend>
-        {options.sourceMode !== 'provided' && <label className="text-sm">Matéria do resumo<select className="field block w-full" value={options.sourceMode === 'work' ? WORKS_OPTION : subject} onChange={event => {
+        <label className="text-sm">Matéria do resumo<select className="field block w-full" value={options.sourceMode === 'work' ? WORKS_OPTION : subject} onChange={event => {
           if (event.target.value === WORKS_OPTION) { setTopicId(''); changeSource('work'); return; }
           if (options.sourceMode === 'work') changeSource('catalog');
           setOpenedKey(''); setAdditional([]); setSubject(event.target.value); setTopicId(mockTopics.find(item => studyAreaForTopic(item) === event.target.value)?.id ?? ''); setChapter('');
-        }}>{studyProtocols.map(item => <option key={item.subject}>{item.subject}</option>)}<option value={WORKS_OPTION}>Obras literárias (Fuvest e Unicamp)</option></select></label>}
+        }}>{studyProtocols.map(item => <option key={item.subject}>{item.subject}</option>)}<option value={WORKS_OPTION}>Obras literárias (Fuvest e Unicamp)</option></select></label>
         {options.sourceMode === 'catalog' && <>
           <label className="text-sm">Tópico do resumo<select className="field block w-full" value={topic?.id ?? ''} onChange={event => { setOpenedKey(''); setTopicId(event.target.value); setChapter(''); setAdditional(previous => previous.filter(item => item.topicId !== event.target.value)); }}>
             <option value="">Selecione um tópico</option>{topics.map(item => <option key={item.id} value={item.id}>{item.name}</option>)}

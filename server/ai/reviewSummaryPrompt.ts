@@ -18,22 +18,34 @@ const LITERARY_SECTIONS = [
   'Escada de leitura quando ajudar: literal → formal → estrutural → histórico-social (contexto só quando formalizado no texto) → crítica → comparativa.',
   'Marque cada afirmação importante como Evidência da obra, Crítica documentada [F#] ou Síntese do CRIVO; nunca as misture. Evite "o autor quis dizer"; distinga autor, narrador, eu lírico, personagem e voz ensaística.',
   'Citações da obra: trechos mínimos, só os presentes nas fontes recebidas; prefira paráfrase analítica. Sem página ou edição nas fontes, localize por capítulo, conto, poema ou parte. Não invente passagem, página, edição, crítico, tese ou consenso.',
-  'Treino com trecho: use uma passagem curta presente nas fontes (ou declare que nenhuma foi fornecida e proponha o exercício sobre uma unidade nomeada, sem inventar o texto). Faça perguntas de 1ª fase e uma discursiva de 2ª fase, sem respostas junto; as respostas vão para o gabarito final.',
+  'Treino com trecho: use uma passagem curta presente nas fontes (ou declare que nenhuma foi fornecida e proponha o exercício sobre uma unidade nomeada, sem inventar o texto). Formule as perguntas no formato das bancas e etapas selecionadas (objetivas, discursivas ou ambas, conforme a etapa); sem banca selecionada, uma objetiva e uma discursiva. Respostas só no gabarito final.',
   'Pegadinhas de leitura: alternativa parcialmente verdadeira mas incompatível com o trecho, extrapolação da fonte, contexto solto, confusão de voz, moralização da personagem — cada uma com por que falha e a correção.',
 ].join('\n');
 
-function literaryExamProtocols(boards: readonly string[]): string {
-  const fuvest = 'FUVEST — 1ª fase: leitura precisa do excerto, reconhecimento sem decoreba de enredo, narrador, focalização, ironia, relação parte–todo, intertextualidade. 2ª fase: ensine o protocolo F.O.R.M.A. — Foco no comando (verbo, recorte, quantidade); Observação textual (evidência concreta); Recurso formal (nomeie o procedimento); Mecanismo interpretativo (como o recurso produz sentido); Articulação (conjunto da obra, contexto ou comparação pedida) — e aplique-o à discursiva do treino.';
-  const unicamp = 'UNICAMP/Comvest — 1ª fase: leitura integrada de texto, imagem e paratexto, comparação entre obras e gêneros, alternativas que extrapolam a fonte, contexto reconstruído por marcas textuais. 2ª fase: ensine o protocolo F.O.N.T.E. — Fonte (elemento textual ou visual relevante); Operação do comando (identificar, explicar, comparar, relacionar, justificar); Núcleo formal (recurso, voz, estrutura); Tensão interpretativa (ambiguidade, conflito, contraste); Explicação articulada (fonte, forma, contexto e conclusão) — separando subitens e respondendo cada verbo, sem mera paráfrase.';
-  const both = !boards.length || (boards.includes('FUVEST') && boards.includes('UNICAMP'));
-  // Outras bancas escolhidas mandam no resumo: os protocolos destas duas só
-  // entram por seleção, ou juntos quando nenhuma banca foi escolhida.
-  const protocols = both ? [fuvest, unicamp] : [boards.includes('FUVEST') ? fuvest : '', boards.includes('UNICAMP') ? unicamp : ''].filter(Boolean);
-  if (!protocols.length) return '';
-  return [
-    ...protocols,
-    `${both ? 'Trate FUVEST e UNICAMP de modo diferente e diferencie' : 'Diferencie'} 1ª e 2ª fase. Não informe número de questões, estrutura vigente ou incidência da obra sem fonte oficial recebida.`,
-  ].join('\n');
+function literaryExamProtocols(boards: readonly string[], scopes: Record<string, string> = {}): string {
+  const phases = {
+    FUVEST: {
+      first: 'FUVEST 1ª fase: leitura precisa do excerto, reconhecimento sem decoreba de enredo, narrador, focalização, ironia, relação parte–todo, intertextualidade, alternativas parcialmente verdadeiras mas incompatíveis com o trecho.',
+      second: 'FUVEST 2ª fase: ensine o protocolo F.O.R.M.A. — Foco no comando (verbo, recorte, quantidade); Observação textual (evidência concreta); Recurso formal (nomeie o procedimento); Mecanismo interpretativo (como o recurso produz sentido); Articulação (conjunto da obra, contexto ou comparação pedida) — e aplique-o à discursiva do treino.',
+    },
+    UNICAMP: {
+      first: 'UNICAMP/Comvest 1ª fase: leitura integrada de texto, imagem e paratexto, comparação entre obras e gêneros, alternativas que extrapolam a fonte, contexto reconstruído por marcas textuais.',
+      second: 'UNICAMP/Comvest 2ª fase: ensine o protocolo F.O.N.T.E. — Fonte (elemento textual ou visual relevante); Operação do comando (identificar, explicar, comparar, relacionar, justificar); Núcleo formal (recurso, voz, estrutura); Tensão interpretativa (ambiguidade, conflito, contraste); Explicação articulada (fonte, forma, contexto e conclusão) — separando subitens e respondendo cada verbo, sem mera paráfrase.',
+    },
+  } as const;
+  // Sem banca, as duas por inteiro. Outras bancas escolhidas mandam no resumo:
+  // estas só entram por seleção, e só na etapa escolhida — "Fuvest · 1ª fase"
+  // não pode receber discursiva nem F.O.R.M.A.
+  const chosen = boards.length ? (['FUVEST', 'UNICAMP'] as const).filter((board) => boards.includes(board)) : (['FUVEST', 'UNICAMP'] as const);
+  if (!chosen.length) return '';
+  const protocols = chosen.flatMap((board) => {
+    const scope = boards.length ? scopes[board] ?? 'all' : 'all';
+    return scope === 'first' ? [phases[board].first] : scope === 'second' ? [phases[board].second] : [phases[board].first, phases[board].second];
+  });
+  const bothBoards = chosen.length === 2;
+  const bothPhases = chosen.some((board) => !boards.length || (scopes[board] ?? 'all') === 'all');
+  const contrast = [bothBoards ? 'Trate FUVEST e UNICAMP de modo diferente.' : '', bothPhases ? 'Diferencie 1ª e 2ª fase.' : ''].filter(Boolean).join(' ');
+  return [...protocols, `${contrast ? `${contrast} ` : ''}Não informe número de questões, estrutura vigente ou incidência da obra sem fonte oficial recebida.`].join('\n');
 }
 
 export function reviewSummaryPrompt(payload: Record<string, unknown>, _context = ''): string {
@@ -53,7 +65,7 @@ export function reviewSummaryPrompt(payload: Record<string, unknown>, _context =
     options.boards.includes('FAMERP') && options.scopes.FAMERP === 'discursive' && !['Biologia','Química','Física','Redação'].includes(String(payload.subject)) ? 'Limite de aplicabilidade: no ciclo 2027, o componente dissertativo da Famerp não contempla esta matéria. Explique essa incompatibilidade; preserve o estudo conceitual e a recuperação ativa, mas não fabrique uma questão discursiva atribuída à Famerp. Sugira direcionar a revisão às objetivas para esse componente.' : '',
     'A extensão e a variedade das aplicações devem mudar efetivamente entre os níveis. Não sacrifique explicações indispensáveis para cumprir limite de tamanho. Com várias bancas, amplie exemplos para contemplar todas sem repetir o resumo para cada uma.',
     options.materialKind === 'literature' ? LITERARY_SECTIONS : 'Adapte estas seções Markdown ## ao assunto; reúna as que não tenham utilidade independente: Essencial para lembrar; Entenda o mecanismo (porquê, causalidade e reconstrução); Como as bancas selecionadas cobram (somente com seleção); Aplicação em questão; Pegadinhas e erros comuns; Recuperação ativa; Revisão de última hora. Não repita a abertura na síntese.',
-    options.materialKind === 'literature' ? literaryExamProtocols(options.boards) : '',
+    options.materialKind === 'literature' ? literaryExamProtocols(options.boards, options.scopes) : '',
     'Na cobrança, mostre habilidade mobilizada → texto/gráfico/tabela/mapa/imagem/experimento pertinente → comando → operações → reconhecimento do caminho → erro ou distrator. Aplique ao conteúdo concreto. Separe PADRÃO OBSERVADO nas provas identificadas, com referência [F#], de PROPOSTA AUTORAL didática. Sem prova pertinente fornecida: declare evidência insuficiente e use proposta autoral sem atribuição histórica.',
     'Nos exemplos comentados, transforme dados e pedido em raciocínio, justifique a escolha e confira a resposta. Rotule questão real (instituição, ano e identificação fornecidos), adaptação (alterações explícitas) ou questão autoral. Nunca atribua exemplo autoral a prova. Não resolva questão com enunciado ou figura ausente; ficha analítica não é enunciado integral.',
     'Pegadinhas específicas: confusão → por que falha → correção → condição de validade ou contraexemplo. Não preencha com alertas genéricos.',
