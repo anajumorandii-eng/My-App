@@ -1,8 +1,11 @@
 import { useId } from 'react';
 import type { StudyVisual } from '../lib/studyVisual';
 import { figureInk, seriesDash, seriesDashName, seriesInk } from '../lib/figureInk';
+import { niceScale } from '../lib/niceScale';
+import { useFigureText } from './useFigureText';
 type Line = Extract<StudyVisual,{type:'line'}>;
-const format = (v:number) => v!==0 && (Math.abs(v)>=10000 || Math.abs(v)<.01) ? v.toExponential(1).replace('.',',') : Number(v.toPrecision(3)).toLocaleString('pt-BR');
+// Sinal de menos tipográfico: o hífen de toLocaleString parece traço de separação no eixo.
+const format = (v:number) => (v!==0 && (Math.abs(v)>=10000 || Math.abs(v)<.01) ? v.toExponential(1).replace('.',',') : Number(v.toPrecision(3)).toLocaleString('pt-BR')).replace(/^-/,'−');
 
 /**
  * Curvas no traço das pranchas: eixos em tinta, grade pontilhada na cor da
@@ -11,24 +14,26 @@ const format = (v:number) => v!==0 && (Math.abs(v)>=10000 || Math.abs(v)<.01) ? 
  */
 export function StudyLineChart({visual}:{visual:Line}) {
  const id=useId();
+ const {ref,fs}=useFigureText<SVGSVGElement>(400);
  const points=visual.series.flatMap(s=>s.points);
- const minX=Math.min(...points.map(p=>p.x)), maxX=Math.max(...points.map(p=>p.x));
- let minY=Math.min(...points.map(p=>p.y)), maxY=Math.max(...points.map(p=>p.y));
- if(minY===maxY){const pad=Math.max(1,Math.abs(minY)*.1);minY-=pad;maxY+=pad;}
- const x=(v:number)=>66+(v-minX)/(maxX-minX)*306;
- const y=(v:number)=>214-(v-minY)/(maxY-minY)*170;
+ const xs=niceScale(Math.min(...points.map(p=>p.x)),Math.max(...points.map(p=>p.x)),6);
+ const ys=niceScale(Math.min(...points.map(p=>p.y)),Math.max(...points.map(p=>p.y)),8);
+ const x=(v:number)=>66+(v-xs.min)/(xs.max-xs.min)*306;
+ const y=(v:number)=>214-(v-ys.min)/(ys.max-ys.min)*170;
  return <div>
-  <svg viewBox="0 0 400 280" role="img" aria-labelledby={`${id}-title ${id}-description`} className="crivo-chart">
+  <svg ref={ref} viewBox="0 0 400 280" role="img" aria-labelledby={`${id}-title ${id}-description`} className="crivo-chart">
    <title id={`${id}-title`}>{visual.title}</title><desc id={`${id}-description`}>{visual.xLabel}; {visual.yLabel}. {visual.caption}</desc>
-   {[0,1,2,3,4].map(i=>{const t=i/4;return <g key={i} fontSize="13" fill={figureInk.muted}>
-    {i>0 && <line x1="66" x2="372" y1={214-t*170} y2={214-t*170} stroke={figureInk.line} strokeDasharray="2 4"/>}
-    <text x="58" y={218-t*170} textAnchor="end">{format(minY+t*(maxY-minY))}</text>
-    <text x={66+t*306} y="234" textAnchor="middle">{format(minX+t*(maxX-minX))}</text>
-   </g>;})}
+   {ys.ticks.map(v=><g key={`y${v}`} fontSize={fs(13)} fill={figureInk.muted}>
+    {v!==ys.min && <line x1="66" x2="372" y1={y(v)} y2={y(v)} stroke={figureInk.line} strokeDasharray="2 4"/>}
+    <text x="58" y={y(v)+4} textAnchor="end">{format(v)}</text>
+   </g>)}
+   {/* Com dados dos dois lados do zero, o zero é referência de leitura (−20 °C, saldo negativo). */}
+   {ys.min<0 && ys.max>0 && <line x1="66" x2="372" y1={y(0)} y2={y(0)} stroke={figureInk.muted} strokeWidth="1"/>}
+   {xs.ticks.map(v=><text key={`x${v}`} x={x(v)} y="234" textAnchor="middle" fontSize={fs(13)} fill={figureInk.muted}>{format(v)}</text>)}
    <path d="M66 38V214H376" fill="none" stroke={figureInk.ink} strokeWidth="1.2"/>
    <path d="M62 44l4-7 4 7M370 210l7 4-7 4" fill="none" stroke={figureInk.ink} strokeWidth="1.2" strokeLinejoin="round"/>
-   <text x="219" y="264" textAnchor="middle" fontSize="14" fill={figureInk.ink} fontStyle="italic">{visual.xLabel}</text>
-   <text transform="translate(16 126) rotate(-90)" textAnchor="middle" fontSize="14" fill={figureInk.ink} fontStyle="italic">{visual.yLabel}</text>
+   <text x="219" y="264" textAnchor="middle" fontSize={fs(14)} fill={figureInk.ink} fontStyle="italic">{visual.xLabel}</text>
+   <text transform="translate(16 126) rotate(-90)" textAnchor="middle" fontSize={fs(14)} fill={figureInk.ink} fontStyle="italic">{visual.yLabel}</text>
    {visual.series.map((series,index)=><g key={series.label} fill="none" stroke={seriesInk[index]} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
     <polyline strokeDasharray={seriesDash[index]} points={series.points.map(p=>`${x(p.x)},${y(p.y)}`).join(' ')}/>
     {series.points.map((p,i)=><circle key={i} cx={x(p.x)} cy={y(p.y)} r="2.8" fill="var(--fig-paper-dot, #fffdf8)" strokeWidth="1.6"/>)}

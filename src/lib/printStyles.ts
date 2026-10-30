@@ -155,6 +155,19 @@ export const printStyles = `${printCoverFontStyles}\n${printBodyFontStyles}\n${p
   [data-print-content] .crivo-chart { display: block; width: 120mm; max-width: 100%; height: auto; margin: 0 auto; }
   [data-print-content] .crivo-chart__legend { display: flex !important; flex-wrap: wrap; justify-content: center; gap: 1mm 5mm; list-style: none; padding: 0 !important; margin: 1mm 0 0 !important; font-size: 8.5pt; }
   [data-print-content] .crivo-chart__legend li { display: inline-flex !important; align-items: center; gap: 1.5mm; }
+  [data-print-content] .crivo-punnett { display: grid !important; justify-items: center; gap: 2mm; }
+  [data-print-content] .crivo-punnett table { border-collapse: collapse; font: 12pt/1.2 Georgia, serif; }
+  [data-print-content] .crivo-punnett th, [data-print-content] .crivo-punnett td { border: .8pt solid #29251f !important; min-width: 15mm; height: 11mm; text-align: center; padding: 1mm 2.5mm !important; }
+  [data-print-content] .crivo-punnett thead th, [data-print-content] .crivo-punnett tbody th { font-style: italic; color: #476e82 !important; }
+  [data-print-content] .crivo-punnett__corner { position: relative; }
+  [data-print-content] .crivo-punnett__corner span { position: absolute; font-size: 8pt; color: #74695d !important; }
+  [data-print-content] .crivo-punnett__corner span:first-child { top: .8mm; right: 1.2mm; }
+  [data-print-content] .crivo-punnett__corner span:last-child { bottom: .8mm; left: 1.2mm; }
+  [data-print-content] .crivo-punnett__ratio { margin: 0 !important; font-size: 9.5pt; text-align: center; }
+  [data-print-content] .crivo-cycle { position: relative; width: 105mm; aspect-ratio: 1; margin: 0 auto; break-inside: avoid !important; }
+  [data-print-content] .crivo-cycle__ring { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  [data-print-content] .crivo-cycle__step { position: absolute; transform: translate(-50%, -50%); width: 30%; padding: 1.2mm 1.5mm !important; border: .5pt solid #c9b58e !important; border-radius: 1.5mm; background: #fffdf8 !important; font-size: 8.5pt; line-height: 1.25; text-align: center; }
+  [data-print-content] .crivo-cycle__center { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 34%; text-align: center; font: italic 10pt/1.3 Georgia, serif; color: #476e82 !important; }
   [data-print-content] .crivo-figure svg text { font-family: Georgia, 'Liberation Serif', serif; }
   [data-print-content] [data-study-visual] figcaption { break-after: avoid !important; }
   [data-print-content] [data-study-molecule] { break-inside: avoid !important; }
