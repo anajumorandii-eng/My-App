@@ -20,11 +20,13 @@ import { normalizeReviewOptions, reviewBoards, reviewBoard, reviewBoardLabels, r
 import { reviewErrorHistory } from '../lib/reviewPersonalization';
 import { renderStudyReference, type StudyPacket } from '../lib/studySources';
 import { getLiteraryWorks } from '../lib/literaryCatalog';
-import type { LiteraryWork } from '../types/literaryWorks';
+import { reviewWorkOptions, groupWorksByBoard, type ReviewWorkOption } from '../lib/reviewWorks';
 import { BEFORE_ASSET_RELOAD } from '../lib/assetRecovery';
 import { readReviewReloadSelection, saveReviewReloadSelection, clearReviewReloadSelection } from '../lib/reviewReloadRecovery';
 import type { StrategyGuide } from '../lib/strategyGuides';
 const ReviewPdf = lazy(() => import('../components/DeepeningPdf').then(module => ({ default: module.DeepeningPdf })));
+
+const WORKS_OPTION = '__obras__';
 
 export default function ReviewSummaries() {
   const { user } = useAuth();
@@ -45,13 +47,17 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
   const { targets } = useStudyTargets();
   const banks = [...new Set([...reviewBoards, ...targets.map(item => reviewBoard(item.board)), ...options.boards])].filter(Boolean);
   const history = useErrorReviewHistory();
-  const [works, setWorks] = useState<LiteraryWork[]>([]);
-  const [workProblem, setWorkProblem] = useState('');
+  // O catálogo local aparece na hora; o do Firestore o substitui se responder
+  // com obras. Sem login a consulta não falha, fica pendente para sempre, e
+  // esperar por ela deixava o seletor de obras vazio.
+  const [works, setWorks] = useState<ReviewWorkOption[]>(() => reviewWorkOptions());
+  // Referência, não estado: marcar a consulta com estado reexecutava o efeito,
+  // e a limpeza descartava a resposta do Firestore antes de ela chegar.
+  const catalogRequested = useRef(false);
   useEffect(() => {
-    if (options.sourceMode !== 'work' || works.length) return;
-    let active = true;
-    getLiteraryWorks().then(value => { if (active) { setWorks(value); if (!value.length) setWorkProblem('O catálogo de obras está vazio. Você pode usar um trecho informado.'); } }).catch(() => { if (active) setWorkProblem('Não foi possível carregar as obras. Você pode usar um trecho informado.'); });
-    return () => { active = false; };
+    if (options.sourceMode !== 'work' || catalogRequested.current) return;
+    catalogRequested.current = true;
+    getLiteraryWorks().then(value => { if (mounted.current && value.length) setWorks(reviewWorkOptions(value)); }).catch(() => {});
   }, [options.sourceMode]);
   const { guides, persist, remove, loading, error, reload, saveMessage, setSaveMessage } = useStrategyGuides(uid);
   const [configurationOpen, setConfigurationOpen] = useState(recoveredSelection?.configurationOpen ?? true);
@@ -69,6 +75,13 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
   const busy = useRef(false), mounted = useRef(true);
   useEffect(() => { mounted.current = true; return () => { mounted.current = false; }; }, []);
   const selectedWork = works.find(work => `obra:${work.slug}` === topicId);
+  // Obras entram na mesma lista das matérias: escondidas em "Origem e tipo de
+  // material", ninguém achava que a revisão aceitava obra literária.
+  const changeSource = (mode: ReviewOptions['sourceMode']) => {
+    setAdditional([]); setChapter('');
+    edit({ sourceMode: mode, useHistory: false, materialKind: mode === 'work' ? 'literature' : options.materialKind === 'literature' && options.sourceMode === 'work' ? 'disciplinary' : options.materialKind });
+    if (mode === 'work') setSubject('Literatura'); else if (topicId.startsWith('obra:')) setTopicId('');
+  };
   const topic = options.sourceMode === 'work' ? (selectedWork ? { id: topicId, name: selectedWork.title, subject: 'Literatura', prerequisites: [] } : undefined) : topics.find(item => item.id === topicId);
   const extras = options.sourceMode === 'catalog' ? readAdditionalSelections(JSON.stringify(additional), topics, topic?.id ?? '').flatMap(item => {
     const selected = topics.find(value => value.id === item.topicId);
@@ -172,9 +185,11 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
       <h3 className="font-semibold">Conteúdo</h3>
       <fieldset disabled={working} className="grid gap-3 sm:grid-cols-2">
         <legend className="sr-only">Conteúdo da revisão</legend>
-        {options.sourceMode !== 'work' && <label className="text-sm">Matéria do resumo<select className="field block w-full" value={subject} onChange={event => {
+        <label className="text-sm">Matéria do resumo<select className="field block w-full" value={options.sourceMode === 'work' ? WORKS_OPTION : subject} onChange={event => {
+          if (event.target.value === WORKS_OPTION) { setTopicId(''); changeSource('work'); return; }
+          if (options.sourceMode === 'work') changeSource('catalog');
           setOpenedKey(''); setAdditional([]); setSubject(event.target.value); setTopicId(mockTopics.find(item => studyAreaForTopic(item) === event.target.value)?.id ?? ''); setChapter('');
-        }}>{studyProtocols.map(item => <option key={item.subject}>{item.subject}</option>)}</select></label>}
+        }}>{studyProtocols.map(item => <option key={item.subject}>{item.subject}</option>)}<option value={WORKS_OPTION}>Obras literárias (Fuvest e Unicamp)</option></select></label>
         {options.sourceMode === 'catalog' && <>
           <label className="text-sm">Tópico do resumo<select className="field block w-full" value={topic?.id ?? ''} onChange={event => { setOpenedKey(''); setTopicId(event.target.value); setChapter(''); setAdditional(previous => previous.filter(item => item.topicId !== event.target.value)); }}>
             <option value="">Selecione um tópico</option>{topics.map(item => <option key={item.id} value={item.id}>{item.name}</option>)}
@@ -182,8 +197,8 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
           <div className="sm:col-span-2">{topic && <SubtopicSelector topic={topic} value={options.topicCuts?.[topic.id]??(chapter?[chapter]:[])} onChange={cuts=>setCuts(topic.id,cuts)} disabled={working}/>}</div>
         </>}
         {options.sourceMode === 'work' && <label className="text-sm">Obra<select className="field block w-full" value={topicId} onChange={event => { setOpenedKey(''); setTopicId(event.target.value); }}>
-          <option value="">Escolha a obra</option>{works.map(work => <option key={work.id} value={`obra:${work.slug}`}>{work.title} — {work.author}</option>)}
-        </select>{workProblem && <span role="status">{workProblem}</span>}</label>}
+          <option value="">Escolha a obra</option>{groupWorksByBoard(works).map(group => <optgroup key={group.label} label={group.label}>{group.works.map(work => <option key={`${group.label}-${work.slug}`} value={`obra:${work.slug}`}>{work.title} — {work.author}</option>)}</optgroup>)}
+        </select></label>}
         {options.sourceMode === 'provided' && <>
           <label className="text-sm">Título do material<input className="field block w-full" maxLength={300} value={options.sourceTitle} onChange={event => edit({ sourceTitle: event.target.value })} /></label>
           <label className="text-sm">Data da fonte (opcional)<input type="date" className="field block w-full" value={options.sourceDate} onChange={event => edit({ sourceDate: event.target.value })} /></label>
@@ -213,7 +228,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
         {scopedErrors ? <label className="flex gap-2 text-sm"><input type="checkbox" checked={options.useHistory} onChange={event => edit({ useHistory: event.target.checked })} />Usar meus erros registrados {combined ? 'nos tópicos selecionados' : 'neste tópico'} para direcionar a revisão</label> : <p className="text-xs text-[var(--dim)]">{history.loading ? 'Carregando histórico de erros…' : history.warning || 'Sem histórico de erros disponível para este recorte. A revisão será gerada normalmente.'}</p>}
       </fieldset>
       </details>
-      <details className="border-t border-[var(--line)] pt-3"><summary className="cursor-pointer py-2 text-sm font-semibold">Origem e tipo de material</summary><fieldset disabled={working} className="grid gap-3 pt-3 sm:grid-cols-2">        <label className="text-sm">Material de origem<select className="field block w-full" value={options.sourceMode} onChange={event => { setAdditional([]); setChapter(''); edit({ sourceMode: event.target.value as ReviewOptions['sourceMode'], useHistory: false, ...(event.target.value === 'work' ? { materialKind: 'literature' as const } : {}) }); if (event.target.value === 'work') { setSubject('Literatura'); setChapter(''); } else if (topicId.startsWith('obra:')) setTopicId(''); }}>
+      <details className="border-t border-[var(--line)] pt-3"><summary className="cursor-pointer py-2 text-sm font-semibold">Origem e tipo de material</summary><fieldset disabled={working} className="grid gap-3 pt-3 sm:grid-cols-2">        <label className="text-sm">Material de origem<select className="field block w-full" value={options.sourceMode} onChange={event => changeSource(event.target.value as ReviewOptions['sourceMode'])}>
           <option value="catalog">Conteúdo do Crivo</option><option value="provided">Texto ou extração informada</option><option value="work">Obra da biblioteca</option>
         </select></label>
         <label className="text-sm">Tipo de material<select className="field block w-full" value={options.materialKind} onChange={event => edit({ materialKind: event.target.value as ReviewOptions['materialKind'] })} disabled={options.sourceMode === 'work'}>

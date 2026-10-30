@@ -142,6 +142,19 @@ it('obra da biblioteca aceita outra banca e encaminha o tipo literário sem foco
   await waitFor(()=>expect(mocks.generate).toHaveBeenCalledWith('review-tip',expect.objectContaining({subject:'Literatura',topic:'Memórias póstumas de Brás Cubas',targetBoards:['UNESP'],reviewOptions:expect.objectContaining({materialKind:'literature',sourceMode:'work',scopes:{UNESP:'second'}})}),expect.any(Function)));
 });
 
+it('obras literárias aparecem na lista de matérias e geram revisão literária', async()=>{
+  mount();
+  fireEvent.change(screen.getByLabelText('Matéria do resumo'),{target:{value:'__obras__'}});
+  expect(screen.getByLabelText('Material de origem')).toHaveValue('work');
+  await screen.findByRole('option',{name:'Memórias póstumas de Brás Cubas — Machado de Assis'});
+  fireEvent.change(screen.getByLabelText('Obra'),{target:{value:'obra:bras-cubas'}});
+  fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
+  await waitFor(()=>expect(mocks.generate).toHaveBeenCalledWith('review-tip',expect.objectContaining({subject:'Literatura',topic:'Memórias póstumas de Brás Cubas',reviewOptions:expect.objectContaining({materialKind:'literature',sourceMode:'work'})}),expect.any(Function)));
+  fireEvent.change(screen.getByLabelText('Matéria do resumo'),{target:{value:'Biologia'}});
+  expect(screen.getByLabelText('Material de origem')).toHaveValue('catalog');
+  expect(screen.getByLabelText('Tipo de material')).toHaveValue('disciplinary');
+});
+
 it('mantém as escolhas e explica a retomada após atualizar os arquivos do aplicativo',async()=>{
  const view=mount();
  fireEvent.change(screen.getByLabelText('Material de origem'),{target:{value:'provided'}});
@@ -273,4 +286,12 @@ it('salva e restaura a preferência por revisão sem figuras',async()=>{
  const open=screen.getByRole('button',{name:/Aritmética e Proporcionalidade/,pressed:false});fireEvent.click(open);
  fireEvent.click(screen.getByRole('button',{name:'Editar configurações desta revisão'}));
  expect(screen.getByRole('checkbox',{name:/Incluir figuras quando ajudarem/})).not.toBeChecked();
+});
+
+it('texto informado mantém a escolha de matéria', () => {
+  mount();
+  fireEvent.change(screen.getByLabelText('Material de origem'),{target:{value:'provided'}});
+  fireEvent.change(screen.getByLabelText('Matéria do resumo'),{target:{value:'Biologia'}});
+  expect(screen.getByLabelText('Matéria do resumo')).toHaveValue('Biologia');
+  expect(screen.getByLabelText('Material de origem')).toHaveValue('provided');
 });

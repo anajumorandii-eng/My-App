@@ -94,3 +94,30 @@ test('figuras automáticas orientam estruturas e gráficos; preferência somente
  assert.match(text,/PREFERÊNCIA DESTA REVISÃO: somente texto/);
  assert.throws(()=>validateAiPayload('review-tip',{...base,reviewOptions:{visualMode:'unknown'}}));
 });
+test('obra literária segue o método da tutora de obras: seções próprias e protocolo por banca', () => {
+  const work = { topic: 'Memórias Póstumas de Brás Cubas', subject: 'Literatura', chapter: undefined };
+  const fuvest = prompt(['FUVEST'], { materialKind: 'literature', sourceMode: 'work' }, work);
+  for (const required of ['Pergunta central da obra', 'Como a forma produz sentido', 'Treino com trecho', 'Evidência da obra', 'Síntese do CRIVO', 'F.O.R.M.A.', 'não substitui a leitura integral']) assert.ok(fuvest.includes(required), required);
+  assert.doesNotMatch(fuvest, /F\.O\.N\.T\.E\.|Comvest|UNICAMP/);
+  assert.doesNotMatch(fuvest, /Entenda o mecanismo \(porquê/);
+  const unicamp = prompt(['UNICAMP'], { materialKind: 'literature', sourceMode: 'work' }, work);
+  assert.match(unicamp, /F\.O\.N\.T\.E\./);
+  assert.doesNotMatch(unicamp, /F\.O\.R\.M\.A\.|FUVEST|Fuvest/);
+  const geral = prompt([], { materialKind: 'literature', sourceMode: 'work' }, work);
+  assert.match(geral, /F\.O\.R\.M\.A\./); assert.match(geral, /F\.O\.N\.T\.E\./);
+  const outra = prompt(['UNESP'], { materialKind: 'literature', sourceMode: 'work' }, work);
+  assert.doesNotMatch(outra, /F\.O\.R\.M\.A\.|F\.O\.N\.T\.E\./, 'outra banca selecionada não recebe protocolo de Fuvest/Unicamp');
+});
+test('conteúdo disciplinar não recebe as seções de obra', () => {
+  assert.doesNotMatch(prompt(['FUVEST']), /Pergunta central da obra|Treino com trecho|protocolo F\.O\.R\.M\.A\./);
+});
+test('obra literária respeita a etapa escolhida', () => {
+  const work = { topic: 'A Paixão Segundo G.H.', subject: 'Literatura', chapter: undefined };
+  const first = prompt(['FUVEST'], { materialKind: 'literature', sourceMode: 'work', scopes: { FUVEST: 'first' } }, work);
+  assert.match(first, /FUVEST 1ª fase/);
+  assert.doesNotMatch(first, /F\.O\.R\.M\.A\.|FUVEST 2ª fase|Diferencie 1ª e 2ª fase/);
+  const second = prompt(['FUVEST'], { materialKind: 'literature', sourceMode: 'work', scopes: { FUVEST: 'second' } }, work);
+  assert.match(second, /F\.O\.R\.M\.A\./); assert.doesNotMatch(second, /FUVEST 1ª fase/);
+  const enem = prompt(['ENEM'], { materialKind: 'literature', sourceMode: 'work' }, work);
+  assert.doesNotMatch(enem, /uma discursiva de 2ª fase|Diferencie 1ª e 2ª fase/);
+});
