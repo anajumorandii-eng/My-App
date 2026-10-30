@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { UNSAFE_LocationContext } from 'react-router-dom';
 import { useAmbienteDaTela } from './visual-boards/ambiente';
 import { ambienteDaMateria } from '../lib/visualAmbiente';
@@ -41,6 +41,7 @@ import { mockTopics } from '../data/mockData';
 import { ALL, buildTopicHierarchy, filterByHierarchy } from '../lib/topicHierarchy';
 import { canonicalExamBoard, matchesExamFilters } from '../lib/questionExamFilters';
 import { matchesQuestionSearch } from '../lib/questionSearch';
+import { questionExamIdentity } from '../lib/questionExamIdentity';
 
 function Metric({
   label,
@@ -75,13 +76,13 @@ function Metric({
 
 function examSourceLabel(source: Question['examSource'] | string | undefined, styleOf?: string) {
   if (!source) return styleOf ? `Autoral · estilo ${styleOf}` : 'Banco de Questões';
-  return typeof source === 'string' ? source : `${source.board}${source.year ? ` ${source.year}` : ' · reprodução em apostila'}${source.phase ? ` · ${source.phase}` : ''}${source.questionNumber ? ` · questão ${source.questionNumber}` : ''}`;
+  return typeof source === 'string' ? source : `${source.board}${source.year ? ` ${source.year}` : ' · reprodução em apostila'}${source.phase ? ` · ${source.phase}` : ''}${source.version ? ` · ${source.version}` : ''}${source.questionNumber ? ` · questão ${source.questionNumber}` : ''}`;
 }
 
 export default function Questoes() {
   const { user } = useAuth();
   const { mastery, updateMastery, isPersisted, syncError } = useUserMastery();
-  const { questions: mockQuestions, loading: questionsLoading, syncError: questionsSyncError } = useQuestions();
+  const { questions: mockQuestions, loading: questionsLoading, syncError: questionsSyncError } = useQuestions(true);
   const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], [mockQuestions]);
   const localLocation = useContext(UNSAFE_LocationContext);
   const requestScope = new URLSearchParams(localLocation?.location.search ?? window.location.search);
@@ -111,6 +112,16 @@ export default function Questoes() {
   const [history, setHistory] = useState<{ questionId: string; correct: boolean }[]>([]);
   const [deepExplanation, setDeepExplanation] = useState<string | null>(null);
   const [loadingDeepExplanation, setLoadingDeepExplanation] = useState(false);
+  const [deepExplanationError, setDeepExplanationError] = useState<string | null>(null);
+  const explanationRequest = useRef(0);
+  const diagnosisRequest = useRef(0);
+  const invalidateQuestionAi = () => {
+    explanationRequest.current++;
+    diagnosisRequest.current++;
+    setDeepExplanation(null);
+    setDeepExplanationError(null);
+    setLoadingDeepExplanation(false);
+  };
   const [diagnosis, setDiagnosis] = useState<ErrorDiagnosis | null>(null);
   const [diagnosing, setDiagnosing] = useState(false);
   const [diagnosisFailed, setDiagnosisFailed] = useState(false);
@@ -176,6 +187,11 @@ export default function Questoes() {
   );
 
   const question = pool.length > 0 ? pool[index % pool.length] : null;
+  useEffect(() => {
+    invalidateQuestionAi();
+    setSelectedOptionId(null);
+    resetDiagnosisState();
+  }, [question?.id]);
   const answered = selectedOptionId !== null;
   const isCorrect = answered && question !== null && selectedOptionId === question.correctOptionId;
   const correctCount = history.filter((h) => h.correct).length;
@@ -190,6 +206,7 @@ export default function Questoes() {
   };
 
   const resetQuestionState = () => {
+    invalidateQuestionAi();
     setIndex(0);
     setSelectedOptionId(null);
     setDeepExplanation(null);
@@ -251,7 +268,7 @@ export default function Questoes() {
   };
 
   const selectOption = (optionId: string) => {
-    if (answered || !question) return;
+    if (answered || !question || question.status === 'annulled') return;
     const correct = optionId === question.correctOptionId;
     setSelectedOptionId(optionId);
     setHistory((h) => [...h, { questionId: question.id, correct }]);
@@ -293,6 +310,7 @@ export default function Questoes() {
   };
 
   const nextQuestion = () => {
+    invalidateQuestionAi();
     setIndex((i) => (i + 1) % pool.length);
     setSelectedOptionId(null);
     setDeepExplanation(null);
@@ -302,6 +320,7 @@ export default function Questoes() {
   };
 
   const resetSession = () => {
+    invalidateQuestionAi();
     setIndex(0);
     setSelectedOptionId(null);
     setHistory([]);
@@ -313,13 +332,16 @@ export default function Questoes() {
 
   const fetchDiagnosis = async (optionId: string, account?: string) => {
     if (!question) return;
-    if (question.originalPages?.length) return; // Text-only endpoint cannot inspect the original page.
-    setDiagnosing(true);
+    if (question.originalPages?.length && !question.statementComplete) return;
+    const requestNumber = ++diagnosisRequest.current;
     resetDiagnosisState();
+    setDiagnosing(true);
     try {
       const selectedOption = question.options.find((o) => o.id === optionId);
       const correctOption = question.options.find((o) => o.id === question.correctOptionId);
       const data = await requestAiText('error-diagnosis', {
+        questionId: question.id,
+        selectedOptionId: optionId,
         prompt: question.prompt,
         subject: question.subject,
         selectedAnswer: selectedOption?.text ?? '',
@@ -327,6 +349,7 @@ export default function Questoes() {
         baseExplanation: question.explanation,
         ...(account?.trim() ? { studentAccount: account.trim() } : {}),
       });
+      if (diagnosisRequest.current !== requestNumber) return;
       const parsed = parseErrorDiagnosis(data.text);
       if (parsed) {
         setDiagnosis(parsed);
@@ -339,9 +362,9 @@ export default function Questoes() {
       }
     } catch (error) {
       console.error('Failed to diagnose error:', error);
-      setDiagnosisFailed(true);
+      if (diagnosisRequest.current === requestNumber) setDiagnosisFailed(true);
     } finally {
-      setDiagnosing(false);
+      if (diagnosisRequest.current === requestNumber) setDiagnosing(false);
     }
   };
 
@@ -409,13 +432,17 @@ export default function Questoes() {
 
   const fetchDeepExplanation = async () => {
     if (!selectedOptionId || !question) return;
-    if (question.originalPages?.length) return;
+    if (question.originalPages?.length && !question.statementComplete) return;
+    const requestNumber = ++explanationRequest.current;
+    setDeepExplanationError(null);
     setLoadingDeepExplanation(true);
     try {
       const selectedOption = question.options.find((o) => o.id === selectedOptionId);
       const correctOption = question.options.find((o) => o.id === question.correctOptionId);
       let acumulado = '';
       const data = await requestAiTextStream('question-explanation', {
+        questionId: question.id,
+        selectedOptionId,
         board: question.examSource?.board,
         topic: mockTopics.find((topic) => topic.id === question.topicId)?.name,
         chapter: question.chapter,
@@ -426,14 +453,16 @@ export default function Questoes() {
         isCorrect,
         baseExplanation: question.explanation,
       }, (delta) => {
+        if (explanationRequest.current !== requestNumber) return;
         acumulado += delta;
         setDeepExplanation(acumulado);
       });
-      setDeepExplanation(data.text);
+      if (explanationRequest.current === requestNumber) setDeepExplanation(data.text);
     } catch (error) {
       console.error('Failed to fetch deep explanation:', error);
+      if (explanationRequest.current === requestNumber) setDeepExplanationError(error instanceof Error ? error.message : 'Não foi possível gerar o comentário. Tente novamente.');
     } finally {
-      setLoadingDeepExplanation(false);
+      if (explanationRequest.current === requestNumber) setLoadingDeepExplanation(false);
     }
   };
 
@@ -472,7 +501,7 @@ export default function Questoes() {
             </span>
           </>
         )}
-        <i /> <b>{examSourceLabel(question?.examSource, question?.styleOf)}</b>
+        <i /> <b>{examSourceLabel(questionExamIdentity(question), question?.styleOf)}</b>
       </div>
 
       {/* Main Title */}
@@ -616,7 +645,7 @@ export default function Questoes() {
           <Panel subject={question.subject} interactive className="ni-panel ni-workspace">
             <div className="flex items-center justify-between gap-4">
               <span className="ni-kicker">
-                Questão {index + 1} de {pool.length} {question.examSource || question.styleOf ? `· ${examSourceLabel(question.examSource, question.styleOf)}` : ''}
+                Questão {index + 1} de {pool.length} {question.examSource || question.styleOf ? `· ${examSourceLabel(questionExamIdentity(question), question.styleOf)}` : ''}
               </span>
               <span className="text-[10px] font-mono text-[var(--dim)]">
                 Acertos: <b className="text-[var(--text)]">{correctCount}</b> / {history.length}
@@ -645,7 +674,7 @@ export default function Questoes() {
                 return (
                   <button
                     key={option.id}
-                    disabled={answered}
+                    disabled={answered || question.status === 'annulled'}
                     onClick={() => selectOption(option.id)}
                     style={styleExtra}
                     className="transition-colors hover:border-[var(--primary)] text-xs"
@@ -659,7 +688,11 @@ export default function Questoes() {
               })}
             </div>
 
-            {answered && (
+            {question.status === 'annulled' && <div className="mt-6 space-y-3" role="status">
+              <p>Questão anulada no gabarito definitivo. Disponível para consulta, sem correção ou efeito no progresso.</p>
+              <Button subject={question.subject} onClick={nextQuestion}>Próxima questão</Button>
+            </div>}
+            {answered && question.status !== 'annulled' && (
               <div className="mt-6 flex flex-col gap-4">
                 <Button
                   subject={question.subject}
@@ -673,8 +706,8 @@ export default function Questoes() {
                 {/* Explanation & Diagnosis */}
                 <div className="p-4 rounded-xl border border-[var(--line)] bg-[var(--surface2)]/40 text-left space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="ni-kicker" style={{ margin: 0 }}>Por que a alternativa correta está certa</span>
-                    {!question.originalPages?.length && (
+                    <span className="ni-kicker" style={{ margin: 0 }}>{question.explanationSource === 'answer-key' ? 'Gabarito — solicite a resolução por etapas' : 'Por que a alternativa correta está certa'}</span>
+                    {(!question.originalPages?.length || question.statementComplete) && (
                       <button onClick={fetchDeepExplanation} disabled={loadingDeepExplanation} className="ni-link text-xs disabled:opacity-50">
                         <Sparkles className="w-3.5 h-3.5 inline mr-1" />
                         {loadingDeepExplanation ? 'Analisando...' : 'Resolução por etapas'}
@@ -686,6 +719,7 @@ export default function Questoes() {
                   {question.examSource?.sourceUrl && <a href={question.examSource.sourceUrl} target="_blank" rel="noreferrer" className="ni-link text-xs">{question.examSource.answerKeyUrl ? 'Conferir prova original' : 'Conferir fonte e gabarito'}</a>}
                   {question.examSource?.answerKeyUrl && <a href={question.examSource.answerKeyUrl} target="_blank" rel="noreferrer" className="ni-link text-xs ml-3">Conferir gabarito oficial</a>}
 
+                  {deepExplanationError && <p role="alert" className="text-xs text-status-error">{deepExplanationError}</p>}
                   {deepExplanation && (
                     <div className="mt-3 p-3 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs">
                       <AiText text={deepExplanation} />

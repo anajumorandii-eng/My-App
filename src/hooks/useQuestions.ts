@@ -9,7 +9,7 @@ export interface UseQuestionsResult {
 }
 
 /** Fontes complementares; uma edição remota substitui apenas o mesmo ID. */
-export function useQuestions(): UseQuestionsResult {
+export function useQuestions(includeAnnulled = false): UseQuestionsResult {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [loading, setLoading] = useState(true);
   const [syncError, setSyncError] = useState<string | null>(null);
@@ -23,19 +23,19 @@ export function useQuestions(): UseQuestionsResult {
       if (cancelled) return;
       const merged = new Map(local.map(q => [q.id, q]));
       remote.forEach(q => merged.set(q.id, { ...merged.get(q.id), ...q }));
-      setQuestions([...merged.values()]);
+      setQuestions([...merged.values()].filter(q => includeAnnulled || q.status !== 'annulled'));
       setLoading(merged.size === 0 && settled < 2);
       setSyncError(failures.size === 2 ? 'Não foi possível carregar o banco de questões.'
         : failures.has('remote') ? 'Não foi possível atualizar o banco compartilhado. Mostrando o banco local.'
         : failures.has('local') ? 'Não foi possível carregar o banco local. Mostrando o banco compartilhado.' : null);
     };
-    getLocalQuestionBank().then(data => { local = data; })
+    getLocalQuestionBank(includeAnnulled).then(data => { local = data; })
       .catch(() => { failures.add('local'); })
       .finally(() => { settled++; publish(); });
     getQuestions().then(data => { remote = data; })
       .catch(() => { failures.add('remote'); })
       .finally(() => { settled++; publish(); });
     return () => { cancelled = true; };
-  }, []);
+  }, [includeAnnulled]);
   return { questions, loading, syncError };
 }

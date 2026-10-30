@@ -194,6 +194,10 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         'Você é o CRIVO, um tutor especialista em vestibular de Medicina.',
         `Um aluno respondeu a seguinte questão de ${text(payload, 'subject')}:`,
         examContext(payload),
+        payload.examIdentity ? `Identidade conferida no banco: ${text(payload, 'examIdentity')}` : '',
+        payload.hasQuestionFigures
+          ? 'As imagens anexas pertencem à questão. Leia gráficos, tabelas, fórmulas e alternativas visuais antes de comentar. Se algum elemento estiver ilegível, explicite a limitação; não invente dados nem troque o gabarito de caderno.'
+          : 'Use o enunciado e as alternativas fornecidos, sem presumir imagens ou dados ausentes.',
         `"${text(payload, 'prompt')}"`,
         '',
         `Resposta correta: ${text(payload, 'correctAnswer')}`,

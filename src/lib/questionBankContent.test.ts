@@ -19,12 +19,13 @@ test('the published question bank has unique and answerable entries', async () =
   const questions = await loadQuestions();
   const ids = questions.map((question) => question.id);
 
-  assert.equal(questions.length, 4_127);
+  assert.equal(questions.length, 5_553);
   assert.equal(new Set(ids).size, ids.length);
 
   for (const question of questions) {
     assert.ok(question.prompt.trim(), `${question.id} has no prompt`);
     assert.ok(question.options.length >= 2, `${question.id} has too few options`);
+    if (question.status === 'annulled') { assert.equal(question.correctOptionId, ''); continue; }
     assert.ok(
       question.options.some((option) => option.id === question.correctOptionId),
       `${question.id} has an invalid correct option`,

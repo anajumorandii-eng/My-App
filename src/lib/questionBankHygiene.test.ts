@@ -34,6 +34,7 @@ test('nenhuma questão traz escape de markdown cru', () => {
 
 test('todo gabarito aponta para uma alternativa que existe', () => {
   for (const q of questions) {
+    if (q.status === 'annulled') { assert.equal(q.correctOptionId, ''); continue; }
     const ids = q.options.map((o) => o.id);
     assert.ok(ids.includes(q.correctOptionId), `${q.id} aponta gabarito "${q.correctOptionId}", opções: ${ids.join(',')}`);
     assert.equal(new Set(ids).size, ids.length, `${q.id} tem alternativa com id repetido`);

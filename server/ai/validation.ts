@@ -177,6 +177,8 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
     }
     case 'error-diagnosis':
       return {
+        questionId: optionalString(payload, 'questionId'),
+        selectedOptionId: optionalString(payload, 'selectedOptionId', 10),
         prompt: requiredString(payload, 'prompt', MAX_LONG_TEXT),
         subject: requiredString(payload, 'subject'),
         selectedAnswer: requiredString(payload, 'selectedAnswer', MAX_LONG_TEXT),
@@ -189,6 +191,8 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
       };
     case 'question-explanation':
       return {
+        questionId: optionalString(payload, 'questionId'),
+        selectedOptionId: optionalString(payload, 'selectedOptionId', 10),
         board: optionalString(payload, 'board', MAX_SHORT_TEXT),
         topic: optionalString(payload, 'topic', MAX_SHORT_TEXT),
         chapter: optionalString(payload, 'chapter', MAX_SHORT_TEXT),

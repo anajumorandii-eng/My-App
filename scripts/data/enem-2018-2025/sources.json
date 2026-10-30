@@ -1,0 +1,2546 @@
+[
+  {
+    "year": 2018,
+    "number": 6,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2018/questions/6",
+    "raw": {
+      "title": "Questão 6 - ENEM 2018",
+      "index": 6,
+      "discipline": "linguagens",
+      "language": null,
+      "year": 2018,
+      "context": "“A Declaração Universal dos Direitos Humanos está completando 70 anos em tempos de desafios crescentes, quando o ódio, a discriminação e a violência permanecem vivos”, disse a diretora-geral da Organização das Nações Unidas para a Educação, a Ciência e a Cultura (Unesco), Audrey Azoulay.  \n“Ao final da Segunda Guerra Mundial, a humanidade inteira resolveu promover a dignidade humana em todos os lugares e para sempre. Nesse espírito, as Nações Unidas adotaram a Declaração Universal dos Direitos Humanos como um padrão comum de conquistas para todos os povos e todas as nações”, disse Audrey.  \n“Centenas de milhões de mulheres e homens são destituídos e privados de condições básicas de subsistência e de oportunidades. Movimentos populacionais forçados geram violações aos direitos em uma escala sem precedentes. A Agenda 2030 para o Desenvolvimento Sustentável promete não deixar ninguém para trás – e os direitos humanos devem ser o alicerce para todo o progresso.”  \nSegundo ela, esse processo precisa começar o quanto antes nas carteiras das escolas. Diante disso, a Unesco lidera a educação em direitos humanos para  \nassegurar que todas as meninas e meninos saibam seus direitos e os direitos dos outros.\n\nDisponível em: https://nacoesunidas.org. Acesso em: 3 abr. 2018 (adaptado).",
+      "files": [],
+      "correctAlternative": "C",
+      "alternativesIntroduction": "Defendendo a ideia de que “os direitos humanos devem ser o alicerce para todo o progresso”, a diretora-geral da Unesco aponta, como estratégia para atingir esse fim, a",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Inclusão de todos na Agenda 2030.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Extinção da intolerância entre os indivíduos.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Discussão desse tema desde a educação básica.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "D",
+          "text": "Conquista de direitos para todos os povos e nações.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Promoção da dignidade humana em todos os lugares.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2018,
+    "number": 8,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2018/questions/8",
+    "raw": {
+      "title": "Questão 8 - ENEM 2018",
+      "index": 8,
+      "discipline": "linguagens",
+      "language": null,
+      "year": 2018,
+      "context": "— Famigerado? \\[…\\]  \n— Famigerado é “inóxio”, é “célebre”, “notório”, “notável”…  \n— Vosmecê mal não veja em minha grossaria no não entender. Mais me diga: é desaforado? É caçoável? É de arrenegar? Farsância? Nome de ofensa?  \n— Vilta nenhuma, nenhum doesto. São expressões neutras, de outros usos…  \n— Pois… e o que é que é, em fala de pobre, linguagem de em dia de semana?  \n— Famigerado? Bem. É: “importante”, que merece louvor, respeito…\n\nROSA, G. Famigerado. In: Primeiras estórias. Rio de Janeiro: Nova Fronteira, 2001.",
+      "files": [],
+      "correctAlternative": "C",
+      "alternativesIntroduction": "Nesse texto, a associação de vocábulos da língua portuguesa a determinados dias da semana remete ao",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Local de origem dos interlocutores.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Estado emocional dos interlocutores.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Grau de coloquialidade da comunicação.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "D",
+          "text": "Nível de intimidade entre os interlocutores.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Conhecimento compartilhado na comunicação.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2018,
+    "number": 46,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2018/questions/46",
+    "raw": {
+      "title": "Questão 46 - ENEM 2018",
+      "index": 46,
+      "discipline": "ciencias-humanas",
+      "language": null,
+      "year": 2018,
+      "context": "No Segundo Congresso internacional de Ciências Geográficas, em 1875, a que compareceram o presidente da República, o governador de Paris e o presidente da Assembleia, o discurso inaugural do almirante La Roucière-Le Noury expôs a atitude predominante no encontro: “Cavalheiros, a Providência nos ditou a obrigação de conhecer e conquistar a terra. Essa ordem suprema é um dos deveres imperiosos inscritos em nossas inteligências e nossas atividades. A geografia, essa ciência que inspira tão bela devoção e em cujo nome foram sacrificadas tantas vítimas, tornou-se a filosofia da terra”.\n\nSAID, E. **Cultura e política**. São Paulo: Cia. das Letras, 1995.",
+      "files": [],
+      "correctAlternative": "C",
+      "alternativesIntroduction": "No contexto histórico apresentado, a exaltação da ciência geográfica decorre do seu uso para o(a)",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Preservação cultural dos territórios ocupados.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Formação humanitária da sociedade europeia.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Catalogação de dados úteis aos propósitos colonialistas.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "D",
+          "text": "Desenvolvimento de técnicas matemáticas de construção de cartas.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Consolidação do conhecimento topográfico como campo acadêmico.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2018,
+    "number": 52,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2018/questions/52",
+    "raw": {
+      "title": "Questão 52 - ENEM 2018",
+      "index": 52,
+      "discipline": "ciencias-humanas",
+      "language": null,
+      "year": 2018,
+      "context": "Tudo aquilo que é válido para um tempo de guerra, em que todo homem é inimigo de todo homem, é válido também para o tempo durante o qual os homens vivem sem outra segurança senão a que lhes pode ser oferecida por sua própria força e invenção.\n\nHOBBES, T. **Leviatã.** São Paulo: Abril Cultural, 1983\n\nNão vamos concluir, com Hobbes que, por não ter nenhuma ideia de bondade, o homem seja naturalmente mau. Esse autor deveria dizer que, sendo o estado de natureza aquele em que o cuidado de nossa conservação é menos prejudicial à dos outros, esse estado era, por conseguinte, o mais próprio à paz e o mais conveniente  \nao gênero humano.\n\nROUSSEAU, J.-J. **Discurso sobre a origem e o fundamento da desigualdade entre os** **homens**. São Paulo: Martins Fontes, 1993 (adaptado).",
+      "files": [],
+      "correctAlternative": "D",
+      "alternativesIntroduction": "Os trechos apresentam divergências conceituais entre autores que sustentam um entendimento segundo o qual a igualdade entre os homens se dá em razão de uma",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Predisposição ao conhecimento.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Submissão ao transcendente.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Tradição epistemológica.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Condição original.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "E",
+          "text": "Vocação política.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2018,
+    "number": 94,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2018/questions/94",
+    "raw": {
+      "title": "Questão 94 - ENEM 2018",
+      "index": 94,
+      "discipline": "ciencias-natureza",
+      "language": null,
+      "year": 2018,
+      "context": "Anabolismo e catabolismo são processos celulares antagônicos, que são controlados principalmente pela ação hormonal. Por exemplo, no fígado a insulina atua como um hormônio com ação anabólica, enquanto o glucagon tem ação catabólica e ambos são secretados em resposta ao nível de glicose sanguínea.",
+      "files": [],
+      "correctAlternative": "E",
+      "alternativesIntroduction": "Em caso de um indivíduo com hipoglicemia, o hormônio citado que atua no catabolismo induzirá o organismo a",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Realizar a fermentação lática.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Metabolizar aerobicamente a glicose.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Produzir aminoácidos a partir de ácidos graxos.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Transformar ácidos graxos em glicogênio.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Estimular a utilização do glicogênio.",
+          "file": null,
+          "isCorrect": true
+        }
+      ]
+    }
+  },
+  {
+    "year": 2018,
+    "number": 98,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2018/questions/98",
+    "raw": {
+      "title": "Questão 98 - ENEM 2018",
+      "index": 98,
+      "discipline": "ciencias-natureza",
+      "language": null,
+      "year": 2018,
+      "context": "Corredores ecológicos visam mitigar os efeitos da fragmentação dos ecossistemas promovendo a ligação entre diferentes áreas, com o objetivo de proporcionar o deslocamento de animais, a dispersão de sementes e o aumento da cobertura vegetal. São instituídos com base em informações como estudos sobre o deslocamento de espécies, sua área de vida (área necessária para o suprimento de suas necessidades vitais e reprodutivas) e a distribuição de suas populações.\n\nDisponível em: www.mma.gov.br. Acesso em: 30 nov. 2017 (adaptado).",
+      "files": [],
+      "correctAlternative": "A",
+      "alternativesIntroduction": "Nessa estratégia, a recuperação da biodiversidade é efetiva porque",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Propicia o fluxo gênico.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "B",
+          "text": "Intensifica o manejo de espécies.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Amplia o processo de ocupação humana.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Aumenta o número de indivíduos nas populações.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Favorece a formação de ilhas de proteção integral.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2018,
+    "number": 141,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2018/questions/141",
+    "raw": {
+      "title": "Questão 141 - ENEM 2018",
+      "index": 141,
+      "discipline": "matematica",
+      "language": null,
+      "year": 2018,
+      "context": "A prefeitura de um pequeno município do interior decide colocar postes para  iluminação ao longo de uma estrada retilínea, que inicia em uma praça central e termina numa fazenda na zona rural. Como a praça já possui iluminação, o primeiro poste será colocado a 80 metros da praça, o segundo, a 100 metros, o terceiro, a 120 metros, e assim sucessivamente, mantendo-se sempre uma distância de vinte metros entre os postes, até que o último poste seja colocado a uma distância de 1 380 metros da praça.",
+      "files": [],
+      "correctAlternative": "C",
+      "alternativesIntroduction": "Se a prefeitura pode pagar, no máximo, R$ 8 000,00 por poste colocado, o maior valor que poderá gastar com a colocação desses postes é",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "R$512 000,00.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "R$520 000,00.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "R$528 000,00.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "D",
+          "text": "R$552 000,00.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "R$584 000,00.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2018,
+    "number": 143,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2018/questions/143",
+    "raw": {
+      "title": "Questão 143 - ENEM 2018",
+      "index": 143,
+      "discipline": "matematica",
+      "language": null,
+      "year": 2018,
+      "context": "Os tipos de prata normalmente vendidos são 975, 950 e 925. Essa classificação é feita de acordo com a sua pureza. Por exemplo, a prata 975 é a substância constituída de 975 partes de prata pura e 25 partes de cobre em 1 000 partes da substância. Já a prata 950 é constituída de 950 partes de prata pura e 50 de cobre em 1 000; e a prata 925 é constituída de 925 partes de prata pura e 75 partes de cobre em 1 000. Um ourives possui 10 gramas de prata 925 e deseja obter 40 gramas de prata 950 para produção de uma joia.",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "Nessas condições, quantos gramas de prata e de cobre, respectivamente, devem ser fundidos com os 10 gramas de prata 925?",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "29,25 e 0,75",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "28,75 e 1,25",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "28,50 e 1,50",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "27,75 e 2,25",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "25,00 e 5,00",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2019,
+    "number": 7,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2019/questions/7",
+    "raw": {
+      "title": "Questão 7 - ENEM 2019",
+      "index": 7,
+      "discipline": "linguagens",
+      "language": null,
+      "year": 2019,
+      "context": "Um amor desse  \nEra 24 horas lado a lado  \nUm radar na pele, aquele sentimento alucinado  \nCoração batia acelerado  \nBastava um olhar pra eu entender  \nQue era hora de me entregar pra você  \nPalavras não faziam falta mais  \nAh, só de lembrar do seu perfume  \nQue arrepio, que calafrio  \nQue o meu corpo sente  \nNem que eu queira, eu te apago da minha mente  \nAh, esse amor  \nDeixou marcas no meu corpo  \nAh, esse amor  \nSó de pensar, eu grito, eu quase morro\n\n**AZEVEDO, N.; LEÃO, W.; QUADROS, R.** _Coração pede socorro_.  \nRio de Janeiro: Som Livre, 2018 (fragmento).",
+      "files": [],
+      "correctAlternative": "C",
+      "alternativesIntroduction": "Essa letra de canção foi composta especialmente para uma campanha de combate à violência contra as mulheres, buscando conscientizá-las acerca do limite entre relacionamento amoroso e relacionamento abusivo. Para tanto, a estratégia empregada na letra é a",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Revelação da submissão da mulher à situação de violência, que muitas vezes a leva à morte.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Ênfase na necessidade de se ouvirem os apelos da mulher agredida, que continuamente pede socorro.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Exploração de situação de duplo sentido, que mostra que atos de dominação e violência não configuram amor.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "D",
+          "text": "Divulgação da importância de denunciar a violência doméstica, que atinge um grande número de mulheres no país.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Naturalização de situações opressivas, que fazem parte da vida de mulheres que vivem em uma sociedade patriarcal.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2019,
+    "number": 8,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2019/questions/8",
+    "raw": {
+      "title": "Questão 8 - ENEM 2019",
+      "index": 8,
+      "discipline": "linguagens",
+      "language": null,
+      "year": 2019,
+      "context": "Meu caro Sherlock Holmes, algo horrível aconteceu às três da manhã no Jardim Lauriston. Nosso homem que estava na vigia viu uma luz às duas da manhã saindo de uma casa vazia. Quando se aproximou, encontrou a porta aberta e, na sala da frente, o corpo de um cavalheiro bem vestido. Os cartões que estavam em seu bolso tinham o nome de Enoch J. Drebber, Cleveland, Ohio, EUA. Não houve assalto e nosso homem não conseguiu encontrar algo que indicasse como ele morreu. Não havia marcas de sangue, nem feridas nele. Não sabemos como ele entrou na casa vazia. Na verdade, todo assunto é um quebra-cabeça sem fim. Se puder vir até a casa seria ótimo, se não, eu lhe conto os detalhes e gostaria muito de saber sua opinião. Atenciosamente, Tobias Gregson.\n\n**DOYLE, A. C.** _Um estudo em vermelho_. Cotia: Pé de Letra, 2017",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "Considerando o objetivo da carta de Tobias Gregson, a sequência de enunciados negativos presente nesse texto tem a função de",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Restringir a investigação, deixando-a sob a responsabilidade do autor da carta.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Refutar possíveis causas da morte do cavalheiro, auxiliando na investigação.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "Identificar o local da cena do crime, localizando-o no Jardim Lauriston.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Introduzir o destinatário da carta, caracterizando sua personalidade.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Apresentar o vigia, incluindo-o entre os suspeitos do assassinato.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2019,
+    "number": 46,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2019/questions/46",
+    "raw": {
+      "title": "Questão 46 - ENEM 2019",
+      "index": 46,
+      "discipline": "ciencias-humanas",
+      "language": null,
+      "year": 2019,
+      "context": "A pegada ecológica gigante que estamos a deixar no planeta está a transformá-to de tal forma que os especialistas consideram que já entramos numa nova época geológica, o Antropoceno. E muitos defendem que, se não travarmos a crise ambiental, mais rapidamente transformaremos a Terra em Vênus do que iremos a Marte. A expressão “Antropoceno” é atribuída ao químico e prêmio Nobel Paul Crutzen, que a propôs durante uma conferência em 2000, ao mesmo tempo que anunciou o fim do Holoceno – a época geológica em que os seres humanos se encontram há cerca de 12 mil anos, segundo a União Internacional das Ciências Geológicas (UICG), a entidade que define as unidades de tempo geológicas.\n\nSILVA, R. D. **Antropoceno: e se formos os últimos seres vivos a alterar a Terra?** Disponível em: www.publico.pt. Acesso em: 5 dez. 2017 (adaptado).",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "A concepção apresentada considera a existência de uma nova época geológica concebida a partir da capacidade de influência humana nos processos",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Eruptivos.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Exógenos.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "Tectônicos.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Magmáticos.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Metamórficos.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2019,
+    "number": 48,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2019/questions/48",
+    "raw": {
+      "title": "Questão 48 - ENEM 2019",
+      "index": 48,
+      "discipline": "ciencias-humanas",
+      "language": null,
+      "year": 2019,
+      "context": "Dizem que Humboldt, naturalista do século XIX, maravilhado pela geografia, flora e fauna da região sulamericana, via seus habitantes como se fossem mendigos sentados sobre um saco de ouro, referindo-se a suas incomensuráveis riquezas naturais não exploradas. De alguma maneira, o cientista ratificou nosso papel de exportadores de natureza no que seria o mundo depois da colonização ibérica: enxergou-nos como territórios condenados a aproveitar os recursos naturais existentes.\n\n**ACOSTA, A.** _Bem viver: uma oportunidade para imaginar outros mundos._ São Paulo: Elefante, 2016 (adaptado).",
+      "files": [],
+      "correctAlternative": "C",
+      "alternativesIntroduction": "A relação entre ser humano e natureza ressaltada no texto refletia a permanência da seguinte corrente filosófica:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Relativismo cognitivo.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Materialismo dialético.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Racionalismo cartesiano.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "D",
+          "text": "Pluralismo epistemológico.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Existencialismo fenomenológico.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2019,
+    "number": 93,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2019/questions/93",
+    "raw": {
+      "title": "Questão 93 - ENEM 2019",
+      "index": 93,
+      "discipline": "ciencias-natureza",
+      "language": null,
+      "year": 2019,
+      "context": "A esquistossomose (barriga-d’água) caracteriza-se pela inflamação do fígado e do baço causada pelo verme Schistosoma mansoni (esquistossomo). O contágio ocorre depois que larvas do verme são liberadas na água pelo caramujo do gênero Biomphalaria, seu hospedeiro intermediário, e penetram na pela humana. Após o diagnóstico, o tratamento tradicional utiliza medicamentos por via oral para matar o parasita dentro do corpo. Uma nova estratégia terapêutica baseia-se na utilização de uma vacina, feita a partir de uma proteína extraída do verme, que induz o organismo humano a produzir anticorpos para combater e prevenir a doença.\n\n**Instituto Oswaldo Cruz/Fundação Oswaldo Cruz (IOC/Fiocruz)**. _Fiocruz anuncia nova fase de vacina para esquistossomose_.  \n**Disponível em:** http://agencia.fiocruz.br. Acesso em: 3 maio 2019 (adaptado).",
+      "files": [],
+      "correctAlternative": "E",
+      "alternativesIntroduction": "Uma vantagem da vacina em relação ao tratamento tradicional é que ela poderá",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Impedir a penetração do parasita pela pele.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Eliminar o caramujo para que não haja contágio.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Impedir o acesso do esquistossomo especificamente para o fígado.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Eliminar o esquistossomo antes que ocorra contato com o organismo.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Eliminar o esquistossomo dentro do organismo antes da manifestação de sintomas.",
+          "file": null,
+          "isCorrect": true
+        }
+      ]
+    }
+  },
+  {
+    "year": 2019,
+    "number": 97,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2019/questions/97",
+    "raw": {
+      "title": "Questão 97 - ENEM 2019",
+      "index": 97,
+      "discipline": "ciencias-natureza",
+      "language": null,
+      "year": 2019,
+      "context": "As cutias, pequenos roedores das zonas tropicais, transportam pela boca as sementes que caem das árvores, mas, em vez de comê-las, enterram-nas em outro lugar. Esse procedimento lhes permite salvar a maioria de suas sementes enterradas para as épocas mais secas, quando não há frutos maduros disponíveis. Cientistas descobriram que as cutias roubam as sementes enterradas por outra, e esse comportamento de “ladroagem” faz com que uma mesma semente possa ser enterrada dezenas de vezes.\n\n**Disponível em:** http://chc.cienciahoje.uol.com.br. Acesso em: 30 jul. 2012.",
+      "files": [],
+      "correctAlternative": "D",
+      "alternativesIntroduction": "Essa “ladroagem” está associada à relação de",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Sinfilia.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Predatismo.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Parasitismo.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Competição.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "E",
+          "text": "Comensalismo.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2019,
+    "number": 148,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2019/questions/148",
+    "raw": {
+      "title": "Questão 148 - ENEM 2019",
+      "index": 148,
+      "discipline": "matematica",
+      "language": null,
+      "year": 2019,
+      "context": "O rótulo da embalagem de um cosmético informa que a dissolução de seu conteúdo, de acordo com suas especificações, rende 2,7 litros desse produto pronto para o uso. Uma pessoa será submetida a um tratamento estético em que deverá tomar um banho de imersão com esse produto numa banheira com capacidade de 0,3 m³.\n\nPara evitar o transbordamento, essa banheira será preenchida em 80% de sua capacidade.",
+      "files": [],
+      "correctAlternative": "C",
+      "alternativesIntroduction": "Para esse banho, o número mínimo de embalagens desse cosmético é",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "9.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "12.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "89.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "D",
+          "text": "112.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "134.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2019,
+    "number": 150,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2019/questions/150",
+    "raw": {
+      "title": "Questão 150 - ENEM 2019",
+      "index": 150,
+      "discipline": "matematica",
+      "language": null,
+      "year": 2019,
+      "context": "Uma pessoa se interessou em adquirir um produto anunciado em uma loja. Negociou com o gerente e conseguiu comprá-lo a uma taxa de juros compostos de 1% ao mês.  \nO primeiro pagamento será um mês após a aquisição do produto, e no valor de R$ 202,00. O segundo pagamento será efetuado um mês após o primeiro, e terá o valor de R$ 204,02.  \nPara concretizar a compra, o gerente emitirá uma nota fiscal com o valor do produto à vista negociado com o cliente, correspondendo ao financiamento aprovado.",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "O valor à vista, em real, que deverá constar na nota fiscal é de",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "398,02",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "400,00",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "401,94",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "404,00",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "406,02",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2020,
+    "number": 6,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2020/questions/6",
+    "raw": {
+      "title": "Questão 6 - ENEM 2020",
+      "index": 6,
+      "discipline": "linguagens",
+      "language": null,
+      "year": 2020,
+      "context": "_Vou-me embora p’ra Pasárgada_ foi o poema de mais longa gestação em toda a minha obra. Vi pela primeira vez esse nome Pasárgada quando tinha os meus dezesseis anos e foi num a autor grego. \\[…\\] Esse nome de Pasárgada, que significa “campo dos persas” ou “tesouro dos persas”, suscitou na minha imaginação uma paisagem fabulosa, um país de delícias, como o de _L’invitation au Voyage_, de Baudelaire. Mais de vinte anos depois, quando eu morava só na minha casa da Rua do Curvelo, num momento de fundo desânimo, da mais aguda sensação de tudo o que eu não tinha feito em minha vida por motivo da doença, saltou-me de súbito do subconsciente este grito estapafúrdio: “Vou-me embora p’ra Pasárgada!” Senti na redondilha a primeira célula de um poema, e tentei realizá-lo, mas fracassei. Alguns anos depois, em idênticas circunstâncias de desalento e tédio, me ocorreu o mesmo desabafo de evasão da “vida besta”. Desta vez o poema saiu sem esforço como se já estivesse pronto dentro de mim. Gosto desse poema porque vejo nele, em escorço, toda a minha vida; \\[…\\] Não sou arquiteto, como meu pai desejava, não fiz nenhuma casa, mas reconstruí e “não de uma forma imperfeita neste mundo de aparências”, uma cidade ilustre, que hoje não é mais a Pasárgada de Ciro, e sim a “minha” Pasárgada.\n\nBANDEIRA, M. **Itinerário de Pasárgada**. Rio de Janeiro: Nova Fronteira; Brasília: INL, 1984.",
+      "files": [],
+      "correctAlternative": "C",
+      "alternativesIntroduction": "Os processos de interação comunicativa preveem a presença ativa de múltiplos elementos da comunicação, entre os quais se destacam as funções da linguagem. Nesse fragmento, a função da linguagem predominante é a",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Emotiva, porque o poeta expõe os sentimentos de angústia que o levaram à criação poética.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Referencial, porque o texto informa sobre a origem do nome empregado em um famoso poema de Bandeira.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Metalinguística, porque o poeta tece comentários sobre a gênese e o processo de escrita de um de seus poemas.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "D",
+          "text": "Poética, porque o texto aborda os elementos estéticos de um dos poemas mais conhecidos de Bandeira.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Apelativa, porque o poeta tenta convencer os leitores sobre sua dificuldade de compor um poema.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2020,
+    "number": 8,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2020/questions/8",
+    "raw": {
+      "title": "Questão 8 - ENEM 2020",
+      "index": 8,
+      "discipline": "linguagens",
+      "language": null,
+      "year": 2020,
+      "context": "_Slam_ do Corpo é um encontro pensado para surdos e ouvintes, existente desde 2014, em São Paulo. Uma iniciativa pioneira do grupo Corposinalizante, criado em 2008. (Antes de seguirmos, vale a explicação: o termo _slam_ vem do inglês e significa — numa nova acepção para o verbo geralmente utilizado para dizer “bater com força” — a “poesia falada nos ritmos das palavras e da cidade”). Nos saraus, o primeiro objetivo foi o de botar os poemas em Libras na roda, colocar os surdos para circular e entender esse encontro entre a poesia e a língua de sinais, compreender o encontro dessas duas línguas. Poemas de autoria própria, três minutos, um microfone. Sem figurino, nem adereços, nem  acompanhamento musical. O que vale é modular a voz e o corpo, um trabalho artesanal de tornar a palavra “visível”, numa arena cujo objetivo maior é o de emocionar a plateia, tirar o público da passividade, seja pelo humor, horror,  caos, doçura e outras tantas sensações.\n\nNOVELLI. O. Poesia incorporada. Revista Continente, n. 189. set. 2016 (adaptado).",
+      "files": [],
+      "correctAlternative": "A",
+      "alternativesIntroduction": "Na prática artística mencionada no texto, o corpo assume papel de destaque ao articular diferentes linguagens com o intuito de",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Imprimir ritmo e visibilidade à expressão poética.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "B",
+          "text": "Redefinir o espaço de circulação da poesia urbana.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Estimular produções autorais de usuários de Libras.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Traduzir expressões verbais para a língua de sinais.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Proporcionar performances estéticas de pessoas surdas.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2020,
+    "number": 46,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2020/questions/46",
+    "raw": {
+      "title": "Questão 46 - ENEM 2020",
+      "index": 46,
+      "discipline": "ciencias-humanas",
+      "language": null,
+      "year": 2020,
+      "context": "Embora inegáveis os benefícios que ambas as economias têm auferido do intercâmbio comercial, o Brasil tem reiterado seu objetivo de desenvolver com a China uma relação comercial menos assimétrica. Os números revelam com clareza a assimetria. As exportações brasileiras de produtos básicos, especialmente soja, minério de ferro e petróleo, compõem, dependendo do ano, algo entre 75% e 80% da pauta, ao passo que as importações brasileiras consistem, aproximadamente, em 95% de produtos industrializados chineses, que vão desde os mais variados bens de consumo até máquinas e equipamentos de alto valor.\n\nLEÃO, V. C. Prefácio. In: CINTRA, M. A. M.; SILVA FILHO, E. B.; PINTO, E. C. (Org.). **China em transformação**: dimensões econômicas e geopolíticas do desenvolvimento. Rio de Janeiro: Ipea, 2015.",
+      "files": [],
+      "correctAlternative": "D",
+      "alternativesIntroduction": "Uma ação estatal de longo prazo capaz de reduzir a assimetria na balança comercial brasileira, conforme exposto no texto, é o(a)",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Expansão do setor extrativista.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Incremento da atividade agrícola.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Diversificação da matriz energética.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Fortalecimento da pesquisa científica.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "E",
+          "text": "Monitoramento do fluxo alfandegário.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2020,
+    "number": 49,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2020/questions/49",
+    "raw": {
+      "title": "Questão 49 - ENEM 2020",
+      "index": 49,
+      "discipline": "ciencias-humanas",
+      "language": null,
+      "year": 2020,
+      "context": "A propriedade compreende, em seu conteúdo e alcance, além do tradicional direito de uso, gozo e disposição por parte de seu titular, a obrigatoriedade do atendimento de sua função social, cuja definição é inseparável do requisito obrigatório do uso racional da propriedade e dos recursos ambientais que lhe são integrantes. O proprietário, como membro integrante da comunidade, se sujeita a obrigações crescentes que, ultrapassando os limites do direitos de vizinhança, no âmbito do direito privado, abrangem o campo dos direitos da coletividade, visando o bem-estar geral, no âmbito do direito público.\n\nJELINEK, R. **O princípio da função social da propriedade e sua repercussão sobre o sistema do Código Civil**. Disponível em: www.mp.rs.gov.br. Acesso em: 20 fev. 2013.",
+      "files": [],
+      "correctAlternative": "C",
+      "alternativesIntroduction": "Os movimentos em prol da reforma agrária, que atuam com base no conceito de direito à propriedade apresentado no texto, propõem-se a",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Reverter o processo de privatização fundiária.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Ressaltar a inviabilidade da produção latifundiária.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Defender a desapropriação dos espaços improdutivos.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "D",
+          "text": "Impedir a produção exportadora nas terras agriculturáveis.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Coibir o funcionamento de empresas agroindustriais no campo.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2020,
+    "number": 96,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2020/questions/96",
+    "raw": {
+      "title": "Questão 96 - ENEM 2020",
+      "index": 96,
+      "discipline": "ciencias-natureza",
+      "language": null,
+      "year": 2020,
+      "context": "A sacarase (ou invertase) é uma enzima que atua no intestino humano hidrolisando o dissacarídeo sacarose nos monossacarídeos glicose e frutose. Em um estudo cinético da reação de hidrólise da sacarose (C12H22O11), foram dissolvidos 171 g de sacarose em 500 mL de água. Observou-se que, a cada 100 minutos de reação, a concentração de sacarose foi reduzida à metade, qualquer que fosse o momento escolhido como tempo inicial. As massas molares dos elementos H, C e O são iguais a 1, 12 e 16 g mo1–1, respectivamente.",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "Qual é a concentração de sacarose depois de 400 minutos do início da reação de hidrólise?",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "2,50 x 10–3 mol L–1",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "6,25 x 10–2 mol L–1",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "1,25 x 10–1 mol L–1",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "2,50 x 10–1 mol L–1",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "4,27 x 10–1 mol L–1",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2020,
+    "number": 103,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2020/questions/103",
+    "raw": {
+      "title": "Questão 103 - ENEM 2020",
+      "index": 103,
+      "discipline": "ciencias-natureza",
+      "language": null,
+      "year": 2020,
+      "context": "O dióxido de carbono passa para o estado sólido (gelo seco) a –78 °C e retorna ao estado gasoso à temperatura ambiente. O gás é facilmente solubilizado em água, capaz de absorver radiação infravermelha da superfície da terra e não conduz eletricidade. Ele é utilizado como maté – ria-prima para a fotossíntese até o limite de saturação. Após a fixação pelos organismos autotróficos, o gás retorna ao meio ambiente pela respiração aeróbica, fermentação, decomposição ou por resíduos industriais, queima de combustíveis fósseis e queimadas. Apesar da sua importância ecológica, seu excesso causa perturbações no equilíbrio ambiental.",
+      "files": [],
+      "correctAlternative": "A",
+      "alternativesIntroduction": "Considerando as propriedades descritas, o aumento atmosférico da substância afetará os organismos aquáticos em razão da",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Redução do potencial hidrogeniônico da água.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "B",
+          "text": "Restrição da aerobiose pelo excesso de poluentes.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Diminuição da emissão de oxigênio pelos autótrofos.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Limitação de transferência de energia entre os seres vivos.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Retração dos oceanos pelo congelamento do gás nos polos.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2020,
+    "number": 138,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2020/questions/138",
+    "raw": {
+      "title": "Questão 138 - ENEM 2020",
+      "index": 138,
+      "discipline": "matematica",
+      "language": null,
+      "year": 2020,
+      "context": "A caixa-d’água de um edifício terá a forma de um paralelepípedo retângulo reto com volume igual a 28 080 litros. Em uma maquete que representa o edifício, a caixa d’água tem dimensões 2 cm x 3,51 cm x 4 cm.\n\nDado: 1 dm3 = 1 L",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "A escala usada pelo arquiteto foi",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "1 : 10",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "1 : 100",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "1 : 1 000",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "1 : 10 000",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "1 : 100 000",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2020,
+    "number": 160,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2020/questions/160",
+    "raw": {
+      "title": "Questão 160 - ENEM 2020",
+      "index": 160,
+      "discipline": "matematica",
+      "language": null,
+      "year": 2020,
+      "context": "Um motociclista planeja realizar uma viagem cujo destino fica a 500 km de sua casa. Sua moto consome 5 litros de gasolina para cada 100 km rodados, e o tanque da moto tem capacidade para 22 litros. Pelo mapa, observou que no trajeto da viagem o último posto disponível para reabastecimento, chamado Estrela, fica a 80 km do seu destino. Ele pretende partir com o tanque da moto cheio e planeja fazer somente duas paradas para reabastecimento, uma na ida e outra na volta, ambas no posto Estrela. No reabastecimento para a viagem de ida, deve considerar também combustível suficiente para se deslocar por 200 km no seu destino.",
+      "files": [],
+      "correctAlternative": "C",
+      "alternativesIntroduction": "A quantidade mínima de combustível, em litro, que esse motociclista deve reabastecer no posto Estrela na viagem de ida, que seja suficiente para fazer o segundo reabastecimento, é",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "13.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "14.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "17.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "D",
+          "text": "18.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "21.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2021,
+    "number": 6,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2021/questions/6",
+    "raw": {
+      "title": "Questão 6 - ENEM 2021",
+      "index": 6,
+      "discipline": "linguagens",
+      "language": null,
+      "year": 2021,
+      "context": "Um asteroide de cerca de um mil metros diâmetro, viajando a 288 mil quilômetros por hora, passou a uma distância insignificante – em termos cósmicos – da Terra, pouco mais do dobre da distância que nos separa da Lua. Segundo os cálculos matemáticos, o asteroide cruzou a órbita da Terra e somente não colidiu porque ela não estava naquele ponto de interseção. Se ele tivesse sido capturado pelo campo gravitacional do nosso planeta e colidido, o impacto equivaleria a 40 bilhões de toneladas de TNT, ou o equivalente à explosão de 40 mil bombas de hidrogênio, conforme calcularam os computadores operados pelos astrônomos do programa de Exploração do Sistema Solar da Nasa; se caísse no continente, abriria uma cratera de cinco quilômetros, no mínimo, e destruiria tudo o que houvesse num raio de milhares de outros; se desabasse no oceano, provocaria maremotos que devastariam imensas regiões costeiras. Enfim, uma visão do Apocalipse.\n\nDisponível em: http:/bdjur.stj.jus.br. Acesso em: 23 abr. 2010.",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "Qual estratégia caracteriza o texto como uma notícia alarmante?",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "A descrição da velocidade do asteroide.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "A recorrência de formulações hipotéticas.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "A referência à opinião dos astrônomos.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "A utilização da locução adverbial \"no mínimo\".",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "A comparação com a distância da Lua à Terra.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2021,
+    "number": 8,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2021/questions/8",
+    "raw": {
+      "title": "Questão 8 - ENEM 2021",
+      "index": 8,
+      "discipline": "linguagens",
+      "language": null,
+      "year": 2021,
+      "context": "O documentário _O menino que fez um museu_, direção de Sérgio Utsch, produção independente de brasileiro e britânicos, gravado no Nordeste em 2016, mais precisamente no distrito Dom Quintino, zona rural do Crato, foi premiado em Londres, pela _Foreign Press Associations_ (FPA), a associação de correspondentes estrangeiros mais antiga do mundo, fundada em 1888.\n\nDe acordo com o diretor, _O menino que fez um museu_ foi o único trabalho produzido por equipes fora do eixo Estados-Unidos-Europa entre os finalistas. O documentário conta a história de um Brasil profundo, desconhecido até mesmo por muitos brasileiros. É apresentado com o carisma de Pedro Lucas Feitosa, 11 anos.\n\nQuanto tinha 10 anos, Pedro Lucas criou o Museu de Luyiz Gonzaga, que fica distrito de Dom Quintino. A ideia surgiu após uma visita que o garoto fez, em 2013, quando tinha 8 anos, ao Museu do Gonzagão, em Exu, Pernambuco. Pedro decidiu criar o próprio lugar de exposição para homenagear o rei e o local escolhido foi a casa da sua bisavó já falecida, que fica ao lado da casa dele, na rua Alto de Antena.\n\nDisponível em: www.opovo.com.br. Acesso em> 18 abr. 2018",
+      "files": [],
+      "correctAlternative": "C",
+      "alternativesIntroduction": "No segundo parágrafo, uma citação afirma que o documentário “foi o único trabalho produzido por equipes fora do eixo Estados Unidos-Europa entre os finalistas”. No texto, esse recurso expressa uma estratégia argumentativa que reforça a",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Originalidade da iniciativa de homenagem à vida vida e à obra de Luiz Gonzaga.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Falta de concorrentes ao prêmio de uma das associações mais antigas do mundo.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Proeza da premiação de uma história ambientada no interior do Nordeste brasileiro.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "D",
+          "text": "Escassez de investimentos para a produção cinematográfica independente no país.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Importância da parceria entre brasileiros e britânicos para a realização das filmagens",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2021,
+    "number": 46,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2021/questions/46",
+    "raw": {
+      "title": "Questão 46 - ENEM 2021",
+      "index": 46,
+      "discipline": "ciencias-humanas",
+      "language": null,
+      "year": 2021,
+      "context": "Seu turno de trabalho acabou, você já está em casa e é hora do jantar da família. Mas, em vez de relaxar, você começa a pensar na possibilidade de ter recebido alguma mensagem importante no e-mail profissional ou no grupo de WhatsApp da empresa. Imediatamente, você fica distante. Momentos depois, com alguns toques na tela do celular, você está de volta ao ambiente de trabalho. O jantar e a família ficaram em segundo plano.\n\nA simples vontade de checar mensagens do trabalho pós-expediente prejudica sua saúde -e a de sua família. Disponível em: www.bbc.com. Acesso em: 4 dez. 2018.",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "O texto indica práticas as relações cotidianas do trabalho que causam para o indivíduo a",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Proteção da vida privada.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Ampliação de atividades extras.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "Elevação de tapas burocráticas.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Diversificação do lazer recreativo.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Desobrigação de afazeres domésticos.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2021,
+    "number": 47,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2021/questions/47",
+    "raw": {
+      "title": "Questão 47 - ENEM 2021",
+      "index": 47,
+      "discipline": "ciencias-humanas",
+      "language": null,
+      "year": 2021,
+      "context": "Quando a taxa de remuneração do capital excede  \nsubstancialmente a taxa de crescimento da economia,  \npela lógica, a riqueza herdada aumenta mais rápido do  \nque a renda e a produção. Então, basta aos herdeiros  \npoupar uma parte limitada da renda de seu capital para  \nque ele cresça mais rápido do que a economia como  \num todo. Sob essas condições, é quase inevitável que  \na riqueza herdada supere a riqueza constituída durante  \numa vida de trabalho, e que a concentração do capital  \natinja níveis muito altos.\n\nPIKETTY, T. O capital no século XXI. Rio de Janeiro: Intrínseca, 2014 (adaptado).",
+      "files": [],
+      "correctAlternative": "A",
+      "alternativesIntroduction": "Considerando os princípios que legitimam as democracias liberais, a lógica econômica descrita no\ntexto enfraquece o(a)",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Ideologia do mérito.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "B",
+          "text": "Direito de nascimento.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Eficácia da legislação",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Ganho das financeiras.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Eficiência dos mercados.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2021,
+    "number": 95,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2021/questions/95",
+    "raw": {
+      "title": "Questão 95 - ENEM 2021",
+      "index": 95,
+      "discipline": "ciencias-natureza",
+      "language": null,
+      "year": 2021,
+      "context": "Os pesticidas organoclorados foram amplamente empregados na agricultura, contudo, em razão das suas elevadas toxicidades e persistências no meio ambiente, eles foram banidos. Considere a aplicação de 500 g de um pesticida organoclorado em uma cultura e que, em certas condições, o tempo de meia-vida do pesticida no solo seja de 5 anos.",
+      "files": [],
+      "correctAlternative": "A",
+      "alternativesIntroduction": "A massa do pesticida no decorrer de 35 anos será mais próxima de",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "3,9 g.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "B",
+          "text": "31, 2 g.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "62,5 g.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "125,0 g.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "250,0 g.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2021,
+    "number": 110,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2021/questions/110",
+    "raw": {
+      "title": "Questão 110 - ENEM 2021",
+      "index": 110,
+      "discipline": "ciencias-natureza",
+      "language": null,
+      "year": 2021,
+      "context": "Organismos autótrofos e heterótrofos realizam processos complementares que associam os ciclos do carbono e do oxigênio. O carbono fixado pela energia luminosa ou a partir de compostos inorgânicos é eventualmente degradado pelos organismos, resultando em fontes de carbono como metano ou gás carbônico. Ainda, outros compostos orgânicos são catabolizados pelos seres, com menor rendimento energético, produzindo compostos secundários (subprodutos) que podem funcionar como combustíveis ambientais.",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "O processo metabólico associado à expressão combustíveis ambientais é a",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Fotossíntese.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Fermentação.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "Quimiossíntese.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Respiração aeróbica.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Fosforilação oxidativa.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2021,
+    "number": 141,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2021/questions/141",
+    "raw": {
+      "title": "Questão 141 - ENEM 2021",
+      "index": 141,
+      "discipline": "matematica",
+      "language": null,
+      "year": 2021,
+      "context": "Aplicativos que gerenciam serviços de hospedagem  \ntêm ganhado espaço no Brasil e no mundo por oferecer  \nopções diferenciadas em termos de localização e valores  \nde hospedagem. Em um desses aplicativos, o preço P a  \nser pago pela hospedagem é calculado considerando um  \npreço por diária d, acrescido de uma taxa fixa de limpeza L  \ne de uma taxa de serviço. Essa taxa de serviço é um valor  \npercentual s calculado sobre o valor pago pelo total das  \ndiárias.",
+      "files": [],
+      "correctAlternative": "A",
+      "alternativesIntroduction": "Nessa situação, o preço a ser pago ao aplicativo para uma hospedagem de n diárias pode ser obtido pela expressão",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "P=d.n + L + d.n.s",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "B",
+          "text": "P=d.n + L + d.s",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "P= d+ L +s",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "P= d.n.s + L",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "P= d.n + L +s",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2021,
+    "number": 142,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2021/questions/142",
+    "raw": {
+      "title": "Questão 142 - ENEM 2021",
+      "index": 142,
+      "discipline": "matematica",
+      "language": null,
+      "year": 2021,
+      "context": "O organizador de uma competição de lançamento de  \ndados pretende tornar o campeonato mais competitivo.  \nPelas regras atuais da competição, numa rodada, o  \njogador lança 3 dardos e pontua caso acerte pelo menos um deles no alvo. O organizador considera que, em média, os jogadores tem, em cada lançamento, 1/2 de probabilidade de acertar um dardo no alvo.  \nA fim de tornar o jogo mais atrativo, planeja modificar  \nas regras de modo que a probabilidade de um jogador  \npontuar em uma rodada seja igual ou superior a 9/10. Para  \nisso, decide aumentar a quantidade de dardos a serem  \nlançados em cada rodada.",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "Com base nos valores considerados pelo organizador da competição, a quantidade mínima de dardos que devem ser disponibilizados em uma rodada para tornar o jogo mais atrativo é",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "2",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "4",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "6",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "9",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "10",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2022,
+    "number": 6,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2022/questions/6",
+    "raw": {
+      "title": "Questão 6 - ENEM 2022",
+      "index": 6,
+      "discipline": "linguagens",
+      "language": null,
+      "year": 2022,
+      "context": "**Urgência emocional**\n\nSe tudo é para ontem, se a vida engata uma primeira e sai em disparada, se não há mais tempo para paradas estratégicas, caímos fatalmente no vício de querer que os amores sejam igualmente resolvidos num átimo de segundo. Temos pressa para ouvir “eu te amo”. Não vemos a hora de que fiquem estabelecidas as regras de convívio: somos namorados, ficantes, casados, amantes? Urgência emocional. Uma cilada. Associamos diversas palavras ao AMOR: paixão, romance, sexo, adrenalina, palpitação. Esquecemos, no entanto, da palavra que viabiliza esse sentimento: “paciência”. Amor sem paciência não vinga. Amor não pode ser mastigado e engolido com emergência, com fome desesperada. É uma refeição que pode durar uma vida.\n\nMEDEIROS, M. Disponível em: http:/porumavidasimples.blogspot.com.br. Acesso em: 20 ago. 2017 (adaptado).",
+      "files": [],
+      "correctAlternative": "E",
+      "alternativesIntroduction": "Nesse texto de opinião, as marcas linguísticas revelam uma situação distensa e de pouca formalidade, o que se evidencia pelo(a)",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Impessoalização ao longo do texto, como em: “se não há mais tempo”.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Construção de uma atmosfera de urgência, em palavras como: “pressa”.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Repetição de uma determinada estrutura sintática, como em: “Se tudo é para ontem”.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Ênfase no emprego da hipérbole, como em: “uma refeição que pode durar uma vida”.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Emprego de metáforas, como em: “a vida engata uma primeira e sai em disparada”.",
+          "file": null,
+          "isCorrect": true
+        }
+      ]
+    }
+  },
+  {
+    "year": 2022,
+    "number": 12,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2022/questions/12",
+    "raw": {
+      "title": "Questão 12 - ENEM 2022",
+      "index": 12,
+      "discipline": "linguagens",
+      "language": null,
+      "year": 2022,
+      "context": "**Papos**\n\n— Me disseram…  \n— Disseram-me.  \n— Hein?  \n— O correto é “disseram-me”. Não “me disseram”.  \n— Eu falo como quero. E te digo mais… Ou é “digo-te”?  \n— O quê?  \n— Digo-te que você…  \n— O “te” e o “você” não combinam.  \n— Lhe digo?  \n— Também não. O que você ia me dizer?  \n— Que você está sendo grosseiro, pedante e chato. \\[…\\]  \n— Dispenso as suas correções. Vê se esquece-me. Falo como bem entender. Mais uma correção e eu…  \n— O quê?  \n— O mato.  \n— Que mato?  \n— Mato-o. Mato-lhe. Mato você. Matar-lhe-ei-te. Ouviu bem? Pois esqueça-o e para-te. Pronome no lugar certo é elitismo!  \n— Se você prefere falar errado…  \n— Falo como todo mundo fala. O importante é me entenderem. Ou entenderem-me?\n\nVERISSIMO, L. F. **Comédias para se ler na escola**.  \nRio de Janeiro: Objetiva, 2001 (adaptado).",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "Nesse texto, o uso da norma-padrão defendido por um dos personagens torna-se inadequado em razão do(a)",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Falta de compreensão causada pelo choque entre gerações.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Contexto de comunicação em que a conversa se dá.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "Grau de polidez distinto entre os interlocutores.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Diferença de escolaridade entre os falantes.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Nível social dos participantes da situação.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2022,
+    "number": 46,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2022/questions/46",
+    "raw": {
+      "title": "Questão 46 - ENEM 2022",
+      "index": 46,
+      "discipline": "ciencias-humanas",
+      "language": null,
+      "year": 2022,
+      "context": "Espera, resignado, o dia 13 daquele mês porque, em tal data, usança avoenga lhe faculta sondar o futuro, interrogando a providência. É a experiência tradicional de Santa Luzia. No dia 12 ao anoitecer expõe ao relento, em linha, seis pedrinhas de sal, que representam, em ordem sucessiva da esquerda para a direita, os seis meses vindouros, de janeiro a junho. Ao alvorecer de 13 observa-as: se estão intactas, pressagiam a seca; se a primeira apenas se deliu,  transmudada em aljôfar límpido, é certa a chuva em janeiro; se a segunda, em fevereiro; se a maioria ou todas, é inevitável O inverno benfazejo. Esta experiência é belíssima.\n\nCUNHA, E. **Os sertões**. São Paulo: Editora Três, 1984.",
+      "files": [],
+      "correctAlternative": "D",
+      "alternativesIntroduction": "No experimento descrito, a relação com a paisagem e com a religiosidade permite que o sertanejo seja",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Afeito à devoção ao aceitar destinos sacralizados.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Acostumado à pobreza ao admitir acasos naturais.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Habituado ao solo ao conhecer terrenos cultiváveis.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Íntimo à Caatinga ao interpretar condições ambientais.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "E",
+          "text": "Próximo à vegetação ao identificar espécies arbustivas.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2022,
+    "number": 47,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2022/questions/47",
+    "raw": {
+      "title": "Questão 47 - ENEM 2022",
+      "index": 47,
+      "discipline": "ciencias-humanas",
+      "language": null,
+      "year": 2022,
+      "context": "Sempre que a relevância do discurso entra em jogo, a questão torna-se política por definição, pois é o discurso que faz do homem um ser político. E tudo que os homens fazem, sabem ou experimentam só tem sentido na medida em que pode ser discutido. Haverá, talvez, verdades que ficam além da linguagem e que podem ser de grande relevância para o homem no singular, isto é, para o homem que, seja o que for, não é um ser político. Mas homens no plural, isto é, os homens que vivem e se movem e agem neste mundo, só podem experimentar o significado das coisas por poderem falar e ser inteligíveis entre si e consigo mesmos.\n\nARENDT, H. **A condição humana**. Rio de Janeiro: Forense Universitária, 2004.",
+      "files": [],
+      "correctAlternative": "E",
+      "alternativesIntroduction": "No trecho, a filósofa Hannah Arendt mostra a importância da linguagem no processo de",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Entendimento da cultura.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Aumento da criatividade.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Percepção da individualidade.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Melhoria da técnica.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Construção da sociabilidade.",
+          "file": null,
+          "isCorrect": true
+        }
+      ]
+    }
+  },
+  {
+    "year": 2022,
+    "number": 93,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2022/questions/93",
+    "raw": {
+      "title": "Questão 93 - ENEM 2022",
+      "index": 93,
+      "discipline": "ciencias-natureza",
+      "language": null,
+      "year": 2022,
+      "context": "Em 2017, foi inaugurado, no estado da Bahia, o Parque Solar Lapa, composto por duas usinas (Bom Jesus  \nda Lapa e Lapa) e capaz de gerar cerca de 300 GWh de energia por ano. Considere que cada usina apresente potência igual a 75 MW, com o parque totalizando uma potência instalada de 150 MW. Considere ainda que a irradiância solar média é de 1 500 W/m² e que a eficiência dos painéis é de 20%.\n\n**Parque Solar Lapa entra em operação**. Disponível em: www.canalbioenergia.com.br. Acesso em: 9 jun. 2022 (adaptado).",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "Nessas condições, a área total dos painéis solares que compõem o Parque Solar Lapa é mais próxima de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "1 000 000 m²",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "500 000 m²",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "250 000 m²",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "100 000 m²",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "20 000 m²",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2022,
+    "number": 97,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2022/questions/97",
+    "raw": {
+      "title": "Questão 97 - ENEM 2022",
+      "index": 97,
+      "discipline": "ciencias-natureza",
+      "language": null,
+      "year": 2022,
+      "context": "O urânio é empregado como fonte de energia em reatores nucleares. Para tanto, o seu mineral deve  \nser refinado, convertido a hexafluoreto de urânio e posteriormente enriquecido, para aumentar de 0,7% a 3% a abundância de um isótopo específico — o urânio-235. Uma das formas de enriquecimento utiliza a pequena diferença de massa entre os hexafluoretos de urânio-235 e de urânio-238 para separá-los por efusão, precedida pela vaporização. Esses vapores devem efundir repetidamente  \nmilhares de vezes através de barreiras porosas formadas por telas com grande número de pequenos orifícios. No entanto, devido à complexidade e à grande quantidade de energia envolvida, cientistas e engenheiros continuam a pesquisar procedimentos alternativos de enriquecimento.\n\nATKINS, P.; JONES, L. **Princípios de química**: questionando a vida moderna e o meio ambiente. Porto Alegre: Bookman, 2006 (adaptado).",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "Considerando a diferença de massa mencionada entre os dois isótopos, que tipo de procedimento alternativo ao da efusão pode ser empregado para tal finalidade?",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Peneiração.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Centrifugação.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "Extração por solvente.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Destilação fracionada.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Separação magnética.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2022,
+    "number": 140,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2022/questions/140",
+    "raw": {
+      "title": "Questão 140 - ENEM 2022",
+      "index": 140,
+      "discipline": "matematica",
+      "language": null,
+      "year": 2022,
+      "context": "Foram convidadas 32 equipes para um torneio de futebol, que foram divididas em 8 grupos com 4 equipes, sendo que, dentro de um grupo, cada equipe disputa uma única partida contra cada uma das demais equipes de seu grupo. A primeira e a segunda colocadas de cada grupo seguem para realizar as 8 partidas da próxima fase do torneio, chamada oitavas de final. Os vencedores das partidas das oitavas de final seguem para jogar as 4 partidas das quartas de final. Os vencedores das quartas de final disputam as 2 partidas das semifinais, e os vencedores avançam para a grande final, que define a campeã do torneio.\n\nPelas regras do torneio, cada equipe deve ter um período de descanso de, no mínimo, 3 dias entre dois jogos por ela disputados, ou seja, se um time disputar uma partida, por exemplo, num domingo, só poderá disputar a partida seguinte a partir da quinta-feira da mesma semana.",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "O número mínimo de dias necessários para a realização desse torneio é",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "22.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "25.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "28.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "48.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "64.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2022,
+    "number": 146,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2022/questions/146",
+    "raw": {
+      "title": "Questão 146 - ENEM 2022",
+      "index": 146,
+      "discipline": "matematica",
+      "language": null,
+      "year": 2022,
+      "context": "Um parque tem dois circuitos de tamanhos diferentes para corridas. Um corredor treina nesse parque e, no primeiro dia, inicia seu treino percorrendo  \n3 voltas em torno do circuito maior e 2 voltas em torno do menor, perfazendo um total de 1 800 m. Em seguida, dando continuidade a seu treino, corre mais 2 voltas em torno do circuito maior e 1 volta em torno do menor,  \npercorrendo mais 1 100 m.\n\nNo segundo dia, ele pretende percorrer 5 000 m nos circuitos do parque, fazendo um número inteiro de voltas em torno deles e de modo que o número de voltas seja o maior possível.",
+      "files": [],
+      "correctAlternative": "E",
+      "alternativesIntroduction": "A soma do número de voltas em torno dos dois circuitos, no segundo dia, será",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "10.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "13.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "14.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "15.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "16",
+          "file": null,
+          "isCorrect": true
+        }
+      ]
+    }
+  },
+  {
+    "year": 2023,
+    "number": 7,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2023/questions/7",
+    "raw": {
+      "title": "Questão 7 - ENEM 2023",
+      "index": 7,
+      "discipline": "linguagens",
+      "language": null,
+      "year": 2023,
+      "context": "**Mais iluminada que outras**\n\nTenho dois seios, estas duas coxas, duas mãos que me são muito úteis, olhos escuros, estas duas sobrancelhas que preencho com maquiagem comprada por dezenove e noventa e orelhas que não aceitam bijuterias. Este corpo é um corpo faminto, dentado, cruel, capaz e violento. Movo os braços e multidões correm desesperadas. Caminho no escuro com o rosto para baixo, pois cada parte isolada de mim tem sua própria vida e não quero domá-las. Animal da caatinga. Forte demais. Engolidora de espadas e espinhos. Dizem e eu ouvi, mas depois também li, que o estado do Ceará aboliu a escravidão quatro anos antes do restante do país. Todos aqueles corpos que eram trazidos com  \nseus dedos contados, seus calcanhares prontos e seus umbigos em fogo, todos eles foram interrompidos no porto. Um homem – dizem e eu ouvi e depois também li — liderou o levante. E todos esses corpos foram buscar outros incômodos. Foram ser incomodados.\n\nARRAES. J. Redemoinho em dia quente. São Paulo: Alfaguara, 2019.",
+      "files": [],
+      "correctAlternative": "A",
+      "alternativesIntroduction": "Nesse texto, os recursos expressivos usados pela narradora",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Revelam as marcas da violência de raça e de gênero na construção da identidade.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "B",
+          "text": "Questionam o pioneirismo do estado do Ceará no enfrentamento à escravidão.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Reproduzem padrões estéticos em busca da valorização da autoestima feminina.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Sugerem uma atmosfera onírica alinhada ao desejo de resgate da espiritualidade.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Mimetizam, na paisagem, os corpos transformados pela violência da escravidão.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2023,
+    "number": 8,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2023/questions/8",
+    "raw": {
+      "title": "Questão 8 - ENEM 2023",
+      "index": 8,
+      "discipline": "linguagens",
+      "language": null,
+      "year": 2023,
+      "context": "**De quem é esta língua?**\n\nUma pequena editora brasileira, a Urutau, acaba de lançar em Lisboa uma “antologia antirracista de poetas estrangeiros em Portugal”, com o título Volta para a tua terra.\n\nO livro denuncia as diversas formas de racismo a que os imigrantes estão sujeitos. Alguns dos poetas brasileiros antologiados queixam-se do desdém com que um grande número de portugueses acolhe o português brasileiro. É uma queixa frequente.\n\n“Aqui em Portugal eles dizem / — eles dizem – / que nosso português é errado, que nós não falamos português”, escreve a poetisa paulista Maria Giulia Pinheiro, para concluir: “Se a sua linguagem, a lusitana, / ainda conserva a palavra da opressão / ela não é a mais bonita do mundo./ Ela é uma das mais violentas”.\n\nAGUALUSA, J. E. Disponível em: https.iloglobo.globo.com Acesso em: 22 nov. 2021 (adaptado).",
+      "files": [],
+      "correctAlternative": "C",
+      "alternativesIntroduction": "O texto de Agualusa tematiza o preconceito em relação ao português brasileiro. Com base no trecho citado pelo autor, infere-se que esse preconceito se deve",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "À dificuldade de consolidação da literatura brasileira em outros países.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Aos diferentes graus de instrução formal entre os falantes de língua portuguesa.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "À existência de uma língua ideal que alguns falantes lusitanos creem ser a falada em Portugal.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "D",
+          "text": "Ao intercâmbio cultural que ocorre entre os povos dos diferentes países de língua portuguesa.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "À distância territorial entre os falantes do português que vivem em Portugal e no Brasil.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2023,
+    "number": 52,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2023/questions/52",
+    "raw": {
+      "title": "Questão 52 - ENEM 2023",
+      "index": 52,
+      "discipline": "ciencias-humanas",
+      "language": null,
+      "year": 2023,
+      "context": null,
+      "files": [],
+      "correctAlternative": "A",
+      "alternativesIntroduction": "TEXTO I\nComo presença consciente no mundo não posso escapar à responsabilidade ética no meu mover-me no mundo. Se sou puro produto da determinação genética ou cultural ou de classe, sou irresponsável pelo que faço no meu mover-me no mundo e, se careço de responsabilidade, não posso falar em ética.\nFREIRE, P. Pedagogia da autonomia: saberes necessários à prática educativa. São Paulo: Paz e Terra, 1996\nТЕХТО II\nPaulo Freire construiu uma pedagogia da esperança. Na sua concepção, a história não é algo pronto e acabado. As estruturas de opressão e as desigualdades, apesar de serem naturalizadas, são sócio e historicamente construídas. Daí a importância de os educandos tomarem consciência da sua realidade para, assim, transformá-la.\nDEMARCHI, J. L. Paulo Freire. Disponivel em: https://diplomatique.org.br. Acesso em: 6 out. 2021 (adaptado).\nCom base no conceito de ética pedagógica presente nos textos, os educandos tornam-se responsáveis pela",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Participação sociopolítica.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "B",
+          "text": "Definição estético-cultural.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Competição econômica local.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Manutenção do sistema escolar.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Capacitação de mobilidade individual.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2023,
+    "number": 53,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2023/questions/53",
+    "raw": {
+      "title": "Questão 53 - ENEM 2023",
+      "index": 53,
+      "discipline": "ciencias-humanas",
+      "language": null,
+      "year": 2023,
+      "context": "A cordilheira do Himalaia tem mais de 50 milhões de anos., sendo classificada como a maior cordilheira do planeta. Originário da língua sânscrito, comum na região, seu nome quer dizer “morada da neve”. É possível encontrar nessa cordilheira as quinze maiores montanhas do mundo. Ao todo, existem mais de cem picos, que contam com altitudes bem maiores que 7 000 m. O Everest, considerado o ponto mais alto da Terra, tem nada menos que 8 848 m de altitude, e continua crescendo, aproximadamente, 0,8 mm a cada ano.\n\nDisponível em: https://meioambiente.culturamix.com. Acesso em: 12 nov. 2021 (adaptado).",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "Qual dinâmica natural é responsável pelo fenômeno apresentado?",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Derrame de lava vulcânica.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Encontro de placas tectônicas.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "Ação do intemperismo químico.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Sedimentação de erosão eólica.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Derretimento de geleiras glaciais.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2023,
+    "number": 91,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2023/questions/91",
+    "raw": {
+      "title": "Questão 91 - ENEM 2023",
+      "index": 91,
+      "discipline": "ciencias-natureza",
+      "language": null,
+      "year": 2023,
+      "context": "O número de abelhas encontra-se em declínio em várias regiões do mundo, inclusive no Brasil, sendo que vários fatores contribuem para o colapso de suas colmeias. Nos Estados Unidos, bombas de sementes de espécies vegetais nativas têm sido utilizadas para combater o desaparecimento desses insetos. Elas são pequenas bolinhas recheadas com sementes, adubo e argila. Quando são arremessadas e ficam expostas ao sol e à chuva, germinam até mesmo em solo pouco fértil.\n\nDARAYA, V. Disponível em: http://planetasustentavel.abril.com.br.  \nAcesso em: 2 fev. 2015 (adaptado).",
+      "files": [],
+      "correctAlternative": "D",
+      "alternativesIntroduction": "Esse método contribui para a preservação das abelhas porque",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Reduz sua predação",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Reduz o uso de pesticidas.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "Reduz a competição por abrigo.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Aumenta a oferta de alimento",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "E",
+          "text": "Aumenta os locais de reprodução",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2023,
+    "number": 92,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2023/questions/92",
+    "raw": {
+      "title": "Questão 92 - ENEM 2023",
+      "index": 92,
+      "discipline": "ciencias-natureza",
+      "language": null,
+      "year": 2023,
+      "context": "Os mais antigos cozinhavam o feijão na panela de ferro a fim de acabar com a palidez de seus filhos. Alguns chegavam até a colocar um prego enferrujado nesse cozimento para liberar o ferro contido nele. Sabe-se que esse elemento pode ser encontrado na sua forma metálica ou iônica, sendo essencial para a manutenção da vida humana.",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "As estratégias citadas eram utilizadas com o objetivo de",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Tratar a diarreia.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "Prevenir a anemia.",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "Evitar as verminoses.",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "Remediar o raquitismo",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "Combater a febre amarela.",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2023,
+    "number": 138,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2023/questions/138",
+    "raw": {
+      "title": "Questão 138 - ENEM 2023",
+      "index": 138,
+      "discipline": "matematica",
+      "language": null,
+      "year": 2023,
+      "context": "Visando atrair mais clientes, o gerente de uma loja anunciou uma promoção em que cada cliente que realizar uma compra pode ganhar um voucher para ser usado em sua próxima compra. Para ganhar seu voucher, o cliente precisa retirar, ao acaso, uma bolinha de dentro de cada uma das duas urnas A e B disponibilizadas pelo gerente, nas quais há apenas bolinhas pretas e brancas. Atualmente, a probabilidade de se escolher, ao acaso, uma bolinha preta na urna A é igual a 20% e a probabilidade de se escolher uma bolinha preta na urna B é 25%. Ganha o voucher o cliente que retirar duas bolinhas pretas, uma de cada urna.\n\nCom o passar dos dias, o gerente percebeu que, para a promoção ser viável aos negócios, era preciso alterar a probabilidade de acerto do cliente sem alterar a regra da promoção. Para isso, resolveu alterar a quantidade de bolinhas brancas na urna B de forma que a probabilidade de um cliente ganhar o voucher passasse a ser menor ou igual a 1%. Sabe-se que a urna B tem 4 bolinhas pretas e que, em ambas as urnas, todas as bolinhas têm a mesma probabilidade de serem retiradas.",
+      "files": [],
+      "correctAlternative": "C",
+      "alternativesIntroduction": "Qual é o número mínimo de bolinhas brancas que o gerente deve adicionar à urna B?",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "20",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "60",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "C",
+          "text": "64",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "D",
+          "text": "68",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "80",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2023,
+    "number": 143,
+    "kind": "secondary-transcription",
+    "url": "https://api.enem.dev/v1/exams/2023/questions/143",
+    "raw": {
+      "title": "Questão 143 - ENEM 2023",
+      "index": 143,
+      "discipline": "matematica",
+      "language": null,
+      "year": 2023,
+      "context": "Em janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com 10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%. A direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano.",
+      "files": [],
+      "correctAlternative": "B",
+      "alternativesIntroduction": "O número mínimo de salas que deverão ser construídas é",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "10",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "B",
+          "text": "11",
+          "file": null,
+          "isCorrect": true
+        },
+        {
+          "letter": "C",
+          "text": "12",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "D",
+          "text": "30",
+          "file": null,
+          "isCorrect": false
+        },
+        {
+          "letter": "E",
+          "text": "33",
+          "file": null,
+          "isCorrect": false
+        }
+      ]
+    }
+  },
+  {
+    "year": 2024,
+    "number": 6,
+    "kind": "pdf-transcription",
+    "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/1dia/enem2024_1dia_prova_amarelo.pdf",
+    "page": 5,
+    "sha256": "b9c9215da6c7eedee80b37131685b516f7ef824b1413c0a1957a76e360cbcdee",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/01f19cf0-4be9-48df-9a29-f5fe33bbae07/download",
+    "answerKeySha256": "e1198aa21e9f04e81ceb314848bab39189fd314b27e2b8dac70a7a662defeb1d",
+    "answerRecord": "scripts/data/board-incidence/enem/2024.json",
+    "rawBlock": "O festival folclórico de Parintins, no Amazonas, \nanunciou que o Boi Caprichoso levou, em 2018, seu \n23º título — contra 31 do adversário Boi Garantido. \nDesde o fim do evento que não paro de cantar duas \nmúsicas que aprendi no Bumbódromo (arena onde ocorre \no espetáculo). Revezo entre “meu amor, eu sou feliz, ééé \nazul o meu país”, obviamente do boi azul, o Caprichoso; \ne “vermelhou o curral, a ideologia avermelhou”, do boi \nvermelho, o Garantido. Esse revezamento seria proibido \nem Parintins, cidade tão dividida entre as torcidas dos bois. \nEm Parintins, você tem de ter um lado. Há aqueles que \ntentam fugir e dizem que são “garanchoso”, com os quais \nme identifiquei, mas esses são vistos com certo desdém.\nDYNIEWICZ, L. Disponível em: https://viagem.estadao.com.br. \nAcesso em: 22 nov. 2018 (adaptado).\nA apropriação de elementos como rivalidade, competitividade, \ntorcida e gritos de guerra pelo festival de Parintins evidencia a\nA\tescolha de um local específico para a festa.\nB\timportância atribuída pelos turistas aos bois.\nC\tinteração social estabelecida após o evento.\nD\taproximação da manifestação folclórica com o esporte.\nE\tcomposição de enredos musicais pelos “garanchosos”.\n"
+  },
+  {
+    "year": 2024,
+    "number": 9,
+    "kind": "pdf-transcription",
+    "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/1dia/enem2024_1dia_prova_amarelo.pdf",
+    "page": 6,
+    "sha256": "b9c9215da6c7eedee80b37131685b516f7ef824b1413c0a1957a76e360cbcdee",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/01f19cf0-4be9-48df-9a29-f5fe33bbae07/download",
+    "answerKeySha256": "e1198aa21e9f04e81ceb314848bab39189fd314b27e2b8dac70a7a662defeb1d",
+    "answerRecord": "scripts/data/board-incidence/enem/2024.json",
+    "rawBlock": "Expressões e termos utilizados no Amazonas \nsão retratados em livro e em camisetas\n“Na linguagem, podemos nos ver da forma mais \nverdadeira: nossas crenças, nossos valores, nosso lugar \nno mundo”, afirmou o doutor em linguística e professor da \nUfam em seu livro Amazonês: expressões e termos usados \nno Amazonas. Portanto, o amazonense, com todas as suas \n“cunhantãs” e “curumins”, acaba por encontrar um lugar no \nmundo e formar uma unidade linguística, informalmente \ndenominada de português “caboco”, que muito se diferencia \ndo português “mineiro”, “gaúcho”, “carioca” e de tantos \noutros espalhados pelo Brasil. O livro, que conta com cerca \nde 1 100 expressões e termos típicos do falar amazonense, \nlevou dez anos para ser construído. Para o autor, o principal \nobjetivo da obra é registrar a linguagem.\nUm designer amazonense também acha o amazonês \n“xibata”, tanto é que criou uma série de camisetas estampadas \ncom o nome de Caboquês Ilustrado, que mistura o bom \nhumor com as expressões típicas da região. A coleção conta \ncom sete modelos já lançados, entre eles: Leseira Baré, \nXibata no Balde e Até o Tucupi, e 43 ainda na fila de espera. \nPara o criador, as camisas têm como objetivo “resgatar o \norgulho do povo manauara, do povo do Norte”.\nDisponível em: https://g1.globo.com. Acesso em: 15 jan. 2024 (adaptado).\nA reportagem apresenta duas iniciativas: o livro Amazonês \ne as camisetas do Caboquês Ilustrado. Com temática em \ncomum, essas iniciativas\nA\trecomendam produtos feitos por empreendedores da \nregião Norte.\nB\tressaltam diferenças entre o falar manauara e outros \nfalares.\nC\treverenciam o trabalho feito por pesquisadores brasileiros.\nD\tdestacam a descontração no jeito de ser do amazonense.\nE\tvalorizam o repertório linguístico do povo do Amazonas.\n"
+  },
+  {
+    "year": 2024,
+    "number": 46,
+    "kind": "pdf-transcription",
+    "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/1dia/enem2024_1dia_prova_amarelo.pdf",
+    "page": 20,
+    "sha256": "b9c9215da6c7eedee80b37131685b516f7ef824b1413c0a1957a76e360cbcdee",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/01f19cf0-4be9-48df-9a29-f5fe33bbae07/download",
+    "answerKeySha256": "e1198aa21e9f04e81ceb314848bab39189fd314b27e2b8dac70a7a662defeb1d",
+    "answerRecord": "scripts/data/board-incidence/enem/2024.json",
+    "rawBlock": "TEXTO I\nO bufarinheiro, conhecido nas cidades por teque-teque, \nchama-se, nos recônditos da Amazônia, “regatão”. Em lugar de \ntransportar nas costas o mundo de miudezas, transporta-o no \nbojo de uma gaiola que desloca duas, três, quatro toneladas, \ndivididas em seções de secos e molhados e é movido por remo \nde faia. Cortando comunidades e matas da Amazônia por rios, \ndentro dessas gaiolas, riscadas de prateleiras, encontram-se \nos artigos mais díspares, que vão da agulha à espingarda, \ndo lenço ao cobertor, da chita à escova de dentes.\nMORAES, R. Na Planície Amazônica. São Paulo: \nEditora Nacional, 1936 (adaptado).\nTEXTO II\nNo século XIX, o comércio dos regatões era feito, então, \ncom base em relações tecidas com quilombolas, pequenos \nprodutores, comerciantes locais e indígenas, constituindo \nrelação comercial alternativa ao abastecimento da população.\nHENRIQUE, M. C.; MORAIS, L. T. Estradas líquidas, comércio sólido: \n índios e regatões na Amazônia (século XIX). Rev. Hist., \nn. 171, jul.-dez. 2014 (adaptado).\nComo parte do patrimônio cultural da Amazônia, o regatão \nfoi fundamental, no século XIX, para a\nA\torganização de rotas de fuga na floresta tropical.\nB\tcriação de postos de trabalho nos seringais nortistas.\nC\tdivulgação de receitas de fármacos nas zonas ribeirinhas.\nD\tconstrução de redes de sociabilidade no interior brasileiro.\nE\tampliação de ambientes de lazer nos territórios autóctones.\n"
+  },
+  {
+    "year": 2024,
+    "number": 47,
+    "kind": "pdf-transcription",
+    "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/1dia/enem2024_1dia_prova_amarelo.pdf",
+    "page": 20,
+    "sha256": "b9c9215da6c7eedee80b37131685b516f7ef824b1413c0a1957a76e360cbcdee",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/01f19cf0-4be9-48df-9a29-f5fe33bbae07/download",
+    "answerKeySha256": "e1198aa21e9f04e81ceb314848bab39189fd314b27e2b8dac70a7a662defeb1d",
+    "answerRecord": "scripts/data/board-incidence/enem/2024.json",
+    "rawBlock": "Era uma vez um país, uma cidade, uma praça, algumas \nmães... Las Madres de Plaza de Mayo! Silenciosas, com \nlenços brancos na cabeça, rondavam a Praça de Maio. \nIncansáveis, caminharam por dias, meses, anos. Foram \nchamadas de loucas. Em silêncio, criaram um fato político, \nescancararam as entranhas da repressão, desafiaram o \naparato militar e suas dores ecoaram pelo mundo. Como \nobservou Oliveira, “à luz do dia, sob as janelas do ditador, sob \nchuva, sob sol, no silêncio entrecortado de gritos, faziam ouvir \ncomo que a alucinação de uma litania, que ecoou no país, \nna América Latina e além-mar”. Era impossível ignorá-las, \nestavam lá, sempre em silêncio, mas estavam lá.\nGONÇALVES, R. De antigas e novas loucas: Madres e Mães de Maio \ncontra a violência de Estado. Lutas Sociais, n. 29, jul.-dez. 2012.\nQual problema de âmbito nacional argentino o movimento \nsocial mencionado expôs ao mundo?\nA\tViolação dos direitos humanos.\nB\tInsegurança da juventude periférica.\nC\tNaturalização da violência doméstica.\nD\tAmpliação das desigualdades sociais.\nE\tRelativização dos princípios democráticos.\n"
+  },
+  {
+    "year": 2024,
+    "number": 92,
+    "kind": "pdf-transcription",
+    "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/2dia/enem2024_2dia_prova_amarelo.pdf",
+    "page": 2,
+    "sha256": "44a324acab3b3922293f06b6ee08c90696c00ba82c0357e9e803b15d80b0ea24",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/109a33f5-e556-4e51-b9e3-8e0bdf3353d8/download",
+    "answerKeySha256": "342edd1d18c0266812b9e379c7b9b2ebfcdd739857445bd03cf3c55951861297",
+    "answerRecord": "scripts/data/board-incidence/enem/2024.json",
+    "rawBlock": "O magnésio metálico utilizado em ligas leves é \nproduzido em um processo que envolve várias etapas e \nutiliza água do mar como matéria-prima. A primeira etapa \ndesse processo consiste na reação entre o íon Mg2+ e \nhidróxido de cálcio, Ca(OH)2, obtendo uma mistura que \ncontém hidróxido de magnésio, pouco solúvel, e íons Ca2+, \nde acordo com a equação química:\nMg2+ (aq) + Ca(OH)2 (aq) → Mg(OH)2 (s) + Ca2+ (aq)\nO método adequado para separar o Mg(OH)2 dessa \nmistura é a\nA\tfiltração.\nB\tcatação.\nC\tdestilação.\nD\tdissolução.\nE\tevaporação.\n"
+  },
+  {
+    "year": 2024,
+    "number": 93,
+    "kind": "pdf-transcription",
+    "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/2dia/enem2024_2dia_prova_amarelo.pdf",
+    "page": 2,
+    "sha256": "44a324acab3b3922293f06b6ee08c90696c00ba82c0357e9e803b15d80b0ea24",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/109a33f5-e556-4e51-b9e3-8e0bdf3353d8/download",
+    "answerKeySha256": "342edd1d18c0266812b9e379c7b9b2ebfcdd739857445bd03cf3c55951861297",
+    "answerRecord": "scripts/data/board-incidence/enem/2024.json",
+    "rawBlock": "Moradores do Brooklin, bairro de São Paulo, perdem o \nsono com um som alto, constante e estridente. O barulho é \ncausado por anfíbios anuros trazidos do Caribe, da espécie \nEleutherodactylus jahnstonei, que têm tamanho um pouco \nmaior que o de um grão de feijão e que encontraram na \ncapital um ambiente favorável. Cientistas foram até o local \ne encontraram esses animais nos jardins das casas.\nPererecas-assobiadoras tiram o sono de moradores do \nBrooklin. Disponível em: http://g1.globo.com. \nAcesso em: 26 mar. 2015 (adaptado).\nAo emitirem o som estridente, esses anfíbios\nA\tindicam que estão fora de seu hábitat natural.\nB\talertam para a presença de poluição urbana.\nC\tsinalizam a existência de superpopulação.\nD\tdirecionam insetos para sua alimentação.\nE\tatraem fêmeas para o acasalamento.\n"
+  },
+  {
+    "year": 2024,
+    "number": 136,
+    "kind": "pdf-transcription",
+    "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/2dia/enem2024_2dia_prova_amarelo.pdf",
+    "page": 16,
+    "sha256": "44a324acab3b3922293f06b6ee08c90696c00ba82c0357e9e803b15d80b0ea24",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/109a33f5-e556-4e51-b9e3-8e0bdf3353d8/download",
+    "answerKeySha256": "342edd1d18c0266812b9e379c7b9b2ebfcdd739857445bd03cf3c55951861297",
+    "answerRecord": "scripts/data/board-incidence/enem/2024.json",
+    "rawBlock": "Uma empresa produz mochilas escolares sob \nencomenda. Essa empresa tem um custo total de produção, \ncomposto por um custo fixo, que não depende do número \nde mochilas, mais um custo variável, que é proporcional \nao número de mochilas produzidas. O custo total cresce \nde forma linear, e a tabela apresenta esse custo para três \nquantidades de mochilas produzidas.\nQuantidade de \nmochilas\n30\n50\n100\nCusto total (R$)\n1 050,00\n1 650,00\n3 150,00\nO custo total, em real, para a produção de 80 mochilas será\nA\t2 400,00.\nB\t2 520,00.\nC\t2 550,00.\nD\t2 700,00.\nE\t2 800,00.\n"
+  },
+  {
+    "year": 2024,
+    "number": 137,
+    "kind": "pdf-transcription",
+    "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/2dia/enem2024_2dia_prova_amarelo.pdf",
+    "page": 16,
+    "sha256": "44a324acab3b3922293f06b6ee08c90696c00ba82c0357e9e803b15d80b0ea24",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/109a33f5-e556-4e51-b9e3-8e0bdf3353d8/download",
+    "answerKeySha256": "342edd1d18c0266812b9e379c7b9b2ebfcdd739857445bd03cf3c55951861297",
+    "answerRecord": "scripts/data/board-incidence/enem/2024.json",
+    "rawBlock": "A umidade relativa do ar é um dos indicadores utilizados \nna meteorologia para fazer previsões sobre o clima. \nO quadro apresenta as médias mensais, em porcentagem, \nda umidade relativa do ar em um período de seis meses \nconsecutivos em uma cidade.\nMeses\nMaio Jun.\nJul.\nAgo.\nSet.\nOut.\nMédia mensal da \numidade relativa \ndo ar (%)\n66\n64\n54\n46\n60\n64\nNessa cidade, a mediana desses dados, em porcentagem, \nda umidade relativa do ar no período considerado foi\nA\t56.\nB\t58.\nC\t59.\nD\t60.\nE\t62.\n"
+  },
+  {
+    "year": 2025,
+    "number": 16,
+    "kind": "pdf-transcription",
+    "url": "https://riep.inep.gov.br/bitstreams/a11f89c6-3693-49f0-8164-2794b5dac372/download",
+    "page": 9,
+    "sha256": "fc5afca9bb3c168c9e1ddc97005736a461104b2552bac02bf0f1386af2164ed3",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/355fc4cc-8bf1-4bc9-b5a7-4ce989c01c76/download",
+    "answerKeySha256": "10a6daeb38ea518d8428dac0d68820ab1f3062dd4216ca6915a78ce830a2abac",
+    "answerRecord": "scripts/data/board-incidence/enem/2025.json",
+    "rawBlock": "A característica fundamental no aprendizado das práticas \nrituais nos candomblés é o processo iniciático e participante. \nDurante o período de reclusão em terreiros ou rocas, o iniciado \npassa por uma série de ritos esotéricos (banhos rituais, raspagem \nda cabeça etc.), ao mesmo tempo em que começa a adquirir \num complexo código de símbolos materiais (substâncias, folhas, \nfrutos, raízes etc.) e de gestos associados a um repertório \nlinguístico específico das cerimônias que se desenrolam nos \ncontextos sagrados em geral e em cada terreiro em particular.\nEsse repertório linguístico, genericamente chamado de \n“língua de santo” na Bahia, compreende uma terminologia \nreligiosa operacional, de caráter mágico-semântico e de aparente \nforma portuguesa, mas que repousa sobre sistemas lexicais de \ndiferentes línguas africanas que provavelmente foram faladas \nno Brasil escravocrata, vindo a constituir uma língua ritual, que \nse acredita pertencer à nação do vodum, do orixá ou do inquice, \ne não a determinada nação africana política atual.\nDisponível em: https://periodicos.ufba.br. \nAcesso em: 21 jan. 2024 (adaptado).\nA “língua de santo” tem sua importância para o patrimônio \nlinguístico brasileiro por\nA\tapresentar uma carga semântica mítica.\nB\tconservar elementos dos falares dos escravizados.\nC\tresgatar expressões portuguesas do período colonial.\nD\tdecodificar o ritual religioso dos nossos antepassados.\nE\tfavorecer a compreensão do léxico africano contemporâneo.\n"
+  },
+  {
+    "year": 2025,
+    "number": 17,
+    "kind": "pdf-transcription",
+    "url": "https://riep.inep.gov.br/bitstreams/a11f89c6-3693-49f0-8164-2794b5dac372/download",
+    "page": 9,
+    "sha256": "fc5afca9bb3c168c9e1ddc97005736a461104b2552bac02bf0f1386af2164ed3",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/355fc4cc-8bf1-4bc9-b5a7-4ce989c01c76/download",
+    "answerKeySha256": "10a6daeb38ea518d8428dac0d68820ab1f3062dd4216ca6915a78ce830a2abac",
+    "answerRecord": "scripts/data/board-incidence/enem/2025.json",
+    "rawBlock": "O meu medo é entrar na faculdade e tirar zero eu que nunca \nfui bom de matemática fraco no inglês eu que nunca gostei de \nquímica geografia e português o que é que eu faço agora hein \nmãe não sei. [...]\nO meu medo é a vida piorar e eu não conseguir arranjar \nemprego nem de faxineiro nem de porteiro nem de ajudante \nde pedreiro e o pessoal dizer que o governo já fez o que pôde \njá pôde o que fez já deu a sua cota de participação hein mãe \nnão sei.\nO meu medo é que mesmo com diploma debaixo do braço \nandando por aí desiludido e desempregado o policial me olhe \nde cara feia e eu acabe fazendo uma burrice sei lá uma besteira \nserá que eu vou ter direito a uma cela especial hein mãe não sei.\nFREIRE, M. Contos negreiros. Rio de Janeiro: Record, 2005.\nNesse texto, a reiteração dos medos e das angústias do \nnarrador exprime\nA\tinseguranças sobre o futuro familiar.\nB\tdilemas resultantes de seu fracasso escolar.\nC\tincertezas centradas em sua condição social.\nD\thesitações em relação à sua formação profissional.\nE\tpreocupações com as políticas públicas assistenciais.\n"
+  },
+  {
+    "year": 2025,
+    "number": 47,
+    "kind": "pdf-transcription",
+    "url": "https://riep.inep.gov.br/bitstreams/a11f89c6-3693-49f0-8164-2794b5dac372/download",
+    "page": 22,
+    "sha256": "fc5afca9bb3c168c9e1ddc97005736a461104b2552bac02bf0f1386af2164ed3",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/355fc4cc-8bf1-4bc9-b5a7-4ce989c01c76/download",
+    "answerKeySha256": "10a6daeb38ea518d8428dac0d68820ab1f3062dd4216ca6915a78ce830a2abac",
+    "answerRecord": "scripts/data/board-incidence/enem/2025.json",
+    "rawBlock": "O direito não é a justiça. O direito é o elemento do cálculo, \né justo que haja um direito, mas a justiça é incalculável, ela exige \nque se calcule o incalculável; e as experiências aporéticas são \nexperiências tão improváveis quanto necessárias da justiça, \nisto é, são momentos em que a decisão entre o justo e o injusto \nnunca é garantida por uma regra.\nDERRIDA, J. Força de lei. São Paulo: Martins Fontes, 2010 (adaptado).\nDe acordo com o texto, ainda que estejam em desconformidade \ncom o ordenamento jurídico, são exemplos de ação justa:\nA\tCasos de desobediência civil.\nB\tRepressões do aparato estatal.\nC\tConflitos de natureza intercontinental.\nD\tManifestações do movimento sindical.\nE\tMobilizações de agremiações estudantis.\n"
+  },
+  {
+    "year": 2025,
+    "number": 48,
+    "kind": "pdf-transcription",
+    "url": "https://riep.inep.gov.br/bitstreams/a11f89c6-3693-49f0-8164-2794b5dac372/download",
+    "page": 22,
+    "sha256": "fc5afca9bb3c168c9e1ddc97005736a461104b2552bac02bf0f1386af2164ed3",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/355fc4cc-8bf1-4bc9-b5a7-4ce989c01c76/download",
+    "answerKeySha256": "10a6daeb38ea518d8428dac0d68820ab1f3062dd4216ca6915a78ce830a2abac",
+    "answerRecord": "scripts/data/board-incidence/enem/2025.json",
+    "rawBlock": "Sinal fechado\nOlá, como vai?\nEu vou indo e você, tudo bem?\nTudo bem, eu vou indo, correndo\nPegar meu lugar no futuro, e você?\nTudo bem, eu vou indo em busca\nDe um sono tranquilo, quem sabe?\nQuanto tempo...\nPois é, quanto tempo...\nMe perdoe a pressa\nÉ a alma dos nossos negócios...\nOh, não tem de que\nEu também só ando a cem\nQuando é que você telefona?\nPrecisamos nos ver por aí\nPra semana, prometo,\nTalvez nos vejamos, quem sabe?\nQuanto tempo...\nPois é, quanto tempo...\nTanta coisa que eu tinha a dizer\nMas eu sumi na poeira das ruas\nEu também tenho algo a dizer\nMas me foge a lembrança\nPor favor, telefone, eu preciso beber\nAlguma coisa rapidamente\nPra semana...\nO sinal...\nEu procuro você...\nVai abrir! Vai abrir!\nPrometo, não esqueço\nPor favor, não esqueça\nNão esqueço, não esqueço\nAdeus...\nPAULINHO DA VIOLA. Foi um rio que passou em minha vida. \nRio de Janeiro: Odeon, 1970.\nA letra da canção apresenta a permanência de uma situação da \nvida cotidiana ao destacar a\nA\tdiminuição do comportamento competitivo.\nB\timportância da memória coletiva.\nC\tredução da mobilidade urbana.\nD\tefemeridade dos vínculos de afetividade.\nE\tobsolescência dos meios de comunicação.\n"
+  },
+  {
+    "year": 2025,
+    "number": 91,
+    "kind": "pdf-transcription",
+    "url": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2025/ENEM_2025_dia_2_caderno_amarelo.pdf",
+    "page": 2,
+    "sha256": "6cf3a0361035f86710be6fd8ff6b6848aa99c98fe71730d8ade1ca4ce4f1e560",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/5830254a-fab5-40e4-bd42-245926bcdd10/download",
+    "answerKeySha256": "4feea3658a94e20fa226028824b22538cb1b7e405a6a6e547d6a7131e5c97c22",
+    "answerRecord": "scripts/data/board-incidence/enem/2025.json",
+    "rawBlock": "TEXTO I\nAs mariposas\nAs mariposa, quando chega o frio\nFica dando volta em volta da lâmpida pra se esquentá. [sic]\nBARBOSA, A. Reviva: Adoniran Barbosa. \nSão Paulo: Som Livre, 2002 (fragmento).\nTEXTO II\nAs mariposas se aproximam das lâmpadas atraídas pela luz, \npois, sendo basicamente criaturas noturnas, estão adaptadas \na seguir o brilho da lua, em um processo conhecido como \norientação transversal. Assim, o que o sambista Adoniran \nBarbosa, no Texto I, descreve não é a causa, mas sim uma das \nconsequências possíveis dessa aproximação. De fato, o calor \ngerado pelas lâmpadas, sobretudo as incandescentes, pode \naquecer as mariposas.\nHERTZBERG, R. Por que as mariposas são tão atraídas por luzes fortes? \nNational Geographic, nov. 2020 (adaptado).\nNesse contexto, o processo de transferência de calor para as \nmariposas que independe da presença de fluidos é a\nA\treflexão.\nB\trefração.\nC\tirradiação.\nD\tdispersão.\nE\tconvecção.\n"
+  },
+  {
+    "year": 2025,
+    "number": 92,
+    "kind": "pdf-transcription",
+    "url": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2025/ENEM_2025_dia_2_caderno_amarelo.pdf",
+    "page": 2,
+    "sha256": "6cf3a0361035f86710be6fd8ff6b6848aa99c98fe71730d8ade1ca4ce4f1e560",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/5830254a-fab5-40e4-bd42-245926bcdd10/download",
+    "answerKeySha256": "4feea3658a94e20fa226028824b22538cb1b7e405a6a6e547d6a7131e5c97c22",
+    "answerRecord": "scripts/data/board-incidence/enem/2025.json",
+    "rawBlock": "Os sapinhos-ponta-de-flecha constituem um grupo de \nespécies encontradas na América Central e do Sul. Seus venenos \nsão obtidos por meio do consumo de algumas formigas e cupins \nque se alimentam de plantas que contêm esses venenos. Esses \nanfíbios são usados para envenenar as flechas das zarabatanas \ndos caçadores nativos. Quando capturados e criados em \ncondições artificiais, ou quando nascidos em cativeiro, não \nsão tóxicos.\nBADIO, B. et al. Epibatidine: Discovery and Definition as a Potent \nAnalgesic and Nicotinic Agonist. Med. Chem. Res., \nn. 4, 1994 (adaptado).\nA perda da capacidade de se obter a toxina nos nascidos em \ncativeiro é causada pela\nA\tdiferença de umidade entre os ambientes.\nB\tausência de alimentação natural.\nC\tadaptação ao novo ambiente.\nD\tmudança de comportamento.\nE\tvariabilidade genética.\n"
+  },
+  {
+    "year": 2025,
+    "number": 137,
+    "kind": "pdf-transcription",
+    "url": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2025/ENEM_2025_dia_2_caderno_amarelo.pdf",
+    "page": 16,
+    "sha256": "6cf3a0361035f86710be6fd8ff6b6848aa99c98fe71730d8ade1ca4ce4f1e560",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/5830254a-fab5-40e4-bd42-245926bcdd10/download",
+    "answerKeySha256": "4feea3658a94e20fa226028824b22538cb1b7e405a6a6e547d6a7131e5c97c22",
+    "answerRecord": "scripts/data/board-incidence/enem/2025.json",
+    "rawBlock": "Em um laboratório, um recipiente contém 10 litros de \numa solução composta apenas pelas substâncias S1 e S2. \nDessa solução, 99,95% é de S1. Uma quantidade de S1 será \nretirada dessa solução, mantendo a quantidade inicial de S2, \nde modo que 99,90% da nova solução seja de S1.\nQual é a quantidade de S1, em litro, que será retirada?\nA\t0,0050\nB\t0,0100\nC\t0,5000\nD\t4,9775\nE\t5,0000\n"
+  },
+  {
+    "year": 2025,
+    "number": 138,
+    "kind": "pdf-transcription",
+    "url": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2025/ENEM_2025_dia_2_caderno_amarelo.pdf",
+    "page": 16,
+    "sha256": "6cf3a0361035f86710be6fd8ff6b6848aa99c98fe71730d8ade1ca4ce4f1e560",
+    "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/5830254a-fab5-40e4-bd42-245926bcdd10/download",
+    "answerKeySha256": "4feea3658a94e20fa226028824b22538cb1b7e405a6a6e547d6a7131e5c97c22",
+    "answerRecord": "scripts/data/board-incidence/enem/2025.json",
+    "rawBlock": "Uma distribuidora de combustível possui caminhões-tanque \ncom capacidade de 30 000 litros cada. Em qualquer transporte \nrealizado por esses caminhões, um mesmo volume de combustível \né descartado, pois fica com muitas impurezas. Esse volume \ndescartado independe da quantidade transportada.\nUm posto de combustível encomendou 10 000 litros de \ngasolina dessa distribuidora, que enviou 10 200 litros, considerando \no volume descartado no transporte. Mesmo assim, a quantidade \nde gasolina entregue ao posto foi de 9 900 litros.\nEm um novo pedido, esse posto solicitou que fosse entregue \nexatamente o dobro do volume de gasolina encomendado no \npedido anterior.\nUtilizando o mesmo caminhão da entrega anterior, qual é o volume \nmínimo de gasolina, em litro, que a distribuidora deverá enviar para \ngarantir a entrega da quantidade encomendada nesse novo pedido?\nA\t20 100\nB\t20 200\nC\t20 300\nD\t20 400\nE\t20 600\n"
+  }
+]
