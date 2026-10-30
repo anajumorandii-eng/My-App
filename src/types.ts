@@ -210,6 +210,9 @@ export interface QuizOption {
 }
 
 export interface Question {
+  /** Preservada para consulta; nunca deve ser corrigida nem gerar progresso. */
+  status?: 'annulled';
+  explanationSource?: 'answer-key' | 'editorial';
   originalPages?: { url: string; page: number }[];
   /** Enunciado e contexto visual já conferidos para leitura sem a página inteira. */
   statementComplete?: boolean;

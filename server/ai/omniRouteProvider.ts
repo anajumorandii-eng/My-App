@@ -104,15 +104,15 @@ export class OmniRouteProvider implements AiProvider {
     return selectOmniRouteModel(task, this.deepModel, this.fastModel);
   }
 
-  async generate({ task, prompt, signal }: AiGenerationRequest): Promise<AiProviderResult> {
+  async generate({ task, prompt, signal, images }: AiGenerationRequest): Promise<AiProviderResult> {
     if (!this.isConfigured) throw new Error('OmniRoute API not configured.');
 
     const primaryModel = this.modelForTask(task);
     try {
-      return await this.complete(primaryModel, prompt, signal);
+      return await this.complete(primaryModel, prompt, signal, images);
     } catch (error) {
       if (primaryModel === this.fastModel || signal?.aborted || (error instanceof OmniRouteHttpError && [401, 403].includes(error.status))) throw error;
-      const fallback = await this.complete(this.fastModel, prompt, signal);
+      const fallback = await this.complete(this.fastModel, prompt, signal, images);
       return { ...fallback, fallback: true };
     }
   }
@@ -122,17 +122,17 @@ export class OmniRouteProvider implements AiProvider {
    * vale antes do primeiro pedaço de texto: depois que a aluna já começou a
    * ler, recomeçar com outro modelo trocaria a resposta debaixo dos olhos dela.
    */
-  async *generateStream({ task, prompt, signal }: AiGenerationRequest): AiStream {
+  async *generateStream({ task, prompt, signal, images }: AiGenerationRequest): AiStream {
     if (!this.isConfigured) throw new Error('OmniRoute API not configured.');
 
     const primaryModel = this.modelForTask(task);
     let emitiu = false;
 
     try {
-      return yield* this.streamComplete(primaryModel, prompt, signal, () => { emitiu = true; });
+      return yield* this.streamComplete(primaryModel, prompt, signal, () => { emitiu = true; }, images);
     } catch (error) {
       if (emitiu || primaryModel === this.fastModel || signal?.aborted || (error instanceof OmniRouteHttpError && [401, 403].includes(error.status))) throw error;
-      const fallback = yield* this.streamComplete(this.fastModel, prompt, signal);
+      const fallback = yield* this.streamComplete(this.fastModel, prompt, signal, undefined, images);
       return { ...fallback, fallback: true };
     }
   }
@@ -147,7 +147,7 @@ export class OmniRouteProvider implements AiProvider {
     return this.fetchFn(url, init);
   }
 
-  private async *streamComplete(model: string, prompt: string, signal?: AbortSignal, onDelta?: () => void): AiStream {
+  private async *streamComplete(model: string, prompt: string, signal?: AbortSignal, onDelta?: () => void, images?: AiGenerationRequest['images']): AiStream {
     const response = await this.fetchWithRetry(`${this.baseUrl}/chat/completions`, {
       method: 'POST',
       headers: {
@@ -156,7 +156,7 @@ export class OmniRouteProvider implements AiProvider {
       },
       body: JSON.stringify({
         model,
-        messages: [{ role: 'user', content: prompt }],
+        messages: [{ role: 'user', content: images?.length ? [{ type: 'text', text: prompt }, ...images.map(image => ({ type: 'image_url', image_url: { url: `data:${image.mimeType};base64,${image.data}` } }))] : prompt }],
         stream: true,
         // Sem isto o total de tokens não vem no fluxo, e as métricas de custo
         // ficariam vazias justamente nas respostas mais longas.
@@ -211,7 +211,7 @@ export class OmniRouteProvider implements AiProvider {
     return { text: texto, model, usage: toUsage(usage) };
   }
 
-  private async complete(model: string, prompt: string, signal?: AbortSignal): Promise<AiProviderResult> {
+  private async complete(model: string, prompt: string, signal?: AbortSignal, images?: AiGenerationRequest['images']): Promise<AiProviderResult> {
     const response = await this.fetchWithRetry(`${this.baseUrl}/chat/completions`, {
       method: 'POST',
       headers: {
@@ -220,7 +220,7 @@ export class OmniRouteProvider implements AiProvider {
       },
       body: JSON.stringify({
         model,
-        messages: [{ role: 'user', content: prompt }],
+        messages: [{ role: 'user', content: images?.length ? [{ type: 'text', text: prompt }, ...images.map(image => ({ type: 'image_url', image_url: { url: `data:${image.mimeType};base64,${image.data}` } }))] : prompt }],
         stream: false,
       }),
       signal,

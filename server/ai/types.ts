@@ -16,6 +16,8 @@ export type AiTask =
 export interface AiGenerationRequest {
   task: AiTask;
   prompt: string;
+  /** Figuras locais verificadas pelo servidor; nunca URLs enviadas pelo cliente. */
+  images?: { mimeType: string; data: string }[];
   userId?: string;
   signal?: AbortSignal;
 }

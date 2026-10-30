@@ -11,6 +11,7 @@ const questionsHook = vi.hoisted(() => vi.fn());
 const addUserAttemptMock = vi.hoisted(() => vi.fn().mockResolvedValue(undefined));
 const addUserErrorLogMock = vi.hoisted(() => vi.fn().mockResolvedValue(undefined));
 const requestAiTextMock = vi.hoisted(() => vi.fn());
+const requestAiTextStreamMock = vi.hoisted(() => vi.fn());
 
 vi.mock('../context/AuthContext', () => ({ useAuth: authHook }));
 vi.mock('../hooks/useUserMastery', () => ({ useUserMastery: masteryHook }));
@@ -19,7 +20,7 @@ vi.mock('../lib/userData', () => ({
   addUserAttempt: addUserAttemptMock,
   addUserErrorLog: addUserErrorLogMock,
 }));
-vi.mock('../lib/aiClient', () => ({ requestAiText: requestAiTextMock }));
+vi.mock('../lib/aiClient', () => ({ requestAiText: requestAiTextMock, requestAiTextStream: requestAiTextStreamMock }));
 
 const QUESTION: Question = {
   id: 'q1',
@@ -52,6 +53,50 @@ beforeEach(() => {
 });
 
 describe('Questoes — banca, ano e fontes oficiais', () => {
+  it('preserva a anulada para consulta sem registrar tentativa ou atualizar domínio', async()=>{
+    questionsHook.mockReturnValue({questions:[{...QUESTION,status:'annulled',correctOptionId:''}],syncError:null});
+    const user=userEvent.setup();render(<Questoes/>);
+    expect(screen.getByText(/Questão anulada no gabarito definitivo/)).toBeInTheDocument();
+    expect(screen.getByRole('button',{name:/Citoplasma/})).toBeDisabled();
+    await user.click(screen.getByRole('button',{name:/Citoplasma/}));
+    expect(addUserAttemptMock).not.toHaveBeenCalled();
+    expect(masteryHook.mock.results[0].value.updateMastery).not.toHaveBeenCalled();
+  });
+
+  it('roteia comentário de questão com texto conferido e figuras pelo ID e alternativa',async()=>{
+    questionsHook.mockReturnValue({questions:[{...QUESTION,statementComplete:true,originalPages:[{page:2,url:'/fonte-conferida.webp'}]}],syncError:null});
+    requestAiTextStreamMock.mockImplementation(async(_endpoint,_payload,onDelta)=>{onDelta('Comentário fundamentado');return {text:'Comentário fundamentado'};});
+    const user=userEvent.setup();render(<Questoes/>);
+    await user.click(screen.getByRole('button',{name:/Citoplasma/}));
+    await user.click(screen.getByRole('button',{name:'Resolução por etapas'}));
+    await waitFor(()=>expect(requestAiTextStreamMock).toHaveBeenCalledWith('question-explanation',expect.objectContaining({questionId:'q1',selectedOptionId:'a'}),expect.any(Function)));
+    expect(await screen.findByText('Comentário fundamentado')).toBeInTheDocument();
+  });
+
+  it('descarta o comentário atrasado quando a estudante muda de questão',async()=>{
+    questionsHook.mockReturnValue({questions:[QUESTION,{...QUESTION,id:'q2',prompt:'Qual é a próxima questão?'}],syncError:null});
+    let emit!:(text:string)=>void;let finish!:(result:{text:string})=>void;
+    requestAiTextStreamMock.mockImplementation((_endpoint,_payload,onDelta)=>{emit=onDelta;return new Promise(resolve=>{finish=resolve;});});
+    const user=userEvent.setup();render(<Questoes/>);
+    await user.click(screen.getByRole('button',{name:/Citoplasma/}));
+    await user.click(screen.getByRole('button',{name:'Resolução por etapas'}));
+    await user.click(screen.getByRole('button',{name:'Próxima questão'}));
+    expect(screen.getByText('Qual é a próxima questão?')).toBeInTheDocument();
+    emit('Comentário da questão anterior');finish({text:'Comentário da questão anterior'});
+    await waitFor(()=>expect(screen.queryByText('Comentário da questão anterior')).not.toBeInTheDocument());
+  });
+
+  it('descarta a resolução da tentativa anterior mesmo quando o pool tem um único ID',async()=>{
+    let emit!:(text:string)=>void;let finish!:(result:{text:string})=>void;
+    requestAiTextStreamMock.mockImplementation((_endpoint,_payload,onDelta)=>{emit=onDelta;return new Promise(resolve=>{finish=resolve;});});
+    const user=userEvent.setup();render(<Questoes/>);
+    await user.click(screen.getByRole('button',{name:/Citoplasma/}));
+    await user.click(screen.getByRole('button',{name:'Resolução por etapas'}));
+    await user.click(screen.getByRole('button',{name:'Próxima questão'}));
+    await user.click(screen.getByRole('button',{name:/Mitocôndria/}));
+    emit('Comentário da tentativa A');finish({text:'Comentário da tentativa A'});
+    await waitFor(()=>expect(screen.queryByText('Comentário da tentativa A')).not.toBeInTheDocument());
+  });
   it('busca no enunciado sem acentos, preserva os filtros e limpa a resposta anterior', async () => {
     questionsHook.mockReturnValue({ questions: [
       { ...QUESTION, id: 'unicamp', examSource: { board: 'UNICAMP', year: 2026 } },

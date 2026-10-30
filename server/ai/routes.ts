@@ -15,6 +15,7 @@ import { validateAiPayload } from './validation';
 import { estimateAiCostUsd } from './cost';
 import { AiMetricsRecorder } from './metrics';
 import { ApostilaReferenceStore } from './apostilaReferenceStore';
+import { groundQuestion } from './questionGrounding';
 
 // Prompt já é grande o bastante sem precisar de um trecho de apostila
 // inteiro — isso aqui é só grounding factual/terminológico, não a fonte
@@ -72,6 +73,7 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
       };
       try {
         const payload = validateAiPayload(task, req.body);
+        const images = ['question-explanation','error-diagnosis'].includes(task) ? await groundQuestion(payload) : undefined;
         const serverSources: import('../../src/lib/studySources').StudySource[] = [];
 
         if (task === 'review-tip' && payload.guideMode === 'review-summary') {
@@ -96,7 +98,7 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
           }
         }
 
-        const request = { task, prompt: buildAiPrompt(task, payload), userId: res.locals.userId as string | undefined };
+        const request = { task, prompt: buildAiPrompt(task, payload), userId: res.locals.userId as string | undefined, ...(images?.length ? { images } : {}) };
 
         if (evaluation && isEvaluationAdmin(res.locals)) {
           try {

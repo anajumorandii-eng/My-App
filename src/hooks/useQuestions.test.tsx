@@ -33,3 +33,15 @@ it('mostra o banco local e avisa quando o remoto falha', async () => {
   expect(result.current.questions).toHaveLength(2);
   expect(result.current.syncError).toContain('Mostrando o banco local');
 });
+
+it('exclui anuladas do treino e as inclui somente na consulta explícita', async () => {
+  const archived={...question('anulada'),status:'annulled' as const};
+  vi.mocked(getLocalQuestionBank).mockResolvedValue([question('valida'),archived]);
+  vi.mocked(getQuestions).mockResolvedValue([archived]);
+  const training=renderHook(()=>useQuestions());
+  await waitFor(()=>expect(training.result.current.loading).toBe(false));
+  expect(training.result.current.questions.map(q=>q.id)).toEqual(['valida']);
+  const archive=renderHook(()=>useQuestions(true));
+  await waitFor(()=>expect(archive.result.current.loading).toBe(false));
+  expect(archive.result.current.questions.map(q=>q.id)).toEqual(['valida','anulada']);
+});

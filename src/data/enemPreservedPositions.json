@@ -1,0 +1,392 @@
+{
+  "q_real_enem_2023_mat": {
+    "year": 2023,
+    "number": 142,
+    "day": 2
+  },
+  "q_real_enem_2023_qui": {
+    "year": 2023,
+    "number": 116,
+    "day": 2
+  },
+  "enem_2022_d2_cd5_q92": {
+    "year": 2022,
+    "number": 92,
+    "day": 2
+  },
+  "enem_2022_d2_cd5_q94": {
+    "year": 2022,
+    "number": 94,
+    "day": 2
+  },
+  "enem_2022_d2_cd5_q97": {
+    "year": 2022,
+    "number": 97,
+    "day": 2
+  },
+  "enem_2022_d2_cd5_q98": {
+    "year": 2022,
+    "number": 98,
+    "day": 2
+  },
+  "enem_2022_d2_cd5_q99": {
+    "year": 2022,
+    "number": 99,
+    "day": 2
+  },
+  "enem_2022_d2_cd5_q104": {
+    "year": 2022,
+    "number": 104,
+    "day": 2
+  },
+  "enem_2022_d2_cd5_q105": {
+    "year": 2022,
+    "number": 105,
+    "day": 2
+  },
+  "enem_2022_d2_cd5_q116": {
+    "year": 2022,
+    "number": 116,
+    "day": 2
+  },
+  "enem_2022_d2_cd5_q130": {
+    "year": 2022,
+    "number": 130,
+    "day": 2
+  },
+  "enem_2022_d2_cd5_q136": {
+    "year": 2022,
+    "number": 136,
+    "day": 2
+  },
+  "enem_2022_d2_cd5_q140": {
+    "year": 2022,
+    "number": 140,
+    "day": 2
+  },
+  "enem_2022_d2_cd5_q157": {
+    "year": 2022,
+    "number": 157,
+    "day": 2
+  },
+  "enem_expansao_2018_q06": {
+    "year": 2018,
+    "number": 42,
+    "day": 1
+  },
+  "enem_expansao_2018_q08": {
+    "year": 2018,
+    "number": 44,
+    "day": 1
+  },
+  "enem_expansao_2018_q46": {
+    "year": 2018,
+    "number": 57,
+    "day": 1
+  },
+  "enem_expansao_2018_q52": {
+    "year": 2018,
+    "number": 67,
+    "day": 1
+  },
+  "enem_expansao_2018_q94": {
+    "year": 2018,
+    "number": 126,
+    "day": 2
+  },
+  "enem_expansao_2018_q98": {
+    "year": 2018,
+    "number": 93,
+    "day": 2
+  },
+  "enem_expansao_2018_q141": {
+    "year": 2018,
+    "number": 159,
+    "day": 2
+  },
+  "enem_expansao_2018_q143": {
+    "year": 2018,
+    "number": 152,
+    "day": 2
+  },
+  "enem_expansao_2019_q07": {
+    "year": 2019,
+    "number": 6,
+    "day": 1
+  },
+  "enem_expansao_2019_q08": {
+    "year": 2019,
+    "number": 9,
+    "day": 1
+  },
+  "enem_expansao_2019_q46": {
+    "year": 2019,
+    "number": 79,
+    "day": 1
+  },
+  "enem_expansao_2019_q48": {
+    "year": 2019,
+    "number": 81,
+    "day": 1
+  },
+  "enem_expansao_2019_q93": {
+    "year": 2019,
+    "number": 96,
+    "day": 2
+  },
+  "enem_expansao_2019_q97": {
+    "year": 2019,
+    "number": 102,
+    "day": 2
+  },
+  "enem_expansao_2019_q148": {
+    "year": 2019,
+    "number": 152,
+    "day": 2
+  },
+  "enem_expansao_2019_q150": {
+    "year": 2019,
+    "number": 154,
+    "day": 2
+  },
+  "enem_expansao_2020_q06": {
+    "year": 2020,
+    "number": 35,
+    "day": 1
+  },
+  "enem_expansao_2020_q08": {
+    "year": 2020,
+    "number": 16,
+    "day": 1
+  },
+  "enem_expansao_2020_q46": {
+    "year": 2020,
+    "number": 68,
+    "day": 1
+  },
+  "enem_expansao_2020_q49": {
+    "year": 2020,
+    "number": 71,
+    "day": 1
+  },
+  "enem_expansao_2020_q96": {
+    "year": 2020,
+    "number": 128,
+    "day": 2
+  },
+  "enem_expansao_2020_q103": {
+    "year": 2020,
+    "number": 104,
+    "day": 2
+  },
+  "enem_expansao_2020_q138": {
+    "year": 2020,
+    "number": 150,
+    "day": 2
+  },
+  "enem_expansao_2020_q160": {
+    "year": 2020,
+    "number": 144,
+    "day": 2
+  },
+  "enem_expansao_2021_q06": {
+    "year": 2021,
+    "number": 44,
+    "day": 1
+  },
+  "enem_expansao_2021_q08": {
+    "year": 2021,
+    "number": 42,
+    "day": 1
+  },
+  "enem_expansao_2021_q46": {
+    "year": 2021,
+    "number": 87,
+    "day": 1
+  },
+  "enem_expansao_2021_q47": {
+    "year": 2021,
+    "number": 88,
+    "day": 1
+  },
+  "enem_expansao_2021_q95": {
+    "year": 2021,
+    "number": 129,
+    "day": 2
+  },
+  "enem_expansao_2021_q110": {
+    "year": 2021,
+    "number": 118,
+    "day": 2
+  },
+  "enem_expansao_2021_q141": {
+    "year": 2021,
+    "number": 176,
+    "day": 2
+  },
+  "enem_expansao_2021_q142": {
+    "year": 2021,
+    "number": 177,
+    "day": 2
+  },
+  "enem_expansao_2022_q06": {
+    "year": 2022,
+    "number": 41,
+    "day": 1
+  },
+  "enem_expansao_2022_q12": {
+    "year": 2022,
+    "number": 40,
+    "day": 1
+  },
+  "enem_expansao_2022_q46": {
+    "year": 2022,
+    "number": 79,
+    "day": 1
+  },
+  "enem_expansao_2022_q47": {
+    "year": 2022,
+    "number": 80,
+    "day": 1
+  },
+  "enem_expansao_2022_q93": {
+    "year": 2022,
+    "number": 124,
+    "day": 2
+  },
+  "enem_expansao_2022_q97": {
+    "year": 2022,
+    "number": 120,
+    "day": 2
+  },
+  "enem_expansao_2022_q140": {
+    "year": 2022,
+    "number": 161,
+    "day": 2
+  },
+  "enem_expansao_2022_q146": {
+    "year": 2022,
+    "number": 155,
+    "day": 2
+  },
+  "enem_expansao_2023_q07": {
+    "year": 2023,
+    "number": 44,
+    "day": 1
+  },
+  "enem_expansao_2023_q08": {
+    "year": 2023,
+    "number": 45,
+    "day": 1
+  },
+  "enem_expansao_2023_q52": {
+    "year": 2023,
+    "number": 73,
+    "day": 1
+  },
+  "enem_expansao_2023_q53": {
+    "year": 2023,
+    "number": 74,
+    "day": 1
+  },
+  "enem_expansao_2023_q91": {
+    "year": 2023,
+    "number": 123,
+    "day": 2
+  },
+  "enem_expansao_2023_q92": {
+    "year": 2023,
+    "number": 124,
+    "day": 2
+  },
+  "enem_expansao_2023_q138": {
+    "year": 2023,
+    "number": 166,
+    "day": 2
+  },
+  "enem_expansao_2023_q143": {
+    "year": 2023,
+    "number": 151,
+    "day": 2
+  },
+  "enem_expansao_2024_q06": {
+    "year": 2024,
+    "number": 6,
+    "day": 1
+  },
+  "enem_expansao_2024_q09": {
+    "year": 2024,
+    "number": 9,
+    "day": 1
+  },
+  "enem_expansao_2024_q46": {
+    "year": 2024,
+    "number": 46,
+    "day": 1
+  },
+  "enem_expansao_2024_q47": {
+    "year": 2024,
+    "number": 47,
+    "day": 1
+  },
+  "enem_expansao_2024_q92": {
+    "year": 2024,
+    "number": 92,
+    "day": 2
+  },
+  "enem_expansao_2024_q93": {
+    "year": 2024,
+    "number": 93,
+    "day": 2
+  },
+  "enem_expansao_2024_q136": {
+    "year": 2024,
+    "number": 136,
+    "day": 2
+  },
+  "enem_expansao_2024_q137": {
+    "year": 2024,
+    "number": 137,
+    "day": 2
+  },
+  "enem_expansao_2025_q16": {
+    "year": 2025,
+    "number": 16,
+    "day": 1
+  },
+  "enem_expansao_2025_q17": {
+    "year": 2025,
+    "number": 17,
+    "day": 1
+  },
+  "enem_expansao_2025_q47": {
+    "year": 2025,
+    "number": 47,
+    "day": 1
+  },
+  "enem_expansao_2025_q48": {
+    "year": 2025,
+    "number": 48,
+    "day": 1
+  },
+  "enem_expansao_2025_q91": {
+    "year": 2025,
+    "number": 91,
+    "day": 2
+  },
+  "enem_expansao_2025_q92": {
+    "year": 2025,
+    "number": 92,
+    "day": 2
+  },
+  "enem_expansao_2025_q137": {
+    "year": 2025,
+    "number": 137,
+    "day": 2
+  },
+  "enem_expansao_2025_q138": {
+    "year": 2025,
+    "number": 138,
+    "day": 2
+  }
+}

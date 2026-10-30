@@ -1,1 +1,5 @@
 PyMuPDF==1.28.2
+numpy==2.3.5
+Pillow==12.3.0
+scipy==1.17.0
+fonttools==4.61.1

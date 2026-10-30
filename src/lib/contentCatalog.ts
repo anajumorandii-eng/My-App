@@ -17,10 +17,11 @@ import { Question, StudyMethod, PodcastEpisode } from '../types';
  * Continua sendo a base offline sobre a qual o Firestore escreve por cima —
  * quando o banco compartilhado responde, ele vence.
  */
-export async function getLocalQuestionBank(): Promise<Question[]> {
-  const res = await fetch('/questions.json');
+export async function getLocalQuestionBank(includeAnnulled = false): Promise<Question[]> {
+  const res = await fetch('/questions.json', { cache: 'no-cache' });
   if (!res.ok) throw new Error('Não foi possível carregar o banco de questões local.');
-  return res.json() as Promise<Question[]>;
+  const questions = await res.json() as Question[];
+  return includeAnnulled ? questions : questions.filter(q => q.status !== 'annulled');
 }
 
 export async function getQuestions(): Promise<Question[]> {
