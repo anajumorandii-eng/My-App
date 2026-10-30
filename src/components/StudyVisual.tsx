@@ -3,11 +3,11 @@ import { figureInk } from '../lib/figureInk';
 import { StudyMolecule } from './StudyMolecule';
 import { StudyLineChart } from './StudyLineChart';
 import { StudyGeometry } from './StudyGeometry';
-import { StudyCircuit, StudyClimate, StudyPedigree, StudyTimeline } from './StudyDiagrams';
+import { StudyCircuit, StudyClimate, StudyCycle, StudyPedigree, StudyPunnett, StudyTimeline } from './StudyDiagrams';
 import './StudyVisual.css';
 
 const KICKER: Record<Visual['type'], string> = {
-  flow: 'Esquema', bars: 'Gráfico', line: 'Gráfico', molecule: 'Estrutura', reaction: 'Reação', geometry: 'Figura', circuit: 'Circuito', timeline: 'Linha do tempo', pedigree: 'Heredograma', climate: 'Climograma',
+  flow: 'Esquema', bars: 'Gráfico', line: 'Gráfico', molecule: 'Estrutura', reaction: 'Reação', geometry: 'Figura', circuit: 'Circuito', timeline: 'Linha do tempo', pedigree: 'Heredograma', climate: 'Climograma', punnett: 'Cruzamento', cycle: 'Ciclo',
 };
 
 /**
@@ -57,6 +57,8 @@ export function StudyVisual({ source }: { source: string }) {
       : visual.type === 'timeline' ? <StudyTimeline visual={visual} />
       : visual.type === 'pedigree' ? <StudyPedigree visual={visual} />
       : visual.type === 'climate' ? <StudyClimate visual={visual} />
+      : visual.type === 'punnett' ? <StudyPunnett visual={visual} />
+      : visual.type === 'cycle' ? <StudyCycle visual={visual} />
       : visual.type === 'line' ? <StudyLineChart visual={visual} />
       : visual.type === 'flow' ? <ol aria-label={visual.title} className="crivo-flow">
         {visual.steps.map((step, index) => <li key={index} className="crivo-flow__item">

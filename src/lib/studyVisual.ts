@@ -10,7 +10,9 @@ export type StudyVisual = Base & (
   { type: 'circuit'; loop: CircuitItem[] } |
   { type: 'timeline'; events: { year: number; label: string }[]; periods?: { start: number; end: number; label: string }[] } |
   { type: 'pedigree'; individuals: PedigreeIndividual[]; couples: { a: string; b: string; children: string[] }[] } |
-  { type: 'climate'; place: string; months: { label: string; temp: number; rain: number }[] }
+  { type: 'climate'; place: string; months: { label: string; temp: number; rain: number }[] } |
+  { type: 'punnett'; parents?: [string, string]; gametes: [string[], string[]] } |
+  { type: 'cycle'; steps: string[]; center?: string }
 );
 export const CIRCUIT_KINDS = ['battery', 'resistor', 'lamp', 'capacitor', 'switch', 'ammeter', 'voltmeter'] as const;
 export type CircuitComponent = { kind: typeof CIRCUIT_KINDS[number]; label?: string };
@@ -81,6 +83,33 @@ function climate(value: Record<string, unknown>): boolean {
   return label(value.place, 80) && Array.isArray(months) && months.length === 12
     && months.every(m => m && label(m.label, 4) && number(m.temp) && Math.abs(m.temp) <= 60 && number(m.rain) && m.rain >= 0 && m.rain <= 2000);
 }
+/**
+ * Quadro de Punnett: o modelo dá só os gametas; os genótipos de cada casa e a
+ * proporção saem de punnettCells, nunca do texto do modelo, que erra conta.
+ * Cada gameta tem uma letra por gene, na mesma ordem nos dois genitores.
+ */
+function punnett(value: Record<string, unknown>): boolean {
+  const gametes = value.gametes;
+  if (!Array.isArray(gametes) || gametes.length !== 2) return false;
+  const all: unknown[] = gametes.flat();
+  if (!gametes.every(side => Array.isArray(side) && side.length >= 1 && side.length <= 4)) return false;
+  if (!all.every(g => typeof g === 'string' && /^[A-Za-z]{1,3}$/.test(g))) return false;
+  const loci = (all[0] as string).toLowerCase();
+  if (!all.every(g => (g as string).toLowerCase() === loci) || new Set(loci).size !== loci.length) return false;
+  const parents = value.parents;
+  return parents === undefined || (Array.isArray(parents) && parents.length === 2 && parents.every(p => label(p, 24)));
+}
+/** Genótipo de cada casa (alelo dominante primeiro em cada gene) e proporção reduzida. */
+export function punnettCells(gametes: [string[], string[]]): { rows: string[][]; ratio: { genotype: string; count: number }[] } {
+  const join = (a: string, b: string) => [...a].map((allele, i) => [allele, b[i]].sort((x, y) => (x === x.toUpperCase() ? 0 : 1) - (y === y.toUpperCase() ? 0 : 1) || x.localeCompare(y)).join('')).join('');
+  const rows = gametes[1].map(g2 => gametes[0].map(g1 => join(g1, g2)));
+  const counts = new Map<string, number>();
+  for (const cell of rows.flat()) counts.set(cell, (counts.get(cell) ?? 0) + 1);
+  const gcd = (a: number, b: number): number => b ? gcd(b, a % b) : a;
+  const divisor = [...counts.values()].reduce(gcd);
+  const upper = (g: string) => [...g].filter(c => c === c.toUpperCase()).length;
+  return { rows, ratio: [...counts].map(([genotype, count]) => ({ genotype, count: count / divisor })).sort((a, b) => upper(b.genotype) - upper(a.genotype) || a.genotype.localeCompare(b.genotype)) };
+}
 /** Model output is untrusted: only finite, bounded data reaches the renderer. */
 export function parseStudyVisual(text: string): StudyVisual | undefined {
   if (text.length > 8000) return;
@@ -96,6 +125,8 @@ export function parseStudyVisual(text: string): StudyVisual | undefined {
     if (value.type === 'timeline' && timeline(value)) return value;
     if (value.type === 'pedigree' && pedigree(value)) return value;
     if (value.type === 'climate' && climate(value)) return value;
+    if (value.type === 'punnett' && punnett(value)) return value;
+    if (value.type === 'cycle' && Array.isArray(value.steps) && value.steps.length >= 3 && value.steps.length <= 8 && value.steps.every((step: unknown) => label(step, 90)) && (value.center === undefined || label(value.center, 40))) return value;
     if (value.type === 'line' && label(value.xLabel,100) && label(value.yLabel,100) && Array.isArray(value.series) && value.series.length >= 1 && value.series.length <= 4 && value.series.every((series: { label?: unknown; points?: { x?: unknown; y?: unknown }[] } | null) => series && label(series.label,100) && Array.isArray(series.points) && series.points.length >= 2 && series.points.length <= 40 && series.points.every((point, index, points) => point && number(point.x) && number(point.y) && (index===0 || Number(point.x)>Number(points[index-1]?.x))))) return value;
   } catch { /* Incomplete streaming blocks never become executable markup. */ }
 }

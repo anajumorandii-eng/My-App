@@ -1,6 +1,7 @@
 import { useId } from 'react';
 import type { StudyVisual } from '../lib/studyVisual';
 import { figureInk } from '../lib/figureInk';
+import { useFigureText } from './useFigureText';
 type Geometry = Extract<StudyVisual, { type: 'geometry' }>;
 
 const W = 400, H = 300, PAD = 40;
@@ -12,6 +13,7 @@ const W = 400, H = 300, PAD = 40;
  */
 export function StudyGeometry({ visual }: { visual: Geometry }) {
   const id = useId();
+  const { ref, fs } = useFigureText<SVGSVGElement>(W);
   const circles = visual.circles ?? [];
   const byId = new Map(visual.points.map(p => [p.id, p]));
   const xs = visual.points.map(p => p.x), ys = visual.points.map(p => p.y);
@@ -32,9 +34,9 @@ export function StudyGeometry({ visual }: { visual: Geometry }) {
   const polygonEdges = [...new Map((visual.polygons ?? []).flatMap(p => p.vertices.map((v, i) => [v, p.vertices[(i + 1) % p.vertices.length]] as const))
     .filter(([a, b]) => !segmentEdges.has(edgeKey(a, b)))
     .map(edge => [edgeKey(...edge), edge] as const)).values()];
-  const label = { fontSize: 15, fill: figureInk.ink } as const;
+  const label = { fontSize: fs(15), fill: figureInk.ink } as const;
 
-  return <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby={`${id}-title ${id}-description`} className="crivo-geometry">
+  return <svg ref={ref} viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby={`${id}-title ${id}-description`} className="crivo-geometry">
     <title id={`${id}-title`}>{visual.title}</title><desc id={`${id}-description`}>{visual.caption}</desc>
     {(visual.polygons ?? []).map((polygon, i) => <polygon key={`p${i}`}
       points={polygon.vertices.map(v => { const p = at(v); return `${p.x},${p.y}`; }).join(' ')}

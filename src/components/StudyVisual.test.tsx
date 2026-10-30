@@ -116,3 +116,16 @@ it('recusa circuito sem gerador, filho na geração errada, ano fracionário e c
  expect(parseStudyVisual(JSON.stringify({...base,type:'timeline',title:'x',events:[{year:1930.5,label:'a'},{year:1940,label:'b'}]}))).toBeUndefined();
  expect(parseStudyVisual(JSON.stringify({...base,type:'climate',title:'x',place:'p',months:[{label:'J',temp:20,rain:10}]}))).toBeUndefined();
 });
+it('desenha o quadro de Punnett com genótipos e proporção calculados pelo app', () => {
+  const punnett = { type: 'punnett', title: 'Cruzamento Aa × Aa', parents: ['Aa', 'Aa'], gametes: [['A', 'a'], ['A', 'a']], caption: 'Dominância completa.', question: 'Qual a proporção fenotípica?' };
+  const { container } = render(<AiTextRenderer text={'```study-visual\n' + JSON.stringify(punnett) + '\n```'} />);
+  expect(screen.getByRole('table', { name: punnett.title })).toBeInTheDocument();
+  expect([...container.querySelectorAll('td')].map(td => td.textContent)).toEqual(['AA', 'Aa', 'Aa', 'aa']);
+  expect(container.textContent).toContain('1 AA : 2 Aa : 1 aa');
+});
+it('desenha o ciclo e diz que ele volta ao início', () => {
+  const cycle = { type: 'cycle', title: 'Ciclo da água', steps: ['Evaporação', 'Condensação', 'Precipitação'], caption: 'Esquema.', question: 'O que move o ciclo?' };
+  const { container } = render(<AiTextRenderer text={'```study-visual\n' + JSON.stringify(cycle) + '\n```'} />);
+  expect(container.querySelector('[data-study-visual="cycle"]')).toBeTruthy();
+  expect(screen.getByRole('img', { name: /Evaporação → Condensação → Precipitação → volta ao início/ })).toBeInTheDocument();
+});
