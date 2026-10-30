@@ -43,6 +43,8 @@ export interface FlashcardTopicSummary {
 
 export interface FlashcardSessionSelection {
   topicId: string | null;
+  /** Quando presente, reúne os tópicos indicados; null inclui Outros tópicos. */
+  topicIds?: (string | null)[];
   /** Ausente ou nulo estuda o tópico inteiro; um id restringe ao subtópico. */
   subtopicId?: string | null;
   priority?: FlashcardPriority;
@@ -159,10 +161,9 @@ export function selectDueCards(
   now: Date = new Date(),
 ): Flashcard[] {
   const knownTopicIds = new Set(topics.map((topic) => topic.id));
+  const selectedTopicIds = new Set(selection.topicIds ?? [selection.topicId]);
   const dueCardsInTopic = cards.filter((card) =>
-    (selection.topicId === null
-      ? !card.topicId || !knownTopicIds.has(card.topicId)
-      : card.topicId === selection.topicId)
+    selectedTopicIds.has(card.topicId && knownTopicIds.has(card.topicId) ? card.topicId : null)
     && (!selection.subtopicId || flashcardSubtopicKey(card) === selection.subtopicId)
     && isDue(reviews[card.id], now),
   );
@@ -178,4 +179,24 @@ export function selectDueCards(
     return (!selection.priority || classification.priority === selection.priority)
       && (!selection.trainingType || classification.trainingType === selection.trainingType);
   });
+}
+
+/** Soma os recortes sem alterar o catálogo nem o agendamento individual. */
+export function combineFlashcardTopicSummaries(summaries: FlashcardTopicSummary[], label: string): FlashcardTopicSummary {
+  const result = createSummary(null, label);
+  const subtopics = new Map<string, FlashcardSubtopicSummary>();
+  for (const summary of summaries) {
+    result.total += summary.total;
+    result.due += summary.due;
+    for (const priority of FLASHCARD_PRIORITY_ORDER) for (const type of FLASHCARD_TRAINING_TYPE_ORDER) {
+      result.buckets[priority][type].total += summary.buckets[priority][type].total;
+      result.buckets[priority][type].due += summary.buckets[priority][type].due;
+    }
+    for (const sub of summary.subtopics) {
+      const previous = subtopics.get(sub.id);
+      subtopics.set(sub.id, { ...sub, total: sub.total + (previous?.total ?? 0), due: sub.due + (previous?.due ?? 0) });
+    }
+  }
+  result.subtopics = [...subtopics.values()];
+  return result;
 }

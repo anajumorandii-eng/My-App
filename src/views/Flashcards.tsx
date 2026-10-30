@@ -7,14 +7,14 @@ import { useFlashcardReviews } from '../hooks/useFlashcardReviews';
 import {
   FLASHCARD_PRIORITY_ORDER,
   FLASHCARD_TRAINING_TYPE_ORDER,
-  FlashcardTopicSummary,
+  combineFlashcardTopicSummaries,
+  flashcardSubtopicKey,
 } from '../lib/flashcardCatalog';
 import {
   flashcardNavigationReducer,
   initialFlashcardNavigationState,
 } from '../lib/flashcardNavigation';
 import {
-  canSelectFlashcardTopic,
   createFlashcardLoadRequestToken,
   createFlashcardOwnerReset,
   createFlashcardSessionStart,
@@ -27,6 +27,8 @@ import FlashcardSession, { SessionCard } from '../components/FlashcardSession';
 import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
 import { motion } from 'motion/react';
 import { Panel } from '../components/ui/Panel';
+import { StudyMultiFilter } from '../components/StudyMultiFilter';
+import { flashcardExamBoards, matchesFlashcardBoards } from '../lib/flashcardExamFilters';
 import { SUBJECT_ICONS } from './Dashboard';
 
 // Contagens conhecidas de antemão (conteúdo estático) — evita ter que
@@ -58,6 +60,7 @@ const TRAINING_TYPE_LABELS: Record<FlashcardTrainingType, string> = {
   padroes_bancas: 'Padrões das bancas',
 };
 
+const SELECTED_TOPICS_NAVIGATION_ID = '__selected_flashcard_topics__';
 const OTHER_TOPICS_NAVIGATION_ID = '__other_flashcard_topics__';
 
 function toSessionCard(card: Flashcard): SessionCard {
@@ -92,6 +95,8 @@ export default function Flashcards() {
     initialFlashcardNavigationState,
   );
   const [cards, setCards] = useState<Flashcard[] | null>(null);
+  const [selectedTopicIds, setSelectedTopicIds] = useState<string[]>([]);
+  const [selectedBoards, setSelectedBoards] = useState<string[]>([]);
   const [sessionCards, setSessionCards] = useState<Flashcard[]>([]);
   const [selectionNow, setSelectionNow] = useState(() => new Date());
   const [loadingSubject, setLoadingSubject] = useState<string | null>(null);
@@ -127,6 +132,8 @@ export default function Flashcards() {
     latestLoadRequest.current = invalidateFlashcardLoadRequests(latestLoadRequest.current);
     dispatch(reset.navigationAction);
     setCards(reset.cards);
+    setSelectedTopicIds([]);
+    setSelectedBoards([]);
     setSessionCards(reset.sessionCards);
     setSelectionNow(reset.selectionNow);
     setLoadingSubject(null);
@@ -147,21 +154,23 @@ export default function Flashcards() {
     [navigation.subject],
   );
 
+  const boardOptions = useMemo(() => [...new Set((cards ?? []).flatMap(flashcardExamBoards))].sort(), [cards]);
+  const filteredCards = useMemo(() => cards?.filter(card => matchesFlashcardBoards(card, selectedBoards)) ?? [], [cards, selectedBoards]);
   const studySnapshot = useMemo(
-    () => (cards
-      ? createFlashcardStudySnapshot(cards, subjectTopics, reviews, selectionNow)
-      : null),
-    [cards, reviews, selectionNow, subjectTopics],
+    () => createFlashcardStudySnapshot(filteredCards, subjectTopics, reviews, selectionNow),
+    [filteredCards, reviews, selectionNow, subjectTopics],
   );
-
-  const topicIndex = studySnapshot?.topicIndex ?? [];
-
-  const selectedTopic = useMemo(
-    () => topicIndex.find((topic) => (
-      topic.topicId ?? OTHER_TOPICS_NAVIGATION_ID
-    ) === navigation.topicId),
-    [navigation.topicId, topicIndex],
-  );
+  const topicIndex = useMemo(() => {
+    const index = studySnapshot.topicIndex;
+    return selectedTopicIds.includes(OTHER_TOPICS_NAVIGATION_ID) && !index.some(topic => topic.topicId === null)
+      ? [...index, combineFlashcardTopicSummaries([], 'Outros tópicos')]
+      : index;
+  }, [studySnapshot, selectedTopicIds]);
+  const selectedTopics = useMemo(() => topicIndex.filter(topic => selectedTopicIds.length === 0
+    || selectedTopicIds.includes(topic.topicId ?? OTHER_TOPICS_NAVIGATION_ID)), [topicIndex, selectedTopicIds]);
+  const selectedTopic = useMemo(() => combineFlashcardTopicSummaries(selectedTopics,
+    selectedTopicIds.length === 0 ? 'Todos os tópicos' : selectedTopics.map(topic => topic.label).join(' + ')),
+    [selectedTopics, selectedTopicIds]);
 
   const selectedTopicSubtopics = selectedTopic?.subtopics ?? [];
 
@@ -198,8 +207,12 @@ export default function Flashcards() {
       const data = await loadFlashcardsForSubject(name);
       if (!isCurrentFlashcardLoadRequest(requestToken, latestLoadRequest.current)) return;
       setCards(data);
+      setSelectedTopicIds([]);
+      setSelectedBoards([]);
       setSelectionNow(new Date());
       dispatch({ type: 'select_subject', subject: name });
+      dispatch({ type: 'select_topic', topicId: SELECTED_TOPICS_NAVIGATION_ID });
+      dispatch({ type: 'back' });
     } catch (error) {
       if (!isCurrentFlashcardLoadRequest(requestToken, latestLoadRequest.current)) return;
       console.error('Failed to load flashcards:', error);
@@ -211,24 +224,13 @@ export default function Flashcards() {
     }
   };
 
-  const renewStudySnapshot = () => {
-    if (!cards) return null;
-    const now = new Date();
-    const snapshot = createFlashcardStudySnapshot(cards, subjectTopics, reviews, now);
-    setSelectionNow(now);
-    return snapshot;
-  };
-
-  const chooseTopic = (topic: FlashcardTopicSummary) => {
-    if (dueNavigationBlocked || !canSelectFlashcardTopic(topic)) return;
-    const refreshedSnapshot = renewStudySnapshot();
-    if (!refreshedSnapshot) return;
-    const navigationTopicId = topic.topicId ?? OTHER_TOPICS_NAVIGATION_ID;
-    const refreshedTopic = refreshedSnapshot.topicIndex.find((candidate) => (
-      candidate.topicId ?? OTHER_TOPICS_NAVIGATION_ID
-    ) === navigationTopicId);
-    if (!refreshedTopic || !canSelectFlashcardTopic(refreshedTopic)) return;
-    dispatch({ type: 'select_topic', topicId: navigationTopicId });
+  const changeScope = (topics: string[], boards: string[]) => {
+    if (dueNavigationBlocked) return;
+    setSelectedTopicIds(topics);
+    setSelectedBoards(boards);
+    setSelectionNow(new Date());
+    setSessionCards([]);
+    dispatch({ type: 'select_topic', topicId: SELECTED_TOPICS_NAVIGATION_ID });
     dispatch({ type: 'back' });
   };
 
@@ -243,10 +245,10 @@ export default function Flashcards() {
     if (!cards) return;
     const now = new Date();
     const start = createFlashcardSessionStart(
-      cards,
+      filteredCards,
       subjectTopics,
       reviews,
-      { topicId: selectedTopic.topicId, subtopicId: navigation.subtopicId, allDueForTopic: true },
+      { topicId: null, topicIds: selectedTopics.map(topic => topic.topicId), subtopicId: navigation.subtopicId, allDueForTopic: true },
       now,
     );
     setSelectionNow(now);
@@ -259,11 +261,12 @@ export default function Flashcards() {
     if (!cards) return;
     const now = new Date();
     const start = createFlashcardSessionStart(
-      cards,
+      filteredCards,
       subjectTopics,
       reviews,
       {
-        topicId: selectedTopic.topicId,
+        topicId: null,
+        topicIds: selectedTopics.map(topic => topic.topicId),
         subtopicId: navigation.subtopicId,
         priority: navigation.priority,
         trainingType,
@@ -281,12 +284,19 @@ export default function Flashcards() {
     dispatch({ type: 'back' });
   };
 
+  const trainingScope = useMemo(() => {
+    if (!navigation.subtopicId) return selectedTopic;
+    const snapshot = createFlashcardStudySnapshot(filteredCards.filter(card => flashcardSubtopicKey(card) === navigation.subtopicId), subjectTopics, reviews, selectionNow);
+    return combineFlashcardTopicSummaries(snapshot.topicIndex.filter(topic => selectedTopicIds.length === 0
+      || selectedTopicIds.includes(topic.topicId ?? OTHER_TOPICS_NAVIGATION_ID)), selectedTopic.label);
+  }, [navigation.subtopicId, selectedTopic, filteredCards, subjectTopics, reviews, selectionNow, selectedTopicIds]);
+
   const priorityCounts = (priority: FlashcardPriority) => (
     selectedTopic
       ? FLASHCARD_TRAINING_TYPE_ORDER.reduce(
         (counts, trainingType) => ({
-          total: counts.total + selectedTopic.buckets[priority][trainingType].total,
-          due: counts.due + selectedTopic.buckets[priority][trainingType].due,
+          total: counts.total + trainingScope.buckets[priority][trainingType].total,
+          due: counts.due + trainingScope.buckets[priority][trainingType].due,
         }),
         { total: 0, due: 0 },
       )
@@ -384,33 +394,20 @@ export default function Flashcards() {
         <div className="space-y-4">
           <BackButton onClick={() => dispatch({ type: 'back' })} />
           <div>
-            <h2 className="text-xl font-semibold">{navigation.subject} — escolha um tópico</h2>
+            <h2 className="text-xl font-semibold">{navigation.subject} — escolha um tópico ou combine vários</h2>
             <p className="text-sm text-zinc-500 mt-1">Selecione o recorte que deseja revisar.</p>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {topicIndex.map((topic) => {
-              const navigationTopicId = topic.topicId ?? OTHER_TOPICS_NAVIGATION_ID;
-              const isSelected = navigation.topicId === navigationTopicId;
-              return (
-                <button
-                  key={navigationTopicId}
-                  onClick={() => chooseTopic(topic)}
-                  disabled={!canSelectFlashcardTopic(topic)}
-                  aria-pressed={isSelected}
-                  className={`rounded-xl border p-4 text-left shadow-sm transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
-                    isSelected
-                      ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20'
-                      : 'border-zinc-200 bg-white hover:border-indigo-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-indigo-700'
-                  }`}
-                >
-                  <span className="font-medium">{topic.label}</span>
-                  <p className="mt-1 text-sm text-zinc-500">
-                    {topic.total.toLocaleString('pt-BR')} cartões · {topic.due.toLocaleString('pt-BR')} vencidos
-                  </p>
-                </button>
-              );
-            })}
+          <p className="text-xs text-[var(--dim)]">As bancas correspondem às etiquetas e aos modelos de treino dos cartões.</p>
+          <div className="crivo-topic-filters">
+            <StudyMultiFilter label="Bancas" allLabel="Todas as bancas" selected={selectedBoards}
+              groups={[{ label: null, options: boardOptions.map(board => ({ id: board, label: board })) }]}
+              onChange={boards => changeScope(selectedTopicIds, boards)} />
+            <StudyMultiFilter label="Tópicos" allLabel="Todos os tópicos" selected={selectedTopicIds}
+              groups={[{ label: null, options: topicIndex.filter(topic => topic.total > 0 || selectedTopicIds.includes(topic.topicId ?? OTHER_TOPICS_NAVIGATION_ID))
+                .map(topic => ({ id: topic.topicId ?? OTHER_TOPICS_NAVIGATION_ID, label: `${topic.label} (${topic.total} cartões · ${topic.due} vencidos)` })) }]}
+              onChange={topics => changeScope(topics, selectedBoards)} />
           </div>
+          <p role="status" className="text-sm text-[var(--dim)]">{selectedTopic.total} cartões · {selectedTopic.due} vencidos na seleção</p>
 
           {selectedTopic && (
             <div className="flex flex-col gap-2 rounded-xl border border-zinc-200 bg-white p-4 sm:flex-row dark:border-zinc-800 dark:bg-zinc-900">
@@ -419,9 +416,10 @@ export default function Flashcards() {
                 disabled={selectedTopic.due === 0}
                 className="flex-1 rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
               >
-                Revisar todos os vencidos deste tópico
+                Revisar todos os vencidos da seleção
               </button>
               <button
+                disabled={selectedTopic.total === 0}
                 onClick={() => {
                   if (navigation.topicId) {
                     dispatch({ type: 'select_topic', topicId: navigation.topicId });
@@ -429,7 +427,7 @@ export default function Flashcards() {
                 }}
                 className="flex-1 rounded-lg border border-zinc-300 px-4 py-2.5 text-sm font-medium hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-800"
               >
-                Escolher subtópico
+                Escolher subtópico ou prioridade
               </button>
             </div>
           )}
@@ -442,7 +440,7 @@ export default function Flashcards() {
           <div>
             <h2 className="text-xl font-semibold">{navigation.subject} — {selectedTopic.label}</h2>
             <p className="text-sm text-zinc-500 mt-1">
-              Escolha um subtópico para focar, ou siga com o tópico inteiro.
+              Escolha um subtópico para focar, ou siga com todos os tópicos selecionados.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -455,7 +453,7 @@ export default function Flashcards() {
                   : 'border-zinc-200 bg-white hover:border-indigo-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-indigo-700'
               }`}
             >
-              <span className="font-medium">Tópico inteiro</span>
+              <span className="font-medium">Todos os tópicos selecionados</span>
               <p className="mt-1 text-sm text-zinc-500">
                 {selectedTopic.total.toLocaleString('pt-BR')} cartões · {selectedTopic.due.toLocaleString('pt-BR')} vencidos
               </p>
@@ -540,7 +538,7 @@ export default function Flashcards() {
           </div>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {FLASHCARD_TRAINING_TYPE_ORDER.map((trainingType) => {
-              const counts = selectedTopic.buckets[navigation.priority][trainingType];
+              const counts = trainingScope.buckets[navigation.priority][trainingType];
               return (
                 <button
                   key={trainingType}

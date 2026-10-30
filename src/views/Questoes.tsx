@@ -5,6 +5,7 @@ import { ambienteDaMateria } from '../lib/visualAmbiente';
 import { useAuth } from '../context/AuthContext';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useQuestions } from '../hooks/useQuestions';
+import { StudyMultiFilter } from '../components/StudyMultiFilter';
 import { QuestionStatement } from '../components/QuestionStatement';
 import { addUserAttempt, addUserErrorLog } from '../lib/userData';
 import { requestAiText, requestAiTextStream } from '../lib/aiClient';
@@ -47,32 +48,6 @@ function matchesSelectedExams(question: Question, boards: string[], year: string
   return boards.length === 0
     ? matchesExamFilters(question, 'all', year)
     : boards.some(board => matchesExamFilters(question, board, year));
-}
-
-function QuestionMultiFilter({ label, allLabel, selected, groups, onChange }: {
-  label: string;
-  allLabel: string;
-  selected: string[];
-  groups: { label: string | null; options: { id: string; label: string }[] }[];
-  onChange: (values: string[]) => void;
-}) {
-  return <fieldset className="crivo-topic-filter crivo-question-multi">
-    <legend>{label}</legend>
-    <div className="crivo-question-multi-options">
-      <label className="crivo-question-multi-choice">
-        <input type="checkbox" checked={selected.length === 0} onChange={() => onChange([])} />
-        <span>{allLabel}</span>
-      </label>
-      {groups.map((group, index) => <div key={group.label ?? index}>
-        {group.label && <p className="crivo-question-multi-heading">{group.label}</p>}
-        {group.options.map(option => <label key={option.id} className="crivo-question-multi-choice">
-          <input type="checkbox" value={option.id} checked={selected.includes(option.id)}
-            onChange={() => onChange(selected.includes(option.id) ? selected.filter(id => id !== option.id) : [...selected, option.id])} />
-          <span>{option.label}</span>
-        </label>)}
-      </div>)}
-    </div>
-  </fieldset>;
 }
 
 function Metric({
@@ -619,7 +594,7 @@ export default function Questoes() {
         {searchQuery && <button type="button" className="ni-link text-sm" onClick={() => { setSearchQuery(''); resetQuestionState(); }}>Limpar busca</button>}
       </div>
       <div className="crivo-topic-filters">
-        <QuestionMultiFilter label="Bancas" allLabel="Todas as bancas" selected={boardFilters}
+        <StudyMultiFilter label="Bancas" allLabel="Todas as bancas" selected={boardFilters}
           groups={[{ label: null, options: examBoards.map(board => ({ id: board, label: board })) }]}
           onChange={boards => changeExam(boards, 'all')} />
         <label className="crivo-topic-filter">
@@ -630,7 +605,7 @@ export default function Questoes() {
             {examYears.hasUnknown && <option value="unknown">Ano não identificado</option>}
           </select>
         </label>
-        <QuestionMultiFilter label="Tópicos" allLabel={`Todos os tópicos (${scoped.length})`} selected={topicFilters}
+        <StudyMultiFilter label="Tópicos" allLabel={`Todos os tópicos (${scoped.length})`} selected={topicFilters}
           groups={topicGroups.map(group => ({ label: group.subject, options: group.nodes.map(node => ({ id: node.id, label: `${node.label} (${node.count})` })) }))}
           onChange={changeTopics} />
 
