@@ -21,6 +21,53 @@ export interface CurrentAffairsTheme {
 
 export const CURRENT_AFFAIRS_THEMES: CurrentAffairsTheme[] = [
   {
+    id: 'ira-guerra-ormuz',
+    title: 'Guerra do Irã e o Estreito de Ormuz',
+    verifiedAt: '2026-10-31',
+    sources: ['https://pt.wikipedia.org/wiki/Guerra_do_Ir%C3%A3', 'https://br.investing.com/news/commodities-news/marinha-da-guarda-revolucionaria-iraniana-diz-que-tres-petroleiros-pegaram-fogo-no-estreito-de-ormuz-2109949'],
+    text: `FATOS VERIFICADOS
+- Em 28/02/2026, Estados Unidos e Israel lançaram ataques coordenados contra o Irã. O líder supremo, aiatolá Ali Khamenei, foi morto; seu filho, Mojtaba Khamenei, assumiu como líder supremo em 08/03/2026.
+- O Irã retaliou contra Israel e aliados regionais dos EUA e passou a restringir a navegação no Estreito de Ormuz.
+- Um acordo interino em junho de 2026 interrompeu a troca direta de ataques, mas não firmou cessar-fogo duradouro nem normalizou o tráfego no estreito.
+- No fim de outubro de 2026 o conflito seguia indefinido: em 29/10 petroleiros pegaram fogo após atingir minas em Ormuz (o número varia entre as fontes), e o petróleo Brent fechou a cerca de US$ 117 por barril em 30/10, segundo reportagens de mercado. O Irã condiciona a reabertura do estreito ao fim do bloqueio americano a seus portos e das sanções ao petróleo.
+
+CONTEXTO
+- Revolução Islâmica de 1979: queda do xá Reza Pahlevi, aliado dos EUA, e criação de uma república teocrática xiita liderada pelos aiatolás.
+- Programa nuclear: o Irã é signatário do TNP; o acordo nuclear de 2015 limitava o enriquecimento de urânio em troca de alívio de sanções; os EUA saíram do acordo em 2018.
+- "Eixo da Resistência": rede de aliados apoiados pelo Irã (Hezbollah no Líbano, Hamas em Gaza, Houthis no Iêmen, milícias no Iraque); os Houthis ameaçam também o estreito de Bab el-Mandeb, no mar Vermelho.
+- A Fuvest 2025 cobrou o acordo China–Irã ligado à Nova Rota da Seda, à entrada do Irã nos BRICS e à tentativa de contornar o sistema de pagamentos em dólar.
+
+CONCEITOS
+- Ponto de estrangulamento (chokepoint) e segurança energética; choque do petróleo de 1973 como precedente; inflação de combustíveis e fertilizantes (ureia), com efeito sobre o agronegócio brasileiro.
+- Xiitas × sunitas (Irã × Arábia Saudita); guerra por procuração (proxy); teocracia; sanções econômicas; multipolaridade.
+
+COMO PODE CAIR
+- Mapa do Golfo Pérsico com Ormuz; gráfico do preço do barril; relação entre conflito, petróleo, inflação e cadeias produtivas; comparação com 1973.`,
+  },
+  {
+    id: 'gaza-palestina',
+    title: 'Gaza, Israel e a questão palestina',
+    verifiedAt: '2026-10-31',
+    sources: ['https://www.opovo.com.br/noticias/mundo/2026/07/31/hamas-aceita-acordo-para-seu-desarmamento-e-retirada-de-israel-de-gaza.html'],
+    text: `FATOS VERIFICADOS
+- Em 07/10/2023, o Hamas atacou Israel, matando cerca de 1.200 pessoas e levando reféns para Gaza; a ofensiva israelense em resposta matou dezenas de milhares de palestinos, segundo as autoridades de saúde de Gaza, e destruiu grande parte da estrutura urbana do território.
+- Um cessar-fogo entrou em vigor em outubro de 2025, com violações frequentes relatadas.
+- Em 30/07/2026, o governo Trump anunciou que o "Conselho da Paz" fechou acordo para o desarmamento do Hamas; o grupo confirmou, condicionando a entrega das armas a uma força internacional de estabilização e à retirada das tropas israelenses. A implementação seguia incerta.
+- A Fuvest 2026 cobrou a comparação de imagens de satélite de Gaza de 2021 e 2024 para identificar a destruição da paisagem urbana.
+
+CONTEXTO
+- Partilha da Palestina pela ONU (1947), criação de Israel (1948) e expulsão de palestinos (Nakba); Guerra dos Seis Dias (1967): ocupação da Cisjordânia, de Gaza e de Jerusalém Oriental.
+- Intifadas (1987 e 2000); o Hamas surge em 1987, a partir da Irmandade Muçulmana; Acordos de Oslo (1993) e a Autoridade Palestina; o Hamas controla Gaza desde 2007.
+- Assentamentos israelenses na Cisjordânia, considerados ilegais pela ONU e pela maioria dos países; Acordos de Abraão (2020) entre Israel e países árabes; mandado de prisão do Tribunal Penal Internacional contra Netanyahu (2024).
+- Hezbollah, no Líbano, ligado ao Irã e enfraquecido pela guerra com Israel.
+
+CONCEITOS
+- Território, soberania e solução de dois Estados; refugiados e deslocamento forçado; crise humanitária; direito internacional humanitário; sensoriamento remoto e leitura de imagens de satélite.
+
+COMO PODE CAIR
+- Mapas da evolução territorial; imagens de satélite; charge sobre deslocamento de civis; relação entre conflito atual e partilha de 1947 e guerra de 1967.`,
+  },
+  {
     id: 'cop30-clima',
     title: 'COP30 em Belém e a agenda do clima',
     verifiedAt: '2026-10-31',
