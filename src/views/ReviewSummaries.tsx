@@ -20,6 +20,7 @@ import { normalizeReviewOptions, reviewBoards, reviewBoard, reviewBoardLabels, r
 import { reviewErrorHistory } from '../lib/reviewPersonalization';
 import { renderStudyReference, type StudyPacket } from '../lib/studySources';
 import { getLiteraryWorks } from '../lib/literaryCatalog';
+import { CURRENT_AFFAIRS_THEMES } from '../data/currentAffairsThemes';
 import { reviewWorkOptions, groupWorksByBoard, type ReviewWorkOption } from '../lib/reviewWorks';
 import { BEFORE_ASSET_RELOAD } from '../lib/assetRecovery';
 import { readReviewReloadSelection, saveReviewReloadSelection, clearReviewReloadSelection } from '../lib/reviewReloadRecovery';
@@ -27,6 +28,10 @@ import type { StrategyGuide } from '../lib/strategyGuides';
 const ReviewPdf = lazy(() => import('../components/DeepeningPdf').then(module => ({ default: module.DeepeningPdf })));
 
 const WORKS_OPTION = '__obras__';
+// Atualidades usa o modo de material informado: o tema escolhido preenche a
+// fonte datada (currentAffairsThemes), e o prompt de atualidades já delimita
+// os fatos a ela. Sem fonte, a revisão completaria fatos de memória.
+const CURRENT_OPTION = '__atualidades__';
 
 export default function ReviewSummaries() {
   const { user } = useAuth();
@@ -75,6 +80,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
   const busy = useRef(false), mounted = useRef(true);
   useEffect(() => { mounted.current = true; return () => { mounted.current = false; }; }, []);
   const selectedWork = works.find(work => `obra:${work.slug}` === topicId);
+  const currentAffairs = options.sourceMode === 'provided' && options.materialKind === 'current-affairs';
   // Obras entram na mesma lista das matérias: escondidas em "Origem e tipo de
   // material", ninguém achava que a revisão aceitava obra literária.
   const changeSource = (mode: ReviewOptions['sourceMode']) => {
@@ -185,11 +191,17 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
       <h3 className="font-semibold">Conteúdo</h3>
       <fieldset disabled={working} className="grid gap-3 sm:grid-cols-2">
         <legend className="sr-only">Conteúdo da revisão</legend>
-        <label className="text-sm">Matéria do resumo<select className="field block w-full" value={options.sourceMode === 'work' ? WORKS_OPTION : subject} onChange={event => {
+        <label className="text-sm">Matéria do resumo<select className="field block w-full" value={options.sourceMode === 'work' ? WORKS_OPTION : currentAffairs ? CURRENT_OPTION : subject} onChange={event => {
           if (event.target.value === WORKS_OPTION) { setTopicId(''); changeSource('work'); return; }
+          if (event.target.value === CURRENT_OPTION) {
+            setOpenedKey(''); setAdditional([]); setChapter(''); setTopicId(''); setSubject('Atualidades');
+            edit({ sourceMode: 'provided', materialKind: 'current-affairs', useHistory: false, sourceTitle: '', sourceText: '', sourceDate: '', sourceUrl: '' });
+            return;
+          }
           if (options.sourceMode === 'work') changeSource('catalog');
+          if (currentAffairs) edit({ sourceMode: 'catalog', materialKind: 'disciplinary', sourceTitle: '', sourceText: '', sourceDate: '', sourceUrl: '' });
           setOpenedKey(''); setAdditional([]); setSubject(event.target.value); setTopicId(mockTopics.find(item => studyAreaForTopic(item) === event.target.value)?.id ?? ''); setChapter('');
-        }}>{studyProtocols.map(item => <option key={item.subject}>{item.subject}</option>)}<option value={WORKS_OPTION}>Obras literárias (Fuvest e Unicamp)</option></select></label>
+        }}>{studyProtocols.map(item => <option key={item.subject}>{item.subject}</option>)}<option value={WORKS_OPTION}>Obras literárias (Fuvest e Unicamp)</option><option value={CURRENT_OPTION}>Atualidades</option></select></label>
         {options.sourceMode === 'catalog' && <>
           <label className="text-sm">Tópico do resumo<select className="field block w-full" value={topic?.id ?? ''} onChange={event => { setOpenedKey(''); setTopicId(event.target.value); setChapter(''); setAdditional(previous => previous.filter(item => item.topicId !== event.target.value)); }}>
             <option value="">Selecione um tópico</option>{topics.map(item => <option key={item.id} value={item.id}>{item.name}</option>)}
@@ -199,6 +211,12 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
         {options.sourceMode === 'work' && <label className="text-sm">Obra<select className="field block w-full" value={topicId} onChange={event => { setOpenedKey(''); setTopicId(event.target.value); }}>
           <option value="">Escolha a obra</option>{groupWorksByBoard(works).map(group => <optgroup key={group.label} label={group.label}>{group.works.map(work => <option key={`${group.label}-${work.slug}`} value={`obra:${work.slug}`}>{work.title} — {work.author}</option>)}</optgroup>)}
         </select></label>}
+        {currentAffairs && <label className="text-sm sm:col-span-2">Tema de atualidades<select className="field block w-full" value={CURRENT_AFFAIRS_THEMES.find(theme => theme.title === options.sourceTitle)?.id ?? ''} onChange={event => {
+          const theme = CURRENT_AFFAIRS_THEMES.find(item => item.id === event.target.value);
+          if (!theme) return;
+          setTopicId(`atualidades:${theme.id}`);
+          edit({ sourceTitle: theme.title, sourceText: `${theme.text}\n\nFatos conferidos em ${theme.verifiedAt.split('-').reverse().join('/')}.${theme.sources.length ? ` Fontes: ${theme.sources.join(' ; ')}` : ''}`, sourceDate: theme.verifiedAt, sourceUrl: theme.sources[0] ?? '' });
+        }}><option value="">Escolha um tema ou cole sua própria fonte abaixo</option>{CURRENT_AFFAIRS_THEMES.map(theme => <option key={theme.id} value={theme.id}>{theme.title}</option>)}</select></label>}
         {options.sourceMode === 'provided' && <>
           <label className="text-sm">Título do material<input className="field block w-full" maxLength={300} value={options.sourceTitle} onChange={event => edit({ sourceTitle: event.target.value })} /></label>
           <label className="text-sm">Data da fonte (opcional)<input type="date" className="field block w-full" value={options.sourceDate} onChange={event => edit({ sourceDate: event.target.value })} /></label>

@@ -295,3 +295,18 @@ it('texto informado mantém a escolha de matéria', () => {
   expect(screen.getByLabelText('Matéria do resumo')).toHaveValue('Biologia');
   expect(screen.getByLabelText('Material de origem')).toHaveValue('provided');
 });
+
+it('atualidades aparece na lista de matérias e o tema envia a fonte datada', async()=>{
+  mount();
+  fireEvent.change(screen.getByLabelText('Matéria do resumo'),{target:{value:'__atualidades__'}});
+  expect(screen.getByLabelText('Material de origem')).toHaveValue('provided');
+  expect(screen.getByLabelText('Tipo de material')).toHaveValue('current-affairs');
+  fireEvent.change(screen.getByLabelText('Tema de atualidades'),{target:{value:'cop30-clima'}});
+  expect(screen.getByLabelText('Título do material')).toHaveValue('COP30 em Belém e a agenda do clima');
+  expect(screen.getByLabelText('Data da fonte (opcional)')).toHaveValue('2026-10-31');
+  fireEvent.click(screen.getByRole('button',{name:'Gerar resumo de revisão'}));
+  await waitFor(()=>expect(mocks.generate).toHaveBeenCalledWith('review-tip',expect.objectContaining({subject:'Atualidades',topic:'COP30 em Belém e a agenda do clima',referenceText:expect.stringContaining('Pacote de Belém'),reviewOptions:expect.objectContaining({materialKind:'current-affairs',sourceMode:'provided',sourceDate:'2026-10-31'})}),expect.any(Function)));
+  fireEvent.change(screen.getByLabelText('Matéria do resumo'),{target:{value:'Biologia'}});
+  expect(screen.getByLabelText('Material de origem')).toHaveValue('catalog');
+  expect(screen.getByLabelText('Tipo de material')).toHaveValue('disciplinary');
+});
