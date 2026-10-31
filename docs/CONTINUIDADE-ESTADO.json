@@ -2,19 +2,13 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "29ae80317a0971bb617f77bf9512436153ff4c26",
-  "generated_at_utc": "2026-10-30T21:13:43Z",
+  "source_commit": "f369c8db4e9ffbcbc3425c47680254586ba94bf2",
+  "generated_at_utc": "2026-10-31T19:43:34Z",
   "changed_files": [
-    "src/components/StudyMultiFilter.tsx",
-    "src/design-system/css/nucleo-instrumental-brand.css",
-    "src/lib/flashcardCatalog.test.ts",
-    "src/lib/flashcardCatalog.ts",
-    "src/lib/flashcardExamFilters.test.ts",
-    "src/lib/flashcardExamFilters.ts",
-    "src/views/Flashcards.tsx",
-    "src/views/FlashcardsFilters.test.tsx",
-    "src/views/Questoes.test.tsx",
-    "src/views/Questoes.tsx"
+    "src/data/currentAffairsThemes.test.ts",
+    "src/data/currentAffairsThemes.ts",
+    "src/views/ReviewSummaries.test.tsx",
+    "src/views/ReviewSummaries.tsx"
   ],
   "next_session": {
     "mode": "delta-only",
