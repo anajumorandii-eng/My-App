@@ -15,21 +15,21 @@
    "topicId": "por_texto",
    "subject": "Português",
    "pAtLeastOne": 0.956,
-   "expected": 16.34,
+   "expected": 21.26,
    "presence": 8
   },
   {
    "topicId": "por_norma_culta",
    "subject": "Português",
    "pAtLeastOne": 0.956,
-   "expected": 6.96,
+   "expected": 7.35,
    "presence": 8
   },
   {
    "topicId": "mat_aritmetica_proporcionalidade",
    "subject": "Matemática",
-   "pAtLeastOne": 0.955,
-   "expected": 6.49,
+   "pAtLeastOne": 0.956,
+   "expected": 7.23,
    "presence": 8
   },
   {
@@ -47,24 +47,24 @@
    "presence": 8
   },
   {
-   "topicId": "mat_funcoes",
-   "subject": "Matemática",
+   "topicId": "ing_01",
+   "subject": "Inglês",
    "pAtLeastOne": 0.953,
-   "expected": 5.16,
+   "expected": 5,
    "presence": 8
   },
   {
    "topicId": "mat_geometria_plana",
    "subject": "Matemática",
    "pAtLeastOne": 0.953,
-   "expected": 5.06,
+   "expected": 4.95,
    "presence": 8
   },
   {
-   "topicId": "ing_01",
-   "subject": "Inglês",
-   "pAtLeastOne": 0.953,
-   "expected": 5,
+   "topicId": "mat_funcoes",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.952,
+   "expected": 4.92,
    "presence": 8
   },
   {
@@ -75,17 +75,17 @@
    "presence": 8
   },
   {
-   "topicId": "mat_equacoes",
-   "subject": "Matemática",
-   "pAtLeastOne": 0.947,
-   "expected": 3.96,
-   "presence": 8
-  },
-  {
    "topicId": "por_lit_contemporanea",
    "subject": "Português",
    "pAtLeastOne": 0.947,
    "expected": 3.95,
+   "presence": 8
+  },
+  {
+   "topicId": "mat_equacoes",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.946,
+   "expected": 3.94,
    "presence": 8
   },
   {
@@ -112,8 +112,8 @@
   {
    "topicId": "mat_sequencias_matrizes",
    "subject": "Matemática",
-   "pAtLeastOne": 0.932,
-   "expected": 3.05,
+   "pAtLeastOne": 0.933,
+   "expected": 3.06,
    "presence": 8
   },
   {
@@ -138,17 +138,17 @@
    "presence": 8
   },
   {
-   "topicId": "mat_combinatoria",
-   "subject": "Matemática",
-   "pAtLeastOne": 0.919,
-   "expected": 2.6,
-   "presence": 8
-  },
-  {
    "topicId": "por_lit_modernismo",
    "subject": "Português",
    "pAtLeastOne": 0.918,
    "expected": 2.58,
+   "presence": 8
+  },
+  {
+   "topicId": "mat_combinatoria",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.917,
+   "expected": 2.54,
    "presence": 8
   },
   {
@@ -250,13 +250,6 @@
    "presence": 6
   },
   {
-   "topicId": "mat_trigonometria",
-   "subject": "Matemática",
-   "pAtLeastOne": 0.823,
-   "expected": 1.58,
-   "presence": 7
-  },
-  {
    "topicId": "bio_zoologia",
    "subject": "Biologia",
    "pAtLeastOne": 0.803,
@@ -273,8 +266,8 @@
   {
    "topicId": "mat_log_exponenciais",
    "subject": "Matemática",
-   "pAtLeastOne": 0.796,
-   "expected": 1.8,
+   "pAtLeastOne": 0.787,
+   "expected": 1.7,
    "presence": 6
   },
   {
@@ -290,6 +283,13 @@
    "pAtLeastOne": 0.783,
    "expected": 1.06,
    "presence": 8
+  },
+  {
+   "topicId": "mat_trigonometria",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.776,
+   "expected": 1.49,
+   "presence": 6
   },
   {
    "topicId": "bio_metabolismo_energetico",
@@ -311,13 +311,6 @@
    "pAtLeastOne": 0.728,
    "expected": 1.43,
    "presence": 5
-  },
-  {
-   "topicId": "por_red_repertorio",
-   "subject": "Português",
-   "pAtLeastOne": 0.721,
-   "expected": 1.92,
-   "presence": 6
   },
   {
    "topicId": "his_idade_antiga",
@@ -348,13 +341,6 @@
    "presence": 5
   },
   {
-   "topicId": "mat_geometria_analitica",
-   "subject": "Matemática",
-   "pAtLeastOne": 0.697,
-   "expected": 1.51,
-   "presence": 5
-  },
-  {
    "topicId": "fil_aristoteles",
    "subject": "Filosofia",
    "pAtLeastOne": 0.696,
@@ -366,6 +352,13 @@
    "subject": "Física",
    "pAtLeastOne": 0.684,
    "expected": 1.03,
+   "presence": 5
+  },
+  {
+   "topicId": "mat_geometria_analitica",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.682,
+   "expected": 1.38,
    "presence": 5
   },
   {
@@ -388,20 +381,6 @@
    "pAtLeastOne": 0.641,
    "expected": 1.03,
    "presence": 4
-  },
-  {
-   "topicId": "por_red_estrutura_coesao",
-   "subject": "Português",
-   "pAtLeastOne": 0.621,
-   "expected": 1.25,
-   "presence": 5
-  },
-  {
-   "topicId": "por_sintaxe",
-   "subject": "Português",
-   "pAtLeastOne": 0.605,
-   "expected": 0.97,
-   "presence": 6
   },
   {
    "topicId": "qui_organica_reacoes",
@@ -537,13 +516,6 @@
    "presence": 3
   },
   {
-   "topicId": "por_red_fundamentos",
-   "subject": "Português",
-   "pAtLeastOne": 0.477,
-   "expected": 0.63,
-   "presence": 5
-  },
-  {
    "topicId": "bio_biotecnologia",
    "subject": "Biologia",
    "pAtLeastOne": 0.459,
@@ -570,13 +542,6 @@
    "pAtLeastOne": 0.449,
    "expected": 0.68,
    "presence": 3
-  },
-  {
-   "topicId": "por_red_argumentacao",
-   "subject": "Português",
-   "pAtLeastOne": 0.434,
-   "expected": 0.48,
-   "presence": 5
   },
   {
    "topicId": "bio_microbiologia",
@@ -723,13 +688,6 @@
    "subject": "Filosofia",
    "pAtLeastOne": 0.138,
    "expected": 0.11,
-   "presence": 1
-  },
-  {
-   "topicId": "por_red_direitos_modelo",
-   "subject": "Português",
-   "pAtLeastOne": 0.1,
-   "expected": 0.06,
    "presence": 1
   }
  ]

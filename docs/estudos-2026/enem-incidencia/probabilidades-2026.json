@@ -14,22 +14,22 @@
  "decay": 0.84,
  "backtest": {
   "topic": {
-   "brier": 0.18398275183764834,
-   "naive": 0.21783391460081067,
+   "brier": 0.1719375527253794,
+   "naive": 0.2009777872249974,
    "bins": [
     {
      "faixa": "80–100%",
-     "n": 38,
-     "caiu": 35
+     "n": 36,
+     "caiu": 34
     },
     {
      "faixa": "60–80%",
-     "n": 21,
-     "caiu": 14
+     "n": 20,
+     "caiu": 15
     },
     {
      "faixa": "40–60%",
-     "n": 26,
+     "n": 24,
      "caiu": 13
     },
     {
@@ -39,7 +39,7 @@
     },
     {
      "faixa": "0–20%",
-     "n": 4,
+     "n": 3,
      "caiu": 2
     }
    ],
@@ -47,36 +47,36 @@
    "unseenThatAppeared": 1
   },
   "chapter": {
-   "brier": 0.19308120798468498,
-   "naive": 0.19632951183431768,
+   "brier": 0.20097920072852857,
+   "naive": 0.20376926280716473,
    "bins": [
     {
      "faixa": "80–100%",
-     "n": 13,
-     "caiu": 13
+     "n": 17,
+     "caiu": 15
     },
     {
      "faixa": "60–80%",
-     "n": 39,
-     "caiu": 15
+     "n": 31,
+     "caiu": 13
     },
     {
      "faixa": "40–60%",
      "n": 69,
-     "caiu": 23
+     "caiu": 24
     },
     {
      "faixa": "20–40%",
-     "n": 146,
-     "caiu": 31
+     "n": 137,
+     "caiu": 29
     },
     {
      "faixa": "0–20%",
-     "n": 149,
-     "caiu": 29
+     "n": 138,
+     "caiu": 30
     }
    ],
-   "top30Hit": 22,
+   "top30Hit": 21,
    "unseenThatAppeared": 11
   }
  },
@@ -86,20 +86,20 @@
    "subject": "Português",
    "label": "Entendimento de Texto",
    "perYear": [
-    9,
     15,
-    14,
+    21,
+    25,
+    21,
+    21,
     16,
-    10,
-    8,
     22,
     25
    ],
-   "total": 119,
+   "total": 166,
    "presence": 8,
    "pAtLeastOne": 0.956,
-   "expected": 16.34,
-   "trend": 1.464
+   "expected": 21.26,
+   "trend": 0.571
   },
   {
    "key": "por_norma_culta",
@@ -107,19 +107,19 @@
    "label": "Domínio da Norma Culta",
    "perYear": [
     10,
-    3,
-    5,
+    4,
     6,
-    6,
+    7,
+    7,
     9,
     8,
     7
    ],
-   "total": 54,
+   "total": 58,
    "presence": 8,
    "pAtLeastOne": 0.956,
-   "expected": 6.96,
-   "trend": 0.19
+   "expected": 7.35,
+   "trend": 0.095
   },
   {
    "key": "mat_aritmetica_proporcionalidade",
@@ -127,19 +127,19 @@
    "label": "Aritmética e Proporcionalidade",
    "perYear": [
     2,
-    7,
+    8,
+    6,
+    5,
     4,
-    3,
-    3,
-    3,
+    4,
     10,
     12
    ],
-   "total": 44,
+   "total": 51,
    "presence": 8,
-   "pAtLeastOne": 0.955,
-   "expected": 6.49,
-   "trend": 0.976
+   "pAtLeastOne": 0.956,
+   "expected": 7.23,
+   "trend": 0.869
   },
   {
    "key": "mat_dados_probabilidade",
@@ -182,46 +182,6 @@
    "trend": 0.238
   },
   {
-   "key": "mat_funcoes",
-   "subject": "Matemática",
-   "label": "Funções",
-   "perYear": [
-    5,
-    6,
-    4,
-    8,
-    7,
-    8,
-    5,
-    1
-   ],
-   "total": 44,
-   "presence": 8,
-   "pAtLeastOne": 0.953,
-   "expected": 5.16,
-   "trend": -0.262
-  },
-  {
-   "key": "mat_geometria_plana",
-   "subject": "Matemática",
-   "label": "Geometria Plana",
-   "perYear": [
-    8,
-    5,
-    7,
-    5,
-    4,
-    4,
-    6,
-    4
-   ],
-   "total": 43,
-   "presence": 8,
-   "pAtLeastOne": 0.953,
-   "expected": 5.06,
-   "trend": -0.393
-  },
-  {
    "key": "ing_01",
    "subject": "Inglês",
    "label": "Compreensão de Texto em Inglês",
@@ -240,6 +200,46 @@
    "pAtLeastOne": 0.953,
    "expected": 5,
    "trend": 0
+  },
+  {
+   "key": "mat_geometria_plana",
+   "subject": "Matemática",
+   "label": "Geometria Plana",
+   "perYear": [
+    8,
+    5,
+    7,
+    4,
+    4,
+    4,
+    6,
+    4
+   ],
+   "total": 42,
+   "presence": 8,
+   "pAtLeastOne": 0.953,
+   "expected": 4.95,
+   "trend": -0.381
+  },
+  {
+   "key": "mat_funcoes",
+   "subject": "Matemática",
+   "label": "Funções",
+   "perYear": [
+    5,
+    6,
+    3,
+    8,
+    7,
+    7,
+    5,
+    1
+   ],
+   "total": 42,
+   "presence": 8,
+   "pAtLeastOne": 0.952,
+   "expected": 4.92,
+   "trend": -0.262
   },
   {
    "key": "bio_ecologia",
@@ -262,26 +262,6 @@
    "trend": 0.179
   },
   {
-   "key": "mat_equacoes",
-   "subject": "Matemática",
-   "label": "Equações, Desigualdades e Modelagem Algébrica",
-   "perYear": [
-    3,
-    4,
-    6,
-    3,
-    1,
-    1,
-    6,
-    6
-   ],
-   "total": 30,
-   "presence": 8,
-   "pAtLeastOne": 0.947,
-   "expected": 3.96,
-   "trend": 0.167
-  },
-  {
    "key": "por_lit_contemporanea",
    "subject": "Português",
    "label": "Literatura Contemporânea",
@@ -300,6 +280,26 @@
    "pAtLeastOne": 0.947,
    "expected": 3.95,
    "trend": 0.155
+  },
+  {
+   "key": "mat_equacoes",
+   "subject": "Matemática",
+   "label": "Equações, Desigualdades e Modelagem Algébrica",
+   "perYear": [
+    4,
+    4,
+    5,
+    3,
+    1,
+    1,
+    6,
+    6
+   ],
+   "total": 30,
+   "presence": 8,
+   "pAtLeastOne": 0.946,
+   "expected": 3.94,
+   "trend": 0.119
   },
   {
    "key": "bio_fisio_animal",
@@ -367,8 +367,8 @@
    "label": "Sequências, Matrizes e Sistemas Lineares",
    "perYear": [
     5,
-    5,
-    2,
+    4,
+    3,
     5,
     5,
     3,
@@ -377,9 +377,9 @@
    ],
    "total": 28,
    "presence": 8,
-   "pAtLeastOne": 0.932,
-   "expected": 3.05,
-   "trend": -0.476
+   "pAtLeastOne": 0.933,
+   "expected": 3.06,
+   "trend": -0.452
   },
   {
    "key": "geo_climatologia_socioambiental",
@@ -442,26 +442,6 @@
    "trend": 0.131
   },
   {
-   "key": "mat_combinatoria",
-   "subject": "Matemática",
-   "label": "Análise Combinatória",
-   "perYear": [
-    2,
-    3,
-    3,
-    4,
-    5,
-    1,
-    2,
-    2
-   ],
-   "total": 22,
-   "presence": 8,
-   "pAtLeastOne": 0.919,
-   "expected": 2.6,
-   "trend": -0.119
-  },
-  {
    "key": "por_lit_modernismo",
    "subject": "Português",
    "label": "Simbolismo, Pré-Modernismo e Modernismo",
@@ -480,6 +460,26 @@
    "pAtLeastOne": 0.918,
    "expected": 2.58,
    "trend": -0.345
+  },
+  {
+   "key": "mat_combinatoria",
+   "subject": "Matemática",
+   "label": "Análise Combinatória",
+   "perYear": [
+    1,
+    3,
+    3,
+    4,
+    5,
+    1,
+    2,
+    2
+   ],
+   "total": 21,
+   "presence": 8,
+   "pAtLeastOne": 0.917,
+   "expected": 2.54,
+   "trend": -0.036
   },
   {
    "key": "his_brasil_imperio",
@@ -762,26 +762,6 @@
    "trend": 0.476
   },
   {
-   "key": "mat_trigonometria",
-   "subject": "Matemática",
-   "label": "Trigonometria",
-   "perYear": [
-    4,
-    0,
-    1,
-    2,
-    1,
-    2,
-    1,
-    2
-   ],
-   "total": 13,
-   "presence": 7,
-   "pAtLeastOne": 0.823,
-   "expected": 1.58,
-   "trend": -0.083
-  },
-  {
    "key": "bio_zoologia",
    "subject": "Biologia",
    "label": "Zoologia",
@@ -829,17 +809,17 @@
     0,
     3,
     1,
-    3,
+    2,
     0,
     4,
     2,
     1
    ],
-   "total": 14,
+   "total": 13,
    "presence": 6,
-   "pAtLeastOne": 0.796,
-   "expected": 1.8,
-   "trend": 0.095
+   "pAtLeastOne": 0.787,
+   "expected": 1.7,
+   "trend": 0.107
   },
   {
    "key": "qui_organica_fundamentos",
@@ -880,6 +860,26 @@
    "pAtLeastOne": 0.783,
    "expected": 1.06,
    "trend": -0.083
+  },
+  {
+   "key": "mat_trigonometria",
+   "subject": "Matemática",
+   "label": "Trigonometria",
+   "perYear": [
+    4,
+    0,
+    0,
+    2,
+    1,
+    2,
+    1,
+    2
+   ],
+   "total": 12,
+   "presence": 6,
+   "pAtLeastOne": 0.776,
+   "expected": 1.49,
+   "trend": -0.048
   },
   {
    "key": "bio_metabolismo_energetico",
@@ -940,26 +940,6 @@
    "pAtLeastOne": 0.728,
    "expected": 1.43,
    "trend": 0.321
-  },
-  {
-   "key": "por_red_repertorio",
-   "subject": "Português",
-   "label": "Leitura de Coletânea e Repertório Temático",
-   "perYear": [
-    1,
-    2,
-    7,
-    1,
-    3,
-    4,
-    0,
-    0
-   ],
-   "total": 18,
-   "presence": 6,
-   "pAtLeastOne": 0.721,
-   "expected": 1.92,
-   "trend": -0.286
   },
   {
    "key": "his_idade_antiga",
@@ -1042,26 +1022,6 @@
    "trend": 0.119
   },
   {
-   "key": "mat_geometria_analitica",
-   "subject": "Matemática",
-   "label": "Geometria Analítica",
-   "perYear": [
-    4,
-    0,
-    1,
-    0,
-    4,
-    3,
-    0,
-    1
-   ],
-   "total": 13,
-   "presence": 5,
-   "pAtLeastOne": 0.697,
-   "expected": 1.51,
-   "trend": -0.131
-  },
-  {
    "key": "fil_aristoteles",
    "subject": "Filosofia",
    "label": "Aristóteles",
@@ -1100,6 +1060,26 @@
    "pAtLeastOne": 0.684,
    "expected": 1.03,
    "trend": 0.202
+  },
+  {
+   "key": "mat_geometria_analitica",
+   "subject": "Matemática",
+   "label": "Geometria Analítica",
+   "perYear": [
+    4,
+    0,
+    1,
+    0,
+    3,
+    3,
+    0,
+    1
+   ],
+   "total": 12,
+   "presence": 5,
+   "pAtLeastOne": 0.682,
+   "expected": 1.38,
+   "trend": -0.143
   },
   {
    "key": "fis_energia",
@@ -1160,46 +1140,6 @@
    "pAtLeastOne": 0.641,
    "expected": 1.03,
    "trend": 0.31
-  },
-  {
-   "key": "por_red_estrutura_coesao",
-   "subject": "Português",
-   "label": "Coesão, Conclusão e Proposta de Intervenção",
-   "perYear": [
-    1,
-    0,
-    2,
-    1,
-    6,
-    1,
-    0,
-    0
-   ],
-   "total": 11,
-   "presence": 5,
-   "pAtLeastOne": 0.621,
-   "expected": 1.25,
-   "trend": -0.06
-  },
-  {
-   "key": "por_sintaxe",
-   "subject": "Português",
-   "label": "Análise Sintática",
-   "perYear": [
-    1,
-    1,
-    1,
-    2,
-    3,
-    1,
-    0,
-    0
-   ],
-   "total": 9,
-   "presence": 6,
-   "pAtLeastOne": 0.605,
-   "expected": 0.97,
-   "trend": -0.131
   },
   {
    "key": "qui_organica_reacoes",
@@ -1582,26 +1522,6 @@
    "trend": 0.155
   },
   {
-   "key": "por_red_fundamentos",
-   "subject": "Português",
-   "label": "Fundamentos da Dissertação",
-   "perYear": [
-    1,
-    3,
-    1,
-    1,
-    0,
-    1,
-    0,
-    0
-   ],
-   "total": 7,
-   "presence": 5,
-   "pAtLeastOne": 0.477,
-   "expected": 0.63,
-   "trend": -0.274
-  },
-  {
    "key": "bio_biotecnologia",
    "subject": "Biologia",
    "label": "Biotecnologia",
@@ -1680,26 +1600,6 @@
    "pAtLeastOne": 0.449,
    "expected": 0.68,
    "trend": 0.107
-  },
-  {
-   "key": "por_red_argumentacao",
-   "subject": "Português",
-   "label": "Introdução, Argumentação e Coerência",
-   "perYear": [
-    1,
-    1,
-    1,
-    1,
-    0,
-    1,
-    0,
-    0
-   ],
-   "total": 5,
-   "presence": 5,
-   "pAtLeastOne": 0.434,
-   "expected": 0.48,
-   "trend": -0.155
   },
   {
    "key": "bio_microbiologia",
@@ -2120,26 +2020,6 @@
    "pAtLeastOne": 0.138,
    "expected": 0.11,
    "trend": -0.012
-  },
-  {
-   "key": "por_red_direitos_modelo",
-   "subject": "Português",
-   "label": "Direitos Humanos e Redações Modelo",
-   "perYear": [
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.1,
-   "expected": 0.06,
-   "trend": -0.083
   }
  ],
  "chapters": [
@@ -2210,18 +2090,38 @@
    "perYear": [
     2,
     1,
-    2,
     3,
-    1,
+    4,
+    2,
     5,
     5,
     3
    ],
-   "total": 22,
+   "total": 25,
    "presence": 8,
-   "pAtLeastOne": 0.934,
-   "expected": 3.1,
-   "trend": 0.405
+   "pAtLeastOne": 0.94,
+   "expected": 3.43,
+   "trend": 0.369
+  },
+  {
+   "key": "por_texto::Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais",
+   "subject": "Português",
+   "label": "Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais (Entendimento de Texto)",
+   "perYear": [
+    2,
+    5,
+    2,
+    2,
+    1,
+    1,
+    3,
+    8
+   ],
+   "total": 24,
+   "presence": 8,
+   "pAtLeastOne": 0.94,
+   "expected": 3.4,
+   "trend": 0.333
   },
   {
    "key": "por_texto::Gêneros não Verbais: Fundamentos de Leitura",
@@ -2270,38 +2170,58 @@
    "perYear": [
     1,
     2,
+    4,
     3,
-    2,
     0,
     1,
     5,
     10
    ],
-   "total": 24,
+   "total": 26,
    "presence": 7,
-   "pAtLeastOne": 0.894,
-   "expected": 3.86,
-   "trend": 0.833
+   "pAtLeastOne": 0.896,
+   "expected": 4.06,
+   "trend": 0.786
   },
   {
-   "key": "por_texto::Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais",
+   "key": "mat_aritmetica_proporcionalidade::Porcentagem",
+   "subject": "Matemática",
+   "label": "Porcentagem (Aritmética e Proporcionalidade)",
+   "perYear": [
+    0,
+    5,
+    1,
+    2,
+    4,
+    2,
+    4,
+    2
+   ],
+   "total": 20,
+   "presence": 7,
+   "pAtLeastOne": 0.894,
+   "expected": 2.62,
+   "trend": 0.167
+  },
+  {
+   "key": "por_texto::Fatores de Textualidade",
    "subject": "Português",
-   "label": "Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais (Entendimento de Texto)",
+   "label": "Fatores de Textualidade (Entendimento de Texto)",
    "perYear": [
     1,
-    4,
-    1,
-    1,
+    2,
     1,
     0,
-    3,
-    8
+    1,
+    5,
+    1,
+    5
    ],
-   "total": 19,
+   "total": 16,
    "presence": 7,
-   "pAtLeastOne": 0.867,
-   "expected": 2.92,
-   "trend": 0.488
+   "pAtLeastOne": 0.868,
+   "expected": 2.42,
+   "trend": 0.429
   },
   {
    "key": "por_lit_classica_barroca::A Arte e suas Linguagens",
@@ -2364,24 +2284,24 @@
    "trend": 0.226
   },
   {
-   "key": "mat_aritmetica_proporcionalidade::Porcentagem",
-   "subject": "Matemática",
-   "label": "Porcentagem (Aritmética e Proporcionalidade)",
+   "key": "por_texto::Modelos de Leitura e Distorções Interpretativas",
+   "subject": "Português",
+   "label": "Modelos de Leitura e Distorções Interpretativas (Entendimento de Texto)",
    "perYear": [
-    0,
-    4,
-    0,
-    1,
     3,
-    1,
+    3,
+    6,
     4,
-    2
+    5,
+    4,
+    2,
+    0
    ],
-   "total": 15,
-   "presence": 6,
-   "pAtLeastOne": 0.831,
-   "expected": 2.07,
-   "trend": 0.226
+   "total": 27,
+   "presence": 7,
+   "pAtLeastOne": 0.842,
+   "expected": 2.96,
+   "trend": -0.369
   },
   {
    "key": "mat_funcoes::Introdução às Funções",
@@ -2402,26 +2322,6 @@
    "pAtLeastOne": 0.822,
    "expected": 1.32,
    "trend": -0.083
-  },
-  {
-   "key": "por_texto::Fatores de Textualidade",
-   "subject": "Português",
-   "label": "Fatores de Textualidade (Entendimento de Texto)",
-   "perYear": [
-    0,
-    1,
-    1,
-    0,
-    1,
-    3,
-    1,
-    5
-   ],
-   "total": 12,
-   "presence": 6,
-   "pAtLeastOne": 0.818,
-   "expected": 1.98,
-   "trend": 0.5
   },
   {
    "key": "his_brasil_imperio::Brasil Império: Formação do Estado Nacional Brasileiro",
@@ -2464,6 +2364,26 @@
    "trend": 0.321
   },
   {
+   "key": "por_texto::Gêneros Textuais",
+   "subject": "Português",
+   "label": "Gêneros Textuais (Entendimento de Texto)",
+   "perYear": [
+    0,
+    3,
+    3,
+    3,
+    2,
+    0,
+    2,
+    1
+   ],
+   "total": 14,
+   "presence": 6,
+   "pAtLeastOne": 0.771,
+   "expected": 1.63,
+   "trend": -0.095
+  },
+  {
    "key": "geo_populacao_urbana_brasil::Dinâmica Demográfica",
    "subject": "Geografia",
    "label": "Dinâmica Demográfica (Geografia da População e Urbana do Brasil)",
@@ -2504,6 +2424,26 @@
    "trend": -0.119
   },
   {
+   "key": "por_norma_culta::Língua: um Sistema Complexo",
+   "subject": "Português",
+   "label": "Língua: um Sistema Complexo (Domínio da Norma Culta)",
+   "perYear": [
+    3,
+    1,
+    1,
+    0,
+    1,
+    1,
+    2,
+    1
+   ],
+   "total": 10,
+   "presence": 7,
+   "pAtLeastOne": 0.762,
+   "expected": 1.2,
+   "trend": -0.095
+  },
+  {
    "key": "his_brasil_colonia::A História e o Brasil",
    "subject": "História",
    "label": "A História e o Brasil (Brasil Colônia)",
@@ -2522,6 +2462,26 @@
    "pAtLeastOne": 0.753,
    "expected": 1.63,
    "trend": 0.036
+  },
+  {
+   "key": "por_texto::Funções da Linguagem",
+   "subject": "Português",
+   "label": "Funções da Linguagem (Entendimento de Texto)",
+   "perYear": [
+    5,
+    1,
+    1,
+    1,
+    3,
+    2,
+    1,
+    0
+   ],
+   "total": 14,
+   "presence": 7,
+   "pAtLeastOne": 0.75,
+   "expected": 1.44,
+   "trend": -0.357
   },
   {
    "key": "mat_geometria_espacial::Sólidos de Revolução",
@@ -2544,6 +2504,26 @@
    "trend": 0.048
   },
   {
+   "key": "por_texto::Função Poética e Linguagem Literária",
+   "subject": "Português",
+   "label": "Função Poética e Linguagem Literária (Entendimento de Texto)",
+   "perYear": [
+    2,
+    1,
+    5,
+    1,
+    0,
+    0,
+    2,
+    2
+   ],
+   "total": 13,
+   "presence": 6,
+   "pAtLeastOne": 0.734,
+   "expected": 1.53,
+   "trend": -0.131
+  },
+  {
    "key": "por_lit_contemporanea::Poesia Concreta",
    "subject": "Português",
    "label": "Poesia Concreta (Literatura Contemporânea)",
@@ -2562,46 +2542,6 @@
    "pAtLeastOne": 0.734,
    "expected": 1.19,
    "trend": 0.214
-  },
-  {
-   "key": "por_norma_culta::Língua: um Sistema Complexo",
-   "subject": "Português",
-   "label": "Língua: um Sistema Complexo (Domínio da Norma Culta)",
-   "perYear": [
-    3,
-    0,
-    1,
-    0,
-    1,
-    1,
-    2,
-    1
-   ],
-   "total": 9,
-   "presence": 6,
-   "pAtLeastOne": 0.719,
-   "expected": 1.12,
-   "trend": -0.036
-  },
-  {
-   "key": "por_texto::Função Poética e Linguagem Literária",
-   "subject": "Português",
-   "label": "Função Poética e Linguagem Literária (Entendimento de Texto)",
-   "perYear": [
-    2,
-    1,
-    3,
-    1,
-    0,
-    0,
-    2,
-    2
-   ],
-   "total": 11,
-   "presence": 6,
-   "pAtLeastOne": 0.713,
-   "expected": 1.36,
-   "trend": -0.06
   },
   {
    "key": "mat_equacoes::Técnicas Algébricas",
@@ -2642,6 +2582,26 @@
    "pAtLeastOne": 0.682,
    "expected": 1.12,
    "trend": 0.25
+  },
+  {
+   "key": "por_texto::Intertextualidade e Interdiscursividade",
+   "subject": "Português",
+   "label": "Intertextualidade e Interdiscursividade (Entendimento de Texto)",
+   "perYear": [
+    2,
+    2,
+    1,
+    2,
+    5,
+    0,
+    1,
+    0
+   ],
+   "total": 13,
+   "presence": 6,
+   "pAtLeastOne": 0.681,
+   "expected": 1.38,
+   "trend": -0.226
   },
   {
    "key": "fis_calorimetria::Temperatura, Calor e seus Mecanismos de Transferência",
@@ -2722,26 +2682,6 @@
    "pAtLeastOne": 0.654,
    "expected": 0.95,
    "trend": 0.214
-  },
-  {
-   "key": "por_texto::Gêneros Textuais",
-   "subject": "Português",
-   "label": "Gêneros Textuais (Entendimento de Texto)",
-   "perYear": [
-    0,
-    2,
-    2,
-    2,
-    0,
-    0,
-    2,
-    1
-   ],
-   "total": 9,
-   "presence": 5,
-   "pAtLeastOne": 0.652,
-   "expected": 1.11,
-   "trend": -0.012
   },
   {
    "key": "his_moderna_iluminismo::América Espanhola",
@@ -2964,6 +2904,26 @@
    "trend": 0.107
   },
   {
+   "key": "mat_equacoes::Modelagem Algébrica de Problemas I",
+   "subject": "Matemática",
+   "label": "Modelagem Algébrica de Problemas I (Equações, Desigualdades e Modelagem Algébrica)",
+   "perYear": [
+    1,
+    3,
+    0,
+    0,
+    0,
+    0,
+    1,
+    3
+   ],
+   "total": 8,
+   "presence": 4,
+   "pAtLeastOne": 0.596,
+   "expected": 1.1,
+   "trend": 0.048
+  },
+  {
    "key": "qui_cinetica::Cinética Química",
    "subject": "Química",
    "label": "Cinética Química (Cinética Química)",
@@ -3002,26 +2962,6 @@
    "pAtLeastOne": 0.588,
    "expected": 0.79,
    "trend": -0.131
-  },
-  {
-   "key": "por_texto::Modelos de Leitura e Distorções Interpretativas",
-   "subject": "Português",
-   "label": "Modelos de Leitura e Distorções Interpretativas (Entendimento de Texto)",
-   "perYear": [
-    1,
-    2,
-    0,
-    2,
-    0,
-    1,
-    2,
-    0
-   ],
-   "total": 8,
-   "presence": 5,
-   "pAtLeastOne": 0.583,
-   "expected": 0.93,
-   "trend": -0.071
   },
   {
    "key": "fil_niilismo_existencialismo::Nietzsche e a Crítica aos Valores Morais",
@@ -3124,66 +3064,6 @@
    "trend": -0.071
   },
   {
-   "key": "mat_equacoes::Modelagem Algébrica de Problemas I",
-   "subject": "Matemática",
-   "label": "Modelagem Algébrica de Problemas I (Equações, Desigualdades e Modelagem Algébrica)",
-   "perYear": [
-    0,
-    3,
-    0,
-    0,
-    0,
-    0,
-    1,
-    3
-   ],
-   "total": 7,
-   "presence": 3,
-   "pAtLeastOne": 0.56,
-   "expected": 1.04,
-   "trend": 0.131
-  },
-  {
-   "key": "mat_funcoes::Composição de Funções",
-   "subject": "Matemática",
-   "label": "Composição de Funções (Funções)",
-   "perYear": [
-    2,
-    2,
-    1,
-    0,
-    1,
-    3,
-    0,
-    0
-   ],
-   "total": 9,
-   "presence": 5,
-   "pAtLeastOne": 0.556,
-   "expected": 0.94,
-   "trend": -0.202
-  },
-  {
-   "key": "por_texto::Intertextualidade e Interdiscursividade",
-   "subject": "Português",
-   "label": "Intertextualidade e Interdiscursividade (Entendimento de Texto)",
-   "perYear": [
-    1,
-    1,
-    0,
-    1,
-    3,
-    0,
-    1,
-    0
-   ],
-   "total": 7,
-   "presence": 5,
-   "pAtLeastOne": 0.545,
-   "expected": 0.8,
-   "trend": -0.06
-  },
-  {
    "key": "qui_oxirreducao::Processos de Oxirredução",
    "subject": "Química",
    "label": "Processos de Oxirredução (Oxirredução)",
@@ -3262,26 +3142,6 @@
    "pAtLeastOne": 0.541,
    "expected": 0.63,
    "trend": -0.012
-  },
-  {
-   "key": "por_texto::Funções da Linguagem",
-   "subject": "Português",
-   "label": "Funções da Linguagem (Entendimento de Texto)",
-   "perYear": [
-    4,
-    0,
-    1,
-    1,
-    1,
-    0,
-    1,
-    0
-   ],
-   "total": 8,
-   "presence": 5,
-   "pAtLeastOne": 0.54,
-   "expected": 0.75,
-   "trend": -0.31
   },
   {
    "key": "mat_geometria_plana::O Ponto Médio e o Baricentro de um Triângulo",
@@ -3404,26 +3264,6 @@
    "trend": -0.131
   },
   {
-   "key": "por_sintaxe::Funções Sintáticas Nominais e Vocativo",
-   "subject": "Português",
-   "label": "Funções Sintáticas Nominais e Vocativo (Análise Sintática)",
-   "perYear": [
-    1,
-    1,
-    0,
-    2,
-    2,
-    1,
-    0,
-    0
-   ],
-   "total": 7,
-   "presence": 5,
-   "pAtLeastOne": 0.522,
-   "expected": 0.75,
-   "trend": -0.107
-  },
-  {
    "key": "mat_geometria_plana::Triângulo Retângulo",
    "subject": "Matemática",
    "label": "Triângulo Retângulo (Geometria Plana)",
@@ -3462,26 +3302,6 @@
    "pAtLeastOne": 0.521,
    "expected": 0.61,
    "trend": -0.012
-  },
-  {
-   "key": "mat_log_exponenciais::Modelagem Exponencial de Problemas",
-   "subject": "Matemática",
-   "label": "Modelagem Exponencial de Problemas (Logaritmos e Exponenciais)",
-   "perYear": [
-    0,
-    1,
-    1,
-    3,
-    0,
-    3,
-    0,
-    0
-   ],
-   "total": 8,
-   "presence": 4,
-   "pAtLeastOne": 0.52,
-   "expected": 0.93,
-   "trend": -0.024
   },
   {
    "key": "por_lit_romantismo_realismo::Machado de Assis",
@@ -3584,26 +3404,6 @@
    "trend": -0.071
   },
   {
-   "key": "mat_equacoes::Modelagem Algébrica de Problemas II",
-   "subject": "Matemática",
-   "label": "Modelagem Algébrica de Problemas II (Equações, Desigualdades e Modelagem Algébrica)",
-   "perYear": [
-    1,
-    1,
-    4,
-    1,
-    0,
-    1,
-    0,
-    0
-   ],
-   "total": 8,
-   "presence": 5,
-   "pAtLeastOne": 0.506,
-   "expected": 0.75,
-   "trend": -0.262
-  },
-  {
    "key": "mat_trigonometria::Trigonometria no Triângulo Retângulo",
    "subject": "Matemática",
    "label": "Trigonometria no Triângulo Retângulo (Trigonometria)",
@@ -3642,6 +3442,26 @@
    "pAtLeastOne": 0.503,
    "expected": 0.63,
    "trend": 0.036
+  },
+  {
+   "key": "mat_log_exponenciais::Modelagem Exponencial de Problemas",
+   "subject": "Matemática",
+   "label": "Modelagem Exponencial de Problemas (Logaritmos e Exponenciais)",
+   "perYear": [
+    0,
+    1,
+    1,
+    2,
+    0,
+    3,
+    0,
+    0
+   ],
+   "total": 7,
+   "presence": 4,
+   "pAtLeastOne": 0.498,
+   "expected": 0.83,
+   "trend": -0.012
   },
   {
    "key": "bio_ecologia::Espécies Invasoras e Controle Biológico",
@@ -3724,6 +3544,26 @@
    "trend": 0.048
   },
   {
+   "key": "mat_sequencias_matrizes::Progressão Aritmética",
+   "subject": "Matemática",
+   "label": "Progressão Aritmética (Sequências, Matrizes e Sistemas Lineares)",
+   "perYear": [
+    2,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0
+   ],
+   "total": 6,
+   "presence": 5,
+   "pAtLeastOne": 0.489,
+   "expected": 0.6,
+   "trend": -0.167
+  },
+  {
    "key": "mat_aritmetica_proporcionalidade::Potências e Radicais",
    "subject": "Matemática",
    "label": "Potências e Radicais (Aritmética e Proporcionalidade)",
@@ -3744,24 +3584,24 @@
    "trend": -0.083
   },
   {
-   "key": "mat_sequencias_matrizes::Médias",
+   "key": "mat_equacoes::Modelagem Algébrica de Problemas II",
    "subject": "Matemática",
-   "label": "Médias (Sequências, Matrizes e Sistemas Lineares)",
+   "label": "Modelagem Algébrica de Problemas II (Equações, Desigualdades e Modelagem Algébrica)",
    "perYear": [
     1,
-    2,
+    1,
+    3,
     1,
     0,
-    1,
     1,
     0,
     0
    ],
-   "total": 6,
+   "total": 7,
    "presence": 5,
-   "pAtLeastOne": 0.47,
-   "expected": 0.58,
-   "trend": -0.19
+   "pAtLeastOne": 0.484,
+   "expected": 0.66,
+   "trend": -0.226
   },
   {
    "key": "his_primeira_republica_vargas::A República da Espada",
@@ -3822,6 +3662,26 @@
    "pAtLeastOne": 0.469,
    "expected": 0.75,
    "trend": 0.262
+  },
+  {
+   "key": "mat_funcoes::Composição de Funções",
+   "subject": "Matemática",
+   "label": "Composição de Funções (Funções)",
+   "perYear": [
+    2,
+    2,
+    0,
+    0,
+    1,
+    2,
+    0,
+    0
+   ],
+   "total": 7,
+   "presence": 4,
+   "pAtLeastOne": 0.466,
+   "expected": 0.7,
+   "trend": -0.202
   },
   {
    "key": "por_lit_modernismo::Semana de Arte Moderna",
@@ -3922,6 +3782,26 @@
    "pAtLeastOne": 0.451,
    "expected": 0.59,
    "trend": -0.012
+  },
+  {
+   "key": "mat_sequencias_matrizes::Médias",
+   "subject": "Matemática",
+   "label": "Médias (Sequências, Matrizes e Sistemas Lineares)",
+   "perYear": [
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "total": 5,
+   "presence": 5,
+   "pAtLeastOne": 0.449,
+   "expected": 0.5,
+   "trend": -0.131
   },
   {
    "key": "bio_evolucao::Evolução Biológica: Construção Histórica",
@@ -4104,26 +3984,6 @@
    "trend": 0.06
   },
   {
-   "key": "mat_sequencias_matrizes::Progressão Aritmética",
-   "subject": "Matemática",
-   "label": "Progressão Aritmética (Sequências, Matrizes e Sistemas Lineares)",
-   "perYear": [
-    2,
-    0,
-    0,
-    1,
-    1,
-    1,
-    0,
-    0
-   ],
-   "total": 5,
-   "presence": 4,
-   "pAtLeastOne": 0.426,
-   "expected": 0.51,
-   "trend": -0.131
-  },
-  {
    "key": "mat_combinatoria::O Problema da Fila",
    "subject": "Matemática",
    "label": "O Problema da Fila (Análise Combinatória)",
@@ -4142,26 +4002,6 @@
    "pAtLeastOne": 0.426,
    "expected": 0.58,
    "trend": -0.167
-  },
-  {
-   "key": "por_red_estrutura_coesao::Proposta de Intervenção: Atores Sociais e Cidadania",
-   "subject": "Português",
-   "label": "Proposta de Intervenção: Atores Sociais e Cidadania (Coesão, Conclusão e Proposta de Intervenção)",
-   "perYear": [
-    0,
-    0,
-    1,
-    1,
-    1,
-    1,
-    0,
-    0
-   ],
-   "total": 4,
-   "presence": 4,
-   "pAtLeastOne": 0.426,
-   "expected": 0.47,
-   "trend": 0
   },
   {
    "key": "qui_polaridade_geometria::Ligações Químicas e Alotropia",
@@ -4344,26 +4184,6 @@
    "trend": -0.048
   },
   {
-   "key": "por_red_repertorio::Analisando Tema de Redação: Corpo, Saúde e Sexualidade",
-   "subject": "Português",
-   "label": "Analisando Tema de Redação: Corpo, Saúde e Sexualidade (Leitura de Coletânea e Repertório Temático)",
-   "perYear": [
-    1,
-    1,
-    1,
-    0,
-    0,
-    2,
-    0,
-    0
-   ],
-   "total": 5,
-   "presence": 4,
-   "pAtLeastOne": 0.404,
-   "expected": 0.53,
-   "trend": -0.107
-  },
-  {
    "key": "mat_sequencias_matrizes::Tabelas e Matrizes",
    "subject": "Matemática",
    "label": "Tabelas e Matrizes (Sequências, Matrizes e Sistemas Lineares)",
@@ -4422,26 +4242,6 @@
    "pAtLeastOne": 0.396,
    "expected": 0.52,
    "trend": 0.048
-  },
-  {
-   "key": "mat_geometria_plana::Áreas de Figuras Planas",
-   "subject": "Matemática",
-   "label": "Áreas de Figuras Planas (Geometria Plana)",
-   "perYear": [
-    0,
-    0,
-    2,
-    2,
-    0,
-    1,
-    0,
-    0
-   ],
-   "total": 5,
-   "presence": 3,
-   "pAtLeastOne": 0.395,
-   "expected": 0.54,
-   "trend": -0.06
   },
   {
    "key": "fis_gravitacao_circular::Leis da Gravitação",
@@ -4644,26 +4444,6 @@
    "trend": 0.155
   },
   {
-   "key": "mat_geometria_analitica::Introdução à Geometria Analítica",
-   "subject": "Matemática",
-   "label": "Introdução à Geometria Analítica (Geometria Analítica)",
-   "perYear": [
-    1,
-    0,
-    0,
-    0,
-    1,
-    2,
-    0,
-    0
-   ],
-   "total": 4,
-   "presence": 3,
-   "pAtLeastOne": 0.377,
-   "expected": 0.49,
-   "trend": 0
-  },
-  {
    "key": "fis_ondas_fundamentos::Equação Fundamental da Ondulatória",
    "subject": "Física",
    "label": "Equação Fundamental da Ondulatória (Fundamentos de Ondas e Oscilações)",
@@ -4844,6 +4624,26 @@
    "trend": 0.095
   },
   {
+   "key": "mat_geometria_plana::Áreas de Figuras Planas",
+   "subject": "Matemática",
+   "label": "Áreas de Figuras Planas (Geometria Plana)",
+   "perYear": [
+    0,
+    0,
+    2,
+    1,
+    0,
+    1,
+    0,
+    0
+   ],
+   "total": 4,
+   "presence": 3,
+   "pAtLeastOne": 0.362,
+   "expected": 0.43,
+   "trend": -0.048
+  },
+  {
    "key": "qui_organica_reacoes::Interpretando Reações Orgânicas",
    "subject": "Química",
    "label": "Interpretando Reações Orgânicas (Reações e Aplicações Orgânicas)",
@@ -4862,26 +4662,6 @@
    "pAtLeastOne": 0.359,
    "expected": 0.5,
    "trend": 0.107
-  },
-  {
-   "key": "por_red_estrutura_coesao::Proposta de Intervenção: Coerência Argumentativa",
-   "subject": "Português",
-   "label": "Proposta de Intervenção: Coerência Argumentativa (Coesão, Conclusão e Proposta de Intervenção)",
-   "perYear": [
-    0,
-    0,
-    1,
-    0,
-    4,
-    0,
-    0,
-    0
-   ],
-   "total": 5,
-   "presence": 2,
-   "pAtLeastOne": 0.356,
-   "expected": 0.59,
-   "trend": 0.012
   },
   {
    "key": "fil_moderna_racionalismo_empirismo::A Crítica de Hume à Causalidade",
@@ -5022,26 +4802,6 @@
    "pAtLeastOne": 0.347,
    "expected": 0.37,
    "trend": 0.012
-  },
-  {
-   "key": "mat_combinatoria::O Problema do Grupo",
-   "subject": "Matemática",
-   "label": "O Problema do Grupo (Análise Combinatória)",
-   "perYear": [
-    1,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    1
-   ],
-   "total": 3,
-   "presence": 3,
-   "pAtLeastOne": 0.347,
-   "expected": 0.36,
-   "trend": -0.036
   },
   {
    "key": "soc_estratificacao_desigualdade::Classes Sociais e Mobilidade Social",
@@ -5664,6 +5424,26 @@
    "trend": 0.048
   },
   {
+   "key": "mat_combinatoria::O Problema do Grupo",
+   "subject": "Matemática",
+   "label": "O Problema do Grupo (Análise Combinatória)",
+   "perYear": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.298,
+   "expected": 0.3,
+   "trend": 0.048
+  },
+  {
    "key": "fis_dinamica_impulsiva::Impulso e Quantidade de Movimento",
    "subject": "Física",
    "label": "Impulso e Quantidade de Movimento (Dinâmica Impulsiva)",
@@ -5704,26 +5484,6 @@
    "trend": -0.19
   },
   {
-   "key": "por_red_fundamentos::Projeto de Texto em Favor da Progressão Textual",
-   "subject": "Português",
-   "label": "Projeto de Texto em Favor da Progressão Textual (Fundamentos da Dissertação)",
-   "perYear": [
-    0,
-    3,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0
-   ],
-   "total": 4,
-   "presence": 2,
-   "pAtLeastOne": 0.293,
-   "expected": 0.37,
-   "trend": -0.143
-  },
-  {
    "key": "mat_funcoes::Função Quadrática",
    "subject": "Matemática",
    "label": "Função Quadrática (Funções)",
@@ -5747,26 +5507,6 @@
    "key": "por_lit_modernismo::Modernismo no Brasil: Primeira Geração",
    "subject": "Português",
    "label": "Modernismo no Brasil: Primeira Geração (Simbolismo, Pré-Modernismo e Modernismo)",
-   "perYear": [
-    0,
-    1,
-    1,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 3,
-   "presence": 3,
-   "pAtLeastOne": 0.289,
-   "expected": 0.29,
-   "trend": -0.083
-  },
-  {
-   "key": "por_red_repertorio::Incrementando o Repertório: Corpo, Saúde e Sexualidade",
-   "subject": "Português",
-   "label": "Incrementando o Repertório: Corpo, Saúde e Sexualidade (Leitura de Coletânea e Repertório Temático)",
    "perYear": [
     0,
     1,
@@ -5882,6 +5622,26 @@
    "pAtLeastOne": 0.285,
    "expected": 0.28,
    "trend": 0.048
+  },
+  {
+   "key": "mat_geometria_analitica::Introdução à Geometria Analítica",
+   "subject": "Matemática",
+   "label": "Introdução à Geometria Analítica (Geometria Analítica)",
+   "perYear": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   "total": 3,
+   "presence": 2,
+   "pAtLeastOne": 0.284,
+   "expected": 0.36,
+   "trend": -0.012
   },
   {
    "key": "fil_niilismo_existencialismo::O Existencialismo de Sartre",
@@ -6184,46 +5944,6 @@
    "trend": -0.131
   },
   {
-   "key": "mat_trigonometria::A Relação Fundamental da Trigonometria",
-   "subject": "Matemática",
-   "label": "A Relação Fundamental da Trigonometria (Trigonometria)",
-   "perYear": [
-    1,
-    0,
-    1,
-    1,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 3,
-   "presence": 3,
-   "pAtLeastOne": 0.264,
-   "expected": 0.26,
-   "trend": -0.131
-  },
-  {
-   "key": "por_red_repertorio::Incrementando o Repertório: Arte, Cultura e Relações Sociais",
-   "subject": "Português",
-   "label": "Incrementando o Repertório: Arte, Cultura e Relações Sociais (Leitura de Coletânea e Repertório Temático)",
-   "perYear": [
-    0,
-    0,
-    2,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 3,
-   "presence": 2,
-   "pAtLeastOne": 0.264,
-   "expected": 0.3,
-   "trend": -0.06
-  },
-  {
    "key": "bio_botanica::Fungos",
    "subject": "Biologia",
    "label": "Fungos (Botânica)",
@@ -6262,26 +5982,6 @@
    "pAtLeastOne": 0.263,
    "expected": 0.29,
    "trend": -0.262
-  },
-  {
-   "key": "por_red_repertorio::Analisando o Tema de Redação: Arte, Cultura e Relações Sociais",
-   "subject": "Português",
-   "label": "Analisando o Tema de Redação: Arte, Cultura e Relações Sociais (Leitura de Coletânea e Repertório Temático)",
-   "perYear": [
-    0,
-    0,
-    0,
-    1,
-    0,
-    1,
-    0,
-    0
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.262,
-   "expected": 0.26,
-   "trend": 0.024
   },
   {
    "key": "mat_trigonometria::Funções Trigonométricas",
@@ -6582,26 +6282,6 @@
    "pAtLeastOne": 0.233,
    "expected": 0.25,
    "trend": -0.155
-  },
-  {
-   "key": "por_red_repertorio::Incrementando o Repertório: Violência, Leis e Punição",
-   "subject": "Português",
-   "label": "Incrementando o Repertório: Violência, Leis e Punição (Leitura de Coletânea e Repertório Temático)",
-   "perYear": [
-    0,
-    0,
-    1,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.229,
-   "expected": 0.22,
-   "trend": -0.024
   },
   {
    "key": "bio_genetica::Ligação Gênica",
@@ -6982,26 +6662,6 @@
    "pAtLeastOne": 0.217,
    "expected": 0.23,
    "trend": -0.179
-  },
-  {
-   "key": "por_red_fundamentos::Gêneros e sua Relação com a Estrutura do Texto",
-   "subject": "Português",
-   "label": "Gêneros e sua Relação com a Estrutura do Texto (Fundamentos da Dissertação)",
-   "perYear": [
-    0,
-    0,
-    1,
-    1,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.213,
-   "expected": 0.19,
-   "trend": -0.048
   },
   {
    "key": "bio_fisio_animal::Coordenação Endócrina I",
@@ -7524,6 +7184,26 @@
    "trend": -0.095
   },
   {
+   "key": "mat_trigonometria::A Relação Fundamental da Trigonometria",
+   "subject": "Matemática",
+   "label": "A Relação Fundamental da Trigonometria (Trigonometria)",
+   "perYear": [
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.191,
+   "expected": 0.17,
+   "trend": -0.095
+  },
+  {
    "key": "fil_aristoteles::Lógica e Metafísica Aristotélicas",
    "subject": "Filosofia",
    "label": "Lógica e Metafísica Aristotélicas (Aristóteles)",
@@ -7664,26 +7344,6 @@
    "trend": -0.119
   },
   {
-   "key": "por_red_repertorio::Incrementando o Repertório: Mídia e Sociedade",
-   "subject": "Português",
-   "label": "Incrementando o Repertório: Mídia e Sociedade (Leitura de Coletânea e Repertório Temático)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.175,
-   "expected": 0.15,
-   "trend": 0.036
-  },
-  {
    "key": "por_lit_classica_barroca::A Estética Neoclássica",
    "subject": "Português",
    "label": "A Estética Neoclássica (Literatura Clássica, Medieval e Barroca)",
@@ -7707,26 +7367,6 @@
    "key": "por_norma_culta::Advérbio e Locuções Adverbiais: Circunstanciadores",
    "subject": "Português",
    "label": "Advérbio e Locuções Adverbiais: Circunstanciadores (Domínio da Norma Culta)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.175,
-   "expected": 0.15,
-   "trend": 0.036
-  },
-  {
-   "key": "por_red_argumentacao::Argumentação: Auditório Particular e Universal",
-   "subject": "Português",
-   "label": "Argumentação: Auditório Particular e Universal (Introdução, Argumentação e Coerência)",
    "perYear": [
     0,
     0,
@@ -8264,46 +7904,6 @@
    "trend": 0.012
   },
   {
-   "key": "por_red_estrutura_coesao::Proposta de Intervenção: Respeito aos Direitos Humanos",
-   "subject": "Português",
-   "label": "Proposta de Intervenção: Respeito aos Direitos Humanos (Coesão, Conclusão e Proposta de Intervenção)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.155,
-   "expected": 0.13,
-   "trend": 0.012
-  },
-  {
-   "key": "por_sintaxe::Vozes Verbais",
-   "subject": "Português",
-   "label": "Vozes Verbais (Análise Sintática)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.155,
-   "expected": 0.13,
-   "trend": 0.012
-  },
-  {
    "key": "soc_cultura_identidade::Identidade e Diferença",
    "subject": "Sociologia",
    "label": "Identidade e Diferença (Cultura, Identidade e Diversidade)",
@@ -8722,26 +8322,6 @@
    "pAtLeastOne": 0.144,
    "expected": 0.15,
    "trend": -0.119
-  },
-  {
-   "key": "por_red_argumentacao::Recursos Argumentativos: Múltiplos Domínios do Saber",
-   "subject": "Português",
-   "label": "Recursos Argumentativos: Múltiplos Domínios do Saber (Introdução, Argumentação e Coerência)",
-   "perYear": [
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.138,
-   "expected": 0.11,
-   "trend": -0.012
   },
   {
    "key": "por_norma_culta::O Léxico em Contexto: Variadas Possibilidades Semânticas",
@@ -9184,89 +8764,9 @@
    "trend": -0.036
   },
   {
-   "key": "por_sintaxe::Tipos de Sujeito",
-   "subject": "Português",
-   "label": "Tipos de Sujeito (Análise Sintática)",
-   "perYear": [
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.123,
-   "expected": 0.09,
-   "trend": -0.036
-  },
-  {
-   "key": "por_red_repertorio::Analisando Tema de Redação: Mídia e Sociedade",
-   "subject": "Português",
-   "label": "Analisando Tema de Redação: Mídia e Sociedade (Leitura de Coletânea e Repertório Temático)",
-   "perYear": [
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.123,
-   "expected": 0.09,
-   "trend": -0.036
-  },
-  {
-   "key": "por_red_argumentacao::Recursos Argumentativos: Interdiscursividade e Intertextualidade",
-   "subject": "Português",
-   "label": "Recursos Argumentativos: Interdiscursividade e Intertextualidade (Introdução, Argumentação e Coerência)",
-   "perYear": [
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.123,
-   "expected": 0.09,
-   "trend": -0.036
-  },
-  {
    "key": "por_norma_culta::Substantivo: os Nomes e a Visão do Enunciador",
    "subject": "Português",
    "label": "Substantivo: os Nomes e a Visão do Enunciador (Domínio da Norma Culta)",
-   "perYear": [
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.123,
-   "expected": 0.09,
-   "trend": -0.036
-  },
-  {
-   "key": "por_red_repertorio::Lendo a Coletânea: a Apreensão de Sentidos II",
-   "subject": "Português",
-   "label": "Lendo a Coletânea: a Apreensão de Sentidos II (Leitura de Coletânea e Repertório Temático)",
    "perYear": [
     0,
     0,
@@ -9724,26 +9224,6 @@
    "trend": -0.06
   },
   {
-   "key": "por_red_argumentacao::Argumentação Quase-Lógica e Efeito de Verdade",
-   "subject": "Português",
-   "label": "Argumentação Quase-Lógica e Efeito de Verdade (Introdução, Argumentação e Coerência)",
-   "perYear": [
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.111,
-   "expected": 0.07,
-   "trend": -0.06
-  },
-  {
    "key": "por_lit_contemporanea::Clarice Lispector",
    "subject": "Português",
    "label": "Clarice Lispector (Literatura Contemporânea)",
@@ -10064,69 +9544,9 @@
    "trend": -0.083
   },
   {
-   "key": "por_red_estrutura_coesao::Coesão no Texto Dissertativo: Análise de Problemas",
-   "subject": "Português",
-   "label": "Coesão no Texto Dissertativo: Análise de Problemas (Coesão, Conclusão e Proposta de Intervenção)",
-   "perYear": [
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.1,
-   "expected": 0.06,
-   "trend": -0.083
-  },
-  {
-   "key": "por_red_fundamentos::O que se Avalia na Dissertação: Competências e Habilidades",
-   "subject": "Português",
-   "label": "O que se Avalia na Dissertação: Competências e Habilidades (Fundamentos da Dissertação)",
-   "perYear": [
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.1,
-   "expected": 0.06,
-   "trend": -0.083
-  },
-  {
    "key": "por_norma_culta::Verbo e Sintaxe da Oração",
    "subject": "Português",
    "label": "Verbo e Sintaxe da Oração (Domínio da Norma Culta)",
-   "perYear": [
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.1,
-   "expected": 0.06,
-   "trend": -0.083
-  },
-  {
-   "key": "por_red_direitos_modelo::Os Direitos Humanos de 1ª Geração: Direitos Individuais",
-   "subject": "Português",
-   "label": "Os Direitos Humanos de 1ª Geração: Direitos Individuais (Direitos Humanos e Redações Modelo)",
    "perYear": [
     1,
     0,
@@ -10167,26 +9587,6 @@
    "key": "por_lit_classica_barroca::Trovadorismo e Humanismo",
    "subject": "Português",
    "label": "Trovadorismo e Humanismo (Literatura Clássica, Medieval e Barroca)",
-   "perYear": [
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.1,
-   "expected": 0.06,
-   "trend": -0.083
-  },
-  {
-   "key": "por_red_argumentacao::Parágrafo de Introdução: como Contextualizar",
-   "subject": "Português",
-   "label": "Parágrafo de Introdução: como Contextualizar (Introdução, Argumentação e Coerência)",
    "perYear": [
     1,
     0,
