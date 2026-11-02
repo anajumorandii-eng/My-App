@@ -14,70 +14,70 @@
  "decay": 0.84,
  "backtest": {
   "topic": {
-   "brier": 0.1719375527253794,
-   "naive": 0.2009777872249974,
+   "brier": 0.1677866630440129,
+   "naive": 0.20097778722499743,
    "bins": [
     {
      "faixa": "80–100%",
-     "n": 36,
-     "caiu": 34
+     "n": 31,
+     "caiu": 30
     },
     {
      "faixa": "60–80%",
-     "n": 20,
-     "caiu": 15
+     "n": 25,
+     "caiu": 17
     },
     {
      "faixa": "40–60%",
      "n": 24,
-     "caiu": 13
+     "caiu": 16
     },
     {
      "faixa": "20–40%",
-     "n": 14,
+     "n": 15,
      "caiu": 6
     },
     {
      "faixa": "0–20%",
-     "n": 3,
-     "caiu": 2
+     "n": 2,
+     "caiu": 1
     }
    ],
    "top30Hit": 29,
    "unseenThatAppeared": 1
   },
   "chapter": {
-   "brier": 0.20097920072852857,
-   "naive": 0.20376926280716473,
+   "brier": 0.20079212372695768,
+   "naive": 0.20573387182484873,
    "bins": [
     {
      "faixa": "80–100%",
      "n": 17,
-     "caiu": 15
+     "caiu": 14
     },
     {
      "faixa": "60–80%",
-     "n": 31,
-     "caiu": 13
+     "n": 29,
+     "caiu": 14
     },
     {
      "faixa": "40–60%",
-     "n": 69,
-     "caiu": 24
+     "n": 73,
+     "caiu": 27
     },
     {
      "faixa": "20–40%",
-     "n": 137,
-     "caiu": 29
+     "n": 135,
+     "caiu": 23
     },
     {
      "faixa": "0–20%",
-     "n": 138,
-     "caiu": 30
+     "n": 134,
+     "caiu": 33
     }
    ],
-   "top30Hit": 21,
-   "unseenThatAppeared": 11
+   "top30Hit": 22,
+   "unseenThatAppeared": 15
   }
  },
  "topics": [
@@ -90,36 +90,16 @@
     21,
     25,
     21,
-    21,
-    16,
+    20,
+    19,
     22,
     25
    ],
-   "total": 166,
+   "total": 168,
    "presence": 8,
    "pAtLeastOne": 0.956,
-   "expected": 21.26,
-   "trend": 0.571
-  },
-  {
-   "key": "por_norma_culta",
-   "subject": "Português",
-   "label": "Domínio da Norma Culta",
-   "perYear": [
-    10,
-    4,
-    6,
-    7,
-    7,
-    9,
-    8,
-    7
-   ],
-   "total": 58,
-   "presence": 8,
-   "pAtLeastOne": 0.956,
-   "expected": 7.35,
-   "trend": 0.095
+   "expected": 21.58,
+   "trend": 0.667
   },
   {
    "key": "mat_aritmetica_proporcionalidade",
@@ -130,16 +110,36 @@
     8,
     6,
     5,
-    4,
-    4,
+    10,
+    8,
     10,
     12
    ],
-   "total": 51,
+   "total": 61,
    "presence": 8,
    "pAtLeastOne": 0.956,
-   "expected": 7.23,
-   "trend": 0.869
+   "expected": 8.59,
+   "trend": 1.083
+  },
+  {
+   "key": "por_norma_culta",
+   "subject": "Português",
+   "label": "Domínio da Norma Culta",
+   "perYear": [
+    10,
+    4,
+    6,
+    7,
+    6,
+    8,
+    8,
+    7
+   ],
+   "total": 56,
+   "presence": 8,
+   "pAtLeastOne": 0.956,
+   "expected": 7.08,
+   "trend": 0.048
   },
   {
    "key": "mat_dados_probabilidade",
@@ -150,16 +150,16 @@
     6,
     4,
     2,
-    5,
     6,
+    7,
     6,
     8
    ],
-   "total": 44,
+   "total": 46,
    "presence": 8,
    "pAtLeastOne": 0.955,
-   "expected": 5.76,
-   "trend": 0.19
+   "expected": 6.04,
+   "trend": 0.238
   },
   {
    "key": "mat_geometria_espacial",
@@ -171,15 +171,55 @@
     10,
     5,
     8,
-    7,
+    5,
     4,
     5
    ],
-   "total": 44,
+   "total": 42,
    "presence": 8,
    "pAtLeastOne": 0.954,
-   "expected": 5.61,
-   "trend": 0.238
+   "expected": 5.31,
+   "trend": 0.167
+  },
+  {
+   "key": "mat_geometria_plana",
+   "subject": "Matemática",
+   "label": "Geometria Plana",
+   "perYear": [
+    8,
+    5,
+    7,
+    4,
+    4,
+    5,
+    6,
+    4
+   ],
+   "total": 43,
+   "presence": 8,
+   "pAtLeastOne": 0.953,
+   "expected": 5.1,
+   "trend": -0.345
+  },
+  {
+   "key": "mat_funcoes",
+   "subject": "Matemática",
+   "label": "Funções",
+   "perYear": [
+    5,
+    6,
+    3,
+    8,
+    7,
+    8,
+    5,
+    1
+   ],
+   "total": 43,
+   "presence": 8,
+   "pAtLeastOne": 0.953,
+   "expected": 5.07,
+   "trend": -0.226
   },
   {
    "key": "ing_01",
@@ -202,44 +242,24 @@
    "trend": 0
   },
   {
-   "key": "mat_geometria_plana",
-   "subject": "Matemática",
-   "label": "Geometria Plana",
+   "key": "por_lit_contemporanea",
+   "subject": "Português",
+   "label": "Literatura Contemporânea",
    "perYear": [
-    8,
-    5,
-    7,
+    2,
     4,
-    4,
-    4,
-    6,
-    4
-   ],
-   "total": 42,
-   "presence": 8,
-   "pAtLeastOne": 0.953,
-   "expected": 4.95,
-   "trend": -0.381
-  },
-  {
-   "key": "mat_funcoes",
-   "subject": "Matemática",
-   "label": "Funções",
-   "perYear": [
-    5,
-    6,
     3,
-    8,
-    7,
-    7,
     5,
-    1
+    4,
+    8,
+    3,
+    3
    ],
-   "total": 42,
+   "total": 32,
    "presence": 8,
-   "pAtLeastOne": 0.952,
-   "expected": 4.92,
-   "trend": -0.262
+   "pAtLeastOne": 0.948,
+   "expected": 4.1,
+   "trend": 0.19
   },
   {
    "key": "bio_ecologia",
@@ -250,56 +270,36 @@
     5,
     6,
     1,
-    4,
+    3,
     4,
     3,
-    6
-   ],
-   "total": 31,
-   "presence": 8,
-   "pAtLeastOne": 0.947,
-   "expected": 4.06,
-   "trend": 0.179
-  },
-  {
-   "key": "por_lit_contemporanea",
-   "subject": "Português",
-   "label": "Literatura Contemporânea",
-   "perYear": [
-    2,
-    4,
-    3,
-    5,
-    4,
-    7,
-    3,
-    3
-   ],
-   "total": 31,
-   "presence": 8,
-   "pAtLeastOne": 0.947,
-   "expected": 3.95,
-   "trend": 0.155
-  },
-  {
-   "key": "mat_equacoes",
-   "subject": "Matemática",
-   "label": "Equações, Desigualdades e Modelagem Algébrica",
-   "perYear": [
-    4,
-    4,
-    5,
-    3,
-    1,
-    1,
-    6,
     6
    ],
    "total": 30,
    "presence": 8,
    "pAtLeastOne": 0.946,
-   "expected": 3.94,
-   "trend": 0.119
+   "expected": 3.93,
+   "trend": 0.167
+  },
+  {
+   "key": "geo_populacao_urbana_brasil",
+   "subject": "Geografia",
+   "label": "Geografia da População e Urbana do Brasil",
+   "perYear": [
+    5,
+    1,
+    5,
+    6,
+    3,
+    4,
+    2,
+    4
+   ],
+   "total": 30,
+   "presence": 8,
+   "pAtLeastOne": 0.943,
+   "expected": 3.66,
+   "trend": -0.095
   },
   {
    "key": "bio_fisio_animal",
@@ -331,35 +331,35 @@
     3,
     2,
     5,
-    8,
+    7,
     3,
+    2
+   ],
+   "total": 27,
+   "presence": 8,
+   "pAtLeastOne": 0.941,
+   "expected": 3.47,
+   "trend": 0.179
+  },
+  {
+   "key": "por_lit_modernismo",
+   "subject": "Português",
+   "label": "Simbolismo, Pré-Modernismo e Modernismo",
+   "perYear": [
+    2,
+    7,
+    4,
+    2,
+    4,
+    5,
+    2,
     2
    ],
    "total": 28,
    "presence": 8,
-   "pAtLeastOne": 0.943,
-   "expected": 3.62,
-   "trend": 0.214
-  },
-  {
-   "key": "geo_populacao_urbana_brasil",
-   "subject": "Geografia",
-   "label": "Geografia da População e Urbana do Brasil",
-   "perYear": [
-    5,
-    1,
-    5,
-    6,
-    2,
-    3,
-    2,
-    4
-   ],
-   "total": 28,
-   "presence": 8,
-   "pAtLeastOne": 0.939,
-   "expected": 3.38,
-   "trend": -0.143
+   "pAtLeastOne": 0.937,
+   "expected": 3.25,
+   "trend": -0.238
   },
   {
    "key": "mat_sequencias_matrizes",
@@ -371,15 +371,55 @@
     3,
     5,
     5,
-    3,
+    4,
     2,
     1
    ],
-   "total": 28,
+   "total": 29,
    "presence": 8,
-   "pAtLeastOne": 0.933,
-   "expected": 3.06,
-   "trend": -0.452
+   "pAtLeastOne": 0.936,
+   "expected": 3.21,
+   "trend": -0.417
+  },
+  {
+   "key": "his_moderna_iluminismo",
+   "subject": "História",
+   "label": "Idade Moderna e Iluminismo",
+   "perYear": [
+    3,
+    3,
+    6,
+    3,
+    2,
+    4,
+    3,
+    1
+   ],
+   "total": 25,
+   "presence": 8,
+   "pAtLeastOne": 0.928,
+   "expected": 2.87,
+   "trend": -0.25
+  },
+  {
+   "key": "fis_circuitos",
+   "subject": "Física",
+   "label": "Circuitos Elétricos",
+   "perYear": [
+    2,
+    1,
+    3,
+    5,
+    4,
+    1,
+    2,
+    4
+   ],
+   "total": 22,
+   "presence": 8,
+   "pAtLeastOne": 0.927,
+   "expected": 2.86,
+   "trend": 0.143
   },
   {
    "key": "geo_climatologia_socioambiental",
@@ -402,64 +442,24 @@
    "trend": -0.024
   },
   {
-   "key": "his_moderna_iluminismo",
+   "key": "his_primeira_republica_vargas",
    "subject": "História",
-   "label": "Idade Moderna e Iluminismo",
+   "label": "Primeira República e Era Vargas",
    "perYear": [
-    3,
-    3,
-    6,
+    4,
     3,
     1,
-    4,
+    3,
+    2,
+    3,
     3,
     1
    ],
-   "total": 24,
+   "total": 20,
    "presence": 8,
-   "pAtLeastOne": 0.924,
-   "expected": 2.74,
-   "trend": -0.262
-  },
-  {
-   "key": "fis_circuitos",
-   "subject": "Física",
-   "label": "Circuitos Elétricos",
-   "perYear": [
-    2,
-    1,
-    3,
-    5,
-    3,
-    1,
-    2,
-    4
-   ],
-   "total": 21,
-   "presence": 8,
-   "pAtLeastOne": 0.924,
-   "expected": 2.73,
-   "trend": 0.131
-  },
-  {
-   "key": "por_lit_modernismo",
-   "subject": "Português",
-   "label": "Simbolismo, Pré-Modernismo e Modernismo",
-   "perYear": [
-    2,
-    7,
-    4,
-    2,
-    1,
-    3,
-    2,
-    2
-   ],
-   "total": 23,
-   "presence": 8,
-   "pAtLeastOne": 0.918,
-   "expected": 2.58,
-   "trend": -0.345
+   "pAtLeastOne": 0.908,
+   "expected": 2.33,
+   "trend": -0.19
   },
   {
    "key": "mat_combinatoria",
@@ -470,15 +470,15 @@
     3,
     3,
     4,
-    5,
-    1,
+    2,
+    2,
     2,
     2
    ],
-   "total": 21,
+   "total": 19,
    "presence": 8,
-   "pAtLeastOne": 0.917,
-   "expected": 2.54,
+   "pAtLeastOne": 0.907,
+   "expected": 2.31,
    "trend": -0.036
   },
   {
@@ -491,35 +491,15 @@
     1,
     3,
     4,
-    3,
-    2,
-    1
-   ],
-   "total": 21,
-   "presence": 8,
-   "pAtLeastOne": 0.912,
-   "expected": 2.43,
-   "trend": -0.179
-  },
-  {
-   "key": "por_lit_classica_barroca",
-   "subject": "Português",
-   "label": "Literatura Clássica, Medieval e Barroca",
-   "perYear": [
-    7,
-    3,
-    2,
-    2,
-    3,
     2,
     2,
     1
    ],
-   "total": 22,
+   "total": 20,
    "presence": 8,
-   "pAtLeastOne": 0.906,
-   "expected": 2.3,
-   "trend": -0.548
+   "pAtLeastOne": 0.905,
+   "expected": 2.28,
+   "trend": -0.214
   },
   {
    "key": "mat_teoria_numeros",
@@ -530,36 +510,16 @@
     2,
     2,
     4,
-    2,
-    2,
+    3,
+    1,
     2,
     2
    ],
    "total": 19,
    "presence": 8,
-   "pAtLeastOne": 0.905,
-   "expected": 2.27,
-   "trend": -0.107
-  },
-  {
-   "key": "his_primeira_republica_vargas",
-   "subject": "História",
-   "label": "Primeira República e Era Vargas",
-   "perYear": [
-    4,
-    3,
-    1,
-    3,
-    1,
-    2,
-    3,
-    1
-   ],
-   "total": 18,
-   "presence": 8,
-   "pAtLeastOne": 0.892,
-   "expected": 2.06,
-   "trend": -0.238
+   "pAtLeastOne": 0.903,
+   "expected": 2.25,
+   "trend": -0.131
   },
   {
    "key": "qui_estequiometria",
@@ -571,15 +531,15 @@
     2,
     1,
     2,
-    2,
+    3,
     2,
     3
    ],
-   "total": 15,
+   "total": 16,
    "presence": 8,
-   "pAtLeastOne": 0.891,
-   "expected": 2.04,
-   "trend": 0.179
+   "pAtLeastOne": 0.9,
+   "expected": 2.19,
+   "trend": 0.214
   },
   {
    "key": "geo_fisica_brasil",
@@ -602,26 +562,6 @@
    "trend": -0.214
   },
   {
-   "key": "por_lit_romantismo_realismo",
-   "subject": "Português",
-   "label": "Romantismo e Realismo",
-   "perYear": [
-    4,
-    1,
-    0,
-    3,
-    4,
-    3,
-    3,
-    2
-   ],
-   "total": 20,
-   "presence": 7,
-   "pAtLeastOne": 0.881,
-   "expected": 2.56,
-   "trend": 0.071
-  },
-  {
    "key": "fis_calorimetria",
    "subject": "Física",
    "label": "Calorimetria",
@@ -630,16 +570,16 @@
     2,
     4,
     1,
-    2,
     1,
+    2,
     3,
     1
    ],
    "total": 16,
    "presence": 8,
-   "pAtLeastOne": 0.88,
-   "expected": 1.89,
-   "trend": -0.119
+   "pAtLeastOne": 0.882,
+   "expected": 1.91,
+   "trend": -0.095
   },
   {
    "key": "fil_niilismo_existencialismo",
@@ -662,24 +602,24 @@
    "trend": 0.19
   },
   {
-   "key": "bio_estrutura_fisio_celular",
-   "subject": "Biologia",
-   "label": "Estrutura e Fisiologia Celular",
+   "key": "his_brasil_colonia",
+   "subject": "História",
+   "label": "Brasil Colônia",
    "perYear": [
-    1,
-    1,
-    1,
-    1,
     2,
-    1,
+    4,
+    5,
     3,
-    1
+    2,
+    3,
+    0,
+    3
    ],
-   "total": 11,
-   "presence": 8,
+   "total": 22,
+   "presence": 7,
    "pAtLeastOne": 0.843,
-   "expected": 1.48,
-   "trend": 0.131
+   "expected": 2.53,
+   "trend": -0.238
   },
   {
    "key": "his_republica_liberal_atual",
@@ -702,44 +642,44 @@
    "trend": -0.321
   },
   {
-   "key": "his_brasil_colonia",
-   "subject": "História",
-   "label": "Brasil Colônia",
+   "key": "mat_equacoes",
+   "subject": "Matemática",
+   "label": "Equações, Desigualdades e Modelagem Algébrica",
    "perYear": [
-    2,
+    4,
     4,
     5,
     3,
-    2,
-    2,
     0,
-    3
+    0,
+    6,
+    6
    ],
-   "total": 21,
-   "presence": 7,
-   "pAtLeastOne": 0.836,
-   "expected": 2.38,
-   "trend": -0.274
+   "total": 28,
+   "presence": 6,
+   "pAtLeastOne": 0.829,
+   "expected": 3.66,
+   "trend": 0.071
   },
   {
-   "key": "his_idade_media",
-   "subject": "História",
-   "label": "Idade Média",
+   "key": "por_lit_classica_barroca",
+   "subject": "Português",
+   "label": "Literatura Clássica, Medieval e Barroca",
    "perYear": [
-    2,
-    1,
-    0,
-    4,
+    7,
     3,
     2,
-    1,
+    2,
+    2,
+    0,
+    2,
     1
    ],
-   "total": 14,
+   "total": 19,
    "presence": 7,
-   "pAtLeastOne": 0.828,
-   "expected": 1.69,
-   "trend": -0.024
+   "pAtLeastOne": 0.818,
+   "expected": 1.88,
+   "trend": -0.631
   },
   {
    "key": "soc_cultura_identidade",
@@ -751,15 +691,15 @@
     1,
     1,
     2,
-    2,
+    1,
     3,
     3
    ],
-   "total": 12,
+   "total": 11,
    "presence": 6,
-   "pAtLeastOne": 0.826,
-   "expected": 1.92,
-   "trend": 0.476
+   "pAtLeastOne": 0.814,
+   "expected": 1.77,
+   "trend": 0.44
   },
   {
    "key": "bio_zoologia",
@@ -802,44 +742,44 @@
    "trend": -0.012
   },
   {
-   "key": "mat_log_exponenciais",
-   "subject": "Matemática",
-   "label": "Logaritmos e Exponenciais",
+   "key": "por_lit_romantismo_realismo",
+   "subject": "Português",
+   "label": "Romantismo e Realismo",
    "perYear": [
+    4,
+    1,
     0,
     3,
-    1,
-    2,
+    4,
     0,
-    4,
-    2,
-    1
-   ],
-   "total": 13,
-   "presence": 6,
-   "pAtLeastOne": 0.787,
-   "expected": 1.7,
-   "trend": 0.107
-  },
-  {
-   "key": "qui_organica_fundamentos",
-   "subject": "Química",
-   "label": "Fundamentos e Nomenclatura Orgânica",
-   "perYear": [
-    6,
-    2,
-    1,
-    1,
-    1,
-    4,
-    2,
-    0
+    3,
+    2
    ],
    "total": 17,
-   "presence": 7,
-   "pAtLeastOne": 0.786,
-   "expected": 1.8,
-   "trend": -0.393
+   "presence": 6,
+   "pAtLeastOne": 0.797,
+   "expected": 2.11,
+   "trend": -0.036
+  },
+  {
+   "key": "fil_etica_politica_contemporanea",
+   "subject": "Filosofia",
+   "label": "Ética e Política Contemporâneas",
+   "perYear": [
+    0,
+    1,
+    0,
+    0,
+    1,
+    2,
+    3,
+    5
+   ],
+   "total": 12,
+   "presence": 5,
+   "pAtLeastOne": 0.789,
+   "expected": 2.1,
+   "trend": 0.619
   },
   {
    "key": "fis_leis_newton",
@@ -862,24 +802,24 @@
    "trend": -0.083
   },
   {
-   "key": "mat_trigonometria",
-   "subject": "Matemática",
-   "label": "Trigonometria",
+   "key": "his_idade_media",
+   "subject": "História",
+   "label": "Idade Média",
    "perYear": [
+    2,
+    1,
+    0,
     4,
-    0,
-    0,
-    2,
     1,
-    2,
     1,
-    2
+    1,
+    1
    ],
-   "total": 12,
-   "presence": 6,
-   "pAtLeastOne": 0.776,
-   "expected": 1.49,
-   "trend": -0.048
+   "total": 11,
+   "presence": 7,
+   "pAtLeastOne": 0.782,
+   "expected": 1.29,
+   "trend": -0.083
   },
   {
    "key": "bio_metabolismo_energetico",
@@ -902,22 +842,42 @@
    "trend": 0.107
   },
   {
-   "key": "geo_geopolitica_regional",
-   "subject": "Geografia",
-   "label": "Geopolítica Regional Contemporânea",
+   "key": "bio_estrutura_fisio_celular",
+   "subject": "Biologia",
+   "label": "Estrutura e Fisiologia Celular",
    "perYear": [
-    2,
     1,
-    0,
-    0,
-    4,
-    2,
     1,
+    1,
+    1,
+    2,
+    0,
+    3,
+    1
+   ],
+   "total": 10,
+   "presence": 7,
+   "pAtLeastOne": 0.762,
+   "expected": 1.33,
+   "trend": 0.095
+  },
+  {
+   "key": "mat_log_exponenciais",
+   "subject": "Matemática",
+   "label": "Logaritmos e Exponenciais",
+   "perYear": [
+    0,
+    3,
+    1,
+    2,
+    0,
+    2,
+    2,
     1
    ],
    "total": 11,
    "presence": 6,
-   "pAtLeastOne": 0.752,
+   "pAtLeastOne": 0.754,
    "expected": 1.4,
    "trend": 0.036
   },
@@ -942,6 +902,46 @@
    "trend": 0.321
   },
   {
+   "key": "qui_organica_fundamentos",
+   "subject": "Química",
+   "label": "Fundamentos e Nomenclatura Orgânica",
+   "perYear": [
+    6,
+    2,
+    1,
+    1,
+    0,
+    4,
+    2,
+    0
+   ],
+   "total": 16,
+   "presence": 6,
+   "pAtLeastOne": 0.723,
+   "expected": 1.68,
+   "trend": -0.405
+  },
+  {
+   "key": "fis_ondulatoria",
+   "subject": "Física",
+   "label": "Ondulatória",
+   "perYear": [
+    2,
+    0,
+    2,
+    0,
+    0,
+    3,
+    2,
+    2
+   ],
+   "total": 11,
+   "presence": 5,
+   "pAtLeastOne": 0.722,
+   "expected": 1.54,
+   "trend": 0.155
+  },
+  {
    "key": "his_idade_antiga",
    "subject": "História",
    "label": "Idade Antiga",
@@ -962,6 +962,26 @@
    "trend": -0.226
   },
   {
+   "key": "mat_trigonometria",
+   "subject": "Matemática",
+   "label": "Trigonometria",
+   "perYear": [
+    4,
+    0,
+    0,
+    2,
+    0,
+    2,
+    1,
+    2
+   ],
+   "total": 11,
+   "presence": 5,
+   "pAtLeastOne": 0.709,
+   "expected": 1.37,
+   "trend": -0.06
+  },
+  {
    "key": "bio_genetica",
    "subject": "Biologia",
    "label": "Genética",
@@ -970,136 +990,36 @@
     2,
     1,
     1,
-    2,
+    1,
     0,
     1,
     1
    ],
-   "total": 9,
-   "presence": 7,
-   "pAtLeastOne": 0.719,
-   "expected": 1.05,
-   "trend": -0.083
-  },
-  {
-   "key": "fil_etica_politica_contemporanea",
-   "subject": "Filosofia",
-   "label": "Ética e Política Contemporâneas",
-   "perYear": [
-    0,
-    1,
-    0,
-    0,
-    1,
-    0,
-    3,
-    5
-   ],
-   "total": 10,
-   "presence": 4,
-   "pAtLeastOne": 0.705,
-   "expected": 1.8,
-   "trend": 0.548
-  },
-  {
-   "key": "fis_ondulatoria",
-   "subject": "Física",
-   "label": "Ondulatória",
-   "perYear": [
-    2,
-    0,
-    2,
-    0,
-    0,
-    2,
-    2,
-    2
-   ],
-   "total": 10,
-   "presence": 5,
-   "pAtLeastOne": 0.705,
-   "expected": 1.39,
-   "trend": 0.119
-  },
-  {
-   "key": "fil_aristoteles",
-   "subject": "Filosofia",
-   "label": "Aristóteles",
-   "perYear": [
-    1,
-    1,
-    1,
-    1,
-    0,
-    1,
-    1,
-    1
-   ],
-   "total": 7,
+   "total": 8,
    "presence": 7,
    "pAtLeastOne": 0.696,
-   "expected": 0.87,
-   "trend": -0.012
+   "expected": 0.92,
+   "trend": -0.095
   },
   {
-   "key": "fis_cinematica_vetorial",
-   "subject": "Física",
-   "label": "Cinemática Vetorial",
+   "key": "geo_geopolitica_regional",
+   "subject": "Geografia",
+   "label": "Geopolítica Regional Contemporânea",
    "perYear": [
-    0,
+    2,
+    1,
     0,
     0,
     2,
     1,
-    2,
     1,
     1
    ],
-   "total": 7,
-   "presence": 5,
-   "pAtLeastOne": 0.684,
-   "expected": 1.03,
-   "trend": 0.202
-  },
-  {
-   "key": "mat_geometria_analitica",
-   "subject": "Matemática",
-   "label": "Geometria Analítica",
-   "perYear": [
-    4,
-    0,
-    1,
-    0,
-    3,
-    3,
-    0,
-    1
-   ],
-   "total": 12,
-   "presence": 5,
-   "pAtLeastOne": 0.682,
-   "expected": 1.38,
-   "trend": -0.143
-  },
-  {
-   "key": "fis_energia",
-   "subject": "Física",
-   "label": "Dinâmica Energética e Transformações de Energia",
-   "perYear": [
-    2,
-    1,
-    1,
-    2,
-    1,
-    1,
-    1,
-    0
-   ],
-   "total": 9,
-   "presence": 7,
-   "pAtLeastOne": 0.676,
-   "expected": 0.96,
-   "trend": -0.179
+   "total": 8,
+   "presence": 6,
+   "pAtLeastOne": 0.691,
+   "expected": 0.99,
+   "trend": -0.024
   },
   {
    "key": "qui_equilibrio",
@@ -1110,16 +1030,56 @@
     0,
     1,
     0,
-    1,
+    2,
     1,
     1,
     1
    ],
-   "total": 6,
+   "total": 7,
    "presence": 6,
-   "pAtLeastOne": 0.661,
-   "expected": 0.82,
-   "trend": 0.071
+   "pAtLeastOne": 0.687,
+   "expected": 0.95,
+   "trend": 0.083
+  },
+  {
+   "key": "soc_globalizacao",
+   "subject": "Sociologia",
+   "label": "Globalização e Sociedade Contemporânea",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    2,
+    2
+   ],
+   "total": 6,
+   "presence": 4,
+   "pAtLeastOne": 0.646,
+   "expected": 1.06,
+   "trend": 0.333
+  },
+  {
+   "key": "qui_cinetica",
+   "subject": "Química",
+   "label": "Cinética Química",
+   "perYear": [
+    0,
+    1,
+    2,
+    3,
+    2,
+    0,
+    0,
+    1
+   ],
+   "total": 9,
+   "presence": 5,
+   "pAtLeastOne": 0.617,
+   "expected": 1.04,
+   "trend": -0.06
   },
   {
    "key": "qui_solucoes",
@@ -1131,15 +1091,55 @@
     0,
     0,
     1,
-    2,
+    1,
     1,
     2
    ],
-   "total": 6,
+   "total": 5,
    "presence": 4,
-   "pAtLeastOne": 0.641,
-   "expected": 1.03,
-   "trend": 0.31
+   "pAtLeastOne": 0.612,
+   "expected": 0.88,
+   "trend": 0.274
+  },
+  {
+   "key": "soc_estratificacao_desigualdade",
+   "subject": "Sociologia",
+   "label": "Estratificação Social e Desigualdade",
+   "perYear": [
+    0,
+    1,
+    1,
+    1,
+    4,
+    0,
+    0,
+    1
+   ],
+   "total": 8,
+   "presence": 5,
+   "pAtLeastOne": 0.608,
+   "expected": 0.99,
+   "trend": 0.024
+  },
+  {
+   "key": "fil_moderna_racionalismo_empirismo",
+   "subject": "Filosofia",
+   "label": "Filosofia Moderna: Racionalismo e Empirismo",
+   "perYear": [
+    0,
+    2,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "total": 6,
+   "presence": 5,
+   "pAtLeastOne": 0.605,
+   "expected": 0.78,
+   "trend": 0.024
   },
   {
    "key": "qui_organica_reacoes",
@@ -1162,24 +1162,44 @@
    "trend": 0
   },
   {
-   "key": "qui_cinetica",
-   "subject": "Química",
-   "label": "Cinética Química",
+   "key": "fil_aristoteles",
+   "subject": "Filosofia",
+   "label": "Aristóteles",
+   "perYear": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    1,
+    1
+   ],
+   "total": 6,
+   "presence": 6,
+   "pAtLeastOne": 0.6,
+   "expected": 0.72,
+   "trend": -0.048
+  },
+  {
+   "key": "fis_ondas_fundamentos",
+   "subject": "Física",
+   "label": "Fundamentos de Ondas e Oscilações",
    "perYear": [
     0,
     1,
-    2,
-    3,
-    1,
     0,
+    1,
+    1,
+    2,
     0,
     1
    ],
-   "total": 8,
+   "total": 6,
    "presence": 5,
-   "pAtLeastOne": 0.593,
-   "expected": 0.91,
-   "trend": -0.071
+   "pAtLeastOne": 0.6,
+   "expected": 0.82,
+   "trend": 0.095
   },
   {
    "key": "qui_oxirreducao",
@@ -1202,24 +1222,24 @@
    "trend": 0.036
   },
   {
-   "key": "soc_estratificacao_desigualdade",
-   "subject": "Sociologia",
-   "label": "Estratificação Social e Desigualdade",
+   "key": "fis_energia",
+   "subject": "Física",
+   "label": "Dinâmica Energética e Transformações de Energia",
    "perYear": [
-    0,
+    2,
     1,
     1,
+    2,
     1,
-    3,
     0,
-    0,
-    1
+    1,
+    0
    ],
-   "total": 7,
-   "presence": 5,
+   "total": 8,
+   "presence": 6,
    "pAtLeastOne": 0.583,
-   "expected": 0.86,
-   "trend": 0.012
+   "expected": 0.81,
+   "trend": -0.214
   },
   {
    "key": "geo_cartografia",
@@ -1242,6 +1262,26 @@
    "trend": -0.238
   },
   {
+   "key": "bio_botanica",
+   "subject": "Biologia",
+   "label": "Botânica",
+   "perYear": [
+    3,
+    0,
+    2,
+    2,
+    2,
+    1,
+    0,
+    0
+   ],
+   "total": 10,
+   "presence": 5,
+   "pAtLeastOne": 0.576,
+   "expected": 0.98,
+   "trend": -0.286
+  },
+  {
    "key": "fis_eletrostatica",
    "subject": "Física",
    "label": "Eletrostática e Campo Elétrico",
@@ -1260,6 +1300,26 @@
    "pAtLeastOne": 0.573,
    "expected": 0.85,
    "trend": 0.119
+  },
+  {
+   "key": "fis_cinematica_vetorial",
+   "subject": "Física",
+   "label": "Cinemática Vetorial",
+   "perYear": [
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    1,
+    1
+   ],
+   "total": 5,
+   "presence": 4,
+   "pAtLeastOne": 0.56,
+   "expected": 0.73,
+   "trend": 0.131
   },
   {
    "key": "soc_movimentos_sociais",
@@ -1282,26 +1342,6 @@
    "trend": 0.131
   },
   {
-   "key": "soc_globalizacao",
-   "subject": "Sociologia",
-   "label": "Globalização e Sociedade Contemporânea",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    2,
-    2
-   ],
-   "total": 5,
-   "presence": 3,
-   "pAtLeastOne": 0.556,
-   "expected": 0.91,
-   "trend": 0.298
-  },
-  {
    "key": "fis_eletromagnetismo",
    "subject": "Física",
    "label": "Eletromagnetismo",
@@ -1322,24 +1362,24 @@
    "trend": -0.071
   },
   {
-   "key": "fis_cinematica",
-   "subject": "Física",
-   "label": "Cinemática Escalar",
+   "key": "his_imperialismo_guerras",
+   "subject": "História",
+   "label": "Imperialismo e Guerras Mundiais",
    "perYear": [
+    3,
+    2,
+    0,
+    0,
+    0,
     1,
     0,
-    0,
-    0,
-    2,
-    2,
-    0,
-    1
+    2
    ],
-   "total": 6,
+   "total": 8,
    "presence": 4,
-   "pAtLeastOne": 0.553,
-   "expected": 0.83,
-   "trend": 0.095
+   "pAtLeastOne": 0.55,
+   "expected": 0.91,
+   "trend": -0.167
   },
   {
    "key": "bio_evolucao",
@@ -1402,46 +1442,6 @@
    "trend": -0.262
   },
   {
-   "key": "fis_ondas_fundamentos",
-   "subject": "Física",
-   "label": "Fundamentos de Ondas e Oscilações",
-   "perYear": [
-    0,
-    1,
-    0,
-    1,
-    0,
-    2,
-    0,
-    1
-   ],
-   "total": 5,
-   "presence": 4,
-   "pAtLeastOne": 0.518,
-   "expected": 0.69,
-   "trend": 0.083
-  },
-  {
-   "key": "fil_moderna_racionalismo_empirismo",
-   "subject": "Filosofia",
-   "label": "Filosofia Moderna: Racionalismo e Empirismo",
-   "perYear": [
-    0,
-    2,
-    1,
-    0,
-    0,
-    0,
-    1,
-    1
-   ],
-   "total": 5,
-   "presence": 4,
-   "pAtLeastOne": 0.506,
-   "expected": 0.63,
-   "trend": -0.012
-  },
-  {
    "key": "fis_gravitacao_circular",
    "subject": "Física",
    "label": "Gravitação e Movimento Circular",
@@ -1450,21 +1450,61 @@
     2,
     4,
     1,
-    2,
+    3,
     0,
     0,
     0
    ],
-   "total": 9,
+   "total": 10,
    "presence": 4,
-   "pAtLeastOne": 0.496,
-   "expected": 0.86,
-   "trend": -0.25
+   "pAtLeastOne": 0.521,
+   "expected": 0.99,
+   "trend": -0.238
+  },
+  {
+   "key": "fis_estatica",
+   "subject": "Física",
+   "label": "Estática dos Corpos Sólidos e dos Fluidos",
+   "perYear": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "total": 4,
+   "presence": 4,
+   "pAtLeastOne": 0.52,
+   "expected": 0.6,
+   "trend": 0.095
   },
   {
    "key": "fil_socrates_platao",
    "subject": "Filosofia",
    "label": "Sócrates e Platão",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    1,
+    1
+   ],
+   "total": 4,
+   "presence": 3,
+   "pAtLeastOne": 0.495,
+   "expected": 0.64,
+   "trend": 0.167
+  },
+  {
+   "key": "bio_biotecnologia",
+   "subject": "Biologia",
+   "label": "Biotecnologia",
    "perYear": [
     0,
     0,
@@ -1511,95 +1551,55 @@
     0,
     1,
     0,
-    3,
+    2,
     1,
     0
    ],
-   "total": 5,
+   "total": 4,
    "presence": 3,
-   "pAtLeastOne": 0.483,
-   "expected": 0.73,
-   "trend": 0.155
+   "pAtLeastOne": 0.444,
+   "expected": 0.58,
+   "trend": 0.119
   },
   {
-   "key": "bio_biotecnologia",
-   "subject": "Biologia",
-   "label": "Biotecnologia",
+   "key": "qui_radioatividade",
+   "subject": "Química",
+   "label": "Radioatividade",
    "perYear": [
     0,
     0,
     0,
     0,
     1,
-    0,
     1,
+    0,
     1
    ],
    "total": 3,
    "presence": 3,
-   "pAtLeastOne": 0.459,
-   "expected": 0.52,
-   "trend": 0.155
+   "pAtLeastOne": 0.439,
+   "expected": 0.49,
+   "trend": 0.131
   },
   {
-   "key": "his_imperialismo_guerras",
-   "subject": "História",
-   "label": "Imperialismo e Guerras Mundiais",
+   "key": "fis_cinematica",
+   "subject": "Física",
+   "label": "Cinemática Escalar",
    "perYear": [
-    3,
+    1,
+    0,
+    0,
+    0,
+    0,
     2,
     0,
-    0,
-    0,
-    0,
-    0,
-    2
+    1
    ],
-   "total": 7,
+   "total": 4,
    "presence": 3,
-   "pAtLeastOne": 0.455,
-   "expected": 0.76,
-   "trend": -0.202
-  },
-  {
-   "key": "bio_botanica",
-   "subject": "Biologia",
-   "label": "Botânica",
-   "perYear": [
-    3,
-    0,
-    2,
-    2,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 8,
-   "presence": 4,
-   "pAtLeastOne": 0.455,
-   "expected": 0.7,
-   "trend": -0.333
-  },
-  {
-   "key": "qui_gases",
-   "subject": "Química",
-   "label": "Gases",
-   "perYear": [
-    0,
-    0,
-    0,
-    1,
-    1,
-    3,
-    0,
-    0
-   ],
-   "total": 5,
-   "presence": 3,
-   "pAtLeastOne": 0.449,
-   "expected": 0.68,
-   "trend": 0.107
+   "pAtLeastOne": 0.438,
+   "expected": 0.58,
+   "trend": 0.071
   },
   {
    "key": "bio_microbiologia",
@@ -1642,24 +1642,44 @@
    "trend": 0.107
   },
   {
-   "key": "fis_estatica",
+   "key": "fis_fisica_moderna",
    "subject": "Física",
-   "label": "Estática dos Corpos Sólidos e dos Fluidos",
+   "label": "Física Moderna",
    "perYear": [
-    1,
-    0,
     0,
     0,
     0,
     0,
     1,
-    1
+    1,
+    1,
+    0
    ],
    "total": 3,
    "presence": 3,
    "pAtLeastOne": 0.414,
    "expected": 0.45,
-   "trend": 0.06
+   "trend": 0.107
+  },
+  {
+   "key": "mat_geometria_analitica",
+   "subject": "Matemática",
+   "label": "Geometria Analítica",
+   "perYear": [
+    4,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "total": 6,
+   "presence": 3,
+   "pAtLeastOne": 0.406,
+   "expected": 0.55,
+   "trend": -0.286
   },
   {
    "key": "bio_codigo_genetico_sintese",
@@ -1722,46 +1742,6 @@
    "trend": 0.06
   },
   {
-   "key": "soc_marx_sociologia",
-   "subject": "Sociologia",
-   "label": "Karl Marx e a Sociologia",
-   "perYear": [
-    0,
-    0,
-    1,
-    1,
-    0,
-    2,
-    0,
-    0
-   ],
-   "total": 4,
-   "presence": 3,
-   "pAtLeastOne": 0.381,
-   "expected": 0.5,
-   "trend": 0.024
-  },
-  {
-   "key": "fis_termodinamica_gases",
-   "subject": "Física",
-   "label": "Termodinâmica dos Gases",
-   "perYear": [
-    0,
-    1,
-    0,
-    0,
-    0,
-    1,
-    1,
-    0
-   ],
-   "total": 3,
-   "presence": 3,
-   "pAtLeastOne": 0.376,
-   "expected": 0.4,
-   "trend": 0.036
-  },
-  {
    "key": "fis_dinamica_impulsiva",
    "subject": "Física",
    "label": "Dinâmica Impulsiva",
@@ -1802,24 +1782,24 @@
    "trend": 0
   },
   {
-   "key": "qui_radioatividade",
-   "subject": "Química",
-   "label": "Radioatividade",
+   "key": "soc_marx_sociologia",
+   "subject": "Sociologia",
+   "label": "Karl Marx e a Sociologia",
    "perYear": [
     0,
     0,
-    0,
+    1,
+    1,
     0,
     1,
     0,
-    0,
-    1
+    0
    ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.327,
+   "total": 3,
+   "presence": 3,
+   "pAtLeastOne": 0.332,
    "expected": 0.34,
-   "trend": 0.095
+   "trend": -0.012
   },
   {
    "key": "mat_complexos_polinomios",
@@ -1842,24 +1822,24 @@
    "trend": -0.036
   },
   {
-   "key": "fis_fisica_moderna",
-   "subject": "Física",
-   "label": "Física Moderna",
+   "key": "qui_gases",
+   "subject": "Química",
+   "label": "Gases",
    "perYear": [
     0,
     0,
     0,
-    0,
     1,
     0,
-    1,
+    2,
+    0,
     0
    ],
-   "total": 2,
+   "total": 3,
    "presence": 2,
-   "pAtLeastOne": 0.301,
-   "expected": 0.3,
-   "trend": 0.071
+   "pAtLeastOne": 0.316,
+   "expected": 0.41,
+   "trend": 0.06
   },
   {
    "key": "qui_termoquimica",
@@ -1905,6 +1885,26 @@
    "key": "fil_kant_idealismo",
    "subject": "Filosofia",
    "label": "Kant e o Idealismo Alemão",
+   "perYear": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.26,
+   "expected": 0.25,
+   "trend": 0
+  },
+  {
+   "key": "fis_termodinamica_gases",
+   "subject": "Física",
+   "label": "Termodinâmica dos Gases",
    "perYear": [
     0,
     1,
@@ -2044,6 +2044,26 @@
    "trend": 0
   },
   {
+   "key": "mat_aritmetica_proporcionalidade::Razão e Proporção",
+   "subject": "Matemática",
+   "label": "Razão e Proporção (Aritmética e Proporcionalidade)",
+   "perYear": [
+    1,
+    2,
+    4,
+    3,
+    3,
+    4,
+    5,
+    10
+   ],
+   "total": 32,
+   "presence": 8,
+   "pAtLeastOne": 0.952,
+   "expected": 4.89,
+   "trend": 0.929
+  },
+  {
    "key": "mat_dados_probabilidade::Introdução às Probabilidades",
    "subject": "Matemática",
    "label": "Introdução às Probabilidades (Probabilidade e Interpretação de Dados)",
@@ -2064,24 +2084,24 @@
    "trend": 0.476
   },
   {
-   "key": "mat_geometria_espacial::O Universo Tridimensional",
-   "subject": "Matemática",
-   "label": "O Universo Tridimensional (Geometria Espacial)",
+   "key": "por_texto::Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais",
+   "subject": "Português",
+   "label": "Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais (Entendimento de Texto)",
    "perYear": [
-    1,
-    1,
-    5,
-    4,
-    6,
-    4,
     2,
-    4
+    5,
+    2,
+    2,
+    1,
+    2,
+    3,
+    8
    ],
-   "total": 27,
+   "total": 25,
    "presence": 8,
    "pAtLeastOne": 0.942,
-   "expected": 3.57,
-   "trend": 0.298
+   "expected": 3.55,
+   "trend": 0.369
   },
   {
    "key": "por_norma_culta::Variação Linguística",
@@ -2104,26 +2124,6 @@
    "trend": 0.369
   },
   {
-   "key": "por_texto::Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais",
-   "subject": "Português",
-   "label": "Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais (Entendimento de Texto)",
-   "perYear": [
-    2,
-    5,
-    2,
-    2,
-    1,
-    1,
-    3,
-    8
-   ],
-   "total": 24,
-   "presence": 8,
-   "pAtLeastOne": 0.94,
-   "expected": 3.4,
-   "trend": 0.333
-  },
-  {
    "key": "por_texto::Gêneros não Verbais: Fundamentos de Leitura",
    "subject": "Português",
    "label": "Gêneros não Verbais: Fundamentos de Leitura (Entendimento de Texto)",
@@ -2132,16 +2132,36 @@
     3,
     3,
     5,
-    3,
+    4,
     2,
     5,
     6
    ],
-   "total": 27,
+   "total": 28,
    "presence": 7,
-   "pAtLeastOne": 0.92,
-   "expected": 3.87,
-   "trend": 0.56
+   "pAtLeastOne": 0.921,
+   "expected": 4,
+   "trend": 0.571
+  },
+  {
+   "key": "mat_aritmetica_proporcionalidade::Porcentagem",
+   "subject": "Matemática",
+   "label": "Porcentagem (Aritmética e Proporcionalidade)",
+   "perYear": [
+    0,
+    5,
+    1,
+    2,
+    6,
+    3,
+    4,
+    2
+   ],
+   "total": 23,
+   "presence": 7,
+   "pAtLeastOne": 0.906,
+   "expected": 3.02,
+   "trend": 0.226
   },
   {
    "key": "mat_teoria_numeros::O Sistema de Numeração Decimal",
@@ -2153,115 +2173,55 @@
     2,
     4,
     2,
-    2,
+    1,
     2,
     2
-   ],
-   "total": 17,
-   "presence": 8,
-   "pAtLeastOne": 0.897,
-   "expected": 2.14,
-   "trend": 0.036
-  },
-  {
-   "key": "mat_aritmetica_proporcionalidade::Razão e Proporção",
-   "subject": "Matemática",
-   "label": "Razão e Proporção (Aritmética e Proporcionalidade)",
-   "perYear": [
-    1,
-    2,
-    4,
-    3,
-    0,
-    1,
-    5,
-    10
-   ],
-   "total": 26,
-   "presence": 7,
-   "pAtLeastOne": 0.896,
-   "expected": 4.06,
-   "trend": 0.786
-  },
-  {
-   "key": "mat_aritmetica_proporcionalidade::Porcentagem",
-   "subject": "Matemática",
-   "label": "Porcentagem (Aritmética e Proporcionalidade)",
-   "perYear": [
-    0,
-    5,
-    1,
-    2,
-    4,
-    2,
-    4,
-    2
-   ],
-   "total": 20,
-   "presence": 7,
-   "pAtLeastOne": 0.894,
-   "expected": 2.62,
-   "trend": 0.167
-  },
-  {
-   "key": "por_texto::Fatores de Textualidade",
-   "subject": "Português",
-   "label": "Fatores de Textualidade (Entendimento de Texto)",
-   "perYear": [
-    1,
-    2,
-    1,
-    0,
-    1,
-    5,
-    1,
-    5
    ],
    "total": 16,
-   "presence": 7,
-   "pAtLeastOne": 0.868,
-   "expected": 2.42,
-   "trend": 0.429
+   "presence": 8,
+   "pAtLeastOne": 0.888,
+   "expected": 1.99,
+   "trend": 0
   },
   {
-   "key": "por_lit_classica_barroca::A Arte e suas Linguagens",
+   "key": "por_texto::Gêneros Textuais",
    "subject": "Português",
-   "label": "A Arte e suas Linguagens (Literatura Clássica, Medieval e Barroca)",
+   "label": "Gêneros Textuais (Entendimento de Texto)",
    "perYear": [
+    0,
+    3,
+    3,
+    3,
     3,
     2,
     2,
-    2,
-    2,
-    1,
-    2,
     1
    ],
-   "total": 15,
-   "presence": 8,
-   "pAtLeastOne": 0.865,
-   "expected": 1.7,
-   "trend": -0.202
+   "total": 17,
+   "presence": 7,
+   "pAtLeastOne": 0.866,
+   "expected": 2.06,
+   "trend": -0.012
   },
   {
-   "key": "mat_combinatoria::Introdução às Técnicas de Contagem",
+   "key": "mat_geometria_espacial::O Universo Tridimensional",
    "subject": "Matemática",
-   "label": "Introdução às Técnicas de Contagem (Análise Combinatória)",
+   "label": "O Universo Tridimensional (Geometria Espacial)",
    "perYear": [
     1,
     1,
-    1,
-    2,
+    5,
     4,
-    1,
+    4,
+    0,
     2,
-    1
+    4
    ],
-   "total": 13,
-   "presence": 8,
+   "total": 21,
+   "presence": 7,
    "pAtLeastOne": 0.861,
-   "expected": 1.66,
-   "trend": 0.083
+   "expected": 2.72,
+   "trend": 0.131
   },
   {
    "key": "bio_ecologia::Introdução à Ecologia",
@@ -2284,26 +2244,6 @@
    "trend": 0.226
   },
   {
-   "key": "por_texto::Modelos de Leitura e Distorções Interpretativas",
-   "subject": "Português",
-   "label": "Modelos de Leitura e Distorções Interpretativas (Entendimento de Texto)",
-   "perYear": [
-    3,
-    3,
-    6,
-    4,
-    5,
-    4,
-    2,
-    0
-   ],
-   "total": 27,
-   "presence": 7,
-   "pAtLeastOne": 0.842,
-   "expected": 2.96,
-   "trend": -0.369
-  },
-  {
    "key": "mat_funcoes::Introdução às Funções",
    "subject": "Matemática",
    "label": "Introdução às Funções (Funções)",
@@ -2313,15 +2253,55 @@
     1,
     1,
     1,
+    2,
+    2,
+    1
+   ],
+   "total": 12,
+   "presence": 8,
+   "pAtLeastOne": 0.841,
+   "expected": 1.47,
+   "trend": -0.048
+  },
+  {
+   "key": "por_texto::Modelos de Leitura e Distorções Interpretativas",
+   "subject": "Português",
+   "label": "Modelos de Leitura e Distorções Interpretativas (Entendimento de Texto)",
+   "perYear": [
+    3,
+    3,
+    6,
+    4,
+    4,
+    4,
+    2,
+    0
+   ],
+   "total": 26,
+   "presence": 7,
+   "pAtLeastOne": 0.839,
+   "expected": 2.83,
+   "trend": -0.381
+  },
+  {
+   "key": "mat_combinatoria::Introdução às Técnicas de Contagem",
+   "subject": "Matemática",
+   "label": "Introdução às Técnicas de Contagem (Análise Combinatória)",
+   "perYear": [
     1,
+    1,
+    1,
+    2,
+    1,
+    2,
     2,
     1
    ],
    "total": 11,
    "presence": 8,
-   "pAtLeastOne": 0.822,
-   "expected": 1.32,
-   "trend": -0.083
+   "pAtLeastOne": 0.837,
+   "expected": 1.43,
+   "trend": 0.083
   },
   {
    "key": "his_brasil_imperio::Brasil Império: Formação do Estado Nacional Brasileiro",
@@ -2332,56 +2312,76 @@
     4,
     0,
     2,
-    1,
+    2,
     2,
     1,
     1
    ],
-   "total": 13,
+   "total": 14,
    "presence": 7,
-   "pAtLeastOne": 0.803,
-   "expected": 1.45,
-   "trend": -0.202
+   "pAtLeastOne": 0.816,
+   "expected": 1.58,
+   "trend": -0.19
   },
   {
-   "key": "soc_cultura_identidade::Cultura e Etnocentrismo",
-   "subject": "Sociologia",
-   "label": "Cultura e Etnocentrismo (Cultura, Identidade e Diversidade)",
-   "perYear": [
-    0,
-    0,
-    1,
-    1,
-    1,
-    2,
-    2,
-    2
-   ],
-   "total": 9,
-   "presence": 6,
-   "pAtLeastOne": 0.777,
-   "expected": 1.4,
-   "trend": 0.321
-  },
-  {
-   "key": "por_texto::Gêneros Textuais",
+   "key": "por_lit_classica_barroca::A Arte e suas Linguagens",
    "subject": "Português",
-   "label": "Gêneros Textuais (Entendimento de Texto)",
+   "label": "A Arte e suas Linguagens (Literatura Clássica, Medieval e Barroca)",
    "perYear": [
-    0,
     3,
-    3,
-    3,
+    2,
+    2,
+    2,
     2,
     0,
     2,
     1
    ],
    "total": 14,
+   "presence": 7,
+   "pAtLeastOne": 0.788,
+   "expected": 1.55,
+   "trend": -0.238
+  },
+  {
+   "key": "por_texto::Fatores de Textualidade",
+   "subject": "Português",
+   "label": "Fatores de Textualidade (Entendimento de Texto)",
+   "perYear": [
+    1,
+    2,
+    1,
+    0,
+    0,
+    2,
+    1,
+    5
+   ],
+   "total": 12,
    "presence": 6,
-   "pAtLeastOne": 0.771,
-   "expected": 1.63,
-   "trend": -0.095
+   "pAtLeastOne": 0.781,
+   "expected": 1.84,
+   "trend": 0.31
+  },
+  {
+   "key": "mat_geometria_espacial::Sólidos de Revolução",
+   "subject": "Matemática",
+   "label": "Sólidos de Revolução (Geometria Espacial)",
+   "perYear": [
+    1,
+    1,
+    1,
+    0,
+    2,
+    3,
+    1,
+    1
+   ],
+   "total": 10,
+   "presence": 7,
+   "pAtLeastOne": 0.779,
+   "expected": 1.32,
+   "trend": 0.095
   },
   {
    "key": "geo_populacao_urbana_brasil::Dinâmica Demográfica",
@@ -2404,44 +2404,24 @@
    "trend": -0.107
   },
   {
-   "key": "por_norma_culta::Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos",
-   "subject": "Português",
-   "label": "Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos (Domínio da Norma Culta)",
+   "key": "soc_cultura_identidade::Cultura e Etnocentrismo",
+   "subject": "Sociologia",
+   "label": "Cultura e Etnocentrismo (Cultura, Identidade e Diversidade)",
    "perYear": [
-    3,
-    1,
     0,
-    1,
-    2,
-    1,
-    1,
-    1
-   ],
-   "total": 10,
-   "presence": 7,
-   "pAtLeastOne": 0.763,
-   "expected": 1.16,
-   "trend": -0.119
-  },
-  {
-   "key": "por_norma_culta::Língua: um Sistema Complexo",
-   "subject": "Português",
-   "label": "Língua: um Sistema Complexo (Domínio da Norma Culta)",
-   "perYear": [
-    3,
-    1,
-    1,
     0,
     1,
     1,
+    1,
+    1,
     2,
-    1
+    2
    ],
-   "total": 10,
-   "presence": 7,
-   "pAtLeastOne": 0.762,
-   "expected": 1.2,
-   "trend": -0.095
+   "total": 8,
+   "presence": 6,
+   "pAtLeastOne": 0.757,
+   "expected": 1.25,
+   "trend": 0.286
   },
   {
    "key": "his_brasil_colonia::A História e o Brasil",
@@ -2464,44 +2444,24 @@
    "trend": 0.036
   },
   {
-   "key": "por_texto::Funções da Linguagem",
-   "subject": "Português",
-   "label": "Funções da Linguagem (Entendimento de Texto)",
+   "key": "geo_populacao_urbana_brasil::O Espaço Urbano I",
+   "subject": "Geografia",
+   "label": "O Espaço Urbano I (Geografia da População e Urbana do Brasil)",
    "perYear": [
-    5,
-    1,
-    1,
-    1,
-    3,
-    2,
-    1,
-    0
-   ],
-   "total": 14,
-   "presence": 7,
-   "pAtLeastOne": 0.75,
-   "expected": 1.44,
-   "trend": -0.357
-  },
-  {
-   "key": "mat_geometria_espacial::Sólidos de Revolução",
-   "subject": "Matemática",
-   "label": "Sólidos de Revolução (Geometria Espacial)",
-   "perYear": [
-    1,
-    1,
-    1,
+    0,
     0,
     1,
+    1,
+    1,
     2,
     1,
-    1
+    2
    ],
    "total": 8,
-   "presence": 7,
-   "pAtLeastOne": 0.736,
-   "expected": 1.04,
-   "trend": 0.048
+   "presence": 6,
+   "pAtLeastOne": 0.753,
+   "expected": 1.23,
+   "trend": 0.262
   },
   {
    "key": "por_texto::Função Poética e Linguagem Literária",
@@ -2544,6 +2504,66 @@
    "trend": 0.214
   },
   {
+   "key": "por_norma_culta::Língua: um Sistema Complexo",
+   "subject": "Português",
+   "label": "Língua: um Sistema Complexo (Domínio da Norma Culta)",
+   "perYear": [
+    3,
+    1,
+    1,
+    0,
+    0,
+    2,
+    2,
+    1
+   ],
+   "total": 10,
+   "presence": 6,
+   "pAtLeastOne": 0.713,
+   "expected": 1.22,
+   "trend": -0.071
+  },
+  {
+   "key": "por_texto::Funções da Linguagem",
+   "subject": "Português",
+   "label": "Funções da Linguagem (Entendimento de Texto)",
+   "perYear": [
+    5,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    0
+   ],
+   "total": 12,
+   "presence": 7,
+   "pAtLeastOne": 0.712,
+   "expected": 1.16,
+   "trend": -0.405
+  },
+  {
+   "key": "mat_funcoes::Função Constante e Função Afim",
+   "subject": "Matemática",
+   "label": "Função Constante e Função Afim (Funções)",
+   "perYear": [
+    1,
+    0,
+    0,
+    4,
+    2,
+    4,
+    2,
+    0
+   ],
+   "total": 13,
+   "presence": 5,
+   "pAtLeastOne": 0.709,
+   "expected": 1.7,
+   "trend": 0.155
+  },
+  {
    "key": "mat_equacoes::Técnicas Algébricas",
    "subject": "Matemática",
    "label": "Técnicas Algébricas (Equações, Desigualdades e Modelagem Algébrica)",
@@ -2562,26 +2582,6 @@
    "pAtLeastOne": 0.688,
    "expected": 1.84,
    "trend": 0.31
-  },
-  {
-   "key": "por_lit_romantismo_realismo::A Estética Romântica: Poesia",
-   "subject": "Português",
-   "label": "A Estética Romântica: Poesia (Romantismo e Realismo)",
-   "perYear": [
-    1,
-    0,
-    0,
-    0,
-    1,
-    1,
-    2,
-    2
-   ],
-   "total": 7,
-   "presence": 5,
-   "pAtLeastOne": 0.682,
-   "expected": 1.12,
-   "trend": 0.25
   },
   {
    "key": "por_texto::Intertextualidade e Interdiscursividade",
@@ -2612,16 +2612,56 @@
     0,
     1,
     1,
-    1,
     0,
+    1,
     3,
     1
    ],
    "total": 7,
    "presence": 5,
-   "pAtLeastOne": 0.666,
-   "expected": 1.07,
-   "trend": 0.226
+   "pAtLeastOne": 0.68,
+   "expected": 1.09,
+   "trend": 0.25
+  },
+  {
+   "key": "fil_etica_politica_contemporanea::Justiça e Direitos Humanos",
+   "subject": "Filosofia",
+   "label": "Justiça e Direitos Humanos (Ética e Política Contemporâneas)",
+   "perYear": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    2,
+    2,
+    3
+   ],
+   "total": 8,
+   "presence": 4,
+   "pAtLeastOne": 0.671,
+   "expected": 1.37,
+   "trend": 0.381
+  },
+  {
+   "key": "mat_dados_probabilidade::Estatística Descritiva",
+   "subject": "Matemática",
+   "label": "Estatística Descritiva (Probabilidade e Interpretação de Dados)",
+   "perYear": [
+    1,
+    3,
+    0,
+    0,
+    3,
+    4,
+    1,
+    0
+   ],
+   "total": 12,
+   "presence": 5,
+   "pAtLeastOne": 0.67,
+   "expected": 1.44,
+   "trend": -0.024
   },
   {
    "key": "qui_estequiometria::Separação de Misturas",
@@ -2644,44 +2684,24 @@
    "trend": 0.036
   },
   {
-   "key": "his_brasil_imperio::Brasil Império: Segundo Reinado (1840-1889)",
-   "subject": "História",
-   "label": "Brasil Império: Segundo Reinado (1840-1889) (Brasil Império)",
+   "key": "por_norma_culta::Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos",
+   "subject": "Português",
+   "label": "Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos (Domínio da Norma Culta)",
    "perYear": [
+    3,
+    1,
     0,
     1,
     1,
+    0,
     1,
-    3,
-    1,
-    1,
-    0
+    1
    ],
    "total": 8,
    "presence": 6,
-   "pAtLeastOne": 0.654,
-   "expected": 0.98,
-   "trend": 0.024
-  },
-  {
-   "key": "geo_populacao_urbana_brasil::O Espaço Urbano I",
-   "subject": "Geografia",
-   "label": "O Espaço Urbano I (Geografia da População e Urbana do Brasil)",
-   "perYear": [
-    0,
-    0,
-    1,
-    1,
-    0,
-    1,
-    1,
-    2
-   ],
-   "total": 6,
-   "presence": 5,
-   "pAtLeastOne": 0.654,
-   "expected": 0.95,
-   "trend": 0.214
+   "pAtLeastOne": 0.652,
+   "expected": 0.89,
+   "trend": -0.167
   },
   {
    "key": "his_moderna_iluminismo::América Espanhola",
@@ -2702,46 +2722,6 @@
    "pAtLeastOne": 0.645,
    "expected": 1.07,
    "trend": -0.345
-  },
-  {
-   "key": "mat_funcoes::Função Constante e Função Afim",
-   "subject": "Matemática",
-   "label": "Função Constante e Função Afim (Funções)",
-   "perYear": [
-    1,
-    0,
-    0,
-    4,
-    1,
-    1,
-    2,
-    0
-   ],
-   "total": 9,
-   "presence": 5,
-   "pAtLeastOne": 0.638,
-   "expected": 1.12,
-   "trend": 0.036
-  },
-  {
-   "key": "mat_dados_probabilidade::Estatística Descritiva",
-   "subject": "Matemática",
-   "label": "Estatística Descritiva (Probabilidade e Interpretação de Dados)",
-   "perYear": [
-    1,
-    3,
-    0,
-    0,
-    2,
-    3,
-    1,
-    0
-   ],
-   "total": 10,
-   "presence": 5,
-   "pAtLeastOne": 0.633,
-   "expected": 1.17,
-   "trend": -0.071
   },
   {
    "key": "fis_circuitos::Corrente Elétrica",
@@ -2784,44 +2764,44 @@
    "trend": -0.071
   },
   {
-   "key": "mat_funcoes::Transformações em Gráficos de Funções",
-   "subject": "Matemática",
-   "label": "Transformações em Gráficos de Funções (Funções)",
+   "key": "qui_cinetica::Cinética Química",
+   "subject": "Química",
+   "label": "Cinética Química (Cinética Química)",
    "perYear": [
     0,
+    1,
     2,
-    1,
-    1,
-    1,
-    1,
-    1,
-    0
+    3,
+    2,
+    0,
+    0,
+    1
    ],
-   "total": 7,
-   "presence": 6,
-   "pAtLeastOne": 0.618,
-   "expected": 0.8,
+   "total": 9,
+   "presence": 5,
+   "pAtLeastOne": 0.617,
+   "expected": 1.04,
    "trend": -0.06
   },
   {
-   "key": "qui_solucoes::Dispersões",
-   "subject": "Química",
-   "label": "Dispersões (Soluções)",
+   "key": "por_texto::Os Dois Níveis da Leitura",
+   "subject": "Português",
+   "label": "Os Dois Níveis da Leitura (Entendimento de Texto)",
    "perYear": [
     0,
     0,
     0,
     0,
-    1,
-    1,
-    1,
-    2
+    0,
+    3,
+    3,
+    1
    ],
-   "total": 5,
-   "presence": 4,
-   "pAtLeastOne": 0.612,
-   "expected": 0.88,
-   "trend": 0.274
+   "total": 7,
+   "presence": 3,
+   "pAtLeastOne": 0.616,
+   "expected": 1.2,
+   "trend": 0.369
   },
   {
    "key": "geo_globalizacao_economica::Do Mundo Bipolar ao Multipolar",
@@ -2862,6 +2842,26 @@
    "pAtLeastOne": 0.608,
    "expected": 0.74,
    "trend": 0.131
+  },
+  {
+   "key": "mat_geometria_plana::Introdução à Geometria Plana",
+   "subject": "Matemática",
+   "label": "Introdução à Geometria Plana (Geometria Plana)",
+   "perYear": [
+    2,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    2
+   ],
+   "total": 7,
+   "presence": 5,
+   "pAtLeastOne": 0.608,
+   "expected": 0.92,
+   "trend": 0.012
   },
   {
    "key": "geo_climatologia_socioambiental::Água na Superfície Terrestre",
@@ -2924,24 +2924,24 @@
    "trend": 0.048
   },
   {
-   "key": "qui_cinetica::Cinética Química",
-   "subject": "Química",
-   "label": "Cinética Química (Cinética Química)",
+   "key": "por_texto::Figuras de Linguagem",
+   "subject": "Português",
+   "label": "Figuras de Linguagem (Entendimento de Texto)",
    "perYear": [
     0,
     1,
     2,
-    3,
+    2,
     1,
+    3,
     0,
-    0,
-    1
+    0
    ],
-   "total": 8,
+   "total": 9,
    "presence": 5,
-   "pAtLeastOne": 0.593,
-   "expected": 0.91,
-   "trend": -0.071
+   "pAtLeastOne": 0.592,
+   "expected": 1.04,
+   "trend": -0.036
   },
   {
    "key": "his_republica_liberal_atual::O Brasil Atual",
@@ -2984,6 +2984,46 @@
    "trend": 0.143
   },
   {
+   "key": "fis_circuitos::Potência Elétrica",
+   "subject": "Física",
+   "label": "Potência Elétrica (Circuitos Elétricos)",
+   "perYear": [
+    1,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1
+   ],
+   "total": 5,
+   "presence": 5,
+   "pAtLeastOne": 0.575,
+   "expected": 0.69,
+   "trend": 0.06
+  },
+  {
+   "key": "mat_aritmetica_proporcionalidade::Potências e Radicais",
+   "subject": "Matemática",
+   "label": "Potências e Radicais (Aritmética e Proporcionalidade)",
+   "perYear": [
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0
+   ],
+   "total": 6,
+   "presence": 6,
+   "pAtLeastOne": 0.572,
+   "expected": 0.68,
+   "trend": -0.071
+  },
+  {
    "key": "qui_estequiometria::Massa Atômica, Mol e Massa Molar",
    "subject": "Química",
    "label": "Massa Atômica, Mol e Massa Molar (Análises Quantitativas e Estequiometria)",
@@ -3004,64 +3044,24 @@
    "trend": 0.298
   },
   {
-   "key": "fil_etica_politica_contemporanea::Justiça e Direitos Humanos",
-   "subject": "Filosofia",
-   "label": "Justiça e Direitos Humanos (Ética e Política Contemporâneas)",
-   "perYear": [
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    2,
-    3
-   ],
-   "total": 6,
-   "presence": 3,
-   "pAtLeastOne": 0.565,
-   "expected": 1.07,
-   "trend": 0.31
-  },
-  {
-   "key": "his_idade_media::Baixa Idade Média",
-   "subject": "História",
-   "label": "Baixa Idade Média (Idade Média)",
+   "key": "por_lit_contemporanea::Prosa Brasileira Contemporânea",
+   "subject": "Português",
+   "label": "Prosa Brasileira Contemporânea (Literatura Contemporânea)",
    "perYear": [
     0,
     0,
     0,
     1,
+    1,
     2,
     0,
-    1,
     1
    ],
    "total": 5,
    "presence": 4,
-   "pAtLeastOne": 0.565,
-   "expected": 0.75,
+   "pAtLeastOne": 0.552,
+   "expected": 0.74,
    "trend": 0.155
-  },
-  {
-   "key": "por_texto::Figuras de Linguagem",
-   "subject": "Português",
-   "label": "Figuras de Linguagem (Entendimento de Texto)",
-   "perYear": [
-    0,
-    1,
-    2,
-    2,
-    1,
-    2,
-    0,
-    0
-   ],
-   "total": 8,
-   "presence": 5,
-   "pAtLeastOne": 0.564,
-   "expected": 0.89,
-   "trend": -0.071
   },
   {
    "key": "qui_oxirreducao::Processos de Oxirredução",
@@ -3104,26 +3104,6 @@
    "trend": 0.274
   },
   {
-   "key": "fis_cinematica_vetorial::Composição de Movimentos",
-   "subject": "Física",
-   "label": "Composição de Movimentos (Cinemática Vetorial)",
-   "perYear": [
-    0,
-    0,
-    0,
-    2,
-    1,
-    1,
-    0,
-    1
-   ],
-   "total": 5,
-   "presence": 4,
-   "pAtLeastOne": 0.541,
-   "expected": 0.7,
-   "trend": 0.107
-  },
-  {
    "key": "bio_genetica::Introdução à Genética",
    "subject": "Biologia",
    "label": "Introdução à Genética (Genética)",
@@ -3142,26 +3122,6 @@
    "pAtLeastOne": 0.541,
    "expected": 0.63,
    "trend": -0.012
-  },
-  {
-   "key": "mat_geometria_plana::O Ponto Médio e o Baricentro de um Triângulo",
-   "subject": "Matemática",
-   "label": "O Ponto Médio e o Baricentro de um Triângulo (Geometria Plana)",
-   "perYear": [
-    1,
-    0,
-    0,
-    0,
-    2,
-    0,
-    1,
-    1
-   ],
-   "total": 5,
-   "presence": 4,
-   "pAtLeastOne": 0.536,
-   "expected": 0.71,
-   "trend": 0.083
   },
   {
    "key": "qui_inorganica::Equações Iônicas e outras Teorias para Ácidos e Bases",
@@ -3204,44 +3164,84 @@
    "trend": -0.095
   },
   {
-   "key": "his_idade_media::Alta Idade Média e Feudalismo",
+   "key": "his_idade_media::Baixa Idade Média",
    "subject": "História",
-   "label": "Alta Idade Média e Feudalismo (Idade Média)",
+   "label": "Baixa Idade Média (Idade Média)",
    "perYear": [
-    2,
+    0,
+    0,
+    0,
+    1,
     1,
     0,
-    3,
     1,
-    1,
-    0,
-    0
+    1
    ],
-   "total": 8,
-   "presence": 5,
-   "pAtLeastOne": 0.532,
-   "expected": 0.79,
-   "trend": -0.214
+   "total": 4,
+   "presence": 4,
+   "pAtLeastOne": 0.533,
+   "expected": 0.62,
+   "trend": 0.143
   },
   {
-   "key": "por_lit_romantismo_realismo::Elementos da Narrativa",
-   "subject": "Português",
-   "label": "Elementos da Narrativa (Romantismo e Realismo)",
+   "key": "mat_sequencias_matrizes::Tabelas e Matrizes",
+   "subject": "Matemática",
+   "label": "Tabelas e Matrizes (Sequências, Matrizes e Sistemas Lineares)",
    "perYear": [
-    3,
+    1,
     1,
     0,
-    1,
     2,
     1,
+    2,
     0,
     0
    ],
-   "total": 8,
+   "total": 7,
    "presence": 5,
-   "pAtLeastOne": 0.527,
-   "expected": 0.77,
-   "trend": -0.262
+   "pAtLeastOne": 0.528,
+   "expected": 0.78,
+   "trend": -0.083
+  },
+  {
+   "key": "soc_globalizacao::Globalização Econômica e Cultural",
+   "subject": "Sociologia",
+   "label": "Globalização Econômica e Cultural (Globalização e Sociedade Contemporânea)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    2,
+    1
+   ],
+   "total": 4,
+   "presence": 3,
+   "pAtLeastOne": 0.524,
+   "expected": 0.72,
+   "trend": 0.238
+  },
+  {
+   "key": "mat_log_exponenciais::Introdução ao Modelo Exponencial",
+   "subject": "Matemática",
+   "label": "Introdução ao Modelo Exponencial (Logaritmos e Exponenciais)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    2,
+    1
+   ],
+   "total": 4,
+   "presence": 3,
+   "pAtLeastOne": 0.524,
+   "expected": 0.72,
+   "trend": 0.238
   },
   {
    "key": "geo_populacao_urbana_brasil::O Espaço Urbano II",
@@ -3264,26 +3264,6 @@
    "trend": -0.131
   },
   {
-   "key": "mat_geometria_plana::Triângulo Retângulo",
-   "subject": "Matemática",
-   "label": "Triângulo Retângulo (Geometria Plana)",
-   "perYear": [
-    1,
-    0,
-    1,
-    0,
-    1,
-    1,
-    1,
-    0
-   ],
-   "total": 5,
-   "presence": 5,
-   "pAtLeastOne": 0.521,
-   "expected": 0.61,
-   "trend": -0.012
-  },
-  {
    "key": "his_primeira_republica_vargas::A Era Vargas: o Estado Novo",
    "subject": "História",
    "label": "A Era Vargas: o Estado Novo (Primeira República e Era Vargas)",
@@ -3304,24 +3284,64 @@
    "trend": -0.012
   },
   {
-   "key": "por_lit_romantismo_realismo::Machado de Assis",
-   "subject": "Português",
-   "label": "Machado de Assis (Romantismo e Realismo)",
+   "key": "qui_equilibrio::Deslocamento de Equilíbrio",
+   "subject": "Química",
+   "label": "Deslocamento de Equilíbrio (Equilíbrio Químico)",
    "perYear": [
+    1,
     0,
     0,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "total": 4,
+   "presence": 4,
+   "pAtLeastOne": 0.52,
+   "expected": 0.6,
+   "trend": 0.095
+  },
+  {
+   "key": "mat_trigonometria::Trigonometria no Triângulo Retângulo",
+   "subject": "Matemática",
+   "label": "Trigonometria no Triângulo Retângulo (Trigonometria)",
+   "perYear": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "total": 4,
+   "presence": 4,
+   "pAtLeastOne": 0.52,
+   "expected": 0.6,
+   "trend": 0.095
+  },
+  {
+   "key": "mat_funcoes::Transformações em Gráficos de Funções",
+   "subject": "Matemática",
+   "label": "Transformações em Gráficos de Funções (Funções)",
+   "perYear": [
     0,
     2,
     1,
     1,
     1,
+    0,
+    1,
     0
    ],
-   "total": 5,
-   "presence": 4,
-   "pAtLeastOne": 0.518,
-   "expected": 0.67,
-   "trend": 0.083
+   "total": 6,
+   "presence": 5,
+   "pAtLeastOne": 0.519,
+   "expected": 0.65,
+   "trend": -0.095
   },
   {
    "key": "bio_fisio_animal::Embriologia Animal",
@@ -3344,6 +3364,46 @@
    "trend": 0.202
   },
   {
+   "key": "por_lit_romantismo_realismo::A Estética Romântica: Poesia",
+   "subject": "Português",
+   "label": "A Estética Romântica: Poesia (Romantismo e Realismo)",
+   "perYear": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2
+   ],
+   "total": 5,
+   "presence": 3,
+   "pAtLeastOne": 0.516,
+   "expected": 0.85,
+   "trend": 0.202
+  },
+  {
+   "key": "qui_solucoes::Dispersões",
+   "subject": "Química",
+   "label": "Dispersões (Soluções)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    2
+   ],
+   "total": 4,
+   "presence": 3,
+   "pAtLeastOne": 0.516,
+   "expected": 0.73,
+   "trend": 0.238
+  },
+  {
    "key": "his_idade_antiga::Antiguidade Clássica: o Mundo Romano",
    "subject": "História",
    "label": "Antiguidade Clássica: o Mundo Romano (Idade Antiga)",
@@ -3362,26 +3422,6 @@
    "pAtLeastOne": 0.513,
    "expected": 0.64,
    "trend": -0.143
-  },
-  {
-   "key": "por_lit_contemporanea::Prosa Brasileira Contemporânea",
-   "subject": "Português",
-   "label": "Prosa Brasileira Contemporânea (Literatura Contemporânea)",
-   "perYear": [
-    0,
-    0,
-    0,
-    1,
-    1,
-    1,
-    0,
-    1
-   ],
-   "total": 4,
-   "presence": 4,
-   "pAtLeastOne": 0.513,
-   "expected": 0.59,
-   "trend": 0.119
   },
   {
    "key": "bio_fisio_animal::Sangue e Imunologia",
@@ -3404,26 +3444,6 @@
    "trend": -0.071
   },
   {
-   "key": "mat_trigonometria::Trigonometria no Triângulo Retângulo",
-   "subject": "Matemática",
-   "label": "Trigonometria no Triângulo Retângulo (Trigonometria)",
-   "perYear": [
-    1,
-    0,
-    0,
-    0,
-    1,
-    0,
-    1,
-    1
-   ],
-   "total": 4,
-   "presence": 4,
-   "pAtLeastOne": 0.503,
-   "expected": 0.58,
-   "trend": 0.071
-  },
-  {
    "key": "geo_globalizacao_economica::Indústria I",
    "subject": "Geografia",
    "label": "Indústria I (Globalização e Geografia Econômica)",
@@ -3444,24 +3464,24 @@
    "trend": 0.036
   },
   {
-   "key": "mat_log_exponenciais::Modelagem Exponencial de Problemas",
-   "subject": "Matemática",
-   "label": "Modelagem Exponencial de Problemas (Logaritmos e Exponenciais)",
+   "key": "his_brasil_imperio::Brasil Império: Segundo Reinado (1840-1889)",
+   "subject": "História",
+   "label": "Brasil Império: Segundo Reinado (1840-1889) (Brasil Império)",
    "perYear": [
     0,
     1,
     1,
-    2,
+    1,
+    1,
     0,
-    3,
-    0,
+    1,
     0
    ],
-   "total": 7,
-   "presence": 4,
-   "pAtLeastOne": 0.498,
-   "expected": 0.83,
-   "trend": -0.012
+   "total": 5,
+   "presence": 5,
+   "pAtLeastOne": 0.499,
+   "expected": 0.57,
+   "trend": -0.036
   },
   {
    "key": "bio_ecologia::Espécies Invasoras e Controle Biológico",
@@ -3504,6 +3524,26 @@
    "trend": 0.071
   },
   {
+   "key": "bio_biotecnologia::Biotecnologia",
+   "subject": "Biologia",
+   "label": "Biotecnologia (Biotecnologia)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    1,
+    1
+   ],
+   "total": 4,
+   "presence": 3,
+   "pAtLeastOne": 0.495,
+   "expected": 0.64,
+   "trend": 0.167
+  },
+  {
    "key": "fis_calorimetria::Calor Sensível e Calor Latente",
    "subject": "Física",
    "label": "Calor Sensível e Calor Latente (Calorimetria)",
@@ -3524,164 +3564,44 @@
    "trend": -0.226
   },
   {
-   "key": "fis_circuitos::Potência Elétrica",
-   "subject": "Física",
-   "label": "Potência Elétrica (Circuitos Elétricos)",
-   "perYear": [
-    1,
-    0,
-    0,
-    1,
-    0,
-    0,
-    1,
-    1
-   ],
-   "total": 4,
-   "presence": 4,
-   "pAtLeastOne": 0.489,
-   "expected": 0.56,
-   "trend": 0.048
-  },
-  {
-   "key": "mat_sequencias_matrizes::Progressão Aritmética",
+   "key": "mat_sequencias_matrizes::Médias",
    "subject": "Matemática",
-   "label": "Progressão Aritmética (Sequências, Matrizes e Sistemas Lineares)",
+   "label": "Médias (Sequências, Matrizes e Sistemas Lineares)",
    "perYear": [
-    2,
+    1,
+    1,
+    1,
     0,
-    1,
-    1,
-    1,
+    2,
     1,
     0,
     0
    ],
    "total": 6,
-   "presence": 5,
-   "pAtLeastOne": 0.489,
-   "expected": 0.6,
-   "trend": -0.167
-  },
-  {
-   "key": "mat_aritmetica_proporcionalidade::Potências e Radicais",
-   "subject": "Matemática",
-   "label": "Potências e Radicais (Aritmética e Proporcionalidade)",
-   "perYear": [
-    1,
-    1,
-    1,
-    0,
-    0,
-    1,
-    1,
-    0
-   ],
-   "total": 5,
-   "presence": 5,
-   "pAtLeastOne": 0.486,
-   "expected": 0.56,
-   "trend": -0.083
-  },
-  {
-   "key": "mat_equacoes::Modelagem Algébrica de Problemas II",
-   "subject": "Matemática",
-   "label": "Modelagem Algébrica de Problemas II (Equações, Desigualdades e Modelagem Algébrica)",
-   "perYear": [
-    1,
-    1,
-    3,
-    1,
-    0,
-    1,
-    0,
-    0
-   ],
-   "total": 7,
    "presence": 5,
    "pAtLeastOne": 0.484,
-   "expected": 0.66,
-   "trend": -0.226
+   "expected": 0.63,
+   "trend": -0.119
   },
   {
-   "key": "his_primeira_republica_vargas::A República da Espada",
-   "subject": "História",
-   "label": "A República da Espada (Primeira República e Era Vargas)",
-   "perYear": [
-    0,
-    3,
-    0,
-    0,
-    0,
-    1,
-    2,
-    0
-   ],
-   "total": 6,
-   "presence": 3,
-   "pAtLeastOne": 0.47,
-   "expected": 0.73,
-   "trend": -0.024
-  },
-  {
-   "key": "qui_organica_fundamentos::Nomenclatura de Compostos Orgânicos",
-   "subject": "Química",
-   "label": "Nomenclatura de Compostos Orgânicos (Fundamentos e Nomenclatura Orgânica)",
-   "perYear": [
-    3,
-    0,
-    1,
-    0,
-    0,
-    1,
-    1,
-    0
-   ],
-   "total": 6,
-   "presence": 4,
-   "pAtLeastOne": 0.469,
-   "expected": 0.61,
-   "trend": -0.19
-  },
-  {
-   "key": "por_texto::Os Dois Níveis da Leitura",
-   "subject": "Português",
-   "label": "Os Dois Níveis da Leitura (Entendimento de Texto)",
+   "key": "fis_ondulatoria::Ondulatória: Ondas Eletromagnéticas",
+   "subject": "Física",
+   "label": "Ondulatória: Ondas Eletromagnéticas (Ondulatória)",
    "perYear": [
     0,
     0,
     0,
     0,
     0,
-    0,
-    3,
+    1,
+    1,
     1
    ],
-   "total": 4,
-   "presence": 2,
-   "pAtLeastOne": 0.469,
-   "expected": 0.75,
-   "trend": 0.262
-  },
-  {
-   "key": "mat_funcoes::Composição de Funções",
-   "subject": "Matemática",
-   "label": "Composição de Funções (Funções)",
-   "perYear": [
-    2,
-    2,
-    0,
-    0,
-    1,
-    2,
-    0,
-    0
-   ],
-   "total": 7,
-   "presence": 4,
-   "pAtLeastOne": 0.466,
-   "expected": 0.7,
-   "trend": -0.202
+   "total": 3,
+   "presence": 3,
+   "pAtLeastOne": 0.476,
+   "expected": 0.54,
+   "trend": 0.179
   },
   {
    "key": "por_lit_modernismo::Semana de Arte Moderna",
@@ -3724,46 +3644,6 @@
    "trend": -0.107
   },
   {
-   "key": "geo_geopolitica_regional::Terrorismo Internacional",
-   "subject": "Geografia",
-   "label": "Terrorismo Internacional (Geopolítica Regional Contemporânea)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    1,
-    1
-   ],
-   "total": 3,
-   "presence": 3,
-   "pAtLeastOne": 0.459,
-   "expected": 0.52,
-   "trend": 0.155
-  },
-  {
-   "key": "bio_biotecnologia::Biotecnologia",
-   "subject": "Biologia",
-   "label": "Biotecnologia (Biotecnologia)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    1,
-    1
-   ],
-   "total": 3,
-   "presence": 3,
-   "pAtLeastOne": 0.459,
-   "expected": 0.52,
-   "trend": 0.155
-  },
-  {
    "key": "his_republica_liberal_atual::Regime Militar (1964-1985) I",
    "subject": "História",
    "label": "Regime Militar (1964-1985) I (República Liberal e Brasil Contemporâneo)",
@@ -3784,44 +3664,44 @@
    "trend": -0.012
   },
   {
-   "key": "mat_sequencias_matrizes::Médias",
+   "key": "mat_geometria_plana::Áreas de Polígonos",
    "subject": "Matemática",
-   "label": "Médias (Sequências, Matrizes e Sistemas Lineares)",
-   "perYear": [
-    1,
-    1,
-    1,
-    0,
-    1,
-    1,
-    0,
-    0
-   ],
-   "total": 5,
-   "presence": 5,
-   "pAtLeastOne": 0.449,
-   "expected": 0.5,
-   "trend": -0.131
-  },
-  {
-   "key": "bio_evolucao::Evolução Biológica: Construção Histórica",
-   "subject": "Biologia",
-   "label": "Evolução Biológica: Construção Histórica (Evolução)",
+   "label": "Áreas de Polígonos (Geometria Plana)",
    "perYear": [
     0,
+    1,
+    1,
     0,
     1,
-    1,
-    1,
     0,
-    1,
-    0
+    0,
+    1
    ],
    "total": 4,
    "presence": 4,
-   "pAtLeastOne": 0.446,
+   "pAtLeastOne": 0.449,
    "expected": 0.5,
-   "trend": 0.024
+   "trend": 0
+  },
+  {
+   "key": "his_imperialismo_guerras::Primeira Guerra Mundial (1914-1918)",
+   "subject": "História",
+   "label": "Primeira Guerra Mundial (1914-1918) (Imperialismo e Guerras Mundiais)",
+   "perYear": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "total": 4,
+   "presence": 4,
+   "pAtLeastOne": 0.447,
+   "expected": 0.5,
+   "trend": -0.024
   },
   {
    "key": "por_lit_modernismo::Parnasianismo",
@@ -3844,9 +3724,29 @@
    "trend": -0.107
   },
   {
-   "key": "por_norma_culta::Processos de Formação de Palavras",
-   "subject": "Português",
-   "label": "Processos de Formação de Palavras (Domínio da Norma Culta)",
+   "key": "fis_cinematica_vetorial::Composição de Movimentos",
+   "subject": "Física",
+   "label": "Composição de Movimentos (Cinemática Vetorial)",
+   "perYear": [
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0,
+    1
+   ],
+   "total": 4,
+   "presence": 3,
+   "pAtLeastOne": 0.439,
+   "expected": 0.55,
+   "trend": 0.071
+  },
+  {
+   "key": "qui_radioatividade::Radioatividade: o Estudo das Radiações",
+   "subject": "Química",
+   "label": "Radioatividade: o Estudo das Radiações (Radioatividade)",
    "perYear": [
     0,
     0,
@@ -3862,6 +3762,46 @@
    "pAtLeastOne": 0.439,
    "expected": 0.49,
    "trend": 0.131
+  },
+  {
+   "key": "fis_ondas_fundamentos::Conceitos Básicos",
+   "subject": "Física",
+   "label": "Conceitos Básicos (Fundamentos de Ondas e Oscilações)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "total": 3,
+   "presence": 3,
+   "pAtLeastOne": 0.439,
+   "expected": 0.49,
+   "trend": 0.131
+  },
+  {
+   "key": "mat_funcoes::Função Quadrática",
+   "subject": "Matemática",
+   "label": "Função Quadrática (Funções)",
+   "perYear": [
+    0,
+    0,
+    0,
+    1,
+    3,
+    1,
+    0,
+    0
+   ],
+   "total": 5,
+   "presence": 3,
+   "pAtLeastOne": 0.436,
+   "expected": 0.63,
+   "trend": 0.06
   },
   {
    "key": "qui_eletroquimica::Introdução ao Estudo das Pilhas e Baterias",
@@ -3884,9 +3824,29 @@
    "trend": -0.024
   },
   {
-   "key": "mat_geometria_plana::A Geometria Métrica Plana",
+   "key": "mat_geometria_plana::Triângulo Retângulo",
    "subject": "Matemática",
-   "label": "A Geometria Métrica Plana (Geometria Plana)",
+   "label": "Triângulo Retângulo (Geometria Plana)",
+   "perYear": [
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "total": 4,
+   "presence": 4,
+   "pAtLeastOne": 0.433,
+   "expected": 0.48,
+   "trend": -0.024
+  },
+  {
+   "key": "his_moderna_iluminismo::Revolução Francesa",
+   "subject": "História",
+   "label": "Revolução Francesa (Idade Moderna e Iluminismo)",
    "perYear": [
     1,
     0,
@@ -3944,24 +3904,24 @@
    "trend": 0.226
   },
   {
-   "key": "mat_geometria_plana::Introdução à Geometria Plana",
-   "subject": "Matemática",
-   "label": "Introdução à Geometria Plana (Geometria Plana)",
+   "key": "por_lit_contemporanea::Cancioneiro Popular Brasileiro",
+   "subject": "Português",
+   "label": "Cancioneiro Popular Brasileiro (Literatura Contemporânea)",
    "perYear": [
-    2,
     0,
+    1,
+    2,
+    2,
     1,
     0,
     0,
-    0,
-    0,
-    2
+    0
    ],
-   "total": 5,
-   "presence": 3,
+   "total": 6,
+   "presence": 4,
    "pAtLeastOne": 0.43,
-   "expected": 0.64,
-   "trend": -0.036
+   "expected": 0.59,
+   "trend": -0.143
   },
   {
    "key": "soc_movimentos_sociais::Movimentos Sociais Clássicos e Contemporâneos",
@@ -3984,109 +3944,9 @@
    "trend": 0.06
   },
   {
-   "key": "mat_combinatoria::O Problema da Fila",
-   "subject": "Matemática",
-   "label": "O Problema da Fila (Análise Combinatória)",
-   "perYear": [
-    0,
-    2,
-    1,
-    2,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 6,
-   "presence": 4,
-   "pAtLeastOne": 0.426,
-   "expected": 0.58,
-   "trend": -0.167
-  },
-  {
-   "key": "qui_polaridade_geometria::Ligações Químicas e Alotropia",
-   "subject": "Química",
-   "label": "Ligações Químicas e Alotropia (Polaridade das Ligações e Geometria Molecular)",
-   "perYear": [
-    0,
-    0,
-    0,
-    1,
-    0,
-    1,
-    0,
-    1
-   ],
-   "total": 3,
-   "presence": 3,
-   "pAtLeastOne": 0.424,
-   "expected": 0.47,
-   "trend": 0.107
-  },
-  {
-   "key": "bio_estrutura_fisio_celular::Composição Química Celular: Compostos Inorgânicos",
-   "subject": "Biologia",
-   "label": "Composição Química Celular: Compostos Inorgânicos (Estrutura e Fisiologia Celular)",
-   "perYear": [
-    0,
-    0,
-    0,
-    1,
-    0,
-    1,
-    0,
-    1
-   ],
-   "total": 3,
-   "presence": 3,
-   "pAtLeastOne": 0.424,
-   "expected": 0.47,
-   "trend": 0.107
-  },
-  {
-   "key": "soc_globalizacao::Globalização Econômica e Cultural",
-   "subject": "Sociologia",
-   "label": "Globalização Econômica e Cultural (Globalização e Sociedade Contemporânea)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    2,
-    1
-   ],
-   "total": 3,
-   "presence": 2,
-   "pAtLeastOne": 0.423,
-   "expected": 0.57,
-   "trend": 0.202
-  },
-  {
    "key": "mat_sequencias_matrizes::Introdução às Sequências",
    "subject": "Matemática",
    "label": "Introdução às Sequências (Sequências, Matrizes e Sistemas Lineares)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    2,
-    1
-   ],
-   "total": 3,
-   "presence": 2,
-   "pAtLeastOne": 0.423,
-   "expected": 0.57,
-   "trend": 0.202
-  },
-  {
-   "key": "mat_log_exponenciais::Introdução ao Modelo Exponencial",
-   "subject": "Matemática",
-   "label": "Introdução ao Modelo Exponencial (Logaritmos e Exponenciais)",
    "perYear": [
     0,
     0,
@@ -4144,9 +4004,49 @@
    "trend": -0.083
   },
   {
-   "key": "qui_equilibrio::Deslocamento de Equilíbrio",
-   "subject": "Química",
-   "label": "Deslocamento de Equilíbrio (Equilíbrio Químico)",
+   "key": "por_lit_romantismo_realismo::Machado de Assis",
+   "subject": "Português",
+   "label": "Machado de Assis (Romantismo e Realismo)",
+   "perYear": [
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    1,
+    0
+   ],
+   "total": 4,
+   "presence": 3,
+   "pAtLeastOne": 0.415,
+   "expected": 0.52,
+   "trend": 0.048
+  },
+  {
+   "key": "fis_fisica_moderna::Noções Básicas de Física Quântica",
+   "subject": "Física",
+   "label": "Noções Básicas de Física Quântica (Física Moderna)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0
+   ],
+   "total": 3,
+   "presence": 3,
+   "pAtLeastOne": 0.414,
+   "expected": 0.45,
+   "trend": 0.107
+  },
+  {
+   "key": "mat_geometria_plana::O Ponto Médio e o Baricentro de um Triângulo",
+   "subject": "Matemática",
+   "label": "O Ponto Médio e o Baricentro de um Triângulo (Geometria Plana)",
    "perYear": [
     1,
     0,
@@ -4184,24 +4084,44 @@
    "trend": -0.048
   },
   {
-   "key": "mat_sequencias_matrizes::Tabelas e Matrizes",
-   "subject": "Matemática",
-   "label": "Tabelas e Matrizes (Sequências, Matrizes e Sistemas Lineares)",
+   "key": "bio_evolucao::Mecanismos da Evolução Biológica",
+   "subject": "Biologia",
+   "label": "Mecanismos da Evolução Biológica (Evolução)",
    "perYear": [
-    1,
+    0,
+    0,
     1,
     0,
     2,
     0,
     1,
+    0
+   ],
+   "total": 4,
+   "presence": 3,
+   "pAtLeastOne": 0.409,
+   "expected": 0.52,
+   "trend": 0.048
+  },
+  {
+   "key": "his_primeira_republica_vargas::Ascensão e Domínio das Oligarquias",
+   "subject": "História",
+   "label": "Ascensão e Domínio das Oligarquias (Primeira República e Era Vargas)",
+   "perYear": [
+    1,
+    0,
+    0,
+    1,
+    1,
+    1,
     0,
     0
    ],
-   "total": 5,
+   "total": 4,
    "presence": 4,
-   "pAtLeastOne": 0.403,
-   "expected": 0.5,
-   "trend": -0.131
+   "pAtLeastOne": 0.407,
+   "expected": 0.44,
+   "trend": -0.048
   },
   {
    "key": "fis_leis_newton::Resultante de um Sistema de Forças",
@@ -4264,24 +4184,24 @@
    "trend": -0.155
   },
   {
-   "key": "fis_energia::Potência, Máquina e Rendimento",
-   "subject": "Física",
-   "label": "Potência, Máquina e Rendimento (Dinâmica Energética e Transformações de Energia)",
+   "key": "soc_estratificacao_desigualdade::Desigualdade de Gênero",
+   "subject": "Sociologia",
+   "label": "Desigualdade de Gênero (Estratificação Social e Desigualdade)",
    "perYear": [
     0,
     0,
-    0,
-    2,
-    1,
     1,
     0,
-    0
+    1,
+    0,
+    0,
+    1
    ],
-   "total": 4,
+   "total": 3,
    "presence": 3,
    "pAtLeastOne": 0.394,
-   "expected": 0.49,
-   "trend": 0.024
+   "expected": 0.43,
+   "trend": 0.06
   },
   {
    "key": "geo_fisica_brasil::Relevo Brasileiro",
@@ -4304,9 +4224,9 @@
    "trend": 0.06
   },
   {
-   "key": "bio_ecologia::Poluição do Ar",
-   "subject": "Biologia",
-   "label": "Poluição do Ar (Ecologia)",
+   "key": "mat_combinatoria::O Problema do Grupo",
+   "subject": "Matemática",
+   "label": "O Problema do Grupo (Análise Combinatória)",
    "perYear": [
     0,
     0,
@@ -4344,24 +4264,24 @@
    "trend": 0.155
   },
   {
-   "key": "por_lit_modernismo::Graciliano Ramos",
+   "key": "por_lit_romantismo_realismo::Elementos da Narrativa",
    "subject": "Português",
-   "label": "Graciliano Ramos (Simbolismo, Pré-Modernismo e Modernismo)",
+   "label": "Elementos da Narrativa (Romantismo e Realismo)",
    "perYear": [
-    0,
-    0,
+    3,
     1,
-    0,
     0,
     1,
     1,
+    0,
+    0,
     0
    ],
-   "total": 3,
-   "presence": 3,
-   "pAtLeastOne": 0.387,
-   "expected": 0.42,
-   "trend": 0.06
+   "total": 6,
+   "presence": 4,
+   "pAtLeastOne": 0.391,
+   "expected": 0.5,
+   "trend": -0.31
   },
   {
    "key": "bio_estrutura_fisio_celular::Origem da Vida e as Primeiras Células",
@@ -4384,26 +4304,6 @@
    "trend": 0.143
   },
   {
-   "key": "por_lit_contemporanea::Literatura Lusófona Contemporânea",
-   "subject": "Português",
-   "label": "Literatura Lusófona Contemporânea (Literatura Contemporânea)",
-   "perYear": [
-    0,
-    1,
-    0,
-    0,
-    1,
-    2,
-    0,
-    0
-   ],
-   "total": 4,
-   "presence": 3,
-   "pAtLeastOne": 0.386,
-   "expected": 0.5,
-   "trend": 0.024
-  },
-  {
    "key": "fis_eletromagnetismo::Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações",
    "subject": "Física",
    "label": "Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações (Eletromagnetismo)",
@@ -4422,6 +4322,46 @@
    "pAtLeastOne": 0.384,
    "expected": 0.41,
    "trend": -0.095
+  },
+  {
+   "key": "geo_fisica_brasil::Geologia e Geomorfologia",
+   "subject": "Geografia",
+   "label": "Geologia e Geomorfologia (Geografia Física do Brasil)",
+   "perYear": [
+    0,
+    0,
+    2,
+    1,
+    2,
+    0,
+    0,
+    0
+   ],
+   "total": 5,
+   "presence": 3,
+   "pAtLeastOne": 0.384,
+   "expected": 0.54,
+   "trend": -0.06
+  },
+  {
+   "key": "mat_sequencias_matrizes::Progressão Aritmética",
+   "subject": "Matemática",
+   "label": "Progressão Aritmética (Sequências, Matrizes e Sistemas Lineares)",
+   "perYear": [
+    2,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   "total": 5,
+   "presence": 4,
+   "pAtLeastOne": 0.382,
+   "expected": 0.45,
+   "trend": -0.202
   },
   {
    "key": "geo_climatologia_socioambiental::Geopolítica Ambiental",
@@ -4444,69 +4384,109 @@
    "trend": 0.155
   },
   {
-   "key": "fis_ondas_fundamentos::Equação Fundamental da Ondulatória",
-   "subject": "Física",
-   "label": "Equação Fundamental da Ondulatória (Fundamentos de Ondas e Oscilações)",
+   "key": "mat_equacoes::Modelagem Algébrica de Problemas II",
+   "subject": "Matemática",
+   "label": "Modelagem Algébrica de Problemas II (Equações, Desigualdades e Modelagem Algébrica)",
+   "perYear": [
+    1,
+    1,
+    3,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 6,
+   "presence": 4,
+   "pAtLeastOne": 0.381,
+   "expected": 0.51,
+   "trend": -0.262
+  },
+  {
+   "key": "por_lit_modernismo::Segunda Geração Modernista: Prosa",
+   "subject": "Português",
+   "label": "Segunda Geração Modernista: Prosa (Simbolismo, Pré-Modernismo e Modernismo)",
    "perYear": [
     0,
     1,
     0,
-    1,
     0,
     2,
+    1,
     0,
     0
    ],
    "total": 4,
    "presence": 3,
-   "pAtLeastOne": 0.371,
+   "pAtLeastOne": 0.378,
    "expected": 0.48,
    "trend": 0
   },
   {
-   "key": "mat_geometria_analitica::Posições Relativas entre Duas Retas",
-   "subject": "Matemática",
-   "label": "Posições Relativas entre Duas Retas (Geometria Analítica)",
+   "key": "fil_moderna_racionalismo_empirismo::Descartes e o Método: a Dúvida Hiperbólica",
+   "subject": "Filosofia",
+   "label": "Descartes e o Método: a Dúvida Hiperbólica (Filosofia Moderna: Racionalismo e Empirismo)",
    "perYear": [
-    0,
-    0,
-    0,
-    0,
-    2,
-    0,
-    0,
-    1
-   ],
-   "total": 3,
-   "presence": 2,
-   "pAtLeastOne": 0.369,
-   "expected": 0.46,
-   "trend": 0.107
-  },
-  {
-   "key": "bio_evolucao::Mecanismos da Evolução Biológica",
-   "subject": "Biologia",
-   "label": "Mecanismos da Evolução Biológica (Evolução)",
-   "perYear": [
-    0,
     0,
     1,
     0,
-    1,
     0,
+    0,
+    1,
     1,
     0
    ],
    "total": 3,
    "presence": 3,
-   "pAtLeastOne": 0.369,
-   "expected": 0.39,
+   "pAtLeastOne": 0.376,
+   "expected": 0.4,
    "trend": 0.036
+  },
+  {
+   "key": "his_primeira_republica_vargas::A República da Espada",
+   "subject": "História",
+   "label": "A República da Espada (Primeira República e Era Vargas)",
+   "perYear": [
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0
+   ],
+   "total": 5,
+   "presence": 2,
+   "pAtLeastOne": 0.369,
+   "expected": 0.58,
+   "trend": -0.06
   },
   {
    "key": "soc_cultura_identidade::Multiculturalismo e Relativismo Cultural",
    "subject": "Sociologia",
    "label": "Multiculturalismo e Relativismo Cultural (Cultura, Identidade e Diversidade)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.367,
+   "expected": 0.39,
+   "trend": 0.143
+  },
+  {
+   "key": "geo_geopolitica_regional::Terrorismo Internacional",
+   "subject": "Geografia",
+   "label": "Terrorismo Internacional (Geopolítica Regional Contemporânea)",
    "perYear": [
     0,
     0,
@@ -4584,44 +4564,24 @@
    "trend": 0.143
   },
   {
-   "key": "fis_ondulatoria::Ondulatória: Ondas Eletromagnéticas",
-   "subject": "Física",
-   "label": "Ondulatória: Ondas Eletromagnéticas (Ondulatória)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    1
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.367,
-   "expected": 0.39,
-   "trend": 0.143
-  },
-  {
-   "key": "qui_gases::O Estado Gasoso",
+   "key": "qui_organica_fundamentos::Nomenclatura de Compostos Orgânicos",
    "subject": "Química",
-   "label": "O Estado Gasoso (Gases)",
+   "label": "Nomenclatura de Compostos Orgânicos (Fundamentos e Nomenclatura Orgânica)",
    "perYear": [
-    0,
-    0,
-    0,
-    1,
-    0,
     3,
     0,
+    1,
+    0,
+    0,
+    0,
+    1,
     0
    ],
-   "total": 4,
-   "presence": 2,
+   "total": 5,
+   "presence": 3,
    "pAtLeastOne": 0.363,
-   "expected": 0.56,
-   "trend": 0.095
+   "expected": 0.46,
+   "trend": -0.226
   },
   {
    "key": "mat_geometria_plana::Áreas de Figuras Planas",
@@ -4642,6 +4602,26 @@
    "pAtLeastOne": 0.362,
    "expected": 0.43,
    "trend": -0.048
+  },
+  {
+   "key": "mat_sequencias_matrizes::Sistemas de Equações",
+   "subject": "Matemática",
+   "label": "Sistemas de Equações (Sequências, Matrizes e Sistemas Lineares)",
+   "perYear": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0
+   ],
+   "total": 3,
+   "presence": 3,
+   "pAtLeastOne": 0.36,
+   "expected": 0.38,
+   "trend": 0.036
   },
   {
    "key": "qui_organica_reacoes::Interpretando Reações Orgânicas",
@@ -4684,44 +4664,24 @@
    "trend": -0.012
   },
   {
-   "key": "mat_geometria_plana::Áreas de Polígonos",
-   "subject": "Matemática",
-   "label": "Áreas de Polígonos (Geometria Plana)",
+   "key": "bio_evolucao::Evolução Biológica: Construção Histórica",
+   "subject": "Biologia",
+   "label": "Evolução Biológica: Construção Histórica (Evolução)",
    "perYear": [
     0,
+    0,
     1,
     1,
     0,
     0,
-    0,
-    0,
-    1
+    1,
+    0
    ],
    "total": 3,
    "presence": 3,
-   "pAtLeastOne": 0.356,
-   "expected": 0.38,
-   "trend": -0.012
-  },
-  {
-   "key": "his_moderna_iluminismo::Vida Urbana e Renascimento Cultural",
-   "subject": "História",
-   "label": "Vida Urbana e Renascimento Cultural (Idade Moderna e Iluminismo)",
-   "perYear": [
-    0,
-    0,
-    1,
-    0,
-    0,
-    3,
-    0,
-    0
-   ],
-   "total": 4,
-   "presence": 2,
-   "pAtLeastOne": 0.351,
-   "expected": 0.54,
-   "trend": 0.071
+   "pAtLeastOne": 0.354,
+   "expected": 0.37,
+   "trend": 0.012
   },
   {
    "key": "fis_circuitos::Geradores",
@@ -4764,6 +4724,26 @@
    "trend": -0.012
   },
   {
+   "key": "his_primeira_republica_vargas::A Era Vargas",
+   "subject": "História",
+   "label": "A Era Vargas (Primeira República e Era Vargas)",
+   "perYear": [
+    1,
+    0,
+    0,
+    2,
+    0,
+    1,
+    0,
+    0
+   ],
+   "total": 4,
+   "presence": 3,
+   "pAtLeastOne": 0.348,
+   "expected": 0.42,
+   "trend": -0.071
+  },
+  {
    "key": "mat_sequencias_matrizes::Progressão Geométrica",
    "subject": "Matemática",
    "label": "Progressão Geométrica (Sequências, Matrizes e Sistemas Lineares)",
@@ -4784,9 +4764,9 @@
    "trend": -0.25
   },
   {
-   "key": "bio_ecologia::Poluição: Aquecimento Global, POPs e Biorremediação",
+   "key": "bio_ecologia::Ciclo do Nitrogênio",
    "subject": "Biologia",
-   "label": "Poluição: Aquecimento Global, POPs e Biorremediação (Ecologia)",
+   "label": "Ciclo do Nitrogênio (Ecologia)",
    "perYear": [
     0,
     0,
@@ -4802,6 +4782,26 @@
    "pAtLeastOne": 0.347,
    "expected": 0.37,
    "trend": 0.012
+  },
+  {
+   "key": "his_idade_media::Alta Idade Média e Feudalismo",
+   "subject": "História",
+   "label": "Alta Idade Média e Feudalismo (Idade Média)",
+   "perYear": [
+    2,
+    1,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 6,
+   "presence": 3,
+   "pAtLeastOne": 0.346,
+   "expected": 0.52,
+   "trend": -0.262
   },
   {
    "key": "soc_estratificacao_desigualdade::Classes Sociais e Mobilidade Social",
@@ -4824,106 +4824,6 @@
    "trend": -0.048
   },
   {
-   "key": "fil_aristoteles::Política Aristotélica: o Homem como Animal Político",
-   "subject": "Filosofia",
-   "label": "Política Aristotélica: o Homem como Animal Político (Aristóteles)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    1
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.346,
-   "expected": 0.36,
-   "trend": 0.119
-  },
-  {
-   "key": "fis_leis_newton::Plano Inclinado",
-   "subject": "Física",
-   "label": "Plano Inclinado (Leis de Newton e Dinâmica do Movimento Retilíneo)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    1
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.346,
-   "expected": 0.36,
-   "trend": 0.119
-  },
-  {
-   "key": "mat_trigonometria::A Trigonometria dos Números Reais",
-   "subject": "Matemática",
-   "label": "A Trigonometria dos Números Reais (Trigonometria)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    1
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.346,
-   "expected": 0.36,
-   "trend": 0.119
-  },
-  {
-   "key": "geo_fisica_brasil::Geologia e Geomorfologia",
-   "subject": "Geografia",
-   "label": "Geologia e Geomorfologia (Geografia Física do Brasil)",
-   "perYear": [
-    0,
-    0,
-    2,
-    1,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 4,
-   "presence": 3,
-   "pAtLeastOne": 0.344,
-   "expected": 0.41,
-   "trend": -0.071
-  },
-  {
-   "key": "por_lit_contemporanea::Cancioneiro Popular Brasileiro",
-   "subject": "Português",
-   "label": "Cancioneiro Popular Brasileiro (Literatura Contemporânea)",
-   "perYear": [
-    0,
-    1,
-    2,
-    2,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 5,
-   "presence": 3,
-   "pAtLeastOne": 0.341,
-   "expected": 0.46,
-   "trend": -0.155
-  },
-  {
    "key": "geo_climatologia_socioambiental::Desafios Ambientais do Século XXI",
    "subject": "Geografia",
    "label": "Desafios Ambientais do Século XXI (Climatologia e Problemas Socioambientais)",
@@ -4944,44 +4844,44 @@
    "trend": -0.012
   },
   {
-   "key": "geo_fisica_brasil::Paisagem, Espaço Geográfico e Ciência Geográfica",
-   "subject": "Geografia",
-   "label": "Paisagem, Espaço Geográfico e Ciência Geográfica (Geografia Física do Brasil)",
+   "key": "mat_combinatoria::O Problema da Fila",
+   "subject": "Matemática",
+   "label": "O Problema da Fila (Análise Combinatória)",
    "perYear": [
     0,
+    2,
     1,
+    2,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 5,
+   "presence": 3,
+   "pAtLeastOne": 0.336,
+   "expected": 0.45,
+   "trend": -0.179
+  },
+  {
+   "key": "bio_botanica::Plantas Terrestres II: Gimnospermas e Angiospermas",
+   "subject": "Biologia",
+   "label": "Plantas Terrestres II: Gimnospermas e Angiospermas (Botânica)",
+   "perYear": [
+    2,
     0,
     0,
     1,
+    0,
     1,
     0,
     0
    ],
-   "total": 3,
+   "total": 4,
    "presence": 3,
-   "pAtLeastOne": 0.337,
-   "expected": 0.35,
-   "trend": -0.012
-  },
-  {
-   "key": "his_imperialismo_guerras::Primeira Guerra Mundial (1914-1918)",
-   "subject": "História",
-   "label": "Primeira Guerra Mundial (1914-1918) (Imperialismo e Guerras Mundiais)",
-   "perYear": [
-    1,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    1
-   ],
-   "total": 3,
-   "presence": 3,
-   "pAtLeastOne": 0.336,
-   "expected": 0.35,
-   "trend": -0.06
+   "pAtLeastOne": 0.334,
+   "expected": 0.38,
+   "trend": -0.143
   },
   {
    "key": "fil_aristoteles::A Ética a Nicômaco e a Doutrina do Meio-Termo",
@@ -5004,9 +4904,29 @@
    "trend": -0.036
   },
   {
-   "key": "qui_radioatividade::Radioatividade: o Estudo das Radiações",
-   "subject": "Química",
-   "label": "Radioatividade: o Estudo das Radiações (Radioatividade)",
+   "key": "mat_geometria_espacial::Prismas",
+   "subject": "Matemática",
+   "label": "Prismas (Geometria Espacial)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    2,
+    0,
+    0
+   ],
+   "total": 3,
+   "presence": 2,
+   "pAtLeastOne": 0.331,
+   "expected": 0.43,
+   "trend": 0.083
+  },
+  {
+   "key": "soc_globalizacao::A Sociedade da Informação",
+   "subject": "Sociologia",
+   "label": "A Sociedade da Informação (Globalização e Sociedade Contemporânea)",
    "perYear": [
     0,
     0,
@@ -5024,9 +4944,9 @@
    "trend": 0.095
   },
   {
-   "key": "soc_globalizacao::A Sociedade da Informação",
-   "subject": "Sociologia",
-   "label": "A Sociedade da Informação (Globalização e Sociedade Contemporânea)",
+   "key": "por_norma_culta::Processos de Formação de Palavras",
+   "subject": "Português",
+   "label": "Processos de Formação de Palavras (Domínio da Norma Culta)",
    "perYear": [
     0,
     0,
@@ -5064,46 +4984,6 @@
    "trend": 0.095
   },
   {
-   "key": "fis_cinematica::O Movimento Circular",
-   "subject": "Física",
-   "label": "O Movimento Circular (Cinemática Escalar)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    1
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.327,
-   "expected": 0.34,
-   "trend": 0.095
-  },
-  {
-   "key": "fis_circuitos::Resistores",
-   "subject": "Física",
-   "label": "Resistores (Circuitos Elétricos)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    2,
-    1,
-    0,
-    0
-   ],
-   "total": 3,
-   "presence": 2,
-   "pAtLeastOne": 0.323,
-   "expected": 0.4,
-   "trend": 0.06
-  },
-  {
    "key": "fis_ondulatoria::Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento",
    "subject": "Física",
    "label": "Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento (Ondulatória)",
@@ -5122,6 +5002,26 @@
    "pAtLeastOne": 0.321,
    "expected": 0.36,
    "trend": -0.167
+  },
+  {
+   "key": "fis_ondas_fundamentos::Equação Fundamental da Ondulatória",
+   "subject": "Física",
+   "label": "Equação Fundamental da Ondulatória (Fundamentos de Ondas e Oscilações)",
+   "perYear": [
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0
+   ],
+   "total": 3,
+   "presence": 3,
+   "pAtLeastOne": 0.321,
+   "expected": 0.33,
+   "trend": -0.036
   },
   {
    "key": "mat_complexos_polinomios::Números Complexos",
@@ -5144,9 +5044,9 @@
    "trend": -0.036
   },
   {
-   "key": "his_moderna_iluminismo::Revolução Francesa",
-   "subject": "História",
-   "label": "Revolução Francesa (Idade Moderna e Iluminismo)",
+   "key": "mat_geometria_plana::A Geometria Métrica Plana",
+   "subject": "Matemática",
+   "label": "A Geometria Métrica Plana (Geometria Plana)",
    "perYear": [
     1,
     0,
@@ -5164,49 +5064,29 @@
    "trend": -0.06
   },
   {
-   "key": "qui_organica_fundamentos::Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+   "key": "fis_estatica::Estática",
+   "subject": "Física",
+   "label": "Estática (Estática dos Corpos Sólidos e dos Fluidos)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.32,
+   "expected": 0.33,
+   "trend": 0.095
+  },
+  {
+   "key": "qui_gases::O Estado Gasoso",
    "subject": "Química",
-   "label": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades (Fundamentos e Nomenclatura Orgânica)",
-   "perYear": [
-    0,
-    0,
-    0,
-    1,
-    0,
-    2,
-    0,
-    0
-   ],
-   "total": 3,
-   "presence": 2,
-   "pAtLeastOne": 0.316,
-   "expected": 0.41,
-   "trend": 0.06
-  },
-  {
-   "key": "soc_trabalho_sociedade::Transformações no Mundo do Trabalho",
-   "subject": "Sociologia",
-   "label": "Transformações no Mundo do Trabalho (Trabalho e Sociedade)",
-   "perYear": [
-    0,
-    0,
-    0,
-    1,
-    0,
-    2,
-    0,
-    0
-   ],
-   "total": 3,
-   "presence": 2,
-   "pAtLeastOne": 0.316,
-   "expected": 0.41,
-   "trend": 0.06
-  },
-  {
-   "key": "mat_funcoes::Estudo do Sinal de Funções",
-   "subject": "Matemática",
-   "label": "Estudo do Sinal de Funções (Funções)",
+   "label": "O Estado Gasoso (Gases)",
    "perYear": [
     0,
     0,
@@ -5284,6 +5164,26 @@
    "trend": 0.071
   },
   {
+   "key": "qui_polaridade_geometria::Ligações Químicas e Alotropia",
+   "subject": "Química",
+   "label": "Ligações Químicas e Alotropia (Polaridade das Ligações e Geometria Molecular)",
+   "perYear": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.312,
+   "expected": 0.32,
+   "trend": 0.071
+  },
+  {
    "key": "bio_metabolismo_energetico::Bioenergética: Fotossíntese e Quimiossíntese",
    "subject": "Biologia",
    "label": "Bioenergética: Fotossíntese e Quimiossíntese (Metabolismo Energético)",
@@ -5302,6 +5202,106 @@
    "pAtLeastOne": 0.312,
    "expected": 0.32,
    "trend": 0.071
+  },
+  {
+   "key": "bio_estrutura_fisio_celular::Composição Química Celular: Compostos Inorgânicos",
+   "subject": "Biologia",
+   "label": "Composição Química Celular: Compostos Inorgânicos (Estrutura e Fisiologia Celular)",
+   "perYear": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.312,
+   "expected": 0.32,
+   "trend": 0.071
+  },
+  {
+   "key": "mat_log_exponenciais::Modelagem Exponencial de Problemas",
+   "subject": "Matemática",
+   "label": "Modelagem Exponencial de Problemas (Logaritmos e Exponenciais)",
+   "perYear": [
+    0,
+    1,
+    1,
+    2,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 4,
+   "presence": 3,
+   "pAtLeastOne": 0.312,
+   "expected": 0.38,
+   "trend": -0.119
+  },
+  {
+   "key": "qui_organica_fundamentos::Combustíveis Fósseis",
+   "subject": "Química",
+   "label": "Combustíveis Fósseis (Fundamentos e Nomenclatura Orgânica)",
+   "perYear": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "total": 4,
+   "presence": 3,
+   "pAtLeastOne": 0.31,
+   "expected": 0.35,
+   "trend": -0.19
+  },
+  {
+   "key": "por_lit_modernismo::Modernismo no Brasil: Primeira Geração",
+   "subject": "Português",
+   "label": "Modernismo no Brasil: Primeira Geração (Simbolismo, Pré-Modernismo e Modernismo)",
+   "perYear": [
+    0,
+    1,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "total": 3,
+   "presence": 3,
+   "pAtLeastOne": 0.308,
+   "expected": 0.31,
+   "trend": -0.06
+  },
+  {
+   "key": "bio_botanica::Fungos",
+   "subject": "Biologia",
+   "label": "Fungos (Botânica)",
+   "perYear": [
+    0,
+    0,
+    2,
+    0,
+    2,
+    0,
+    0,
+    0
+   ],
+   "total": 4,
+   "presence": 2,
+   "pAtLeastOne": 0.307,
+   "expected": 0.43,
+   "trend": -0.048
   },
   {
    "key": "bio_zoologia::Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética",
@@ -5324,6 +5324,26 @@
    "trend": 0.167
   },
   {
+   "key": "his_moderna_iluminismo::Vida Urbana e Renascimento Cultural",
+   "subject": "História",
+   "label": "Vida Urbana e Renascimento Cultural (Idade Moderna e Iluminismo)",
+   "perYear": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   "total": 3,
+   "presence": 2,
+   "pAtLeastOne": 0.304,
+   "expected": 0.39,
+   "trend": 0.036
+  },
+  {
    "key": "fil_socrates_platao::O Método Socrático e a Maiêutica",
    "subject": "Filosofia",
    "label": "O Método Socrático e a Maiêutica (Sócrates e Platão)",
@@ -5342,46 +5362,6 @@
    "pAtLeastOne": 0.301,
    "expected": 0.3,
    "trend": 0.071
-  },
-  {
-   "key": "fis_fisica_moderna::Noções Básicas de Física Quântica",
-   "subject": "Física",
-   "label": "Noções Básicas de Física Quântica (Física Moderna)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    1,
-    0
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.301,
-   "expected": 0.3,
-   "trend": 0.071
-  },
-  {
-   "key": "soc_estratificacao_desigualdade::Desigualdade de Gênero",
-   "subject": "Sociologia",
-   "label": "Desigualdade de Gênero (Estratificação Social e Desigualdade)",
-   "perYear": [
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    1
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.298,
-   "expected": 0.3,
-   "trend": 0.048
   },
   {
    "key": "his_guerra_fria_contemporaneo::Guerra Fria",
@@ -5424,9 +5404,9 @@
    "trend": 0.048
   },
   {
-   "key": "mat_combinatoria::O Problema do Grupo",
-   "subject": "Matemática",
-   "label": "O Problema do Grupo (Análise Combinatória)",
+   "key": "bio_ecologia::Poluição do Ar",
+   "subject": "Biologia",
+   "label": "Poluição do Ar (Ecologia)",
    "perYear": [
     0,
     0,
@@ -5484,44 +5464,44 @@
    "trend": -0.19
   },
   {
-   "key": "mat_funcoes::Função Quadrática",
+   "key": "mat_geometria_espacial::Cubos e Paralelepípedos",
    "subject": "Matemática",
-   "label": "Função Quadrática (Funções)",
+   "label": "Cubos e Paralelepípedos (Geometria Espacial)",
    "perYear": [
     0,
     0,
+    3,
     0,
     1,
-    2,
     0,
+    0,
+    0
+   ],
+   "total": 4,
+   "presence": 2,
+   "pAtLeastOne": 0.295,
+   "expected": 0.39,
+   "trend": -0.095
+  },
+  {
+   "key": "por_lit_contemporanea::Literatura Lusófona Contemporânea",
+   "subject": "Português",
+   "label": "Literatura Lusófona Contemporânea (Literatura Contemporânea)",
+   "perYear": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    2,
     0,
     0
    ],
    "total": 3,
    "presence": 2,
-   "pAtLeastOne": 0.29,
-   "expected": 0.36,
+   "pAtLeastOne": 0.293,
+   "expected": 0.37,
    "trend": 0.012
-  },
-  {
-   "key": "por_lit_modernismo::Modernismo no Brasil: Primeira Geração",
-   "subject": "Português",
-   "label": "Modernismo no Brasil: Primeira Geração (Simbolismo, Pré-Modernismo e Modernismo)",
-   "perYear": [
-    0,
-    1,
-    1,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 3,
-   "presence": 3,
-   "pAtLeastOne": 0.289,
-   "expected": 0.29,
-   "trend": -0.083
   },
   {
    "key": "mat_dados_probabilidade::Operações com Probabilidades",
@@ -5584,26 +5564,6 @@
    "trend": 0.024
   },
   {
-   "key": "por_lit_contemporanea::Poesia Brasileira Contemporânea",
-   "subject": "Português",
-   "label": "Poesia Brasileira Contemporânea (Literatura Contemporânea)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    3,
-    0,
-    0
-   ],
-   "total": 3,
-   "presence": 1,
-   "pAtLeastOne": 0.287,
-   "expected": 0.45,
-   "trend": 0.107
-  },
-  {
    "key": "bio_zoologia::Cordados Tetrápodes",
    "subject": "Biologia",
    "label": "Cordados Tetrápodes (Zoologia)",
@@ -5624,9 +5584,9 @@
    "trend": 0.048
   },
   {
-   "key": "mat_geometria_analitica::Introdução à Geometria Analítica",
-   "subject": "Matemática",
-   "label": "Introdução à Geometria Analítica (Geometria Analítica)",
+   "key": "fis_cinematica::Movimento Uniforme",
+   "subject": "Física",
+   "label": "Movimento Uniforme (Cinemática Escalar)",
    "perYear": [
     1,
     0,
@@ -5644,49 +5604,49 @@
    "trend": -0.012
   },
   {
-   "key": "fil_niilismo_existencialismo::O Existencialismo de Sartre",
-   "subject": "Filosofia",
-   "label": "O Existencialismo de Sartre (Nietzsche, Existencialismo e Filosofia Contemporânea)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    1,
-    1,
-    0,
-    0
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.278,
-   "expected": 0.28,
-   "trend": 0.048
-  },
-  {
-   "key": "fis_cinematica::Cinemática Escalar. Conceitos Fundamentais",
+   "key": "fis_energia::Potência, Máquina e Rendimento",
    "subject": "Física",
-   "label": "Cinemática Escalar. Conceitos Fundamentais (Cinemática Escalar)",
+   "label": "Potência, Máquina e Rendimento (Dinâmica Energética e Transformações de Energia)",
    "perYear": [
     0,
     0,
     0,
+    2,
+    1,
     0,
-    1,
-    1,
     0,
     0
    ],
-   "total": 2,
+   "total": 3,
    "presence": 2,
-   "pAtLeastOne": 0.278,
-   "expected": 0.28,
-   "trend": 0.048
+   "pAtLeastOne": 0.283,
+   "expected": 0.34,
+   "trend": -0.012
   },
   {
-   "key": "mat_geometria_espacial::Prismas",
+   "key": "mat_geometria_plana::Identificação de Simetrias I",
    "subject": "Matemática",
-   "label": "Prismas (Geometria Espacial)",
+   "label": "Identificação de Simetrias I (Geometria Plana)",
+   "perYear": [
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "total": 3,
+   "presence": 3,
+   "pAtLeastOne": 0.28,
+   "expected": 0.28,
+   "trend": -0.107
+  },
+  {
+   "key": "fis_circuitos::Resistores",
+   "subject": "Física",
+   "label": "Resistores (Circuitos Elétricos)",
    "perYear": [
     0,
     0,
@@ -5784,6 +5744,26 @@
    "trend": 0
   },
   {
+   "key": "por_lit_modernismo::Pré-Modernismo",
+   "subject": "Português",
+   "label": "Pré-Modernismo (Simbolismo, Pré-Modernismo e Modernismo)",
+   "perYear": [
+    0,
+    0,
+    1,
+    0,
+    2,
+    0,
+    0,
+    0
+   ],
+   "total": 3,
+   "presence": 2,
+   "pAtLeastOne": 0.277,
+   "expected": 0.34,
+   "trend": -0.012
+  },
+  {
    "key": "mat_dados_probabilidade::Eventos Disjuntos e Eventos Independentes",
    "subject": "Matemática",
    "label": "Eventos Disjuntos e Eventos Independentes (Probabilidade e Interpretação de Dados)",
@@ -5802,6 +5782,26 @@
    "pAtLeastOne": 0.275,
    "expected": 0.3,
    "trend": -0.107
+  },
+  {
+   "key": "por_lit_modernismo::Graciliano Ramos",
+   "subject": "Português",
+   "label": "Graciliano Ramos (Simbolismo, Pré-Modernismo e Modernismo)",
+   "perYear": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.272,
+   "expected": 0.27,
+   "trend": 0.024
   },
   {
    "key": "geo_hidrogeografia::Geopolítica dos Recursos Hídricos",
@@ -5864,9 +5864,9 @@
    "trend": 0.024
   },
   {
-   "key": "geo_geopolitica_regional::Geopolítica e Geoeconomia da América Latina",
-   "subject": "Geografia",
-   "label": "Geopolítica e Geoeconomia da América Latina (Geopolítica Regional Contemporânea)",
+   "key": "mat_teoria_numeros::Introdução à Teoria dos Números Inteiros",
+   "subject": "Matemática",
+   "label": "Introdução à Teoria dos Números Inteiros (Teoria dos Números Inteiros)",
    "perYear": [
     1,
     1,
@@ -5902,6 +5902,26 @@
    "pAtLeastOne": 0.268,
    "expected": 0.36,
    "trend": 0.119
+  },
+  {
+   "key": "qui_estequiometria::Cálculos Estequiométricos",
+   "subject": "Química",
+   "label": "Cálculos Estequiométricos (Análises Quantitativas e Estequiometria)",
+   "perYear": [
+    0,
+    2,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "total": 3,
+   "presence": 2,
+   "pAtLeastOne": 0.266,
+   "expected": 0.3,
+   "trend": -0.083
   },
   {
    "key": "mat_log_exponenciais::Introdução aos Logaritmos",
@@ -5944,26 +5964,6 @@
    "trend": -0.131
   },
   {
-   "key": "bio_botanica::Fungos",
-   "subject": "Biologia",
-   "label": "Fungos (Botânica)",
-   "perYear": [
-    0,
-    0,
-    2,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 3,
-   "presence": 2,
-   "pAtLeastOne": 0.264,
-   "expected": 0.3,
-   "trend": -0.06
-  },
-  {
    "key": "qui_termoquimica::Termoquímica I",
    "subject": "Química",
    "label": "Termoquímica I (Termoquímica)",
@@ -5982,6 +5982,66 @@
    "pAtLeastOne": 0.263,
    "expected": 0.29,
    "trend": -0.262
+  },
+  {
+   "key": "qui_organica_fundamentos::Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+   "subject": "Química",
+   "label": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades (Fundamentos e Nomenclatura Orgânica)",
+   "perYear": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.262,
+   "expected": 0.26,
+   "trend": 0.024
+  },
+  {
+   "key": "soc_trabalho_sociedade::Transformações no Mundo do Trabalho",
+   "subject": "Sociologia",
+   "label": "Transformações no Mundo do Trabalho (Trabalho e Sociedade)",
+   "perYear": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.262,
+   "expected": 0.26,
+   "trend": 0.024
+  },
+  {
+   "key": "por_lit_contemporanea::Artes Plásticas Brasileiras",
+   "subject": "Português",
+   "label": "Artes Plásticas Brasileiras (Literatura Contemporânea)",
+   "perYear": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.262,
+   "expected": 0.26,
+   "trend": 0.024
   },
   {
    "key": "mat_trigonometria::Funções Trigonométricas",
@@ -6004,24 +6064,24 @@
    "trend": 0.024
   },
   {
-   "key": "fil_moderna_racionalismo_empirismo::Descartes e o Método: a Dúvida Hiperbólica",
-   "subject": "Filosofia",
-   "label": "Descartes e o Método: a Dúvida Hiperbólica (Filosofia Moderna: Racionalismo e Empirismo)",
+   "key": "mat_funcoes::Estudo do Sinal de Funções",
+   "subject": "Matemática",
+   "label": "Estudo do Sinal de Funções (Funções)",
    "perYear": [
     0,
-    1,
-    0,
-    0,
     0,
     0,
     1,
+    0,
+    1,
+    0,
     0
    ],
    "total": 2,
    "presence": 2,
-   "pAtLeastOne": 0.26,
-   "expected": 0.25,
-   "trend": 0
+   "pAtLeastOne": 0.262,
+   "expected": 0.26,
+   "trend": 0.024
   },
   {
    "key": "fil_kant_idealismo::A Ética Kantiana e o Imperativo Categórico",
@@ -6084,9 +6144,9 @@
    "trend": -0.155
   },
   {
-   "key": "qui_equilibrio::Equilíbrios Iônicos",
-   "subject": "Química",
-   "label": "Equilíbrios Iônicos (Equilíbrio Químico)",
+   "key": "his_brasil_colonia::A Crise do Antigo Sistema Colonial",
+   "subject": "História",
+   "label": "A Crise do Antigo Sistema Colonial (Brasil Colônia)",
    "perYear": [
     0,
     0,
@@ -6124,9 +6184,9 @@
    "trend": 0
   },
   {
-   "key": "bio_ecologia::Ciclo do Nitrogênio",
+   "key": "bio_ecologia::Poluição: Aquecimento Global, POPs e Biorremediação",
    "subject": "Biologia",
-   "label": "Ciclo do Nitrogênio (Ecologia)",
+   "label": "Poluição: Aquecimento Global, POPs e Biorremediação (Ecologia)",
    "perYear": [
     0,
     0,
@@ -6144,9 +6204,49 @@
    "trend": 0
   },
   {
-   "key": "mat_sequencias_matrizes::Sistemas de Equações",
+   "key": "por_norma_culta::O Léxico em Contexto: Variadas Possibilidades Semânticas",
+   "subject": "Português",
+   "label": "O Léxico em Contexto: Variadas Possibilidades Semânticas (Domínio da Norma Culta)",
+   "perYear": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.243,
+   "expected": 0.23,
+   "trend": 0
+  },
+  {
+   "key": "fis_circuitos::Circuitos de Malha Única",
+   "subject": "Física",
+   "label": "Circuitos de Malha Única (Circuitos Elétricos)",
+   "perYear": [
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.243,
+   "expected": 0.23,
+   "trend": 0
+  },
+  {
+   "key": "mat_geometria_plana::Simetrias e Congruências",
    "subject": "Matemática",
-   "label": "Sistemas de Equações (Sequências, Matrizes e Sistemas Lineares)",
+   "label": "Simetrias e Congruências (Geometria Plana)",
    "perYear": [
     0,
     0,
@@ -6184,9 +6284,9 @@
    "trend": -0.179
   },
   {
-   "key": "geo_globalizacao_economica::Desigualdades Globais",
+   "key": "geo_fisica_brasil::Paisagem, Espaço Geográfico e Ciência Geográfica",
    "subject": "Geografia",
-   "label": "Desigualdades Globais (Globalização e Geografia Econômica)",
+   "label": "Paisagem, Espaço Geográfico e Ciência Geográfica (Geografia Física do Brasil)",
    "perYear": [
     0,
     1,
@@ -6224,69 +6324,29 @@
    "trend": -0.024
   },
   {
-   "key": "soc_movimentos_sociais::Cidadania e Direitos",
-   "subject": "Sociologia",
-   "label": "Cidadania e Direitos (Movimentos Sociais e Cidadania)",
+   "key": "qui_equilibrio::Equilíbrios Iônicos",
+   "subject": "Química",
+   "label": "Equilíbrios Iônicos (Equilíbrio Químico)",
    "perYear": [
     0,
     0,
+    1,
     0,
+    1,
     0,
-    0,
-    2,
     0,
     0
    ],
    "total": 2,
-   "presence": 1,
-   "pAtLeastOne": 0.235,
-   "expected": 0.3,
-   "trend": 0.071
+   "presence": 2,
+   "pAtLeastOne": 0.229,
+   "expected": 0.22,
+   "trend": -0.024
   },
   {
-   "key": "his_primeira_republica_vargas::A Era Vargas",
+   "key": "his_moderna_iluminismo::Reforma Religiosa",
    "subject": "História",
-   "label": "A Era Vargas (Primeira República e Era Vargas)",
-   "perYear": [
-    1,
-    0,
-    0,
-    2,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 3,
-   "presence": 2,
-   "pAtLeastOne": 0.233,
-   "expected": 0.27,
-   "trend": -0.107
-  },
-  {
-   "key": "mat_geometria_analitica::Distância entre um Ponto e uma Reta",
-   "subject": "Matemática",
-   "label": "Distância entre um Ponto e uma Reta (Geometria Analítica)",
-   "perYear": [
-    2,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 3,
-   "presence": 2,
-   "pAtLeastOne": 0.233,
-   "expected": 0.25,
-   "trend": -0.155
-  },
-  {
-   "key": "bio_genetica::Ligação Gênica",
-   "subject": "Biologia",
-   "label": "Ligação Gênica (Genética)",
+   "label": "Reforma Religiosa (Idade Moderna e Iluminismo)",
    "perYear": [
     0,
     0,
@@ -6302,71 +6362,11 @@
    "pAtLeastOne": 0.229,
    "expected": 0.22,
    "trend": -0.024
-  },
-  {
-   "key": "mat_funcoes::Inversão de Funções",
-   "subject": "Matemática",
-   "label": "Inversão de Funções (Funções)",
-   "perYear": [
-    0,
-    0,
-    1,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.229,
-   "expected": 0.22,
-   "trend": -0.024
-  },
-  {
-   "key": "geo_geopolitica_regional::Questão Palestina",
-   "subject": "Geografia",
-   "label": "Questão Palestina (Geopolítica Regional Contemporânea)",
-   "perYear": [
-    1,
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.227,
-   "expected": 0.21,
-   "trend": -0.048
   },
   {
    "key": "geo_globalizacao_economica::Mobilidade Populacional",
    "subject": "Geografia",
    "label": "Mobilidade Populacional (Globalização e Geografia Econômica)",
-   "perYear": [
-    1,
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.227,
-   "expected": 0.21,
-   "trend": -0.048
-  },
-  {
-   "key": "fis_cinematica::Movimento Uniforme",
-   "subject": "Física",
-   "label": "Movimento Uniforme (Cinemática Escalar)",
    "perYear": [
     1,
     0,
@@ -6407,6 +6407,26 @@
    "key": "por_norma_culta::Tipos de Discurso",
    "subject": "Português",
    "label": "Tipos de Discurso (Domínio da Norma Culta)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.227,
+   "expected": 0.21,
+   "trend": 0.083
+  },
+  {
+   "key": "fil_aristoteles::Política Aristotélica: o Homem como Animal Político",
+   "subject": "Filosofia",
+   "label": "Política Aristotélica: o Homem como Animal Político (Aristóteles)",
    "perYear": [
     0,
     0,
@@ -6484,9 +6504,9 @@
    "trend": 0.083
   },
   {
-   "key": "fis_ondas_fundamentos::Conceitos Básicos",
+   "key": "fis_leis_newton::Plano Inclinado",
    "subject": "Física",
-   "label": "Conceitos Básicos (Fundamentos de Ondas e Oscilações)",
+   "label": "Plano Inclinado (Leis de Newton e Dinâmica do Movimento Retilíneo)",
    "perYear": [
     0,
     0,
@@ -6564,6 +6584,26 @@
    "trend": 0.083
   },
   {
+   "key": "fis_cinematica::O Movimento Circular",
+   "subject": "Física",
+   "label": "O Movimento Circular (Cinemática Escalar)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.227,
+   "expected": 0.21,
+   "trend": 0.083
+  },
+  {
    "key": "fis_eletromagnetismo::Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre",
    "subject": "Física",
    "label": "Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre (Eletromagnetismo)",
@@ -6584,9 +6624,69 @@
    "trend": 0.083
   },
   {
-   "key": "por_lit_classica_barroca::Texto Literário x Texto não Literário",
+   "key": "mat_geometria_analitica::Posições Relativas entre Duas Retas",
+   "subject": "Matemática",
+   "label": "Posições Relativas entre Duas Retas (Geometria Analítica)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.227,
+   "expected": 0.21,
+   "trend": 0.083
+  },
+  {
+   "key": "mat_trigonometria::A Trigonometria dos Números Reais",
+   "subject": "Matemática",
+   "label": "A Trigonometria dos Números Reais (Trigonometria)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.227,
+   "expected": 0.21,
+   "trend": 0.083
+  },
+  {
+   "key": "mat_funcoes::Composição de Funções",
+   "subject": "Matemática",
+   "label": "Composição de Funções (Funções)",
+   "perYear": [
+    2,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 4,
+   "presence": 2,
+   "pAtLeastOne": 0.221,
+   "expected": 0.28,
+   "trend": -0.286
+  },
+  {
+   "key": "por_lit_contemporanea::Clarice Lispector",
    "subject": "Português",
-   "label": "Texto Literário x Texto não Literário (Literatura Clássica, Medieval e Barroca)",
+   "label": "Clarice Lispector (Literatura Contemporânea)",
    "perYear": [
     0,
     1,
@@ -6642,26 +6742,6 @@
    "pAtLeastOne": 0.217,
    "expected": 0.24,
    "trend": -0.155
-  },
-  {
-   "key": "bio_botanica::Plantas Terrestres II: Gimnospermas e Angiospermas",
-   "subject": "Biologia",
-   "label": "Plantas Terrestres II: Gimnospermas e Angiospermas (Botânica)",
-   "perYear": [
-    2,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 3,
-   "presence": 2,
-   "pAtLeastOne": 0.217,
-   "expected": 0.23,
-   "trend": -0.179
   },
   {
    "key": "bio_fisio_animal::Coordenação Endócrina I",
@@ -6724,29 +6804,29 @@
    "trend": -0.071
   },
   {
-   "key": "mat_geometria_plana::Razões entre Áreas de Figuras Planas",
-   "subject": "Matemática",
-   "label": "Razões entre Áreas de Figuras Planas (Geometria Plana)",
+   "key": "geo_globalizacao_economica::Geografia das Redes Mundiais",
+   "subject": "Geografia",
+   "label": "Geografia das Redes Mundiais (Globalização e Geografia Econômica)",
    "perYear": [
-    1,
     0,
     0,
     0,
-    1,
+    0,
+    2,
     0,
     0,
     0
    ],
    "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.208,
-   "expected": 0.19,
-   "trend": -0.071
+   "presence": 1,
+   "pAtLeastOne": 0.207,
+   "expected": 0.25,
+   "trend": 0.024
   },
   {
-   "key": "geo_globalizacao_economica::Geografia das Redes Mundiais",
-   "subject": "Geografia",
-   "label": "Geografia das Redes Mundiais (Globalização e Geografia Econômica)",
+   "key": "fis_gravitacao_circular::Analisando Movimentos Contidos em um Plano Vertical",
+   "subject": "Física",
+   "label": "Analisando Movimentos Contidos em um Plano Vertical (Gravitação e Movimento Circular)",
    "perYear": [
     0,
     0,
@@ -7024,26 +7104,6 @@
    "trend": 0.06
   },
   {
-   "key": "fis_estatica::Estática",
-   "subject": "Física",
-   "label": "Estática (Estática dos Corpos Sólidos e dos Fluidos)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.199,
-   "expected": 0.18,
-   "trend": 0.06
-  },
-  {
    "key": "fis_ondulatoria::Ondulatória: Som e suas Propriedades",
    "subject": "Física",
    "label": "Ondulatória: Som e suas Propriedades (Ondulatória)",
@@ -7122,66 +7182,6 @@
    "pAtLeastOne": 0.199,
    "expected": 0.18,
    "trend": 0.06
-  },
-  {
-   "key": "mat_geometria_espacial::Cubos e Paralelepípedos",
-   "subject": "Matemática",
-   "label": "Cubos e Paralelepípedos (Geometria Espacial)",
-   "perYear": [
-    0,
-    0,
-    3,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 3,
-   "presence": 1,
-   "pAtLeastOne": 0.198,
-   "expected": 0.27,
-   "trend": -0.107
-  },
-  {
-   "key": "qui_organica_fundamentos::Combustíveis Fósseis",
-   "subject": "Química",
-   "label": "Combustíveis Fósseis (Fundamentos e Nomenclatura Orgânica)",
-   "perYear": [
-    2,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 3,
-   "presence": 2,
-   "pAtLeastOne": 0.191,
-   "expected": 0.2,
-   "trend": -0.226
-  },
-  {
-   "key": "his_primeira_republica_vargas::Ascensão e Domínio das Oligarquias",
-   "subject": "História",
-   "label": "Ascensão e Domínio das Oligarquias (Primeira República e Era Vargas)",
-   "perYear": [
-    1,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.191,
-   "expected": 0.17,
-   "trend": -0.095
   },
   {
    "key": "mat_trigonometria::A Relação Fundamental da Trigonometria",
@@ -7324,29 +7324,29 @@
    "trend": -0.119
   },
   {
-   "key": "mat_geometria_plana::Identificação de Simetrias I",
-   "subject": "Matemática",
-   "label": "Identificação de Simetrias I (Geometria Plana)",
+   "key": "soc_movimentos_sociais::Cidadania e Direitos",
+   "subject": "Sociologia",
+   "label": "Cidadania e Direitos (Movimentos Sociais e Cidadania)",
    "perYear": [
-    1,
+    0,
+    0,
+    0,
+    0,
     0,
     1,
-    0,
-    0,
-    0,
     0,
     0
    ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.177,
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.175,
    "expected": 0.15,
-   "trend": -0.119
+   "trend": 0.036
   },
   {
-   "key": "por_lit_classica_barroca::A Estética Neoclássica",
+   "key": "por_lit_contemporanea::Prosa Brasileira: 1960-1980",
    "subject": "Português",
-   "label": "A Estética Neoclássica (Literatura Clássica, Medieval e Barroca)",
+   "label": "Prosa Brasileira: 1960-1980 (Literatura Contemporânea)",
    "perYear": [
     0,
     0,
@@ -7384,6 +7384,26 @@
    "trend": 0.036
   },
   {
+   "key": "por_lit_contemporanea::Poesia Brasileira Contemporânea",
+   "subject": "Português",
+   "label": "Poesia Brasileira Contemporânea (Literatura Contemporânea)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.175,
+   "expected": 0.15,
+   "trend": 0.036
+  },
+  {
    "key": "geo_globalizacao_economica::Blocos Econômicos",
    "subject": "Geografia",
    "label": "Blocos Econômicos (Globalização e Geografia Econômica)",
@@ -7404,9 +7424,9 @@
    "trend": 0.036
   },
   {
-   "key": "soc_marx_sociologia::A Luta de Classes na Análise Sociológica",
-   "subject": "Sociologia",
-   "label": "A Luta de Classes na Análise Sociológica (Karl Marx e a Sociologia)",
+   "key": "his_idade_media::A Primeira Globalização",
+   "subject": "História",
+   "label": "A Primeira Globalização (Idade Média)",
    "perYear": [
     0,
     0,
@@ -7424,9 +7444,29 @@
    "trend": 0.036
   },
   {
-   "key": "his_idade_media::A Primeira Globalização",
-   "subject": "História",
-   "label": "A Primeira Globalização (Idade Média)",
+   "key": "fil_niilismo_existencialismo::O Existencialismo de Sartre",
+   "subject": "Filosofia",
+   "label": "O Existencialismo de Sartre (Nietzsche, Existencialismo e Filosofia Contemporânea)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.175,
+   "expected": 0.15,
+   "trend": 0.036
+  },
+  {
+   "key": "soc_movimentos_sociais::Democracia e Participação Política",
+   "subject": "Sociologia",
+   "label": "Democracia e Participação Política (Movimentos Sociais e Cidadania)",
    "perYear": [
     0,
     0,
@@ -7544,9 +7584,9 @@
    "trend": 0.036
   },
   {
-   "key": "fis_cinematica_vetorial::Velocidade Vetorial",
-   "subject": "Física",
-   "label": "Velocidade Vetorial (Cinemática Vetorial)",
+   "key": "qui_polaridade_geometria::Polaridade das Ligações e das Moléculas",
+   "subject": "Química",
+   "label": "Polaridade das Ligações e das Moléculas (Polaridade das Ligações e Geometria Molecular)",
    "perYear": [
     0,
     0,
@@ -7624,26 +7664,6 @@
    "trend": 0.036
   },
   {
-   "key": "fis_termodinamica_gases::Máquinas Térmicas e Ciclo de Carnot",
-   "subject": "Física",
-   "label": "Máquinas Térmicas e Ciclo de Carnot (Termodinâmica dos Gases)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.175,
-   "expected": 0.15,
-   "trend": 0.036
-  },
-  {
    "key": "qui_solucoes::Efeitos Coligativos",
    "subject": "Química",
    "label": "Efeitos Coligativos (Soluções)",
@@ -7684,9 +7704,49 @@
    "trend": 0.036
   },
   {
-   "key": "mat_geometria_analitica::A Geometria dos Números Complexos",
+   "key": "fis_leis_newton::Sistema de Corpos Interagindo e os Elementos Transmissores de Força",
+   "subject": "Física",
+   "label": "Sistema de Corpos Interagindo e os Elementos Transmissores de Força (Leis de Newton e Dinâmica do Movimento Retilíneo)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.175,
+   "expected": 0.15,
+   "trend": 0.036
+  },
+  {
+   "key": "qui_organica_fundamentos::Isomeria",
+   "subject": "Química",
+   "label": "Isomeria (Fundamentos e Nomenclatura Orgânica)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.175,
+   "expected": 0.15,
+   "trend": 0.036
+  },
+  {
+   "key": "mat_geometria_plana::Ângulos e Circunferências",
    "subject": "Matemática",
-   "label": "A Geometria dos Números Complexos (Geometria Analítica)",
+   "label": "Ângulos e Circunferências (Geometria Plana)",
    "perYear": [
     0,
     0,
@@ -7744,6 +7804,26 @@
    "trend": -0.143
   },
   {
+   "key": "geo_geopolitica_regional::Geopolítica e Geoeconomia da América Latina",
+   "subject": "Geografia",
+   "label": "Geopolítica e Geoeconomia da América Latina (Geopolítica Regional Contemporânea)",
+   "perYear": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.165,
+   "expected": 0.14,
+   "trend": -0.143
+  },
+  {
    "key": "fis_energia::Trabalho e Energia: o Teorema da Energia Potencial",
    "subject": "Física",
    "label": "Trabalho e Energia: o Teorema da Energia Potencial (Dinâmica Energética e Transformações de Energia)",
@@ -7767,26 +7847,6 @@
    "key": "bio_estrutura_fisio_celular::Citoplasma: Estrutura e Componentes I",
    "subject": "Biologia",
    "label": "Citoplasma: Estrutura e Componentes I (Estrutura e Fisiologia Celular)",
-   "perYear": [
-    1,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.165,
-   "expected": 0.14,
-   "trend": -0.143
-  },
-  {
-   "key": "mat_teoria_numeros::Introdução à Teoria dos Números Inteiros",
-   "subject": "Matemática",
-   "label": "Introdução à Teoria dos Números Inteiros (Teoria dos Números Inteiros)",
    "perYear": [
     1,
     1,
@@ -7864,9 +7924,9 @@
    "trend": 0.012
   },
   {
-   "key": "por_lit_contemporanea::Prosa Brasileira: 1960-1980",
+   "key": "por_lit_romantismo_realismo::Naturalismo",
    "subject": "Português",
-   "label": "Prosa Brasileira: 1960-1980 (Literatura Contemporânea)",
+   "label": "Naturalismo (Romantismo e Realismo)",
    "perYear": [
     0,
     0,
@@ -7887,6 +7947,26 @@
    "key": "por_norma_culta::Artigo, Numeral e Adjetivo no Sintagma Nominal",
    "subject": "Português",
    "label": "Artigo, Numeral e Adjetivo no Sintagma Nominal (Domínio da Norma Culta)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.155,
+   "expected": 0.13,
+   "trend": 0.012
+  },
+  {
+   "key": "por_lit_romantismo_realismo::A Estética Romântica: Prosa",
+   "subject": "Português",
+   "label": "A Estética Romântica: Prosa (Romantismo e Realismo)",
    "perYear": [
     0,
     0,
@@ -7944,9 +8024,9 @@
    "trend": 0.012
   },
   {
-   "key": "fil_socrates_platao::O Mito da Caverna",
-   "subject": "Filosofia",
-   "label": "O Mito da Caverna (Sócrates e Platão)",
+   "key": "his_brasil_imperio::Brasil Império: o Declínio do Segundo Reinado",
+   "subject": "História",
+   "label": "Brasil Império: o Declínio do Segundo Reinado (Brasil Império)",
    "perYear": [
     0,
     0,
@@ -8064,46 +8144,6 @@
    "trend": 0.012
   },
   {
-   "key": "qui_organica_fundamentos::Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
-   "subject": "Química",
-   "label": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados (Fundamentos e Nomenclatura Orgânica)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.155,
-   "expected": 0.13,
-   "trend": 0.012
-  },
-  {
-   "key": "qui_gases::Estudo dos Gases II",
-   "subject": "Química",
-   "label": "Estudo dos Gases II (Gases)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.155,
-   "expected": 0.13,
-   "trend": 0.012
-  },
-  {
    "key": "qui_equilibrio::Equilíbrios Químicos I",
    "subject": "Química",
    "label": "Equilíbrios Químicos I (Equilíbrio Químico)",
@@ -8184,86 +8224,6 @@
    "trend": 0.012
   },
   {
-   "key": "fis_gravitacao_circular::Analisando Movimentos Contidos em um Plano Vertical",
-   "subject": "Física",
-   "label": "Analisando Movimentos Contidos em um Plano Vertical (Gravitação e Movimento Circular)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.155,
-   "expected": 0.13,
-   "trend": 0.012
-  },
-  {
-   "key": "mat_sequencias_matrizes::Multiplicação de Matrizes",
-   "subject": "Matemática",
-   "label": "Multiplicação de Matrizes (Sequências, Matrizes e Sistemas Lineares)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.155,
-   "expected": 0.13,
-   "trend": 0.012
-  },
-  {
-   "key": "mat_equacoes::Desigualdades",
-   "subject": "Matemática",
-   "label": "Desigualdades (Equações, Desigualdades e Modelagem Algébrica)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.155,
-   "expected": 0.13,
-   "trend": 0.012
-  },
-  {
-   "key": "mat_sequencias_matrizes::Discussão de Sistemas Lineares",
-   "subject": "Matemática",
-   "label": "Discussão de Sistemas Lineares (Sequências, Matrizes e Sistemas Lineares)",
-   "perYear": [
-    0,
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.155,
-   "expected": 0.13,
-   "trend": 0.012
-  },
-  {
    "key": "bio_ecologia::Dinâmica de Populações",
    "subject": "Biologia",
    "label": "Dinâmica de Populações (Ecologia)",
@@ -8304,69 +8264,9 @@
    "trend": -0.119
   },
   {
-   "key": "qui_estequiometria::Cálculos Estequiométricos",
-   "subject": "Química",
-   "label": "Cálculos Estequiométricos (Análises Quantitativas e Estequiometria)",
-   "perYear": [
-    0,
-    2,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 2,
-   "presence": 1,
-   "pAtLeastOne": 0.144,
-   "expected": 0.15,
-   "trend": -0.119
-  },
-  {
-   "key": "por_norma_culta::O Léxico em Contexto: Variadas Possibilidades Semânticas",
-   "subject": "Português",
-   "label": "O Léxico em Contexto: Variadas Possibilidades Semânticas (Domínio da Norma Culta)",
-   "perYear": [
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.138,
-   "expected": 0.11,
-   "trend": -0.012
-  },
-  {
    "key": "por_norma_culta::Verbo",
    "subject": "Português",
    "label": "Verbo (Domínio da Norma Culta)",
-   "perYear": [
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.138,
-   "expected": 0.11,
-   "trend": -0.012
-  },
-  {
-   "key": "por_lit_contemporanea::Artes Plásticas Brasileiras",
-   "subject": "Português",
-   "label": "Artes Plásticas Brasileiras (Literatura Contemporânea)",
    "perYear": [
     0,
     0,
@@ -8524,26 +8424,6 @@
    "trend": -0.012
   },
   {
-   "key": "fis_circuitos::Circuitos de Malha Única",
-   "subject": "Física",
-   "label": "Circuitos de Malha Única (Circuitos Elétricos)",
-   "perYear": [
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.138,
-   "expected": 0.11,
-   "trend": -0.012
-  },
-  {
    "key": "qui_organica_reacoes::Álcoois",
    "subject": "Química",
    "label": "Álcoois (Reações e Aplicações Orgânicas)",
@@ -8664,26 +8544,6 @@
    "trend": -0.012
   },
   {
-   "key": "mat_geometria_plana::Simetrias e Congruências",
-   "subject": "Matemática",
-   "label": "Simetrias e Congruências (Geometria Plana)",
-   "perYear": [
-    0,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.138,
-   "expected": 0.11,
-   "trend": -0.012
-  },
-  {
    "key": "mat_equacoes::Igualdades",
    "subject": "Matemática",
    "label": "Igualdades (Equações, Desigualdades e Modelagem Algébrica)",
@@ -8707,6 +8567,26 @@
    "key": "por_lit_classica_barroca::Brasil: Primeiros Registros",
    "subject": "Português",
    "label": "Brasil: Primeiros Registros (Literatura Clássica, Medieval e Barroca)",
+   "perYear": [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 2,
+   "presence": 1,
+   "pAtLeastOne": 0.129,
+   "expected": 0.13,
+   "trend": -0.167
+  },
+  {
+   "key": "mat_geometria_analitica::Distância entre um Ponto e uma Reta",
+   "subject": "Matemática",
+   "label": "Distância entre um Ponto e uma Reta (Geometria Analítica)",
    "perYear": [
     2,
     0,
@@ -8804,26 +8684,6 @@
    "trend": -0.036
   },
   {
-   "key": "por_lit_modernismo::Pré-Modernismo",
-   "subject": "Português",
-   "label": "Pré-Modernismo (Simbolismo, Pré-Modernismo e Modernismo)",
-   "perYear": [
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.123,
-   "expected": 0.09,
-   "trend": -0.036
-  },
-  {
    "key": "soc_formacao_ciencia::O Contexto Histórico do Surgimento da Sociologia",
    "subject": "Sociologia",
    "label": "O Contexto Histórico do Surgimento da Sociologia (A Formação da Sociologia como Ciência)",
@@ -8864,26 +8724,6 @@
    "trend": -0.036
   },
   {
-   "key": "his_moderna_iluminismo::Reforma Religiosa",
-   "subject": "História",
-   "label": "Reforma Religiosa (Idade Moderna e Iluminismo)",
-   "perYear": [
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.123,
-   "expected": 0.09,
-   "trend": -0.036
-  },
-  {
    "key": "soc_weber::Tipos de Ação Social",
    "subject": "Sociologia",
    "label": "Tipos de Ação Social (Max Weber e a Ação Social)",
@@ -8907,26 +8747,6 @@
    "key": "geo_fisica_brasil::Biogeografia do Brasil I",
    "subject": "Geografia",
    "label": "Biogeografia do Brasil I (Geografia Física do Brasil)",
-   "perYear": [
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.123,
-   "expected": 0.09,
-   "trend": -0.036
-  },
-  {
-   "key": "his_brasil_colonia::A Crise do Antigo Sistema Colonial",
-   "subject": "História",
-   "label": "A Crise do Antigo Sistema Colonial (Brasil Colônia)",
    "perYear": [
     0,
     0,
@@ -9027,6 +8847,26 @@
    "key": "fis_ondulatoria::Ondas Estacionárias em Tubos",
    "subject": "Física",
    "label": "Ondas Estacionárias em Tubos (Ondulatória)",
+   "perYear": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.123,
+   "expected": 0.09,
+   "trend": -0.036
+  },
+  {
+   "key": "bio_genetica::Ligação Gênica",
+   "subject": "Biologia",
+   "label": "Ligação Gênica (Genética)",
    "perYear": [
     0,
     0,
@@ -9164,6 +9004,26 @@
    "trend": -0.036
   },
   {
+   "key": "mat_funcoes::Inversão de Funções",
+   "subject": "Matemática",
+   "label": "Inversão de Funções (Funções)",
+   "perYear": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.123,
+   "expected": 0.09,
+   "trend": -0.036
+  },
+  {
    "key": "mat_geometria_analitica::Lugar Geométrico e Equação da Circunferência",
    "subject": "Matemática",
    "label": "Lugar Geométrico e Equação da Circunferência (Geometria Analítica)",
@@ -9182,6 +9042,26 @@
    "pAtLeastOne": 0.123,
    "expected": 0.09,
    "trend": -0.036
+  },
+  {
+   "key": "por_lit_classica_barroca::Texto Literário x Texto não Literário",
+   "subject": "Português",
+   "label": "Texto Literário x Texto não Literário (Literatura Clássica, Medieval e Barroca)",
+   "perYear": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.111,
+   "expected": 0.07,
+   "trend": -0.06
   },
   {
    "key": "por_norma_culta::Pronomes",
@@ -9224,29 +9104,9 @@
    "trend": -0.06
   },
   {
-   "key": "por_lit_contemporanea::Clarice Lispector",
-   "subject": "Português",
-   "label": "Clarice Lispector (Literatura Contemporânea)",
-   "perYear": [
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.111,
-   "expected": 0.07,
-   "trend": -0.06
-  },
-  {
-   "key": "por_lit_modernismo::Segunda Geração Modernista: Prosa",
-   "subject": "Português",
-   "label": "Segunda Geração Modernista: Prosa (Simbolismo, Pré-Modernismo e Modernismo)",
+   "key": "geo_globalizacao_economica::Desigualdades Globais",
+   "subject": "Geografia",
+   "label": "Desigualdades Globais (Globalização e Geografia Econômica)",
    "perYear": [
     0,
     1,
@@ -9664,6 +9524,26 @@
    "trend": -0.083
   },
   {
+   "key": "geo_geopolitica_regional::Questão Palestina",
+   "subject": "Geografia",
+   "label": "Questão Palestina (Geopolítica Regional Contemporânea)",
+   "perYear": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.1,
+   "expected": 0.06,
+   "trend": -0.083
+  },
+  {
    "key": "geo_populacao_urbana_brasil::Estrutura Ativa da População",
    "subject": "Geografia",
    "label": "Estrutura Ativa da População (Geografia da População e Urbana do Brasil)",
@@ -9804,9 +9684,49 @@
    "trend": -0.083
   },
   {
+   "key": "mat_geometria_analitica::Introdução à Geometria Analítica",
+   "subject": "Matemática",
+   "label": "Introdução à Geometria Analítica (Geometria Analítica)",
+   "perYear": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.1,
+   "expected": 0.06,
+   "trend": -0.083
+  },
+  {
    "key": "mat_trigonometria::Outras Razões Trigonométricas",
    "subject": "Matemática",
    "label": "Outras Razões Trigonométricas (Trigonometria)",
+   "perYear": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.1,
+   "expected": 0.06,
+   "trend": -0.083
+  },
+  {
+   "key": "mat_geometria_plana::Razões entre Áreas de Figuras Planas",
+   "subject": "Matemática",
+   "label": "Razões entre Áreas de Figuras Planas (Geometria Plana)",
    "perYear": [
     1,
     0,
