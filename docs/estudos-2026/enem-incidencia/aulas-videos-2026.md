@@ -48,3 +48,51 @@ A live promete marcar a resposta sem saber a matéria, com regras que diz vir de
 Nenhuma regra supera o chute em nenhuma área: Linguagens 20,9%, Humanas 20,0%, Natureza 19,8%. Na prova real, essas regras equivalem a marcar ao acaso. O que funciona são os vícios de alternativa da seção 11 do guia de padrões, que dependem de ler o texto.
 
 O teste é reprodutível: a regra usa só o texto das alternativas e do enunciado do banco, e o gabarito entra apenas na conferência.
+
+## Vídeo 4 — `80zqb5.mp4` (2h37min): apostas de Ecologia
+
+Aula da equipe do Edcley inteira de Ecologia, com mais de 20 questões. Os temas:
+- relações ecológicas pelo sinal de cada espécie (+/+, +/0, −/−), incluindo a armadilha de confundir amensalismo e alelopatia com competição;
+- corais e algas simbiontes, com o branqueamento;
+- ciclo do carbono e balanço dos biocombustíveis;
+- sobreposição de nicho e exclusão competitiva;
+- polinização;
+- isótopos de carbono e nitrogênio como pista da dieta;
+- sucessão ecológica e espécies pioneiras, inclusive em concreto urbano;
+- pirâmide de energia (só cerca de 10% passa ao nível seguinte);
+- ciclo do nitrogênio com leguminosas e fixação;
+- habitat versus nicho;
+- endemismo;
+- direção das setas na cadeia alimentar (a seta aponta para quem come).
+
+## Vídeo 5 — `8y59qy.mp4` (47min): apostas de ambiente e saúde
+
+Temas:
+- biomagnificação do mercúrio (Minamata);
+- eutrofização passo a passo;
+- desmatamento e novas doenças, com hospedeiros silvestres como reservatórios;
+- material particulado das queimadas e doenças respiratórias;
+- neonicotinoides e o declínio das abelhas;
+- fragmentação e corredores ecológicos;
+- floresta como sumidouro de carbono com o aquecimento;
+- quatro fenômenos atmosféricos que o ENEM mistura: camada de ozônio e CFC, efeito estufa, inversão térmica e chuva ácida.
+
+## Conferência dos vídeos 4 e 5 com as provas
+
+Ecologia é o assunto de Biologia com maior chance (95%, nas 8 provas). Frequência no enunciado das 1.440 questões de 2018–2025:
+
+| Tema das aulas | Questões | Provas |
+|---|---|---|
+| Polinizadores, abelhas e agrotóxicos | 16 | 7/8 |
+| Relações ecológicas | 10 | 7/8 |
+| Ciclo do nitrogênio e leguminosas | 10 | 6/8 |
+| Queimadas, fumaça e saúde | 9 | 5/8 |
+| Fragmentação e corredores | 7 | 4/8 |
+| Sucessão ecológica e pioneiras | 7 | 5/8 |
+| Cadeia alimentar e fluxo de energia | 5 | 4/8 |
+| Bioacumulação e mercúrio | 3 | 3/8 |
+| Desmatamento e zoonoses | 3 | 2/8 |
+| Ciclo do carbono e sumidouro | 1 | 1/8 |
+| Camada de ozônio e CFC | 1 | 1/8 |
+
+**Leitura:** as duas aulas acertam o foco. Polinizadores e agrotóxicos, relações ecológicas e ciclo do nitrogênio caíram em 6 ou 7 das 8 provas. A camada de ozônio, tratada como "o ENEM adora", apareceu uma vez no período: revise só o suficiente para não confundir com o efeito estufa.
