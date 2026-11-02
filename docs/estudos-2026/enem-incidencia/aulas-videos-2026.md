@@ -107,3 +107,32 @@ Aula longa da monitoria, com mais de 60 questões autorais e trechos de pré-tes
 - **Linguagens e Artes:** impressionismo e surrealismo; Machado de Assis e a ironia; O Cortiço (Aluísio Azevedo); Carolina Maria de Jesus; Parintins e o boi-bumbá; funções da linguagem; texto em inglês; valores olímpicos.
 
 **Conferência com o histórico:** a aula cobre bem os assuntos de Humanas com maior chance (Idade Moderna e Iluminismo, 92%; Primeira República e Vargas, 89%; Brasil Império, 91%; globalização, 94%; cultura e identidade, 83%) e a filosofia contemporânea (86%). O contratualismo (Locke e Rousseau), com só 40% de chance histórica, aparece aqui e nos vídeos 2 e 3. Vale uma revisão curta pelo tema da propriedade e do contrato social, sem prioridade sobre os assuntos acima de 85%.
+
+## Vídeo 7 — `videoplayback-1.mp4` (6h53min): monitoria de Natureza e Matemática
+
+A maior aula do lote, com cerca de 80 questões do dia 2:
+
+- **Biologia:** genética mendeliana e dominância; seleção natural e convergência evolutiva (membranas interdigitais em grupos distantes); fotossíntese, respiração e cadeia transportadora de elétrons; fermentação na falta de oxigênio; vacinas e anticorpos; DNA mitocondrial na reprodução assistida; transcrição sem tradução; sistema renina-angiotensina-aldosterona; alvéolos; LH e testosterona; hormônios da gravidez e ácido fólico; toxoplasmose e malária; hormônios vegetais (auxina e dominância apical, ácido abscísico); mutualismo; biomagnificação; saneamento e epidemiologia.
+- **Química:** surfactantes e micelas no petróleo; estequiometria (barrilha); lei de Beer (absorbância e concentração); isomeria; catalisador automotivo; conservantes; Le Chatelier e pH; combustão.
+- **Física:** circuitos em série a 220 V e pilhas em série; colisões; dilatação e comportamento anômalo da água; empuxo; ressonância; reflexão na elipse; raio X em filme; condensação; velocidade média.
+- **Matemática:** probabilidade e valor esperado (sorteio, torneio, descontos); função quadrática e parábola; progressão aritmética; estatística por faixa etária; ângulos de polígonos e radianos; áreas e volumes; proporção entre custo e área; estimativa por escala.
+
+**Conferência com o histórico:** é a aula que mais se aproxima da distribuição real do dia 2, com probabilidade (95%), funções (95%), geometria (95%), fisiologia humana (94%), circuitos (92%) e estequiometria (89%) no centro. Hormônios vegetais (fisiologia vegetal, 51%) e ressonância ficam abaixo de 60%: são revisão secundária.
+
+## Vídeo 8 — `qb4uj8.mp4` (1h08min): estratégias de Matemática
+
+Live curta da equipe do Edcley, só com estratégias de resolução. Diferente das "regras" dos vídeos 2 e 3, estas dependem do conteúdo e se confirmam:
+
+1. **Mistura e evaporação: trabalhe com o que fica fixo.** Ao acrescentar xarope ou evaporar água, o componente que não muda é a âncora da conta. Se a água cai de 99,95% para 99,90%, a fração de sólido dobra (0,05% → 0,10%), então a massa total cai pela metade. É a pegadinha clássica: achar que quase nada mudou porque as porcentagens são parecidas. Reforça o padrão 4 do guia ("por cento de quê?").
+2. **Quadrática: x do vértice ou y do vértice?** "Qual valor de x maximiza" pede −b/2a; "qual a área máxima" pede o valor da função nesse x. Errar qual dos dois é pedido é o erro mais comum.
+3. **Soma constante, produto máximo na metade.** Se dois fatores somam um valor fixo, o produto é máximo quando são iguais (65 × 65 para soma 130). Resolve sem montar a parábola.
+4. **Logaritmo quase sempre se reduz ao log que a questão deu.** Se só aparece log 3, o número dentro do log é potência de 3 (81 = 3⁴, então log 81 = 4 log 3). E atenção ao período: a função de arrecadação era mensal, então o trimestre é três vezes o mês, e não a função aplicada a 240.
+5. **pH a partir de [OH⁻]:** calcule o pOH e use pH = 14 − pOH.
+6. **Volume desgastado:** a diferença entre o volume antes e depois, com a base constante (cilindro mais cone do lápis).
+
+## Síntese dos 8 vídeos
+
+- **Assuntos:** as aulas de apostas e monitoria se concentram nos mesmos assuntos que o histórico aponta como mais prováveis: ecologia, fisiologia, circuitos, estequiometria, porcentagem e proporção, probabilidade, funções, geometria e Humanas acima de 85%. Os poucos temas fora disso (contrato social, camada de ozônio, hormônios vegetais, ressonância) ficam como revisão curta.
+- **Sinais que se repetem em várias aulas e nas apostas:** movimento circular e satélites, decibel e escala logarítmica, ondas eletromagnéticas (infravermelho e Bluetooth) e epigenética.
+- **O que descartar:** as regras de "acertar sem saber o conteúdo" dos vídeos 2 e 3, que nas questões reais acertam o mesmo que o chute (cerca de 20%).
+- **O que aproveitar além do conteúdo:** reler o negrito antes de marcar (vídeo 1), escala ao quadrado ou ao cubo (vídeo 1), trabalhar com o que fica fixo (vídeo 8) e distinguir x e y do vértice (vídeo 8).
