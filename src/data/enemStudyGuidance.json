@@ -1,0 +1,274 @@
+{
+  "reviewedOn": "2026-11-02",
+  "entries": [
+    {
+      "id": "EG1",
+      "title": "Vídeo 1 — `videoplayback (1).mp4` (2h42min)",
+      "subjects": [
+        "Matemática",
+        "Biologia",
+        "Física",
+        "Química"
+      ],
+      "content": "Aula ao vivo da equipe de monitoria do Edcley, na véspera de uma prova, com o título \"questões com probabilidade de estarem presentes\". São cerca de 40 questões autorais resolvidas na hora.\n\n| Área | Assuntos resolvidos | Bate com o histórico (2018–2025)? |\n|---|---|---|\n| Biologia | ambiente controlando a expressão do gene (coelho himalaia); entrada do vírus por encaixe proteína–receptor; xilema e floema nas pteridófitas; tubo polínico e independência da água; gráfico de crescimento de duas espécies com e sem interação; bactéria transgênica produzindo hormônio do crescimento; epigenética por metilação do DNA; seleção estabilizadora; raio X danificando o DNA | Sim. Ecologia (95%), fisiologia (94%), genética (72%) e biotecnologia; epigenética repete a aposta Q58 |\n| Química | esterificação (ácido + álcool → éster); energia da combustão do gás de cozinha por massa; extração e filtração sob pressão (cápsula de café); isomeria de função aldeído/cetona (glicose-6P e frutose-6P); proporção de massas na redução do óxido de ferro; gases com temperatura em kelvin; filtro de carvão (adsorção) | Sim. Estequiometria (89%), orgânica (79%) e separação de misturas |\n| Física | calor como energia em trânsito, não como propriedade do corpo; circuito com pilhas em série e resistor em paralelo com a lâmpada; impulso e quantidade de movimento; MCU (v = 2πfR) em bomba de roda e em engrenagens de relógio; infravermelho invisível ao olho e visível na câmera do celular; dilatação térmica em sensor; nível sonoro em decibéis; termodinâmica dos gases | Circuitos (92%) e calorimetria (88%) sim; MCU, decibel e ondas eletromagnéticas são os sinais que o histórico subestima, como nas apostas |\n| Matemática | escala aplicada à área (escala ao quadrado); Pitágoras dentro do cubo; notação científica e valor posicional; função quadrática na forma fatorada (vértice entre as raízes); tangente para altura de morro; contagem com visualização em malha 3×3; arestas na planificação de prisma; problema de moedas com solução inteira; vazão; porcentagem e matemática financeira; aproximação de π | Sim. Aritmética e proporção, geometria plana e espacial, funções e trigonometria, todos ≥ 78% |\n\n### O que o vídeo acrescenta\n\n1. **Ler a restrição escrita em negrito.** Na questão do circuito, o professor errou na primeira leitura e se corrigiu ao reler \"sem reduzir a tensão que chega à lâmpada\", que obriga a ligação em paralelo. É o padrão 8 do guia de padrões aplicado à Física: a palavra que restringe decide a alternativa.\n2. **Escala ao quadrado ou ao cubo.** Confirma o padrão 2 do guia: a armadilha está em aplicar a escala linear direto na área.\n3. **Pergunta com formulação incomum** (\"massa efetivamente afetada pelo impacto\"). O caminho foi voltar à definição: impulso = variação da quantidade de movimento, e então descobrir a massa que, a 90 km/h, teria esse impulso. Diante de uma formulação estranha, reescreva o que se pede com as grandezas que você conhece.\n4. **Duas questões do material estavam com o enunciado quebrado** (ângulo não indicado na figura e letras trocadas no cubo), o que o próprio professor aponta. Questão autoral de apostila não passou pelo pré-teste; não se desanime ao travar numa delas.",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/aulas-videos-2026.md",
+      "sourceSha256": "d77616aa695875849288710c67a7e4527f61d3a2cbb8e9c1e0f89a68a9b4c749"
+    },
+    {
+      "id": "EG2",
+      "title": "Vídeos 2 e 3 — `t9oopz.mp4` (1h41min) e `jzoezj.mp4` (2h20min)",
+      "subjects": [
+        "Português",
+        "Literatura",
+        "História",
+        "Geografia",
+        "Filosofia",
+        "Sociologia",
+        "Inglês",
+        "Arte"
+      ],
+      "content": "São duas gravações da mesma live do Edcley Teixeira; a segunda repete a primeira com mais questões. Boa parte do tempo é venda do curso. O conteúdo resolvido é de Linguagens e Humanas:\n- valores olímpicos e doping;\n- resistência bacteriana a antibióticos (seleção de variantes que já existiam, e não mutação dirigida);\n- poema contemporâneo que parodia o formalismo parnasiano;\n- ironia;\n- vanguarda futurista;\n- carta de Pero Vaz de Caminha;\n- tabelamento de preços e vigilância (Foucault, panóptico);\n- Rousseau e a origem da desigualdade;\n- espectro eletromagnético (infravermelho visto pela câmera do celular).\n\nEsses assuntos batem com o histórico: Entendimento de Texto (96%), Idade Moderna e Iluminismo (92%), evolução e ondulatória.\n\n### As \"regras para acertar sem saber o conteúdo\", testadas\n\nA live promete marcar a resposta sem saber a matéria, com regras que diz vir de um viés das questões no pré-teste. Apliquei cada regra às questões reais do ENEM 2018–2025 do banco do app, sem olhar o gabarito, e medi o acerto. Com cinco alternativas, o chute puro acerta 20%.\n\n| Regra da live | Questões testadas | Acerto |\n|---|---|---|\n| Marcar a alternativa cujas palavras e sinônimos mais se repetem nas outras alternativas | 900 | 20,1% |\n| Marcar a alternativa que mais repete palavras do comando | 1.351 | 19,3% |\n| Marcar a alternativa com \"mais\" ou \"porém\" (o \"argumento mais forte da sentença\") | 50 | 18,2% |\n\nNenhuma regra supera o chute em nenhuma área: Linguagens 20,9%, Humanas 20,0%, Natureza 19,8%. Na prova real, essas regras equivalem a marcar ao acaso. O que funciona são os vícios de alternativa da seção 11 do guia de padrões, que dependem de ler o texto.\n\nO teste é reprodutível: a regra usa só o texto das alternativas e do enunciado do banco, e o gabarito entra apenas na conferência.",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/aulas-videos-2026.md",
+      "sourceSha256": "d77616aa695875849288710c67a7e4527f61d3a2cbb8e9c1e0f89a68a9b4c749"
+    },
+    {
+      "id": "EG3",
+      "title": "Vídeo 4 — `80zqb5.mp4` (2h37min): apostas de Ecologia",
+      "subjects": [
+        "Biologia"
+      ],
+      "content": "Aula da equipe do Edcley inteira de Ecologia, com mais de 20 questões. Os temas:\n- relações ecológicas pelo sinal de cada espécie (+/+, +/0, −/−), incluindo a armadilha de confundir amensalismo e alelopatia com competição;\n- corais e algas simbiontes, com o branqueamento;\n- ciclo do carbono e balanço dos biocombustíveis;\n- sobreposição de nicho e exclusão competitiva;\n- polinização;\n- isótopos de carbono e nitrogênio como pista da dieta;\n- sucessão ecológica e espécies pioneiras, inclusive em concreto urbano;\n- pirâmide de energia (só cerca de 10% passa ao nível seguinte);\n- ciclo do nitrogênio com leguminosas e fixação;\n- habitat versus nicho;\n- endemismo;\n- direção das setas na cadeia alimentar (a seta aponta para quem come).",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/aulas-videos-2026.md",
+      "sourceSha256": "d77616aa695875849288710c67a7e4527f61d3a2cbb8e9c1e0f89a68a9b4c749"
+    },
+    {
+      "id": "EG4",
+      "title": "Vídeo 5 — `8y59qy.mp4` (47min): apostas de ambiente e saúde",
+      "subjects": [
+        "Biologia",
+        "Química",
+        "Geografia"
+      ],
+      "content": "Temas:\n- biomagnificação do mercúrio (Minamata);\n- eutrofização passo a passo;\n- desmatamento e novas doenças, com hospedeiros silvestres como reservatórios;\n- material particulado das queimadas e doenças respiratórias;\n- neonicotinoides e o declínio das abelhas;\n- fragmentação e corredores ecológicos;\n- floresta como sumidouro de carbono com o aquecimento;\n- quatro fenômenos atmosféricos que o ENEM mistura: camada de ozônio e CFC, efeito estufa, inversão térmica e chuva ácida.",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/aulas-videos-2026.md",
+      "sourceSha256": "d77616aa695875849288710c67a7e4527f61d3a2cbb8e9c1e0f89a68a9b4c749"
+    },
+    {
+      "id": "EG5",
+      "title": "Conferência dos vídeos 4 e 5 com as provas",
+      "subjects": [
+        "Biologia",
+        "Química",
+        "Geografia"
+      ],
+      "content": "Ecologia é o assunto de Biologia com maior chance (95%, nas 8 provas). Frequência no enunciado das 1.440 questões de 2018–2025:\n\n| Tema das aulas | Questões | Provas |\n|---|---|---|\n| Polinizadores, abelhas e agrotóxicos | 16 | 7/8 |\n| Relações ecológicas | 10 | 7/8 |\n| Ciclo do nitrogênio e leguminosas | 10 | 6/8 |\n| Queimadas, fumaça e saúde | 9 | 5/8 |\n| Fragmentação e corredores | 7 | 4/8 |\n| Sucessão ecológica e pioneiras | 7 | 5/8 |\n| Cadeia alimentar e fluxo de energia | 5 | 4/8 |\n| Bioacumulação e mercúrio | 3 | 3/8 |\n| Desmatamento e zoonoses | 3 | 2/8 |\n| Ciclo do carbono e sumidouro | 1 | 1/8 |\n| Camada de ozônio e CFC | 1 | 1/8 |\n\n**Leitura:** as duas aulas acertam o foco. Polinizadores e agrotóxicos, relações ecológicas e ciclo do nitrogênio caíram em 6 ou 7 das 8 provas. A camada de ozônio, tratada como \"o ENEM adora\", apareceu uma vez no período: revise só o suficiente para não confundir com o efeito estufa.",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/aulas-videos-2026.md",
+      "sourceSha256": "d77616aa695875849288710c67a7e4527f61d3a2cbb8e9c1e0f89a68a9b4c749"
+    },
+    {
+      "id": "EG6",
+      "title": "Vídeo 6 — `videoplayback-2.mp4` (4h48min): monitoria de Humanas e Linguagens",
+      "subjects": [
+        "Português",
+        "Literatura",
+        "História",
+        "Geografia",
+        "Filosofia",
+        "Sociologia",
+        "Inglês",
+        "Arte"
+      ],
+      "content": "Aula longa da monitoria, com mais de 60 questões autorais e trechos de pré-teste comentados. Assuntos, agrupados:\n\n- **História:** independência do Haiti e apoio a Bolívar; Doutrina Monroe (\"América para os americanos\"); Era das Revoluções; Era Vargas (1932, Constituição de 1934, Intentona de 1935, Estado Novo em 1937); coronelismo e patrimonialismo; direito divino dos reis; Revolução Industrial e toyotismo (just-in-time); MST.\n- **Filosofia:** passagem do mito ao logos; Maquiavel rompendo com a moral cristã na política; Agostinho e Platão; Locke e Rousseau sobre a origem da propriedade; Marx e a desigualdade; Foucault; Byung-Chul Han e a sociedade do desempenho.\n- **Sociologia e Geografia:** antropologia e cultura; Adam Smith (o interesse próprio do açougueiro e do cervejeiro); darwinismo social; Bolsa Família e combate à fome; cartografia como representação adaptada; ilha de calor e frentes frias; enchentes em cidades impermeabilizadas; energia nuclear.\n- **Linguagens e Artes:** impressionismo e surrealismo; Machado de Assis e a ironia; O Cortiço (Aluísio Azevedo); Carolina Maria de Jesus; Parintins e o boi-bumbá; funções da linguagem; texto em inglês; valores olímpicos.\n\n**Conferência com o histórico:** a aula cobre bem os assuntos de Humanas com maior chance (Idade Moderna e Iluminismo, 92%; Primeira República e Vargas, 89%; Brasil Império, 91%; globalização, 94%; cultura e identidade, 83%) e a filosofia contemporânea (86%). O contratualismo (Locke e Rousseau), com só 40% de chance histórica, aparece aqui e nos vídeos 2 e 3. Vale uma revisão curta pelo tema da propriedade e do contrato social, sem prioridade sobre os assuntos acima de 85%.",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/aulas-videos-2026.md",
+      "sourceSha256": "d77616aa695875849288710c67a7e4527f61d3a2cbb8e9c1e0f89a68a9b4c749"
+    },
+    {
+      "id": "EG7",
+      "title": "Vídeo 7 — `videoplayback-1.mp4` (6h53min): monitoria de Natureza e Matemática",
+      "subjects": [
+        "Matemática",
+        "Biologia",
+        "Física",
+        "Química"
+      ],
+      "content": "A maior aula do lote, com cerca de 80 questões do dia 2:\n\n- **Biologia:** genética mendeliana e dominância; seleção natural e convergência evolutiva (membranas interdigitais em grupos distantes); fotossíntese, respiração e cadeia transportadora de elétrons; fermentação na falta de oxigênio; vacinas e anticorpos; DNA mitocondrial na reprodução assistida; transcrição sem tradução; sistema renina-angiotensina-aldosterona; alvéolos; LH e testosterona; hormônios da gravidez e ácido fólico; toxoplasmose e malária; hormônios vegetais (auxina e dominância apical, ácido abscísico); mutualismo; biomagnificação; saneamento e epidemiologia.\n- **Química:** surfactantes e micelas no petróleo; estequiometria (barrilha); lei de Beer (absorbância e concentração); isomeria; catalisador automotivo; conservantes; Le Chatelier e pH; combustão.\n- **Física:** circuitos em série a 220 V e pilhas em série; colisões; dilatação e comportamento anômalo da água; empuxo; ressonância; reflexão na elipse; raio X em filme; condensação; velocidade média.\n- **Matemática:** probabilidade e valor esperado (sorteio, torneio, descontos); função quadrática e parábola; progressão aritmética; estatística por faixa etária; ângulos de polígonos e radianos; áreas e volumes; proporção entre custo e área; estimativa por escala.\n\n**Conferência com o histórico:** é a aula que mais se aproxima da distribuição real do dia 2, com probabilidade (95%), funções (95%), geometria (95%), fisiologia humana (94%), circuitos (92%) e estequiometria (89%) no centro. Hormônios vegetais (fisiologia vegetal, 51%) e ressonância ficam abaixo de 60%: são revisão secundária.",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/aulas-videos-2026.md",
+      "sourceSha256": "d77616aa695875849288710c67a7e4527f61d3a2cbb8e9c1e0f89a68a9b4c749"
+    },
+    {
+      "id": "EG8",
+      "title": "Vídeo 8 — `qb4uj8.mp4` (1h08min): estratégias de Matemática",
+      "subjects": [
+        "Matemática"
+      ],
+      "content": "Live curta da equipe do Edcley, só com estratégias de resolução. Diferente das \"regras\" dos vídeos 2 e 3, estas dependem do conteúdo e se confirmam:\n\n1. **Mistura e evaporação: trabalhe com o que fica fixo.** Ao acrescentar xarope ou evaporar água, o componente que não muda é a âncora da conta. Se a água cai de 99,95% para 99,90%, a fração de sólido dobra (0,05% → 0,10%), então a massa total cai pela metade. É a pegadinha clássica: achar que quase nada mudou porque as porcentagens são parecidas. Reforça o padrão 4 do guia (\"por cento de quê?\").\n2. **Quadrática: x do vértice ou y do vértice?** \"Qual valor de x maximiza\" pede −b/2a; \"qual a área máxima\" pede o valor da função nesse x. Errar qual dos dois é pedido é o erro mais comum.\n3. **Soma constante, produto máximo na metade.** Se dois fatores somam um valor fixo, o produto é máximo quando são iguais (65 × 65 para soma 130). Resolve sem montar a parábola.\n4. **Logaritmo quase sempre se reduz ao log que a questão deu.** Se só aparece log 3, o número dentro do log é potência de 3 (81 = 3⁴, então log 81 = 4 log 3). E atenção ao período: a função de arrecadação era mensal, então o trimestre é três vezes o mês, e não a função aplicada a 240.\n5. **pH a partir de [OH⁻]:** calcule o pOH e use pH = 14 − pOH.\n6. **Volume desgastado:** a diferença entre o volume antes e depois, com a base constante (cilindro mais cone do lápis).",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/aulas-videos-2026.md",
+      "sourceSha256": "d77616aa695875849288710c67a7e4527f61d3a2cbb8e9c1e0f89a68a9b4c749"
+    },
+    {
+      "id": "EG9",
+      "title": "1. Unidades antes de qualquer conta",
+      "subjects": [
+        "Matemática",
+        "Biologia",
+        "Física",
+        "Química"
+      ],
+      "content": "**Âncora:** 2025, q166 (Matemática). Um pote de 20 000 cm³ serve taças de 250 mL. Como 1 L = 1 000 cm³ = 1 000 mL, o pote tem 20 L = 20 000 mL, e 20 000 ÷ 250 = **80 taças** (gabarito d). As alternativas 8 e 800 são o erro de uma casa decimal na conversão.\n\n**Como executar:** escreva a unidade ao lado de cada número do enunciado, converta tudo para a mesma unidade e só depois divida. Equivalências que mais caem: 1 m³ = 1 000 L, 1 cm³ = 1 mL, 1 h = 3 600 s, km/h ÷ 3,6 = m/s, 1 kWh = 3,6 × 10⁶ J.\n\n**Transferência:** uma caixa-d'água de 1,2 m³ enche garrafas de 1,5 L. Quantas garrafas?\n<details><summary>Conferir</summary>1,2 m³ = 1 200 L; 1 200 ÷ 1,5 = 800 garrafas. Quem usar 1 m³ = 100 L chega a 80.</details>",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
+      "sourceSha256": "9bf9eedd9f2d84ac871106938c2471d64e2beb232a3c299f707d89f955d09958"
+    },
+    {
+      "id": "EG10",
+      "title": "2. Escala é razão de comprimentos",
+      "subjects": [
+        "Matemática"
+      ],
+      "content": "**Âncora:** 2025, q163 (Matemática). O desenho foi ampliado e as medidas indicadas viraram 30 m; a pergunta é a escala desenho : obra (gabarito e, 1 : 150). Também aparece em Geografia (mapa) e em Física (imagem de microscópio).\n\n**Como executar:** escala = medida no desenho ÷ medida real, **na mesma unidade**. Em área, a razão vai ao quadrado; em volume, ao cubo. Essa é a armadilha das alternativas.\n\n**Transferência:** num mapa 1 : 250 000, duas cidades estão a 6 cm. Qual é a distância real?\n<details><summary>Conferir</summary>6 × 250 000 = 1 500 000 cm = 15 km.</details>",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
+      "sourceSha256": "9bf9eedd9f2d84ac871106938c2471d64e2beb232a3c299f707d89f955d09958"
+    },
+    {
+      "id": "EG11",
+      "title": "3. Mediana pede a lista ordenada",
+      "subjects": [
+        "Matemática"
+      ],
+      "content": "**Âncoras:** 2024, q137 (umidade relativa em seis meses). Ordenando 46, 54, 60, 64, 64, 66, a mediana é a média dos dois centrais: (60 + 64) ÷ 2 = **62** (gabarito e). 2025, q139 (velocidade de internet em dez cidades) repete a operação com número par de dados.\n\n**Como executar:** ordene sempre. Com número ímpar de dados, a mediana é o valor central; com número par, a média dos dois centrais. Média é a soma dividida pela quantidade; moda é o valor mais frequente. A alternativa errada costuma ser o valor central da lista **não ordenada**.\n\n**Transferência:** 12, 5, 9, 20, 9, 14, 3. Calcule mediana, moda e média.\n<details><summary>Conferir</summary>Ordenada: 3, 5, 9, 9, 12, 14, 20. Mediana 9, moda 9, média 72 ÷ 7 ≈ 10,3. O valor 20 puxa a média, não a mediana.</details>",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
+      "sourceSha256": "9bf9eedd9f2d84ac871106938c2471d64e2beb232a3c299f707d89f955d09958"
+    },
+    {
+      "id": "EG12",
+      "title": "4. Porcentagem sobre porcentagem",
+      "subjects": [
+        "Matemática"
+      ],
+      "content": "**Âncora:** 2024, q170 (casa de shows). A meia-entrada prevista era de 60% dos 500 ingressos, ou seja, 300. Ela \"superou em 50% o previsto\": 300 × 1,5 = 450 meias. A porcentagem incide sobre a **quantidade prevista**, não sobre o total de ingressos.\n\n**Como executar:** troque cada porcentagem por um fator multiplicativo (aumento de 20% = × 1,2; desconto de 20% = × 0,8) e pergunte \"por cento **de quê**?\". Variações sucessivas se multiplicam, não se somam.\n\n**Transferência:** um preço sobe 20% e depois cai 20%. Qual é a variação final?\n<details><summary>Conferir</summary>1,2 × 0,8 = 0,96, ou seja, queda de 4%. Somar dá 0%, que é a alternativa armadilha.</details>",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
+      "sourceSha256": "9bf9eedd9f2d84ac871106938c2471d64e2beb232a3c299f707d89f955d09958"
+    },
+    {
+      "id": "EG13",
+      "title": "5. Comparar opções montando o custo total",
+      "subjects": [
+        "Matemática"
+      ],
+      "content": "**Âncora:** 2025, q173 (autoescolas). O custo de cada escola é 20 aulas teóricas + 10 práticas + aluguel do veículo; a escolha é a de menor total (gabarito e, III com R$ 1 200,00). As alternativas com valores baixos (R$ 280, R$ 460) somam só parte dos produtos.\n\n**Como executar:** escreva a expressão do total de cada opção antes de substituir valores. Quando há fixo + variável, o ponto de empate (igualar as expressões) diz a partir de quando cada opção vence.\n\n**Transferência:** o plano A cobra R$ 40 fixos + R$ 2 por km; o plano B, R$ 100 fixos + R$ 0,50 por km. A partir de quantos km B fica mais barato?\n<details><summary>Conferir</summary>40 + 2x = 100 + 0,5x, então 1,5x = 60 e x = 40 km. Acima de 40 km, B é mais barato.</details>",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
+      "sourceSha256": "9bf9eedd9f2d84ac871106938c2471d64e2beb232a3c299f707d89f955d09958"
+    },
+    {
+      "id": "EG14",
+      "title": "6. Experimento: o que o controle permite concluir",
+      "subjects": [
+        "Biologia",
+        "Química",
+        "Física"
+      ],
+      "content": "**Âncoras:** 2024, q91 (Biologia). Amebas tratadas com citocalasina B perdem forma e movimento, e o grupo não tratado é o controle; o componente afetado são os microfilamentos (gabarito c). 2024, q100 (Física) usa o farelo de milho que desenha as linhas de campo elétrico. Dezoito das 24 questões com \"experimento\" no enunciado são de Natureza.\n\n**Como executar:** identifique a variável que mudou entre os grupos, o que ficou igual e o efeito observado. A conclusão só vale para aquela variável. Alternativas erradas tiram conclusão que o experimento não testou ou citam uma estrutura que não explica o efeito observado (movimento, aqui).\n\n**Transferência:** sementes regadas com água salgada germinam menos do que as regadas com água pura, com mesma luz e temperatura. O que o experimento permite e o que não permite concluir?\n<details><summary>Conferir</summary>Permite: a salinidade reduz a germinação nessas condições. Não permite: qual mecanismo (osmótico ou tóxico) causa o efeito, nem o resultado em outras espécies ou concentrações.</details>",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
+      "sourceSha256": "9bf9eedd9f2d84ac871106938c2471d64e2beb232a3c299f707d89f955d09958"
+    },
+    {
+      "id": "EG15",
+      "title": "7. Gráfico de Natureza: ache o eixo antes da curva",
+      "subjects": [
+        "Matemática",
+        "Biologia",
+        "Física",
+        "Química"
+      ],
+      "content": "**Âncora:** 2024, q123 (Química). O gráfico relaciona a razão ar/combustível do motor com a composição dos gases (CO₂, HC, CO, NO). A pergunta fixa a razão em 18, mistura com excesso de ar. A resposta (gabarito c: baixa de CO e alta de CO₂) sai de marcar 18 no eixo horizontal e ler cada curva; o mecanismo confirma, porque sobra oxigênio e a combustão fica mais completa.\n\n**Como executar:** leia título, eixos e unidades; marque no eixo horizontal a condição pedida e suba até cada curva. Depois confira com o mecanismo: mais O₂ leva a combustão completa, com mais CO₂ e menos CO.",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
+      "sourceSha256": "9bf9eedd9f2d84ac871106938c2471d64e2beb232a3c299f707d89f955d09958"
+    },
+    {
+      "id": "EG16",
+      "title": "8. Linguagens: a função do texto, não o assunto",
+      "subjects": [
+        "Português",
+        "Literatura",
+        "História",
+        "Geografia",
+        "Filosofia",
+        "Sociologia",
+        "Inglês",
+        "Arte"
+      ],
+      "content": "**Âncoras:** 2024, q14 (aplicativo que facilita a escrita de línguas indígenas; gabarito b, democratização do registro escrito) e 2024, q15 (foto de longa exposição feita por acaso; gabarito e, a produção artística pode resultar do acaso). Nas duas, as alternativas erradas repetem palavras do texto (jogo, tradução, tecnologia) com outra relação entre elas.\n\n**Como executar:** responda antes de ler as alternativas: \"este texto serve para quê?\". Descarte a alternativa que generaliza (\"depende\", \"limita\", \"sempre\") ou que troca causa e efeito.",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
+      "sourceSha256": "9bf9eedd9f2d84ac871106938c2471d64e2beb232a3c299f707d89f955d09958"
+    },
+    {
+      "id": "EG17",
+      "title": "9. Palavra do enunciado que entrega o conceito (Natureza)",
+      "subjects": [
+        "Matemática",
+        "Biologia",
+        "Física",
+        "Química"
+      ],
+      "content": "Materiais de macetes que circulam para o ENEM (como o enviado ao Drive em 02/11/2026) ensinam a reconhecer o conceito pela palavra do enunciado. A regra vale, mas a frequência varia muito. Contagem no enunciado das 1.440 questões de 2018–2025; é piso, porque palavras que estão só na figura não entram:\n\n| Pista no enunciado | Conceito a recuperar | Questões | Provas |\n|---|---|---|---|\n| corrente elétrica, resistor, resistência | U = R·I; associação série e paralelo; potência P = U·I | 13 | 7/8 |\n| satélite, órbita, geoestacionário | período igual à rotação da Terra; gravidade como força centrípeta | 10 | 7/8 |\n| indução, fluxo magnético variável | lei de Faraday: só há corrente induzida se o fluxo variar (fogão de indução, transformador, usina) | 9 | 6/8 |\n| fragmentação, corredor ecológico | ilhas de habitat, perda de fluxo gênico; corredores reconectam populações | 7 | 4/8 |\n| mitocôndria, ATP, respiração celular | glicose + O₂ → CO₂ + H₂O + ATP; ciclo de Krebs e cadeia respiratória | 5 | 5/8 |\n| Bluetooth, wi-fi, radiofrequência | onda eletromagnética, não sonora; viaja no vácuo | 4 | 2/8 |\n| decibel, nível sonoro | escala logarítmica: +10 dB = intensidade 10 vezes maior | 3 | 3/8 (2023–2025) |\n| chuva ácida, óxidos de enxofre | SO₂/NOₓ + água → ácidos; corrosão de calcário e metais | 1 | 1/8 |\n| sensação térmica, condutividade | metal parece mais frio porque conduz calor mais rápido, não por estar mais frio | 0 | — |\n\n**Como usar:** a pista diz **onde procurar**, não a resposta. Em Física e Química, confirme com a conta ou com o mecanismo; as alternativas erradas costumam usar a palavra certa com a relação trocada (por exemplo, \"o metal está a uma temperatura menor\").",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
+      "sourceSha256": "9bf9eedd9f2d84ac871106938c2471d64e2beb232a3c299f707d89f955d09958"
+    },
+    {
+      "id": "EG18",
+      "title": "10. Atalhos de conta que economizam tempo",
+      "subjects": [
+        "Matemática"
+      ],
+      "content": "- **Porcentagem de cabeça:** 10% = dividir por 10; 5% = metade dos 10%; 1% = dividir por 100; 0,5% = metade de 1%.\n- **Comparar frações sem MMC:** para a/b e c/d, compare a·d com c·b; o produto maior indica a fração maior.\n- **Terno pitagórico:** lados proporcionais a 3, 4 e 5 (como 90, 120 e 150) dispensam a conta.\n- **MMC ou MDC:** \"quando voltam a coincidir\" pede MMC; \"maior pedaço possível, sem sobra\" pede MDC.\n- **Grandezas:** diretamente proporcional fica no numerador; inversamente proporcional, no denominador.",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
+      "sourceSha256": "9bf9eedd9f2d84ac871106938c2471d64e2beb232a3c299f707d89f955d09958"
+    },
+    {
+      "id": "EG19",
+      "title": "11. Linguagens: como a alternativa errada é construída",
+      "subjects": [
+        "Português",
+        "Literatura",
+        "História",
+        "Geografia",
+        "Filosofia",
+        "Sociologia",
+        "Inglês",
+        "Arte"
+      ],
+      "content": "Fonte: e-book de macetes de Linguagens enviado em 02/11/2026, conferido com a classificação das 320 questões de Português de 2018–2025. Entendimento de Texto tem cerca de 16 questões por prova e 96% de chance, a maior de toda a prova.\n\n**Os cinco tipos de alternativa errada.** Antes de marcar, pergunte qual destes vícios a alternativa tem:\n\n| Vício | Como reconhecer | Exemplo do raciocínio |\n|---|---|---|\n| Contradição | diz o oposto do texto | o texto defende a reciclagem e a alternativa nega o benefício |\n| Redução | pega um detalhe e trata como ideia central | o texto lista três efeitos e a alternativa diz \"apenas um\" |\n| Extrapolação | conclui além do que o texto garante | o texto diz que ler ajuda a memória e a alternativa promete sucesso escolar |\n| Generalização | \"sempre\", \"todos\", \"nunca\" onde o texto diz \"alguns\" | um estudo indica e a alternativa afirma para todos |\n| Fuga | fala de assunto que o texto não trata | o texto é sobre poluição e a alternativa sobre desemprego |\n\nÉ a mesma lógica do padrão 8 (função antes do assunto) e da prova de 2024 (q14 e q15), em que as erradas repetiam palavras do texto com outra relação entre elas.\n\n**O que o histórico confirma dentro de Linguagens** (capítulos presentes em 6 ou mais das 8 provas):\n- **Variação linguística:** 94%, 8 de 8 provas. A resposta certa trata de adequação ao contexto e legitimidade das variedades, nunca de \"certo e errado\".\n- **Textos de tecnologia e redes sociais (TDIC):** 94%, 8 de 8 provas.\n- **Gêneros não verbais (charge, tirinha, cartaz):** 92%, 7 de 8 provas. Leia imagem, texto e contexto juntos.\n- **Fatores de textualidade e progressão:** 87%.\n- **Funções da linguagem:** 75%, com a pergunta explícita em 7 das 8 provas. Informar → referencial; sentimento do autor → emotiva; convencer ou chamar o leitor → conativa; testar o canal → fática; falar da própria língua → metalinguística; forma e ritmo → poética.\n- **Gêneros textuais:** 77%. Identifique o gênero pela intenção do texto (informar, convencer, criticar, relatar), não pelo formato. Na questão do ENEM 2024 sobre \"Feijoada à minha moda\", de Vinicius de Moraes, uma receita com marcas de carta, o que fazia do texto um poema era a linguagem expressiva.\n- **Intertextualidade:** 68%. Citação, paráfrase, paródia (recriação crítica ou humorística) e alusão.\n\n**O que o macete superestima:** figuras de linguagem isoladas (56%, em 5 de 8 provas) e escolas literárias por data. O ENEM cobra a escola pelo efeito no trecho, não pela cronologia: Parnasianismo aparece em 44% e a Semana de 22 em 46%.",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
+      "sourceSha256": "9bf9eedd9f2d84ac871106938c2471d64e2beb232a3c299f707d89f955d09958"
+    },
+    {
+      "id": "EG20",
+      "title": "12. Humanas: palavra-chave e eliminação",
+      "subjects": [
+        "Português",
+        "Literatura",
+        "História",
+        "Geografia",
+        "Filosofia",
+        "Sociologia",
+        "Inglês",
+        "Arte"
+      ],
+      "content": "Fonte: e-book \"Como dominar Humanas\" enviado em 02/11/2026. O método confere com o padrão 8 e com os vícios da seção 11:\n\n1. **Resuma o enunciado em três partes:** assunto, recorte e tarefa. Por exemplo: \"Era Vargas; legislação trabalhista; identificar a medida\".\n2. **Elimine pela coerência de tempo e lugar.** Se o enunciado fala do Brasil no século XX, a alternativa que cita a Europa medieval sai.\n3. **Desconfie dos absolutos** (\"redução total das desigualdades\", \"fim das barreiras\").\n4. **Duelo final:** entre duas alternativas, fica a mais ligada ao núcleo do enunciado.\n\nOs exemplos do e-book (empirismo e tábula rasa, fato social, CLT, globalização) caem nos assuntos de maior chance de Humanas: Brasil República (89%), globalização (94%) e Idade Moderna e Iluminismo (92%).",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
+      "sourceSha256": "9bf9eedd9f2d84ac871106938c2471d64e2beb232a3c299f707d89f955d09958"
+    },
+    {
+      "id": "EG21",
+      "title": "13. Resumões de Natureza: o que eles destacam e o que o histórico diz",
+      "subjects": [
+        "Matemática",
+        "Biologia",
+        "Física",
+        "Química"
+      ],
+      "content": "Os dois resumões enviados (\"Resumão da Salvação\" e \"Guia completo de Ciências da Natureza\") são revisões de conteúdo, sem dado de incidência. Conferindo os temas que eles destacam com o enunciado das 1.440 questões:\n\n| Tema destacado | Questões 2018–2025 | Provas |\n|---|---|---|\n| Polímeros e plásticos | 16 | 8/8 |\n| Ciclo do nitrogênio e leguminosas | 10 | 6/8 |\n| Tratamento de água e esgoto | 4 | 4/8 |\n| Arboviroses (dengue, zika, chikungunya) | 4 | 3/8 |\n| Fibra óptica e reflexão total | 0 | 0/8 |\n\n**Polímeros** aparecem em todas as provas, quase sempre como contexto ambiental (plástico, biodegradável) dentro de questões de orgânica. Vale revisar a diferença entre polímero de adição e de condensação, e entre biodegradável e reciclável. **Fibra óptica** é tema clássico de vestibular, mas não apareceu no ENEM nesse período.",
+      "sourcePath": "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
+      "sourceSha256": "9bf9eedd9f2d84ac871106938c2471d64e2beb232a3c299f707d89f955d09958"
+    }
+  ]
+}

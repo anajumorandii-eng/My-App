@@ -70,3 +70,19 @@ test('mantém a mensagem específica de um provedor não configurado', async () 
     assert.equal(body.error, 'Serviço de IA não configurado.');
   });
 });
+
+test('rotas de resumos, estratégias e aprofundamentos enviam as fontes ENEM ao provedor e as devolvem para persistência',async()=>{
+ const prompts:string[]=[];
+ const service=new AiService(provider({generate:async request=>{prompts.push(request.prompt);return 'Material gerado';}}));
+ await withServer(service,async base=>{
+  for(const guideMode of ['review-summary','strategy','combined-strategy',undefined]){
+   const response=await fetch(`${base}/api/ai/review-tip`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({topic:'Ecologia',subject:'Biologia',targetBoards:['ENEM'],guideMode,level:50,daysSinceReview:0})});
+   assert.equal(response.status,200);const result=await response.json();
+   assert.ok(result.serverSources.some((s:{id:string})=>s.id.startsWith('EH')));
+   assert.match(prompts.at(-1)!,/FONTES ENEM DO SERVIDOR/);
+   assert.match(prompts.at(-1)!,/apostas de 131 itens/);
+  }
+  const response=await fetch(`${base}/api/ai/content-explanation`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({topic:'Ecologia',subject:'Biologia',targetBoards:['ENEM']})});
+  assert.equal(response.status,200);assert.match(prompts.at(-1)!,/FONTES ENEM DO SERVIDOR/);
+ });
+});

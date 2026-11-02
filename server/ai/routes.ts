@@ -1,3 +1,4 @@
+import { enemStudySources, renderEnemStudySources } from './enemStudySources';
 import { reviewFormatSources } from './reviewFormatSources';
 import type { ReviewOptions } from '../../src/lib/strategicReview';
 import { getReviewedApostilaReference } from '../../src/lib/reviewedApostilaReferences';
@@ -98,7 +99,9 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
           }
         }
 
-        const request = { task, prompt: buildAiPrompt(task, payload), userId: res.locals.userId as string | undefined, ...(images?.length ? { images } : {}) };
+        const enemSources = enemStudySources(task, payload);
+        serverSources.push(...enemSources);
+        const request = { task, prompt: buildAiPrompt(task, payload) + renderEnemStudySources(enemSources), userId: res.locals.userId as string | undefined, ...(images?.length ? { images } : {}) };
 
         if (evaluation && isEvaluationAdmin(res.locals)) {
           try {
