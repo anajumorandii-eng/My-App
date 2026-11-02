@@ -49,48 +49,46 @@
         },
         {
           "subject": "Literatura",
-          "total": 13,
+          "total": 11,
           "topics": [
             {
               "topicId": "por_lit_contemporanea",
-              "count": 4,
+              "count": 3,
               "numbers": [
                 "06",
-                "21",
-                "30",
-                "43"
-              ]
-            },
-            {
-              "topicId": "por_lit_romantismo_realismo",
-              "count": 5,
-              "numbers": [
-                "07",
-                "13",
-                "14",
-                "17",
-                "27"
+                "19",
+                "21"
               ]
             },
             {
               "topicId": "por_lit_modernismo",
               "count": 4,
               "numbers": [
+                "07",
                 "08",
                 "15",
-                "19",
                 "29"
+              ]
+            },
+            {
+              "topicId": "por_lit_romantismo_realismo",
+              "count": 4,
+              "numbers": [
+                "13",
+                "14",
+                "17",
+                "27"
               ]
             }
           ]
         },
         {
           "subject": "Português",
-          "total": 22,
+          "total": 24,
           "topics": [
             {
               "topicId": "por_texto",
-              "count": 16,
+              "count": 18,
               "numbers": [
                 "09",
                 "10",
@@ -99,6 +97,7 @@
                 "20",
                 "24",
                 "28",
+                "30",
                 "31",
                 "32",
                 "33",
@@ -107,6 +106,7 @@
                 "37",
                 "39",
                 "41",
+                "43",
                 "44"
               ]
             },
@@ -199,9 +199,10 @@
             },
             {
               "topicId": "geo_populacao_urbana_brasil",
-              "count": 2,
+              "count": 3,
               "numbers": [
                 "60",
+                "85",
                 "89"
               ]
             },
@@ -223,10 +224,9 @@
             },
             {
               "topicId": "geo_economica_brasil",
-              "count": 2,
+              "count": 1,
               "numbers": [
-                "73",
-                "85"
+                "73"
               ]
             }
           ]
@@ -303,12 +303,12 @@
           "total": 8,
           "topics": [
             {
-              "topicId": "soc_cultura_identidade",
+              "topicId": "soc_estratificacao_desigualdade",
               "count": 3,
               "numbers": [
                 "50",
-                "63",
-                "68"
+                "81",
+                "87"
               ]
             },
             {
@@ -327,11 +327,11 @@
               ]
             },
             {
-              "topicId": "soc_estratificacao_desigualdade",
+              "topicId": "soc_cultura_identidade",
               "count": 2,
               "numbers": [
-                "81",
-                "87"
+                "63",
+                "68"
               ]
             }
           ]
@@ -461,10 +461,9 @@
             },
             {
               "topicId": "bio_microbiologia",
-              "count": 2,
+              "count": 1,
               "numbers": [
-                "123",
-                "135"
+                "123"
               ]
             },
             {
@@ -479,6 +478,13 @@
               "count": 1,
               "numbers": [
                 "131"
+              ]
+            },
+            {
+              "topicId": "bio_botanica",
+              "count": 1,
+              "numbers": [
+                "135"
               ]
             }
           ]
@@ -569,11 +575,10 @@
           "total": 14,
           "topics": [
             {
-              "topicId": "qui_organica_fundamentos",
-              "count": 2,
+              "topicId": "qui_equilibrio",
+              "count": 1,
               "numbers": [
-                "93",
-                "102"
+                "93"
               ]
             },
             {
@@ -582,6 +587,13 @@
               "numbers": [
                 "97",
                 "120"
+              ]
+            },
+            {
+              "topicId": "qui_organica_fundamentos",
+              "count": 1,
+              "numbers": [
+                "102"
               ]
             },
             {
@@ -648,7 +660,7 @@
             },
             {
               "topicId": "mat_aritmetica_proporcionalidade",
-              "count": 10,
+              "count": 11,
               "numbers": [
                 "137",
                 "138",
@@ -659,6 +671,7 @@
                 "160",
                 "168",
                 "170",
+                "171",
                 "172"
               ]
             },
@@ -675,11 +688,13 @@
               ]
             },
             {
-              "topicId": "mat_geometria_analitica",
-              "count": 2,
+              "topicId": "mat_geometria_plana",
+              "count": 4,
               "numbers": [
                 "141",
-                "145"
+                "145",
+                "163",
+                "179"
               ]
             },
             {
@@ -723,21 +738,6 @@
                 "162",
                 "164",
                 "173"
-              ]
-            },
-            {
-              "topicId": "mat_geometria_plana",
-              "count": 2,
-              "numbers": [
-                "163",
-                "179"
-              ]
-            },
-            {
-              "topicId": "mat_trigonometria",
-              "count": 1,
-              "numbers": [
-                "171"
               ]
             }
           ]
@@ -792,7 +792,7 @@
         },
         {
           "subject": "Português",
-          "total": 23,
+          "total": 24,
           "topics": [
             {
               "topicId": "por_norma_culta",
@@ -807,7 +807,7 @@
             },
             {
               "topicId": "por_texto",
-              "count": 18,
+              "count": 19,
               "numbers": [
                 "09",
                 "10",
@@ -825,6 +825,7 @@
                 "40",
                 "41",
                 "42",
+                "43",
                 "44",
                 "45"
               ]
@@ -833,7 +834,7 @@
         },
         {
           "subject": "Literatura",
-          "total": 12,
+          "total": 11,
           "topics": [
             {
               "topicId": "por_lit_contemporanea",
@@ -856,13 +857,6 @@
                 "14",
                 "26",
                 "29"
-              ]
-            },
-            {
-              "topicId": "por_lit_romantismo_realismo",
-              "count": 1,
-              "numbers": [
-                "43"
               ]
             }
           ]
@@ -913,13 +907,11 @@
           "total": 14,
           "topics": [
             {
-              "topicId": "geo_populacao_urbana_brasil",
-              "count": 4,
+              "topicId": "geo_fisica_brasil",
+              "count": 2,
               "numbers": [
                 "46",
-                "68",
-                "76",
-                "78"
+                "53"
               ]
             },
             {
@@ -927,13 +919,6 @@
               "count": 1,
               "numbers": [
                 "49"
-              ]
-            },
-            {
-              "topicId": "geo_fisica_brasil",
-              "count": 1,
-              "numbers": [
-                "53"
               ]
             },
             {
@@ -960,6 +945,15 @@
               "numbers": [
                 "67",
                 "71"
+              ]
+            },
+            {
+              "topicId": "geo_populacao_urbana_brasil",
+              "count": 3,
+              "numbers": [
+                "68",
+                "76",
+                "78"
               ]
             }
           ]
@@ -1164,17 +1158,11 @@
             },
             {
               "topicId": "fis_ondulatoria",
-              "count": 2,
+              "count": 3,
               "numbers": [
                 "92",
+                "93",
                 "115"
-              ]
-            },
-            {
-              "topicId": "fis_energia",
-              "count": 1,
-              "numbers": [
-                "93"
               ]
             },
             {
@@ -1235,11 +1223,12 @@
           "total": 15,
           "topics": [
             {
-              "topicId": "qui_inorganica",
-              "count": 2,
+              "topicId": "qui_polaridade_geometria",
+              "count": 3,
               "numbers": [
                 "94",
-                "126"
+                "116",
+                "121"
               ]
             },
             {
@@ -1267,19 +1256,17 @@
               ]
             },
             {
-              "topicId": "qui_solucoes",
-              "count": 2,
+              "topicId": "qui_equilibrio",
+              "count": 1,
               "numbers": [
-                "110",
-                "118"
+                "110"
               ]
             },
             {
-              "topicId": "qui_polaridade_geometria",
-              "count": 2,
+              "topicId": "qui_solucoes",
+              "count": 1,
               "numbers": [
-                "116",
-                "121"
+                "118"
               ]
             },
             {
@@ -1287,6 +1274,13 @@
               "count": 1,
               "numbers": [
                 "125"
+              ]
+            },
+            {
+              "topicId": "qui_inorganica",
+              "count": 1,
+              "numbers": [
+                "126"
               ]
             },
             {
@@ -1337,7 +1331,7 @@
               ]
             },
             {
-              "topicId": "bio_microbiologia",
+              "topicId": "bio_zoologia",
               "count": 1,
               "numbers": [
                 "105"
@@ -1393,29 +1387,60 @@
               ]
             },
             {
-              "topicId": "mat_geometria_plana",
-              "count": 4,
+              "topicId": "mat_trigonometria",
+              "count": 2,
               "numbers": [
                 "137",
-                "142",
-                "174",
-                "175"
+                "153"
+              ]
+            },
+            {
+              "topicId": "mat_sequencias_matrizes",
+              "count": 3,
+              "numbers": [
+                "139",
+                "152",
+                "180"
               ]
             },
             {
               "topicId": "mat_teoria_numeros",
-              "count": 3,
+              "count": 2,
               "numbers": [
-                "139",
                 "141",
                 "168"
               ]
             },
             {
-              "topicId": "mat_dados_probabilidade",
-              "count": 8,
+              "topicId": "mat_geometria_plana",
+              "count": 5,
+              "numbers": [
+                "142",
+                "147",
+                "174",
+                "175",
+                "179"
+              ]
+            },
+            {
+              "topicId": "mat_funcoes",
+              "count": 9,
               "numbers": [
                 "144",
+                "155",
+                "160",
+                "161",
+                "162",
+                "167",
+                "171",
+                "172",
+                "176"
+              ]
+            },
+            {
+              "topicId": "mat_dados_probabilidade",
+              "count": 7,
+              "numbers": [
                 "145",
                 "149",
                 "154",
@@ -1436,47 +1461,11 @@
               ]
             },
             {
-              "topicId": "mat_geometria_analitica",
-              "count": 2,
-              "numbers": [
-                "147",
-                "179"
-              ]
-            },
-            {
               "topicId": "mat_combinatoria",
               "count": 2,
               "numbers": [
                 "148",
                 "157"
-              ]
-            },
-            {
-              "topicId": "mat_sequencias_matrizes",
-              "count": 2,
-              "numbers": [
-                "152",
-                "180"
-              ]
-            },
-            {
-              "topicId": "mat_trigonometria",
-              "count": 1,
-              "numbers": [
-                "153"
-              ]
-            },
-            {
-              "topicId": "mat_funcoes",
-              "count": 7,
-              "numbers": [
-                "155",
-                "161",
-                "162",
-                "167",
-                "171",
-                "172",
-                "176"
               ]
             },
             {
@@ -1486,13 +1475,6 @@
                 "156",
                 "159",
                 "163"
-              ]
-            },
-            {
-              "topicId": "mat_equacoes",
-              "count": 1,
-              "numbers": [
-                "160"
               ]
             }
           ]

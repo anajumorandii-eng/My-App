@@ -39,7 +39,7 @@ test('contexto compartilhado, figuras nativas e equivalência entre cadernos pre
   assert.equal(get(2023,142).id,'q_real_enem_2023_mat');
   assert.equal(get(2018,42).id,'enem_expansao_2018_q06');
   for(const media of manifest.media){
-    assert.match(media.url,/\/enem-completo\/enem-20\d\d-d[12]-q\d{3}-p\d+-\d+\.webp$/);
+    assert.match(media.url,/\/(?:enem-completo|enem-revisado)\/enem-20\d\d-d[12]-q\d{3}-p\d+-\d+\.webp$/);
     assert.equal(createHash('sha256').update(readFileSync(`public${media.url}`)).digest('hex'),media.sha256);
   }
 });

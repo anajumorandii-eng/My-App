@@ -38,3 +38,16 @@ it('explicita anos adiados e permite consultar ausência de cobertura sem percen
  expect(screen.queryByText(/NaN%|Infinity%/)).toBeNull();
  spy.mockRestore();
 });
+
+it('abre no grupo que mais cobra a matéria e deixa a matéria visível no filtro',async()=>{
+ const paper=fixture.papers[0];
+ const other={...paper,id:'b',group:'linguagens',phase:'Linguagens',sha256:'c'.repeat(64)};
+ const corpus:BoardCorpus={...fixture,papers:[other,paper],questions:[q('01',{id:'b:01',paperId:'b'}),q('09',{id:'b:09',paperId:'b',subject:'Português',topicId:'por_texto',topic:'Texto'}),q('01'),q('02'),q('03')]};
+ const spy=vi.spyOn(research,'loadBoardCorpus').mockResolvedValue(corpus);
+ render(<BoardIncidencePanel board="FAMERP" subject="Biologia"/>);
+ expect(await screen.findByRole('table')).toHaveTextContent('Biologia · Conhecimentos gerais');
+ expect(screen.getByLabelText('Matéria')).toHaveValue('Biologia');
+ fireEvent.change(screen.getByLabelText('Matéria'),{target:{value:''}});
+ expect(screen.getByRole('table')).toHaveTextContent('Todas as matérias');
+ spy.mockRestore();
+});

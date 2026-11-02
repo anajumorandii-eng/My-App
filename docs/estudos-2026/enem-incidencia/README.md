@@ -4,18 +4,20 @@ Provas em **8/11** (Linguagens, Humanas e Redação) e **15/11** (Natureza e Mat
 Tabelas completas: [probabilidades-2026.md](probabilidades-2026.md) · dados: [probabilidades-2026.json](probabilidades-2026.json).
 Regerar: `npx tsx scripts/analisar-enem-probabilidades.mts`.
 
+Conferência de 02/11/2026: [186 fichas de 2022–2023](conferencia-2022-2023.md), com texto revisto e 185 recortes WebP transparentes no banco. São 182 classificações de confiança alta e quatro ressalvas de taxonomia. As transcrições manuais já completas foram preservadas. A numeração azul de 2023 foi vinculada às posições amarelas históricas, mantendo os IDs e o progresso. As probabilidades abaixo foram recalculadas após essa revisão.
+
 ## O que difere da análise FUVEST
 
 A FUVEST foi medida com n/N e recorrência em 2017–2026 (`../fuvest-incidencia/`). O ENEM
-já tinha classificação editorial só de 2024–2025 (`../incidencia-multibancas/enem-relatorio.md`).
+tem classificação editorial de 2022–2025 (`../incidencia-multibancas/enem-relatorio.md`).
 Aqui a base são as **oito aplicações regulares 2018–2025** do banco: 1.440 itens, 180 por edição
 (Inglês como língua estrangeira), com dois acréscimos:
 
 1. **P(cair)** — chance estimada de vir pelo menos uma questão do assunto/capítulo, com peso maior
    para provas recentes.
 2. **Retroteste** — o mesmo cálculo feito só com 2018–2024 previu 2025. No nível de **assunto**, os
-   30 mais prováveis, 29 caíram e a faixa 80–100% acertou 34 de 36. No nível de
-   **capítulo**, a faixa 80–100% acertou 15 de 17, mas abaixo disso a previsão é fraca: escolha de
+   30 mais prováveis, 29 caíram e a faixa 80–100% acertou 30 de 31. No nível de
+   **capítulo**, a faixa 80–100% acertou 14 de 17, mas abaixo disso a previsão é fraca: escolha de
    capítulo varia muito de ano para ano. Use capítulo para ordenar, não para excluir.
 
 ## Limitações declaradas
