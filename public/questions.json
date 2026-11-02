@@ -194808,7 +194808,7 @@
     "id": "enem_completo_2024_d2_q108",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Porcentagem",
     "prompt": "Brasil fecha 2020 entre os maiores recicladores de latas de alumínio\nA bauxita contém alumina (Al2O3), que é a matéria-prima para produção do alumínio (Al). De forma geral, são\nnecessários 50 kg de bauxita para produzir 10 kg de alumínio. O Brasil fechou 2020 como um dos principais líderes\nmundiais em reciclagem de latas de alumínio. De acordo com levantamento da Associação Brasileira dos Fabricantes\nde Latas de Alumínio (Abralatas), o país obteve um índice de reciclagem de 97,4%, de um total de 4,0 × 10⁵ toneladas\nde latas vendidas. Considere que a lata é constituída de alumínio puro.\nDisponível em: https://agenciabrasil.ebc.com.br. Acesso em: 30 nov. 2021 (adaptado).\nLevando em conta apenas a reciclagem de latas, qual é o valor mais próximo da massa de bauxita, em tonelada, que\ndeixou de ser extraída da natureza em 2020 no Brasil?",
     "options": [
       {
@@ -196120,7 +196120,7 @@
     "id": "enem_completo_2024_d2_q138",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Razão e Proporção",
     "prompt": "Uma empresa de engenharia foi contratada para\nrealizar um serviço no valor de R$ 71 250,00. Os sócios da\nempresa decidiram que 40% desse valor seria destinado ao\npagamento de três engenheiros que gerenciaram o serviço.\nO pagamento para cada um deles será feito de forma\ndiretamente proporcional ao total de horas trabalhadas.\nO número de dias e o número de horas diárias\ntrabalhadas pelos engenheiros foram, respectivamente:\n•\t engenheiro I: 4 dias, numa jornada de 5 horas e\nmeia por dia;\n•\t engenheiro II: 5 dias, numa jornada de 4 horas por dia;\n•\t engenheiro III: 6 dias, numa jornada de 2 horas e\nmeia por dia.\nQual a maior diferença, em real, entre os valores recebidos\npor esse serviço entre dois desses engenheiros?",
     "options": [
       {
@@ -196306,9 +196306,9 @@
   },
   {
     "id": "enem_completo_2024_d2_q142",
-    "topicId": "mat_aritmetica_proporcionalidade",
+    "topicId": "mat_teoria_numeros",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "O Sistema de Numeração Decimal",
     "prompt": "Atualmente, há telefones celulares com telas de\ndiversos tamanhos e em formatos retangulares. Alguns\ndeles apresentam telas medindo 3 ¹\npolegadas, com\n2\ndeterminadas especificações técnicas. Além disso, em\nmuitos modelos, com a inclusão de novas funções no\ncelular, suas telas ficaram maiores, sendo muito comum\nDisponível em: www.tecmundo.com.br.\nAcesso em: 5 nov. 2014 (adaptado).\nA diferença de tamanho, em valor absoluto, entre as\nmedidas, em polegada, das telas do celular 2 e do celular 1,\nrepresentada apenas com uma casa decimal, é",
     "options": [
       {
@@ -197043,7 +197043,7 @@
     "id": "enem_completo_2024_d2_q157",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Razão e Proporção",
     "prompt": "Uma piscina tem capacidade de 2 500 000 litros.\nSeu sistema de abastecimento foi regulado para ter\numa vazão constante de 6 000 litros de água por minuto.\nO mesmo sistema foi instalado em uma segunda\npiscina, com capacidade de 2 750 000 litros, e regulado\npara ter uma vazão, também constante, capaz de enchê-la\nem um tempo 20% maior que o gasto para encher\na primeira piscina.\nA vazão do sistema de abastecimento da segunda piscina,\nem litro por minuto, é",
     "options": [
       {
@@ -197086,7 +197086,7 @@
     "id": "enem_completo_2024_d2_q158",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Razão e Proporção",
     "prompt": "Uma tubulação despeja sempre o mesmo volume de\nágua por unidade de tempo em uma caixa-d’água, o que\nsignifica dizer que a vazão de água nessa tubulação é\nconstante. Na junção dessa tubulação com a caixa-d’água,\nestá instalada uma membrana de filtragem cujo objetivo é\nfiltrar eventuais impurezas presentes na água, combinado\na um bom fluxo de água. O fluxo (φ) de água através\nda superfície da membrana é diretamente proporcional\nà vazão de água na tubulação, medida em mililitro por\nsegundo, e inversamente proporcional à área da superfície\nda membrana, medida em centímetro quadrado.\nA unidade de medida adequada para descrever o fluxo\n(φ) de água que atravessa a superfície da membrana é",
     "options": [
       {
@@ -197134,7 +197134,7 @@
     "id": "enem_completo_2024_d2_q159",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Razão e Proporção",
     "prompt": "Em uma loja de defensivos agrícolas, os preços de\nalguns produtos foram divulgados em um cartaz.\nSabe-se que 1 litro de defensivo do Tipo A é suficiente\npara aplicação em 0,5 hectare (ha), enquanto que 1 litro de\ndefensivo do Tipo B é suficiente para aplicação em 0,4 ha.\nUm agricultor precisa comprar, nessa loja, uma quantidade\nde litros de defensivo suficiente para aplicar em uma área\nde 20 ha, além de levar uma máscara para aplicação.\nO valor mínimo, em real, a ser gasto pelo agricultor é",
     "options": [
       {
@@ -197467,9 +197467,9 @@
   },
   {
     "id": "enem_completo_2024_d2_q166",
-    "topicId": "mat_aritmetica_proporcionalidade",
+    "topicId": "mat_equacoes",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Modelagem Algébrica de Problemas I",
     "prompt": "Um artesão utiliza dois tipos de componentes, X e\nY, nos enfeites que produz. Ele sempre compra todos os\ncomponentes em uma mesma loja. O quadro apresenta\nos preços dos dois tipos de componentes nas lojas I e II.\nEle confeccionará enfeites formados por duas unidades\ndo componente X e uma unidade do componente Y e\nefetuará a compra na loja que oferecer o menor valor total\npara a confecção de um enfeite.\nO artesão efetuará a compra na loja",
     "options": [
       {
@@ -197656,7 +197656,7 @@
     "id": "enem_completo_2024_d2_q170",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Porcentagem",
     "prompt": "Uma casa de shows terá um evento cujo custo total\nde produção é de R$ 34 350,00, sendo que comporta\n500 pessoas. O preço do ingresso será de R$ 130,00 e,\nnormalmente, 60% das pessoas adquirem meia-entrada,\npagando R$ 65,00 pelo ingresso. Além do faturamento\nproveniente da venda de ingressos, a casa de shows\nvende, com 60% de lucro, bebidas e petiscos ao público\nno dia do evento.\nApós ter vendido todos os 500 ingressos, constatou-se\nque a quantidade de meias-entradas vendidas superou\nem 50% o que estava previsto, impactando o faturamento\nestimado com a venda de ingressos.\nNo dia do evento, decidiu-se manter o percentual\nde 60% de lucro sobre as bebidas e petiscos, pois todo\no público que comprou ingresso compareceu ao\nshow. Com isso, espera-se ter lucro de R$ 17 000,00\nnesse evento.\nPara que se alcance o lucro esperado, o gasto médio por\npessoa com bebidas e petiscos, em real, deverá ser de",
     "options": [
       {
@@ -197932,7 +197932,7 @@
     "id": "enem_completo_2024_d2_q176",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Porcentagem",
     "prompt": "Um instituto de pesquisa constatou que, nos últimos\ndez anos, o crescimento populacional de uma cidade foi\nde 135,25%.\nQual é a representação decimal da taxa percentual desse\ncrescimento populacional?",
     "options": [
       {
@@ -198016,9 +198016,9 @@
   },
   {
     "id": "enem_completo_2024_d2_q178",
-    "topicId": "mat_aritmetica_proporcionalidade",
+    "topicId": "mat_teoria_numeros",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "O Sistema de Numeração Decimal",
     "prompt": "Uma professora de matemática utiliza em suas\naulas uma “máquina caça-números” para verificar os\nconhecimentos de seus estudantes sobre representações\nde números racionais. Essa máquina tem um visor dividido\nem seis compartimentos e, na lateral, uma alavanca. Cada\nestudante puxa a alavanca e espera que os compartimentos\nparem de girar. A partir daí, precisa responder para a\nprofessora em quais posições se encontram os números\nque representam a mesma quantidade.\nUm estudante puxou a alavanca, aguardou que os\ncompartimentos parassem de girar e observou os números\napresentados no visor. A configuração da máquina naquele\ninstante está apresentada na imagem.\nEsse estudante respondeu corretamente à pergunta\nda professora.\nAs posições indicadas pelo estudante foram",
     "options": [
       {
@@ -204118,7 +204118,7 @@
     "id": "enem_completo_2025_d2_q140",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Razão e Proporção",
     "prompt": "Na cantina de uma escola, há cinco alimentos vendidos em\npacotes com diferentes quantidades de porções.\nAs informações nutricionais contidas nos rótulos desses\nprodutos estão indicadas nas imagens.\nUma estudante opta sempre pelo alimento com a menor\nquantidade total de sódio por pacote.\nQual desses produtos deve ser o escolhido pela estudante?",
     "options": [
       {
@@ -204255,9 +204255,9 @@
   },
   {
     "id": "enem_completo_2025_d2_q143",
-    "topicId": "mat_aritmetica_proporcionalidade",
+    "topicId": "mat_teoria_numeros",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "O Sistema de Numeração Decimal",
     "prompt": "No atletismo, um grande desafio da prova de 100 metros\nrasos é a sua conclusão num tempo abaixo da marca de\nreferência dos 10,00 segundos. Vários atletas já alcançaram\nesse feito. Em 2009, o jamaicano Usain Bolt estabeleceu o\nrecorde mundial masculino dessa prova, com o tempo de\n9,58 segundos.\nQual é a diferença, em segundo, entre a marca de referência e\na marca estabelecida por Usain Bolt em 2009?",
     "options": [
       {
@@ -204405,7 +204405,7 @@
     "id": "enem_completo_2025_d2_q146",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Razão e Proporção",
     "prompt": "Uma pessoa pretende instalar um kit de gás natural veicular (GNV) em seu carro. Na loja que escolheu para realizar a compra\ne instalação desse kit, havia cinco modelos de cilindro para armazenamento do gás, cujas capacidades, em metro cúbico, eram,\nrespectivamente: 10, 14, 17, 21 e 25. O preço do cilindro é proporcional à sua capacidade. Esse carro rodará 30 km diariamente,\n7 dias por semana, e o consumo do GNV é de 1 m³ a cada 13 km rodados. A pessoa escolherá o modelo de cilindro de menor\npreço e que garanta apenas um abastecimento semanal.\nNessas condições, qual será a capacidade, em metro cúbico, do cilindro escolhido por essa pessoa?",
     "options": [
       {
@@ -204544,7 +204544,7 @@
     "id": "enem_completo_2025_d2_q149",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Porcentagem",
     "prompt": "Uma escola de idiomas oferece cursos de inglês, espanhol, francês e alemão. Os gráficos apresentam a distribuição percentual\ndas matrículas, por idioma, em 2023, e a distribuição da quantidade de matrículas, por idioma, em 2024.\nPara planejar as atividades de 2025, o gerente da escola estimou que o total de matrículas será o mesmo de 2024, e a distribuição\npercentual das matrículas, por idioma, será igual à registrada em 2023.\nSegundo essa estimativa, o número de matrículas no curso de francês para o ano de 2025 será",
     "options": [
       {
@@ -204592,7 +204592,7 @@
     "id": "enem_completo_2025_d2_q150",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Razão e Proporção",
     "prompt": "O controle remoto de um carrinho de brinquedo vem equipado com uma tela que ajusta automaticamente a escala empregada\nna exibição de cada deslocamento. A tela apresenta a imagem do deslocamento, a escala utilizada na geração dessa imagem e\no comprimento desse deslocamento, em centímetro, em conformidade com a escala empregada. As figuras representam a tela\ndo controle remoto exibindo os dados de cinco deslocamentos realizados por esse carrinho.\nA opção que indica o deslocamento de maior comprimento realizado pelo carrinho de brinquedo é",
     "options": [
       {
@@ -204688,7 +204688,7 @@
     "id": "enem_completo_2025_d2_q152",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Razão e Proporção",
     "prompt": "Uma fábrica de tijolos ecológicos com 3 funcionários,\ncada um trabalhando 6 horas diárias, produz 720 unidades\npor dia. Para atender ao crescimento da demanda por esse\ntipo de tijolo, essa fábrica passou a ter 5 funcionários, cada um\ntrabalhando 9 horas por dia, aumentando, assim, sua capacidade\nde produção. Todos os funcionários produzem igual quantidade\nde tijolos a cada hora, independentemente de trabalharem\n6 ou 9 horas diárias.\nO número de tijolos fabricados diariamente após o aumento da\ncapacidade de produção é",
     "options": [
       {
@@ -204966,7 +204966,7 @@
     "id": "enem_completo_2025_d2_q158",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Razão e Proporção",
     "prompt": "Pace é um termo usado por um corredor para denominar o seu ritmo médio em uma corrida. Representa o tempo médio,\nem segundo, que esse corredor leva para percorrer 1 km.\nO esquema apresenta o tempo, em segundo, que um corredor levou para cruzar as marcas que definem os quatro primeiros\ntrechos de 1 km, em uma corrida de 5 km, e o tempo gasto para percorrer cada trecho de 1 km.\nO melhor pace que esse corredor alcançou em corridas de 5 km foi 281 s/km.\nPara que consiga repetir nessa corrida seu melhor pace em corridas de 5 km, seu tempo, no 5º trecho, deve ser quantos segundos\nmenor do que o que ele gastou para percorrer o 4º trecho?",
     "options": [
       {
@@ -205208,7 +205208,7 @@
     "id": "enem_completo_2025_d2_q163",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Razão e Proporção",
     "prompt": "Um artista, que costuma fazer desenhos com areia na\npraia, pediu a um banhista que fizesse um pequeno desenho,\nque serviria de esboço para uma grande obra de arte a ser\nfeita na areia. Esse desenho está representado na figura.\nApós a conclusão, a obra de arte obtida manteve as mesmas\nproporções do desenho feito pelo banhista, sendo que as\nmedidas indicadas na figura foram ampliadas para 30 m.\nEm qual escala esse desenho representa a obra de arte?",
     "options": [
       {
@@ -205297,9 +205297,9 @@
   },
   {
     "id": "enem_completo_2025_d2_q165",
-    "topicId": "mat_aritmetica_proporcionalidade",
+    "topicId": "mat_equacoes",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Modelagem Algébrica de Problemas I",
     "prompt": "Um estacionamento possui 120 vagas para veículos,\ne todas essas vagas estão ocupadas. Cada cliente paga uma\nmensalidade para utilizar uma vaga, que é calculada com base\nnas despesas mensais do estacionamento e no lucro pretendido.\nAs despesas mensais do estacionamento são: R$ 14 240,00 com\nmanutenção mais R$ 36,00 de seguro por veículo. O lucro do\nestacionamento é determinado pela diferença do valor arrecadado\ncom as mensalidades pelas despesas efetuadas. A partir do mês\nseguinte, o valor do seguro por veículo aumentará em 20%,\ne as despesas com manutenção permanecerão sem alterações.\nCom isso, o dono do estacionamento reajustará as mensalidades\npara obter um lucro mensal de R$ 10 000,00. Apesar desse\nreajuste, todas as vagas continuarão ocupadas.\nO valor, em real, da mensalidade reajustada será",
     "options": [
       {
@@ -205342,7 +205342,7 @@
     "id": "enem_completo_2025_d2_q166",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Razão e Proporção",
     "prompt": "O dono de uma sorveteria armazena sorvete em potes de\n20 000 cm³. Ele serve o sorvete em taças, em porções de 250 mL.\nA quantidade de taças que ele consegue servir a partir de um\npote cheio de sorvete é",
     "options": [
       {
@@ -205652,7 +205652,7 @@
     "id": "enem_completo_2025_d2_q172",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Razão e Proporção",
     "prompt": "Uma pessoa tem um carro bicombustível, que funciona a gás natural veicular (GNV) e a gasolina. O rendimento do carro,\nmedido em km/m³, no caso do gás, ou medido em km/L, no caso da gasolina, depende, entre outros fatores, da velocidade,\nem km/h, em que o carro trafega. Essa relação está em conformidade com estes gráficos.\nDurante um feriado, essa pessoa realizou uma viagem de 240 km. Para obter uma estimativa de gasto de combustível,\nassuma que em todo o trajeto se manteve uma velocidade constante de 60 km/h. Considere que, durante metade do caminho,\nfoi utilizado apenas GNV e, na outra metade, apenas gasolina. O que foi pago pelo metro cúbico de GNV e pelo litro de gasolina\ncorrespondeu, respectivamente, a R$ 2,00 e a R$ 3,00.\nQual foi a diferença, em real, entre os gastos totais com gasolina e com GNV?",
     "options": [
       {
@@ -205698,9 +205698,9 @@
   },
   {
     "id": "enem_completo_2025_d2_q173",
-    "topicId": "mat_aritmetica_proporcionalidade",
+    "topicId": "mat_equacoes",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Modelagem Algébrica de Problemas I",
     "prompt": "Em um país, a primeira etapa para obtenção da carteira de motorista é a contratação de três produtos:\n•\tpacote com 20 aulas teóricas;\n•\tpacote com 10 aulas práticas;\n•\taluguel do veículo para realização das aulas práticas.\nUma pessoa que pretende obter a carteira de motorista pesquisou o valor do aluguel do veículo e os valores de cada aula\nteórica e de cada aula prática em três autoescolas. O quadro apresenta esses valores.\nEla contratará os três produtos numa mesma autoescola de modo que o custo total nessa primeira etapa seja o menor possível.\nA autoescola que será contratada é a",
     "options": [
       {
@@ -206025,7 +206025,7 @@
     "id": "enem_completo_2025_d2_q180",
     "topicId": "mat_aritmetica_proporcionalidade",
     "subject": "Matemática",
-    "chapter": "Potências e Radicais",
+    "chapter": "Razão e Proporção",
     "prompt": "A final de um campeonato de futebol foi disputada em 2 tempos\nregulamentares, de 45 minutos cada, sem acréscimos, com uma\nprorrogação de 30 minutos, também sem acréscimos. Um jogador\nentrou no início do segundo tempo, com um equipamento para\nmedir a distância percorrida durante sua participação no jogo.\nAo final do segundo tempo regulamentar, esse jogador havia\npercorrido 4,5 km. Ele manteve na prorrogação a mesma velocidade\nmédia que havia mantido no segundo tempo regulamentar.\nA distância percorrida por esse jogador durante sua participação\nna partida, em quilômetro, foi",
     "options": [
       {

@@ -15,20 +15,28 @@ import { mockTopics } from '../src/data/mockData';
 type Q = { id: string; topicId: string; subject: string; chapter?: string; examSource?: { board?: string; year?: number; questionNumber?: number } };
 const bank = JSON.parse(await readFile('public/questions.json', 'utf8')) as Q[];
 const topicName = new Map(mockTopics.map(t => [t.id, t.name]));
+// Itens "enem_expansao_*" e "q_real_*" guardam o número de outro caderno no
+// examSource; a posição no caderno amarelo está neste mapa. Sem ele, 50 itens
+// de 2018–2023 colidiam com outra questão e eram descartados na deduplicação.
+const preserved = JSON.parse(await readFile('src/data/enemPreservedPositions.json', 'utf8')) as Record<string, { year: number; number: number }>;
 
 // Um item por (ano, número): ids "completo" e "expansao" descrevem a mesma prova.
 const items = new Map<string, Q & { year: number; n: number }>();
 for (const q of bank) {
+  const real = preserved[q.id];
   const s = q.examSource;
-  if (s?.board !== 'ENEM' || !s.year || !s.questionNumber || s.year < 2018 || s.year > 2025) continue;
-  const key = `${s.year}:${s.questionNumber}`;
-  if (!items.has(key)) items.set(key, { ...q, year: s.year, n: s.questionNumber });
+  const year = real?.year ?? s?.year, n = real?.number ?? s?.questionNumber;
+  if (!real && s?.board !== 'ENEM') continue;
+  if (!year || !n || year < 2018 || year > 2025) continue;
+  const key = `${year}:${n}`;
+  if (items.has(key)) throw new Error(`Duas questões na posição ${key}: ${items.get(key)!.id} e ${q.id}`);
+  items.set(key, { ...q, year, n });
 }
 const YEARS = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
 const all = [...items.values()];
 for (const y of YEARS) {
   const c = all.filter(q => q.year === y).length;
-  if (c < 170) throw new Error(`Edição ${y} incompleta no banco: ${c} itens`);
+  if (c !== 180) throw new Error(`Edição ${y} incompleta no banco: ${c} itens`);
 }
 
 // Peso por recência: meia-vida de ~4 edições. Mudanças de matriz e de estilo
