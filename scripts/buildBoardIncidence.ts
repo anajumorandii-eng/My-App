@@ -7,7 +7,7 @@ import {studyAreaForTopic} from '../src/data/studyProtocols';
 import {boardIncidenceRows,isCompleteBoardCorpus,type BoardCorpus,type BoardPaper,type BoardQuestion,type ResearchBoard} from '../src/lib/boardIncidence';
 // User-authorized release of the 16 completed editions; deferred years are explicit.
 // Drafts never enter this input list or the published denominators.
-const plans=[{board:'ENEM',slug:'enem',years:[2024,2025],plannedYears:[2021,2022,2023,2024,2025]},{board:'UNESP',slug:'unesp',years:[2022,2023,2024,2025],plannedYears:[2022,2023,2024,2025,2026]},{board:'FAMERP',slug:'famerp',years:[2022,2023,2024,2025,2026],plannedYears:[2022,2023,2024,2025,2026]},{board:'UNIFESP',slug:'unifesp',years:[2022,2023,2024,2025,2026],plannedYears:[2022,2023,2024,2025,2026]}] as const;
+const plans=[{board:'ENEM',slug:'enem',years:[2022,2023,2024,2025],plannedYears:[2021,2022,2023,2024,2025]},{board:'UNESP',slug:'unesp',years:[2022,2023,2024,2025],plannedYears:[2022,2023,2024,2025,2026]},{board:'FAMERP',slug:'famerp',years:[2022,2023,2024,2025,2026],plannedYears:[2022,2023,2024,2025,2026]},{board:'UNIFESP',slug:'unifesp',years:[2022,2023,2024,2025,2026],plannedYears:[2022,2023,2024,2025,2026]}] as const;
 const known=new Map(mockTopics.map(topic=>[topic.id,{...topic,subject:studyAreaForTopic(topic)}]));
 const harmonization=JSON.parse(await readFile('scripts/data/fuvest-incidence/subtopic-aliases.json','utf8'));
 const aliases=new Map<string,string[]>(harmonization.aliases.map((entry:any)=>[`${entry.subject}:${entry.original}`,entry.canonical]));

@@ -1,0 +1,5140 @@
+{
+  "board": "ENEM",
+  "year": 2023,
+  "coverageNote": "Regular impressa, cadernos CD1 azul (1º dia) e CD5 amarelo (2º dia), Inglês nas opcionais 01–05. 180 objetivas e proposta de redação R: 181 unidades. Leitura dos itens extraídos dos PDFs enviados pela estudante, cruzada com o gabarito oficial do mesmo caderno e com o banco do app; itens dependentes de figura marcados com confiança média. Anulada 177 mantida com excluded=true. Classificação editorial própria, sem dupla codificação independente integral. Contagem não equivale a peso TRI.",
+  "sourceManifest": [
+    {
+      "sourceUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2023/ENEM_2023_dia_1_caderno_azul_aplicacao_regular.pdf",
+      "sha256": "10c12d3bcd5e2ae2b04be1530ee11c815fc64e9dda31ab17062115ac2910f825",
+      "pages": 32,
+      "bytes": 1244340,
+      "role": "prova-d1"
+    },
+    {
+      "sourceUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2023/ENEM_2023_dia_1_gabarito_azul.pdf",
+      "sha256": "4ddc4872e7eb06776073b10713ba4c8c8fa8214041a72300cb0c2225345c79da",
+      "pages": 1,
+      "bytes": 544353,
+      "role": "gabarito pareado"
+    },
+    {
+      "sourceUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2023/ENEM_2023_dia_2_caderno_amarelo.pdf",
+      "sha256": "722d68f4b39f0b508ae2f17086d48422ec5a0b479b190fff33c89e3bdedfbd00",
+      "pages": 32,
+      "bytes": 2350359,
+      "role": "prova-d2"
+    },
+    {
+      "sourceUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2023/ENEM_2023_dia_2_gabarito_amarelo.pdf",
+      "sha256": "03f43b97a23c5b0847ad7a76cc43918d9f9cac8476c6e8ac51b0c270442f434b",
+      "pages": 1,
+      "bytes": 544745,
+      "role": "gabarito pareado"
+    }
+  ],
+  "papers": [
+    {
+      "id": "enem-2023-linguagens-humanas",
+      "group": "linguagens-humanas",
+      "phase": "Linguagens, Ciências Humanas e Redação",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "Caderno 1 — Azul",
+      "sourceUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2023/ENEM_2023_dia_1_caderno_azul_aplicacao_regular.pdf",
+      "answerKeyUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2023/ENEM_2023_dia_1_gabarito_azul.pdf",
+      "sha256": "10c12d3bcd5e2ae2b04be1530ee11c815fc64e9dda31ab17062115ac2910f825",
+      "answerKeySha256": "4ddc4872e7eb06776073b10713ba4c8c8fa8214041a72300cb0c2225345c79da",
+      "pages": 32,
+      "expectedQuestions": 91,
+      "coverageNote": "Aplicação regular impressa; caderno identificado pela capa e pareado com o gabarito oficial do mesmo caderno. Inglês nas questões 01–05; proposta R sem gabarito objetivo.",
+      "questions": [
+        {
+          "number": "01",
+          "page": 2,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Cartaz contra desperdício"
+          ],
+          "skills": [
+            "Reconhece que o cartaz associa desperdício de comida à degradação ambiental"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece que o cartaz associa desperdício de comida à degradação ambiental.",
+          "rationale": "Imagem e texto ligam alimentos descartados ao dano ao ambiente.",
+          "strategy": [
+            "Leia o slogan em inglês",
+            "Relacione à imagem do cartaz."
+          ],
+          "trap": "Escolher desnutrição ou refrigeração.",
+          "confidence": "medium",
+          "reviewNote": "Cartaz visual; leitura pelo comando e gabarito.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "02",
+          "page": 2,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "John Donne"
+          ],
+          "skills": [
+            "Reconhece a ideia de conexão entre os seres humanos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a ideia de conexão entre os seres humanos.",
+          "rationale": "A imagem da ilha e do continente mostra que ninguém vive isolado.",
+          "strategy": [
+            "Leia No man is an island",
+            "Relacione a part of the main."
+          ],
+          "trap": "Escolher solidão ou medo da morte.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "03",
+          "page": 2,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Poema sobre migração"
+          ],
+          "skills": [
+            "Identifica a existência de experiências plurais de quem migra pelo mar"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a existência de experiências plurais de quem migra pelo mar.",
+          "rationale": "A enumeração reúne perdas, guerras, desastres e esperanças diversas.",
+          "strategy": [
+            "Observe a repetição de We carry",
+            "Veja a variedade de experiências."
+          ],
+          "trap": "Reduzir o poema à luta ambiental.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "04",
+          "page": 3,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Spanglish"
+          ],
+          "skills": [
+            "Reconhece a convergência linguístico-cultural no poema"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a convergência linguístico-cultural no poema.",
+          "rationale": "A mistura de inglês e espanhol encena o encontro de culturas.",
+          "strategy": [
+            "Observe a alternância de línguas",
+            "Relacione ao título."
+          ],
+          "trap": "Achar que o poema denuncia censura ou discriminação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "05",
+          "page": 3,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Cartum de escritório"
+          ],
+          "skills": [
+            "Identifica a crítica à falta de diversidade no ambiente de trabalho"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a crítica à falta de diversidade no ambiente de trabalho.",
+          "rationale": "O cartum mostra funcionários idênticos.",
+          "strategy": [
+            "Observe as figuras do cartum",
+            "Ligue a uniformidade à crítica."
+          ],
+          "trap": "Escolher padrão de vestimenta.",
+          "confidence": "medium",
+          "reviewNote": "Cartum visual; leitura pelo comando e gabarito.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "06",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Lema olímpico"
+          ],
+          "skills": [
+            "Reconhece a associação entre o novo lema e a ideia de cooperação"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a associação entre o novo lema e a ideia de cooperação.",
+          "rationale": "A inclusão de juntos acrescenta solidariedade ao lema.",
+          "strategy": [
+            "Compare lema antigo e novo",
+            "Ache o sentido da palavra acrescentada."
+          ],
+          "trap": "Escolher unificação dos lemas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "07",
+          "page": 6,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Corpo, raça e gênero"
+          ],
+          "skills": [
+            "Reconhece as marcas da violência de raça e de gênero na construção do eu lírico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece as marcas da violência de raça e de gênero na construção do eu lírico.",
+          "rationale": "O corpo descrito carrega força e violência sofrida.",
+          "strategy": [
+            "Leia a enumeração do corpo",
+            "Relacione às marcas sociais."
+          ],
+          "trap": "Escolher reprodução de padrões estéticos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "08",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Língua e preconceito"
+          ],
+          "skills": [
+            "Identifica a crença numa língua ideal usada contra imigrantes brasileiros"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a crença numa língua ideal usada contra imigrantes brasileiros.",
+          "rationale": "Os poetas denunciam o preconceito contra o português do Brasil em Portugal.",
+          "strategy": [
+            "Leia a queixa dos poetas",
+            "Relacione ao preconceito linguístico."
+          ],
+          "trap": "Atribuir a diferença à escolaridade.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "09",
+          "page": 7,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Circulação de notícias"
+          ],
+          "skills": [
+            "Compara a circulação de notícias na Idade Média e hoje"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara a circulação de notícias na Idade Média e hoje.",
+          "rationale": "O texto mostra que o interesse acelerava a difusão das informações.",
+          "strategy": [
+            "Leia a comparação histórica",
+            "Ache o elemento comparado."
+          ],
+          "trap": "Escolher censura ou letramento.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito E; alternativa E lida parcialmente.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "10",
+          "page": 7,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Desinformação e contas falsas"
+          ],
+          "skills": [
+            "Reconhece a necessidade de regulamentação das redes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a necessidade de regulamentação das redes.",
+          "rationale": "Perfis falsos sofisticados ameaçam a democracia.",
+          "strategy": [
+            "Leia o perigo descrito",
+            "Ache a solução coerente."
+          ],
+          "trap": "Escolher controle de profissionais de TI.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito E; tópico reclassificado de literatura para texto.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "11",
+          "page": 7,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Maio Amarelo"
+          ],
+          "skills": [
+            "Identifica o objetivo de sensibilizar para a violência no trânsito"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o objetivo de sensibilizar para a violência no trânsito.",
+          "rationale": "O texto contextualiza a campanha e os riscos de mortes.",
+          "strategy": [
+            "Leia a explicação do amarelo",
+            "Relacione ao objetivo da campanha."
+          ],
+          "trap": "Escolher só divulgar números.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito D; alternativa lida parcialmente.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "12",
+          "page": 8,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Narrativa intimista"
+          ],
+          "skills": [
+            "Reconhece a descrição impressionista do fetiche da personagem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a descrição impressionista do fetiche da personagem.",
+          "rationale": "O narrador observa Timóteo com detalhes sensoriais.",
+          "strategy": [
+            "Leia a descrição do vestido",
+            "Ligue ao olhar do narrador."
+          ],
+          "trap": "Escolher crítica social.",
+          "confidence": "medium",
+          "reviewNote": "Excerto de Lúcio Cardoso (1959), geração pós-45.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "13",
+          "page": 8,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Mário de Andrade"
+          ],
+          "skills": [
+            "Reconhece a serenidade da entrega ao desejo no poema"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a serenidade da entrega ao desejo no poema.",
+          "rationale": "O eu lírico revisita amores com calma.",
+          "strategy": [
+            "Leia o tom das imagens",
+            "Relacione ao estado afetivo."
+          ],
+          "trap": "Escolher vergonha ou frustração.",
+          "confidence": "medium",
+          "reviewNote": "Poema modernista; gabarito C.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "14",
+          "page": 9,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Guimarães Rosa"
+          ],
+          "skills": [
+            "Identifica o jeito singular de contar a novela aos ouvintes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o jeito singular de contar a novela aos ouvintes.",
+          "rationale": "O contador reconta à sua maneira o que ouviu no rádio.",
+          "strategy": [
+            "Leia como a história chega ao povoado",
+            "Relacione à oralidade."
+          ],
+          "trap": "Escolher qualidade do som.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "15",
+          "page": 9,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Museu Nacional"
+          ],
+          "skills": [
+            "Reconhece os danos irreparáveis à memória e à identidade nacional"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece os danos irreparáveis à memória e à identidade nacional.",
+          "rationale": "O acervo perdido guardava respostas a perguntas ainda não feitas.",
+          "strategy": [
+            "Leia o valor atribuído às cinzas",
+            "Relacione à memória."
+          ],
+          "trap": "Achar que a pesquisa ficou impossível.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "16",
+          "page": 10,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Variação em Libras"
+          ],
+          "skills": [
+            "Reconhece que a Libras passa por variação como qualquer língua"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece que a Libras passa por variação como qualquer língua.",
+          "rationale": "Sinais regionais equivalem a palavras regionais.",
+          "strategy": [
+            "Compare os exemplos do português",
+            "Aplique à Libras."
+          ],
+          "trap": "Achar que a variação muda a estrutura da língua.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "17",
+          "page": 10,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Editorial de revista"
+          ],
+          "skills": [
+            "Identifica a explicação do nome entre colchetes abertos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a explicação do nome entre colchetes abertos.",
+          "rationale": "Os sinais voltados para fora simbolizam abertura.",
+          "strategy": [
+            "Leia a explicação do nome",
+            "Relacione ao perfil da revista."
+          ],
+          "trap": "Escolher rigor normativo.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito D; alternativa lida parcialmente.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "18",
+          "page": 10,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Caetano Veloso e Anjos tronchos"
+          ],
+          "skills": [
+            "Reconhece a percepção da profusão de informações nas duas canções"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a percepção da profusão de informações nas duas canções.",
+          "rationale": "As letras de épocas diferentes tratam do excesso de estímulos.",
+          "strategy": [
+            "Compare as duas canções",
+            "Ache o tema comum."
+          ],
+          "trap": "Escolher contraposição entre vícios e virtudes.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "19",
+          "page": 11,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Poesia e violência racial"
+          ],
+          "skills": [
+            "Reconhece a poesia como denúncia da morte de jovens negros"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a poesia como denúncia da morte de jovens negros.",
+          "rationale": "O texto apresenta o poeta e o uso da poesia na periferia.",
+          "strategy": [
+            "Leia a estrofe",
+            "Relacione ao objetivo do texto."
+          ],
+          "trap": "Escolher crescimento da temática.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito D; alternativa lida parcialmente.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "20",
+          "page": 11,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Palavra e criação"
+          ],
+          "skills": [
+            "Identifica a relação entre linguagem e sociedade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a relação entre linguagem e sociedade.",
+          "rationale": "O texto mostra a palavra como criadora em várias culturas.",
+          "strategy": [
+            "Leia a ideia central",
+            "Escolha a finalidade do texto."
+          ],
+          "trap": "Achar que o texto revela origem religiosa da linguagem.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito E; alternativa E lida parcialmente.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "21",
+          "page": 11,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Variação e saúde"
+          ],
+          "skills": [
+            "Reconhece erros causados pelo desconhecimento da variedade popular"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece erros causados pelo desconhecimento da variedade popular.",
+          "rationale": "O dicionário traduz termos populares para termos médicos.",
+          "strategy": [
+            "Leia o problema descrito",
+            "Relacione à variação linguística."
+          ],
+          "trap": "Achar que os pesquisadores descobriram sintomas novos.",
+          "confidence": "medium",
+          "reviewNote": "Reclassificada de Arte para variação linguística.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "22",
+          "page": 12,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Conceição Evaristo"
+          ],
+          "skills": [
+            "Reconhece a preservação da ancestralidade pela tradição oral"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a preservação da ancestralidade pela tradição oral.",
+          "rationale": "A cantiga liga Luandi à herança africana.",
+          "strategy": [
+            "Leia a cena da cantiga",
+            "Relacione à memória ancestral."
+          ],
+          "trap": "Escolher língua extinta.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "23",
+          "page": 12,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Machismo e estereótipos"
+          ],
+          "skills": [
+            "Identifica as construções imaginárias cristalizadas sobre mulheres"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica as construções imaginárias cristalizadas sobre mulheres.",
+          "rationale": "O episódio de Os Jetsons revela estereótipos persistentes.",
+          "strategy": [
+            "Compare os dois textos",
+            "Ache a crítica comum."
+          ],
+          "trap": "Escolher censura a expressões femininas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "24",
+          "page": 12,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Campanha contra violência doméstica"
+          ],
+          "skills": [
+            "Identifica a finalidade de divulgar um canal de denúncia na pandemia"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a finalidade de divulgar um canal de denúncia na pandemia.",
+          "rationale": "O anúncio orienta mulheres em isolamento.",
+          "strategy": [
+            "Observe o canal citado",
+            "Relacione ao contexto da pandemia."
+          ],
+          "trap": "Escolher atuação geral da entidade.",
+          "confidence": "medium",
+          "reviewNote": "Peça visual; gabarito E.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "25",
+          "page": 13,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Narrativa e linguagem"
+          ],
+          "skills": [
+            "Reconhece a metáfora da linguagem como ferramenta de lavoura"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a metáfora da linguagem como ferramenta de lavoura.",
+          "rationale": "A palavra arado liga o aprendizado da fala ao trabalho do pai.",
+          "strategy": [
+            "Leia a escolha da palavra",
+            "Relacione à imagem do arado."
+          ],
+          "trap": "Escolher medo da solidão.",
+          "confidence": "medium",
+          "reviewNote": "Excerto de Torto Arado; reclassificado como contemporâneo.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "26",
+          "page": 13,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Crônica sobre escravidão"
+          ],
+          "skills": [
+            "Reconhece a antecipação do apagamento das marcas da escravidão"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a antecipação do apagamento das marcas da escravidão.",
+          "rationale": "O cronista imagina crianças que conhecerão a escravidão só por museus.",
+          "strategy": [
+            "Leia o futuro imaginado",
+            "Relacione ao esquecimento."
+          ],
+          "trap": "Escolher descrição impessoal.",
+          "confidence": "medium",
+          "reviewNote": "Crônica do fim do séc. XIX (Bilac); agrupada em pré-modernismo.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "27",
+          "page": 13,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Coesão referencial"
+          ],
+          "skills": [
+            "Identifica a retomada por pronome que organiza o trecho"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a retomada por pronome que organiza o trecho.",
+          "rationale": "O texto encadeia o acaso e a decisão dos personagens.",
+          "strategy": [
+            "Localize o elemento citado",
+            "Teste sua função coesiva."
+          ],
+          "trap": "Confundir função do travessão.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito A; alternativas parcialmente extraídas.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "28",
+          "page": 13,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Slam e voz"
+          ],
+          "skills": [
+            "Reconhece a expressão da dificuldade de comunicação"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a expressão da dificuldade de comunicação.",
+          "rationale": "O poema mostra o nó entre querer falar e conseguir.",
+          "strategy": [
+            "Leia a imagem da garganta",
+            "Relacione ao calar final."
+          ],
+          "trap": "Escolher censura externa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "29",
+          "page": 14,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Crônica e Ouro Preto"
+          ],
+          "skills": [
+            "Identifica o vínculo entre o gato, a literatura e a cidade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o vínculo entre o gato, a literatura e a cidade.",
+          "rationale": "O cronista mistura humor e referências literárias.",
+          "strategy": [
+            "Leia a descrição do gato",
+            "Ache o efeito do texto."
+          ],
+          "trap": "Escolher descrição do casario.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito E; autoria e período não confirmados.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "30",
+          "page": 14,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Realismo mágico e autoritarismo"
+          ],
+          "skills": [
+            "Reconhece o culto ao medo no cotidiano da cidade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o culto ao medo no cotidiano da cidade.",
+          "rationale": "As proibições absurdas da Companhia criam um clima de opressão.",
+          "strategy": [
+            "Leia as proibições",
+            "Relacione ao medo."
+          ],
+          "trap": "Escolher ambiente de sonho.",
+          "confidence": "medium",
+          "reviewNote": "Excerto de J. J. Veiga; reclassificado como contemporâneo.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "31",
+          "page": 14,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Poema e banalidade"
+          ],
+          "skills": [
+            "Reconhece a diluição da comoção amorosa em cena banal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a diluição da comoção amorosa em cena banal.",
+          "rationale": "O fim do amor acontece entre toalha e bule, sem cenário solene.",
+          "strategy": [
+            "Compare os cenários imaginados com o real",
+            "Veja o contraste."
+          ],
+          "trap": "Escolher questionamento do amor.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "32",
+          "page": 15,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Pôr do sol com Bolero"
+          ],
+          "skills": [
+            "Identifica a inter-relação entre referências estéticas distantes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a inter-relação entre referências estéticas distantes.",
+          "rationale": "Música erudita francesa se integra a um costume local paraibano.",
+          "strategy": [
+            "Leia a cena descrita",
+            "Relacione os dois universos."
+          ],
+          "trap": "Escolher consagração do erudito como dominante.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "33",
+          "page": 15,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Expressionismo e Arte Degenerada",
+          "subtopics": [
+            "Lasar Segall"
+          ],
+          "skills": [
+            "Reconhece a estética considerada inconveniente pelo nazismo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a estética considerada inconveniente pelo nazismo.",
+          "rationale": "A obra foi exibida na mostra de arte degenerada por fugir do ideal nazista.",
+          "strategy": [
+            "Leia o texto sobre a exposição",
+            "Relacione ao ideário nazista."
+          ],
+          "trap": "Escolher posicionamento político do artista.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "34",
+          "page": 15,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Dança contemporânea",
+          "subtopics": [
+            "Dança e religiosidade popular"
+          ],
+          "skills": [
+            "Reconhece a reelaboração erudita de práticas religiosas populares"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a reelaboração erudita de práticas religiosas populares.",
+          "rationale": "O espetáculo Gira recria o transe da umbanda no palco.",
+          "strategy": [
+            "Leia a descrição das bailarinas",
+            "Relacione à origem religiosa."
+          ],
+          "trap": "Escolher crítica ao balé clássico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "35",
+          "page": 16,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Esporte eletrônico"
+          ],
+          "skills": [
+            "Identifica a condição favorável à expansão do e-sport no Brasil"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a condição favorável à expansão do e-sport no Brasil.",
+          "rationale": "Os dados mostram interesse crescente do público.",
+          "strategy": [
+            "Leia os números citados",
+            "Relacione à expansão."
+          ],
+          "trap": "Escolher favorecimento de fabricantes.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "36",
+          "page": 16,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Marabaixo",
+          "subtopics": [
+            "Cultura afro-amapaense"
+          ],
+          "skills": [
+            "Reconhece a ressignificação de episódios dramáticos em práticas culturais"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a ressignificação de episódios dramáticos em práticas culturais.",
+          "rationale": "O lamento pelos escravizados virou expressão festiva e religiosa.",
+          "strategy": [
+            "Leia a origem do nome",
+            "Relacione à transformação da prática."
+          ],
+          "trap": "Reduzir o Marabaixo a imitação do mar.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "37",
+          "page": 16,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Arte e redes sociais",
+          "subtopics": [
+            "Colagem e circulação"
+          ],
+          "skills": [
+            "Identifica a função das redes para ampliar o alcance da produção artística"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a função das redes para ampliar o alcance da produção artística.",
+          "rationale": "O artista goiano encontrou espaço fora do circuito local.",
+          "strategy": [
+            "Leia a fala do artista",
+            "Relacione redes e visibilidade."
+          ],
+          "trap": "Escolher vitrine internacional.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito C; alternativa lida parcialmente.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "38",
+          "page": 16,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Rap indígena",
+          "subtopics": [
+            "Brô MCs"
+          ],
+          "skills": [
+            "Reconhece a fusão do rap com causas indígenas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a fusão do rap com causas indígenas.",
+          "rationale": "O grupo usa o rap para defender seu povo.",
+          "strategy": [
+            "Leia a trajetória do grupo",
+            "Relacione rap e identidade."
+          ],
+          "trap": "Escolher rejeição do rádio.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "39",
+          "page": 17,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Dicionário e sociedade"
+          ],
+          "skills": [
+            "Reconhece a inclusão de informação no verbete casamento"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a inclusão de informação no verbete casamento.",
+          "rationale": "A petição ampliou a definição para incluir uniões homoafetivas.",
+          "strategy": [
+            "Compare as duas definições",
+            "Ache a mudança."
+          ],
+          "trap": "Escolher a relevância social do casamento.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito C; reclassificada como funcionamento da língua.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "40",
+          "page": 17,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Esporte e gênero"
+          ],
+          "skills": [
+            "Identifica a dependência de características biológicas padronizadas nas categorias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a dependência de características biológicas padronizadas nas categorias.",
+          "rationale": "A participação de Hubbard expõe o critério de sexo biológico.",
+          "strategy": [
+            "Leia a história da atleta",
+            "Relacione às regras de categoria."
+          ],
+          "trap": "Escolher falta de categoria trans.",
+          "confidence": "medium",
+          "reviewNote": "Educação Física; gabarito B.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "41",
+          "page": 17,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Abuso no esporte"
+          ],
+          "skills": [
+            "Reconhece a responsabilização das instituições de inteligência"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a responsabilização das instituições de inteligência.",
+          "rationale": "Biles denuncia falhas do FBI no caso Nassar.",
+          "strategy": [
+            "Leia o contexto do depoimento",
+            "Ache o alvo da crítica."
+          ],
+          "trap": "Escolher federações esportivas.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito B na chave azul; conferir sentido da alternativa B.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "42",
+          "page": 17,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Práticas corporais e classe"
+          ],
+          "skills": [
+            "Identifica a desigualdade entre classes sociais no acesso a atividades físicas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a desigualdade entre classes sociais no acesso a atividades físicas.",
+          "rationale": "O lazer ativo concentra-se nos mais ricos; os pobres se exercitam no deslocamento.",
+          "strategy": [
+            "Leia a distribuição das práticas",
+            "Relacione à renda."
+          ],
+          "trap": "Escolher diferença entre homens e mulheres.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "43",
+          "page": 18,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Machado de Assis e o discurso fúnebre"
+          ],
+          "skills": [
+            "Reconhece as metáforas da trajetória pessoal e criadora do homenageado"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece as metáforas da trajetória pessoal e criadora do homenageado.",
+          "rationale": "O discurso retoma versos do poeta para falar de morte e permanência.",
+          "strategy": [
+            "Leia as citações do homenageado",
+            "Relacione à vida dele."
+          ],
+          "trap": "Escolher frases curtas e diretas.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito A; contexto do discurso não extraído.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "44",
+          "page": 18,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Campanha de amamentação"
+          ],
+          "skills": [
+            "Identifica a divulgação dos benefícios da amamentação"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a divulgação dos benefícios da amamentação.",
+          "rationale": "A peça do Ministério da Saúde lista vantagens para mãe e bebê.",
+          "strategy": [
+            "Observe as informações da peça",
+            "Ache a finalidade."
+          ],
+          "trap": "Escolher direito de amamentar em público.",
+          "confidence": "medium",
+          "reviewNote": "Peça visual; gabarito A.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "45",
+          "page": 18,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Carta aberta"
+          ],
+          "skills": [
+            "Identifica o objetivo de chamar a atenção para a saúde dos idosos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o objetivo de chamar a atenção para a saúde dos idosos.",
+          "rationale": "A carta denuncia o despreparo do país para o envelhecimento.",
+          "strategy": [
+            "Leia a quem a carta se dirige",
+            "Relacione à reivindicação."
+          ],
+          "trap": "Escolher divulgar a sociedade médica.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito E; alternativa E lida parcialmente.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "46",
+          "page": 20,
+          "subject": "Geografia",
+          "topicId": "geo_populacao_urbana_brasil",
+          "topic": "Geografia da População e Urbana do Brasil",
+          "subtopics": [
+            "Conceito de lugar"
+          ],
+          "skills": [
+            "Associa o sertão bordado a vivências e itinerários socioafetivos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Associa o sertão bordado a vivências e itinerários socioafetivos.",
+          "rationale": "O bordado define o sertão pelas experiências, não pela fronteira.",
+          "strategy": [
+            "Leia a definição bordada",
+            "Relacione ao conceito de lugar."
+          ],
+          "trap": "Escolher demarcação territorial.",
+          "confidence": "medium",
+          "reviewNote": "Imagem não extraída; conceito geográfico de lugar.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "47",
+          "page": 20,
+          "subject": "História",
+          "topicId": "his_brasil_imperio",
+          "topic": "Brasil Império",
+          "subtopics": [
+            "Letramento feminino"
+          ],
+          "skills": [
+            "Identifica práticas de letramento e transformação cultural no séc. XIX"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica práticas de letramento e transformação cultural no séc. XIX.",
+          "rationale": "O texto lamenta que as moças agora saibam escrever bilhetes.",
+          "strategy": [
+            "Leia a nostalgia do narrador",
+            "Relacione à mudança de costumes."
+          ],
+          "trap": "Escolher imigração.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "48",
+          "page": 20,
+          "subject": "Sociologia",
+          "topicId": "soc_marx_sociologia",
+          "topic": "Karl Marx e a Sociologia",
+          "subtopics": [
+            "Agronegócio no Cerrado"
+          ],
+          "skills": [
+            "Reconhece o cerco aos camponeses pela lógica do agronegócio"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o cerco aos camponeses pela lógica do agronegócio.",
+          "rationale": "O capital impõe técnicas e subordina saberes locais.",
+          "strategy": [
+            "Leia o efeito do modelo",
+            "Relacione aos camponeses."
+          ],
+          "trap": "Escolher descaso com latifundiários.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "49",
+          "page": 20,
+          "subject": "Geografia",
+          "topicId": "geo_geopolitica_regional",
+          "topic": "Geopolítica Regional Contemporânea",
+          "subtopics": [
+            "Xinjiang e uigures"
+          ],
+          "skills": [
+            "Identifica o objetivo de assegurar a integridade territorial da China"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o objetivo de assegurar a integridade territorial da China.",
+          "rationale": "A região é estratégica por fronteiras, recursos e rota comercial.",
+          "strategy": [
+            "Leia a importância da região",
+            "Relacione à política chinesa."
+          ],
+          "trap": "Escolher liberdade religiosa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "50",
+          "page": 21,
+          "subject": "Sociologia",
+          "topicId": "soc_cultura_identidade",
+          "topic": "Cultura, Identidade e Diversidade",
+          "subtopics": [
+            "Herança africana"
+          ],
+          "skills": [
+            "Reconhece a crítica ao eurocentrismo da plataforma Ancestralidades"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a crítica ao eurocentrismo da plataforma Ancestralidades.",
+          "rationale": "A proposta valoriza a contribuição negra além da escravidão.",
+          "strategy": [
+            "Leia o objetivo da plataforma",
+            "Relacione à crítica de visões europeias."
+          ],
+          "trap": "Escolher etnocentrismo ou tradicionalismo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "51",
+          "page": 21,
+          "subject": "História",
+          "topicId": "his_imperialismo_guerras",
+          "topic": "Imperialismo e Guerras Mundiais",
+          "subtopics": [
+            "Declaração Balfour"
+          ],
+          "skills": [
+            "Identifica o interesse britânico em mediar conflitos territoriais"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o interesse britânico em mediar conflitos territoriais.",
+          "rationale": "A carta apoiava um lar judeu na Palestina durante a guerra.",
+          "strategy": [
+            "Leia a data e o contexto",
+            "Relacione à política britânica."
+          ],
+          "trap": "Escolher combate a governos autocráticos.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito C; interpretação oficial conferida pela chave.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "52",
+          "page": 21,
+          "subject": "Sociologia",
+          "topicId": "soc_movimentos_sociais",
+          "topic": "Movimentos Sociais e Cidadania",
+          "subtopics": [
+            "Paulo Freire e ética"
+          ],
+          "skills": [
+            "Reconhece a participação sociopolítica como exigência da ética"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a participação sociopolítica como exigência da ética.",
+          "rationale": "Para Freire, quem age no mundo é responsável por transformá-lo.",
+          "strategy": [
+            "Compare os dois textos",
+            "Ache a ideia comum."
+          ],
+          "trap": "Escolher manutenção do sistema escolar.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "53",
+          "page": 21,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Himalaia"
+          ],
+          "skills": [
+            "Associa a formação do Himalaia ao encontro de placas tectônicas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Associa a formação do Himalaia ao encontro de placas tectônicas.",
+          "rationale": "O choque entre a placa Indiana e a Euroasiática soergueu a cordilheira.",
+          "strategy": [
+            "Leia a idade e altitude",
+            "Relacione a dobramentos modernos."
+          ],
+          "trap": "Escolher vulcanismo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "54",
+          "page": 21,
+          "subject": "Filosofia",
+          "topicId": "fil_moderna_racionalismo_empirismo",
+          "topic": "Filosofia Moderna: Racionalismo e Empirismo",
+          "subtopics": [
+            "Mente e corpo"
+          ],
+          "skills": [
+            "Reconhece a crítica a uma visão dualista da raiva"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a crítica a uma visão dualista da raiva.",
+          "rationale": "O autor parte de Descartes, mas a experiência mostra a raiva no corpo.",
+          "strategy": [
+            "Leia a hipótese inicial",
+            "Identifique a tese criticada."
+          ],
+          "trap": "Escolher tese idealista.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito A; texto sobre fenomenologia e dualismo.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "55",
+          "page": 22,
+          "subject": "Filosofia",
+          "topicId": "fil_niilismo_existencialismo",
+          "topic": "Nietzsche, Existencialismo e Filosofia Contemporânea",
+          "subtopics": [
+            "Indústria cultural"
+          ],
+          "skills": [
+            "Reconhece o lazer como consumo de produtos do mesmo sistema produtivo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o lazer como consumo de produtos do mesmo sistema produtivo.",
+          "rationale": "Adorno e Horkheimer veem a diversão como prolongamento do trabalho.",
+          "strategy": [
+            "Leia a relação entre lazer e trabalho",
+            "Ache a crítica."
+          ],
+          "trap": "Escolher realização das potencialidades humanas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "56",
+          "page": 22,
+          "subject": "Sociologia",
+          "topicId": "soc_movimentos_sociais",
+          "topic": "Movimentos Sociais e Cidadania",
+          "subtopics": [
+            "Charge e participação"
+          ],
+          "skills": [
+            "Identifica o anseio de participação em ações decisórias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o anseio de participação em ações decisórias.",
+          "rationale": "A charge mostra o desejo de influir nas decisões.",
+          "strategy": [
+            "Observe a charge",
+            "Relacione ao anseio citado."
+          ],
+          "trap": "Escolher passividade social.",
+          "confidence": "medium",
+          "reviewNote": "Charge não extraída; gabarito C.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "57",
+          "page": 22,
+          "subject": "Filosofia",
+          "topicId": "fil_etica_politica_contemporanea",
+          "topic": "Ética e Política Contemporâneas",
+          "subtopics": [
+            "Ricoeur e o perdão"
+          ],
+          "skills": [
+            "Reconhece o perdão como escolha humana sem garantia"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o perdão como escolha humana sem garantia.",
+          "rationale": "O perdão pedido pode ser recusado.",
+          "strategy": [
+            "Leia a condição do perdão",
+            "Relacione à liberdade do outro."
+          ],
+          "trap": "Escolher vontade divina.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito E; alternativa E lida parcialmente.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "58",
+          "page": 23,
+          "subject": "Sociologia",
+          "topicId": "soc_cultura_identidade",
+          "topic": "Cultura, Identidade e Diversidade",
+          "subtopics": [
+            "Cavalgada de Sant'Ana"
+          ],
+          "skills": [
+            "Reconhece a combinação de elementos tradicionais e modernos na festa religiosa"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a combinação de elementos tradicionais e modernos na festa religiosa.",
+          "rationale": "A procissão a cavalo se transformou com a urbanização.",
+          "strategy": [
+            "Compare a festa antiga e a atual",
+            "Ache a mistura."
+          ],
+          "trap": "Escolher argumentos teológicos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "59",
+          "page": 23,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Processo civilizador"
+          ],
+          "skills": [
+            "Reconhece o garfo como distinção das classes sociais"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o garfo como distinção das classes sociais.",
+          "rationale": "O utensílio se difundiu primeiro nas classes altas.",
+          "strategy": [
+            "Leia quem usava o garfo",
+            "Relacione à distinção."
+          ],
+          "trap": "Escolher higiene.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "60",
+          "page": 23,
+          "subject": "Sociologia",
+          "topicId": "soc_estratificacao_desigualdade",
+          "topic": "Estratificação Social e Desigualdade",
+          "subtopics": [
+            "Violência contra a mulher"
+          ],
+          "skills": [
+            "Classifica as condutas como violência patrimonial"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Classifica as condutas como violência patrimonial.",
+          "rationale": "Controle de dinheiro, bens e documentos é forma prevista em lei.",
+          "strategy": [
+            "Leia as condutas listadas",
+            "Relacione aos bens da vítima."
+          ],
+          "trap": "Chamar de desentendimento matrimonial.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "61",
+          "page": 23,
+          "subject": "Sociologia",
+          "topicId": "soc_trabalho_sociedade",
+          "topic": "Trabalho e Sociedade",
+          "subtopics": [
+            "Trabalho por trás da IA"
+          ],
+          "skills": [
+            "Reconhece a invisibilidade do profissional que treina a inteligência artificial"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a invisibilidade do profissional que treina a inteligência artificial.",
+          "rationale": "Linguistas subcontratados e mal pagos sustentam a \"mágica\" do assistente.",
+          "strategy": [
+            "Leia as condições de trabalho",
+            "Relacione à ideia de magia."
+          ],
+          "trap": "Escolher autonomia do empregado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "62",
+          "page": 24,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Coreias"
+          ],
+          "skills": [
+            "Identifica divergências político-ideológicas entre os Estados coreanos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica divergências político-ideológicas entre os Estados coreanos.",
+          "rationale": "Os alto-falantes são instrumento de propaganda na fronteira.",
+          "strategy": [
+            "Leia o conteúdo transmitido",
+            "Relacione à Guerra Fria."
+          ],
+          "trap": "Escolher disputa étnica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "63",
+          "page": 24,
+          "subject": "História",
+          "topicId": "his_brasil_colonia",
+          "topic": "Brasil Colônia",
+          "subtopics": [
+            "Comércio e ouro"
+          ],
+          "skills": [
+            "Identifica o intercâmbio transcontinental de objetos nas cidades mineiras"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o intercâmbio transcontinental de objetos nas cidades mineiras.",
+          "rationale": "Porcelanas e sedas asiáticas chegaram com a riqueza do ouro.",
+          "strategy": [
+            "Leia a origem dos objetos",
+            "Relacione às rotas comerciais."
+          ],
+          "trap": "Escolher dependência econômica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "64",
+          "page": 24,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Discurso indígena na COP-26"
+          ],
+          "skills": [
+            "Reconhece a crítica à exploração predatória dos recursos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a crítica à exploração predatória dos recursos.",
+          "rationale": "Txai Suruí aponta sinais de colapso ambiental.",
+          "strategy": [
+            "Leia os sintomas citados",
+            "Ache a causa implícita."
+          ],
+          "trap": "Escolher consumo consciente.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "65",
+          "page": 24,
+          "subject": "Sociologia",
+          "topicId": "soc_estratificacao_desigualdade",
+          "topic": "Estratificação Social e Desigualdade",
+          "subtopics": [
+            "Lina Bo Bardi"
+          ],
+          "skills": [
+            "Reconhece a falta de equidade de gênero no reconhecimento profissional"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a falta de equidade de gênero no reconhecimento profissional.",
+          "rationale": "A arquiteta do Masp não foi citada nas reportagens.",
+          "strategy": [
+            "Leia o apagamento descrito",
+            "Relacione ao gênero."
+          ],
+          "trap": "Escolher liberdade de expressão.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "66",
+          "page": 25,
+          "subject": "Sociologia",
+          "topicId": "soc_estratificacao_desigualdade",
+          "topic": "Estratificação Social e Desigualdade",
+          "subtopics": [
+            "Fome ontem e hoje"
+          ],
+          "skills": [
+            "Reconhece a recorrência da miséria em épocas diferentes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a recorrência da miséria em épocas diferentes.",
+          "rationale": "O diário de Carolina e o texto atual mostram a fome que persiste.",
+          "strategy": [
+            "Compare as duas épocas",
+            "Ache a continuidade."
+          ],
+          "trap": "Escolher superação da escassez.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "67",
+          "page": 25,
+          "subject": "Geografia",
+          "topicId": "geo_economica_brasil",
+          "topic": "Geografia Econômica do Brasil",
+          "subtopics": [
+            "Cabruca"
+          ],
+          "skills": [
+            "Reconhece o uso sustentável dos recursos no cacau sob a floresta"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o uso sustentável dos recursos no cacau sob a floresta.",
+          "rationale": "O sistema agroflorestal mantém a mata nativa.",
+          "strategy": [
+            "Leia como o cacau é cultivado",
+            "Relacione à conservação."
+          ],
+          "trap": "Escolher lavouras temporárias.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "68",
+          "page": 25,
+          "subject": "Geografia",
+          "topicId": "geo_populacao_urbana_brasil",
+          "topic": "Geografia da População e Urbana do Brasil",
+          "subtopics": [
+            "Mangue e pobreza urbana"
+          ],
+          "skills": [
+            "Identifica a interferência do espaço geográfico na vida dos moradores"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a interferência do espaço geográfico na vida dos moradores.",
+          "rationale": "A maré, os insetos e o mau cheiro marcam a vida no mangue.",
+          "strategy": [
+            "Leia as condições da tapera",
+            "Relacione o ambiente à vida."
+          ],
+          "trap": "Escolher equilíbrio urbano.",
+          "confidence": "medium",
+          "reviewNote": "Excerto de Josué de Castro; gabarito C.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "69",
+          "page": 25,
+          "subject": "Filosofia",
+          "topicId": "fil_etica_politica_contemporanea",
+          "topic": "Ética e Política Contemporâneas",
+          "subtopics": [
+            "Juízas afegãs"
+          ],
+          "skills": [
+            "Reconhece o desrespeito à dignidade humana sob o Talibã"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o desrespeito à dignidade humana sob o Talibã.",
+          "rationale": "As juízas são perseguidas por defender direitos das mulheres.",
+          "strategy": [
+            "Leia a situação das juízas",
+            "Relacione aos direitos humanos."
+          ],
+          "trap": "Escolher afronta a valores religiosos.",
+          "confidence": "medium",
+          "reviewNote": "Tema de direitos humanos classificado em ética.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "70",
+          "page": 26,
+          "subject": "História",
+          "topicId": "his_republica_liberal_atual",
+          "topic": "República Liberal e Brasil Contemporâneo",
+          "subtopics": [
+            "Caso Herzog"
+          ],
+          "skills": [
+            "Identifica a institucionalização de mecanismos repressivos na ditadura"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a institucionalização de mecanismos repressivos na ditadura.",
+          "rationale": "A morte de Herzog no DOI expõe a tortura do regime.",
+          "strategy": [
+            "Leia o contexto do funeral",
+            "Relacione à repressão."
+          ],
+          "trap": "Escolher estratégia psicossocial.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "71",
+          "page": 26,
+          "subject": "Geografia",
+          "topicId": "geo_economica_brasil",
+          "topic": "Geografia Econômica do Brasil",
+          "subtopics": [
+            "Soja e desmatamento"
+          ],
+          "skills": [
+            "Reconhece a apropriação de áreas devolutas pela expansão da soja"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a apropriação de áreas devolutas pela expansão da soja.",
+          "rationale": "Obras logísticas valorizam terras e estimulam a especulação.",
+          "strategy": [
+            "Leia o papel da logística",
+            "Relacione à grilagem."
+          ],
+          "trap": "Escolher sonegação de impostos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "72",
+          "page": 26,
+          "subject": "Sociologia",
+          "topicId": "soc_globalizacao",
+          "topic": "Globalização e Sociedade Contemporânea",
+          "subtopics": [
+            "Turismo espacial"
+          ],
+          "skills": [
+            "Reconhece a combinação de expectativa e desconfiança sobre viagens espaciais"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a combinação de expectativa e desconfiança sobre viagens espaciais.",
+          "rationale": "Os textos mostram promessas tecnológicas e críticas ao privilégio.",
+          "strategy": [
+            "Compare os dois textos",
+            "Ache as duas atitudes."
+          ],
+          "trap": "Escolher pioneirismo e retrocesso.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito B; textos parcialmente extraídos.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "73",
+          "page": 27,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Crise florestal"
+          ],
+          "skills": [
+            "Relaciona a crise florestal à expansão marítima"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a crise florestal à expansão marítima.",
+          "rationale": "A construção de navios consumia muita madeira.",
+          "strategy": [
+            "Leia o período e o país",
+            "Relacione à navegação."
+          ],
+          "trap": "Escolher Renascimento cultural.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "74",
+          "page": 27,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Império Inca"
+          ],
+          "skills": [
+            "Reconhece a flexibilidade inca em relação aos costumes dos povos dominados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a flexibilidade inca em relação aos costumes dos povos dominados.",
+          "rationale": "Os incas mantinham práticas locais dos povos submetidos.",
+          "strategy": [
+            "Leia a organização do império",
+            "Relacione à convivência de culturas."
+          ],
+          "trap": "Escolher direitos humanos.",
+          "confidence": "medium",
+          "reviewNote": "América pré-colombiana; gabarito D.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "75",
+          "page": 27,
+          "subject": "Sociologia",
+          "topicId": "soc_cultura_identidade",
+          "topic": "Cultura, Identidade e Diversidade",
+          "subtopics": [
+            "Racismo no futebol"
+          ],
+          "skills": [
+            "Identifica a condenação do preconceito racial no canto da torcida"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a condenação do preconceito racial no canto da torcida.",
+          "rationale": "O termo mulambo tem origem escravista.",
+          "strategy": [
+            "Leia a origem do termo",
+            "Relacione ao racismo."
+          ],
+          "trap": "Escolher misoginia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "76",
+          "page": 27,
+          "subject": "Geografia",
+          "topicId": "geo_populacao_urbana_brasil",
+          "topic": "Geografia da População e Urbana do Brasil",
+          "subtopics": [
+            "Queda da fecundidade"
+          ],
+          "skills": [
+            "Associa a queda da fecundidade à participação feminina no trabalho"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Associa a queda da fecundidade à participação feminina no trabalho.",
+          "rationale": "Urbanização e trabalho feminino reduzem o número de filhos.",
+          "strategy": [
+            "Observe a tendência do gráfico",
+            "Relacione à mudança social."
+          ],
+          "trap": "Escolher envelhecimento, que é consequência.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "77",
+          "page": 28,
+          "subject": "História",
+          "topicId": "his_brasil_colonia",
+          "topic": "Brasil Colônia",
+          "subtopics": [
+            "Vacina e Ilustração"
+          ],
+          "skills": [
+            "Identifica a crítica ilustrada ao atraso de Portugal na vacinação do Brasil"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a crítica ilustrada ao atraso de Portugal na vacinação do Brasil.",
+          "rationale": "O texto valoriza a ciência como progresso.",
+          "strategy": [
+            "Leia a crítica ao governo português",
+            "Relacione aos ideais iluministas."
+          ],
+          "trap": "Escolher direito natural.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito E; alternativa E lida parcialmente.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "78",
+          "page": 28,
+          "subject": "Geografia",
+          "topicId": "geo_populacao_urbana_brasil",
+          "topic": "Geografia da População e Urbana do Brasil",
+          "subtopics": [
+            "Agricultura urbana"
+          ],
+          "skills": [
+            "Reconhece a ocupação de lugares ociosos pela agricultura urbana"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a ocupação de lugares ociosos pela agricultura urbana.",
+          "rationale": "Moradores cultivam em espaços vazios da cidade.",
+          "strategy": [
+            "Leia como surgem as hortas",
+            "Relacione aos espaços ociosos."
+          ],
+          "trap": "Escolher mecanização.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "79",
+          "page": 28,
+          "subject": "Filosofia",
+          "topicId": "fil_niilismo_existencialismo",
+          "topic": "Nietzsche, Existencialismo e Filosofia Contemporânea",
+          "subtopics": [
+            "Acaso e conformismo"
+          ],
+          "skills": [
+            "Reconhece a negação da possibilidade de transcendência no comportamento de Gerineldo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a negação da possibilidade de transcendência no comportamento de Gerineldo.",
+          "rationale": "O personagem reduz a vida a cálculo de probabilidades.",
+          "strategy": [
+            "Compare os textos",
+            "Ache a crítica comum."
+          ],
+          "trap": "Escolher manifestação do inconsciente.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito B; textos filosóficos parcialmente extraídos.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "80",
+          "page": 28,
+          "subject": "História",
+          "topicId": "his_republica_liberal_atual",
+          "topic": "República Liberal e Brasil Contemporâneo",
+          "subtopics": [
+            "Ditadura e sindicatos"
+          ],
+          "skills": [
+            "Identifica o objetivo de controlar as tensões políticas nos sindicatos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o objetivo de controlar as tensões políticas nos sindicatos.",
+          "rationale": "O regime reprimiu as Ligas e formou lideranças conservadoras.",
+          "strategy": [
+            "Leia a atitude ambígua do regime",
+            "Relacione ao controle."
+          ],
+          "trap": "Escolher reforma agrária.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "81",
+          "page": 29,
+          "subject": "Filosofia",
+          "topicId": "fil_niilismo_existencialismo",
+          "topic": "Nietzsche, Existencialismo e Filosofia Contemporânea",
+          "subtopics": [
+            "Foucault e ilegalidades"
+          ],
+          "skills": [
+            "Reconhece a gestão diferenciada das ilicitudes pelo sistema judicial"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a gestão diferenciada das ilicitudes pelo sistema judicial.",
+          "rationale": "A separação entre ilegalidade de bens e de direitos expressa classes.",
+          "strategy": [
+            "Leia a divisão descrita",
+            "Relacione ao poder."
+          ],
+          "trap": "Escolher modelo equânime.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "82",
+          "page": 29,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Cartas de imigrantes"
+          ],
+          "skills": [
+            "Reconhece a circularidade cultural entre sociedade de partida e de chegada"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a circularidade cultural entre sociedade de partida e de chegada.",
+          "rationale": "As cartas levavam notícias e ideias pelo oceano.",
+          "strategy": [
+            "Leia a função das cartas",
+            "Relacione às duas sociedades."
+          ],
+          "trap": "Escolher controle doutrinário.",
+          "confidence": "medium",
+          "reviewNote": "Período da imigração não especificado no trecho extraído.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "83",
+          "page": 29,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Degradação do solo"
+          ],
+          "skills": [
+            "Associa a degradação à diminuição da fertilidade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Associa a degradação à diminuição da fertilidade.",
+          "rationale": "Desmatamento e cortes expõem o solo à erosão.",
+          "strategy": [
+            "Leia as causas",
+            "Relacione à perda de nutrientes."
+          ],
+          "trap": "Escolher elevação da biomassa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "84",
+          "page": 29,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Racionalização doméstica"
+          ],
+          "skills": [
+            "Identifica o efeito da cozinha racionalizada sobre o tempo das mulheres"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o efeito da cozinha racionalizada sobre o tempo das mulheres.",
+          "rationale": "A organização visava simplificar o trabalho doméstico.",
+          "strategy": [
+            "Leia o objetivo da cozinha moderna",
+            "Relacione ao tempo livre."
+          ],
+          "trap": "Escolher controle do orçamento.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito D; anos 1930, classificado em Era Vargas.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "85",
+          "page": 30,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Mercosul e União Europeia"
+          ],
+          "skills": [
+            "Reconhece a oposição dos produtores europeus por concorrência desleal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a oposição dos produtores europeus por concorrência desleal.",
+          "rationale": "Regras mais rígidas encarecem a produção europeia.",
+          "strategy": [
+            "Leia o argumento dos produtores",
+            "Ache a medida que exigem."
+          ],
+          "trap": "Escolher restrição migratória.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito D; alternativa D lida parcialmente.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "86",
+          "page": 30,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Educação feminina e Revolução Francesa"
+          ],
+          "skills": [
+            "Reconhece a ruptura de valores institucionalizados na educação de Anaïs"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a ruptura de valores institucionalizados na educação de Anaïs.",
+          "rationale": "A jovem recebe educação masculina e independência.",
+          "strategy": [
+            "Leia a educação recebida",
+            "Relacione à ruptura."
+          ],
+          "trap": "Escolher aceitação da hierarquia de gênero.",
+          "confidence": "medium",
+          "reviewNote": "Excerto literário com contexto da Revolução Francesa.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "87",
+          "page": 30,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Imigração judaica e Vargas"
+          ],
+          "skills": [
+            "Identifica aspectos socioeconômicos e ideológicos na política migratória"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica aspectos socioeconômicos e ideológicos na política migratória.",
+          "rationale": "O caso de Genny Gleizer mostra antissemitismo e anticomunismo.",
+          "strategy": [
+            "Compare os dois textos",
+            "Relacione à política da época."
+          ],
+          "trap": "Escolher preceitos teológicos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "88",
+          "page": 30,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Concorrência e competitividade"
+          ],
+          "skills": [
+            "Reconhece o dumping comercial como prática competitiva"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o dumping comercial como prática competitiva.",
+          "rationale": "Milton Santos distingue concorrência regrada de competição sem limites.",
+          "strategy": [
+            "Leia a definição de competitividade",
+            "Ache a prática sem regras."
+          ],
+          "trap": "Escolher modernização industrial.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "89",
+          "page": 31,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Antropoceno"
+          ],
+          "skills": [
+            "Identifica o controle das emissões de carbono como medida contra as mudanças"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o controle das emissões de carbono como medida contra as mudanças.",
+          "rationale": "As simulações mostram aquecimento por gases de efeito estufa.",
+          "strategy": [
+            "Observe as simulações",
+            "Ache a medida sobre a causa."
+          ],
+          "trap": "Escolher termoelétricas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "90",
+          "page": 31,
+          "subject": "Filosofia",
+          "topicId": "fil_origem_pre_socraticos",
+          "topic": "Origens da Filosofia e os Pré-Socráticos",
+          "subtopics": [
+            "Brás Cubas e retórica"
+          ],
+          "skills": [
+            "Reconhece a utilização persuasiva do discurso"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a utilização persuasiva do discurso.",
+          "rationale": "O narrador usa citações só para impressionar na conversa.",
+          "strategy": [
+            "Leia como ele usa o latim e a filosofia",
+            "Relacione à retórica sofística."
+          ],
+          "trap": "Escolher investigação da physis.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "R",
+          "page": 19,
+          "subject": "Redação",
+          "topicId": "por_red_repertorio",
+          "topic": "Leitura de Coletânea e Repertório Temático",
+          "subtopics": [
+            "Trabalho de cuidado"
+          ],
+          "skills": [
+            "Propõe dissertação sobre a invisibilidade do trabalho de cuidado realizado pela mulher no Brasil"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Propõe dissertação sobre a invisibilidade do trabalho de cuidado realizado pela mulher no Brasil.",
+          "rationale": "É preciso tratar desafios e invisibilidade do cuidado feminino, não o trabalho em geral.",
+          "strategy": [
+            "Delimite as palavras-chave do tema",
+            "Construa argumentos e intervenção com os cinco elementos."
+          ],
+          "trap": "Falar de mercado de trabalho feminino em geral e tangenciar o tema.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answerKeyUrl": null,
+          "answerKeySha256": null
+        }
+      ]
+    },
+    {
+      "id": "enem-2023-natureza-matematica",
+      "group": "natureza-matematica",
+      "phase": "Ciências da Natureza e Matemática",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "Caderno 5 — Amarelo",
+      "sourceUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2023/ENEM_2023_dia_2_caderno_amarelo.pdf",
+      "answerKeyUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2023/ENEM_2023_dia_2_gabarito_amarelo.pdf",
+      "sha256": "722d68f4b39f0b508ae2f17086d48422ec5a0b479b190fff33c89e3bdedfbd00",
+      "answerKeySha256": "03f43b97a23c5b0847ad7a76cc43918d9f9cac8476c6e8ac51b0c270442f434b",
+      "pages": 32,
+      "expectedQuestions": 90,
+      "coverageNote": "Aplicação regular impressa; caderno identificado pela capa e pareado com o gabarito oficial do mesmo caderno.",
+      "questions": [
+        {
+          "number": "91",
+          "page": 2,
+          "subject": "Física",
+          "topicId": "fis_ondas_fundamentos",
+          "topic": "Fundamentos de Ondas e Oscilações",
+          "subtopics": [
+            "Telefone de lata"
+          ],
+          "skills": [
+            "Identifica a grandeza que muda quando o barbante fica mais longo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a grandeza que muda quando o barbante fica mais longo.",
+          "rationale": "Em barbante mais extenso, o som chega com menor amplitude por perdas.",
+          "strategy": [
+            "Leia o que muda na brincadeira",
+            "Relacione distância e intensidade."
+          ],
+          "trap": "Escolher altura ou velocidade.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito C (amplitude).",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "92",
+          "page": 2,
+          "subject": "Física",
+          "topicId": "fis_ondulatoria",
+          "topic": "Ondulatória",
+          "subtopics": [
+            "Laser e discos ópticos"
+          ],
+          "skills": [
+            "Escolhe a cor de laser que permite cavidades menores"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Escolhe a cor de laser que permite cavidades menores.",
+          "rationale": "Menor comprimento de onda lê detalhes menores; o violeta é o menor visível.",
+          "strategy": [
+            "Relacione cavidade a comprimento de onda",
+            "Ache a cor de menor λ."
+          ],
+          "trap": "Escolher infravermelho.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "93",
+          "page": 2,
+          "subject": "Física",
+          "topicId": "fis_energia",
+          "topic": "Dinâmica Energética e Transformações de Energia",
+          "subtopics": [
+            "Energia do bluetooth"
+          ],
+          "skills": [
+            "Calcula a energia emitida num intervalo pela potência da antena"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a energia emitida num intervalo pela potência da antena.",
+          "rationale": "Energia é potência vezes tempo.",
+          "strategy": [
+            "Converta mW para W",
+            "Multiplique pelo tempo dado."
+          ],
+          "trap": "Errar a potência de dez.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito A; tempo do enunciado não extraído.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "94",
+          "page": 3,
+          "subject": "Química",
+          "topicId": "qui_inorganica",
+          "topic": "Química Inorgânica",
+          "subtopics": [
+            "Terra preta"
+          ],
+          "skills": [
+            "Identifica o nutriente fornecido pelas cinzas e restos da terra preta"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o nutriente fornecido pelas cinzas e restos da terra preta.",
+          "rationale": "Ossos e cinzas são ricos em cálcio e fósforo.",
+          "strategy": [
+            "Leia a composição do insumo",
+            "Relacione ao elemento."
+          ],
+          "trap": "Escolher ferro, comum no solo amazônico.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito A (potássio); composição do insumo parcialmente extraída.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "95",
+          "page": 3,
+          "subject": "Física",
+          "topicId": "fis_calorimetria",
+          "topic": "Calorimetria",
+          "subtopics": [
+            "Tacho a vapor"
+          ],
+          "skills": [
+            "Identifica calor sensível e latente de condensação no tacho"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica calor sensível e latente de condensação no tacho.",
+          "rationale": "O vapor esfria de 120 °C a 100 °C e depois condensa.",
+          "strategy": [
+            "Siga o estado do vapor",
+            "Separe as duas etapas."
+          ],
+          "trap": "Chamar a etapa de vaporização.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "96",
+          "page": 4,
+          "subject": "Química",
+          "topicId": "qui_organica_fundamentos",
+          "topic": "Fundamentos e Nomenclatura Orgânica",
+          "subtopics": [
+            "Gasolina de alto desempenho"
+          ],
+          "skills": [
+            "Escolhe o hidrocarboneto saturado e ramificado adequado"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Escolhe o hidrocarboneto saturado e ramificado adequado.",
+          "rationale": "Cadeias ramificadas resistem à compressão.",
+          "strategy": [
+            "Confira o número de carbonos",
+            "Verifique ramificação e saturação."
+          ],
+          "trap": "Escolher cadeia normal ou insaturada.",
+          "confidence": "medium",
+          "reviewNote": "Estruturas em números romanos; gabarito C.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "97",
+          "page": 4,
+          "subject": "Química",
+          "topicId": "qui_gases",
+          "topic": "Gases",
+          "subtopics": [
+            "Explosão em incinerador"
+          ],
+          "skills": [
+            "Calcula a pressão de um gás aquecido em recipiente fechado"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a pressão de um gás aquecido em recipiente fechado.",
+          "rationale": "Com volume constante, a pressão é proporcional à temperatura absoluta.",
+          "strategy": [
+            "Converta para kelvin",
+            "Aplique P/T constante."
+          ],
+          "trap": "Usar Celsius.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito C; dados parcialmente extraídos.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "98",
+          "page": 4,
+          "subject": "Física",
+          "topicId": "fis_circuitos",
+          "topic": "Circuitos Elétricos",
+          "subtopics": [
+            "Associação mista de lâmpadas"
+          ],
+          "skills": [
+            "Prevê o brilho das lâmpadas após alterar um conjunto"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Prevê o brilho das lâmpadas após alterar um conjunto.",
+          "rationale": "Mudar um resistor altera a corrente total e a divisão nos conjuntos.",
+          "strategy": [
+            "Calcule a resistência equivalente",
+            "Compare a corrente em cada lâmpada."
+          ],
+          "trap": "Achar que as lâmpadas não mudam.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito C; alteração do circuito parcialmente extraída.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "99",
+          "page": 5,
+          "subject": "Biologia",
+          "topicId": "bio_codigo_genetico_sintese",
+          "topic": "Código Genético e Síntese Proteica",
+          "subtopics": [
+            "Vacina de RNA mensageiro"
+          ],
+          "skills": [
+            "Reconhece a tradução do RNAm em proteína viral como base da resposta"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a tradução do RNAm em proteína viral como base da resposta.",
+          "rationale": "A célula produz a proteína do vírus, que estimula o sistema imune.",
+          "strategy": [
+            "Leia o papel da capa lipídica",
+            "Relacione à tradução."
+          ],
+          "trap": "Achar que o RNAm altera o DNA.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "100",
+          "page": 5,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Fertilização in vitro"
+          ],
+          "skills": [
+            "Identifica a falha na passagem do espermatozoide pelas camadas do ovócito"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a falha na passagem do espermatozoide pelas camadas do ovócito.",
+          "rationale": "Sem enzimas do acrossomo, não há penetração.",
+          "strategy": [
+            "Leia o defeito dos espermatozoides",
+            "Relacione ao acrossomo."
+          ],
+          "trap": "Escolher divisão do zigoto.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "101",
+          "page": 5,
+          "subject": "Física",
+          "topicId": "fis_eletromagnetismo",
+          "topic": "Eletromagnetismo",
+          "subtopics": [
+            "Fogão de indução"
+          ],
+          "skills": [
+            "Identifica o campo magnético variável como origem da corrente"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o campo magnético variável como origem da corrente.",
+          "rationale": "A indução exige variação do fluxo magnético.",
+          "strategy": [
+            "Relacione corrente induzida a Faraday",
+            "Escolha a grandeza variável."
+          ],
+          "trap": "Escolher condução ou radiação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "102",
+          "page": 5,
+          "subject": "Física",
+          "topicId": "fis_estatica",
+          "topic": "Estática dos Corpos Sólidos e dos Fluidos",
+          "subtopics": [
+            "Polias e carga"
+          ],
+          "skills": [
+            "Compara as forças nos aparelhos com polias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara as forças nos aparelhos com polias.",
+          "rationale": "Polias móveis dividem a força necessária.",
+          "strategy": [
+            "Conte as polias móveis",
+            "Compare as forças."
+          ],
+          "trap": "Inverter a razão.",
+          "confidence": "medium",
+          "reviewNote": "Figura necessária; gabarito D.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "103",
+          "page": 6,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_vegetal",
+          "topic": "Fisiologia Vegetal",
+          "subtopics": [
+            "Amadurecimento de frutos"
+          ],
+          "skills": [
+            "Associa o amadurecimento acelerado ao acúmulo de etileno"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Associa o amadurecimento acelerado ao acúmulo de etileno.",
+          "rationale": "O fruto libera etileno, que se concentra no recipiente fechado.",
+          "strategy": [
+            "Leia o experimento",
+            "Relacione ao hormônio gasoso."
+          ],
+          "trap": "Escolher CO₂.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "104",
+          "page": 6,
+          "subject": "Biologia",
+          "topicId": "bio_metabolismo_energetico",
+          "topic": "Metabolismo Energético",
+          "subtopics": [
+            "Lesmas fotossintetizantes"
+          ],
+          "skills": [
+            "Identifica os carboidratos obtidos pelos cloroplastos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica os carboidratos obtidos pelos cloroplastos.",
+          "rationale": "Os cloroplastos produzem açúcares pela fotossíntese.",
+          "strategy": [
+            "Leia o papel dos cloroplastos",
+            "Relacione ao produto da fotossíntese."
+          ],
+          "trap": "Escolher proteínas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "105",
+          "page": 6,
+          "subject": "Biologia",
+          "topicId": "bio_microbiologia",
+          "topic": "Microbiologia e Virologia",
+          "subtopics": [
+            "Leishmaniose visceral"
+          ],
+          "skills": [
+            "Identifica o sangue como material para diagnóstico ou transmissão"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o sangue como material para diagnóstico ou transmissão.",
+          "rationale": "O protozoário é transmitido pelo vetor que suga sangue.",
+          "strategy": [
+            "Leia como ocorre a transmissão",
+            "Ache o material relevante."
+          ],
+          "trap": "Escolher urina ou fezes.",
+          "confidence": "medium",
+          "reviewNote": "Comando parcialmente extraído; gabarito D.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "106",
+          "page": 6,
+          "subject": "Física",
+          "topicId": "fis_cinematica",
+          "topic": "Cinemática Escalar",
+          "subtopics": [
+            "Lançamento vertical"
+          ],
+          "skills": [
+            "Identifica velocidade nula e aceleração para baixo no ponto mais alto"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica velocidade nula e aceleração para baixo no ponto mais alto.",
+          "rationale": "A gravidade age o tempo todo; a velocidade zera só no topo.",
+          "strategy": [
+            "Separe velocidade e aceleração",
+            "Lembre que g não muda."
+          ],
+          "trap": "Achar que a aceleração é nula no topo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "107",
+          "page": 7,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Tensão pré-menstrual"
+          ],
+          "skills": [
+            "Relaciona a queda de serotonina à regressão do corpo lúteo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a queda de serotonina à regressão do corpo lúteo.",
+          "rationale": "A queda dos hormônios do corpo lúteo antecede a menstruação.",
+          "strategy": [
+            "Situe o período do ciclo",
+            "Relacione à queda hormonal."
+          ],
+          "trap": "Escolher ovulação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "108",
+          "page": 7,
+          "subject": "Química",
+          "topicId": "qui_oxirreducao",
+          "topic": "Oxirredução",
+          "subtopics": [
+            "Oxidação de álcool"
+          ],
+          "skills": [
+            "Identifica o hexan-3-ol como reagente para obter hexan-3-ona"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o hexan-3-ol como reagente para obter hexan-3-ona.",
+          "rationale": "Álcool secundário oxida a cetona.",
+          "strategy": [
+            "Localize o carbono da carbonila",
+            "Ache o álcool correspondente."
+          ],
+          "trap": "Escolher hexanal ou álcool primário.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "109",
+          "page": 7,
+          "subject": "Biologia",
+          "topicId": "bio_botanica",
+          "topic": "Botânica",
+          "subtopics": [
+            "Plantas na terra firme"
+          ],
+          "skills": [
+            "Identifica a semente como estrutura que permitiu independência da água"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a semente como estrutura que permitiu independência da água.",
+          "rationale": "A semente protege o embrião e dispensa água para dispersão.",
+          "strategy": [
+            "Leia a transição descrita",
+            "Relacione às gimnospermas."
+          ],
+          "trap": "Escolher vaso condutor.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito C.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "110",
+          "page": 7,
+          "subject": "Química",
+          "topicId": "qui_solucoes",
+          "topic": "Soluções",
+          "subtopics": [
+            "Dissolução do alumínio"
+          ],
+          "skills": [
+            "Identifica a condição que promove a dissolução do alumínio do vidro"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a condição que promove a dissolução do alumínio do vidro.",
+          "rationale": "Substâncias que se ligam ao íon aumentam a dissolução.",
+          "strategy": [
+            "Leia o critério do texto",
+            "Relacione à concentração."
+          ],
+          "trap": "Escolher espessura do vidro.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito B.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "111",
+          "page": 7,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_vegetal",
+          "topic": "Fisiologia Vegetal",
+          "subtopics": [
+            "Anelamento do tronco"
+          ],
+          "skills": [
+            "Explica a morte da árvore pela interrupção do floema"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica a morte da árvore pela interrupção do floema.",
+          "rationale": "Sem floema, as raízes não recebem açúcares.",
+          "strategy": [
+            "Leia os tecidos retirados",
+            "Relacione à nutrição das raízes."
+          ],
+          "trap": "Escolher transpiração, ligada ao xilema.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "112",
+          "page": 8,
+          "subject": "Química",
+          "topicId": "qui_organica_fundamentos",
+          "topic": "Fundamentos e Nomenclatura Orgânica",
+          "subtopics": [
+            "Detergente biodegradável"
+          ],
+          "skills": [
+            "Propõe modificar a cadeia para que seja linear"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Propõe modificar a cadeia para que seja linear.",
+          "rationale": "Microrganismos degradam cadeias não ramificadas.",
+          "strategy": [
+            "Leia a causa da espuma",
+            "Ache a alteração estrutural."
+          ],
+          "trap": "Retirar a parte polar.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito E; alternativa E lida parcialmente.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "113",
+          "page": 8,
+          "subject": "Biologia",
+          "topicId": "bio_estrutura_fisio_celular",
+          "topic": "Estrutura e Fisiologia Celular",
+          "subtopics": [
+            "Micronúcleos"
+          ],
+          "skills": [
+            "Identifica cromossomos como origem dos micronúcleos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica cromossomos como origem dos micronúcleos.",
+          "rationale": "Fragmentos de cromossomos ficam fora do núcleo após a divisão.",
+          "strategy": [
+            "Leia a definição",
+            "Relacione a lesões genéticas."
+          ],
+          "trap": "Escolher nucléolos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "114",
+          "page": 8,
+          "subject": "Física",
+          "topicId": "fis_ondas_fundamentos",
+          "topic": "Fundamentos de Ondas e Oscilações",
+          "subtopics": [
+            "Prospecção sísmica"
+          ],
+          "skills": [
+            "Calcula a velocidade do som na camada pelo tempo de ida e volta"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a velocidade do som na camada pelo tempo de ida e volta.",
+          "rationale": "A distância é duas vezes a espessura.",
+          "strategy": [
+            "Dobre a espessura",
+            "Divida pelo tempo."
+          ],
+          "trap": "Usar só a ida.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito D; tempo parcialmente extraído.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "115",
+          "page": 9,
+          "subject": "Física",
+          "topicId": "fis_ondulatoria",
+          "topic": "Ondulatória",
+          "subtopics": [
+            "Interferência de ondas"
+          ],
+          "skills": [
+            "Identifica a mesma frequência como condição de interferência"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a mesma frequência como condição de interferência.",
+          "rationale": "Ondas de frequências iguais podem se somar ou anular.",
+          "strategy": [
+            "Leia o motivo do pedido",
+            "Relacione à interferência."
+          ],
+          "trap": "Escolher mesma potência.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "116",
+          "page": 9,
+          "subject": "Química",
+          "topicId": "qui_polaridade_geometria",
+          "topic": "Polaridade das Ligações e Geometria Molecular",
+          "subtopics": [
+            "Aldrin e polaridade"
+          ],
+          "skills": [
+            "Relaciona a baixa polaridade do Aldrin à sua acumulação no organismo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a baixa polaridade do Aldrin à sua acumulação no organismo.",
+          "rationale": "Moléculas apolares se dissolvem em gordura.",
+          "strategy": [
+            "Leia a polaridade",
+            "Relacione ao fluido analisado."
+          ],
+          "trap": "Escolher fluido aquoso.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito E; alternativa E não extraída.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "117",
+          "page": 9,
+          "subject": "Física",
+          "topicId": "fis_calorimetria",
+          "topic": "Calorimetria",
+          "subtopics": [
+            "Copo reutilizável"
+          ],
+          "skills": [
+            "Avalia as vantagens do copo de casca de café"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Avalia as vantagens do copo de casca de café.",
+          "rationale": "O material isola o calor e reduz o descarte.",
+          "strategy": [
+            "Leia as propriedades do copo",
+            "Relacione à condução térmica e ao lixo."
+          ],
+          "trap": "Escolher alta condutividade.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito D; alternativa D lida parcialmente.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "118",
+          "page": 9,
+          "subject": "Química",
+          "topicId": "qui_solucoes",
+          "topic": "Soluções",
+          "subtopics": [
+            "Refrigerante comum e diet"
+          ],
+          "skills": [
+            "Identifica a maior densidade do refrigerante com açúcar"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a maior densidade do refrigerante com açúcar.",
+          "rationale": "Mais soluto dissolvido aumenta a densidade.",
+          "strategy": [
+            "Compare os dois",
+            "Relacione soluto e densidade."
+          ],
+          "trap": "Escolher maior volume de gás.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "119",
+          "page": 10,
+          "subject": "Química",
+          "topicId": "qui_gases",
+          "topic": "Gases",
+          "subtopics": [
+            "Pneu aquecido"
+          ],
+          "skills": [
+            "Identifica o gráfico de pressão em função da temperatura"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o gráfico de pressão em função da temperatura.",
+          "rationale": "A volume constante, pressão e temperatura absoluta são proporcionais.",
+          "strategy": [
+            "Converta temperatura",
+            "Escolha a reta coerente."
+          ],
+          "trap": "Usar escala Celsius passando pela origem.",
+          "confidence": "medium",
+          "reviewNote": "Alternativas gráficas; gabarito E.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "120",
+          "page": 11,
+          "subject": "Biologia",
+          "topicId": "bio_genetica",
+          "topic": "Genética",
+          "subtopics": [
+            "Síndrome de Down"
+          ],
+          "skills": [
+            "Deduz os genótipos de filhos de pais trissômicos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Deduz os genótipos de filhos de pais trissômicos.",
+          "rationale": "Cada pai pode formar gametas com um ou dois cromossomos 21.",
+          "strategy": [
+            "Monte os gametas de cada pai",
+            "Combine-os."
+          ],
+          "trap": "Esquecer a combinação normal.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "121",
+          "page": 11,
+          "subject": "Química",
+          "topicId": "qui_polaridade_geometria",
+          "topic": "Polaridade das Ligações e Geometria Molecular",
+          "subtopics": [
+            "Sal de fármaco"
+          ],
+          "skills": [
+            "Reconhece que converter a amina em cloridrato aumenta o caráter iônico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece que converter a amina em cloridrato aumenta o caráter iônico.",
+          "rationale": "O sal formado com HCl é mais solúvel no plasma sanguíneo.",
+          "strategy": [
+            "Leia a reação R₃N + HCl",
+            "Relacione sal iônico à solubilidade em água."
+          ],
+          "trap": "Escolher lipofilicidade, que diminui com a conversão.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "122",
+          "page": 11,
+          "subject": "Biologia",
+          "topicId": "bio_metabolismo_energetico",
+          "topic": "Metabolismo Energético",
+          "subtopics": [
+            "Cianeto e cadeia respiratória"
+          ],
+          "skills": [
+            "Identifica o acúmulo de NADH quando o cianeto bloqueia a citocromo c oxidase"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o acúmulo de NADH quando o cianeto bloqueia a citocromo c oxidase.",
+          "rationale": "Com a cadeia parada, o NADH não é oxidado de volta a NAD⁺.",
+          "strategy": [
+            "Localize o bloqueio na cadeia",
+            "Veja qual molécula deixa de ser consumida."
+          ],
+          "trap": "Escolher ATP, que diminui.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "123",
+          "page": 12,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Declínio das abelhas"
+          ],
+          "skills": [
+            "Reconhece que bombas de sementes aumentam a oferta de alimento"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece que bombas de sementes aumentam a oferta de alimento.",
+          "rationale": "Plantas nativas florescem e oferecem néctar e pólen.",
+          "strategy": [
+            "Leia a medida adotada",
+            "Relacione flores e alimento."
+          ],
+          "trap": "Escolher redução de pesticidas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "124",
+          "page": 12,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Ferro e anemia"
+          ],
+          "skills": [
+            "Reconhece a prevenção da anemia pelo ferro liberado no cozimento"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a prevenção da anemia pelo ferro liberado no cozimento.",
+          "rationale": "O ferro compõe a hemoglobina.",
+          "strategy": [
+            "Leia o sintoma citado (palidez)",
+            "Relacione ao ferro."
+          ],
+          "trap": "Escolher raquitismo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "125",
+          "page": 12,
+          "subject": "Química",
+          "topicId": "qui_radioatividade",
+          "topic": "Radioatividade",
+          "subtopics": [
+            "Tecnologia nuclear"
+          ],
+          "skills": [
+            "Identifica a vantagem de não contribuir para a chuva ácida ou emitir gases"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a vantagem de não contribuir para a chuva ácida ou emitir gases.",
+          "rationale": "Usinas nucleares não queimam combustíveis fósseis.",
+          "strategy": [
+            "Leia as desvantagens citadas",
+            "Ache a vantagem ambiental."
+          ],
+          "trap": "Escolher resíduos recicláveis.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito E; alternativa E lida parcialmente.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "126",
+          "page": 12,
+          "subject": "Química",
+          "topicId": "qui_inorganica",
+          "topic": "Química Inorgânica",
+          "subtopics": [
+            "Dureza da água"
+          ],
+          "skills": [
+            "Identifica a amostra adequada pela formação de precipitados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a amostra adequada pela formação de precipitados.",
+          "rationale": "Íons de cálcio e magnésio formam sais pouco solúveis.",
+          "strategy": [
+            "Leia os testes feitos",
+            "Escolha a amostra sem precipitado."
+          ],
+          "trap": "Confundir dureza com acidez.",
+          "confidence": "medium",
+          "reviewNote": "Quadro de amostras não extraído; gabarito A.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "127",
+          "page": 12,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Músculo vermelho em aves"
+          ],
+          "skills": [
+            "Associa os músculos vermelhos ao metabolismo elevado no voo longo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Associa os músculos vermelhos ao metabolismo elevado no voo longo.",
+          "rationale": "Mais vasos e mioglobina sustentam respiração aeróbica prolongada.",
+          "strategy": [
+            "Leia a função dos músculos",
+            "Relacione ao gasto energético."
+          ],
+          "trap": "Escolher manobras rápidas, típicas do músculo branco.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "128",
+          "page": 12,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Antimofo de cloreto de cálcio"
+          ],
+          "skills": [
+            "Calcula o aumento percentual de massa ao hidratar o CaCl₂"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula o aumento percentual de massa ao hidratar o CaCl₂.",
+          "rationale": "Cada mol absorve 2 mols de água.",
+          "strategy": [
+            "Calcule a massa da água absorvida",
+            "Divida pela massa inicial."
+          ],
+          "trap": "Dividir pela massa final.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "129",
+          "page": 13,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Precipitação de mercúrio"
+          ],
+          "skills": [
+            "Calcula a massa de cloreto necessária para precipitar o mercúrio"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a massa de cloreto necessária para precipitar o mercúrio.",
+          "rationale": "A reação forma Hg₂Cl₂ pouco solúvel.",
+          "strategy": [
+            "Calcule os mols de Hg₂(NO₃)₂ dos sete frascos",
+            "Aplique a proporção."
+          ],
+          "trap": "Esquecer de multiplicar por sete frascos.",
+          "confidence": "medium",
+          "reviewNote": "Alternativas parcialmente gráficas; gabarito B.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "130",
+          "page": 14,
+          "subject": "Física",
+          "topicId": "fis_leis_newton",
+          "topic": "Leis de Newton e Dinâmica do Movimento Retilíneo",
+          "subtopics": [
+            "Cordas e aceleração"
+          ],
+          "skills": [
+            "Calcula as trações nas cordas na aceleração e na frenagem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula as trações nas cordas na aceleração e na frenagem.",
+          "rationale": "Cada corda segura a carga num sentido; a força é m·a.",
+          "strategy": [
+            "Calcule m·a em cada situação",
+            "Identifique qual corda trabalha."
+          ],
+          "trap": "Inverter as cordas.",
+          "confidence": "medium",
+          "reviewNote": "Figura necessária; gabarito A.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "131",
+          "page": 14,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Biorremediação com aguapé"
+          ],
+          "skills": [
+            "Reconhece o acúmulo dos poluentes nos tecidos da planta"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o acúmulo dos poluentes nos tecidos da planta.",
+          "rationale": "O aguapé absorve metais e os retém.",
+          "strategy": [
+            "Leia o processo descrito",
+            "Relacione à fitorremediação."
+          ],
+          "trap": "Achar que a planta digere os metais.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "132",
+          "page": 14,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Ciclo do nitrogênio"
+          ],
+          "skills": [
+            "Identifica a amonificação como etapa feita pelos decompositores"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a amonificação como etapa feita pelos decompositores.",
+          "rationale": "Decompositores transformam matéria orgânica em amônia.",
+          "strategy": [
+            "Localize a etapa na figura",
+            "Relacione ao grupo."
+          ],
+          "trap": "Escolher fixação.",
+          "confidence": "medium",
+          "reviewNote": "Figura necessária; gabarito B.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "133",
+          "page": 14,
+          "subject": "Física",
+          "topicId": "fis_fisica_moderna",
+          "topic": "Física Moderna",
+          "subtopics": [
+            "Dose de radiação"
+          ],
+          "skills": [
+            "Calcula a dose recebida em voos pela taxa de exposição"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a dose recebida em voos pela taxa de exposição.",
+          "rationale": "Dose é taxa vezes tempo de exposição.",
+          "strategy": [
+            "Leia a taxa dada",
+            "Multiplique pelo tempo."
+          ],
+          "trap": "Errar a conversão de unidades.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito A; dados parcialmente extraídos.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "134",
+          "page": 15,
+          "subject": "Química",
+          "topicId": "qui_organica_fundamentos",
+          "topic": "Fundamentos e Nomenclatura Orgânica",
+          "subtopics": [
+            "Ibuprofeno e outros fármacos"
+          ],
+          "skills": [
+            "Identifica o fármaco que também apresenta carbono quiral"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o fármaco que também apresenta carbono quiral.",
+          "rationale": "Carbono com quatro ligantes diferentes gera isomeria óptica.",
+          "strategy": [
+            "Localize carbonos com quatro ligantes diferentes",
+            "Compare as estruturas."
+          ],
+          "trap": "Escolher molécula sem carbono quiral.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito E; estruturas não extraídas.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "135",
+          "page": 15,
+          "subject": "Física",
+          "topicId": "fis_cinematica",
+          "topic": "Cinemática Escalar",
+          "subtopics": [
+            "Pedágio automático"
+          ],
+          "skills": [
+            "Calcula o tempo economizado com o pagamento automático"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula o tempo economizado com o pagamento automático.",
+          "rationale": "Somam-se as reduções de tempo nas dez praças.",
+          "strategy": [
+            "Calcule o tempo em cada praça",
+            "Multiplique pelo número de praças."
+          ],
+          "trap": "Esquecer a desaceleração.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito B; dados parcialmente extraídos.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "136",
+          "page": 16,
+          "subject": "Matemática",
+          "topicId": "mat_aritmetica_proporcionalidade",
+          "topic": "Aritmética e Proporcionalidade",
+          "subtopics": [
+            "Consumo de carboidratos"
+          ],
+          "skills": [
+            "Calcula a quantidade de porções pela proporção indicada"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a quantidade de porções pela proporção indicada.",
+          "rationale": "A recomendação por massa corporal define o total.",
+          "strategy": [
+            "Calcule a necessidade",
+            "Divida pela porção."
+          ],
+          "trap": "Errar a unidade.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito D; enunciado parcial.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "137",
+          "page": 16,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_plana",
+          "topic": "Geometria Plana",
+          "subtopics": [
+            "Cabos do mastro"
+          ],
+          "skills": [
+            "Calcula o comprimento dos cabos com Pitágoras"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula o comprimento dos cabos com Pitágoras.",
+          "rationale": "O cabo é hipotenusa entre a altura no mastro e a distância no solo.",
+          "strategy": [
+            "Monte o triângulo retângulo",
+            "Aplique Pitágoras."
+          ],
+          "trap": "Usar a altura total do mastro.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito C; dados da figura.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "138",
+          "page": 16,
+          "subject": "Matemática",
+          "topicId": "mat_aritmetica_proporcionalidade",
+          "topic": "Aritmética e Proporcionalidade",
+          "subtopics": [
+            "Escala de gráfico"
+          ],
+          "skills": [
+            "Calcula a escala entre distância horizontal e altitude"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a escala entre distância horizontal e altitude.",
+          "rationale": "A razão entre as unidades dos eixos define a escala.",
+          "strategy": [
+            "Converta as unidades",
+            "Compare."
+          ],
+          "trap": "Errar potência de dez.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito E; gráfico não extraído.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "139",
+          "page": 17,
+          "subject": "Matemática",
+          "topicId": "mat_teoria_numeros",
+          "topic": "Teoria dos Números Inteiros",
+          "subtopics": [
+            "Contagem de horas"
+          ],
+          "skills": [
+            "Determina o dia da semana em que a meta de horas é atingida"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina o dia da semana em que a meta de horas é atingida.",
+          "rationale": "Soma-se o total semanal até alcançar o objetivo.",
+          "strategy": [
+            "Calcule as horas por semana",
+            "Ache o dia da meta."
+          ],
+          "trap": "Contar só uma atividade.",
+          "confidence": "medium",
+          "reviewNote": "Quadro não extraído; gabarito C.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "140",
+          "page": 17,
+          "subject": "Matemática",
+          "topicId": "mat_aritmetica_proporcionalidade",
+          "topic": "Aritmética e Proporcionalidade",
+          "subtopics": [
+            "Proporcionalidade"
+          ],
+          "skills": [
+            "Calcula as folhas compradas para o novo número de alunos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula as folhas compradas para o novo número de alunos.",
+          "rationale": "A razão folhas por aluno é constante.",
+          "strategy": [
+            "Ache folhas por aluno",
+            "Multiplique pelo novo total."
+          ],
+          "trap": "Usar proporção inversa.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito A; enunciado parcial.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "141",
+          "page": 18,
+          "subject": "Matemática",
+          "topicId": "mat_teoria_numeros",
+          "topic": "Teoria dos Números Inteiros",
+          "subtopics": [
+            "Calendário maia"
+          ],
+          "skills": [
+            "Usa o MMC para achar quando os calendários coincidem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Usa o MMC para achar quando os calendários coincidem.",
+          "rationale": "Os dois ciclos voltam juntos no MMC de 260 e 365.",
+          "strategy": [
+            "Fatore os números",
+            "Calcule o MMC e converta."
+          ],
+          "trap": "Multiplicar os números sem simplificar.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "142",
+          "page": 18,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_plana",
+          "topic": "Geometria Plana",
+          "subtopics": [
+            "Generalização de Pitágoras"
+          ],
+          "skills": [
+            "Identifica o ângulo para o qual a relação de áreas vale"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o ângulo para o qual a relação de áreas vale.",
+          "rationale": "A relação entre áreas de figuras semelhantes vale só com ângulo reto.",
+          "strategy": [
+            "Leia a generalização proposta",
+            "Relacione ao teorema."
+          ],
+          "trap": "Escolher qualquer ângulo agudo.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito C; enunciado parcial.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "143",
+          "page": 18,
+          "subject": "Matemática",
+          "topicId": "mat_aritmetica_proporcionalidade",
+          "topic": "Aritmética e Proporcionalidade",
+          "subtopics": [
+            "Unidade de medida"
+          ],
+          "skills": [
+            "Determina a unidade da economia de corrida"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina a unidade da economia de corrida.",
+          "rationale": "É mL/min dividido por kg.",
+          "strategy": [
+            "Escreva a razão",
+            "Simplifique as unidades."
+          ],
+          "trap": "Inverter numerador e denominador.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "144",
+          "page": 19,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Projeção de vendas"
+          ],
+          "skills": [
+            "Identifica o mês em que as vendas de dois produtos se igualam"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o mês em que as vendas de dois produtos se igualam.",
+          "rationale": "A variação mensal constante permite projetar.",
+          "strategy": [
+            "Calcule a variação de cada produto",
+            "Projete até igualar."
+          ],
+          "trap": "Usar só um mês.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito D; tabela não extraída.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "145",
+          "page": 19,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Média, mediana e moda"
+          ],
+          "skills": [
+            "Compara média, mediana e moda num gráfico de barras"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara média, mediana e moda num gráfico de barras.",
+          "rationale": "A distribuição assimétrica afasta a média da moda.",
+          "strategy": [
+            "Ache a moda",
+            "Calcule mediana e média."
+          ],
+          "trap": "Confundir moda com maior valor.",
+          "confidence": "medium",
+          "reviewNote": "Gráfico não extraído; gabarito E.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "146",
+          "page": 20,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Cisterna e vazão"
+          ],
+          "skills": [
+            "Calcula a vazão pela variação da altura da água"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a vazão pela variação da altura da água.",
+          "rationale": "Volume = área da base × altura.",
+          "strategy": [
+            "Calcule a variação de volume",
+            "Divida pelo tempo."
+          ],
+          "trap": "Esquecer a área da base.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito C; gráfico não extraído.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "147",
+          "page": 20,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_analitica",
+          "topic": "Geometria Analítica",
+          "subtopics": [
+            "Posição no plano"
+          ],
+          "skills": [
+            "Identifica o jogador mais próximo do caminho indicado"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o jogador mais próximo do caminho indicado.",
+          "rationale": "Distâncias no plano cartesiano definem a escolha.",
+          "strategy": [
+            "Leia as coordenadas",
+            "Compare as distâncias."
+          ],
+          "trap": "Medir na diagonal errada.",
+          "confidence": "medium",
+          "reviewNote": "Figura necessária; gabarito B.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "148",
+          "page": 20,
+          "subject": "Matemática",
+          "topicId": "mat_combinatoria",
+          "topic": "Análise Combinatória",
+          "subtopics": [
+            "Triângulo mágico"
+          ],
+          "skills": [
+            "Conta as soluções com somas iguais nos lados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Conta as soluções com somas iguais nos lados.",
+          "rationale": "Testam-se as distribuições possíveis dos números 1 a 6.",
+          "strategy": [
+            "Fixe os vértices",
+            "Teste as somas."
+          ],
+          "trap": "Contar soluções repetidas por rotação.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito E; alternativas parcialmente extraídas.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "149",
+          "page": 21,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Sorteio de quarto"
+          ],
+          "skills": [
+            "Calcula a probabilidade de um estudante no sorteio por cartões"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a probabilidade de um estudante no sorteio por cartões.",
+          "rationale": "Probabilidade = cartões do estudante / total de cartões.",
+          "strategy": [
+            "Conte os cartões de cada candidato",
+            "Monte a razão."
+          ],
+          "trap": "Contar candidatos em vez de cartões.",
+          "confidence": "medium",
+          "reviewNote": "Alternativas com expressões; gabarito E.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "150",
+          "page": 21,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Reservatório e consumo"
+          ],
+          "skills": [
+            "Calcula a altura mínima de água no reservatório"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a altura mínima de água no reservatório.",
+          "rationale": "O consumo mensal dividido pela área da base dá a altura.",
+          "strategy": [
+            "Calcule o consumo do mês",
+            "Divida pela área πr²."
+          ],
+          "trap": "Esquecer de converter litros em m³.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito A; dados parcialmente extraídos.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "151",
+          "page": 21,
+          "subject": "Matemática",
+          "topicId": "mat_aritmetica_proporcionalidade",
+          "topic": "Aritmética e Proporcionalidade",
+          "subtopics": [
+            "Vagas na creche"
+          ],
+          "skills": [
+            "Calcula a quantidade de salas necessárias para atender à demanda"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a quantidade de salas necessárias para atender à demanda.",
+          "rationale": "Compara-se a demanda com a capacidade de 10 crianças por sala.",
+          "strategy": [
+            "Calcule a demanda total",
+            "Divida pela capacidade."
+          ],
+          "trap": "Arredondar para baixo.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito B; enunciado parcialmente extraído.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "152",
+          "page": 22,
+          "subject": "Matemática",
+          "topicId": "mat_sequencias_matrizes",
+          "topic": "Sequências, Matrizes e Sistemas Lineares",
+          "subtopics": [
+            "Números pentagonais"
+          ],
+          "skills": [
+            "Calcula o oitavo número pentagonal pelo padrão"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula o oitavo número pentagonal pelo padrão.",
+          "rationale": "As diferenças entre termos crescem de 3 em 3.",
+          "strategy": [
+            "Calcule as diferenças",
+            "Prolongue até o oitavo termo."
+          ],
+          "trap": "Tratar como PA simples.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "153",
+          "page": 22,
+          "subject": "Matemática",
+          "topicId": "mat_trigonometria",
+          "topic": "Trigonometria",
+          "subtopics": [
+            "Roda-gigante"
+          ],
+          "skills": [
+            "Identifica o gráfico da altura da cadeira ao longo do tempo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o gráfico da altura da cadeira ao longo do tempo.",
+          "rationale": "A altura varia periodicamente, partindo do máximo.",
+          "strategy": [
+            "Identifique o ponto inicial",
+            "Escolha a curva que começa no máximo."
+          ],
+          "trap": "Escolher curva que começa no mínimo.",
+          "confidence": "medium",
+          "reviewNote": "Alternativas gráficas; gabarito A.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "154",
+          "page": 23,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Porcentagem de estudantes"
+          ],
+          "skills": [
+            "Calcula o percentual com massa abaixo e altura acima da média"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula o percentual com massa abaixo e altura acima da média.",
+          "rationale": "É preciso calcular as médias e contar quem atende às duas condições.",
+          "strategy": [
+            "Calcule as duas médias",
+            "Conte os casos."
+          ],
+          "trap": "Considerar só uma condição.",
+          "confidence": "medium",
+          "reviewNote": "Quadro não extraído; gabarito B.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "155",
+          "page": 23,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Lucro do pescador"
+          ],
+          "skills": [
+            "Determina o número de ajudantes para atingir o lucro mínimo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina o número de ajudantes para atingir o lucro mínimo.",
+          "rationale": "Lucro = receita − custos fixos − custos com ajudantes.",
+          "strategy": [
+            "Monte a função lucro",
+            "Resolva a inequação."
+          ],
+          "trap": "Esquecer o custo fixo.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito D; enunciado parcial.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "156",
+          "page": 23,
+          "subject": "Matemática",
+          "topicId": "mat_log_exponenciais",
+          "topic": "Logaritmos e Exponenciais",
+          "subtopics": [
+            "Crescimento de larvas"
+          ],
+          "skills": [
+            "Calcula o tempo para atingir a população desejada"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula o tempo para atingir a população desejada.",
+          "rationale": "A população multiplica por 10 a cada 3 dias.",
+          "strategy": [
+            "Ache quantas vezes multiplicar por 10",
+            "Multiplique por 3 dias."
+          ],
+          "trap": "Somar em vez de multiplicar.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "157",
+          "page": 23,
+          "subject": "Matemática",
+          "topicId": "mat_combinatoria",
+          "topic": "Análise Combinatória",
+          "subtopics": [
+            "Senhas e segurança"
+          ],
+          "skills": [
+            "Compara a quantidade de senhas possíveis em cada tipo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara a quantidade de senhas possíveis em cada tipo.",
+          "rationale": "O número de senhas é 62ⁿ ou similar conforme os caracteres.",
+          "strategy": [
+            "Calcule as possibilidades de cada tipo",
+            "Compare."
+          ],
+          "trap": "Achar que mais letras é sempre mais seguro.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito A; regras parcialmente extraídas.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "158",
+          "page": 24,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Sorteio em duas urnas"
+          ],
+          "skills": [
+            "Avalia a justiça do sorteio por dezena e unidade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Avalia a justiça do sorteio por dezena e unidade.",
+          "rationale": "Números de 01 a 55 não têm a mesma chance com urnas separadas.",
+          "strategy": [
+            "Monte as probabilidades de cada número",
+            "Compare."
+          ],
+          "trap": "Supor equiprobabilidade.",
+          "confidence": "medium",
+          "reviewNote": "Alternativas com expressões; gabarito A.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "159",
+          "page": 24,
+          "subject": "Matemática",
+          "topicId": "mat_log_exponenciais",
+          "topic": "Logaritmos e Exponenciais",
+          "subtopics": [
+            "Decaimento da luz"
+          ],
+          "skills": [
+            "Calcula a intensidade a certa profundidade pelo padrão de queda"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a intensidade a certa profundidade pelo padrão de queda.",
+          "rationale": "A intensidade cai por um fator constante a cada metro.",
+          "strategy": [
+            "Identifique o fator",
+            "Eleve à profundidade."
+          ],
+          "trap": "Subtrair um valor constante.",
+          "confidence": "medium",
+          "reviewNote": "Alternativas com expressões; gabarito D.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "160",
+          "page": 24,
+          "subject": "Matemática",
+          "topicId": "mat_equacoes",
+          "topic": "Equações, Desigualdades e Modelagem Algébrica",
+          "subtopics": [
+            "Desempenho de vendas"
+          ],
+          "skills": [
+            "Classifica o desempenho mensal calculando a arrecadação"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Classifica o desempenho mensal calculando a arrecadação.",
+          "rationale": "A expressão dá o valor diário; o critério usa a soma ou média.",
+          "strategy": [
+            "Calcule os valores pedidos",
+            "Compare com a tabela."
+          ],
+          "trap": "Avaliar só um dia.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito D; expressão parcialmente extraída.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "161",
+          "page": 25,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Eliminação do álcool"
+          ],
+          "skills": [
+            "Escolhe a expressão da concentração em função das doses"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Escolhe a expressão da concentração em função das doses.",
+          "rationale": "A relação descrita é linear no contexto do quadro.",
+          "strategy": [
+            "Leia os dados",
+            "Teste as expressões."
+          ],
+          "trap": "Usar a fórmula exponencial.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito A (C = 0,9q).",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "162",
+          "page": 25,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Gráficos de criptomoedas"
+          ],
+          "skills": [
+            "Conta os instantes em que uma moeda supera a outra"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Conta os instantes em que uma moeda supera a outra.",
+          "rationale": "Compara-se os dois gráficos ponto a ponto.",
+          "strategy": [
+            "Leia os nove instantes",
+            "Conte as comparações pedidas."
+          ],
+          "trap": "Comparar escalas diferentes.",
+          "confidence": "medium",
+          "reviewNote": "Gráfico não extraído; gabarito B.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "163",
+          "page": 25,
+          "subject": "Matemática",
+          "topicId": "mat_log_exponenciais",
+          "topic": "Logaritmos e Exponenciais",
+          "subtopics": [
+            "Nível sonoro em decibéis"
+          ],
+          "skills": [
+            "Classifica as máquinas pelo nível em dB"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Classifica as máquinas pelo nível em dB.",
+          "rationale": "N = 10·log(I/I₀); cada ×10 em I soma 10 dB.",
+          "strategy": [
+            "Calcule N de cada máquina",
+            "Compare com as faixas."
+          ],
+          "trap": "Usar intensidade direta.",
+          "confidence": "medium",
+          "reviewNote": "Quadro não extraído; gabarito B.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "164",
+          "page": 26,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Tronco de cone"
+          ],
+          "skills": [
+            "Calcula o volume do tronco de cone esculpido"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula o volume do tronco de cone esculpido.",
+          "rationale": "Volume do cone grande menos o do cone pequeno semelhante.",
+          "strategy": [
+            "Ache a altura do cone menor por semelhança",
+            "Subtraia os volumes."
+          ],
+          "trap": "Esquecer o fator 1/3.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "165",
+          "page": 26,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Média ponderada"
+          ],
+          "skills": [
+            "Calcula a média salarial ponderada pelos setores"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a média salarial ponderada pelos setores.",
+          "rationale": "Multiplica-se cada salário pelo número de funcionários.",
+          "strategy": [
+            "Some os produtos",
+            "Divida por 100."
+          ],
+          "trap": "Fazer média simples dos salários.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito C; quadro não extraído.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "166",
+          "page": 26,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Duas urnas"
+          ],
+          "skills": [
+            "Calcula a probabilidade de ganhar o voucher"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a probabilidade de ganhar o voucher.",
+          "rationale": "Eventos independentes: multiplicam-se as probabilidades.",
+          "strategy": [
+            "Calcule cada probabilidade",
+            "Multiplique e converta."
+          ],
+          "trap": "Somar as probabilidades.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito C; conteúdo das urnas não extraído.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "167",
+          "page": 27,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Torneira inteligente"
+          ],
+          "skills": [
+            "Identifica o gráfico de vazão ao longo do tempo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o gráfico de vazão ao longo do tempo.",
+          "rationale": "A torneira alterna intervalos de abertura e fechamento.",
+          "strategy": [
+            "Siga a sequência de tempos",
+            "Escolha o gráfico."
+          ],
+          "trap": "Ignorar o intervalo fechado.",
+          "confidence": "medium",
+          "reviewNote": "Alternativas gráficas; gabarito B.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "168",
+          "page": 27,
+          "subject": "Matemática",
+          "topicId": "mat_teoria_numeros",
+          "topic": "Teoria dos Números Inteiros",
+          "subtopics": [
+            "Sistemas de numeração"
+          ],
+          "skills": [
+            "Representa cinco e sete no sistema de contagem do quadrinho"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Representa cinco e sete no sistema de contagem do quadrinho.",
+          "rationale": "O povo conta em grupos de dois.",
+          "strategy": [
+            "Identifique o padrão",
+            "Aplique a cinco e sete."
+          ],
+          "trap": "Contar em base dez.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "169",
+          "page": 27,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Previsão de chuvas"
+          ],
+          "skills": [
+            "Escolhe o mês de plantio pelos índices de precipitação"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Escolhe o mês de plantio pelos índices de precipitação.",
+          "rationale": "É preciso somar os dois meses seguintes ao plantio.",
+          "strategy": [
+            "Some os índices de dois meses",
+            "Escolha o maior."
+          ],
+          "trap": "Considerar só o mês do plantio.",
+          "confidence": "medium",
+          "reviewNote": "Gráfico não extraído; gabarito C.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "170",
+          "page": 28,
+          "subject": "Matemática",
+          "topicId": "mat_aritmetica_proporcionalidade",
+          "topic": "Aritmética e Proporcionalidade",
+          "subtopics": [
+            "Juros no parcelamento"
+          ],
+          "skills": [
+            "Calcula a taxa mensal embutida no parcelamento"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a taxa mensal embutida no parcelamento.",
+          "rationale": "A loja cobra 20% sobre o valor à vista, pago em três vezes com entrada.",
+          "strategy": [
+            "Calcule as parcelas",
+            "Compare com o valor à vista."
+          ],
+          "trap": "Achar que a taxa é 20% ao mês.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito D; cálculo depende de juros sobre saldo.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "171",
+          "page": 28,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Função afim"
+          ],
+          "skills": [
+            "Escreve o preço do concreto como função do volume"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Escreve o preço do concreto como função do volume.",
+          "rationale": "Preço = taxa fixa + valor por metro cúbico.",
+          "strategy": [
+            "Identifique a parte fixa",
+            "Identifique a variável."
+          ],
+          "trap": "Esquecer a taxa fixa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "172",
+          "page": 28,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Trajeto de patrulha"
+          ],
+          "skills": [
+            "Identifica o gráfico da distância à base durante a patrulha"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o gráfico da distância à base durante a patrulha.",
+          "rationale": "A distância varia conforme o percurso.",
+          "strategy": [
+            "Siga o trajeto",
+            "Escolha o gráfico."
+          ],
+          "trap": "Confundir distância com tempo.",
+          "confidence": "medium",
+          "reviewNote": "Alternativas gráficas; gabarito A.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "173",
+          "page": 29,
+          "subject": "Matemática",
+          "topicId": "mat_aritmetica_proporcionalidade",
+          "topic": "Aritmética e Proporcionalidade",
+          "subtopics": [
+            "Fila do supermercado"
+          ],
+          "skills": [
+            "Escolhe o caixa com menor tempo total de espera"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Escolhe o caixa com menor tempo total de espera.",
+          "rationale": "Tempo = número de pessoas × tempo médio por cliente.",
+          "strategy": [
+            "Calcule o tempo de cada caixa",
+            "Compare."
+          ],
+          "trap": "Olhar só o tamanho da fila.",
+          "confidence": "medium",
+          "reviewNote": "Quadro não extraído; gabarito E.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "174",
+          "page": 29,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_plana",
+          "topic": "Geometria Plana",
+          "subtopics": [
+            "Partes do círculo"
+          ],
+          "skills": [
+            "Identifica o segmento circular formado pela sobreposição"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o segmento circular formado pela sobreposição.",
+          "rationale": "A corda do triângulo corta o círculo, formando um segmento.",
+          "strategy": [
+            "Observe a figura",
+            "Diferencie setor de segmento."
+          ],
+          "trap": "Confundir com setor circular.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "175",
+          "page": 29,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_plana",
+          "topic": "Geometria Plana",
+          "subtopics": [
+            "Área da calçada"
+          ],
+          "skills": [
+            "Calcula a área da calçada ao redor da piscina"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula a área da calçada ao redor da piscina.",
+          "rationale": "O quadrado maior tem lado 30 m; subtrai-se a piscina.",
+          "strategy": [
+            "Ache o lado da piscina (20 m)",
+            "Calcule 30² − 20²."
+          ],
+          "trap": "Somar só uma faixa de 5 m.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "176",
+          "page": 29,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Leitura de gráfico"
+          ],
+          "skills": [
+            "Calcula o tempo com sinal abaixo de um nível"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula o tempo com sinal abaixo de um nível.",
+          "rationale": "Lê-se no gráfico os intervalos que atendem à condição.",
+          "strategy": [
+            "Ache os intervalos",
+            "Some as durações."
+          ],
+          "trap": "Contar intervalos acima.",
+          "confidence": "medium",
+          "reviewNote": "Gráfico não extraído; gabarito A.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "177",
+          "page": 30,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Gráfico da gripe H1N1"
+          ],
+          "skills": [
+            "Questão anulada pelo Inep"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Questão anulada pelo Inep.",
+          "rationale": "A questão sobre a campanha de vacinação foi anulada.",
+          "strategy": [
+            "Questão anulada",
+            "Fora da frequência"
+          ],
+          "trap": "Não se aplica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": true,
+          "excludedReason": "Anulada pelo Inep no gabarito oficial.",
+          "subitems": [],
+          "answer": null
+        },
+        {
+          "number": "178",
+          "page": 30,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Volume da escada"
+          ],
+          "skills": [
+            "Calcula o volume de concreto da escada"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula o volume de concreto da escada.",
+          "rationale": "A escada é soma de prismas retangulares.",
+          "strategy": [
+            "Decomponha os degraus",
+            "Some os volumes."
+          ],
+          "trap": "Contar degraus duas vezes.",
+          "confidence": "medium",
+          "reviewNote": "Figura necessária; gabarito E.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "179",
+          "page": 31,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_analitica",
+          "topic": "Geometria Analítica",
+          "subtopics": [
+            "Localização no mapa"
+          ],
+          "skills": [
+            "Identifica a poltrona pelas coordenadas no mapa"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a poltrona pelas coordenadas no mapa.",
+          "rationale": "É preciso seguir a orientação a partir da posição indicada.",
+          "strategy": [
+            "Localize a estrela",
+            "Siga a direção."
+          ],
+          "trap": "Inverter linha e coluna.",
+          "confidence": "medium",
+          "reviewNote": "Figura necessária; gabarito E.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "180",
+          "page": 31,
+          "subject": "Matemática",
+          "topicId": "mat_sequencias_matrizes",
+          "topic": "Sequências, Matrizes e Sistemas Lineares",
+          "subtopics": [
+            "Sistema de tíquetes"
+          ],
+          "skills": [
+            "Resolve o sistema para achar o preço do tíquete"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Resolve o sistema para achar o preço do tíquete.",
+          "rationale": "Duas combinações de cartelas formam um sistema.",
+          "strategy": [
+            "Monte as equações",
+            "Resolva e divida por nove."
+          ],
+          "trap": "Esquecer que cada cartela tem nove tíquetes.",
+          "confidence": "medium",
+          "reviewNote": "Gabarito B; segunda equação não extraída.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [],
+          "answer": "B"
+        }
+      ]
+    }
+  ]
+}

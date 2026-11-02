@@ -5,8 +5,8 @@ import { examEvidenceCohorts, loadExamEvidenceCases, selectExamEvidence } from '
 import { mockTopics } from '../data/mockData';
 test('corpus substitui amostras das cinco bancas e preserva Unicamp e janela recente FUVEST', async () => {
   const cases = await loadExamEvidenceCases();
-  assert.equal(cases.length, 2482); assert.equal(new Set(cases.map(item => item.id)).size, 2482);
-  assert.equal(examEvidenceCohorts.length, 52);
+  assert.equal(cases.length, 2842); assert.equal(new Set(cases.map(item => item.id)).size, 2842);
+  assert.equal(examEvidenceCohorts.length, 56);
   assert.equal(cases.filter(item=>item.cohortId.startsWith('unicamp-')).length,150);
   assert.ok(!examEvidenceCohorts.some(cohort=>['unesp-2025-v1','enem-2022-d2-cd5','famerp-2025-v1','unifesp-2025-v1'].includes(cohort.id)));
   const fuvest = examEvidenceCohorts.filter(cohort=>cohort.board==='FUVEST');

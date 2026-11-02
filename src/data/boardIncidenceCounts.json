@@ -2,6 +2,1504 @@
   "reviewedOn": "2026-10-22",
   "cohorts": [
     {
+      "id": "enem-2022-linguagens-humanas",
+      "board": "ENEM",
+      "year": 2022,
+      "group": "linguagens-humanas",
+      "format": "multiple-choice",
+      "phase": "Linguagens, Ciências Humanas e Redação",
+      "phaseGroup": "1a",
+      "version": "Caderno 2 — Amarelo",
+      "examUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2022/ENEM_2022_dia_1_caderno_amarelo.pdf",
+      "answerKeyUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2022/ENEM_2022_dia_1_gabarito_amarelo.pdf",
+      "reviewedOn": "2026-10-22",
+      "examSha256": "d06370a12c80fe1b7563745d1a3caff35e7ef7556f36e38b8cfb2fad60a8aedc",
+      "answerKeySha256": "c9170122ea1d7b6e8578eb46e0274acb4185bfeb9e01fd5566cb24cbc09cf5c1",
+      "completeSubjects": [
+        "Inglês",
+        "Literatura",
+        "Português",
+        "Arte",
+        "Geografia",
+        "História",
+        "Sociologia",
+        "Filosofia",
+        "Redação"
+      ],
+      "totalQuestions": 91,
+      "excludedNumbers": [],
+      "classification": "complete",
+      "subjects": [
+        {
+          "subject": "Inglês",
+          "total": 5,
+          "topics": [
+            {
+              "topicId": "ing_01",
+              "count": 5,
+              "numbers": [
+                "01",
+                "02",
+                "03",
+                "04",
+                "05"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Literatura",
+          "total": 13,
+          "topics": [
+            {
+              "topicId": "por_lit_contemporanea",
+              "count": 4,
+              "numbers": [
+                "06",
+                "21",
+                "30",
+                "43"
+              ]
+            },
+            {
+              "topicId": "por_lit_romantismo_realismo",
+              "count": 5,
+              "numbers": [
+                "07",
+                "13",
+                "14",
+                "17",
+                "27"
+              ]
+            },
+            {
+              "topicId": "por_lit_modernismo",
+              "count": 4,
+              "numbers": [
+                "08",
+                "15",
+                "19",
+                "29"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Português",
+          "total": 22,
+          "topics": [
+            {
+              "topicId": "por_texto",
+              "count": 16,
+              "numbers": [
+                "09",
+                "10",
+                "16",
+                "18",
+                "20",
+                "24",
+                "28",
+                "31",
+                "32",
+                "33",
+                "35",
+                "36",
+                "37",
+                "39",
+                "41",
+                "44"
+              ]
+            },
+            {
+              "topicId": "por_norma_culta",
+              "count": 6,
+              "numbers": [
+                "25",
+                "26",
+                "34",
+                "40",
+                "42",
+                "45"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Arte",
+          "total": 5,
+          "topics": [
+            {
+              "topicId": "fuvest-unmapped:Maneirismo e figura humana",
+              "count": 1,
+              "numbers": [
+                "11"
+              ]
+            },
+            {
+              "topicId": "fuvest-unmapped:Minimalismo",
+              "count": 1,
+              "numbers": [
+                "12"
+              ]
+            },
+            {
+              "topicId": "fuvest-unmapped:Ready-made e instalação",
+              "count": 1,
+              "numbers": [
+                "22"
+              ]
+            },
+            {
+              "topicId": "fuvest-unmapped:Manguebeat e cultura pernambucana",
+              "count": 1,
+              "numbers": [
+                "23"
+              ]
+            },
+            {
+              "topicId": "fuvest-unmapped:Arte e tecnologia",
+              "count": 1,
+              "numbers": [
+                "38"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Geografia",
+          "total": 18,
+          "topics": [
+            {
+              "topicId": "geo_globalizacao_economica",
+              "count": 4,
+              "numbers": [
+                "46",
+                "47",
+                "53",
+                "72"
+              ]
+            },
+            {
+              "topicId": "geo_fisica_brasil",
+              "count": 4,
+              "numbers": [
+                "49",
+                "75",
+                "79",
+                "83"
+              ]
+            },
+            {
+              "topicId": "geo_geopolitica_regional",
+              "count": 2,
+              "numbers": [
+                "56",
+                "76"
+              ]
+            },
+            {
+              "topicId": "geo_populacao_urbana_brasil",
+              "count": 2,
+              "numbers": [
+                "60",
+                "89"
+              ]
+            },
+            {
+              "topicId": "geo_climatologia_socioambiental",
+              "count": 3,
+              "numbers": [
+                "65",
+                "82",
+                "84"
+              ]
+            },
+            {
+              "topicId": "geo_cartografia",
+              "count": 1,
+              "numbers": [
+                "67"
+              ]
+            },
+            {
+              "topicId": "geo_economica_brasil",
+              "count": 2,
+              "numbers": [
+                "73",
+                "85"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "História",
+          "total": 13,
+          "topics": [
+            {
+              "topicId": "his_idade_media",
+              "count": 1,
+              "numbers": [
+                "48"
+              ]
+            },
+            {
+              "topicId": "his_brasil_imperio",
+              "count": 3,
+              "numbers": [
+                "51",
+                "64",
+                "74"
+              ]
+            },
+            {
+              "topicId": "his_guerra_fria_contemporaneo",
+              "count": 1,
+              "numbers": [
+                "54"
+              ]
+            },
+            {
+              "topicId": "his_republica_liberal_atual",
+              "count": 2,
+              "numbers": [
+                "57",
+                "88"
+              ]
+            },
+            {
+              "topicId": "his_moderna_iluminismo",
+              "count": 2,
+              "numbers": [
+                "62",
+                "78"
+              ]
+            },
+            {
+              "topicId": "his_primeira_republica_vargas",
+              "count": 2,
+              "numbers": [
+                "70",
+                "71"
+              ]
+            },
+            {
+              "topicId": "his_brasil_colonia",
+              "count": 1,
+              "numbers": [
+                "86"
+              ]
+            },
+            {
+              "topicId": "his_imperialismo_guerras",
+              "count": 1,
+              "numbers": [
+                "90"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Sociologia",
+          "total": 8,
+          "topics": [
+            {
+              "topicId": "soc_cultura_identidade",
+              "count": 3,
+              "numbers": [
+                "50",
+                "63",
+                "68"
+              ]
+            },
+            {
+              "topicId": "soc_movimentos_sociais",
+              "count": 1,
+              "numbers": [
+                "52"
+              ]
+            },
+            {
+              "topicId": "soc_globalizacao",
+              "count": 2,
+              "numbers": [
+                "58",
+                "66"
+              ]
+            },
+            {
+              "topicId": "soc_estratificacao_desigualdade",
+              "count": 2,
+              "numbers": [
+                "81",
+                "87"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Filosofia",
+          "total": 6,
+          "topics": [
+            {
+              "topicId": "fil_niilismo_existencialismo",
+              "count": 2,
+              "numbers": [
+                "55",
+                "77"
+              ]
+            },
+            {
+              "topicId": "fil_origem_pre_socraticos",
+              "count": 2,
+              "numbers": [
+                "59",
+                "69"
+              ]
+            },
+            {
+              "topicId": "fil_socrates_platao",
+              "count": 1,
+              "numbers": [
+                "61"
+              ]
+            },
+            {
+              "topicId": "fil_etica_politica_contemporanea",
+              "count": 1,
+              "numbers": [
+                "80"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Redação",
+          "total": 1,
+          "topics": [
+            {
+              "topicId": "por_red_repertorio",
+              "count": 1,
+              "numbers": [
+                "R"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "enem-2022-natureza-matematica",
+      "board": "ENEM",
+      "year": 2022,
+      "group": "natureza-matematica",
+      "format": "multiple-choice",
+      "phase": "Ciências da Natureza e Matemática",
+      "phaseGroup": "1a",
+      "version": "Caderno 5 — Amarelo",
+      "examUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2022/ENEM_2022_dia_2_caderno_amarelo.pdf",
+      "answerKeyUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2022/ENEM_2022_dia_2_gabarito_amarelo.pdf",
+      "reviewedOn": "2026-10-22",
+      "examSha256": "dd58a7a22a8eafe592e86d80a735c917e015d5c3e306bababe3038d5f2069c1b",
+      "answerKeySha256": "8dd16f26c53d41dce676a9c73cf2ea52549e2b5da06a80d8475ee8e55b810e9c",
+      "completeSubjects": [
+        "Biologia",
+        "Física",
+        "Química",
+        "Matemática"
+      ],
+      "totalQuestions": 90,
+      "excludedNumbers": [
+        "175"
+      ],
+      "classification": "complete",
+      "subjects": [
+        {
+          "subject": "Biologia",
+          "total": 16,
+          "topics": [
+            {
+              "topicId": "bio_fisio_animal",
+              "count": 5,
+              "numbers": [
+                "91",
+                "94",
+                "101",
+                "113",
+                "114"
+              ]
+            },
+            {
+              "topicId": "bio_metabolismo_energetico",
+              "count": 1,
+              "numbers": [
+                "98"
+              ]
+            },
+            {
+              "topicId": "bio_ecologia",
+              "count": 3,
+              "numbers": [
+                "100",
+                "103",
+                "104"
+              ]
+            },
+            {
+              "topicId": "bio_biotecnologia",
+              "count": 2,
+              "numbers": [
+                "107",
+                "121"
+              ]
+            },
+            {
+              "topicId": "bio_genetica",
+              "count": 1,
+              "numbers": [
+                "117"
+              ]
+            },
+            {
+              "topicId": "bio_microbiologia",
+              "count": 2,
+              "numbers": [
+                "123",
+                "135"
+              ]
+            },
+            {
+              "topicId": "bio_estrutura_fisio_celular",
+              "count": 1,
+              "numbers": [
+                "128"
+              ]
+            },
+            {
+              "topicId": "bio_evolucao",
+              "count": 1,
+              "numbers": [
+                "131"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Física",
+          "total": 15,
+          "topics": [
+            {
+              "topicId": "fis_dinamica_impulsiva",
+              "count": 1,
+              "numbers": [
+                "92"
+              ]
+            },
+            {
+              "topicId": "fis_ondas_fundamentos",
+              "count": 1,
+              "numbers": [
+                "95"
+              ]
+            },
+            {
+              "topicId": "fis_optica_geometrica",
+              "count": 1,
+              "numbers": [
+                "96"
+              ]
+            },
+            {
+              "topicId": "fis_circuitos",
+              "count": 4,
+              "numbers": [
+                "99",
+                "111",
+                "119",
+                "133"
+              ]
+            },
+            {
+              "topicId": "fis_cinematica_vetorial",
+              "count": 1,
+              "numbers": [
+                "105"
+              ]
+            },
+            {
+              "topicId": "fis_leis_newton",
+              "count": 1,
+              "numbers": [
+                "108"
+              ]
+            },
+            {
+              "topicId": "fis_gravitacao_circular",
+              "count": 3,
+              "numbers": [
+                "115",
+                "126",
+                "132"
+              ]
+            },
+            {
+              "topicId": "fis_eletromagnetismo",
+              "count": 1,
+              "numbers": [
+                "118"
+              ]
+            },
+            {
+              "topicId": "fis_energia",
+              "count": 1,
+              "numbers": [
+                "124"
+              ]
+            },
+            {
+              "topicId": "fis_calorimetria",
+              "count": 1,
+              "numbers": [
+                "129"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Química",
+          "total": 14,
+          "topics": [
+            {
+              "topicId": "qui_organica_fundamentos",
+              "count": 2,
+              "numbers": [
+                "93",
+                "102"
+              ]
+            },
+            {
+              "topicId": "qui_estequiometria",
+              "count": 2,
+              "numbers": [
+                "97",
+                "120"
+              ]
+            },
+            {
+              "topicId": "qui_cinetica",
+              "count": 3,
+              "numbers": [
+                "106",
+                "109",
+                "134"
+              ]
+            },
+            {
+              "topicId": "qui_solucoes",
+              "count": 1,
+              "numbers": [
+                "110"
+              ]
+            },
+            {
+              "topicId": "qui_inorganica",
+              "count": 2,
+              "numbers": [
+                "112",
+                "125"
+              ]
+            },
+            {
+              "topicId": "qui_oxirreducao",
+              "count": 2,
+              "numbers": [
+                "116",
+                "122"
+              ]
+            },
+            {
+              "topicId": "qui_eletroquimica",
+              "count": 1,
+              "numbers": [
+                "127"
+              ]
+            },
+            {
+              "topicId": "qui_radioatividade",
+              "count": 1,
+              "numbers": [
+                "130"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Matemática",
+          "total": 44,
+          "topics": [
+            {
+              "topicId": "mat_sequencias_matrizes",
+              "count": 4,
+              "numbers": [
+                "136",
+                "146",
+                "155",
+                "166"
+              ]
+            },
+            {
+              "topicId": "mat_aritmetica_proporcionalidade",
+              "count": 10,
+              "numbers": [
+                "137",
+                "138",
+                "140",
+                "143",
+                "149",
+                "156",
+                "160",
+                "168",
+                "170",
+                "172"
+              ]
+            },
+            {
+              "topicId": "mat_funcoes",
+              "count": 6,
+              "numbers": [
+                "139",
+                "151",
+                "154",
+                "174",
+                "176",
+                "180"
+              ]
+            },
+            {
+              "topicId": "mat_geometria_analitica",
+              "count": 2,
+              "numbers": [
+                "141",
+                "145"
+              ]
+            },
+            {
+              "topicId": "mat_geometria_espacial",
+              "count": 8,
+              "numbers": [
+                "142",
+                "147",
+                "148",
+                "158",
+                "165",
+                "167",
+                "169",
+                "178"
+              ]
+            },
+            {
+              "topicId": "mat_teoria_numeros",
+              "count": 3,
+              "numbers": [
+                "144",
+                "159",
+                "177"
+              ]
+            },
+            {
+              "topicId": "mat_combinatoria",
+              "count": 3,
+              "numbers": [
+                "150",
+                "157",
+                "161"
+              ]
+            },
+            {
+              "topicId": "mat_dados_probabilidade",
+              "count": 5,
+              "numbers": [
+                "152",
+                "153",
+                "162",
+                "164",
+                "173"
+              ]
+            },
+            {
+              "topicId": "mat_geometria_plana",
+              "count": 2,
+              "numbers": [
+                "163",
+                "179"
+              ]
+            },
+            {
+              "topicId": "mat_trigonometria",
+              "count": 1,
+              "numbers": [
+                "171"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "enem-2023-linguagens-humanas",
+      "board": "ENEM",
+      "year": 2023,
+      "group": "linguagens-humanas",
+      "format": "multiple-choice",
+      "phase": "Linguagens, Ciências Humanas e Redação",
+      "phaseGroup": "1a",
+      "version": "Caderno 1 — Azul",
+      "examUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2023/ENEM_2023_dia_1_caderno_azul_aplicacao_regular.pdf",
+      "answerKeyUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2023/ENEM_2023_dia_1_gabarito_azul.pdf",
+      "reviewedOn": "2026-10-22",
+      "examSha256": "10c12d3bcd5e2ae2b04be1530ee11c815fc64e9dda31ab17062115ac2910f825",
+      "answerKeySha256": "4ddc4872e7eb06776073b10713ba4c8c8fa8214041a72300cb0c2225345c79da",
+      "completeSubjects": [
+        "Inglês",
+        "Português",
+        "Literatura",
+        "Arte",
+        "Geografia",
+        "História",
+        "Sociologia",
+        "Filosofia",
+        "Redação"
+      ],
+      "totalQuestions": 91,
+      "excludedNumbers": [],
+      "classification": "complete",
+      "subjects": [
+        {
+          "subject": "Inglês",
+          "total": 5,
+          "topics": [
+            {
+              "topicId": "ing_01",
+              "count": 5,
+              "numbers": [
+                "01",
+                "02",
+                "03",
+                "04",
+                "05"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Português",
+          "total": 23,
+          "topics": [
+            {
+              "topicId": "por_norma_culta",
+              "count": 5,
+              "numbers": [
+                "06",
+                "08",
+                "16",
+                "21",
+                "39"
+              ]
+            },
+            {
+              "topicId": "por_texto",
+              "count": 18,
+              "numbers": [
+                "09",
+                "10",
+                "11",
+                "15",
+                "17",
+                "19",
+                "20",
+                "23",
+                "24",
+                "27",
+                "31",
+                "32",
+                "35",
+                "40",
+                "41",
+                "42",
+                "44",
+                "45"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Literatura",
+          "total": 12,
+          "topics": [
+            {
+              "topicId": "por_lit_contemporanea",
+              "count": 6,
+              "numbers": [
+                "07",
+                "18",
+                "22",
+                "25",
+                "28",
+                "30"
+              ]
+            },
+            {
+              "topicId": "por_lit_modernismo",
+              "count": 5,
+              "numbers": [
+                "12",
+                "13",
+                "14",
+                "26",
+                "29"
+              ]
+            },
+            {
+              "topicId": "por_lit_romantismo_realismo",
+              "count": 1,
+              "numbers": [
+                "43"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Arte",
+          "total": 5,
+          "topics": [
+            {
+              "topicId": "fuvest-unmapped:Expressionismo e Arte Degenerada",
+              "count": 1,
+              "numbers": [
+                "33"
+              ]
+            },
+            {
+              "topicId": "fuvest-unmapped:Dança contemporânea",
+              "count": 1,
+              "numbers": [
+                "34"
+              ]
+            },
+            {
+              "topicId": "fuvest-unmapped:Marabaixo",
+              "count": 1,
+              "numbers": [
+                "36"
+              ]
+            },
+            {
+              "topicId": "fuvest-unmapped:Arte e redes sociais",
+              "count": 1,
+              "numbers": [
+                "37"
+              ]
+            },
+            {
+              "topicId": "fuvest-unmapped:Rap indígena",
+              "count": 1,
+              "numbers": [
+                "38"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Geografia",
+          "total": 14,
+          "topics": [
+            {
+              "topicId": "geo_populacao_urbana_brasil",
+              "count": 4,
+              "numbers": [
+                "46",
+                "68",
+                "76",
+                "78"
+              ]
+            },
+            {
+              "topicId": "geo_geopolitica_regional",
+              "count": 1,
+              "numbers": [
+                "49"
+              ]
+            },
+            {
+              "topicId": "geo_fisica_brasil",
+              "count": 1,
+              "numbers": [
+                "53"
+              ]
+            },
+            {
+              "topicId": "geo_globalizacao_economica",
+              "count": 3,
+              "numbers": [
+                "62",
+                "85",
+                "88"
+              ]
+            },
+            {
+              "topicId": "geo_climatologia_socioambiental",
+              "count": 3,
+              "numbers": [
+                "64",
+                "83",
+                "89"
+              ]
+            },
+            {
+              "topicId": "geo_economica_brasil",
+              "count": 2,
+              "numbers": [
+                "67",
+                "71"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "História",
+          "total": 13,
+          "topics": [
+            {
+              "topicId": "his_brasil_imperio",
+              "count": 1,
+              "numbers": [
+                "47"
+              ]
+            },
+            {
+              "topicId": "his_imperialismo_guerras",
+              "count": 1,
+              "numbers": [
+                "51"
+              ]
+            },
+            {
+              "topicId": "his_moderna_iluminismo",
+              "count": 4,
+              "numbers": [
+                "59",
+                "73",
+                "74",
+                "86"
+              ]
+            },
+            {
+              "topicId": "his_brasil_colonia",
+              "count": 2,
+              "numbers": [
+                "63",
+                "77"
+              ]
+            },
+            {
+              "topicId": "his_republica_liberal_atual",
+              "count": 2,
+              "numbers": [
+                "70",
+                "80"
+              ]
+            },
+            {
+              "topicId": "his_primeira_republica_vargas",
+              "count": 3,
+              "numbers": [
+                "82",
+                "84",
+                "87"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Sociologia",
+          "total": 11,
+          "topics": [
+            {
+              "topicId": "soc_marx_sociologia",
+              "count": 1,
+              "numbers": [
+                "48"
+              ]
+            },
+            {
+              "topicId": "soc_cultura_identidade",
+              "count": 3,
+              "numbers": [
+                "50",
+                "58",
+                "75"
+              ]
+            },
+            {
+              "topicId": "soc_movimentos_sociais",
+              "count": 2,
+              "numbers": [
+                "52",
+                "56"
+              ]
+            },
+            {
+              "topicId": "soc_estratificacao_desigualdade",
+              "count": 3,
+              "numbers": [
+                "60",
+                "65",
+                "66"
+              ]
+            },
+            {
+              "topicId": "soc_trabalho_sociedade",
+              "count": 1,
+              "numbers": [
+                "61"
+              ]
+            },
+            {
+              "topicId": "soc_globalizacao",
+              "count": 1,
+              "numbers": [
+                "72"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Filosofia",
+          "total": 7,
+          "topics": [
+            {
+              "topicId": "fil_moderna_racionalismo_empirismo",
+              "count": 1,
+              "numbers": [
+                "54"
+              ]
+            },
+            {
+              "topicId": "fil_niilismo_existencialismo",
+              "count": 3,
+              "numbers": [
+                "55",
+                "79",
+                "81"
+              ]
+            },
+            {
+              "topicId": "fil_etica_politica_contemporanea",
+              "count": 2,
+              "numbers": [
+                "57",
+                "69"
+              ]
+            },
+            {
+              "topicId": "fil_origem_pre_socraticos",
+              "count": 1,
+              "numbers": [
+                "90"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Redação",
+          "total": 1,
+          "topics": [
+            {
+              "topicId": "por_red_repertorio",
+              "count": 1,
+              "numbers": [
+                "R"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "enem-2023-natureza-matematica",
+      "board": "ENEM",
+      "year": 2023,
+      "group": "natureza-matematica",
+      "format": "multiple-choice",
+      "phase": "Ciências da Natureza e Matemática",
+      "phaseGroup": "1a",
+      "version": "Caderno 5 — Amarelo",
+      "examUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2023/ENEM_2023_dia_2_caderno_amarelo.pdf",
+      "answerKeyUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2023/ENEM_2023_dia_2_gabarito_amarelo.pdf",
+      "reviewedOn": "2026-10-22",
+      "examSha256": "722d68f4b39f0b508ae2f17086d48422ec5a0b479b190fff33c89e3bdedfbd00",
+      "answerKeySha256": "03f43b97a23c5b0847ad7a76cc43918d9f9cac8476c6e8ac51b0c270442f434b",
+      "completeSubjects": [
+        "Física",
+        "Química",
+        "Biologia",
+        "Matemática"
+      ],
+      "totalQuestions": 90,
+      "excludedNumbers": [
+        "177"
+      ],
+      "classification": "complete",
+      "subjects": [
+        {
+          "subject": "Física",
+          "total": 14,
+          "topics": [
+            {
+              "topicId": "fis_ondas_fundamentos",
+              "count": 2,
+              "numbers": [
+                "91",
+                "114"
+              ]
+            },
+            {
+              "topicId": "fis_ondulatoria",
+              "count": 2,
+              "numbers": [
+                "92",
+                "115"
+              ]
+            },
+            {
+              "topicId": "fis_energia",
+              "count": 1,
+              "numbers": [
+                "93"
+              ]
+            },
+            {
+              "topicId": "fis_calorimetria",
+              "count": 2,
+              "numbers": [
+                "95",
+                "117"
+              ]
+            },
+            {
+              "topicId": "fis_circuitos",
+              "count": 1,
+              "numbers": [
+                "98"
+              ]
+            },
+            {
+              "topicId": "fis_eletromagnetismo",
+              "count": 1,
+              "numbers": [
+                "101"
+              ]
+            },
+            {
+              "topicId": "fis_estatica",
+              "count": 1,
+              "numbers": [
+                "102"
+              ]
+            },
+            {
+              "topicId": "fis_cinematica",
+              "count": 2,
+              "numbers": [
+                "106",
+                "135"
+              ]
+            },
+            {
+              "topicId": "fis_leis_newton",
+              "count": 1,
+              "numbers": [
+                "130"
+              ]
+            },
+            {
+              "topicId": "fis_fisica_moderna",
+              "count": 1,
+              "numbers": [
+                "133"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Química",
+          "total": 15,
+          "topics": [
+            {
+              "topicId": "qui_inorganica",
+              "count": 2,
+              "numbers": [
+                "94",
+                "126"
+              ]
+            },
+            {
+              "topicId": "qui_organica_fundamentos",
+              "count": 3,
+              "numbers": [
+                "96",
+                "112",
+                "134"
+              ]
+            },
+            {
+              "topicId": "qui_gases",
+              "count": 2,
+              "numbers": [
+                "97",
+                "119"
+              ]
+            },
+            {
+              "topicId": "qui_oxirreducao",
+              "count": 1,
+              "numbers": [
+                "108"
+              ]
+            },
+            {
+              "topicId": "qui_solucoes",
+              "count": 2,
+              "numbers": [
+                "110",
+                "118"
+              ]
+            },
+            {
+              "topicId": "qui_polaridade_geometria",
+              "count": 2,
+              "numbers": [
+                "116",
+                "121"
+              ]
+            },
+            {
+              "topicId": "qui_radioatividade",
+              "count": 1,
+              "numbers": [
+                "125"
+              ]
+            },
+            {
+              "topicId": "qui_estequiometria",
+              "count": 2,
+              "numbers": [
+                "128",
+                "129"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Biologia",
+          "total": 16,
+          "topics": [
+            {
+              "topicId": "bio_codigo_genetico_sintese",
+              "count": 1,
+              "numbers": [
+                "99"
+              ]
+            },
+            {
+              "topicId": "bio_fisio_animal",
+              "count": 4,
+              "numbers": [
+                "100",
+                "107",
+                "124",
+                "127"
+              ]
+            },
+            {
+              "topicId": "bio_fisio_vegetal",
+              "count": 2,
+              "numbers": [
+                "103",
+                "111"
+              ]
+            },
+            {
+              "topicId": "bio_metabolismo_energetico",
+              "count": 2,
+              "numbers": [
+                "104",
+                "122"
+              ]
+            },
+            {
+              "topicId": "bio_microbiologia",
+              "count": 1,
+              "numbers": [
+                "105"
+              ]
+            },
+            {
+              "topicId": "bio_botanica",
+              "count": 1,
+              "numbers": [
+                "109"
+              ]
+            },
+            {
+              "topicId": "bio_estrutura_fisio_celular",
+              "count": 1,
+              "numbers": [
+                "113"
+              ]
+            },
+            {
+              "topicId": "bio_genetica",
+              "count": 1,
+              "numbers": [
+                "120"
+              ]
+            },
+            {
+              "topicId": "bio_ecologia",
+              "count": 3,
+              "numbers": [
+                "123",
+                "131",
+                "132"
+              ]
+            }
+          ]
+        },
+        {
+          "subject": "Matemática",
+          "total": 44,
+          "topics": [
+            {
+              "topicId": "mat_aritmetica_proporcionalidade",
+              "count": 7,
+              "numbers": [
+                "136",
+                "138",
+                "140",
+                "143",
+                "151",
+                "170",
+                "173"
+              ]
+            },
+            {
+              "topicId": "mat_geometria_plana",
+              "count": 4,
+              "numbers": [
+                "137",
+                "142",
+                "174",
+                "175"
+              ]
+            },
+            {
+              "topicId": "mat_teoria_numeros",
+              "count": 3,
+              "numbers": [
+                "139",
+                "141",
+                "168"
+              ]
+            },
+            {
+              "topicId": "mat_dados_probabilidade",
+              "count": 8,
+              "numbers": [
+                "144",
+                "145",
+                "149",
+                "154",
+                "158",
+                "165",
+                "166",
+                "169"
+              ]
+            },
+            {
+              "topicId": "mat_geometria_espacial",
+              "count": 4,
+              "numbers": [
+                "146",
+                "150",
+                "164",
+                "178"
+              ]
+            },
+            {
+              "topicId": "mat_geometria_analitica",
+              "count": 2,
+              "numbers": [
+                "147",
+                "179"
+              ]
+            },
+            {
+              "topicId": "mat_combinatoria",
+              "count": 2,
+              "numbers": [
+                "148",
+                "157"
+              ]
+            },
+            {
+              "topicId": "mat_sequencias_matrizes",
+              "count": 2,
+              "numbers": [
+                "152",
+                "180"
+              ]
+            },
+            {
+              "topicId": "mat_trigonometria",
+              "count": 1,
+              "numbers": [
+                "153"
+              ]
+            },
+            {
+              "topicId": "mat_funcoes",
+              "count": 7,
+              "numbers": [
+                "155",
+                "161",
+                "162",
+                "167",
+                "171",
+                "172",
+                "176"
+              ]
+            },
+            {
+              "topicId": "mat_log_exponenciais",
+              "count": 3,
+              "numbers": [
+                "156",
+                "159",
+                "163"
+              ]
+            },
+            {
+              "topicId": "mat_equacoes",
+              "count": 1,
+              "numbers": [
+                "160"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "enem-2024-linguagens-humanas",
       "board": "ENEM",
       "year": 2024,
