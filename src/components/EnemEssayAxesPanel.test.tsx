@@ -21,3 +21,10 @@ it('eixos não repetem o grupo dos três últimos temas e todo repertório cita 
     expect(axis.repertoire.join(' ')).not.toMatch(/\d+\s?%|milh(ão|ões)/);
   }
 });
+
+it('mostra o método do tema à proposta, com conectivos por função', () => {
+  render(<EnemEssayAxesPanel onPractice={() => {}} />);
+  expect(screen.getByRole('heading', { name: 'Do tema à proposta: o método' })).toBeInTheDocument();
+  expect(screen.getByText(/Separe o assunto/)).toBeInTheDocument();
+  expect(screen.getByText('3. Conectivos por função')).toBeInTheDocument();
+});
