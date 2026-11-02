@@ -2,15 +2,16 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "00c2d5796af9706a03ac5874355f2b33692329a5",
-  "generated_at_utc": "2026-11-02T00:15:42Z",
+  "source_commit": "f20c2da880c6868f6a833f21b381d4564fc6b80c",
+  "generated_at_utc": "2026-11-02T02:07:44Z",
   "changed_files": [
     "docs/estudos-2026/enem-incidencia/README.md",
-    "docs/estudos-2026/enem-incidencia/probabilidades-2026.json",
-    "docs/estudos-2026/enem-incidencia/probabilidades-2026.md",
-    "public/questions.json",
     "scripts/analisar-enem-probabilidades.mts",
-    "scripts/data/enem-reclassificacao/capitulos-2024-2025.json"
+    "src/components/EnemPersonalPriorityPanel.tsx",
+    "src/data/enemProbabilities2026.json",
+    "src/lib/enemPersonalPriority.test.ts",
+    "src/lib/enemPersonalPriority.ts",
+    "src/views/Prioridades.tsx"
   ],
   "next_session": {
     "mode": "delta-only",
