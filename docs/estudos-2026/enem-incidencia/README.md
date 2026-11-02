@@ -108,3 +108,4 @@ mesmo script.
 - `apostas-edcley-2026.md`: as 131 apostas do Edcley Teixeira classificadas por assunto e cruzadas com o histórico; 41% caem em assuntos acima de 90%, e satélites, decibel e lógica aparecem como sinais que o histórico subestima.
 - `padroes-de-questao.md`, seções 9 e 10: palavras-chave de Natureza e atalhos de conta dos materiais de macetes, conferidos contra a frequência real nas 1.440 questões.
 - Redação: a aba ENEM 2026 do app ganhou o método do tema à proposta (leitura do tema, esqueleto com linhas, conectivos por função, proposta e armadilhas formais), escrito a partir do material do curso conferido com a cartilha do Inep.
+- `padroes-de-questao.md`, seções 11 a 13: macetes de Linguagens (os cinco vícios de alternativa errada e os capítulos que o histórico confirma), método de palavra-chave de Humanas e temas dos resumões de Natureza conferidos com as provas.

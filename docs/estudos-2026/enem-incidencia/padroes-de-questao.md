@@ -118,3 +118,55 @@ Materiais de macetes que circulam para o ENEM (como o enviado ao Drive em 02/11/
 - **Terno pitagórico:** lados proporcionais a 3, 4 e 5 (como 90, 120 e 150) dispensam a conta.
 - **MMC ou MDC:** "quando voltam a coincidir" pede MMC; "maior pedaço possível, sem sobra" pede MDC.
 - **Grandezas:** diretamente proporcional fica no numerador; inversamente proporcional, no denominador.
+
+## 11. Linguagens: como a alternativa errada é construída
+
+Fonte: e-book de macetes de Linguagens enviado em 02/11/2026, conferido com a classificação das 320 questões de Português de 2018–2025. Entendimento de Texto tem cerca de 16 questões por prova e 96% de chance, a maior de toda a prova.
+
+**Os cinco tipos de alternativa errada.** Antes de marcar, pergunte qual destes vícios a alternativa tem:
+
+| Vício | Como reconhecer | Exemplo do raciocínio |
+|---|---|---|
+| Contradição | diz o oposto do texto | o texto defende a reciclagem e a alternativa nega o benefício |
+| Redução | pega um detalhe e trata como ideia central | o texto lista três efeitos e a alternativa diz "apenas um" |
+| Extrapolação | conclui além do que o texto garante | o texto diz que ler ajuda a memória e a alternativa promete sucesso escolar |
+| Generalização | "sempre", "todos", "nunca" onde o texto diz "alguns" | um estudo indica e a alternativa afirma para todos |
+| Fuga | fala de assunto que o texto não trata | o texto é sobre poluição e a alternativa sobre desemprego |
+
+É a mesma lógica do padrão 8 (função antes do assunto) e da prova de 2024 (q14 e q15), em que as erradas repetiam palavras do texto com outra relação entre elas.
+
+**O que o histórico confirma dentro de Linguagens** (capítulos presentes em 6 ou mais das 8 provas):
+- **Variação linguística:** 94%, 8 de 8 provas. A resposta certa trata de adequação ao contexto e legitimidade das variedades, nunca de "certo e errado".
+- **Textos de tecnologia e redes sociais (TDIC):** 94%, 8 de 8 provas.
+- **Gêneros não verbais (charge, tirinha, cartaz):** 92%, 7 de 8 provas. Leia imagem, texto e contexto juntos.
+- **Fatores de textualidade e progressão:** 87%.
+- **Funções da linguagem:** 75%, com a pergunta explícita em 7 das 8 provas. Informar → referencial; sentimento do autor → emotiva; convencer ou chamar o leitor → conativa; testar o canal → fática; falar da própria língua → metalinguística; forma e ritmo → poética.
+- **Gêneros textuais:** 77%. Identifique o gênero pela intenção do texto (informar, convencer, criticar, relatar), não pelo formato. Na questão do ENEM 2024 sobre "Feijoada à minha moda", de Vinicius de Moraes, uma receita com marcas de carta, o que fazia do texto um poema era a linguagem expressiva.
+- **Intertextualidade:** 68%. Citação, paráfrase, paródia (recriação crítica ou humorística) e alusão.
+
+**O que o macete superestima:** figuras de linguagem isoladas (56%, em 5 de 8 provas) e escolas literárias por data. O ENEM cobra a escola pelo efeito no trecho, não pela cronologia: Parnasianismo aparece em 44% e a Semana de 22 em 46%.
+
+## 12. Humanas: palavra-chave e eliminação
+
+Fonte: e-book "Como dominar Humanas" enviado em 02/11/2026. O método confere com o padrão 8 e com os vícios da seção 11:
+
+1. **Resuma o enunciado em três partes:** assunto, recorte e tarefa. Por exemplo: "Era Vargas; legislação trabalhista; identificar a medida".
+2. **Elimine pela coerência de tempo e lugar.** Se o enunciado fala do Brasil no século XX, a alternativa que cita a Europa medieval sai.
+3. **Desconfie dos absolutos** ("redução total das desigualdades", "fim das barreiras").
+4. **Duelo final:** entre duas alternativas, fica a mais ligada ao núcleo do enunciado.
+
+Os exemplos do e-book (empirismo e tábula rasa, fato social, CLT, globalização) caem nos assuntos de maior chance de Humanas: Brasil República (89%), globalização (94%) e Idade Moderna e Iluminismo (92%).
+
+## 13. Resumões de Natureza: o que eles destacam e o que o histórico diz
+
+Os dois resumões enviados ("Resumão da Salvação" e "Guia completo de Ciências da Natureza") são revisões de conteúdo, sem dado de incidência. Conferindo os temas que eles destacam com o enunciado das 1.440 questões:
+
+| Tema destacado | Questões 2018–2025 | Provas |
+|---|---|---|
+| Polímeros e plásticos | 16 | 8/8 |
+| Ciclo do nitrogênio e leguminosas | 10 | 6/8 |
+| Tratamento de água e esgoto | 4 | 4/8 |
+| Arboviroses (dengue, zika, chikungunya) | 4 | 3/8 |
+| Fibra óptica e reflexão total | 0 | 0/8 |
+
+**Polímeros** aparecem em todas as provas, quase sempre como contexto ambiental (plástico, biodegradável) dentro de questões de orgânica. Vale revisar a diferença entre polímero de adição e de condensação, e entre biodegradável e reciclável. **Fibra óptica** é tema clássico de vestibular, mas não apareceu no ENEM nesse período.
