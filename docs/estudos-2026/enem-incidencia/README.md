@@ -60,3 +60,25 @@ orgânica (nomenclatura e reações), equilíbrio, soluções, ética e polític
 
 Em sete dias, não estude por lista: refaça questões de ENEM 2022–2025 dos assuntos ≥ 90% em que você
 ainda erra (Caderno de Erros), porque é ali que P(cair) × taxa de erro é maior.
+
+## Prioridade pessoal no app (02/11/2026)
+
+A aba Prioridades abre com "ENEM 2026: o que mais rende estudar agora". Para cada assunto:
+questões em jogo = questões esperadas por prova × (1 − domínio registrado). Assunto sem registro
+conta como 50% e aparece como "diagnosticar". Filtra por dia de prova. Regra em
+`src/lib/enemPersonalPriority.ts`; dados em `src/data/enemProbabilities2026.json`, gerados pelo
+mesmo script.
+
+## Conferência com o material do Drive
+
+- **Percentuais de cursinho no cronograma** (Estratégia, Aprova Total, COC) batem em parte com as
+  oito provas: ecologia é 24–25% da Biologia aqui (cursinho: 26–37%); circuitos são 18% da Física e,
+  somando eletrostática e eletromagnetismo, ~28% (cursinho: eletrodinâmica 21%); estequiometria
+  14–17% da Química; Orgânica (nomenclatura + reações) é o maior bloco de Química, 25%.
+- **Lacunas da semana ENEM do cronograma** frente ao ranking: geometria espacial (95%, ~5,6 por
+  prova) só aparece junto de funções em 12/11; análise combinatória (92%) não aparece; em História,
+  03/11 cobre Vargas/Ditadura, mas Idade Moderna e Iluminismo (92%) e Brasil Império/Colônia
+  (91%/84%) ficam de fora; literatura contemporânea e modernismo (94%/92%) não têm bloco próprio.
+- **"Simulado do Edcley"** não entra como evidência: é material de 2023 reconstruído de memória do
+  pré-teste do Inep, e no ENEM 2025 o Inep anulou as questões antecipadas (115, 121 e 178 — as mesmas
+  que esta base já marca como anuladas). Item vazado tende a ser anulado; não é aposta de estudo.

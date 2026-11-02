@@ -155,5 +155,10 @@ await writeFile('docs/estudos-2026/enem-incidencia/probabilidades-2026.json', JS
   topics: topics.map(r => ({ ...r, label: r.label, pAtLeastOne: +r.pAtLeastOne.toFixed(3), expected: +r.expected.toFixed(2), trend: +r.trend.toFixed(3) })),
   chapters: chapters.map(r => ({ ...r, pAtLeastOne: +r.pAtLeastOne.toFixed(3), expected: +r.expected.toFixed(2), trend: +r.trend.toFixed(3) })),
 }, null, 1) + '\n');
+// Cópia enxuta para o app: só o que a prioridade pessoal usa, sem capítulos.
+await writeFile('src/data/enemProbabilities2026.json', JSON.stringify({
+  editions: YEARS, items: all.length,
+  topics: topics.map(r => ({ topicId: r.key, subject: r.subject, pAtLeastOne: +r.pAtLeastOne.toFixed(3), expected: +r.expected.toFixed(2), presence: r.presence })),
+}, null, 1) + '\n');
 console.log(`itens ${all.length}; assuntos ${topics.length}; capítulos ${chapters.length}`);
 console.log('retroteste assunto', btTopic, 'capítulo', btChapter);

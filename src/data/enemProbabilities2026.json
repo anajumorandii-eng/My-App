@@ -1,0 +1,736 @@
+{
+ "editions": [
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ],
+ "items": 1440,
+ "topics": [
+  {
+   "topicId": "por_texto",
+   "subject": "Português",
+   "pAtLeastOne": 0.956,
+   "expected": 16.34,
+   "presence": 8
+  },
+  {
+   "topicId": "por_norma_culta",
+   "subject": "Português",
+   "pAtLeastOne": 0.956,
+   "expected": 6.96,
+   "presence": 8
+  },
+  {
+   "topicId": "mat_aritmetica_proporcionalidade",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.955,
+   "expected": 6.49,
+   "presence": 8
+  },
+  {
+   "topicId": "mat_dados_probabilidade",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.955,
+   "expected": 5.76,
+   "presence": 8
+  },
+  {
+   "topicId": "mat_geometria_espacial",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.954,
+   "expected": 5.61,
+   "presence": 8
+  },
+  {
+   "topicId": "mat_funcoes",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.953,
+   "expected": 5.16,
+   "presence": 8
+  },
+  {
+   "topicId": "mat_geometria_plana",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.953,
+   "expected": 5.06,
+   "presence": 8
+  },
+  {
+   "topicId": "ing_01",
+   "subject": "Inglês",
+   "pAtLeastOne": 0.953,
+   "expected": 5,
+   "presence": 8
+  },
+  {
+   "topicId": "bio_ecologia",
+   "subject": "Biologia",
+   "pAtLeastOne": 0.947,
+   "expected": 4.06,
+   "presence": 8
+  },
+  {
+   "topicId": "mat_equacoes",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.947,
+   "expected": 3.96,
+   "presence": 8
+  },
+  {
+   "topicId": "por_lit_contemporanea",
+   "subject": "Português",
+   "pAtLeastOne": 0.947,
+   "expected": 3.95,
+   "presence": 8
+  },
+  {
+   "topicId": "bio_fisio_animal",
+   "subject": "Biologia",
+   "pAtLeastOne": 0.943,
+   "expected": 3.63,
+   "presence": 8
+  },
+  {
+   "topicId": "geo_globalizacao_economica",
+   "subject": "Geografia",
+   "pAtLeastOne": 0.943,
+   "expected": 3.62,
+   "presence": 8
+  },
+  {
+   "topicId": "geo_populacao_urbana_brasil",
+   "subject": "Geografia",
+   "pAtLeastOne": 0.939,
+   "expected": 3.38,
+   "presence": 8
+  },
+  {
+   "topicId": "mat_sequencias_matrizes",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.932,
+   "expected": 3.05,
+   "presence": 8
+  },
+  {
+   "topicId": "geo_climatologia_socioambiental",
+   "subject": "Geografia",
+   "pAtLeastOne": 0.924,
+   "expected": 2.75,
+   "presence": 8
+  },
+  {
+   "topicId": "his_moderna_iluminismo",
+   "subject": "História",
+   "pAtLeastOne": 0.924,
+   "expected": 2.74,
+   "presence": 8
+  },
+  {
+   "topicId": "fis_circuitos",
+   "subject": "Física",
+   "pAtLeastOne": 0.924,
+   "expected": 2.73,
+   "presence": 8
+  },
+  {
+   "topicId": "mat_combinatoria",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.919,
+   "expected": 2.6,
+   "presence": 8
+  },
+  {
+   "topicId": "por_lit_modernismo",
+   "subject": "Português",
+   "pAtLeastOne": 0.918,
+   "expected": 2.58,
+   "presence": 8
+  },
+  {
+   "topicId": "his_brasil_imperio",
+   "subject": "História",
+   "pAtLeastOne": 0.912,
+   "expected": 2.43,
+   "presence": 8
+  },
+  {
+   "topicId": "por_lit_classica_barroca",
+   "subject": "Português",
+   "pAtLeastOne": 0.906,
+   "expected": 2.3,
+   "presence": 8
+  },
+  {
+   "topicId": "mat_teoria_numeros",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.905,
+   "expected": 2.27,
+   "presence": 8
+  },
+  {
+   "topicId": "his_primeira_republica_vargas",
+   "subject": "História",
+   "pAtLeastOne": 0.892,
+   "expected": 2.06,
+   "presence": 8
+  },
+  {
+   "topicId": "qui_estequiometria",
+   "subject": "Química",
+   "pAtLeastOne": 0.891,
+   "expected": 2.04,
+   "presence": 8
+  },
+  {
+   "topicId": "geo_fisica_brasil",
+   "subject": "Geografia",
+   "pAtLeastOne": 0.889,
+   "expected": 2.01,
+   "presence": 8
+  },
+  {
+   "topicId": "por_lit_romantismo_realismo",
+   "subject": "Português",
+   "pAtLeastOne": 0.881,
+   "expected": 2.56,
+   "presence": 7
+  },
+  {
+   "topicId": "fis_calorimetria",
+   "subject": "Física",
+   "pAtLeastOne": 0.88,
+   "expected": 1.89,
+   "presence": 8
+  },
+  {
+   "topicId": "fil_niilismo_existencialismo",
+   "subject": "Filosofia",
+   "pAtLeastOne": 0.863,
+   "expected": 1.68,
+   "presence": 8
+  },
+  {
+   "topicId": "bio_estrutura_fisio_celular",
+   "subject": "Biologia",
+   "pAtLeastOne": 0.843,
+   "expected": 1.48,
+   "presence": 8
+  },
+  {
+   "topicId": "his_republica_liberal_atual",
+   "subject": "História",
+   "pAtLeastOne": 0.841,
+   "expected": 1.85,
+   "presence": 7
+  },
+  {
+   "topicId": "his_brasil_colonia",
+   "subject": "História",
+   "pAtLeastOne": 0.836,
+   "expected": 2.38,
+   "presence": 7
+  },
+  {
+   "topicId": "his_idade_media",
+   "subject": "História",
+   "pAtLeastOne": 0.828,
+   "expected": 1.69,
+   "presence": 7
+  },
+  {
+   "topicId": "soc_cultura_identidade",
+   "subject": "Sociologia",
+   "pAtLeastOne": 0.826,
+   "expected": 1.92,
+   "presence": 6
+  },
+  {
+   "topicId": "mat_trigonometria",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.823,
+   "expected": 1.58,
+   "presence": 7
+  },
+  {
+   "topicId": "bio_zoologia",
+   "subject": "Biologia",
+   "pAtLeastOne": 0.803,
+   "expected": 1.41,
+   "presence": 7
+  },
+  {
+   "topicId": "qui_inorganica",
+   "subject": "Química",
+   "pAtLeastOne": 0.798,
+   "expected": 1.33,
+   "presence": 7
+  },
+  {
+   "topicId": "mat_log_exponenciais",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.796,
+   "expected": 1.8,
+   "presence": 6
+  },
+  {
+   "topicId": "qui_organica_fundamentos",
+   "subject": "Química",
+   "pAtLeastOne": 0.786,
+   "expected": 1.8,
+   "presence": 7
+  },
+  {
+   "topicId": "fis_leis_newton",
+   "subject": "Física",
+   "pAtLeastOne": 0.783,
+   "expected": 1.06,
+   "presence": 8
+  },
+  {
+   "topicId": "bio_metabolismo_energetico",
+   "subject": "Biologia",
+   "pAtLeastOne": 0.773,
+   "expected": 1.23,
+   "presence": 7
+  },
+  {
+   "topicId": "geo_geopolitica_regional",
+   "subject": "Geografia",
+   "pAtLeastOne": 0.752,
+   "expected": 1.4,
+   "presence": 6
+  },
+  {
+   "topicId": "geo_economica_brasil",
+   "subject": "Geografia",
+   "pAtLeastOne": 0.728,
+   "expected": 1.43,
+   "presence": 5
+  },
+  {
+   "topicId": "por_red_repertorio",
+   "subject": "Português",
+   "pAtLeastOne": 0.721,
+   "expected": 1.92,
+   "presence": 6
+  },
+  {
+   "topicId": "his_idade_antiga",
+   "subject": "História",
+   "pAtLeastOne": 0.721,
+   "expected": 1.44,
+   "presence": 6
+  },
+  {
+   "topicId": "bio_genetica",
+   "subject": "Biologia",
+   "pAtLeastOne": 0.719,
+   "expected": 1.05,
+   "presence": 7
+  },
+  {
+   "topicId": "fil_etica_politica_contemporanea",
+   "subject": "Filosofia",
+   "pAtLeastOne": 0.705,
+   "expected": 1.8,
+   "presence": 4
+  },
+  {
+   "topicId": "fis_ondulatoria",
+   "subject": "Física",
+   "pAtLeastOne": 0.705,
+   "expected": 1.39,
+   "presence": 5
+  },
+  {
+   "topicId": "mat_geometria_analitica",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.697,
+   "expected": 1.51,
+   "presence": 5
+  },
+  {
+   "topicId": "fil_aristoteles",
+   "subject": "Filosofia",
+   "pAtLeastOne": 0.696,
+   "expected": 0.87,
+   "presence": 7
+  },
+  {
+   "topicId": "fis_cinematica_vetorial",
+   "subject": "Física",
+   "pAtLeastOne": 0.684,
+   "expected": 1.03,
+   "presence": 5
+  },
+  {
+   "topicId": "fis_energia",
+   "subject": "Física",
+   "pAtLeastOne": 0.676,
+   "expected": 0.96,
+   "presence": 7
+  },
+  {
+   "topicId": "qui_equilibrio",
+   "subject": "Química",
+   "pAtLeastOne": 0.661,
+   "expected": 0.82,
+   "presence": 6
+  },
+  {
+   "topicId": "qui_solucoes",
+   "subject": "Química",
+   "pAtLeastOne": 0.641,
+   "expected": 1.03,
+   "presence": 4
+  },
+  {
+   "topicId": "por_red_estrutura_coesao",
+   "subject": "Português",
+   "pAtLeastOne": 0.621,
+   "expected": 1.25,
+   "presence": 5
+  },
+  {
+   "topicId": "por_sintaxe",
+   "subject": "Português",
+   "pAtLeastOne": 0.605,
+   "expected": 0.97,
+   "presence": 6
+  },
+  {
+   "topicId": "qui_organica_reacoes",
+   "subject": "Química",
+   "pAtLeastOne": 0.602,
+   "expected": 1.27,
+   "presence": 4
+  },
+  {
+   "topicId": "qui_cinetica",
+   "subject": "Química",
+   "pAtLeastOne": 0.593,
+   "expected": 0.91,
+   "presence": 5
+  },
+  {
+   "topicId": "qui_oxirreducao",
+   "subject": "Química",
+   "pAtLeastOne": 0.584,
+   "expected": 0.9,
+   "presence": 5
+  },
+  {
+   "topicId": "soc_estratificacao_desigualdade",
+   "subject": "Sociologia",
+   "pAtLeastOne": 0.583,
+   "expected": 0.86,
+   "presence": 5
+  },
+  {
+   "topicId": "geo_cartografia",
+   "subject": "Geografia",
+   "pAtLeastOne": 0.579,
+   "expected": 0.79,
+   "presence": 6
+  },
+  {
+   "topicId": "fis_eletrostatica",
+   "subject": "Física",
+   "pAtLeastOne": 0.573,
+   "expected": 0.85,
+   "presence": 4
+  },
+  {
+   "topicId": "soc_movimentos_sociais",
+   "subject": "Sociologia",
+   "pAtLeastOne": 0.556,
+   "expected": 0.99,
+   "presence": 4
+  },
+  {
+   "topicId": "soc_globalizacao",
+   "subject": "Sociologia",
+   "pAtLeastOne": 0.556,
+   "expected": 0.91,
+   "presence": 3
+  },
+  {
+   "topicId": "fis_eletromagnetismo",
+   "subject": "Física",
+   "pAtLeastOne": 0.554,
+   "expected": 0.7,
+   "presence": 5
+  },
+  {
+   "topicId": "fis_cinematica",
+   "subject": "Física",
+   "pAtLeastOne": 0.553,
+   "expected": 0.83,
+   "presence": 4
+  },
+  {
+   "topicId": "bio_evolucao",
+   "subject": "Biologia",
+   "pAtLeastOne": 0.545,
+   "expected": 0.89,
+   "presence": 4
+  },
+  {
+   "topicId": "qui_eletroquimica",
+   "subject": "Química",
+   "pAtLeastOne": 0.536,
+   "expected": 0.71,
+   "presence": 4
+  },
+  {
+   "topicId": "qui_modelos_atomicos",
+   "subject": "Química",
+   "pAtLeastOne": 0.522,
+   "expected": 0.77,
+   "presence": 5
+  },
+  {
+   "topicId": "fis_ondas_fundamentos",
+   "subject": "Física",
+   "pAtLeastOne": 0.518,
+   "expected": 0.69,
+   "presence": 4
+  },
+  {
+   "topicId": "fil_moderna_racionalismo_empirismo",
+   "subject": "Filosofia",
+   "pAtLeastOne": 0.506,
+   "expected": 0.63,
+   "presence": 4
+  },
+  {
+   "topicId": "fis_gravitacao_circular",
+   "subject": "Física",
+   "pAtLeastOne": 0.496,
+   "expected": 0.86,
+   "presence": 4
+  },
+  {
+   "topicId": "fil_socrates_platao",
+   "subject": "Filosofia",
+   "pAtLeastOne": 0.495,
+   "expected": 0.64,
+   "presence": 3
+  },
+  {
+   "topicId": "qui_polaridade_geometria",
+   "subject": "Química",
+   "pAtLeastOne": 0.484,
+   "expected": 0.68,
+   "presence": 3
+  },
+  {
+   "topicId": "soc_trabalho_sociedade",
+   "subject": "Sociologia",
+   "pAtLeastOne": 0.483,
+   "expected": 0.73,
+   "presence": 3
+  },
+  {
+   "topicId": "por_red_fundamentos",
+   "subject": "Português",
+   "pAtLeastOne": 0.477,
+   "expected": 0.63,
+   "presence": 5
+  },
+  {
+   "topicId": "bio_biotecnologia",
+   "subject": "Biologia",
+   "pAtLeastOne": 0.459,
+   "expected": 0.52,
+   "presence": 3
+  },
+  {
+   "topicId": "his_imperialismo_guerras",
+   "subject": "História",
+   "pAtLeastOne": 0.455,
+   "expected": 0.76,
+   "presence": 3
+  },
+  {
+   "topicId": "bio_botanica",
+   "subject": "Biologia",
+   "pAtLeastOne": 0.455,
+   "expected": 0.7,
+   "presence": 4
+  },
+  {
+   "topicId": "qui_gases",
+   "subject": "Química",
+   "pAtLeastOne": 0.449,
+   "expected": 0.68,
+   "presence": 3
+  },
+  {
+   "topicId": "por_red_argumentacao",
+   "subject": "Português",
+   "pAtLeastOne": 0.434,
+   "expected": 0.48,
+   "presence": 5
+  },
+  {
+   "topicId": "bio_microbiologia",
+   "subject": "Biologia",
+   "pAtLeastOne": 0.434,
+   "expected": 0.48,
+   "presence": 4
+  },
+  {
+   "topicId": "his_guerra_fria_contemporaneo",
+   "subject": "História",
+   "pAtLeastOne": 0.433,
+   "expected": 0.48,
+   "presence": 3
+  },
+  {
+   "topicId": "fis_estatica",
+   "subject": "Física",
+   "pAtLeastOne": 0.414,
+   "expected": 0.45,
+   "presence": 3
+  },
+  {
+   "topicId": "bio_codigo_genetico_sintese",
+   "subject": "Biologia",
+   "pAtLeastOne": 0.406,
+   "expected": 0.62,
+   "presence": 3
+  },
+  {
+   "topicId": "fil_contratualismo_iluminismo",
+   "subject": "Filosofia",
+   "pAtLeastOne": 0.401,
+   "expected": 0.44,
+   "presence": 4
+  },
+  {
+   "topicId": "geo_hidrogeografia",
+   "subject": "Geografia",
+   "pAtLeastOne": 0.387,
+   "expected": 0.42,
+   "presence": 3
+  },
+  {
+   "topicId": "soc_marx_sociologia",
+   "subject": "Sociologia",
+   "pAtLeastOne": 0.381,
+   "expected": 0.5,
+   "presence": 3
+  },
+  {
+   "topicId": "fis_termodinamica_gases",
+   "subject": "Física",
+   "pAtLeastOne": 0.376,
+   "expected": 0.4,
+   "presence": 3
+  },
+  {
+   "topicId": "fis_dinamica_impulsiva",
+   "subject": "Física",
+   "pAtLeastOne": 0.376,
+   "expected": 0.44,
+   "presence": 4
+  },
+  {
+   "topicId": "bio_fisio_vegetal",
+   "subject": "Biologia",
+   "pAtLeastOne": 0.371,
+   "expected": 0.48,
+   "presence": 3
+  },
+  {
+   "topicId": "qui_radioatividade",
+   "subject": "Química",
+   "pAtLeastOne": 0.327,
+   "expected": 0.34,
+   "presence": 2
+  },
+  {
+   "topicId": "mat_complexos_polinomios",
+   "subject": "Matemática",
+   "pAtLeastOne": 0.321,
+   "expected": 0.33,
+   "presence": 3
+  },
+  {
+   "topicId": "fis_fisica_moderna",
+   "subject": "Física",
+   "pAtLeastOne": 0.301,
+   "expected": 0.3,
+   "presence": 2
+  },
+  {
+   "topicId": "qui_termoquimica",
+   "subject": "Química",
+   "pAtLeastOne": 0.286,
+   "expected": 0.35,
+   "presence": 3
+  },
+  {
+   "topicId": "soc_weber",
+   "subject": "Sociologia",
+   "pAtLeastOne": 0.273,
+   "expected": 0.27,
+   "presence": 3
+  },
+  {
+   "topicId": "fil_kant_idealismo",
+   "subject": "Filosofia",
+   "pAtLeastOne": 0.26,
+   "expected": 0.25,
+   "presence": 2
+  },
+  {
+   "topicId": "fis_optica_geometrica",
+   "subject": "Física",
+   "pAtLeastOne": 0.251,
+   "expected": 0.24,
+   "presence": 2
+  },
+  {
+   "topicId": "fil_origem_pre_socraticos",
+   "subject": "Filosofia",
+   "pAtLeastOne": 0.227,
+   "expected": 0.21,
+   "presence": 1
+  },
+  {
+   "topicId": "fil_medieval",
+   "subject": "Filosofia",
+   "pAtLeastOne": 0.191,
+   "expected": 0.2,
+   "presence": 2
+  },
+  {
+   "topicId": "soc_formacao_ciencia",
+   "subject": "Sociologia",
+   "pAtLeastOne": 0.177,
+   "expected": 0.15,
+   "presence": 2
+  },
+  {
+   "topicId": "fil_marx_critica_sociedade",
+   "subject": "Filosofia",
+   "pAtLeastOne": 0.138,
+   "expected": 0.11,
+   "presence": 1
+  },
+  {
+   "topicId": "por_red_direitos_modelo",
+   "subject": "Português",
+   "pAtLeastOne": 0.1,
+   "expected": 0.06,
+   "presence": 1
+  }
+ ]
+}
