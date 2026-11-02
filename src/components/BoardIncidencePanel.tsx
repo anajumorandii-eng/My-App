@@ -5,7 +5,7 @@ const percent=(value:number)=>(100*value).toLocaleString('pt-BR',{maximumFractio
 export function BoardIncidencePanel({board,subject}:{board:ResearchBoard;subject:string}){
  const [corpus,setCorpus]=useState<BoardCorpus|null>(null),[error,setError]=useState(false),[attempt,setAttempt]=useState(0);
  const [startYear,setStartYear]=useState(2022),[endYear,setEndYear]=useState(2026),[group,setGroup]=useState('');
- const [area,setArea]=useState(''),[highOnly,setHighOnly]=useState(false),[mode,setMode]=useState<'topic'|'subtopic'>('topic');
+ const [areas,setAreas]=useState<string[]>([]),[highOnly,setHighOnly]=useState(false),[mode,setMode]=useState<'topic'|'subtopic'>('topic');
  const [query,setQuery]=useState(''),[selected,setSelected]=useState<string[]|null>(null),[visible,setVisible]=useState(12),[visibleQuestions,setVisibleQuestions]=useState(6);
  useEffect(()=>{
   let cancelled=false;setCorpus(null);setError(false);setSelected(null);
@@ -15,10 +15,10 @@ export function BoardIncidencePanel({board,subject}:{board:ResearchBoard;subject
    const wanted=normalizeIncidenceSubject(subject),counts=new Map<string,number>();
    for(const question of data.questions)if(question.subject===wanted){const paper=data.papers.find(item=>item.id===question.paperId);if(paper)counts.set(paper.group,(counts.get(paper.group)??0)+1);}
    const best=[...counts].sort((a,b)=>b[1]-a[1])[0]?.[0]??data.papers[0].group;
-   setGroup(best);setArea(counts.size?wanted:'');setCorpus(data);}).catch(()=>{if(!cancelled)setError(true);});
+   setGroup(best);setAreas(counts.size?[wanted]:[]);setCorpus(data);}).catch(()=>{if(!cancelled)setError(true);});
   return()=>{cancelled=true;};
  },[board,attempt]);
- const filter={startYear,endYear,group,subject:area||undefined,highConfidenceOnly:highOnly};
+ const filter={startYear,endYear,group,subjects:areas,highConfidenceOnly:highOnly};
  const view=useMemo(()=>{
   if(!corpus)return null;
   const pool=boardPool(corpus,filter),scheduled=boardPool(corpus,filter,true);
@@ -29,7 +29,7 @@ export function BoardIncidencePanel({board,subject}:{board:ResearchBoard;subject
   const questions=pool.filter(question=>byId.has(question.id)&&(!highOnly||question.confidence==='high')).sort((a,b)=>b.year-a.year||a.number.localeCompare(b.number));
   const papers=corpus.papers.filter(paper=>paper.group===group&&paper.year>=startYear&&paper.year<=endYear);
   return {pool,scheduled,rows,questions,papers,pairs:boardInterdisciplinaryPairs(corpus,filter),uncertain:pool.filter(question=>question.confidence!=='high').length};
- },[corpus,startYear,endYear,group,area,highOnly,mode,query,selected]);
+ },[corpus,startYear,endYear,group,areas,highOnly,mode,query,selected]);
  const reset=()=>{setSelected(null);setVisible(12);setVisibleQuestions(6);};
  const slug=board.toLowerCase();
  const groupSubjects=(value:string)=>{const counts=new Map<string,number>();if(corpus)for(const question of corpus.questions){const paper=corpus.papers.find(item=>item.id===question.paperId);if(paper?.group===value&&!question.excluded)counts.set(question.subject,(counts.get(question.subject)??0)+1);}return [...counts].sort((a,b)=>b[1]-a[1]);};
@@ -46,14 +46,20 @@ export function BoardIncidencePanel({board,subject}:{board:ResearchBoard;subject
    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
     <label>Do vestibular<select className="field block w-full" value={startYear} onChange={event=>{const year=Number(event.target.value);setStartYear(year);if(year>endYear)setEndYear(year);reset();}}>{analysisYears.map(year=><option key={year}>{year}</option>)}</select></label>
     <label>Até o vestibular<select className="field block w-full" value={endYear} onChange={event=>{const year=Number(event.target.value);setEndYear(year);if(year<startYear)setStartYear(year);reset();}}>{analysisYears.map(year=><option key={year}>{year}</option>)}</select></label>
-    <label>Grupo da prova<select className="field block w-full" value={group} onChange={event=>{const next=event.target.value;setGroup(next);if(area&&!groupSubjects(next).some(([name])=>name===area))setArea('');reset();}}>{[...new Set(corpus.papers.map(paper=>paper.group))].map(value=><option key={value} value={value}>{corpus.papers.find(paper=>paper.group===value)!.phase} · {corpus.papers.find(paper=>paper.group===value)!.format==='multiple-choice'?'objetivas':'respostas abertas'}</option>)}</select></label>
-    <label>Matéria<select className="field block w-full" value={area} onChange={event=>{setArea(event.target.value);reset();}}><option value="">Todas as matérias</option>{groupSubjects(group).map(([name,count])=><option key={name} value={name}>{name} · {count}</option>)}</select></label>
+    <label>Grupo da prova<select className="field block w-full" value={group} onChange={event=>{const next=event.target.value;setGroup(next);{const available=new Set(groupSubjects(next).map(([name])=>name));setAreas(current=>current.filter(name=>available.has(name)));}reset();}}>{[...new Set(corpus.papers.map(paper=>paper.group))].map(value=><option key={value} value={value}>{corpus.papers.find(paper=>paper.group===value)!.phase} · {corpus.papers.find(paper=>paper.group===value)!.format==='multiple-choice'?'objetivas':'respostas abertas'}</option>)}</select></label>
+
     <label>Detalhamento<select className="field block w-full" value={mode} onChange={event=>{setMode(event.target.value as 'topic'|'subtopic');reset();}}><option value="topic">Assunto principal</option><option value="subtopic">Presença de subassuntos</option></select></label>
     <label>Buscar assunto<input type="search" className="field block w-full" value={query} onChange={event=>{setQuery(event.target.value);reset();}}/></label>
    </div>
+   {/* Várias matérias ao mesmo tempo: cada linha mantém o denominador da
+       própria matéria, então juntar matérias não mistura percentuais. */}
+   <fieldset className="text-sm"><legend className="mb-2">Matérias <span className="text-[var(--dim)]">({areas.length?`${areas.length} selecionada${areas.length>1?'s':''}`:'todas'})</span></legend><div className="flex flex-wrap gap-2">
+    <button type="button" className={`inline-flex items-center gap-1 rounded-full border px-3 py-1.5 text-sm ${!areas.length?'border-[var(--action-primary)] font-semibold':'border-[var(--line)]'}`} aria-pressed={!areas.length} onClick={()=>{setAreas([]);reset();}}>Todas as matérias</button>
+    {groupSubjects(group).map(([name,count])=><label key={name} className={`inline-flex items-center gap-1 rounded-full border px-3 py-1.5 text-sm cursor-pointer ${areas.includes(name)?'border-[var(--action-primary)] font-semibold':'border-[var(--line)]'}`}><input type="checkbox" checked={areas.includes(name)} onChange={event=>{setAreas(current=>event.target.checked?[...current,name]:current.filter(item=>item!==name));reset();}}/>{name} · {count}</label>)}
+   </div></fieldset>
    <div className="flex flex-wrap gap-4 text-sm"><label><input type="checkbox" checked={highOnly} onChange={event=>{setHighOnly(event.target.checked);reset();}}/> Somente classificações de alta confiança</label></div>
    <p className="text-xs text-[var(--dim)]">Uma matéria e um assunto principal por item. Subassuntos podem coexistir, portanto seus percentuais não somam 100%. Alta confiança restringe as ocorrências e conserva o denominador. “Não classificado” não significa zero de cobrança. Redação usa denominador próprio.</p>
-   <div className="overflow-x-auto max-w-full" tabIndex={0} role="region" aria-label={`Tabela de incidência ${board}`}><table className="w-full text-xs text-left"><caption className="text-left pb-2 font-semibold">{area||'Todas as matérias'} · {corpus.papers.find(paper=>paper.group===group)?.phase} · {startYear}–{endYear} · {view.pool.length} questões</caption><thead><tr><th className="p-2">Assunto / matéria</th><th className="p-2">n/N da matéria</th><th className="p-2">%</th><th className="p-2">Edições</th>{analysisYears.filter(year=>year>=startYear&&year<=endYear).map(year=><th className="p-2" key={year}>{year}</th>)}</tr></thead><tbody>
+   <div className="overflow-x-auto max-w-full" tabIndex={0} role="region" aria-label={`Tabela de incidência ${board}`}><table className="w-full text-xs text-left"><caption className="text-left pb-2 font-semibold">{areas.length?areas.join(', '):'Todas as matérias'} · {corpus.papers.find(paper=>paper.group===group)?.phase} · {startYear}–{endYear} · {view.pool.length} questões</caption><thead><tr><th className="p-2">Assunto / matéria</th><th className="p-2">n/N da matéria</th><th className="p-2">%</th><th className="p-2">Edições</th>{analysisYears.filter(year=>year>=startYear&&year<=endYear).map(year=><th className="p-2" key={year}>{year}</th>)}</tr></thead><tbody>
     {view.rows.slice(0,visible).map(row=><tr key={row.id} className="border-b border-[var(--line)] align-top"><th className="p-2 font-normal"><button className="underline text-left" onClick={()=>{setSelected(row.questionIds);setVisibleQuestions(6);}}>{row.label}</button><span className="block text-[var(--dim)]">{row.subject}{row.uncertain?` · ${row.uncertain} com ressalva`:''}</span></th><td className="p-2 font-mono">{row.count}/{row.total}</td><td className="p-2 font-mono">{percent(row.rate)}</td><td className="p-2 font-mono">{row.editions}/{row.observedEditions}</td>{row.annual.map(annual=><td key={annual.year} className="p-2 whitespace-nowrap">{annual.total?`${annual.count}/${annual.total}`:annual.covered?'—':'Não classificado'}</td>)}</tr>)}
    </tbody></table></div>
    {!view.rows.length&&<p>{view.papers.length?'Sem ocorrências classificadas para esta matéria e filtro; isso não a retira do programa.':'Este formato não está classificado no período selecionado. Não há denominador.'}</p>}

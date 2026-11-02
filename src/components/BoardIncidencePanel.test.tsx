@@ -46,8 +46,20 @@ it('abre no grupo que mais cobra a matéria e deixa a matéria visível no filtr
  const spy=vi.spyOn(research,'loadBoardCorpus').mockResolvedValue(corpus);
  render(<BoardIncidencePanel board="FAMERP" subject="Biologia"/>);
  expect(await screen.findByRole('table')).toHaveTextContent('Biologia · Conhecimentos gerais');
- expect(screen.getByLabelText('Matéria')).toHaveValue('Biologia');
- fireEvent.change(screen.getByLabelText('Matéria'),{target:{value:''}});
+ expect(screen.getByRole('checkbox',{name:/Biologia/})).toBeChecked();
+ fireEvent.click(screen.getByRole('button',{name:'Todas as matérias'}));
  expect(screen.getByRole('table')).toHaveTextContent('Todas as matérias');
+ spy.mockRestore();
+});
+
+it('permite combinar várias matérias, cada uma com o próprio denominador',async()=>{
+ const corpus:BoardCorpus={...fixture,questions:[q('01'),q('02',{subject:'Química',topicId:'qui_solucoes',topic:'Soluções'}),q('03',{subject:'Física',topicId:'fis_energia',topic:'Energia'})]};
+ const spy=vi.spyOn(research,'loadBoardCorpus').mockResolvedValue(corpus);
+ render(<BoardIncidencePanel board="FAMERP" subject="Biologia"/>);
+ await screen.findByRole('table');
+ fireEvent.click(screen.getByRole('checkbox',{name:/Química/}));
+ const table=screen.getByRole('table');
+ expect(table).toHaveTextContent('Biologia, Química');
+ expect(table).toHaveTextContent('Ecologia');expect(table).toHaveTextContent('Soluções');expect(table).not.toHaveTextContent('Energia');
  spy.mockRestore();
 });

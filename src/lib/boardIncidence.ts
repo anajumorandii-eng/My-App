@@ -11,10 +11,10 @@ export interface BoardCorpus {
   papers: BoardPaper[]; questions: BoardQuestion[];
 }
 export interface BoardIncidenceRow extends Omit<IncidenceRow,'annual'> { annual: (AnnualIncidence & {covered: boolean})[]; }
-export interface BoardIncidenceFilter { startYear: number; endYear: number; group: string; subject?: string; highConfidenceOnly?: boolean; }
+export interface BoardIncidenceFilter { startYear: number; endYear: number; group: string; subject?: string; subjects?: string[]; highConfidenceOnly?: boolean; }
 export function boardPool(corpus: BoardCorpus, filter: BoardIncidenceFilter, includeExcluded=false) {
   const papers=new Set(corpus.papers.filter(paper=>paper.group===filter.group&&paper.year>=filter.startYear&&paper.year<=filter.endYear).map(paper=>paper.id));
-  return corpus.questions.filter(question=>papers.has(question.paperId)&&(!filter.subject||question.subject===filter.subject)&&(includeExcluded||!question.excluded));
+  return corpus.questions.filter(question=>papers.has(question.paperId)&&(!filter.subject||question.subject===filter.subject)&&(!filter.subjects?.length||filter.subjects.includes(question.subject))&&(includeExcluded||!question.excluded));
 }
 export function boardIncidenceRows(corpus: BoardCorpus, filter: BoardIncidenceFilter, group: 'topic'|'subtopic'='topic'): BoardIncidenceRow[] {
   const pool=boardPool(corpus,filter);
