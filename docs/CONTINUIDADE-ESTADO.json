@@ -2,12 +2,18 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "187bc40b41ab56e16caef5fe16396104a8a7208c",
-  "generated_at_utc": "2026-11-02T21:37:01Z",
+  "source_commit": "ce8015db9537c13cdf93edf408aaa4f53f170e16",
+  "generated_at_utc": "2026-11-02T22:44:17Z",
   "changed_files": [
-    "src/components/BoardIncidencePanel.test.tsx",
-    "src/components/BoardIncidencePanel.tsx",
-    "src/lib/boardIncidence.ts"
+    "docs/estudos-2026/enem-incidencia/integracao-motor.md",
+    "package.json",
+    "scripts/buildEnemStudyGuidance.mjs",
+    "server/ai/enemStudySources.test.ts",
+    "server/ai/enemStudySources.ts",
+    "server/ai/routes.test.ts",
+    "server/ai/routes.ts",
+    "server/ai/validation.ts",
+    "src/data/enemStudyGuidance.json"
   ],
   "next_session": {
     "mode": "delta-only",
