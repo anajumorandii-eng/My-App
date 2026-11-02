@@ -98,3 +98,7 @@ mesmo script.
 ## Padrões de questão
 
 `padroes-de-questao.md` traz oito operações que se repetem (unidades, escala, mediana, porcentagem sobre porcentagem, custo total, experimento, gráfico de Natureza, função do texto), com frequência medida por `scripts/medir-padroes-enem.py`, âncoras em questões reais do caderno amarelo e exercícios de transferência autorais com resposta.
+
+## Planilha completa
+
+`incidencia-enem-2018-2025.xlsx` traz todas as matérias, os 97 assuntos e os 392 subtópicos (capítulos), com chance de cair, questões esperadas, edições, % da matéria, tendência e a série 2018–2025, filtráveis por dia de prova. Regerar: `python3 scripts/gerar-planilha-incidencia-enem.py` (lê o JSON do relatório, não recalcula).
