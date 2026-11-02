@@ -1,4 +1,6 @@
 export interface PrintCoverContext {
+  /** Identidade da composição desta edição, preservada nas tentativas do mesmo PDF. */
+  edition?: string;
   subject?: string;
   topic?: string;
   subtopic?: string;

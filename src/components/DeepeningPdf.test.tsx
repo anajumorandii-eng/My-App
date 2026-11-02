@@ -102,6 +102,9 @@ it('gerar novo PDF cria outra capa sem regenerar ao abrir ou salvar o arquivo pr
  expect(calls).toHaveLength(2);
  expect(JSON.parse(calls[0][1].body).html).not.toBe(JSON.parse(calls[1][1]!.body).html);
  expect(fetch.mock.calls.filter(([url,options])=>url==='/api/cover-illustrations'&&options?.method==='POST')).toHaveLength(2);
+ const images=fetch.mock.calls.filter(([url,options])=>url==='/api/cover-illustrations'&&options?.method==='POST').map(([,options])=>JSON.parse(options!.body));
+ expect(images[0].edition).toMatch(/^[a-f0-9-]{36}$/);
+ expect(images[1].edition).not.toBe(images[0].edition);
 });
 it('recupera da conta o arquivo exato de uma sessão anterior sem pedir outra capa ou PDF', async () => {
  const fetch = vi.fn(async (_url: string) => pdf());

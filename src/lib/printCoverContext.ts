@@ -3,6 +3,7 @@ import type { PrintCoverContext } from "./printCoverSpec";
 export function readPrintCoverContext(content: HTMLElement): PrintCoverContext {
   const data = content.dataset;
   const fields = {
+    edition: data.printCoverEdition,
     subject: data.printSubject,
     topic: data.printTopic,
     subtopic: data.printSubtopic,
@@ -18,6 +19,7 @@ export function readPrintCoverContext(content: HTMLElement): PrintCoverContext {
 }
 export function coverContextKey(context: PrintCoverContext): string {
   return JSON.stringify([
+    context.edition || "",
     context.subject || "",
     context.topic || "",
     context.subtopic || "",

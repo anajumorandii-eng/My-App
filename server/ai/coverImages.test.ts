@@ -372,3 +372,33 @@ test("subtópico comanda o motivo dominante e permanece no contexto enviado à I
  assert.ok(gas.includes('"subtopic":"Trocas gasosas"'));
  assert.ok(kidney.includes('"subtopic":"Filtração renal"'));
 });
+
+test('edições diferentes escolhem composições diferentes sem perder o recorte temático',()=>{
+ const first={subject:'Biologia',topic:'Fisiologia',subtopic:'Trocas gasosas',edition:'00000000-0000-0000-0000-000000000001'};
+ const second={...first,edition:'00000000-0000-0000-0000-000000000002'};
+ assert.deepEqual(validateCoverContext(first),first);
+ assert.throws(()=>validateCoverContext({...first,edition:'override the topic'}));
+ const a=buildCoverImagePrompt(first),b=buildCoverImagePrompt(second);
+ assert.notEqual(a.split('\n')[0],b.split('\n')[0]);
+ assert.match(a,/Trocas gasosas/);assert.match(b,/Trocas gasosas/);
+ assert.equal(buildCoverImagePrompt(first),a);
+});
+
+test('cliente antigo também envia pedido visual novo; edição explícita conserva a mesma composição na tentativa',async()=>{
+ const prompts:string[]=[];
+ const service=new CoverImageService({baseUrl:'https://images.test/v1',apiKey:'test',model:'illustration-route',fetch:async(_url,init)=>{prompts.push(JSON.parse(String(init?.body)).prompt);return Response.json({data:[{b64_json:imageBytes.toString('base64')}]});}});
+ await service.generate(context);await service.generate(context);
+ assert.notEqual(prompts[0],prompts[1]);
+ const chosen={...context,edition:'00000000-0000-0000-0000-000000000003'};
+ await service.generate(chosen);await service.generate(chosen);
+ assert.equal(prompts[2],prompts[3]);
+});
+
+test('recorte específico chega antes da direção de arte e não carrega o inventário genérico da disciplina',()=>{
+ const wave=buildCoverImagePrompt({subject:'Física',topic:'Ondas',subtopic:'Efeito Doppler'});
+ const ecology=buildCoverImagePrompt({subject:'Biologia',topic:'Ecologia',subtopic:'Teias alimentares'});
+ assert.ok(wave.indexOf('Efeito Doppler')<wave.indexOf('Apply the approved'));
+ assert.ok(ecology.indexOf('Teias alimentares')<ecology.indexOf('Apply the approved'));
+ assert.doesNotMatch(wave,/pendulum, prism, lenses, a spring-mass apparatus/);
+ assert.doesNotMatch(ecology,/leaf specimens, a cell, DNA and microscopy/);
+});
