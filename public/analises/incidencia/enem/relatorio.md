@@ -1,16 +1,22 @@
-# ENEM: incidência 2024–2025
+# ENEM: incidência 2022–2025
 
-362 questões/propostas, 4 cadernos. 4 itens excluídos. A proposta de redação é uma unidade; subitens e cores equivalentes não são questões extras.
+724 questões/propostas, 8 cadernos. 6 itens excluídos. A proposta de redação é uma unidade; subitens e cores equivalentes não são questões extras.
 
+2022: Regular impressa, cadernos CD2 amarelo e CD5 amarelo, Inglês nas opcionais 01–05. 180 objetivas e proposta de redação R: 181 unidades. Leitura dos itens extraídos dos PDFs enviados pela estudante, cruzada com o gabarito oficial do mesmo caderno e com o banco do app; itens dependentes de figura marcados com confiança média. Anulada 175 mantida com excluded=true. Classificação editorial própria, sem dupla codificação independente integral. Contagem não equivale a peso TRI.
+2023: Regular impressa, cadernos CD1 azul (1º dia) e CD5 amarelo (2º dia), Inglês nas opcionais 01–05. 180 objetivas e proposta de redação R: 181 unidades. Leitura dos itens extraídos dos PDFs enviados pela estudante, cruzada com o gabarito oficial do mesmo caderno e com o banco do app; itens dependentes de figura marcados com confiança média. Anulada 177 mantida com excluded=true. Classificação editorial própria, sem dupla codificação independente integral. Contagem não equivale a peso TRI.
 2024: Aplicação regular impressa, amarelosCD2 eCD5, Inglês nas01–05.180objetivas e propostaR:181unidades. Leitura integral documentada no checkpoint anterior, retomada com redação das90fichasD2, releitura integralD2, revisão dos casosD1 e inspeção das figuras decisivas. Anulada102 mantida com excluded=true. Classificação editorial única, sem dupla codificação integral. Contagem não equivale a pesoTRI.
 2025: Regular impressa, cadernos amarelos CD2 e CD5, Inglês nas opcionais 01–05. 180 objetivas e proposta de redação R: 181 unidades. Leitura integral dos itens e inspeção de figuras decisivas; classificação editorial própria, sem dupla codificação independente integral. Anuladas 115, 121 e 178 mantidas com excluded=true. Contagem não equivale a peso TRI.
 
-Edições não classificadas nesta publicação: 2021, 2022, 2023. Ausência de classificação não representa zero de cobrança. Rascunhos não entram nos denominadores.
+Edições não classificadas nesta publicação: 2021. Ausência de classificação não representa zero de cobrança. Rascunhos não entram nos denominadores.
 
 Classificação editorial: uma matéria e assunto principal por item. Subassuntos são presenças múltiplas. n/N usa apenas a matéria, grupo e edições selecionados. Questões anuladas saem da frequência. Confiança editorial não é uma probabilidade. Não há dificuldade medida nem previsão de cobrança. Formatos diferentes têm grupos distintos. Não se somam percentuais entre bancas. No ENEM, contagem não equivale ao peso na TRI. Na UNIFESP, estes são cadernos do Sistema Misto; o ENEM não é contado novamente como UNIFESP.
 
 |Ano|Fase|Grupo|Classificadas/previstas|Fonte|
 |---|---|---|---|---|
+|2022|Linguagens, Ciências Humanas e Redação|linguagens-humanas|91/91|[PDF](https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2022/ENEM_2022_dia_1_caderno_amarelo.pdf)|
+|2022|Ciências da Natureza e Matemática|natureza-matematica|90/90|[PDF](https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2022/ENEM_2022_dia_2_caderno_amarelo.pdf)|
+|2023|Linguagens, Ciências Humanas e Redação|linguagens-humanas|91/91|[PDF](https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2023/ENEM_2023_dia_1_caderno_azul_aplicacao_regular.pdf)|
+|2023|Ciências da Natureza e Matemática|natureza-matematica|90/90|[PDF](https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2023/ENEM_2023_dia_2_caderno_amarelo.pdf)|
 |2024|Linguagens, Ciências Humanas e Redação|linguagens-humanas|91/91|[PDF](https://riep.inep.gov.br/bitstreams/71aaf57d-a5b7-4300-bd8b-fcf2ec490570/download)|
 |2024|Ciências da Natureza e Matemática|natureza-matematica|90/90|[PDF](https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/2dia/enem2024_2dia_prova_amarelo.pdf)|
 |2025|Linguagens, Ciências Humanas e Redação|linguagens-humanas|91/91|[PDF](https://riep.inep.gov.br/bitstreams/a11f89c6-3693-49f0-8164-2794b5dac372/download)|
@@ -20,108 +26,126 @@ Classificação editorial: uma matéria e assunto principal por item. Subassunto
 
 |Matéria|Assunto|n/N|%|Edições|2021|2022|2023|2024|2025|
 |---|---|---|---|---|---|---|---|---|---|
-|Português|Entendimento de Texto|45/56|80.4|2/2|Não classificado|Não classificado|Não classificado|20/26|25/30|
-|Português|Domínio da Norma Culta|11/56|19.6|2/2|Não classificado|Não classificado|Não classificado|6/26|5/30|
-|Inglês|Compreensão de Texto em Inglês|10/10|100.0|2/2|Não classificado|Não classificado|Não classificado|5/5|5/5|
-|Filosofia|Ética e Política Contemporâneas|8/22|36.4|2/2|Não classificado|Não classificado|Não classificado|3/11|5/11|
-|Geografia|Climatologia e Problemas Socioambientais|6/27|22.2|2/2|Não classificado|Não classificado|Não classificado|3/13|3/14|
-|Sociologia|Cultura, Identidade e Diversidade|6/15|40.0|2/2|Não classificado|Não classificado|Não classificado|3/9|3/6|
-|Geografia|Geografia da População e Urbana do Brasil|6/27|22.2|2/2|Não classificado|Não classificado|Não classificado|2/13|4/14|
-|Geografia|Geografia Econômica do Brasil|5/27|18.5|2/2|Não classificado|Não classificado|Não classificado|2/13|3/14|
-|Literatura|Literatura Contemporânea|5/14|35.7|2/2|Não classificado|Não classificado|Não classificado|3/8|2/6|
-|Filosofia|Nietzsche, Existencialismo e Filosofia Contemporânea|5/22|22.7|2/2|Não classificado|Não classificado|Não classificado|3/11|2/11|
-|Literatura|Romantismo e Realismo|5/14|35.7|2/2|Não classificado|Não classificado|Não classificado|3/8|2/6|
-|Geografia|Globalização e Geografia Econômica|4/27|14.8|2/2|Não classificado|Não classificado|Não classificado|2/13|2/14|
-|Sociologia|Globalização e Sociedade Contemporânea|4/15|26.7|2/2|Não classificado|Não classificado|Não classificado|2/9|2/6|
-|História|Idade Moderna e Iluminismo|4/24|16.7|2/2|Não classificado|Não classificado|Não classificado|3/11|1/13|
-|História|Primeira República e Era Vargas|4/24|16.7|2/2|Não classificado|Não classificado|Não classificado|3/11|1/13|
-|História|Brasil Império|3/24|12.5|2/2|Não classificado|Não classificado|Não classificado|2/11|1/13|
-|Literatura|Simbolismo, Pré-Modernismo e Modernismo|3/14|21.4|2/2|Não classificado|Não classificado|Não classificado|2/8|1/6|
-|Filosofia|Aristóteles|2/22|9.1|2/2|Não classificado|Não classificado|Não classificado|1/11|1/11|
-|Filosofia|Filosofia Moderna: Racionalismo e Empirismo|2/22|9.1|2/2|Não classificado|Não classificado|Não classificado|1/11|1/11|
-|Geografia|Geopolítica Regional Contemporânea|2/27|7.4|2/2|Não classificado|Não classificado|Não classificado|1/13|1/14|
-|História|Guerra Fria e Mundo Contemporâneo|2/24|8.3|2/2|Não classificado|Não classificado|Não classificado|1/11|1/13|
-|História|Idade Média|2/24|8.3|2/2|Não classificado|Não classificado|Não classificado|1/11|1/13|
-|Redação|Leitura de Coletânea e Repertório Temático|2/2|100.0|2/2|Não classificado|Não classificado|Não classificado|1/1|1/1|
-|História|República Liberal e Brasil Contemporâneo|2/24|8.3|2/2|Não classificado|Não classificado|Não classificado|1/11|1/13|
-|Filosofia|Sócrates e Platão|2/22|9.1|2/2|Não classificado|Não classificado|Não classificado|1/11|1/11|
-|História|Brasil Colônia|3/24|12.5|1/2|Não classificado|Não classificado|Não classificado|0/11|3/13|
-|Sociologia|Movimentos Sociais e Cidadania|3/15|20.0|1/2|Não classificado|Não classificado|Não classificado|3/9|0/6|
-|História|Idade Antiga|2/24|8.3|1/2|Não classificado|Não classificado|Não classificado|0/11|2/13|
-|História|Imperialismo e Guerras Mundiais|2/24|8.3|1/2|Não classificado|Não classificado|Não classificado|0/11|2/13|
-|Arte|Acaso e experimentação fotográfica|1/11|9.1|1/2|Não classificado|Não classificado|Não classificado|1/7|0/4|
-|Arte|Arte contemporânea e violência colonial|1/11|9.1|1/2|Não classificado|Não classificado|Não classificado|0/7|1/4|
-|Arte|Arte indígena e sacralidade|1/11|9.1|1/2|Não classificado|Não classificado|Não classificado|0/7|1/4|
-|Arte|Arte plumária e papéis comunitários|1/11|9.1|1/2|Não classificado|Não classificado|Não classificado|1/7|0/4|
-|Geografia|Cartografia e Fundamentos|1/27|3.7|1/2|Não classificado|Não classificado|Não classificado|1/13|0/14|
-|Filosofia|Contratualismo Político e Iluminismo|1/22|4.5|1/2|Não classificado|Não classificado|Não classificado|1/11|0/11|
-|Biologia|Ecologia|1/1|100.0|1/2|Não classificado|Não classificado|Não classificado|Sem categoria|1/1|
-|Sociologia|Estratificação Social e Desigualdade|1/15|6.7|1/2|Não classificado|Não classificado|Não classificado|0/9|1/6|
-|Literatura|Expressividade do luto na poesia de Vicente de Carvalho|1/14|7.1|1/2|Não classificado|Não classificado|Não classificado|0/8|1/6|
-|Geografia|Geografia Física do Brasil|1/27|3.7|1/2|Não classificado|Não classificado|Não classificado|1/13|0/14|
-|Geografia|Geomorfologia: carste e intemperismo químico|1/27|3.7|1/2|Não classificado|Não classificado|Não classificado|0/13|1/14|
-|Geografia|Hidrogeografia|1/27|3.7|1/2|Não classificado|Não classificado|Não classificado|1/13|0/14|
-|Arte|Impressionismo e efeitos de luz|1/11|9.1|1/2|Não classificado|Não classificado|Não classificado|1/7|0/4|
-|Arte|Instrumentos musicais e adaptação cultural|1/11|9.1|1/2|Não classificado|Não classificado|Não classificado|1/7|0/4|
-|Filosofia|Kant e o Idealismo Alemão|1/22|4.5|1/2|Não classificado|Não classificado|Não classificado|1/11|0/11|
-|Filosofia|Origens da Filosofia e os Pré-Socráticos|1/22|4.5|1/2|Não classificado|Não classificado|Não classificado|0/11|1/11|
-|Arte|Persistência de formas escultóricas|1/11|9.1|1/2|Não classificado|Não classificado|Não classificado|1/7|0/4|
-|Arte|Ressignificação de materiais no artesanato|1/11|9.1|1/2|Não classificado|Não classificado|Não classificado|0/7|1/4|
-|Arte|Retrato e afirmação de identidades negras|1/11|9.1|1/2|Não classificado|Não classificado|Não classificado|0/7|1/4|
-|Sociologia|Trabalho e Sociedade|1/15|6.7|1/2|Não classificado|Não classificado|Não classificado|1/9|0/6|
-|Arte|Vivência e referenciais na arte afro-brasileira|1/11|9.1|1/2|Não classificado|Não classificado|Não classificado|1/7|0/4|
-|Arte|Xilogravura e estética do cordel|1/11|9.1|1/2|Não classificado|Não classificado|Não classificado|1/7|0/4|
+|Português|Entendimento de Texto|79/101|78.2|4/4|Não classificado|16/22|18/23|20/26|25/30|
+|Português|Domínio da Norma Culta|22/101|21.8|4/4|Não classificado|6/22|5/23|6/26|5/30|
+|Inglês|Compreensão de Texto em Inglês|20/20|100.0|4/4|Não classificado|5/5|5/5|5/5|5/5|
+|Literatura|Literatura Contemporânea|15/39|38.5|4/4|Não classificado|4/13|6/12|3/8|2/6|
+|Geografia|Climatologia e Problemas Socioambientais|12/59|20.3|4/4|Não classificado|3/18|3/14|3/13|3/14|
+|Sociologia|Cultura, Identidade e Diversidade|12/34|35.3|4/4|Não classificado|3/8|3/11|3/9|3/6|
+|Geografia|Geografia da População e Urbana do Brasil|12/59|20.3|4/4|Não classificado|2/18|4/14|2/13|4/14|
+|Literatura|Simbolismo, Pré-Modernismo e Modernismo|12/39|30.8|4/4|Não classificado|4/13|5/12|2/8|1/6|
+|Filosofia|Ética e Política Contemporâneas|11/35|31.4|4/4|Não classificado|1/6|2/7|3/11|5/11|
+|Geografia|Globalização e Geografia Econômica|11/59|18.6|4/4|Não classificado|4/18|3/14|2/13|2/14|
+|Literatura|Romantismo e Realismo|11/39|28.2|4/4|Não classificado|5/13|1/12|3/8|2/6|
+|História|Idade Moderna e Iluminismo|10/50|20.0|4/4|Não classificado|2/13|4/13|3/11|1/13|
+|Filosofia|Nietzsche, Existencialismo e Filosofia Contemporânea|10/35|28.6|4/4|Não classificado|2/6|3/7|3/11|2/11|
+|Geografia|Geografia Econômica do Brasil|9/59|15.3|4/4|Não classificado|2/18|2/14|2/13|3/14|
+|História|Primeira República e Era Vargas|9/50|18.0|4/4|Não classificado|2/13|3/13|3/11|1/13|
+|História|Brasil Império|7/50|14.0|4/4|Não classificado|3/13|1/13|2/11|1/13|
+|Sociologia|Globalização e Sociedade Contemporânea|7/34|20.6|4/4|Não classificado|2/8|1/11|2/9|2/6|
+|História|República Liberal e Brasil Contemporâneo|6/50|12.0|4/4|Não classificado|2/13|2/13|1/11|1/13|
+|Geografia|Geopolítica Regional Contemporânea|5/59|8.5|4/4|Não classificado|2/18|1/14|1/13|1/14|
+|Redação|Leitura de Coletânea e Repertório Temático|4/4|100.0|4/4|Não classificado|1/1|1/1|1/1|1/1|
+|História|Brasil Colônia|6/50|12.0|3/4|Não classificado|1/13|2/13|0/11|3/13|
+|Sociologia|Estratificação Social e Desigualdade|6/34|17.6|3/4|Não classificado|2/8|3/11|0/9|1/6|
+|Geografia|Geografia Física do Brasil|6/59|10.2|3/4|Não classificado|4/18|1/14|1/13|0/14|
+|Sociologia|Movimentos Sociais e Cidadania|6/34|17.6|3/4|Não classificado|1/8|2/11|3/9|0/6|
+|História|Imperialismo e Guerras Mundiais|4/50|8.0|3/4|Não classificado|1/13|1/13|0/11|2/13|
+|Filosofia|Origens da Filosofia e os Pré-Socráticos|4/35|11.4|3/4|Não classificado|2/6|1/7|0/11|1/11|
+|Filosofia|Filosofia Moderna: Racionalismo e Empirismo|3/35|8.6|3/4|Não classificado|0/6|1/7|1/11|1/11|
+|História|Guerra Fria e Mundo Contemporâneo|3/50|6.0|3/4|Não classificado|1/13|0/13|1/11|1/13|
+|História|Idade Média|3/50|6.0|3/4|Não classificado|1/13|0/13|1/11|1/13|
+|Filosofia|Sócrates e Platão|3/35|8.6|3/4|Não classificado|1/6|0/7|1/11|1/11|
+|Filosofia|Aristóteles|2/35|5.7|2/4|Não classificado|0/6|0/7|1/11|1/11|
+|Geografia|Cartografia e Fundamentos|2/59|3.4|2/4|Não classificado|1/18|0/14|1/13|0/14|
+|Sociologia|Trabalho e Sociedade|2/34|5.9|2/4|Não classificado|0/8|1/11|1/9|0/6|
+|História|Idade Antiga|2/50|4.0|1/4|Não classificado|0/13|0/13|0/11|2/13|
+|Arte|Acaso e experimentação fotográfica|1/21|4.8|1/4|Não classificado|0/5|0/5|1/7|0/4|
+|Arte|Arte contemporânea e violência colonial|1/21|4.8|1/4|Não classificado|0/5|0/5|0/7|1/4|
+|Arte|Arte e redes sociais|1/21|4.8|1/4|Não classificado|0/5|1/5|0/7|0/4|
+|Arte|Arte e tecnologia|1/21|4.8|1/4|Não classificado|1/5|0/5|0/7|0/4|
+|Arte|Arte indígena e sacralidade|1/21|4.8|1/4|Não classificado|0/5|0/5|0/7|1/4|
+|Arte|Arte plumária e papéis comunitários|1/21|4.8|1/4|Não classificado|0/5|0/5|1/7|0/4|
+|Filosofia|Contratualismo Político e Iluminismo|1/35|2.9|1/4|Não classificado|0/6|0/7|1/11|0/11|
+|Arte|Dança contemporânea|1/21|4.8|1/4|Não classificado|0/5|1/5|0/7|0/4|
+|Biologia|Ecologia|1/1|100.0|1/4|Não classificado|Sem categoria|Sem categoria|Sem categoria|1/1|
+|Arte|Expressionismo e Arte Degenerada|1/21|4.8|1/4|Não classificado|0/5|1/5|0/7|0/4|
+|Literatura|Expressividade do luto na poesia de Vicente de Carvalho|1/39|2.6|1/4|Não classificado|0/13|0/12|0/8|1/6|
+|Geografia|Geomorfologia: carste e intemperismo químico|1/59|1.7|1/4|Não classificado|0/18|0/14|0/13|1/14|
+|Geografia|Hidrogeografia|1/59|1.7|1/4|Não classificado|0/18|0/14|1/13|0/14|
+|Arte|Impressionismo e efeitos de luz|1/21|4.8|1/4|Não classificado|0/5|0/5|1/7|0/4|
+|Arte|Instrumentos musicais e adaptação cultural|1/21|4.8|1/4|Não classificado|0/5|0/5|1/7|0/4|
+|Filosofia|Kant e o Idealismo Alemão|1/35|2.9|1/4|Não classificado|0/6|0/7|1/11|0/11|
+|Sociologia|Karl Marx e a Sociologia|1/34|2.9|1/4|Não classificado|0/8|1/11|0/9|0/6|
+|Arte|Maneirismo e figura humana|1/21|4.8|1/4|Não classificado|1/5|0/5|0/7|0/4|
+|Arte|Manguebeat e cultura pernambucana|1/21|4.8|1/4|Não classificado|1/5|0/5|0/7|0/4|
+|Arte|Marabaixo|1/21|4.8|1/4|Não classificado|0/5|1/5|0/7|0/4|
+|Arte|Minimalismo|1/21|4.8|1/4|Não classificado|1/5|0/5|0/7|0/4|
+|Arte|Persistência de formas escultóricas|1/21|4.8|1/4|Não classificado|0/5|0/5|1/7|0/4|
+|Arte|Rap indígena|1/21|4.8|1/4|Não classificado|0/5|1/5|0/7|0/4|
+|Arte|Ready-made e instalação|1/21|4.8|1/4|Não classificado|1/5|0/5|0/7|0/4|
+|Arte|Ressignificação de materiais no artesanato|1/21|4.8|1/4|Não classificado|0/5|0/5|0/7|1/4|
+|Arte|Retrato e afirmação de identidades negras|1/21|4.8|1/4|Não classificado|0/5|0/5|0/7|1/4|
+|Arte|Vivência e referenciais na arte afro-brasileira|1/21|4.8|1/4|Não classificado|0/5|0/5|1/7|0/4|
+|Arte|Xilogravura e estética do cordel|1/21|4.8|1/4|Não classificado|0/5|0/5|1/7|0/4|
 
 ## natureza-matematica
 
 |Matéria|Assunto|n/N|%|Edições|2021|2022|2023|2024|2025|
 |---|---|---|---|---|---|---|---|---|---|
-|Matemática|Aritmética e Proporcionalidade|29/90|32.2|2/2|Não classificado|Não classificado|Não classificado|13/46|16/44|
-|Matemática|Probabilidade e Interpretação de Dados|14/90|15.6|2/2|Não classificado|Não classificado|Não classificado|6/46|8/44|
-|Matemática|Geometria Plana|10/90|11.1|2/2|Não classificado|Não classificado|Não classificado|6/46|4/44|
-|Matemática|Geometria Espacial|9/90|10.0|2/2|Não classificado|Não classificado|Não classificado|4/46|5/44|
-|Biologia|Ecologia|8/32|25.0|2/2|Não classificado|Não classificado|Não classificado|3/17|5/15|
-|Matemática|Equações, Desigualdades e Modelagem Algébrica|7/90|7.8|2/2|Não classificado|Não classificado|Não classificado|5/46|2/44|
-|Biologia|Fisiologia Animal e Humana|7/32|21.9|2/2|Não classificado|Não classificado|Não classificado|4/17|3/15|
-|Física|Circuitos Elétricos|6/28|21.4|2/2|Não classificado|Não classificado|Não classificado|2/15|4/13|
-|Matemática|Funções|6/90|6.7|2/2|Não classificado|Não classificado|Não classificado|5/46|1/44|
-|Matemática|Análise Combinatória|4/90|4.4|2/2|Não classificado|Não classificado|Não classificado|2/46|2/44|
-|Biologia|Estrutura e Fisiologia Celular|4/32|12.5|2/2|Não classificado|Não classificado|Não classificado|3/17|1/15|
-|Biologia|Zoologia|4/32|12.5|2/2|Não classificado|Não classificado|Não classificado|2/17|2/15|
-|Química|Análises Quantitativas e Estequiometria|3/26|11.5|2/2|Não classificado|Não classificado|Não classificado|1/11|2/15|
-|Física|Calorimetria|3/28|10.7|2/2|Não classificado|Não classificado|Não classificado|2/15|1/13|
-|Física|Eletrostática e Campo Elétrico|3/28|10.7|2/2|Não classificado|Não classificado|Não classificado|2/15|1/13|
-|Matemática|Logaritmos e Exponenciais|3/90|3.3|2/2|Não classificado|Não classificado|Não classificado|2/46|1/44|
-|Física|Ondulatória|3/28|10.7|2/2|Não classificado|Não classificado|Não classificado|2/15|1/13|
-|Química|Química Inorgânica|3/26|11.5|2/2|Não classificado|Não classificado|Não classificado|2/11|1/15|
-|Matemática|Sequências, Matrizes e Sistemas Lineares|3/90|3.3|2/2|Não classificado|Não classificado|Não classificado|2/46|1/44|
-|Química|Soluções|3/26|11.5|2/2|Não classificado|Não classificado|Não classificado|1/11|2/15|
-|Matemática|Trigonometria|3/90|3.3|2/2|Não classificado|Não classificado|Não classificado|1/46|2/44|
-|Biologia|Biotecnologia|2/32|6.3|2/2|Não classificado|Não classificado|Não classificado|1/17|1/15|
-|Física|Cinemática Vetorial|2/28|7.1|2/2|Não classificado|Não classificado|Não classificado|1/15|1/13|
-|Química|Eletroquímica|2/26|7.7|2/2|Não classificado|Não classificado|Não classificado|1/11|1/15|
-|Química|Equilíbrio Químico|2/26|7.7|2/2|Não classificado|Não classificado|Não classificado|1/11|1/15|
-|Física|Estática dos Corpos Sólidos e dos Fluidos|2/28|7.1|2/2|Não classificado|Não classificado|Não classificado|1/15|1/13|
-|Biologia|Genética|2/32|6.3|2/2|Não classificado|Não classificado|Não classificado|1/17|1/15|
-|Física|Leis de Newton e Dinâmica do Movimento Retilíneo|2/28|7.1|2/2|Não classificado|Não classificado|Não classificado|1/15|1/13|
-|Biologia|Metabolismo Energético|2/32|6.3|2/2|Não classificado|Não classificado|Não classificado|1/17|1/15|
-|Química|Reações e Aplicações Orgânicas|3/26|11.5|1/2|Não classificado|Não classificado|Não classificado|0/11|3/15|
-|Biologia|Evolução|2/32|6.3|1/2|Não classificado|Não classificado|Não classificado|2/17|0/15|
-|Química|Fundamentos e Nomenclatura Orgânica|2/26|7.7|1/2|Não classificado|Não classificado|Não classificado|2/11|0/15|
-|Química|Oxirredução|2/26|7.7|1/2|Não classificado|Não classificado|Não classificado|2/11|0/15|
-|Química|Polaridade das Ligações e Geometria Molecular|2/26|7.7|1/2|Não classificado|Não classificado|Não classificado|0/11|2/15|
-|Química|Adsorção e tratamento da água|1/26|3.8|1/2|Não classificado|Não classificado|Não classificado|0/11|1/15|
-|Física|Cinemática Escalar|1/28|3.6|1/2|Não classificado|Não classificado|Não classificado|0/15|1/13|
-|Química|Cinética Química|1/26|3.8|1/2|Não classificado|Não classificado|Não classificado|0/11|1/15|
-|Física|Dinâmica Energética e Transformações de Energia|1/28|3.6|1/2|Não classificado|Não classificado|Não classificado|1/15|0/13|
-|Física|Eletromagnetismo|1/28|3.6|1/2|Não classificado|Não classificado|Não classificado|0/15|1/13|
-|Física|Física Moderna|1/28|3.6|1/2|Não classificado|Não classificado|Não classificado|1/15|0/13|
-|Física|Fundamentos de Ondas e Oscilações|1/28|3.6|1/2|Não classificado|Não classificado|Não classificado|0/15|1/13|
-|Matemática|Geometria Analítica|1/90|1.1|1/2|Não classificado|Não classificado|Não classificado|0/46|1/44|
-|Biologia|Microbiologia e Virologia|1/32|3.1|1/2|Não classificado|Não classificado|Não classificado|0/17|1/15|
-|Química|Modelos Atômicos e Estrutura do Átomo|1/26|3.8|1/2|Não classificado|Não classificado|Não classificado|1/11|0/15|
-|Física|Óptica Geométrica|1/28|3.6|1/2|Não classificado|Não classificado|Não classificado|1/15|0/13|
-|Química|Radioatividade|1/26|3.8|1/2|Não classificado|Não classificado|Não classificado|0/11|1/15|
-|Matemática|Representação numérica e composição de códigos|1/90|1.1|1/2|Não classificado|Não classificado|Não classificado|0/46|1/44|
-|Física|Termodinâmica dos Gases|1/28|3.6|1/2|Não classificado|Não classificado|Não classificado|1/15|0/13|
+|Matemática|Aritmética e Proporcionalidade|46/178|25.8|4/4|Não classificado|10/44|7/44|13/46|16/44|
+|Matemática|Probabilidade e Interpretação de Dados|27/178|15.2|4/4|Não classificado|5/44|8/44|6/46|8/44|
+|Matemática|Geometria Espacial|21/178|11.8|4/4|Não classificado|8/44|4/44|4/46|5/44|
+|Matemática|Funções|19/178|10.7|4/4|Não classificado|6/44|7/44|5/46|1/44|
+|Biologia|Fisiologia Animal e Humana|16/64|25.0|4/4|Não classificado|5/16|4/16|4/17|3/15|
+|Matemática|Geometria Plana|16/178|9.0|4/4|Não classificado|2/44|4/44|6/46|4/44|
+|Biologia|Ecologia|14/64|21.9|4/4|Não classificado|3/16|3/16|3/17|5/15|
+|Física|Circuitos Elétricos|11/57|19.3|4/4|Não classificado|4/15|1/14|2/15|4/13|
+|Matemática|Análise Combinatória|9/178|5.1|4/4|Não classificado|3/44|2/44|2/46|2/44|
+|Matemática|Sequências, Matrizes e Sistemas Lineares|9/178|5.1|4/4|Não classificado|4/44|2/44|2/46|1/44|
+|Química|Análises Quantitativas e Estequiometria|7/55|12.7|4/4|Não classificado|2/14|2/15|1/11|2/15|
+|Química|Química Inorgânica|7/55|12.7|4/4|Não classificado|2/14|2/15|2/11|1/15|
+|Física|Calorimetria|6/57|10.5|4/4|Não classificado|1/15|2/14|2/15|1/13|
+|Biologia|Estrutura e Fisiologia Celular|6/64|9.4|4/4|Não classificado|1/16|1/16|3/17|1/15|
+|Química|Soluções|6/55|10.9|4/4|Não classificado|1/14|2/15|1/11|2/15|
+|Biologia|Metabolismo Energético|5/64|7.8|4/4|Não classificado|1/16|2/16|1/17|1/15|
+|Matemática|Trigonometria|5/178|2.8|4/4|Não classificado|1/44|1/44|1/46|2/44|
+|Biologia|Genética|4/64|6.3|4/4|Não classificado|1/16|1/16|1/17|1/15|
+|Física|Leis de Newton e Dinâmica do Movimento Retilíneo|4/57|7.0|4/4|Não classificado|1/15|1/14|1/15|1/13|
+|Matemática|Equações, Desigualdades e Modelagem Algébrica|8/178|4.5|3/4|Não classificado|0/44|1/44|5/46|2/44|
+|Química|Fundamentos e Nomenclatura Orgânica|7/55|12.7|3/4|Não classificado|2/14|3/15|2/11|0/15|
+|Matemática|Logaritmos e Exponenciais|6/178|3.4|3/4|Não classificado|0/44|3/44|2/46|1/44|
+|Matemática|Geometria Analítica|5/178|2.8|3/4|Não classificado|2/44|2/44|0/46|1/44|
+|Física|Ondulatória|5/57|8.8|3/4|Não classificado|0/15|2/14|2/15|1/13|
+|Química|Oxirredução|5/55|9.1|3/4|Não classificado|2/14|1/15|2/11|0/15|
+|Biologia|Biotecnologia|4/64|6.3|3/4|Não classificado|2/16|0/16|1/17|1/15|
+|Física|Fundamentos de Ondas e Oscilações|4/57|7.0|3/4|Não classificado|1/15|2/14|0/15|1/13|
+|Biologia|Microbiologia e Virologia|4/64|6.3|3/4|Não classificado|2/16|1/16|0/17|1/15|
+|Física|Cinemática Vetorial|3/57|5.3|3/4|Não classificado|1/15|0/14|1/15|1/13|
+|Física|Dinâmica Energética e Transformações de Energia|3/57|5.3|3/4|Não classificado|1/15|1/14|1/15|0/13|
+|Física|Eletromagnetismo|3/57|5.3|3/4|Não classificado|1/15|1/14|0/15|1/13|
+|Química|Eletroquímica|3/55|5.5|3/4|Não classificado|1/14|0/15|1/11|1/15|
+|Física|Estática dos Corpos Sólidos e dos Fluidos|3/57|5.3|3/4|Não classificado|0/15|1/14|1/15|1/13|
+|Química|Radioatividade|3/55|5.5|3/4|Não classificado|1/14|1/15|0/11|1/15|
+|Matemática|Teoria dos Números Inteiros|6/178|3.4|2/4|Não classificado|3/44|3/44|0/46|0/44|
+|Química|Cinética Química|4/55|7.3|2/4|Não classificado|3/14|0/15|0/11|1/15|
+|Química|Polaridade das Ligações e Geometria Molecular|4/55|7.3|2/4|Não classificado|0/14|2/15|0/11|2/15|
+|Biologia|Zoologia|4/64|6.3|2/4|Não classificado|0/16|0/16|2/17|2/15|
+|Física|Cinemática Escalar|3/57|5.3|2/4|Não classificado|0/15|2/14|0/15|1/13|
+|Física|Eletrostática e Campo Elétrico|3/57|5.3|2/4|Não classificado|0/15|0/14|2/15|1/13|
+|Biologia|Evolução|3/64|4.7|2/4|Não classificado|1/16|0/16|2/17|0/15|
+|Química|Equilíbrio Químico|2/55|3.6|2/4|Não classificado|0/14|0/15|1/11|1/15|
+|Física|Física Moderna|2/57|3.5|2/4|Não classificado|0/15|1/14|1/15|0/13|
+|Física|Óptica Geométrica|2/57|3.5|2/4|Não classificado|1/15|0/14|1/15|0/13|
+|Física|Gravitação e Movimento Circular|3/57|5.3|1/4|Não classificado|3/15|0/14|0/15|0/13|
+|Química|Reações e Aplicações Orgânicas|3/55|5.5|1/4|Não classificado|0/14|0/15|0/11|3/15|
+|Biologia|Fisiologia Vegetal|2/64|3.1|1/4|Não classificado|0/16|2/16|0/17|0/15|
+|Química|Gases|2/55|3.6|1/4|Não classificado|0/14|2/15|0/11|0/15|
+|Química|Adsorção e tratamento da água|1/55|1.8|1/4|Não classificado|0/14|0/15|0/11|1/15|
+|Biologia|Botânica|1/64|1.6|1/4|Não classificado|0/16|1/16|0/17|0/15|
+|Biologia|Código Genético e Síntese Proteica|1/64|1.6|1/4|Não classificado|0/16|1/16|0/17|0/15|
+|Física|Dinâmica Impulsiva|1/57|1.8|1/4|Não classificado|1/15|0/14|0/15|0/13|
+|Química|Modelos Atômicos e Estrutura do Átomo|1/55|1.8|1/4|Não classificado|0/14|0/15|1/11|0/15|
+|Matemática|Representação numérica e composição de códigos|1/178|0.6|1/4|Não classificado|0/44|0/44|0/46|1/44|
+|Física|Termodinâmica dos Gases|1/57|1.8|1/4|Não classificado|0/15|0/14|1/15|0/13|
 

@@ -5,14 +5,14 @@ import {isCompleteBoardCorpus,boardIncidenceRows,type BoardCorpus,type ResearchB
 type PublishedCorpus=BoardCorpus&{sourceDocuments:{sourceUrl:string;sha256:string;localPath?:string}[]};
 const load=async(board:ResearchBoard)=>JSON.parse(await readFile(`public/analises/incidencia/${board.toLowerCase()}/corpus.json`,'utf8')) as PublishedCorpus;
 
-test('quatro bancas têm dezesseis edições e 34 cadernos completos, com formatos pandêmicos separados',async()=>{
+test('quatro bancas têm dezoito edições e 38 cadernos completos, com formatos pandêmicos separados',async()=>{
  let papers=0,items=0;
  for(const board of ['ENEM','UNESP','FAMERP','UNIFESP'] as const){
   const corpus=await load(board);assert.equal(isCompleteBoardCorpus(corpus,board),true);
   assert.equal(new Set(corpus.sourceDocuments.map(source=>source.sourceUrl)).size,corpus.sourceDocuments.length);
   for(const source of corpus.sourceDocuments){assert.match(source.sourceUrl,/^https:\/\//);assert.match(source.sha256,/^[a-f0-9]{64}$/);assert.equal(source.localPath,undefined);}
-  assert.deepEqual(corpus.years,board==='ENEM'?[2024,2025]:board==='UNESP'?[2022,2023,2024,2025]:[2022,2023,2024,2025,2026]);
-  const expected=board==='ENEM'?362:board==='UNESP'?556:board==='FAMERP'?505:230;
+  assert.deepEqual(corpus.years,board==='ENEM'?[2022,2023,2024,2025]:board==='UNESP'?[2022,2023,2024,2025]:[2022,2023,2024,2025,2026]);
+  const expected=board==='ENEM'?724:board==='UNESP'?556:board==='FAMERP'?505:230;
   assert.equal(corpus.questions.length,expected);items+=expected;papers+=corpus.papers.length;
   for(const group of new Set(corpus.papers.map(p=>p.group))){
    const own=corpus.papers.filter(p=>p.group===group);
@@ -21,7 +21,7 @@ test('quatro bancas têm dezesseis edições e 34 cadernos completos, com format
    assert.ok(rows.every(row=>row.observedEditions===new Set(own.map(p=>p.year)).size));
   }
  }
- assert.equal(papers,34);assert.equal(items,1653);
+ assert.equal(papers,38);assert.equal(items,2015);
 });
 
 test('UNIFESP2024 conta somente a reaplicação válida e não atribui chave objetiva à redação',async()=>{
@@ -49,8 +49,8 @@ test('anos adiados e rascunhos não entram nos denominadores ou na recorrência'
  const rows=boardIncidenceRows(enem,{startYear:2021,endYear:2025,group:'natureza-matematica'});
  assert.ok(rows.length>0);
  for(const row of rows){
-  assert.equal(row.observedEditions,2);
-  for(const annual of row.annual.filter(value=>value.year<=2023)){
+  assert.equal(row.observedEditions,4);
+  for(const annual of row.annual.filter(value=>value.year<=2021)){
    assert.equal(annual.covered,false);assert.equal(annual.rate,null);assert.equal(annual.total,0);
   }
  }
