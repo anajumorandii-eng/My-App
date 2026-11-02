@@ -2,16 +2,12 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "f20c2da880c6868f6a833f21b381d4564fc6b80c",
-  "generated_at_utc": "2026-11-02T02:07:44Z",
+  "source_commit": "98c8402ef7fdca66d8f6a876ceaba9bf7f25878a",
+  "generated_at_utc": "2026-11-02T02:58:44Z",
   "changed_files": [
     "docs/estudos-2026/enem-incidencia/README.md",
-    "scripts/analisar-enem-probabilidades.mts",
-    "src/components/EnemPersonalPriorityPanel.tsx",
-    "src/data/enemProbabilities2026.json",
-    "src/lib/enemPersonalPriority.test.ts",
-    "src/lib/enemPersonalPriority.ts",
-    "src/views/Prioridades.tsx"
+    "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
+    "scripts/medir-padroes-enem.py"
   ],
   "next_session": {
     "mode": "delta-only",
