@@ -1,6 +1,7 @@
 import { StudyExportButton } from '../components/StudyExportButton';
 import { EssayReviewAudit, type EssayAudit } from '../components/EssayReviewAudit';
 import { EssayWorkshop } from '../components/EssayWorkshop';
+import { EnemEssayAxesPanel } from '../components/EnemEssayAxesPanel';
 import { emptyEssayPlan } from '../data/essayWorkshop';
 import { readEssayCurrent, readEssayVersions, essayCorrectionQuestion, type EssayVersion } from '../lib/essayWorkspace';
 import { useStudyDraft } from '../hooks/useStudyDraft';
@@ -22,10 +23,11 @@ import { AiText } from '../components/AiText';
 import { Panel } from '../components/ui/Panel';
 import { SUBJECT_ICONS } from './Dashboard';
 
-type Tab = 'pratica' | 'estrutura' | 'bancas' | 'erros' | 'checklist';
+type Tab = 'enem2026' | 'pratica' | 'estrutura' | 'bancas' | 'erros' | 'checklist';
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'pratica', label: 'Escrever e Reescrever' },
+  { id: 'enem2026', label: 'ENEM 2026: eixos e repertório' },
   { id: 'estrutura', label: 'Guia de Estrutura' },
   { id: 'bancas', label: 'Por Vestibular' },
   { id: 'erros', label: 'Erros que Limitam a Nota' },
@@ -154,6 +156,14 @@ function EssayEditor({ scope }: { scope: string }) {
           );
         })}
       </div>
+
+      {tab === 'enem2026' && <EnemEssayAxesPanel onPractice={nextTheme => {
+        // Guarda o texto aberto como versão antes de trocar de proposta, como a
+        // restauração já faz: trocar o tema por cima do rascunho o deixaria
+        // associado a uma proposta que ele não responde.
+        if ((draft.trim() || rewrite.trim()) && !saveDraft()) return;
+        invalidate(); setBoard('ENEM'); setTheme(nextTheme); setDraft(''); setRewrite(''); setPlan({ ...emptyEssayPlan }); setTab('pratica');
+      }} />}
 
       {/* Practice Tab */}
       {tab === 'pratica' && (
