@@ -82,3 +82,7 @@ mesmo script.
 - **"Simulado do Edcley"** não entra como evidência: é material de 2023 reconstruído de memória do
   pré-teste do Inep, e no ENEM 2025 o Inep anulou as questões antecipadas (115, 121 e 178 — as mesmas
   que esta base já marca como anuladas). Item vazado tende a ser anulado; não é aposta de estudo.
+
+## Padrões de questão
+
+`padroes-de-questao.md` traz oito operações que se repetem (unidades, escala, mediana, porcentagem sobre porcentagem, custo total, experimento, gráfico de Natureza, função do texto), com frequência medida por `scripts/medir-padroes-enem.py`, âncoras em questões reais do caderno amarelo e exercícios de transferência autorais com resposta.
