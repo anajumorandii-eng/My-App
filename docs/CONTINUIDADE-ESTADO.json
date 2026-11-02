@@ -2,17 +2,10 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "5654909f27a8425843a838a79e9a0dbe5549e04a",
-  "generated_at_utc": "2026-11-02T18:56:12Z",
+  "source_commit": "9a8e904163eb67033e81c3d535d7b0f1e101cb35",
+  "generated_at_utc": "2026-11-02T20:16:27Z",
   "changed_files": [
-    "docs/estudos-2026/enem-incidencia/README.md",
-    "docs/estudos-2026/enem-incidencia/apostas-edcley-2026.md",
-    "docs/estudos-2026/enem-incidencia/aulas-videos-2026.md",
-    "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
-    "scripts/data/enem-apostas/edcley-2026-classificacao.json",
-    "src/components/EnemEssayAxesPanel.test.tsx",
-    "src/components/EnemEssayAxesPanel.tsx",
-    "src/data/enemEssay2026.ts"
+    "docs/estudos-2026/enem-incidencia/aulas-videos-2026.md"
   ],
   "next_session": {
     "mode": "delta-only",
