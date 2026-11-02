@@ -140,6 +140,7 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
     }
     case 'content-explanation':
       return {
+        ...(payload.targetBoards !== undefined ? { targetBoards: studyBoards(payload) } : {}),
         topic: requiredString(payload, 'topic'),
         subject: requiredString(payload, 'subject'),
         question: optionalString(payload, 'question', MAX_LONG_TEXT),
