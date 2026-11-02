@@ -2,12 +2,17 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "98c8402ef7fdca66d8f6a876ceaba9bf7f25878a",
-  "generated_at_utc": "2026-11-02T02:58:44Z",
+  "source_commit": "aa91f807e3d737151b501182ae5bcf7b2f2cb533",
+  "generated_at_utc": "2026-11-02T03:57:24Z",
   "changed_files": [
     "docs/estudos-2026/enem-incidencia/README.md",
-    "docs/estudos-2026/enem-incidencia/padroes-de-questao.md",
-    "scripts/medir-padroes-enem.py"
+    "docs/estudos-2026/enem-incidencia/probabilidades-2026.json",
+    "docs/estudos-2026/enem-incidencia/probabilidades-2026.md",
+    "public/questions.json",
+    "scripts/aplicar-reclassificacao-enem.mts",
+    "scripts/data/enem-reclassificacao/matematica-2018-2023.json",
+    "scripts/data/enem-reclassificacao/portugues-2018-2023.json",
+    "src/data/enemProbabilities2026.json"
   ],
   "next_session": {
     "mode": "delta-only",
