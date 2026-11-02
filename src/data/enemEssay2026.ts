@@ -135,3 +135,53 @@ export const enemEssayTimedPlan: string[] = [
   '10 min: projeto — dois argumentos com causa, mecanismo e repertório; proposta com agente, ação, meio, finalidade e detalhamento.',
   '35 min: rascunho. 15 min: passar a limpo e conferir os cinco elementos da intervenção.',
 ];
+
+// Técnica de redação conferida contra a cartilha do participante do Inep e o
+// material de curso enviado ao Drive em 02/11/2026. O texto é próprio: o curso
+// é material pago de terceiros e o repositório é público.
+
+export const enemThemeReading: string[] = [
+  'Separe o assunto (amplo, como "internet") do tema (o recorte, como "manipulação do comportamento do usuário pelo controle de dados"). Escrever só sobre o assunto é tangenciar o tema.',
+  'Marque três peças da frase-tema: a palavra que dá a direção ("desafios", "persistência", "caminhos para", "efeitos", "democratização"), o objeto ("estigma associado às doenças mentais") e o recorte de lugar e tempo ("no Brasil", "na sociedade brasileira").',
+  'A direção decide o desenvolvimento: "desafios" e "persistência" pedem obstáculos e causas; "efeitos" pede consequências, não origens; "caminhos para" e "como garantir" já pedem soluções nos desenvolvimentos, não só na conclusão.',
+  'Se o tema traz "e" ligando duas exigências ("garantir a liberdade de informação e evitar abusos"), as duas precisam aparecer.',
+  'Use os textos motivadores para confirmar o sentido de palavras que você não domina: em 2020, muitos fugiram do tema por não saber o que era "estigma", definido na própria coletânea.',
+];
+
+export const enemEssaySkeleton: { part: string; lines: string; role: string }[] = [
+  { part: 'Introdução', lines: '5 a 7 linhas', role: 'Contexto ligado ao tema (repertório com informação suficiente para mostrar que não é enfeite), transição que leva da referência ao problema brasileiro, e tese que anuncia os dois eixos do desenvolvimento. Não desenvolver argumento aqui.' },
+  { part: 'Desenvolvimento 1', lines: '8 a 9 linhas', role: 'Tópico frasal com o primeiro eixo da tese; explicação do porquê ("isso ocorre porque…"); fundamentação com repertório, dado ou conceito; fechamento que liga de volta à tese.' },
+  { part: 'Desenvolvimento 2', lines: '8 a 9 linhas', role: 'Mesmo desenho, com o segundo eixo. Abrir com operador argumentativo ("Além disso", "Ademais", "Como consequência"). Manter os dois desenvolvimentos com tamanhos parecidos.' },
+  { part: 'Conclusão', lines: '6 a 8 linhas', role: 'Retomar a tese sem ideia nova; proposta com agente, ação, meio, finalidade e detalhamento; fechamento que pode retomar o repertório da introdução.' },
+];
+
+export const enemConnectivesByFunction: { function: string; examples: string; use: string }[] = [
+  { function: 'Abrir o 1º desenvolvimento', examples: 'Nesse sentido; Diante desse cenário; Em primeiro lugar', use: 'Liga o parágrafo à tese.' },
+  { function: 'Explicar a causa', examples: 'Isso ocorre porque; uma vez que; visto que; haja vista', use: 'Logo depois do tópico frasal, para dizer o porquê.' },
+  { function: 'Somar um argumento', examples: 'Além disso; Ademais; Outrossim; não só… mas também', use: 'Abertura do 2º desenvolvimento.' },
+  { function: 'Opor ou ressalvar', examples: 'No entanto; Contudo; Todavia; embora; ainda que', use: '"embora" e "ainda que" pedem subjuntivo: "embora a lei exista".' },
+  { function: 'Consequência', examples: 'Consequentemente; Por conseguinte; de modo que', use: 'Para mostrar efeito, central em temas sobre "efeitos" e "persistência".' },
+  { function: 'Exemplificar ou reformular', examples: 'Prova disso é; por exemplo; ou seja; isto é', use: 'Entre a tese do parágrafo e o repertório.' },
+  { function: 'Finalidade', examples: 'a fim de; com o intuito de; para que', use: 'Obrigatório na proposta de intervenção.' },
+  { function: 'Concluir', examples: 'Portanto; Logo; Dessa forma; Torna-se evidente, portanto, que', use: 'Evite "conclui-se" e "diante do exposto", que são fórmulas gastas.' },
+];
+
+export const enemC4Rule = 'Para 200 na Competência 4, a correção espera operador argumentativo entre parágrafos em pelo menos dois momentos, algum elemento coesivo dentro de cada parágrafo e poucas repetições. Conectivo errado ("onde" sem ideia de lugar, "mas" em sequência) conta contra.';
+
+export const enemInterventionPitfalls: string[] = [
+  'Agente que não vale: "alguém", "a gente", verbo no imperativo ("respeitem"). Nomeie quem tem a atribuição: Ministério da Educação, Congresso Nacional, prefeituras, escolas, mídia, ONGs.',
+  'Agente com escala compatível: tema "no Brasil" pede agente nacional ou articulação entre esferas; prefeitura não resolve diplomacia, Presidência não recolhe lixo.',
+  'Ação vaga não conta: "conscientizar a população", "ter mais respeito", "viver em harmonia". Diga o que será feito, como em "incluir no currículo", "criar linha de financiamento" ou "veicular campanha em horário nobre".',
+  'Meio responde "por meio de quê"; finalidade responde "para quê". "O Estado, por meio do Ministério X" é um único agente com meio, não dois agentes.',
+  'Detalhamento: uma explicação a mais sobre agente, ação, meio ou finalidade. Sem ele, a proposta perde pontos na Competência 5.',
+  'A proposta resolve o problema que você discutiu. Se o desenvolvimento falou de quem está fora da escola, a escola não pode ser o agente.',
+  'Direitos humanos: nada de punição cruel, exclusão de grupos ou solução ilegal. Fere a Competência 5.',
+];
+
+export const enemFormalTraps: string[] = [
+  'Texto com até 7 linhas é anulado; linha toda riscada não conta.',
+  'Erro na folha definitiva: um traço simples sobre a palavra e a forma correta ao lado. Nada de parênteses ou corretivo.',
+  'Na divisão silábica no fim da linha, evite deixar vogal sozinha e cortes que formem palavra inadequada.',
+  '"Neste século" para o atual; "nesse" para o já citado. "Cujo" só com ideia de posse: "o relatório cujo conteúdo revisei".',
+  'Título é opcional no ENEM, mas, se usado, conta como linha escrita e pode ter erro.',
+];

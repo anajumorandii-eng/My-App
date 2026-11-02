@@ -92,3 +92,29 @@ Os padrões se sobrepõem: uma questão com tabela e porcentagem conta nas duas 
 1. No dia 2 (15/11), os padrões 1 a 5 concentram a maior parte de Matemática: faça 10 questões de cada no banco filtrando ENEM, cronometradas a 3 minutos.
 2. Para cada erro, anote no Caderno de Erros **qual operação falhou** (unidade, "por cento de quê", lista não ordenada, total incompleto), não só o assunto.
 3. No dia 1 (8/11), o padrão 8 vale para Linguagens e Humanas: antecipe a função do texto antes das alternativas.
+
+## 9. Palavra do enunciado que entrega o conceito (Natureza)
+
+Materiais de macetes que circulam para o ENEM (como o enviado ao Drive em 02/11/2026) ensinam a reconhecer o conceito pela palavra do enunciado. A regra vale, mas a frequência varia muito. Contagem no enunciado das 1.440 questões de 2018–2025; é piso, porque palavras que estão só na figura não entram:
+
+| Pista no enunciado | Conceito a recuperar | Questões | Provas |
+|---|---|---|---|
+| corrente elétrica, resistor, resistência | U = R·I; associação série e paralelo; potência P = U·I | 13 | 7/8 |
+| satélite, órbita, geoestacionário | período igual à rotação da Terra; gravidade como força centrípeta | 10 | 7/8 |
+| indução, fluxo magnético variável | lei de Faraday: só há corrente induzida se o fluxo variar (fogão de indução, transformador, usina) | 9 | 6/8 |
+| fragmentação, corredor ecológico | ilhas de habitat, perda de fluxo gênico; corredores reconectam populações | 7 | 4/8 |
+| mitocôndria, ATP, respiração celular | glicose + O₂ → CO₂ + H₂O + ATP; ciclo de Krebs e cadeia respiratória | 5 | 5/8 |
+| Bluetooth, wi-fi, radiofrequência | onda eletromagnética, não sonora; viaja no vácuo | 4 | 2/8 |
+| decibel, nível sonoro | escala logarítmica: +10 dB = intensidade 10 vezes maior | 3 | 3/8 (2023–2025) |
+| chuva ácida, óxidos de enxofre | SO₂/NOₓ + água → ácidos; corrosão de calcário e metais | 1 | 1/8 |
+| sensação térmica, condutividade | metal parece mais frio porque conduz calor mais rápido, não por estar mais frio | 0 | — |
+
+**Como usar:** a pista diz **onde procurar**, não a resposta. Em Física e Química, confirme com a conta ou com o mecanismo; as alternativas erradas costumam usar a palavra certa com a relação trocada (por exemplo, "o metal está a uma temperatura menor").
+
+## 10. Atalhos de conta que economizam tempo
+
+- **Porcentagem de cabeça:** 10% = dividir por 10; 5% = metade dos 10%; 1% = dividir por 100; 0,5% = metade de 1%.
+- **Comparar frações sem MMC:** para a/b e c/d, compare a·d com c·b; o produto maior indica a fração maior.
+- **Terno pitagórico:** lados proporcionais a 3, 4 e 5 (como 90, 120 e 150) dispensam a conta.
+- **MMC ou MDC:** "quando voltam a coincidir" pede MMC; "maior pedaço possível, sem sobra" pede MDC.
+- **Grandezas:** diretamente proporcional fica no numerador; inversamente proporcional, no denominador.

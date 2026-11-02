@@ -102,3 +102,9 @@ mesmo script.
 ## Planilha completa
 
 `incidencia-enem-2018-2025.xlsx` traz todas as matérias, os 97 assuntos e os 392 subtópicos (capítulos), com chance de cair, questões esperadas, edições, % da matéria, tendência e a série 2018–2025, filtráveis por dia de prova. Regerar: `python3 scripts/gerar-planilha-incidencia-enem.py` (lê o JSON do relatório, não recalcula).
+
+## Material do Drive (02/11/2026)
+
+- `apostas-edcley-2026.md`: as 131 apostas do Edcley Teixeira classificadas por assunto e cruzadas com o histórico; 41% caem em assuntos acima de 90%, e satélites, decibel e lógica aparecem como sinais que o histórico subestima.
+- `padroes-de-questao.md`, seções 9 e 10: palavras-chave de Natureza e atalhos de conta dos materiais de macetes, conferidos contra a frequência real nas 1.440 questões.
+- Redação: a aba ENEM 2026 do app ganhou o método do tema à proposta (leitura do tema, esqueleto com linhas, conectivos por função, proposta e armadilhas formais), escrito a partir do material do curso conferido com a cartilha do Inep.

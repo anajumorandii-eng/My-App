@@ -1,4 +1,4 @@
-import { enemEssayAxes, enemEssayPattern, enemEssayThemes, enemEssayTimedPlan, enemEssayWildcards } from '../data/enemEssay2026';
+import { enemC4Rule, enemConnectivesByFunction, enemEssayAxes, enemEssayPattern, enemEssaySkeleton, enemEssayThemes, enemEssayTimedPlan, enemEssayWildcards, enemFormalTraps, enemInterventionPitfalls, enemThemeReading } from '../data/enemEssay2026';
 
 export function EnemEssayAxesPanel({ onPractice }: { onPractice: (theme: string) => void }) {
   return <div className="space-y-4">
@@ -20,6 +20,14 @@ export function EnemEssayAxesPanel({ onPractice }: { onPractice: (theme: string)
           <button className="ni-button" onClick={() => onPractice(axis.practice)}>Treinar esta proposta</button>
         </div>
       </details>)}
+    </section>
+    <section aria-labelledby="enem-essay-method" className="ni-panel p-5 space-y-3">
+      <h2 id="enem-essay-method" className="font-display text-lg">Do tema à proposta: o método</h2>
+      <details open><summary className="cursor-pointer font-semibold text-sm">1. Ler o tema sem tangenciar</summary><ul className="list-disc pl-5 space-y-1 text-sm mt-2">{enemThemeReading.map(item => <li key={item}>{item}</li>)}</ul></details>
+      <details><summary className="cursor-pointer font-semibold text-sm">2. Esqueleto com linhas</summary><ul className="space-y-2 text-sm mt-2">{enemEssaySkeleton.map(item => <li key={item.part}><b>{item.part}</b> <span className="text-xs text-[var(--dim)]">({item.lines})</span><span className="block">{item.role}</span></li>)}</ul></details>
+      <details><summary className="cursor-pointer font-semibold text-sm">3. Conectivos por função</summary><ul className="space-y-2 text-sm mt-2">{enemConnectivesByFunction.map(item => <li key={item.function}><b>{item.function}:</b> {item.examples}<span className="block text-xs text-[var(--dim)]">{item.use}</span></li>)}</ul><p className="text-xs mt-2">{enemC4Rule}</p></details>
+      <details><summary className="cursor-pointer font-semibold text-sm">4. Proposta de intervenção que pontua</summary><ul className="list-disc pl-5 space-y-1 text-sm mt-2">{enemInterventionPitfalls.map(item => <li key={item}>{item}</li>)}</ul></details>
+      <details><summary className="cursor-pointer font-semibold text-sm">5. Armadilhas formais</summary><ul className="list-disc pl-5 space-y-1 text-sm mt-2">{enemFormalTraps.map(item => <li key={item}>{item}</li>)}</ul></details>
     </section>
     <section aria-labelledby="enem-essay-wild" className="ni-panel p-5 space-y-3">
       <h2 id="enem-essay-wild" className="font-display text-lg">Se o tema surpreender</h2>
