@@ -96,3 +96,14 @@ Ecologia é o assunto de Biologia com maior chance (95%, nas 8 provas). Frequên
 | Camada de ozônio e CFC | 1 | 1/8 |
 
 **Leitura:** as duas aulas acertam o foco. Polinizadores e agrotóxicos, relações ecológicas e ciclo do nitrogênio caíram em 6 ou 7 das 8 provas. A camada de ozônio, tratada como "o ENEM adora", apareceu uma vez no período: revise só o suficiente para não confundir com o efeito estufa.
+
+## Vídeo 6 — `videoplayback-2.mp4` (4h48min): monitoria de Humanas e Linguagens
+
+Aula longa da monitoria, com mais de 60 questões autorais e trechos de pré-teste comentados. Assuntos, agrupados:
+
+- **História:** independência do Haiti e apoio a Bolívar; Doutrina Monroe ("América para os americanos"); Era das Revoluções; Era Vargas (1932, Constituição de 1934, Intentona de 1935, Estado Novo em 1937); coronelismo e patrimonialismo; direito divino dos reis; Revolução Industrial e toyotismo (just-in-time); MST.
+- **Filosofia:** passagem do mito ao logos; Maquiavel rompendo com a moral cristã na política; Agostinho e Platão; Locke e Rousseau sobre a origem da propriedade; Marx e a desigualdade; Foucault; Byung-Chul Han e a sociedade do desempenho.
+- **Sociologia e Geografia:** antropologia e cultura; Adam Smith (o interesse próprio do açougueiro e do cervejeiro); darwinismo social; Bolsa Família e combate à fome; cartografia como representação adaptada; ilha de calor e frentes frias; enchentes em cidades impermeabilizadas; energia nuclear.
+- **Linguagens e Artes:** impressionismo e surrealismo; Machado de Assis e a ironia; O Cortiço (Aluísio Azevedo); Carolina Maria de Jesus; Parintins e o boi-bumbá; funções da linguagem; texto em inglês; valores olímpicos.
+
+**Conferência com o histórico:** a aula cobre bem os assuntos de Humanas com maior chance (Idade Moderna e Iluminismo, 92%; Primeira República e Vargas, 89%; Brasil Império, 91%; globalização, 94%; cultura e identidade, 83%) e a filosofia contemporânea (86%). O contratualismo (Locke e Rousseau), com só 40% de chance histórica, aparece aqui e nos vídeos 2 e 3. Vale uma revisão curta pelo tema da propriedade e do contrato social, sem prioridade sobre os assuntos acima de 85%.
