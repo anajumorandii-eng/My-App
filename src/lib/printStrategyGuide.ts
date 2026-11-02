@@ -1,3 +1,4 @@
+import { preparedCoverIllustration, coverContextKey, readPrintCoverContext } from './printCoverContext';
 import { createPrintFrontMatter } from './printFrontMatter';
 import { printStyles } from './printStyles';
 
@@ -11,7 +12,9 @@ export function createStrategyPrintRoot(content: HTMLElement, title: string) {
   root.dataset.crivoPrintRoot = '';
   root.style.display = 'none';
   const printable = content.cloneNode(true) as HTMLElement;
+  const existingArt = preparedCoverIllustration(printable);
   printable.dataset.printCoverEdition ||= crypto.randomUUID();
+  if (existingArt) printable.dataset.printGeneratedContext = coverContextKey(readPrintCoverContext(printable));
   printable.querySelectorAll('[data-print-exclude]').forEach(element => element.remove());
   printable.querySelectorAll<HTMLElement>('[data-print-only]').forEach(element => { element.hidden = false; element.style.display = 'block'; element.classList.remove('hidden'); });
   // References stay readable without exporting raw OCR and internal analytical sheets.
