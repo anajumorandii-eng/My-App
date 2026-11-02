@@ -1,6 +1,7 @@
 import { ExamIncidenceExplorer } from '../components/ExamIncidenceExplorer';
 import { FuvestDepthPanel } from '../components/FuvestDepthPanel';
 import { PriorityStudyPanel } from '../components/PriorityStudyPanel';
+import { EnemPersonalPriorityPanel } from '../components/EnemPersonalPriorityPanel';
 import React, { useMemo, useState } from 'react';
 import { ExamEvidencePanel } from '../components/ExamEvidencePanel';
 import { literaryWorks } from '../data/literaryWorks';
@@ -79,6 +80,7 @@ export default function Prioridades() {
       </div>
 
       <div className="space-y-4">
+        <EnemPersonalPriorityPanel />
         <ExamIncidenceExplorer subject={activeSubject} />
         <details className="ni-panel p-5"><summary className="cursor-pointer font-semibold">Consultar o roteiro curricular complementar</summary><div className="mt-4"><FuvestDepthPanel key={`depth-${activeSubject}`} subject={activeSubject} /></div></details>
         {!['Arte', 'Educação Física'].includes(activeSubject) && <PriorityStudyPanel key={activeSubject} subject={activeSubject} />}
