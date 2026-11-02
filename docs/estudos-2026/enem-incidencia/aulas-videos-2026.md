@@ -19,3 +19,120 @@ Aula ao vivo da equipe de monitoria do Edcley, na véspera de uma prova, com o t
 2. **Escala ao quadrado ou ao cubo.** Confirma o padrão 2 do guia: a armadilha está em aplicar a escala linear direto na área.
 3. **Pergunta com formulação incomum** ("massa efetivamente afetada pelo impacto"). O caminho foi voltar à definição: impulso = variação da quantidade de movimento, e então descobrir a massa que, a 90 km/h, teria esse impulso. Diante de uma formulação estranha, reescreva o que se pede com as grandezas que você conhece.
 4. **Duas questões do material estavam com o enunciado quebrado** (ângulo não indicado na figura e letras trocadas no cubo), o que o próprio professor aponta. Questão autoral de apostila não passou pelo pré-teste; não se desanime ao travar numa delas.
+
+## Vídeos 2 e 3 — `t9oopz.mp4` (1h41min) e `jzoezj.mp4` (2h20min)
+
+São duas gravações da mesma live do Edcley Teixeira; a segunda repete a primeira com mais questões. Boa parte do tempo é venda do curso. O conteúdo resolvido é de Linguagens e Humanas:
+- valores olímpicos e doping;
+- resistência bacteriana a antibióticos (seleção de variantes que já existiam, e não mutação dirigida);
+- poema contemporâneo que parodia o formalismo parnasiano;
+- ironia;
+- vanguarda futurista;
+- carta de Pero Vaz de Caminha;
+- tabelamento de preços e vigilância (Foucault, panóptico);
+- Rousseau e a origem da desigualdade;
+- espectro eletromagnético (infravermelho visto pela câmera do celular).
+
+Esses assuntos batem com o histórico: Entendimento de Texto (96%), Idade Moderna e Iluminismo (92%), evolução e ondulatória.
+
+### As "regras para acertar sem saber o conteúdo", testadas
+
+A live promete marcar a resposta sem saber a matéria, com regras que diz vir de um viés das questões no pré-teste. Apliquei cada regra às questões reais do ENEM 2018–2025 do banco do app, sem olhar o gabarito, e medi o acerto. Com cinco alternativas, o chute puro acerta 20%.
+
+| Regra da live | Questões testadas | Acerto |
+|---|---|---|
+| Marcar a alternativa cujas palavras e sinônimos mais se repetem nas outras alternativas | 900 | 20,1% |
+| Marcar a alternativa que mais repete palavras do comando | 1.351 | 19,3% |
+| Marcar a alternativa com "mais" ou "porém" (o "argumento mais forte da sentença") | 50 | 18,2% |
+
+Nenhuma regra supera o chute em nenhuma área: Linguagens 20,9%, Humanas 20,0%, Natureza 19,8%. Na prova real, essas regras equivalem a marcar ao acaso. O que funciona são os vícios de alternativa da seção 11 do guia de padrões, que dependem de ler o texto.
+
+O teste é reprodutível: a regra usa só o texto das alternativas e do enunciado do banco, e o gabarito entra apenas na conferência.
+
+## Vídeo 4 — `80zqb5.mp4` (2h37min): apostas de Ecologia
+
+Aula da equipe do Edcley inteira de Ecologia, com mais de 20 questões. Os temas:
+- relações ecológicas pelo sinal de cada espécie (+/+, +/0, −/−), incluindo a armadilha de confundir amensalismo e alelopatia com competição;
+- corais e algas simbiontes, com o branqueamento;
+- ciclo do carbono e balanço dos biocombustíveis;
+- sobreposição de nicho e exclusão competitiva;
+- polinização;
+- isótopos de carbono e nitrogênio como pista da dieta;
+- sucessão ecológica e espécies pioneiras, inclusive em concreto urbano;
+- pirâmide de energia (só cerca de 10% passa ao nível seguinte);
+- ciclo do nitrogênio com leguminosas e fixação;
+- habitat versus nicho;
+- endemismo;
+- direção das setas na cadeia alimentar (a seta aponta para quem come).
+
+## Vídeo 5 — `8y59qy.mp4` (47min): apostas de ambiente e saúde
+
+Temas:
+- biomagnificação do mercúrio (Minamata);
+- eutrofização passo a passo;
+- desmatamento e novas doenças, com hospedeiros silvestres como reservatórios;
+- material particulado das queimadas e doenças respiratórias;
+- neonicotinoides e o declínio das abelhas;
+- fragmentação e corredores ecológicos;
+- floresta como sumidouro de carbono com o aquecimento;
+- quatro fenômenos atmosféricos que o ENEM mistura: camada de ozônio e CFC, efeito estufa, inversão térmica e chuva ácida.
+
+## Conferência dos vídeos 4 e 5 com as provas
+
+Ecologia é o assunto de Biologia com maior chance (95%, nas 8 provas). Frequência no enunciado das 1.440 questões de 2018–2025:
+
+| Tema das aulas | Questões | Provas |
+|---|---|---|
+| Polinizadores, abelhas e agrotóxicos | 16 | 7/8 |
+| Relações ecológicas | 10 | 7/8 |
+| Ciclo do nitrogênio e leguminosas | 10 | 6/8 |
+| Queimadas, fumaça e saúde | 9 | 5/8 |
+| Fragmentação e corredores | 7 | 4/8 |
+| Sucessão ecológica e pioneiras | 7 | 5/8 |
+| Cadeia alimentar e fluxo de energia | 5 | 4/8 |
+| Bioacumulação e mercúrio | 3 | 3/8 |
+| Desmatamento e zoonoses | 3 | 2/8 |
+| Ciclo do carbono e sumidouro | 1 | 1/8 |
+| Camada de ozônio e CFC | 1 | 1/8 |
+
+**Leitura:** as duas aulas acertam o foco. Polinizadores e agrotóxicos, relações ecológicas e ciclo do nitrogênio caíram em 6 ou 7 das 8 provas. A camada de ozônio, tratada como "o ENEM adora", apareceu uma vez no período: revise só o suficiente para não confundir com o efeito estufa.
+
+## Vídeo 6 — `videoplayback-2.mp4` (4h48min): monitoria de Humanas e Linguagens
+
+Aula longa da monitoria, com mais de 60 questões autorais e trechos de pré-teste comentados. Assuntos, agrupados:
+
+- **História:** independência do Haiti e apoio a Bolívar; Doutrina Monroe ("América para os americanos"); Era das Revoluções; Era Vargas (1932, Constituição de 1934, Intentona de 1935, Estado Novo em 1937); coronelismo e patrimonialismo; direito divino dos reis; Revolução Industrial e toyotismo (just-in-time); MST.
+- **Filosofia:** passagem do mito ao logos; Maquiavel rompendo com a moral cristã na política; Agostinho e Platão; Locke e Rousseau sobre a origem da propriedade; Marx e a desigualdade; Foucault; Byung-Chul Han e a sociedade do desempenho.
+- **Sociologia e Geografia:** antropologia e cultura; Adam Smith (o interesse próprio do açougueiro e do cervejeiro); darwinismo social; Bolsa Família e combate à fome; cartografia como representação adaptada; ilha de calor e frentes frias; enchentes em cidades impermeabilizadas; energia nuclear.
+- **Linguagens e Artes:** impressionismo e surrealismo; Machado de Assis e a ironia; O Cortiço (Aluísio Azevedo); Carolina Maria de Jesus; Parintins e o boi-bumbá; funções da linguagem; texto em inglês; valores olímpicos.
+
+**Conferência com o histórico:** a aula cobre bem os assuntos de Humanas com maior chance (Idade Moderna e Iluminismo, 92%; Primeira República e Vargas, 89%; Brasil Império, 91%; globalização, 94%; cultura e identidade, 83%) e a filosofia contemporânea (86%). O contratualismo (Locke e Rousseau), com só 40% de chance histórica, aparece aqui e nos vídeos 2 e 3. Vale uma revisão curta pelo tema da propriedade e do contrato social, sem prioridade sobre os assuntos acima de 85%.
+
+## Vídeo 7 — `videoplayback-1.mp4` (6h53min): monitoria de Natureza e Matemática
+
+A maior aula do lote, com cerca de 80 questões do dia 2:
+
+- **Biologia:** genética mendeliana e dominância; seleção natural e convergência evolutiva (membranas interdigitais em grupos distantes); fotossíntese, respiração e cadeia transportadora de elétrons; fermentação na falta de oxigênio; vacinas e anticorpos; DNA mitocondrial na reprodução assistida; transcrição sem tradução; sistema renina-angiotensina-aldosterona; alvéolos; LH e testosterona; hormônios da gravidez e ácido fólico; toxoplasmose e malária; hormônios vegetais (auxina e dominância apical, ácido abscísico); mutualismo; biomagnificação; saneamento e epidemiologia.
+- **Química:** surfactantes e micelas no petróleo; estequiometria (barrilha); lei de Beer (absorbância e concentração); isomeria; catalisador automotivo; conservantes; Le Chatelier e pH; combustão.
+- **Física:** circuitos em série a 220 V e pilhas em série; colisões; dilatação e comportamento anômalo da água; empuxo; ressonância; reflexão na elipse; raio X em filme; condensação; velocidade média.
+- **Matemática:** probabilidade e valor esperado (sorteio, torneio, descontos); função quadrática e parábola; progressão aritmética; estatística por faixa etária; ângulos de polígonos e radianos; áreas e volumes; proporção entre custo e área; estimativa por escala.
+
+**Conferência com o histórico:** é a aula que mais se aproxima da distribuição real do dia 2, com probabilidade (95%), funções (95%), geometria (95%), fisiologia humana (94%), circuitos (92%) e estequiometria (89%) no centro. Hormônios vegetais (fisiologia vegetal, 51%) e ressonância ficam abaixo de 60%: são revisão secundária.
+
+## Vídeo 8 — `qb4uj8.mp4` (1h08min): estratégias de Matemática
+
+Live curta da equipe do Edcley, só com estratégias de resolução. Diferente das "regras" dos vídeos 2 e 3, estas dependem do conteúdo e se confirmam:
+
+1. **Mistura e evaporação: trabalhe com o que fica fixo.** Ao acrescentar xarope ou evaporar água, o componente que não muda é a âncora da conta. Se a água cai de 99,95% para 99,90%, a fração de sólido dobra (0,05% → 0,10%), então a massa total cai pela metade. É a pegadinha clássica: achar que quase nada mudou porque as porcentagens são parecidas. Reforça o padrão 4 do guia ("por cento de quê?").
+2. **Quadrática: x do vértice ou y do vértice?** "Qual valor de x maximiza" pede −b/2a; "qual a área máxima" pede o valor da função nesse x. Errar qual dos dois é pedido é o erro mais comum.
+3. **Soma constante, produto máximo na metade.** Se dois fatores somam um valor fixo, o produto é máximo quando são iguais (65 × 65 para soma 130). Resolve sem montar a parábola.
+4. **Logaritmo quase sempre se reduz ao log que a questão deu.** Se só aparece log 3, o número dentro do log é potência de 3 (81 = 3⁴, então log 81 = 4 log 3). E atenção ao período: a função de arrecadação era mensal, então o trimestre é três vezes o mês, e não a função aplicada a 240.
+5. **pH a partir de [OH⁻]:** calcule o pOH e use pH = 14 − pOH.
+6. **Volume desgastado:** a diferença entre o volume antes e depois, com a base constante (cilindro mais cone do lápis).
+
+## Síntese dos 8 vídeos
+
+- **Assuntos:** as aulas de apostas e monitoria se concentram nos mesmos assuntos que o histórico aponta como mais prováveis: ecologia, fisiologia, circuitos, estequiometria, porcentagem e proporção, probabilidade, funções, geometria e Humanas acima de 85%. Os poucos temas fora disso (contrato social, camada de ozônio, hormônios vegetais, ressonância) ficam como revisão curta.
+- **Sinais que se repetem em várias aulas e nas apostas:** movimento circular e satélites, decibel e escala logarítmica, ondas eletromagnéticas (infravermelho e Bluetooth) e epigenética.
+- **O que descartar:** as regras de "acertar sem saber o conteúdo" dos vídeos 2 e 3, que nas questões reais acertam o mesmo que o chute (cerca de 20%).
+- **O que aproveitar além do conteúdo:** reler o negrito antes de marcar (vídeo 1), escala ao quadrado ou ao cubo (vídeo 1), trabalhar com o que fica fixo (vídeo 8) e distinguir x e y do vértice (vídeo 8).
