@@ -15,12 +15,12 @@ Antes de confiar nos números de 2026, o mesmo cálculo foi feito só com 2018�
 
 |Nível|Brier do modelo|Brier de referência (taxa única)|Top-30 previstos que caíram em 2025|Caíram sem histórico|
 |---|---|---|---|---|
-|Assunto|0.184|0.218|29/30|1|
-|Capítulo|0.193|0.196|22/30|11|
+|Assunto|0.172|0.201|29/30|1|
+|Capítulo|0.201|0.204|21/30|11|
 
-Calibração por faixa (assunto): 80–100%: 35/38 · 60–80%: 14/21 · 40–60%: 13/26 · 20–40%: 6/14 · 0–20%: 2/4.
+Calibração por faixa (assunto): 80–100%: 34/36 · 60–80%: 15/20 · 40–60%: 13/24 · 20–40%: 6/14 · 0–20%: 2/3.
 
-Calibração por faixa (capítulo): 80–100%: 13/13 · 60–80%: 15/39 · 40–60%: 23/69 · 20–40%: 31/146 · 0–20%: 29/149.
+Calibração por faixa (capítulo): 80–100%: 15/17 · 60–80%: 13/31 · 40–60%: 24/69 · 20–40%: 29/137 · 0–20%: 30/138.
 
 Brier menor que a referência significa que o histórico separa de fato o que cai do que não cai. Capítulo é mais incerto que assunto: o currículo tem muitos capítulos e cada prova escolhe poucos.
 
@@ -28,26 +28,26 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 
 |#|Matéria|Assunto|P(cair)|Questões esperadas|Edições|Tendência|2018→2025|
 |---|---|---|---|---|---|---|---|
-|1|Português|Entendimento de Texto|96%|16.3|8/8|↑|9 15 14 16 10 8 22 25|
-|2|Português|Domínio da Norma Culta|96%|7.0|8/8|↑|10 3 5 6 6 9 8 7|
-|3|Matemática|Aritmética e Proporcionalidade|96%|6.5|8/8|↑|2 7 4 3 3 3 10 12|
+|1|Português|Entendimento de Texto|96%|21.3|8/8|↑|15 21 25 21 21 16 22 25|
+|2|Português|Domínio da Norma Culta|96%|7.4|8/8|→|10 4 6 7 7 9 8 7|
+|3|Matemática|Aritmética e Proporcionalidade|96%|7.2|8/8|↑|2 8 6 5 4 4 10 12|
 |4|Matemática|Probabilidade e Interpretação de Dados|95%|5.8|8/8|↑|7 6 4 2 5 6 6 8|
 |5|Matemática|Geometria Espacial|95%|5.6|8/8|↑|2 3 10 5 8 7 4 5|
-|6|Matemática|Funções|95%|5.2|8/8|↓|5 6 4 8 7 8 5 1|
-|7|Matemática|Geometria Plana|95%|5.1|8/8|↓|8 5 7 5 4 4 6 4|
-|8|Inglês|Compreensão de Texto em Inglês|95%|5.0|8/8|→|5 5 5 5 5 5 5 5|
+|6|Inglês|Compreensão de Texto em Inglês|95%|5.0|8/8|→|5 5 5 5 5 5 5 5|
+|7|Matemática|Geometria Plana|95%|5.0|8/8|↓|8 5 7 4 4 4 6 4|
+|8|Matemática|Funções|95%|4.9|8/8|↓|5 6 3 8 7 7 5 1|
 |9|Biologia|Ecologia|95%|4.1|8/8|↑|2 5 6 1 4 4 3 6|
-|10|Matemática|Equações, Desigualdades e Modelagem Algébrica|95%|4.0|8/8|↑|3 4 6 3 1 1 6 6|
-|11|Português|Literatura Contemporânea|95%|4.0|8/8|↑|2 4 3 5 4 7 3 3|
+|10|Português|Literatura Contemporânea|95%|4.0|8/8|↑|2 4 3 5 4 7 3 3|
+|11|Matemática|Equações, Desigualdades e Modelagem Algébrica|95%|3.9|8/8|→|4 4 5 3 1 1 6 6|
 |12|Biologia|Fisiologia Animal e Humana|94%|3.6|8/8|↓|4 6 2 4 3 4 4 3|
 |13|Geografia|Globalização e Geografia Econômica|94%|3.6|8/8|↑|2 3 3 2 5 8 3 2|
 |14|Geografia|Geografia da População e Urbana do Brasil|94%|3.4|8/8|↓|5 1 5 6 2 3 2 4|
-|15|Matemática|Sequências, Matrizes e Sistemas Lineares|93%|3.0|8/8|↓|5 5 2 5 5 3 2 1|
+|15|Matemática|Sequências, Matrizes e Sistemas Lineares|93%|3.1|8/8|↓|5 4 3 5 5 3 2 1|
 |16|Geografia|Climatologia e Problemas Socioambientais|92%|2.7|8/8|→|3 4 1 3 3 2 3 3|
 |17|História|Idade Moderna e Iluminismo|92%|2.7|8/8|↓|3 3 6 3 1 4 3 1|
 |18|Física|Circuitos Elétricos|92%|2.7|8/8|↑|2 1 3 5 3 1 2 4|
-|19|Matemática|Análise Combinatória|92%|2.6|8/8|→|2 3 3 4 5 1 2 2|
-|20|Português|Simbolismo, Pré-Modernismo e Modernismo|92%|2.6|8/8|↓|2 7 4 2 1 3 2 2|
+|19|Português|Simbolismo, Pré-Modernismo e Modernismo|92%|2.6|8/8|↓|2 7 4 2 1 3 2 2|
+|20|Matemática|Análise Combinatória|92%|2.5|8/8|→|1 3 3 4 5 1 2 2|
 |21|História|Brasil Império|91%|2.4|8/8|↓|2 5 1 3 4 3 2 1|
 |22|Português|Literatura Clássica, Medieval e Barroca|91%|2.3|8/8|↓|7 3 2 2 3 2 2 1|
 |23|Matemática|Teoria dos Números Inteiros|90%|2.3|8/8|→|3 2 2 4 2 2 2 2|
@@ -62,12 +62,12 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 |32|História|Brasil Colônia|84%|2.4|7/8|↓|2 4 5 3 2 2 0 3|
 |33|História|Idade Média|83%|1.7|7/8|→|2 1 0 4 3 2 1 1|
 |34|Sociologia|Cultura, Identidade e Diversidade|83%|1.9|6/8|↑|0 0 1 1 2 2 3 3|
-|35|Matemática|Trigonometria|82%|1.6|7/8|→|4 0 1 2 1 2 1 2|
-|36|Biologia|Zoologia|80%|1.4|7/8|↑|1 0 2 1 1 1 2 2|
-|37|Química|Química Inorgânica|80%|1.3|7/8|→|0 2 2 2 2 1 1 1|
-|38|Matemática|Logaritmos e Exponenciais|80%|1.8|6/8|→|0 3 1 3 0 4 2 1|
-|39|Química|Fundamentos e Nomenclatura Orgânica|79%|1.8|7/8|↓|6 2 1 1 1 4 2 0|
-|40|Física|Leis de Newton e Dinâmica do Movimento Retilíneo|78%|1.1|8/8|→|2 1 1 1 1 1 1 1|
+|35|Biologia|Zoologia|80%|1.4|7/8|↑|1 0 2 1 1 1 2 2|
+|36|Química|Química Inorgânica|80%|1.3|7/8|→|0 2 2 2 2 1 1 1|
+|37|Matemática|Logaritmos e Exponenciais|79%|1.7|6/8|→|0 3 1 2 0 4 2 1|
+|38|Química|Fundamentos e Nomenclatura Orgânica|79%|1.8|7/8|↓|6 2 1 1 1 4 2 0|
+|39|Física|Leis de Newton e Dinâmica do Movimento Retilíneo|78%|1.1|8/8|→|2 1 1 1 1 1 1 1|
+|40|Matemática|Trigonometria|78%|1.5|6/8|→|4 0 0 2 1 2 1 2|
 
 ## Por matéria: assuntos e capítulos
 
@@ -75,18 +75,18 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 
 |Assunto|P(cair)|Esperadas|Edições|Tend.|2018→2025|
 |---|---|---|---|---|---|
-|Aritmética e Proporcionalidade|96%|6.5|8/8|↑|2 7 4 3 3 3 10 12|
+|Aritmética e Proporcionalidade|96%|7.2|8/8|↑|2 8 6 5 4 4 10 12|
 |Probabilidade e Interpretação de Dados|95%|5.8|8/8|↑|7 6 4 2 5 6 6 8|
 |Geometria Espacial|95%|5.6|8/8|↑|2 3 10 5 8 7 4 5|
-|Funções|95%|5.2|8/8|↓|5 6 4 8 7 8 5 1|
-|Geometria Plana|95%|5.1|8/8|↓|8 5 7 5 4 4 6 4|
-|Equações, Desigualdades e Modelagem Algébrica|95%|4.0|8/8|↑|3 4 6 3 1 1 6 6|
-|Sequências, Matrizes e Sistemas Lineares|93%|3.0|8/8|↓|5 5 2 5 5 3 2 1|
-|Análise Combinatória|92%|2.6|8/8|→|2 3 3 4 5 1 2 2|
+|Geometria Plana|95%|5.0|8/8|↓|8 5 7 4 4 4 6 4|
+|Funções|95%|4.9|8/8|↓|5 6 3 8 7 7 5 1|
+|Equações, Desigualdades e Modelagem Algébrica|95%|3.9|8/8|→|4 4 5 3 1 1 6 6|
+|Sequências, Matrizes e Sistemas Lineares|93%|3.1|8/8|↓|5 4 3 5 5 3 2 1|
+|Análise Combinatória|92%|2.5|8/8|→|1 3 3 4 5 1 2 2|
 |Teoria dos Números Inteiros|90%|2.3|8/8|→|3 2 2 4 2 2 2 2|
-|Trigonometria|82%|1.6|7/8|→|4 0 1 2 1 2 1 2|
-|Logaritmos e Exponenciais|80%|1.8|6/8|→|0 3 1 3 0 4 2 1|
-|Geometria Analítica|70%|1.5|5/8|↓|4 0 1 0 4 3 0 1|
+|Logaritmos e Exponenciais|79%|1.7|6/8|→|0 3 1 2 0 4 2 1|
+|Trigonometria|78%|1.5|6/8|→|4 0 0 2 1 2 1 2|
+|Geometria Analítica|68%|1.4|5/8|↓|4 0 1 0 3 3 0 1|
 |Números Complexos e Polinômios|32%|0.3|3/8|→|0 1 0 1 0 1 0 0|
 
 **Capítulos mais recorrentes de Matemática** (3+ edições):
@@ -96,9 +96,9 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 |Introdução às Probabilidades (Probabilidade e Interpretação de Dados)|95%|8/8|3 2 4 2 3 2 4 8|
 |O Universo Tridimensional (Geometria Espacial)|94%|8/8|1 1 5 4 6 4 2 4|
 |O Sistema de Numeração Decimal (Teoria dos Números Inteiros)|90%|8/8|2 1 2 4 2 2 2 2|
-|Razão e Proporção (Aritmética e Proporcionalidade)|89%|7/8|1 2 3 2 0 1 5 10|
+|Razão e Proporção (Aritmética e Proporcionalidade)|90%|7/8|1 2 4 3 0 1 5 10|
+|Porcentagem (Aritmética e Proporcionalidade)|89%|7/8|0 5 1 2 4 2 4 2|
 |Introdução às Técnicas de Contagem (Análise Combinatória)|86%|8/8|1 1 1 2 4 1 2 1|
-|Porcentagem (Aritmética e Proporcionalidade)|83%|6/8|0 4 0 1 3 1 4 2|
 |Introdução às Funções (Funções)|82%|8/8|2 2 1 1 1 1 2 1|
 |Sólidos de Revolução (Geometria Espacial)|74%|7/8|1 1 1 0 1 2 1 1|
 |Técnicas Algébricas (Equações, Desigualdades e Modelagem Algébrica)|69%|4/8|2 0 2 0 0 0 5 3|
@@ -110,35 +110,29 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 
 |Assunto|P(cair)|Esperadas|Edições|Tend.|2018→2025|
 |---|---|---|---|---|---|
-|Entendimento de Texto|96%|16.3|8/8|↑|9 15 14 16 10 8 22 25|
-|Domínio da Norma Culta|96%|7.0|8/8|↑|10 3 5 6 6 9 8 7|
+|Entendimento de Texto|96%|21.3|8/8|↑|15 21 25 21 21 16 22 25|
+|Domínio da Norma Culta|96%|7.4|8/8|→|10 4 6 7 7 9 8 7|
 |Literatura Contemporânea|95%|4.0|8/8|↑|2 4 3 5 4 7 3 3|
 |Simbolismo, Pré-Modernismo e Modernismo|92%|2.6|8/8|↓|2 7 4 2 1 3 2 2|
 |Literatura Clássica, Medieval e Barroca|91%|2.3|8/8|↓|7 3 2 2 3 2 2 1|
 |Romantismo e Realismo|88%|2.6|7/8|→|4 1 0 3 4 3 3 2|
-|Leitura de Coletânea e Repertório Temático|72%|1.9|6/8|↓|1 2 7 1 3 4 0 0|
-|Coesão, Conclusão e Proposta de Intervenção|62%|1.3|5/8|→|1 0 2 1 6 1 0 0|
-|Análise Sintática|60%|1.0|6/8|↓|1 1 1 2 3 1 0 0|
-|Fundamentos da Dissertação|48%|0.6|5/8|↓|1 3 1 1 0 1 0 0|
-|Introdução, Argumentação e Coerência|43%|0.5|5/8|↓|1 1 1 1 0 1 0 0|
-|Direitos Humanos e Redações Modelo|10%|0.1|1/8|→|1 0 0 0 0 0 0 0|
 
 **Capítulos mais recorrentes de Português** (3+ edições):
 
 |Capítulo|P(cair)|Edições|2018→2025|
 |---|---|---|---|
-|Variação Linguística (Domínio da Norma Culta)|93%|8/8|2 1 2 3 1 5 5 3|
+|Variação Linguística (Domínio da Norma Culta)|94%|8/8|2 1 3 4 2 5 5 3|
+|Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais (Entendimento de Texto)|94%|8/8|2 5 2 2 1 1 3 8|
 |Gêneros não Verbais: Fundamentos de Leitura (Entendimento de Texto)|92%|7/8|0 3 3 5 3 2 5 6|
-|Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais (Entendimento de Texto)|87%|7/8|1 4 1 1 1 0 3 8|
+|Fatores de Textualidade (Entendimento de Texto)|87%|7/8|1 2 1 0 1 5 1 5|
 |A Arte e suas Linguagens (Literatura Clássica, Medieval e Barroca)|86%|8/8|3 2 2 2 2 1 2 1|
-|Fatores de Textualidade (Entendimento de Texto)|82%|6/8|0 1 1 0 1 3 1 5|
+|Modelos de Leitura e Distorções Interpretativas (Entendimento de Texto)|84%|7/8|3 3 6 4 5 4 2 0|
+|Gêneros Textuais (Entendimento de Texto)|77%|6/8|0 3 3 3 2 0 2 1|
 |Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos (Domínio da Norma Culta)|76%|7/8|3 1 0 1 2 1 1 1|
+|Língua: um Sistema Complexo (Domínio da Norma Culta)|76%|7/8|3 1 1 0 1 1 2 1|
+|Funções da Linguagem (Entendimento de Texto)|75%|7/8|5 1 1 1 3 2 1 0|
+|Função Poética e Linguagem Literária (Entendimento de Texto)|73%|6/8|2 1 5 1 0 0 2 2|
 |Poesia Concreta (Literatura Contemporânea)|73%|6/8|0 1 1 0 1 1 3 1|
-|Língua: um Sistema Complexo (Domínio da Norma Culta)|72%|6/8|3 0 1 0 1 1 2 1|
-|Função Poética e Linguagem Literária (Entendimento de Texto)|71%|6/8|2 1 3 1 0 0 2 2|
-|A Estética Romântica: Poesia (Romantismo e Realismo)|68%|5/8|1 0 0 0 1 1 2 2|
-|Gêneros Textuais (Entendimento de Texto)|65%|5/8|0 2 2 2 0 0 2 1|
-|Modelos de Leitura e Distorções Interpretativas (Entendimento de Texto)|58%|5/8|1 2 0 2 0 1 2 0|
 
 ### História — 17.3 questões por edição
 
