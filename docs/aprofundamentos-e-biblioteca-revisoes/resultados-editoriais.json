@@ -1,0 +1,414 @@
+[
+  {
+    "case": 1,
+    "before": 9,
+    "after": 7,
+    "font": "14px",
+    "contentIdentical": true,
+    "details": [
+      {
+        "version": "before",
+        "pages": 9,
+        "type": {
+          "size": "14px",
+          "lineHeight": "21px"
+        },
+        "toc": {
+          "crivo-print-section-1": 3,
+          "crivo-print-section-2": 3,
+          "crivo-print-section-3": 3,
+          "crivo-print-section-4": 3,
+          "crivo-print-section-5": 4,
+          "crivo-print-section-6": 4,
+          "crivo-print-section-7": 4,
+          "crivo-print-section-8": 4,
+          "crivo-print-section-9": 5,
+          "crivo-print-section-10": 5,
+          "crivo-print-section-11": 5,
+          "crivo-print-section-12": 6,
+          "crivo-print-section-13": 6,
+          "crivo-print-section-14": 6,
+          "crivo-print-section-15": 6,
+          "crivo-print-section-16": 6,
+          "crivo-print-section-17": 7,
+          "crivo-print-section-18": 7,
+          "crivo-print-section-19": 7,
+          "crivo-print-section-20": 7,
+          "crivo-print-section-21": 8,
+          "crivo-print-section-22": 8,
+          "crivo-print-section-23": 8,
+          "crivo-print-section-24": 9,
+          "crivo-print-section-25": 9
+        },
+        "links": 25,
+        "pageContent": [
+          {
+            "number": 1,
+            "characters": 304
+          },
+          {
+            "number": 2,
+            "characters": 823
+          },
+          {
+            "number": 3,
+            "characters": 3769
+          },
+          {
+            "number": 4,
+            "characters": 4324
+          },
+          {
+            "number": 5,
+            "characters": 4118
+          },
+          {
+            "number": 6,
+            "characters": 4138
+          },
+          {
+            "number": 7,
+            "characters": 4064
+          },
+          {
+            "number": 8,
+            "characters": 4062
+          },
+          {
+            "number": 9,
+            "characters": 1638
+          }
+        ]
+      },
+      {
+        "version": "after",
+        "pages": 7,
+        "type": {
+          "size": "14px",
+          "lineHeight": "18.2px"
+        },
+        "toc": {
+          "crivo-print-section-1": 2,
+          "crivo-print-section-2": 2,
+          "crivo-print-section-3": 2,
+          "crivo-print-section-4": 3,
+          "crivo-print-section-5": 3,
+          "crivo-print-section-6": 3,
+          "crivo-print-section-7": 3,
+          "crivo-print-section-8": 3,
+          "crivo-print-section-9": 4,
+          "crivo-print-section-10": 4,
+          "crivo-print-section-11": 4,
+          "crivo-print-section-12": 4,
+          "crivo-print-section-13": 5,
+          "crivo-print-section-14": 5,
+          "crivo-print-section-15": 5,
+          "crivo-print-section-16": 5,
+          "crivo-print-section-17": 5,
+          "crivo-print-section-18": 5,
+          "crivo-print-section-19": 6,
+          "crivo-print-section-20": 6,
+          "crivo-print-section-21": 6,
+          "crivo-print-section-22": 6,
+          "crivo-print-section-23": 6,
+          "crivo-print-section-24": 7,
+          "crivo-print-section-25": 7
+        },
+        "links": 25,
+        "pageContent": [
+          {
+            "number": 1,
+            "characters": 304
+          },
+          {
+            "number": 2,
+            "characters": 3303
+          },
+          {
+            "number": 3,
+            "characters": 5622
+          },
+          {
+            "number": 4,
+            "characters": 5523
+          },
+          {
+            "number": 5,
+            "characters": 5274
+          },
+          {
+            "number": 6,
+            "characters": 5391
+          },
+          {
+            "number": 7,
+            "characters": 1784
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "case": 2,
+    "before": 17,
+    "after": 13,
+    "font": "14px",
+    "contentIdentical": true,
+    "details": [
+      {
+        "version": "before",
+        "pages": 17,
+        "type": {
+          "size": "14px",
+          "lineHeight": "21px"
+        },
+        "toc": {
+          "crivo-print-section-1": 4,
+          "crivo-print-section-2": 4,
+          "crivo-print-section-3": 4,
+          "crivo-print-section-4": 4,
+          "crivo-print-section-5": 4,
+          "crivo-print-section-6": 5,
+          "crivo-print-section-7": 5,
+          "crivo-print-section-8": 5,
+          "crivo-print-section-9": 5,
+          "crivo-print-section-10": 6,
+          "crivo-print-section-11": 6,
+          "crivo-print-section-12": 6,
+          "crivo-print-section-13": 7,
+          "crivo-print-section-14": 7,
+          "crivo-print-section-15": 7,
+          "crivo-print-section-16": 7,
+          "crivo-print-section-17": 8,
+          "crivo-print-section-18": 8,
+          "crivo-print-section-19": 8,
+          "crivo-print-section-20": 8,
+          "crivo-print-section-21": 8,
+          "crivo-print-section-22": 9,
+          "crivo-print-section-23": 9,
+          "crivo-print-section-24": 9,
+          "crivo-print-section-25": 10,
+          "crivo-print-section-26": 10,
+          "crivo-print-section-27": 10,
+          "crivo-print-section-28": 10,
+          "crivo-print-section-29": 11,
+          "crivo-print-section-30": 11,
+          "crivo-print-section-31": 11,
+          "crivo-print-section-32": 11,
+          "crivo-print-section-33": 12,
+          "crivo-print-section-34": 12,
+          "crivo-print-section-35": 12,
+          "crivo-print-section-36": 12,
+          "crivo-print-section-37": 13,
+          "crivo-print-section-38": 13,
+          "crivo-print-section-39": 13,
+          "crivo-print-section-40": 13,
+          "crivo-print-section-41": 14,
+          "crivo-print-section-42": 14,
+          "crivo-print-section-43": 14,
+          "crivo-print-section-44": 14,
+          "crivo-print-section-45": 14,
+          "crivo-print-section-46": 15,
+          "crivo-print-section-47": 15,
+          "crivo-print-section-48": 15,
+          "crivo-print-section-49": 15,
+          "crivo-print-section-50": 15,
+          "crivo-print-section-51": 16,
+          "crivo-print-section-52": 16,
+          "crivo-print-section-53": 16,
+          "crivo-print-section-54": 17
+        },
+        "links": 54,
+        "pageContent": [
+          {
+            "number": 1,
+            "characters": 303
+          },
+          {
+            "number": 2,
+            "characters": 869
+          },
+          {
+            "number": 3,
+            "characters": 753
+          },
+          {
+            "number": 4,
+            "characters": 3966
+          },
+          {
+            "number": 5,
+            "characters": 4364
+          },
+          {
+            "number": 6,
+            "characters": 4204
+          },
+          {
+            "number": 7,
+            "characters": 3789
+          },
+          {
+            "number": 8,
+            "characters": 4219
+          },
+          {
+            "number": 9,
+            "characters": 4469
+          },
+          {
+            "number": 10,
+            "characters": 3851
+          },
+          {
+            "number": 11,
+            "characters": 3828
+          },
+          {
+            "number": 12,
+            "characters": 4343
+          },
+          {
+            "number": 13,
+            "characters": 3596
+          },
+          {
+            "number": 14,
+            "characters": 4095
+          },
+          {
+            "number": 15,
+            "characters": 4142
+          },
+          {
+            "number": 16,
+            "characters": 4368
+          },
+          {
+            "number": 17,
+            "characters": 1287
+          }
+        ]
+      },
+      {
+        "version": "after",
+        "pages": 13,
+        "type": {
+          "size": "14px",
+          "lineHeight": "18.2px"
+        },
+        "toc": {
+          "crivo-print-section-1": 3,
+          "crivo-print-section-2": 3,
+          "crivo-print-section-3": 3,
+          "crivo-print-section-4": 3,
+          "crivo-print-section-5": 3,
+          "crivo-print-section-6": 4,
+          "crivo-print-section-7": 4,
+          "crivo-print-section-8": 4,
+          "crivo-print-section-9": 4,
+          "crivo-print-section-10": 4,
+          "crivo-print-section-11": 4,
+          "crivo-print-section-12": 5,
+          "crivo-print-section-13": 5,
+          "crivo-print-section-14": 5,
+          "crivo-print-section-15": 5,
+          "crivo-print-section-16": 5,
+          "crivo-print-section-17": 6,
+          "crivo-print-section-18": 6,
+          "crivo-print-section-19": 6,
+          "crivo-print-section-20": 6,
+          "crivo-print-section-21": 6,
+          "crivo-print-section-22": 7,
+          "crivo-print-section-23": 7,
+          "crivo-print-section-24": 7,
+          "crivo-print-section-25": 7,
+          "crivo-print-section-26": 7,
+          "crivo-print-section-27": 7,
+          "crivo-print-section-28": 8,
+          "crivo-print-section-29": 8,
+          "crivo-print-section-30": 8,
+          "crivo-print-section-31": 8,
+          "crivo-print-section-32": 8,
+          "crivo-print-section-33": 9,
+          "crivo-print-section-34": 9,
+          "crivo-print-section-35": 9,
+          "crivo-print-section-36": 9,
+          "crivo-print-section-37": 10,
+          "crivo-print-section-38": 10,
+          "crivo-print-section-39": 10,
+          "crivo-print-section-40": 10,
+          "crivo-print-section-41": 10,
+          "crivo-print-section-42": 10,
+          "crivo-print-section-43": 11,
+          "crivo-print-section-44": 11,
+          "crivo-print-section-45": 11,
+          "crivo-print-section-46": 11,
+          "crivo-print-section-47": 11,
+          "crivo-print-section-48": 11,
+          "crivo-print-section-49": 12,
+          "crivo-print-section-50": 12,
+          "crivo-print-section-51": 12,
+          "crivo-print-section-52": 12,
+          "crivo-print-section-53": 12,
+          "crivo-print-section-54": 13
+        },
+        "links": 54,
+        "pageContent": [
+          {
+            "number": 1,
+            "characters": 303
+          },
+          {
+            "number": 2,
+            "characters": 1655
+          },
+          {
+            "number": 3,
+            "characters": 5164
+          },
+          {
+            "number": 4,
+            "characters": 5401
+          },
+          {
+            "number": 5,
+            "characters": 5273
+          },
+          {
+            "number": 6,
+            "characters": 5452
+          },
+          {
+            "number": 7,
+            "characters": 5295
+          },
+          {
+            "number": 8,
+            "characters": 5535
+          },
+          {
+            "number": 9,
+            "characters": 5065
+          },
+          {
+            "number": 10,
+            "characters": 5257
+          },
+          {
+            "number": 11,
+            "characters": 5443
+          },
+          {
+            "number": 12,
+            "characters": 5304
+          },
+          {
+            "number": 13,
+            "characters": 1205
+          }
+        ]
+      }
+    ]
+  }
+]

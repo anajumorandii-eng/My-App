@@ -1,7 +1,7 @@
 import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { beforeEach, expect, it, vi } from 'vitest';
-import Aprofundamentos from './Aprofundamentos';
+import Aprofundamentos, { SavedReviewSummaries } from './Aprofundamentos';
 import { cacheStrategyGuides, strategyGuideUrl, type StrategyGuide } from '../lib/strategyGuides';
 import { printStrategyGuide } from '../lib/printStrategyGuide';
 
@@ -120,4 +120,44 @@ it('mantém os resumos de revisão na biblioteca própria sem apagar os aprofund
   expect(screen.getAllByRole('link', { name: /Abrir aprofundamento:/ })).toHaveLength(1);
   expect(screen.queryByText('Resumo para FUVEST')).toBeNull();
   expect(localStorage.getItem('crivo:strategy-guides:v1:guest')).toContain('review-summary:1');
+});
+
+const reviewGuide = (i: number): StrategyGuide => ({ ...guide(i), key: `review-${i}`, kind: 'review-summary', topicName: 'Geometria Plana', chapter: `Revisão ${i}`, selections: [{ topicId: 'mat_geometria_plana', topicName: 'Geometria Plana', chapter: '', cuts: ['Ângulos na circunferência'] }] });
+const openReviews = (path = '/meus-resumos-revisao') => render(<MemoryRouter initialEntries={[path]}><SavedReviewSummaries /></MemoryRouter>);
+it('biblioteca de revisões tem leitura própria e preserva busca e recortes ao voltar', () => {
+  cacheStrategyGuides(null, collection(guide(0), reviewGuide(1), reviewGuide(2)));
+  const before = localStorage.getItem('crivo:strategy-guides:v1:guest');
+  openReviews();
+  expect(screen.getByRole('heading', { name: 'Meus resumos de revisão' })).toBeInTheDocument();
+  expect(screen.queryByRole('link', { name: /Abrir aprofundamento:/ })).toBeNull();
+  fireEvent.change(screen.getByRole('searchbox'), { target: { value: 'angulos circunferencia' } });
+  expect(screen.getAllByRole('link', { name: /Abrir resumo de revisão:/ })).toHaveLength(2);
+  fireEvent.click(screen.getAllByRole('link', { name: /Abrir resumo de revisão:/ })[0]);
+  expect(screen.getByText('Explicação preservada número 2.')).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: 'Editar configurações desta revisão' })).toHaveAttribute('href', '/resumos-revisao?guia=review-2');
+  fireEvent.click(screen.getByRole('button', { name: 'Imprimir / Salvar em PDF' }));
+  expect(printStrategyGuide).toHaveBeenCalledWith(expect.any(HTMLElement), expect.stringContaining('Revisão —'));
+  fireEvent.click(screen.getByRole('link', { name: 'Voltar à biblioteca de resumos de revisão' }));
+  expect(screen.getByRole('searchbox')).toHaveValue('angulos circunferencia');
+  expect(localStorage.getItem('crivo:strategy-guides:v1:guest')).toBe(before);
+});
+it('biblioteca de revisões pagina, exclui apenas a seleção e mostra um estado vazio útil', async () => {
+  cacheStrategyGuides(null, collection(guide(0), ...Array.from({ length: 13 }, (_, i) => reviewGuide(i))));
+  openReviews();
+  expect(screen.getAllByRole('link', { name: /Abrir resumo de revisão:/ })).toHaveLength(12);
+  fireEvent.click(screen.getByRole('button', { name: 'Próxima' }));
+  fireEvent.click(screen.getByRole('link', { name: /Abrir resumo de revisão:/ }));
+  fireEvent.click(screen.getByRole('button', { name: 'Excluir material: Revisão 0' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Confirmar exclusão' }));
+  await waitFor(() => expect(screen.getAllByRole('link', { name: /Abrir resumo de revisão:/ })).toHaveLength(12));
+  expect(localStorage.getItem('crivo:strategy-guides:v1:guest')).toContain('Explicação preservada número 0.');
+});
+it('links entre bibliotecas não abrem materiais do tipo errado', () => {
+  cacheStrategyGuides(null, collection(guide(0)));
+  openReviews(`/meus-resumos-revisao?${new URLSearchParams({ guia: guide(0).key })}`);
+  expect(screen.getByText('Guia não encontrado nas cópias disponíveis')).toBeInTheDocument();
+  expect(screen.queryByText('Explicação preservada número 0.')).toBeNull();
+  fireEvent.click(screen.getByRole('link', { name: 'Voltar à biblioteca de resumos de revisão' }));
+  expect(screen.getByText('Sua biblioteca ainda não tem resumos de revisão')).toBeInTheDocument();
+  expect(screen.getByRole('link', { name: 'Criar resumo de revisão' })).toHaveAttribute('href', '/resumos-revisao');
 });

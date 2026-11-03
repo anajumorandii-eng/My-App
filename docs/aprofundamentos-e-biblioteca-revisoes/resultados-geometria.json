@@ -1,0 +1,77 @@
+[
+  {
+    "case": 1,
+    "before": 4,
+    "after": 3,
+    "font": "14px",
+    "contentIdentical": true,
+    "details": [
+      {
+        "version": "before",
+        "pages": 4,
+        "type": {
+          "size": "14px",
+          "lineHeight": "21px"
+        },
+        "toc": {
+          "crivo-print-section-1": 3,
+          "crivo-print-section-2": 3,
+          "crivo-print-section-3": 3,
+          "crivo-print-section-4": 3,
+          "crivo-print-section-5": 4,
+          "crivo-print-section-6": 4
+        },
+        "links": 6,
+        "pageContent": [
+          {
+            "number": 1,
+            "characters": 370
+          },
+          {
+            "number": 2,
+            "characters": 197
+          },
+          {
+            "number": 3,
+            "characters": 1827
+          },
+          {
+            "number": 4,
+            "characters": 874
+          }
+        ]
+      },
+      {
+        "version": "after",
+        "pages": 3,
+        "type": {
+          "size": "14px",
+          "lineHeight": "18.2px"
+        },
+        "toc": {
+          "crivo-print-section-1": 2,
+          "crivo-print-section-2": 2,
+          "crivo-print-section-3": 2,
+          "crivo-print-section-4": 2,
+          "crivo-print-section-5": 3,
+          "crivo-print-section-6": 3
+        },
+        "links": 6,
+        "pageContent": [
+          {
+            "number": 1,
+            "characters": 370
+          },
+          {
+            "number": 2,
+            "characters": 2159
+          },
+          {
+            "number": 3,
+            "characters": 741
+          }
+        ]
+      }
+    ]
+  }
+]

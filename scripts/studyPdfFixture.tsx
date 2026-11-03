@@ -7,12 +7,12 @@ import { nativeMathPrintStyles } from '../src/lib/printPdfFile';
 import records from '../src/data/deepSummaryContent.json';
 import { mockTopics } from '../src/data/mockData';
 
-export function fixture(subject: string, topic: string, stress = false) {
+export function fixture(subject: string, topic: string, stress = false, purpose = 'Revisão do gerador com conteúdo editorial disponível') {
   const chapters = mockTopics.find(entry => entry.name === topic)?.chapters ?? [topic];
   const selected = chapters.flatMap(chapter => records.filter(record => record.subject === subject && record.topic === chapter));
   if (!selected.length) throw new Error(`Missing editorial content: ${subject} / ${topic}`);
   const article = document.createElement('article');
-  Object.assign(article.dataset, { printSubject: subject, printTopic: topic, printBoard: 'FUVEST', printPurpose: 'Revisão do gerador com conteúdo editorial disponível' });
+  Object.assign(article.dataset, { printSubject: subject, printTopic: topic, printBoard: 'FUVEST', printPurpose: purpose });
   const markdown = selected.map(record => `## ${record.topic}\n\n` + record.sections.map(section => `### ${section.title}\n\n${section.content}`).join('\n\n')).join('\n\n');
   article.innerHTML = renderToStaticMarkup(<AiTextRenderer text={markdown} />);
   const editorialText = article.textContent;

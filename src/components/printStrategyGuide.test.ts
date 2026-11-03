@@ -121,8 +121,21 @@ it('revisão usa sumário e conteúdo no mesmo layout sem mudar a fonte ou o con
  expect(root.textContent).toContain('Explicação integral.');expect(root.textContent).toContain('Resposta integral.');
  expect(content.querySelector('[data-print-toc]')).toBeNull();
 });
-it('aprofundamento conserva a organização anterior',()=>{
+it('aprofundamento compartilha o fluxo compacto sem alterar a identidade da capa',()=>{
  const content=document.createElement('article');content.dataset.printPurpose='Aprofundamento';content.innerHTML='<h2>Seção</h2><p>Texto.</p>';
  const root=createStrategyPrintRoot(content,'Guia');expect(root).not.toHaveAttribute('data-print-review-compact');
+ expect(root).toHaveAttribute('data-print-deepening-compact');
+ expect(root.querySelector('[data-print-cover]')).toHaveAttribute('data-print-material','study');
+ expect(root.querySelector('[data-print-layout] > tbody > tr > td')?.firstElementChild).toHaveAttribute('data-print-toc');
+ expect(root.querySelector('[data-print-content]')).toHaveTextContent('Texto.');
+ expect(content.children).toHaveLength(2);
+});
+
+it('outras impressões não recebem a compactação de aprofundamento', () => {
+ const content = document.createElement('article');
+ content.dataset.printPurpose = 'Resolução de questão';
+ content.innerHTML = '<h2>Resolução</h2><p>Texto original.</p>';
+ const root = createStrategyPrintRoot(content, 'Questão');
+ expect(root).not.toHaveAttribute('data-print-deepening-compact');
  expect(root.children[1]).toHaveAttribute('data-print-toc');
 });
