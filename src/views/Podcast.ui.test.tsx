@@ -187,3 +187,26 @@ it('restaura a preferência salva e permite voltar ao foco geral das bancas pess
  expect(vi.mocked(requestAiTextStream).mock.calls[0][1]).toMatchObject({exam:'Geral',targetBoards:['FUVEST','UNICAMP']});
  expect(screen.queryByLabelText('Foco de vestibular')).not.toBeInTheDocument();
 });
+it('mantém as marcações junto ao áudio em cache e abre o acompanhamento pela lista', async () => {
+  vi.mocked(synthesizePodcastAudio).mockImplementation(async (_text,_voice,_options,control) => {
+    control?.onCues?.([{ start:0,end:2,text:'Vamos aprender.',speaker:1 },{ start:2.2,end:5,text:'Explique um exemplo.',speaker:2 }]);
+    return new Blob(['audio']);
+  });
+  render(<MemoryRouter><Podcast /></MemoryRouter>);
+  fireEvent.change(screen.getByLabelText('Título do episódio'), {target:{value:'Roteiro em cache'}});
+  fireEvent.click(screen.getByRole('button',{name:'Gerar meu podcast'}));
+  const play=await screen.findByRole('button',{name:'Reproduzir episódio Roteiro em cache'});
+  fireEvent.click(play);
+  await screen.findByRole('button',{name:'Acompanhar roteiro do episódio Roteiro em cache'});
+  fireEvent.click(screen.getByRole('button',{name:'Acompanhar roteiro do episódio Roteiro em cache'}));
+  const audio=screen.getByLabelText('Áudio de Roteiro em cache') as HTMLAudioElement;
+  audio.currentTime=3;fireEvent.timeUpdate(audio);
+  expect(screen.getByRole('region',{name:'Roteiro para acompanhar o áudio'}).querySelector('[aria-current="true"]')).toHaveTextContent('Explique um exemplo.');
+  fireEvent.pause(audio);
+  const calls=vi.mocked(synthesizePodcastAudio).mock.calls.length;
+  fireEvent.click(screen.getByRole('button',{name:'Reproduzir episódio Roteiro em cache'}));
+  await waitFor(()=>expect(screen.getByLabelText('Áudio de Roteiro em cache')).toHaveAttribute('src','blob:podcast'));
+  expect(vi.mocked(synthesizePodcastAudio).mock.calls.length).toBe(calls);
+  audio.currentTime=1;fireEvent.timeUpdate(audio);
+  expect(screen.getByRole('region',{name:'Roteiro para acompanhar o áudio'}).querySelector('[aria-current="true"]')).toHaveTextContent('Vamos aprender.');
+});

@@ -1,3 +1,4 @@
+import { podcastWavDuration, readPodcastCues, type PodcastCue } from './podcastTiming';
 import { splitPodcastScript, mergePodcastWav } from './podcastChunks';
 import type { PodcastSpeechOptions } from './podcastConfig';
 import { getFirebaseIdToken } from './auth';
@@ -19,9 +20,11 @@ interface PodcastAudioErrorBody {
 }
 
 // A autenticação acompanha todos os trechos porque a síntese tem custo por uso.
-export async function synthesizePodcastAudio(text: string, voiceName: string, options?: PodcastSpeechOptions, control?: { signal?: AbortSignal; onProgress?: (completed: number, total: number) => void }): Promise<Blob> {
+export async function synthesizePodcastAudio(text: string, voiceName: string, options?: PodcastSpeechOptions, control?: { signal?: AbortSignal; onProgress?: (completed: number, total: number) => void; onCues?: (cues: PodcastCue[]) => void }): Promise<Blob> {
   const chunks = splitPodcastScript(text, options?.speakers === 2);
   const parts: Uint8Array[] = [];
+  const cues: PodcastCue[] = [];
+  let offset = 0;
   const idToken = await getFirebaseIdToken();
   if (!idToken) {
     throw new PodcastAudioError('Entre na sua conta para ouvir com voz natural.', 401, 'AUTH_REQUIRED');
@@ -47,10 +50,19 @@ export async function synthesizePodcastAudio(text: string, voiceName: string, op
       );
     }
 
-    parts.push(new Uint8Array(await response.arrayBuffer()));
+    const audio = new Uint8Array(await response.arrayBuffer());
+    const duration = podcastWavDuration(audio);
+    const marked = readPodcastCues(audio);
+    const normalize = (value: string) => value.replace(/^Host[12]:\s*/gm, '').replace(/\s+/g, ' ').trim();
+    const timing = marked.length && normalize(marked.map(cue => cue.text).join(' ')) === normalize(chunk) ? marked : [{ start: 0, end: duration, text: chunk }];
+    cues.push(...timing.map(cue => ({ ...cue, start: cue.start + offset, end: cue.end + offset })));
+    offset += duration; parts.push(audio);
     control?.onProgress?.(parts.length, chunks.length);
   }
-  return new Blob([mergePodcastWav(parts)], { type: 'audio/wav' });
+  control?.signal?.throwIfAborted();
+  const merged = mergePodcastWav(parts);
+  control?.onCues?.(cues);
+  return new Blob([merged], { type: 'audio/wav' });
 }
 
 export function podcastAudioErrorMessage(error: unknown): string {

@@ -31,3 +31,24 @@ it('cancelamento antes da síntese impede requisições ao servidor', async () =
   await expect(synthesizePodcastAudio('Explicação.', 'Kore', undefined, { signal: controller.signal })).rejects.toThrow();
   expect(fetch).not.toHaveBeenCalled();
 });
+
+it('entrega marcações do áudio com offsets reais entre requisições e ignora marcas de outro texto', async () => {
+ const {withPodcastCues}=await import('../lib/podcastTiming');
+ const markers:any[]=[];const chunks:string[]=[];
+ vi.stubGlobal('fetch',vi.fn(async(_url,init)=>{
+  const text=JSON.parse(init.body).text;chunks.push(text);
+  // The one-sample fixture keeps offsets measurable without a speech service.
+  return {ok:true,arrayBuffer:async()=>withPodcastCues(new Uint8Array(wav()),[{start:0,end:1/24000,text:chunks.length===1?text:'Texto de outro episódio.'}])};
+ }));
+ const script=`${'Primeiro parágrafo com conceitos. '.repeat(70)}\nFim do episódio.`;
+ const blob=await synthesizePodcastAudio(script,'Kore',undefined,{onCues:cues=>markers.push(...cues)});
+ expect(chunks.length).toBeGreaterThan(1);expect(markers.map(c=>c.text)).toEqual(chunks);
+ markers.forEach((cue,i)=>{expect(cue.start).toBeCloseTo(i/24000,10);expect(cue.end).toBeCloseTo((i+1)/24000,10);});
+ expect(blob.size).toBe(44+chunks.length*2);
+});
+it('uma falha não publica uma sequência parcial de marcações', async () => {
+ const onCues=vi.fn();let calls=0;
+ vi.stubGlobal('fetch',vi.fn(async()=>++calls===1?{ok:true,arrayBuffer:async()=>wav()}:{ok:false,status:503,json:async()=>({error:'Interrompido'})}));
+ await expect(synthesizePodcastAudio('Texto de teste. '.repeat(300),'Kore',undefined,{onCues})).rejects.toThrow('Interrompido');
+ expect(onCues).not.toHaveBeenCalled();
+});
