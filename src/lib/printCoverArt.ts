@@ -6,15 +6,16 @@ import mathematics from '../assets/print/atlas-mathematics.jpg?inline';
 import geography from '../assets/print/atlas-geography.jpg?inline';
 import history from '../assets/print/atlas-history.jpg?inline';
 import literature from '../assets/print/atlas-literature.jpg?inline';
+import language from '../assets/print/atlas-language.jpg?inline';
 import { selectCoverTheme, type PrintCoverContext } from './printCoverSpec';
-const plates = { biology, blood, chemistry, physics, mathematics, geography, history, literature };
+const plates = { biology, blood, chemistry, physics, mathematics, geography, history, literature, language };
 export function coverMaterial(context: PrintCoverContext) {
   return /^revis[aã]o\b/i.test(context.purpose || '') ? 'review' : 'study';
 }
 /** Standard art is a contingency, not a generated illustration for this file. */
 export function printCoverArt(context: PrintCoverContext) {
   const key = selectCoverTheme(context);
-  const fallbackTheme = key === 'language' || key === 'writing' ? 'literature'
+  const fallbackTheme = key === 'writing' ? 'language'
     : key === 'philosophy' || key === 'sociology' ? 'history' : key;
   return { key, src: plates[fallbackTheme] };
 }

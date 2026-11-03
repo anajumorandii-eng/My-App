@@ -402,3 +402,14 @@ test('recorte específico chega antes da direção de arte e não carrega o inve
  assert.doesNotMatch(wave,/pendulum, prism, lenses, a spring-mass apparatus/);
  assert.doesNotMatch(ecology,/leaf specimens, a cell, DNA and microscopy/);
 });
+
+test('pedido de Português contém orientação própria antes da estética e evita personificações', () => {
+  for (const purpose of ['Aprofundamento','Revisão aprofundada']) {
+    const prompt=buildCoverImagePrompt({subject:'Português',topic:'Gramática',subtopic:'Orações subordinadas',purpose});
+    assert.ok(prompt.indexOf('Sentence structure') < prompt.indexOf('Apply the approved'));
+    assert.match(prompt,/Do not depict any woman, man/);
+    assert.match(prompt,/textual relationship is the subject/);
+    assert.match(prompt,/every supporting object can be justified/);
+    assert.match(prompt,/No text, lettering, labels, borders/);
+  }
+});
