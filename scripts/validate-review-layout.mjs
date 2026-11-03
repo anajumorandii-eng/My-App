@@ -4,6 +4,7 @@ import {execFileSync} from 'node:child_process';
 import {chromium} from '@playwright/test';
 import {renderStudyPdf} from '../server/http/studyPdf.ts';
 import {readSectionPages} from '../server/http/studyPdfPagination.ts';
+const material=process.env.CRIVO_LAYOUT_MATERIAL==='deepening'?'deepening':'review';
 const output=process.env.CRIVO_LAYOUT_OUTPUT||'/tmp/crivo-review-layout/results';await fs.mkdir(output,{recursive:true});
 const inputFiles=process.argv.slice(2);assert.ok(inputFiles.length,'Pass source HTML files, never PDF page images.');
 const baseline=new URL('../src/lib/printStylesBaseline.audit.ts',import.meta.url);
@@ -17,15 +18,15 @@ try{
  for(const [index,file] of inputFiles.entries()){
   const source=await fs.readFile(file,'utf8');const reports=[];
   for(const version of ['before','after']){
-   const data=await page.evaluate(({source,css,version})=>{
+   const data=await page.evaluate(({source,css,version,material})=>{
     const doc=new DOMParser().parseFromString(source,'text/html');doc.querySelector('style').textContent=css;
-    const root=doc.querySelector('[data-crivo-print-root]');root.toggleAttribute('data-print-review-compact',version==='after');
+    const root=doc.querySelector('[data-crivo-print-root]');root.removeAttribute('data-print-review-compact');root.removeAttribute('data-print-deepening-compact');root.toggleAttribute(`data-print-${material}-compact`,version==='after');
     const content=doc.querySelector('[data-print-content]');
     if(version==='after') content.before(doc.querySelector('[data-print-toc]'));
     else root.insertBefore(doc.querySelector('[data-print-toc]'),doc.querySelector('[data-print-layout]'));
     const snapshot={text:content.textContent,svg:[...content.querySelectorAll('svg')].map(n=>n.outerHTML),tables:[...content.querySelectorAll('table')].map(n=>n.textContent),headings:[...content.querySelectorAll('h1,h2,h3,h4,summary')].map(n=>n.textContent),toc:[...doc.querySelectorAll('[data-toc-page]')].map(n=>n.dataset.tocPage)};
     return {html:doc.documentElement.outerHTML,snapshot};
-   },{source,css:styles[version],version});
+   },{source,css:styles[version],version,material});
    await page.setContent(data.html);await page.emulateMedia({media:'print'});await page.evaluate(()=>document.fonts.ready);
    const type=await page.locator('[data-print-content] p').first().evaluate(p=>({size:getComputedStyle(p).fontSize,lineHeight:getComputedStyle(p).lineHeight}));
    const pdf=await renderStudyPdf(data.html);const stem=`${index+1}-${version}`;await fs.writeFile(`${output}/${stem}.pdf`,pdf);await fs.writeFile(`${output}/${stem}.html`,data.html);

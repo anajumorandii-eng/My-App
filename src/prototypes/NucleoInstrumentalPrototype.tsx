@@ -331,6 +331,17 @@ export const SCREENS: InstrumentalScreen[] = [
     action: "Ver estratégia",
   },
   {
+    key: "meus-resumos-revisao",
+    label: "Meus resumos de revisão",
+    title: "Retome suas revisões salvas.",
+    summary: "Resumos por matéria, tópico e banca, com leitura e exportação próprias.",
+    kind: "library",
+    icon: BookText,
+    subject: "Português",
+    topic: "Biblioteca de revisões",
+    action: "Abrir biblioteca",
+  },
+  {
     key: "aprofundamentos",
     label: "Meus aprofundamentos",
     title: "Retome o que você aprofundou.",

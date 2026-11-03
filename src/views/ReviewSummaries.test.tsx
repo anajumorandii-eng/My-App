@@ -13,7 +13,12 @@ vi.mock('../lib/strategyGuides', async () => ({ ...await vi.importActual('../lib
 vi.mock('../components/AiText', () => ({ AiText: ({ text }: { text: string }) => <div>{text}</div> }));
 import ReviewSummaries from './ReviewSummaries';
 import { cacheStrategyGuides, readStrategyGuides } from '../lib/strategyGuides';
-const mount = () => render(<MemoryRouter><ReviewSummaries /></MemoryRouter>);
+const mount = () => {
+ const view = render(<MemoryRouter><ReviewSummaries /></MemoryRouter>);
+ // Existing saved-material flows deliberately open the optional quick access.
+ fireEvent.click(screen.getByText('Abrir revisão salva nesta tela'));
+ return view;
+};
 
 it('permite excluir uma revisão antiga e gerar uma nova sem apagar aprofundamentos', async () => {
   const old = { key: 'review-old', kind: 'review-summary' as const, subject: 'Biologia', topicId: 'bio', topicName: 'Revisão antiga', chapter: '', board: '', text: 'Texto antigo', savedAt: '2025-01-01T00:00:00Z' };
@@ -309,4 +314,21 @@ it('atualidades aparece na lista de matérias e o tema envia a fonte datada', as
   fireEvent.change(screen.getByLabelText('Matéria do resumo'),{target:{value:'Biologia'}});
   expect(screen.getByLabelText('Material de origem')).toHaveValue('catalog');
   expect(screen.getByLabelText('Tipo de material')).toHaveValue('disciplinary');
+});
+
+it('abre a configuração de uma revisão pela biblioteca sem regenerar ou perder recortes', async () => {
+ const { normalizeReviewOptions } = await import('../lib/strategicReview');
+ cacheStrategyGuides(null, { 'review-link': { key: 'review-link', kind: 'review-summary', subject: 'Matemática', topicId: 'mat_geometria_plana', topicName: 'Geometria Plana', chapter: '', board: 'FUVEST', text: 'Texto integral salvo para edição.', savedAt: '2026-10-20T12:00:00Z', reviewOptions: normalizeReviewOptions({ boards: ['FUVEST'], topicCuts: { mat_geometria_plana: ['Área do círculo'] } }), selections: [{ topicId: 'mat_geometria_plana', topicName: 'Geometria Plana', chapter: '', cuts: ['Área do círculo'] }] } });
+ render(<MemoryRouter initialEntries={['/resumos-revisao?guia=review-link']}><ReviewSummaries /></MemoryRouter>);
+ expect(await screen.findByText('Texto integral salvo para edição.')).toBeInTheDocument();
+ fireEvent.click(screen.getByRole('button', { name: 'Editar configurações desta revisão' }));
+ expect(screen.getByLabelText('Área do círculo')).toBeChecked();
+ expect(mocks.generate).not.toHaveBeenCalled();
+ expect(screen.getByRole('link', { name: /Abrir biblioteca/ })).toHaveAttribute('href', '/meus-resumos-revisao');
+});
+
+it('criação aponta para a biblioteca separada e mantém o acesso rápido fechado inicialmente', () => {
+ render(<MemoryRouter><ReviewSummaries /></MemoryRouter>);
+ expect(screen.getByRole('link', { name: /Abrir biblioteca/ })).toHaveAttribute('href', '/meus-resumos-revisao');
+ expect(screen.getByText('Abrir revisão salva nesta tela').closest('details')).not.toHaveAttribute('open');
 });

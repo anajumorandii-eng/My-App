@@ -35,6 +35,7 @@ export function createStrategyPrintRoot(content: HTMLElement, title: string) {
   });
   const { cover, toc } = createPrintFrontMatter(printable, title);
   if (cover.dataset.printMaterial === 'review') root.dataset.printReviewCompact = '';
+  else if (/^aprofundamento\b/i.test(printable.dataset.printPurpose || '')) root.dataset.printDeepeningCompact = '';
 
   // The selected cover already owns these bytes; duplicating them in body
   // metadata can double the PDF request and exceed its size limit.
@@ -54,7 +55,7 @@ export function createStrategyPrintRoot(content: HTMLElement, title: string) {
   }
   printable.dataset.printContent = '';
   const cell = layout.createTBody().insertRow().insertCell();
-  if (root.hasAttribute('data-print-review-compact')) {
+  if (root.hasAttribute('data-print-review-compact') || root.hasAttribute('data-print-deepening-compact')) {
     cell.append(toc, printable);
     root.append(cover, layout);
   } else {

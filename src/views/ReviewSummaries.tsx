@@ -15,7 +15,7 @@ import { useStudyTargets } from '../hooks/useStudyTargets';
 import { useErrorReviewHistory } from '../hooks/useErrorReviewHistory';
 import { AiRequestError, requestAiTextStream } from '../lib/aiClient';
 import { loadStudyPacket } from '../lib/loadStudyPacket';
-import { reviewSummaryKey, selectReviewSummaries } from '../lib/reviewSummaries';
+import { isReviewSummary, reviewSummaryKey, selectReviewSummaries } from '../lib/reviewSummaries';
 import { normalizeReviewOptions, reviewBoards, reviewBoard, reviewBoardLabels, reviewDepths, reviewScopes, reviewScopeLabels, reviewSelectionLabel, splitReviewAnswers, type ReviewOptions, type ReviewScope } from '../lib/strategicReview';
 import { reviewErrorHistory } from '../lib/reviewPersonalization';
 import { renderStudyReference, type StudyPacket } from '../lib/studySources';
@@ -35,7 +35,7 @@ const CURRENT_OPTION = '__atualidades__';
 
 export default function ReviewSummaries() {
   const { user } = useAuth();
-  return <ReviewSummariesContent key={user?.uid ?? 'guest'} uid={user?.uid ?? null} />;
+  return <div className="ni-main"><ReviewSummariesContent key={user?.uid ?? 'guest'} uid={user?.uid ?? null} /></div>;
 }
 function ReviewSummariesContent({ uid }: { uid: string | null }) {
   const [params] = useSearchParams();
@@ -124,6 +124,15 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
     setOptions(normalizeReviewOptions(guide.reviewOptions ?? { boards: guide.targetBoards ?? (guide.board ? [guide.board] : []) }));
     setOpenedKey(guide.key); setCreatedRevision(''); setConfigurationOpen(false);
   };
+  const restoredGuide = useRef('');
+  const requestedGuide = params.get('guia') ?? '';
+  useEffect(() => {
+    if (!requestedGuide || restoredGuide.current === requestedGuide || !Object.hasOwn(guides, requestedGuide)) return;
+    const guide = guides[requestedGuide];
+    if (!isReviewSummary(guide)) return;
+    restoredGuide.current = requestedGuide;
+    openSaved(guide);
+  }, [requestedGuide, guides]);
   const canGenerate = options.sourceMode === 'provided' ? Boolean(options.sourceText.trim() && options.sourceTitle.trim()) : Boolean(topic);
   const generate = async () => {
     if (busy.current || pdfBusy || !canGenerate) return;
@@ -176,15 +185,15 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
   const legacy = Boolean(current && !current.reviewOptions && !generating);
   const selectionDescription = legacy ? `${current!.board || 'Geral'} · Versão anterior: etapa e profundidade não registradas` : `${reviewSelectionLabel(displayedOptions)} · ${reviewDepths[displayedOptions.depth]}`;
   const title = `Revisão · ${current?.chapter || current?.topicName || (combined ? focusName : chapter || topic?.name || options.sourceTitle)}`;
-  return <section className="grid min-w-0 grid-cols-1 gap-5 [&_.field]:min-h-11 [&_summary]:min-h-11 xl:grid-cols-[minmax(0,1fr)_20rem]" aria-labelledby="review-summary-title">
-    <div className="flex flex-wrap items-center justify-between gap-3 xl:col-span-2">
+  return <section className="grid min-w-0 grid-cols-1 gap-5 [&_.field]:min-h-11 [&_summary]:min-h-11" aria-labelledby="review-summary-title">
+    <div className="flex flex-wrap items-center justify-between gap-3">
       <h2 id="review-summary-title" className="font-display text-2xl">Criar e abrir revisões</h2>
-      <div className="flex flex-wrap items-center gap-4 text-sm"><a className="underline" href="#saved-review-summaries">Meus resumos ({allSaved.length})</a>
+      <div className="flex flex-wrap items-center gap-4 text-sm"><Link className="underline" to="/meus-resumos-revisao">Meus resumos de revisão ({allSaved.length}) · Abrir biblioteca</Link>
         {current && <button type="button" disabled={working} className="underline disabled:opacity-50" onClick={() => setConfigurationOpen(true)}>Configurar nova revisão</button>}
       </div>
     </div>
     {showRecoveryNotice && <p role="status" aria-label="Atualização do aplicativo" className="ni-panel p-4 text-sm">O Crivo foi atualizado para carregar os arquivos necessários. Sua seleção foi mantida. Gere a revisão novamente para continuar; se o texto já estiver salvo, abra seu resumo e use Exportar revisão em PDF.</p>}
-    <details ref={configurationRef} className="ni-panel min-w-0 xl:col-start-1" open={configurationOpen} onToggle={event => setConfigurationOpen(event.currentTarget.open)}>
+    <details ref={configurationRef} className="ni-panel min-w-0" open={configurationOpen} onToggle={event => setConfigurationOpen(event.currentTarget.open)}>
       <summary className="cursor-pointer p-4 text-sm font-semibold">Criar revisão · {subject} · {reviewDepths[options.depth]}</summary>
       <div className="px-5 pb-5 space-y-3">
       <p className="text-sm text-[var(--dim)]">Escolha o conteúdo e o foco. A revisão inclui explicações, treino e recuperação ativa.</p>
@@ -263,7 +272,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
       {saveMessage && <p role="status" className="text-sm">{saveMessage}</p>}
       </div>
     </details>
-    {(stream || current) && <article className="ni-panel p-5 space-y-4 min-w-0 xl:col-start-1" aria-label="Resumo selecionado" aria-busy={generating}>
+    {(stream || current) && <article className="ni-panel p-5 space-y-4 min-w-0" aria-label="Resumo selecionado" aria-busy={generating}>
       <div ref={printContent as React.RefObject<HTMLDivElement>} data-print-subject={current?.subject || subject} data-print-topic={current?.topicName || topic?.name || options.sourceTitle} data-print-subtopic={displayedSelections.length > 1 || displayedSelections.some(item=>item.cuts?.length) ? recortes : current?.chapter || chapter || 'Visão geral'} data-print-board={legacy ? current!.board || 'Geral' : reviewSelectionLabel(displayedOptions)} data-print-purpose={legacy ? 'Revisão salva — etapa e profundidade não registradas' : reviewDepths[displayedOptions.depth]}>
         <h3 className="break-words font-display text-xl">{current?.subject || subject} · {current?.chapter || current?.topicName || (combined ? focusName : chapter || topic?.name || options.sourceTitle)}</h3>
         <p className="text-sm text-[var(--dim)]">{selectionDescription}</p>
@@ -279,7 +288,8 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
       {current && !generating && <button type="button" disabled={working} className="min-h-11 text-sm underline" onClick={()=>setConfigurationOpen(true)}>Editar configurações desta revisão</button>}
       <Link className="block underline text-sm" to={`/estrategias?${new URLSearchParams({ topic: topic?.id ?? topicId, ...(displayedOptions.topicCuts?{cuts:JSON.stringify(displayedOptions.topicCuts)}:{}), ...(options.boards.length === 1 ? { board: options.boards[0] } : {}), ...(displayedPrimaryChapter ? { chapter: displayedPrimaryChapter } : {}), ...(displayedSelections.length > 1 ? { topics: JSON.stringify(displayedSelections.slice(1)) } : {}) })}`}>Aprofundar este conteúdo</Link>
     </article>}
-    <section className="ni-panel min-w-0 self-start p-5 space-y-4 xl:col-start-2 xl:row-start-2 xl:row-span-3" aria-labelledby="saved-review-summaries">
+    <details className="ni-panel min-w-0 p-5 space-y-4">
+      <summary className="min-h-11 cursor-pointer text-sm font-semibold">Abrir revisão salva nesta tela</summary>
       <h3 id="saved-review-summaries" className="font-display text-xl">Meus resumos de revisão ({allSaved.length})</h3>
       {loading && <p role="status">Carregando os resumos da conta…</p>}
       {error && <div role="alert"><p>{error}</p><button type="button" className="underline" onClick={reload}>Tentar carregar novamente</button></div>}
@@ -297,6 +307,6 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
         </button>
         <details className="text-sm"><summary className="cursor-pointer py-2 text-[var(--dim)]">Mais ações para {item.chapter || item.topicName}</summary><DeleteStudyMaterial key={item.key} title={item.chapter || item.topicName} disabled={working} remove={() => remove(item.key)} onDeleted={() => { if (current?.key === item.key) { setOpenedKey(''); setStream(''); setConfigurationOpen(true); } }} /></details>
       </li>)}</ul>
-    </section>
+    </details>
   </section>;
 }

@@ -28,6 +28,7 @@ const Laboratorio = lazy(() => import('./views/Laboratorio'));
 const Evolucao = lazy(() => import('./views/Evolucao'));
 const Prioridades = lazy(() => import('./views/Prioridades'));
 const Estrategias = lazy(() => import('./views/Estrategias'));
+const SavedReviewSummaries = lazy(() => import('./views/Aprofundamentos').then(module => ({ default: module.SavedReviewSummaries })));
 const Aprofundamentos = lazy(() => import('./views/Aprofundamentos'));
 const Conexoes = lazy(() => import('./views/Conexoes'));
 const Perfil = lazy(() => import('./views/Perfil'));
@@ -112,6 +113,7 @@ export default function App() {
                 <Route path="evolucao" element={<Evolucao />} />
                 <Route path="prioridades" element={<Prioridades />} />
                 <Route path="estrategias" element={<Estrategias />} />
+                <Route path="meus-resumos-revisao" element={<SavedReviewSummaries />} />
                 <Route path="aprofundamentos" element={<Aprofundamentos />} />
                 <Route path="conexoes" element={<Conexoes />} />
                 <Route path="perfil" element={<Perfil />} />
