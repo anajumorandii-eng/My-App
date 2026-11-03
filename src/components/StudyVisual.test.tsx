@@ -129,3 +129,20 @@ it('desenha o ciclo e diz que ele volta ao início', () => {
   expect(container.querySelector('[data-study-visual="cycle"]')).toBeTruthy();
   expect(screen.getByRole('img', { name: /Evaporação → Condensação → Precipitação → volta ao início/ })).toBeInTheDocument();
 });
+it('separa figuras e questões de verificação e mantém a referência no gabarito impresso',()=>{
+ const first={...flow,title:'Primeiro esquema',question:'V1. O que muda?'};
+ const second={...flow,title:'Segundo esquema',question:'V2. O que permanece?'};
+ const text=[first,second].map(v=>'```study-visual\n'+JSON.stringify(v)+'\n```').join('\n\n')+'\n\n## Gabarito da recuperação ativa\n\n### Respostas das perguntas visuais\n\n**V1.** Muda a resposta.\n\n**V2.** Permanece o processo.';
+ const {container,rerender}=render(<AiTextRenderer text={text}/>);
+ expect(screen.getByText('Figura 1 — Primeiro esquema')).toBeInTheDocument();
+ expect(screen.getByText('Figura 2 — Segundo esquema')).toBeInTheDocument();
+ expect(screen.getByText('Questão de verificação 1')).toBeInTheDocument();
+ expect(screen.getByText('Questão de verificação 2')).toBeInTheDocument();
+ expect(screen.getByText('Resposta da questão de verificação 1.')).toBeInTheDocument();
+ const root=createStrategyPrintRoot(container,'Revisão');
+ expect(root.textContent).toContain('Questão de verificação 2');
+ expect(root.textContent).toContain('Resposta da questão de verificação 2.');
+ expect(root.textContent).not.toMatch(/\bV[12]\./);
+ rerender(<AiTextRenderer text={'```study-visual\n'+JSON.stringify(second)+'\n```'}/>);
+ expect(screen.getByText('Figura 1 — Segundo esquema')).toBeInTheDocument();
+});

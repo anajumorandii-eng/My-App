@@ -1,4 +1,4 @@
-type Base = { title: string; caption: string; question: string };
+type Base = { figureNumber?: number; title: string; caption: string; question: string };
 export type StudyMolecule = { label: string; smiles: string };
 export type StudyVisual = Base & (
   { type: 'flow'; steps: string[] } |
@@ -116,6 +116,7 @@ export function parseStudyVisual(text: string): StudyVisual | undefined {
   try {
     const value = JSON.parse(text);
     if (!value || !label(value.title) || !label(value.caption, 1200) || !label(value.question, 600)) return;
+    if (value.figureNumber !== undefined && (!Number.isInteger(value.figureNumber) || value.figureNumber < 1 || value.figureNumber > 10000)) delete value.figureNumber;
     if (value.type === 'flow' && Array.isArray(value.steps) && value.steps.length >= 2 && value.steps.length <= 8 && value.steps.every((step: unknown) => label(step))) return value;
     if (value.type === 'bars' && label(value.unit, 80) && Array.isArray(value.data) && value.data.length >= 2 && value.data.length <= 12 && value.data.every((item: { label?: unknown; value?: unknown } | null) => item && label(item.label, 120) && typeof item.value === 'number' && Number.isFinite(item.value) && item.value >= 0)) return value;
     if (value.type === 'molecule' && molecule(value.molecule)) return value;
