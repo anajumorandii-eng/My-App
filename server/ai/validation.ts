@@ -1,6 +1,6 @@
 import { normalizeReviewOptions, reviewDepths, reviewScopes, reviewBoard, type ReviewOptions } from '../../src/lib/strategicReview';
 import { STUDY_SOURCE_CHAR_LIMIT } from '../../src/lib/studySources';
-import { DEFAULT_PODCAST_SETTINGS, PODCAST_FORMATS, PODCAST_LEVELS, PODCAST_PACES, PODCAST_TONES, PODCAST_HOST_STYLES } from '../../src/lib/podcastConfig';
+import { DEFAULT_PODCAST_SETTINGS, podcastTargetBoards, PODCAST_FORMATS, PODCAST_LEVELS, PODCAST_PACES, PODCAST_TONES, PODCAST_HOST_STYLES } from '../../src/lib/podcastConfig';
 import { AiValidationError } from './errors';
 import { AiTask } from './types';
 
@@ -237,6 +237,7 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
       };
       const speakers = payload.speakers === undefined ? 1 : requiredNumber(payload, 'speakers', 1, 2);
       const durationMinutes = payload.durationMinutes === undefined ? 5 : requiredNumber(payload, 'durationMinutes', 2, 15);
+      const exam = optionalString(payload, 'exam', 100) ?? 'Geral';
       if (!Number.isInteger(speakers) || !Number.isInteger(durationMinutes)) throw new AiValidationError('Participantes e duração devem ser inteiros.');
       return {
         speakers, durationMinutes,
@@ -248,9 +249,9 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
         cohostStyle: choice('cohostStyle', PODCAST_HOST_STYLES, defaults.cohostStyle),
         focus: optionalString(payload, 'focus', 2000),
         sourceText: optionalString(payload, 'sourceText', STUDY_SOURCE_CHAR_LIMIT),
-        targetBoards: studyBoards(payload),
+        targetBoards: podcastTargetBoards(exam, studyBoards(payload)),
         learnerReflection: optionalString(payload, 'learnerReflection', 6000),
-        exam: optionalString(payload, 'exam', 100) ?? 'Geral',
+        exam,
         title: requiredString(payload, 'title'),
         subject: requiredString(payload, 'subject'),
         topic: requiredString(payload, 'topic', 1200),

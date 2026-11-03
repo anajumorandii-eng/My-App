@@ -1,3 +1,4 @@
+import { useSearchParams } from 'react-router-dom';
 import { workStudyGuides } from '../data/workStudyGuides';
 import type { Topic } from '../types';
 import { StudyReflectionPanel } from '../components/StudyReflectionPanel';
@@ -20,7 +21,7 @@ import { usePodcastEpisodes } from '../hooks/usePodcastEpisodes';
 import { usePersonalPodcasts } from '../hooks/usePersonalPodcasts';
 import { usePodcastVoices } from '../hooks/usePodcastVoices';
 import { useAuth } from '../context/AuthContext';
-import { DEFAULT_PODCAST_SETTINGS, PODCAST_FORMATS, resolvePodcastVoices, selectedPodcastVoices, type PodcastSettings } from '../lib/podcastConfig';
+import { DEFAULT_PODCAST_SETTINGS, PODCAST_EXAMS, normalizePodcastExam, podcastTargetBoards, PODCAST_FORMATS, resolvePodcastVoices, selectedPodcastVoices, type PodcastSettings } from '../lib/podcastConfig';
 import { splitPodcastScript } from '../lib/podcastChunks';
 import { summaryCurriculum } from '../data/summaryCurriculum';
 import type { PodcastEpisode } from '../types';
@@ -36,7 +37,7 @@ export default function Podcast() {
   const { profile, updateProfile, syncError: profileError, loading: profileLoading, isPersisted: profilePersisted } = useUserProfile();
   const goals = useStudentGoals();
   const targets = resolveStudyTargets(profile, Boolean(profilePersisted), goals.goals, goals.isPersisted);
-  const params = new URLSearchParams(typeof window === 'undefined' ? '' : window.location.search);
+  const [params, setParams] = useSearchParams();
   const [studyTopicId, setStudyTopicId] = useState(params.get('topic') ?? (params.get('work') ? `obra:${params.get('work')}` : ''));
   const [studyChapter, setStudyChapter] = useState(params.get('chapter') ?? '');
   const [packetState, setPacketState] = useState<{ key: string; packet?: StudyPacket; error?: string } | null>(null);
@@ -48,8 +49,9 @@ export default function Podcast() {
   const { voices, loading: voicesLoading, error: voicesError, retry: retryVoices } = usePodcastVoices();
   const panelVoices = selectedPodcastVoices(voices);
   const savedSettings: PodcastSettings = { ...DEFAULT_PODCAST_SETTINGS, ...(profile.podcastVoiceName ? { voiceName: profile.podcastVoiceName } : {}), ...profile.podcastSettings };
-  const settings: PodcastSettings = { ...savedSettings, ...resolvePodcastVoices(savedSettings.voiceName, savedSettings.secondVoice, panelVoices) };
-  const studyBoards = params.get('board') ? [params.get('board')!] : settings.exam === 'Geral' ? targets.map(item => item.board) : [settings.exam];
+  const settings: PodcastSettings = { ...savedSettings, ...resolvePodcastVoices(savedSettings.voiceName, savedSettings.secondVoice, panelVoices), exam: normalizePodcastExam(params.get('board') || savedSettings.exam) };
+  const studyBoards = podcastTargetBoards(settings.exam, targets.map(item => item.board));
+  const examChoices = { ...PODCAST_EXAMS, ...Object.fromEntries([...targets.map(item => item.board), settings.exam].map(normalizePodcastExam).filter(board => !Object.hasOwn(PODCAST_EXAMS, board)).map(board => [board, board])) };
   const packetKey = JSON.stringify([studyTopicId, studyChapter, studyBoards]);
   const studyPacket = packetState?.key === packetKey ? packetState.packet : undefined;
   const [title, setTitle] = useState('');
@@ -76,6 +78,7 @@ export default function Podcast() {
   const controller = useRef<AbortController | null>(null);
 
   const change = <K extends keyof PodcastSettings>(key: K, value: PodcastSettings[K]) => {
+    if (key === 'exam') setParams(previous => { const next = new URLSearchParams(previous); next.delete('board'); return next; }, { replace: true });
     updateProfile(prev => ({ ...prev, podcastSettings: { ...DEFAULT_PODCAST_SETTINGS, ...(prev.podcastVoiceName ? { voiceName: prev.podcastVoiceName } : {}), ...prev.podcastSettings, [key]: value } }), ['podcastSettings']);
   };
   useEffect(() => {
@@ -198,12 +201,15 @@ export default function Podcast() {
     {(error || profileError || personalError || catalogError) && <div role="alert" className="rounded-xl border border-rose-500/30 bg-rose-500/10 p-3 mb-4 text-sm text-[var(--text)]">{error || profileError || personalError || catalogError}</div>}
     <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 mb-6">
       <section className="ni-panel p-5 sm:p-6"><fieldset disabled={generating} className="space-y-5 min-w-0"><legend className="flex items-center gap-2 text-base font-semibold mb-4"><BookOpen size={18} /> 1. O que vamos estudar?</legend>
+        <div className="space-y-2">
+          <PodcastSelect label="Banca do podcast" value={settings.exam} choices={examChoices} disabled={preferencesBlocked} onChange={value => change('exam', value)} />
+          <p className="text-sm text-[var(--dim)]" aria-live="polite">{settings.exam !== 'Geral' ? `Foco em ${PODCAST_EXAMS[settings.exam] || settings.exam}: fontes, exemplos e roteiro direcionados a esta banca.` : targets.length ? `Foco geral: ${studyBoards.map(board => PODCAST_EXAMS[board] || board).join(' · ')}. Escolha uma banca acima para concentrar o episódio.` : 'Foco geral nas bancas disponíveis. Escolha uma banca acima para concentrar o episódio.'}</p>
+        </div>
         <section className="rounded-xl border border-[var(--line)] p-4 space-y-3" aria-label="Estudo com fontes e provas">
           <h2 className="font-display text-lg">Estudo aprofundado com fontes e provas</h2>
           <p className="text-sm text-[var(--dim)]">Escolha um tópico para reunir resumos e questões das bancas consideradas. O roteiro e a transcrição preservam o índice de fontes.</p>
           <label className="block text-sm">Tópico do caderno de áudio<select className={podcastInputClass} value={studyTopicId} onChange={event => { setStudyTopicId(event.target.value); setStudyChapter(''); }}><option value="">Criar livremente pelo tema</option>{studyTopics.map(topic => <option key={topic.id} value={topic.id}>{topic.subject} · {topic.name}</option>)}</select></label>
           {studyTopic && <label className="block text-sm">Capítulo do caderno de áudio<select className={podcastInputClass} value={studyChapter} onChange={event => setStudyChapter(event.target.value)}><option value="">Visão geral</option>{studyTopic.chapters?.map(chapter => <option key={chapter}>{chapter}</option>)}</select></label>}
-          <p className="text-xs">{targets.length ? `Suas bancas: ${targets.map(item => item.board).join(' · ')}. Com foco Geral, todas participam do recorte.` : 'Sem bancas pessoais confirmadas: o foco Geral usa as origens disponíveis nas questões.'}</p>
           <button type="button" className="text-sm underline" disabled={preferencesBlocked || generating} onClick={() => updateProfile(previous => ({ ...previous, podcastSettings: { ...settings, durationMinutes: 12, level: 'avancado', format: 'conversa', hostStyle: 'analitico', cohostStyle: 'curioso' } }), ['podcastSettings'])}>Preparar conversa aprofundada de 12 minutos</button>
           {studyTopic && !packetState && <p role="status">Reunindo fontes e questões…</p>}
           {packetState?.key === packetKey && packetState.error && <p role="alert">{packetState.error}</p>}
@@ -217,7 +223,7 @@ export default function Podcast() {
         <label className="block space-y-1.5"><span className="text-xs font-medium text-[var(--dim)]">O que você quer aprender? (opcional)</span><textarea rows={3} className={podcastInputClass} value={focus} maxLength={2000} onChange={e => setFocus(e.target.value)} placeholder="Ex.: Compare osmose e difusão, explique com exemplos e me faça perguntas no final." /></label>
         {!selected.length && !sourceText.trim() && <p className="text-xs text-[var(--dim)]">Você pode gerar o episódio só com o tema. Resumos e materiais são opcionais; se quiser, use-os para direcionar a explicação.</p>}
       </fieldset></section>
-      <section className="ni-panel p-5 sm:p-6"><fieldset disabled={generating || preferencesBlocked} className="min-w-0"><legend className="text-base font-semibold mb-5">2. Monte sua experiência</legend><PodcastSettingsPanel examChoices={targets.map(item => item.board)} settings={settings} change={change} voiceOptions={panelVoices} onPreview={previewVoice} previewLoading={Boolean(loadingId)} /></fieldset>
+      <section className="ni-panel p-5 sm:p-6"><fieldset disabled={generating || preferencesBlocked} className="min-w-0"><legend className="text-base font-semibold mb-5">2. Monte sua experiência</legend><PodcastSettingsPanel settings={settings} change={change} voiceOptions={panelVoices} onPreview={previewVoice} previewLoading={Boolean(loadingId)} /></fieldset>
         {preferencesBlocked && <p className="text-xs text-[var(--dim)] mt-4">{profileLoading ? 'Carregando suas preferências…' : 'As preferências precisam ser carregadas antes de criar o episódio. Reabra a aba para tentar novamente.'}</p>}
         {voicesLoading && <p role="status" className="text-xs text-[var(--dim)] mt-4">Consultando vozes em português…</p>}
         {voicesError && <p role="alert" className="text-xs mt-4">{voicesError} <button type="button" onClick={retryVoices} className="underline">Tentar consultar novamente</button></p>}

@@ -29,7 +29,7 @@ describe('Controles com propósito acessível', () => {
   it('identifica o episódio ao reproduzir, carregar e parar', async () => {
     let finish!: (blob: Blob) => void;
     vi.mocked(synthesizePodcastAudio).mockImplementation(() => new Promise((resolve) => { finish = resolve; }));
-    render(<Podcast />);
+    render(<MemoryRouter><Podcast /></MemoryRouter>);
     fireEvent.click(screen.getByRole('button', { name: 'Reproduzir episódio Divisão celular' }));
     expect(screen.getByRole('button', { name: 'Carregando áudio do episódio Divisão celular' })).toBeDisabled();
     finish(new Blob(['audio']));
