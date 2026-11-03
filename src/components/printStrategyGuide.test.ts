@@ -139,3 +139,15 @@ it('outras impressões não recebem a compactação de aprofundamento', () => {
  expect(root).not.toHaveAttribute('data-print-deepening-compact');
  expect(root.children[1]).toHaveAttribute('data-print-toc');
 });
+
+it('Português e redação usam alternativa própria sem emprestar a prancha de Literatura', async () => {
+ const {printCoverArt}=await import('../lib/printCoverArt');
+ const portuguese=printCoverArt({subject:'Português',topic:'Sintaxe'});
+ const writing=printCoverArt({subject:'Redação',topic:'Argumentação'});
+ const literature=printCoverArt({subject:'Literatura',work:'Obra de teste'});
+ expect(portuguese.key).toBe('language');
+ expect(writing.key).toBe('writing');
+ expect(portuguese.src).not.toBe(literature.src);
+ expect(writing.src).toBe(portuguese.src);
+ expect(portuguese.src).toMatch(/^data:image\/jpeg;base64,/);
+});
