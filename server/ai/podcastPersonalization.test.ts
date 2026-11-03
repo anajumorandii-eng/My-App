@@ -31,7 +31,7 @@ test('aceita combinação de títulos de três fontes longas', () => {
 test('aprofundamento multibanca mantém fontes e exige mecanismo, limites e recuperação', () => {
   const payload = validateAiPayload('podcast-script', { ...base, targetBoards: ['Fuvest', 'Unicamp', 'UNESP'], level: 'avancado', sourceText: '[F1] Questão fornecida' });
   const prompt = buildAiPrompt('podcast-script', payload);
-  assert.match(prompt, /Fuvest, Unicamp, UNESP/);
+  assert.match(prompt, /FUVEST, UNICAMP, UNESP/);
   assert.match(prompt, /mecanismo causal/);
   assert.match(prompt, /recuperação sem consulta/);
   assert.match(prompt, /F1/);
@@ -45,4 +45,20 @@ test('a reflexão orienta perguntas sobre o entendimento, sem simular audição 
   assert.match(prompt, /comparar a explicação inicial e a revisada/);
   assert.match(prompt, /Áudio não transcrito não foi ouvido/);
   assert.match(prompt, /não consigo explicar o mecanismo/);
+});
+
+test('podcast de banca específica ignora outras bancas recebidas por cliente antigo', () => {
+ const payload=validateAiPayload('podcast-script',{...base,exam:'COMVEST',targetBoards:['FUVEST','ENEM']});
+ assert.deepEqual(payload.targetBoards,['UNICAMP']);
+ const prompt=buildAiPrompt('podcast-script',payload);
+ assert.match(prompt,/Banca exclusiva deste episódio: UNICAMP/);
+ assert.match(prompt,/Não distribua o tempo entre outras bancas/);
+ assert.match(prompt,/Sem fontes suficientes desta banca, declare a limitação/);
+ assert.doesNotMatch(prompt,/Bancas consideradas neste estudo|FUVEST|ENEM/);
+});
+test('foco geral continua admitindo várias bancas e chamadas antigas sem banca', () => {
+ const prompt=buildAiPrompt('podcast-script',validateAiPayload('podcast-script',{...base,exam:'Geral',targetBoards:['Fuvest','Unicamp']}));
+ assert.match(prompt,/Bancas consideradas neste estudo: FUVEST, UNICAMP/);
+ assert.doesNotMatch(prompt,/Banca exclusiva/);
+ assert.match(buildAiPrompt('podcast-script',validateAiPayload('podcast-script',base)),/origens disponíveis nas fontes/);
 });

@@ -1,3 +1,5 @@
+import { canonicalExamBoard } from './questionExamFilters';
+
 export const PODCAST_VOICE_OPTIONS = [
   { value: 'Charon', label: 'Charon · informativa' },
   { value: 'Kore', label: 'Kore · firme' },
@@ -62,4 +64,18 @@ export function resolvePodcastVoices(voiceName: string, secondVoice: string, voi
     else if (alternative && !available(voiceName)) resolved.voiceName = alternative;
   }
   return resolved;
+}
+
+export const PODCAST_EXAMS: Record<string, string> = {
+  Geral: 'Geral · todas as bancas', FUVEST: 'Fuvest', UNICAMP: 'Unicamp',
+  UNESP: 'Unesp', FAMERP: 'Famerp', UNIFESP: 'Unifesp', ENEM: 'ENEM',
+};
+export function normalizePodcastExam(value?: string): string {
+  const board = canonicalExamBoard(value || '');
+  return !board || board === 'GERAL' || board === 'TODAS AS BANCAS' ? 'Geral' : board;
+}
+/** One explicit choice governs sources and script, including older clients. */
+export function podcastTargetBoards(exam: string, available: readonly string[] = []): string[] {
+  const selected = normalizePodcastExam(exam);
+  return selected !== 'Geral' ? [selected] : [...new Set(available.map(normalizePodcastExam).filter(board => board !== 'Geral'))];
 }

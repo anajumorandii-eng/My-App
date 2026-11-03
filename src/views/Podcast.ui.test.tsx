@@ -4,8 +4,10 @@ import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/re
 import { afterEach, beforeEach, expect, it, vi } from 'vitest';
 import Podcast from './Podcast';
 import { requestAiTextStream } from '../lib/aiClient';
+import { loadStudyPacket } from '../lib/loadStudyPacket';
 import { synthesizePodcastAudio } from '../lib/podcastAudio';
-vi.mock('../hooks/useUserProfile', () => ({ useUserProfile: () => { const [profile, updateProfile] = useState({}); return { profile, updateProfile }; } }));
+const profileFixture = vi.hoisted(() => ({ initial: {} as Record<string, unknown> }));
+vi.mock('../hooks/useUserProfile', () => ({ useUserProfile: () => { const [profile, updateProfile] = useState(profileFixture.initial); return { profile, updateProfile, isPersisted: true }; } }));
 vi.mock('../hooks/usePodcastVoices', () => ({ usePodcastVoices: () => ({ voices: ['Achernar', 'Enceladus', 'Aoede', 'Zubenelgenubi', 'Algenib', 'Kore', 'Puck'].map(name => ({ value: `pt-BR-Chirp3-HD-${name}`, label: name })).concat([{ value: 'pt-BR-Wavenet-D', label: 'Wavenet-D' }]) }) }));
 vi.mock('../hooks/usePodcastEpisodes', () => ({ usePodcastEpisodes: () => ({ episodes: [] }) }));
 vi.mock('../lib/loadStudyPacket', () => ({ loadStudyPacket: vi.fn(async (topic: any) => ({ topicId: topic.id, chapter: '', referenceText: '[F1] Fonte de genética: separação dos alelos.', coverage: [], sources: [{ id: 'F1', title: 'Fonte de genética', kind: 'resumo', content: 'Separação dos alelos.', excerpt: false }] })) }));
@@ -14,7 +16,7 @@ vi.mock('../lib/podcastAudio', () => ({ synthesizePodcastAudio: vi.fn(), podcast
 vi.mock('../hooks/usePersonalPodcasts', () => ({ usePersonalPodcasts: () => { const [episodes, set] = useState<any[]>([]); return { episodes, saveEpisode: async (ep: any) => set(old => [ep, ...old]) }; } }));
 afterEach(cleanup);
 beforeEach(() => {
-  localStorage.clear();
+  localStorage.clear(); profileFixture.initial = {};
   vi.spyOn(HTMLMediaElement.prototype, 'pause').mockImplementation(() => {});
   vi.spyOn(HTMLMediaElement.prototype, 'play').mockResolvedValue();
   URL.createObjectURL = vi.fn(() => 'blob:podcast'); URL.revokeObjectURL = vi.fn();
@@ -22,7 +24,7 @@ beforeEach(() => {
   vi.mocked(synthesizePodcastAudio).mockResolvedValue(new Blob(['audio']));
 });
 it('gera usando escolhas de duração, foco e material; mantém a configuração do episódio no áudio', async () => {
-  render(<Podcast />);
+  render(<MemoryRouter><Podcast /></MemoryRouter>);
   fireEvent.change(screen.getByLabelText('Título do episódio'), { target: { value: 'Osmose do zero' } });
   fireEvent.change(screen.getByLabelText('Duração aproximada em minutos'), { target: { value: '12' } });
   fireEvent.change(screen.getByLabelText('Seu material de estudo (opcional)'), { target: { value: 'A membrana é seletiva.' } });
@@ -37,14 +39,14 @@ it('gera usando escolhas de duração, foco e material; mantém a configuração
 });
 it('mostra falha de geração sem disponibilizar roteiro incompleto', async () => {
   vi.mocked(requestAiTextStream).mockImplementation(async (_ep, _payload, delta) => { delta('Trecho parcial'); throw new Error('Serviço indisponível'); });
-  render(<Podcast />);
+  render(<MemoryRouter><Podcast /></MemoryRouter>);
   fireEvent.change(screen.getByLabelText('Título do episódio'), { target: { value: 'Teste' } });
   fireEvent.click(screen.getByRole('button', { name: 'Gerar meu podcast' }));
   expect(await screen.findByRole('alert')).toHaveTextContent('Serviço indisponível');
   expect(screen.queryByRole('button', { name: 'Reproduzir episódio Teste' })).not.toBeInTheDocument();
 });
 it('uma pessoa oculta a segunda voz e vozes iguais impedem gerar diálogo', () => {
-  render(<Podcast />);
+  render(<MemoryRouter><Podcast /></MemoryRouter>);
   fireEvent.change(screen.getByLabelText('Voz da pessoa 2'), { target: { value: 'pt-BR-Chirp3-HD-Achernar' } });
   expect(screen.getByRole('button', { name: 'Gerar meu podcast' })).toBeDisabled();
   fireEvent.click(screen.getByRole('button', { name: 'Uma pessoa' }));
@@ -52,7 +54,7 @@ it('uma pessoa oculta a segunda voz e vozes iguais impedem gerar diálogo', () =
 });
 
 it('permite gerar apenas pelo tema sem exigir material ou instruções', async () => {
-  render(<Podcast />);
+  render(<MemoryRouter><Podcast /></MemoryRouter>);
   fireEvent.change(screen.getByLabelText('Título do episódio'), { target: { value: 'Osmose' } });
   expect(screen.getByText('Você pode gerar o episódio só com o tema. Resumos e materiais são opcionais; se quiser, use-os para direcionar a explicação.')).toBeInTheDocument();
   fireEvent.click(screen.getByRole('button', { name: 'Gerar meu podcast' }));
@@ -61,7 +63,7 @@ it('permite gerar apenas pelo tema sem exigir material ou instruções', async (
 });
 
 it('o player gera o áudio do roteiro pronto antes de disponibilizar os controles de reprodução', async () => {
-  render(<Podcast />);
+  render(<MemoryRouter><Podcast /></MemoryRouter>);
   fireEvent.change(screen.getByLabelText('Título do episódio'), { target: { value: 'Osmose com som' } });
   fireEvent.click(screen.getByRole('button', { name: 'Gerar meu podcast' }));
   await screen.findByRole('heading', { name: 'Osmose com som', level: 2 });
@@ -73,7 +75,7 @@ it('o player gera o áudio do roteiro pronto antes de disponibilizar os controle
 });
 it('prévia bloqueada por política de autoplay mantém o áudio pronto para um toque no play', async () => {
   vi.mocked(HTMLMediaElement.prototype.play).mockRejectedValueOnce(new DOMException('Requires a user gesture', 'NotAllowedError'));
-  render(<Podcast />);
+  render(<MemoryRouter><Podcast /></MemoryRouter>);
   fireEvent.click(screen.getByRole('button', { name: 'Ouvir voz da pessoa 1' }));
   await waitFor(() => expect(synthesizePodcastAudio).toHaveBeenCalled());
   await waitFor(() => expect(screen.getByLabelText(/Áudio de Amostra/)).toHaveAttribute('src', 'blob:podcast'));
@@ -86,7 +88,7 @@ it('a prévia prepara a sessão de mídia e remove mudo ou volume zero antes de 
   const session = { type: 'ambient' };
   Object.defineProperty(navigator, 'audioSession', { configurable: true, value: session });
   try {
-    render(<Podcast />);
+    render(<MemoryRouter><Podcast /></MemoryRouter>);
     const audio = screen.getByLabelText('Áudio de podcast') as HTMLAudioElement;
     audio.muted = true; audio.volume = 0;
     fireEvent.click(screen.getByRole('button', { name: 'Ouvir voz da pessoa 1' }));
@@ -102,7 +104,7 @@ it('a prévia prepara a sessão de mídia e remove mudo ou volume zero antes de 
 });
 
 it('não inicia áudio do episódio anterior enquanto cria um novo roteiro', async () => {
-  render(<Podcast />);
+  render(<MemoryRouter><Podcast /></MemoryRouter>);
   fireEvent.change(screen.getByLabelText('Título do episódio'), { target: { value: 'Primeiro episódio' } });
   fireEvent.click(screen.getByRole('button', { name: 'Gerar meu podcast' }));
   await screen.findByRole('heading', { name: 'Primeiro episódio', level: 2 });
@@ -116,7 +118,7 @@ it('não inicia áudio do episódio anterior enquanto cria um novo roteiro', asy
 });
 
 it('mostra apenas as seis vozes escolhidas e inicia com Achernar e Enceladus', () => {
-  render(<Podcast />);
+  render(<MemoryRouter><Podcast /></MemoryRouter>);
   const first = screen.getByLabelText('Voz da pessoa 1') as HTMLSelectElement;
   const second = screen.getByLabelText('Voz da pessoa 2') as HTMLSelectElement;
   const expected = ['pt-BR-Chirp3-HD-Achernar', 'pt-BR-Chirp3-HD-Enceladus', 'pt-BR-Chirp3-HD-Aoede', 'pt-BR-Chirp3-HD-Zubenelgenubi', 'pt-BR-Wavenet-D', 'pt-BR-Chirp3-HD-Algenib'];
@@ -130,7 +132,7 @@ it('mostra apenas as seis vozes escolhidas e inicia com Achernar e Enceladus', (
 });
 
 it('o preparo aprofundado é explícito e mantém o comando da estudante', async () => {
-  render(<Podcast />);
+  render(<MemoryRouter><Podcast /></MemoryRouter>);
   fireEvent.change(screen.getByLabelText('Título do episódio'), { target: { value: 'Como sei se entendi osmose?' } });
   fireEvent.click(screen.getByRole('button', { name: 'Preparar conversa aprofundada de 12 minutos' }));
   fireEvent.click(screen.getByRole('button', { name: 'Gerar meu podcast' }));
@@ -146,4 +148,42 @@ it('reúne as fontes e a autoexplicação do tópico no mesmo pedido de podcast'
   fireEvent.click(screen.getByRole('button', { name: 'Gerar meu podcast' }));
   await waitFor(() => expect(requestAiTextStream).toHaveBeenCalled());
   expect(vi.mocked(requestAiTextStream).mock.calls[0][1]).toMatchObject({ sourceText: expect.stringContaining('[F1]'), learnerReflection: expect.stringContaining('Não sei explicar') });
+});
+
+it('banca visível orienta as fontes e o roteiro, e permanece no episódio após outra escolha', async () => {
+ profileFixture.initial={targetExams:['FUVEST','UNICAMP']};
+ render(<MemoryRouter><Podcast /></MemoryRouter>);
+ expect(screen.getByLabelText('Banca do podcast')).toHaveValue('Geral');
+ fireEvent.change(screen.getByLabelText('Banca do podcast'),{target:{value:'UNICAMP'}});
+ fireEvent.change(screen.getByLabelText('Tópico do caderno de áudio'),{target:{value:'bio_genetica'}});
+ await waitFor(()=>expect(loadStudyPacket).toHaveBeenLastCalledWith(expect.objectContaining({id:'bio_genetica'}),'',['UNICAMP']));
+ await screen.findByText('[F1] Fonte de genética');
+ fireEvent.click(screen.getByRole('button',{name:'Gerar meu podcast'}));
+ await waitFor(()=>expect(requestAiTextStream).toHaveBeenCalled());
+ expect(vi.mocked(requestAiTextStream).mock.calls[0][1]).toMatchObject({exam:'UNICAMP',targetBoards:['UNICAMP']});
+ await screen.findByRole('button',{name:/Reproduzir episódio/});
+ fireEvent.change(screen.getByLabelText('Banca do podcast'),{target:{value:'FUVEST'}});
+ expect(screen.getByLabelText('Banca do podcast')).toHaveValue('FUVEST');
+ expect(screen.getByLabelText('Player do podcast')).toHaveTextContent('min planejados · UNICAMP');
+ await waitFor(()=>expect(loadStudyPacket).toHaveBeenLastCalledWith(expect.objectContaining({id:'bio_genetica'}),'',['FUVEST']));
+});
+it('banca do link preenche o controle e pode ser trocada pela estudante', async () => {
+ render(<MemoryRouter initialEntries={['/podcast?board=COMVEST']}><Podcast /></MemoryRouter>);
+ expect(screen.getByLabelText('Banca do podcast')).toHaveValue('UNICAMP');
+ fireEvent.change(screen.getByLabelText('Banca do podcast'),{target:{value:'FUVEST'}});
+ fireEvent.change(screen.getByLabelText('Título do episódio'),{target:{value:'Teste de banca'}});
+ fireEvent.click(screen.getByRole('button',{name:'Gerar meu podcast'}));
+ await waitFor(()=>expect(requestAiTextStream).toHaveBeenCalled());
+ expect(vi.mocked(requestAiTextStream).mock.calls[0][1]).toMatchObject({exam:'FUVEST',targetBoards:['FUVEST']});
+});
+it('restaura a preferência salva e permite voltar ao foco geral das bancas pessoais', async () => {
+ profileFixture.initial={targetExams:['FUVEST','UNICAMP'],podcastSettings:{exam:'Fuvest'}};
+ render(<MemoryRouter><Podcast /></MemoryRouter>);
+ expect(screen.getByLabelText('Banca do podcast')).toHaveValue('FUVEST');
+ fireEvent.change(screen.getByLabelText('Banca do podcast'),{target:{value:'Geral'}});
+ fireEvent.change(screen.getByLabelText('Título do episódio'),{target:{value:'Comparação geral'}});
+ fireEvent.click(screen.getByRole('button',{name:'Gerar meu podcast'}));
+ await waitFor(()=>expect(requestAiTextStream).toHaveBeenCalled());
+ expect(vi.mocked(requestAiTextStream).mock.calls[0][1]).toMatchObject({exam:'Geral',targetBoards:['FUVEST','UNICAMP']});
+ expect(screen.queryByLabelText('Foco de vestibular')).not.toBeInTheDocument();
 });
