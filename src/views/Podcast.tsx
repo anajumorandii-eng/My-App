@@ -1,3 +1,4 @@
+import type { PodcastCue } from '../lib/podcastTiming';
 import { useSearchParams } from 'react-router-dom';
 import { workStudyGuides } from '../data/workStudyGuides';
 import type { Topic } from '../types';
@@ -70,9 +71,12 @@ export default function Podcast() {
   const [loadingId, setLoadingId] = useState<string | null>(null);
   const [progress, setProgress] = useState('');
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
+  const [audioCues, setAudioCues] = useState<PodcastCue[]>([]);
+  const [followRequest, setFollowRequest] = useState(0);
+  const playerRef = useRef<HTMLDivElement>(null);
   const [playbackNotice, setPlaybackNotice] = useState<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const cache = useRef(new Map<string, string>());
+  const cache = useRef(new Map<string, {url: string; cues: PodcastCue[]}>());
   const audioTask = useRef(0);
   const generationTask = useRef(0);
   const controller = useRef<AbortController | null>(null);
@@ -83,13 +87,13 @@ export default function Podcast() {
   };
   useEffect(() => {
     const urls = cache.current;
-    return () => { audioTask.current++; generationTask.current++; controller.current?.abort(); audioRef.current?.pause(); urls.forEach(url => URL.revokeObjectURL(url)); };
+    return () => { audioTask.current++; generationTask.current++; controller.current?.abort(); audioRef.current?.pause(); urls.forEach(url => URL.revokeObjectURL(url.url)); };
   }, []);
   useEffect(() => {
     audioTask.current++; generationTask.current++; controller.current?.abort(); audioRef.current?.pause();
-    setActive(null); setAudioUrl(null); setPlayingId(null); setLoadingId(null); setGenerating(false); setDraft(''); setError(null);
-    setPlaybackNotice(null); setTitle(''); setFocus(''); setSourceText(''); setSelected([]);
-    cache.current.forEach(url => URL.revokeObjectURL(url)); cache.current.clear();
+    setActive(null); setAudioUrl(null); setAudioCues([]); setPlayingId(null); setLoadingId(null); setGenerating(false); setDraft(''); setError(null);
+    setFollowRequest(0); setPlaybackNotice(null); setTitle(''); setFocus(''); setSourceText(''); setSelected([]);
+    cache.current.forEach(url => URL.revokeObjectURL(url.url)); cache.current.clear();
   }, [user?.uid]);
   useEffect(() => {
     let cancelled = false;
@@ -139,7 +143,7 @@ export default function Podcast() {
       splitPodcastScript(result.text, snapshot.speakers === 2);
       const episode: PersonalPodcast = { id: crypto.randomUUID(), topicId: sourceIds[0] ?? 'personalizado', title: inputTitle, subject: inputSubject, durationMinutes: snapshot.durationMinutes, script: result.text, settings: snapshot, createdAt: new Date().toISOString(), sourceLabels: labels, focus: inputFocus, targetBoards: studyBoards, ...(studyPacket ? { studyPacket: result.serverSources?.length ? { ...studyPacket, sources: [...studyPacket.sources, ...result.serverSources] } : studyPacket } : result.serverSources?.length ? { studyPacket: { topicId: sourceIds[0] ?? 'personalizado', chapter: '', coverage: [], referenceText: material, sources: result.serverSources } } : {}) };
       saveEpisode(episode);
-      if (task === generationTask.current) { setActive(episode); setAudioUrl(null); audioRef.current?.pause(); setPlayingId(null); }
+      if (task === generationTask.current) { setActive(episode); setAudioUrl(null); setAudioCues([]); audioRef.current?.pause(); setPlayingId(null); }
     } catch (e) {
       if (task === generationTask.current) setError(e instanceof Error ? e.message : 'Não foi possível criar o episódio. Tente novamente.');
     } finally { if (task === generationTask.current) { setGenerating(false); setDraft(''); } }
@@ -152,22 +156,23 @@ export default function Podcast() {
     setPlaybackNotice(null);
     const task = ++audioTask.current;
     controller.current?.abort(); controller.current = new AbortController();
-    audioRef.current?.pause(); setPlayingId(null); setActive(episode); setError(null); setAudioUrl(null); setLoadingId(episode.id); setProgress('Preparando as vozes…');
+    audioRef.current?.pause(); setPlayingId(null); setActive(episode); setError(null); setAudioUrl(null); setAudioCues([]); setLoadingId(episode.id); setProgress('Preparando as vozes…');
     const savedConfiguration = 'settings' in episode ? (episode as PersonalPodcast).settings : { ...settings, speakers: 1 as const };
     const configuration = { ...savedConfiguration, ...resolvePodcastVoices(savedConfiguration.voiceName, savedConfiguration.secondVoice, voices) };
     const key = JSON.stringify([episode.id, configuration, episode.script]);
     try {
-      let url = cache.current.get(key);
-      if (!url) {
-        const blob = await synthesizePodcastAudio(episode.script, configuration.voiceName, configuration, { signal: controller.current.signal, onProgress: (done, total) => { if (task === audioTask.current) setProgress(`Gerando áudio: ${done} de ${total} trechos`); } });
+      let prepared = cache.current.get(key);
+      if (!prepared) {
+        let cues: PodcastCue[] = [];
+        const blob = await synthesizePodcastAudio(episode.script, configuration.voiceName, configuration, { signal: controller.current.signal, onCues: value => { cues = value; }, onProgress: (done, total) => { if (task === audioTask.current) setProgress(`Gerando áudio: ${done} de ${total} trechos`); } });
         if (task !== audioTask.current) return;
-        url = URL.createObjectURL(blob); cache.current.set(key, url);
-        if (cache.current.size > 6) { const first = cache.current.entries().next().value!; URL.revokeObjectURL(first[1]); cache.current.delete(first[0]); }
+        prepared = {url: URL.createObjectURL(blob), cues}; cache.current.set(key, prepared);
+        if (cache.current.size > 6) { const first = cache.current.entries().next().value!; URL.revokeObjectURL(first[1].url); cache.current.delete(first[0]); }
       }
       if (task !== audioTask.current) return;
       // O src precisa estar no DOM antes do play; duas atualizações independentes
       // (React e audio.src) podiam interromper o carregamento da mesma faixa.
-      flushSync(() => setAudioUrl(url));
+      flushSync(() => { setAudioUrl(prepared.url); setAudioCues(prepared.cues); });
       const audio = audioRef.current;
       if (audio) { preparePodcastPlayback(audio); await audio.play(); if (task === audioTask.current) setPlayingId(episode.id); }
     } catch (e) {
@@ -190,6 +195,7 @@ export default function Podcast() {
     return <article key={episode.id} className="ni-panel p-4 flex flex-wrap items-center gap-3">
       <button type="button" aria-label={`${isLoading ? 'Carregando áudio do' : isPlaying ? 'Parar' : 'Reproduzir'} episódio ${episode.title}`} disabled={isLoading || generating} onClick={() => play(episode)} className="w-11 h-11 shrink-0 rounded-full bg-[var(--surface2)] flex items-center justify-center border border-[var(--line)]">{isLoading ? <Loader2 size={18} className="animate-spin" /> : isPlaying ? <Square size={16} /> : <Play size={18} />}</button>
       <div className="flex-1 min-w-[140px]"><h3 className="text-sm font-semibold break-words">{episode.title}</h3><p className="text-xs text-[var(--dim)] mt-1">{episode.subject}{saved ? ` · ${saved.settings.speakers} pessoas · ~${saved.durationMinutes} min · ${PODCAST_FORMATS[saved.settings.format]}` : ' · roteiro de referência'}</p></div>
+      {active?.id === episode.id && audioUrl && <button type="button" className="min-h-11 text-sm underline" aria-label={`Acompanhar roteiro do episódio ${episode.title}`} onClick={() => { setFollowRequest(value => value + 1); playerRef.current?.scrollIntoView?.({block:'start',behavior:window.matchMedia?.('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}); }}>Acompanhar roteiro</button>}
       {saved && <button type="button" disabled={generating || voicesBlocked || sameVoice} onClick={() => play({ ...saved, settings: { ...saved.settings, voiceName: settings.voiceName, secondVoice: settings.secondVoice } })} className="text-xs border border-[var(--line)] rounded-xl px-3 py-2">Usar vozes do painel</button>}
       {legacy ? <button type="button" disabled={generating} onClick={() => { setTitle(episode.title); setSubject(episode.subject); setSourceText(episode.script.slice(0, 12000)); setSelected([]); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="text-xs border border-[var(--line)] rounded-xl px-3 py-2">Personalizar</button> : <button type="button" onClick={() => downloadPodcastText(episode)} className="text-xs border border-[var(--line)] rounded-xl px-3 py-2">Baixar roteiro</button>}
     </article>;
@@ -236,7 +242,7 @@ export default function Podcast() {
     {generating && <section role="status" className="ni-panel p-5 mb-5"><h2 className="text-sm font-semibold mb-3">Construindo sua explicação…</h2><p className="text-xs text-[var(--dim)] mb-3">Este é um rascunho. A reprodução fica disponível quando o roteiro estiver completo.</p><p className="text-sm whitespace-pre-wrap leading-6 max-h-52 overflow-y-auto">{draft || 'Organizando os conceitos e as fontes.'}</p></section>}
     {loadingId && <div role="status" className="ni-panel p-4 mb-4 flex items-center gap-3 text-sm"><Loader2 size={18} className="animate-spin shrink-0" /><span className="flex-1">{progress}</span><button type="button" onClick={() => { audioTask.current++; controller.current?.abort(); setLoadingId(null); setProgress(''); }} className="underline">Cancelar</button></div>}
     {playbackNotice && <p role="status" className="ni-panel p-4 mb-4 text-sm">{playbackNotice}</p>}
-    <PodcastPlayer episode={active} audioUrl={audioUrl} audioRef={audioRef} audioLoading={Boolean(loadingId && loadingId === active?.id)} requestDisabled={generating} onRequestAudio={() => { if (active) void play(active); }} onEnded={() => setPlayingId(null)} onPlay={() => { setPlaybackNotice(null); setPlayingId(active?.id ?? null); }} onPause={() => setPlayingId(null)} onError={() => { setPlayingId(null); setError('O navegador não conseguiu reproduzir o áudio. Tente novamente.'); }} />
+    <div ref={playerRef} className="scroll-mt-20"><PodcastPlayer cues={audioCues} followRequest={followRequest} episode={active} audioUrl={audioUrl} audioRef={audioRef} audioLoading={Boolean(loadingId && loadingId === active?.id)} requestDisabled={generating} onRequestAudio={() => { if (active) void play(active); }} onEnded={() => setPlayingId(null)} onPlay={() => { setPlaybackNotice(null); setPlayingId(active?.id ?? null); }} onPause={() => setPlayingId(null)} onError={() => { setPlayingId(null); setError('O navegador não conseguiu reproduzir o áudio. Tente novamente.'); }} /></div>
     <section className="mb-7">{pendingCount > 0 && <p role="status" className="text-xs text-[var(--dim)] mb-3">{pendingCount} episódio(s) aguardando sincronização. Você já pode ouvir ou baixar o roteiro.</p>}{personalError && <button type="button" onClick={retrySaves} className="text-sm underline mb-3">Tentar salvar novamente</button>}<h2 className="text-lg font-semibold mb-2">Seus podcasts</h2><p className="text-xs text-[var(--dim)] mb-4">{user ? 'Roteiros e configurações salvos na sua conta.' : 'Conecte sua conta para gerar e guardar seus episódios.'} O áudio pode ser baixado após gerar.</p>{personal.length ? <div className="space-y-3">{rows(personal)}</div> : <div className="rounded-xl border border-dashed border-[var(--line)] p-6 text-sm text-[var(--dim)]">Escolha um tema e crie seu primeiro episódio acima para ouvir aqui.</div>}{hasMore && <button type="button" disabled={personalLoading} onClick={loadMore} className="w-full mt-3 border border-[var(--line)] rounded-xl p-3 text-sm disabled:opacity-50">{personalLoading ? 'Carregando…' : 'Carregar podcasts anteriores'}</button>}</section>
     <section><h2 className="text-lg font-semibold mb-2">Ideias da biblioteca</h2><p className="text-xs text-[var(--dim)] mb-4">Use um roteiro de referência como ponto de partida e personalize a explicação.</p><label className="block mb-4"><span className="sr-only">Buscar na biblioteca de podcasts</span><input className={podcastInputClass} value={libraryQuery} onChange={e => { setLibraryQuery(e.target.value); setVisible(8); }} placeholder="Busque tema ou matéria…" /></label><div className="space-y-3">{rows(filteredCatalog.slice(0, visible), true)}</div>{!filteredCatalog.length && <p className="text-sm text-[var(--dim)]">Nenhum roteiro encontrado.</p>}{filteredCatalog.length > visible && <button type="button" onClick={() => setVisible(n => n + 8)} className="w-full mt-3 border border-[var(--line)] rounded-xl p-3 text-sm">Mostrar mais roteiros</button>}</section>
   </div>;

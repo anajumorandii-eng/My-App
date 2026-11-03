@@ -1,3 +1,4 @@
+import { podcastWavDuration, withPodcastCues, type PodcastCue } from '../../src/lib/podcastTiming';
 import { createHash } from 'node:crypto';
 import { google } from 'googleapis';
 import type { PodcastSpeechOptions } from '../../src/lib/podcastConfig';
@@ -71,14 +72,16 @@ export class CloudTtsService implements PodcastTtsService {
     const lines = options?.speakers === 2 ? text.split('\n').filter(line => line.trim()).map(line => {
       const match = /^Host([12]):\s*(.+)$/.exec(line);
       if (!match) throw new PodcastTtsValidationError('O diálogo precisa identificar cada fala como Host1: ou Host2:.');
-      return { text: match[2], voice: match[1] === '1' ? voice : secondVoice };
-    }) : [{ text, voice }];
+      return { text: match[2], voice: match[1] === '1' ? voice : secondVoice, speaker: Number(match[1]) as 1 | 2 };
+    }) : text.split(/\n+/).filter(line => line.trim()).map(line => ({ text: line.trim(), voice, speaker: undefined }));
     const rate = options?.pace === 'tranquilo' ? 0.9 : options?.pace === 'dinamico' ? 1.1 : 1;
-    const key = createHash('sha256').update(JSON.stringify(['cloud-tts', voice, secondVoice, rate, text])).digest('hex');
+    const key = createHash('sha256').update(JSON.stringify(['cloud-tts-timed', voice, secondVoice, rate, text])).digest('hex');
     const deadline = AbortSignal.timeout(140000);
     const requestSignal = signal ? AbortSignal.any([signal, deadline]) : deadline;
     const buffer = await this.cachedAudio(key, async combinedSignal => {
       const parts: Buffer[] = [];
+      const cues: PodcastCue[] = [];
+      let position = 0;
       for (const [i, line] of lines.entries()) {
         combinedSignal.throwIfAborted();
         const lineKey = createHash('sha256').update(JSON.stringify(['cloud-utterance', line.voice, rate, line.text])).digest('hex');
@@ -87,10 +90,15 @@ export class CloudTtsService implements PodcastTtsService {
           if (!result.audioContent) throw new Error('O serviço de voz retornou áudio vazio.');
           return Buffer.from(mergePodcastWav([Buffer.from(result.audioContent, 'base64')]));
         }, combinedSignal);
-        if (i) parts.push(pcmToWav(Buffer.alloc(24000 * 2 * (options?.pace === 'tranquilo' ? 0.35 : 0.2))));
-        parts.push(audio);
+        if (i) {
+          const pause = pcmToWav(Buffer.alloc(24000 * 2 * (options?.pace === 'tranquilo' ? 0.35 : 0.2)));
+          parts.push(pause); position += podcastWavDuration(pause);
+        }
+        const end = position + podcastWavDuration(audio);
+        cues.push({ start: position, end, text: line.text, ...(line.speaker ? { speaker: line.speaker } : {}) });
+        position = end; parts.push(audio);
       }
-      return Buffer.from(mergePodcastWav(parts));
+      return Buffer.from(withPodcastCues(new Uint8Array(mergePodcastWav(parts)), cues));
     }, requestSignal);
     return { buffer, mimeType: 'audio/wav' };
   }

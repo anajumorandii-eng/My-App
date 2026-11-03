@@ -74,3 +74,25 @@ test('catálogo inclui todas as vozes brasileiras HD, Neural2, Wavenet e Standar
     assert.equal(await service.resolveVoice(name), name);
   }
 });
+
+test('marca as falas usando os WAV reais e as pausas, e mantém os tempos ao ler do cache', async () => {
+ const {readPodcastCues,podcastWavDuration}=await import('../../src/lib/podcastTiming');
+ const store=new Map<string,Buffer>();let calls=0;
+ const client={listVoices:async()=>({voices:names.map(name=>({name,languageCodes:['pt-BR']}))}),synthesize:async()=>({audioContent:pcmToWav(Buffer.alloc(48000*(++calls===1?2:3))).toString('base64')})};
+ const cache={read:async(key:string)=>store.get(key)||null,write:async(key:string,value:Buffer)=>{store.set(key,value);}};
+ const settings={speakers:2 as const,secondVoice:'Puck',pace:'natural' as const,tone:'objetivo' as const};
+ const text='Host1: Primeira fala.\nHost2: Segunda fala.';
+ const result=await new CloudTtsService({client,cache}).synthesize(text,'Kore',settings);
+ const cues=readPodcastCues(result.buffer);
+ assert.deepEqual(cues,[{start:0,end:2,text:'Primeira fala.',speaker:1},{start:2.2,end:5.2,text:'Segunda fala.',speaker:2}]);
+ assert.equal(podcastWavDuration(result.buffer),5.2);
+ const cached=await new CloudTtsService({client,cache}).synthesize(text,'Kore',settings);
+ assert.equal(calls,2);assert.deepEqual(readPodcastCues(cached.buffer),cues);
+});
+test('narrador único também marca parágrafos, sem atribuir falantes de diálogo', async () => {
+ const {service,requests}=fixture();const {readPodcastCues}=await import('../../src/lib/podcastTiming');
+ const result=await service.synthesize('Um parágrafo.\nOutro parágrafo.','Kore');
+ const cues=readPodcastCues(result.buffer);
+ assert.equal(requests.length,2);assert.deepEqual(cues.map(c=>c.text),['Um parágrafo.','Outro parágrafo.']);
+ assert.ok(cues.every(c=>c.speaker===undefined));assert.ok(cues[1].start>=cues[0].end+.19);
+});
