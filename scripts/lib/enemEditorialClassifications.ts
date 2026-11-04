@@ -10,7 +10,7 @@ export interface EditorialClassification {
   confidence: string;
 }
 /** Source-page review takes precedence over earlier broad reclassification lists. */
-export async function loadEnemEditorialClassifications(topics: Topic[]) {
+export async function loadEnemEditorialClassifications(topics: Topic[], includeBatch = true) {
   const catalog = new Map(topics.map(topic => [topic.id, topic]));
   const result = new Map<string, EditorialClassification>();
   const directory = 'scripts/data/enem-reclassificacao';
@@ -26,12 +26,23 @@ export async function loadEnemEditorialClassifications(topics: Topic[]) {
       result.set(id, { topicId, subject: topic.subject, chapter, source, evidence: records._motivo || 'Lista editorial versionada.', confidence: 'editorial-list' });
     }
   }
-  for (const source of ['scripts/data/enem-conferencia-2022-2023.json', 'scripts/data/enem-auditoria-cobertura-2026-11-04.json']) {
+  const sources = ['scripts/data/enem-conferencia-2022-2023.json', 'scripts/data/enem-auditoria-cobertura-2026-11-04.json'];
+  if (includeBatch) sources.push(...await enemReviewBatchPaths());
+  const batchIds = new Set<string>();
+  for (const source of sources) {
     const review = JSON.parse(await readFile(source, 'utf8'));
     for (const row of review.items) {
       const topic = catalog.get(row.bankTopicId);
-      if (!topic || topic.subject !== row.bankSubject || (row.bankChapter !== null && !topic.chapters.includes(row.bankChapter)) || !row.evidence) throw new Error(`Revisão inválida: ${row.questionId}`);
+      if (!topic || topic.subject !== row.bankSubject || (row.bankChapter !== null && !topic.chapters.includes(row.bankChapter)) || !row.evidence || !['high','medium'].includes(row.confidence)) throw new Error(`Revisão inválida: ${row.questionId}`);
+      if (source.startsWith(ENEM_REVIEW_BATCH_DIRECTORY)) {
+        if (batchIds.has(row.questionId)) throw new Error(`ID repetido nos lotes editoriais: ${row.questionId}`);
+        batchIds.add(row.questionId);
+      }
       result.set(row.questionId, { topicId: topic.id, subject: topic.subject, ...(row.bankChapter === null ? {} : { chapter: row.bankChapter }), source, evidence: row.evidence, confidence: row.confidence });
+    }
+    if (source.startsWith(ENEM_REVIEW_BATCH_DIRECTORY)) for (const row of review.deferred ?? []) {
+      if (batchIds.has(row.questionId) || !row.reason?.trim()) throw new Error(`Reserva repetida/inválida: ${row.questionId}`);
+      batchIds.add(row.questionId);
     }
   }
   return result;
@@ -48,4 +59,20 @@ export function applyEnemEditorialClassifications(questions: Question[], classif
     else delete copy.chapter;
     return copy;
   });
+}
+
+export const ENEM_REVIEW_BATCH_DIRECTORY = 'scripts/data/enem-revisao-editorial-2026-11-04';
+export async function enemReviewBatchPaths(): Promise<string[]> {
+  return (await readdir(ENEM_REVIEW_BATCH_DIRECTORY)).filter(file => file.endsWith('.json')).sort().map(file => `${ENEM_REVIEW_BATCH_DIRECTORY}/${file}`);
+}
+export async function loadEnemEditorialDeferrals() {
+  const result = new Map<string, { source: string; reason: string }>();
+  for (const source of await enemReviewBatchPaths()) {
+    const review = JSON.parse(await readFile(source,'utf8'));
+    for (const row of review.deferred ?? []) {
+      if (result.has(row.questionId) || !row.reason?.trim()) throw new Error(`Reserva inválida: ${row.questionId}`);
+      result.set(row.questionId,{source,reason:row.reason});
+    }
+  }
+  return result;
 }
