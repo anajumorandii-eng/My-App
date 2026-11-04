@@ -1,3 +1,4 @@
+import { BookletPdf } from './BookletPdf';
 import { useEffect, useRef, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { authHeaders } from '../lib/auth';
@@ -134,6 +135,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
           });
         }}>Compartilhar PDF</button>}
       </div>
+      <BookletPdf key={ready.key} pdf={ready.blob} filename={filename} />
     </> : idle ? <button type="button" className="underline" onClick={() => setRequestedKey(cacheKey)}>Exportar {materialLabel.toLowerCase()} em PDF</button> : !error && <p role="status">{materialLabel === 'Aprofundamento' ? 'Preparando seu aprofundamento completo…' : `Preparando ${materialLabel.toLowerCase()} completa…`}</p>}
     {error && <div role="alert" className="space-y-2"><p>{error} {materialLabel === 'Aprofundamento' ? 'O texto do seu aprofundamento continua salvo.' : `O texto de ${materialLabel.toLowerCase()} continua salvo.`}</p>
       {!ready && <button type="button" className="underline" onClick={() => setAttempt(value => value + 1)}>Tentar novamente</button>}
