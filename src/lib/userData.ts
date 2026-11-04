@@ -18,6 +18,10 @@ const HISTORY_PAGE_SIZE = 500;
 const RECENT_SESSIONS_WINDOW = 200;
 
 export interface QuestionAttempt {
+  startedAt?: string;
+  completedAt?: string;
+  durationSeconds?: number;
+  expectedDurationSeconds?: number;
   id: string;
   questionId: string;
   topicId: string;

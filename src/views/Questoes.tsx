@@ -1,3 +1,6 @@
+import { useQuestionTimer } from '../hooks/useQuestionTimer';
+import { QuestionTimer } from '../components/QuestionTimer';
+import { formatQuestionTime, suggestedQuestionSeconds } from '../lib/questionTiming';
 import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { UNSAFE_LocationContext } from 'react-router-dom';
 import { useAmbienteDaTela } from './visual-boards/ambiente';
@@ -116,7 +119,7 @@ export default function Questoes() {
   }, [mockQuestions, boardFilters]);
   const [index, setIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
-  const [history, setHistory] = useState<{ questionId: string; correct: boolean }[]>([]);
+  const [history, setHistory] = useState<{ questionId: string; correct: boolean; durationSeconds: number }[]>([]);
   const [deepExplanation, setDeepExplanation] = useState<string | null>(null);
   const [loadingDeepExplanation, setLoadingDeepExplanation] = useState(false);
   const [deepExplanationError, setDeepExplanationError] = useState<string | null>(null);
@@ -208,11 +211,15 @@ export default function Questoes() {
   }, [scoped, topicFilters, subtopicFilter]);
 
   const question = pool.length > 0 ? pool[index % pool.length] : null;
+  const timer = useQuestionTimer(`${user?.uid ?? 'guest'}:${question?.id ?? 'empty'}`, Boolean(question && question.status !== 'annulled'));
+  const [expectedOverride, setExpectedOverride] = useState<number | null>(null);
+  const expectedSeconds = expectedOverride ?? suggestedQuestionSeconds(question?.difficulty);
+  useEffect(() => { setHistory([]); setExpectedOverride(null); }, [user?.uid]);
   useEffect(() => {
     invalidateQuestionAi();
     setSelectedOptionId(null);
     resetDiagnosisState();
-  }, [question?.id]);
+  }, [question?.id, user?.uid]);
   const answered = selectedOptionId !== null;
   const isCorrect = answered && question !== null && selectedOptionId === question.correctOptionId;
   const correctCount = history.filter((h) => h.correct).length;
@@ -227,6 +234,7 @@ export default function Questoes() {
   };
 
   const resetQuestionState = () => {
+    timer.restart();
     invalidateQuestionAi();
     setIndex(0);
     setSelectedOptionId(null);
@@ -289,9 +297,11 @@ export default function Questoes() {
 
   const selectOption = (optionId: string) => {
     if (answered || !question || question.status === 'annulled') return;
+    const timing = timer.finish();
+    if (!timing) return;
     const correct = optionId === question.correctOptionId;
     setSelectedOptionId(optionId);
-    setHistory((h) => [...h, { questionId: question.id, correct }]);
+    setHistory((h) => [...h, { questionId: question.id, correct, durationSeconds: timing.durationSeconds }]);
 
     updateMastery((previous) => {
       const current = previous.find((item) => item.topicId === question.topicId);
@@ -316,7 +326,9 @@ export default function Questoes() {
 
     if (user) {
       addUserAttempt(user.uid, {
-        id: `attempt_${Date.now()}`,
+        id: `attempt_${crypto.randomUUID()}`,
+        ...timing,
+        expectedDurationSeconds: expectedSeconds,
         questionId: question.id,
         topicId: question.topicId,
         correct,
@@ -330,6 +342,7 @@ export default function Questoes() {
   };
 
   const nextQuestion = () => {
+    timer.restart();
     invalidateQuestionAi();
     setIndex((i) => (i + 1) % pool.length);
     setSelectedOptionId(null);
@@ -340,6 +353,7 @@ export default function Questoes() {
   };
 
   const resetSession = () => {
+    timer.restart();
     invalidateQuestionAi();
     setIndex(0);
     setSelectedOptionId(null);
@@ -647,6 +661,8 @@ export default function Questoes() {
               </span>
             </div>
 
+            {question.status !== 'annulled' && <QuestionTimer seconds={timer.seconds} expectedSeconds={expectedSeconds} running={timer.running} manualPause={timer.manualPause} finished={timer.finished} onTogglePause={timer.togglePause} onExpectedChange={setExpectedOverride} />}
+
             {/* O título era "Qual é o próximo passo do raciocínio?" em toda
                 questão, inclusive nas que não pedem raciocínio em etapas. */}
             <h2>Escolha uma alternativa.</h2>
@@ -855,6 +871,7 @@ export default function Questoes() {
               bar
               fill={history.length > 0 ? correctCount / history.length : 0}
             />
+            <Metric label="Tempo médio por questão" value={history.length ? formatQuestionTime(history.reduce((sum, item) => sum + item.durationSeconds, 0) / history.length) : '—'} />
             <Metric label="Filtro ativo" value={subjectFilter} />
             <Metric
               label="Domínio deste tópico"
