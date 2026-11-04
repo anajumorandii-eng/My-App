@@ -1,0 +1,72 @@
+{
+  "reviewedOn": "2026-11-04",
+  "scope": "Conferência individual de três classificações, com leitura visual das páginas dos cadernos e gabaritos. Os seis PDFs conferem com os hashes do manifesto existente. Duas correções de tópico e uma ressalva taxonômica; não representa revisão integral do corpus.",
+  "items": [
+    {
+      "questionId": "enem_completo_2018_d2_q106",
+      "year": 2018,
+      "day": 2,
+      "number": 106,
+      "page": 6,
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/2dia/enem2018_2dia_prova_amarelo.pdf",
+      "sourceSha256": "e8269bcbfaba92b60436510ce1c14c1141258ac5644c3ad78d1485f308fcf1af",
+      "answerKeyUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/2dia/enem2018_2dia_gabarito_amarelo.pdf",
+      "answerKeySha256": "bbc0e2eca03fb1b445e5a27c84e173fe25e1929566ea7758fec93e81a6add07c",
+      "answer": "C",
+      "previous": {
+        "subject": "Química",
+        "topicId": "qui_eletroquimica",
+        "chapter": "Eletroquímica de Processos Espontâneos"
+      },
+      "bankSubject": "Física",
+      "bankTopicId": "fis_circuitos",
+      "bankChapter": "Resistores",
+      "confidence": "high",
+      "evidence": "Leitura da página 6: o comando pede resistência equivalente no circuito de uma tela resistiva; o desenho exige associação de resistores, não reação eletroquímica. Com o contato A fechado, o ramo inferior direito fica aberto: 4 kΩ em série com dois resistores de 4 kΩ em paralelo resulta em 6 kΩ. A chave confirma C."
+    },
+    {
+      "questionId": "enem_completo_2021_d2_q117",
+      "year": 2021,
+      "day": 2,
+      "number": 117,
+      "page": 11,
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477",
+      "answerKeyUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_gabarito_amarelo.pdf",
+      "answerKeySha256": "3e584e478d6cac53e7446816372868dc090ea7fc749b2a7f84a943c8090d334e",
+      "answer": "C",
+      "previous": {
+        "subject": "Física",
+        "topicId": "fis_dinamica_impulsiva",
+        "chapter": "Sistemas Isolados e a Conservação da Quantidade de Movimento"
+      },
+      "bankSubject": "Física",
+      "bankTopicId": "fis_circuitos",
+      "bankChapter": "Resistores",
+      "confidence": "high",
+      "evidence": "Leitura da página 11: a tabela informa área e comprimento de fios com resistividade constante. Aplica-se R = ρL/A: L/A vale 312/9, 47/4, 54/2 e 106/1, dando R2 < R3 < R1 < R4. O conteúdo é resistores/segunda lei de Ohm, não quantidade de movimento. A chave confirma C."
+    },
+    {
+      "questionId": "enem_completo_2024_d1_q049",
+      "year": 2024,
+      "day": 1,
+      "number": 49,
+      "page": 21,
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/1dia/enem2024_1dia_prova_amarelo.pdf",
+      "sourceSha256": "b9c9215da6c7eedee80b37131685b516f7ef824b1413c0a1957a76e360cbcdee",
+      "answerKeyUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/1dia/enem2024_1dia_gabarito_amarelo.pdf",
+      "answerKeySha256": "8a6f5f74e7b399833ab4b6139402c639d6ac4ee41118b21bea6c19daff6026de",
+      "answer": "A",
+      "previous": {
+        "subject": "Filosofia",
+        "topicId": "fil_niilismo_existencialismo",
+        "chapter": "A Escola de Frankfurt e a Indústria Cultural"
+      },
+      "bankSubject": "Filosofia",
+      "bankTopicId": "fil_niilismo_existencialismo",
+      "bankChapter": null,
+      "confidence": "medium",
+      "evidence": "A página 21 confronta Quine e Carnap sobre verdades analíticas/sintéticas, reducionismo e conteúdo factual. A chave A identifica o estatuto epistemológico da linguagem; a questão não aborda Escola de Frankfurt nem indústria cultural. Mantido o tópico amplo de filosofia contemporânea, sem capítulo artificial, pois o catálogo atual não tem epistemologia/filosofia analítica contemporânea."
+    }
+  ]
+}

@@ -117,17 +117,17 @@
    "presence": 8
   },
   {
+   "topicId": "fis_circuitos",
+   "subject": "Física",
+   "pAtLeastOne": 0.932,
+   "expected": 3.03,
+   "presence": 8
+  },
+  {
    "topicId": "his_moderna_iluminismo",
    "subject": "História",
    "pAtLeastOne": 0.928,
    "expected": 2.87,
-   "presence": 8
-  },
-  {
-   "topicId": "fis_circuitos",
-   "subject": "Física",
-   "pAtLeastOne": 0.927,
-   "expected": 2.86,
    "presence": 8
   },
   {
@@ -474,13 +474,6 @@
    "presence": 4
   },
   {
-   "topicId": "qui_eletroquimica",
-   "subject": "Química",
-   "pAtLeastOne": 0.536,
-   "expected": 0.71,
-   "presence": 4
-  },
-  {
    "topicId": "qui_modelos_atomicos",
    "subject": "Química",
    "pAtLeastOne": 0.522,
@@ -492,6 +485,13 @@
    "subject": "Física",
    "pAtLeastOne": 0.521,
    "expected": 0.99,
+   "presence": 4
+  },
+  {
+   "topicId": "qui_eletroquimica",
+   "subject": "Química",
+   "pAtLeastOne": 0.52,
+   "expected": 0.64,
    "presence": 4
   },
   {
@@ -593,13 +593,6 @@
    "presence": 3
   },
   {
-   "topicId": "fis_dinamica_impulsiva",
-   "subject": "Física",
-   "pAtLeastOne": 0.376,
-   "expected": 0.44,
-   "presence": 4
-  },
-  {
    "topicId": "bio_fisio_vegetal",
    "subject": "Biologia",
    "pAtLeastOne": 0.371,
@@ -626,6 +619,13 @@
    "pAtLeastOne": 0.316,
    "expected": 0.41,
    "presence": 2
+  },
+  {
+   "topicId": "fis_dinamica_impulsiva",
+   "subject": "Física",
+   "pAtLeastOne": 0.296,
+   "expected": 0.34,
+   "presence": 3
   },
   {
    "topicId": "qui_termoquimica",

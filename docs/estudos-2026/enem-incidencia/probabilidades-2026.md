@@ -15,12 +15,12 @@ Antes de confiar nos números de 2026, o mesmo cálculo foi feito só com 2018�
 
 |Nível|Brier do modelo|Brier de referência (taxa única)|Top-30 previstos que caíram em 2025|Caíram sem histórico|
 |---|---|---|---|---|
-|Assunto|0.168|0.201|29/30|1|
+|Assunto|0.167|0.201|29/30|1|
 |Capítulo|0.201|0.206|22/30|15|
 
-Calibração por faixa (assunto): 80–100%: 30/31 · 60–80%: 17/25 · 40–60%: 16/24 · 20–40%: 6/15 · 0–20%: 1/2.
+Calibração por faixa (assunto): 80–100%: 30/31 · 60–80%: 17/25 · 40–60%: 16/23 · 20–40%: 6/16 · 0–20%: 1/2.
 
-Calibração por faixa (capítulo): 80–100%: 14/17 · 60–80%: 14/29 · 40–60%: 27/73 · 20–40%: 23/135 · 0–20%: 33/134.
+Calibração por faixa (capítulo): 80–100%: 14/17 · 60–80%: 14/29 · 40–60%: 27/74 · 20–40%: 23/132 · 0–20%: 33/135.
 
 Brier menor que a referência significa que o histórico separa de fato o que cai do que não cai. Capítulo é mais incerto que assunto: o currículo tem muitos capítulos e cada prova escolhe poucos.
 
@@ -43,8 +43,8 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 |13|Geografia|Globalização e Geografia Econômica|94%|3.5|8/8|↑|2 3 3 2 5 7 3 2|
 |14|Português|Simbolismo, Pré-Modernismo e Modernismo|94%|3.3|8/8|↓|2 7 4 2 4 5 2 2|
 |15|Matemática|Sequências, Matrizes e Sistemas Lineares|94%|3.2|8/8|↓|5 4 3 5 5 4 2 1|
-|16|História|Idade Moderna e Iluminismo|93%|2.9|8/8|↓|3 3 6 3 2 4 3 1|
-|17|Física|Circuitos Elétricos|93%|2.9|8/8|↑|2 1 3 5 4 1 2 4|
+|16|Física|Circuitos Elétricos|93%|3.0|8/8|→|3 1 3 6 4 1 2 4|
+|17|História|Idade Moderna e Iluminismo|93%|2.9|8/8|↓|3 3 6 3 2 4 3 1|
 |18|Geografia|Climatologia e Problemas Socioambientais|92%|2.7|8/8|→|3 4 1 3 3 2 3 3|
 |19|História|Primeira República e Era Vargas|91%|2.3|8/8|↓|4 3 1 3 2 3 3 1|
 |20|Matemática|Análise Combinatória|91%|2.3|8/8|→|1 3 3 4 2 2 2 2|
@@ -229,11 +229,11 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 |Geologia e Geomorfologia (Geografia Física do Brasil)|38%|3/8|0 0 2 1 2 0 0 0|
 |Desafios Ambientais do Século XXI (Climatologia e Problemas Socioambientais)|34%|3/8|0 1 0 0 1 1 0 0|
 
-### Física — 14.9 questões por edição
+### Física — 15.0 questões por edição
 
 |Assunto|P(cair)|Esperadas|Edições|Tend.|2018→2025|
 |---|---|---|---|---|---|
-|Circuitos Elétricos|93%|2.9|8/8|↑|2 1 3 5 4 1 2 4|
+|Circuitos Elétricos|93%|3.0|8/8|→|3 1 3 6 4 1 2 4|
 |Calorimetria|88%|1.9|8/8|→|2 2 4 1 1 2 3 1|
 |Leis de Newton e Dinâmica do Movimento Retilíneo|78%|1.1|8/8|→|2 1 1 1 1 1 1 1|
 |Ondulatória|72%|1.5|5/8|↑|2 0 2 0 0 3 2 2|
@@ -246,7 +246,7 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 |Estática dos Corpos Sólidos e dos Fluidos|52%|0.6|4/8|→|1 0 0 0 0 1 1 1|
 |Cinemática Escalar|44%|0.6|3/8|→|1 0 0 0 0 2 0 1|
 |Física Moderna|41%|0.5|3/8|→|0 0 0 0 1 1 1 0|
-|Dinâmica Impulsiva|38%|0.4|4/8|↓|1 2 0 1 1 0 0 0|
+|Dinâmica Impulsiva|30%|0.3|3/8|↓|1 2 0 0 1 0 0 0|
 |Termodinâmica dos Gases|26%|0.3|2/8|→|0 1 0 0 0 0 1 0|
 |Óptica Geométrica|25%|0.2|2/8|→|1 0 0 0 0 0 1 0|
 
@@ -262,12 +262,12 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 |Composição de Movimentos (Cinemática Vetorial)|44%|3/8|0 0 0 2 1 0 0 1|
 |Conceitos Básicos (Fundamentos de Ondas e Oscilações)|44%|3/8|0 0 0 0 1 1 0 1|
 |Noções Básicas de Física Quântica (Física Moderna)|41%|3/8|0 0 0 0 1 1 1 0|
+|Resistores (Circuitos Elétricos)|41%|4/8|1 0 0 1 1 1 0 0|
 |Resultante de um Sistema de Forças (Leis de Newton e Dinâmica do Movimento Retilíneo)|40%|4/8|1 0 1 1 0 0 1 0|
 |Leis da Gravitação (Gravitação e Movimento Circular)|39%|4/8|0 2 1 1 1 0 0 0|
 |Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações (Eletromagnetismo)|38%|4/8|1 1 0 0 1 1 0 0|
-|Geradores (Circuitos Elétricos)|35%|3/8|0 0 1 2 1 0 0 0|
 
-### Química — 13.8 questões por edição
+### Química — 13.6 questões por edição
 
 |Assunto|P(cair)|Esperadas|Edições|Tend.|2018→2025|
 |---|---|---|---|---|---|
@@ -279,8 +279,8 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 |Soluções|61%|0.9|4/8|↑|0 0 0 0 1 1 1 2|
 |Reações e Aplicações Orgânicas|60%|1.3|4/8|→|0 3 1 3 0 0 0 3|
 |Oxirredução|58%|0.9|5/8|→|1 1 0 0 2 1 2 0|
-|Eletroquímica|54%|0.7|4/8|→|3 0 0 0 1 0 1 1|
 |Modelos Atômicos e Estrutura do Átomo|52%|0.8|5/8|↓|1 3 1 2 0 0 1 0|
+|Eletroquímica|52%|0.6|4/8|→|2 0 0 0 1 0 1 1|
 |Polaridade das Ligações e Geometria Molecular|48%|0.7|3/8|↑|0 0 0 1 0 1 0 2|
 |Radioatividade|44%|0.5|3/8|↑|0 0 0 0 1 1 0 1|
 |Gases|32%|0.4|2/8|→|0 0 0 1 0 2 0 0|

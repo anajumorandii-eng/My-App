@@ -148116,9 +148116,9 @@
   },
   {
     "id": "enem_completo_2018_d2_q106",
-    "topicId": "qui_eletroquimica",
-    "subject": "Química",
-    "chapter": "Eletroquímica de Processos Espontâneos",
+    "topicId": "fis_circuitos",
+    "subject": "Física",
+    "chapter": "Resistores",
     "prompt": "Muitos smartphones e tablets não precisam mais\nde teclas, uma vez que todos os comandos podem ser\ndados ao se pressionar a própria tela. Inicialmente\nessa tecnologia foi proporcionada por meio das telas\nresistivas, formadas basicamente por duas camadas de\nmaterial condutor transparente que não se encostam até\nque alguém as pressione, modificando a resistência total\ndo circuito de acordo com o ponto onde ocorre o toque.\nA imagem é uma simplificação do circuito formado pelas\nplacas, em que A e B representam pontos onde o circuito\npode ser fechado por meio do toque.\nQual é a resistência equivalente no circuito provocada por\num toque que fecha o circuito no ponto A?",
     "options": [
       {
@@ -172267,9 +172267,9 @@
   },
   {
     "id": "enem_completo_2021_d2_q117",
-    "topicId": "fis_dinamica_impulsiva",
+    "topicId": "fis_circuitos",
     "subject": "Física",
-    "chapter": "Sistemas Isolados e a Conservação da Quantidade de Movimento",
+    "chapter": "Resistores",
     "prompt": "Cientistas da Universidade de New South Wales,\nna Austrália, demonstraram em 2012 que a Lei de\nOhm é válida mesmo para fios finíssimos, cuja área\nda seção reta compreende alguns poucos átomos.\nA tabela apresenta as áreas e comprimentos de alguns\ndos fios construídos (respectivamente com as mesmas\nunidades de medida). Considere que a resistividade\nmantém-se constante para todas as geometrias (uma\naproximação confirmada pelo estudo).\nWEBER, S. B. et al. Ohm‘s Law Survives to the Atomic Scale.\nScience, n. 335, jan. 2012 (adaptado).\nAs resistências elétricas dos fios, em ordem crescente, são",
     "options": [
       {
@@ -193100,7 +193100,6 @@
     "id": "enem_completo_2024_d1_q049",
     "topicId": "fil_niilismo_existencialismo",
     "subject": "Filosofia",
-    "chapter": "A Escola de Frankfurt e a Indústria Cultural",
     "prompt": "TEXTO I\nO empirismo moderno foi, em grande parte,\ncondicionado por dois dogmas. Um deles é a crença em\ncerta divisão fundamental entre verdades analíticas, ou\nfundadas em significados independentemente de questões\nde fato, e verdades sintéticas, ou fundadas em fatos. O outro\ndogma é o reducionismo: a crença de que todo enunciado\nsignificativo é equivalente a algum construto lógico sobre\ntermos que se referem à experiência imediata.\nQUINE, W. V. O. Dois dogmas do empirismo. In: RYLE, G. et al.\nEnsaios. São Paulo: Abril Cultural, 1975.\nTEXTO II\nTeses: 1. Somente os enunciados que possuem conteúdo\nfactual são teoricamente significativos; enunciados que não\npodem, em princípio, estar fundamentados pela experiência\nsão carentes de significado. 2. As ciências empíricas usam\nsomente o conteúdo empírico da realidade. 3. A filosofia usa\num conceito não empírico da realidade.\nCARNAP, R. Pseudoproblemas na filosofia. In: SCHLICK, M.;\nCARNAP, R.; POPPER, K. Coletânea de textos.\nSão Paulo: Abril Cultural, 1975.\nAo comparar os textos, conclui-se que eles apresentam\nposicionamentos filosóficos divergentes com relação ao",
     "options": [
       {
