@@ -4,13 +4,15 @@ import { readFile, writeFile, rename } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { mockTopics } from '../src/data/mockData';
 import type { Question } from '../src/types';
+import { loadEnemEditorialClassifications, applyEnemEditorialClassifications } from './lib/enemEditorialClassifications';
 
 const directory='scripts/data/enem-completo-2018-2025';
 const manifest=JSON.parse(await readFile(`${directory}/manifest.json`,'utf8'));
-const items=JSON.parse(await readFile(`${directory}/questions.json`,'utf8')) as Question[];
+const rawItems=JSON.parse(await readFile(`${directory}/questions.json`,'utf8')) as Question[];
+const classifications=await loadEnemEditorialClassifications(mockTopics);
+const items=applyEnemEditorialClassifications(rawItems, classifications, new Set<string>(manifest.positions.map((position: { questionId: string }) => position.questionId)));
 const bank=JSON.parse(await readFile('public/questions.json','utf8')) as Question[];
-const visualReview=JSON.parse(await readFile('scripts/data/enem-conferencia-2022-2023.json','utf8'));
-const reviewedWithoutChapter=new Set(visualReview.items.filter((item:any)=>item.confidence==='medium'&&item.bankChapter===null).map((item:any)=>item.questionId));
+const reviewedWithoutChapter=new Set([...classifications].filter(([,row])=>row.chapter===undefined).map(([id])=>id));
 assert.equal(items.length,1440);assert.equal(manifest.positions.length,1440);
 assert.equal(new Set(items.map(q=>q.id)).size,1440);
 const catalog=new Map(mockTopics.map(t=>[t.id,t]));
