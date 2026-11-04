@@ -1,3 +1,4 @@
+import { prepareStudyVisualLabels } from '../lib/studyVisualLabels';
 import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import remarkGfm from 'remark-gfm';
@@ -32,7 +33,7 @@ function normalizeMathDelimiters(text: string): string {
     .join('');
 }
 
-export default function AiTextRenderer({ text, className = '' }: { text: string; className?: string }) {
+export default function AiTextRenderer({ text, className = '', visualsPrepared = false }: { text: string; className?: string; visualsPrepared?: boolean }) {
   return (
     <div className={`min-w-0 max-w-full space-y-2 ${className}`}>
       <ReactMarkdown
@@ -70,7 +71,7 @@ export default function AiTextRenderer({ text, className = '' }: { text: string;
           ),
         }}
       >
-        {normalizeMathDelimiters(text)}
+        {normalizeMathDelimiters(visualsPrepared ? text : prepareStudyVisualLabels(text))}
       </ReactMarkdown>
     </div>
   );

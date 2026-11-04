@@ -42,7 +42,7 @@ export function StudyVisual({ source }: { source: string }) {
   return <figure data-study-visual={visual.type} className="crivo-figure">
     <figcaption className="crivo-figure__head">
       <span className="crivo-figure__kicker">{KICKER[visual.type]}</span>
-      <span className="crivo-figure__title">{visual.title}</span>
+      <span className="crivo-figure__title">{visual.figureNumber ? `Figura ${visual.figureNumber} — ` : ''}{visual.title}</span>
     </figcaption>
     <div className="crivo-figure__body">
       {visual.type === 'molecule' ? <StudyMolecule molecule={visual.molecule} />
@@ -79,7 +79,7 @@ export function StudyVisual({ source }: { source: string }) {
     </div>
     <div className="crivo-figure__foot">
       <p className="crivo-figure__caption">{visual.caption}</p>
-      <p className="crivo-figure__question"><b>Interprete:</b> {visual.question}</p>
+      <p className="crivo-figure__question"><b>Questão de verificação{visual.figureNumber ? ` ${visual.figureNumber}` : ''}</b><br />{visual.question}</p>
     </div>
   </figure>;
 }

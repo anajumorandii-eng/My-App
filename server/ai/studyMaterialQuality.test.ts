@@ -21,3 +21,9 @@ test('cada matéria tem o tipo de figura do próprio objeto', () => {
   for (const type of ['circuit', 'timeline', 'pedigree', 'climate', 'arrow:true']) assert.ok(STUDY_MATERIAL_QUALITY.includes(type), type);
   assert.match(STUDY_MATERIAL_QUALITY, /Não desenhe mapas, anatomia/);
 });
+test('figuras e perguntas têm nomes explícitos e referências correspondentes no gabarito',()=>{
+ assert.match(STUDY_MATERIAL_QUALITY,/title e question sem prefixos/);
+ assert.match(STUDY_MATERIAL_QUALITY,/Questão de verificação 1/);
+ assert.match(STUDY_MATERIAL_QUALITY,/### Respostas das questões de verificação/);
+ assert.match(STUDY_MATERIAL_QUALITY,/Resposta da questão de verificação 1/);
+});

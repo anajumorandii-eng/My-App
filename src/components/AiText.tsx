@@ -7,7 +7,7 @@ import React, { Suspense, lazy } from 'react';
 // texto de IA aparece de verdade.
 const AiTextRenderer = lazy(() => import('./AiTextRenderer'));
 
-export function AiText({ text, className = '' }: { text: string; className?: string }) {
+export function AiText({ text, className = '', visualsPrepared = false }: { text: string; className?: string; visualsPrepared?: boolean }) {
   return (
     <Suspense
       // O texto puro enquanto o renderizador carrega: a aluna lê a resposta
@@ -15,7 +15,7 @@ export function AiText({ text, className = '' }: { text: string; className?: str
       // quando o chunk chega.
       fallback={<div data-ai-text-pending className={`space-y-2 whitespace-pre-wrap leading-relaxed ${className}`}>{text}</div>}
     >
-      <AiTextRenderer text={text} className={className} />
+      <AiTextRenderer text={text} className={className} visualsPrepared={visualsPrepared} />
     </Suspense>
   );
 }
