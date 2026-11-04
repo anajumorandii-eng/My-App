@@ -1,5 +1,5 @@
 import { Link, MemoryRouter } from 'react-router-dom';
-import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
+import { act, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { Question } from '../types';
@@ -568,5 +568,41 @@ describe('Questoes — seleção múltipla', () => {
     expect(screen.getByRole('checkbox', { name: /^Todos os tópicos/ })).toBeChecked();
     expect(screen.getByRole('checkbox', { name: 'ENEM' })).toBeChecked();
     expect(screen.getByRole('checkbox', { name: 'UNICAMP' })).toBeChecked();
+  });
+});
+
+
+describe('cronômetro da questão',()=>{
+  it('registra duração e meta ao responder, congela no feedback e reinicia ao repetir',()=>{
+    vi.useFakeTimers();
+    try {
+      render(<Questoes/>);
+      expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:00');
+      expect(screen.getByLabelText('Tempo esperado por questão')).toHaveValue('120');
+      fireEvent.change(screen.getByLabelText('Tempo esperado por questão'),{target:{value:'180'}});
+      act(()=>vi.advanceTimersByTime(46500));
+      fireEvent.click(screen.getByRole('button',{name:/Citoplasma/}));
+      expect(addUserAttemptMock).toHaveBeenCalledWith('user-1',expect.objectContaining({questionId:'q1',durationSeconds:46,expectedDurationSeconds:180,startedAt:expect.any(String),completedAt:expect.any(String)}));
+      expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:46');
+      expect(screen.getByText('02:14 abaixo do tempo esperado.')).toBeInTheDocument();
+      act(()=>vi.advanceTimersByTime(120000));
+      expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:46');
+      fireEvent.click(screen.getByRole('button',{name:/Citoplasma/}));expect(addUserAttemptMock).toHaveBeenCalledTimes(1);
+      fireEvent.click(screen.getByRole('button',{name:'Próxima questão'}));
+      expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:00');
+      act(()=>vi.advanceTimersByTime(3000));expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:03');
+      fireEvent.click(screen.getByRole('button',{name:'Reiniciar treino'}));
+      expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:00');
+    } finally { vi.useRealTimers(); }
+  });
+  it('permite ultrapassar a meta e responder sem penalidade ou bloqueio',()=>{
+    vi.useFakeTimers();
+    try {
+      render(<Questoes/>);act(()=>vi.advanceTimersByTime(121000));
+      expect(screen.getByText(/Você passou da meta/)).toBeInTheDocument();
+      expect(screen.getByRole('button',{name:/Citoplasma/})).toBeEnabled();
+      fireEvent.click(screen.getByRole('button',{name:/Citoplasma/}));
+      expect(screen.getByText('00:01 acima do tempo esperado.')).toBeInTheDocument();
+    } finally { vi.useRealTimers(); }
   });
 });
