@@ -4,18 +4,22 @@
   "inputs": {
     "bank": {
       "path": "public/questions.json",
-      "sha256": "c7176754e84427c21ca074eafd3181389b79bbafcd6a84a4fc695af5465044ae"
+      "sha256": "7d3e5232e1b71df3615591bb89bf06afd47136ed9e2f6e0f87d171e6a43da0f4"
     },
     "manifest": {
       "path": "scripts/data/enem-completo-2018-2025/manifest.json",
-      "sha256": "7166435646ed7ba422c6c90a68662b1bc373818fe6bc06f6c382547cc69312c4"
+      "sha256": "01e15f1329ca116e67c2f120b74906ce1859d3695f0cf08c1bde418dd2227907"
     },
     "imported": {
       "path": "scripts/data/enem-completo-2018-2025/questions.json",
-      "sha256": "946831de52cafa84b149cee9242905cf10bda4be61f74f75e2db182b906dbf58"
+      "sha256": "3ece7c1a2b71f3c22a35c1c0e03898c30db9f48b1b51411bfb556718ad4b8943"
     }
   },
   "additionalInputs": {
+    "scripts/data/enem-correcao-transcricao-2026-11-04.json": {
+      "path": "scripts/data/enem-correcao-transcricao-2026-11-04.json",
+      "sha256": "2f908bbc3b36176ad2b506869fb4c9b56e120e4db9633057698ebba28540772d"
+    },
     "src/data/mockData.ts": {
       "path": "src/data/mockData.ts",
       "sha256": "5f77036ea3351e6329732a9ff1c533f195704aa755b0d8998185e5ac853f501b"

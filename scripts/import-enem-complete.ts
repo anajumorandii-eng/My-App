@@ -6,11 +6,13 @@ import { mockTopics } from '../src/data/mockData';
 import type { Question } from '../src/types';
 import { loadEnemEditorialClassifications, applyEnemEditorialClassifications } from './lib/enemEditorialClassifications';
 
+import { applyEnemContentCorrections } from './lib/enemContentCorrections';
+
 const directory='scripts/data/enem-completo-2018-2025';
 const manifest=JSON.parse(await readFile(`${directory}/manifest.json`,'utf8'));
 const rawItems=JSON.parse(await readFile(`${directory}/questions.json`,'utf8')) as Question[];
 const classifications=await loadEnemEditorialClassifications(mockTopics);
-const items=applyEnemEditorialClassifications(rawItems, classifications, new Set<string>(manifest.positions.map((position: { questionId: string }) => position.questionId)));
+const items=applyEnemContentCorrections(applyEnemEditorialClassifications(rawItems, classifications, new Set<string>(manifest.positions.map((position: { questionId: string }) => position.questionId))));
 const bank=JSON.parse(await readFile('public/questions.json','utf8')) as Question[];
 const reviewedWithoutChapter=new Set([...classifications].filter(([,row])=>row.chapter===undefined).map(([id])=>id));
 assert.equal(items.length,1440);assert.equal(manifest.positions.length,1440);

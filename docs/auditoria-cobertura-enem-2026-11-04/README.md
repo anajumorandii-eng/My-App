@@ -189,6 +189,7 @@ Contagem de registros não comprova variedade de habilidades, precisão editoria
 ## Arquivos e reprodução
 
 - [Revisão da fila: método, decisões e pendências](REVISAO-EDITORIAL.md).
+- [Correções de transcrição e proteção da extração](CORRECOES-DE-TRANSCRICAO.md).
 - [Decisões, correções confirmadas e prioridades de ampliação](DECISOES-E-PRIORIDADES.md).
 - [Capítulos e subtópicos: contagem integral](capitulos.csv).
 - [Fila de conferência por questão](fila-revisao.csv): lacunas taxonômicas primeiro, depois classificações automáticas; uma fila de trabalho, não uma lista de erros comprovados.

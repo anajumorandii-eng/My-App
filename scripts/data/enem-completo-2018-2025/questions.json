@@ -1987,7 +1987,7 @@
       },
       {
         "id": "e",
-        "text": "expõe a ineficácia dos estudos para alterar tal\ncomportamento.\nINSTRUÇÕES PARA A REDAÇÃO\n1. O rascunho da redação deve ser feito no espaço apropriado.\n2.  O texto definitivo deve ser escrito à tinta, na folha própria, em até 30 linhas.\n3. A redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas copiadas\ndesconsiderado para efeito de correção.\n4. Receberá nota zero, em qualquer das situações expressas a seguir, a redação que:\n4.1. tiver até 7 (sete) linhas escritas, sendo considerada —texto insuficiente“.\n4.2. fugir ao tema ou que não atender ao tipo dissertativo-argumentativo.\n4.3. apresentar parte do texto deliberadamente desconectada do tema proposto.\nTEXTOS MOTIVADORES\nTEXTO I\ns segundas-feiras pela manhã, os usuários de um serviço de música digital recebem uma lista personalizada de\nmúsicas que lhes permite descobrir novidades. Assim como os sistemas de outros aplicativos e redes sociais, este\ncérebro artificial consegue traçar um retrato automatizado do gosto de seus assinantes e constrói uma máquina de\nsugestões que não costuma falhar. O sistema se baseia em um algoritmo cuja evolução e usos aplicados ao consumo\ncultural são infinitos. De fato, plataformas de transmissão de vídeo on-line começam a desenhar suas séries de sucesso\nrastreando o banco de dados gerado por todos os movimentos dos usuários para analisar o que os satisfaz. O algoritmo\nconstrói assim um universo cultural adequado e complacente com o gosto do consumidor, que pode avançar até chegar\nsempre a lugares reconhecíveis. Dessa forma, a filtragem de informação feita pelas redes sociais ou pelos sistemas\nde busca pode moldar nossa maneira de pensar. E esse é o problema principal: a ilusão de liberdade de escolha que\nmuitas vezes é gerada pelos algoritmos.\nVERDÚ, Daniel. O gosto na era do algoritmo. Disponível em: https://brasil.elpais.com. Acesso em: 11 jun. 2018 (adaptado).\nTEXTO II\nNos sistemas dos gigantes da internet, a filtragem\nde dados é transferida para um exército de\nmoderadores em empresas localizadas do Oriente\nMédio ao Sul da Êsia, que têm um papel importante\nno controle daquilo que deve ser eliminado da\nrede social, a partir de sinalizações dos usuários.\nMas a informação é então processada por um\nalgoritmo, que tem a decisão final. Os algoritmos\nsão literais. Em poucas palavras, são uma opinião\nembrulhada em código. E estamos caminhando\npara um estágio em que é a máquina que decide\nqual notícia deve ou não ser lida.\nPEPE ESCOBAR. A silenciosa ditadura do algoritmo. Disponível em:\nhttp://outraspalavras.net. Acesso em: 5 jun. 2017 (adaptado).\nInternet no Brasil em 2016. Disponível em: www.ibge.gov.br. Acesso em: 18 jun. 2018 (adaptado).\nTEXTO IV\nMudanças sutis nas informações às quais somos expostos podem transformar nosso comportamento. As redes\ntêm selecionado as notícias sob títulos chamativos como “trending topics“ ou critérios como —relevância“. Mas nós\npraticamente não sabemos como isso tudo é filtrado. Quanto mais informações relevantes tivermos nas pontas dos\ndedos, melhor equipados estamos para tomar decisões. No entanto, surgem algumas tensões fundamentais: entre a\nconveniência e a deliberação; entre o que o usuário deseja e o que é melhor para ele; entre a transparência e o lado\ncomercial. Quanto mais os sistemas souberem sobre você em comparação ao que você sabe sobre eles, há mais\nriscos de suas escolhas se tornarem apenas uma série de reações a “cutucadas” invisíveis. O que está em jogo não\né tanto a questão “homem versus máquina”, mas sim a disputa “decisão informada versus obediência influenciada“.\nCHATFIELD, Tom. Como a internet influencia secretamente nossas escolhas. Disponível em: www.bbc.com.  Acesso em: 3 jun. 2017 (adaptado).\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua formação,\nredija um texto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa sobre o tema\n—Manipulação do comportamento do usuário pelo controle de dados na internet“, apresentando proposta de\nintervenção que respeite os direitos humanos. Selecione, organize e relacione, de forma coerente e coesa,\nargumentos e fatos para defesa de seu ponto de vista."
+        "text": "expõe a ineficácia dos estudos para alterar tal\ncomportamento."
       }
     ],
     "correctOptionId": "b",
@@ -2004,11 +2004,7 @@
       "version": "CD2 amarelo",
       "questionNumber": 45
     },
-    "figures": [
-      {
-        "url": "/question-media/enem-completo/enem-2018-d1-q045-p19-0.webp"
-      }
-    ]
+    "figures": []
   },
   {
     "id": "enem_completo_2018_d1_q046",
@@ -4678,23 +4674,23 @@
     "options": [
       {
         "id": "a",
-        "text": "1,3 kȍ"
+        "text": "1,3 kΩ"
       },
       {
         "id": "b",
-        "text": "4,0 kȍ"
+        "text": "4,0 kΩ"
       },
       {
         "id": "c",
-        "text": "6,0 kȍ"
+        "text": "6,0 kΩ"
       },
       {
         "id": "d",
-        "text": "6,7 kȍ"
+        "text": "6,7 kΩ"
       },
       {
         "id": "e",
-        "text": "12,0 kȍ"
+        "text": "12,0 kΩ"
       }
     ],
     "correctOptionId": "c",
@@ -10198,7 +10194,7 @@
       },
       {
         "id": "e",
-        "text": "seleção lexical na qual predominam informações\nredundantes.\nINSTRUÇÕES PARA A REDAÇÃO\n1.  \tO rascunho da redação deve ser feito no espaço apropriado.\n2.  \tO texto definitivo deve ser escrito à tinta preta, na folha própria, em até 30 linhas.\n3.\t A redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas copiadas\ndesconsiderado para a contagem de linhas.\n4. \tReceberá nota zero, em qualquer das situações expressas a seguir, a redação que:\n4.1.  tiver até 7 (sete) linhas escritas, sendo considerada “texto insuficiente”.\n4.2.  fugir ao tema ou que não atender ao tipo dissertativo-argumentativo.\n4.3.  apresentar parte do texto deliberadamente desconectada do tema proposto.\n4.4.  apresentar nome, assinatura, rubrica ou outras formas de identificação no espaço destinado ao texto.\nTEXTOS MOTIVADORES\nTEXTO I\nNo dia da primeira exibição pública de cinema — 28 de dezembro de 1895, em Paris —, um homem de teatro que\ntrabalhava com mágicas, Georges Mélies, foi falar com Lumière, um dos inventores do cinema; queria adquirir um\naparelho, e Lumière desencorajou-o, disse-lhe que o “Cinematógrapho” não tinha o menor futuro como espetáculo,\nera um instrumento científico para reproduzir o movimento e só poderia servir para pesquisas. Mesmo que o\npúblico, no início, se divertisse com ele, seria uma novidade de vida breve, logo cansaria. Lumière enganou-se.\nComo essa estranha máquina de austeros cientistas virou uma máquina de contar estórias para enormes plateias,\nde geração em geração, durante já quase um século?\nBERNARDET, Jean-Claude. O que é Cinema. In BERNARDET, Jean-Claude; ROSSI, Clóvis. O que é Jornalismo, O que é Editora,\nO que é Cinema. São Paulo: Brasiliense, 1993.\nTEXTO II\nEdgar Morin define o cinema como uma máquina que registra a existência e a restitui como tal, porém levando em\nconsideração o indivíduo, ou seja, o cinema seria um meio de transpor para a tela o universo pessoal, solicitando\na participação do espectador.\nGUTFREIND, C. F. O filme e a representação do real. E-Compós, v. 6, 11, 2006 (adaptado).\nTEXTO IV\nO Brasil já teve um parque exibidor vigoroso e descentralizado:\nquase 3 300 salas em 1975, uma para cada 30 000 habitantes,\n80% em cidades do interior. Desde então, o país mudou.\nQuase 120 milhões de pessoas a mais passaram a viver nas cidades.\nA urbanização acelerada, a falta de investimentos em infraestrutura\nurbana, a baixa capitalização das empresas exibidoras, as\nmudanças tecnológicas, entre outros fatores, alteraram a geografia\ndo cinema. Em 1997, chegamos a pouco mais de 1 000 salas.\nCom a expansão dos shopping centers, a atividade de exibição\nse reorganizou. O número de cinemas duplicou, até chegar às\natuais 2 200 salas. Esse crescimento, porém, além de insuficiente\n(o Brasil é apenas o 60º país na relação habitantes por sala),\nocorreu de forma concentrada. Foram privilegiadas as áreas de\nrenda mais alta das grandes cidades. Populações inteiras foram\nexcluídas do universo do cinema ou continuam mal atendidas:\no Norte e o Nordeste, as periferias urbanas, as cidades pequenas\ne médias do interior.\nDisponível em: www.meioemensagem.com.\nDisponível em: https://cinemapertodevoce.ancine.gov.br.\nAcesso em: 12 jun. 2019 (adaptado).\nAcesso em: 13 jun. 2019 (fragmento).\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua formação,\nredija texto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa sobre o tema\n“Democratização do acesso ao cinema no Brasil”, apresentando proposta de intervenção que respeite os direitos\nhumanos. Selecione, organize e relacione, de forma coerente e coesa, argumentos e fatos para defesa de seu\nponto de vista."
+        "text": "seleção lexical na qual predominam informações\nredundantes."
       }
     ],
     "correctOptionId": "d",
@@ -10215,11 +10211,7 @@
       "version": "CD2 amarelo",
       "questionNumber": 45
     },
-    "figures": [
-      {
-        "url": "/question-media/enem-completo/enem-2019-d1-q045-p20-0.webp"
-      }
-    ]
+    "figures": []
   },
   {
     "id": "enem_completo_2019_d1_q046",
@@ -10828,7 +10820,7 @@
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A — expressão ou figura identificada por essa letra."
+        "text": "Falsificação de teses."
       },
       {
         "id": "b",
@@ -12193,7 +12185,7 @@
       },
       {
         "id": "e",
-        "text": "Benefícios assistenciais públicos.\nTranscreva a sua Redação para a Folha de Redação.\nRASCUNHO\nDA REDAÇÃO"
+        "text": "Benefícios assistenciais públicos."
       }
     ],
     "correctOptionId": "c",
@@ -12210,11 +12202,7 @@
       "version": "CD2 amarelo",
       "questionNumber": 90
     },
-    "figures": [
-      {
-        "url": "/question-media/enem-completo/enem-2019-d1-q090-p32-0.webp"
-      }
-    ]
+    "figures": []
   },
   {
     "id": "enem_completo_2019_d2_q091",
@@ -18361,7 +18349,7 @@
       },
       {
         "id": "e",
-        "text": "apelo pela identificação com a empresa extensiva ao\namor patriótico.\nINSTRUÇÕES PARA A REDAÇÃO\n1. \tO rascunho da redação deve ser feito no espaço apropriado.\n2. \tO texto definitivo deve ser escrito à tinta, na folha própria, em até 30 linhas.\n3. \tA redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas copiadas\ndesconsiderado para efeito de correção.\n4. Receberá nota zero, em qualquer das situações expressas a seguir, a redação que:\n4.1. tiver até 7 (sete) linhas escritas, sendo considerada “texto insuficiente”.\n4.2. fugir ao tema ou que não atender ao tipo dissertativo-argumentativo.\n4.3. apresentar parte do texto deliberadamente desconectada do tema proposto.\nTEXTOS MOTIVADORES\nTEXTO I\nA maior parte das pessoas, quando ouve falar em “saúde mental”, pensa em “doença mental”. Mas a saúde mental\nimplica muito mais que a ausência de doenças mentais. Pessoas mentalmente saudáveis compreendem que\nninguém é perfeito, que todos possuem limites e que não se pode ser tudo para todos. Elas vivenciam diariamente\numa série de emoções como alegria, amor, satisfação, tristeza, raiva e frustração. São capazes de enfrentar os\ndesafios e as mudanças da vida cotidiana com equilíbrio e sabem procurar ajuda quando têm dificuldade em lidar\ncom conflitos, perturbações, traumas ou transições importantes nos diferentes ciclos da vida. A saúde mental de\numa pessoa está relacionada à forma como ela reage às exigências da vida e ao modo como harmoniza seus\ndesejos, capacidades, ambições, ideias e emoções. Todas as pessoas podem apresentar sinais de sofrimento\npsíquico em alguma fase da vida.\nDisponível em: http://www.saude.pr.gov.br. Acesso em: 27 jul. 2020 (adaptado).\nTEXTO II\nA origem da palavra “estigma” aponta para marcas ou cicatrizes\ndeixadas por feridas. Por extensão, em um período que remonta\nà Grécia Antiga, passou a designar também as marcas feitas com\nferro em brasa em criminosos, escravos e outras pessoas que se\ndesejava separar da sociedade “correta” e “honrada”. Essa mesma\npalavra muitas vezes está presente no universo das doenças\npsiquiátricas. No lugar da marca de ferro, relegamos preconceito,\nfalta de informação e tratamentos precários a pessoas que sofrem\nde depressão, ansiedade, transtorno bipolar e outros transtornos\nmentais graves.\nAchar que a manifestação de um transtorno mental é “frescura”\nestá relacionado a um ideal de felicidade que não é igual para\ntodo mundo. A tentativa de se encaixar nesse modelo cria\ndistância dos sentimentos reais, e quem os demonstra é rotulado,\no que progressivamente dificulta a interação social. É aqui que\nredes sociais de enorme popularidade mostram uma face cruel,\ndesempenhando um papel de validação da vida perfeita e criando\num ambiente em que tudo deve ser mostrado em seu melhor\nângulo. Fora dos holofotes da internet, porém, transtornos mentais\nmostram-se mais presentes do que se imagina.\nDisponível em: https://zenklub.com.br.\nhttp://www.abrata.org.br. Acesso em: 27 jul. 2020 (adaptado).\nAcesso em: 27 jul. 2020 (adaptado).\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua\nformação, redija um texto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa\nsobre o tema “O estigma associado às doenças mentais na sociedade brasileira”, apresentando proposta de\nintervenção que respeite os direitos humanos. Selecione, organize e relacione, de forma coerente e coesa,\nargumentos e fatos para defesa de seu ponto de vista."
+        "text": "apelo pela identificação com a empresa extensiva ao\namor patriótico."
       }
     ],
     "correctOptionId": "e",
@@ -18378,11 +18366,7 @@
       "version": "CD2 amarelo",
       "questionNumber": 45
     },
-    "figures": [
-      {
-        "url": "/question-media/enem-completo/enem-2020-d1-q045-p19-0.webp"
-      }
-    ]
+    "figures": []
   },
   {
     "id": "enem_completo_2020_d1_q046",
@@ -20317,7 +20301,7 @@
       },
       {
         "id": "e",
-        "text": "existencialista, na questão do reconhecimento de si.\nTranscreva a sua Redação para a Folha de Redação."
+        "text": "existencialista, na questão do reconhecimento de si."
       }
     ],
     "correctOptionId": "e",
@@ -20334,14 +20318,7 @@
       "version": "CD2 amarelo",
       "questionNumber": 90
     },
-    "figures": [
-      {
-        "url": "/question-media/enem-completo/enem-2020-d1-q090-p32-0.webp"
-      },
-      {
-        "url": "/question-media/enem-completo/enem-2020-d1-q090-p32-1.webp"
-      }
-    ]
+    "figures": []
   },
   {
     "id": "enem_completo_2020_d2_q091",
@@ -26574,7 +26551,7 @@
       },
       {
         "id": "e",
-        "text": "defende novas regras gramaticais.\nINSTRUÇÕES PARA A REDAÇÃO\n1. O rascunho da redação deve ser feito no espaço apropriado.\n2. O texto defi nitivo deve ser escrito à tinta preta, na folha própria, em até 30 linhas.\n3.  A redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas\ncopiadas desconsiderado para a contagem de linhas.\n4. Receberá nota zero, em qualquer das situações expressas a seguir, a redação que:\n4.1. tiver até 7 (sete) linhas escritas, sendo considerada —texto insufi ciente“;\n4.2. fugir ao tema ou que não atender ao tipo dissertativo-argumentativo;\n4.3. apresentar parte do texto deliberadamente desconectada do tema proposto;\n4.4. apresentar nome, assinatura, rubrica ou outras formas de identifi cação no espaço destinado ao texto.\nTEXTOS MOTIVADORES\nTEXTO I\nTEXTO III\nToda sexta-feira, o ônibus azul e branco estacionado\nA certidão de nascimento é o primeiro e o mais\nno pátio da Vara da Infância e da Juventude, na Praça\nimportante documento do cidadão. Com ele, a pessoa\nOnze, Centro do Rio, sacoleja com o entra e sai de gente a\nexiste ofi cialmente para o Estado e a sociedade. Só de\npartir das 9 h. Do lado de fora, nunca menos de 50 pessoas,\nposse da certidão é possível retirar outros documentos\ntodas pobres ou muito pobres, quase todas negras, cercam\ncivis, como a carteira de trabalho, a carteira de identidade,\no veículo, perguntam, sentam e levantam, perguntam de\no título de eleitor e o Cadastro de Pessoa Física (CPF).\nnovo e esperam sem reclamar o tempo que for preciso.\nAlém disso, para matricular uma criança na escola e\nAdultos, velhos e crianças estão ali para conseguir o que,\nter acesso a benefícios sociais, a apresentação do\nno Brasil, é ofi cialmente reconhecido como o primeiro\ndocumento da vida œ a certidão de nascimento. [...]\ndocumento é obrigatória.\nAo longo do discurso desses entrevistados, fi ca clara\nDisponível em: http://www.senado.leg.br/. Acesso em: 21 jul. 2021.\na forma como os usuários se defi nem: —zero à esquerda“,\n—cachorro“, —um nada“, —pessoa que não existe“, entre\noutras, todas são expressões que conformam claramente\na ideia da pessoa sem registro de nascimento sobre si\nmesma como uma pessoa sem valor, cuja existência\nnunca foi ofi cialmente reconhecida pelo Estado.\nESCÌSSIA, F. M. Invisíveis: uma etnografi a sobre identidade, direitos e cidadania nas\ntrajetórias de brasileiros sem documento. Tese (Doutorado em História, Política e\nBens Culturais). Fundação Getúlio Vargas. Rio de Janeiro, 2019.\nTEXTO II\nA Lei Nº 9 534 de 1997 tornou o registro de nascimento\ngratuito no Brasil. Só que o problema persiste, mostrando\nque essa exclusão é complexa e não se explica apenas pela\ndifi culdade fi nanceira em pagar pelo registro, por exemplo.\nDisponível em: https://www.ufrgs.br/humanista. Acesso em: 26 jul. 2021 (adaptado).\nDisponível em: https://estudio.r7.com/. Acesso em: 22 jul. 2021 (adaptado).\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua formação,\nredija texto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa sobre o tema\n—Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil“, apresentando proposta de intervenção\nque respeite os direitos humanos. Selecione, organize e relacione, de forma coerente e coesa, argumentos e\nfatos para a defesa de seu ponto de vista."
+        "text": "defende novas regras gramaticais."
       }
     ],
     "correctOptionId": "d",
@@ -26591,14 +26568,7 @@
       "version": "CD2 amarelo",
       "questionNumber": 45
     },
-    "figures": [
-      {
-        "url": "/question-media/enem-completo/enem-2021-d1-q045-p21-0.webp"
-      },
-      {
-        "url": "/question-media/enem-completo/enem-2021-d1-q045-p21-1.webp"
-      }
-    ]
+    "figures": []
   },
   {
     "id": "enem_completo_2021_d1_q046",
@@ -28527,7 +28497,7 @@
       },
       {
         "id": "e",
-        "text": "medidas de salvaguarda de peças museológicas.\nTranscreva a sua Redação para a Folha de Redação."
+        "text": "medidas de salvaguarda de peças museológicas."
       }
     ],
     "correctOptionId": "c",
@@ -28544,14 +28514,7 @@
       "version": "CD2 amarelo",
       "questionNumber": 90
     },
-    "figures": [
-      {
-        "url": "/question-media/enem-completo/enem-2021-d1-q090-p32-0.webp"
-      },
-      {
-        "url": "/question-media/enem-completo/enem-2021-d1-q090-p32-1.webp"
-      }
-    ]
+    "figures": []
   },
   {
     "id": "enem_completo_2021_d2_q091",
@@ -34897,7 +34860,7 @@
       },
       {
         "id": "e",
-        "text": "aumenta o número de línguas indígenas faladas\nno Brasil.\nINSTRUÇÕES PARA A REDAÇÃO\n1.  O rascunho da redação deve ser feito no espaço apropriado.\n2.  O texto definitivo deve ser escrito à tinta preta, na folha própria, em até 30 linhas.\n3.  A redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas\ncopiadas desconsiderado para a contagem de linhas.\n4.  Receberá nota zero, em qualquer das situações expressas a seguir, a redação que:\n4.1.  tiver até 7 (sete) linhas escritas, sendo considerada “texto insuficiente”;\n4.2.  fugir ao tema ou não atender ao tipo dissertativo-argumentativo;\n4.3.  apresentar parte do texto deliberadamente desconectada do tema proposto;\n4.4.  apresentar nome, assinatura, rubrica ou outras formas de identificação no espaço destinado ao texto.\nTEXTO I\nTEXTO III\nVocê sabe quais são as comunidades e os povos\nPovos e comunidades tradicionais\ntradicionais brasileiros? Talvez indígenas e quilombolas\nO Ministério do Desenvolvimento Social (MDS)\nsejam os primeiros que passam pela cabeça, mas,\npreside,\ndesde\n2007,\na\nComissão\nNacional\nde\nna verdade, além deles, existem 26 reconhecidos\nDesenvolvimento Sustentável dos Povos e Comunidades\noficialmente e muitos outros que ainda não foram\nTradicionais (CNPCT), criada em 2006. Fruto dos\nincluídos na legislação.\ntrabalhos da CNPCT, foi instituída, por meio do Decreto\nSão pescadores artesanais, quebradeiras de coco\nnº 6.040, de 7 de fevereiro de 2017, a Política Nacional de\nDesenvolvimento Sustentável dos Povos e Comunidades\nbabaçu, apanhadores de flores sempre-vivas, caatingueiros,\nTradicionais (PNPCT). A PNPCT foi criada em um\nextrativistas, para citar alguns, todos considerados\ncontexto de busca de reconhecimento e preservação de\nculturalmente diferenciados, capazes de se reconhecerem\noutras formas de organização social por parte do Estado.\nentre si.\nDisponível em: http://mds.gov.br. Acesso em: 17 jun. 2022 (adaptado).\nPara uma pesquisadora da UnB, essas populações\nTEXTO IV\nconsideram a terra como uma mãe, e há uma relação de\nCarta da Amazônia 2021\nreciprocidade com a natureza. Nessa troca, a natureza fornece\nAos participantes da 26ª Conferência das Nações Unidas\n“alimento, um lugar saudável para habitar, para ter água.\nsobre Mudanças Climáticas (COP26)\nE elas se responsabilizam por cuidar dela, por tirar dela\napenas o suficiente para viver bem e respeitam o tempo de\nNão podia ser mais estratégico para nós, Povos\nIndígenas, Populações e Comunidades Tradicionais\nregeneração da própria natureza”, diz.\nbrasileiras, reafirmarmos a defesa da sociobiodiversidade\nDisponível em: https://g1.globo.com. Acesso em: 17 jun. 2022 (adaptado).\namazônica neste momento em que o mundo volta a\ndebater a crise climática na COP26. Uma crise que\nTEXTO II\natinge, em todos os contextos, os viventes da Terra!\nPovos tradicionais do Brasil\nNossos territórios protegidos e direitos respeitados\nEstados com a maior concentração de famílias\nsão as reivindicações dos movimentos sociais e\nambientais brasileiros.\nNão compactuamos com qualquer tentativa e estratégia\n43.264\nbaseada somente na lógica do mercado, com empresas\n21.507\n15.316\nque apoiam legislações ambientais que ameaçam nossos\ndireitos e com mecanismos de financiamento que não\ncondizem com a realidade dos nossos territórios.\n43.009\nPropomos o que temos de melhor: a experiência das\n39.316\n15.282\nnossas sociedades e culturas históricas, construídas com\nbase em nossos saberes tradicionais e ancestrais, além de\nnosso profundo conhecimento da natureza.\n1.538\n643\nInovação, para nós, não pode resultar em processos\n556\nque venham a ameaçar nossos territórios, nossas formas\ntradicionais e harmônicas de viver e produzir.\n11.826\nAmazônia, Brasil, 20 de outubro de 2021.\n9.772\nFonte: Ministério Público Federal.\n7.190\nInfográfico elaborado em: 25/10/2019.\nEntidades signatárias: CNS; Coiab; Conaq; MIQCB;\nCoica; ANA Amazônia e Confrem\nDisponível em: https://g1.globo.com. Acesso em: 17 jun. 2022 (adaptado).\nDisponível em: https://s3.amazonaws.com. Acesso em: 17 jun. 2022 (adaptado).\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua formação,\nredija um texto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa sobre o tema\n“Desafios para a valorização de comunidades e povos tradicionais no Brasil”, apresentando proposta de\nintervenção que respeite os direitos humanos. Selecione, organize e relacione, de forma coerente e coesa,\nargumentos e fatos para a defesa de seu ponto de vista."
+        "text": "aumenta o número de línguas indígenas faladas\nno Brasil."
       }
     ],
     "correctOptionId": "b",
@@ -34914,14 +34877,7 @@
       "version": "CD2 amarelo",
       "questionNumber": 45
     },
-    "figures": [
-      {
-        "url": "/question-media/enem-completo/enem-2022-d1-q045-p20-0.webp"
-      },
-      {
-        "url": "/question-media/enem-completo/enem-2022-d1-q045-p20-1.webp"
-      }
-    ]
+    "figures": []
   },
   {
     "id": "enem_completo_2022_d1_q046",
@@ -36929,7 +36885,7 @@
       },
       {
         "id": "e",
-        "text": "definir uma tradição popular.\nTranscreva a sua Redação para a Folha de Redação.\nRASCUNHO\nDA REDAÇÃO"
+        "text": "definir uma tradição popular."
       }
     ],
     "correctOptionId": "b",
@@ -36946,14 +36902,7 @@
       "version": "CD2 amarelo",
       "questionNumber": 90
     },
-    "figures": [
-      {
-        "url": "/question-media/enem-completo/enem-2022-d1-q090-p32-0.webp"
-      },
-      {
-        "url": "/question-media/enem-completo/enem-2022-d1-q090-p32-1.webp"
-      }
-    ]
+    "figures": []
   },
   {
     "id": "enem_completo_2022_d2_q091",
@@ -42925,7 +42874,7 @@
       },
       {
         "id": "e",
-        "text": "chamar a atenção da população sobre a qualidade dos\nserviços de saúde pública para o idoso.\nINSTRUÇÕES PARA A REDAÇÃO\n1. O rascunho da redação deve ser feito no espaço apropriado.\n2. O texto definitivo deve ser escrito à tinta preta, na folha própria, em até 30 (trinta) linhas.\n3.  A redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas\ncopiadas desconsiderado para a contagem de linhas.\n4. Receberá nota zero, em qualquer das situações expressas a seguir, a redação que:\n4.1. tiver até 7 (sete) linhas escritas, sendo considerada “texto insuficiente”;\n4.2. fugir ao tema ou não atender ao tipo dissertativo-argumentativo;\n4.3. apresentar parte do texto deliberadamente desconectada do tema proposto;\n4.4. apresentar nome, assinatura, rubrica ou outras formas de identificação no espaço destinado ao texto.\nTEXTO I\nTEXTO III\nO trabalho de cuidado não remunerado e mal pago\nA sociedade brasileira tem passado por inúmeras\ne a crise global da desigualdade\ntransformações sociais ao longo das últimas décadas.\nEntre elas, as percepções sociais a respeito dos valores\nO trabalho de cuidado é essencial para nossas\ne das convenções de gênero e a forma como mulheres\nsociedades e para a economia. Ele inclui o trabalho\ntêm se inserido na sociedade. Algumas permanências,\nde cuidar de crianças, idosos e pessoas com doenças\nporém, chamam a atenção, como a delegação quase\ne deficiências físicas e mentais, bem como o trabalho\nque exclusiva às famílias – e, nestas, às mulheres –\ndoméstico diário que inclui cozinhar, limpar, lavar,\nde atividades relacionadas à reprodução da vida e da\nconsertar coisas e buscar água e lenha. Se ninguém\nsociedade, usualmente nominadas trabalho de cuidado.\ninvestisse tempo, esforços e recursos nessas tarefas\nDisponível em: https://repositorio.ipea.gov.br.\ndiárias essenciais, comunidades, locais de trabalho e\nAcesso em: 24 maio 2023 (adaptado).\neconomias inteiras ficariam estagnados. Em todo o mundo,\nTEXTO IV\no trabalho de cuidado não remunerado e mal pago é\ndesproporcionalmente assumido por mulheres e meninas\nem situação de pobreza, especialmente por aquelas\nque pertencem a grupos que, além da discriminação de\ngênero, sofrem preconceito em decorrência de sua raça,\netnia, nacionalidade e sexualidade. As mulheres são\nDESAFIOS\nresponsáveis por mais de três quartos do cuidado não\nDESAFIOS\nremunerado e compõem dois terços da força de trabalho\nDESAFIOS\nenvolvida em atividades de cuidado remuneradas.\nDO CUIDADO\nDO CUIDADO\nDO CUIDADO\nDocumento informativo – Tempo de Cuidar. Disponível em:\nhttps://www.oxfam.org.br. Acesso em: 18 de jul. de 2023 (adaptado).\nTEXTO II\nAumenta o número de pessoas\nAumenta o número de pessoas\nque demandam serviços de\nque demandam serviços\nde assistência, obrigando\nMédia de horas dedicadas pelas pessoas de 14 anos\nassistência, obrigando os\nos países a repensar\npaíses a repensar seus\nou mais de idade aos afazeres domésticos e/ou\nseus sistemas de atenção;\nsistemas de atenção;\nno Brasil, protagonismo\nàs tarefas de cuidado de pessoas, por sexo\nno Brasil, protagonismo\ncontinua familiar\ncontinua familiar\nBrasil - 2019\nCovid-19: a complexidade\nda distribuição das vacinas;\nSexo\nHoras Semanais\nas startups que criaram os\nprimeiros imunizantes aprovados;\nHomens\n11,0\no impacto das mutações do vírus\nMulheres\n21,4\nApenas 15%\nRede de\nPterossauros\nCresce o número\ndos ﬁlmes\nestradas\npodem ter\nde brasileiros\nFonte: IBGE - Pnad contínua anual\nnacionais foram\nconectava\nse originado\nentre os\nCovid-19: a complexidade\nApenas 15%\nRede de\nPterossauros\nCresce o número\ndirigidos por\naldeias e culturas\ndos ﬁlmes\nde pequenos\nestradas\npodem ter\npesquisadores\nde brasileiros\nda distribuição das vacinas;\nnacionais foram\nconectava\nse originado\nentre os\nDisponível em: https://agenciadenoticias.ibge.gov.br.\nas startups que criaram os\nmulheres entre\npré-colombianas\nrépteis\nmais citados\nprimeiros imunizantes aprovados;\ndirigidos por\naldeias e culturas\nde pequenos\npesquisadores\nAcesso em: 18 de jul. 2023 (adaptado).\nmulheres entre\npré-colombianas\nrépteis\nmais citados\no impacto das mutações do vírus\n2001 e 2010\nna Amazônia\nterrestres\nem 2020\n2001 e 2010\nna Amazônia\nterrestres\nem 2020\nCapa da revista Pesquisa. Disponível em: https://revistapesquisa.fapesp.br.\nAcesso em: 23 maio 2023 (adaptado).\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua formação,\nredija texto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa sobre o tema “Desafios\npara o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil”, apresentando\nproposta de intervenção que respeite os direitos humanos. Selecione, organize e relacione, de forma coerente e\ncoesa, argumentos e fatos para a defesa de seu ponto de vista."
+        "text": "chamar a atenção da população sobre a qualidade dos\nserviços de saúde pública para o idoso."
       }
     ],
     "correctOptionId": "e",
@@ -52183,7 +52132,7 @@
       },
       {
         "id": "e",
-        "text": "pronominalização, marcada pela retomada de “minha filha”\ne “um namorado ruim” pelos pronomes “ela” e “lo”.\nINSTRUÇÕES PARA A REDAÇÃO\n1.  O rascunho da redação deve ser feito no espaço apropriado.\n2.  O texto definitivo deve ser escrito à tinta preta, na folha própria, em até 30 (trinta) linhas.\n3.  A redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas\ncopiadas desconsiderado para a contagem de linhas.\n4.  Receberá nota zero, em qualquer das situações expressas a seguir, a redação que:\n4.1.  tiver até 7 (sete) linhas escritas, sendo considerada “texto insuficiente”;\n4.2.  fugir ao tema ou não atender ao tipo dissertativo-argumentativo;\n4.3.  apresentar parte do texto deliberadamente desconectada do tema proposto;\n4.4.  apresentar nome, assinatura, rubrica ou outras formas de identificação no espaço destinado ao texto.\nTEXTO I\nTEXTO V\nHerança – o legado de crenças, conhecimentos, técnicas,\nHistórias para ninar gente grande\nG.R.E.S. Estação Primeira de Mangueira\ncostumes, tradições, transmitido por um grupo social de\ngeração para geração; cultura.\n(samba-enredo de 2019)\nBrasil, meu nego\nHOUAISS, A.; VILLAR, M. S. Dicionário Houaiss da língua\nDeixa eu te contar\nportuguesa. Rio de Janeiro: Objetiva, 2009 (adaptado).\nA história que a história não conta\nTEXTO II\nO avesso do mesmo lugar\nAs culturas africanas e afro-brasileiras foram relegadas\nNa luta é que a gente se encontra\nao campo do folclore com o propósito de confiná-las ao gueto\nfossilizado da memória. Folclorizar, nesse caso, é reduzir uma\nBrasil, meu dengo\ncultura a um conjunto de representações estereotipadas, via\nA Mangueira chegou\nde regra, alheias ao contexto que produziu essa cultura.\nCom versos que o livro apagou\nOLIVEIRA, E. D. A epistemologia da ancestralidade. Entrelugares:\nDesde 1500 tem mais invasão do que descobrimento\nrevista de sociopoética e abordagens afins, 2009.\nTem sangue retinto pisado\nAtrás do herói emoldurado\nMulheres, tamoios, mulatos\nEu quero um país que não está no retrato\nBrasil, o teu nome é Dandara\nE a tua cara é de cariri\nNão veio do céu\nNem das mãos de Isabel\nA liberdade é um dragão no mar de Aracati\nSalve os caboclos de julho\nQuem foi de aço nos anos de chumbo\nBrasil, chegou a vez\nDe ouvir as Marias, Mahins, Marielles, malês\nPAULINO, R. Ainda a lamentar. In: GONÇALVES, A. M. Um defeito de cor:\nromance. Rio de Janeiro: Record, 2024 (adaptado).\nDisponível em: www.mangueira.com.br.\nAcesso em: 30 maio 2024 (fragmento).\nTEXTO IV\nTEXTO VI\nHistória afro-brasileira nas escolas: professoras\nAlunos de escola municipal conhecem pontos\ncomentam avanços e dificuldades\ndo Rio que retratam relação com a África\nAs aulas sobre escravidão eram motivo de vergonha\nFoto: Brenno Carvalho / O Globo\npara uma professora quando ela estudava em uma escola\nmunicipal na zona sul de São Paulo. “Era o meu pior\nmomento na escola”, lembra a ex-aluna. Naquela época,\na história da população negra no Brasil era reduzida ao\nhorror do período escravocrata. Não se falava na escola\nsobre temas como a história e a cultura afro-brasileira, muito\nmenos sobre as grandes personalidades negras do país,\ncomo Luiz Gama e Carolina Maria de Jesus.\nA pedagoga, que é negra, tem orgulho de oferecer\numa experiência diferente da que viveu em sala de aula\npara seus alunos. Agora os livros infantis levados para as\nturmas têm protagonistas pretos. Temas como a beleza\ndo cabelo crespo e o combate ao racismo fazem parte do\nAlunos admiram grafite de Zumbi dos\ndia a dia da escola.\nPalmares na Pedra do Sal.\nDisponível em: www.oglobo.com. Acesso em:\nDisponível em: https://jornal.unesp.br. Acesso em: 3 jun. 2024 (adaptado).\n29 maio 2024 (adaptado).\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua\nformação, redija texto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa sobre o tema\n“Desafios para a valorização da herança africana no Brasil”, apresentando proposta de intervenção que respeite os direitos\nhumanos. Selecione, organize e relacione, de forma coerente e coesa, argumentos e fatos para defesa de seu ponto de vista."
+        "text": "pronominalização, marcada pela retomada de “minha filha”\ne “um namorado ruim” pelos pronomes “ela” e “lo”."
       }
     ],
     "correctOptionId": "c",
@@ -52200,14 +52149,7 @@
       "version": "CD2 amarelo",
       "questionNumber": 45
     },
-    "figures": [
-      {
-        "url": "/question-media/enem-completo/enem-2024-d1-q045-p19-0.webp"
-      },
-      {
-        "url": "/question-media/enem-completo/enem-2024-d1-q045-p19-1.webp"
-      }
-    ]
+    "figures": []
   },
   {
     "id": "enem_expansao_2024_q46",
@@ -54141,7 +54083,7 @@
       },
       {
         "id": "e",
-        "text": "ensimesmamento, interiorização e indulgência dos agentes.\nTranscreva a sua Redação para a Folha de Redação.\nRASCUNHO\nDA REDAÇÃO"
+        "text": "ensimesmamento, interiorização e indulgência dos agentes."
       }
     ],
     "correctOptionId": "a",
@@ -54158,14 +54100,7 @@
       "version": "CD2 amarelo",
       "questionNumber": 90
     },
-    "figures": [
-      {
-        "url": "/question-media/enem-completo/enem-2024-d1-q090-p32-0.webp"
-      },
-      {
-        "url": "/question-media/enem-completo/enem-2024-d1-q090-p32-1.webp"
-      }
-    ]
+    "figures": []
   },
   {
     "id": "enem_completo_2024_d2_q091",
@@ -60416,7 +60351,7 @@
       },
       {
         "id": "e",
-        "text": "técnica, que facilita a circulação de informações no sistema judiciário.\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua formação, redija um\ntexto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa sobre o tema “Perspectivas acerca do\nenvelhecimento na sociedade brasileira”, apresentando proposta de intervenção que respeite os direitos humanos. Selecione,\norganize e relacione, de forma coerente e coesa, argumentos e fatos para a defesa de seu ponto de vista.\nTEXTO I\nTEXTO IV\nEm 2022, o total de pessoas com 65 anos de idade ou\nUm novo estereótipo: o “velho ativo”, saudável e com\nmais no país chegou a 10,9% da população, com alta de 57,4%\nrecursos pressiona o “velho inativo”, doente e pobre. Nem todos\nfrente a 2010, quando esse contingente era 7,4% da população.\nos idosos têm recursos à disposição para aderir a essa corrida.\nÉ o que revelam os resultados do universo da população do\nIdosos são os principais mantenedores dos lares\nBrasil desagregada por idade e sexo do Censo Demográfico\n2022. “O Estatuto do Idoso define como idoso a pessoa de\n60 anos ou mais. O corte de 65 anos ou mais foi utilizado nessa\nanálise para manter comparabilidade internacional e com outras\npesquisas que utilizam essa faixa etária, como de mercado de\ntrabalho”, justifica a gerente de Estudos e Análises da Dinâmica\nDemográfica do IBGE. O aumento da população de 65 anos ou\nmais e a diminuição da parcela da população de até 14 anos no\nmesmo período, que passou de 24,1% para 19,8%, evidenciam\no franco envelhecimento da população brasileira.\nGOMES, I.; BRITTO, V. Censo 2022. Disponível em:\nDisponível em: g1.globo.com. Acesso em: 4 jun. 2025 (adaptado).\nhttps://agenciadenoticias.ibge.gov.br.\nAcesso em: 21 maio 2025 (adaptado).\nTEXTO V\nTEXTO II\nDona Maria Rita era tão antiga que na casa da filha estavam\nUm movimento na internet, contrário ao pictograma com a\nhabituados a ela como a um móvel velho. Ela não era novidade\nbengala para os idosos, iniciou uma campanha para modificar essa\npara ninguém. Mas nunca lhe passara pela cabeça que era uma\nimagem. A empreitada coletiva acabou com a elaboração de um\nsolitária. Só que não tinha nada para fazer. Era um lazer forçado\nnovo desenho, uma figura mais altiva, ao lado da inscrição “60+”.\nque em certos momentos se tornava lancinante: nada tinha a\nfazer no mundo. Senão viver como um gato, como um cachorro.\nSeu ideal era ser dama de companhia de alguma senhora, mas\nisso nem se usava mais e mesmo ninguém acreditaria nos\nseus fortes setenta e sete anos, pensariam que era uma fraca.\nNão fazia nada, fazia só isso: ser velha. Às vezes ficava deprimida:\nachava que não servia a nada, não servia sequer a Deus.\nLISPECTOR, C. Onde estivestes de noite.\nDisponível em: www12.senado.leg.br. Acesso em: 21 maio 2025.\nRio de Janeiro: Francisco Alves, 1974.\nTEXTO III\nTEXTO VI\nA velhice é tempo de se retratar consigo mesma, de falar\nQuem tem direito de viver mais?\nda doença, da sexualidade, do tédio e da liberdade de não se\nO documentário Quantos dias. Quantas noites busca\nencaixar mais nas expectativas sociais. “A velhice não é doença.\nÉ destino”, escreve Rita Lee. Mas ela mesma mostra que esse\ninvestigar quem, afinal, tem direito a uma vida longa no Brasil.\ndestino não é sinônimo de mero encaminhamento para o fim —\n“São inúmeros os marcadores que definem quem vai viver e\né campo de novas escolhas, inclusive a de desafiar estereótipos\nquem vai sucumbir diante de uma realidade imposta por um\nreservados para essa fase da vida.\nsistema bastante perverso”, afirma o diretor do documentário.\nA atriz Fernanda Montenegro, 95 anos, oferece em suas\n“O envelhecimento leva a maioria das pessoas a um\nmemórias uma síntese luminosa desse gesto de habitar o tempo\ndeclínio funcional. Mas, se você chega aos 75 tendo acumulado\ncom dignidade: “A velhice é o tempo em que a vida já foi vivida\ndesigualdades, principalmente pelo racismo, é muito difícil\ne, por isso mesmo, pode finalmente ser olhada de frente, sem\no pânico do ineditismo”.\nsobreviver com qualidade de vida”, diz um médico gerontólogo.\nDisponível em: https://rascunho.com.br. Acesso em: 17 maio 2025.\nDisponível em: g1.globo.com. Acesso em: 10 jun. 2025 (adaptado).\nINSTRUÇÕES PARA A REDAÇÃO\ncopiadas desconsiderado para a contagem de linhas.\n1\n2\n3\n4\n5\n6\n7\nRASCUNHO\n8\n9\n10\nDA REDAÇÃO\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30"
+        "text": "técnica, que facilita a circulação de informações no sistema judiciário."
       }
     ],
     "correctOptionId": "a",
@@ -60436,15 +60371,6 @@
     "figures": [
       {
         "url": "/question-media/enem-completo/enem-2025-d1-q045-p19-1.webp"
-      },
-      {
-        "url": "/question-media/enem-completo/enem-2025-d1-q045-p20-0.webp"
-      },
-      {
-        "url": "/question-media/enem-completo/enem-2025-d1-q045-p20-1.webp"
-      },
-      {
-        "url": "/question-media/enem-completo/enem-2025-d1-q045-p22-1.webp"
       }
     ]
   },

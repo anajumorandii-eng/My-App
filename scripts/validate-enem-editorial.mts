@@ -4,6 +4,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { mockTopics } from '../src/data/mockData';
 import { enemReviewBatchPaths, loadEnemEditorialClassifications } from './lib/enemEditorialClassifications';
+import { matchesReviewedContent } from './lib/enemContentCorrections';
 const bank=JSON.parse(await readFile('public/questions.json','utf8'));
 const manifest=JSON.parse(await readFile('scripts/data/enem-completo-2018-2025/manifest.json','utf8'));
 const byId=new Map<string,any>(bank.map((q:any)=>[q.id,q]));
@@ -35,7 +36,7 @@ for(const path of await enemReviewBatchPaths()){
   if(row.decision==='keep')assert.deepEqual(row.previous,{subject:row.bankSubject,topicId:row.bankTopicId,chapter:row.bankChapter},row.questionId);
   if(row.decision==='taxonomy-gap'){assert.equal(row.bankChapter,null,row.questionId);assert.equal(row.confidence,'medium',row.questionId);}
   const hash=digest(q);
-  if(row.contentSha256)assert.equal(row.contentSha256,hash,`Conteúdo alterado sem nova revisão: ${row.questionId}`);
+  if(row.contentSha256)assert.ok(matchesReviewedContent(q,row.contentSha256),`Conteúdo alterado sem nova revisão: ${row.questionId}`);
   else if(process.argv.includes('--stamp'))row.contentSha256=hash;
   else throw new Error(`Falta o hash de conteúdo de ${row.questionId}; use --stamp após conferir o lote.`);
   counts.reviewed++;counts[row.decision as 'keep'|'correct'|'taxonomy-gap']++;

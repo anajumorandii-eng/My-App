@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFileSync } from 'node:fs';
-import { createHash } from 'node:crypto';
+import { matchesReviewedContent } from '../../scripts/lib/enemContentCorrections';
 import { execFileSync } from 'node:child_process';
 import { mockTopics } from '../data/mockData';
 import type { Question } from '../types';
@@ -10,7 +10,7 @@ const read=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const manifest=read('scripts/data/enem-completo-2018-2025/manifest.json');
 const bank:Question[]=read('public/questions.json');
 const byId=new Map(bank.map(q=>[q.id,q]));
-const protectedQuestion=(q:Question)=>JSON.stringify({id:q.id,prompt:q.prompt,options:q.options,correctOptionId:q.correctOptionId,status:q.status??null,figures:q.figures??[],examSource:q.examSource});
+
 
 test('todos os 789 casos da fila original têm decisão ou adiamento explícito, com fontes e conteúdo preservados',async()=>{
  const base=await loadEnemEditorialClassifications(mockTopics,false);
@@ -21,7 +21,7 @@ test('todos os 789 casos da fila original têm decisão ou adiamento explícito,
   const file=read(path);
   for(const row of [...file.items,...file.deferred]){assert.ok(expected.has(row.questionId));assert.ok(!ids.has(row.questionId));ids.add(row.questionId);}
   for(const row of file.items){
-   reviewed++;const q=byId.get(row.questionId)!;assert.ok(q);assert.equal(createHash('sha256').update(protectedQuestion(q)).digest('hex'),row.contentSha256,row.questionId);
+   reviewed++;const q=byId.get(row.questionId)!;assert.ok(q);assert.ok(matchesReviewedContent(q,row.contentSha256),row.questionId);
    const p=manifest.positions.find((p:any)=>p.questionId===q.id);assert.equal(q.correctOptionId,p.status==='annulled'?'':p.answer);assert.equal(row.answer,p.status==='annulled'?'*':p.answer.toUpperCase());
    assert.deepEqual([row.year,row.day,row.number],[p.year,p.day,p.number]);
    assert.equal(q.topicId,row.bankTopicId);assert.equal(q.subject,row.bankSubject);assert.equal(q.chapter??null,row.bankChapter);
