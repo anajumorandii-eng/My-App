@@ -1,5 +1,7 @@
 # Decisões e prioridades após a auditoria
 
+> Registro histórico da etapa inicial (PR #410). Os números e as três correções descritos abaixo são daquela etapa. Para os resultados atuais da revisão da fila, consulte [Revisão editorial](REVISAO-EDITORIAL.md) e [cobertura atual](README.md).
+
 ## O que foi conferido
 
 A auditoria automática abrange todas as 1.440 posições da aplicação regular impressa de 2018–2025, com opção Inglês, no banco versionado. Ela verifica identidade, posição canônica, estrutura, gabarito, tópico, capítulo, duplicação textual exata, procedência das classificações e alinhamento com o lote de importação. Não representa uma nova leitura editorial individual de 1.440 questões nem uma auditoria do Firestore remoto.

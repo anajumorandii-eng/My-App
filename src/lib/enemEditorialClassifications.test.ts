@@ -3,7 +3,7 @@ import test from 'node:test';
 import { readFileSync } from 'node:fs';
 import { mockTopics } from '../data/mockData';
 import type { Question } from '../types';
-import { loadEnemEditorialClassifications, applyEnemEditorialClassifications } from '../../scripts/lib/enemEditorialClassifications';
+import { loadEnemEditorialClassifications, applyEnemEditorialClassifications, loadEnemEditorialDeferrals } from '../../scripts/lib/enemEditorialClassifications';
 import { auditEnemCoverage } from './enemCoverageAudit';
 const bank:Question[]=JSON.parse(readFileSync('public/questions.json','utf8'));
 const manifest=JSON.parse(readFileSync('scripts/data/enem-completo-2018-2025/manifest.json','utf8'));
@@ -36,7 +36,7 @@ test('correções e ressalva têm fonte e chave rastreáveis, sem mudar resposta
 });
 test('os relatórios gerados correspondem ao banco atual e não tratam redação como questão objetiva ausente',async()=>{
  const report=JSON.parse(readFileSync('docs/auditoria-cobertura-enem-2026-11-04/auditoria.json','utf8'));
- const fresh=auditEnemCoverage(bank,mockTopics,manifest.positions,await loadEnemEditorialClassifications(mockTopics),imported);
+ const fresh=auditEnemCoverage(bank,mockTopics,manifest.positions,await loadEnemEditorialClassifications(mockTopics),imported,await loadEnemEditorialDeferrals());
  assert.deepEqual(report.summary,fresh.summary);assert.deepEqual(report.coverage,fresh.coverage);assert.deepEqual(report.queue,fresh.queue);
  assert.equal(fresh.coverage.filter(t=>!t.valid&&t.topicId.startsWith('por_red_')).length,5);
 });

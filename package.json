@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "flashcards:classify": "tsx scripts/classifyFlashcards.ts",
+    "audit:enem-review": "tsx scripts/validate-enem-editorial.mts",
     "audit:enem": "tsx scripts/audit-enem-coverage.mts",
     "visual:matrix": "node scripts/updateVisualMatrix.mjs",
     "visual:quality": "node scripts/updateVisualQuality.mjs",
