@@ -636,8 +636,7 @@
       "version": "CD2 amarelo",
       "language": null,
       "pages": [
-        18,
-        19
+        18
       ],
       "classificationMethod": "automatic-lexical-similarity"
     },
@@ -3158,8 +3157,7 @@
       "version": "CD2 amarelo",
       "language": null,
       "pages": [
-        19,
-        20
+        19
       ],
       "classificationMethod": "automatic-lexical-similarity"
     },
@@ -3789,8 +3787,7 @@
       "version": "CD2 amarelo",
       "language": null,
       "pages": [
-        31,
-        32
+        31
       ],
       "classificationMethod": "automatic-lexical-similarity"
     },
@@ -5680,8 +5677,7 @@
       "version": "CD2 amarelo",
       "language": null,
       "pages": [
-        18,
-        19
+        18
       ],
       "classificationMethod": "automatic-lexical-similarity"
     },
@@ -6311,8 +6307,7 @@
       "version": "CD2 amarelo",
       "language": null,
       "pages": [
-        31,
-        32
+        31
       ],
       "classificationMethod": "automatic-lexical-similarity"
     },
@@ -8202,8 +8197,7 @@
       "version": "CD2 amarelo",
       "language": null,
       "pages": [
-        20,
-        21
+        20
       ],
       "classificationMethod": "automatic-lexical-similarity"
     },
@@ -8833,8 +8827,7 @@
       "version": "CD2 amarelo",
       "language": null,
       "pages": [
-        31,
-        32
+        31
       ],
       "classificationMethod": "automatic-lexical-similarity"
     },
@@ -10886,8 +10879,7 @@
       "version": "CD2 amarelo",
       "language": null,
       "pages": [
-        19,
-        20
+        19
       ],
       "classificationMethod": "automatic-lexical-similarity"
     },
@@ -11625,8 +11617,7 @@
       "version": "CD2 amarelo",
       "language": null,
       "pages": [
-        31,
-        32
+        31
       ],
       "classificationMethod": "automatic-lexical-similarity"
     },
@@ -17443,8 +17434,7 @@
       "version": "CD2 amarelo",
       "language": null,
       "pages": [
-        18,
-        19
+        18
       ],
       "classificationMethod": "existing-editorial-incidence"
     },
@@ -18074,8 +18064,7 @@
       "version": "CD2 amarelo",
       "language": null,
       "pages": [
-        31,
-        32
+        31
       ],
       "classificationMethod": "existing-editorial-incidence"
     },
@@ -19965,9 +19954,7 @@
       "version": "CD2 amarelo",
       "language": null,
       "pages": [
-        19,
-        20,
-        21
+        19
       ],
       "classificationMethod": "existing-editorial-incidence"
     },
@@ -22089,21 +22076,6 @@
       "alphaCanvas": true
     },
     {
-      "questionId": "enem_completo_2018_d1_q045",
-      "url": "/question-media/enem-completo/enem-2018-d1-q045-p19-0.webp",
-      "width": 702,
-      "height": 447,
-      "sha256": "daa17134e865de7d57e7dfc93813666ea02230fc705e6c665265f75a431ac965",
-      "page": 19,
-      "box": [
-        290.81597900390625,
-        366.0429992675781,
-        570.0289916992188,
-        544.6739501953125
-      ],
-      "alphaCanvas": true
-    },
-    {
       "questionId": "enem_completo_2018_d1_q048",
       "url": "/question-media/enem-completo/enem-2018-d1-q048-p20-0.webp",
       "width": 562,
@@ -23814,21 +23786,6 @@
       ]
     },
     {
-      "questionId": "enem_completo_2019_d1_q045",
-      "url": "/question-media/enem-completo/enem-2019-d1-q045-p20-0.webp",
-      "width": 504,
-      "height": 657,
-      "sha256": "8d6871e0f89eb7a1acae13e9021024d03439c4d2d9b8ce5164951da963b0d0b2",
-      "alphaCanvas": true,
-      "page": 20,
-      "box": [
-        29.281949996948242,
-        377.4404602050781,
-        230.0153045654297,
-        642.3379516601562
-      ]
-    },
-    {
       "questionId": "enem_completo_2019_d1_q053",
       "url": "/question-media/enem-completo/enem-2019-d1-q053-p22-0.webp",
       "width": 620,
@@ -24036,21 +23993,6 @@
         468.4208068847656,
         280.4645080566406,
         597.1949462890625
-      ]
-    },
-    {
-      "questionId": "enem_completo_2019_d1_q090",
-      "url": "/question-media/enem-completo/enem-2019-d1-q090-p32-0.webp",
-      "width": 900,
-      "height": 127,
-      "sha256": "9a8ed9221fc2d1dedcc99e2363fdcae608f5e37321689693f15c0bc556855efa",
-      "alphaCanvas": true,
-      "page": 32,
-      "box": [
-        104.05841064453125,
-        79.3701171875,
-        462.8714904785156,
-        129.17811584472656
       ]
     },
     {
@@ -25329,21 +25271,6 @@
       "alphaCanvas": true
     },
     {
-      "questionId": "enem_completo_2020_d1_q045",
-      "url": "/question-media/enem-completo/enem-2020-d1-q045-p19-0.webp",
-      "width": 451,
-      "height": 750,
-      "sha256": "92a42975e0473f984eff4b466a563bd8917033a90b0efa7fb58f09d2cccca10c",
-      "page": 19,
-      "box": [
-        357.09515380859375,
-        344.9381103515625,
-        536.1881713867188,
-        644.5057373046875
-      ],
-      "alphaCanvas": true
-    },
-    {
       "questionId": "enem_completo_2020_d1_q053",
       "url": "/question-media/enem-completo/enem-2020-d1-q053-p22-0.webp",
       "width": 619,
@@ -25400,36 +25327,6 @@
         90.20530700683594,
         364.8914794921875,
         419.96527099609375
-      ],
-      "alphaCanvas": true
-    },
-    {
-      "questionId": "enem_completo_2020_d1_q090",
-      "url": "/question-media/enem-completo/enem-2020-d1-q090-p32-0.webp",
-      "width": 966,
-      "height": 128,
-      "sha256": "8862b4430acc9560dca13951b3f1845ef4ab25199c51a421294179632e9b078c",
-      "page": 32,
-      "box": [
-        89.96931457519531,
-        77.52001190185547,
-        474.95916748046875,
-        127.4074935913086
-      ],
-      "alphaCanvas": true
-    },
-    {
-      "questionId": "enem_completo_2020_d1_q090",
-      "url": "/question-media/enem-completo/enem-2020-d1-q090-p32-1.webp",
-      "width": 1217,
-      "height": 1385,
-      "sha256": "5bba66c6b968ba68769855f8f0957e832befa200c26a4daa57f6dd7c5d401570",
-      "page": 32,
-      "box": [
-        31.232999801635742,
-        174.9210205078125,
-        514.4229736328125,
-        727.0549926757812
       ],
       "alphaCanvas": true
     },
@@ -27069,36 +26966,6 @@
       "alphaCanvas": true
     },
     {
-      "questionId": "enem_completo_2021_d1_q045",
-      "url": "/question-media/enem-completo/enem-2021-d1-q045-p21-0.webp",
-      "width": 622,
-      "height": 577,
-      "sha256": "b13f7788d76d55ee26839406c111426104a0d6e6e5487cf1bb75d719b2da0071",
-      "page": 21,
-      "box": [
-        288.4739990234375,
-        337.39251708984375,
-        536.885986328125,
-        567.8159790039062
-      ],
-      "alphaCanvas": true
-    },
-    {
-      "questionId": "enem_completo_2021_d1_q045",
-      "url": "/question-media/enem-completo/enem-2021-d1-q045-p21-1.webp",
-      "width": 330,
-      "height": 445,
-      "sha256": "8ede983e6c69977b70d00ee214bc957d17b0ad28a23bb89628362554ef74040a",
-      "page": 21,
-      "box": [
-        88.11500549316406,
-        481.5740051269531,
-        219.9669952392578,
-        659.5870361328125
-      ],
-      "alphaCanvas": true
-    },
-    {
       "questionId": "enem_completo_2021_d1_q046",
       "url": "/question-media/enem-completo/enem-2021-d1-q046-p22-1.webp",
       "width": 821,
@@ -27140,36 +27007,6 @@
         325.63800048828125,
         277.2019958496094,
         608.0159912109375
-      ],
-      "alphaCanvas": true
-    },
-    {
-      "questionId": "enem_completo_2021_d1_q090",
-      "url": "/question-media/enem-completo/enem-2021-d1-q090-p32-0.webp",
-      "width": 966,
-      "height": 141,
-      "sha256": "712a0e4ad347921c0a2c7c57f650503253d546a6624dc85490efdf30cb71b75d",
-      "page": 32,
-      "box": [
-        90.78399658203125,
-        77.98898315429688,
-        475.7729797363281,
-        132.85000610351562
-      ],
-      "alphaCanvas": true
-    },
-    {
-      "questionId": "enem_completo_2021_d1_q090",
-      "url": "/question-media/enem-completo/enem-2021-d1-q090-p32-1.webp",
-      "width": 1217,
-      "height": 1385,
-      "sha256": "7e8ee964e599f4db219b4de09ae7d4be49f196c846db8a3b7e6631f4b6af4df1",
-      "page": 32,
-      "box": [
-        31.336999893188477,
-        175.3900146484375,
-        514.5280151367188,
-        727.5250244140625
       ],
       "alphaCanvas": true
     },
@@ -28899,36 +28736,6 @@
       "alphaCanvas": true
     },
     {
-      "questionId": "enem_completo_2022_d1_q045",
-      "url": "/question-media/enem-completo/enem-2022-d1-q045-p20-0.webp",
-      "width": 140,
-      "height": 386,
-      "sha256": "85a188a571789f28e9e3e83aae3808ce588d5fd3f4a027edc150381bc9788522",
-      "page": 20,
-      "box": [
-        40.4652099609375,
-        469.99310302734375,
-        93.26200103759766,
-        626.450439453125
-      ],
-      "alphaCanvas": true
-    },
-    {
-      "questionId": "enem_completo_2022_d1_q045",
-      "url": "/question-media/enem-completo/enem-2022-d1-q045-p20-1.webp",
-      "width": 246,
-      "height": 285,
-      "sha256": "2d31a94e883a0c01f7299efaa2be9222ea44eaac84e7fc4d6b1b172aa6ef5cc6",
-      "page": 20,
-      "box": [
-        170.4984130859375,
-        470.7021179199219,
-        268.1411437988281,
-        585.9309692382812
-      ],
-      "alphaCanvas": true
-    },
-    {
       "questionId": "enem_completo_2022_d1_q053",
       "url": "/question-media/enem-completo/enem-2022-d1-q053-p22-0.webp",
       "width": 579,
@@ -29030,36 +28837,6 @@
         126.44342041015625,
         280.4645080566406,
         326.87200927734375
-      ],
-      "alphaCanvas": true
-    },
-    {
-      "questionId": "enem_completo_2022_d1_q090",
-      "url": "/question-media/enem-completo/enem-2022-d1-q090-p32-0.webp",
-      "width": 972,
-      "height": 138,
-      "sha256": "2715ae660c8d3dfead0d740625c61b98df6f3e8d206ef9c6515ab02bc7a0d88e",
-      "page": 32,
-      "box": [
-        89.60810852050781,
-        78.58480834960938,
-        477.3212890625,
-        132.4328155517578
-      ],
-      "alphaCanvas": true
-    },
-    {
-      "questionId": "enem_completo_2022_d1_q090",
-      "url": "/question-media/enem-completo/enem-2022-d1-q090-p32-1.webp",
-      "width": 61,
-      "height": 1386,
-      "sha256": "aea9fdcc217007c43c4869614ae53d923f8b364349b4ae3f6c45c80bfa7c6d23",
-      "page": 32,
-      "box": [
-        31.181100845336914,
-        176.91583251953125,
-        52.157100677490234,
-        729.6716918945312
       ],
       "alphaCanvas": true
     },
@@ -29649,36 +29426,6 @@
       "alphaCanvas": true
     },
     {
-      "questionId": "enem_completo_2024_d1_q045",
-      "url": "/question-media/enem-completo/enem-2024-d1-q045-p19-0.webp",
-      "width": 575,
-      "height": 333,
-      "sha256": "afef5ef330241aef9f12a5a3580e4e1dd5bbde09e49a1b18857cf60aeb0b60e5",
-      "page": 19,
-      "box": [
-        32.179298400878906,
-        315.95904541015625,
-        262.88592529296875,
-        445.78631591796875
-      ],
-      "alphaCanvas": true
-    },
-    {
-      "questionId": "enem_completo_2024_d1_q045",
-      "url": "/question-media/enem-completo/enem-2024-d1-q045-p19-1.webp",
-      "width": 525,
-      "height": 320,
-      "sha256": "023af233554a71e553529720d0d761570bd572d578402c3dd6c7e85b20c8c705",
-      "page": 19,
-      "box": [
-        308.8865966796875,
-        515.7168579101562,
-        517.6488647460938,
-        640.7015380859375
-      ],
-      "alphaCanvas": true
-    },
-    {
       "questionId": "enem_completo_2024_d1_q048",
       "url": "/question-media/enem-completo/enem-2024-d1-q048-p20-0.webp",
       "width": 619,
@@ -29735,36 +29482,6 @@
         443.2486572265625,
         497.9479675292969,
         615.8870849609375
-      ],
-      "alphaCanvas": true
-    },
-    {
-      "questionId": "enem_completo_2024_d1_q090",
-      "url": "/question-media/enem-completo/enem-2024-d1-q090-p32-0.webp",
-      "width": 761,
-      "height": 108,
-      "sha256": "814127ea534fb463a27cca179aab4dc45a2be97e0d973a012b43a80b54aaa850",
-      "page": 32,
-      "box": [
-        122.24288940429688,
-        69.39129638671875,
-        425.43035888671875,
-        111.37800598144531
-      ],
-      "alphaCanvas": true
-    },
-    {
-      "questionId": "enem_completo_2024_d1_q090",
-      "url": "/question-media/enem-completo/enem-2024-d1-q090-p32-1.webp",
-      "width": 60,
-      "height": 1386,
-      "sha256": "dc8c118937153ed0cf60c73d0315e6a5c420b3344aa5dfcc4df047ea7170b827",
-      "page": 32,
-      "box": [
-        32.007896423339844,
-        163.3603515625,
-        52.98389434814453,
-        716.1163330078125
       ],
       "alphaCanvas": true
     },
@@ -31415,51 +31132,6 @@
         501.291015625,
         531.7045288085938,
         637.18896484375
-      ],
-      "alphaCanvas": true
-    },
-    {
-      "questionId": "enem_completo_2025_d1_q045",
-      "url": "/question-media/enem-completo/enem-2025-d1-q045-p20-0.webp",
-      "width": 358,
-      "height": 239,
-      "sha256": "2fc967ae14f6ebc50a77f6a46ddebce006e7d16150da51308401af776a6657c6",
-      "page": 20,
-      "box": [
-        83.86149597167969,
-        449.9926452636719,
-        225.8214874267578,
-        544.0726318359375
-      ],
-      "alphaCanvas": true
-    },
-    {
-      "questionId": "enem_completo_2025_d1_q045",
-      "url": "/question-media/enem-completo/enem-2025-d1-q045-p20-1.webp",
-      "width": 616,
-      "height": 257,
-      "sha256": "7d73c95d361093e189902aec2dcf1cb54d4494e2af968151ff40086366761665",
-      "page": 20,
-      "box": [
-        295.6322326660156,
-        239.6566162109375,
-        542.7122192382812,
-        343.59564208984375
-      ],
-      "alphaCanvas": true
-    },
-    {
-      "questionId": "enem_completo_2025_d1_q045",
-      "url": "/question-media/enem-completo/enem-2025-d1-q045-p22-1.webp",
-      "width": 631,
-      "height": 78,
-      "sha256": "277e658dc920d8691ed3eee29dece42a8eebd28d9632046b2aa022016da9f906",
-      "page": 22,
-      "box": [
-        29.762802124023438,
-        76.53520202636719,
-        281.0068054199219,
-        106.46827697753906
       ],
       "alphaCanvas": true
     },

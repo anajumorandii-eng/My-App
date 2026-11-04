@@ -11,6 +11,7 @@ import numpy as np
 from scipy import ndimage
 from PIL import Image
 from lib.enem_pdf_fonts import fix
+from lib.enem_page_boundaries import is_essay_page
 
 ROOT=pathlib.Path(sys.argv[1] if len(sys.argv)>1 else 'work/enem-full')
 MEDIA=ROOT/'media';MEDIA.mkdir(exist_ok=True)
@@ -223,7 +224,11 @@ def extract(year,day):
     answers=answer_key(year,day);questions={};current=None;skip=False;shared=None;shared_rows=[]
     for pi,page in enumerate(doc):
         if pi==0:continue
-        lines=native_lines(page);bounds=content_bounds(page,lines);figs=graphics(page,lines,bounds)
+        lines=native_lines(page)
+        if day==1 and is_essay_page(lines):
+            current=None;skip=False;shared=None;shared_rows=[]
+            continue
+        bounds=content_bounds(page,lines);figs=graphics(page,lines,bounds)
         # O anúncio de 2019/07 é um fundo tipográfico com texto nativo completo.
         # Extrair as palavras evita transformar seu papel texturizado em figura.
         if (year,day,pi+1)==(2019,1,6):figs=[r for r in figs if r.x0>page.rect.width/2]

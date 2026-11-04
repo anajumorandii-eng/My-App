@@ -1,0 +1,451 @@
+{
+  "scope": "Correções de transcrição conferidas nas páginas de origem, sem alteração de IDs, gabaritos ou classificação. Hashes editoriais anteriores são preservados como histórico.",
+  "items": [
+    {
+      "questionId": "enem_completo_2018_d1_q045",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/1dia/enem2018_1dia_prova_amarelo.pdf",
+      "sourceSha256": "d4e9bffb7a2bf01205e8703f4c1bdfd860fc8b90a8a32ce5f68407dcb0a67fe0",
+      "pages": [
+        18,
+        19
+      ],
+      "evidence": "Conferência visual da página 18: texto-base, comando e alternativas A–E da questão 45 estão completos nessa página, sem continuação. A alternativa E termina no ponto final preservado em after. A página 19 começa INSTRUÇÕES PARA A REDAÇÃO e seus textos motivadores não pertencem à questão. O campo options.e.text anexou indevidamente esse conteúdo após a alternativa. O infográfico Utilização da Internet (Texto III) está na página 19 da redação sobre manipulação do comportamento por controle de dados. As figuras locais indicadas em removeFigureUrls foram inspecionadas e correspondem visualmente a esses elementos da página de redação. A questão 45 não possui figura própria; a proposta retira apenas os anexos de redação e preserva o restante da questão.",
+      "beforeSha256": "51cb07ec675ec93e1677257706929141acb42a962e1e7298d742d9a5de175503",
+      "afterSha256": "8d6f4765c96d04e2bf66b75920388363736c45ac5c2cfda26b56bcbf53647327",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "expõe a ineficácia dos estudos para alterar tal\ncomportamento.\nINSTRUÇÕES PARA A REDAÇÃO\n1. O rascunho da redação deve ser feito no espaço apropriado.\n2.  O texto definitivo deve ser escrito à tinta, na folha própria, em até 30 linhas.\n3. A redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas copiadas\ndesconsiderado para efeito de correção.\n4. Receberá nota zero, em qualquer das situações expressas a seguir, a redação que:\n4.1. tiver até 7 (sete) linhas escritas, sendo considerada —texto insuficiente“.\n4.2. fugir ao tema ou que não atender ao tipo dissertativo-argumentativo.\n4.3. apresentar parte do texto deliberadamente desconectada do tema proposto.\nTEXTOS MOTIVADORES\nTEXTO I\ns segundas-feiras pela manhã, os usuários de um serviço de música digital recebem uma lista personalizada de\nmúsicas que lhes permite descobrir novidades. Assim como os sistemas de outros aplicativos e redes sociais, este\ncérebro artificial consegue traçar um retrato automatizado do gosto de seus assinantes e constrói uma máquina de\nsugestões que não costuma falhar. O sistema se baseia em um algoritmo cuja evolução e usos aplicados ao consumo\ncultural são infinitos. De fato, plataformas de transmissão de vídeo on-line começam a desenhar suas séries de sucesso\nrastreando o banco de dados gerado por todos os movimentos dos usuários para analisar o que os satisfaz. O algoritmo\nconstrói assim um universo cultural adequado e complacente com o gosto do consumidor, que pode avançar até chegar\nsempre a lugares reconhecíveis. Dessa forma, a filtragem de informação feita pelas redes sociais ou pelos sistemas\nde busca pode moldar nossa maneira de pensar. E esse é o problema principal: a ilusão de liberdade de escolha que\nmuitas vezes é gerada pelos algoritmos.\nVERDÚ, Daniel. O gosto na era do algoritmo. Disponível em: https://brasil.elpais.com. Acesso em: 11 jun. 2018 (adaptado).\nTEXTO II\nNos sistemas dos gigantes da internet, a filtragem\nde dados é transferida para um exército de\nmoderadores em empresas localizadas do Oriente\nMédio ao Sul da Êsia, que têm um papel importante\nno controle daquilo que deve ser eliminado da\nrede social, a partir de sinalizações dos usuários.\nMas a informação é então processada por um\nalgoritmo, que tem a decisão final. Os algoritmos\nsão literais. Em poucas palavras, são uma opinião\nembrulhada em código. E estamos caminhando\npara um estágio em que é a máquina que decide\nqual notícia deve ou não ser lida.\nPEPE ESCOBAR. A silenciosa ditadura do algoritmo. Disponível em:\nhttp://outraspalavras.net. Acesso em: 5 jun. 2017 (adaptado).\nInternet no Brasil em 2016. Disponível em: www.ibge.gov.br. Acesso em: 18 jun. 2018 (adaptado).\nTEXTO IV\nMudanças sutis nas informações às quais somos expostos podem transformar nosso comportamento. As redes\ntêm selecionado as notícias sob títulos chamativos como “trending topics“ ou critérios como —relevância“. Mas nós\npraticamente não sabemos como isso tudo é filtrado. Quanto mais informações relevantes tivermos nas pontas dos\ndedos, melhor equipados estamos para tomar decisões. No entanto, surgem algumas tensões fundamentais: entre a\nconveniência e a deliberação; entre o que o usuário deseja e o que é melhor para ele; entre a transparência e o lado\ncomercial. Quanto mais os sistemas souberem sobre você em comparação ao que você sabe sobre eles, há mais\nriscos de suas escolhas se tornarem apenas uma série de reações a “cutucadas” invisíveis. O que está em jogo não\né tanto a questão “homem versus máquina”, mas sim a disputa “decisão informada versus obediência influenciada“.\nCHATFIELD, Tom. Como a internet influencia secretamente nossas escolhas. Disponível em: www.bbc.com.  Acesso em: 3 jun. 2017 (adaptado).\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua formação,\nredija um texto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa sobre o tema\n—Manipulação do comportamento do usuário pelo controle de dados na internet“, apresentando proposta de\nintervenção que respeite os direitos humanos. Selecione, organize e relacione, de forma coerente e coesa,\nargumentos e fatos para defesa de seu ponto de vista.",
+          "after": "expõe a ineficácia dos estudos para alterar tal\ncomportamento."
+        },
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2018-d1-q045-p19-0.webp"
+            }
+          ],
+          "after": []
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2019_d1_q045",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2019/1dia/enem2019_1dia_prova_amarelo.pdf",
+      "sourceSha256": "952410c24574d8464c7a737ed41727404912d9f61178b8f9e98bcebe5a757242",
+      "pages": [
+        19,
+        20
+      ],
+      "evidence": "Conferência visual da página 19: texto-base, comando e alternativas A–E da questão 45 estão completos nessa página, sem continuação. A alternativa E termina no ponto final preservado em after. A página 20 começa INSTRUÇÕES PARA A REDAÇÃO e seus textos motivadores não pertencem à questão. O campo options.e.text anexou indevidamente esse conteúdo após a alternativa. O infográfico Da telona para as telinhas (Texto III) está na página 20 da redação sobre democratização do acesso ao cinema. As figuras locais indicadas em removeFigureUrls foram inspecionadas e correspondem visualmente a esses elementos da página de redação. A questão 45 não possui figura própria; a proposta retira apenas os anexos de redação e preserva o restante da questão.",
+      "beforeSha256": "352155330e88b501ed0ded94940203df771c3b0c6c8c9e8ed3b240a8fd3ef994",
+      "afterSha256": "4b31ee00110a925b530efd3f59c7b8d5f9ff32e09ee38f816f5a6109f46878d2",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "seleção lexical na qual predominam informações\nredundantes.\nINSTRUÇÕES PARA A REDAÇÃO\n1.  \tO rascunho da redação deve ser feito no espaço apropriado.\n2.  \tO texto definitivo deve ser escrito à tinta preta, na folha própria, em até 30 linhas.\n3.\t A redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas copiadas\ndesconsiderado para a contagem de linhas.\n4. \tReceberá nota zero, em qualquer das situações expressas a seguir, a redação que:\n4.1.  tiver até 7 (sete) linhas escritas, sendo considerada “texto insuficiente”.\n4.2.  fugir ao tema ou que não atender ao tipo dissertativo-argumentativo.\n4.3.  apresentar parte do texto deliberadamente desconectada do tema proposto.\n4.4.  apresentar nome, assinatura, rubrica ou outras formas de identificação no espaço destinado ao texto.\nTEXTOS MOTIVADORES\nTEXTO I\nNo dia da primeira exibição pública de cinema — 28 de dezembro de 1895, em Paris —, um homem de teatro que\ntrabalhava com mágicas, Georges Mélies, foi falar com Lumière, um dos inventores do cinema; queria adquirir um\naparelho, e Lumière desencorajou-o, disse-lhe que o “Cinematógrapho” não tinha o menor futuro como espetáculo,\nera um instrumento científico para reproduzir o movimento e só poderia servir para pesquisas. Mesmo que o\npúblico, no início, se divertisse com ele, seria uma novidade de vida breve, logo cansaria. Lumière enganou-se.\nComo essa estranha máquina de austeros cientistas virou uma máquina de contar estórias para enormes plateias,\nde geração em geração, durante já quase um século?\nBERNARDET, Jean-Claude. O que é Cinema. In BERNARDET, Jean-Claude; ROSSI, Clóvis. O que é Jornalismo, O que é Editora,\nO que é Cinema. São Paulo: Brasiliense, 1993.\nTEXTO II\nEdgar Morin define o cinema como uma máquina que registra a existência e a restitui como tal, porém levando em\nconsideração o indivíduo, ou seja, o cinema seria um meio de transpor para a tela o universo pessoal, solicitando\na participação do espectador.\nGUTFREIND, C. F. O filme e a representação do real. E-Compós, v. 6, 11, 2006 (adaptado).\nTEXTO IV\nO Brasil já teve um parque exibidor vigoroso e descentralizado:\nquase 3 300 salas em 1975, uma para cada 30 000 habitantes,\n80% em cidades do interior. Desde então, o país mudou.\nQuase 120 milhões de pessoas a mais passaram a viver nas cidades.\nA urbanização acelerada, a falta de investimentos em infraestrutura\nurbana, a baixa capitalização das empresas exibidoras, as\nmudanças tecnológicas, entre outros fatores, alteraram a geografia\ndo cinema. Em 1997, chegamos a pouco mais de 1 000 salas.\nCom a expansão dos shopping centers, a atividade de exibição\nse reorganizou. O número de cinemas duplicou, até chegar às\natuais 2 200 salas. Esse crescimento, porém, além de insuficiente\n(o Brasil é apenas o 60º país na relação habitantes por sala),\nocorreu de forma concentrada. Foram privilegiadas as áreas de\nrenda mais alta das grandes cidades. Populações inteiras foram\nexcluídas do universo do cinema ou continuam mal atendidas:\no Norte e o Nordeste, as periferias urbanas, as cidades pequenas\ne médias do interior.\nDisponível em: www.meioemensagem.com.\nDisponível em: https://cinemapertodevoce.ancine.gov.br.\nAcesso em: 12 jun. 2019 (adaptado).\nAcesso em: 13 jun. 2019 (fragmento).\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua formação,\nredija texto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa sobre o tema\n“Democratização do acesso ao cinema no Brasil”, apresentando proposta de intervenção que respeite os direitos\nhumanos. Selecione, organize e relacione, de forma coerente e coesa, argumentos e fatos para defesa de seu\nponto de vista.",
+          "after": "seleção lexical na qual predominam informações\nredundantes."
+        },
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2019-d1-q045-p20-0.webp"
+            }
+          ],
+          "after": []
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2019_d1_q059",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2019/1dia/enem2019_1dia_prova_amarelo.pdf",
+      "sourceSha256": "952410c24574d8464c7a737ed41727404912d9f61178b8f9e98bcebe5a757242",
+      "pages": [
+        24
+      ],
+      "evidence": "Conferência visual da página 24 do caderno amarelo de 2019 e do recorte local public/question-media/enem-completo/enem-2019-d1-q059-p24-8.webp: a alternativa A da questão 59 está impressa como “Falsificação de teses.”, incluindo o ponto final. O texto nativo omite a expressão, mas ambas as imagens a mostram inequivocamente. Correção apenas da transcrição do texto da alternativa; gabarito e classificação não alterados.",
+      "beforeSha256": "ae9aaec00ce70f5b131be4a023ed40d6bf1997fe69f5edbecd1e50ce685b43f0",
+      "afterSha256": "d7428770042aa49a7b4fbdd0ad4dc62c6953d6c07324f170ee4d667425c7449e",
+      "changes": [
+        {
+          "field": "options.a.text",
+          "before": "Alternativa A — expressão ou figura identificada por essa letra.",
+          "after": "Falsificação de teses."
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2020_d1_q045",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2020/presencial/1dia/enem2020_1dia_prova_amarelo.pdf",
+      "sourceSha256": "8e8c0ff25b2265a8711626fc7e42c3e9eed64504b80b37d478bf877b7af099c5",
+      "pages": [
+        18,
+        19
+      ],
+      "evidence": "Conferência visual da página 18: texto-base, comando e alternativas A–E da questão 45 estão completos nessa página, sem continuação. A alternativa E termina no ponto final preservado em after. A página 19 começa INSTRUÇÕES PARA A REDAÇÃO e seus textos motivadores não pertencem à questão. O campo options.e.text anexou indevidamente esse conteúdo após a alternativa. O infográfico Socorro, Brasil! (Texto III) está na página 19 da redação sobre estigma das doenças mentais. As figuras locais indicadas em removeFigureUrls foram inspecionadas e correspondem visualmente a esses elementos da página de redação. A questão 45 não possui figura própria; a proposta retira apenas os anexos de redação e preserva o restante da questão.",
+      "beforeSha256": "8c8788cc287f56980be6e1c5776feea3f741400ccdb9e438fd8c1ec9da0eeb97",
+      "afterSha256": "3c832e81e115ed6c16b2c561d2ef42118a64d1f72e9277f329b0068facc44495",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "apelo pela identificação com a empresa extensiva ao\namor patriótico.\nINSTRUÇÕES PARA A REDAÇÃO\n1. \tO rascunho da redação deve ser feito no espaço apropriado.\n2. \tO texto definitivo deve ser escrito à tinta, na folha própria, em até 30 linhas.\n3. \tA redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas copiadas\ndesconsiderado para efeito de correção.\n4. Receberá nota zero, em qualquer das situações expressas a seguir, a redação que:\n4.1. tiver até 7 (sete) linhas escritas, sendo considerada “texto insuficiente”.\n4.2. fugir ao tema ou que não atender ao tipo dissertativo-argumentativo.\n4.3. apresentar parte do texto deliberadamente desconectada do tema proposto.\nTEXTOS MOTIVADORES\nTEXTO I\nA maior parte das pessoas, quando ouve falar em “saúde mental”, pensa em “doença mental”. Mas a saúde mental\nimplica muito mais que a ausência de doenças mentais. Pessoas mentalmente saudáveis compreendem que\nninguém é perfeito, que todos possuem limites e que não se pode ser tudo para todos. Elas vivenciam diariamente\numa série de emoções como alegria, amor, satisfação, tristeza, raiva e frustração. São capazes de enfrentar os\ndesafios e as mudanças da vida cotidiana com equilíbrio e sabem procurar ajuda quando têm dificuldade em lidar\ncom conflitos, perturbações, traumas ou transições importantes nos diferentes ciclos da vida. A saúde mental de\numa pessoa está relacionada à forma como ela reage às exigências da vida e ao modo como harmoniza seus\ndesejos, capacidades, ambições, ideias e emoções. Todas as pessoas podem apresentar sinais de sofrimento\npsíquico em alguma fase da vida.\nDisponível em: http://www.saude.pr.gov.br. Acesso em: 27 jul. 2020 (adaptado).\nTEXTO II\nA origem da palavra “estigma” aponta para marcas ou cicatrizes\ndeixadas por feridas. Por extensão, em um período que remonta\nà Grécia Antiga, passou a designar também as marcas feitas com\nferro em brasa em criminosos, escravos e outras pessoas que se\ndesejava separar da sociedade “correta” e “honrada”. Essa mesma\npalavra muitas vezes está presente no universo das doenças\npsiquiátricas. No lugar da marca de ferro, relegamos preconceito,\nfalta de informação e tratamentos precários a pessoas que sofrem\nde depressão, ansiedade, transtorno bipolar e outros transtornos\nmentais graves.\nAchar que a manifestação de um transtorno mental é “frescura”\nestá relacionado a um ideal de felicidade que não é igual para\ntodo mundo. A tentativa de se encaixar nesse modelo cria\ndistância dos sentimentos reais, e quem os demonstra é rotulado,\no que progressivamente dificulta a interação social. É aqui que\nredes sociais de enorme popularidade mostram uma face cruel,\ndesempenhando um papel de validação da vida perfeita e criando\num ambiente em que tudo deve ser mostrado em seu melhor\nângulo. Fora dos holofotes da internet, porém, transtornos mentais\nmostram-se mais presentes do que se imagina.\nDisponível em: https://zenklub.com.br.\nhttp://www.abrata.org.br. Acesso em: 27 jul. 2020 (adaptado).\nAcesso em: 27 jul. 2020 (adaptado).\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua\nformação, redija um texto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa\nsobre o tema “O estigma associado às doenças mentais na sociedade brasileira”, apresentando proposta de\nintervenção que respeite os direitos humanos. Selecione, organize e relacione, de forma coerente e coesa,\nargumentos e fatos para defesa de seu ponto de vista.",
+          "after": "apelo pela identificação com a empresa extensiva ao\namor patriótico."
+        },
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2020-d1-q045-p19-0.webp"
+            }
+          ],
+          "after": []
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2021_d1_q045",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/1dia/enem2021_1dia_prova_amarelo.pdf",
+      "sourceSha256": "4b39bd9944e82ba1f1134b2b213295a25530906f75e0c35a54eb4aa78b4de6d9",
+      "pages": [
+        20,
+        21
+      ],
+      "evidence": "Conferência visual da página 20: texto-base, comando e alternativas A–E da questão 45 estão completos nessa página, sem continuação. A alternativa E termina no ponto final preservado em after. A página 21 começa INSTRUÇÕES PARA A REDAÇÃO e seus textos motivadores não pertencem à questão. O campo options.e.text anexou indevidamente esse conteúdo após a alternativa. A campanha Onde existem pessoas, nós enxergamos cidadãos (Texto IV) e o Mapa da invisibilidade no Brasil (Texto II) estão na página 21 da redação sobre invisibilidade e registro civil. As figuras locais indicadas em removeFigureUrls foram inspecionadas e correspondem visualmente a esses elementos da página de redação. A questão 45 não possui figura própria; a proposta retira apenas os anexos de redação e preserva o restante da questão.",
+      "beforeSha256": "af87039ec0818678863556c117367f9e02707c0c39007878ab38c8a62856d391",
+      "afterSha256": "73a33cc23ccc3f6bbbb24999dbc6cccbabfd28efe022dddf77e139e9884839c4",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "defende novas regras gramaticais.\nINSTRUÇÕES PARA A REDAÇÃO\n1. O rascunho da redação deve ser feito no espaço apropriado.\n2. O texto defi nitivo deve ser escrito à tinta preta, na folha própria, em até 30 linhas.\n3.  A redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas\ncopiadas desconsiderado para a contagem de linhas.\n4. Receberá nota zero, em qualquer das situações expressas a seguir, a redação que:\n4.1. tiver até 7 (sete) linhas escritas, sendo considerada —texto insufi ciente“;\n4.2. fugir ao tema ou que não atender ao tipo dissertativo-argumentativo;\n4.3. apresentar parte do texto deliberadamente desconectada do tema proposto;\n4.4. apresentar nome, assinatura, rubrica ou outras formas de identifi cação no espaço destinado ao texto.\nTEXTOS MOTIVADORES\nTEXTO I\nTEXTO III\nToda sexta-feira, o ônibus azul e branco estacionado\nA certidão de nascimento é o primeiro e o mais\nno pátio da Vara da Infância e da Juventude, na Praça\nimportante documento do cidadão. Com ele, a pessoa\nOnze, Centro do Rio, sacoleja com o entra e sai de gente a\nexiste ofi cialmente para o Estado e a sociedade. Só de\npartir das 9 h. Do lado de fora, nunca menos de 50 pessoas,\nposse da certidão é possível retirar outros documentos\ntodas pobres ou muito pobres, quase todas negras, cercam\ncivis, como a carteira de trabalho, a carteira de identidade,\no veículo, perguntam, sentam e levantam, perguntam de\no título de eleitor e o Cadastro de Pessoa Física (CPF).\nnovo e esperam sem reclamar o tempo que for preciso.\nAlém disso, para matricular uma criança na escola e\nAdultos, velhos e crianças estão ali para conseguir o que,\nter acesso a benefícios sociais, a apresentação do\nno Brasil, é ofi cialmente reconhecido como o primeiro\ndocumento da vida œ a certidão de nascimento. [...]\ndocumento é obrigatória.\nAo longo do discurso desses entrevistados, fi ca clara\nDisponível em: http://www.senado.leg.br/. Acesso em: 21 jul. 2021.\na forma como os usuários se defi nem: —zero à esquerda“,\n—cachorro“, —um nada“, —pessoa que não existe“, entre\noutras, todas são expressões que conformam claramente\na ideia da pessoa sem registro de nascimento sobre si\nmesma como uma pessoa sem valor, cuja existência\nnunca foi ofi cialmente reconhecida pelo Estado.\nESCÌSSIA, F. M. Invisíveis: uma etnografi a sobre identidade, direitos e cidadania nas\ntrajetórias de brasileiros sem documento. Tese (Doutorado em História, Política e\nBens Culturais). Fundação Getúlio Vargas. Rio de Janeiro, 2019.\nTEXTO II\nA Lei Nº 9 534 de 1997 tornou o registro de nascimento\ngratuito no Brasil. Só que o problema persiste, mostrando\nque essa exclusão é complexa e não se explica apenas pela\ndifi culdade fi nanceira em pagar pelo registro, por exemplo.\nDisponível em: https://www.ufrgs.br/humanista. Acesso em: 26 jul. 2021 (adaptado).\nDisponível em: https://estudio.r7.com/. Acesso em: 22 jul. 2021 (adaptado).\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua formação,\nredija texto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa sobre o tema\n—Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil“, apresentando proposta de intervenção\nque respeite os direitos humanos. Selecione, organize e relacione, de forma coerente e coesa, argumentos e\nfatos para a defesa de seu ponto de vista.",
+          "after": "defende novas regras gramaticais."
+        },
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2021-d1-q045-p21-0.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d1-q045-p21-1.webp"
+            }
+          ],
+          "after": []
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2022_d1_q045",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2022/1dia/enem2022_1dia_prova_amarelo.pdf",
+      "sourceSha256": "68c7299f42be65650daea628ca8744bb1a1ae967fbbaec06ce47891a17ceb354",
+      "pages": [
+        19,
+        20
+      ],
+      "evidence": "Conferência visual do caderno amarelo: a questão 45, incluindo todas as alternativas, está completa na página 19. A alternativa E termina em “no Brasil.”. A página 20 contém exclusivamente instruções, textos motivadores e proposta de redação sobre povos tradicionais. Os dois recortes locais anexados à questão foram vistos e são partes do infográfico Povos tradicionais do Brasil, Texto II dessa redação, não figuras da questão 45. Retirar a contaminação após o ponto final e os dois anexos; preservar o restante.",
+      "beforeSha256": "ddcc2abffbf73ffdff0e93efa605f15470b23f1cbd71e81706bb0fe1bdc7863d",
+      "afterSha256": "4b97404667dfd0b3b1bcfa18e72b6881d1c625897078eda66247335f69f246b8",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "aumenta o número de línguas indígenas faladas\nno Brasil.\nINSTRUÇÕES PARA A REDAÇÃO\n1.  O rascunho da redação deve ser feito no espaço apropriado.\n2.  O texto definitivo deve ser escrito à tinta preta, na folha própria, em até 30 linhas.\n3.  A redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas\ncopiadas desconsiderado para a contagem de linhas.\n4.  Receberá nota zero, em qualquer das situações expressas a seguir, a redação que:\n4.1.  tiver até 7 (sete) linhas escritas, sendo considerada “texto insuficiente”;\n4.2.  fugir ao tema ou não atender ao tipo dissertativo-argumentativo;\n4.3.  apresentar parte do texto deliberadamente desconectada do tema proposto;\n4.4.  apresentar nome, assinatura, rubrica ou outras formas de identificação no espaço destinado ao texto.\nTEXTO I\nTEXTO III\nVocê sabe quais são as comunidades e os povos\nPovos e comunidades tradicionais\ntradicionais brasileiros? Talvez indígenas e quilombolas\nO Ministério do Desenvolvimento Social (MDS)\nsejam os primeiros que passam pela cabeça, mas,\npreside,\ndesde\n2007,\na\nComissão\nNacional\nde\nna verdade, além deles, existem 26 reconhecidos\nDesenvolvimento Sustentável dos Povos e Comunidades\noficialmente e muitos outros que ainda não foram\nTradicionais (CNPCT), criada em 2006. Fruto dos\nincluídos na legislação.\ntrabalhos da CNPCT, foi instituída, por meio do Decreto\nSão pescadores artesanais, quebradeiras de coco\nnº 6.040, de 7 de fevereiro de 2017, a Política Nacional de\nDesenvolvimento Sustentável dos Povos e Comunidades\nbabaçu, apanhadores de flores sempre-vivas, caatingueiros,\nTradicionais (PNPCT). A PNPCT foi criada em um\nextrativistas, para citar alguns, todos considerados\ncontexto de busca de reconhecimento e preservação de\nculturalmente diferenciados, capazes de se reconhecerem\noutras formas de organização social por parte do Estado.\nentre si.\nDisponível em: http://mds.gov.br. Acesso em: 17 jun. 2022 (adaptado).\nPara uma pesquisadora da UnB, essas populações\nTEXTO IV\nconsideram a terra como uma mãe, e há uma relação de\nCarta da Amazônia 2021\nreciprocidade com a natureza. Nessa troca, a natureza fornece\nAos participantes da 26ª Conferência das Nações Unidas\n“alimento, um lugar saudável para habitar, para ter água.\nsobre Mudanças Climáticas (COP26)\nE elas se responsabilizam por cuidar dela, por tirar dela\napenas o suficiente para viver bem e respeitam o tempo de\nNão podia ser mais estratégico para nós, Povos\nIndígenas, Populações e Comunidades Tradicionais\nregeneração da própria natureza”, diz.\nbrasileiras, reafirmarmos a defesa da sociobiodiversidade\nDisponível em: https://g1.globo.com. Acesso em: 17 jun. 2022 (adaptado).\namazônica neste momento em que o mundo volta a\ndebater a crise climática na COP26. Uma crise que\nTEXTO II\natinge, em todos os contextos, os viventes da Terra!\nPovos tradicionais do Brasil\nNossos territórios protegidos e direitos respeitados\nEstados com a maior concentração de famílias\nsão as reivindicações dos movimentos sociais e\nambientais brasileiros.\nNão compactuamos com qualquer tentativa e estratégia\n43.264\nbaseada somente na lógica do mercado, com empresas\n21.507\n15.316\nque apoiam legislações ambientais que ameaçam nossos\ndireitos e com mecanismos de financiamento que não\ncondizem com a realidade dos nossos territórios.\n43.009\nPropomos o que temos de melhor: a experiência das\n39.316\n15.282\nnossas sociedades e culturas históricas, construídas com\nbase em nossos saberes tradicionais e ancestrais, além de\nnosso profundo conhecimento da natureza.\n1.538\n643\nInovação, para nós, não pode resultar em processos\n556\nque venham a ameaçar nossos territórios, nossas formas\ntradicionais e harmônicas de viver e produzir.\n11.826\nAmazônia, Brasil, 20 de outubro de 2021.\n9.772\nFonte: Ministério Público Federal.\n7.190\nInfográfico elaborado em: 25/10/2019.\nEntidades signatárias: CNS; Coiab; Conaq; MIQCB;\nCoica; ANA Amazônia e Confrem\nDisponível em: https://g1.globo.com. Acesso em: 17 jun. 2022 (adaptado).\nDisponível em: https://s3.amazonaws.com. Acesso em: 17 jun. 2022 (adaptado).\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua formação,\nredija um texto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa sobre o tema\n“Desafios para a valorização de comunidades e povos tradicionais no Brasil”, apresentando proposta de\nintervenção que respeite os direitos humanos. Selecione, organize e relacione, de forma coerente e coesa,\nargumentos e fatos para a defesa de seu ponto de vista.",
+          "after": "aumenta o número de línguas indígenas faladas\nno Brasil."
+        },
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2022-d1-q045-p20-0.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2022-d1-q045-p20-1.webp"
+            }
+          ],
+          "after": []
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2023_d1_q028",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2023/1dia/enem2023_1dia_prova_amarelo.pdf",
+      "sourceSha256": "7478e01dae6265959a12724b27e6a6ebb6d22b60a3031a7c54e9b9dae63260f5",
+      "pages": [
+        12
+      ],
+      "evidence": "Conferência visual da página 12 do caderno amarelo: a questão canônica 28 é a carta aberta da SBGG e contém integralmente o comando e as alternativas A–E. A alternativa E termina em “serviços de saúde pública para o idoso.”. Tudo que começa com INSTRUÇÕES PARA A REDAÇÃO no valor atual de options.e.text é conteúdo estranho à questão e deve ser removido. A proveniência anterior refere-se à questão 45 do caderno azul, mas esta proposta se apoia diretamente na posição canônica amarela 28, página 12; nenhuma figura está anexada no banco a esse ID.",
+      "beforeSha256": "0eeb036da30ffba5743629625aae778fdeb36037d9f6071f9899719a01f5fc56",
+      "afterSha256": "776d921d119450281b4f84a434e412a30b15a2277a941db485078a275a75a65a",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "chamar a atenção da população sobre a qualidade dos\nserviços de saúde pública para o idoso.\nINSTRUÇÕES PARA A REDAÇÃO\n1. O rascunho da redação deve ser feito no espaço apropriado.\n2. O texto definitivo deve ser escrito à tinta preta, na folha própria, em até 30 (trinta) linhas.\n3.  A redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas\ncopiadas desconsiderado para a contagem de linhas.\n4. Receberá nota zero, em qualquer das situações expressas a seguir, a redação que:\n4.1. tiver até 7 (sete) linhas escritas, sendo considerada “texto insuficiente”;\n4.2. fugir ao tema ou não atender ao tipo dissertativo-argumentativo;\n4.3. apresentar parte do texto deliberadamente desconectada do tema proposto;\n4.4. apresentar nome, assinatura, rubrica ou outras formas de identificação no espaço destinado ao texto.\nTEXTO I\nTEXTO III\nO trabalho de cuidado não remunerado e mal pago\nA sociedade brasileira tem passado por inúmeras\ne a crise global da desigualdade\ntransformações sociais ao longo das últimas décadas.\nEntre elas, as percepções sociais a respeito dos valores\nO trabalho de cuidado é essencial para nossas\ne das convenções de gênero e a forma como mulheres\nsociedades e para a economia. Ele inclui o trabalho\ntêm se inserido na sociedade. Algumas permanências,\nde cuidar de crianças, idosos e pessoas com doenças\nporém, chamam a atenção, como a delegação quase\ne deficiências físicas e mentais, bem como o trabalho\nque exclusiva às famílias – e, nestas, às mulheres –\ndoméstico diário que inclui cozinhar, limpar, lavar,\nde atividades relacionadas à reprodução da vida e da\nconsertar coisas e buscar água e lenha. Se ninguém\nsociedade, usualmente nominadas trabalho de cuidado.\ninvestisse tempo, esforços e recursos nessas tarefas\nDisponível em: https://repositorio.ipea.gov.br.\ndiárias essenciais, comunidades, locais de trabalho e\nAcesso em: 24 maio 2023 (adaptado).\neconomias inteiras ficariam estagnados. Em todo o mundo,\nTEXTO IV\no trabalho de cuidado não remunerado e mal pago é\ndesproporcionalmente assumido por mulheres e meninas\nem situação de pobreza, especialmente por aquelas\nque pertencem a grupos que, além da discriminação de\ngênero, sofrem preconceito em decorrência de sua raça,\netnia, nacionalidade e sexualidade. As mulheres são\nDESAFIOS\nresponsáveis por mais de três quartos do cuidado não\nDESAFIOS\nremunerado e compõem dois terços da força de trabalho\nDESAFIOS\nenvolvida em atividades de cuidado remuneradas.\nDO CUIDADO\nDO CUIDADO\nDO CUIDADO\nDocumento informativo – Tempo de Cuidar. Disponível em:\nhttps://www.oxfam.org.br. Acesso em: 18 de jul. de 2023 (adaptado).\nTEXTO II\nAumenta o número de pessoas\nAumenta o número de pessoas\nque demandam serviços de\nque demandam serviços\nde assistência, obrigando\nMédia de horas dedicadas pelas pessoas de 14 anos\nassistência, obrigando os\nos países a repensar\npaíses a repensar seus\nou mais de idade aos afazeres domésticos e/ou\nseus sistemas de atenção;\nsistemas de atenção;\nno Brasil, protagonismo\nàs tarefas de cuidado de pessoas, por sexo\nno Brasil, protagonismo\ncontinua familiar\ncontinua familiar\nBrasil - 2019\nCovid-19: a complexidade\nda distribuição das vacinas;\nSexo\nHoras Semanais\nas startups que criaram os\nprimeiros imunizantes aprovados;\nHomens\n11,0\no impacto das mutações do vírus\nMulheres\n21,4\nApenas 15%\nRede de\nPterossauros\nCresce o número\ndos ﬁlmes\nestradas\npodem ter\nde brasileiros\nFonte: IBGE - Pnad contínua anual\nnacionais foram\nconectava\nse originado\nentre os\nCovid-19: a complexidade\nApenas 15%\nRede de\nPterossauros\nCresce o número\ndirigidos por\naldeias e culturas\ndos ﬁlmes\nde pequenos\nestradas\npodem ter\npesquisadores\nde brasileiros\nda distribuição das vacinas;\nnacionais foram\nconectava\nse originado\nentre os\nDisponível em: https://agenciadenoticias.ibge.gov.br.\nas startups que criaram os\nmulheres entre\npré-colombianas\nrépteis\nmais citados\nprimeiros imunizantes aprovados;\ndirigidos por\naldeias e culturas\nde pequenos\npesquisadores\nAcesso em: 18 de jul. 2023 (adaptado).\nmulheres entre\npré-colombianas\nrépteis\nmais citados\no impacto das mutações do vírus\n2001 e 2010\nna Amazônia\nterrestres\nem 2020\n2001 e 2010\nna Amazônia\nterrestres\nem 2020\nCapa da revista Pesquisa. Disponível em: https://revistapesquisa.fapesp.br.\nAcesso em: 23 maio 2023 (adaptado).\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua formação,\nredija texto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa sobre o tema “Desafios\npara o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil”, apresentando\nproposta de intervenção que respeite os direitos humanos. Selecione, organize e relacione, de forma coerente e\ncoesa, argumentos e fatos para a defesa de seu ponto de vista.",
+          "after": "chamar a atenção da população sobre a qualidade dos\nserviços de saúde pública para o idoso."
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2024_d1_q045",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/1dia/enem2024_1dia_prova_amarelo.pdf",
+      "sourceSha256": "b9c9215da6c7eedee80b37131685b516f7ef824b1413c0a1957a76e360cbcdee",
+      "pages": [
+        18,
+        19
+      ],
+      "evidence": "Conferência visual das páginas 18 e 19 e das duas figuras locais: a questão 45 está integralmente na página 18 e sua alternativa E termina em “ela” e “lo”. A página 19 contém as instruções e os textos da redação sobre herança africana. As imagens p19-0 (obra Ainda a lamentar) e p19-1 (alunos diante do grafite de Zumbi) são textos motivadores dessa redação, sem vínculo com a questão 45; devem ser removidas, sem reatribuição a outra questão objetiva.",
+      "beforeSha256": "60d2a60c6970fd3a64cff38905dbceab0913b05d04eb63ffe4320e7bf0eab3d8",
+      "afterSha256": "5f2c435121cb637cea138e569cd84e934af06e9c07950de617afa214c26119d2",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "pronominalização, marcada pela retomada de “minha filha”\ne “um namorado ruim” pelos pronomes “ela” e “lo”.\nINSTRUÇÕES PARA A REDAÇÃO\n1.  O rascunho da redação deve ser feito no espaço apropriado.\n2.  O texto definitivo deve ser escrito à tinta preta, na folha própria, em até 30 (trinta) linhas.\n3.  A redação que apresentar cópia dos textos da Proposta de Redação ou do Caderno de Questões terá o número de linhas\ncopiadas desconsiderado para a contagem de linhas.\n4.  Receberá nota zero, em qualquer das situações expressas a seguir, a redação que:\n4.1.  tiver até 7 (sete) linhas escritas, sendo considerada “texto insuficiente”;\n4.2.  fugir ao tema ou não atender ao tipo dissertativo-argumentativo;\n4.3.  apresentar parte do texto deliberadamente desconectada do tema proposto;\n4.4.  apresentar nome, assinatura, rubrica ou outras formas de identificação no espaço destinado ao texto.\nTEXTO I\nTEXTO V\nHerança – o legado de crenças, conhecimentos, técnicas,\nHistórias para ninar gente grande\nG.R.E.S. Estação Primeira de Mangueira\ncostumes, tradições, transmitido por um grupo social de\ngeração para geração; cultura.\n(samba-enredo de 2019)\nBrasil, meu nego\nHOUAISS, A.; VILLAR, M. S. Dicionário Houaiss da língua\nDeixa eu te contar\nportuguesa. Rio de Janeiro: Objetiva, 2009 (adaptado).\nA história que a história não conta\nTEXTO II\nO avesso do mesmo lugar\nAs culturas africanas e afro-brasileiras foram relegadas\nNa luta é que a gente se encontra\nao campo do folclore com o propósito de confiná-las ao gueto\nfossilizado da memória. Folclorizar, nesse caso, é reduzir uma\nBrasil, meu dengo\ncultura a um conjunto de representações estereotipadas, via\nA Mangueira chegou\nde regra, alheias ao contexto que produziu essa cultura.\nCom versos que o livro apagou\nOLIVEIRA, E. D. A epistemologia da ancestralidade. Entrelugares:\nDesde 1500 tem mais invasão do que descobrimento\nrevista de sociopoética e abordagens afins, 2009.\nTem sangue retinto pisado\nAtrás do herói emoldurado\nMulheres, tamoios, mulatos\nEu quero um país que não está no retrato\nBrasil, o teu nome é Dandara\nE a tua cara é de cariri\nNão veio do céu\nNem das mãos de Isabel\nA liberdade é um dragão no mar de Aracati\nSalve os caboclos de julho\nQuem foi de aço nos anos de chumbo\nBrasil, chegou a vez\nDe ouvir as Marias, Mahins, Marielles, malês\nPAULINO, R. Ainda a lamentar. In: GONÇALVES, A. M. Um defeito de cor:\nromance. Rio de Janeiro: Record, 2024 (adaptado).\nDisponível em: www.mangueira.com.br.\nAcesso em: 30 maio 2024 (fragmento).\nTEXTO IV\nTEXTO VI\nHistória afro-brasileira nas escolas: professoras\nAlunos de escola municipal conhecem pontos\ncomentam avanços e dificuldades\ndo Rio que retratam relação com a África\nAs aulas sobre escravidão eram motivo de vergonha\nFoto: Brenno Carvalho / O Globo\npara uma professora quando ela estudava em uma escola\nmunicipal na zona sul de São Paulo. “Era o meu pior\nmomento na escola”, lembra a ex-aluna. Naquela época,\na história da população negra no Brasil era reduzida ao\nhorror do período escravocrata. Não se falava na escola\nsobre temas como a história e a cultura afro-brasileira, muito\nmenos sobre as grandes personalidades negras do país,\ncomo Luiz Gama e Carolina Maria de Jesus.\nA pedagoga, que é negra, tem orgulho de oferecer\numa experiência diferente da que viveu em sala de aula\npara seus alunos. Agora os livros infantis levados para as\nturmas têm protagonistas pretos. Temas como a beleza\ndo cabelo crespo e o combate ao racismo fazem parte do\nAlunos admiram grafite de Zumbi dos\ndia a dia da escola.\nPalmares na Pedra do Sal.\nDisponível em: www.oglobo.com. Acesso em:\nDisponível em: https://jornal.unesp.br. Acesso em: 3 jun. 2024 (adaptado).\n29 maio 2024 (adaptado).\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua\nformação, redija texto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa sobre o tema\n“Desafios para a valorização da herança africana no Brasil”, apresentando proposta de intervenção que respeite os direitos\nhumanos. Selecione, organize e relacione, de forma coerente e coesa, argumentos e fatos para defesa de seu ponto de vista.",
+          "after": "pronominalização, marcada pela retomada de “minha filha”\ne “um namorado ruim” pelos pronomes “ela” e “lo”."
+        },
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2024-d1-q045-p19-0.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2024-d1-q045-p19-1.webp"
+            }
+          ],
+          "after": []
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2025_d1_q045",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2025/1dia/enem2025_1dia_prova_amarelo.pdf",
+      "sourceSha256": "0e5f4fa385f9a605d7b03ecc2de9d2b0031dede7c2695c5810a8834b89a57805",
+      "pages": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "evidence": "Conferência visual das páginas 19, 20, 21 e 22 e das quatro figuras locais: a questão 45 termina na página 19; sua alternativa E termina em sistema judiciário. A figura p19-1 é o quadro TRADUZINDO O JURIDIQUÊS, texto-base legítimo e indispensável da questão, e deve ser preservada. As figuras p20-0 (pictogramas de idosos) e p20-1 (gráfico 65 a 74 anos) pertencem aos textos II e IV da proposta de redação da página 20; a página 21 é o rascunho da redação. A figura p22-1 não é a pintura da questão 46: é apenas o cabeçalho CIÊNCIAS HUMANAS E SUAS TECNOLOGIAS — Questões de 46 a 90, portanto não tem questão proprietária e não deve ser reatribuída. A pintura La piazzetta, texto I da questão 46 na página 22, já está corretamente anexada a essa questão pelo arquivo enem-2025-d1-q046-p22-0.webp. Retirar de Q45 o cabeçalho p22-1 basta; não há figura faltante em Q46.",
+      "beforeSha256": "0b2ac367196496ff9d25ee9566a2923a8e49173d19a2f851abe51c903b581d6e",
+      "afterSha256": "e888294ec4a72d086aca40eb904b93b6676a2741c1a140b7059981bace5b9da6",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "técnica, que facilita a circulação de informações no sistema judiciário.\nPROPOSTA DE REDAÇÃO\nA partir da leitura dos textos motivadores e com base nos conhecimentos construídos ao longo de sua formação, redija um\ntexto dissertativo-argumentativo em modalidade escrita formal da língua portuguesa sobre o tema “Perspectivas acerca do\nenvelhecimento na sociedade brasileira”, apresentando proposta de intervenção que respeite os direitos humanos. Selecione,\norganize e relacione, de forma coerente e coesa, argumentos e fatos para a defesa de seu ponto de vista.\nTEXTO I\nTEXTO IV\nEm 2022, o total de pessoas com 65 anos de idade ou\nUm novo estereótipo: o “velho ativo”, saudável e com\nmais no país chegou a 10,9% da população, com alta de 57,4%\nrecursos pressiona o “velho inativo”, doente e pobre. Nem todos\nfrente a 2010, quando esse contingente era 7,4% da população.\nos idosos têm recursos à disposição para aderir a essa corrida.\nÉ o que revelam os resultados do universo da população do\nIdosos são os principais mantenedores dos lares\nBrasil desagregada por idade e sexo do Censo Demográfico\n2022. “O Estatuto do Idoso define como idoso a pessoa de\n60 anos ou mais. O corte de 65 anos ou mais foi utilizado nessa\nanálise para manter comparabilidade internacional e com outras\npesquisas que utilizam essa faixa etária, como de mercado de\ntrabalho”, justifica a gerente de Estudos e Análises da Dinâmica\nDemográfica do IBGE. O aumento da população de 65 anos ou\nmais e a diminuição da parcela da população de até 14 anos no\nmesmo período, que passou de 24,1% para 19,8%, evidenciam\no franco envelhecimento da população brasileira.\nGOMES, I.; BRITTO, V. Censo 2022. Disponível em:\nDisponível em: g1.globo.com. Acesso em: 4 jun. 2025 (adaptado).\nhttps://agenciadenoticias.ibge.gov.br.\nAcesso em: 21 maio 2025 (adaptado).\nTEXTO V\nTEXTO II\nDona Maria Rita era tão antiga que na casa da filha estavam\nUm movimento na internet, contrário ao pictograma com a\nhabituados a ela como a um móvel velho. Ela não era novidade\nbengala para os idosos, iniciou uma campanha para modificar essa\npara ninguém. Mas nunca lhe passara pela cabeça que era uma\nimagem. A empreitada coletiva acabou com a elaboração de um\nsolitária. Só que não tinha nada para fazer. Era um lazer forçado\nnovo desenho, uma figura mais altiva, ao lado da inscrição “60+”.\nque em certos momentos se tornava lancinante: nada tinha a\nfazer no mundo. Senão viver como um gato, como um cachorro.\nSeu ideal era ser dama de companhia de alguma senhora, mas\nisso nem se usava mais e mesmo ninguém acreditaria nos\nseus fortes setenta e sete anos, pensariam que era uma fraca.\nNão fazia nada, fazia só isso: ser velha. Às vezes ficava deprimida:\nachava que não servia a nada, não servia sequer a Deus.\nLISPECTOR, C. Onde estivestes de noite.\nDisponível em: www12.senado.leg.br. Acesso em: 21 maio 2025.\nRio de Janeiro: Francisco Alves, 1974.\nTEXTO III\nTEXTO VI\nA velhice é tempo de se retratar consigo mesma, de falar\nQuem tem direito de viver mais?\nda doença, da sexualidade, do tédio e da liberdade de não se\nO documentário Quantos dias. Quantas noites busca\nencaixar mais nas expectativas sociais. “A velhice não é doença.\nÉ destino”, escreve Rita Lee. Mas ela mesma mostra que esse\ninvestigar quem, afinal, tem direito a uma vida longa no Brasil.\ndestino não é sinônimo de mero encaminhamento para o fim —\n“São inúmeros os marcadores que definem quem vai viver e\né campo de novas escolhas, inclusive a de desafiar estereótipos\nquem vai sucumbir diante de uma realidade imposta por um\nreservados para essa fase da vida.\nsistema bastante perverso”, afirma o diretor do documentário.\nA atriz Fernanda Montenegro, 95 anos, oferece em suas\n“O envelhecimento leva a maioria das pessoas a um\nmemórias uma síntese luminosa desse gesto de habitar o tempo\ndeclínio funcional. Mas, se você chega aos 75 tendo acumulado\ncom dignidade: “A velhice é o tempo em que a vida já foi vivida\ndesigualdades, principalmente pelo racismo, é muito difícil\ne, por isso mesmo, pode finalmente ser olhada de frente, sem\no pânico do ineditismo”.\nsobreviver com qualidade de vida”, diz um médico gerontólogo.\nDisponível em: https://rascunho.com.br. Acesso em: 17 maio 2025.\nDisponível em: g1.globo.com. Acesso em: 10 jun. 2025 (adaptado).\nINSTRUÇÕES PARA A REDAÇÃO\ncopiadas desconsiderado para a contagem de linhas.\n1\n2\n3\n4\n5\n6\n7\nRASCUNHO\n8\n9\n10\nDA REDAÇÃO\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30",
+          "after": "técnica, que facilita a circulação de informações no sistema judiciário."
+        },
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2025-d1-q045-p19-1.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2025-d1-q045-p20-0.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2025-d1-q045-p20-1.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2025-d1-q045-p22-1.webp"
+            }
+          ],
+          "after": [
+            {
+              "url": "/question-media/enem-completo/enem-2025-d1-q045-p19-1.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2018_d2_q106",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/2dia/enem2018_2dia_prova_amarelo.pdf",
+      "sourceSha256": "e8269bcbfaba92b60436510ce1c14c1141258ac5644c3ad78d1485f308fcf1af",
+      "pages": [
+        6
+      ],
+      "evidence": "Conferência visual da página 6: as cinco alternativas da questão 106 usam a unidade de resistência elétrica kΩ. O glifo do PDF foi transcrito como a letra latina ȍ; preservados números, circuito e gabarito C.",
+      "beforeSha256": "c8b7ad06031f9ac2896628d18cd5fe3a11dc7b2a5e0b2bc080637c9aa9022eef",
+      "afterSha256": "81c74b73dbca5bfac8a190c1d251dd4611e6c4cd90bf3fda8e0e6f2b844f6c97",
+      "changes": [
+        {
+          "field": "options.a.text",
+          "before": "1,3 kȍ",
+          "after": "1,3 kΩ"
+        },
+        {
+          "field": "options.b.text",
+          "before": "4,0 kȍ",
+          "after": "4,0 kΩ"
+        },
+        {
+          "field": "options.c.text",
+          "before": "6,0 kȍ",
+          "after": "6,0 kΩ"
+        },
+        {
+          "field": "options.d.text",
+          "before": "6,7 kȍ",
+          "after": "6,7 kΩ"
+        },
+        {
+          "field": "options.e.text",
+          "before": "12,0 kȍ",
+          "after": "12,0 kΩ"
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2019_d1_q090",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2019/1dia/enem2019_1dia_prova_amarelo.pdf",
+      "sourceSha256": "952410c24574d8464c7a737ed41727404912d9f61178b8f9e98bcebe5a757242",
+      "pages": [
+        31,
+        32
+      ],
+      "evidence": "Conferência visual das páginas 31 e 32 do caderno amarelo de 2019: a questão 90 e todas as alternativas estão completas na página 31; a alternativa E termina exatamente em “Benefícios assistenciais públicos.”. A página 32 é exclusivamente a folha de rascunho da redação, com o aviso Transcreva a sua Redação para a Folha de Redação. O texto anexado após o ponto final não integra a alternativa. Todos os recortes locais listados em removeFigureUrls foram inspecionados visualmente e reproduzem o logotipo do ENEM ou a folha de rascunho da página 32, sem conteúdo próprio da questão. Preservar enunciado, demais alternativas e gabarito.",
+      "beforeSha256": "8fdf5594f213112d3c22f8b870cf0eac4f1fcce2788cfd95bc70e3a15cae6d8f",
+      "afterSha256": "f079ff683c5afc7f09cf596b3fb0918dea4f9bcc56ee0ec862fc7c939a17ada4",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "Benefícios assistenciais públicos.\nTranscreva a sua Redação para a Folha de Redação.\nRASCUNHO\nDA REDAÇÃO",
+          "after": "Benefícios assistenciais públicos."
+        },
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2019-d1-q090-p32-0.webp"
+            }
+          ],
+          "after": []
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2020_d1_q090",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2020/presencial/1dia/enem2020_1dia_prova_amarelo.pdf",
+      "sourceSha256": "8e8c0ff25b2265a8711626fc7e42c3e9eed64504b80b37d478bf877b7af099c5",
+      "pages": [
+        31,
+        32
+      ],
+      "evidence": "Conferência visual das páginas 31 e 32 do caderno amarelo de 2020: a questão 90 e todas as alternativas estão completas na página 31; a alternativa E termina exatamente em “existencialista, na questão do reconhecimento de si.”. A página 32 é exclusivamente a folha de rascunho da redação, com o aviso Transcreva a sua Redação para a Folha de Redação. O texto anexado após o ponto final não integra a alternativa. Todos os recortes locais listados em removeFigureUrls foram inspecionados visualmente e reproduzem o logotipo do ENEM ou a folha de rascunho da página 32, sem conteúdo próprio da questão. Preservar enunciado, demais alternativas e gabarito.",
+      "beforeSha256": "341ffb5f4ce34cd3c77ad7f6850647a645bb0e59e503910570d1adb61d1bfff6",
+      "afterSha256": "6ae629212c5d707a67b50a5605efa7878f647efd80cae8274f0c725ded1b4d49",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "existencialista, na questão do reconhecimento de si.\nTranscreva a sua Redação para a Folha de Redação.",
+          "after": "existencialista, na questão do reconhecimento de si."
+        },
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2020-d1-q090-p32-0.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2020-d1-q090-p32-1.webp"
+            }
+          ],
+          "after": []
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2021_d1_q090",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/1dia/enem2021_1dia_prova_amarelo.pdf",
+      "sourceSha256": "4b39bd9944e82ba1f1134b2b213295a25530906f75e0c35a54eb4aa78b4de6d9",
+      "pages": [
+        31,
+        32
+      ],
+      "evidence": "Conferência visual das páginas canônicas 31 e 32: a questão 90 contém texto-base, comando e todas as alternativas na página 31, com a alternativa E terminando no ponto final preservado em after. A página 32 é exclusivamente a folha de rascunho de redação, com a instrução Transcreva a sua Redação para a Folha de Redação., cabeçalho ENEM e linhas numeradas; não há continuação da questão. O campo options.e.text anexou indevidamente instruções dessa página após a alternativa E. As duas imagens locais listadas em removeFigureUrls foram inspecionadas: recortam o logotipo ENEM e a folha pautada de rascunho da página 32, não elementos da questão 90, que não possui figura própria. A proposta preserva todo o texto da alternativa e remove apenas o conteúdo de rascunho anexado.",
+      "beforeSha256": "1983099719187bddf90500fefae4961a5b6a8b3c7f7c8920d4fce7e3bb76fe6c",
+      "afterSha256": "080d6157860a6f59b8beb4af97dbcac39567c5717f702f9af4f4f34cd0425d33",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "medidas de salvaguarda de peças museológicas.\nTranscreva a sua Redação para a Folha de Redação.",
+          "after": "medidas de salvaguarda de peças museológicas."
+        },
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2021-d1-q090-p32-0.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d1-q090-p32-1.webp"
+            }
+          ],
+          "after": []
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2022_d1_q090",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2022/1dia/enem2022_1dia_prova_amarelo.pdf",
+      "sourceSha256": "68c7299f42be65650daea628ca8744bb1a1ae967fbbaec06ce47891a17ceb354",
+      "pages": [
+        31,
+        32
+      ],
+      "evidence": "Conferência visual das páginas canônicas 31 e 32: a questão 90 contém texto-base, comando e todas as alternativas na página 31, com a alternativa E terminando no ponto final preservado em after. A página 32 é exclusivamente a folha de rascunho de redação, com a instrução Transcreva a sua Redação para a Folha de Redação., cabeçalho ENEM e linhas numeradas; não há continuação da questão. O campo options.e.text anexou indevidamente instruções dessa página após a alternativa E. As duas imagens locais listadas em removeFigureUrls foram inspecionadas: recortam o logotipo ENEM e a folha pautada de rascunho da página 32, não elementos da questão 90, que não possui figura própria. A proposta preserva todo o texto da alternativa e remove apenas o conteúdo de rascunho anexado.",
+      "beforeSha256": "0f8a07b41fec150356ad6e67450914071809a15390935cc581a17b158ee3912e",
+      "afterSha256": "423faee135ce8be91d7f7a74ed1ae0692d313d0afe891b64fc3205459c2eee39",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "definir uma tradição popular.\nTranscreva a sua Redação para a Folha de Redação.\nRASCUNHO\nDA REDAÇÃO",
+          "after": "definir uma tradição popular."
+        },
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2022-d1-q090-p32-0.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2022-d1-q090-p32-1.webp"
+            }
+          ],
+          "after": []
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2024_d1_q090",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/1dia/enem2024_1dia_prova_amarelo.pdf",
+      "sourceSha256": "b9c9215da6c7eedee80b37131685b516f7ef824b1413c0a1957a76e360cbcdee",
+      "pages": [
+        31,
+        32
+      ],
+      "evidence": "Conferência visual das páginas canônicas 31 e 32: a questão 90 contém texto-base, comando e todas as alternativas na página 31, com a alternativa E terminando no ponto final preservado em after. A página 32 é exclusivamente a folha de rascunho de redação, com a instrução Transcreva a sua Redação para a Folha de Redação., cabeçalho ENEM e linhas numeradas; não há continuação da questão. O campo options.e.text anexou indevidamente instruções dessa página após a alternativa E. As duas imagens locais listadas em removeFigureUrls foram inspecionadas: recortam o logotipo ENEM e a folha pautada de rascunho da página 32, não elementos da questão 90, que não possui figura própria. A proposta preserva todo o texto da alternativa e remove apenas o conteúdo de rascunho anexado.",
+      "beforeSha256": "6afef21e901c9b13b201e68bafa47bf616bfefedd5add4be941ef575463066e4",
+      "afterSha256": "c212e6f5d7c08a10f18e6ee0b9469f9fdf5f6169b5db5b4167ddd4b828897168",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "ensimesmamento, interiorização e indulgência dos agentes.\nTranscreva a sua Redação para a Folha de Redação.\nRASCUNHO\nDA REDAÇÃO",
+          "after": "ensimesmamento, interiorização e indulgência dos agentes."
+        },
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2024-d1-q090-p32-0.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2024-d1-q090-p32-1.webp"
+            }
+          ],
+          "after": []
+        }
+      ]
+    }
+  ]
+}
