@@ -46,3 +46,9 @@ test('streaming envia a mesma mídia e só conclui com quadro terminal válido',
   const done=await stream.next();assert.equal(done.done,true);
   assert.equal(body.model,'deep-comment');assert.equal(body.messages[0].content[1].image_url.url,'data:image/png;base64,ZmlndXJh');
 });
+
+test('comentário de assunto complementar usa a classificação conferida do banco',async()=>{
+ const payload:Record<string,unknown>={questionId:'enem_completo_2018_d1_q052',selectedOptionId:'c',topic:'Aristóteles',subject:'outra matéria'};
+ await groundQuestion(payload);
+ assert.equal(payload.topic,'Filosofia Helenística');assert.equal(payload.subject,'Filosofia');assert.match(String(payload.correctAnswer),/^C\)/);
+});

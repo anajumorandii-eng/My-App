@@ -39,7 +39,7 @@ import {
 import { Panel } from '../components/ui/Panel';
 import { Button } from '../components/ui/Button';
 import { SUBJECT_ICONS } from './Dashboard';
-import { mockTopics } from '../data/mockData';
+import { questionTopics, isQuestionOnlyTopic } from '../data/questionTopics';
 import { ALL, buildTopicHierarchy, filterByHierarchy } from '../lib/topicHierarchy';
 import { canonicalExamBoard, matchesExamFilters } from '../lib/questionExamFilters';
 import { matchesQuestionSearch } from '../lib/questionSearch';
@@ -94,7 +94,7 @@ export default function Questoes() {
   const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], [mockQuestions]);
   const localLocation = useContext(UNSAFE_LocationContext);
   const requestScope = new URLSearchParams(localLocation?.location.search ?? window.location.search);
-  const requestedTopic = mockTopics.find(topic => topic.id === requestScope.get('topic'));
+  const requestedTopic = questionTopics.find(topic => topic.id === requestScope.get('topic'));
   const rawBoard = canonicalExamBoard(requestScope.get('board') ?? '');
   const requestedBoard = ['FUVEST', 'UNICAMP', 'UNESP', 'FAMERP', 'UNIFESP', 'ENEM'].includes(rawBoard) ? rawBoard : 'all';
   const [subjectFilter, setSubjectFilter] = useState(requestedTopic?.subject ?? 'Todas');
@@ -169,8 +169,8 @@ export default function Questoes() {
   }, [mockQuestions, subjectFilter, boardFilters, yearFilter, searchQuery]);
 
   const topicTree = useMemo(() => {
-    const available = buildTopicHierarchy(scoped, mockTopics);
-    const selected = buildTopicHierarchy(mockQuestions.filter(q => subjectFilter === 'Todas' || q.subject === subjectFilter), mockTopics)
+    const available = buildTopicHierarchy(scoped, questionTopics);
+    const selected = buildTopicHierarchy(mockQuestions.filter(q => subjectFilter === 'Todas' || q.subject === subjectFilter), questionTopics)
       .filter(node => topicFilters.includes(node.id) && !available.some(other => other.id === node.id))
       .map(node => ({ ...node, count: 0, subtopics: [] }));
     return [...available, ...selected];
@@ -206,7 +206,7 @@ export default function Questoes() {
   const pool = useMemo(() => {
     if (!topicFilters.length) return scoped;
     const selected = new Set(topicFilters.flatMap(topicId =>
-      filterByHierarchy(scoped, { topicId, subtopicId: subtopicFilter }, mockTopics).map(q => q.id)));
+      filterByHierarchy(scoped, { topicId, subtopicId: subtopicFilter }, questionTopics).map(q => q.id)));
     return scoped.filter(q => selected.has(q.id));
   }, [scoped, topicFilters, subtopicFilter]);
 
@@ -479,7 +479,7 @@ export default function Questoes() {
         questionId: question.id,
         selectedOptionId,
         board: question.examSource?.board,
-        topic: mockTopics.find((topic) => topic.id === question.topicId)?.name,
+        topic: questionTopics.find((topic) => topic.id === question.topicId)?.name,
         chapter: question.chapter,
         prompt: question.prompt,
         subject: question.subject,
@@ -567,7 +567,7 @@ export default function Questoes() {
             <h2 className="text-base font-medium">{filtersOpen ? 'Escolha suas questões' : 'Seu recorte de treino'}</h2>
             {!filtersOpen && <p className="mt-1 break-words text-sm text-[var(--dim)]">{[
               subjectFilter === 'Todas' ? 'Todas as matérias' : subjectFilter,
-              ...topicFilters.map(id => mockTopics.find(topic => topic.id === id)?.name ?? 'Fora do currículo'),
+              ...topicFilters.map(id => questionTopics.find(topic => topic.id === id)?.name ?? 'Fora do currículo'),
               subtopicFilter !== ALL ? subtopicFilter : '',
               boardFilters.length ? boardFilters.join(', ') : 'Todas as bancas',
               yearFilter === 'all' ? '' : yearFilter === 'unknown' ? 'Ano não identificado' : yearFilter,
@@ -671,6 +671,8 @@ export default function Questoes() {
                 Acertos: <b className="text-[var(--text)]">{correctCount}</b> / {history.length}
               </span>
             </div>
+
+            {isQuestionOnlyTopic(question.topicId) && <p className="my-3 text-xs text-[var(--dim)]">Assunto complementar do banco de questões. Ainda não há um módulo correspondente na sua grade de estudo.</p>}
 
             {question.status !== 'annulled' && <QuestionTimer seconds={timer.seconds} expectedSeconds={expectedSeconds} started={timer.started} onStart={timer.start} running={timer.running} manualPause={timer.manualPause} finished={timer.finished} onTogglePause={timer.togglePause} onExpectedChange={setExpectedOverride} />}
 

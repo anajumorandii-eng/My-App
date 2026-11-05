@@ -1,5 +1,7 @@
 # Revisão editorial da fila — ENEM 2018–2025
 
+> Registro histórico. A continuação de 05/11 e a resolução dos dez adiamentos estão em [RESOLUCAO-TAXONOMIA.md](RESOLUCAO-TAXONOMIA.md).
+
 A auditoria inicial da PR #410 foi mesclada. Esta continuação processa a fila de 784 classificações automáticas e cinco reservas já registradas, preservando o currículo fornecido, os IDs e o conteúdo das questões.
 
 ## Resultado

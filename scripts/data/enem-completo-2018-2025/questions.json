@@ -446,9 +446,9 @@
   },
   {
     "id": "enem_completo_2018_d1_q011",
-    "topicId": "por_lit_classica_barroca",
-    "subject": "Português",
-    "chapter": "A Estética Barroca",
+    "topicId": "q_ef_cultura_corporal",
+    "subject": "Educação Física",
+    "chapter": "Valores Olímpicos e Paralímpicos",
     "prompt": "Tanto os Jogos Olímpicos quanto os Paralímpicos são\nmais que uma corrida por recordes, medalhas e busca\nda excelência. Por trás deles está a filosofia do barão\nPierre de Coubertin, fundador do Movimento Olímpico.\nComo educador, ele viu nos Jogos a oportunidade para\nque os povos desenvolvessem valores, que poderiam ser\naplicados não somente ao esporte, mas à educação e à\nsociedade. Existem atualmente sete valores associados\naos Jogos. Os valores olímpicos são: a amizade, a\nexcelência e o respeito, enquanto os valores paralímpicos\nsão: a determinação, a coragem, a igualdade e a inspiração.\nMIRAGAYA, A. Valores para toda a vida. Disponível em: www.esporteessencial.com.br.\nAcesso em: 9 ago. 2017 (adaptado).\nNo contexto das aulas de Educação Física escolar, os\nvalores olímpicos e paralímpicos podem ser identificados\nquando o colega",
     "options": [
       {
@@ -2271,9 +2271,9 @@
   },
   {
     "id": "enem_completo_2018_d1_q052",
-    "topicId": "fil_aristoteles",
+    "topicId": "q_fil_helenistica",
     "subject": "Filosofia",
-    "chapter": "A Ética a Nicômaco e a Doutrina do Meio-Termo",
+    "chapter": "Epicurismo e Moderação dos Desejos",
     "prompt": "A quem não basta pouco, nada basta.\nEPICURO. Os pensadores. São Paulo: Abril Cultural, 1985.\nRemanescente do período helenístico, a máxima\napresentada valoriza a seguinte virtude:",
     "options": [
       {
@@ -2380,7 +2380,7 @@
       },
       {
         "id": "e",
-        "text": "seletividade dos mecanismos segregadores.\nCH 1º dia | Caderno 2 - AMARELO - Página 21"
+        "text": "seletividade dos mecanismos segregadores."
       }
     ],
     "correctOptionId": "e",
@@ -2622,9 +2622,9 @@
   },
   {
     "id": "enem_completo_2018_d1_q060",
-    "topicId": "his_moderna_iluminismo",
-    "subject": "História",
-    "chapter": "América Espanhola",
+    "topicId": "q_fil_introducao",
+    "subject": "Filosofia",
+    "chapter": "Atitude Filosófica e Questionamento",
     "prompt": "O filósofo reconhece-se pela posse inseparável\ndo gosto da evidência e do sentido da ambiguidade.\nQuando se limita a suportar a ambiguidade, esta se\nchama equívoco. Sempre aconteceu que, mesmo aqueles\nque pretenderam construir uma filosofia absolutamente\npositiva, só conseguiram ser filósofos na medida em que,\nsimultaneamente, se recusaram o direito de se instalar no\nsaber absoluto. O que caracteriza o filósofo é o movimento\nque leva incessantemente do saber à ignorância, da\nignorância ao saber, e um certo repouso neste movimento.\nMERLEAU-PONTY, M. Elogio da filosofia.\nLisboa: Guimarães, 1998 (adaptado).\nO texto apresenta um entendimento acerca dos elementos\nconstitutivos da atividade do filósofo, que se caracteriza por",
     "options": [
       {
@@ -2645,7 +2645,7 @@
       },
       {
         "id": "e",
-        "text": "compatibilizar as estruturas do pensamento aos\nprincípios fundamentais.\nCH 1º dia | Caderno 2 - AMARELO - Página 23"
+        "text": "compatibilizar as estruturas do pensamento aos\nprincípios fundamentais."
       }
     ],
     "correctOptionId": "d",
@@ -2995,7 +2995,7 @@
       },
       {
         "id": "e",
-        "text": "redefinição de regiões administrativas.\nCH 1º dia | Caderno 2 - AMARELO - Página 25"
+        "text": "redefinição de regiões administrativas."
       }
     ],
     "correctOptionId": "d",
@@ -3306,7 +3306,7 @@
       },
       {
         "id": "e",
-        "text": "centralidade do indivíduo na sociedade.\nCH 1º dia | Caderno 2 - AMARELO - Página 27"
+        "text": "centralidade do indivíduo na sociedade."
       }
     ],
     "correctOptionId": "e",
@@ -3658,7 +3658,7 @@
       },
       {
         "id": "e",
-        "text": "condenação pela ciência dos conhecimentos populares\nde cura.\nCH 1º dia | Caderno 2 - AMARELO - Página 29"
+        "text": "condenação pela ciência dos conhecimentos populares\nde cura."
       }
     ],
     "correctOptionId": "e",
@@ -7162,15 +7162,15 @@
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A — expressão ou figura identificada por essa letra."
+        "text": "I"
       },
       {
         "id": "b",
-        "text": "Alternativa B — expressão ou figura identificada por essa letra."
+        "text": "II"
       },
       {
         "id": "c",
-        "text": "Alternativa C — expressão ou figura identificada por essa letra."
+        "text": "III"
       },
       {
         "id": "d",
@@ -7653,19 +7653,19 @@
       },
       {
         "id": "b",
-        "text": "Alternativa visual B (ver figura identificada pela letra)."
+        "text": "12"
       },
       {
         "id": "c",
-        "text": "Alternativa visual C (ver figura identificada pela letra)."
+        "text": "7√2"
       },
       {
         "id": "d",
-        "text": "Alternativa visual D (ver figura identificada pela letra)."
+        "text": "6 + 4√2"
       },
       {
         "id": "e",
-        "text": "Alternativa visual E (ver figura identificada pela letra)."
+        "text": "6 + 2√2"
       }
     ],
     "correctOptionId": "a",
@@ -7700,19 +7700,19 @@
     "options": [
       {
         "id": "a",
-        "text": "Alternativa visual A (ver figura identificada pela letra)."
+        "text": "36√3"
       },
       {
         "id": "b",
-        "text": "Alternativa visual B (ver figura identificada pela letra)."
+        "text": "24√3"
       },
       {
         "id": "c",
-        "text": "Alternativa visual C (ver figura identificada pela letra)."
+        "text": "4√3"
       },
       {
         "id": "d",
-        "text": "Alternativa visual D (ver figura identificada pela letra)."
+        "text": "36"
       },
       {
         "id": "e",
@@ -8538,9 +8538,9 @@
   },
   {
     "id": "enem_completo_2019_d1_q008",
-    "topicId": "por_texto",
-    "subject": "Português",
-    "chapter": "Fatores de Textualidade",
+    "topicId": "q_ef_cultura_corporal",
+    "subject": "Educação Física",
+    "chapter": "Esporte e Mídia",
     "prompt": "Mídias: aliadas ou inimigas da educação física escolar?\nNo caso do esporte, a mediação efetuada pela\ncâmera de TV construiu uma nova modalidade de\nconsumo: o esporte telespetáculo, realidade textual\nrelativamente autônoma face à prática “real” do esporte,\nconstruída pela codificação e mediação dos eventos\nesportivos efetuados pelo enquadramento, edição das\nimagens e comentários, interpretando para o espectador\no que ele está vendo. Esse fenômeno tende a valorizar\na forma em relação ao conteúdo, e para tal faz uso\nprivilegiado da linguagem audiovisual com ênfase na\nimagem cujas possibilidades são levadas cada vez mais\nadiante, em decorrência dos avanços tecnológicos.\nPor outro lado, a narração esportiva propõe uma\nconcepção hegemônica de esporte: esporte é esforço\nmáximo, busca da vitória, dinheiro... O preço que se\npaga por sua espetacularização é a fragmentação do\nfenômeno esportivo. A experiência global do ser-atleta é\nmodificada: a sociabilização no confronto e a ludicidade\nnão são vivências privilegiadas no enfoque das\nmídias, mas as eventuais manifestações de violência,\nem partidas de futebol, por exemplo, são exibidas e\nreexibidas em todo o mundo.\nBETTI, M. Motriz, n. 2, jul.-dez. 2001 (adaptado).\nA reflexão trazida pelo texto, que aborda o esporte\ntelespetáculo, está fundamentada na",
     "options": [
       {
@@ -8977,9 +8977,9 @@
   },
   {
     "id": "enem_completo_2019_d1_q018",
-    "topicId": "por_lit_modernismo",
-    "subject": "Português",
-    "chapter": "Parnasianismo",
+    "topicId": "q_ef_cultura_corporal",
+    "subject": "Educação Física",
+    "chapter": "Esportivização de Práticas Corporais",
     "prompt": "Esporte e cultura: análise acerca da esportivização de práticas corporais nos jogos indígenas\nNos Jogos dos Povos Indígenas, observa-se que as práticas corporais realizadas envolvem elementos\ntradicionais (como as pinturas e adornos corporais) e modernos (como a regulamentação, a fiscalização e a\npadronização). O arco e flecha e a lança, por exemplo, são instrumentos tradicionalmente utilizados para a caça\ne a defesa da comunidade na aldeia. Na ocasião do evento, esses artefatos foram produzidos pela própria etnia,\nporém sua estruturação como “modalidade esportiva” promoveu uma semelhança entre as técnicas apresentadas,\ncom o sentido único da competição.\nALMEIDA, A. J. M.; SUASSUNA, D. M. F. A. Pensar a prática, n. 1, jan.-abr. 2010 (adaptado).\nA relação entre os elementos tradicionais e modernos nos Jogos dos Povos Indígenas desencadeou a",
     "options": [
       {
@@ -9551,9 +9551,9 @@
   },
   {
     "id": "enem_completo_2019_d1_q031",
-    "topicId": "por_lit_contemporanea",
-    "subject": "Português",
-    "chapter": "Clarice Lispector",
+    "topicId": "q_ef_corpo_saude",
+    "subject": "Educação Física",
+    "chapter": "Transtornos da Imagem Corporal",
     "prompt": "No Brasil, a disseminação de uma expectativa de\ncorpo com base na estética da magreza é bastante grande\ne apresenta uma enorme repercussão, especialmente,\nse considerada do ponto de vista da realização pessoal.\nEm pesquisa feita na cidade de São Paulo, aparecem os\npercentuais de 90% entre as mulheres pesquisadas que\nse dizem preocupadas com seu peso corporal, sendo\nque 95% se sentem insatisfeitas com “seu próprio corpo”.\nSILVA, A. M. Corpo, ciência e mercado: reflexões acerca da gestação\nde um novo arquétipo da felicidade. Campinas: Autores Associados;\nFlorianópolis: UFSC, 2001.\nA preocupação excessiva com o “peso” corporal pode\nprovocar o desenvolvimento de distúrbios associados\ndiretamente à imagem do corpo, tais como",
     "options": [
       {
@@ -12034,9 +12034,9 @@
   },
   {
     "id": "enem_completo_2019_d1_q087",
-    "topicId": "his_moderna_iluminismo",
-    "subject": "História",
-    "chapter": "América Espanhola",
+    "topicId": "q_fil_politica_moderna",
+    "subject": "Filosofia",
+    "chapter": "Maquiavel: Moral e Eficácia Política",
     "prompt": "Para Maquiavel, quando um homem decide dizer\na verdade pondo em risco a própria integridade física,\ntal resolução diz respeito apenas a sua pessoa. Mas se\nesse mesmo homem é um chefe de Estado, os critérios\npessoais não são mais adequados para decidir sobre\nações cujas consequências se tornam tão amplas,\njá que o prejuízo não será apenas individual,\nmas coletivo. Nesse caso, conforme as circunstâncias e\nos fins a serem atingidos, pode-se decidir que o melhor\npara o bem comum seja mentir.\nARANHA, M. L. Maquiavel: a lógica da força.\nSão Paulo: Moderna, 2006 (adaptado).\nO texto aponta uma inovação na teoria política na época\nmoderna expressa na distinção entre",
     "options": [
       {
@@ -21133,7 +21133,7 @@
     },
     "figures": [
       {
-        "url": "/question-media/enem-completo/enem-2020-d2-q108-p7-0.webp"
+        "url": "/question-media/enem-completo/enem-2020-d2-q108-p7-1.webp"
       }
     ]
   },
@@ -23964,11 +23964,11 @@
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A — expressão ou figura identificada por essa letra."
+        "text": "R/2"
       },
       {
         "id": "b",
-        "text": "Alternativa B — expressão ou figura identificada por essa letra."
+        "text": "2 R"
       },
       {
         "id": "c",
@@ -28568,11 +28568,11 @@
     "options": [
       {
         "id": "a",
-        "text": "Alternativa A — expressão ou figura identificada por essa letra."
+        "text": "I"
       },
       {
         "id": "b",
-        "text": "Alternativa B — expressão ou figura identificada por essa letra."
+        "text": "II"
       },
       {
         "id": "c",
@@ -28671,7 +28671,7 @@
       },
       {
         "id": "b",
-        "text": "O\nn\nO"
+        "text": "Alternativa visual B (ver figura identificada pela letra)."
       },
       {
         "id": "c",
@@ -28679,11 +28679,11 @@
       },
       {
         "id": "d",
-        "text": "n\nn"
+        "text": "Alternativa visual D (ver figura identificada pela letra)."
       },
       {
         "id": "e",
-        "text": "n\nO"
+        "text": "Alternativa visual E (ver figura identificada pela letra)."
       }
     ],
     "correctOptionId": "d",
@@ -28702,7 +28702,19 @@
     },
     "figures": [
       {
+        "url": "/question-media/enem-completo/enem-2021-d2-q094-p2-4.webp"
+      },
+      {
+        "url": "/question-media/enem-completo/enem-2021-d2-q094-p2-5.webp"
+      },
+      {
         "url": "/question-media/enem-completo/enem-2021-d2-q094-p2-3.webp"
+      },
+      {
+        "url": "/question-media/enem-completo/enem-2021-d2-q094-p2-6.webp"
+      },
+      {
+        "url": "/question-media/enem-completo/enem-2021-d2-q094-p2-7.webp"
       }
     ]
   },
@@ -31484,7 +31496,7 @@
       },
       {
         "id": "d",
-        "text": "I\n2 000"
+        "text": "Alternativa visual D (ver figura identificada pela letra)."
       },
       {
         "id": "e",
@@ -31510,19 +31522,19 @@
         "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-0.webp"
       },
       {
-        "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-1.webp"
+        "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-6.webp"
       },
       {
-        "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-2.webp"
+        "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-7.webp"
       },
       {
-        "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-3.webp"
+        "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-8.webp"
       },
       {
-        "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-4.webp"
+        "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-9.webp"
       },
       {
-        "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-5.webp"
+        "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-10.webp"
       }
     ]
   },
@@ -31535,23 +31547,23 @@
     "options": [
       {
         "id": "a",
-        "text": "Arrecadação"
+        "text": "Alternativa visual A (ver figura identificada pela letra)."
       },
       {
         "id": "b",
-        "text": "Arrecadação"
+        "text": "Alternativa visual B (ver figura identificada pela letra)."
       },
       {
         "id": "c",
-        "text": "Arrecadação\n7 000\n6 500\n6 000\n5 500\n5 000\n2 500\n2 000\n1 500\n1 000\nDesconto\n500\n0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23"
+        "text": "Alternativa visual C (ver figura identificada pela letra)."
       },
       {
         "id": "d",
-        "text": "7 000\n3 000\n2 500\n2 000\n1 500\n1 000\nDesconto\n500\n0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23\n0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23"
+        "text": "Alternativa visual D (ver figura identificada pela letra)."
       },
       {
         "id": "e",
-        "text": "7 000\n3 000\n2 500\n2 500\n2 000\n2 000\n1 500\n1 500\n1 000\n1 000\n500\nDesconto\nDesconto\n500\n0 1 2 3 4 5 6 7 8 9 1011121314151617181920212223\n0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23"
+        "text": "Alternativa visual E (ver figura identificada pela letra)."
       }
     ],
     "correctOptionId": "e",
@@ -31570,19 +31582,19 @@
     },
     "figures": [
       {
-        "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-0.webp"
+        "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-5.webp"
       },
       {
-        "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-1.webp"
+        "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-6.webp"
       },
       {
-        "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-2.webp"
+        "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-7.webp"
       },
       {
-        "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-3.webp"
+        "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-8.webp"
       },
       {
-        "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-4.webp"
+        "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-9.webp"
       }
     ]
   },
@@ -32635,7 +32647,7 @@
       },
       {
         "id": "b",
-        "text": "7\n!\n5\n!\n7\n!\n9 10\n!\n!"
+        "text": "7! · 5! · 7! · 9! · 10!"
       },
       {
         "id": "c",
@@ -33593,9 +33605,9 @@
   },
   {
     "id": "enem_completo_2022_d1_q018",
-    "topicId": "por_texto",
-    "subject": "Português",
-    "chapter": "Intertextualidade e Interdiscursividade",
+    "topicId": "q_ef_cultura_corporal",
+    "subject": "Educação Física",
+    "chapter": "Práticas Corporais de Aventura",
     "prompt": "Criado há cerca de 20 anos na Califórnia, o\nmountainboard é um esporte de aventura que utiliza uma\nespécie de skate off-road para realizar manobras similares\nàs das modalidades de snowboard, surf e do próprio\nskate. A atividade chegou ao Brasil em 1997 e hoje possui\ncentenas de praticantes, um circuito nacional respeitável\ne mais de uma dezena de pistas espalhadas pelo país.\nSegundo consta na história oficial, o mountainboard foi\ncriado por praticantes de snowboard que sentiam falta\nde praticar o esporte nos períodos sem neve. Para isso,\neles desenvolveram um equipamento bem simples:\numa prancha semelhante ao modelo utilizado na neve\n(menor e um pouco menos flexível), com dois eixos\nbem resistentes, alças para encaixar os pés e quatro\npneus com câmaras de ar para regular a velocidade que\npode ser alcançada em diferentes condições. Com essa\nconfiguração, o esporte se mostrou possível em diversos\ntipos de terreno: grama, terra, pedras, asfalto e areia.\nAlém desses pisos, também é possível procurar pelas\npróprias trilhas para treinar as manobras.\nDisponível em: www.webventure.com.br. Acesso em: 19 jun. 2019.\nA história da prática do mountainboard representa\numa das principais marcas das atividades de aventura,\ncaracterizada pela",
     "options": [
       {
@@ -35555,7 +35567,7 @@
   },
   {
     "id": "enem_completo_2022_d1_q061",
-    "topicId": "fil_socrates_platao",
+    "topicId": "q_fil_helenistica",
     "subject": "Filosofia",
     "prompt": "Entretanto, nosso amigo Basso tem o ânimo alegre.\nIsso resulta da filosofia: estar alegre diante da morte, forte\ne contente qualquer que seja o estado do corpo, sem\ndesfalecer, ainda que desfaleça.\nSÊNECA, L. Cartas morais. Lisboa: Calouste Gulbenkian, 1990.\nO excerto refere-se a uma carta de Sêneca na qual\nse apresenta como um bem fundamental da filosofia\npromover a",
     "options": [
@@ -35598,7 +35610,8 @@
       "file": "ENEM_2022_dia_1_amarelo.pdf",
       "page": 24,
       "questionNumber": 61
-    }
+    },
+    "chapter": "Estoicismo e Moderação das Paixões"
   },
   {
     "id": "enem_completo_2022_d1_q062",
@@ -37915,7 +37928,7 @@
     "topicId": "qui_estequiometria",
     "subject": "Química",
     "chapter": "Cálculos Estequiométricos",
-    "prompt": "O ácido tartárico é o principal ácido do vinho e está diretamente relacionado com sua qualidade. Na avaliação de\num vinho branco em produção, uma analista neutralizou uma alíquota de 25,0 mL do vinho com NaOH a 0,10 mol L−¹,\nconsumindo um volume igual a 8,0 mL dessa base. A reação para esse processo de titulação é representada pela\n  2 NaOH\n  2 H2O\nÁcido tartárico\n(massa molar: 150 g mol\n1)\nA concentração de ácido tartárico no vinho analisado é mais próxima de:",
+    "prompt": "O ácido tartárico é o principal ácido do vinho e está diretamente relacionado com sua qualidade. Na avaliação de\num vinho branco em produção, uma analista neutralizou uma alíquota de 25,0 mL do vinho com NaOH a 0,10 mol L−¹,\nconsumindo um volume igual a 8,0 mL dessa base. A reação para esse processo de titulação é representada pela\n+  2 NaOH\n+  2 H2O\nÁcido tartárico\n(massa molar: 150 g mol⁻¹)\nA concentração de ácido tartárico no vinho analisado é mais próxima de:",
     "options": [
       {
         "id": "a",
@@ -43545,9 +43558,9 @@
   },
   {
     "id": "enem_completo_2023_d1_q043",
-    "topicId": "por_norma_culta",
-    "subject": "Português",
-    "chapter": "Variação Linguística",
+    "topicId": "q_ef_cultura_corporal",
+    "subject": "Educação Física",
+    "chapter": "Valores Olímpicos e Paralímpicos",
     "prompt": "A sessão do Comitê Olímpico Internacional (COI)\naprovou uma mudança histórica e inédita no lema\nolímpico, criado em 1894 pelo Barão Pierre de Coubertin\npara expressar os valores e a excelência do esporte. Mais\nde 120 anos depois, o lema tem sua primeira alteração\npara ressaltar a solidariedade e incluir a palavra “juntos”:\nmais rápido, mais alto, mais forte — juntos. A mudança\nfoi aprovada por unanimidade pelos membros do COI\ne celebrada pelo presidente da entidade.\nDisponível em: https://ge.globo.com. Acesso em: 10 nov. 2021 (adaptado).\nDe acordo com o texto, a alteração do lema olímpico teve\ncomo objetivo a",
     "options": [
       {
@@ -56471,23 +56484,23 @@
     "options": [
       {
         "id": "a",
-        "text": "d Q"
+        "text": "d(Q) = (1/4) d(R)"
       },
       {
         "id": "b",
-        "text": "d Q"
+        "text": "d(Q) = (1/2) d(R)"
       },
       {
         "id": "c",
-        "text": "d Q"
+        "text": "d(Q) = (3/4) d(R)"
       },
       {
         "id": "d",
-        "text": "d Q"
+        "text": "d(Q) = (3/2) d(R)"
       },
       {
         "id": "e",
-        "text": "Alternativa visual E (ver figura identificada pela letra)."
+        "text": "d(Q) = (2/3) d(R)"
       }
     ],
     "correctOptionId": "e",
@@ -56970,15 +56983,15 @@
       },
       {
         "id": "c",
-        "text": "⁴ ⁰⁰⁰\nπ"
+        "text": "4000/π"
       },
       {
         "id": "d",
-        "text": "¹⁰⁰⁰\nπ"
+        "text": "1000/π"
       },
       {
         "id": "e",
-        "text": "Alternativa E — expressão ou figura identificada por essa letra."
+        "text": "500/π"
       }
     ],
     "correctOptionId": "d",
@@ -57297,23 +57310,23 @@
     "options": [
       {
         "id": "a",
-        "text": "mL ⋅\ns cm²\n⋅"
+        "text": "mL · s · cm²"
       },
       {
         "id": "b",
-        "text": "mL\n⋅\ncm²"
+        "text": "(mL/s) · cm²"
       },
       {
         "id": "c",
-        "text": "Alternativa C — expressão ou figura identificada por essa letra."
+        "text": "mL/(cm² · s)"
       },
       {
         "id": "d",
-        "text": "Alternativa D — expressão ou figura identificada por essa letra."
+        "text": "(cm² · s)/mL"
       },
       {
         "id": "e",
-        "text": "Alternativa E — expressão ou figura identificada por essa letra."
+        "text": "cm²/(mL · s)"
       }
     ],
     "correctOptionId": "c",
@@ -58277,23 +58290,23 @@
     "options": [
       {
         "id": "a",
-        "text": "a ⁼ ²⁰; b ⁼ log⁽⁰,⁵⁾"
+        "text": "a = 20; b = log(0,5)"
       },
       {
         "id": "b",
-        "text": "Alternativa B — expressão ou figura identificada por essa letra."
+        "text": "a = 100; b = 0,5"
       },
       {
         "id": "c",
-        "text": "Alternativa C — expressão ou figura identificada por essa letra."
+        "text": "a = 20; b = (0,5)^(1/10)"
       },
       {
         "id": "d",
-        "text": "Alternativa D — expressão ou figura identificada por essa letra."
+        "text": "a = 20; b = 40^(1/10)/80"
       },
       {
         "id": "e",
-        "text": "Alternativa E — expressão ou figura identificada por essa letra."
+        "text": "a = 20; b = 40"
       }
     ],
     "correctOptionId": "c",
@@ -58332,19 +58345,19 @@
       },
       {
         "id": "b",
-        "text": "Alternativa B — expressão ou figura identificada por essa letra."
+        "text": "18"
       },
       {
         "id": "c",
-        "text": "Alternativa C — expressão ou figura identificada por essa letra."
+        "text": "6√6"
       },
       {
         "id": "d",
-        "text": "Alternativa D — expressão ou figura identificada por essa letra."
+        "text": "6∛6"
       },
       {
         "id": "e",
-        "text": "Alternativa E — expressão ou figura identificada por essa letra."
+        "text": "3∛12"
       }
     ],
     "correctOptionId": "e",
@@ -65552,23 +65565,23 @@
     "options": [
       {
         "id": "a",
-        "text": "D\n=\n2 5\n,\n+\ntg\n30\n…\n«∆\n»\n≈"
+        "text": "D = 2,5 + tg[30(T − (5 − 2π)/2)]"
       },
       {
         "id": "b",
-        "text": "D\n=\n4\n+\ntg\n30\n…\n«∆"
+        "text": "D = 4 + tg[30(T − 5/2)]"
       },
       {
         "id": "c",
-        "text": "D\n=\n4\n+\ntg"
+        "text": "D = 4 + tg[2,5(T + (5 + 2π)/2)]"
       },
       {
         "id": "d",
-        "text": "D\n=\n30\n+"
+        "text": "D = 30 + tg[(1/2)(T − 5)]"
       },
       {
         "id": "e",
-        "text": "D\n=\n30\n+"
+        "text": "D = 30 + tg[(1/2)(T − 5/2)]"
       }
     ],
     "correctOptionId": "e",
@@ -66094,23 +66107,23 @@
     "options": [
       {
         "id": "a",
-        "text": "cd"
+        "text": "cd/m²"
       },
       {
         "id": "b",
-        "text": "Alternativa B — expressão ou figura identificada por essa letra."
+        "text": "m²/cd"
       },
       {
         "id": "c",
-        "text": "Alternativa C — expressão ou figura identificada por essa letra."
+        "text": "cd/m"
       },
       {
         "id": "d",
-        "text": "m\ncd"
+        "text": "m/cd"
       },
       {
         "id": "e",
-        "text": "m\ncd²"
+        "text": "m/cd²"
       }
     ],
     "correctOptionId": "a",
@@ -66388,15 +66401,15 @@
       },
       {
         "id": "c",
-        "text": "Alternativa C — expressão ou figura identificada por essa letra."
+        "text": "10^(2,5)/84"
       },
       {
         "id": "d",
-        "text": "Alternativa D — expressão ou figura identificada por essa letra."
+        "text": "10^(2,5)/99"
       },
       {
         "id": "e",
-        "text": "Alternativa E — expressão ou figura identificada por essa letra."
+        "text": "25 × 10⁻²"
       }
     ],
     "correctOptionId": "a",

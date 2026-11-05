@@ -25481,21 +25481,6 @@
       "alphaCanvas": true
     },
     {
-      "questionId": "enem_completo_2020_d2_q108",
-      "url": "/question-media/enem-completo/enem-2020-d2-q108-p7-0.webp",
-      "width": 296,
-      "height": 1289,
-      "sha256": "4db992cabc9a086b357cbea54f9ab2bfef1a91ca2f5cdd2fe354028d9f643f4e",
-      "page": 7,
-      "box": [
-        83.65299987792969,
-        217.25543212890625,
-        200.9188995361328,
-        731.8040161132812
-      ],
-      "alphaCanvas": true
-    },
-    {
       "questionId": "enem_completo_2020_d2_q113",
       "url": "/question-media/enem-completo/enem-2020-d2-q113-p8-0.webp",
       "width": 505,
@@ -27068,6 +27053,9 @@
         702.4901733398438,
         391.89581298828125,
         734.896728515625
+      ],
+      "alternativeLabels": [
+        "C"
       ]
     },
     {
@@ -27893,156 +27881,6 @@
         105.20697021484375,
         406.77801513671875,
         165.5999755859375
-      ]
-    },
-    {
-      "questionId": "enem_completo_2021_d2_q154",
-      "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-1.webp",
-      "width": 381,
-      "height": 389,
-      "sha256": "5f24e91a71c28866e016846b6438c5b13877fea296d4886fa92bd014c1336242",
-      "alphaCanvas": true,
-      "page": 21,
-      "box": [
-        57.36268997192383,
-        198.71218872070312,
-        209.24400329589844,
-        353.82861328125
-      ]
-    },
-    {
-      "questionId": "enem_completo_2021_d2_q154",
-      "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-2.webp",
-      "width": 362,
-      "height": 132,
-      "sha256": "075f67a20eb3522aab5a62457444f0e4006eacd50b98cfca7ee9d14921299df4",
-      "alphaCanvas": true,
-      "page": 21,
-      "box": [
-        319.25140380859375,
-        303.67657470703125,
-        463.4179992675781,
-        353.82763671875
-      ]
-    },
-    {
-      "questionId": "enem_completo_2021_d2_q154",
-      "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-3.webp",
-      "width": 379,
-      "height": 232,
-      "sha256": "bff4e8a07ee59a8c6b62d2f18c758f5b97a40edfb5f415f481e9ed3671d826f7",
-      "alphaCanvas": true,
-      "page": 21,
-      "box": [
-        57.36366653442383,
-        433.6094055175781,
-        209.24400329589844,
-        526.594970703125
-      ]
-    },
-    {
-      "questionId": "enem_completo_2021_d2_q154",
-      "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-4.webp",
-      "width": 380,
-      "height": 232,
-      "sha256": "1dcdb0c9285f645c63bce003f343bd2e65068da01bf263022ec05dd5ba392231",
-      "alphaCanvas": true,
-      "page": 21,
-      "box": [
-        311.5372009277344,
-        433.6094055175781,
-        463.4179992675781,
-        526.594970703125
-      ]
-    },
-    {
-      "questionId": "enem_completo_2021_d2_q154",
-      "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-5.webp",
-      "width": 379,
-      "height": 232,
-      "sha256": "9796feec5affd1ade46a1fdd66a158ca0a073ee8b62443b0e9531b8f722a6f11",
-      "alphaCanvas": true,
-      "page": 21,
-      "box": [
-        57.36366653442383,
-        603.8966674804688,
-        209.24400329589844,
-        696.8822631835938
-      ]
-    },
-    {
-      "questionId": "enem_completo_2021_d2_q155",
-      "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-0.webp",
-      "width": 473,
-      "height": 163,
-      "sha256": "6da75b21c37a6244ce23b6522c988ae7fbedecd2a8ec8aab05b1e1ed68dbbf49",
-      "alphaCanvas": true,
-      "page": 22,
-      "box": [
-        46.068599700927734,
-        196.27816772460938,
-        234.02000427246094,
-        256.2303466796875
-      ]
-    },
-    {
-      "questionId": "enem_completo_2021_d2_q155",
-      "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-1.webp",
-      "width": 609,
-      "height": 416,
-      "sha256": "63e88ad26c24cc917c448e1a56bb65e4b93c94bb4b4cee679501de22865b330f",
-      "alphaCanvas": true,
-      "page": 22,
-      "box": [
-        292.3916015625,
-        153.41299438476562,
-        532.8768920898438,
-        319.5639953613281
-      ]
-    },
-    {
-      "questionId": "enem_completo_2021_d2_q155",
-      "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-2.webp",
-      "width": 506,
-      "height": 166,
-      "sha256": "4181e7d1b4ed9559d2213c0da9e7be02a7dc1b87e4c54b2fa55a91cd6feb50b8",
-      "alphaCanvas": true,
-      "page": 22,
-      "box": [
-        46.068599700927734,
-        388.52081298828125,
-        247.0989990234375,
-        449.8908996582031
-      ]
-    },
-    {
-      "questionId": "enem_completo_2021_d2_q155",
-      "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-3.webp",
-      "width": 407,
-      "height": 220,
-      "sha256": "4a1fdcd153d8742001fd8fac71e670c0b09bb095952861a88028f5ee1a78314c",
-      "alphaCanvas": true,
-      "page": 22,
-      "box": [
-        292.3916015625,
-        372.1482849121094,
-        453.6679992675781,
-        456.1072998046875
-      ]
-    },
-    {
-      "questionId": "enem_completo_2021_d2_q155",
-      "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-4.webp",
-      "width": 495,
-      "height": 97,
-      "sha256": "841d915fa24de2a5653c493a07225f499153ccd70c13055397f515df9ec59b2c",
-      "alphaCanvas": true,
-      "page": 22,
-      "box": [
-        46.068599700927734,
-        606.8171997070312,
-        243.14500427246094,
-        640.525634765625
       ]
     },
     {
@@ -36951,6 +36789,326 @@
       "backgroundMode": "neutral-white",
       "sourceUrl": "https://media.githubusercontent.com/media/anajumorandii-eng/My-App/main/provas%20brutas/ENEM/2023/ENEM_2023_dia_2_caderno_amarelo.pdf",
       "sourceSha256": "722d68f4b39f0b508ae2f17086d48422ec5a0b479b190fff33c89e3bdedfbd00"
+    },
+    {
+      "url": "/question-media/enem-completo/enem-2021-d2-q094-p2-4.webp",
+      "width": 258,
+      "height": 228,
+      "sha256": "779aa46c78276be22c93040f0b181f94e6f1e376b42293ca6ad69e0040c1f018",
+      "alphaCanvas": true,
+      "questionId": "enem_completo_2021_d2_q094",
+      "page": 2,
+      "box": [
+        288,
+        529,
+        399,
+        632
+      ],
+      "alternativeLabels": [
+        "A"
+      ],
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477"
+    },
+    {
+      "url": "/question-media/enem-completo/enem-2021-d2-q094-p2-5.webp",
+      "width": 210,
+      "height": 103,
+      "sha256": "572c9dd90bb5cfc539b640b90b112b59bf5ac2725abdc44d722002faefd5bf18",
+      "alphaCanvas": true,
+      "questionId": "enem_completo_2021_d2_q094",
+      "page": 2,
+      "box": [
+        288,
+        635,
+        399,
+        683
+      ],
+      "alternativeLabels": [
+        "B"
+      ],
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477"
+    },
+    {
+      "url": "/question-media/enem-completo/enem-2021-d2-q094-p2-6.webp",
+      "width": 209,
+      "height": 77,
+      "sha256": "d954f1150fbb2c9490c23db930a0423a0deb1781dd6dde7b3870a79eaa0f2c7d",
+      "alphaCanvas": true,
+      "questionId": "enem_completo_2021_d2_q094",
+      "page": 2,
+      "box": [
+        411,
+        529,
+        512,
+        566
+      ],
+      "alternativeLabels": [
+        "D"
+      ],
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477"
+    },
+    {
+      "url": "/question-media/enem-completo/enem-2021-d2-q094-p2-7.webp",
+      "width": 264,
+      "height": 160,
+      "sha256": "2c38b444ef26f1897011bdc188871f2226d00d760447eb29f95dafbc5e3fe939",
+      "alphaCanvas": true,
+      "questionId": "enem_completo_2021_d2_q094",
+      "page": 2,
+      "box": [
+        411,
+        578,
+        523,
+        648
+      ],
+      "alternativeLabels": [
+        "E"
+      ],
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477"
+    },
+    {
+      "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-6.webp",
+      "width": 436,
+      "height": 392,
+      "sha256": "9c9b7f068817850ad0d00546728864ec5af4cdb5d15b06416f0160de50e1ba2b",
+      "alphaCanvas": true,
+      "questionId": "enem_completo_2021_d2_q154",
+      "page": 21,
+      "box": [
+        34,
+        194,
+        212,
+        357
+      ],
+      "alternativeLabels": [
+        "A"
+      ],
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477"
+    },
+    {
+      "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-7.webp",
+      "width": 436,
+      "height": 283,
+      "sha256": "3524a13c092bbfd28ac3a986281621150163a02e8dd57f3f0de1558c6065eb5b",
+      "alphaCanvas": true,
+      "questionId": "enem_completo_2021_d2_q154",
+      "page": 21,
+      "box": [
+        34,
+        406,
+        212,
+        530
+      ],
+      "alternativeLabels": [
+        "B"
+      ],
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477"
+    },
+    {
+      "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-8.webp",
+      "width": 436,
+      "height": 284,
+      "sha256": "b5527308b8638770d63eba725f2ba77d0d484dca0fc8b9def73f9a8152aad775",
+      "alphaCanvas": true,
+      "questionId": "enem_completo_2021_d2_q154",
+      "page": 21,
+      "box": [
+        34,
+        578,
+        212,
+        700
+      ],
+      "alternativeLabels": [
+        "C"
+      ],
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477"
+    },
+    {
+      "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-9.webp",
+      "width": 442,
+      "height": 392,
+      "sha256": "faa58b942c47735968f043f2bb3f4709c19f97cf96545d68e966c5ab59dc7e85",
+      "alphaCanvas": true,
+      "questionId": "enem_completo_2021_d2_q154",
+      "page": 21,
+      "box": [
+        288,
+        194,
+        467,
+        357
+      ],
+      "alternativeLabels": [
+        "D"
+      ],
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477"
+    },
+    {
+      "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-10.webp",
+      "width": 442,
+      "height": 283,
+      "sha256": "ae418ec7a26dba7e9533b3adeef2515b560240fe15f31ffa6a75ab2595ac43bc",
+      "alphaCanvas": true,
+      "questionId": "enem_completo_2021_d2_q154",
+      "page": 21,
+      "box": [
+        288,
+        406,
+        467,
+        530
+      ],
+      "alternativeLabels": [
+        "E"
+      ],
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477"
+    },
+    {
+      "questionId": "enem_completo_2020_d2_q108",
+      "url": "/question-media/enem-completo/enem-2020-d2-q108-p7-1.webp",
+      "width": 414,
+      "height": 1289,
+      "sha256": "6c4572ea658948f9d718adbd19a391b0158d928584a61fcdf2e37bfa9e096ca9",
+      "page": 7,
+      "box": [
+        30,
+        215,
+        205,
+        735
+      ],
+      "alphaCanvas": true,
+      "alternativeLabels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2020/presencial/2dia/enem2020_2dia_prova_amarelo.pdf",
+      "sourceSha256": "3ea8f537cfaf836fbb337c73aac954320bd0a3098a382cba17f2d196d501fa1c"
+    },
+    {
+      "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-5.webp",
+      "width": 589,
+      "height": 361,
+      "sha256": "897caf27a35df820510ac3852fa9d90e4fa898216bc171b0d9cccf267f52e28e",
+      "alphaCanvas": true,
+      "questionId": "enem_completo_2021_d2_q155",
+      "page": 22,
+      "box": [
+        30,
+        178,
+        268,
+        327
+      ],
+      "alternativeLabels": [
+        "A"
+      ],
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477"
+    },
+    {
+      "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-6.webp",
+      "width": 627,
+      "height": 368,
+      "sha256": "dfcb3dbe7760d78a3fb1d5e3aab4de79935fd9a2ebe1300f080b01e4389953dc",
+      "alphaCanvas": true,
+      "questionId": "enem_completo_2021_d2_q155",
+      "page": 22,
+      "box": [
+        30,
+        371,
+        282,
+        521
+      ],
+      "alternativeLabels": [
+        "B"
+      ],
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477",
+      "excludedAdjacentBoxes": [
+        [
+          278,
+          368,
+          286,
+          384
+        ]
+      ]
+    },
+    {
+      "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-7.webp",
+      "width": 616,
+      "height": 363,
+      "sha256": "1d365a79930bbcefddf85647b8be37b0ccbbdda3ff7c334b1abacb4030d01d0a",
+      "alphaCanvas": true,
+      "questionId": "enem_completo_2021_d2_q155",
+      "page": 22,
+      "box": [
+        30,
+        554,
+        282,
+        704
+      ],
+      "alternativeLabels": [
+        "C"
+      ],
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477"
+    },
+    {
+      "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-8.webp",
+      "width": 635,
+      "height": 375,
+      "sha256": "7518b60c8594a200d35338b596fc9bc5479e2e3efed5d2db357db9d46a5850b2",
+      "alphaCanvas": true,
+      "questionId": "enem_completo_2021_d2_q155",
+      "page": 22,
+      "box": [
+        278,
+        178,
+        535,
+        333
+      ],
+      "alternativeLabels": [
+        "D"
+      ],
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477"
+    },
+    {
+      "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-9.webp",
+      "width": 609,
+      "height": 358,
+      "sha256": "85e2a478104f2f1e678b6b8158cf12c9a25e1a4e19d0b62f8185dac2887b8730",
+      "alphaCanvas": true,
+      "questionId": "enem_completo_2021_d2_q155",
+      "page": 22,
+      "box": [
+        278,
+        371,
+        525,
+        521
+      ],
+      "alternativeLabels": [
+        "E"
+      ],
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477",
+      "excludedAdjacentBoxes": [
+        [
+          275,
+          480,
+          282,
+          522
+        ]
+      ]
     }
   ],
   "documents": [

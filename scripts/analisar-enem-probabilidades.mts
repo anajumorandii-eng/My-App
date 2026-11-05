@@ -10,11 +10,11 @@
  * verificação contra uma prova real seria só um percentual bonito.
  */
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import { mockTopics } from '../src/data/mockData';
+import { questionTopics } from '../src/data/questionTopics';
 
 type Q = { id: string; topicId: string; subject: string; chapter?: string; examSource?: { board?: string; year?: number; questionNumber?: number } };
 const bank = JSON.parse(await readFile('public/questions.json', 'utf8')) as Q[];
-const topicName = new Map(mockTopics.map(t => [t.id, t.name]));
+const topicName = new Map(questionTopics.map(t => [t.id, t.name]));
 // Itens "enem_expansao_*" e "q_real_*" guardam o número de outro caderno no
 // examSource; a posição no caderno amarelo está neste mapa. Sem ele, 50 itens
 // de 2018–2023 colidiam com outra questão e eram descartados na deduplicação.

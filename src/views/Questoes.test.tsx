@@ -661,3 +661,22 @@ describe('Questoes — filtros recolhidos após a busca',()=>{
   expect(addUserAttemptMock).not.toHaveBeenCalled();
  });
 });
+
+it.each([
+  ['q_ef_cultura_corporal', 'Educação Física', 'Valores Olímpicos e Paralímpicos', 'Cultura Corporal e Esporte'],
+  ['q_fil_helenistica', 'Filosofia', 'Epicurismo e Moderação dos Desejos', 'Filosofia Helenística'],
+])('abre o assunto complementar %s com tópico e subtópico próprios', async (topicId,subject,chapter,name)=>{
+  questionsHook.mockReturnValue({questions:[{...QUESTION,subject,topicId,chapter,examSource:{board:'ENEM',year:2018}}],loading:false,syncError:null});
+  const user=userEvent.setup();
+  render(<MemoryRouter initialEntries={[`/questoes?topic=${topicId}&board=ENEM`]}><Questoes/></MemoryRouter>);
+  expect(screen.getByLabelText('Matéria')).toHaveValue(subject);
+  expect(screen.getByRole('checkbox',{name:new RegExp(`^${name}`)})).toBeChecked();
+  expect(screen.getByLabelText('Subtópico')).toHaveTextContent(chapter);
+  expect(screen.getByText(/Assunto complementar do banco de questões/)).toBeInTheDocument();
+  await user.click(screen.getByRole('button',{name:'Buscar questões'}));
+  expect(screen.queryByRole('searchbox')).not.toBeInTheDocument();
+  expect(screen.getByText(new RegExp(chapter))).toBeInTheDocument();
+  await user.click(screen.getByRole('button',{name:'Iniciar questão'}));
+  await user.click(screen.getByRole('button',{name:/Citoplasma/}));
+  expect(addUserAttemptMock).toHaveBeenCalledWith('user-1',expect.objectContaining({topicId,questionId:'q1'}));
+});

@@ -1,0 +1,15 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { auditEnemContentQuality } from '../src/lib/enemContentQuality';
+import { loadEnemContentCorrections } from './lib/enemContentCorrections';
+const bank=JSON.parse(await readFile('public/questions.json','utf8'));
+const manifest=JSON.parse(await readFile('scripts/data/enem-completo-2018-2025/manifest.json','utf8'));
+const ids=new Set<string>(manifest.positions.map((p:any)=>p.questionId));
+const source='scripts/data/enem-conferencia-visual-2026-11-05.json';
+const review=JSON.parse(await readFile(source,'utf8'));
+const reviewedIds=new Set<string>([...loadEnemContentCorrections().map(row=>row.questionId),...review.reviewed.map((row:any)=>row.questionId)]);
+const result=auditEnemContentQuality(bank.filter((q:any)=>ids.has(q.id)),reviewedIds);
+const inputs=Object.fromEntries(await Promise.all(['public/questions.json','scripts/data/enem-completo-2018-2025/manifest.json','scripts/data/enem-correcao-transcricao-2026-11-05.json',source].map(async path=>[path,createHash('sha256').update(await readFile(path)).digest('hex')])));
+await writeFile('docs/auditoria-cobertura-enem-2026-11-04/qualidade-conteudo.json',JSON.stringify({asOf:'2026-11-05',scope:'Triagem estrutural do corpus ENEM. Referência visual com figura não comprova defeito nem completude; a fila requer conferência na fonte. IDs revisados têm evidência versionada.',inputs,...result},null,2)+'\n');
+console.log(JSON.stringify(result.summary));
+if(result.errors.length)process.exitCode=1;

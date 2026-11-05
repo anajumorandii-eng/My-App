@@ -15,12 +15,12 @@ Antes de confiar nos números de 2026, o mesmo cálculo foi feito só com 2018�
 
 |Nível|Brier do modelo|Brier de referência (taxa única)|Top-30 previstos que caíram em 2025|Caíram sem histórico|
 |---|---|---|---|---|
-|Assunto|0.168|0.210|26/30|0|
-|Capítulo|0.215|0.215|21/30|17|
+|Assunto|0.165|0.222|26/30|0|
+|Capítulo|0.210|0.212|21/30|17|
 
-Calibração por faixa (assunto): 80–100%: 30/34 · 60–80%: 20/25 · 40–60%: 12/19 · 20–40%: 5/14 · 0–20%: 1/5.
+Calibração por faixa (assunto): 80–100%: 30/34 · 60–80%: 20/25 · 40–60%: 11/19 · 20–40%: 6/16 · 0–20%: 1/8.
 
-Calibração por faixa (capítulo): 80–100%: 10/15 · 60–80%: 14/26 · 40–60%: 25/67 · 20–40%: 31/141 · 0–20%: 29/107.
+Calibração por faixa (capítulo): 80–100%: 10/15 · 60–80%: 14/26 · 40–60%: 25/65 · 20–40%: 31/143 · 0–20%: 29/115.
 
 Brier menor que a referência significa que o histórico separa de fato o que cai do que não cai. Capítulo é mais incerto que assunto: o currículo tem muitos capítulos e cada prova escolhe poucos.
 
@@ -28,10 +28,10 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 
 |#|Matéria|Assunto|P(cair)|Questões esperadas|Edições|Tendência|2018→2025|
 |---|---|---|---|---|---|---|---|
-|1|Português|Entendimento de Texto|96%|24.2|8/8|↓|26 28 30 25 24 20 20 26|
+|1|Português|Entendimento de Texto|96%|24.0|8/8|↓|26 27 30 25 23 20 20 26|
 |2|Matemática|Aritmética e Proporcionalidade|96%|11.3|8/8|↓|10 14 16 11 11 9 10 12|
 |3|Matemática|Probabilidade e Interpretação de Dados|96%|6.4|8/8|↑|7 6 3 7 5 7 6 8|
-|4|Português|Domínio da Norma Culta|95%|5.5|8/8|↑|4 4 7 6 4 7 6 5|
+|4|Português|Domínio da Norma Culta|95%|5.3|8/8|↑|4 4 7 6 4 6 6 5|
 |5|Matemática|Geometria Espacial|95%|5.1|8/8|↑|2 5 6 6 8 4 4 5|
 |6|Inglês|Compreensão de Texto em Inglês|95%|5.0|8/8|→|5 5 5 5 5 5 5 5|
 |7|Matemática|Geometria Plana|95%|4.5|8/8|→|7 3 5 2 4 5 6 4|
@@ -43,16 +43,16 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 |13|Geografia|Geografia da População e Urbana do Brasil|93%|2.8|8/8|↑|1 2 3 3 3 3 2 4|
 |14|Geografia|Geografia Econômica do Brasil|92%|2.8|8/8|→|2 2 4 4 2 3 2 3|
 |15|Física|Circuitos Elétricos|92%|2.7|8/8|→|3 1 2 4 4 1 2 4|
-|16|Português|Literatura Contemporânea|91%|4.4|7/8|↑|3 3 0 3 3 5 7 6|
+|16|Português|Literatura Contemporânea|91%|4.3|7/8|↑|3 2 0 3 3 5 7 6|
 |17|Geografia|Globalização e Geografia Econômica|91%|2.4|8/8|↓|4 4 3 1 3 2 2 2|
-|18|História|Idade Moderna e Iluminismo|90%|2.3|8/8|↓|2 4 5 1 2 2 3 1|
+|18|História|Idade Moderna e Iluminismo|90%|2.1|8/8|→|1 3 5 1 2 2 3 1|
 |19|Sociologia|Cultura, Identidade e Diversidade|90%|2.7|7/8|↑|0 2 2 5 3 2 3 3|
 |20|Física|Calorimetria|89%|2.1|8/8|→|1 3 2 4 1 2 3 1|
 |21|Matemática|Análise Combinatória|89%|2.0|8/8|→|1 2 3 2 2 2 2 2|
 |22|Filosofia|Nietzsche, Existencialismo e Filosofia Contemporânea|88%|2.3|7/8|↑|0 2 3 2 2 3 3 2|
 |23|Química|Análises Quantitativas e Estequiometria|88%|2.2|7/8|↑|0 1 2 3 3 2 2 3|
 |24|Filosofia|Ética e Política Contemporâneas|87%|2.4|7/8|↑|1 3 1 0 1 2 3 5|
-|25|Português|Simbolismo, Pré-Modernismo e Modernismo|86%|2.3|7/8|→|2 3 1 0 4 5 2 1|
+|25|Português|Simbolismo, Pré-Modernismo e Modernismo|86%|2.2|7/8|→|2 2 1 0 4 5 2 1|
 |26|Biologia|Metabolismo Energético|85%|1.6|8/8|→|1 1 1 2 2 2 1 2|
 |27|Biologia|Zoologia|85%|1.5|8/8|→|2 1 2 1 1 1 2 2|
 |28|História|Primeira República e Era Vargas|85%|1.9|7/8|→|5 1 0 1 2 3 3 1|
@@ -60,8 +60,8 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 |30|História|Brasil Colônia|83%|2.3|7/8|↓|3 4 3 3 1 3 0 3|
 |31|Matemática|Equações, Desigualdades e Modelagem Algébrica|82%|3.2|6/8|↑|5 1 1 4 0 0 6 6|
 |32|História|Brasil Império|81%|1.6|7/8|→|1 1 0 3 3 1 2 1|
-|33|Português|Literatura Clássica, Medieval e Barroca|80%|2.0|7/8|↓|4 2 2 3 2 2 3 0|
-|34|Matemática|Teoria dos Números Inteiros|80%|1.6|6/8|↑|0 0 1 2 3 1 2 2|
+|33|Matemática|Teoria dos Números Inteiros|80%|1.6|6/8|↑|0 0 1 2 3 1 2 2|
+|34|Português|Literatura Clássica, Medieval e Barroca|80%|1.9|7/8|↓|3 2 2 3 2 2 3 0|
 |35|Química|Fundamentos e Nomenclatura Orgânica|78%|1.8|7/8|↓|5 1 1 2 1 4 2 0|
 |36|Sociologia|Movimentos Sociais e Cidadania|77%|1.6|7/8|→|1 2 1 1 3 2 3 0|
 |37|Matemática|Trigonometria|77%|1.3|7/8|→|2 1 1 1 0 2 1 2|
@@ -105,15 +105,15 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 |Técnicas Algébricas (Equações, Desigualdades e Modelagem Algébrica)|66%|3/8|0 0 0 2 0 0 5 3|
 |Trigonometria no Triângulo Retângulo (Trigonometria)|58%|5/8|1 0 1 0 0 1 1 1|
 
-### Português — 39.6 questões por edição
+### Português — 38.9 questões por edição
 
 |Assunto|P(cair)|Esperadas|Edições|Tend.|2018→2025|
 |---|---|---|---|---|---|
-|Entendimento de Texto|96%|24.2|8/8|↓|26 28 30 25 24 20 20 26|
-|Domínio da Norma Culta|95%|5.5|8/8|↑|4 4 7 6 4 7 6 5|
-|Literatura Contemporânea|91%|4.4|7/8|↑|3 3 0 3 3 5 7 6|
-|Simbolismo, Pré-Modernismo e Modernismo|86%|2.3|7/8|→|2 3 1 0 4 5 2 1|
-|Literatura Clássica, Medieval e Barroca|80%|2.0|7/8|↓|4 2 2 3 2 2 3 0|
+|Entendimento de Texto|96%|24.0|8/8|↓|26 27 30 25 23 20 20 26|
+|Domínio da Norma Culta|95%|5.3|8/8|↑|4 4 7 6 4 6 6 5|
+|Literatura Contemporânea|91%|4.3|7/8|↑|3 2 0 3 3 5 7 6|
+|Simbolismo, Pré-Modernismo e Modernismo|86%|2.2|7/8|→|2 2 1 0 4 5 2 1|
+|Literatura Clássica, Medieval e Barroca|80%|1.9|7/8|↓|3 2 2 3 2 2 3 0|
 |Romantismo e Realismo|68%|1.4|4/8|↑|0 0 0 1 3 0 3 2|
 
 **Capítulos mais recorrentes de Português** (3+ edições):
@@ -122,9 +122,9 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 |---|---|---|---|
 |Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais (Entendimento de Texto)|95%|8/8|3 7 4 1 3 4 3 8|
 |Gêneros não Verbais: Fundamentos de Leitura (Entendimento de Texto)|94%|8/8|4 1 3 3 2 1 5 6|
-|Variação Linguística (Domínio da Norma Culta)|93%|8/8|4 1 3 4 3 4 4 1|
+|Variação Linguística (Domínio da Norma Culta)|92%|8/8|4 1 3 4 3 3 4 1|
 |Gêneros Textuais (Entendimento de Texto)|91%|8/8|1 4 6 3 4 2 1 1|
-|Fatores de Textualidade (Entendimento de Texto)|87%|7/8|3 2 0 2 1 2 1 5|
+|Fatores de Textualidade (Entendimento de Texto)|86%|7/8|3 1 0 2 1 2 1 5|
 |Função Poética e Linguagem Literária (Entendimento de Texto)|84%|7/8|5 3 4 2 1 0 2 3|
 |Os Dois Níveis da Leitura (Entendimento de Texto)|84%|7/8|1 1 0 2 2 3 3 1|
 |Modelos de Leitura e Distorções Interpretativas (Entendimento de Texto)|84%|7/8|3 2 6 5 4 3 2 0|
@@ -234,37 +234,6 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 |Globalização e Processos Econômicos Atuais (Globalização e Geografia Econômica)|33%|3/8|0 0 1 1 0 1 0 0|
 |Pedologia (Geografia Física do Brasil)|33%|3/8|1 0 0 0 1 1 0 0|
 
-### História — 13.4 questões por edição
-
-|Assunto|P(cair)|Esperadas|Edições|Tend.|2018→2025|
-|---|---|---|---|---|---|
-|Idade Moderna e Iluminismo|90%|2.3|8/8|↓|2 4 5 1 2 2 3 1|
-|Primeira República e Era Vargas|85%|1.9|7/8|→|5 1 0 1 2 3 3 1|
-|Brasil Colônia|83%|2.3|7/8|↓|3 4 3 3 1 3 0 3|
-|Brasil Império|81%|1.6|7/8|→|1 1 0 3 3 1 2 1|
-|República Liberal e Brasil Contemporâneo|76%|1.2|7/8|↓|3 2 1 1 0 2 1 1|
-|Idade Média|68%|1.0|6/8|→|2 1 0 3 1 0 1 1|
-|Idade Antiga|57%|1.1|4/8|→|0 1 5 1 0 0 0 2|
-|Imperialismo e Guerras Mundiais|54%|0.8|4/8|↑|1 0 0 0 1 1 0 2|
-|Guerra Fria e Mundo Contemporâneo|54%|0.7|4/8|→|2 0 0 0 0 1 1 1|
-
-**Capítulos mais recorrentes de História** (3+ edições):
-
-|Capítulo|P(cair)|Edições|2018→2025|
-|---|---|---|---|
-|Baixa Idade Média (Idade Média)|57%|5/8|1 1 0 2 0 0 1 1|
-|Brasil Império: Formação do Estado Nacional Brasileiro (Brasil Império)|51%|4/8|0 1 0 0 1 0 1 1|
-|Brasil Império: Segundo Reinado (1840-1889) (Brasil Império)|49%|4/8|0 0 0 1 1 1 1 0|
-|O Brasil Atual (República Liberal e Brasil Contemporâneo)|49%|4/8|0 1 1 0 0 0 1 1|
-|A Era Vargas: o Estado Novo (Primeira República e Era Vargas)|43%|4/8|1 0 0 1 1 0 1 0|
-|Introdução à História e Primeiras Civilizações (Idade Antiga)|41%|3/8|0 0 2 1 0 0 0 1|
-|Guerra Fria (Guerra Fria e Mundo Contemporâneo)|39%|3/8|1 0 0 0 0 1 0 1|
-|Revolução Francesa (Idade Moderna e Iluminismo)|39%|3/8|0 0 1 0 0 1 1 0|
-|Dinâmica Interna da Colonização (Brasil Colônia)|39%|4/8|1 1 0 2 1 0 0 0|
-|Ascensão e Domínio das Oligarquias (Primeira República e Era Vargas)|38%|4/8|1 1 0 0 1 1 0 0|
-|A Montagem da Colonização (Brasil Colônia)|35%|3/8|1 0 1 0 0 0 0 1|
-|América Espanhola (Idade Moderna e Iluminismo)|33%|3/8|2 1 0 0 0 0 1 0|
-
 ### Química — 13.3 questões por edição
 
 |Assunto|P(cair)|Esperadas|Edições|Tend.|2018→2025|
@@ -301,6 +270,37 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 |Interações Intermoleculares (Polaridade das Ligações e Geometria Molecular)|40%|3/8|0 1 0 0 0 1 0 1|
 |Eletroquímica de Processos Espontâneos (Eletroquímica)|38%|4/8|1 2 0 1 1 0 0 0|
 
+### História — 13.1 questões por edição
+
+|Assunto|P(cair)|Esperadas|Edições|Tend.|2018→2025|
+|---|---|---|---|---|---|
+|Idade Moderna e Iluminismo|90%|2.1|8/8|→|1 3 5 1 2 2 3 1|
+|Primeira República e Era Vargas|85%|1.9|7/8|→|5 1 0 1 2 3 3 1|
+|Brasil Colônia|83%|2.3|7/8|↓|3 4 3 3 1 3 0 3|
+|Brasil Império|81%|1.6|7/8|→|1 1 0 3 3 1 2 1|
+|República Liberal e Brasil Contemporâneo|76%|1.2|7/8|↓|3 2 1 1 0 2 1 1|
+|Idade Média|68%|1.0|6/8|→|2 1 0 3 1 0 1 1|
+|Idade Antiga|57%|1.1|4/8|→|0 1 5 1 0 0 0 2|
+|Imperialismo e Guerras Mundiais|54%|0.8|4/8|↑|1 0 0 0 1 1 0 2|
+|Guerra Fria e Mundo Contemporâneo|54%|0.7|4/8|→|2 0 0 0 0 1 1 1|
+
+**Capítulos mais recorrentes de História** (3+ edições):
+
+|Capítulo|P(cair)|Edições|2018→2025|
+|---|---|---|---|
+|Baixa Idade Média (Idade Média)|57%|5/8|1 1 0 2 0 0 1 1|
+|Brasil Império: Formação do Estado Nacional Brasileiro (Brasil Império)|51%|4/8|0 1 0 0 1 0 1 1|
+|Brasil Império: Segundo Reinado (1840-1889) (Brasil Império)|49%|4/8|0 0 0 1 1 1 1 0|
+|O Brasil Atual (República Liberal e Brasil Contemporâneo)|49%|4/8|0 1 1 0 0 0 1 1|
+|A Era Vargas: o Estado Novo (Primeira República e Era Vargas)|43%|4/8|1 0 0 1 1 0 1 0|
+|Introdução à História e Primeiras Civilizações (Idade Antiga)|41%|3/8|0 0 2 1 0 0 0 1|
+|Guerra Fria (Guerra Fria e Mundo Contemporâneo)|39%|3/8|1 0 0 0 0 1 0 1|
+|Revolução Francesa (Idade Moderna e Iluminismo)|39%|3/8|0 0 1 0 0 1 1 0|
+|Dinâmica Interna da Colonização (Brasil Colônia)|39%|4/8|1 1 0 2 1 0 0 0|
+|Ascensão e Domínio das Oligarquias (Primeira República e Era Vargas)|38%|4/8|1 1 0 0 1 1 0 0|
+|A Montagem da Colonização (Brasil Colônia)|35%|3/8|1 0 1 0 0 0 0 1|
+|Reforma Religiosa (Idade Moderna e Iluminismo)|32%|3/8|0 1 2 0 1 0 0 0|
+
 ### Sociologia — 9.1 questões por edição
 
 |Assunto|P(cair)|Esperadas|Edições|Tend.|2018→2025|
@@ -330,20 +330,23 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 |Democracia e Participação Política (Movimentos Sociais e Cidadania)|33%|3/8|1 0 0 0 1 1 0 0|
 |Transformações no Mundo do Trabalho (Trabalho e Sociedade)|30%|3/8|0 1 0 1 1 0 0 0|
 
-### Filosofia — 7.9 questões por edição
+### Filosofia — 8.1 questões por edição
 
 |Assunto|P(cair)|Esperadas|Edições|Tend.|2018→2025|
 |---|---|---|---|---|---|
 |Nietzsche, Existencialismo e Filosofia Contemporânea|88%|2.3|7/8|↑|0 2 3 2 2 3 3 2|
 |Ética e Política Contemporâneas|87%|2.4|7/8|↑|1 3 1 0 1 2 3 5|
 |Filosofia Moderna: Racionalismo e Empirismo|70%|1.0|6/8|→|0 4 1 1 0 1 1 1|
-|Sócrates e Platão|53%|0.6|4/8|↑|0 0 0 1 1 0 1 1|
-|Aristóteles|48%|0.5|4/8|→|1 0 1 0 0 0 1 1|
 |Origens da Filosofia e os Pré-Socráticos|48%|0.6|3/8|↑|0 0 0 0 2 1 0 1|
+|Sócrates e Platão|44%|0.5|3/8|↑|0 0 0 1 0 0 1 1|
+|Aristóteles|43%|0.5|3/8|→|0 0 1 0 0 0 1 1|
 |Contratualismo Político e Iluminismo|27%|0.3|2/8|→|2 0 0 0 0 0 1 0|
 |Kant e o Idealismo Alemão|26%|0.3|2/8|→|0 1 0 0 0 0 1 0|
+|Filosofia Helenística|21%|0.2|2/8|→|1 0 0 0 1 0 0 0|
 |Filosofia Medieval|19%|0.2|2/8|↓|2 1 0 0 0 0 0 0|
 |Marx e a Crítica à Sociedade Capitalista|14%|0.1|1/8|→|0 0 0 1 0 0 0 0|
+|Filosofia Política Moderna|11%|0.1|1/8|→|0 1 0 0 0 0 0 0|
+|Introdução à Filosofia|10%|0.1|1/8|→|1 0 0 0 0 0 0 0|
 
 **Capítulos mais recorrentes de Filosofia** (3+ edições):
 
@@ -367,4 +370,11 @@ Brier menor que a referência significa que o histórico separa de fato o que ca
 |Capítulo|P(cair)|Edições|2018→2025|
 |---|---|---|---|
 |Text Comprehension: Taxonomy and Terminology (Compreensão de Texto em Inglês)|95%|8/8|5 5 5 5 5 5 5 5|
+
+### Educação Física — 0.8 questões por edição
+
+|Assunto|P(cair)|Esperadas|Edições|Tend.|2018→2025|
+|---|---|---|---|---|---|
+|Cultura Corporal e Esporte|41%|0.5|4/8|↓|1 2 0 0 1 1 0 0|
+|Corpo, Saúde e Imagem Corporal|11%|0.1|1/8|→|0 1 0 0 0 0 0 0|
 

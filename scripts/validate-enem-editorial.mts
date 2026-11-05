@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { mockTopics } from '../src/data/mockData';
-import { enemReviewBatchPaths, loadEnemEditorialClassifications } from './lib/enemEditorialClassifications';
+import { enemReviewBatchPaths, loadEnemEditorialClassifications, loadEnemEditorialDeferrals } from './lib/enemEditorialClassifications';
 import { matchesReviewedContent } from './lib/enemContentCorrections';
 const bank=JSON.parse(await readFile('public/questions.json','utf8'));
 const manifest=JSON.parse(await readFile('scripts/data/enem-completo-2018-2025/manifest.json','utf8'));
@@ -46,4 +46,4 @@ for(const path of await enemReviewBatchPaths()){
 }
 assert.deepEqual([...seen].sort(),[...expected].sort(),'Toda a fila original precisa de decisão ou adiamento explícito.');
 if(process.argv.includes('--stamp'))for(const file of files)await writeFile(file.path,JSON.stringify(file.data,null,2)+'\n');
-console.log(JSON.stringify({assigned:expected.size,...counts}));
+console.log(JSON.stringify({assigned:expected.size,...counts,historicalDeferred:counts.deferred,activeDeferred:(await loadEnemEditorialDeferrals()).size}));

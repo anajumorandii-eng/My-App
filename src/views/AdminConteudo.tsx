@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Database, HelpCircle, FlaskConical, Headphones, ShieldCheck } from 'lucide-react';
 import { getFirebaseIdToken } from '../lib/auth';
 import { mockTopics } from '../data/mockData';
+import { questionTopics } from '../data/questionTopics';
 import { Question, StudyMethod, PodcastEpisode, QuizOption } from '../types';
 
 // Painel administrativo do banco de conteúdo compartilhado — questões,
@@ -251,7 +252,7 @@ export default function AdminConteudo() {
       )}
       <form key={editingQuestion?.id ?? 'new-question'} onSubmit={(e) => { e.preventDefault(); handleSubmitQuestion(e.currentTarget); }} className="grid min-w-0 grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
         <select aria-label="Tópico da questão" name="topicId" required defaultValue={editingQuestion?.topicId} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2">
-          {mockTopics.map((t) => <option key={t.id} value={t.id}>{t.subject} — {t.name}</option>)}
+          {questionTopics.map((t) => <option key={t.id} value={t.id}>{t.subject} — {t.name}</option>)}
         </select>
         <input name="subject" placeholder="Matéria (ex.: Biologia)" required defaultValue={editingQuestion?.subject} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
         <select aria-label="Dificuldade da questão" name="difficulty" required defaultValue={editingQuestion?.difficulty} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800">

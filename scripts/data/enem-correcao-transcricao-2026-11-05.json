@@ -1,0 +1,789 @@
+{
+  "scope": "Correções verificadas nas páginas originais: alternativas textuais, referências a estruturas/gráficos, rodapés e glifos da fonte Symbol. Preservados IDs, gabaritos, figuras e explicações.",
+  "items": [
+    {
+      "questionId": "enem_completo_2018_d2_q158",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/2dia/enem2018_2dia_prova_amarelo.pdf",
+      "sourceSha256": "e8269bcbfaba92b60436510ce1c14c1141258ac5644c3ad78d1485f308fcf1af",
+      "pages": [
+        23
+      ],
+      "evidence": "PDF p23: alternativas impressas I, II, III, IV, V; as três primeiras estavam substituídas por placeholders.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "139355d81f0f41113e089b7681f40e327b656c0f556385578a7aefe04eb634fb",
+      "afterSha256": "95d39f22952032fcd20359efceac7b63ddd1401613528a0432c5673acc3b9a59",
+      "changes": [
+        {
+          "field": "options.a.text",
+          "before": "Alternativa A — expressão ou figura identificada por essa letra.",
+          "after": "I"
+        },
+        {
+          "field": "options.b.text",
+          "before": "Alternativa B — expressão ou figura identificada por essa letra.",
+          "after": "II"
+        },
+        {
+          "field": "options.c.text",
+          "before": "Alternativa C — expressão ou figura identificada por essa letra.",
+          "after": "III"
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2018_d2_q169",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/2dia/enem2018_2dia_prova_amarelo.pdf",
+      "sourceSha256": "e8269bcbfaba92b60436510ce1c14c1141258ac5644c3ad78d1485f308fcf1af",
+      "pages": [
+        26
+      ],
+      "evidence": "PDF p26: quatro alternativas numéricas visíveis estavam substituídas por placeholders.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "76d4f75d9d7a2899a0f5db6038eec83043cb780f04a49983f3b97473a9dc43d5",
+      "afterSha256": "c45cd9023f596a54cf081a167fa72af1f6e140a4325e799b8a86dd88f1c37966",
+      "changes": [
+        {
+          "field": "options.b.text",
+          "before": "Alternativa visual B (ver figura identificada pela letra).",
+          "after": "12"
+        },
+        {
+          "field": "options.c.text",
+          "before": "Alternativa visual C (ver figura identificada pela letra).",
+          "after": "7√2"
+        },
+        {
+          "field": "options.d.text",
+          "before": "Alternativa visual D (ver figura identificada pela letra).",
+          "after": "6 + 4√2"
+        },
+        {
+          "field": "options.e.text",
+          "before": "Alternativa visual E (ver figura identificada pela letra).",
+          "after": "6 + 2√2"
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2018_d2_q170",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/2dia/enem2018_2dia_prova_amarelo.pdf",
+      "sourceSha256": "e8269bcbfaba92b60436510ce1c14c1141258ac5644c3ad78d1485f308fcf1af",
+      "pages": [
+        26
+      ],
+      "evidence": "PDF p26: alternativas A–D numéricas visíveis estavam substituídas por placeholders.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "5f1a4c61f25f0ba1b87fe4b28ab054128a25a1030f8133f5ac734ed8a6cabfcf",
+      "afterSha256": "fdcb82c1e70ff654aed6b5786b0124a10d26a9c50b7488828ca30c45be306570",
+      "changes": [
+        {
+          "field": "options.a.text",
+          "before": "Alternativa visual A (ver figura identificada pela letra).",
+          "after": "36√3"
+        },
+        {
+          "field": "options.b.text",
+          "before": "Alternativa visual B (ver figura identificada pela letra).",
+          "after": "24√3"
+        },
+        {
+          "field": "options.c.text",
+          "before": "Alternativa visual C (ver figura identificada pela letra).",
+          "after": "4√3"
+        },
+        {
+          "field": "options.d.text",
+          "before": "Alternativa visual D (ver figura identificada pela letra).",
+          "after": "36"
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2021_d2_q092",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477",
+      "pages": [
+        2
+      ],
+      "evidence": "PDF p2: alternativas A e B impressas I e II estavam substituídas por placeholders.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "c570044382eddee6f5634a24564012d19ad151e44ac820157fd61f63eb67e9f3",
+      "afterSha256": "9872ede4c3051800c92dd0a9ec1a4afae8d3c1358d6f20be41e75fe5ccae3d80",
+      "changes": [
+        {
+          "field": "options.a.text",
+          "before": "Alternativa A — expressão ou figura identificada por essa letra.",
+          "after": "I"
+        },
+        {
+          "field": "options.b.text",
+          "before": "Alternativa B — expressão ou figura identificada por essa letra.",
+          "after": "II"
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2021_d2_q094",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477",
+      "pages": [
+        2
+      ],
+      "evidence": "PDF p2: alternativas são estruturas químicas; B, D e E tinham fragmentos de rótulos O/n no lugar da estrutura. Substituir somente esses fragmentos pelo aviso visual preserva as estruturas nas figuras existentes. PDF p2: figuras existentes cobriam somente C; novos recortes A/B/D/E incluem letras e estruturas completas; C mantido byte a byte.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "3883cdab5b911fb241ee1b57d927fb20116f404dc53e74a14945365bbcb92d06",
+      "afterSha256": "5c1d8ba5c3635e7a8e344954b2910f126f4b1d332b1e98a41f4c15e00d0a974a",
+      "changes": [
+        {
+          "field": "options.b.text",
+          "before": "O\nn\nO",
+          "after": "Alternativa visual B (ver figura identificada pela letra)."
+        },
+        {
+          "field": "options.d.text",
+          "before": "n\nn",
+          "after": "Alternativa visual D (ver figura identificada pela letra)."
+        },
+        {
+          "field": "options.e.text",
+          "before": "n\nO",
+          "after": "Alternativa visual E (ver figura identificada pela letra)."
+        },
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q094-p2-3.webp"
+            }
+          ],
+          "after": [
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q094-p2-4.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q094-p2-5.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q094-p2-3.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q094-p2-6.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q094-p2-7.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2024_d2_q141",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/2dia/enem2024_2dia_prova_amarelo.pdf",
+      "sourceSha256": "44a324acab3b3922293f06b6ee08c90696c00ba82c0357e9e803b15d80b0ea24",
+      "pages": [
+        17
+      ],
+      "evidence": "PDF p17: A–D estavam reduzidas a d Q e E era placeholder; os cinco fatores e a igualdade estão visualmente legíveis.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "75aa02b6bf42bdc4a353e4c9bc18b22e482618b21f1912914629b327d7a720da",
+      "afterSha256": "67ae47c0624493d8f3dedd1172245294fdf562d54790534945982aa53fe4f462",
+      "changes": [
+        {
+          "field": "options.a.text",
+          "before": "d Q",
+          "after": "d(Q) = (1/4) d(R)"
+        },
+        {
+          "field": "options.b.text",
+          "before": "d Q",
+          "after": "d(Q) = (1/2) d(R)"
+        },
+        {
+          "field": "options.c.text",
+          "before": "d Q",
+          "after": "d(Q) = (3/4) d(R)"
+        },
+        {
+          "field": "options.d.text",
+          "before": "d Q",
+          "after": "d(Q) = (3/2) d(R)"
+        },
+        {
+          "field": "options.e.text",
+          "before": "Alternativa visual E (ver figura identificada pela letra).",
+          "after": "d(Q) = (2/3) d(R)"
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2024_d2_q151",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/2dia/enem2024_2dia_prova_amarelo.pdf",
+      "sourceSha256": "44a324acab3b3922293f06b6ee08c90696c00ba82c0357e9e803b15d80b0ea24",
+      "pages": [
+        22
+      ],
+      "evidence": "PDF p22: C e D tinham numeradores como sobrescritos soltos; E era placeholder. São frações com denominador π.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "0d3bb9c8f9ab1fc7933ce99c5f526eedb097abac42b1e61aebfc74220cb819f8",
+      "afterSha256": "f87f222967295383e69122e38dfabf8b27b8992d750093f1acef169ffe8a1ce6",
+      "changes": [
+        {
+          "field": "options.c.text",
+          "before": "⁴ ⁰⁰⁰\nπ",
+          "after": "4000/π"
+        },
+        {
+          "field": "options.d.text",
+          "before": "¹⁰⁰⁰\nπ",
+          "after": "1000/π"
+        },
+        {
+          "field": "options.e.text",
+          "before": "Alternativa E — expressão ou figura identificada por essa letra.",
+          "after": "500/π"
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2024_d2_q158",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/2dia/enem2024_2dia_prova_amarelo.pdf",
+      "sourceSha256": "44a324acab3b3922293f06b6ee08c90696c00ba82c0357e9e803b15d80b0ea24",
+      "pages": [
+        25
+      ],
+      "evidence": "PDF p25: unidades A–E conferidas visualmente; barras de fração foram perdidas e C–E viraram placeholders.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "143e5201f6500ccf9d8dcd176802462de95d4cc4762e5029846fa8d4614636b5",
+      "afterSha256": "14894e728c14608a30772c0a7d3487a634ea477172534d7869110a4b5b48f453",
+      "changes": [
+        {
+          "field": "options.a.text",
+          "before": "mL ⋅\ns cm²\n⋅",
+          "after": "mL · s · cm²"
+        },
+        {
+          "field": "options.b.text",
+          "before": "mL\n⋅\ncm²",
+          "after": "(mL/s) · cm²"
+        },
+        {
+          "field": "options.c.text",
+          "before": "Alternativa C — expressão ou figura identificada por essa letra.",
+          "after": "mL/(cm² · s)"
+        },
+        {
+          "field": "options.d.text",
+          "before": "Alternativa D — expressão ou figura identificada por essa letra.",
+          "after": "(cm² · s)/mL"
+        },
+        {
+          "field": "options.e.text",
+          "before": "Alternativa E — expressão ou figura identificada por essa letra.",
+          "after": "cm²/(mL · s)"
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2024_d2_q179",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/2dia/enem2024_2dia_prova_amarelo.pdf",
+      "sourceSha256": "44a324acab3b3922293f06b6ee08c90696c00ba82c0357e9e803b15d80b0ea24",
+      "pages": [
+        31
+      ],
+      "evidence": "PDF p31: A tinha igualdade e números como sobrescritos indevidos, B–E placeholders. Na alternativa D a raiz décima incide apenas em 40, com divisão externa por 80, conforme impresso.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "08652edf2cf89fb283340d0bca7e0333c75c6c0a501dc348b85430a0e56abde0",
+      "afterSha256": "26274485c4a3a334ab3af6d27c66944707bebcdb5a46009a53865bc02ca6ab8c",
+      "changes": [
+        {
+          "field": "options.a.text",
+          "before": "a ⁼ ²⁰; b ⁼ log⁽⁰,⁵⁾",
+          "after": "a = 20; b = log(0,5)"
+        },
+        {
+          "field": "options.b.text",
+          "before": "Alternativa B — expressão ou figura identificada por essa letra.",
+          "after": "a = 100; b = 0,5"
+        },
+        {
+          "field": "options.c.text",
+          "before": "Alternativa C — expressão ou figura identificada por essa letra.",
+          "after": "a = 20; b = (0,5)^(1/10)"
+        },
+        {
+          "field": "options.d.text",
+          "before": "Alternativa D — expressão ou figura identificada por essa letra.",
+          "after": "a = 20; b = 40^(1/10)/80"
+        },
+        {
+          "field": "options.e.text",
+          "before": "Alternativa E — expressão ou figura identificada por essa letra.",
+          "after": "a = 20; b = 40"
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2024_d2_q180",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/2dia/enem2024_2dia_prova_amarelo.pdf",
+      "sourceSha256": "44a324acab3b3922293f06b6ee08c90696c00ba82c0357e9e803b15d80b0ea24",
+      "pages": [
+        31
+      ],
+      "evidence": "PDF p31: B–E placeholders; índices das raízes C (quadrada), D e E (cúbicas) conferidos visualmente.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "944addb6d31c1e3b17b98fa5ec8c2db31a54fe46605f285dcee4d0793cc8d2fb",
+      "afterSha256": "bb0df5c4b71c2cf2d4a60445e203dca668546d78ea50c05012906c74e10dcb7b",
+      "changes": [
+        {
+          "field": "options.b.text",
+          "before": "Alternativa B — expressão ou figura identificada por essa letra.",
+          "after": "18"
+        },
+        {
+          "field": "options.c.text",
+          "before": "Alternativa C — expressão ou figura identificada por essa letra.",
+          "after": "6√6"
+        },
+        {
+          "field": "options.d.text",
+          "before": "Alternativa D — expressão ou figura identificada por essa letra.",
+          "after": "6∛6"
+        },
+        {
+          "field": "options.e.text",
+          "before": "Alternativa E — expressão ou figura identificada por essa letra.",
+          "after": "3∛12"
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2025_d2_q170",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2025/2dia/enem2025_2dia_prova_amarelo.pdf",
+      "sourceSha256": "08a093fcd289a6725b35e3152d55fa133ba5d4f7ac2b95c31466a9376d997838",
+      "pages": [
+        28
+      ],
+      "evidence": "PDF p28: A perdeu denominador m²; B/C placeholders; D/E preservam rótulos separados, aqui linearizados como frações.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "14482fbcf5bc0523d6476a45657ed45856dfe4bc7bff2fc8f4a4117fea87a389",
+      "afterSha256": "2670425e7a247eb9bc1a90208bd80e1cd4b91236d9fcee1fd166158934bffe15",
+      "changes": [
+        {
+          "field": "options.a.text",
+          "before": "cd",
+          "after": "cd/m²"
+        },
+        {
+          "field": "options.b.text",
+          "before": "Alternativa B — expressão ou figura identificada por essa letra.",
+          "after": "m²/cd"
+        },
+        {
+          "field": "options.c.text",
+          "before": "Alternativa C — expressão ou figura identificada por essa letra.",
+          "after": "cd/m"
+        },
+        {
+          "field": "options.d.text",
+          "before": "m\ncd",
+          "after": "m/cd"
+        },
+        {
+          "field": "options.e.text",
+          "before": "m\ncd²",
+          "after": "m/cd²"
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2025_d2_q176",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2025/2dia/enem2025_2dia_prova_amarelo.pdf",
+      "sourceSha256": "08a093fcd289a6725b35e3152d55fa133ba5d4f7ac2b95c31466a9376d997838",
+      "pages": [
+        30
+      ],
+      "evidence": "PDF p30: C–E placeholders; numeradores 10 elevado a 2,5 sobre 84 e 99, e E igual a 25 vezes 10 elevado a −2 conferidos visualmente.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "6c9e7a4b788a3307f7427139a941b2981c87cc2d8ba4266db5ccec359e5a8ee2",
+      "afterSha256": "df42c65c0aaa4e3b6e1fb82890703fd3bfe698ca431fab1c5e1dee69491a21d8",
+      "changes": [
+        {
+          "field": "options.c.text",
+          "before": "Alternativa C — expressão ou figura identificada por essa letra.",
+          "after": "10^(2,5)/84"
+        },
+        {
+          "field": "options.d.text",
+          "before": "Alternativa D — expressão ou figura identificada por essa letra.",
+          "after": "10^(2,5)/99"
+        },
+        {
+          "field": "options.e.text",
+          "before": "Alternativa E — expressão ou figura identificada por essa letra.",
+          "after": "25 × 10⁻²"
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2018_d1_q060",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/1dia/enem2018_1dia_prova_amarelo.pdf",
+      "sourceSha256": "d4e9bffb7a2bf01205e8703f4c1bdfd860fc8b90a8a32ce5f68407dcb0a67fe0",
+      "pages": [
+        23
+      ],
+      "evidence": "Página 23 do PDF público, questão 60 na coluna direita inferior: a alternativa E termina em “princípios fundamentais.”. Abaixo, o rodapé alinhado à margem inferior identifica “CH 1º dia | Caderno 2 - AMARELO - Página 23” e está fora da alternativa. A imagem rasterizada da página foi inspecionada visualmente. A proposta remove somente essa linha de rodapé; preserva enunciado, alternativas A–D, conteúdo da alternativa E e gabarito D.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "11e3d9092e92e5476f16e1653b46165d0c1dae442524680fc25bcc4f10b60bd4",
+      "afterSha256": "9a4491d543294800d6f64625a02f0beaa60d195409b8df9c84ed835b20c0cf7d",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "compatibilizar as estruturas do pensamento aos\nprincípios fundamentais.\nCH 1º dia | Caderno 2 - AMARELO - Página 23",
+          "after": "compatibilizar as estruturas do pensamento aos\nprincípios fundamentais."
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2018_d1_q054",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/1dia/enem2018_1dia_prova_amarelo.pdf",
+      "sourceSha256": "d4e9bffb7a2bf01205e8703f4c1bdfd860fc8b90a8a32ce5f68407dcb0a67fe0",
+      "pages": [
+        21
+      ],
+      "evidence": "Página 21, questão 54, coluna direita, parte inferior, conferida visualmente na rasterização do PDF público. A alternativa E termina em “seletividade dos mecanismos segregadores.”. A linha “CH 1º dia | Caderno 2 - AMARELO - Página 21” é o rodapé abaixo da linha horizontal que delimita o conteúdo e não faz parte da alternativa. Remover somente o rodapé anexado, preservando as quebras internas da alternativa, enunciado, demais alternativas e gabarito.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "8364bfe047a5da2be34bb88e64968ecf8b9abfc8f6d8c646246522e3f911eb8e",
+      "afterSha256": "7a0322715efc446727e3d8c5fd4177453668e75cfe13adb6c03e87cd0994bfda",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "seletividade dos mecanismos segregadores.\nCH 1º dia | Caderno 2 - AMARELO - Página 21",
+          "after": "seletividade dos mecanismos segregadores."
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2018_d1_q068",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/1dia/enem2018_1dia_prova_amarelo.pdf",
+      "sourceSha256": "d4e9bffb7a2bf01205e8703f4c1bdfd860fc8b90a8a32ce5f68407dcb0a67fe0",
+      "pages": [
+        25
+      ],
+      "evidence": "Página 25, questão 68, coluna direita, parte inferior, conferida visualmente na rasterização do PDF público. A alternativa E termina em “redefinição de regiões administrativas.”. A linha “CH 1º dia | Caderno 2 - AMARELO - Página 25” é o rodapé abaixo da linha horizontal que delimita o conteúdo e não faz parte da alternativa. Remover somente o rodapé anexado, preservando as quebras internas da alternativa, enunciado, demais alternativas e gabarito.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "3776290fc1e56b067117af401568016c334c0d204a6dbc676b3939086fd6e7df",
+      "afterSha256": "a9bfa37a3bfb65053d69241c4718b2e772a2fb84650bcd72b21d1393891e608a",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "redefinição de regiões administrativas.\nCH 1º dia | Caderno 2 - AMARELO - Página 25",
+          "after": "redefinição de regiões administrativas."
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2018_d1_q075",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/1dia/enem2018_1dia_prova_amarelo.pdf",
+      "sourceSha256": "d4e9bffb7a2bf01205e8703f4c1bdfd860fc8b90a8a32ce5f68407dcb0a67fe0",
+      "pages": [
+        27
+      ],
+      "evidence": "Página 27, questão 75, bloco final da página em largura inteira, conferida visualmente na rasterização do PDF público. A alternativa E termina em “centralidade do indivíduo na sociedade.”. A linha “CH 1º dia | Caderno 2 - AMARELO - Página 27” é o rodapé abaixo da linha horizontal que delimita o conteúdo e não faz parte da alternativa. Remover somente o rodapé anexado, preservando as quebras internas da alternativa, enunciado, demais alternativas e gabarito.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "b1eb4d653da55ff35476399532e6ae7d694a90c63b8e0d737ca2304ac0d934a8",
+      "afterSha256": "104bbb01ed24a71594c252a025da67ef38f20a59d485b308c4e757a2a88b6b9a",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "centralidade do indivíduo na sociedade.\nCH 1º dia | Caderno 2 - AMARELO - Página 27",
+          "after": "centralidade do indivíduo na sociedade."
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2018_d1_q083",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/1dia/enem2018_1dia_prova_amarelo.pdf",
+      "sourceSha256": "d4e9bffb7a2bf01205e8703f4c1bdfd860fc8b90a8a32ce5f68407dcb0a67fe0",
+      "pages": [
+        29
+      ],
+      "evidence": "Página 29, questão 83, coluna direita, parte inferior, conferida visualmente na rasterização do PDF público. A alternativa E termina em “condenação pela ciência dos conhecimentos populares de cura.”. A linha “CH 1º dia | Caderno 2 - AMARELO - Página 29” é o rodapé abaixo da linha horizontal que delimita o conteúdo e não faz parte da alternativa. Remover somente o rodapé anexado, preservando as quebras internas da alternativa, enunciado, demais alternativas e gabarito.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "7d42b56fd009382a2e149280c8e4a19a7e73553ed729404fe8543e44596d0dd4",
+      "afterSha256": "42739144477ff337ba6bb6012eecd4c6804482745644fd9141d188a121faf27b",
+      "changes": [
+        {
+          "field": "options.e.text",
+          "before": "condenação pela ciência dos conhecimentos populares\nde cura.\nCH 1º dia | Caderno 2 - AMARELO - Página 29",
+          "after": "condenação pela ciência dos conhecimentos populares\nde cura."
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2020_d2_q168",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2020/presencial/2dia/enem2020_2dia_prova_amarelo.pdf",
+      "sourceSha256": "3ea8f537cfaf836fbb337c73aac954320bd0a3098a382cba17f2d196d501fa1c",
+      "pages": [
+        28
+      ],
+      "evidence": "PDF p28: alternativas A e B mostram R sobre 2 e 2 R, respectivamente. Ambas eram placeholders; C–E já correspondem ao impresso.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "dc72bc8941be0444a7cf3975424b637606d938bd4951381a64a9bf1321da4e00",
+      "afterSha256": "42ab4ebeadf144558543f243d4522f175005db97fb8d34cc025e44e249d26922",
+      "changes": [
+        {
+          "field": "options.a.text",
+          "before": "Alternativa A — expressão ou figura identificada por essa letra.",
+          "after": "R/2"
+        },
+        {
+          "field": "options.b.text",
+          "before": "Alternativa B — expressão ou figura identificada por essa letra.",
+          "after": "2 R"
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2021_d2_q154",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477",
+      "pages": [
+        21
+      ],
+      "evidence": "PDF p21: D é gráfico de função em degraus, preservado nas figuras existentes; o texto I seguido de 2 000 é fragmento dos rótulos do gráfico. Substituição por referência visual, em coerência com A/B/C/E. PDF p21: gráfico D anterior continha só parte inferior (faltava nível 2000). Os cinco gráficos anteriores também omitiam as letras identificadoras. Novos recortes A–E contêm gráficos completos e suas letras; quadro de tributação original preservado.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "8a93c361c2309f050d848dacadf536799e9dda673c22c11d96f2ade3a744aa5c",
+      "afterSha256": "4a35fc0470b1a264e14632bcb5da9262dd0e6faec844c5228d7c9c43d67785db",
+      "changes": [
+        {
+          "field": "options.d.text",
+          "before": "I\n2 000",
+          "after": "Alternativa visual D (ver figura identificada pela letra)."
+        },
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-0.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-1.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-2.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-3.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-4.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-5.webp"
+            }
+          ],
+          "after": [
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-0.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-6.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-7.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-8.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-9.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q154-p21-10.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2021_d2_q178",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477",
+      "pages": [
+        30
+      ],
+      "evidence": "PDF p30: B mostra o produto completo 7! · 5! · 7! · 9! · 10!, sem barras de fração. Corrige somente a ordem e associação dos fragmentos da alternativa B. A/D/E mantêm referências às fórmulas nas figuras existentes; C = 30! preservado. Questão anulada, sem alteração de status/gabarito.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "05d38d32db1d9042cb38d691ed42f92542a80aecbd4635f0820ac8433aedbdc4",
+      "afterSha256": "505794a59e5fee8cb8ee0ac98e1f4c035a148629320e7428235ff17a731225ac",
+      "changes": [
+        {
+          "field": "options.b.text",
+          "before": "7\n!\n5\n!\n7\n!\n9 10\n!\n!",
+          "after": "7! · 5! · 7! · 9! · 10!"
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2022_d2_q110",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2022/2dia/enem2022_2dia_prova_amarelo.pdf",
+      "sourceSha256": "f7d2a0ead97673f61e3aa8a00a3ff0a250111ca8abc209ca8b57f4e69bcb5c91",
+      "pages": [
+        8
+      ],
+      "evidence": "PDF p8 conferido visualmente: os dois glifos U+F02B representam sinais + antes de 2 NaOH e 2 H2O; U+F02D representa − no expoente da unidade mol−1. Proposta mínima de substituição dos três glifos, sem reconstruir equação ou reescrever enunciado. Arquivo separado para decisão do responsável pois amplia whitelist e excede lote de 12. A unidade mol⁻¹ foi mantida em uma única linha com o expoente da página original, sem alteração do valor 150.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "39480f91c6cc61a468fa4a2cf3efcfd2a76327a72b13cfa570c8115563de3ac8",
+      "afterSha256": "ccfe33975aab9868daf129196b560f686e2afdac5598d2134d3b88ae7ae52b1b",
+      "changes": [
+        {
+          "field": "prompt",
+          "before": "O ácido tartárico é o principal ácido do vinho e está diretamente relacionado com sua qualidade. Na avaliação de\num vinho branco em produção, uma analista neutralizou uma alíquota de 25,0 mL do vinho com NaOH a 0,10 mol L−¹,\nconsumindo um volume igual a 8,0 mL dessa base. A reação para esse processo de titulação é representada pela\n  2 NaOH\n  2 H2O\nÁcido tartárico\n(massa molar: 150 g mol\n1)\nA concentração de ácido tartárico no vinho analisado é mais próxima de:",
+          "after": "O ácido tartárico é o principal ácido do vinho e está diretamente relacionado com sua qualidade. Na avaliação de\num vinho branco em produção, uma analista neutralizou uma alíquota de 25,0 mL do vinho com NaOH a 0,10 mol L−¹,\nconsumindo um volume igual a 8,0 mL dessa base. A reação para esse processo de titulação é representada pela\n+  2 NaOH\n+  2 H2O\nÁcido tartárico\n(massa molar: 150 g mol⁻¹)\nA concentração de ácido tartárico no vinho analisado é mais próxima de:"
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2020_d2_q108",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2020/presencial/2dia/enem2020_2dia_prova_amarelo.pdf",
+      "sourceSha256": "3ea8f537cfaf836fbb337c73aac954320bd0a3098a382cba17f2d196d501fa1c",
+      "pages": [
+        7
+      ],
+      "evidence": "Comparação visual da página7 e da mídia existente: a figura anterior reúne cinco trajetórias, mas começa no desenho, excluindo todas as letras A, B, C, D e E na margem esquerda. Novo recorte inclui todas as cinco letras, setas de velocidade, mesa/solo e trajetórias completas do original.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "100277e35783803d05caefacc3f243f65378cdf39544442d003876c8a47057e0",
+      "afterSha256": "2e6b5b6390a77a0d851d683d56bfc2e60440c87acb02cff1c9a6750b6d988cfc",
+      "changes": [
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2020-d2-q108-p7-0.webp"
+            }
+          ],
+          "after": [
+            {
+              "url": "/question-media/enem-completo/enem-2020-d2-q108-p7-1.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2021_d2_q155",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477",
+      "pages": [
+        22
+      ],
+      "evidence": "PDF p22: as cinco alternativas são gráficos diferentes; textos existentes eram fragmentos dos rótulos/eixos. Inspeção visual dos assets antigos confirmou A/B/C/E truncados e D com frase avulsa do enunciado. Cinco novos recortes completos com letras e eixos, em ordem A–E.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "84059a28bfa556d57002890aa5a2465f32f7d5333ca8800b4154fa365ddefa4d",
+      "afterSha256": "0c220254245edbb9a222b09c53f0115d7db50cdddf112ff59de506be7dc07243",
+      "changes": [
+        {
+          "field": "options.a.text",
+          "before": "Arrecadação",
+          "after": "Alternativa visual A (ver figura identificada pela letra)."
+        },
+        {
+          "field": "options.b.text",
+          "before": "Arrecadação",
+          "after": "Alternativa visual B (ver figura identificada pela letra)."
+        },
+        {
+          "field": "options.c.text",
+          "before": "Arrecadação\n7 000\n6 500\n6 000\n5 500\n5 000\n2 500\n2 000\n1 500\n1 000\nDesconto\n500\n0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23",
+          "after": "Alternativa visual C (ver figura identificada pela letra)."
+        },
+        {
+          "field": "options.d.text",
+          "before": "7 000\n3 000\n2 500\n2 000\n1 500\n1 000\nDesconto\n500\n0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23\n0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23",
+          "after": "Alternativa visual D (ver figura identificada pela letra)."
+        },
+        {
+          "field": "options.e.text",
+          "before": "7 000\n3 000\n2 500\n2 500\n2 000\n2 000\n1 500\n1 500\n1 000\n1 000\n500\nDesconto\nDesconto\n500\n0 1 2 3 4 5 6 7 8 9 1011121314151617181920212223\n0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23",
+          "after": "Alternativa visual E (ver figura identificada pela letra)."
+        },
+        {
+          "field": "figures",
+          "before": [
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-0.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-1.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-2.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-3.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-4.webp"
+            }
+          ],
+          "after": [
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-5.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-6.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-7.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-8.webp"
+            },
+            {
+              "url": "/question-media/enem-completo/enem-2021-d2-q155-p22-9.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "enem_completo_2025_d2_q159",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2025/2dia/enem2025_2dia_prova_amarelo.pdf",
+      "sourceSha256": "08a093fcd289a6725b35e3152d55fa133ba5d4f7ac2b95c31466a9376d997838",
+      "pages": [
+        25
+      ],
+      "evidence": "PDF p25: alternativas A–E completas conferidas visualmente. D e E diferem no deslocamento T−5 e T−5/2; demais coeficientes e parênteses transcritos conforme impresso. Enunciado e comentário não alterados.",
+      "reviewBasis": "pdf-page-visual",
+      "beforeSha256": "facea402d07ba1183111b9c45ea053e5239305ef7d2b17d7e5355d7690c43ce9",
+      "afterSha256": "2c260cfd66103bae2a1b3810b0d89190b401b8c8d395265e4d92fe2984b55a2c",
+      "changes": [
+        {
+          "field": "options.a.text",
+          "before": "D\n=\n2 5\n,\n+\ntg\n30\n…\n«∆\n»\n≈",
+          "after": "D = 2,5 + tg[30(T − (5 − 2π)/2)]"
+        },
+        {
+          "field": "options.b.text",
+          "before": "D\n=\n4\n+\ntg\n30\n…\n«∆",
+          "after": "D = 4 + tg[30(T − 5/2)]"
+        },
+        {
+          "field": "options.c.text",
+          "before": "D\n=\n4\n+\ntg",
+          "after": "D = 4 + tg[2,5(T + (5 + 2π)/2)]"
+        },
+        {
+          "field": "options.d.text",
+          "before": "D\n=\n30\n+",
+          "after": "D = 30 + tg[(1/2)(T − 5)]"
+        },
+        {
+          "field": "options.e.text",
+          "before": "D\n=\n30\n+",
+          "after": "D = 30 + tg[(1/2)(T − 5/2)]"
+        }
+      ]
+    }
+  ]
+}
