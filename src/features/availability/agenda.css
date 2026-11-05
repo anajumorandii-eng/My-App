@@ -1,0 +1,124 @@
+/* O planner vive dentro do Layout existente; nenhuma regra alcança a navegação do app. */
+.crivo-agenda {
+  --agenda-paper: var(--surface-default);
+  --agenda-line: var(--border-default, var(--line));
+  --agenda-green: var(--forest-900);
+  --agenda-wine: var(--burgundy-700);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--text-primary);
+}
+.crivo-agenda .agenda-page-heading { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-bottom: 24px; border-bottom: 1px solid var(--border-default, var(--line)); }
+.crivo-agenda .agenda-page-heading h1 { font: 500 clamp(38px, 4vw, 58px)/1.12 var(--font-display, Georgia, serif); letter-spacing: -.025em; }
+.crivo-agenda .agenda-page-heading p { margin-top: 9px; color: var(--text-secondary); font-size: 14px; }
+.crivo-agenda .agenda-page-heading a { font-size: 13px; text-decoration: underline; text-underline-offset: 4px; white-space: nowrap; padding: 12px 0; }
+.crivo-agenda .agenda-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 22px; }
+.crivo-agenda .agenda-switch button { min-height: 40px; padding: 8px 20px; border-radius: 5px; font-size: 13px; }
+.crivo-agenda .agenda-switch button[aria-pressed="true"] { background: var(--agenda-green); color: var(--warm-50); }
+.crivo-agenda .agenda-date-controls { display: flex; align-items: center; gap: 7px; }
+.dark .crivo-agenda .agenda-date-controls input { color-scheme: dark; }
+.crivo-agenda .agenda-planner-grid { display: grid; grid-template-columns: minmax(0, 1fr) 285px; gap: 22px; align-items: start; }
+.crivo-agenda .agenda-main-column, .crivo-agenda .agenda-side-column { display: grid; gap: 20px; min-width: 0; }
+.crivo-agenda .agenda-panel-heading { display: flex; align-items: center; gap: 10px; padding: 16px 19px; background: var(--agenda-green); color: var(--warm-50); }
+.crivo-agenda .agenda-panel-heading h2 { margin: 0; font: 500 22px/1.2 var(--font-display, Georgia, serif); }
+.crivo-agenda .agenda-panel-heading > span { margin-left: auto; font-size: 11px; }
+.crivo-agenda .agenda-panel-heading svg { flex: none; }
+.crivo-agenda .agenda-panel-heading.is-sage { background: color-mix(in srgb, var(--forest-700) 13%, var(--agenda-paper)); color: var(--text-primary); }
+.crivo-agenda .agenda-panel-heading.is-wine { background: var(--agenda-wine); }
+.crivo-agenda .agenda-panel-heading.is-rose { background: color-mix(in srgb, var(--burgundy-700) 12%, var(--agenda-paper)); color: var(--text-primary); }
+.crivo-agenda .agenda-panel-heading.is-sand { background: var(--surface-secondary); color: var(--text-primary); }
+.crivo-agenda .agenda-day-heading { display: flex; align-items: center; gap: 17px; padding: 22px; border-bottom: 1px solid var(--agenda-line); }
+.crivo-agenda .agenda-date-stamp { flex: none; text-align: center; border-right: 1px solid var(--agenda-line); padding-right: 18px; }
+.crivo-agenda .agenda-date-stamp strong { display: block; font: 500 42px/1 var(--font-display, Georgia, serif); }
+.crivo-agenda .agenda-date-stamp span { display: block; margin-top: 5px; font-size: 11px; color: var(--text-secondary); }
+.crivo-agenda .agenda-day-heading h3 { font: 500 25px/1.25 var(--font-display, Georgia, serif); overflow-wrap: anywhere; }
+.crivo-agenda .agenda-day-heading p { margin-top: 6px; font-size: 12px; color: var(--text-secondary); }
+.crivo-agenda .agenda-morning, .crivo-agenda .agenda-notice { padding: 14px 20px; font-size: 13px; line-height: 1.65; border-bottom: 1px solid var(--agenda-line); background: var(--surface-secondary); }
+.crivo-agenda .agenda-notice { border-left: 3px solid var(--agenda-wine); }
+.crivo-agenda .agenda-table-head, .crivo-agenda .agenda-routine > li { display: grid; grid-template-columns: 75px minmax(0, 1fr); gap: 16px; padding: 11px 21px; }
+.crivo-agenda .agenda-table-head { font-size: 11px; background: var(--surface-secondary); color: var(--text-secondary); }
+.crivo-agenda .agenda-routine { list-style: none; margin: 0; padding: 0; }
+.crivo-agenda .agenda-routine > li { border-top: 1px solid var(--agenda-line); padding-top: 18px; padding-bottom: 18px; }
+.crivo-agenda .agenda-time { font-size: 13px; font-variant-numeric: tabular-nums; color: var(--text-secondary); }
+.crivo-agenda .agenda-time span { display: block; margin-top: 3px; font-size: 12px; }
+.crivo-agenda .agenda-activity h4 { font-size: 14px; font-weight: 600; }
+.crivo-agenda .agenda-activity p { margin-top: 5px; font-size: 13px; line-height: 1.65; color: var(--text-secondary); overflow-wrap: anywhere; }
+.crivo-agenda .agenda-activity small { display: block; margin-top: 7px; font-size: 12px; }
+.crivo-agenda .agenda-open { display: inline-block; margin-top: 9px; padding: 7px 0; font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
+.crivo-agenda .agenda-footnote { padding: 14px 20px; font-size: 12px; line-height: 1.6; color: var(--text-secondary); border-top: 1px solid var(--agenda-line); }
+.crivo-agenda .agenda-empty { padding: 21px; font-size: 13px; line-height: 1.7; color: var(--text-secondary); }
+.crivo-agenda .agenda-priorities { padding: 4px 19px; list-style: none; }
+.crivo-agenda .agenda-priorities li { display: flex; align-items: start; gap: 12px; padding: 15px 0; border-bottom: 1px solid var(--agenda-line); }
+.crivo-agenda .agenda-priorities li > span { height: 23px; width: 23px; display: grid; place-items: center; border-radius: 50%; font-size: 12px; background: var(--surface-secondary); flex: none; }
+.crivo-agenda .agenda-priorities p { font-size: 13px; }
+.crivo-agenda .agenda-priorities small { display: block; font-size: 11px; color: var(--text-secondary); margin-top: 5px; }
+.crivo-agenda .agenda-exams { list-style: none; padding: 2px 19px; }
+.crivo-agenda .agenda-exams li { display: flex; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--agenda-line); }
+.crivo-agenda .agenda-exam-date { flex: none; width: 32px; text-align: center; }
+.crivo-agenda .agenda-exam-date strong { font: 500 30px/1 var(--font-display, Georgia, serif); }
+.crivo-agenda .agenda-exam-date small { display: block; margin-top: 5px; font-size: 11px; color: var(--text-secondary); }
+.crivo-agenda .agenda-exams h3 { font-size: 13px; font-weight: 600; }
+.crivo-agenda .agenda-exams p { margin-top: 6px; font-size: 12px; line-height: 1.6; color: var(--text-secondary); }
+.crivo-agenda .agenda-deadlines { padding: 16px 19px; background: var(--surface-secondary); border-top: 1px solid var(--agenda-line); font-size: 12px; }
+.crivo-agenda .agenda-deadlines h3 { font-weight: 600; margin-bottom: 6px; }
+.crivo-agenda .agenda-deadlines li { margin-top: 5px; }
+.crivo-agenda .agenda-notes { padding: 8px 20px; list-style: none; }
+.crivo-agenda .agenda-notes li { padding: 12px 0; border-bottom: 1px solid var(--agenda-line); font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+.crivo-agenda .agenda-week-intro h2 { font: 500 28px/1.2 var(--font-display, Georgia, serif); }
+.crivo-agenda .agenda-week-intro p { margin-top: 7px; color: var(--text-secondary); font-size: 12px; }
+.crivo-agenda .agenda-week-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
+.crivo-agenda .agenda-week-card > button { display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 8px; padding: 14px; min-height: 48px; text-align: left; background: color-mix(in srgb, var(--forest-700) 13%, var(--agenda-paper)); font: 500 18px/1.25 var(--font-display, Georgia, serif); }
+.crivo-agenda .agenda-week-card:nth-child(3n) > button { background: color-mix(in srgb, var(--burgundy-700) 12%, var(--agenda-paper)); }
+.crivo-agenda .agenda-week-card.is-selected { border-color: var(--action-primary); }
+.crivo-agenda .agenda-week-card.is-selected > button { background: var(--agenda-green); color: var(--warm-50); }
+.crivo-agenda .agenda-week-card.is-exam > button { background: var(--agenda-wine); color: var(--warm-50); }
+.crivo-agenda .agenda-week-card > h3 { font-size: 13px; font-weight: 600; line-height: 1.5; padding: 12px 14px 0; }
+.crivo-agenda .agenda-week-card ul { padding: 0 14px; list-style: none; }
+.crivo-agenda .agenda-week-card li { display: flex; gap: 8px; padding: 12px 0; border-bottom: 1px solid var(--agenda-line); font-size: 12px; overflow-wrap: anywhere; }
+.crivo-agenda .agenda-week-card time { color: var(--text-secondary); font-size: 11px; flex: none; }
+.crivo-agenda .agenda-week-more { padding: 13px 14px; font-size: 12px; line-height: 1.6; color: var(--text-secondary); }
+.crivo-agenda .agenda-editor { padding: 20px; }
+.crivo-agenda .agenda-editor > div:first-child h2, .crivo-agenda .agenda-editor h2 { font: 500 26px/1.25 var(--font-display, Georgia, serif); }
+.crivo-agenda .agenda-save { background: var(--action-primary); color: var(--text-inverse); min-height: 44px; }
+.crivo-agenda .agenda-capacity-value { color: var(--text-primary); font: 500 27px var(--font-display, Georgia, serif); white-space: nowrap; }
+.crivo-agenda :is(button, a, input, select, summary):focus-visible { outline: 3px solid var(--action-primary); outline-offset: 3px; }
+.crivo-agenda .agenda-switch { display: flex; padding: 4px; border: 1px solid var(--agenda-line); border-radius: 8px; background: var(--agenda-paper); }
+.crivo-agenda .agenda-date-controls button { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; min-height: 40px; padding: 7px 9px; border: 1px solid var(--agenda-line); border-radius: 6px; background: var(--agenda-paper); font-size: 13px; }
+.crivo-agenda .agenda-date-controls input { max-width: 155px; min-width: 0; padding: 8px; min-height: 40px; border: 1px solid var(--agenda-line); border-radius: 6px; background: var(--agenda-paper); font-size: 13px; color: var(--text-primary); color-scheme: light; }
+.crivo-agenda .agenda-paper, .crivo-agenda .agenda-editor { border: 1px solid var(--agenda-line); border-radius: 10px; background: var(--papel-fibras, none), var(--agenda-paper); overflow: hidden; }
+.crivo-agenda .agenda-priorities li:last-child, .crivo-agenda .agenda-exams li:last-child, .crivo-agenda .agenda-notes li:last-child { border: 0; }
+.crivo-agenda .agenda-week-intro { display: flex; justify-content: space-between; align-items: center; padding: 20px; margin-bottom: 17px; border: 1px solid var(--agenda-line); border-radius: 9px; background: var(--agenda-paper); }
+.crivo-agenda .agenda-week-card { border: 1px solid var(--agenda-line); border-radius: 9px; overflow: hidden; background: var(--agenda-paper); min-width: 0; }
+
+@media (max-width: 1150px) {
+  .crivo-agenda .agenda-planner-grid { grid-template-columns: minmax(0, 1fr) 240px; gap: 17px; }
+  .crivo-agenda .agenda-week-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .crivo-agenda .agenda-panel-heading { padding: 15px; }
+  .crivo-agenda .agenda-panel-heading h2 { font-size: 21px; }
+  .crivo-agenda .agenda-panel-heading > span { display: none; }
+}
+@media (max-width: 760px) {
+  .crivo-agenda .agenda-planner-grid { grid-template-columns: minmax(0, 1fr); }
+  .crivo-agenda .agenda-side-column { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+  .crivo-agenda .agenda-day-heading { padding: 19px 17px; gap: 13px; }
+}
+@media (max-width: 560px) {
+  .crivo-agenda .agenda-page-heading { align-items: start; gap: 10px; }
+  .crivo-agenda .agenda-page-heading a { white-space: normal; max-width: 90px; text-align: right; }
+  .crivo-agenda .agenda-page-heading p { max-width: 245px; font-size: 13px; }
+  .crivo-agenda .agenda-side-column, .crivo-agenda .agenda-week-grid { grid-template-columns: minmax(0, 1fr); }
+  .crivo-agenda .agenda-date-controls { gap: 5px; width: 100%; }
+  .crivo-agenda .agenda-date-controls input { flex: 1; max-width: none; width: 125px; }
+  .crivo-agenda .agenda-table-head, .crivo-agenda .agenda-routine > li { grid-template-columns: 58px minmax(0, 1fr); gap: 12px; padding-left: 16px; padding-right: 16px; }
+  .crivo-agenda .agenda-date-stamp { padding-right: 12px; }
+  .crivo-agenda .agenda-day-heading h3 { font-size: 23px; }
+  .crivo-agenda .agenda-editor { padding: 16px; }
+}
+/* O ambiente do aplicativo usa sans nos títulos; o planner aprovado reserva serifa para suas seções. */
+.ni-production-app .crivo-agenda .agenda-panel-heading h2,
+.ni-production-app .crivo-agenda .agenda-day-heading h3,
+.ni-production-app .crivo-agenda .agenda-week-intro h2,
+.ni-production-app .crivo-agenda .agenda-week-card > button {
+  font-family: var(--font-display, Georgia, serif);
+}

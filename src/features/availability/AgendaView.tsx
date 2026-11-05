@@ -1,10 +1,12 @@
 import AdaptiveStudyDay from '../../components/AdaptiveStudyDay';
 import { useEffect, useState } from 'react';
-import { CalendarDays, Clock3, Save } from 'lucide-react';
+import { Clock3, Save } from 'lucide-react';
 import { useDailyStudyAvailability } from './useDailyStudyAvailability';
 import { createCourseRoutine } from './courseRoutine';
 import { entriesAreSafe } from './scheduleSafety';
-import { motion } from 'motion/react';
+import { AgendaPlanner } from './AgendaPlanner';
+import { useStudyPlan } from '../../hooks/useStudyPlan';
+import './agenda.css';
 import {
   SAO_PAULO_TIME_ZONE,
   type ScheduleEntry,
@@ -60,6 +62,7 @@ function formatInterval(iso: string): string {
 
 export default function AgendaView() {
   const [localDate, setLocalDate] = useState(todayInSaoPaulo);
+  const { plan, loading: planLoading, error: planError } = useStudyPlan();
   const { availability, schedule, exception, loading, syncError, saveSchedule, saveException, deleteException } = useDailyStudyAvailability(localDate);
   const [draftSchedule, setDraftSchedule] = useState<WeeklySchedule>();
   const [editedEntryIds, setEditedEntryIds] = useState<Set<string>>(new Set());
@@ -149,23 +152,30 @@ export default function AgendaView() {
     if (field === 'localDate') setLocalDate(value as string);
   };
 
-  if (loading) return <div className="ni-main"><p role="status">Carregando agenda…</p></div>;
-
   return (
-    <div className="ni-main space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <header>
-        <div className="flex items-center gap-2 mb-1.5">
-          <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />
-          <span className="text-[11px] font-mono tracking-widest uppercase text-ember-600 dark:text-ember-400">Janelas & Orçamento de Tempo · Crivo</span>
-        </div>
-        <h1 className="font-display text-3xl sm:text-4xl font-semibold italic text-text-primary tracking-tight flex items-center gap-3">
-          <CalendarDays className="w-7 h-7 text-action-primary" />
-          Agenda
-        </h1>
-        <p className="text-text-secondary mt-1 max-w-2xl text-base">Defina suas janelas de estudo recorrentes e exceções por data; o Crivo calcula os blocos disponíveis.</p>
+    <div className="ni-main crivo-agenda">
+      <header className="agenda-page-heading">
+        <div><h1>Agenda</h1><p>Seu tempo, com espaço para o que importa.</p></div>
+        <a href="#semana-recorrente">Editar minha rotina</a>
       </header>
+      {loading && <p role="status">Carregando agenda…</p>}
+      <AgendaPlanner localDate={localDate} today={todayInSaoPaulo()} onDateChange={setLocalDate} plan={plan} planLoading={planLoading} planError={planError} schedule={schedule} exception={exception} />
 
-      <section aria-labelledby="semana-recorrente" className="space-y-3">
+      {!loading && <AdaptiveStudyDay localDate={localDate} availability={availability} schedule={schedule} />}
+
+      <section aria-labelledby="disponibilidade-efetiva" className="agenda-paper agenda-capacity p-4 space-y-3">
+        <div className="flex items-center justify-between gap-4">
+          <div><h2 id="disponibilidade-efetiva" className="text-xl font-semibold">Capacidade da rotina antes das restrições de prova</h2><p className="text-sm text-zinc-600 dark:text-zinc-400">Para {localDate}. O plano acima aplica prova e véspera a estas janelas.</p></div>
+          <strong className="agenda-capacity-value">{loading ? '…' : `${availability?.totalMinutes ?? 0} min`}</strong>
+        </div>
+        <p role="status" className="text-sm text-zinc-600 dark:text-zinc-400">Calendar: {availability?.warnings.some(({ code }) => code === 'calendar-disconnected') ? 'desconectado' : availability?.warnings.some(({ code }) => code === 'calendar-failed') ? 'falha na consulta' : availability?.status === 'ready' ? 'exceções aplicadas' : 'indisponível'}</p>
+        {syncError && <p role="alert" className="text-sm text-amber-700">{syncError}</p>}
+        {availability?.warnings.map((warning) => <p key={warning.code} role="status" className="text-sm text-amber-700 dark:text-amber-300">{warning.message}</p>)}
+        <ul aria-label="Blocos disponíveis" className="flex flex-wrap gap-2">
+          {availability?.intervals.map((interval) => <li key={interval.start} className="inline-flex items-center rounded-lg bg-zinc-100 dark:bg-zinc-800 px-3 py-2 text-sm font-medium"><Clock3 className="w-4 h-4 mr-2" />{formatInterval(interval.start)}–{formatInterval(interval.end)}</li>)}
+        </ul>
+      </section>
+      <section aria-labelledby="semana-recorrente" className="agenda-editor agenda-week-editor space-y-3">
         <div>
           <h2 id="semana-recorrente" className="text-xl font-semibold">Semana recorrente</h2>
           <p className="text-sm text-zinc-600 dark:text-zinc-400">Edite aulas, refeições, deslocamentos, descanso e janelas de estudo. Confirme as estimativas antes de salvar.</p>
@@ -176,14 +186,8 @@ export default function AgendaView() {
           <button type="button" className="text-sm underline" onClick={() => { setDraftSchedule(createCourseRoutine(new Date().toISOString())); setEditedEntryIds(new Set()); setScheduleSaveError(null); }}>Carregar rotina do cronograma</button>
         </div>
         <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {WEEKDAYS.map(({ key, label }, index) => (
-            <motion.div
-              key={key}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.04, duration: 0.25 }}
-              whileHover={{ y: -2 }}
-            >
+          {WEEKDAYS.map(({ key, label }) => (
+            <div key={key}>
               <WeekdayCard
                 label={label}
                 entries={draftSchedule?.days[key] ?? []}
@@ -191,16 +195,16 @@ export default function AgendaView() {
                 onAdd={() => addStudyWindow(key)}
                 onRemove={(entryId) => removeStudyWindow(key, entryId)}
               />
-            </motion.div>
+            </div>
           ))}
         </div>
-        <button type="button" onClick={() => void saveWeeklySchedule()} disabled={!draftSchedule} className="inline-flex items-center px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium disabled:opacity-50">
+        <button type="button" onClick={() => void saveWeeklySchedule()} disabled={!draftSchedule} className="agenda-save inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium disabled:opacity-50">
           <Save className="w-4 h-4 mr-2" /> Salvar semana
         </button>
         {scheduleSaveError && <p role="alert" className="text-sm text-red-700 dark:text-red-300">{scheduleSaveError}</p>}
       </section>
 
-      <section aria-labelledby="excecao-data" className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 space-y-4">
+      <section aria-labelledby="excecao-data" className="agenda-editor agenda-exception-editor p-4 space-y-4">
         <div>
           <h2 id="excecao-data" className="text-xl font-semibold">Exceção por data</h2>
           <p className="text-sm text-zinc-600 dark:text-zinc-400">Aplica-se somente ao dia escolhido e não altera a semana recorrente.</p>
@@ -224,25 +228,11 @@ export default function AgendaView() {
           </>}
         </div>
         <div className="flex gap-3">
-          <button type="button" onClick={() => void saveDateException()} className="inline-flex items-center px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium">Salvar exceção</button>
+          <button type="button" onClick={() => void saveDateException()} className="agenda-save inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium">Salvar exceção</button>
           {exception && <button type="button" onClick={() => void deleteException()} className="px-4 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 text-sm font-medium">Remover exceção</button>}
         </div>
       </section>
 
-      <AdaptiveStudyDay localDate={localDate} availability={availability} schedule={schedule} />
-
-      <section aria-labelledby="disponibilidade-efetiva" className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 space-y-3">
-        <div className="flex items-center justify-between gap-4">
-          <div><h2 id="disponibilidade-efetiva" className="text-xl font-semibold">Capacidade da rotina antes das restrições de prova</h2><p className="text-sm text-zinc-600 dark:text-zinc-400">Para {localDate}. O plano acima aplica prova e véspera a estas janelas.</p></div>
-          <strong className="text-indigo-600 dark:text-indigo-400">{availability?.totalMinutes ?? 0} min</strong>
-        </div>
-        <p role="status" className="text-sm text-zinc-600 dark:text-zinc-400">Calendar: {availability?.warnings.some(({ code }) => code === 'calendar-disconnected') ? 'desconectado' : availability?.warnings.some(({ code }) => code === 'calendar-failed') ? 'falha na consulta' : availability?.status === 'ready' ? 'exceções aplicadas' : 'indisponível'}</p>
-        {syncError && <p role="alert" className="text-sm text-amber-700">{syncError}</p>}
-        {availability?.warnings.map((warning) => <p key={warning.code} role="status" className="text-sm text-amber-700 dark:text-amber-300">{warning.message}</p>)}
-        <ul aria-label="Blocos disponíveis" className="flex flex-wrap gap-2">
-          {availability?.intervals.map((interval) => <li key={interval.start} className="inline-flex items-center rounded-lg bg-zinc-100 dark:bg-zinc-800 px-3 py-2 text-sm font-medium"><Clock3 className="w-4 h-4 mr-2" />{formatInterval(interval.start)}–{formatInterval(interval.end)}</li>)}
-        </ul>
-      </section>
     </div>
   );
 }
