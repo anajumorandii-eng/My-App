@@ -19,7 +19,7 @@ test('the published question bank has unique and answerable entries', async () =
   const questions = await loadQuestions();
   const ids = questions.map((question) => question.id);
 
-  assert.equal(questions.length, 5_553);
+  assert.equal(questions.length, 5_603);
   assert.equal(new Set(ids).size, ids.length);
 
   for (const question of questions) {
