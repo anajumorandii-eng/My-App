@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "crivo_enem_l1_01",
+    "subject": "Matemática",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "chapter": "Porcentagem",
+    "difficulty": "easy",
+    "skill": "modelagem",
+    "trap": "Somar porcentagens sucessivas em vez de multiplicar os fatores.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nUma loja de roupas reajustou em 25% o preço de uma jaqueta que custava R$ 80,00. Semanas depois, durante uma liquidação, anunciou um desconto de 20% sobre o novo preço. Uma cliente, que havia visto a jaqueta antes do reajuste, comentou com a vendedora que, como 25% é mais que 20%, o preço na liquidação ainda estaria acima do valor original, embora com uma diferença pequena. A vendedora, para tirar a dúvida, refez a conta no caixa da loja, aplicando primeiro o reajuste e depois o desconto anunciado, como manda a regra da promoção.\n\nTexto elaborado para esta questão.\n\nNa liquidação, o preço da jaqueta, em real, é",
+    "options": [
+      {
+        "id": "a",
+        "text": "76,00."
+      },
+      {
+        "id": "b",
+        "text": "80,00."
+      },
+      {
+        "id": "c",
+        "text": "84,00."
+      },
+      {
+        "id": "d",
+        "text": "96,00."
+      },
+      {
+        "id": "e",
+        "text": "100,00."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Os fatores se multiplicam: 80 × 1,25 = 100 e 100 × 0,80 = 80. O desconto de 20% incide sobre R$ 100,00, valor maior que a base do reajuste, e por isso anula exatamente o aumento.\n\nPegadinhas:\n• A: calcula 25% − 20% = 5% e o desconta de 80, misturando as bases.\n• C: soma 25% − 20% = 5% a 80, como pensou a cliente, sem ver que as porcentagens têm bases diferentes.\n• D: aplica 20% de aumento em vez de 25% de aumento seguido de desconto.\n• E: para no reajuste e esquece o desconto da liquidação.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_02",
+    "subject": "Matemática",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "chapter": "Razão e Proporção",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Errar a conversão de centímetros para quilômetros na escala.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nPara planejar uma trilha, um grupo de escoteiros usou um mapa na escala 1 : 500 000, isto é, cada centímetro no mapa corresponde a 500 000 centímetros no terreno. No mapa, o ponto de partida e o acampamento estão separados, em linha reta, por 4,2 cm. O chefe do grupo pediu que cada escoteiro calculasse essa distância real em quilômetros, lembrando que 1 km equivale a 100 000 cm, antes de estimar o tempo de caminhada.\n\nTexto elaborado para esta questão.\n\nA distância real, em linha reta, entre o ponto de partida e o acampamento é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "2,1 km."
+      },
+      {
+        "id": "b",
+        "text": "8,4 km."
+      },
+      {
+        "id": "c",
+        "text": "21 km."
+      },
+      {
+        "id": "d",
+        "text": "210 km."
+      },
+      {
+        "id": "e",
+        "text": "2 100 km."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. 4,2 × 500 000 = 2 100 000 cm. Como 1 km = 100 000 cm, a distância é 2 100 000 ÷ 100 000 = 21 km.\n\nPegadinhas:\n• A: divide por 1 000 000, errando uma casa na conversão de centímetro para quilômetro.\n• B: multiplica 4,2 por 2, tomando a escala como um fator de ampliação simples.\n• D: divide por 10 000, como se 1 km tivesse 10 000 cm.\n• E: divide por 1 000, confundindo centímetro com metro.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_03",
+    "subject": "Matemática",
+    "topicId": "mat_dados_probabilidade",
+    "chapter": "Introdução às Probabilidades",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Inverter a condição: calcular a chance de ser menina entre os que usam óculos.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nEm uma turma de 40 estudantes há 25 meninas e 15 meninos. Uma pesquisa da escola sobre saúde visual mostrou que 10 meninas e 8 meninos usam óculos. Para uma palestra, o professor sorteou um estudante da turma e informou apenas que a pessoa sorteada era uma menina, deixando a turma curiosa sobre a chance de ela usar óculos. Antes de revelar o nome, ele pediu que a turma calculasse essa chance com base na tabela da pesquisa, considerando apenas a informação que havia sido dada.\n\nTexto elaborado para esta questão.\n\nConsiderando a informação dada pelo professor, a probabilidade de a estudante sorteada usar óculos é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "25%."
+      },
+      {
+        "id": "b",
+        "text": "40%."
+      },
+      {
+        "id": "c",
+        "text": "45%."
+      },
+      {
+        "id": "d",
+        "text": "55,6%."
+      },
+      {
+        "id": "e",
+        "text": "62,5%."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Sabendo que é menina, o espaço amostral passa a ter 25 pessoas, das quais 10 usam óculos: 10/25 = 0,40 = 40%.\n\nPegadinhas:\n• A: divide 10 pelos 40 estudantes, ignorando a informação de que a sorteada é menina.\n• C: calcula a chance de qualquer estudante usar óculos, 18/40.\n• D: inverte a condição: entre os 18 que usam óculos, 10 são meninas.\n• E: calcula a chance de o sorteado ser menina, 25/40, que já é dado conhecido.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_04",
+    "subject": "Matemática",
+    "topicId": "mat_dados_probabilidade",
+    "chapter": "Estatística Descritiva",
+    "difficulty": "medium",
+    "skill": "interpretacao_tabela",
+    "trap": "Tomar o valor central da lista não ordenada como mediana.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nUma unidade básica de saúde registrou, durante oito dias, o tempo médio de espera dos pacientes para a triagem, em minuto: 12, 7, 15, 9, 20, 7, 11 e 14. A coordenadora quer divulgar um valor que represente o tempo típico de espera sem ser muito influenciado por um dia excepcional, e escolheu a mediana desses registros. Em um dos dias, uma falha no sistema de senhas elevou a espera, e a coordenadora não quer que esse episódio isolado distorça a informação passada à população no mural da unidade.\n\nTexto elaborado para esta questão.\n\nO valor divulgado pela coordenadora, em minuto, é",
+    "options": [
+      {
+        "id": "a",
+        "text": "7,0."
+      },
+      {
+        "id": "b",
+        "text": "11,0."
+      },
+      {
+        "id": "c",
+        "text": "11,5."
+      },
+      {
+        "id": "d",
+        "text": "11,9."
+      },
+      {
+        "id": "e",
+        "text": "14,5."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Ordenando: 7, 7, 9, 11, 12, 14, 15, 20. Com oito valores, a mediana é a média dos dois centrais: (11 + 12) ÷ 2 = 11,5.\n\nPegadinhas:\n• A: é a moda, o valor que mais se repete.\n• B: toma só o quarto valor da lista ordenada, sem fazer a média dos dois centrais.\n• D: é a média aritmética, 95 ÷ 8, que a coordenadora quis evitar.\n• E: faz a média dos dois valores centrais da lista não ordenada, 9 e 20.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_05",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_espacial",
+    "chapter": "O Universo Tridimensional",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Calcular o volume do aquário cheio, ignorando o nível da água.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nUm aquário tem a forma de um paralelepípedo reto-retângulo com 60 cm de comprimento, 30 cm de largura e 40 cm de altura. Para não estressar os peixes recém-chegados, o vendedor recomendou enchê-lo apenas até três quartos da altura nas primeiras semanas. O comprador quer saber quantos litros de água tratada deve preparar, sabendo que 1 litro corresponde a 1 000 cm³. Ele pretende usar galões de água filtrada e quer comprar a quantidade certa, sem sobras, já que o produto de condicionamento é dosado por litro de água.\n\nTexto elaborado para esta questão.\n\nA quantidade de água necessária para seguir a recomendação do vendedor é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "5,4 litros."
+      },
+      {
+        "id": "b",
+        "text": "18 litros."
+      },
+      {
+        "id": "c",
+        "text": "54 litros."
+      },
+      {
+        "id": "d",
+        "text": "72 litros."
+      },
+      {
+        "id": "e",
+        "text": "540 litros."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. A água chega a 3/4 × 40 = 30 cm. V = 60 × 30 × 30 = 54 000 cm³ = 54 L.\n\nPegadinhas:\n• A: divide por 10 000 na conversão de centímetro cúbico para litro.\n• B: usa um quarto da altura em vez de três quartos.\n• D: calcula o volume do aquário cheio, 60 × 30 × 40.\n• E: divide por 100 na conversão, errando a relação entre cm³ e litro.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_06",
+    "subject": "Matemática",
+    "topicId": "mat_geometria_espacial",
+    "chapter": "Sólidos de Revolução",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Usar o diâmetro no lugar do raio na fórmula do volume do cilindro.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nUma lanchonete serve sucos em copos cilíndricos com 6 cm de diâmetro interno e 10 cm de altura útil. Para calcular quantos copos consegue servir com cada jarra, o gerente precisa conhecer a capacidade de um copo. Ele lembra que o volume de um cilindro é o produto da área da base pela altura e que 1 cm³ equivale a 1 mL.\n\nUtilize 3 como aproximação para π. A informação também será impressa no cardápio, ao lado do preço de cada suco, porque a vigilância sanitária exige que o volume servido seja informado ao consumidor.\n\nTexto elaborado para esta questão.\n\nA capacidade de cada copo, em mililitro, é",
+    "options": [
+      {
+        "id": "a",
+        "text": "90."
+      },
+      {
+        "id": "b",
+        "text": "180."
+      },
+      {
+        "id": "c",
+        "text": "270."
+      },
+      {
+        "id": "d",
+        "text": "540."
+      },
+      {
+        "id": "e",
+        "text": "1 080."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. O raio é 3 cm. V = π · r² · h = 3 × 9 × 10 = 270 cm³ = 270 mL.\n\nPegadinhas:\n• A: calcula π · r · h, sem elevar o raio ao quadrado.\n• B: calcula a área lateral, 2 · π · r · h, que mede a superfície, não o volume.\n• D: multiplica o volume por 2 sem motivo, como se a base fosse 2 · π · r².\n• E: usa o diâmetro, 6 cm, no lugar do raio.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_07",
+    "subject": "Matemática",
+    "topicId": "mat_funcoes",
+    "chapter": "Função Constante e Função Afim",
+    "difficulty": "easy",
+    "skill": "modelagem",
+    "trap": "Esquecer a tarifa fixa ou multiplicá-la pelo consumo.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nA companhia de saneamento de um município cobra, nas residências, uma tarifa mensal fixa de R$ 25,00, que cobre a manutenção da rede, mais R$ 4,50 por metro cúbico de água consumido. Em março, o hidrômetro de uma casa registrou consumo de 18 m³. O morador, estranhando o valor da fatura, decidiu refazer a conta por conta própria. Ele encontrou na fatura a leitura anterior e a atual do hidrômetro, cuja diferença corresponde ao consumo do mês, e aplicou a regra divulgada no site da companhia.\n\nTexto elaborado para esta questão.\n\nPela regra de cobrança descrita, o valor da fatura de março, em real, é",
+    "options": [
+      {
+        "id": "a",
+        "text": "81,00."
+      },
+      {
+        "id": "b",
+        "text": "106,00."
+      },
+      {
+        "id": "c",
+        "text": "112,50."
+      },
+      {
+        "id": "d",
+        "text": "450,00."
+      },
+      {
+        "id": "e",
+        "text": "531,00."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Valor = 25 + 4,50 × 18 = 25 + 81 = 106. É uma função afim: parte fixa mais parte proporcional ao consumo.\n\nPegadinhas:\n• A: calcula só a parte variável e esquece a tarifa fixa.\n• C: multiplica a tarifa fixa pelo preço do metro cúbico, 25 × 4,50.\n• D: multiplica a tarifa fixa pelo consumo, 25 × 18.\n• E: soma fixa e preço unitário e multiplica pelo consumo, (25 + 4,50) × 18.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_08",
+    "subject": "Matemática",
+    "topicId": "mat_equacoes",
+    "chapter": "Técnicas Algébricas",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Responder o número de inteiras quando a pergunta pede as meias-entradas.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nEm um festival de cinema, o ingresso inteiro custava R$ 40,00, e a meia-entrada, R$ 20,00. Ao final de uma sessão, a organização registrou 300 ingressos vendidos e arrecadação total de R$ 9 600,00, mas o sistema não separou os dois tipos de ingresso. Para prestar contas ao patrocinador, que financiava a política de meia-entrada, foi preciso descobrir quantas meias-entradas haviam sido vendidas. O responsável pela bilheteria lembrou que todos os ingressos tinham sido vendidos por um dos dois preços e que não houve cortesias naquela sessão.\n\nTexto elaborado para esta questão.\n\nO número de meias-entradas vendidas nessa sessão foi",
+    "options": [
+      {
+        "id": "a",
+        "text": "60."
+      },
+      {
+        "id": "b",
+        "text": "120."
+      },
+      {
+        "id": "c",
+        "text": "150."
+      },
+      {
+        "id": "d",
+        "text": "180."
+      },
+      {
+        "id": "e",
+        "text": "240."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Com x inteiras: 40x + 20(300 − x) = 9 600 ⇒ 20x = 3 600 ⇒ x = 180. Meias: 300 − 180 = 120.\n\nPegadinhas:\n• A: calcula a diferença entre inteiras e meias, 180 − 120.\n• C: supõe que metade dos ingressos foi de cada tipo, sem usar a arrecadação.\n• D: responde o número de ingressos inteiros.\n• E: divide a arrecadação pelo preço da inteira, 9 600 ÷ 40, como se todos fossem inteiros.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_09",
+    "subject": "Matemática",
+    "topicId": "mat_funcoes",
+    "chapter": "Introdução às Funções",
+    "difficulty": "medium",
+    "skill": "interpretacao_tabela",
+    "trap": "Usar proporção direta, ignorando a altura inicial da muda.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nEm uma aula de Ciências, estudantes mediram a altura de uma muda de feijão a cada dois dias e registraram os dados em um quadro:\n\nDia 0: 2 cm\nDia 2: 5 cm\nDia 4: 8 cm\nDia 6: 11 cm\n\nA professora pediu que eles supusessem que o crescimento continuaria no mesmo ritmo observado e previssem a altura da muda em um dia ainda não medido. Os estudantes perceberam que a diferença entre duas medidas consecutivas era sempre a mesma e decidiram usar essa regularidade para fazer a previsão.\n\nTexto elaborado para esta questão.\n\nMantido o padrão do quadro, a altura prevista para a muda no dia 10 é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "14 cm."
+      },
+      {
+        "id": "b",
+        "text": "17 cm."
+      },
+      {
+        "id": "c",
+        "text": "18,3 cm."
+      },
+      {
+        "id": "d",
+        "text": "20 cm."
+      },
+      {
+        "id": "e",
+        "text": "25 cm."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A altura aumenta 3 cm a cada 2 dias, ou 1,5 cm por dia, a partir de 2 cm: h = 2 + 1,5d. Para d = 10, h = 17 cm.\n\nPegadinhas:\n• A: calcula a altura do dia 8, um intervalo antes do pedido.\n• C: usa proporção direta, 11 × 10/6, como se a muda tivesse altura zero no dia 0.\n• D: toma 2 cm por dia como taxa, confundindo a altura inicial com a taxa.\n• E: usa 2,5 cm por dia, dividindo 5 cm por 2 dias sem descontar a altura inicial.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_10",
+    "subject": "Matemática",
+    "topicId": "mat_teoria_numeros",
+    "chapter": "O Sistema de Numeração Decimal",
+    "difficulty": "easy",
+    "skill": "calculo",
+    "trap": "Errar o deslocamento da vírgula na conversão de grama para miligrama.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nA bula de um medicamento infantil informa que cada comprimido contém 0,125 g do princípio ativo. A farmacêutica de um posto de saúde precisa registrar essa dose em miligrama no prontuário eletrônico, que não aceita valores em grama. Ela lembra que 1 grama corresponde a 1 000 miligramas e confere a conta antes de digitar, pois um erro de casa decimal na dose pode ser grave. O sistema também exige que o valor seja informado sem casas decimais, e a farmacêutica aproveita para confirmar que a conversão não gera arredondamento.\n\nTexto elaborado para esta questão.\n\nA dose de cada comprimido, em miligrama, é",
+    "options": [
+      {
+        "id": "a",
+        "text": "1,25."
+      },
+      {
+        "id": "b",
+        "text": "12,5."
+      },
+      {
+        "id": "c",
+        "text": "125."
+      },
+      {
+        "id": "d",
+        "text": "1 250."
+      },
+      {
+        "id": "e",
+        "text": "12 500."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. 0,125 g × 1 000 = 125 mg: a vírgula anda três casas para a direita.\n\nPegadinhas:\n• A: multiplica por 10 em vez de 1 000.\n• B: multiplica por 100, deslocando a vírgula só duas casas.\n• D: multiplica por 10 000, deslocando a vírgula quatro casas.\n• E: multiplica por 100 000, como se cada grama tivesse cem mil miligramas.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_11",
+    "subject": "Matemática",
+    "topicId": "mat_combinatoria",
+    "chapter": "Introdução às Técnicas de Contagem",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Somar as possibilidades das etapas em vez de multiplicá-las.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nUma biblioteca escolar vai criar códigos para identificar os armários dos estudantes. Cada código terá três letras distintas, escolhidas entre A, B, C, D e E, seguidas de dois algarismos de 0 a 9, que podem se repetir. Códigos como BEA07 e ACD33 são válidos, mas AAB12 não é, pois repete letra. A diretora quer saber quantos códigos diferentes podem ser formados antes de encomendar as placas. Cada armário receberá um único código, e a escola tem hoje pouco mais de dois mil estudantes matriculados nos três turnos.\n\nTexto elaborado para esta questão.\n\nA quantidade de códigos distintos que podem ser formados é",
+    "options": [
+      {
+        "id": "a",
+        "text": "160."
+      },
+      {
+        "id": "b",
+        "text": "1 000."
+      },
+      {
+        "id": "c",
+        "text": "5 400."
+      },
+      {
+        "id": "d",
+        "text": "6 000."
+      },
+      {
+        "id": "e",
+        "text": "12 500."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Letras: 5 × 4 × 3 = 60 sequências ordenadas. Algarismos: 10 × 10 = 100. Pelo princípio multiplicativo, 60 × 100 = 6 000.\n\nPegadinhas:\n• A: soma as possibilidades das letras e dos algarismos, 60 + 100, em vez de multiplicá-las.\n• B: conta grupos de letras sem ordem, C(5,3) = 10, mas BEA e ABE são códigos diferentes.\n• C: impede a repetição dos algarismos, 10 × 9, o que o enunciado permite.\n• E: permite repetir as letras, 5 × 5 × 5, o que o enunciado proíbe.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_12",
+    "subject": "Matemática",
+    "topicId": "mat_sequencias_matrizes",
+    "chapter": "Médias",
+    "difficulty": "medium",
+    "skill": "modelagem",
+    "trap": "Trocar os pesos das provas ou dividir pela soma errada dos pesos.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nEm uma escola técnica, a nota final de cada disciplina é a média ponderada de três avaliações: a primeira prova tem peso 2, a segunda prova tem peso 3 e o trabalho prático tem peso 1. Para ser aprovado, o estudante precisa de nota final igual ou superior a 6,0. Um estudante tirou 5,0 na primeira prova e 8,0 no trabalho e quer saber de quanto precisa na segunda prova. A coordenação divulgou a regra no início do semestre, junto com um exemplo de cálculo, mas muitos estudantes ainda confundem a média ponderada com a média simples.\n\nTexto elaborado para esta questão.\n\nA nota mínima que esse estudante precisa obter na segunda prova é",
+    "options": [
+      {
+        "id": "a",
+        "text": "4,0."
+      },
+      {
+        "id": "b",
+        "text": "5,0."
+      },
+      {
+        "id": "c",
+        "text": "6,0."
+      },
+      {
+        "id": "d",
+        "text": "6,5."
+      },
+      {
+        "id": "e",
+        "text": "6,7."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. (2 × 5 + 3x + 1 × 8) ÷ 6 = 6 ⇒ 18 + 3x = 36 ⇒ x = 6,0.\n\nPegadinhas:\n• A: divide pela soma 5 dos pesos das provas, esquecendo o peso do trabalho.\n• B: usa média aritmética simples, (5 + x + 8) ÷ 3 = 6.\n• D: troca os pesos das provas: 3 × 5 + 2x + 8 = 36.\n• E: deixa o trabalho de fora: (2 × 5 + 3x) ÷ 5 = 6.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_13",
+    "subject": "Português",
+    "topicId": "por_texto",
+    "chapter": "Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Tomar o efeito descrito como benefício, por o texto citar a comodidade.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nToda vez que abrimos um aplicativo de vídeos ou uma rede social, uma sequência de cálculos invisíveis decide o que aparecerá primeiro na tela. Os algoritmos de recomendação aprendem com cada curtida, cada pausa e cada compartilhamento e passam a oferecer mais do mesmo: quem assiste a vídeos de culinária recebe mais culinária; quem curte uma opinião política recebe outras parecidas. A comodidade é evidente, já que ninguém precisa procurar. O custo é menos visível: aos poucos, o usuário deixa de topar com o que discorda dele, e o mundo parece mais unânime do que é.\n\nTexto elaborado para esta questão.\n\nO texto aponta como efeito do funcionamento dos algoritmos de recomendação a",
+    "options": [
+      {
+        "id": "a",
+        "text": "Redução do contato com opiniões divergentes."
+      },
+      {
+        "id": "b",
+        "text": "Ampliação do acesso a conteúdos variados e inesperados."
+      },
+      {
+        "id": "c",
+        "text": "Eliminação definitiva de opiniões políticas na internet."
+      },
+      {
+        "id": "d",
+        "text": "Dificuldade de encontrar vídeos de culinária e de outros temas preferidos."
+      },
+      {
+        "id": "e",
+        "text": "Substituição da escolha consciente do usuário por cálculos que priorizam a qualidade dos vídeos."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O texto conclui que o usuário \"deixa de topar com o que discorda dele\": a personalização restringe a diversidade de pontos de vista.\n\nPegadinhas:\n• B: contradição: o texto diz que os algoritmos oferecem \"mais do mesmo\".\n• C: generalização: o texto fala em perder o contato com o divergente, não no fim das opiniões.\n• D: contradição: os temas preferidos são justamente os mais oferecidos.\n• E: extrapolação: o texto não diz que o critério é qualidade, e sim o histórico de interações.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_14",
+    "subject": "Português",
+    "topicId": "por_texto",
+    "chapter": "Gêneros não Verbais: Fundamentos de Leitura",
+    "difficulty": "medium",
+    "skill": "analise_imagem",
+    "trap": "Ler só a imagem ou só a frase, sem relacioná-las.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nUm cartaz de campanha de doação de sangue mostra, ocupando quase todo o espaço, uma ampulheta em que a areia que escorre é vermelha. Na parte de cima, restam poucos grãos. Embaixo da imagem, em letras pequenas, lê-se: \"Os estoques duram poucos dias. Uma doação leva 40 minutos.\" No canto inferior, aparece o endereço do hemocentro e o horário de funcionamento, sem nenhuma outra ilustração. O cartaz foi afixado em pontos de ônibus e estações de metrô, onde as pessoas costumam olhar as mensagens por poucos segundos enquanto esperam a condução.\n\nTexto elaborado para esta questão.\n\nNo cartaz, a relação entre a imagem e o texto verbal tem o objetivo de",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ensinar como funciona uma ampulheta."
+      },
+      {
+        "id": "b",
+        "text": "Informar o horário de funcionamento do hemocentro."
+      },
+      {
+        "id": "c",
+        "text": "Criticar a demora no atendimento dos doadores no hemocentro."
+      },
+      {
+        "id": "d",
+        "text": "Mostrar que doar sangue é um procedimento demorado, que exige planejamento cuidadoso do doador."
+      },
+      {
+        "id": "e",
+        "text": "Sugerir urgência, associando o tempo que se esgota na ampulheta à escassez de sangue e mostrando que doar exige pouco tempo do leitor."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A areia vermelha que acaba representa o estoque de sangue que se esgota; o texto confirma (\"duram poucos dias\") e contrapõe o pouco tempo da doação, o que torna o apelo à ação imediato.\n\nPegadinhas:\n• A: fuga: a ampulheta é recurso simbólico, não o assunto.\n• B: redução: o horário é um detalhe; o cartaz é construído para convencer.\n• C: inversão: os 40 minutos aparecem como pouco tempo, argumento a favor de doar.\n• D: contradição: o texto apresenta a doação como rápida.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_15",
+    "subject": "Português",
+    "topicId": "por_norma_culta",
+    "chapter": "Variação Linguística",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Tratar a variedade regional como erro a ser corrigido.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nEm um documentário sobre feiras do interior, uma vendedora explica ao repórter como escolhe as frutas:\n\n— Ocê vê, moço, o caju bão é esse aqui, que tá mais amarelim. Esses outro aí tão verde ainda, num presta pra doce não. Eu aprendi com minha vó, que vendia aqui desde moça.\n\nNa edição final, a produção manteve a fala exatamente como foi dita, com legenda fiel à pronúncia, e explicou no encerramento que pretendia registrar a cultura da feira.\n\nTexto elaborado para esta questão.\n\nA decisão da produção de manter a fala da vendedora revela o reconhecimento de que",
+    "options": [
+      {
+        "id": "a",
+        "text": "A vendedora não domina nenhuma regra gramatical."
+      },
+      {
+        "id": "b",
+        "text": "A norma-padrão deve ser evitada em documentários."
+      },
+      {
+        "id": "c",
+        "text": "A fala precisava ser mantida por falta de tempo para corrigi-la."
+      },
+      {
+        "id": "d",
+        "text": "As variedades regionais são legítimas e fazem parte da identidade de seus falantes."
+      },
+      {
+        "id": "e",
+        "text": "O jeito de falar da vendedora deve ser corrigido nas escolas da região para garantir a comunicação."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A fala é marcada regionalmente (\"ocê\", \"bão\", \"amarelim\"); mantê-la para registrar a cultura da feira reconhece a variedade como legítima, e não como erro.\n\nPegadinhas:\n• A: preconceito linguístico: a fala segue regras próprias, como a concordância no primeiro termo (\"esses outro\").\n• B: generalização: manter uma fala não é rejeitar a norma-padrão em geral.\n• C: fuga: o texto diz que a intenção era registrar a cultura.\n• E: contradição: o documentário valoriza a variedade, e a comunicação não ficou comprometida.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_16",
+    "subject": "Português",
+    "topicId": "por_texto",
+    "chapter": "Modelos de Leitura e Distorções Interpretativas",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Extrapolar a crônica para uma condenação geral da tecnologia.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nMeu avô guardava os números de telefone numa caderneta de capa marrom, em ordem alfabética, com letra caprichada. Quando alguém morria, ele não apagava: fazia um risco fino, de lado a lado, e deixava o nome ali. Dizia que a caderneta era também um livro de memórias. Outro dia, trocando de celular, vi que meus contatos foram transferidos inteiros, em segundos. Fiquei feliz com a praticidade. Só depois notei que, entre eles, havia gente com quem não falo há dez anos e que eu nem sabia mais quem era.\n\nTexto elaborado para esta questão.\n\nNa crônica, a comparação entre a caderneta do avô e o celular do narrador sugere que",
+    "options": [
+      {
+        "id": "a",
+        "text": "O celular é inútil para guardar contatos."
+      },
+      {
+        "id": "b",
+        "text": "O avô não sabia usar aparelhos eletrônicos."
+      },
+      {
+        "id": "c",
+        "text": "O narrador perdeu todos os contatos ao trocar de aparelho."
+      },
+      {
+        "id": "d",
+        "text": "A praticidade da transferência não preserva o sentido afetivo que os registros tinham para o avô."
+      },
+      {
+        "id": "e",
+        "text": "A tecnologia destrói as relações familiares e deve ser abandonada pelas novas gerações em nome da tradição."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. A caderneta guardava memória (o risco que mantém o nome); no celular, os contatos passam intactos, mas sem significado: o narrador nem sabe quem são algumas pessoas.\n\nPegadinhas:\n• A: generalização: o narrador elogia a praticidade.\n• B: extrapolação: o texto não fala da relação do avô com tecnologia.\n• C: contradição: os contatos foram transferidos inteiros.\n• E: extrapolação: a crônica sugere uma perda de sentido, sem condenar a tecnologia.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_17",
+    "subject": "Português",
+    "topicId": "por_texto",
+    "chapter": "Gêneros Textuais",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Classificar o texto pela forma (manual) e não pela função.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nModo de usar a saudade\n\n1. Retire-a da gaveta com cuidado: ela costuma vir embrulhada em cheiro de bolo.\n2. Não tente lavá-la. A saudade não sai com água.\n3. Use-a em pequenas doses, de preferência no fim da tarde.\n4. Em caso de excesso, telefone para alguém.\n5. Mantenha fora do alcance do esquecimento.\n\nAtenção: este produto não tem prazo de validade.\n\nTexto publicado em um mural de uma escola, em uma exposição de trabalhos dos estudantes sobre gêneros textuais do cotidiano.\n\nTexto elaborado para esta questão.\n\nEmbora reproduza a estrutura de um manual de instruções, o texto se aproxima do gênero poema porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "Usa verbos no imperativo."
+      },
+      {
+        "id": "b",
+        "text": "Está organizado em itens numerados."
+      },
+      {
+        "id": "c",
+        "text": "Ensina o leitor a guardar objetos antigos de forma segura em gavetas."
+      },
+      {
+        "id": "d",
+        "text": "Apresenta rimas regulares em todos os versos, como exige a poesia tradicional."
+      },
+      {
+        "id": "e",
+        "text": "Explora a linguagem figurada para expressar uma experiência subjetiva, dando à saudade características de um objeto de uso."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A forma de manual (itens numerados, imperativo, advertência) é usada para fins expressivos: personificação e metáforas tratam um sentimento como produto, o que caracteriza a função poética.\n\nPegadinhas:\n• A: redução: o imperativo também é próprio de instruções.\n• B: redução: a numeração é traço do manual, não do poema.\n• C: leitura literal: a gaveta e o embrulho são metáforas.\n• D: erro de fato: o texto não tem rimas, e o poema não as exige.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_18",
+    "subject": "Português",
+    "topicId": "por_texto",
+    "chapter": "Função Poética e Linguagem Literária",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir sonoridade com rima.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nchove\nna rua\nchove\nna roupa\nchove\nna rima\nchove\nno resto\ne a palavra\nescorre\nde rua em roupa\nde roupa em resto\naté secar\nno papel\n\nTexto elaborado para esta questão.\n\nNo poema, a repetição de \"chove\" e de sons como o /r/ contribui para",
+    "options": [
+      {
+        "id": "a",
+        "text": "Imitar o ritmo da chuva."
+      },
+      {
+        "id": "b",
+        "text": "Narrar uma história com começo, meio e fim."
+      },
+      {
+        "id": "c",
+        "text": "Construir rimas ricas entre todos os versos do poema."
+      },
+      {
+        "id": "d",
+        "text": "Descrever com objetividade as condições do tempo em uma cidade."
+      },
+      {
+        "id": "e",
+        "text": "Criticar o uso excessivo de repetições na poesia contemporânea, que empobrece a linguagem literária."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. A reiteração do verbo em versos curtos e a aliteração em /r/ (rua, roupa, rima, resto, escorre) produzem um ritmo insistente, como gotas, e a palavra \"escorre\" como a água.\n\nPegadinhas:\n• B: fuga: o poema não tem narrativa.\n• C: erro de fato: o efeito vem da aliteração e da repetição, não de rimas ao fim dos versos.\n• D: inversão: a linguagem é expressiva, não referencial.\n• E: contradição: a repetição é o próprio recurso expressivo do poema.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_19",
+    "subject": "Português",
+    "topicId": "por_texto",
+    "chapter": "Fatores de Textualidade",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Atribuir o pronome ao termo mais próximo, sem verificar o sentido.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nPesquisadores acompanharam, por cinco anos, estudantes que dormiam menos de seis horas por noite. Eles apresentaram mais dificuldade de memorizar conteúdos e mais episódios de irritação do que os colegas que dormiam oito horas. Isso levou várias escolas a rever o horário de início das aulas, adiando a primeira atividade da manhã em trinta minutos. Os primeiros resultados foram animadores. O texto foi publicado em um jornal escolar, em uma seção dedicada a divulgar pesquisas sobre saúde de adolescentes e suas consequências para a rotina da escola.\n\nTexto elaborado para esta questão.\n\nNo texto, o pronome \"Isso\" retoma",
+    "options": [
+      {
+        "id": "a",
+        "text": "O horário de início das aulas."
+      },
+      {
+        "id": "b",
+        "text": "Os colegas que dormiam oito horas."
+      },
+      {
+        "id": "c",
+        "text": "Os primeiros resultados animadores obtidos pelas escolas."
+      },
+      {
+        "id": "d",
+        "text": "A constatação de que dormir pouco prejudicou a memória e o humor dos estudantes."
+      },
+      {
+        "id": "e",
+        "text": "A decisão dos pesquisadores de acompanhar estudantes por cinco anos em diferentes escolas."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. \"Isso\" é anafórico e resume a informação do período anterior, o resultado da pesquisa, que motivou as escolas a mudar o horário.\n\nPegadinhas:\n• A: o horário é o que foi revisto, consequência, não aquilo que \"Isso\" retoma.\n• B: \"Isso\" não retoma pessoas, e sim um fato.\n• C: \"Isso\" retoma o que vem antes, não o que vem depois.\n• E: é o procedimento da pesquisa, não a conclusão que motivou a mudança.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_20",
+    "subject": "Português",
+    "topicId": "por_lit_contemporanea",
+    "chapter": "Artes Plásticas Brasileiras",
+    "difficulty": "medium",
+    "skill": "analise_imagem",
+    "trap": "Achar que a arte de rua perde valor por ser efêmera ou fora do museu.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nEm muitas cidades brasileiras, muros, viadutos e empenas de prédios recebem grandes pinturas feitas por artistas de rua. Algumas são encomendadas por prefeituras; outras surgem sem autorização e são apagadas semanas depois. Os artistas costumam dizer que a rua é uma galeria aberta: quem passa não precisa pagar ingresso nem entrar em um museu, e a obra dialoga com o bairro, com as pessoas e com o desgaste do tempo. Parte do público, porém, ainda vê nessas pinturas apenas sujeira.\n\nTexto elaborado para esta questão.\n\nDe acordo com o texto, os artistas de rua valorizam esse tipo de produção porque ela",
+    "options": [
+      {
+        "id": "a",
+        "text": "É sempre autorizada pelo poder público."
+      },
+      {
+        "id": "b",
+        "text": "Dura mais que as obras expostas em museus."
+      },
+      {
+        "id": "c",
+        "text": "Garante aos artistas renda maior do que a obtida com a venda de quadros."
+      },
+      {
+        "id": "d",
+        "text": "Amplia o acesso do público à arte e estabelece diálogo com o espaço urbano."
+      },
+      {
+        "id": "e",
+        "text": "Elimina a opinião contrária do público, que passou a aceitar as pinturas como parte da cidade sem nenhuma crítica."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. Para os artistas, a rua é \"galeria aberta\": dispensa ingresso e museu, e a obra conversa com o bairro e com as pessoas.\n\nPegadinhas:\n• A: contradição: o texto diz que parte surge sem autorização.\n• B: contradição: algumas são apagadas em semanas.\n• C: fuga: o texto não trata de renda.\n• E: contradição: o texto registra que parte do público vê as pinturas como sujeira.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_21",
+    "subject": "Português",
+    "topicId": "por_texto",
+    "chapter": "Os Dois Níveis da Leitura",
+    "difficulty": "hard",
+    "skill": "inferencia",
+    "trap": "Ler a ironia ao pé da letra.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nParabéns à prefeitura pela nova ciclovia do centro. Ela tem exatamente 300 metros, começa em um poste e termina em outro, e atravessa dois pontos de ônibus, onde os ciclistas precisam desviar das pessoas na fila. Nos fins de semana, serve de estacionamento para carros de entrega. Uma obra assim mostra o quanto a cidade leva a sério quem escolhe pedalar. O texto foi publicado na seção de cartas dos leitores de um jornal da cidade, uma semana depois da inauguração, que teve discurso do prefeito e corte de fita.\n\nTexto elaborado para esta questão.\n\nNo texto, o efeito crítico é produzido principalmente pela",
+    "options": [
+      {
+        "id": "a",
+        "text": "Descrição técnica do projeto da ciclovia."
+      },
+      {
+        "id": "b",
+        "text": "Defesa sincera do trabalho da prefeitura."
+      },
+      {
+        "id": "c",
+        "text": "Comparação entre ciclistas e motoristas de carros de entrega."
+      },
+      {
+        "id": "d",
+        "text": "Ironia, que elogia a obra enquanto os fatos descritos revelam sua inutilidade."
+      },
+      {
+        "id": "e",
+        "text": "Narração em primeira pessoa da experiência de um ciclista que usa a ciclovia todos os dias para ir ao trabalho."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O elogio (\"Parabéns\", \"leva a sério\") contrasta com os fatos: ciclovia curta, sem ligação, obstruída e usada como estacionamento. Diz-se o contrário do que se pensa.\n\nPegadinhas:\n• A: redução: os dados técnicos servem à ironia.\n• B: leitura literal: o elogio é irônico.\n• C: fuga: não há comparação entre os grupos.\n• E: fuga: o texto não narra uma experiência pessoal.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_22",
+    "subject": "Português",
+    "topicId": "por_texto",
+    "chapter": "Funções da Linguagem",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir função metalinguística com referencial.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nSaudade, s.f. Palavra que, segundo se costuma dizer, não tem tradução exata em outras línguas. Na verdade, quase toda língua tem um modo de nomear a falta do que se ama; o que talvez seja nosso é o hábito de falar dela com orgulho. Neste verbete, aliás, a palavra aparece seis vezes, contando esta. Há quem diga que um dicionário deveria definir sem opinar. Este não consegue.\n\nVerbete de um dicionário afetivo, elaborado por estudantes do ensino médio em um projeto de leitura.\n\nTexto elaborado para esta questão.\n\nPredomina no texto a função metalinguística, pois ele",
+    "options": [
+      {
+        "id": "a",
+        "text": "Testa o canal de comunicação com o leitor."
+      },
+      {
+        "id": "b",
+        "text": "Tenta convencer o leitor a comprar um dicionário."
+      },
+      {
+        "id": "c",
+        "text": "Expressa apenas a saudade que o autor sente de alguém."
+      },
+      {
+        "id": "d",
+        "text": "Usa a linguagem para comentar a própria palavra e o próprio verbete."
+      },
+      {
+        "id": "e",
+        "text": "Informa de modo neutro e objetivo a origem histórica da palavra saudade."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O texto fala da palavra \"saudade\", conta quantas vezes ela aparece e comenta como um dicionário deveria definir: é a língua falando de si mesma.\n\nPegadinhas:\n• A: função fática ausente.\n• B: função conativa ausente: não há apelo ao leitor.\n• C: redução: há opinião, mas o foco é a palavra.\n• E: contradição: o texto opina e não trata de origem histórica.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_23",
+    "subject": "Português",
+    "topicId": "por_texto",
+    "chapter": "Intertextualidade e Interdiscursividade",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir paródia com citação literal.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nLeia o início de um poema de Gonçalves Dias e uma recriação contemporânea.\n\nTexto I\nMinha terra tem palmeiras,\nOnde canta o Sabiá;\n\nDIAS, G. Canção do exílio, 1843.\n\nTexto II\nMinha terra tem prédios\nonde buzina o avião;\no sabiá, que não canta,\nmudou-se para o refrão.\n\nTexto elaborado para esta questão.\n\nO texto II estabelece relação intertextual com o texto I por meio de",
+    "options": [
+      {
+        "id": "a",
+        "text": "Citação, pois copia o poema original."
+      },
+      {
+        "id": "b",
+        "text": "Tradução do poema para a linguagem atual."
+      },
+      {
+        "id": "c",
+        "text": "Plágio, porque omite o nome do autor do texto original."
+      },
+      {
+        "id": "d",
+        "text": "Paráfrase, pois mantém o sentido de exaltação da natureza brasileira."
+      },
+      {
+        "id": "e",
+        "text": "Paródia, que retoma a estrutura do poema romântico para contrapor a paisagem urbana à natureza exaltada no original."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O texto II mantém o molde (\"Minha terra tem...\", \"onde...\") e troca palmeiras e canto do sabiá por prédios e avião: recriação crítica e bem-humorada, ou seja, paródia.\n\nPegadinhas:\n• A: só o molde é retomado; o conteúdo é transformado.\n• B: traduzir manteria o sentido, e o texto II o inverte.\n• C: o texto II não se apresenta como original de outro, e a relação é declarada pela retomada evidente.\n• D: contradição: o texto II troca a natureza pela cidade.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_24",
+    "subject": "Inglês",
+    "topicId": "ing_01",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "difficulty": "medium",
+    "skill": "interpretacao_textual",
+    "trap": "Achar que o texto proíbe os nomes populares.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nWhy do scientists use Latin names?\n\nA bird called \"robin\" in the United Kingdom is a completely different species from the bird called \"robin\" in North America. Common names change from place to place and from language to language, which can cause confusion. Scientific names solve this problem: each species receives a unique two-part name, such as Turdus migratorius for the American robin, used by researchers all over the world. Common names, however, are still useful in everyday conversation.\n\nTexto elaborado para esta questão.\n\nDe acordo com o texto, os nomes científicos são usados porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "São mais fáceis de pronunciar."
+      },
+      {
+        "id": "b",
+        "text": "Indicam o país onde cada espécie foi descoberta."
+      },
+      {
+        "id": "c",
+        "text": "Substituem os nomes populares em todas as situações."
+      },
+      {
+        "id": "d",
+        "text": "Evitam confusões, já que nomes populares variam entre lugares e línguas."
+      },
+      {
+        "id": "e",
+        "text": "Mostram que o pássaro do Reino Unido e o da América do Norte pertencem à mesma espécie."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O texto mostra que \"robin\" designa espécies diferentes em dois países e que o nome científico, único, resolve a confusão.\n\nPegadinhas:\n• A: fuga: o texto não fala de pronúncia.\n• B: extrapolação: o texto não associa o nome ao país.\n• C: generalização: o texto diz que os populares ainda são úteis.\n• E: contradição: o texto diz que são espécies diferentes.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_25",
+    "subject": "Biologia",
+    "topicId": "bio_ecologia",
+    "chapter": "Introdução à Ecologia",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que retirar o predador só beneficia a cadeia.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nEm uma ilha, a caça intensa reduziu quase a zero a população de raposas, principal predador de um roedor nativo. Nos anos seguintes, os pesquisadores registraram forte aumento do número de roedores, seguido de queda acentuada na quantidade de sementes de uma planta rasteira, alimento preferido desses animais. Algumas espécies de aves que também se alimentavam dessas sementes passaram a ser vistas com menos frequência na ilha. Os pesquisadores destacaram que nenhuma dessas espécies havia sido alvo direto da caça.\n\nTexto elaborado para esta questão.\n\nA sequência de eventos descrita evidencia que",
+    "options": [
+      {
+        "id": "a",
+        "text": "Os roedores são predadores das aves."
+      },
+      {
+        "id": "b",
+        "text": "A planta rasteira é parasita dos roedores."
+      },
+      {
+        "id": "c",
+        "text": "As raposas competiam com as aves pelas sementes."
+      },
+      {
+        "id": "d",
+        "text": "A caça não altera as populações das espécies que não são caçadas diretamente."
+      },
+      {
+        "id": "e",
+        "text": "A remoção de um predador pode desencadear efeitos em vários níveis da teia alimentar."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Sem o predador, os roedores aumentam, consomem mais sementes, e as aves que competem por elas diminuem: o efeito se propaga em cascata pela teia.\n\nPegadinhas:\n• A: erro de relação: roedores e aves competem pelas sementes.\n• B: erro de relação: a planta é alimento do roedor.\n• C: erro de nível trófico: raposas são predadoras de roedores.\n• D: contradição: roedores, plantas e aves mudaram.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_26",
+    "subject": "Biologia",
+    "topicId": "bio_biotecnologia",
+    "chapter": "Biotecnologia",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a vacina de RNA altera o DNA da pessoa.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nAs vacinas de RNA mensageiro, usadas em larga escala a partir da pandemia de covid-19, contêm uma molécula de RNA envolta em uma cápsula de lipídios. Ao entrar nas células do braço, esse RNA é lido pelos ribossomos, que produzem uma proteína característica do vírus. O sistema imune reconhece essa proteína como estranha e produz anticorpos e células de memória. O RNA vacinal é degradado em poucos dias e não entra no núcleo da célula. Desde então, a mesma tecnologia vem sendo testada contra outras doenças infecciosas e alguns tipos de câncer.\n\nTexto elaborado para esta questão.\n\nA proteção conferida por esse tipo de vacina resulta da",
+    "options": [
+      {
+        "id": "a",
+        "text": "Destruição direta do vírus pelo RNA presente na vacina."
+      },
+      {
+        "id": "b",
+        "text": "Transferência de anticorpos prontos, como ocorre no soro."
+      },
+      {
+        "id": "c",
+        "text": "Inserção do RNA vacinal no DNA do núcleo da célula humana."
+      },
+      {
+        "id": "d",
+        "text": "Produção de uma proteína viral pelas células, que estimula a resposta imune."
+      },
+      {
+        "id": "e",
+        "text": "Multiplicação do vírus enfraquecido dentro das células do braço até ser eliminado pelo organismo."
+      }
+    ],
+    "correctOptionId": "d",
+    "explanation": "Resposta D. O RNA serve de molde para os ribossomos produzirem a proteína do vírus; ela age como antígeno e estimula anticorpos e memória imunológica.\n\nPegadinhas:\n• A: erro de mecanismo: o RNA não ataca o vírus; ele induz a resposta imune.\n• B: confusão entre imunização ativa (vacina) e passiva (soro).\n• C: contradição: o texto diz que o RNA não entra no núcleo.\n• E: confusão com vacina de vírus atenuado: não há vírus nesta vacina.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_27",
+    "subject": "Biologia",
+    "topicId": "bio_fisio_animal",
+    "chapter": "Sangue e Imunologia",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Confundir soro com vacina.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nUm trabalhador rural foi picado por uma jararaca e levado com urgência ao hospital, onde recebeu soro antibotrópico. Semanas antes, ele havia tomado no posto de saúde a vacina contra o tétano, com a orientação de receber reforço a cada dez anos. Curioso, perguntou ao médico por que o soro precisava ser aplicado logo após a picada, enquanto a vacina era tomada com antecedência. O médico explicou ainda que o soro é obtido do sangue de cavalos que recebem pequenas doses do veneno e que, por isso, o paciente fica em observação após a aplicação.\n\nTexto elaborado para esta questão.\n\nA diferença entre os dois procedimentos se explica porque o soro",
+    "options": [
+      {
+        "id": "a",
+        "text": "E a vacina são idênticos, mudando apenas o local da aplicação."
+      },
+      {
+        "id": "b",
+        "text": "Estimula a memória imunológica, e a vacina age apenas no momento da aplicação."
+      },
+      {
+        "id": "c",
+        "text": "Contém o veneno enfraquecido da serpente para estimular o sistema imune do paciente."
+      },
+      {
+        "id": "d",
+        "text": "Destrói as hemácias contaminadas pelo veneno, e a vacina elimina bactérias do sangue."
+      },
+      {
+        "id": "e",
+        "text": "Contém anticorpos prontos, de ação imediata, enquanto a vacina induz o organismo a produzir anticorpos e memória imunológica."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Soro é imunização passiva: anticorpos produzidos em outro animal neutralizam o veneno já. Vacina é ativa: leva tempo, mas gera memória duradoura, por isso é preventiva.\n\nPegadinhas:\n• A: contradição: os mecanismos são distintos.\n• B: inverte os papéis.\n• C: confusão com vacina: o soro traz anticorpos, não antígeno.\n• D: erro de mecanismo: nenhum dos dois age assim.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_28",
+    "subject": "Biologia",
+    "topicId": "bio_evolucao",
+    "chapter": "Mecanismos da Evolução Biológica",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Raciocínio lamarckista: o antibiótico cria a resistência.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nEm hospitais, o uso frequente de um mesmo antibiótico tem sido associado ao aumento de infecções por bactérias resistentes a ele. Estudos mostram que, antes do tratamento, já existiam, na população bacteriana, alguns indivíduos com mutações que conferiam resistência. Quando o medicamento é usado de forma incorreta, por exemplo interrompendo o tratamento antes do prazo, a proporção dessas bactérias na população tende a aumentar.\n\nTexto elaborado para esta questão.\n\nO aumento da proporção de bactérias resistentes ocorre porque o antibiótico",
+    "options": [
+      {
+        "id": "a",
+        "text": "Seleciona as bactérias que já eram resistentes."
+      },
+      {
+        "id": "b",
+        "text": "Fortalece as bactérias que entram em contato com ele por mais tempo."
+      },
+      {
+        "id": "c",
+        "text": "Provoca mutações nas bactérias para que elas se adaptem ao medicamento."
+      },
+      {
+        "id": "d",
+        "text": "Ensina as bactérias a reconhecer o medicamento e a evitá-lo no organismo."
+      },
+      {
+        "id": "e",
+        "text": "Elimina todas as bactérias, e novas espécies resistentes surgem espontaneamente no hospital."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. As mutações já existiam; o antibiótico mata as sensíveis, e as resistentes sobrevivem e se reproduzem. É seleção natural, não indução da mutação.\n\nPegadinhas:\n• B: uso e desuso: não há fortalecimento adquirido herdável.\n• C: lamarckismo: o ambiente não cria a variação de propósito.\n• D: atribui intenção e aprendizagem a bactérias.\n• E: geração espontânea: as resistentes já estavam presentes.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_29",
+    "subject": "Biologia",
+    "topicId": "bio_metabolismo_energetico",
+    "chapter": "Proteínas: Enzimas",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Achar que a enzima é consumida, ou que o calor só acelera.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nPara amaciar carnes, cozinheiros usam o suco de mamão verde ou de abacaxi, ricos em enzimas que quebram proteínas. Um estudante testou o efeito: deixou pedaços iguais de carne em suco de abacaxi fresco, em suco de abacaxi fervido e resfriado, e em água pura, todos à temperatura ambiente por duas horas. Apenas a carne em contato com o suco fresco ficou visivelmente mais macia. Os três pedaços tinham o mesmo tamanho e foram cortados da mesma peça de carne, e o estudante avaliou a maciez apertando cada um com um garfo ao final do tempo.\n\nTexto elaborado para esta questão.\n\nO resultado indica que a fervura do suco",
+    "options": [
+      {
+        "id": "a",
+        "text": "Desnaturou a enzima."
+      },
+      {
+        "id": "b",
+        "text": "Aumentou a atividade da enzima."
+      },
+      {
+        "id": "c",
+        "text": "Transformou a enzima em carboidrato."
+      },
+      {
+        "id": "d",
+        "text": "Fez a enzima ser consumida antes de agir."
+      },
+      {
+        "id": "e",
+        "text": "Eliminou a água do suco, impedindo que ele entrasse em contato com a carne durante o experimento."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. As enzimas são proteínas: o calor intenso altera sua forma tridimensional e o sítio ativo, e a atividade se perde. A água pura serviu de controle.\n\nPegadinhas:\n• B: contradição: o suco fervido não amaciou.\n• C: erro de fato: a desnaturação não muda a classe da molécula.\n• D: enzimas não são consumidas; perderam a atividade.\n• E: fuga: o suco foi resfriado e usado; a variável é a temperatura.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_30",
+    "subject": "Física",
+    "topicId": "fis_calorimetria",
+    "chapter": "Temperatura, Calor e seus Mecanismos de Transferência",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a garrafa térmica produz frio ou calor.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nUma garrafa térmica tem paredes duplas de vidro, com vácuo entre elas, e superfícies espelhadas. A tampa é feita de material isolante e fecha bem a abertura. Assim, um café quente colocado de manhã continua quente à tarde, e uma bebida gelada se mantém fria por muitas horas. Um estudante concluiu que a garrafa \"guarda o calor do café e o frio do suco\". O professor aproveitou a afirmação para discutir com a turma o que, de fato, é transferido entre corpos com temperaturas diferentes.\n\nTexto elaborado para esta questão.\n\nA garrafa conserva a temperatura das bebidas porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "Produz frio para as bebidas geladas e calor para as quentes."
+      },
+      {
+        "id": "b",
+        "text": "Dificulta as trocas de calor por condução, convecção e radiação."
+      },
+      {
+        "id": "c",
+        "text": "Facilita a radiação térmica entre o interior e o exterior da garrafa."
+      },
+      {
+        "id": "d",
+        "text": "Armazena \"frio\", que é transferido para as bebidas quando a tampa é fechada."
+      },
+      {
+        "id": "e",
+        "text": "O vácuo entre as paredes conduz o calor rapidamente para fora, mantendo a temperatura constante dentro dela."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. O vácuo impede condução e convecção entre as paredes; o espelhamento reflete a radiação; a tampa reduz as trocas pela abertura. A garrafa não produz frio: só retarda as trocas.\n\nPegadinhas:\n• A: a garrafa não é fonte de energia.\n• C: inversão: o espelhamento reduz a radiação.\n• D: frio não é uma forma de energia transferida; o que se transfere é calor.\n• E: contradição: o vácuo dificulta a condução.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_31",
+    "subject": "Física",
+    "topicId": "fis_estatica",
+    "chapter": "Hidrostática: Densidade e Pressão",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Esquecer a pressão atmosférica ou usar profundidade errada.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nMergulhadores aprendem que, no mar, a pressão aumenta cerca de 1 atmosfera a cada 10 metros de profundidade, somando-se à pressão atmosférica de 1 atm que já atua na superfície. Um instrutor explicou que esse aumento comprime o ar dos pulmões e dos ouvidos, e por isso a descida deve ser lenta. Em um curso, os alunos desceram até 30 metros de profundidade com acompanhamento. O equipamento do curso inclui um computador de mergulho que mostra a pressão total em atmosferas, e os alunos foram desafiados a prever o valor antes de olhar o visor.\n\nTexto elaborado para esta questão.\n\nA pressão total sobre o mergulhador a 30 metros de profundidade é de aproximadamente",
+    "options": [
+      {
+        "id": "a",
+        "text": "3 atm."
+      },
+      {
+        "id": "b",
+        "text": "4 atm."
+      },
+      {
+        "id": "c",
+        "text": "10 atm."
+      },
+      {
+        "id": "d",
+        "text": "30 atm."
+      },
+      {
+        "id": "e",
+        "text": "31 atm."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Pressão hidrostática: 30 m ÷ 10 m × 1 atm = 3 atm; somando a atmosférica, 1 atm, a pressão total é 4 atm.\n\nPegadinhas:\n• A: considera só a coluna de água e esquece a pressão atmosférica.\n• C: toma a pressão como proporcional aos metros divididos por 3.\n• D: soma 1 atm por metro, e não a cada 10 metros.\n• E: soma 1 atm por metro e ainda acrescenta a atmosférica.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_32",
+    "subject": "Física",
+    "topicId": "fis_circuitos",
+    "chapter": "Potência Elétrica",
+    "difficulty": "medium",
+    "skill": "calculo",
+    "trap": "Não converter minutos em horas no cálculo do consumo.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nEm uma casa com quatro moradores, cada um toma um banho diário de 15 minutos em um chuveiro elétrico de 5 500 W, ligado na posição inverno. A família quer estimar o consumo de energia do chuveiro em um mês de 30 dias para avaliar se vale a pena reduzir o tempo dos banhos ou trocar a posição para verão. A distribuidora de energia cobra pelo consumo em quilowatt-hora, e o chuveiro é o aparelho de maior potência da casa, embora fique ligado por pouco tempo.\n\nTexto elaborado para esta questão.\n\nO consumo mensal de energia elétrica do chuveiro, em quilowatt-hora, é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "41,25."
+      },
+      {
+        "id": "b",
+        "text": "165."
+      },
+      {
+        "id": "c",
+        "text": "660."
+      },
+      {
+        "id": "d",
+        "text": "2 475."
+      },
+      {
+        "id": "e",
+        "text": "9 900."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Tempo por dia: 4 × 15 min = 1 h. No mês: 30 h. E = P · t = 5,5 kW × 30 h = 165 kWh.\n\nPegadinhas:\n• A: considera só um morador: 5,5 × 0,25 × 30.\n• C: multiplica por 4 duas vezes: conta os quatro moradores e ainda uma hora de banho para cada um.\n• D: usa os 15 minutos como se fossem horas para um morador: 5,5 × 15 × 30.\n• E: multiplica 5,5 kW por 4 × 15 minutos sem converter para hora: 5,5 × 60 × 30.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_33",
+    "subject": "Física",
+    "topicId": "fis_ondulatoria",
+    "chapter": "Ondulatória: Ondas Eletromagnéticas",
+    "difficulty": "medium",
+    "skill": "comparacao_conceitual",
+    "trap": "Confundir onda de rádio do wi-fi com onda sonora.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nFones de ouvido sem fio recebem o áudio do celular por Bluetooth, tecnologia que transmite informação por ondas de radiofrequência de cerca de 2,4 GHz, a mesma faixa usada por muitos roteadores de internet. Um estudante afirmou que o fone funciona porque o celular \"emite o som pelo ar até o ouvido\", e que, por isso, a transmissão seria impossível no vácuo do espaço. O professor de Física aproveitou o comentário para comparar o funcionamento do fone com o de uma conversa entre duas pessoas no mesmo ambiente.\n\nTexto elaborado para esta questão.\n\nO estudante se equivoca porque a comunicação por Bluetooth",
+    "options": [
+      {
+        "id": "a",
+        "text": "Usa ondas sonoras de frequência muito alta."
+      },
+      {
+        "id": "b",
+        "text": "Depende do ar, e por isso não funciona no vácuo."
+      },
+      {
+        "id": "c",
+        "text": "É feita por cabos invisíveis que ligam o celular ao fone."
+      },
+      {
+        "id": "d",
+        "text": "Transmite luz visível, que precisa de um meio material para se propagar entre o celular e o fone."
+      },
+      {
+        "id": "e",
+        "text": "Usa ondas eletromagnéticas, que se propagam também no vácuo, e o som só é produzido no próprio fone."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O celular envia sinais codificados em ondas de rádio (eletromagnéticas), que não precisam de meio material; o fone converte o sinal em vibração sonora.\n\nPegadinhas:\n• A: confusão: 2,4 GHz é radiofrequência, não som.\n• B: é a afirmação equivocada do estudante.\n• C: fuga: não há meio físico de ligação.\n• D: duplo erro: não é luz visível, e a luz não precisa de meio.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_34",
+    "subject": "Química",
+    "topicId": "qui_estequiometria",
+    "chapter": "Separação de Misturas",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que a filtração remove micro-organismos e substâncias dissolvidas.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nEm uma estação de tratamento de água, a água bruta recebe sulfato de alumínio, que faz as partículas de sujeira se agruparem em flocos. Depois, a água passa lentamente por grandes tanques, onde os flocos mais pesados se depositam no fundo. Em seguida, atravessa camadas de areia e cascalho que retêm as partículas menores. Por fim, recebe cloro e flúor antes de seguir para a rede de distribuição.\n\nTexto elaborado para esta questão.\n\nAs etapas em que a água atravessa os tanques e as camadas de areia correspondem, respectivamente, a",
+    "options": [
+      {
+        "id": "a",
+        "text": "Destilação e cloração."
+      },
+      {
+        "id": "b",
+        "text": "Decantação e filtração."
+      },
+      {
+        "id": "c",
+        "text": "Filtração e decantação."
+      },
+      {
+        "id": "d",
+        "text": "Floculação e evaporação."
+      },
+      {
+        "id": "e",
+        "text": "Centrifugação e dissolução do cloro, que elimina as partículas sólidas restantes da água."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Nos tanques, os flocos se depositam por ação da gravidade (decantação); na areia e no cascalho, as partículas menores ficam retidas (filtração).\n\nPegadinhas:\n• A: a destilação envolve ebulição, ausente no processo.\n• C: inverte a ordem das etapas descritas.\n• D: a floculação ocorre antes, com o sulfato de alumínio, e não há evaporação.\n• E: não há centrifugação, e o cloro desinfeta, não retém sólidos.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_35",
+    "subject": "Química",
+    "topicId": "qui_estequiometria",
+    "chapter": "Cálculos Estequiométricos",
+    "difficulty": "hard",
+    "skill": "calculo",
+    "trap": "Esquecer a proporção 2 : 1 entre bicarbonato e gás carbônico.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nO fermento químico usado em bolos contém bicarbonato de sódio, que, ao ser aquecido, se decompõe e libera gás carbônico, responsável pelo crescimento da massa:\n\n2 NaHCO₃ → Na₂CO₃ + H₂O + CO₂\n\nUma receita leva 8,4 g de bicarbonato de sódio.\n\nMassas molares (g/mol): NaHCO₃ = 84; CO₂ = 44. O cozinheiro quer saber quanto gás é produzido para comparar com outra receita, que usa fermento biológico.\n\nTexto elaborado para esta questão.\n\nA massa de gás carbônico liberada pela decomposição completa do bicarbonato da receita é de",
+    "options": [
+      {
+        "id": "a",
+        "text": "2,2 g."
+      },
+      {
+        "id": "b",
+        "text": "4,4 g."
+      },
+      {
+        "id": "c",
+        "text": "8,4 g."
+      },
+      {
+        "id": "d",
+        "text": "8,8 g."
+      },
+      {
+        "id": "e",
+        "text": "44 g."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. 8,4 g ÷ 84 g/mol = 0,10 mol de NaHCO₃. Pela proporção 2 : 1, formam-se 0,05 mol de CO₂, ou 0,05 × 44 = 2,2 g.\n\nPegadinhas:\n• B: usa proporção 1 : 1, esquecendo o coeficiente 2 do bicarbonato.\n• C: supõe que toda a massa de bicarbonato vira gás.\n• D: dobra a quantidade em vez de dividir, invertendo a proporção.\n• E: toma a massa molar do CO₂ como resposta, sem calcular a quantidade em mol.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_36",
+    "subject": "Química",
+    "topicId": "qui_cinetica",
+    "chapter": "Cinética Química",
+    "difficulty": "easy",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a geladeira mata os micro-organismos.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nUma família deixou um pote de feijão cozido fora da geladeira durante uma noite quente de verão; pela manhã, o alimento tinha cheiro azedo. Outro pote do mesmo feijão, guardado na geladeira, ainda estava bom para consumo três dias depois. A deterioração dos alimentos envolve reações químicas, muitas delas catalisadas por enzimas de micro-organismos. O dono de uma lanchonete, ao ouvir o caso, comentou que por isso os restaurantes precisam manter os alimentos prontos sob refrigeração ou aquecidos até serem servidos.\n\nTexto elaborado para esta questão.\n\nA diferença entre os dois potes se explica porque a baixa temperatura",
+    "options": [
+      {
+        "id": "a",
+        "text": "Elimina todos os micro-organismos do feijão."
+      },
+      {
+        "id": "b",
+        "text": "Diminui a velocidade das reações de deterioração."
+      },
+      {
+        "id": "c",
+        "text": "Aumenta a energia de ativação das reações químicas do alimento."
+      },
+      {
+        "id": "d",
+        "text": "Funciona como catalisador das reações de conservação dos alimentos."
+      },
+      {
+        "id": "e",
+        "text": "Impede definitivamente que o alimento estrague, mesmo depois de retirado da geladeira e deixado ao ar."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Com menos energia, há menos colisões efetivas e menor atividade enzimática e microbiana; o alimento se deteriora mais devagar, sem ser esterilizado.\n\nPegadinhas:\n• A: a refrigeração não esteriliza.\n• C: a energia de ativação depende do caminho da reação, não da temperatura.\n• D: não há \"reação de conservação\" catalisada.\n• E: fora da geladeira, a deterioração recomeça.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_37",
+    "subject": "Química",
+    "topicId": "qui_equilibrio",
+    "chapter": "Deslocamento de Equilíbrio",
+    "difficulty": "hard",
+    "skill": "inferencia_causal",
+    "trap": "Inverter o sentido do deslocamento em altitude.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nNo sangue, a hemoglobina (Hb) se combina com o oxigênio em um equilíbrio que pode ser representado por:\n\nHb + O₂ ⇌ HbO₂\n\nEm cidades muito altas, como algumas da Bolívia e do Peru, a pressão parcial de oxigênio no ar é menor que ao nível do mar. Visitantes recém-chegados sentem cansaço e falta de ar. Após algumas semanas, o organismo passa a produzir mais hemoglobina, e os sintomas diminuem.\n\nTexto elaborado para esta questão.\n\nCom base no equilíbrio, o aumento da produção de hemoglobina reduz os sintomas porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aumenta a pressão parcial de oxigênio no ar."
+      },
+      {
+        "id": "b",
+        "text": "Desloca o equilíbrio para a formação de HbO₂."
+      },
+      {
+        "id": "c",
+        "text": "Desloca o equilíbrio para a liberação de hemoglobina livre."
+      },
+      {
+        "id": "d",
+        "text": "Diminui a quantidade de oxigênio que chega aos tecidos do visitante."
+      },
+      {
+        "id": "e",
+        "text": "Faz o equilíbrio deixar de existir, pois todo o oxigênio passa a ser transportado dissolvido no plasma."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. A queda de O₂ desloca o equilíbrio para a esquerda (menos HbO₂, menos oxigênio levado aos tecidos). Mais Hb, um reagente, desloca-o de volta para a direita, compensando.\n\nPegadinhas:\n• A: a pressão do ar não muda com a fisiologia.\n• C: inverte o sentido do deslocamento.\n• D: contradição com a melhora dos sintomas.\n• E: o equilíbrio continua; não há essa mudança de transporte.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_38",
+    "subject": "Geografia",
+    "topicId": "geo_economica_brasil",
+    "chapter": "O Espaço Agrário Brasileiro",
+    "difficulty": "medium",
+    "skill": "relacionar_evidencias",
+    "trap": "Atribuir a concentração fundiária à falta de terras.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nDados do censo agropecuário mostram que os estabelecimentos com menos de 10 hectares são quase metade do total no Brasil, mas ocupam pouco mais de 2% da área agrícola. Já os estabelecimentos com mais de 1 000 hectares, que são cerca de 1% do total, ocupam quase metade dessa área. Ao mesmo tempo, a agricultura familiar responde por parcela importante dos alimentos que chegam à mesa da população, como mandioca, feijão e leite.\n\nTexto elaborado para esta questão.\n\nOs dados indicam que a estrutura fundiária brasileira se caracteriza pela",
+    "options": [
+      {
+        "id": "a",
+        "text": "Concentração de terras."
+      },
+      {
+        "id": "b",
+        "text": "Predominância de pequenas propriedades na ocupação da maior parte da área."
+      },
+      {
+        "id": "c",
+        "text": "Ausência de produção de alimentos nos estabelecimentos familiares do país."
+      },
+      {
+        "id": "d",
+        "text": "Distribuição equilibrada da área agrícola entre pequenos e grandes estabelecimentos."
+      },
+      {
+        "id": "e",
+        "text": "Escassez de terras disponíveis no território, que impede a criação de grandes estabelecimentos rurais."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Poucos estabelecimentos grandes detêm quase metade da área, enquanto muitos pequenos ocupam fração mínima: é concentração fundiária, herança da ocupação do território.\n\nPegadinhas:\n• B: confunde número de estabelecimentos com área ocupada.\n• C: contradição: o texto destaca essa produção.\n• D: contradição com os percentuais.\n• E: contradição: há grandes estabelecimentos ocupando 45% da área.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_39",
+    "subject": "Geografia",
+    "topicId": "geo_populacao_urbana_brasil",
+    "chapter": "O Espaço Urbano I",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a periferização é escolha por qualidade de vida.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nNas últimas décadas, em várias metrópoles brasileiras, bairros centrais receberam investimentos em transporte, comércio e lazer, o que valorizou os imóveis e elevou os aluguéis. Muitas famílias de baixa renda que viviam nessas áreas mudaram-se para bairros distantes, com menos infraestrutura, e passaram a gastar mais de duas horas por dia no deslocamento até o trabalho, que continuou concentrado na região central.\n\nTexto elaborado para esta questão.\n\nO processo descrito está associado à",
+    "options": [
+      {
+        "id": "a",
+        "text": "Desconcentração do emprego nas metrópoles."
+      },
+      {
+        "id": "b",
+        "text": "Melhoria da mobilidade urbana das famílias."
+      },
+      {
+        "id": "c",
+        "text": "Escolha voluntária das famílias por bairros mais tranquilos."
+      },
+      {
+        "id": "d",
+        "text": "Redução das desigualdades, pois os investimentos públicos beneficiaram igualmente todos os moradores."
+      },
+      {
+        "id": "e",
+        "text": "Segregação socioespacial, em que a valorização imobiliária empurra a população de menor renda para áreas periféricas com menos infraestrutura e mais distantes do trabalho."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A valorização expulsa quem não pode pagar (gentrificação), o que amplia a periferização e o tempo de deslocamento: o espaço urbano reflete e reproduz a desigualdade.\n\nPegadinhas:\n• A: contradição: o trabalho continuou no centro.\n• B: contradição: o deslocamento ficou mais longo.\n• C: o texto aponta a causa econômica, a alta dos aluguéis.\n• D: contradição: os moradores de baixa renda saíram.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_40",
+    "subject": "Geografia",
+    "topicId": "geo_populacao_urbana_brasil",
+    "chapter": "Dinâmica Demográfica",
+    "difficulty": "medium",
+    "skill": "interpretacao_tabela",
+    "trap": "Achar que o envelhecimento decorre do aumento de nascimentos.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nProjeções demográficas indicam que, no Brasil, a proporção de pessoas com 60 anos ou mais deve passar de cerca de 15% da população em 2020 para mais de 30% em 2060, enquanto a proporção de crianças e jovens até 14 anos tende a diminuir. A taxa de fecundidade, que era de cerca de 6 filhos por mulher em 1960, já está abaixo de 2. Especialistas lembram que essa mudança ocorre de forma mais rápida no Brasil do que ocorreu em países europeus, que tiveram mais tempo para se adaptar ao envelhecimento.\n\nTexto elaborado para esta questão.\n\nEssa transformação na estrutura etária impõe ao país o desafio de",
+    "options": [
+      {
+        "id": "a",
+        "text": "Controlar o crescimento acelerado da população jovem."
+      },
+      {
+        "id": "b",
+        "text": "Ampliar creches para atender ao aumento de nascimentos."
+      },
+      {
+        "id": "c",
+        "text": "Adaptar a previdência e a saúde a uma população mais idosa."
+      },
+      {
+        "id": "d",
+        "text": "Reduzir a expectativa de vida para equilibrar a pirâmide etária."
+      },
+      {
+        "id": "e",
+        "text": "Incentivar a emigração de idosos para países com população mais jovem, mantendo a estrutura etária estável."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Menos nascimentos e maior longevidade elevam a proporção de idosos: mais demanda por aposentadorias, cuidados e atendimento de doenças crônicas, com menos pessoas em idade ativa por idoso.\n\nPegadinhas:\n• A: contradição: a proporção de jovens diminui.\n• B: contradição: a fecundidade caiu.\n• D: proposta absurda e contrária aos direitos humanos.\n• E: fuga: não é política demográfica plausível nem sugerida.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_41",
+    "subject": "Geografia",
+    "topicId": "geo_climatologia_socioambiental",
+    "chapter": "Água na Superfície Terrestre",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Atribuir o assoreamento só à chuva.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nEm uma bacia hidrográfica do interior paulista, agricultores retiraram, ao longo de décadas, a vegetação das margens de um rio para ampliar as pastagens. Com o tempo, nas épocas de chuva, a terra das áreas expostas passou a ser levada para o leito do rio, que ficou mais raso. Ribeirinhos relatam que barcos já não conseguem passar em alguns trechos e que as enchentes se tornaram mais frequentes. Técnicos de um comitê de bacia propuseram recompor a vegetação das margens e mudar o manejo do pasto, mas parte dos produtores teme perder área de criação.\n\nTexto elaborado para esta questão.\n\nOs problemas relatados resultam principalmente da",
+    "options": [
+      {
+        "id": "a",
+        "text": "Redução do volume de chuvas na bacia hidrográfica."
+      },
+      {
+        "id": "b",
+        "text": "Construção de barragens ao longo de todo o curso do rio."
+      },
+      {
+        "id": "c",
+        "text": "Remoção da mata ciliar, que deixa o solo exposto à erosão."
+      },
+      {
+        "id": "d",
+        "text": "Elevação do nível do mar, que represa o rio no interior do estado."
+      },
+      {
+        "id": "e",
+        "text": "Ampliação da vegetação nativa nas margens, que bloqueia a passagem dos barcos e das águas."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Sem a mata ciliar, a chuva carrega sedimentos para o rio (assoreamento): o leito fica raso, a navegação piora e a água transborda com mais facilidade.\n\nPegadinhas:\n• A: contradição: o problema ocorre justamente nas chuvas.\n• B: fuga: o texto não cita barragens.\n• D: fuga: o interior paulista não sofre esse efeito.\n• E: inversão: a vegetação foi retirada.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_42",
+    "subject": "História",
+    "topicId": "his_idade_media",
+    "chapter": "Baixa Idade Média",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Confundir o renascimento comercial com o fim imediato do feudalismo.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nA partir do século XI, na Europa ocidental, o fim das grandes invasões, o aumento da produção agrícola e o crescimento da população favoreceram a retomada do comércio. Feiras passaram a reunir mercadores de regiões distantes, e cidades cresceram em torno de castelos e mosteiros. Seus habitantes, chamados burgueses, dedicavam-se ao artesanato e ao comércio e, muitas vezes, compravam dos senhores cartas que lhes garantiam certas liberdades.\n\nTexto elaborado para esta questão.\n\nO processo descrito contribuiu para",
+    "options": [
+      {
+        "id": "a",
+        "text": "A extinção imediata do feudalismo na Europa."
+      },
+      {
+        "id": "b",
+        "text": "O abandono das cidades e o retorno ao campo."
+      },
+      {
+        "id": "c",
+        "text": "A proibição das feiras pela Igreja Católica."
+      },
+      {
+        "id": "d",
+        "text": "O fim do comércio entre regiões distantes da Europa, substituído pela produção apenas para o consumo local."
+      },
+      {
+        "id": "e",
+        "text": "O fortalecimento de grupos urbanos ligados ao comércio, que passaram a buscar autonomia em relação aos senhores feudais, transformando as relações sociais e econômicas medievais."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O renascimento comercial e urbano fortaleceu a burguesia, e as cartas de franquia expressam a busca de autonomia diante dos senhores, transformação gradual da sociedade feudal.\n\nPegadinhas:\n• A: generalização: a transformação foi gradual.\n• B: contradição: as cidades cresceram.\n• C: fuga: o texto não trata disso.\n• D: contradição: as feiras reuniam mercadores distantes.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_43",
+    "subject": "História",
+    "topicId": "his_brasil_imperio",
+    "chapter": "Brasil Império: Formação do Estado Nacional Brasileiro",
+    "difficulty": "medium",
+    "skill": "leitura_fontes",
+    "trap": "Confundir poder moderador com divisão equilibrada de poderes.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nArt. 98. O Poder Moderador é a chave de toda a organisação Politica, e é delegado privativamente ao Imperador, como Chefe Supremo da Nação, e seu Primeiro Representante, para que incessantemente vele sobre a manutenção da Independencia, equilibrio, e harmonia dos mais Poderes Politicos.\n\nBRASIL. Constituição Política do Império do Brasil, 1824.\n\nEntre as atribuições desse poder estavam nomear senadores, dissolver a Câmara dos Deputados e suspender magistrados.\n\nO artigo e as atribuições citadas indicam que a Constituição de 1824",
+    "options": [
+      {
+        "id": "a",
+        "text": "Concentrava poder nas mãos do imperador."
+      },
+      {
+        "id": "b",
+        "text": "Instituía uma república com eleições diretas."
+      },
+      {
+        "id": "c",
+        "text": "Garantia a independência total do Poder Judiciário."
+      },
+      {
+        "id": "d",
+        "text": "Limitava as funções do imperador às cerimônias oficiais."
+      },
+      {
+        "id": "e",
+        "text": "Proibia o imperador de interferir no funcionamento da Câmara dos Deputados e do Senado."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Sob o pretexto de garantir a \"harmonia\", o Poder Moderador permitia ao imperador interferir no Legislativo e no Judiciário: centralização política.\n\nPegadinhas:\n• B: fuga: era uma monarquia.\n• C: contradição: o imperador podia suspender magistrados.\n• D: contradição com as atribuições.\n• E: contradição: ele podia dissolver a Câmara e nomear senadores.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_44",
+    "subject": "História",
+    "topicId": "his_brasil_imperio",
+    "chapter": "Brasil Império: Segundo Reinado (1840-1889)",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que a Lei de Terras facilitou o acesso dos pobres à terra.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nEm 1850, o governo imperial aprovou a Lei de Terras, que estabeleceu que as terras devolutas só poderiam ser adquiridas por meio de compra. No mesmo ano, a Lei Eusébio de Queirós proibiu o tráfico de africanos escravizados para o Brasil. Nas décadas seguintes, fazendeiros de café passaram a trazer imigrantes europeus para trabalhar nas lavouras. Parte dessas terras devolutas já era ocupada por posseiros, que não tinham título nem recursos para comprá-las do Estado.\n\nTexto elaborado para esta questão.\n\nA Lei de Terras, nesse contexto, dificultou",
+    "options": [
+      {
+        "id": "a",
+        "text": "O tráfico de escravizados."
+      },
+      {
+        "id": "b",
+        "text": "A expansão das lavouras de café."
+      },
+      {
+        "id": "c",
+        "text": "A vinda de imigrantes europeus ao Brasil."
+      },
+      {
+        "id": "d",
+        "text": "A concentração de terras nas mãos dos grandes fazendeiros do Sudeste."
+      },
+      {
+        "id": "e",
+        "text": "O acesso de imigrantes pobres e libertos à propriedade da terra, garantindo mão de obra para as fazendas."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. Com a terra só por compra, quem não tinha recursos (imigrantes, libertos) não conseguia virar proprietário e precisava trabalhar para os fazendeiros justamente quando o tráfico acabava.\n\nPegadinhas:\n• A: é a Lei Eusébio de Queirós.\n• B: o café se expandiu.\n• C: contradição: os imigrantes vieram.\n• D: inversão: a lei favoreceu a concentração.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_45",
+    "subject": "História",
+    "topicId": "his_primeira_republica_vargas",
+    "chapter": "A Era Vargas: o Estado Novo",
+    "difficulty": "medium",
+    "skill": "inferencia_causal",
+    "trap": "Achar que o Estado Novo foi democrático por conceder direitos trabalhistas.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nDurante o Estado Novo (1937-1945), o governo de Getúlio Vargas fechou o Congresso, extinguiu os partidos e criou o Departamento de Imprensa e Propaganda, que censurava jornais e divulgava a imagem do presidente como \"pai dos pobres\". No mesmo período, foi promulgada a Consolidação das Leis do Trabalho, que reuniu direitos como salário mínimo, férias e jornada de oito horas, e os sindicatos passaram a ser controlados pelo Ministério do Trabalho.\n\nTexto elaborado para esta questão.\n\nO texto revela que o Estado Novo combinou",
+    "options": [
+      {
+        "id": "a",
+        "text": "Liberdade de imprensa e pluripartidarismo."
+      },
+      {
+        "id": "b",
+        "text": "Concessão de direitos trabalhistas e autoritarismo."
+      },
+      {
+        "id": "c",
+        "text": "Fortalecimento do Congresso e dos partidos políticos nacionais."
+      },
+      {
+        "id": "d",
+        "text": "Autonomia completa dos sindicatos e ausência de propaganda oficial."
+      },
+      {
+        "id": "e",
+        "text": "Eliminação dos direitos trabalhistas e fim do controle estatal sobre os sindicatos do período."
+      }
+    ],
+    "correctOptionId": "b",
+    "explanation": "Resposta B. Ditadura (Congresso fechado, censura, partidos extintos) conviveu com legislação trabalhista e propaganda que associava Vargas aos trabalhadores, sob sindicatos tutelados: o trabalhismo autoritário.\n\nPegadinhas:\n• A: contradição: havia censura e partidos extintos.\n• C: contradição: o Congresso foi fechado.\n• D: contradição: sindicatos controlados e DIP.\n• E: contradição: a CLT foi promulgada.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_46",
+    "subject": "Sociologia",
+    "topicId": "soc_cultura_identidade",
+    "chapter": "Cultura e Etnocentrismo",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir etnocentrismo com relativismo cultural.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nUm viajante europeu do século XIX descreveu, em seu diário, um povo indígena que visitou: \"Não conhecem a escrita, não usam roupas como as nossas e não acumulam riquezas. Vivem como as crianças da humanidade, à espera de que a civilização os eduque\". Antropólogos atuais lembram que esse mesmo povo tinha sistemas complexos de parentesco, um amplo conhecimento das plantas medicinais da floresta e uma rica tradição oral. Para esses estudiosos, avaliar outra sociedade pelos critérios da própria cultura leva a conclusões distorcidas sobre ela.\n\nTexto elaborado para esta questão.\n\nA descrição do viajante é um exemplo de",
+    "options": [
+      {
+        "id": "a",
+        "text": "Etnocentrismo."
+      },
+      {
+        "id": "b",
+        "text": "Relativismo cultural, pois reconhece a lógica própria daquela cultura."
+      },
+      {
+        "id": "c",
+        "text": "Aculturação, pois descreve a troca equilibrada entre as duas culturas."
+      },
+      {
+        "id": "d",
+        "text": "Multiculturalismo, pois defende a convivência entre culturas distintas."
+      },
+      {
+        "id": "e",
+        "text": "Observação científica neutra, pois descreve os costumes daquele povo sem fazer nenhum julgamento de valor."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. O viajante mede o outro povo pelos padrões de sua cultura (escrita, roupas, riqueza) e o vê como inferior e atrasado: etnocentrismo. A ressalva dos antropólogos mostra a complexidade ignorada.\n\nPegadinhas:\n• B: inversão: o viajante não reconhece.\n• C: não há troca descrita.\n• D: o texto hierarquiza culturas.\n• E: contradição: chama-os de \"crianças da humanidade\".",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_47",
+    "subject": "Sociologia",
+    "topicId": "soc_estratificacao_desigualdade",
+    "chapter": "Desigualdade de Gênero",
+    "difficulty": "medium",
+    "skill": "interpretacao_tabela",
+    "trap": "Ler a dupla jornada como escolha individual.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nPesquisas do IBGE indicam que, no Brasil, as mulheres dedicam, em média, quase o dobro de horas semanais aos afazeres domésticos e ao cuidado de pessoas em relação aos homens, mesmo quando ambos trabalham fora de casa. Essa diferença ajuda a explicar por que muitas mulheres ocupam empregos de meio período e têm menos tempo para estudo e qualificação profissional. A mesma pesquisa mostra que a diferença aparece já na adolescência: meninas relatam mais tempo dedicado a tarefas de casa do que meninos da mesma idade.\n\nTexto elaborado para esta questão.\n\nA situação descrita evidencia",
+    "options": [
+      {
+        "id": "a",
+        "text": "A igualdade entre homens e mulheres no trabalho."
+      },
+      {
+        "id": "b",
+        "text": "A preferência natural das mulheres pelo trabalho doméstico."
+      },
+      {
+        "id": "c",
+        "text": "O fim do trabalho doméstico com a entrada das mulheres no mercado."
+      },
+      {
+        "id": "d",
+        "text": "A maior qualificação profissional das mulheres em relação aos homens no país."
+      },
+      {
+        "id": "e",
+        "text": "A divisão sexual do trabalho, que atribui às mulheres a maior parte das tarefas domésticas e de cuidado e limita suas oportunidades no mercado de trabalho e na formação."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. A sobrecarga de trabalho não remunerado (dupla jornada) é social, não natural, e reflete-se em empregos parciais e menos tempo de estudo.\n\nPegadinhas:\n• A: contradição: elas trabalham quase o dobro em casa.\n• B: naturaliza uma construção social.\n• C: contradição: a carga doméstica persiste.\n• D: fuga: o texto aponta menos tempo para qualificação.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_48",
+    "subject": "Sociologia",
+    "topicId": "soc_movimentos_sociais",
+    "chapter": "Movimentos Sociais Clássicos e Contemporâneos",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Confundir movimento social com ação individual.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nEm uma cidade, moradores de bairros sem coleta regular de lixo organizaram assembleias, reuniram assinaturas e fizeram protestos em frente à prefeitura. Com o apoio de associações comunitárias, conseguiram que o tema entrasse na pauta da Câmara Municipal, que aprovou a ampliação do serviço. Os organizadores afirmaram que a conquista mostrou que \"saneamento é direito, não favor\". Nos meses seguintes, as associações passaram a acompanhar a execução do serviço e a cobrar a prefeitura nas audiências públicas sobre o orçamento.\n\nTexto elaborado para esta questão.\n\nA ação dos moradores é um exemplo de",
+    "options": [
+      {
+        "id": "a",
+        "text": "Favor concedido pelos vereadores."
+      },
+      {
+        "id": "b",
+        "text": "Ação isolada e espontânea de um único morador."
+      },
+      {
+        "id": "c",
+        "text": "Mobilização coletiva para reivindicar direitos."
+      },
+      {
+        "id": "d",
+        "text": "Mudança promovida apenas pela iniciativa privada, sem participação popular."
+      },
+      {
+        "id": "e",
+        "text": "Desinteresse dos moradores pela política institucional, que preferiram não recorrer à Câmara Municipal."
+      }
+    ],
+    "correctOptionId": "c",
+    "explanation": "Resposta C. Organização, pressão sobre o poder público e reivindicação de um direito (saneamento) caracterizam a ação de um movimento social.\n\nPegadinhas:\n• A: contradição: os moradores dizem que é direito.\n• B: contradição: houve assembleias e associações.\n• D: contradição: a pressão foi popular.\n• E: contradição: o tema entrou na pauta da Câmara.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_49",
+    "subject": "Filosofia",
+    "topicId": "fil_etica_politica_contemporanea",
+    "chapter": "Justiça e Direitos Humanos",
+    "difficulty": "medium",
+    "skill": "analise_conceitual",
+    "trap": "Achar que os direitos humanos dependem de mérito ou nacionalidade.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nA Declaração Universal dos Direitos Humanos, aprovada pela ONU após a Segunda Guerra Mundial, afirma que todos os seres humanos nascem livres e iguais em dignidade e direitos. Seus defensores argumentam que esses direitos não são concedidos pelo Estado como recompensa por bom comportamento nem dependem da nacionalidade, da religião ou da renda: pertencem a cada pessoa pelo simples fato de ser humana.\n\nTexto elaborado para esta questão.\n\nDe acordo com o texto, os direitos humanos se caracterizam por serem",
+    "options": [
+      {
+        "id": "a",
+        "text": "Universais."
+      },
+      {
+        "id": "b",
+        "text": "Privilégios de quem tem bom comportamento."
+      },
+      {
+        "id": "c",
+        "text": "Concedidos apenas aos cidadãos de cada país."
+      },
+      {
+        "id": "d",
+        "text": "Definidos de acordo com a religião de cada pessoa."
+      },
+      {
+        "id": "e",
+        "text": "Garantidos somente às pessoas que contribuem economicamente com o Estado."
+      }
+    ],
+    "correctOptionId": "a",
+    "explanation": "Resposta A. Pertencem a toda pessoa, \"pelo simples fato de ser humana\", independentemente de mérito, nacionalidade, religião ou renda.\n\nPegadinhas:\n• B: contradição: não são recompensa.\n• C: contradição: não dependem da nacionalidade.\n• D: contradição explícita no texto.\n• E: contradição: não dependem da renda.",
+    "styleOf": "ENEM"
+  },
+  {
+    "id": "crivo_enem_l1_50",
+    "subject": "Filosofia",
+    "topicId": "fil_etica_politica_contemporanea",
+    "chapter": "Ética Aplicada e Bioética",
+    "difficulty": "hard",
+    "skill": "analise_conceitual",
+    "trap": "Achar que autonomia dispensa informação.",
+    "prompt": "Questão autoral CRIVO · estilo ENEM.\n\nEm um hospital, uma paciente recebeu um formulário de consentimento para participar de uma pesquisa sobre um novo medicamento. A equipe explicou os possíveis benefícios e riscos, garantiu que ela poderia desistir a qualquer momento sem prejuízo ao tratamento habitual e respondeu às suas dúvidas antes da assinatura. Esse procedimento segue princípios da bioética contemporânea. A pesquisa havia sido aprovada previamente por um comitê de ética, que avaliou o projeto e os riscos envolvidos para os participantes.\n\nTexto elaborado para esta questão.\n\nO procedimento descrito respeita principalmente o princípio da",
+    "options": [
+      {
+        "id": "a",
+        "text": "Obediência às decisões médicas."
+      },
+      {
+        "id": "b",
+        "text": "Beneficência, que obriga a pessoa a participar."
+      },
+      {
+        "id": "c",
+        "text": "Utilidade, que permite expor pacientes a riscos sem aviso."
+      },
+      {
+        "id": "d",
+        "text": "Justiça distributiva, que sorteia quem participará da pesquisa sem consultar os pacientes."
+      },
+      {
+        "id": "e",
+        "text": "Autonomia, pois garante que a paciente decida livremente, depois de informada sobre riscos e benefícios, podendo desistir a qualquer momento da pesquisa."
+      }
+    ],
+    "correctOptionId": "e",
+    "explanation": "Resposta E. O consentimento livre e esclarecido expressa a autonomia: informação completa, decisão voluntária e liberdade de retirar-se.\n\nPegadinhas:\n• A: contradição: a decisão é da paciente.\n• B: beneficência não impõe participação.\n• C: contradição: os riscos foram explicados.\n• D: fuga: não houve sorteio nem decisão sem consulta.",
+    "styleOf": "ENEM"
+  }
+]
