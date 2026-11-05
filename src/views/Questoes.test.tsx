@@ -52,12 +52,18 @@ beforeEach(() => {
   });
 });
 
+async function startIfReady(user: ReturnType<typeof userEvent.setup>) {
+  const start=screen.queryByRole('button',{name:'Iniciar questão'});
+  if(start)await user.click(start);
+}
+
 describe('Questoes — banca, ano e fontes oficiais', () => {
   it('preserva a anulada para consulta sem registrar tentativa ou atualizar domínio', async()=>{
     questionsHook.mockReturnValue({questions:[{...QUESTION,status:'annulled',correctOptionId:''}],syncError:null});
     const user=userEvent.setup();render(<Questoes/>);
     expect(screen.getByText(/Questão anulada no gabarito definitivo/)).toBeInTheDocument();
     expect(screen.getByRole('button',{name:/Citoplasma/})).toBeDisabled();
+    await startIfReady(user);
     await user.click(screen.getByRole('button',{name:/Citoplasma/}));
     expect(addUserAttemptMock).not.toHaveBeenCalled();
     expect(masteryHook.mock.results[0].value.updateMastery).not.toHaveBeenCalled();
@@ -67,6 +73,7 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     questionsHook.mockReturnValue({questions:[{...QUESTION,statementComplete:true,originalPages:[{page:2,url:'/fonte-conferida.webp'}]}],syncError:null});
     requestAiTextStreamMock.mockImplementation(async(_endpoint,_payload,onDelta)=>{onDelta('Comentário fundamentado');return {text:'Comentário fundamentado'};});
     const user=userEvent.setup();render(<Questoes/>);
+    await startIfReady(user);
     await user.click(screen.getByRole('button',{name:/Citoplasma/}));
     await user.click(screen.getByRole('button',{name:'Resolução por etapas'}));
     await waitFor(()=>expect(requestAiTextStreamMock).toHaveBeenCalledWith('question-explanation',expect.objectContaining({questionId:'q1',selectedOptionId:'a'}),expect.any(Function)));
@@ -78,6 +85,7 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     let emit!:(text:string)=>void;let finish!:(result:{text:string})=>void;
     requestAiTextStreamMock.mockImplementation((_endpoint,_payload,onDelta)=>{emit=onDelta;return new Promise(resolve=>{finish=resolve;});});
     const user=userEvent.setup();render(<Questoes/>);
+    await startIfReady(user);
     await user.click(screen.getByRole('button',{name:/Citoplasma/}));
     await user.click(screen.getByRole('button',{name:'Resolução por etapas'}));
     await user.click(screen.getByRole('button',{name:'Próxima questão'}));
@@ -90,9 +98,11 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     let emit!:(text:string)=>void;let finish!:(result:{text:string})=>void;
     requestAiTextStreamMock.mockImplementation((_endpoint,_payload,onDelta)=>{emit=onDelta;return new Promise(resolve=>{finish=resolve;});});
     const user=userEvent.setup();render(<Questoes/>);
+    await startIfReady(user);
     await user.click(screen.getByRole('button',{name:/Citoplasma/}));
     await user.click(screen.getByRole('button',{name:'Resolução por etapas'}));
     await user.click(screen.getByRole('button',{name:'Próxima questão'}));
+    await startIfReady(user);
     await user.click(screen.getByRole('button',{name:/Mitocôndria/}));
     emit('Comentário da tentativa A');finish({text:'Comentário da tentativa A'});
     await waitFor(()=>expect(screen.queryByText('Comentário da tentativa A')).not.toBeInTheDocument());
@@ -104,6 +114,7 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     ], syncError: null });
     const user = userEvent.setup();
     render(<Questoes />);
+    await startIfReady(user);
     await user.click(screen.getByRole('button', { name: /Citoplasma/ }));
     await user.type(screen.getByRole('searchbox', { name: 'Buscar questões' }), 'fotossintese');
     expect(screen.getByText('Onde ocorre a fotossíntese?')).toBeInTheDocument();
@@ -127,6 +138,7 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     render(<Questoes />);
     await user.click(screen.getByRole('checkbox', { name: 'UNICAMP' }));
     expect(screen.getByText(/Questão 1 de 2/)).toBeInTheDocument();
+    await startIfReady(user);
     await user.click(screen.getByRole('button', { name: /Citoplasma/ }));
     expect(screen.getByText(QUESTION.explanation)).toBeInTheDocument();
     await user.selectOptions(screen.getByLabelText('Ano da prova'), '2026');
@@ -187,6 +199,7 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     const user = userEvent.setup();
     render(<Questoes />);
     expect(screen.queryByRole('img')).not.toBeInTheDocument();
+    await startIfReady(user);
     await user.click(screen.getByRole('button', { name: /Citoplasma/ }));
     expect(screen.getByRole('link', { name: 'Conferir prova original' })).toHaveAttribute('href', 'https://www.comvest.unicamp.br/prova.pdf');
     expect(screen.getByRole('link', { name: 'Conferir gabarito oficial' })).toHaveAttribute('href', 'https://www.comvest.unicamp.br/gabarito.pdf');
@@ -213,6 +226,7 @@ describe('Questoes — diagnóstico de erro salvo no Caderno', () => {
     const user = userEvent.setup();
     render(<Questoes />);
 
+    await startIfReady(user);
     await user.click(screen.getByRole('button', { name: /Mitocôndria/ }));
 
     const saveButton = await screen.findByRole('button', { name: /Adicionar ao Caderno de Erros/i });
@@ -237,6 +251,7 @@ describe('Questoes — diagnóstico de erro salvo no Caderno', () => {
     const user = userEvent.setup();
     render(<Questoes />);
 
+    await startIfReady(user);
     await user.click(screen.getByRole('button', { name: /Mitocôndria/ }));
 
     expect(await screen.findByText(/Não consegui diagnosticar agora/i)).toBeInTheDocument();
@@ -258,6 +273,7 @@ describe('Questoes — diagnóstico de erro salvo no Caderno', () => {
     const user = userEvent.setup();
     render(<Questoes />);
 
+    await startIfReady(user);
     await user.click(screen.getByRole('button', { name: /Mitocôndria/ }));
     expect(await screen.findByText(/Não consegui diagnosticar agora/i)).toBeInTheDocument();
 
@@ -288,6 +304,7 @@ describe('Questoes — diagnóstico de erro salvo no Caderno', () => {
     const user = userEvent.setup();
     render(<Questoes />);
 
+    await startIfReady(user);
     await user.click(screen.getByRole('button', { name: /Mitocôndria/ }));
     const select = await screen.findByLabelText(/Tipo do erro/i);
     await user.selectOptions(select, 'attention');
@@ -304,6 +321,7 @@ describe('Questoes — diagnóstico de erro salvo no Caderno', () => {
     const user = userEvent.setup();
     render(<Questoes />);
 
+    await startIfReady(user);
     await user.click(screen.getByRole('button', { name: /Citoplasma/ }));
 
     expect(screen.queryByRole('button', { name: /Adicionar ao Caderno de Erros/i })).not.toBeInTheDocument();
@@ -382,7 +400,7 @@ describe('Questoes — navegação por tópico e subtópico', () => {
     await escolherTopico(user, 'Estrutura e Fisiologia Celular');
     expect(seletorSubtopico()).toBeEnabled();
 
-    await user.click(screen.getByRole('button', { name: /^Biologia$/ }));
+    await user.selectOptions(screen.getByLabelText('Matéria'), 'Biologia');
 
     expect(within(seletorTopico()).getByRole('checkbox', { name: /^Todos os tópicos/ })).toBeChecked();
     expect(seletorSubtopico()).toBeDisabled();
@@ -448,6 +466,7 @@ describe('Questoes — visibilidade do filtro de questões reais', () => {
     const barra = () => container.querySelector('.ni-metric > i > span') as HTMLElement;
     expect(barra().style.getPropertyValue('--bar-fill')).toBe('0%');
 
+    await startIfReady(user);
     await user.click(screen.getByRole('button', { name: /Mitocôndria/ }));
     await waitFor(() => expect(barra().style.getPropertyValue('--bar-fill')).toBe('0%'));
   });
@@ -463,6 +482,7 @@ describe('Questoes — visibilidade do filtro de questões reais', () => {
 it.each(['Citoplasma', 'Mitocôndria'])('mostra justificativa da alternativa correta ao responder %s', async answer => {
   const user = userEvent.setup();
   render(<Questoes />);
+    await startIfReady(user);
   await user.click(screen.getByRole('button', { name: new RegExp(answer) }));
   expect(screen.getByText('Por que a alternativa correta está certa')).toBeInTheDocument();
   expect(screen.getByText(QUESTION.explanation)).toBeInTheDocument();
@@ -522,12 +542,13 @@ describe('Questoes — seleção múltipla', () => {
 
   it('combina dois tópicos e duas bancas, permite desmarcar e voltar a todos', async () => {
     const user = userEvent.setup(); render(<Questoes />);
-    await user.click(screen.getByRole('button', { name: /^Biologia$/ }));
+    await user.selectOptions(screen.getByLabelText('Matéria'), 'Biologia');
     await user.click(screen.getByRole('checkbox', { name: /^Estrutura e Fisiologia Celular/ }));
     await user.click(screen.getByRole('checkbox', { name: /^Genética/ }));
     expect(screen.getByRole('status')).toHaveTextContent('3 questões encontradas');
     expect(screen.getByLabelText('Subtópico')).toHaveTextContent('Membranas Celulares (1)');
     expect(screen.getByLabelText('Subtópico')).toHaveTextContent('Herança Sexual (2)');
+    await startIfReady(user);
     await user.click(screen.getByRole('button', { name: /Citoplasma/ }));
     await user.click(screen.getByRole('checkbox', { name: 'FUVEST' }));
     expect(screen.queryByText(QUESTION.explanation)).not.toBeInTheDocument();
@@ -564,7 +585,7 @@ describe('Questoes — seleção múltipla', () => {
     await user.selectOptions(screen.getByLabelText('Ano da prova'), '2026');
     expect(screen.getByText('Enunciado gen-unicamp')).toBeInTheDocument();
     await user.click(screen.getByRole('checkbox', { name: /^Genética/ }));
-    await user.click(screen.getByRole('button', { name: /^Biologia$/ }));
+    await user.selectOptions(screen.getByLabelText('Matéria'), 'Biologia');
     expect(screen.getByRole('checkbox', { name: /^Todos os tópicos/ })).toBeChecked();
     expect(screen.getByRole('checkbox', { name: 'ENEM' })).toBeChecked();
     expect(screen.getByRole('checkbox', { name: 'UNICAMP' })).toBeChecked();
@@ -580,6 +601,9 @@ describe('cronômetro da questão',()=>{
       expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:00');
       expect(screen.getByLabelText('Tempo esperado por questão')).toHaveValue('120');
       fireEvent.change(screen.getByLabelText('Tempo esperado por questão'),{target:{value:'180'}});
+      act(()=>vi.advanceTimersByTime(60000));
+      expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:00');
+      fireEvent.click(screen.getByRole('button',{name:'Iniciar questão'}));
       act(()=>vi.advanceTimersByTime(46500));
       fireEvent.click(screen.getByRole('button',{name:/Citoplasma/}));
       expect(addUserAttemptMock).toHaveBeenCalledWith('user-1',expect.objectContaining({questionId:'q1',durationSeconds:46,expectedDurationSeconds:180,startedAt:expect.any(String),completedAt:expect.any(String)}));
@@ -590,6 +614,8 @@ describe('cronômetro da questão',()=>{
       fireEvent.click(screen.getByRole('button',{name:/Citoplasma/}));expect(addUserAttemptMock).toHaveBeenCalledTimes(1);
       fireEvent.click(screen.getByRole('button',{name:'Próxima questão'}));
       expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:00');
+      act(()=>vi.advanceTimersByTime(3000));expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:00');
+      fireEvent.click(screen.getByRole('button',{name:'Iniciar questão'}));
       act(()=>vi.advanceTimersByTime(3000));expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:03');
       fireEvent.click(screen.getByRole('button',{name:'Reiniciar treino'}));
       expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:00');
@@ -598,11 +624,40 @@ describe('cronômetro da questão',()=>{
   it('permite ultrapassar a meta e responder sem penalidade ou bloqueio',()=>{
     vi.useFakeTimers();
     try {
-      render(<Questoes/>);act(()=>vi.advanceTimersByTime(121000));
+      render(<Questoes/>);fireEvent.click(screen.getByRole('button',{name:'Iniciar questão'}));act(()=>vi.advanceTimersByTime(121000));
       expect(screen.getByText(/Você passou da meta/)).toBeInTheDocument();
       expect(screen.getByRole('button',{name:/Citoplasma/})).toBeEnabled();
       fireEvent.click(screen.getByRole('button',{name:/Citoplasma/}));
       expect(screen.getByText('00:01 acima do tempo esperado.')).toBeInTheDocument();
     } finally { vi.useRealTimers(); }
   });
+});
+
+describe('Questoes — filtros recolhidos após a busca',()=>{
+ it('busca, recolhe, permite resolver e restaura os filtros para edição',async()=>{
+  const user=userEvent.setup();render(<Questoes/>);
+  expect(screen.getByRole('button',{name:/Citoplasma/})).toBeDisabled();
+  await user.selectOptions(screen.getByLabelText('Matéria'),'Biologia');
+  await user.type(screen.getByRole('searchbox',{name:'Buscar questões'}),'glicolise');
+  await user.click(screen.getByRole('button',{name:'Buscar questões'}));
+  expect(screen.queryByRole('searchbox')).not.toBeInTheDocument();
+  expect(screen.getByText(/Busca: “glicolise”/)).toBeInTheDocument();
+  await waitFor(()=>expect(screen.getByRole('heading',{name:'Escolha uma alternativa.'})).toHaveFocus());
+  await user.click(screen.getByRole('button',{name:'Iniciar questão'}));
+  expect(screen.getByRole('button',{name:/Citoplasma/})).toBeEnabled();
+  await user.click(screen.getByRole('button',{name:'Editar filtros'}));
+  expect(screen.getByRole('searchbox',{name:'Buscar questões'})).toHaveValue('glicolise');
+  expect(screen.getByLabelText('Matéria')).toHaveValue('Biologia');
+  expect(screen.getByText('Pausado por você')).toBeInTheDocument();
+ });
+ it('mantém filtros acessíveis quando a busca não encontra questões e não inicia o relógio',async()=>{
+  const user=userEvent.setup();render(<Questoes/>);
+  await user.type(screen.getByRole('searchbox',{name:'Buscar questões'}),'inexistente');
+  expect(screen.getByRole('status')).toHaveTextContent('0 questões encontradas');
+  expect(screen.getByRole('button',{name:'Buscar questões'})).toBeDisabled();
+  expect(screen.getByRole('searchbox')).toBeVisible();
+  await user.click(screen.getByRole('button',{name:'Limpar busca'}));
+  expect(screen.getByText('Aguardando início')).toBeInTheDocument();
+  expect(addUserAttemptMock).not.toHaveBeenCalled();
+ });
 });
