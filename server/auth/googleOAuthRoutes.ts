@@ -48,6 +48,10 @@ export function createGoogleOAuthRouter(deps: GoogleOAuthRouterDeps): Router {
       const state = await store.createState(uid, returnTo);
       const url = createClient().generateAuthUrl({
         access_type: 'offline',
+        // Reutiliza a conta identificada no login em vez de pedir outra escolha.
+        ...(res.locals.userEmailVerified === true && res.locals.userEmail
+          ? { login_hint: res.locals.userEmail }
+          : {}),
         scope: GOOGLE_SCOPES,
         state,
         include_granted_scopes: true,
