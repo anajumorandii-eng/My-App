@@ -31,7 +31,6 @@ import {
   XCircle,
   RotateCcw,
   Sparkles,
-  BadgeCheck,
   Stethoscope,
   ArrowRight,
   BookOpen,
@@ -39,7 +38,6 @@ import {
 } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
 import { Button } from '../components/ui/Button';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 import { mockTopics } from '../data/mockData';
 import { ALL, buildTopicHierarchy, filterByHierarchy } from '../lib/topicHierarchy';
@@ -109,6 +107,8 @@ export default function Questoes() {
   const [boardFilters, setBoardFilters] = useState<string[]>(requestedBoard !== 'all' ? [requestedBoard] : []);
   const [yearFilter, setYearFilter] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [filtersOpen, setFiltersOpen] = useState(true);
+  const questionHeading = useRef<HTMLHeadingElement>(null);
   const examBoards = useMemo(() => [...new Set([...(requestedBoard !== 'all' ? [requestedBoard] : []), ...mockQuestions.flatMap(q => q.examSource ? [canonicalExamBoard(q.examSource.board)] : [])])].sort(), [mockQuestions, requestedBoard]);
   const examYears = useMemo(() => {
     const questions = mockQuestions.filter(q => q.examSource && matchesSelectedExams(q, boardFilters, 'all'));
@@ -250,6 +250,7 @@ export default function Questoes() {
     setBoardFilters(requestedBoard !== 'all' ? [requestedBoard] : []);
     setYearFilter('all');
     setOnlyRealExams(requestedBoard !== 'all');
+    setFiltersOpen(true);
     resetQuestionState();
   }, [requestScope.get('topic'), requestScope.get('chapter'), requestScope.get('board')]);
 
@@ -560,51 +561,54 @@ export default function Questoes() {
       {syncError && <p className="text-xs text-rose-500 mb-2">{syncError}</p>}
       {questionsSyncError && <p className="text-xs text-rose-500 mb-2">{questionsSyncError}</p>}
 
-      {/* Subject Filter & Real Exams Toggle */}
-      <div className="ni-subjects">
-        {subjects.map((subject) => {
-          const active = subjectFilter === subject;
-          const Icon = SUBJECT_ICONS[subject] ?? BookOpen;
-          const subPalette = PALETTES[subject] ?? PALETTES.Matemática;
-          return (
-            <button
-              key={subject}
-              onClick={() => changeSubject(subject)}
-              // O estado ativo vem do design system (.ni-subjects button.active),
-              // igual ao botão de questões reais logo abaixo. O estilo inline que
-              // ficava aqui pintava o chip com a paleta da matéria e escrevia o
-              // rótulo na cor "wash" dela — em "Todas", que não é matéria nenhuma,
-              // isso caía no fallback de Matemática e dava azul sobre azul, com
-              // contraste de 2,19:1 (o mínimo legível é 4,5:1).
-              className={active ? 'active' : ''}
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
-            >
-              {subject !== 'Todas' && <Icon className="w-3 h-3" style={{ color: subPalette.primary }} />}
-              <span>{subject}</span>
-            </button>
-          );
-        })}
-        <button
-          onClick={toggleRealExams}
-          className={onlyRealExams ? 'active' : ''}
-          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
-        >
-          <BadgeCheck className="w-3 h-3" />
-          <span>Só Questões Reais ({realExamCount})</span>
-        </button>
-      </div>
-
+      <section aria-label="Seleção de questões" className="mb-5 rounded-xl border border-[var(--line)] bg-[var(--surface)] p-4">
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div className="min-w-0 flex-1">
+            <h2 className="text-base font-medium">{filtersOpen ? 'Escolha suas questões' : 'Seu recorte de treino'}</h2>
+            {!filtersOpen && <p className="mt-1 break-words text-sm text-[var(--dim)]">{[
+              subjectFilter === 'Todas' ? 'Todas as matérias' : subjectFilter,
+              ...topicFilters.map(id => mockTopics.find(topic => topic.id === id)?.name ?? 'Fora do currículo'),
+              subtopicFilter !== ALL ? subtopicFilter : '',
+              boardFilters.length ? boardFilters.join(', ') : 'Todas as bancas',
+              yearFilter === 'all' ? '' : yearFilter === 'unknown' ? 'Ano não identificado' : yearFilter,
+              onlyRealExams ? 'Só questões reais' : '',
+              searchQuery ? `Busca: “${searchQuery}”` : '',
+            ].filter(Boolean).join(' · ')}</p>}
+            <p role="status" className="mt-1 text-xs text-[var(--dim)]">{questionsLoading ? 'Carregando questões…' : `${pool.length} ${pool.length === 1 ? 'questão encontrada' : 'questões encontradas'}`}</p>
+          </div>
+          <button type="button" aria-expanded={filtersOpen} aria-controls="question-filters" onClick={() => {
+            if (!filtersOpen && timer.running) timer.togglePause();
+            setFiltersOpen(open => !open);
+            if (filtersOpen) requestAnimationFrame(() => questionHeading.current?.focus());
+          }} className="min-h-11 shrink-0 rounded-lg border border-[var(--line)] px-3 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">{filtersOpen ? 'Recolher filtros' : 'Editar filtros'}</button>
+        </div>
+        <form id="question-filters" hidden={!filtersOpen} onSubmit={event => {
+          event.preventDefault();
+          if (questionsLoading || !pool.length) return;
+          resetQuestionState();
+          setFiltersOpen(false);
+          requestAnimationFrame(() => questionHeading.current?.focus());
+        }} className="mt-4 space-y-4">
+        <div className="flex flex-wrap items-end gap-3">
+          <label className="crivo-topic-filter flex-1"><span>Matéria</span>
+            <select value={subjectFilter} onChange={event => changeSubject(event.target.value)}>
+              {subjects.map(subject => <option key={subject} value={subject}>{subject === 'Todas' ? 'Todas as matérias' : subject}</option>)}
+            </select>
+          </label>
+          <button type="button" onClick={toggleRealExams} aria-pressed={onlyRealExams} className="min-h-11 rounded-lg border border-[var(--line)] px-3 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
+            Só Questões Reais ({realExamCount}){onlyRealExams ? ' · selecionado' : ''}
+          </button>
+        </div>
       <div className="mb-4 space-y-2">
         <label className="crivo-topic-filter">
-          <span>Buscar questões</span>
+          <span>Palavras-chave</span>
           <input type="search" value={searchQuery} maxLength={200}
             placeholder="Palavras do enunciado, capítulo ou origem"
             onChange={event => { setSearchQuery(event.target.value); resetQuestionState(); }}
-            aria-describedby="question-search-help"
+            aria-label="Buscar questões" aria-describedby="question-search-help"
             className="w-full min-w-0 rounded-lg border border-[var(--line)] bg-transparent p-3 text-sm" />
         </label>
         <p id="question-search-help" className="text-xs text-[var(--dim)]">Busca no banco carregado, sem diferenciar acentos. Os filtros abaixo continuam valendo.</p>
-        <p role="status" className="text-xs text-[var(--dim)]">{questionsLoading ? 'Carregando questões…' : `${pool.length} ${pool.length === 1 ? 'questão encontrada' : 'questões encontradas'}`}</p>
         {searchQuery && <button type="button" className="ni-link text-sm" onClick={() => { setSearchQuery(''); resetQuestionState(); }}>Limpar busca</button>}
       </div>
       <div className="crivo-topic-filters">
@@ -648,6 +652,13 @@ export default function Questoes() {
         </p>
       )}
 
+        <div className="flex flex-wrap items-center gap-3">
+          <Button type="submit" disabled={questionsLoading || !pool.length}>Buscar questões</Button>
+          <p className="text-xs text-[var(--dim)]">Os filtros ficam recolhidos após a busca. O cronômetro só começa quando você iniciar a questão.</p>
+        </div>
+        </form>
+      </section>
+
       {question ? (
         <section className="ni-grid ni-grid--practice">
           {/* Left Workspace Panel */}
@@ -661,11 +672,11 @@ export default function Questoes() {
               </span>
             </div>
 
-            {question.status !== 'annulled' && <QuestionTimer seconds={timer.seconds} expectedSeconds={expectedSeconds} running={timer.running} manualPause={timer.manualPause} finished={timer.finished} onTogglePause={timer.togglePause} onExpectedChange={setExpectedOverride} />}
+            {question.status !== 'annulled' && <QuestionTimer seconds={timer.seconds} expectedSeconds={expectedSeconds} started={timer.started} onStart={timer.start} running={timer.running} manualPause={timer.manualPause} finished={timer.finished} onTogglePause={timer.togglePause} onExpectedChange={setExpectedOverride} />}
 
             {/* O título era "Qual é o próximo passo do raciocínio?" em toda
                 questão, inclusive nas que não pedem raciocínio em etapas. */}
-            <h2>Escolha uma alternativa.</h2>
+            <h2 ref={questionHeading} tabIndex={-1} className="scroll-mt-24">Escolha uma alternativa.</h2>
             <p>O feedback e a justificativa só aparecem após a sua tentativa.</p>
 
             <div className="ni-question"><QuestionStatement question={question} /></div>
@@ -685,7 +696,7 @@ export default function Questoes() {
                 return (
                   <button
                     key={option.id}
-                    disabled={answered || question.status === 'annulled'}
+                    disabled={!timer.started || answered || question.status === 'annulled'}
                     onClick={() => selectOption(option.id)}
                     style={styleExtra}
                     className="transition-colors hover:border-[var(--primary)] text-xs"

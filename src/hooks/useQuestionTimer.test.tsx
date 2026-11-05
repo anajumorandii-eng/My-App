@@ -5,6 +5,7 @@ beforeEach(()=>vi.useFakeTimers());
 afterEach(()=>{cleanup();vi.useRealTimers();vi.restoreAllMocks()});
 it('mede intervalos reais, congela no envio e impede conclusão duplicada',()=>{
  const {result}=renderHook(()=>useQuestionTimer('q1',true));
+ act(()=>result.current.start());
  act(()=>vi.advanceTimersByTime(12350));
  expect(result.current.seconds).toBe(12);
  let saved;act(()=>{saved=result.current.finish()});
@@ -15,6 +16,7 @@ it('mede intervalos reais, congela no envio e impede conclusão duplicada',()=>{
 it('exclui pausa manual e aba oculta, sem retomar uma pausa manual ao voltar',()=>{
  let hidden=false;vi.spyOn(document,'hidden','get').mockImplementation(()=>hidden);
  const {result}=renderHook(()=>useQuestionTimer('q1',true));
+ act(()=>result.current.start());
  act(()=>vi.advanceTimersByTime(5000));
  act(()=>result.current.togglePause());act(()=>vi.advanceTimersByTime(20000));
  act(()=>{hidden=true;document.dispatchEvent(new Event('visibilitychange'))});
@@ -28,8 +30,22 @@ it('exclui pausa manual e aba oculta, sem retomar uma pausa manual ao voltar',()
 });
 it('reinicia ao trocar de questão/conta ou repetir a mesma e não cronometra consulta anulada',()=>{
  const {result,rerender}=renderHook(({id,enabled})=>useQuestionTimer(id,enabled),{initialProps:{id:'a:q1',enabled:true}});
- act(()=>vi.advanceTimersByTime(5000));act(()=>result.current.finish());
- act(()=>result.current.restart());expect(result.current.seconds).toBe(0);expect(result.current.running).toBe(true);
- act(()=>vi.advanceTimersByTime(10000));rerender({id:'b:q1',enabled:true});expect(result.current.seconds).toBe(0);
- rerender({id:'b:q2',enabled:false});act(()=>vi.advanceTimersByTime(60000));expect(result.current.seconds).toBe(0);expect(result.current.finish()).toBeNull();
+ act(()=>result.current.start());act(()=>vi.advanceTimersByTime(5000));act(()=>result.current.finish());
+ act(()=>result.current.restart());expect(result.current.seconds).toBe(0);expect(result.current.running).toBe(false);expect(result.current.started).toBe(false);
+ act(()=>result.current.start());act(()=>vi.advanceTimersByTime(10000));expect(result.current.seconds).toBe(10);
+ rerender({id:'b:q1',enabled:true});expect(result.current.seconds).toBe(0);expect(result.current.started).toBe(false);
+ rerender({id:'b:q2',enabled:false});act(()=>result.current.start());act(()=>vi.advanceTimersByTime(60000));expect(result.current.seconds).toBe(0);expect(result.current.finish()).toBeNull();
+});
+
+it('aguarda início explícito, inclusive ao voltar à aba, e registra o horário do início real',()=>{
+ let hidden=false;vi.spyOn(document,'hidden','get').mockImplementation(()=>hidden);
+ const {result}=renderHook(()=>useQuestionTimer('q1',true));
+ act(()=>vi.advanceTimersByTime(60000));
+ act(()=>{hidden=true;document.dispatchEvent(new Event('visibilitychange'));hidden=false;document.dispatchEvent(new Event('visibilitychange'))});
+ expect(result.current.seconds).toBe(0);expect(result.current.started).toBe(false);expect(result.current.running).toBe(false);expect(result.current.finish()).toBeNull();
+ const startedAt=new Date().toISOString();
+ act(()=>result.current.start());act(()=>vi.advanceTimersByTime(5000));
+ act(()=>result.current.start());act(()=>vi.advanceTimersByTime(2000));
+ let saved;act(()=>{saved=result.current.finish()});
+ expect(saved).toMatchObject({startedAt,durationSeconds:7});
 });
