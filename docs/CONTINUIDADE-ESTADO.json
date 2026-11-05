@@ -2,10 +2,13 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "df794c0126b793ad3b23c1cd481a946bce904725",
-  "generated_at_utc": "2026-11-05T18:17:25Z",
+  "source_commit": "ee7e74eabdfb96a6af9dd8e0337477780539e3af",
+  "generated_at_utc": "2026-11-05T19:09:29Z",
   "changed_files": [
-    "src/lib/auth.ts"
+    "server/auth/googleOAuthRoutes.test.ts",
+    "server/auth/googleOAuthRoutes.ts",
+    "src/views/Conexoes.test.tsx",
+    "src/views/Conexoes.tsx"
   ],
   "next_session": {
     "mode": "delta-only",
