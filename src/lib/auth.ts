@@ -15,7 +15,7 @@ import firebaseConfig from '../../firebase-applet-config.json';
 
 export const app = initializeApp({
   ...firebaseConfig,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || firebaseConfig.authDomain,
+  authDomain: import.meta.env?.VITE_FIREBASE_AUTH_DOMAIN || firebaseConfig.authDomain,
 });
 const auth = getAuth(app);
 
