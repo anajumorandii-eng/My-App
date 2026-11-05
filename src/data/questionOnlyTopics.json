@@ -1,0 +1,37 @@
+[
+  {
+    "id": "q_fil_helenistica",
+    "name": "Filosofia Helenística",
+    "subject": "Filosofia",
+    "prerequisites": [],
+    "chapters": ["Epicurismo e Moderação dos Desejos", "Estoicismo e Moderação das Paixões"]
+  },
+  {
+    "id": "q_fil_introducao",
+    "name": "Introdução à Filosofia",
+    "subject": "Filosofia",
+    "prerequisites": [],
+    "chapters": ["Atitude Filosófica e Questionamento"]
+  },
+  {
+    "id": "q_fil_politica_moderna",
+    "name": "Filosofia Política Moderna",
+    "subject": "Filosofia",
+    "prerequisites": [],
+    "chapters": ["Maquiavel: Moral e Eficácia Política"]
+  },
+  {
+    "id": "q_ef_cultura_corporal",
+    "name": "Cultura Corporal e Esporte",
+    "subject": "Educação Física",
+    "prerequisites": [],
+    "chapters": ["Valores Olímpicos e Paralímpicos", "Esporte e Mídia", "Esportivização de Práticas Corporais", "Práticas Corporais de Aventura"]
+  },
+  {
+    "id": "q_ef_corpo_saude",
+    "name": "Corpo, Saúde e Imagem Corporal",
+    "subject": "Educação Física",
+    "prerequisites": [],
+    "chapters": ["Transtornos da Imagem Corporal"]
+  }
+]

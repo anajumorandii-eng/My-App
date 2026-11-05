@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { mockTopics } from '../data/mockData';
+import { questionTopics } from '../data/questionTopics';
+import { loadEnemEditorialClassifications } from '../../scripts/lib/enemEditorialClassifications';
 import type { Question } from '../types';
 import { questionExamIdentity } from './questionExamIdentity';
 const read=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
@@ -14,20 +15,21 @@ const corpus=read('src/data/incidence/enem.json');
 const item=(year:number,day:number,number:number)=>review.items.find((r:any)=>r.year===year&&r.day===day&&r.sourceNumber===number);
 const question=(year:number,day:number,number:number)=>bank.get(item(year,day,number).questionId)!;
 
-test('186 fichas conferidas mantêm identidade, gabarito e texto no banco e no lote importável',()=>{
+test('186 fichas conferidas mantêm identidade, gabarito e texto no banco e no lote importável',async()=>{
+ const latest=await loadEnemEditorialClassifications(questionTopics);
  assert.equal(review.items.length,186);assert.equal(new Set(review.items.map((r:any)=>r.questionId)).size,186);
  for(const [year,day,total] of [[2022,1,30],[2022,2,59],[2023,1,39],[2023,2,58]])assert.equal(review.items.filter((r:any)=>r.year===year&&r.day===day).length,total);
  for(const r of review.items){
   const q=bank.get(r.questionId)!;assert.ok(q,r.questionId);assert.deepEqual(q,canonical.get(q.id));
   assert.equal(q.correctOptionId,r.answer.toLowerCase());assert.equal(q.options.map(o=>o.id).join(''),'abcde');assert.ok(q.statementComplete);
-  assert.doesNotMatch(q.prompt,/[\ue000-\uf8ff\ufffd]/);assert.equal(q.topicId,r.bankTopicId);
+  assert.doesNotMatch(q.prompt,/[\ue000-\uf8ff\ufffd]/);assert.equal(q.topicId,latest.get(q.id)?.topicId??r.bankTopicId);
   const position=manifest.positions.find((p:any)=>p.questionId===q.id);assert.equal(position.number,r.bankNumber);
   assert.equal(questionExamIdentity(q)?.questionNumber,r.bankNumber,'Identidade canônica deve sobreviver à troca de caderno da fonte');
   assert.equal(position.reviewedSource.number,r.sourceNumber);assert.equal(q.examSource?.questionNumber??null,r.publishedSourceNumber);
   assert.deepEqual(q.figures?.map(f=>f.url)??[],r.figures);
   const incidence=corpus.questions.find((p:any)=>p.paperId===r.paperId&&Number(p.number)===r.sourceNumber);
   assert.equal(incidence.confidence,r.confidence);assert.equal(incidence.rationale,r.evidence);assert.equal(incidence.topicId,r.topicId);
-  if(q.chapter)assert.ok(mockTopics.find(t=>t.id===q.topicId)?.chapters.includes(q.chapter));
+  if(q.chapter)assert.ok(questionTopics.find(t=>t.id===q.topicId)?.chapters.includes(q.chapter));
   else assert.equal(r.confidence,'medium','Ausência de capítulo deve continuar explícita');
  }
 });
@@ -69,9 +71,10 @@ test('185 recortes têm transparência gravada no WebP e rastreio para página e
  assert.deepEqual([...new Set(oersted.flatMap((m:any)=>m.alternativeLabels))].sort(),['a','b','c','d','e']);
 });
 
-test('ressalvas taxonômicas continuam médias após a conferência das fontes',()=>{
+test('ressalvas históricas preservam a evidência e a resolução posterior tem precedência',async()=>{
  assert.equal(review.items.filter((r:any)=>r.confidence==='high').length,182);
  const remaining=review.items.filter((r:any)=>r.confidence==='medium').map((r:any)=>`${r.year}/${r.day}/${r.sourceNumber}`);
  assert.deepEqual(remaining,['2022/1/61','2022/1/77','2023/1/12','2023/1/74']);
- assert.equal(question(2022,1,61).chapter,undefined);assert.equal(question(2022,1,77).chapter,undefined);
+ assert.equal(question(2022,1,61).chapter,'Estoicismo e Moderação das Paixões');
+ const latest=await loadEnemEditorialClassifications(questionTopics);assert.equal(latest.get(question(2022,1,61).id)?.confidence,'high');assert.equal(question(2022,1,77).chapter,undefined);
 });

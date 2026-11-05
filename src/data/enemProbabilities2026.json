@@ -15,7 +15,7 @@
    "topicId": "por_texto",
    "subject": "Português",
    "pAtLeastOne": 0.956,
-   "expected": 24.17,
+   "expected": 23.97,
    "presence": 8
   },
   {
@@ -36,7 +36,7 @@
    "topicId": "por_norma_culta",
    "subject": "Português",
    "pAtLeastOne": 0.954,
-   "expected": 5.5,
+   "expected": 5.35,
    "presence": 8
   },
   {
@@ -120,7 +120,7 @@
    "topicId": "por_lit_contemporanea",
    "subject": "Português",
    "pAtLeastOne": 0.913,
-   "expected": 4.39,
+   "expected": 4.31,
    "presence": 7
   },
   {
@@ -133,8 +133,8 @@
   {
    "topicId": "his_moderna_iluminismo",
    "subject": "História",
-   "pAtLeastOne": 0.905,
-   "expected": 2.28,
+   "pAtLeastOne": 0.897,
+   "expected": 2.14,
    "presence": 8
   },
   {
@@ -182,8 +182,8 @@
   {
    "topicId": "por_lit_modernismo",
    "subject": "Português",
-   "pAtLeastOne": 0.86,
-   "expected": 2.26,
+   "pAtLeastOne": 0.856,
+   "expected": 2.19,
    "presence": 7
   },
   {
@@ -236,18 +236,18 @@
    "presence": 7
   },
   {
-   "topicId": "por_lit_classica_barroca",
-   "subject": "Português",
-   "pAtLeastOne": 0.8,
-   "expected": 1.98,
-   "presence": 7
-  },
-  {
    "topicId": "mat_teoria_numeros",
    "subject": "Matemática",
    "pAtLeastOne": 0.8,
    "expected": 1.61,
    "presence": 6
+  },
+  {
+   "topicId": "por_lit_classica_barroca",
+   "subject": "Português",
+   "pAtLeastOne": 0.795,
+   "expected": 1.92,
+   "presence": 7
   },
   {
    "topicId": "qui_organica_fundamentos",
@@ -495,13 +495,6 @@
    "presence": 4
   },
   {
-   "topicId": "fil_socrates_platao",
-   "subject": "Filosofia",
-   "pAtLeastOne": 0.533,
-   "expected": 0.62,
-   "presence": 4
-  },
-  {
    "topicId": "bio_botanica",
    "subject": "Biologia",
    "pAtLeastOne": 0.507,
@@ -530,17 +523,24 @@
    "presence": 5
   },
   {
-   "topicId": "fil_aristoteles",
-   "subject": "Filosofia",
-   "pAtLeastOne": 0.477,
-   "expected": 0.54,
-   "presence": 4
-  },
-  {
    "topicId": "fil_origem_pre_socraticos",
    "subject": "Filosofia",
    "pAtLeastOne": 0.475,
    "expected": 0.62,
+   "presence": 3
+  },
+  {
+   "topicId": "fil_socrates_platao",
+   "subject": "Filosofia",
+   "pAtLeastOne": 0.445,
+   "expected": 0.5,
+   "presence": 3
+  },
+  {
+   "topicId": "fil_aristoteles",
+   "subject": "Filosofia",
+   "pAtLeastOne": 0.433,
+   "expected": 0.48,
    "presence": 3
   },
   {
@@ -556,6 +556,13 @@
    "pAtLeastOne": 0.411,
    "expected": 0.66,
    "presence": 3
+  },
+  {
+   "topicId": "q_ef_cultura_corporal",
+   "subject": "Educação Física",
+   "pAtLeastOne": 0.408,
+   "expected": 0.49,
+   "presence": 4
   },
   {
    "topicId": "fis_gravitacao_circular",
@@ -649,6 +656,13 @@
    "presence": 2
   },
   {
+   "topicId": "q_fil_helenistica",
+   "subject": "Filosofia",
+   "pAtLeastOne": 0.208,
+   "expected": 0.19,
+   "presence": 2
+  },
+  {
    "topicId": "fil_medieval",
    "subject": "Filosofia",
    "pAtLeastOne": 0.191,
@@ -677,6 +691,20 @@
    "presence": 1
   },
   {
+   "topicId": "q_ef_corpo_saude",
+   "subject": "Educação Física",
+   "pAtLeastOne": 0.111,
+   "expected": 0.07,
+   "presence": 1
+  },
+  {
+   "topicId": "q_fil_politica_moderna",
+   "subject": "Filosofia",
+   "pAtLeastOne": 0.111,
+   "expected": 0.07,
+   "presence": 1
+  },
+  {
    "topicId": "fis_optica_instrumental",
    "subject": "Física",
    "pAtLeastOne": 0.111,
@@ -686,6 +714,13 @@
   {
    "topicId": "soc_durkheim",
    "subject": "Sociologia",
+   "pAtLeastOne": 0.1,
+   "expected": 0.06,
+   "presence": 1
+  },
+  {
+   "topicId": "q_fil_introducao",
+   "subject": "Filosofia",
    "pAtLeastOne": 0.1,
    "expected": 0.06,
    "presence": 1

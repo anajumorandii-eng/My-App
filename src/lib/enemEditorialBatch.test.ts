@@ -45,8 +45,8 @@ test('as correções verificadas seguem a competência, com segunda leitura nos 
  assert.equal(get('enem_completo_2021_d2_q136').chapter,undefined);
 });
 
-test('reservas de taxonomia não são tratadas como classificações concluídas e reaplicar é idempotente',async()=>{
- const deferred=await loadEnemEditorialDeferrals();assert.equal(deferred.size,10);assert.ok(deferred.has('enem_completo_2018_d1_q052'));assert.ok(deferred.has('enem_completo_2022_d1_q061'));
+test('adiamentos históricos resolvidos não reaparecem na fila ativa e reaplicar é idempotente',async()=>{
+ const deferred=await loadEnemEditorialDeferrals();assert.equal(deferred.size,0);assert.ok(!deferred.has('enem_completo_2018_d1_q052'));assert.ok(!deferred.has('enem_completo_2022_d1_q061'));
  const map=await loadEnemEditorialClassifications(mockTopics);
  assert.deepEqual(applyEnemEditorialClassifications(bank,map,new Set<string>(manifest.positions.map((p:any)=>p.questionId))),bank);
 });

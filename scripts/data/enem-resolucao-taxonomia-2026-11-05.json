@@ -1,0 +1,295 @@
+{
+  "scope": "Resolve as dez pendências originais com catálogo complementar de questões; não cria módulos na grade de estudo nem altera conteúdo, IDs ou gabaritos.",
+  "items": [
+    {
+      "questionId": "enem_completo_2018_d1_q011",
+      "year": 2018,
+      "day": 1,
+      "number": 11,
+      "page": 7,
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/1dia/enem2018_1dia_prova_amarelo.pdf",
+      "sourceSha256": "d4e9bffb7a2bf01205e8703f4c1bdfd860fc8b90a8a32ce5f68407dcb0a67fe0",
+      "answerKeyUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/1dia/enem2018_1dia_gabarito_amarelo.pdf",
+      "answerKeySha256": "0fdba83122202e84f0c118c04fbda4c6344450c2527323031e0f1904b23f73b5",
+      "answer": "E",
+      "reviewBasis": "pdf-page-visual",
+      "evidence": "O comando pede identificar valores olímpicos e paralímpicos em ações nas aulas de Educação Física. A alternativa E associa fair play, honestidade, limites, saúde e combate ao doping ao respeito; as outras alternativas trocam os valores. Página 7 integral e linha 11 da chave amarela visualmente conferidas.",
+      "bankTopicId": "q_ef_cultura_corporal",
+      "bankSubject": "Educação Física",
+      "bankChapter": "Valores Olímpicos e Paralímpicos",
+      "confidence": "high",
+      "decision": "resolve-taxonomy",
+      "previous": {
+        "subject": "Português",
+        "topicId": "por_lit_classica_barroca",
+        "chapter": "A Estética Barroca"
+      },
+      "previousDeferral": {
+        "source": "scripts/data/enem-revisao-editorial-2026-11-04/portugues.json",
+        "reason": "Exige distinguir valores olímpicos e paralímpicos na conduta esportiva, sobretudo respeito e fair play. Não há tópico de Educação Física nem capítulo de ética esportiva no catálogo; interpretar o texto não autoriza classificá-lo em Barroco."
+      },
+      "contentSha256": "e2cf884052f2e3508220d117f3ed839ed2b04b87aec0550889bbd2c89ec51924"
+    },
+    {
+      "questionId": "enem_completo_2018_d1_q052",
+      "year": 2018,
+      "day": 1,
+      "number": 52,
+      "page": 21,
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/1dia/enem2018_1dia_prova_amarelo.pdf",
+      "sourceSha256": "d4e9bffb7a2bf01205e8703f4c1bdfd860fc8b90a8a32ce5f68407dcb0a67fe0",
+      "answerKeyUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/1dia/enem2018_1dia_gabarito_amarelo.pdf",
+      "answerKeySha256": "0fdba83122202e84f0c118c04fbda4c6344450c2527323031e0f1904b23f73b5",
+      "answer": "C",
+      "reviewBasis": "pdf-page-visual",
+      "evidence": "Página 21, coluna esquerda inferior, questão 52: máxima explicitamente atribuída a Epicuro, situada pelo comando no período helenístico; alternativa C associa temperança ao domínio da vontade. Gabarito amarelo, página 1, tabela de Ciências Humanas, linha 52 = C. A autoria e o enquadramento helenístico sustentam Epicurismo, em lugar de Aristóteles.",
+      "bankTopicId": "q_fil_helenistica",
+      "bankSubject": "Filosofia",
+      "bankChapter": "Epicurismo e Moderação dos Desejos",
+      "confidence": "high",
+      "decision": "resolve-taxonomy",
+      "previous": {
+        "subject": "Filosofia",
+        "topicId": "fil_aristoteles",
+        "chapter": "A Ética a Nicômaco e a Doutrina do Meio-Termo"
+      },
+      "previousDeferral": {
+        "source": "scripts/data/enem-revisao-editorial-2026-11-04/filosofia.json",
+        "reason": "Epicuro e temperança pertencem à filosofia helenística. O catálogo atual não tem tópico-pai de helenismo nem Epicurismo; confirmar Aristóteles seria falsa atribuição. Necessária decisão de taxonomia, preservando a questão e a chave C."
+      },
+      "contentSha256": "c446ad4086a52e522896d098748e051c366a017df9329d0341a27eeaa97f0f02"
+    },
+    {
+      "questionId": "enem_completo_2018_d1_q060",
+      "year": 2018,
+      "day": 1,
+      "number": 60,
+      "page": 23,
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/1dia/enem2018_1dia_prova_amarelo.pdf",
+      "sourceSha256": "d4e9bffb7a2bf01205e8703f4c1bdfd860fc8b90a8a32ce5f68407dcb0a67fe0",
+      "answerKeyUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2018/1dia/enem2018_1dia_gabarito_amarelo.pdf",
+      "answerKeySha256": "0fdba83122202e84f0c118c04fbda4c6344450c2527323031e0f1904b23f73b5",
+      "answer": "D",
+      "reviewBasis": "pdf-page-visual",
+      "evidence": "Página 23, coluna direita inferior, questão 60: excerto de Merleau-Ponty sobre o movimento do saber à ignorância e o questionamento; comando pede elementos constitutivos da atividade do filósofo. Alternativa D: conciliar o rigor da investigação à inquietude do questionamento. Gabarito amarelo, página 1, tabela de Ciências Humanas, linha 60 = D. O objeto é a atitude filosófica, sem vínculo com América Espanhola ou Iluminismo.",
+      "bankTopicId": "q_fil_introducao",
+      "bankSubject": "Filosofia",
+      "bankChapter": "Atitude Filosófica e Questionamento",
+      "confidence": "high",
+      "decision": "resolve-taxonomy",
+      "previous": {
+        "subject": "História",
+        "topicId": "his_moderna_iluminismo",
+        "chapter": "América Espanhola"
+      },
+      "previousDeferral": {
+        "source": "scripts/data/enem-revisao-editorial-2026-11-04/historia.json",
+        "reason": "O comando caracteriza a própria atividade filosófica (rigor e questionamento), mas o catálogo não possui introdução à Filosofia nem tópico-pai epistemológico contemporâneo defensável para esse objeto; América Espanhola está incorreta."
+      },
+      "contentSha256": "11e3d9092e92e5476f16e1653b46165d0c1dae442524680fc25bcc4f10b60bd4"
+    },
+    {
+      "questionId": "enem_completo_2019_d1_q008",
+      "year": 2019,
+      "day": 1,
+      "number": 8,
+      "page": 6,
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2019/1dia/enem2019_1dia_prova_amarelo.pdf",
+      "sourceSha256": "952410c24574d8464c7a737ed41727404912d9f61178b8f9e98bcebe5a757242",
+      "answerKeyUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2019/1dia/enem2019_1dia_gabarito_amarelo.pdf",
+      "answerKeySha256": "1fc26449fee8d7a8ac3056ee83247fd706b0e19ace60cc01dfc637b81ac1c9e7",
+      "answer": "A",
+      "reviewBasis": "pdf-page-visual",
+      "evidence": "O comando pede o fundamento da reflexão sobre esporte telespetáculo. A edição, o enquadramento e a narração privilegiam a forma e fragmentam sociabilização/ludicidade da experiência do atleta; A nomeia essa distorção. Página 6, ambas as colunas, e linha 8 da chave amarela visualmente conferidas.",
+      "bankTopicId": "q_ef_cultura_corporal",
+      "bankSubject": "Educação Física",
+      "bankChapter": "Esporte e Mídia",
+      "confidence": "high",
+      "decision": "resolve-taxonomy",
+      "previous": {
+        "subject": "Português",
+        "topicId": "por_texto",
+        "chapter": "Fatores de Textualidade"
+      },
+      "previousDeferral": {
+        "source": "scripts/data/enem-revisao-editorial-2026-11-04/portugues.json",
+        "reason": "O comando pede compreender a espetacularização esportiva como distorção da experiência de ser atleta pela mídia. O currículo não tem Educação Física/cultura corporal; não há capítulo específico coerente, apesar de haver leitura audiovisual secundária."
+      },
+      "contentSha256": "9d351d46cd77fabcb9effb3ebdfce41a562797e6c2cfacae838fc28e14b1fe69"
+    },
+    {
+      "questionId": "enem_completo_2019_d1_q018",
+      "year": 2019,
+      "day": 1,
+      "number": 18,
+      "page": 9,
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2019/1dia/enem2019_1dia_prova_amarelo.pdf",
+      "sourceSha256": "952410c24574d8464c7a737ed41727404912d9f61178b8f9e98bcebe5a757242",
+      "answerKeyUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2019/1dia/enem2019_1dia_gabarito_amarelo.pdf",
+      "answerKeySha256": "1fc26449fee8d7a8ac3056ee83247fd706b0e19ace60cc01dfc637b81ac1c9e7",
+      "answer": "D",
+      "reviewBasis": "pdf-page-visual",
+      "evidence": "O comando pede o efeito da relação entre elementos tradicionais e modernos nos Jogos dos Povos Indígenas. Regulamentação, fiscalização e padronização transformam instrumentos de caça/defesa em modalidades competitivas; D expressa a legitimação esportiva. Página 9 e linha 18 da chave amarela visualmente conferidas.",
+      "bankTopicId": "q_ef_cultura_corporal",
+      "bankSubject": "Educação Física",
+      "bankChapter": "Esportivização de Práticas Corporais",
+      "confidence": "high",
+      "decision": "resolve-taxonomy",
+      "previous": {
+        "subject": "Português",
+        "topicId": "por_lit_modernismo",
+        "chapter": "Parnasianismo"
+      },
+      "previousDeferral": {
+        "source": "scripts/data/enem-revisao-editorial-2026-11-04/portugues.json",
+        "reason": "O arco, a flecha e a lança são reinterpretados pela regulamentação competitiva dos Jogos dos Povos Indígenas. O foco é esportivização de práticas corporais; falta tópico-pai de Educação Física, portanto não há classificação curricular segura."
+      },
+      "contentSha256": "23cf858c19d39bf33c3a0543ee872518e9edf8a746bd86eba770c7902b92d288"
+    },
+    {
+      "questionId": "enem_completo_2019_d1_q031",
+      "year": 2019,
+      "day": 1,
+      "number": 31,
+      "page": 14,
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2019/1dia/enem2019_1dia_prova_amarelo.pdf",
+      "sourceSha256": "952410c24574d8464c7a737ed41727404912d9f61178b8f9e98bcebe5a757242",
+      "answerKeyUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2019/1dia/enem2019_1dia_gabarito_amarelo.pdf",
+      "answerKeySha256": "1fc26449fee8d7a8ac3056ee83247fd706b0e19ace60cc01dfc637b81ac1c9e7",
+      "answer": "A",
+      "reviewBasis": "pdf-page-visual",
+      "evidence": "O comando exige identificar distúrbios associados à preocupação excessiva com peso e à imagem corporal sob o ideal de magreza. A resposta A é anorexia e bulimia; o conhecimento exigido é saúde/imagem corporal, sem relação com a autoria literária anterior. Página 14 e linha 31 da chave amarela visualmente conferidas.",
+      "bankTopicId": "q_ef_corpo_saude",
+      "bankSubject": "Educação Física",
+      "bankChapter": "Transtornos da Imagem Corporal",
+      "confidence": "high",
+      "decision": "resolve-taxonomy",
+      "previous": {
+        "subject": "Português",
+        "topicId": "por_lit_contemporanea",
+        "chapter": "Clarice Lispector"
+      },
+      "previousDeferral": {
+        "source": "scripts/data/enem-revisao-editorial-2026-11-04/portugues.json",
+        "reason": "A identificação de anorexia e bulimia depende de conhecimentos sobre distúrbios da imagem corporal e saúde. Não há capítulo correspondente em Português nem tópico de Educação Física; não convém confirmar por simples interpretação textual."
+      },
+      "contentSha256": "5d7bdceaf66a64938c9f31b14d0b6802db7d789aaa8dbe03eac2d1940d352abb"
+    },
+    {
+      "questionId": "enem_completo_2019_d1_q087",
+      "year": 2019,
+      "day": 1,
+      "number": 87,
+      "page": 31,
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2019/1dia/enem2019_1dia_prova_amarelo.pdf",
+      "sourceSha256": "952410c24574d8464c7a737ed41727404912d9f61178b8f9e98bcebe5a757242",
+      "answerKeyUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2019/1dia/enem2019_1dia_gabarito_amarelo.pdf",
+      "answerKeySha256": "1fc26449fee8d7a8ac3056ee83247fd706b0e19ace60cc01dfc637b81ac1c9e7",
+      "answer": "A",
+      "reviewBasis": "pdf-page-visual",
+      "evidence": "Página 31, coluna esquerda superior, questão 87: texto de Aranha apresenta Maquiavel e distingue critérios pessoais e consequências coletivas da ação de um chefe de Estado. Alternativa A: idealidade e efetividade da moral. Gabarito amarelo, página 1, tabela de Ciências Humanas, linha 87 = A. O núcleo é a autonomia da ação política moderna em Maquiavel, não América Espanhola ou Iluminismo.",
+      "bankTopicId": "q_fil_politica_moderna",
+      "bankSubject": "Filosofia",
+      "bankChapter": "Maquiavel: Moral e Eficácia Política",
+      "confidence": "high",
+      "decision": "resolve-taxonomy",
+      "previous": {
+        "subject": "História",
+        "topicId": "his_moderna_iluminismo",
+        "chapter": "América Espanhola"
+      },
+      "previousDeferral": {
+        "source": "scripts/data/enem-revisao-editorial-2026-11-04/historia.json",
+        "reason": "O comando exige a distinção maquiaveliana entre moral pessoal e eficácia política na modernidade. Falta tópico-pai de filosofia política moderna/Maquiavel; classificar em política contemporânea ou em contratualismo apenas aproximaria teorias diferentes."
+      },
+      "contentSha256": "98c446de2cf059353c8824734c634771dadbc98f6d0d2ea449d9cc6cdc551492"
+    },
+    {
+      "questionId": "enem_completo_2022_d1_q018",
+      "year": 2022,
+      "day": 1,
+      "number": 18,
+      "page": 10,
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2022/1dia/enem2022_1dia_prova_amarelo.pdf",
+      "sourceSha256": "68c7299f42be65650daea628ca8744bb1a1ae967fbbaec06ce47891a17ceb354",
+      "answerKeyUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2022/1dia/enem2022_1dia_gabarito_amarelo.pdf",
+      "answerKeySha256": "7d77942c0fbe13c82c5069691a432ea881c8b59ae65cd69b0b8c4fcfbd395241",
+      "answer": "D",
+      "reviewBasis": "pdf-page-visual",
+      "evidence": "O comando pede a característica das atividades de aventura exemplificada pela criação do mountainboard. A adaptação do snowboard a espaços sem neve, mediante prancha com rodas e pneus, sustenta D: criatividade para adaptações a novos espaços. Página 10 e linha 18 da chave amarela visualmente conferidas.",
+      "bankTopicId": "q_ef_cultura_corporal",
+      "bankSubject": "Educação Física",
+      "bankChapter": "Práticas Corporais de Aventura",
+      "confidence": "high",
+      "decision": "resolve-taxonomy",
+      "previous": {
+        "subject": "Português",
+        "topicId": "por_texto",
+        "chapter": "Intertextualidade e Interdiscursividade"
+      },
+      "previousDeferral": {
+        "source": "scripts/data/enem-revisao-editorial-2026-11-04/portugues.json",
+        "reason": "A criação do mountainboard adapta snowboard a terrenos sem neve, exemplificando criatividade e ressignificação espacial em atividades de aventura. Falta tópico de Educação Física/práticas corporais, não havendo capítulo curricular fiel."
+      },
+      "contentSha256": "7a703bf6c412dd4049dc975521ffd76578b17890b9f5f1180a1a1e9528d976af"
+    },
+    {
+      "questionId": "enem_completo_2022_d1_q061",
+      "year": 2022,
+      "day": 1,
+      "number": 61,
+      "page": 24,
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2022/1dia/enem2022_1dia_prova_amarelo.pdf",
+      "sourceSha256": "68c7299f42be65650daea628ca8744bb1a1ae967fbbaec06ce47891a17ceb354",
+      "answerKeyUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2022/1dia/enem2022_1dia_gabarito_amarelo.pdf",
+      "answerKeySha256": "7d77942c0fbe13c82c5069691a432ea881c8b59ae65cd69b0b8c4fcfbd395241",
+      "answer": "E",
+      "reviewBasis": "pdf-page-visual",
+      "evidence": "Página 24, coluna esquerda inferior, questão 61: autoria Sêneca, Cartas morais; excerto valoriza alegria e fortaleza diante de morte e doença. Alternativa E: moderação das paixões. Gabarito amarelo, página 1, tabela de Ciências Humanas, linha 61 = E. A ética estoica justifica Estoicismo em lugar de Sócrates e Platão.",
+      "bankTopicId": "q_fil_helenistica",
+      "bankSubject": "Filosofia",
+      "bankChapter": "Estoicismo e Moderação das Paixões",
+      "confidence": "high",
+      "decision": "resolve-taxonomy",
+      "previous": {
+        "subject": "Filosofia",
+        "topicId": "fil_socrates_platao",
+        "chapter": null
+      },
+      "previousDeferral": {
+        "source": "scripts/data/enem-revisao-editorial-2026-11-04/filosofia.json",
+        "reason": "Sêneca trata de estoicismo e moderação das paixões diante da morte. Não há tópico-pai de filosofia helenística/estoicismo no currículo fixo; não confirmar Sócrates/Platão apenas por ser filosofia antiga."
+      },
+      "contentSha256": "bfccb37b824400e31fe2a62403f4f25999c393cec7aaf54b1ff075efd12d2887"
+    },
+    {
+      "questionId": "enem_completo_2023_d1_q043",
+      "year": 2023,
+      "day": 1,
+      "number": 43,
+      "page": 18,
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2023/1dia/enem2023_1dia_prova_amarelo.pdf",
+      "sourceSha256": "7478e01dae6265959a12724b27e6a6ebb6d22b60a3031a7c54e9b9dae63260f5",
+      "answerKeyUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2023/1dia/enem2023_1dia_gabarito_amarelo.pdf",
+      "answerKeySha256": "07d21bcecf5554f2ba71b03e8e72ba77b700df4a8d21b3ddd4f2bf048548bd5f",
+      "answer": "D",
+      "reviewBasis": "pdf-page-visual",
+      "evidence": "O comando pede a finalidade de acrescentar juntos ao lema olímpico. A solidariedade explicitada no texto fundamenta D, associação do lema à cooperatividade; o objeto central são valores do esporte. Página 18 e linha 43 da chave amarela visualmente conferidas.",
+      "bankTopicId": "q_ef_cultura_corporal",
+      "bankSubject": "Educação Física",
+      "bankChapter": "Valores Olímpicos e Paralímpicos",
+      "confidence": "high",
+      "decision": "resolve-taxonomy",
+      "previous": {
+        "subject": "Português",
+        "topicId": "por_norma_culta",
+        "chapter": "Variação Linguística"
+      },
+      "previousDeferral": {
+        "source": "scripts/data/enem-revisao-editorial-2026-11-04/portugues.json",
+        "reason": "A inclusão de juntos no lema olímpico associa excelência e cooperatividade, exigindo reconhecer valores do esporte. Falta tópico de Educação Física/olimpismo no catálogo; não é justificável encaixá-la numa escola literária."
+      },
+      "contentSha256": "b9fab6cf62fc28fd88b564543854ed59790b858a9f6f94d0c1489cc082f845c7"
+    }
+  ]
+}

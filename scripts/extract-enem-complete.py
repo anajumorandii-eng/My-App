@@ -11,12 +11,14 @@ import numpy as np
 from scipy import ndimage
 from PIL import Image
 from lib.enem_pdf_fonts import fix
-from lib.enem_page_boundaries import is_essay_page
+from lib.enem_page_boundaries import is_essay_page, is_institutional_footer
+from lib.enem_symbol_glyphs import normalize_symbol_glyphs
 
 ROOT=pathlib.Path(sys.argv[1] if len(sys.argv)>1 else 'work/enem-full')
 MEDIA=ROOT/'media';MEDIA.mkdir(exist_ok=True)
 HEADER=re.compile(r'^QUEST[ÃA]O\s+(\d{1,3})\b',re.I)
 SHARED=re.compile(r'(?:Texto|Textos|Leia|Considere|responder|responda|resolver).*?quest[õoÕO]es\s+(?:de\s+)?(\d{1,2})\s+a\s+(\d{1,2})',re.I)
+REVIEWED_CROP_EXCLUSIONS={(2021, 2, 22, (30, 371, 282, 521)): [[278, 368, 286, 384]], (2021, 2, 22, (278, 371, 525, 521)): [[275, 480, 282, 522]]}
 
 def clean(s):
     return re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '',s).replace('\u00ad','').replace('\ufffd','').strip()
@@ -40,7 +42,7 @@ def native_lines(page):
             greek=str.maketrans(dict(zip('abgdezhqiklm n xop rstufcyw'.replace(' ',''),'αβγδεζηθικλμνξοπρστυφχψω')))
             parts=[]
             for s in line['spans']:
-                t=s['text']
+                t=normalize_symbol_glyphs(s['text'], s['font'])
                 if s['font'].split('+')[-1] in ('Symbol','SymbolMT'):t=t.translate(greek)
                 parts.append(t.translate(superscript) if s['flags']&1 else t)
             text=clean(''.join(parts))
@@ -60,7 +62,7 @@ def native_lines(page):
                 if duplicate:
                     if len(text)>len(duplicate['text']):duplicate.update(row)
                 else:out.append(row)
-    return out
+    return [row for row in out if not (row['box'][1] > page.rect.height * .85 and is_institutional_footer(row['text']))]
 
 def content_bounds(page,lines):
     # Remove somente margens institucionais, código de barras e rodapé.
@@ -186,10 +188,16 @@ def graphics(page,lines,bounds):
         clean_rects.append(r)
     return clean_rects
 
-def transparent_crop(page,rect,name):
+def transparent_crop(page,rect,name,excluded=()):
     rect=rect+(-2,-2,2,2)
     pix=page.get_pixmap(matrix=fitz.Matrix(2.5,2.5),clip=rect,alpha=True)
     a=np.frombuffer(pix.samples,dtype=np.uint8).reshape(pix.height,pix.width,4).copy()
+    for box in excluded:
+        cut=fitz.Rect(box) & rect
+        if cut.is_empty:continue
+        x0=max(0,int((cut.x0-rect.x0)*2.5));x1=min(pix.width,int((cut.x1-rect.x0)*2.5)+1)
+        y0=max(0,int((cut.y0-rect.y0)*2.5));y1=min(pix.height,int((cut.y1-rect.y0)*2.5)+1)
+        a[y0:y1,x0:x1,3]=0
     # Remover só o branco neutro do suporte. Não recolorir fotografias/mapas.
     alpha=a[:,:,3].astype(np.float32)
     rgb=np.where(alpha[:,:,None]>0,a[:,:,:3].astype(np.float32)*255/np.maximum(alpha[:,:,None],1),255)
@@ -242,6 +250,10 @@ def extract(year,day):
         }
         if (year,day,pi+1) in reviewed_regions:figs=[fitz.Rect(r) for r in reviewed_regions[year,day,pi+1]]
         reviewed_additions={
+            (2021, 2, 22):[[30, 178, 268, 327], [30, 371, 282, 521], [30, 554, 282, 704], [278, 178, 535, 333], [278, 371, 525, 521]],
+            (2020, 2, 7):[[30, 215, 205, 735]],
+            (2021, 2, 2):[[288, 529, 399, 632], [288, 635, 399, 683], [411, 529, 512, 566], [411, 578, 523, 648]],
+            (2021, 2, 21):[[34, 194, 212, 357], [34, 406, 212, 530], [34, 578, 212, 700], [288, 194, 467, 357], [288, 406, 467, 530]],
             (2019,1,11):[(30,137,277.5,559.1)],
             (2021,2,16):[(94,596,224,740)],
             (2025,2,4):[(287,611,539,741)],
@@ -310,7 +322,8 @@ def extract(year,day):
                 # Espanhol opcional não pode substituir a imagem do Inglês.
                 if day==1 and owner<=5 and questions[owner]['pages'] and pi+1 not in questions[owner]['pages']:continue
                 name=f'enem-{year}-d{day}-q{owner:03d}-p{pi+1}-{gi}.webp'
-                asset=transparent_crop(page,r,name)
+                # Only neighboring-column fragments, outside the reviewed graph.
+                asset=transparent_crop(page,r,name,REVIEWED_CROP_EXCLUSIONS.get((year,day,pi+1,tuple(r)),()))
                 if asset:questions[owner]['graphics'].append({**asset,'page':pi+1,'box':list(r)})
     expected=list(range(1,91) if day==1 else range(91,181))
     assert sorted(questions)==expected,(year,day,'questões ausentes',set(expected)-set(questions))

@@ -1,0 +1,1568 @@
+{
+  "asOf": "2026-11-05",
+  "scope": "Triagem estrutural do corpus ENEM. Referência visual com figura não comprova defeito nem completude; a fila requer conferência na fonte. IDs revisados têm evidência versionada.",
+  "inputs": {
+    "public/questions.json": "3d0b52b0270d5646ad2c7a065ffefc8c67373c138684c6e73fa645cff308df80",
+    "scripts/data/enem-completo-2018-2025/manifest.json": "232ae656d53755e5e946df163dfc47e98a4bf3138dcb8edf7c8cd7637e78352c",
+    "scripts/data/enem-correcao-transcricao-2026-11-05.json": "0c2b319c14e3432ec230072e95f30d8e7d1c6e97e2e2d0aee99a9268d86e23f2",
+    "scripts/data/enem-conferencia-visual-2026-11-05.json": "cede6da5798f7c8493a0d873030262e1b43c4b52c42184d7e1b375d57fc74d02"
+  },
+  "summary": {
+    "questions": 1440,
+    "errors": 0,
+    "visualReferences": 69,
+    "visualReviewed": 9,
+    "visualPending": 60
+  },
+  "errors": [],
+  "visual": [
+    {
+      "id": "enem_completo_2018_d1_q090",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q110",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q127",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q129",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q138",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q140",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q146",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q157",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q174",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2019_d2_q109",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2019_d2_q137",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2019_d2_q139",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2019_d2_q163",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2019_d2_q170",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2019_d2_q171",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q106",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q108",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": true
+    },
+    {
+      "id": "enem_completo_2020_d2_q136",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q137",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q140",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q149",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q156",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q159",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q163",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q166",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q170",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": true
+    },
+    {
+      "id": "enem_completo_2020_d2_q173",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2021_d2_q094",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": true
+    },
+    {
+      "id": "enem_completo_2021_d2_q105",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2021_d2_q121",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2021_d2_q127",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2021_d2_q154",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": true
+    },
+    {
+      "id": "enem_completo_2021_d2_q155",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": true
+    },
+    {
+      "id": "enem_completo_2021_d2_q162",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": true
+    },
+    {
+      "id": "enem_completo_2021_d2_q178",
+      "options": [
+        "a",
+        "d",
+        "e"
+      ],
+      "mixed": true,
+      "reviewed": true
+    },
+    {
+      "id": "enem_completo_2021_d2_q180",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q093",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q108",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q118",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q119",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q158",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q163",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q165",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q178",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2023_d2_q119",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2023_d2_q129",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2023_d2_q153",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2023_d2_q167",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2023_d2_q172",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q100",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q106",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q109",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q116",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": true
+    },
+    {
+      "id": "enem_completo_2024_d2_q135",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q139",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q146",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q149",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q153",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q162",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q101",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q102",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q103",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q113",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q125",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q129",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q144",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q145",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q154",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": true
+    },
+    {
+      "id": "enem_completo_2025_d2_q167",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    }
+  ],
+  "queue": [
+    {
+      "id": "enem_completo_2018_d1_q090",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q110",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q127",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q129",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q138",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q140",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q146",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q157",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2018_d2_q174",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2019_d2_q109",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2019_d2_q137",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2019_d2_q139",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2019_d2_q163",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2019_d2_q170",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2019_d2_q171",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q106",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q136",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q137",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q140",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q149",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q156",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q159",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q163",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q166",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2020_d2_q173",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2021_d2_q105",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2021_d2_q121",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2021_d2_q127",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2021_d2_q180",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q093",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q108",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q118",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q119",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q158",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q163",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q165",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2022_d2_q178",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2023_d2_q119",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2023_d2_q129",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2023_d2_q153",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2023_d2_q167",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2023_d2_q172",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q100",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q106",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q109",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q135",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q139",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q146",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q149",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q153",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2024_d2_q162",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q101",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q102",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q103",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q113",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q125",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q129",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q144",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q145",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    },
+    {
+      "id": "enem_completo_2025_d2_q167",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "mixed": false,
+      "reviewed": false
+    }
+  ]
+}

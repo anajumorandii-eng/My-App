@@ -4,7 +4,7 @@ export interface EnemAuditPosition { questionId: string; year: number; day: numb
 export interface EnemAuditReview { topicId: string; subject: string; chapter?: string; source: string; confidence: string; }
 const normalize = (text: string) => text.normalize('NFKD').replace(/\p{M}/gu, '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
 export const enemOfficialArea = (number: number) => number <= 45 ? 'Linguagens' : number <= 90 ? 'Humanas' : number <= 135 ? 'Natureza' : 'Matemática';
-const areaSubjects: Record<string, string[]> = { Linguagens: ['Português','Inglês'], Humanas: ['História','Geografia','Filosofia','Sociologia'], Natureza: ['Biologia','Física','Química'], Matemática: ['Matemática'] };
+const areaSubjects: Record<string, string[]> = { Linguagens: ['Português','Inglês','Educação Física'], Humanas: ['História','Geografia','Filosofia','Sociologia'], Natureza: ['Biologia','Física','Química'], Matemática: ['Matemática'] };
 const classificationKeys = ['subject','topicId','chapter'] as const;
 
 export function auditEnemCoverage(questions: Question[], topics: Topic[], positions: EnemAuditPosition[], reviews: Map<string, EnemAuditReview> = new Map(), imported: Question[] = [], deferred: Map<string, { source: string; reason: string }> = new Map()) {

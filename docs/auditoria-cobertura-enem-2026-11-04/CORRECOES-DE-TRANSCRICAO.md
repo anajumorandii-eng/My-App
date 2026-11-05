@@ -1,5 +1,7 @@
 # Correções de transcrição após a revisão editorial
 
+> Registro histórico. A continuação de 05/11 e a resolução dos dez adiamentos estão em [RESOLUCAO-TAXONOMIA.md](RESOLUCAO-TAXONOMIA.md).
+
 A revisão de classificação foi mesclada na PR #412. Esta etapa corrige exclusivamente conteúdo extraído incorretamente das fontes públicas: 15 questões, sem alteração de IDs, classificações, gabaritos ou progresso.
 
 ## Causa e correções

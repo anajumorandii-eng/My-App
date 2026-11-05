@@ -4,7 +4,7 @@ import type { Question } from '../../src/types';
 import type { AiGenerationRequest } from './types';
 import { AiValidationError } from './errors';
 import { questionExamIdentity } from '../../src/lib/questionExamIdentity';
-import { mockTopics } from '../../src/data/mockData';
+import { questionTopics } from '../../src/data/questionTopics';
 
 let catalog: Promise<Map<string, Question>> | undefined;
 const publicRoot = () => path.resolve(process.env.NODE_ENV === 'production' ? 'dist' : 'public');
@@ -23,7 +23,7 @@ export async function groundQuestion(payload: Record<string, unknown>): Promise<
   if (!selected || !correct) throw new AiValidationError('Alternativa inválida para esta questão.');
   payload.prompt = `${question.prompt}\n\nAlternativas:\n${question.options.map(o => `${o.id.toUpperCase()}) ${o.text}`).join('\n')}`;
   payload.subject = question.subject;
-  payload.topic = mockTopics.find(topic => topic.id === question.topicId)?.name ?? question.chapter ?? '';
+  payload.topic = questionTopics.find(topic => topic.id === question.topicId)?.name ?? question.chapter ?? '';
   payload.board = question.examSource?.board;
   payload.chapter = question.chapter;
   payload.selectedAnswer = selected.text;

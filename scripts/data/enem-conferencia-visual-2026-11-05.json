@@ -1,0 +1,78 @@
+{
+  "scope": "Conferências sem alteração de conteúdo; figuras e alternativas verificadas na página original.",
+  "reviewed": [
+    {
+      "questionId": "enem_completo_2021_d2_q178",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477",
+      "pages": [
+        30
+      ],
+      "evidence": "Página e recortes comparados visualmente: as representações de A–E estão completas nas figuras e/ou nos textos das alternativas; nenhuma alteração necessária.",
+      "reviewBasis": "pdf-page-visual",
+      "figureUrls": [
+        "/question-media/enem-completo/enem-2021-d2-q178-p30-0.webp",
+        "/question-media/enem-completo/enem-2021-d2-q178-p30-1.webp",
+        "/question-media/enem-completo/enem-2021-d2-q178-p30-2.webp",
+        "/question-media/enem-completo/enem-2021-d2-q178-p30-3.webp",
+        "/question-media/enem-completo/enem-2021-d2-q178-p30-4.webp",
+        "/question-media/enem-completo/enem-2021-d2-q178-p30-5.webp",
+        "/question-media/enem-completo/enem-2021-d2-q178-p30-6.webp",
+        "/question-media/enem-completo/enem-2021-d2-q178-p30-7.webp",
+        "/question-media/enem-completo/enem-2021-d2-q178-p30-8.webp"
+      ]
+    },
+    {
+      "questionId": "enem_completo_2021_d2_q162",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2021/2dia/enem2021_2dia_prova_amarelo.pdf",
+      "sourceSha256": "1d85f9bab48ecd7b2cb53869b78a0a0c249af593abb1c7cb057403a43cd9b477",
+      "pages": [
+        25
+      ],
+      "evidence": "Página e recortes comparados visualmente: as representações de A–E estão completas nas figuras e/ou nos textos das alternativas; nenhuma alteração necessária.",
+      "reviewBasis": "pdf-page-visual",
+      "figureUrls": [
+        "/question-media/enem-completo/enem-2021-d2-q162-p25-0.webp"
+      ]
+    },
+    {
+      "questionId": "enem_completo_2024_d2_q116",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/2dia/enem2024_2dia_prova_amarelo.pdf",
+      "sourceSha256": "44a324acab3b3922293f06b6ee08c90696c00ba82c0357e9e803b15d80b0ea24",
+      "pages": [
+        10
+      ],
+      "evidence": "Página e recortes comparados visualmente: as representações de A–E estão completas nas figuras e/ou nos textos das alternativas; nenhuma alteração necessária.",
+      "reviewBasis": "pdf-page-visual",
+      "figureUrls": [
+        "/question-media/enem-completo/enem-2024-d2-q116-p10-0.webp"
+      ]
+    },
+    {
+      "questionId": "enem_completo_2025_d2_q154",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2025/2dia/enem2025_2dia_prova_amarelo.pdf",
+      "sourceSha256": "08a093fcd289a6725b35e3152d55fa133ba5d4f7ac2b95c31466a9376d997838",
+      "pages": [
+        22
+      ],
+      "evidence": "Página e recortes comparados visualmente: as representações de A–E estão completas nas figuras e/ou nos textos das alternativas; nenhuma alteração necessária.",
+      "reviewBasis": "pdf-page-visual",
+      "figureUrls": [
+        "/question-media/enem-completo/enem-2025-d2-q154-p22-1.webp"
+      ]
+    },
+    {
+      "questionId": "enem_completo_2020_d2_q170",
+      "sourceUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2020/presencial/2dia/enem2020_2dia_prova_amarelo.pdf",
+      "sourceSha256": "3ea8f537cfaf836fbb337c73aac954320bd0a3098a382cba17f2d196d501fa1c",
+      "pages": [
+        28
+      ],
+      "evidence": "Página e recortes comparados visualmente: as representações de A–E estão completas nas figuras e/ou nos textos das alternativas; nenhuma alteração necessária.",
+      "reviewBasis": "pdf-page-visual",
+      "figureUrls": [
+        "/question-media/enem-completo/enem-2020-d2-q170-p28-0.webp"
+      ]
+    }
+  ]
+}

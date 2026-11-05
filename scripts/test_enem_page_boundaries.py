@@ -1,5 +1,5 @@
 import unittest
-from lib.enem_page_boundaries import is_essay_page
+from lib.enem_page_boundaries import is_essay_page, is_institutional_footer
 
 class EssayBoundaries(unittest.TestCase):
     def test_standalone_writing_page(self):
@@ -10,5 +10,10 @@ class EssayBoundaries(unittest.TestCase):
         self.assertFalse(is_essay_page([{'text':'QUESTÃO 45'},{'text':'PROPOSTA DE REDAÇÃO'}]))
         self.assertFalse(is_essay_page([{'text':'Leia a proposta de redação abaixo.'}]))
         self.assertFalse(is_essay_page([{'text':'TEXTOS MOTIVADORES'}]))
+
+    def test_footer_requires_complete_institutional_label(self):
+        self.assertTrue(is_institutional_footer('CH 1º dia | Caderno 2 - AMARELO - Página 23'))
+        self.assertFalse(is_institutional_footer('A autora cita a página 23 do caderno.'))
+        self.assertFalse(is_institutional_footer('CH 1º dia | Caderno 2 - AMARELO - Página 23 — analise o texto'))
 
 if __name__=='__main__':unittest.main()

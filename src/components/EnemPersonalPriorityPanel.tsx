@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import data from '../data/enemProbabilities2026.json';
-import { mockTopics } from '../data/mockData';
+import { questionTopics, isQuestionOnlyTopic } from '../data/questionTopics';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { buildEnemPersonalPriorities, type EnemDay } from '../lib/enemPersonalPriority';
 
-const names = new Map(mockTopics.map(topic => [topic.id, topic.name]));
+const names = new Map(questionTopics.map(topic => [topic.id, topic.name]));
 const DAYS: Record<EnemDay, string> = { 1: 'Dia 1 (8/11) · Linguagens e Humanas', 2: 'Dia 2 (15/11) · Natureza e Matemática' };
 
 export function EnemPersonalPriorityPanel() {
@@ -23,7 +23,7 @@ export function EnemPersonalPriorityPanel() {
     {!loading && <p className="text-xs">{isPersisted ? `${withEvidence} de ${ranked.length} assuntos deste dia têm domínio registrado.` : 'Sem progresso salvo carregado.'} Assunto sem registro conta como 50% e aparece como "diagnosticar": resolver questões dele é o que tira essa dúvida.</p>}
     <ol className="space-y-2">
       {ranked.slice(0, visible).map((entry, index) => <li key={entry.topicId} className="border border-[var(--line)] rounded-lg p-3">
-        <b>{index + 1}. {names.get(entry.topicId) ?? entry.topicId}</b> <span className="text-xs text-[var(--dim)]">{entry.subject}</span>
+        <b>{index + 1}. {names.get(entry.topicId) ?? entry.topicId}</b> <span className="text-xs text-[var(--dim)]">{entry.subject}{isQuestionOnlyTopic(entry.topicId) ? ' · assunto complementar do banco' : ''}</span>
         <span className="block text-sm">{entry.atStake.toFixed(1)} questões em jogo · cai em {Math.round(entry.pAtLeastOne * 100)}% (esteve em {entry.presence} de 8 provas) · ~{entry.expected.toFixed(1)} por prova · domínio {entry.level === null ? 'diagnosticar' : `${Math.round(entry.level)}%`}</span>
         <Link className="underline text-sm" to={`/questoes?topic=${encodeURIComponent(entry.topicId)}&board=ENEM`}>Resolver questões do ENEM deste assunto</Link>
       </li>)}

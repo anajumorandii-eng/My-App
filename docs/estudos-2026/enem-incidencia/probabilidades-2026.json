@@ -14,8 +14,8 @@
  "decay": 0.84,
  "backtest": {
   "topic": {
-   "brier": 0.16794973087716705,
-   "naive": 0.2095865660537782,
+   "brier": 0.16524995471907877,
+   "naive": 0.22222222222222185,
    "bins": [
     {
      "faixa": "80–100%",
@@ -30,16 +30,16 @@
     {
      "faixa": "40–60%",
      "n": 19,
-     "caiu": 12
+     "caiu": 11
     },
     {
      "faixa": "20–40%",
-     "n": 14,
-     "caiu": 5
+     "n": 16,
+     "caiu": 6
     },
     {
      "faixa": "0–20%",
-     "n": 5,
+     "n": 8,
      "caiu": 1
     }
    ],
@@ -47,8 +47,8 @@
    "unseenThatAppeared": 0
   },
   "chapter": {
-   "brier": 0.21498632001098217,
-   "naive": 0.2147140512561546,
+   "brier": 0.2102718963236194,
+   "naive": 0.21196111580726967,
    "bins": [
     {
      "faixa": "80–100%",
@@ -62,17 +62,17 @@
     },
     {
      "faixa": "40–60%",
-     "n": 67,
+     "n": 65,
      "caiu": 25
     },
     {
      "faixa": "20–40%",
-     "n": 141,
+     "n": 143,
      "caiu": 31
     },
     {
      "faixa": "0–20%",
-     "n": 107,
+     "n": 115,
      "caiu": 29
     }
    ],
@@ -87,19 +87,19 @@
    "label": "Entendimento de Texto",
    "perYear": [
     26,
-    28,
+    27,
     30,
     25,
-    24,
+    23,
     20,
     20,
     26
    ],
-   "total": 199,
+   "total": 197,
    "presence": 8,
    "pAtLeastOne": 0.956,
-   "expected": 24.17,
-   "trend": -0.845
+   "expected": 23.97,
+   "trend": -0.798
   },
   {
    "key": "mat_aritmetica_proporcionalidade",
@@ -151,15 +151,15 @@
     7,
     6,
     4,
-    7,
+    6,
     6,
     5
    ],
-   "total": 43,
+   "total": 42,
    "presence": 8,
    "pAtLeastOne": 0.954,
-   "expected": 5.5,
-   "trend": 0.179
+   "expected": 5.35,
+   "trend": 0.143
   },
   {
    "key": "mat_geometria_espacial",
@@ -387,7 +387,7 @@
    "label": "Literatura Contemporânea",
    "perYear": [
     3,
-    3,
+    2,
     0,
     3,
     3,
@@ -395,11 +395,11 @@
     7,
     6
    ],
-   "total": 30,
+   "total": 29,
    "presence": 7,
    "pAtLeastOne": 0.913,
-   "expected": 4.39,
-   "trend": 0.667
+   "expected": 4.31,
+   "trend": 0.726
   },
   {
    "key": "geo_globalizacao_economica",
@@ -426,8 +426,8 @@
    "subject": "História",
    "label": "Idade Moderna e Iluminismo",
    "perYear": [
-    2,
-    4,
+    1,
+    3,
     5,
     1,
     2,
@@ -435,11 +435,11 @@
     3,
     1
    ],
-   "total": 20,
+   "total": 18,
    "presence": 8,
-   "pAtLeastOne": 0.905,
-   "expected": 2.28,
-   "trend": -0.238
+   "pAtLeastOne": 0.897,
+   "expected": 2.14,
+   "trend": -0.095
   },
   {
    "key": "soc_cultura_identidade",
@@ -567,7 +567,7 @@
    "label": "Simbolismo, Pré-Modernismo e Modernismo",
    "perYear": [
     2,
-    3,
+    2,
     1,
     0,
     4,
@@ -575,11 +575,11 @@
     2,
     1
    ],
-   "total": 18,
+   "total": 17,
    "presence": 7,
-   "pAtLeastOne": 0.86,
-   "expected": 2.26,
-   "trend": 0.048
+   "pAtLeastOne": 0.856,
+   "expected": 2.19,
+   "trend": 0.107
   },
   {
    "key": "bio_metabolismo_energetico",
@@ -722,26 +722,6 @@
    "trend": 0.095
   },
   {
-   "key": "por_lit_classica_barroca",
-   "subject": "Português",
-   "label": "Literatura Clássica, Medieval e Barroca",
-   "perYear": [
-    4,
-    2,
-    2,
-    3,
-    2,
-    2,
-    3,
-    0
-   ],
-   "total": 18,
-   "presence": 7,
-   "pAtLeastOne": 0.8,
-   "expected": 1.98,
-   "trend": -0.286
-  },
-  {
    "key": "mat_teoria_numeros",
    "subject": "Matemática",
    "label": "Teoria dos Números Inteiros",
@@ -760,6 +740,26 @@
    "pAtLeastOne": 0.8,
    "expected": 1.61,
    "trend": 0.298
+  },
+  {
+   "key": "por_lit_classica_barroca",
+   "subject": "Português",
+   "label": "Literatura Clássica, Medieval e Barroca",
+   "perYear": [
+    3,
+    2,
+    2,
+    3,
+    2,
+    2,
+    3,
+    0
+   ],
+   "total": 17,
+   "presence": 7,
+   "pAtLeastOne": 0.795,
+   "expected": 1.92,
+   "trend": -0.202
   },
   {
    "key": "qui_organica_fundamentos",
@@ -1462,26 +1462,6 @@
    "trend": 0.143
   },
   {
-   "key": "fil_socrates_platao",
-   "subject": "Filosofia",
-   "label": "Sócrates e Platão",
-   "perYear": [
-    0,
-    0,
-    0,
-    1,
-    1,
-    0,
-    1,
-    1
-   ],
-   "total": 4,
-   "presence": 4,
-   "pAtLeastOne": 0.533,
-   "expected": 0.62,
-   "trend": 0.143
-  },
-  {
    "key": "bio_botanica",
    "subject": "Biologia",
    "label": "Botânica",
@@ -1562,26 +1542,6 @@
    "trend": -0.083
   },
   {
-   "key": "fil_aristoteles",
-   "subject": "Filosofia",
-   "label": "Aristóteles",
-   "perYear": [
-    1,
-    0,
-    1,
-    0,
-    0,
-    0,
-    1,
-    1
-   ],
-   "total": 4,
-   "presence": 4,
-   "pAtLeastOne": 0.477,
-   "expected": 0.54,
-   "trend": 0.024
-  },
-  {
    "key": "fil_origem_pre_socraticos",
    "subject": "Filosofia",
    "label": "Origens da Filosofia e os Pré-Socráticos",
@@ -1600,6 +1560,46 @@
    "pAtLeastOne": 0.475,
    "expected": 0.62,
    "trend": 0.143
+  },
+  {
+   "key": "fil_socrates_platao",
+   "subject": "Filosofia",
+   "label": "Sócrates e Platão",
+   "perYear": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1
+   ],
+   "total": 3,
+   "presence": 3,
+   "pAtLeastOne": 0.445,
+   "expected": 0.5,
+   "trend": 0.131
+  },
+  {
+   "key": "fil_aristoteles",
+   "subject": "Filosofia",
+   "label": "Aristóteles",
+   "perYear": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1
+   ],
+   "total": 3,
+   "presence": 3,
+   "pAtLeastOne": 0.433,
+   "expected": 0.48,
+   "trend": 0.107
   },
   {
    "key": "qui_solucoes",
@@ -1640,6 +1640,26 @@
    "pAtLeastOne": 0.411,
    "expected": 0.66,
    "trend": -0.095
+  },
+  {
+   "key": "q_ef_cultura_corporal",
+   "subject": "Educação Física",
+   "label": "Cultura Corporal e Esporte",
+   "perYear": [
+    1,
+    2,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "total": 5,
+   "presence": 4,
+   "pAtLeastOne": 0.408,
+   "expected": 0.49,
+   "trend": -0.155
   },
   {
    "key": "fis_gravitacao_circular",
@@ -1902,6 +1922,26 @@
    "trend": -0.107
   },
   {
+   "key": "q_fil_helenistica",
+   "subject": "Filosofia",
+   "label": "Filosofia Helenística",
+   "perYear": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.208,
+   "expected": 0.19,
+   "trend": -0.071
+  },
+  {
    "key": "fil_medieval",
    "subject": "Filosofia",
    "label": "Filosofia Medieval",
@@ -1982,6 +2022,46 @@
    "trend": -0.012
   },
   {
+   "key": "q_ef_corpo_saude",
+   "subject": "Educação Física",
+   "label": "Corpo, Saúde e Imagem Corporal",
+   "perYear": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.111,
+   "expected": 0.07,
+   "trend": -0.06
+  },
+  {
+   "key": "q_fil_politica_moderna",
+   "subject": "Filosofia",
+   "label": "Filosofia Política Moderna",
+   "perYear": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.111,
+   "expected": 0.07,
+   "trend": -0.06
+  },
+  {
    "key": "fis_optica_instrumental",
    "subject": "Física",
    "label": "Óptica Instrumental e da Visão",
@@ -2005,6 +2085,26 @@
    "key": "soc_durkheim",
    "subject": "Sociologia",
    "label": "Émile Durkheim e o Fato Social",
+   "perYear": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.1,
+   "expected": 0.06,
+   "trend": -0.083
+  },
+  {
+   "key": "q_fil_introducao",
+   "subject": "Filosofia",
+   "label": "Introdução à Filosofia",
    "perYear": [
     1,
     0,
@@ -2133,15 +2233,15 @@
     3,
     4,
     3,
-    4,
+    3,
     4,
     1
    ],
-   "total": 24,
+   "total": 23,
    "presence": 8,
-   "pAtLeastOne": 0.929,
-   "expected": 2.92,
-   "trend": -0.048
+   "pAtLeastOne": 0.925,
+   "expected": 2.77,
+   "trend": -0.083
   },
   {
    "key": "por_texto::Gêneros Textuais",
@@ -2189,7 +2289,7 @@
    "label": "Fatores de Textualidade (Entendimento de Texto)",
    "perYear": [
     3,
-    2,
+    1,
     0,
     2,
     1,
@@ -2197,11 +2297,11 @@
     1,
     5
    ],
-   "total": 16,
+   "total": 15,
    "presence": 7,
-   "pAtLeastOne": 0.865,
-   "expected": 2.22,
-   "trend": 0.167
+   "pAtLeastOne": 0.861,
+   "expected": 2.14,
+   "trend": 0.226
   },
   {
    "key": "por_texto::Função Poética e Linguagem Literária",
@@ -2684,26 +2784,6 @@
    "trend": 0.321
   },
   {
-   "key": "por_texto::Intertextualidade e Interdiscursividade",
-   "subject": "Português",
-   "label": "Intertextualidade e Interdiscursividade (Entendimento de Texto)",
-   "perYear": [
-    1,
-    1,
-    2,
-    1,
-    4,
-    1,
-    0,
-    0
-   ],
-   "total": 10,
-   "presence": 6,
-   "pAtLeastOne": 0.624,
-   "expected": 1.08,
-   "trend": -0.143
-  },
-  {
    "key": "qui_estequiometria::Separação de Misturas",
    "subject": "Química",
    "label": "Separação de Misturas (Análises Quantitativas e Estequiometria)",
@@ -2762,6 +2842,26 @@
    "pAtLeastOne": 0.614,
    "expected": 0.89,
    "trend": -0.119
+  },
+  {
+   "key": "por_texto::Intertextualidade e Interdiscursividade",
+   "subject": "Português",
+   "label": "Intertextualidade e Interdiscursividade (Entendimento de Texto)",
+   "perYear": [
+    1,
+    1,
+    2,
+    1,
+    3,
+    1,
+    0,
+    0
+   ],
+   "total": 9,
+   "presence": 6,
+   "pAtLeastOne": 0.601,
+   "expected": 0.95,
+   "trend": -0.155
   },
   {
    "key": "geo_climatologia_socioambiental::Geomorfologia Mundial",
@@ -4384,26 +4484,6 @@
    "trend": 0.036
   },
   {
-   "key": "por_lit_modernismo::Parnasianismo",
-   "subject": "Português",
-   "label": "Parnasianismo (Simbolismo, Pré-Modernismo e Modernismo)",
-   "perYear": [
-    0,
-    1,
-    0,
-    0,
-    0,
-    1,
-    1,
-    0
-   ],
-   "total": 3,
-   "presence": 3,
-   "pAtLeastOne": 0.376,
-   "expected": 0.4,
-   "trend": 0.036
-  },
-  {
    "key": "qui_eletroquimica::Eletroquímica de Processos Espontâneos",
    "subject": "Química",
    "label": "Eletroquímica de Processos Espontâneos (Eletroquímica)",
@@ -4824,26 +4904,6 @@
    "trend": -0.012
   },
   {
-   "key": "his_moderna_iluminismo::América Espanhola",
-   "subject": "História",
-   "label": "América Espanhola (Idade Moderna e Iluminismo)",
-   "perYear": [
-    2,
-    1,
-    0,
-    0,
-    0,
-    0,
-    1,
-    0
-   ],
-   "total": 4,
-   "presence": 3,
-   "pAtLeastOne": 0.332,
-   "expected": 0.38,
-   "trend": -0.167
-  },
-  {
    "key": "his_moderna_iluminismo::América no Século XIX",
    "subject": "História",
    "label": "América no Século XIX (Idade Moderna e Iluminismo)",
@@ -5042,6 +5102,26 @@
    "pAtLeastOne": 0.321,
    "expected": 0.38,
    "trend": -0.119
+  },
+  {
+   "key": "por_lit_modernismo::Parnasianismo",
+   "subject": "Português",
+   "label": "Parnasianismo (Simbolismo, Pré-Modernismo e Modernismo)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.32,
+   "expected": 0.33,
+   "trend": 0.095
   },
   {
    "key": "fis_fisica_moderna::Noções Básicas de Física Quântica",
@@ -5844,9 +5924,9 @@
    "trend": -0.155
   },
   {
-   "key": "fil_aristoteles::A Ética a Nicômaco e a Doutrina do Meio-Termo",
-   "subject": "Filosofia",
-   "label": "A Ética a Nicômaco e a Doutrina do Meio-Termo (Aristóteles)",
+   "key": "his_moderna_iluminismo::América Espanhola",
+   "subject": "História",
+   "label": "América Espanhola (Idade Moderna e Iluminismo)",
    "perYear": [
     1,
     0,
@@ -6262,6 +6342,26 @@
    "pAtLeastOne": 0.233,
    "expected": 0.25,
    "trend": -0.155
+  },
+  {
+   "key": "q_ef_cultura_corporal::Valores Olímpicos e Paralímpicos",
+   "subject": "Educação Física",
+   "label": "Valores Olímpicos e Paralímpicos (Cultura Corporal e Esporte)",
+   "perYear": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "total": 2,
+   "presence": 2,
+   "pAtLeastOne": 0.227,
+   "expected": 0.21,
+   "trend": -0.048
   },
   {
    "key": "por_lit_contemporanea::Prosa Brasileira: 1960-1980",
@@ -6724,26 +6824,6 @@
    "trend": -0.048
   },
   {
-   "key": "por_lit_contemporanea::Clarice Lispector",
-   "subject": "Português",
-   "label": "Clarice Lispector (Literatura Contemporânea)",
-   "perYear": [
-    0,
-    1,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0
-   ],
-   "total": 2,
-   "presence": 2,
-   "pAtLeastOne": 0.218,
-   "expected": 0.2,
-   "trend": -0.048
-  },
-  {
    "key": "geo_globalizacao_economica::Unilateralismo e Multilateralismo",
    "subject": "Geografia",
    "label": "Unilateralismo e Multilateralismo (Globalização e Geografia Econômica)",
@@ -6967,6 +7047,26 @@
    "key": "por_lit_modernismo::Graciliano Ramos",
    "subject": "Português",
    "label": "Graciliano Ramos (Simbolismo, Pré-Modernismo e Modernismo)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.199,
+   "expected": 0.18,
+   "trend": 0.06
+  },
+  {
+   "key": "fil_aristoteles::A Ética a Nicômaco e a Doutrina do Meio-Termo",
+   "subject": "Filosofia",
+   "label": "A Ética a Nicômaco e a Doutrina do Meio-Termo (Aristóteles)",
    "perYear": [
     0,
     0,
@@ -7724,6 +7824,46 @@
    "trend": 0.012
   },
   {
+   "key": "q_ef_cultura_corporal::Práticas Corporais de Aventura",
+   "subject": "Educação Física",
+   "label": "Práticas Corporais de Aventura (Cultura Corporal e Esporte)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.155,
+   "expected": 0.13,
+   "trend": 0.012
+  },
+  {
+   "key": "por_lit_contemporanea::Clarice Lispector",
+   "subject": "Português",
+   "label": "Clarice Lispector (Literatura Contemporânea)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.155,
+   "expected": 0.13,
+   "trend": 0.012
+  },
+  {
    "key": "por_lit_contemporanea::Cancioneiro Popular Brasileiro",
    "subject": "Português",
    "label": "Cancioneiro Popular Brasileiro (Literatura Contemporânea)",
@@ -7807,6 +7947,26 @@
    "key": "geo_geopolitica_regional::Geografia das Religiões",
    "subject": "Geografia",
    "label": "Geografia das Religiões (Geopolítica Regional Contemporânea)",
+   "perYear": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.155,
+   "expected": 0.13,
+   "trend": 0.012
+  },
+  {
+   "key": "q_fil_helenistica::Estoicismo e Moderação das Paixões",
+   "subject": "Filosofia",
+   "label": "Estoicismo e Moderação das Paixões (Filosofia Helenística)",
    "perYear": [
     0,
     0,
@@ -8504,9 +8664,69 @@
    "trend": -0.036
   },
   {
+   "key": "q_ef_cultura_corporal::Esporte e Mídia",
+   "subject": "Educação Física",
+   "label": "Esporte e Mídia (Cultura Corporal e Esporte)",
+   "perYear": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.111,
+   "expected": 0.07,
+   "trend": -0.06
+  },
+  {
+   "key": "q_ef_cultura_corporal::Esportivização de Práticas Corporais",
+   "subject": "Educação Física",
+   "label": "Esportivização de Práticas Corporais (Cultura Corporal e Esporte)",
+   "perYear": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.111,
+   "expected": 0.07,
+   "trend": -0.06
+  },
+  {
    "key": "por_norma_culta::Pronomes",
    "subject": "Português",
    "label": "Pronomes (Domínio da Norma Culta)",
+   "perYear": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.111,
+   "expected": 0.07,
+   "trend": -0.06
+  },
+  {
+   "key": "q_ef_corpo_saude::Transtornos da Imagem Corporal",
+   "subject": "Educação Física",
+   "label": "Transtornos da Imagem Corporal (Corpo, Saúde e Imagem Corporal)",
    "perYear": [
     0,
     1,
@@ -8587,6 +8807,26 @@
    "key": "geo_globalizacao_economica::Indústria II",
    "subject": "Geografia",
    "label": "Indústria II (Globalização e Geografia Econômica)",
+   "perYear": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.111,
+   "expected": 0.07,
+   "trend": -0.06
+  },
+  {
+   "key": "q_fil_politica_moderna::Maquiavel: Moral e Eficácia Política",
+   "subject": "Filosofia",
+   "label": "Maquiavel: Moral e Eficácia Política (Filosofia Política Moderna)",
    "perYear": [
     0,
     1,
@@ -8784,26 +9024,6 @@
    "trend": -0.083
   },
   {
-   "key": "por_lit_classica_barroca::A Estética Barroca",
-   "subject": "Português",
-   "label": "A Estética Barroca (Literatura Clássica, Medieval e Barroca)",
-   "perYear": [
-    1,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
-   ],
-   "total": 1,
-   "presence": 1,
-   "pAtLeastOne": 0.1,
-   "expected": 0.06,
-   "trend": -0.083
-  },
-  {
    "key": "fil_contratualismo_iluminismo::O Ideal Iluminista de Razão e Progresso",
    "subject": "Filosofia",
    "label": "O Ideal Iluminista de Razão e Progresso (Contratualismo Político e Iluminismo)",
@@ -8824,9 +9044,49 @@
    "trend": -0.083
   },
   {
+   "key": "q_fil_helenistica::Epicurismo e Moderação dos Desejos",
+   "subject": "Filosofia",
+   "label": "Epicurismo e Moderação dos Desejos (Filosofia Helenística)",
+   "perYear": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.1,
+   "expected": 0.06,
+   "trend": -0.083
+  },
+  {
    "key": "soc_durkheim::Anomia e Coesão Social",
    "subject": "Sociologia",
    "label": "Anomia e Coesão Social (Émile Durkheim e o Fato Social)",
+   "perYear": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "total": 1,
+   "presence": 1,
+   "pAtLeastOne": 0.1,
+   "expected": 0.06,
+   "trend": -0.083
+  },
+  {
+   "key": "q_fil_introducao::Atitude Filosófica e Questionamento",
+   "subject": "Filosofia",
+   "label": "Atitude Filosófica e Questionamento (Introdução à Filosofia)",
    "perYear": [
     1,
     0,

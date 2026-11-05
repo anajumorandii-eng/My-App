@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFileSync } from 'node:fs';
 import { mockTopics, mockMastery, mockPodcastEpisodes, mockBacklog, mockErrorLogs } from '../data/mockData';
+import { questionTopics } from '../data/questionTopics';
 import type { Question } from '../types';
 import { mockTopicDiscursivePrompts } from '../data/topicDiscursivePrompts';
 import { SPLIT_TOPIC_PARENTS } from '../data/topicSplits';
@@ -28,7 +29,8 @@ test('every prerequisite points at a real topic', () => {
 test('every topicId referenced elsewhere in the mock dataset resolves to a real topic', () => {
   const ids = new Set(mockTopics.map((t) => t.id));
   for (const m of mockMastery) assert.ok(ids.has(m.topicId), `mockMastery references unknown topic ${m.topicId}`);
-  for (const q of mockQuestions) assert.ok(ids.has(q.topicId), `mockQuestions references unknown topic ${q.topicId}`);
+  const questionIds = new Set(questionTopics.map(t => t.id));
+  for (const q of mockQuestions) assert.ok(questionIds.has(q.topicId), `mockQuestions references unknown topic ${q.topicId}`);
   for (const p of mockPodcastEpisodes) assert.ok(ids.has(p.topicId), `mockPodcastEpisodes references unknown topic ${p.topicId}`);
   for (const b of mockBacklog) assert.ok(ids.has(b.topicId), `mockBacklog references unknown topic ${b.topicId}`);
   for (const e of mockErrorLogs) assert.ok(ids.has(e.topicId), `mockErrorLogs references unknown topic ${e.topicId}`);
@@ -42,9 +44,10 @@ test('no duplicate id within mockTopicDiscursivePrompts', () => {
 
 test('every question/discursive-prompt chapter tag matches a real chapter of its topic', () => {
   const topicsById = new Map(mockTopics.map((t) => [t.id, t]));
+  const questionTopicsById = new Map(questionTopics.map(t => [t.id,t]));
   for (const q of mockQuestions) {
     if (!q.chapter) continue;
-    const topic = topicsById.get(q.topicId);
+    const topic = questionTopicsById.get(q.topicId);
     assert.ok(topic?.chapters?.includes(q.chapter), `${q.id} has chapter "${q.chapter}" not listed in ${q.topicId}'s chapters`);
   }
   for (const p of mockTopicDiscursivePrompts) {

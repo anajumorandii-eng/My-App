@@ -1,21 +1,39 @@
 {
-  "asOf": "2026-11-04",
-  "scope": "ENEM 2018–2025, aplicação regular impressa, cadernos amarelos, opção Inglês; currículo principal por questão, sem dupla contagem de habilidades secundárias.",
+  "asOf": "2026-11-05",
+  "catalogScope": {
+    "studyTopics": 105,
+    "studyChapters": 612,
+    "questionOnlyTopics": 5,
+    "questionOnlyChapters": 9
+  },
+  "scope": "ENEM 2018–2025, aplicação regular impressa, cadernos amarelos, opção Inglês; classificação principal por questão, incluindo assuntos complementares do banco que ainda não possuem módulo na grade de estudo. Sem dupla contagem de habilidades secundárias.",
   "inputs": {
     "bank": {
       "path": "public/questions.json",
-      "sha256": "7d3e5232e1b71df3615591bb89bf06afd47136ed9e2f6e0f87d171e6a43da0f4"
+      "sha256": "3d0b52b0270d5646ad2c7a065ffefc8c67373c138684c6e73fa645cff308df80"
     },
     "manifest": {
       "path": "scripts/data/enem-completo-2018-2025/manifest.json",
-      "sha256": "01e15f1329ca116e67c2f120b74906ce1859d3695f0cf08c1bde418dd2227907"
+      "sha256": "232ae656d53755e5e946df163dfc47e98a4bf3138dcb8edf7c8cd7637e78352c"
     },
     "imported": {
       "path": "scripts/data/enem-completo-2018-2025/questions.json",
-      "sha256": "3ece7c1a2b71f3c22a35c1c0e03898c30db9f48b1b51411bfb556718ad4b8943"
+      "sha256": "4ad04dab76ead1cad2fa522444c430db873ac08411b0af71fc62da8d3d8e77be"
     }
   },
   "additionalInputs": {
+    "scripts/data/enem-correcao-transcricao-2026-11-05.json": {
+      "path": "scripts/data/enem-correcao-transcricao-2026-11-05.json",
+      "sha256": "0c2b319c14e3432ec230072e95f30d8e7d1c6e97e2e2d0aee99a9268d86e23f2"
+    },
+    "scripts/data/enem-resolucao-taxonomia-2026-11-05.json": {
+      "path": "scripts/data/enem-resolucao-taxonomia-2026-11-05.json",
+      "sha256": "0dc75266a91bb6e2086bf4445446fea3aa1e4d87e468d9c4a6a4891bda774345"
+    },
+    "src/data/questionOnlyTopics.json": {
+      "path": "src/data/questionOnlyTopics.json",
+      "sha256": "09f2e755787fe89b6085851b1404d2bb21d6b2c9b1d512aa36fcfff8f8386a39"
+    },
     "scripts/data/enem-correcao-transcricao-2026-11-04.json": {
       "path": "scripts/data/enem-correcao-transcricao-2026-11-04.json",
       "sha256": "2f908bbc3b36176ad2b506869fb4c9b56e120e4db9633057698ebba28540772d"
@@ -79,15 +97,15 @@
     "uniqueQuestions": 1440,
     "valid": 1430,
     "annulled": 10,
-    "topics": 105,
-    "representedTopics": 97,
+    "topics": 110,
+    "representedTopics": 102,
     "uncoveredTopics": 8,
-    "chapters": 612,
-    "uncoveredChapters": 256,
-    "automaticPending": 9,
-    "editoriallyReviewed": 1035,
-    "editorialReservations": 79,
-    "deferred": 10,
+    "chapters": 621,
+    "uncoveredChapters": 257,
+    "automaticPending": 0,
+    "editoriallyReviewed": 1044,
+    "editorialReservations": 78,
+    "deferred": 0,
     "errors": 0
   },
   "subjects": [
@@ -123,14 +141,14 @@
     },
     {
       "subject": "História",
-      "total": 107,
-      "valid": 107,
+      "total": 105,
+      "valid": 105,
       "annulled": 0
     },
     {
       "subject": "Português",
-      "total": 317,
-      "valid": 317,
+      "total": 311,
+      "valid": 311,
       "annulled": 0
     },
     {
@@ -141,14 +159,20 @@
     },
     {
       "subject": "Filosofia",
-      "total": 63,
-      "valid": 63,
+      "total": 65,
+      "valid": 65,
       "annulled": 0
     },
     {
       "subject": "Sociologia",
       "total": 73,
       "valid": 73,
+      "annulled": 0
+    },
+    {
+      "subject": "Educação Física",
+      "total": 6,
+      "valid": 6,
       "annulled": 0
     }
   ],
@@ -180,8 +204,7 @@
   ],
   "methods": {
     "language-option": 38,
-    "versioned-editorial-review": 1035,
-    "automatic-lexical-similarity": 9,
+    "versioned-editorial-review": 1044,
     "preserved-existing-record": 63,
     "existing-editorial-incidence": 295
   },
@@ -399,11 +422,6 @@
       "id": "enem_completo_2022_d1_q059",
       "topicId": "fil_origem_pre_socraticos",
       "reviewSource": "scripts/data/enem-revisao-editorial-2026-11-04/filosofia.json"
-    },
-    {
-      "id": "enem_completo_2022_d1_q061",
-      "topicId": "fil_socrates_platao",
-      "reviewSource": "scripts/data/enem-conferencia-2022-2023.json"
     },
     {
       "id": "enem_completo_2022_d1_q062",
@@ -5423,8 +5441,8 @@
       "topicId": "his_moderna_iluminismo",
       "subject": "História",
       "topic": "Idade Moderna e Iluminismo",
-      "total": 20,
-      "valid": 20,
+      "total": 18,
+      "valid": 18,
       "annulled": 0,
       "years": [
         2018,
@@ -5436,18 +5454,17 @@
         2024,
         2025
       ],
-      "automaticPending": 2,
+      "automaticPending": 0,
       "missingChapter": 2,
       "chapters": [
         {
           "chapter": "América Espanhola",
-          "total": 4,
-          "valid": 4,
+          "total": 2,
+          "valid": 2,
           "annulled": 0,
-          "automaticPending": 2,
+          "automaticPending": 0,
           "years": [
             2018,
-            2019,
             2024
           ]
         },
@@ -6018,8 +6035,8 @@
       "topicId": "por_norma_culta",
       "subject": "Português",
       "topic": "Domínio da Norma Culta",
-      "total": 43,
-      "valid": 43,
+      "total": 42,
+      "valid": 42,
       "annulled": 0,
       "years": [
         2018,
@@ -6031,7 +6048,7 @@
         2024,
         2025
       ],
-      "automaticPending": 1,
+      "automaticPending": 0,
       "missingChapter": 0,
       "chapters": [
         {
@@ -6051,10 +6068,10 @@
         },
         {
           "chapter": "Variação Linguística",
-          "total": 24,
-          "valid": 24,
+          "total": 23,
+          "valid": 23,
           "annulled": 0,
-          "automaticPending": 1,
+          "automaticPending": 0,
           "years": [
             2018,
             2019,
@@ -6291,8 +6308,8 @@
       "topicId": "por_texto",
       "subject": "Português",
       "topic": "Entendimento de Texto",
-      "total": 199,
-      "valid": 199,
+      "total": 197,
+      "valid": 197,
       "annulled": 0,
       "years": [
         2018,
@@ -6304,15 +6321,15 @@
         2024,
         2025
       ],
-      "automaticPending": 2,
+      "automaticPending": 0,
       "missingChapter": 0,
       "chapters": [
         {
           "chapter": "Fatores de Textualidade",
-          "total": 16,
-          "valid": 16,
+          "total": 15,
+          "valid": 15,
           "annulled": 0,
-          "automaticPending": 1,
+          "automaticPending": 0,
           "years": [
             2018,
             2019,
@@ -6341,10 +6358,10 @@
         },
         {
           "chapter": "Intertextualidade e Interdiscursividade",
-          "total": 10,
-          "valid": 10,
+          "total": 9,
+          "valid": 9,
           "annulled": 0,
-          "automaticPending": 1,
+          "automaticPending": 0,
           "years": [
             2018,
             2019,
@@ -6502,8 +6519,8 @@
       "topicId": "por_lit_classica_barroca",
       "subject": "Português",
       "topic": "Literatura Clássica, Medieval e Barroca",
-      "total": 18,
-      "valid": 18,
+      "total": 17,
+      "valid": 17,
       "annulled": 0,
       "years": [
         2018,
@@ -6514,7 +6531,7 @@
         2023,
         2024
       ],
-      "automaticPending": 1,
+      "automaticPending": 0,
       "missingChapter": 1,
       "chapters": [
         {
@@ -6567,13 +6584,11 @@
         },
         {
           "chapter": "A Estética Barroca",
-          "total": 1,
-          "valid": 1,
+          "total": 0,
+          "valid": 0,
           "annulled": 0,
-          "automaticPending": 1,
-          "years": [
-            2018
-          ]
+          "automaticPending": 0,
+          "years": []
         },
         {
           "chapter": "A Estética Neoclássica",
@@ -6674,8 +6689,8 @@
       "topicId": "por_lit_modernismo",
       "subject": "Português",
       "topic": "Simbolismo, Pré-Modernismo e Modernismo",
-      "total": 18,
-      "valid": 18,
+      "total": 17,
+      "valid": 17,
       "annulled": 0,
       "years": [
         2018,
@@ -6686,17 +6701,16 @@
         2024,
         2025
       ],
-      "automaticPending": 1,
+      "automaticPending": 0,
       "missingChapter": 1,
       "chapters": [
         {
           "chapter": "Parnasianismo",
-          "total": 3,
-          "valid": 3,
+          "total": 2,
+          "valid": 2,
           "annulled": 0,
-          "automaticPending": 1,
+          "automaticPending": 0,
           "years": [
-            2019,
             2023,
             2024
           ]
@@ -6812,8 +6826,8 @@
       "topicId": "por_lit_contemporanea",
       "subject": "Português",
       "topic": "Literatura Contemporânea",
-      "total": 30,
-      "valid": 30,
+      "total": 29,
+      "valid": 29,
       "annulled": 0,
       "years": [
         2018,
@@ -6824,7 +6838,7 @@
         2024,
         2025
       ],
-      "automaticPending": 1,
+      "automaticPending": 0,
       "missingChapter": 0,
       "chapters": [
         {
@@ -6840,12 +6854,11 @@
         },
         {
           "chapter": "Clarice Lispector",
-          "total": 2,
-          "valid": 2,
+          "total": 1,
+          "valid": 1,
           "annulled": 0,
-          "automaticPending": 1,
+          "automaticPending": 0,
           "years": [
-            2019,
             2022
           ]
         },
@@ -7698,17 +7711,16 @@
       "topicId": "fil_socrates_platao",
       "subject": "Filosofia",
       "topic": "Sócrates e Platão",
-      "total": 4,
-      "valid": 4,
+      "total": 3,
+      "valid": 3,
       "annulled": 0,
       "years": [
         2021,
-        2022,
         2024,
         2025
       ],
       "automaticPending": 0,
-      "missingChapter": 1,
+      "missingChapter": 0,
       "chapters": [
         {
           "chapter": "O Método Socrático e a Maiêutica",
@@ -7753,16 +7765,15 @@
       "topicId": "fil_aristoteles",
       "subject": "Filosofia",
       "topic": "Aristóteles",
-      "total": 4,
-      "valid": 4,
+      "total": 3,
+      "valid": 3,
       "annulled": 0,
       "years": [
-        2018,
         2020,
         2024,
         2025
       ],
-      "automaticPending": 1,
+      "automaticPending": 0,
       "missingChapter": 0,
       "chapters": [
         {
@@ -7775,12 +7786,11 @@
         },
         {
           "chapter": "A Ética a Nicômaco e a Doutrina do Meio-Termo",
-          "total": 2,
-          "valid": 2,
+          "total": 1,
+          "valid": 1,
           "annulled": 0,
-          "automaticPending": 1,
+          "automaticPending": 0,
           "years": [
-            2018,
             2024
           ]
         },
@@ -8609,6 +8619,176 @@
           ]
         }
       ]
+    },
+    {
+      "topicId": "q_fil_helenistica",
+      "subject": "Filosofia",
+      "topic": "Filosofia Helenística",
+      "total": 2,
+      "valid": 2,
+      "annulled": 0,
+      "years": [
+        2018,
+        2022
+      ],
+      "automaticPending": 0,
+      "missingChapter": 0,
+      "chapters": [
+        {
+          "chapter": "Epicurismo e Moderação dos Desejos",
+          "total": 1,
+          "valid": 1,
+          "annulled": 0,
+          "automaticPending": 0,
+          "years": [
+            2018
+          ]
+        },
+        {
+          "chapter": "Estoicismo e Moderação das Paixões",
+          "total": 1,
+          "valid": 1,
+          "annulled": 0,
+          "automaticPending": 0,
+          "years": [
+            2022
+          ]
+        }
+      ]
+    },
+    {
+      "topicId": "q_fil_introducao",
+      "subject": "Filosofia",
+      "topic": "Introdução à Filosofia",
+      "total": 1,
+      "valid": 1,
+      "annulled": 0,
+      "years": [
+        2018
+      ],
+      "automaticPending": 0,
+      "missingChapter": 0,
+      "chapters": [
+        {
+          "chapter": "Atitude Filosófica e Questionamento",
+          "total": 1,
+          "valid": 1,
+          "annulled": 0,
+          "automaticPending": 0,
+          "years": [
+            2018
+          ]
+        }
+      ]
+    },
+    {
+      "topicId": "q_fil_politica_moderna",
+      "subject": "Filosofia",
+      "topic": "Filosofia Política Moderna",
+      "total": 1,
+      "valid": 1,
+      "annulled": 0,
+      "years": [
+        2019
+      ],
+      "automaticPending": 0,
+      "missingChapter": 0,
+      "chapters": [
+        {
+          "chapter": "Maquiavel: Moral e Eficácia Política",
+          "total": 1,
+          "valid": 1,
+          "annulled": 0,
+          "automaticPending": 0,
+          "years": [
+            2019
+          ]
+        }
+      ]
+    },
+    {
+      "topicId": "q_ef_cultura_corporal",
+      "subject": "Educação Física",
+      "topic": "Cultura Corporal e Esporte",
+      "total": 5,
+      "valid": 5,
+      "annulled": 0,
+      "years": [
+        2018,
+        2019,
+        2022,
+        2023
+      ],
+      "automaticPending": 0,
+      "missingChapter": 0,
+      "chapters": [
+        {
+          "chapter": "Valores Olímpicos e Paralímpicos",
+          "total": 2,
+          "valid": 2,
+          "annulled": 0,
+          "automaticPending": 0,
+          "years": [
+            2018,
+            2023
+          ]
+        },
+        {
+          "chapter": "Esporte e Mídia",
+          "total": 1,
+          "valid": 1,
+          "annulled": 0,
+          "automaticPending": 0,
+          "years": [
+            2019
+          ]
+        },
+        {
+          "chapter": "Esportivização de Práticas Corporais",
+          "total": 1,
+          "valid": 1,
+          "annulled": 0,
+          "automaticPending": 0,
+          "years": [
+            2019
+          ]
+        },
+        {
+          "chapter": "Práticas Corporais de Aventura",
+          "total": 1,
+          "valid": 1,
+          "annulled": 0,
+          "automaticPending": 0,
+          "years": [
+            2022
+          ]
+        }
+      ]
+    },
+    {
+      "topicId": "q_ef_corpo_saude",
+      "subject": "Educação Física",
+      "topic": "Corpo, Saúde e Imagem Corporal",
+      "total": 1,
+      "valid": 1,
+      "annulled": 0,
+      "years": [
+        2019
+      ],
+      "automaticPending": 0,
+      "missingChapter": 0,
+      "chapters": [
+        {
+          "chapter": "Transtornos da Imagem Corporal",
+          "total": 1,
+          "valid": 1,
+          "annulled": 0,
+          "automaticPending": 0,
+          "years": [
+            2019
+          ]
+        }
+      ]
     }
   ],
   "queue": [
@@ -8821,21 +9001,6 @@
         "editorial-reservation"
       ],
       "source": "scripts/data/enem-revisao-editorial-2026-11-04/filosofia.json"
-    },
-    {
-      "id": "enem_completo_2022_d1_q061",
-      "year": 2022,
-      "number": 61,
-      "subject": "Filosofia",
-      "topicId": "fil_socrates_platao",
-      "chapter": null,
-      "deferredReason": "Sêneca trata de estoicismo e moderação das paixões diante da morte. Não há tópico-pai de filosofia helenística/estoicismo no currículo fixo; não confirmar Sócrates/Platão apenas por ser filosofia antiga.",
-      "reasons": [
-        "deferred-review",
-        "taxonomy-gap",
-        "editorial-reservation"
-      ],
-      "source": "scripts/data/enem-conferencia-2022-2023.json"
     },
     {
       "id": "enem_completo_2022_d1_q077",
@@ -9059,20 +9224,6 @@
         "editorial-reservation"
       ],
       "source": "scripts/data/enem-revisao-editorial-2026-11-04/fisica-quimica.json"
-    },
-    {
-      "id": "enem_completo_2018_d1_q052",
-      "year": 2018,
-      "number": 52,
-      "subject": "Filosofia",
-      "topicId": "fil_aristoteles",
-      "chapter": "A Ética a Nicômaco e a Doutrina do Meio-Termo",
-      "deferredReason": "Epicuro e temperança pertencem à filosofia helenística. O catálogo atual não tem tópico-pai de helenismo nem Epicurismo; confirmar Aristóteles seria falsa atribuição. Necessária decisão de taxonomia, preservando a questão e a chave C.",
-      "reasons": [
-        "deferred-review",
-        "automatic-classification"
-      ],
-      "source": null
     },
     {
       "id": "enem_completo_2019_d1_q052",
@@ -9309,20 +9460,6 @@
       "source": "scripts/data/enem-revisao-editorial-2026-11-04/geografia-sociologia.json"
     },
     {
-      "id": "enem_completo_2018_d1_q060",
-      "year": 2018,
-      "number": 60,
-      "subject": "História",
-      "topicId": "his_moderna_iluminismo",
-      "chapter": "América Espanhola",
-      "deferredReason": "O comando caracteriza a própria atividade filosófica (rigor e questionamento), mas o catálogo não possui introdução à Filosofia nem tópico-pai epistemológico contemporâneo defensável para esse objeto; América Espanhola está incorreta.",
-      "reasons": [
-        "deferred-review",
-        "automatic-classification"
-      ],
-      "source": null
-    },
-    {
       "id": "enem_completo_2019_d1_q071",
       "year": 2019,
       "number": 71,
@@ -9334,20 +9471,6 @@
         "editorial-reservation"
       ],
       "source": "scripts/data/enem-revisao-editorial-2026-11-04/historia.json"
-    },
-    {
-      "id": "enem_completo_2019_d1_q087",
-      "year": 2019,
-      "number": 87,
-      "subject": "História",
-      "topicId": "his_moderna_iluminismo",
-      "chapter": "América Espanhola",
-      "deferredReason": "O comando exige a distinção maquiaveliana entre moral pessoal e eficácia política na modernidade. Falta tópico-pai de filosofia política moderna/Maquiavel; classificar em política contemporânea ou em contratualismo apenas aproximaria teorias diferentes.",
-      "reasons": [
-        "deferred-review",
-        "automatic-classification"
-      ],
-      "source": null
     },
     {
       "id": "enem_completo_2020_d1_q073",
@@ -9467,62 +9590,6 @@
       "source": "scripts/data/enem-revisao-editorial-2026-11-04/matematica.json"
     },
     {
-      "id": "enem_completo_2018_d1_q011",
-      "year": 2018,
-      "number": 11,
-      "subject": "Português",
-      "topicId": "por_lit_classica_barroca",
-      "chapter": "A Estética Barroca",
-      "deferredReason": "Exige distinguir valores olímpicos e paralímpicos na conduta esportiva, sobretudo respeito e fair play. Não há tópico de Educação Física nem capítulo de ética esportiva no catálogo; interpretar o texto não autoriza classificá-lo em Barroco.",
-      "reasons": [
-        "deferred-review",
-        "automatic-classification"
-      ],
-      "source": null
-    },
-    {
-      "id": "enem_completo_2019_d1_q008",
-      "year": 2019,
-      "number": 8,
-      "subject": "Português",
-      "topicId": "por_texto",
-      "chapter": "Fatores de Textualidade",
-      "deferredReason": "O comando pede compreender a espetacularização esportiva como distorção da experiência de ser atleta pela mídia. O currículo não tem Educação Física/cultura corporal; não há capítulo específico coerente, apesar de haver leitura audiovisual secundária.",
-      "reasons": [
-        "deferred-review",
-        "automatic-classification"
-      ],
-      "source": null
-    },
-    {
-      "id": "enem_completo_2019_d1_q018",
-      "year": 2019,
-      "number": 18,
-      "subject": "Português",
-      "topicId": "por_lit_modernismo",
-      "chapter": "Parnasianismo",
-      "deferredReason": "O arco, a flecha e a lança são reinterpretados pela regulamentação competitiva dos Jogos dos Povos Indígenas. O foco é esportivização de práticas corporais; falta tópico-pai de Educação Física, portanto não há classificação curricular segura.",
-      "reasons": [
-        "deferred-review",
-        "automatic-classification"
-      ],
-      "source": null
-    },
-    {
-      "id": "enem_completo_2019_d1_q031",
-      "year": 2019,
-      "number": 31,
-      "subject": "Português",
-      "topicId": "por_lit_contemporanea",
-      "chapter": "Clarice Lispector",
-      "deferredReason": "A identificação de anorexia e bulimia depende de conhecimentos sobre distúrbios da imagem corporal e saúde. Não há capítulo correspondente em Português nem tópico de Educação Física; não convém confirmar por simples interpretação textual.",
-      "reasons": [
-        "deferred-review",
-        "automatic-classification"
-      ],
-      "source": null
-    },
-    {
       "id": "enem_completo_2020_d1_q050",
       "year": 2020,
       "number": 50,
@@ -9534,34 +9601,6 @@
         "editorial-reservation"
       ],
       "source": "scripts/data/enem-revisao-editorial-2026-11-04/geografia-sociologia.json"
-    },
-    {
-      "id": "enem_completo_2022_d1_q018",
-      "year": 2022,
-      "number": 18,
-      "subject": "Português",
-      "topicId": "por_texto",
-      "chapter": "Intertextualidade e Interdiscursividade",
-      "deferredReason": "A criação do mountainboard adapta snowboard a terrenos sem neve, exemplificando criatividade e ressignificação espacial em atividades de aventura. Falta tópico de Educação Física/práticas corporais, não havendo capítulo curricular fiel.",
-      "reasons": [
-        "deferred-review",
-        "automatic-classification"
-      ],
-      "source": null
-    },
-    {
-      "id": "enem_completo_2023_d1_q043",
-      "year": 2023,
-      "number": 43,
-      "subject": "Português",
-      "topicId": "por_norma_culta",
-      "chapter": "Variação Linguística",
-      "deferredReason": "A inclusão de juntos no lema olímpico associa excelência e cooperatividade, exigindo reconhecer valores do esporte. Falta tópico de Educação Física/olimpismo no catálogo; não é justificável encaixá-la numa escola literária.",
-      "reasons": [
-        "deferred-review",
-        "automatic-classification"
-      ],
-      "source": null
     },
     {
       "id": "enem_completo_2024_d1_q080",

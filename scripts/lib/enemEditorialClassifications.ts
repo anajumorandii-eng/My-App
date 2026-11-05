@@ -1,4 +1,5 @@
 import { readFile, readdir } from 'node:fs/promises';
+import { withQuestionTopics } from '../../src/data/questionTopics';
 import type { Question, Topic } from '../../src/types';
 
 export interface EditorialClassification {
@@ -11,7 +12,7 @@ export interface EditorialClassification {
 }
 /** Source-page review takes precedence over earlier broad reclassification lists. */
 export async function loadEnemEditorialClassifications(topics: Topic[], includeBatch = true) {
-  const catalog = new Map(topics.map(topic => [topic.id, topic]));
+  const catalog = new Map(withQuestionTopics(topics).map(topic => [topic.id, topic]));
   const result = new Map<string, EditorialClassification>();
   const directory = 'scripts/data/enem-reclassificacao';
   for (const filename of (await readdir(directory)).filter(file => file.endsWith('.json')).sort()) {
@@ -27,7 +28,7 @@ export async function loadEnemEditorialClassifications(topics: Topic[], includeB
     }
   }
   const sources = ['scripts/data/enem-conferencia-2022-2023.json', 'scripts/data/enem-auditoria-cobertura-2026-11-04.json'];
-  if (includeBatch) sources.push(...await enemReviewBatchPaths());
+  if (includeBatch) sources.push(...await enemReviewBatchPaths(), ENEM_TAXONOMY_RESOLUTION_PATH);
   const batchIds = new Set<string>();
   for (const source of sources) {
     const review = JSON.parse(await readFile(source, 'utf8'));
@@ -61,6 +62,7 @@ export function applyEnemEditorialClassifications(questions: Question[], classif
   });
 }
 
+export const ENEM_TAXONOMY_RESOLUTION_PATH = 'scripts/data/enem-resolucao-taxonomia-2026-11-05.json';
 export const ENEM_REVIEW_BATCH_DIRECTORY = 'scripts/data/enem-revisao-editorial-2026-11-04';
 export async function enemReviewBatchPaths(): Promise<string[]> {
   return (await readdir(ENEM_REVIEW_BATCH_DIRECTORY)).filter(file => file.endsWith('.json')).sort().map(file => `${ENEM_REVIEW_BATCH_DIRECTORY}/${file}`);
@@ -74,5 +76,14 @@ export async function loadEnemEditorialDeferrals() {
       result.set(row.questionId,{source,reason:row.reason});
     }
   }
+  const resolutions = JSON.parse(await readFile(ENEM_TAXONOMY_RESOLUTION_PATH,'utf8'));
+  const catalog = new Map(withQuestionTopics([]).map(topic => [topic.id,topic]));
+  const resolved = new Set<string>();
+  for (const row of resolutions.items) {
+    const topic = catalog.get(row.bankTopicId);
+    if (!result.has(row.questionId) || resolved.has(row.questionId) || !topic || topic.subject !== row.bankSubject || !topic.chapters?.includes(row.bankChapter) || row.confidence !== 'high' || !row.evidence?.trim()) throw new Error(`Resolução de taxonomia inválida: ${row.questionId}`);
+    resolved.add(row.questionId);
+  }
+  for (const id of resolved) result.delete(id);
   return result;
 }

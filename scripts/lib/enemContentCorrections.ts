@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import type { Question } from '../../src/types';
 
 export const ENEM_CONTENT_CORRECTIONS_PATH = 'scripts/data/enem-correcao-transcricao-2026-11-04.json';
+export const ENEM_CONTENT_FOLLOWUP_PATH = 'scripts/data/enem-correcao-transcricao-2026-11-05.json';
 export interface ContentCorrection {
   questionId: string;
   sourceUrl: string;
@@ -17,7 +18,7 @@ export function questionContentDigest(q: Question): string {
   return createHash('sha256').update(JSON.stringify({ id:q.id,prompt:q.prompt,options:q.options,correctOptionId:q.correctOptionId,status:q.status??null,figures:q.figures??[],examSource:q.examSource })).digest('hex');
 }
 export function loadEnemContentCorrections(): ContentCorrection[] {
-  return JSON.parse(readFileSync(ENEM_CONTENT_CORRECTIONS_PATH,'utf8')).items;
+  return [ENEM_CONTENT_CORRECTIONS_PATH, ENEM_CONTENT_FOLLOWUP_PATH].flatMap(path=>JSON.parse(readFileSync(path,'utf8')).items);
 }
 /** Exact, source-reviewed transitions only. Unknown edits must be reviewed again. */
 export function applyEnemContentCorrections(questions: Question[], corrections = loadEnemContentCorrections()): Question[] {
@@ -36,6 +37,9 @@ export function applyEnemContentCorrections(questions: Question[], corrections =
         const target=copy.options.find(value=>value.id===option[1]);
         if (!target || target.text!==change.before || typeof change.after!=='string' || !change.after.trim()) throw new Error(`Alternativa inválida: ${question.id}`);
         target.text=change.after;
+      } else if (change.field==='prompt') {
+        if (copy.prompt!==change.before || typeof change.after!=='string' || !change.after.trim()) throw new Error(`Enunciado inválido: ${question.id}`);
+        copy.prompt=change.after;
       } else if (change.field==='figures') {
         if (JSON.stringify(copy.figures??[])!==JSON.stringify(change.before) || !Array.isArray(change.after) || !change.after.every(value=>value&&typeof value.url==='string'&&value.url.startsWith('/question-media/'))) throw new Error(`Figuras inválidas: ${question.id}`);
         copy.figures=change.after;
