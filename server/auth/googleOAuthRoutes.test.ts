@@ -68,6 +68,8 @@ function harness(options: { issued?: GoogleTokenResponse; getTokenFails?: boolea
 
 const comoAluna: RequestHandler = (_req, res, next) => {
   res.locals.userId = 'aluna1';
+  res.locals.userEmail = 'ana@example.com';
+  res.locals.userEmailVerified = true;
   next();
 };
 
@@ -108,6 +110,7 @@ test('/start pede acesso offline com consentimento e o state criado para a aluna
     assert.equal(h.states.get('nonce-1')?.returnTo, '/plano');
     assert.equal(h.authUrlOptions[0].access_type, 'offline');
     assert.equal(h.authUrlOptions[0].prompt, 'consent');
+    assert.equal(h.authUrlOptions[0].login_hint, 'ana@example.com');
     assert.deepEqual(h.authUrlOptions[0].scope, GOOGLE_SCOPES);
     assert.equal(h.authUrlOptions[0].state, 'nonce-1');
   });

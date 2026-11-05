@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { CalendarEvent, DriveFile } from '../types';
 import { Link2, Unlink, Calendar as CalendarIcon, Clock, AlertTriangle, FileText } from 'lucide-react';
 import { initAuth, googleSignIn, authHeaders } from '../lib/auth';
@@ -15,6 +15,8 @@ export default function Conexoes() {
   // Dois estados diferentes, que antes viviam colapsados num só: estar logada
   // no app (Firebase) e ter autorizado o app a ler a agenda e o Drive. A
   // segunda agora mora no servidor e sobrevive à recarga da página.
+  const connectingRef = useRef(false);
+  const [connecting, setConnecting] = useState(false);
   const [signedIn, setSignedIn] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
   const [events, setEvents] = useState<CalendarEvent[]>([]);
@@ -101,6 +103,9 @@ export default function Conexoes() {
   }, [refreshConnection]);
 
   const handleConnect = async () => {
+    if (connectingRef.current) return;
+    connectingRef.current = true;
+    setConnecting(true);
     setError(null);
     try {
       if (!signedIn) {
@@ -109,11 +114,22 @@ export default function Conexoes() {
         if (!user) return;
         setSignedIn(true);
       }
+      // O login pode restaurar uma autorização já existente. Não abra outro
+      // consentimento depois de a própria tela confirmar a conexão.
+      const status = await getGoogleConnectionStatus();
+      if (status.connected) {
+        setIsConnected(true);
+        await loadGoogleData();
+        return;
+      }
       // Sai da página rumo ao consentimento do Google e volta pelo callback.
       await startGoogleConnection('/conexoes');
     } catch (err: any) {
       console.error('Failed to connect Google', err);
       setError(err?.message || 'Não foi possível conectar sua conta Google. Tente novamente.');
+    } finally {
+      connectingRef.current = false;
+      setConnecting(false);
     }
   };
 
@@ -194,10 +210,12 @@ export default function Conexoes() {
           ) : (
             <button
               onClick={handleConnect}
+              disabled={connecting || loading}
+              aria-busy={connecting}
               className="flex items-center px-3.5 py-1.5 bg-[var(--action-primary)] text-[var(--text-inverse)] rounded-lg text-xs font-semibold hover:bg-action-primary-hover transition-colors"
             >
               <Link2 className="w-3.5 h-3.5 mr-1.5" />
-              Conectar com Google
+              {connecting ? 'Conectando…' : 'Conectar com Google'}
             </button>
           )}
         </div>
