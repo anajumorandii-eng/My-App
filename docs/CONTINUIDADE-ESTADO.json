@@ -2,17 +2,10 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "591874a5ebec7c3f38c8427254e74d71b978a7c1",
-  "generated_at_utc": "2026-11-05T18:08:17Z",
+  "source_commit": "df794c0126b793ad3b23c1cd481a946bce904725",
+  "generated_at_utc": "2026-11-05T18:17:25Z",
   "changed_files": [
-    ".env.example",
-    "docs/auth/dominio-google.md",
-    "firebase-applet-config.json",
-    "server.ts",
-    "server/http/firebaseAuthProxy.test.ts",
-    "server/http/firebaseAuthProxy.ts",
-    "src/lib/auth.ts",
-    "src/vite-env.d.ts"
+    "src/lib/auth.ts"
   ],
   "next_session": {
     "mode": "delta-only",
