@@ -23,6 +23,7 @@ import { FirestoreApostilaReferenceStore } from './server/ai/apostilaReferenceSt
 import { createAdminRouter } from './server/admin/routes';
 import { createApostilaIngestRouter } from './server/admin/apostilaIngestRoutes';
 import { jsonBodyAfter } from './server/http/jsonBodyAfter';
+import { firebaseAuthProxy } from './server/http/firebaseAuthProxy';
 import { securityHeaders } from './server/http/securityHeaders';
 import { createStudyPdfRouter } from './server/http/studyPdf';
 import { createLiteraryAdminRouter } from './server/literary/literaryAdminRoutes';
@@ -39,6 +40,9 @@ const PORT = Number(process.env.PORT) || 3000;
 
 // Primeiro de tudo, para valer também em 404 e nas respostas de erro. HSTS só
 // em produção: em desenvolvimento o servidor responde em http.
+// Firebase embeds its helper iframe on the app origin; mount before frame denial.
+app.use('/__/auth', firebaseAuthProxy());
+
 app.use(securityHeaders({ hsts: process.env.NODE_ENV === 'production' }));
 
 // Antes de qualquer rota: sem isso o bundle e os JSON de flashcards viajam

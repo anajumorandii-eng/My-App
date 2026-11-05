@@ -13,7 +13,10 @@ import {
 } from 'firebase/auth';
 import firebaseConfig from '../../firebase-applet-config.json';
 
-export const app = initializeApp(firebaseConfig);
+export const app = initializeApp({
+  ...firebaseConfig,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || firebaseConfig.authDomain,
+});
 const auth = getAuth(app);
 
 export const getFirebaseIdToken = async (): Promise<string | null> => {
