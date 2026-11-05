@@ -155,3 +155,21 @@ natural, abaixo dos 40% do teste. Em 32 questões, o distrator mais longo foi
 cortado numa vírgula, sem a oração final (", que…", ", já que…"), que
 apenas alongava o erro sem mudá-lo. A resposta passou a ser a alternativa
 mais longa, e 103 questões ficaram em ordem natural.
+
+## Lote 4 (200 questões, formato do dia 1)
+
+Mesma distribuição dos lotes 2 e 3, com assuntos novos: Alencar, Pompeia,
+Machado (Quincas Borba), Gonzaga, Bilac, Pessoa (Campos e Caeiro), Mário de
+Andrade, cantigas medievais, bula, receita, manifesto, entrevista; Nilo,
+monções, Sahel, Mercosul, pré-sal, energia nuclear, megacidades, rios
+voadores, Código Florestal; Hamurabi, teatro grego, Cruzadas, mercantilismo,
+luditas, Voltaire, Declaração de 1789, Napoleão, trincheiras, fascismo,
+Guernica, Hiroshima, Muro de Berlim, Vietnã, Primavera Árabe, Balaiada, Ventre
+Livre, tenentismo, carta-testamento de Vargas, milagre econômico, Plano Real;
+Bourdieu, socialização, controle social, democracia racial; Beauvoir, Jonas,
+Popper, Berkeley, panóptico, senhor e escravo. Gabarito: A 35, B 35, C 35,
+D 58, E 37. Enunciado mediano de 611 caracteres; 104 questões com
+alternativas em ordem crescente natural.
+
+Neste lote, cerca de um quinto das respostas já saiu como alternativa mais
+longa na escrita, de modo que nenhum distrator precisou ser cortado.
