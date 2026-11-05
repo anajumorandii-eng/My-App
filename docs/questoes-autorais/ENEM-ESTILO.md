@@ -136,3 +136,22 @@ resposta em relação ao distrator mais longo.
 
 Fontes reais citadas, todas em domínio público e conferidas: Machado de Assis
 (1881), Fernando Pessoa (1932), Gonçalves Dias (1843) e Olavo Bilac (1888).
+
+## Lote 3 (200 questões, formato do dia 1)
+
+Mesma distribuição do lote 2 (Português 89, Inglês 11, Geografia 33,
+História 29, Sociologia 20, Filosofia 18), com assuntos que não se repetem:
+literatura em domínio público (Camões, Gregório de Matos, Caminha, Castro
+Alves, Álvares de Azevedo, Machado, Euclides, Augusto dos Anjos, Cruz e
+Sousa, Oswald e Mário de Andrade), cordel, slam, variação etária e indígena;
+cartografia, relevo, solos, El Niño, COP30; Antiguidade, Renascimento,
+Reforma, Haiti, unificações, New Deal, Canudos, Chibata, Era Vargas; Weber,
+Marx, Durkheim, racismo estrutural; falácias (ad hominem, falso dilema),
+Espinosa, Hegel, Rawls. Gabarito: A 35, B 35, C 35, D 58, E 37. Enunciado
+mediano de 672 caracteres.
+
+O reposicionamento sozinho deixaria só 73 questões em ordem crescente
+natural, abaixo dos 40% do teste. Em 32 questões, o distrator mais longo foi
+cortado numa vírgula, sem a oração final (", que…", ", já que…"), que
+apenas alongava o erro sem mudá-lo. A resposta passou a ser a alternativa
+mais longa, e 103 questões ficaram em ordem natural.
