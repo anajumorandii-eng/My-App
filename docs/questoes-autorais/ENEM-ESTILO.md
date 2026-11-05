@@ -59,13 +59,15 @@ porcentagem, a casa decimal na conversão, o diâmetro no lugar do raio, a lista
 não ordenada na mediana, a condição invertida na probabilidade, o coeficiente
 esquecido na estequiometria. O comentário mostra a conta que leva a ele.
 
-## Distribuição de cada lote de 50
+## Distribuição de cada lote
 
-As quatro provas objetivas têm 45 questões cada. Um lote de 50 segue essa
-proporção, com tolerância de 5 pontos por área, que o teste confere:
-Matemática 12; Linguagens 12 (Português 11, Inglês 1); Natureza 13
-(Biologia 5, Física 4, Química 4); Humanas 13 (Geografia 4, História 4,
-Sociologia 3, Filosofia 2).
+As quatro provas objetivas têm 45 questões cada e são aplicadas em dois dias:
+Linguagens e Humanas no primeiro, Natureza e Matemática no segundo. Um lote
+segue a prova inteira (25% por área) ou um dos dias (50% para cada área do
+dia), com tolerância de 5 pontos, que o teste confere. Dentro da área, as
+matérias seguem a média por prova de 2018–2025: Português 39, Inglês 5,
+Geografia 15, História 13, Sociologia 9, Filosofia 8; Biologia 17, Física 15,
+Química 13; Matemática 45.
 
 Dentro de cada matéria, os capítulos saem dos de maior chance histórica em
 `probabilidades-2026.json`: razão, proporção e porcentagem, probabilidade,
@@ -114,3 +116,23 @@ Gabarito: A 9, B 12, C 9, D 9, E 11. Enunciado mediano de 602 caracteres;
 alternativa mediana de 45. É mais longa que a mediana geral da banca, porque o
 lote não tem as alternativas de um só número que derrubam a mediana real em
 Matemática.
+
+## Lote 2 (200 questões, formato do dia 1)
+
+Escrito na semana do primeiro dia da prova, só com Linguagens e Humanas:
+Português 89, Inglês 11, Geografia 33, História 29, Sociologia 20,
+Filosofia 18. Gabarito: A 35, B 35, C 35, D 60, E 35. Enunciado mediano de
+617 caracteres; 46% das questões com alternativas em ordem crescente de
+tamanho.
+
+Ao ordenar pelo tamanho, a resposta caiu na alternativa D em 167 das 200
+questões: a correta costuma ser a segunda mais longa, porque o distrator de
+extrapolação ("…, que…") tende a ser o mais comprido. O lote passou por um
+reposicionamento que leva a resposta de parte dessas questões para outra
+letra, mantém os distratores em ordem crescente e reescreve as pegadinhas
+pela nova letra. Pelo menos 40% das questões seguem em ordem crescente
+natural, perto dos 44% da banca. Ao escrever, convém variar o tamanho da
+resposta em relação ao distrator mais longo.
+
+Fontes reais citadas, todas em domínio público e conferidas: Machado de Assis
+(1881), Fernando Pessoa (1932), Gonçalves Dias (1843) e Olavo Bilac (1888).

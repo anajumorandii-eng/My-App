@@ -10,7 +10,7 @@
   "inputs": {
     "bank": {
       "path": "public/questions.json",
-      "sha256": "c0f57f478b79a2f0fb902ac90025383a5459f9bd7d4d91469bab60dbe36b87f5"
+      "sha256": "1b879a48b61b7d9694a1f1367f6d0c3eea489436a832216fb3ed6269b225017b"
     },
     "manifest": {
       "path": "scripts/data/enem-completo-2018-2025/manifest.json",
@@ -92,7 +92,7 @@
     }
   },
   "summary": {
-    "bank": 5603,
+    "bank": 5803,
     "positions": 1440,
     "uniqueQuestions": 1440,
     "valid": 1430,

@@ -108,11 +108,13 @@ test('o lote ENEM acompanha o formato medido nas provas reais da banca', () => {
         assert.ok(v.every((n, i) => i === 0 || n > v[i - 1]), `${q.id}: alternativas numéricas fora de ordem`);
       }
     }
-    // Proporção das áreas por prova de 180: Matemática 45, Linguagens 45,
-    // Natureza 45, Humanas 45.
+    // Proporção das áreas: a prova inteira (45 questões em cada uma das quatro)
+    // ou um dos dois dias, que a banca aplica separados — Linguagens e Humanas
+    // no primeiro, Natureza e Matemática no segundo, 90 questões cada.
     const area = (s: string) => ({ Matemática: 'mat', Português: 'lin', Inglês: 'lin', 'Educação Física': 'lin', Biologia: 'nat', Física: 'nat', Química: 'nat' } as Record<string, string>)[s] ?? 'hum';
-    const porArea = new Map<string, number>();
-    for (const q of questoes) porArea.set(area(q.subject), (porArea.get(area(q.subject)) ?? 0) + 1);
-    for (const [a, n] of porArea) assert.ok(Math.abs(n / questoes.length - 0.25) <= 0.05, `${arquivo}: área ${a} com ${n}`);
+    const porArea: Record<string, number> = { lin: 0, hum: 0, nat: 0, mat: 0 };
+    for (const q of questoes) porArea[area(q.subject)] += 1;
+    const formatos = [{ lin: 0.25, hum: 0.25, nat: 0.25, mat: 0.25 }, { lin: 0.5, hum: 0.5, nat: 0, mat: 0 }, { lin: 0, hum: 0, nat: 0.5, mat: 0.5 }];
+    assert.ok(formatos.some(f => Object.entries(f).every(([a, p]) => Math.abs(porArea[a] / questoes.length - p) <= 0.05)), `${arquivo}: áreas ${JSON.stringify(porArea)}`);
   }
 });
