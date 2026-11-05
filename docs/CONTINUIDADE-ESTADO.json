@@ -2,15 +2,13 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "efca3ef194a38bfef07395be11d63ea41133f720",
-  "generated_at_utc": "2026-11-05T00:30:00Z",
+  "source_commit": "8f885f510cf2dce180a2f250348dedcca5d762cc",
+  "generated_at_utc": "2026-11-05T11:58:54Z",
   "changed_files": [
-    "src/components/QuestionTimer.tsx",
-    "src/hooks/useQuestionTimer.test.tsx",
-    "src/hooks/useQuestionTimer.ts",
-    "src/views/Questoes.test.tsx",
-    "src/views/Questoes.tsx",
-    "tests/e2e/questions-focus.spec.ts"
+    "src/features/availability/AgendaPlanner.test.tsx",
+    "src/features/availability/AgendaPlanner.tsx",
+    "src/features/availability/AgendaView.tsx",
+    "src/features/availability/agenda.css"
   ],
   "next_session": {
     "mode": "delta-only",
