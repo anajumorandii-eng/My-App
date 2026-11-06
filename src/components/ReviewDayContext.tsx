@@ -18,7 +18,7 @@ export default function ReviewDayContext({ localDate }: { localDate: string }) {
       {loading ? <p role="status">Consultando suas janelas...</p> : <p className="text-sm text-[var(--dim)]">{budget} minutos para revisitas de erros neste dia. {reserved.length > 0 ? `Janelas reservadas: ${reserved.map((i) => `${formatIsoTimeInSaoPaulo(i.start)}–${formatIsoTimeInSaoPaulo(i.end)}`).join(', ')}.` : 'Sem janela exclusiva: confira o plano da agenda antes de encaixar a revisão.'}</p>}
       {syncError && <p role="alert" className="text-sm">{syncError}</p>}
       <Link to="/agenda" className="text-sm underline">Ajustar rotina, compromissos e prioridades do dia</Link>
-      <a href="/study-guide.html" target="_blank" rel="noreferrer" className="ml-4 text-sm underline">Consultar guia de estudo</a>
+      <a href="/study-guide.html?leitura=2" target="_blank" rel="noreferrer" className="ml-4 text-sm underline">Consultar guia de estudo</a>
     </section>
     {!loading && <ErrorRevisitPanel localDate={localDate} availableMinutes={budget} />}
   </div>;

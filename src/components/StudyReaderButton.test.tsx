@@ -8,12 +8,13 @@ const descriptors = [
   [HTMLDialogElement.prototype, 'showModal'], [HTMLDialogElement.prototype, 'close'], [Element.prototype, 'scrollIntoView'],
 ].map(([object, name]) => ({ object: object as object, name: name as string, descriptor: Object.getOwnPropertyDescriptor(object, name as string) }));
 beforeEach(() => {
+  localStorage.setItem('crivo_reading_appearance_v1', JSON.stringify({theme:'paper',fontSize:20,showIndex:true}));
   Object.defineProperty(HTMLDialogElement.prototype, 'showModal', { configurable: true, value: vi.fn(function (this: HTMLDialogElement) { this.setAttribute('open', ''); }) });
   Object.defineProperty(HTMLDialogElement.prototype, 'close', { configurable: true, value: vi.fn(function (this: HTMLDialogElement) { this.removeAttribute('open'); }) });
   Object.defineProperty(Element.prototype, 'scrollIntoView', { configurable: true, value: vi.fn() });
 });
 afterEach(() => {
-  cleanup(); vi.restoreAllMocks(); document.body.style.overflow = '';
+  cleanup(); vi.restoreAllMocks(); document.body.style.overflow = ''; localStorage.removeItem('crivo_reading_appearance_v1');
   for (const { object, name, descriptor } of descriptors) { if (descriptor) Object.defineProperty(object, name, descriptor); else Reflect.deleteProperty(object, name); }
 });
 
@@ -49,7 +50,7 @@ it('monta todas as seções do resumo, sem antecipar os critérios de correção
 it('abre o guia com índice e fecha pelo botão ou Escape, devolvendo o foco ao material', async () => {
   const content = document.createElement('article'); content.innerHTML = '<h2>Conceito central</h2><p>Texto da explicação.</p>';
   render(<StudyReaderButton title="Minha revisão" getContent={() => content} />);
-  const open = screen.getByRole('button', { name: 'Abrir para leitura' });
+  const open = screen.getByRole('button', { name: 'Leitura Crivo' });
   fireEvent.click(open);
   const dialog = await screen.findByRole('dialog', { name: 'Minha revisão' });
   expect(within(dialog).getByRole('navigation', { name: 'Seções da leitura' })).toBeInTheDocument();
@@ -64,7 +65,7 @@ it('abre o guia com índice e fecha pelo botão ou Escape, devolvendo o foco ao 
 it('espera a formatação do texto antes de congelar a cópia para leitura', async () => {
   const content = document.createElement('article'); content.innerHTML = '<div data-ai-text-pending>Carregando</div>';
   render(<StudyReaderButton title="Guia formatado" getContent={() => content} />);
-  fireEvent.click(screen.getByRole('button', { name: 'Abrir para leitura' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Leitura Crivo' }));
   expect(screen.getByRole('button', { name: 'Preparando leitura…' })).toBeDisabled();
   content.innerHTML = '<h2>Seção formatada</h2><p>Explicação pronta.</p>';
   expect(await screen.findByRole('dialog', { name: 'Guia formatado' })).toHaveTextContent('Explicação pronta.');
@@ -73,8 +74,45 @@ it('espera a formatação do texto antes de congelar a cópia para leitura', asy
 it('permite tentar novamente quando o conteúdo ainda não está disponível', async () => {
   const get = vi.fn<() => HTMLElement | null>().mockReturnValueOnce(null).mockReturnValue(document.createElement('article'));
   render(<StudyReaderButton title="Guia" getContent={get} />);
-  fireEvent.click(screen.getByRole('button', { name: 'Abrir para leitura' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Leitura Crivo' }));
   expect(await screen.findByRole('alert')).toHaveTextContent('Tente novamente.');
-  fireEvent.click(screen.getByRole('button', { name: 'Abrir para leitura' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Leitura Crivo' }));
   expect(await screen.findByRole('dialog', { name: 'Guia' })).toBeInTheDocument();
+});
+
+
+it('ocultar os núcleos remove a coluna e preserva o texto; preferências sobrevivem à reabertura', async () => {
+ const content=document.createElement('article');content.innerHTML='<h2>Primeiro núcleo</h2><p>Texto integral preservado.</p>';
+ render(<StudyReaderButton title="Leitura extensa" getContent={()=>content}/>);
+ fireEvent.click(screen.getByRole('button',{name:'Leitura Crivo'}));
+ const dialog=await screen.findByRole('dialog');
+ fireEvent.click(within(dialog).getByRole('button',{name:'Somente texto'}));
+ expect(within(dialog).queryByRole('navigation',{name:'Seções da leitura'})).toBeNull();
+ expect(dialog.querySelector('.study-reader-layout')).toHaveClass('is-full-width');
+ expect(dialog).toHaveTextContent('Texto integral preservado.');
+ fireEvent.click(within(dialog).getByRole('button',{name:'Ajustar aparência da leitura'}));
+ fireEvent.click(within(dialog).getByRole('button',{name:'Noturno'}));
+ fireEvent.click(within(dialog).getByRole('button',{name:'Aumentar tamanho do texto'}));
+ expect(dialog).toHaveAttribute('data-theme','night');expect(dialog.style.getPropertyValue('--reading-size')).toBe('21px');
+ fireEvent(dialog,new Event('cancel',{bubbles:true,cancelable:true}));
+ expect(screen.getByRole('dialog')).toBeInTheDocument();expect(within(dialog).queryByRole('group',{name:'Preferências de leitura'})).toBeNull();
+ fireEvent(dialog,new Event('cancel',{bubbles:true,cancelable:true}));
+ fireEvent.click(screen.getByRole('button',{name:'Leitura Crivo'}));
+ const reopened=await screen.findByRole('dialog');expect(reopened).toHaveAttribute('data-theme','night');
+ expect(reopened.style.getPropertyValue('--reading-size')).toBe('21px');
+ expect(within(reopened).getByRole('button',{name:'Mostrar núcleos'})).toHaveAttribute('aria-expanded','false');
+ fireEvent.click(within(reopened).getByRole('button',{name:'Mostrar núcleos'}));
+ expect(within(reopened).getByRole('navigation',{name:'Seções da leitura'})).toBeInTheDocument();
+});
+
+it('a leitura usa o título do recorte e retira somente cabeçalhos bibliográficos repetidos da cópia',async()=>{
+ const content=document.createElement('article');Object.assign(content.dataset,{printSubject:'Literatura',printTopic:'Literatura Contemporânea',printPurpose:'Revisão aprofundada'});
+ content.innerHTML='<h2 data-reader-cover-title>Literatura · Literatura Contemporânea</h2><p data-reader-meta>Salvo em uma edição anterior</p><h2>CRIVO — Literatura Contemporânea: revisão estratégica</h2><h2>Voz social e memória</h2><p>Explicação original completa.</p>';
+ render(<StudyReaderButton title="Revisão — Literatura — Literatura Contemporânea" getContent={()=>content}/>);
+ fireEvent.click(screen.getByRole('button',{name:'Leitura Crivo'}));const dialog=await screen.findByRole('dialog');
+ expect(within(dialog).getByRole('heading',{level:1,name:'Literatura Contemporânea'})).toBeInTheDocument();
+ expect(within(dialog).getByRole('heading',{name:'Voz social e memória'})).toBeInTheDocument();
+ expect(dialog).not.toHaveTextContent('CRIVO — Literatura Contemporânea: revisão estratégica');
+ expect(dialog).toHaveTextContent('Salvo em uma edição anterior');
+ expect(content.querySelectorAll('h2')).toHaveLength(3);
 });

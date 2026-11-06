@@ -427,3 +427,18 @@ test('pedido de Português contém orientação própria antes da estética e ev
   assert.match(scoped,/Recorte específico/);assert.match(scoped,/quoted subtopic always takes precedence/);
  }
  });
+
+test('livreto solicita uma única arte panorâmica contínua com capa e contracapa planejadas juntas',async()=>{
+ const input={subject:'Geografia',topic:'Climatologia e Problemas Socioambientais',side:'spread' as const};
+ assert.deepEqual(validateCoverContext(input),input);
+ const prompt=buildCoverImagePrompt(input);assert.match(prompt,/ONE SINGLE PAIRED COVER/);assert.match(prompt,/TWO DISTINCT TALL VERTICAL COMPOSITIONS/);assert.match(prompt,/x=2%-49%, y=20%-82%/);assert.match(prompt,/untrusted data/);
+ let calls=0;
+ const wide=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAACAAAAAUCAYAAADskT9PAAAAKklEQVR4nGNgGAWjYIABo1Fm6P+BdADTQFo+6oBRB4w6YNQBo2AUDAoAAAS6AgP2cc2iAAAAAElFTkSuQmCC','base64');
+ const service=new CoverImageService({baseUrl:'https://gateway.test/v1',apiKey:'private-test-key',model:'cover-image-route',fetch:async(_url,init)=>{
+  calls++;const body=JSON.parse(String(init?.body));assert.equal(body.n,1);assert.equal(body.size,'1536x1024');assert.equal(body.background,'transparent');assert.equal(body.prompt,prompt.replace(JSON.stringify(input),JSON.stringify({...input,edition:'c8d8a3ac-3a14-4ea3-8e88-e177de5cebf5'})));
+  return Response.json({data:[{b64_json:wide.toString('base64')}]});
+ }});
+ await service.generate({...input,edition:'c8d8a3ac-3a14-4ea3-8e88-e177de5cebf5'});assert.equal(calls,1);
+ const portrait=new CoverImageService({baseUrl:'https://gateway.test/v1',apiKey:'private-test-key',model:'cover-image-route',fetch:async()=>Response.json({data:[{b64_json:imageBytes.toString('base64')}]})});
+ await assert.rejects(portrait.generate(input),/panorâmico/);
+});

@@ -1,5 +1,7 @@
 import { PDFDocument, pushGraphicsState, rectangle, clip, endPath, popGraphicsState } from 'pdf-lib';
 import { appendBookletBackCover } from './bookletBackCover';
+import { drawBookletCoverSpread, type BookletCoverFonts } from './bookletCoverSpread';
+import type { PrintCoverContext } from './printCoverSpec';
 
 const MAX_PAGES=400;
 /** Índices base zero; cada par corresponde a uma face da folha, esquerda/direita. */
@@ -16,22 +18,29 @@ export function bookletPageOrder(pageCount:number,withBackCover=false):(number|n
 }
 
 /** Impõe o PDF em A4 paisagem e reserva a última página lógica para a contracapa. */
-export async function createBookletPdf(bytes:Uint8Array,backIllustration?:Uint8Array){
+export async function createBookletPdf(bytes:Uint8Array,backIllustration?:Uint8Array,context?:PrintCoverContext,fonts?:BookletCoverFonts){
  if(bytes.byteLength>25*1024*1024)throw new Error('O PDF excede o limite de 25 MB para gerar o livreto.');
  const source=await PDFDocument.load(bytes);
  const sourcePages=source.getPageCount(),plan=bookletPageOrder(sourcePages,true);
- const backCover=await appendBookletBackCover(source,backIllustration);
+ const paired=Boolean(backIllustration&&context);
+ if(paired&&!fonts)throw new Error("Não foi possível carregar as fontes das capas. Tente novamente.");
+ const backCover=await appendBookletBackCover(source,paired?undefined:backIllustration);
  const result=await PDFDocument.create();
  result.setTitle(`${source.getTitle()||'CRIVO'} — Livreto`);
  const width=841.8897637795277,height=595.2755905511812,padding=8.5;
  // Páginas sem Contents são espaços reais: contam na dobra, mas não podem ser incorporadas.
  await source.flush();
  const pages=source.getPages();
- const printed=await result.embedPages(pages.filter(page=>page.node.Contents()));
+ const included=pages.map((page,index)=>Boolean(page.node.Contents())&&(!paired||index!==0&&index!==sourcePages));
+ const printed=await result.embedPages(pages.filter((_,index)=>included[index]));
  let cursor=0;
- const embedded=pages.map(page=>page.node.Contents()?printed[cursor++]:null);
+ const embedded=pages.map((_,index)=>included[index]?printed[cursor++]:null);
  for(const side of plan){
   const sheet=result.addPage([width,height]);
+  if(paired&&side[0]===sourcePages&&side[1]===0){
+   await drawBookletCoverSpread(sheet,backIllustration!,context!,fonts!);
+   continue;
+  }
   for(const [column,index] of side.entries()){
    if(index===null)continue;
    const page=embedded[index];
@@ -46,5 +55,5 @@ export async function createBookletPdf(bytes:Uint8Array,backIllustration?:Uint8A
    if(fullBleed)sheet.pushOperators(popGraphicsState());
   }
  }
- return {bytes:await result.save(),sourcePages,blankPages:Math.ceil((sourcePages+1)/4)*4-sourcePages-1,sheets:plan.length/2,backCoverHasArtwork:backCover.hasArtwork};
+ return {bytes:await result.save(),sourcePages,blankPages:Math.ceil((sourcePages+1)/4)*4-sourcePages-1,sheets:plan.length/2,backCoverHasArtwork:paired||backCover.hasArtwork};
 }

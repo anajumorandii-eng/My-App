@@ -19,5 +19,12 @@
   "next_session": {
     "mode": "delta-only",
     "instructions": "Leia docs/CRIVO-CONTINUIDADE.md e este arquivo; então consulte no GitHub apenas os commits posteriores a source_commit. Não clone o repositório completo sem necessidade técnica."
+  },
+  "checkpoint_leitura_livreto_2026_11_06": {
+    "branch": "fix/livreto-capa-panoramica",
+    "estado": "As duas propostas foram aprovadas pela estudante. Implementação pronta para integração na PR 425 após verificações.",
+    "retomada": "docs/previas/leitura-e-capas-2026-11-06/README.md",
+    "leitura": "Aplicada ao leitor de materiais e ao guia completo: aquarela decorativa, fundo contínuo, largura inteira e preferências de aparência.",
+    "capas": "Duas composições verticais em uma camada conjunta; ligação delicada através da dobra. Referência original aprovada; faixa horizontal rejeitada."
   }
 }

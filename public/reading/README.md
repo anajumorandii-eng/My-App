@@ -1,0 +1,11 @@
+# Artes decorativas da Leitura Crivo
+
+Estas imagens são decoração da interface de leitura, não diagramas nem fontes de conteúdo curricular. A ilustração válida preparada para um material tem prioridade quando está disponível. `literature.png` corresponde à proposta de Literatura aprovada; `notebook.png` é uma vinheta de leitura sem assunto específico para os outros materiais e o guia geral.
+
+As duas artes foram produzidas com a ferramenta integrada de geração de imagens, com transparência preservada. A primeira pede um livro aberto, caneta vinho, página em movimento e uma paisagem urbana brasileira, em gravura fina e aquarela suave. A segunda pede um caderno aberto com páginas curvas, caneta vinho, folha em movimento e pequeno ramo sálvia, sem paisagem, pessoas, equações, símbolos de matéria ou texto. Ambas usam verde floresta, sálvia, vinho, sépia e ouro discreto, sem moldura nem fundo opaco. Não são reutilizadas como capas dos materiais.
+
+As fontes são cópias dos arquivos Cormorant já usados pela identidade do app. A licença está em `CORMORANT-LICENSE.txt`.
+
+## Prompt de notebook.png
+
+> A refined transparent editorial watercolor vignette for the CRIVO digital reading notebook. A single open ivory reading journal with softly curved pages, one slim burgundy fountain pen resting diagonally beside its lower edge, and one small sage botanical sprig subtly accompanying it. A loose elegant blank manuscript sheet curls gently upward behind the journal. This is SUBJECT-NEUTRAL reading-brand decoration, not an illustration of a particular school subject. No landscape, buildings, people, globes, scientific diagrams, equations or subject-specific props. Beautiful fine copperplate engraving with delicate luminous naturalist watercolor, tactile paper edges on the objects themselves, muted sage, forest green, wine, warm sepia and restrained antique gold. Graceful cohesive horizontal silhouette, airy and quiet, suitable beside an editorial title on warm ivory paper, softly dissolving watercolor edges. No text, lettering, labels, frame, border, background paper rectangle, white matte or shadow behind the vignette. Genuine transparent background and generous clear margins, complete objects entirely inside the image.

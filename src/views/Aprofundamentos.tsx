@@ -97,10 +97,10 @@ function GuideLibrary({ uid, review = false }: { uid: string | null; review?: bo
         {saveMessage && <p role="status" className="text-xs text-[var(--dim)]">{saveMessage}</p>}
         {printError && <p role="alert" className="text-sm">{printError}</p>}
         <article ref={printContent} className="ni-panel p-5 space-y-4" data-print-subject={selected.subject} data-print-work={selected.workSlug ? selected.topicName : undefined} data-print-topic={selected.workSlug ? undefined : selected.topicName} data-print-subtopic={selected.selections?.map(describeStudySelection).join(' · ') || selected.chapter || (selected.workSlug ? 'Obra completa' : 'Visão geral')} data-print-board={selected.targetBoards?.join(' · ') || selected.board} data-print-purpose={review ? (selected.reviewOptions ? reviewDepths[selected.reviewOptions.depth] : 'Revisão salva') : selected.workSlug ? 'Aprofundamento da obra e de sua cobrança na prova' : 'Aprofundamento dos conceitos e de como são cobrados nas provas'}>
-          <h2 className="font-display text-xl">{selected.subject} · {selected.chapter || selected.topicName}</h2>
-          <p className="text-sm text-[var(--dim)]">{selected.topicName} · {selected.board} · Salvo em {dateLabel(selected.savedAt)}</p>
+          <h2 data-reader-cover-title className="font-display text-xl">{selected.subject} · {selected.chapter || selected.topicName}</h2>
+          <p data-reader-meta className="text-sm text-[var(--dim)]">{selected.topicName} · {selected.board} · Salvo em {dateLabel(selected.savedAt)}</p>
           {selected.selections?.length ? <p className="text-sm">Recortes: {selected.selections.map(describeStudySelection).join(' + ')}</p> : null}
-          {review && selected.reviewOptions && <p className="text-sm text-[var(--dim)]">{reviewSelectionLabel(selected.reviewOptions)} · {reviewDepths[selected.reviewOptions.depth]}</p>}
+          {review && selected.reviewOptions && <p data-reader-meta className="text-sm text-[var(--dim)]">{reviewSelectionLabel(selected.reviewOptions)} · {reviewDepths[selected.reviewOptions.depth]}</p>}
           <ReviewSummaryText text={selected.text} />
           {isStudyPacket(selected.studyPacket) && <StudySourcesPanel packet={selected.studyPacket} />}
         </article>
