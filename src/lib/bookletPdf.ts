@@ -16,11 +16,11 @@ export function bookletPageOrder(pageCount:number,withBackCover=false):(number|n
 }
 
 /** Impõe o PDF em A4 paisagem e reserva a última página lógica para a contracapa. */
-export async function createBookletPdf(bytes:Uint8Array){
+export async function createBookletPdf(bytes:Uint8Array,backIllustration?:Uint8Array){
  if(bytes.byteLength>25*1024*1024)throw new Error('O PDF excede o limite de 25 MB para gerar o livreto.');
  const source=await PDFDocument.load(bytes);
  const sourcePages=source.getPageCount(),plan=bookletPageOrder(sourcePages,true);
- const backCover=await appendBookletBackCover(source);
+ const backCover=await appendBookletBackCover(source,backIllustration);
  const result=await PDFDocument.create();
  result.setTitle(`${source.getTitle()||'CRIVO'} — Livreto`);
  const width=841.8897637795277,height=595.2755905511812,padding=8.5;

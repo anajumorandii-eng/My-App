@@ -1,33 +1,8 @@
-import { PDFDict, PDFName, PDFNumber, PDFRawStream, PDFRef, StandardFonts, rgb, pushGraphicsState, translate, scale as scaleOperator, drawObject, popGraphicsState, type PDFDocument } from 'pdf-lib';
+import { StandardFonts, rgb, type PDFDocument } from 'pdf-lib';
 
-/** Reutiliza o XObject da ilustração, inclusive sua transparência; não rasteriza a página da capa. */
-function coverIllustration(document: PDFDocument) {
-  let best: { ref: PDFRef; area: number; width: number; height: number } | undefined;
-  const visited = new Set<unknown>();
-  const visit = (resources: PDFDict | undefined, depth: number) => {
-    if (!resources || depth > 6 || visited.size > 256 || visited.has(resources)) return;
-    visited.add(resources);
-    const objects = resources.lookupMaybe(PDFName.of('XObject'), PDFDict);
-    if (!objects) return;
-    for (const [, ref] of objects.entries()) {
-      if (!(ref instanceof PDFRef)) continue;
-      const object = document.context.lookup(ref);
-      if (!(object instanceof PDFRawStream)) continue;
-      const subtype = object.dict.get(PDFName.of('Subtype'));
-      if (subtype === PDFName.of('Image')) {
-        const width = object.dict.lookupMaybe(PDFName.of('Width'), PDFNumber)?.asNumber() ?? 0;
-        const height = object.dict.lookupMaybe(PDFName.of('Height'), PDFNumber)?.asNumber() ?? 0;
-        if (width * height > (best?.area ?? 0)) best = { ref, area: width * height, width, height };
-      } else if (subtype === PDFName.of('Form')) visit(object.dict.lookupMaybe(PDFName.of('Resources'), PDFDict), depth + 1);
-    }
-  };
-  visit(document.getPage(0).node.Resources(), 0);
-  return best;
-}
-
-/** Contracapa coordenada com a edição: arte original, outra hierarquia e acabamento vetorial. */
-export async function appendBookletBackCover(document: PDFDocument) {
-  const art = coverIllustration(document);
+/** Contracapa coordenada com a edição: segunda arte, outra hierarquia e acabamento vetorial. */
+export async function appendBookletBackCover(document: PDFDocument, illustration?: Uint8Array) {
+  const art = illustration ? await document.embedPng(illustration) : undefined;
   const { width, height } = document.getPage(0).getSize();
   const page = document.addPage([width, height]);
   const serif = await document.embedFont(StandardFonts.TimesRoman);
@@ -46,12 +21,11 @@ export async function appendBookletBackCover(document: PDFDocument) {
   center('CADERNOS DE ESTUDO', .851, 7.5, sans, gold);
   page.drawLine({ start: { x: width * .35, y: height * .818 }, end: { x: width * .65, y: height * .818 }, color: gold, thickness: .5 * unit });
   if (art) {
-    const scale = Math.min(width * .67 / art.width, height * .52 / art.height);
+    const scale = Math.min(width * .87 / art.width, height * .58 / art.height);
     const w = art.width * scale, h = art.height * scale;
-    const name = page.node.newXObject('BookletIllustration', art.ref);
-    page.pushOperators(pushGraphicsState(), translate((width - w) / 2, height * .29 + (height * .52 - h) / 2), scaleOperator(w, h), drawObject(name), popGraphicsState());
+    page.drawImage(art, { x: (width - w) / 2, y: height * .255 + (height * .58 - h) / 2, width: w, height: h });
   } else {
-    // O texto continua imprimível mesmo quando a capa de origem não contém imagem.
+    // Uso local sem segunda arte: acabamento tipográfico, sem duplicar a imagem da frente.
     page.drawCircle({ x: width / 2, y: height * .55, size: 58 * unit, borderColor: gold, borderWidth: .6 * unit });
     center('C', .527, 58, italic);
   }

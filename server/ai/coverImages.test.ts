@@ -413,3 +413,17 @@ test('pedido de Português contém orientação própria antes da estética e ev
     assert.match(prompt,/No text, lettering, labels, borders/);
   }
 });
+
+ test('contracapa é uma segunda cena complementar, com escopo e transparência preservados',()=>{
+ const payload={subject:'Geografia',topic:'Climatologia e Problemas Socioambientais',side:'back'};
+ assert.deepEqual(validateCoverContext(payload),payload);
+ assert.throws(()=>validateCoverContext({...payload,side:'anything'}));
+ const prompt=buildCoverImagePrompt(validateCoverContext(payload));
+ assert.match(prompt,/ONLY a new BACK COVER/);assert.match(prompt,/never the same image, mirrored image/);
+ assert.match(prompt,/Brazilian watershed landscape/);assert.match(prompt,/without another globe or weather instruments/);
+ assert.match(prompt,/transparent background/);assert.match(prompt,/No text, lettering/);
+ for(const subject of ['Matemática','Biologia','Literatura','Português']){
+  const scoped=buildCoverImagePrompt({subject,topic:'Tópico selecionado',subtopic:'Recorte específico',side:'back'});
+  assert.match(scoped,/Recorte específico/);assert.match(scoped,/quoted subtopic always takes precedence/);
+ }
+ });

@@ -1,3 +1,4 @@
+import type { PrintCoverContext } from '../lib/printCoverSpec';
 import { BookletPdf } from './BookletPdf';
 import { useEffect, useRef, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
@@ -41,7 +42,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
   const { user } = useAuth();
   const [attempt, setAttempt] = useState(0);
   const [edition,setEdition]=useState('original');
-  const [file, setFile] = useState<{ key: string; url: string; blob: Blob }>();
+  const [file, setFile] = useState<{ key: string; url: string; blob: Blob; context: PrintCoverContext }>();
   const [error, setError] = useState('');
   const [standardCover, setStandardCover] = useState(false);
   const [coverProblem, setCoverProblem] = useState('');
@@ -61,6 +62,8 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
     if (usingStandardCover) { setStandardCover(true); setCoverProblem(coverReason); }
     void (async () => {
       try {
+        const currentContent=getContent();
+        let coverContext=currentContent?readPrintCoverContext(currentContent):{};
         let blob = edition==='original'?completedFiles.get(documentKey):undefined;
         // Library headings may omit the board; identity follows the saved guide.
         const documentId = user ? await studyPdfDocumentId(JSON.stringify(['study-pdf-quality-v2', user.uid, guideKey, revision, materialLabel])) : undefined;
@@ -100,6 +103,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
             } catch (failure) { usingStandardCover = true; coverReason = failure instanceof Error && failure.name === 'Error' ? failure.message : 'A ilustração não concluiu a tempo. Tente novamente mais tarde.'; if (!controller.signal.aborted) { setStandardCover(true); setCoverProblem(coverReason); } }
           }
           controller.signal.throwIfAborted();
+          coverContext=readPrintCoverContext(content);
           preparedContent.current = { key: cacheKey, content, standardCover: usingStandardCover, coverProblem: coverReason };
           const signal = AbortSignal.any([controller.signal, AbortSignal.timeout(45_000)]);
           blob = await requestStudyPdf(createStrategyPrintRoot(content, title), title, printStyles, signal, documentId);
@@ -109,7 +113,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
         }
         controller.signal.throwIfAborted();
         objectUrl = URL.createObjectURL(blob);
-        setFile({ key: cacheKey, url: objectUrl, blob });
+        setFile({ key: cacheKey, url: objectUrl, blob, context:coverContext });
       } catch (failure) {
         if (!controller.signal.aborted) setError(failure instanceof Error && failure.name !== 'TimeoutError' ? failure.message : 'Não foi possível preparar o material. Tente novamente.');
       } finally {
@@ -135,7 +139,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
           });
         }}>Compartilhar PDF</button>}
       </div>
-      <BookletPdf key={ready.key} pdf={ready.blob} filename={filename} />
+      <BookletPdf key={ready.key} pdf={ready.blob} filename={filename} context={ready.context} />
     </> : idle ? <button type="button" className="underline" onClick={() => setRequestedKey(cacheKey)}>Exportar {materialLabel.toLowerCase()} em PDF</button> : !error && <p role="status">{materialLabel === 'Aprofundamento' ? 'Preparando seu aprofundamento completo…' : `Preparando ${materialLabel.toLowerCase()} completa…`}</p>}
     {error && <div role="alert" className="space-y-2"><p>{error} {materialLabel === 'Aprofundamento' ? 'O texto do seu aprofundamento continua salvo.' : `O texto de ${materialLabel.toLowerCase()} continua salvo.`}</p>
       {!ready && <button type="button" className="underline" onClick={() => setAttempt(value => value + 1)}>Tentar novamente</button>}
