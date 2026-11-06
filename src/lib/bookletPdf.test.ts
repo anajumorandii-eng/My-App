@@ -70,3 +70,18 @@ test('incorpora a ilustração real da capa à contracapa e conserva o texto nat
   for(let i=1;i<=3;i++)assert.equal(text.join('').match(new RegExp(`CONTEUDO_${i}`,'g'))?.length,1);
  }finally{rmSync(folder,{recursive:true,force:true});}
 });
+
+test('a face externa não deixa faixas brancas na borda nem na dobra, mesmo com rodapé branco na capa',async()=>{
+ const source=await PDFDocument.create();const front=source.addPage([595.28,841.89]);
+ front.drawRectangle({x:0,y:3,width:595.28,height:838.89,color:(await import('pdf-lib')).rgb(246/255,242/255,233/255)});
+ const result=await createBookletPdf(await source.save());const folder=mkdtempSync(join(tmpdir(),'crivo-booklet-bleed-'));
+ try{
+  const path=join(folder,'livreto.pdf'),prefix=join(folder,'face');writeFileSync(path,result.bytes);
+  execFileSync('pdftoppm',['-f','1','-l','1','-singlefile','-scale-to','600',path,prefix]);
+  const ppm=readFileSync(prefix+'.ppm');const header=/^P6\s+(\d+)\s+(\d+)\s+255\s/.exec(ppm.toString('ascii',0,80))!;
+  const width=Number(header[1]),height=Number(header[2]),offset=header[0].length;
+  for(const x of [0,Math.floor(width/2)-1,Math.floor(width/2),width-1])for(const y of [0,height-1]){
+   const pixel=offset+3*(y*width+x);assert.deepEqual([...ppm.subarray(pixel,pixel+3)],[246,242,233]);
+  }
+ }finally{rmSync(folder,{recursive:true,force:true});}
+});
