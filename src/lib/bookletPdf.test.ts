@@ -53,15 +53,19 @@ test('mantém a contracapa do lado de fora, com os brancos antes dela, para qual
  assert.deepEqual(bookletPageOrder(4,true),[[4,0],[1,null],[null,2],[3,null]]);
 });
 
-test('incorpora a ilustração real da capa à contracapa e conserva o texto nativo',async()=>{
+test('incorpora uma segunda ilustração à contracapa e conserva o texto nativo',async()=>{
  const source=await PDFDocument.create();const font=await source.embedFont(StandardFonts.Helvetica);
  const art=await source.embedPng(readFileSync(new URL('../../public/icon-192.png',import.meta.url)));
  const front=source.addPage([595.28,841.89]);front.drawImage(art,{x:150,y:230,width:280,height:280});front.drawText('CAPA ORIGINAL',{x:80,y:700,font,size:24});
  for(let i=1;i<=3;i++)source.addPage([595.28,841.89]).drawText(`CONTEUDO_${i}`,{x:80,y:700,font,size:24});
- const original=await source.save();const copy=original.slice();const result=await createBookletPdf(original);
+ const original=await source.save();const copy=original.slice();
+ // A contracapa recebe seus próprios pixels PNG e não busca a imagem da frente.
+ const backPng=readFileSync(new URL('../../public/icon-512.png',import.meta.url));
+ const result=await createBookletPdf(original,backPng);
  assert.equal(result.backCoverHasArtwork,true);assert.equal(result.blankPages,3);assert.deepEqual(original,copy);
  const images=(document:PDFDocument)=>document.context.enumerateIndirectObjects().filter(([,object])=>object instanceof PDFRawStream&&object.dict.get(PDFName.of('Subtype'))===PDFName.of('Image')).length;
- assert.equal(images(await PDFDocument.load(result.bytes)),images(await PDFDocument.load(original)));
+ const rearOnly=await PDFDocument.create();await rearOnly.embedPng(backPng);await rearOnly.flush();
+ assert.equal(images(await PDFDocument.load(result.bytes)),images(await PDFDocument.load(original))+images(rearOnly));
  const folder=mkdtempSync(join(tmpdir(),'crivo-booklet-cover-'));
  try{
   const path=join(folder,'booklet.pdf');writeFileSync(path,result.bytes);
@@ -85,3 +89,10 @@ test('a face externa não deixa faixas brancas na borda nem na dobra, mesmo com 
   }
  }finally{rmSync(folder,{recursive:true,force:true});}
 });
+
+ test('sem segunda arte não duplica a ilustração da frente',async()=>{
+ const source=await PDFDocument.create();const front=source.addPage();
+ front.drawImage(await source.embedPng(readFileSync(new URL('../../public/icon-192.png',import.meta.url))),{x:100,y:100,width:200,height:200});
+ const result=await createBookletPdf(await source.save());
+ assert.equal(result.backCoverHasArtwork,false);
+ });
