@@ -1,3 +1,5 @@
+import { StudyReaderButton } from '../components/StudyReaderButton';
+import { resolutionReadingContent } from '../lib/studyReading';
 import { lazy, Suspense } from 'react';
 import React, { useState } from 'react';
 import {
@@ -75,6 +77,10 @@ export default function Estrategias() {
           );
         })}
       </div>
+
+      {(tab === 'metodo' || tab === 'materia' || tab === 'banca' || tab === 'segunda-fase') && <div className="mb-5">
+        <StudyReaderButton key={tab} title={`Estratégias — ${TABS.find(item => item.id === tab)!.label}`} getContent={() => resolutionReadingContent(tab, { method: generalResolutionMethod, subjects: subjectStrategies, boards: bancaStrategies, protocols: secondPhaseProtocols })} />
+      </div>}
 
       {tab === 'guia' && <Suspense fallback={<p role="status">Carregando estratégias...</p>}><StrategyExplorer /></Suspense>}
 

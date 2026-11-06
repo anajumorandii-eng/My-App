@@ -1,3 +1,4 @@
+import { summaryReadingContent } from '../lib/studyReading';
 import { StudyExportButton } from '../components/StudyExportButton';
 import React, { useEffect, useMemo, useState } from 'react';
 import { BookOpen, Search, Star, ChevronDown, ChevronUp, Check, AlertTriangle, CloudOff, ExternalLink, ArrowLeft, Brain, Waypoints } from 'lucide-react';
@@ -88,7 +89,7 @@ export default function Resumos() {
           <button onClick={() => { setSearchParams({}); setSelectedId(null); }} className="inline-flex items-center text-sm font-medium text-[var(--primary)] hover:underline"><ArrowLeft className="w-4 h-4 mr-2"/>Voltar à biblioteca</button>
       {syncError && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">{syncError}</div>}
       {requestedQuestionId && !summary.retrieval.some((item) => item.id === requestedQuestionId) && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 dark:border-amber-900 dark:bg-amber-950/20 p-3 text-sm text-amber-900 dark:text-amber-200">A pergunta indicada não está mais disponível. O restante do resumo continua acessível.</div>}
-      <StudyExportButton title={summary.title} />
+      <StudyExportButton title={summary.title} getReadingContent={() => summaryReadingContent(summary)} />
       <StudyDraftNotice statuses={[draftsStatus]} />
       {curriculumTopic && <><details><summary className="cursor-pointer font-semibold text-sm">Antes de ler: o que consigo explicar?</summary><StudyReflectionPanel topicId={curriculumTopic.id} topicName={summary.title} subject={summary.subject} /></details><StudyJourneyLinks topicId={curriculumTopic.id} chapter={summary.topic} /></>}
       <header className="crivo-hero-capitulo rounded-3xl bg-zinc-950 text-white p-6 sm:p-8">

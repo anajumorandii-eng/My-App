@@ -1,3 +1,4 @@
+import { StudyReaderButton } from './StudyReaderButton';
 import { SubtopicSelector } from './SubtopicSelector';
 import { describeStudySelection,normalizeTopicCuts } from '../lib/topicCuts';
 import { AdditionalStudyTopics } from './AdditionalStudyTopics';
@@ -35,6 +36,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
   const [packetState, setPacketState] = useState<{ key: string; packet?: StudyPacket; error?: string } | null>(null);
   const { guides, persist, error: guidesError, reload: reloadGuides, saveMessage, setSaveMessage } = useStrategyGuides(uid);
   const printContent = useRef<HTMLDivElement>(null);
+  const strategyContent = useRef<HTMLDivElement>(null);
   const [subject, setSubject] = useState(requestedTopic ? studyAreaForTopic(requestedTopic) : 'Matemática');
   const topics = mockTopics.filter((topic) => studyAreaForTopic(topic) === subject);
   const [topicId, setTopicId] = useState(requestedTopic?.id ?? topics[0]?.id ?? '');
@@ -92,6 +94,12 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
     {guidesError && <div role="alert" className="text-sm"><p>{guidesError}</p><button type="button" className="underline" onClick={reloadGuides}>Tentar carregar novamente</button></div>}
     <div className="ni-panel p-4 space-y-3">
       <h2 id="guia-estrategias" className="font-display text-xl">Banca, matéria e tópico: decidir cada passo</h2>
+      <StudyReaderButton title={`Estratégia — ${subject} — ${scopeName} — ${board}`} label="Abrir estratégia para leitura" disabled={loadingKey !== null} getContent={() => {
+        const root = document.createElement('div');
+        if (strategyContent.current) root.append(strategyContent.current.cloneNode(true));
+        if (printContent.current) root.append(printContent.current.cloneNode(true));
+        return root;
+      }} />
       <p className="text-sm text-[var(--dim)]">Escolha o recorte do currículo. O protocolo e o exemplo são autorais; o guia aprofundado usa os resumos editoriais disponíveis como referência e deve ser conferido com questões e gabaritos.</p>
       <div className="grid gap-3 sm:grid-cols-2">
         <label className="text-sm">Matéria do guia<select className="field w-full" value={subject} onChange={(event) => changeSubject(event.target.value)}>{studyProtocols.map((item) => <option key={item.subject}>{item.subject}</option>)}</select></label>
@@ -110,6 +118,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
     {packetState?.key === key && packetState.error && <p role="alert">{packetState.error}</p>}
     {(guides[key]?.studyPacket || (packetState?.key === key && packetState.packet)) && <StudySourcesPanel packet={guides[key]?.studyPacket ?? packetState!.packet!} />}
     <ExamEvidencePanel key={key} subject={subject} topicIds={selections.map(item => item.topicId)} boards={targetBoards} />
+    <div ref={strategyContent} className="space-y-3">
     <article className="ni-panel p-4 space-y-3">
       <h3 className="font-display text-lg">Como preparar este conteúdo para {board}</h3>
       <p className="text-sm">{boardProfile?.format ?? 'Compare os comandos, os dados e as representações das questões de cada origem disponível.'}</p><p className="text-sm text-[var(--dim)]">{boardProfile?.training ?? 'A análise deve separar o que foi observado nas fontes de uma adaptação didática. Uma amostra não representa toda a banca.'}</p>
@@ -122,6 +131,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
       <details><summary className="cursor-pointer text-sm font-semibold">Exemplo resolvido e questão de transferência</summary><p className="text-sm my-3">{protocol.example.prompt}</p><ol className="list-decimal pl-5 space-y-2 text-sm">{protocol.example.solution.map((step) => <li key={step}>{step}</li>)}</ol><p className="text-sm mt-3"><b>Sem consultar:</b> {protocol.example.transfer}</p><details className="mt-2"><summary className="text-sm cursor-pointer">Conferir critérios de resposta</summary><p className="text-sm mt-2">{protocol.example.expected}</p></details></details>
       <details><summary className="cursor-pointer text-sm font-semibold">Pegadinhas e revisão desta área</summary><ul className="list-disc pl-5 text-sm space-y-2 mt-3">{protocol.pitfalls.map((pitfall) => <li key={pitfall}>{pitfall}</li>)}</ul><p className="text-sm mt-3">{protocol.review}</p></details>
     </article>
+    </div>
     <div className="ni-panel p-4 space-y-3">
       <h3 className="font-display text-lg">Aprofundamento: {scopeName}</h3>
       <p className="text-xs text-[var(--dim)]">Conceitos, representações, decisão de estratégia, resolução justificada, contrastes, pegadinhas e exercícios. Comparações de cobrança devem indicar evidência; frequência não é inferida pelo nome da banca.</p>
@@ -133,6 +143,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
       {guides[key]?.targetBoards?.length ? <p className="text-xs">Bancas deste guia salvo: {guides[key].targetBoards!.join(' · ')}</p> : null}
       <a className="text-sm underline block" href={`/podcast?topic=${encodeURIComponent(topic?.id ?? '')}${chapter ? `&chapter=${encodeURIComponent(chapter)}` : ''}${board !== 'Todas as bancas' ? `&board=${encodeURIComponent(board)}` : ''}`}>{selections.length > 1 ? `Estudar ${topic?.name} em podcast aprofundado` : 'Transformar este recorte em podcast aprofundado'}</a>
       {guides[key] && loadingKey !== key && <div className="flex flex-wrap gap-3">
+        <StudyReaderButton key={`reading-${key}`} title={`Aprofundamento — ${subject} — ${scopeName} — ${board}`} getContent={() => printContent.current} />
         <Link to={strategyGuideUrl(guides[key])} className="text-sm underline">Abrir este guia na biblioteca</Link>
         {uid ? <DeepeningPdf key={key} getContent={() => printContent.current}
           guideKey={key} revision={guides[key].savedAt}

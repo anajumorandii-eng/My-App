@@ -1,3 +1,4 @@
+import { StudyReaderButton } from './StudyReaderButton';
 import { CoverIllustrationButton } from './CoverIllustrationButton';
 import { StudyReflectionPanel } from './StudyReflectionPanel';
 import { useMemo, useRef, useState } from 'react';
@@ -44,6 +45,7 @@ export function WorkStudyContent({ dossier, mode, boards = [] }: { dossier: Work
   const chooseUnit = (id: string) => setSearchParams(previous => { const params = new URLSearchParams(previous); if (id) params.set('unidade', id); else params.delete('unidade'); return params; });
   const heading = `${mode === 'summary' ? 'Resumo aprofundado' : 'Estratégias de leitura e resolução'} de ${guide.profile.title}`;
   return <section className="ni-panel p-5 space-y-5">
+    <StudyReaderButton key={`${mode}-${dossier.slug}-${requestedUnit ?? ''}`} title={heading} getContent={() => content.current} />
     <div className="flex flex-wrap items-center gap-3">
       <button type="button" className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm" onClick={() => {
         if (!content.current) return;
@@ -84,7 +86,7 @@ export function WorkStudyContent({ dossier, mode, boards = [] }: { dossier: Work
         </section>
         <section className="space-y-2"><h3 className="font-semibold">Antes de reler: teste sua explicação</h3><p className="text-sm leading-relaxed">{unit ? 'Reconstrua esta unidade sem consultar: situação → voz → indício → recurso → efeito → relação com a obra. Depois confronte sua resposta com a passagem comentada acima.' : 'Explique a obra como um conjunto: qual é o eixo central, como as partes se organizam e que escolhas de voz, forma e linguagem sustentam sua leitura? Relacione abertura, desenvolvimento e encerramento, usando evidências de diferentes partes. Depois escolha uma unidade para conferir sua interpretação.'} Corrija o ponto em que você só nomeou um tema, sem mostrar como o texto o constrói.</p></section>
       </>}
-      {!unit && guide.units.length > 0 && <details className="border-t border-[var(--line)] pt-4 space-y-3">
+      {!unit && guide.units.length > 0 && <details data-reader-exclude className="border-t border-[var(--line)] pt-4 space-y-3">
         <summary className="font-semibold cursor-pointer">Aprofundar uma parte da obra</summary>
         <p className="text-sm text-[var(--dim)]">Abra uma unidade para estudar seu resumo, suas escolhas formais e as passagens publicadas.</p>
         <ol className="list-decimal pl-5 space-y-2 text-sm">{guide.units.map(item => <li key={item.id}><button type="button" className="underline text-left" onClick={() => chooseUnit(item.id)}>{item.title}</button></li>)}</ol>

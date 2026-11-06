@@ -1,3 +1,4 @@
+import { StudyReaderButton } from './StudyReaderButton';
 import { DeepeningPdf } from './DeepeningPdf';
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -67,6 +68,7 @@ function WorkDeepeningContent({ dossier, title, unitId, unitTitle, uid }: { doss
     <div className="flex flex-wrap gap-3 text-sm">
       <Link to="/aprofundamentos" className="underline">Meus aprofundamentos</Link>
       {saved && !busy && <>
+        <StudyReaderButton title={`Aprofundamento — ${title} — ${scope} — ${board}`} getContent={() => content.current} />
         <Link to={strategyGuideUrl(saved)} className="underline">Abrir este guia na biblioteca</Link>
         {uid ? <DeepeningPdf key={key} getContent={() => content.current}
           guideKey={key} revision={saved.savedAt} title={`Aprofundamento — ${title} — ${scope} — ${board}`}
