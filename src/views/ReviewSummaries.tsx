@@ -276,7 +276,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
     {current && !generating && <StudyReaderButton key={`reading-${current.key}`} title={title} getContent={() => printContent.current} />}
     {(stream || current) && <article className="ni-panel p-5 space-y-4 min-w-0" aria-label="Resumo selecionado" aria-busy={generating}>
       <div ref={printContent as React.RefObject<HTMLDivElement>} data-print-subject={current?.subject || subject} data-print-topic={current?.topicName || topic?.name || options.sourceTitle} data-print-subtopic={displayedSelections.length > 1 || displayedSelections.some(item=>item.cuts?.length) ? recortes : current?.chapter || chapter || 'Visão geral'} data-print-board={legacy ? current!.board || 'Geral' : reviewSelectionLabel(displayedOptions)} data-print-purpose={legacy ? 'Revisão salva — etapa e profundidade não registradas' : reviewDepths[displayedOptions.depth]}>
-        <h3 className="break-words font-display text-xl">{current?.subject || subject} · {current?.chapter || current?.topicName || (combined ? focusName : chapter || topic?.name || options.sourceTitle)}</h3>
+        <h3 data-reader-cover-title className="break-words font-display text-xl">{current?.subject || subject} · {current?.chapter || current?.topicName || (combined ? focusName : chapter || topic?.name || options.sourceTitle)}</h3>
         <p className="text-sm text-[var(--dim)]">{selectionDescription}</p>
         {(displayedSelections.length > 1 || displayedSelections.some(item=>item.cuts?.length)) && <p className="text-sm">Recortes: {recortes}</p>}
         {!generating && stream && <p role="status">Rascunho incompleto — ainda não foi salvo como revisão concluída. Copie o texto antes de sair ou tentar novamente.</p>}

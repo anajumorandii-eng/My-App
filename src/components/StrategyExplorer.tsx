@@ -161,6 +161,6 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
         {guides[key]?.studyPacket && <div className="hidden" data-print-only><StudySourcesPanel packet={guides[key].studyPacket!} /></div>}
       </div>}
     </div>
-    <a href="/study-guide.html" target="_blank" rel="noreferrer" className="text-sm underline">Abrir guia completo para consultar ou imprimir</a>
+    <a href="/study-guide.html?leitura=2" target="_blank" rel="noreferrer" className="text-sm underline">Abrir guia completo para consultar ou imprimir</a>
   </section>;
 }

@@ -1,3 +1,4 @@
+import { readPrintCoverContext } from './printCoverContext';
 import type { InteractiveSummary } from '../types/summary';
 
 export interface ReadingSection { id: string; label: string; }
@@ -15,6 +16,12 @@ export function prepareStudyReading(source: HTMLElement, prefix: string) {
   });
   // A consulta mantém referências, sem repetir os textos brutos usados como insumo da explicação.
   content.querySelectorAll('script,style,iframe,object,embed,audio,video,form,nav,[data-print-exclude],[data-reader-exclude],[data-study-source] [data-source-content]').forEach(element => element.remove());
+  content.querySelectorAll('[data-reader-cover-title]').forEach(element => element.remove());
+  const context = readPrintCoverContext(content);
+  const scope = context.work || context.topic;
+  const firstHeading = content.querySelector('h1,h2,h3');
+  const normalize = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  if (scope && firstHeading && /^crivo\s*[—–:-]/i.test(firstHeading.textContent || '') && normalize(firstHeading.textContent || '').includes(normalize(scope))) firstHeading.remove();
   content.querySelectorAll('button').forEach(button => {
     if (button.querySelector('h1,h2,h3,h4,h5,h6')) button.replaceWith(...button.childNodes);
     else button.remove();
@@ -41,6 +48,8 @@ export function prepareStudyReading(source: HTMLElement, prefix: string) {
       }
     }
   });
+  const lead = [...content.querySelectorAll<HTMLElement>('p')].find(paragraph => (paragraph.textContent?.trim().length || 0) > 80 && !paragraph.hasAttribute('data-reader-meta') && !paragraph.closest('blockquote,figure,.crivo-figure,[data-review-answer-key]') && !paragraph.querySelector('.katex,math,svg,img'));
+  if (lead) lead.dataset.readerLead = '';
   const sections: ReadingSection[] = [];
   content.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach((heading, index) => {
     if (heading.closest('[data-review-answer-key]') || !heading.textContent?.trim()) return;
@@ -53,9 +62,10 @@ export function prepareStudyReading(source: HTMLElement, prefix: string) {
 /** O capítulo completo vem dos dados; seções recolhidas na tela não podem desaparecer do guia. */
 export function summaryReadingContent(summary: InteractiveSummary) {
   const root = document.createElement('article');
+  root.dataset.printSubject = summary.subject; root.dataset.printTopic = summary.topic; root.dataset.printSubtopic = summary.title; root.dataset.printPurpose = 'Resumo';
   const add = (tag: string, text: string, parent = root) => { const element = document.createElement(tag); element.textContent = text; parent.append(element); return element; };
-  add('p', `${summary.subject} · ${summary.topic}`);
-  add('p', summary.contentStatus === 'roteiro' ? 'Roteiro inicial · aprofundamento pendente' : summary.contentStatus === 'aprofundado' ? 'Capítulo aprofundado · exemplos resolvidos e prática' : 'Material de estudo');
+  add('p', `${summary.subject} · ${summary.topic}`).dataset.readerCoverTitle = '';
+  add('p', summary.contentStatus === 'roteiro' ? 'Roteiro inicial · aprofundamento pendente' : summary.contentStatus === 'aprofundado' ? 'Capítulo aprofundado · exemplos resolvidos e prática' : 'Material de estudo').dataset.readerMeta = '';
   add('p', summary.overview);
   add('h2', 'Pré-requisitos'); add('p', summary.prerequisites.join(' · '));
   const stages = { intuicao: 'Intuição', conceito: 'Conceito', aplicacao: 'Aplicação', exercicio: 'Exercício', estrategia: 'Estratégia de prova' };

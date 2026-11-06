@@ -8,7 +8,7 @@ vi.mock('../components/WorkStrategiesExplorer', () => ({ default: () => null }))
 afterEach(cleanup);
 
 it.each(['Método Geral', 'Por Matéria', 'Por Banca', '2ª Fase (Discursiva)'])('oferece leitura para a estratégia %s', (name) => {
-  render(<Estrategias />);fireEvent.click(screen.getByRole('button', { name }));expect(screen.getByRole('button', { name: 'Abrir para leitura' })).toBeEnabled();
+  render(<Estrategias />);fireEvent.click(screen.getByRole('button', { name }));expect(screen.getByRole('button', { name: 'Leitura Crivo' })).toBeEnabled();
 });
 it('leva ao guia as matérias e os protocolos recolhidos, sem depender da expansão na tela', () => {
   const data = { method: generalResolutionMethod, subjects: subjectStrategies, boards: bancaStrategies, protocols: secondPhaseProtocols };

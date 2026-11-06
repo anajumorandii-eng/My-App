@@ -22,9 +22,9 @@
   },
   "checkpoint_leitura_livreto_2026_11_06": {
     "branch": "fix/livreto-capa-panoramica",
-    "estado": "Rascunho para preservar trabalho. Não mesclar sem concluir a validação visual.",
+    "estado": "As duas propostas foram aprovadas pela estudante. Implementação pronta para integração na PR 425 após verificações.",
     "retomada": "docs/previas/leitura-e-capas-2026-11-06/README.md",
-    "leitura": "Prévia ilustrada; não aplicada ao aplicativo; aguarda aprovação.",
-    "capas": "Seguir a referência original com duas composições verticais e conexão delicada. A faixa horizontal foi rejeitada."
+    "leitura": "Aplicada ao leitor de materiais e ao guia completo: aquarela decorativa, fundo contínuo, largura inteira e preferências de aparência.",
+    "capas": "Duas composições verticais em uma camada conjunta; ligação delicada através da dobra. Referência original aprovada; faixa horizontal rejeitada."
   }
 }
