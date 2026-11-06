@@ -2,11 +2,9 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "7ec2c489ff5a6c6603224059735254400934d58d",
-  "generated_at_utc": "2026-11-06T18:26:33Z",
+  "source_commit": "1e089815cbc2d4d37e40be7fbaf7464c9a3c7e9f",
+  "generated_at_utc": "2026-11-06T18:38:18Z",
   "changed_files": [
-    "src/components/BookletPdf.tsx",
-    "src/lib/bookletBackCover.ts",
     "src/lib/bookletPdf.test.ts",
     "src/lib/bookletPdf.ts"
   ],
