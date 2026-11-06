@@ -32,3 +32,7 @@ Para retomar: conferir a composição com a referência acima, pedir validação
 ## Imagens da prévia
 
 Geradas pela ferramenta de imagem integrada, com transparência preservada. A aquarela de leitura pede livro aberto, caneta vinho, página em movimento e paisagem urbana brasileira, em gravura fina e aquarela suave, sem pessoas, rótulos, moldura ou fundo opaco. A camada das capas foi extraída da referência aprovada, preservando posições, volumes verticais, suporte do globo e ligação pelas nuvens, removendo somente textos, molduras e papel para permitir composição nativa. São ativos de prévia, não uma nova biblioteca genérica de imagens do aplicativo.
+
+### Resultado final das verificações do checkpoint
+
+`npm run lint` e `npm run build` concluíram com sucesso. `npm test` aprovou 1.363 testes de servidor/bibliotecas (um teste ignorado) e 3.429 testes de interface em 270 arquivos. A suíte de interface levou 477 segundos. Nenhuma falha. O checkpoint permanece em rascunho para validação visual; esses resultados não constituem aprovação do design.
