@@ -1,3 +1,4 @@
+import { StudyReaderButton } from '../components/StudyReaderButton';
 import { describeStudySelection } from '../lib/topicCuts';
 import { reviewDepths, reviewSelectionLabel } from '../lib/strategicReview';
 import { isReviewSummary } from '../lib/reviewSummaries';
@@ -77,6 +78,7 @@ function GuideLibrary({ uid, review = false }: { uid: string | null; review?: bo
       <Link to={backUrl} className="text-sm underline">Voltar à biblioteca de {plural}</Link>
       {selected ? <>
         <div className="flex flex-wrap items-center gap-3">
+          <StudyReaderButton key={`reading-${selected.key}`} title={`${material} — ${selected.subject} — ${selected.chapter || selected.topicName}`} getContent={() => printContent.current} />
           {uid ? <DeepeningPdf key={selected.key} getContent={() => printContent.current}
             guideKey={selected.key} revision={selected.savedAt}
             materialLabel={material} autoGenerate={!review} title={`${material} — ${selected.subject} — ${selected.chapter || selected.topicName}`} /> :

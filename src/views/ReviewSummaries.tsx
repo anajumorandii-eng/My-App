@@ -1,3 +1,4 @@
+import { StudyReaderButton } from '../components/StudyReaderButton';
 import { SubtopicSelector } from '../components/SubtopicSelector';
 import { describeStudySelection, normalizeTopicCuts } from '../lib/topicCuts';
 import { AdditionalStudyTopics } from '../components/AdditionalStudyTopics';
@@ -272,6 +273,7 @@ function ReviewSummariesContent({ uid }: { uid: string | null }) {
       {saveMessage && <p role="status" className="text-sm">{saveMessage}</p>}
       </div>
     </details>
+    {current && !generating && <StudyReaderButton key={`reading-${current.key}`} title={title} getContent={() => printContent.current} />}
     {(stream || current) && <article className="ni-panel p-5 space-y-4 min-w-0" aria-label="Resumo selecionado" aria-busy={generating}>
       <div ref={printContent as React.RefObject<HTMLDivElement>} data-print-subject={current?.subject || subject} data-print-topic={current?.topicName || topic?.name || options.sourceTitle} data-print-subtopic={displayedSelections.length > 1 || displayedSelections.some(item=>item.cuts?.length) ? recortes : current?.chapter || chapter || 'Visão geral'} data-print-board={legacy ? current!.board || 'Geral' : reviewSelectionLabel(displayedOptions)} data-print-purpose={legacy ? 'Revisão salva — etapa e profundidade não registradas' : reviewDepths[displayedOptions.depth]}>
         <h3 className="break-words font-display text-xl">{current?.subject || subject} · {current?.chapter || current?.topicName || (combined ? focusName : chapter || topic?.name || options.sourceTitle)}</h3>

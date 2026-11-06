@@ -1,3 +1,4 @@
+import { StudyReaderButton } from './StudyReaderButton';
 import { CoverIllustrationButton } from './CoverIllustrationButton';
 import React, { useRef, useState } from 'react';
 import { printStrategyGuide } from '../lib/printStrategyGuide';
@@ -24,10 +25,11 @@ export function prepareStudyExport(source: HTMLElement): HTMLElement {
   return copy;
 }
 
-export function StudyExportButton({ title }: { title: string }) {
+export function StudyExportButton({ title, getReadingContent }: { title: string; getReadingContent?: () => HTMLElement | null }) {
   const [error, setError] = useState('');
   const controls = useRef<HTMLDivElement>(null);
-  return <div data-print-exclude ref={controls}>
+  return <div data-print-exclude ref={controls} className="flex flex-wrap items-center gap-3">
+    <StudyReaderButton title={title} getContent={getReadingContent ?? (() => controls.current?.closest<HTMLElement>('[data-study-export]') ?? null)} />
     <button type="button" className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm" onClick={event => {
       const root = event.currentTarget.closest<HTMLElement>('[data-study-export]');
       if (!root) return;
