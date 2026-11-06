@@ -19,5 +19,12 @@
   "next_session": {
     "mode": "delta-only",
     "instructions": "Leia docs/CRIVO-CONTINUIDADE.md e este arquivo; então consulte no GitHub apenas os commits posteriores a source_commit. Não clone o repositório completo sem necessidade técnica."
+  },
+  "checkpoint_leitura_livreto_2026_11_06": {
+    "branch": "fix/livreto-capa-panoramica",
+    "estado": "Rascunho para preservar trabalho. Não mesclar sem concluir a validação visual.",
+    "retomada": "docs/previas/leitura-e-capas-2026-11-06/README.md",
+    "leitura": "Prévia ilustrada; não aplicada ao aplicativo; aguarda aprovação.",
+    "capas": "Seguir a referência original com duas composições verticais e conexão delicada. A faixa horizontal foi rejeitada."
   }
 }

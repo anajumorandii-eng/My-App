@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { requestBookletArtwork } from '../lib/bookletArtwork';
 import type { PrintCoverContext } from '../lib/printCoverSpec';
 
-/** A transformação local reutiliza exatamente o PDF que a estudante já escolheu. */
+/** Preserva o miolo do PDF escolhido e compõe as capas do livreto em conjunto. */
 export function BookletPdf({pdf,filename,context}:{pdf:Blob;filename:string;context?:PrintCoverContext}){
  const [busy,setBusy]=useState(false),[error,setError]=useState('');
  const [ready,setReady]=useState<{url:string;sheets:number;blankPages:number}>();
@@ -20,7 +20,8 @@ export function BookletPdf({pdf,filename,context}:{pdf:Blob;filename:string;cont
    if(context&&!artwork.current)artwork.current=await requestBookletArtwork({...context,edition:edition.current},signal);
    signal.throwIfAborted();
    const {createBookletPdf}=await import('../lib/bookletPdf');
-   const result=await createBookletPdf(new Uint8Array(await pdf.arrayBuffer()),artwork.current);
+   const fonts=context&&artwork.current?(await import('../lib/bookletCoverFonts')).bookletCoverFonts():undefined;
+   const result=await createBookletPdf(new Uint8Array(await pdf.arrayBuffer()),artwork.current,context,fonts);
    if(!mounted.current)return;
    const file=new Blob([new Uint8Array(result.bytes)],{type:'application/pdf'});
    url.current=URL.createObjectURL(file);
@@ -36,8 +37,8 @@ export function BookletPdf({pdf,filename,context}:{pdf:Blob;filename:string;cont
    </div>
    <p role="status">Livreto pronto: {ready.sheets} {ready.sheets===1?'folha A4':'folhas A4'}, frente e verso, com capa e contracapa.{ready.blankPages>0?` ${ready.blankPages} ${ready.blankPages===1?'página em branco adicionada':'páginas em branco adicionadas'} para completar a dobra.`:''}</p>
    <p>Imprima em A4, paisagem, tamanho real (100%), frente e verso pela borda curta. Selecione 1 página por face na impressora: o arquivo já está organizado para dobrar ao meio.</p>
-  </>:<button type="button" className="underline disabled:opacity-50" disabled={busy} onClick={()=>void generate()}>{busy?'Criando contracapa e preparando livreto…':'Gerar livreto'}</button>}
-  {!ready&&<p className="text-xs text-[var(--dim)]">Livreto A5 para dobrar e grampear: duas páginas por face de uma folha A4. Preserva a capa e o conteúdo do PDF pronto e cria uma segunda arte para a contracapa: uma cena diferente que complementa o conteúdo da capa. A criação da contracapa usa uma geração de IA.</p>}
+  </>:<button type="button" className="underline disabled:opacity-50" disabled={busy} onClick={()=>void generate()}>{busy?'Criando capa e contracapa integradas…':'Gerar livreto'}</button>}
+  {!ready&&<p className="text-xs text-[var(--dim)]">Livreto A5 para dobrar e grampear: duas páginas por face de uma folha A4. Preserva o conteúdo do PDF pronto e cria capa e contracapa juntas, com duas cenas diferentes ligadas por uma única arte contínua. A criação das capas usa uma geração de IA.</p>}
   {error&&<p role="alert">{error}</p>}
  </div>;
 }

@@ -85,7 +85,7 @@ test('a face externa não deixa faixas brancas na borda nem na dobra, mesmo com 
   const ppm=readFileSync(prefix+'.ppm');const header=/^P6\s+(\d+)\s+(\d+)\s+255\s/.exec(ppm.toString('ascii',0,80))!;
   const width=Number(header[1]),height=Number(header[2]),offset=header[0].length;
   for(const x of [0,Math.floor(width/2)-1,Math.floor(width/2),width-1])for(const y of [0,height-1]){
-   const pixel=offset+3*(y*width+x);assert.deepEqual([...ppm.subarray(pixel,pixel+3)],[246,242,233]);
+   const pixel=offset+3*(y*width+x);assert.deepEqual([...ppm.subarray(pixel,pixel+3)],[246,242,233],`borda ${x},${y}`);
   }
  }finally{rmSync(folder,{recursive:true,force:true});}
 });
@@ -96,3 +96,47 @@ test('a face externa não deixa faixas brancas na borda nem na dobra, mesmo com 
  const result=await createBookletPdf(await source.save());
  assert.equal(result.backCoverHasArtwork,false);
  });
+
+const panorama=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAACAAAAAUCAYAAADskT9PAAAAKklEQVR4nGNgGAWjYIABo1Fm6P+BdADTQFo+6oBRB4w6YNQBo2AUDAoAAAS6AgP2cc2iAAAAAElFTkSuQmCC','base64');
+const coverFonts=()=>({
+ serif:readFileSync(new URL('../assets/print/fonts/cormorant-normal-400.ttf',import.meta.url)),
+ display:readFileSync(new URL('../assets/print/fonts/playfair-normal-700.ttf',import.meta.url)),
+ italic:readFileSync(new URL('../assets/print/fonts/cormorant-italic-400.ttf',import.meta.url)),
+ text:readFileSync(new URL('../assets/print/fonts/LiberationSerif-Regular.ttf',import.meta.url)),
+});
+test('capas integradas usam uma só imagem na dobra e fontes incorporadas; miolo e PDF comum são preservados',async()=>{
+ const source=await PDFDocument.create(),font=await source.embedFont(StandardFonts.Helvetica);
+ const first=source.addPage([595.28,841.89]);first.drawText('OLD_COVER',{x:80,y:700,font,size:24});
+ first.drawImage(await source.embedPng(readFileSync(new URL('../../public/icon-192.png',import.meta.url))),{x:100,y:100,width:200,height:200});
+ for(let i=1;i<=4;i++)source.addPage([595.28,841.89]).drawText(`BODY_${i}`,{x:80,y:700,font,size:24});
+ const original=await source.save(),copy=original.slice();
+ const result=await createBookletPdf(original,panorama,{subject:'Física',topic:'Termodinâmica',subtopic:'Variação ΔG',board:'ENEM',purpose:'Revisão aprofundada'},coverFonts());
+ assert.deepEqual(original,copy);assert.equal(result.sourcePages,5);assert.equal(result.sheets,2);assert.equal(result.backCoverHasArtwork,true);
+ const output=await PDFDocument.load(result.bytes);
+ const images=output.context.enumerateIndirectObjects().filter(([,object])=>object instanceof PDFRawStream&&object.dict.get(PDFName.of('Subtype'))===PDFName.of('Image'));
+ assert.equal(images.length,2,'uma imagem panorâmica e sua máscara alfa; sem incorporar a imagem antiga');
+ const folder=mkdtempSync(join(tmpdir(),'crivo-booklet-pair-'));
+ try{
+  const path=join(folder,'booklet.pdf'),prefix=join(folder,'outside');writeFileSync(path,result.bytes);
+  const text=execFileSync('pdftotext',['-layout',path,'-'],{encoding:'utf8'});
+  assert.doesNotMatch(text,/OLD_COVER/);assert.match(text,/ΔG/);
+  for(let i=1;i<=4;i++)assert.equal(text.match(new RegExp(`BODY_${i}`,'g'))?.length,1);
+  const fontList=execFileSync('pdffonts',['-f','1','-l','1',path],{encoding:'utf8'});
+  assert.match(fontList,/Cormorant/);assert.match(fontList,/Playfair/);
+  assert.ok(fontList.split('\n').filter(line=>/Cormorant|Playfair|LiberationSerif/.test(line)).every(line=>/yes\s+(?:no|yes)\s+yes/.test(line)));
+  execFileSync('pdftoppm',['-f','1','-l','1','-singlefile','-scale-to','600',path,prefix]);
+  const ppm=readFileSync(prefix+'.ppm'),header=/^P6\s+(\d+)\s+(\d+)\s+255\s/.exec(ppm.toString('ascii',0,80))!;
+  const width=Number(header[1]),height=Number(header[2]),offset=header[0].length;
+  for(const x of [width/2-3,width/2-1,width/2,width/2+1,width/2+3]){
+   const pixel=offset+3*(Math.floor(height/2)*width+Math.floor(x));assert.deepEqual([...ppm.subarray(pixel,pixel+3)],[50,105,85],'a arte atravessa a dobra sem faixa nem redimensionamento separado');
+  }
+  for(const x of [0,width-1])for(const y of [0,height-1]){
+   const pixel=offset+3*(y*width+x);assert.deepEqual([...ppm.subarray(pixel,pixel+3)],[246,242,233],`borda ${x},${y}`);
+  }
+ }finally{rmSync(folder,{recursive:true,force:true});}
+});
+
+test('recusa arte vertical para a composição integrada, sem publicar duas cenas desconectadas',async()=>{
+ const source=await PDFDocument.create();source.addPage();
+ await assert.rejects(createBookletPdf(await source.save(),readFileSync(new URL('../../public/icon-192.png',import.meta.url)),{subject:'Geografia',topic:'Climatologia'},coverFonts()),/panorâmica/);
+});

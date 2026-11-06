@@ -2,6 +2,7 @@ import {afterEach,expect,it,vi} from 'vitest';
 import {cleanup,fireEvent,render,screen} from '@testing-library/react';
 import {BookletPdf} from './BookletPdf';
 const {create,requestArt}=vi.hoisted(()=>({create:vi.fn(),requestArt:vi.fn()}));
+vi.mock('../lib/bookletCoverFonts',()=>({bookletCoverFonts:()=>({serif:new Uint8Array(),display:new Uint8Array(),italic:new Uint8Array(),text:new Uint8Array()})}));
 vi.mock('../lib/bookletArtwork',()=>({requestBookletArtwork:requestArt}));
 vi.mock('../lib/bookletPdf',()=>({createBookletPdf:create}));
 afterEach(()=>{cleanup();vi.clearAllMocks();vi.unstubAllGlobals();});
@@ -15,7 +16,7 @@ it('gera sob demanda a partir do PDF pronto, oferece arquivo separado e libera s
  const {view,revoke}=setup();expect(create).not.toHaveBeenCalled();
  fireEvent.click(screen.getByRole('button',{name:'Gerar livreto'}));
  expect(await screen.findByRole('link',{name:'Salvar livreto'})).toHaveAttribute('download','Revisão-livreto.pdf');
- expect(create).toHaveBeenCalledWith(new Uint8Array([1,2,3]),undefined);
+ expect(create).toHaveBeenCalledWith(new Uint8Array([1,2,3]),undefined,undefined,undefined);
  expect(screen.getByRole('status')).toHaveTextContent('2 folhas A4');
  expect(screen.getByText(/borda curta/)).toBeInTheDocument();
  view.unmount();expect(revoke).toHaveBeenCalledWith('blob:booklet');
@@ -37,7 +38,7 @@ it('cria uma segunda arte com os metadados da edição e reaproveita ao tentar a
  expect(requestArt).not.toHaveBeenCalled();fireEvent.click(screen.getByRole('button',{name:'Gerar livreto'}));
  await screen.findByRole('alert');
  expect(requestArt).toHaveBeenCalledWith(context,expect.any(AbortSignal));
- expect(create).toHaveBeenCalledWith(new Uint8Array([1,2,3]),art);
+ expect(create).toHaveBeenCalledWith(new Uint8Array([1,2,3]),art,context,expect.any(Object));
  fireEvent.click(screen.getByRole('button',{name:'Gerar livreto'}));await screen.findByRole('link',{name:'Abrir livreto'});
  expect(requestArt).toHaveBeenCalledTimes(1);
 });
