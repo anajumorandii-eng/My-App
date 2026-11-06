@@ -1,4 +1,4 @@
-import { PDFDocument } from 'pdf-lib';
+import { PDFDocument, pushGraphicsState, rectangle, clip, endPath, popGraphicsState } from 'pdf-lib';
 import { appendBookletBackCover } from './bookletBackCover';
 
 const MAX_PAGES=400;
@@ -36,9 +36,14 @@ export async function createBookletPdf(bytes:Uint8Array){
    if(index===null)continue;
    const page=embedded[index];
    if(!page)continue;
-   const scale=Math.min((width/2-2*padding)/page.width,(height-2*padding)/page.height);
+   const cover=index===0||index===sourcePages;
+   // A capa do app pode trazer 1 mm branco no rodapé. A sangria fica dentro do respiro da moldura.
+   const fullBleed=cover&&Math.abs(page.width/page.height-(width/2)/height)<.01;
+   const scale=fullBleed?Math.max((width/2)/page.width,height/page.height)*1.01:Math.min((width/2-2*padding)/page.width,(height-2*padding)/page.height);
    const w=page.width*scale,h=page.height*scale;
+   if(fullBleed)sheet.pushOperators(pushGraphicsState(),rectangle(column*width/2,0,width/2,height),clip(),endPath());
    sheet.drawPage(page,{x:column*width/2+(width/2-w)/2,y:(height-h)/2,width:w,height:h});
+   if(fullBleed)sheet.pushOperators(popGraphicsState());
   }
  }
  return {bytes:await result.save(),sourcePages,blankPages:Math.ceil((sourcePages+1)/4)*4-sourcePages-1,sheets:plan.length/2,backCoverHasArtwork:backCover.hasArtwork};
