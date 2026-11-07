@@ -43,7 +43,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
   const { user } = useAuth();
   const [attempt, setAttempt] = useState(0);
   const [edition,setEdition]=useState('original');
-  const [file, setFile] = useState<{ key: string; url: string; blob: Blob; context: PrintCoverContext; getBookletSource: (signal: AbortSignal) => Promise<Blob> }>();
+  const [file, setFile] = useState<{ key: string; url: string; blob: Blob; documentId?: string; context: PrintCoverContext; getBookletSource: (signal: AbortSignal) => Promise<Blob> }>();
   const [error, setError] = useState('');
   const [standardCover, setStandardCover] = useState(false);
   const [coverProblem, setCoverProblem] = useState('');
@@ -116,7 +116,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
         }
         controller.signal.throwIfAborted();
         objectUrl = URL.createObjectURL(blob);
-        setFile({ key: cacheKey, url: objectUrl, blob, context:coverContext, getBookletSource: async signal => {
+        setFile({ key: cacheKey, url: objectUrl, blob, documentId, context:coverContext, getBookletSource: async signal => {
           const content = bookletContent ?? await capturePrintableContent(getContent, signal);
           signal.throwIfAborted();
           return requestStudyPdf(createBookletSourceRoot(content, title), title, `${printStyles}\n${bookletPrintLayout}`, signal);
@@ -146,7 +146,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
           });
         }}>Compartilhar PDF</button>}
       </div>
-      <BookletPdf key={ready.key} pdf={ready.blob} filename={filename} context={ready.context} getSource={ready.getBookletSource} />
+      <BookletPdf key={ready.key} pdf={ready.blob} documentId={ready.documentId} filename={filename} context={ready.context} getSource={ready.getBookletSource} />
     </> : idle ? <button type="button" className="underline" onClick={() => setRequestedKey(cacheKey)}>Exportar {materialLabel.toLowerCase()} em PDF</button> : !error && <p role="status">{materialLabel === 'Aprofundamento' ? 'Preparando seu aprofundamento completo…' : `Preparando ${materialLabel.toLowerCase()} completa…`}</p>}
     {error && <div role="alert" className="space-y-2"><p>{error} {materialLabel === 'Aprofundamento' ? 'O texto do seu aprofundamento continua salvo.' : `O texto de ${materialLabel.toLowerCase()} continua salvo.`}</p>
       {!ready && <button type="button" className="underline" onClick={() => setAttempt(value => value + 1)}>Tentar novamente</button>}
