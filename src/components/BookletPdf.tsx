@@ -40,8 +40,8 @@ export function BookletPdf({pdf,filename,context,getSource}:{pdf:Blob;filename:s
    </div>
    <p role="status">Livreto pronto: {ready.sheets} {ready.sheets===1?'folha A4':'folhas A4'}, frente e verso, com capa e contracapa.{ready.blankPages>0?` ${ready.blankPages} ${ready.blankPages===1?'página em branco adicionada':'páginas em branco adicionadas'} para completar a dobra.`:''}</p>
    <p>Imprima em A4, paisagem, tamanho real (100%), frente e verso pela borda curta. Selecione 1 página por face na impressora: o arquivo já está organizado para dobrar ao meio.</p>
-  </>:<button type="button" className="underline disabled:opacity-50" disabled={busy} onClick={()=>void generate()}>{busy?'Preparando livreto com fonte maior…':'Gerar livreto'}</button>}
-  {!ready&&<p className="text-xs text-[var(--dim)]">Livreto A5 para dobrar e grampear: duas páginas por face de uma folha A4. Repagina o conteúdo em A5 com fonte de 12 pt para leitura e cria capa e contracapa juntas, com duas cenas diferentes ligadas por uma única arte contínua. A criação das capas usa uma geração de IA.</p>}
+  </>:<button type="button" className="underline disabled:opacity-50" disabled={busy} onClick={()=>void generate()}>{busy?'Preparando livreto com diagramação compacta…':'Gerar livreto'}</button>}
+  {!ready&&<p className="text-xs text-[var(--dim)]">Livreto A5 para dobrar e grampear: duas páginas por face de uma folha A4. Repagina o conteúdo em A5 com fonte de 11 pt e espaçamento compacto para leitura e cria capa e contracapa juntas, com duas cenas diferentes ligadas por uma única arte contínua. A criação das capas usa uma geração de IA.</p>}
   {error&&<p role="alert">{error}</p>}
  </div>;
 }
