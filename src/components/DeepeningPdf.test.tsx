@@ -7,7 +7,7 @@ const image = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAB';
 const pdf = () => new Response('%PDF-1.7\n', { headers: { 'Content-Type': 'application/pdf' } });
 afterEach(() => { cleanup(); vi.unstubAllGlobals(); });
 function setup(guideKey: string, fetch: (url: string, options?: RequestInit) => Promise<Response>, readSaved: typeof fetch = async () => new Response(null, {status:404})) {
-  vi.stubGlobal('fetch', (url: string, options?: RequestInit) => url.startsWith('/api/study-pdf/saved/') ? readSaved(url, options) : fetch(url, options));
+  vi.stubGlobal('fetch', (url: string, options?: RequestInit) => url.endsWith('/booklet') ? Promise.resolve(new Response(null,{status:404})) : url.startsWith('/api/study-pdf/saved/') ? readSaved(url, options) : fetch(url, options));
   vi.stubGlobal('URL', class extends URL { static createObjectURL = vi.fn(() => 'blob:prepared'); static revokeObjectURL = vi.fn(); });
   const root = document.createElement('article');
   root.dataset.printSubject = 'Matemática'; root.dataset.printTopic = 'Probabilidade';
@@ -31,7 +31,7 @@ it('só mostra pronto após gerar o PDF com ilustração, índice e conteúdo; a
   expect(sent.html).toContain('Última seção.'); expect(sent.html).toContain('data-print-cover');
   finish(pdf());
   expect(await screen.findByRole('link', { name: 'Abrir PDF' })).toHaveAttribute('href', 'blob:prepared');
-  expect(screen.getByRole('status')).toHaveTextContent('Aprofundamento pronto, com capa e índice');
+  expect(screen.getByText('Aprofundamento pronto, com capa e índice.')).toBeInTheDocument();
   expect(screen.getByRole('link', { name: 'Salvar PDF' })).toHaveAttribute('download', 'Aprofundamento.pdf');
   expect(screen.queryByRole('button', { name: /ilustração/ })).toBeNull();
   expect(fetch).toHaveBeenCalledTimes(3);
@@ -214,7 +214,7 @@ it('repagina também um PDF salvo em A5, sem gerar outra capa A4 nem sobrescreve
  const fetcher=vi.fn(async(url,options)=>url==='/api/study-pdf'?pdf():Response.json({error:'Pausa na ilustração'},{status:503}));
  const {props}=setup('booklet-saved-a5',fetcher,async()=>pdf());
  render(<DeepeningPdf {...props}/>);await screen.findByRole('link',{name:'Abrir PDF'});
- expect(fetcher).not.toHaveBeenCalled();fireEvent.click(screen.getByRole('button',{name:'Gerar livreto'}));
+ expect(fetcher).not.toHaveBeenCalled();fireEvent.click(await screen.findByRole('button',{name:'Gerar livreto'}));
  await waitFor(()=>expect(fetcher.mock.calls.some(([url])=>url==='/api/study-pdf')).toBe(true));
  const sent=JSON.parse(String(fetcher.mock.calls.find(([url])=>url==='/api/study-pdf')![1].body));
  expect(sent.documentId).toBeUndefined();expect(sent.html).toContain('148.5mm 210mm');expect(sent.html).toContain('font-size: 11pt');expect(sent.html).toContain('line-height: 1.3 !important');expect(sent.html).toContain('padding: 0 10mm !important');
@@ -222,4 +222,19 @@ it('repagina também um PDF salvo em A5, sem gerar outra capa A4 nem sobrescreve
  expect(document.querySelector('[data-print-illustration]')).toBeNull();
  expect(document.querySelector('[data-print-layout] > tbody > tr > td')?.firstElementChild?.hasAttribute('data-print-toc')).toBe(true);
  expect(sent.html).toContain('page: auto; min-height: 0');
+});
+
+
+it('a biblioteca recupera o livreto salvo pela mesma identidade do PDF sem gerar novamente',async()=>{
+ const {props}=setup('booklet-persisted-library',vi.fn());
+ const fetcher=vi.fn(async(url:string)=>url.endsWith('/booklet')
+  ?new Response('%PDF-1.7\nLIVRETO_SALVO',{headers:{'Content-Type':'application/pdf','X-Booklet-Sheets':'4'}})
+  :pdf());
+ vi.stubGlobal('fetch',fetcher);
+ render(<DeepeningPdf {...props}/>);
+ await screen.findByRole('link',{name:'Abrir livreto'});
+ expect(screen.getByText(/Livreto salvo na sua conta: 4 folhas A4/)).toBeInTheDocument();
+ const urls=fetcher.mock.calls.map(([url])=>url);
+ expect(urls).toHaveLength(2);expect(urls[1]).toBe(urls[0]+'/booklet');
+ expect(urls.every(url=>url.startsWith('/api/study-pdf/saved/'))).toBe(true);
 });

@@ -1,3 +1,4 @@
+import { createSavedBookletPdfRouter } from './savedBookletPdf';
 import { fitPrintMath } from '../../src/lib/fitPrintMath';
 import { Router } from 'express';
 import { existsSync } from 'node:fs';
@@ -66,6 +67,7 @@ export function createStudyPdfRouter(render: (html: string) => Promise<Uint8Arra
   const router = Router();
   let rendering = false;
   router.use((_req, res, next) => { res.setHeader('Cache-Control', 'no-store'); next(); });
+  router.use(createSavedBookletPdfRouter(storage));
   router.get('/saved/:documentId', async (req, res) => {
     const uid = res.locals.userId as string | undefined;
     if (!uid) return res.status(401).json({ error: 'Entre na sua conta para recuperar o PDF.' });
