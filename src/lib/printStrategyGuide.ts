@@ -71,9 +71,18 @@ export function createBookletSourceRoot(content: HTMLElement, title: string) {
   root.dataset.printBookletSource = '';
   delete root.dataset.printReviewCompact;
   delete root.dataset.printDeepeningCompact;
-  // O índice tem margens próprias; não pode herdar a largura da tabela do miolo.
-  const toc = root.querySelector('[data-print-toc]'), layout = root.querySelector('[data-print-layout]');
-  if (toc && layout) root.insertBefore(toc, layout);
+  const toc = root.querySelector('[data-print-toc]');
+  const cell = root.querySelector('[data-print-layout] > tbody > tr > td');
+  if (toc && cell) {
+    // As fichas continuam completas no corpo, agrupadas sob a seção de fontes.
+    const sourceIds = new Set([...root.querySelectorAll<HTMLElement>('[data-print-content] [data-study-source][id], [data-print-content] [data-study-source] [id]')].map(element => element.id));
+    for (const link of toc.querySelectorAll('a')) {
+      if (sourceIds.has(link.getAttribute('href')!.slice(1))) link.closest('li')!.remove();
+    }
+    // O CSS do livreto usa page:auto: índice e texto compartilham as mesmas
+    // margens, sem a página nomeada que reduziria a escala dentro da tabela.
+    cell.prepend(toc);
+  }
   // A arte conjunta já é responsabilidade do livreto: não carregar outra imagem para esta reserva.
   const cover = root.querySelector<HTMLElement>('[data-print-cover]');
   if (cover) { const heading = document.createElement('p'); heading.textContent = title; cover.replaceChildren(heading); }

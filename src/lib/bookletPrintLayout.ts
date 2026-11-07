@@ -2,7 +2,6 @@
 export const bookletPrintLayout = `
 @media print {
  @page { size: 148.5mm 210mm; margin: 0; }
- @page crivo-toc { size: 148.5mm 210mm; margin: 10mm; }
  [data-print-booklet-source] { font-size: 11pt !important; }
  [data-print-booklet-source] [data-print-cover] { height: 209mm; width: auto; padding: 12mm; font-size: 11pt; }
  [data-print-booklet-source] [data-print-layout] { width: 148.5mm !important; }
@@ -23,11 +22,13 @@ export const bookletPrintLayout = `
  [data-print-booklet-source] [data-print-content] :is(table, th, td) { font-size: 10.5pt !important; }
  [data-print-booklet-source] [data-print-content] pre { font-size: 10.5pt !important; }
  [data-print-booklet-source] [data-print-content] :is(img, svg) { max-height: 175mm !important; }
- [data-print-booklet-source] [data-print-toc] { padding: 0; }
+ [data-print-booklet-source] [data-print-toc] { page: auto; min-height: 0; padding: 0; margin: 0 0 4mm; break-after: auto; }
+ [data-print-booklet-source] [data-print-toc] h2 { font-size: 16pt; margin: 0 0 2mm; }
+ [data-print-booklet-source] [data-print-toc] > p { display: none; }
  [data-print-booklet-source] [data-print-toc] ol { columns: auto; }
- [data-print-booklet-source] [data-print-toc] li { font-size: 10.5pt; line-height: 1.25; margin-bottom: 1.5mm; }
- [data-print-booklet-source] [data-print-toc] li[data-toc-level="2"] { font-size: 10.5pt; }
- [data-print-booklet-source] [data-print-toc] > p { font-size: 10.5pt; }
+ [data-print-booklet-source] [data-print-toc] li { font-size: 10.5pt; line-height: 1.15; margin: 0 0 .6mm; gap: 2mm; }
+ [data-print-booklet-source] [data-print-toc] li[data-toc-level="2"] { font-size: 10.5pt; padding-left: 3mm; }
+ [data-print-booklet-source] [data-toc-page] { width: 7mm; }
  [data-print-booklet-source] [data-print-content] [data-print-answer-key] { break-before: auto !important; }
  [data-print-booklet-source] [data-print-content] .crivo-reaction { flex-wrap: wrap !important; }
 }

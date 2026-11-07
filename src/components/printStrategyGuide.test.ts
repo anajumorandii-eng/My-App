@@ -1,5 +1,5 @@
 import { expect, it, vi } from 'vitest';
-import { createStrategyPrintRoot, printStrategyGuide } from '../lib/printStrategyGuide';
+import { createBookletSourceRoot, createStrategyPrintRoot, printStrategyGuide } from '../lib/printStrategyGuide';
 import { openStudyPdf } from '../lib/printPdfFile';
 vi.mock('../lib/printPdfFile', () => ({ openStudyPdf: vi.fn() }));
 
@@ -150,4 +150,29 @@ it('Português e redação usam alternativa própria sem emprestar a prancha de 
  expect(portuguese.src).not.toBe(literature.src);
  expect(writing.src).toBe(portuguese.src);
  expect(portuguese.src).toMatch(/^data:image\/jpeg;base64,/);
+});
+
+
+it.each(['Revisão aprofundada', 'Aprofundamento', 'Estratégia'])('livreto de %s usa sumário contínuo e agrupa fichas sem perder as fontes', purpose => {
+ const content = document.createElement('article');
+ content.dataset.printPurpose = purpose;
+ content.innerHTML = '<h2>Conceitos</h2><p>Explicação integral.</p><h2>Fontes</h2><details data-study-source><summary>Ficha de referência longa</summary><p>Referência completa.</p><a href="https://example.org/fonte">Consultar origem</a></details><h2>Gabarito</h2><p>Resposta integral.</p>';
+ const root = createBookletSourceRoot(content, 'Guia');
+ const cell = root.querySelector('[data-print-layout] > tbody > tr > td')!;
+ expect(cell.firstElementChild).toHaveAttribute('data-print-toc');
+ expect(cell.lastElementChild).toHaveAttribute('data-print-content');
+ expect([...root.querySelectorAll('[data-print-toc] a')].map(link => link.textContent)).toEqual(['Conceitos', 'Fontes', 'Gabarito']);
+ expect(root.querySelector('[data-print-content] [data-study-source]')).toHaveTextContent('Referência completa.');
+ expect(root.querySelector('a[href="https://example.org/fonte"]')).toBeTruthy();
+ expect(root.querySelector('[data-print-content]')).toHaveTextContent('Resposta integral.');
+ expect(content.querySelector('details')!.open).toBe(false);
+ expect(content.querySelector('[data-print-toc]')).toBeNull();
+});
+
+it('livreto conserva todas as seções de um índice extenso', () => {
+ const content = document.createElement('article');
+ content.innerHTML = Array.from({length: 70}, (_, i) => `<h2>Seção ${i}</h2><p>Texto.</p>`).join('');
+ const root = createBookletSourceRoot(content, 'Guia');
+ expect(root.querySelectorAll('[data-toc-page]')).toHaveLength(70);
+ for (const link of root.querySelectorAll<HTMLAnchorElement>('[data-print-toc] a')) expect(root.querySelector(link.hash)).toBeTruthy();
 });
