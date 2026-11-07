@@ -2,14 +2,14 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "f01e537626fdde20a9d23657754a212505c5ac77",
-  "generated_at_utc": "2026-11-07T01:56:07Z",
+  "source_commit": "fe0389ddcf2eaa48e61e6ab284c516d9b37ce1dd",
+  "generated_at_utc": "2026-11-07T02:43:10Z",
   "changed_files": [
-    "docs/LIVRETO-TIPOGRAFIA.md",
-    "src/components/DeepeningPdf.test.tsx",
-    "src/components/printStrategyGuide.test.ts",
-    "src/lib/bookletPrintLayout.ts",
-    "src/lib/printStrategyGuide.ts"
+    "docs/CONTRACAPAS-POR-CONTEUDO.md",
+    "server/ai/coverImages.test.ts",
+    "server/ai/coverImages.ts",
+    "src/lib/coverPairVisualBrief.test.ts",
+    "src/lib/coverPairVisualBrief.ts"
   ],
   "next_session": {
     "mode": "delta-only",
