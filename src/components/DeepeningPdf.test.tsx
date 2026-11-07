@@ -209,3 +209,16 @@ it('aguarda a remoção do marcador de figura pendente antes de exportar',async(
  await screen.findByRole('link',{name:'Abrir PDF'});
  expect(fetch.mock.calls.some(([url])=>url==='/api/study-pdf')).toBe(true);
 });
+
+it('repagina também um PDF salvo em A5, sem gerar outra capa A4 nem sobrescrever o arquivo salvo',async()=>{
+ const fetcher=vi.fn(async(url,options)=>url==='/api/study-pdf'?pdf():Response.json({error:'Pausa na ilustração'},{status:503}));
+ const {props}=setup('booklet-saved-a5',fetcher,async()=>pdf());
+ render(<DeepeningPdf {...props}/>);await screen.findByRole('link',{name:'Abrir PDF'});
+ expect(fetcher).not.toHaveBeenCalled();fireEvent.click(screen.getByRole('button',{name:'Gerar livreto'}));
+ await waitFor(()=>expect(fetcher.mock.calls.some(([url])=>url==='/api/study-pdf')).toBe(true));
+ const sent=JSON.parse(String(fetcher.mock.calls.find(([url])=>url==='/api/study-pdf')![1].body));
+ expect(sent.documentId).toBeUndefined();expect(sent.html).toContain('148.5mm 210mm');expect(sent.html).toContain('font-size: 12pt');
+ expect(sent.html).toContain('Conteúdo completo.');expect(sent.html).toContain('Última seção.');const document = new DOMParser().parseFromString(sent.html,'text/html');
+ expect(document.querySelector('[data-print-illustration]')).toBeNull();
+ expect(document.querySelector('[data-print-toc]')?.closest('[data-print-layout]')).toBeNull();
+});

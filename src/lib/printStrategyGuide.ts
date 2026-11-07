@@ -65,6 +65,21 @@ export function createStrategyPrintRoot(content: HTMLElement, title: string) {
   return root;
 }
 
+/** Recompõe o mesmo texto para A5; a capa definitiva é desenhada na imposição. */
+export function createBookletSourceRoot(content: HTMLElement, title: string) {
+  const root = createStrategyPrintRoot(content, title);
+  root.dataset.printBookletSource = '';
+  delete root.dataset.printReviewCompact;
+  delete root.dataset.printDeepeningCompact;
+  // O índice tem margens próprias; não pode herdar a largura da tabela do miolo.
+  const toc = root.querySelector('[data-print-toc]'), layout = root.querySelector('[data-print-layout]');
+  if (toc && layout) root.insertBefore(toc, layout);
+  // A arte conjunta já é responsabilidade do livreto: não carregar outra imagem para esta reserva.
+  const cover = root.querySelector<HTMLElement>('[data-print-cover]');
+  if (cover) { const heading = document.createElement('p'); heading.textContent = title; cover.replaceChildren(heading); }
+  return root;
+}
+
 /** One prepared file gives every platform the final, verified table of contents. */
 export function printStrategyGuide(content: HTMLElement, title: string) {
   openStudyPdf(createStrategyPrintRoot(content, title), title, printStyles);

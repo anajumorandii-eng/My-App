@@ -30,7 +30,7 @@ export async function renderStudyPdf(html: string): Promise<Uint8Array> {
     });
     await page.evaluate(fitPrintMath);
     await page.evaluate(() => {
-      const usefulHeight = 245 * 96 / 25.4;
+      const usefulHeight = (document.querySelector('[data-print-booklet-source]') ? 186 : 245) * 96 / 25.4;
       // Keep modest tables and individual solution steps intact; large units flow.
       for (const unit of document.querySelectorAll<HTMLElement>('[data-print-content] table, [data-print-content] li, [data-print-step]')) {
         if (unit.getBoundingClientRect().height < usefulHeight * .35) unit.dataset.printKeep = '';
