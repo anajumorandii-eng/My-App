@@ -50,3 +50,15 @@ it('falha da segunda arte não publica um livreto com imagem repetida',async()=>
  expect(await screen.findByRole('alert')).toHaveTextContent('Serviço indisponível');
  expect(create.mock.calls.length).toBe(before);expect(screen.queryByRole('link',{name:'Abrir livreto'})).not.toBeInTheDocument();
 });
+
+it('usa a versão repaginada e a reutiliza após falha, sem modificar o arquivo comum',async()=>{
+ const repaginated={arrayBuffer:async()=>new Uint8Array([5,6,7]).buffer}as Blob;
+ const getSource=vi.fn().mockResolvedValue(repaginated);
+ create.mockRejectedValueOnce(new Error('Falha na imposição')).mockResolvedValue({bytes:new Uint8Array([37]),sheets:1,blankPages:0});
+ vi.stubGlobal('URL',{createObjectURL:vi.fn(()=> 'blob:booklet'),revokeObjectURL:vi.fn()});
+ render(<BookletPdf pdf={source} filename="Revisão.pdf" getSource={getSource}/>);
+ expect(getSource).not.toHaveBeenCalled();fireEvent.click(screen.getByRole('button',{name:'Gerar livreto'}));await screen.findByRole('alert');
+ expect(create).toHaveBeenCalledWith(new Uint8Array([5,6,7]),undefined,undefined,undefined);
+ fireEvent.click(screen.getByRole('button',{name:'Gerar livreto'}));await screen.findByRole('link',{name:'Abrir livreto'});
+ expect(getSource).toHaveBeenCalledTimes(1);expect(new Uint8Array(await source.arrayBuffer())).toEqual(new Uint8Array([1,2,3]));
+});
