@@ -2,14 +2,19 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "fe0389ddcf2eaa48e61e6ab284c516d9b37ce1dd",
-  "generated_at_utc": "2026-11-07T02:43:10Z",
+  "source_commit": "e9cf5baf093448fa12eefc759ff505dc9d64ff05",
+  "generated_at_utc": "2026-11-07T04:51:17Z",
   "changed_files": [
-    "docs/CONTRACAPAS-POR-CONTEUDO.md",
-    "server/ai/coverImages.test.ts",
-    "server/ai/coverImages.ts",
-    "src/lib/coverPairVisualBrief.test.ts",
-    "src/lib/coverPairVisualBrief.ts"
+    "docs/LIVRETOS-SALVOS.md",
+    "server/http/savedBookletPdf.test.ts",
+    "server/http/savedBookletPdf.ts",
+    "server/http/studyPdf.ts",
+    "src/components/BookletPdf.test.tsx",
+    "src/components/BookletPdf.tsx",
+    "src/components/DeepeningPdf.test.tsx",
+    "src/components/DeepeningPdf.tsx",
+    "src/components/savedBookletPdf.test.ts",
+    "src/lib/savedBookletPdf.ts"
   ],
   "next_session": {
     "mode": "delta-only",
