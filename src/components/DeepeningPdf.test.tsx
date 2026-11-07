@@ -217,7 +217,7 @@ it('repagina também um PDF salvo em A5, sem gerar outra capa A4 nem sobrescreve
  expect(fetcher).not.toHaveBeenCalled();fireEvent.click(screen.getByRole('button',{name:'Gerar livreto'}));
  await waitFor(()=>expect(fetcher.mock.calls.some(([url])=>url==='/api/study-pdf')).toBe(true));
  const sent=JSON.parse(String(fetcher.mock.calls.find(([url])=>url==='/api/study-pdf')![1].body));
- expect(sent.documentId).toBeUndefined();expect(sent.html).toContain('148.5mm 210mm');expect(sent.html).toContain('font-size: 12pt');
+ expect(sent.documentId).toBeUndefined();expect(sent.html).toContain('148.5mm 210mm');expect(sent.html).toContain('font-size: 11pt');expect(sent.html).toContain('line-height: 1.3 !important');expect(sent.html).toContain('padding: 0 10mm !important');
  expect(sent.html).toContain('Conteúdo completo.');expect(sent.html).toContain('Última seção.');const document = new DOMParser().parseFromString(sent.html,'text/html');
  expect(document.querySelector('[data-print-illustration]')).toBeNull();
  expect(document.querySelector('[data-print-toc]')?.closest('[data-print-layout]')).toBeNull();

@@ -141,18 +141,18 @@ test('recusa arte vertical para a composição integrada, sem publicar duas cena
  await assert.rejects(createBookletPdf(await source.save(),readFileSync(new URL('../../public/icon-192.png',import.meta.url)),{subject:'Geografia',topic:'Climatologia'},coverFonts()),/panorâmica/);
 });
 
-test('mantém 12 pt físicos no miolo A5, sem uma segunda redução na imposição',async()=>{
+test('mantém 11 pt físicos no miolo A5, sem uma segunda redução na imposição',async()=>{
  const source=await PDFDocument.create(),font=await source.embedFont(StandardFonts.Helvetica);
  source.addPage([420.94488,595.27559]).drawText('CAPA',{x:40,y:500,font,size:18});
- source.addPage([420.94488,595.27559]).drawText('LEITURA_12_PT',{x:40,y:500,font,size:12});
+ source.addPage([420.94488,595.27559]).drawText('LEITURA_11_PT',{x:40,y:500,font,size:11});
  const result=await createBookletPdf(await source.save());
  const {getDocument}=await import('pdfjs-dist/legacy/build/pdf.mjs');
  const task=getDocument({data:Uint8Array.from(result.bytes),useSystemFonts:true,isEvalSupported:false});
  try{
   const document=await task.promise;let measured=0;
   for(let i=1;i<=document.numPages;i++)for(const item of (await(await document.getPage(i)).getTextContent()).items){
-   if('str' in item&&item.str==='LEITURA_12_PT')measured=Math.hypot(item.transform[0],item.transform[1]);
+   if('str' in item&&item.str==='LEITURA_11_PT')measured=Math.hypot(item.transform[0],item.transform[1]);
   }
-  assert.ok(measured>11.9&&measured<12.1,`fonte física esperada: 12 pt; obtida: ${measured}`);
+  assert.ok(measured>10.9&&measured<11.1,`fonte física esperada: 11 pt; obtida: ${measured}`);
  }finally{await task.destroy();}
 });
