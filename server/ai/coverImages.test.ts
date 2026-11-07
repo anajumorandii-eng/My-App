@@ -442,3 +442,31 @@ test('livreto solicita uma única arte panorâmica contínua com capa e contraca
  const portrait=new CoverImageService({baseUrl:'https://gateway.test/v1',apiKey:'private-test-key',model:'cover-image-route',fetch:async()=>Response.json({data:[{b64_json:imageBytes.toString('base64')}]})});
  await assert.rejects(portrait.generate(input),/panorâmico/);
 });
+
+test('capas de população e urbanização não recebem a cena de climatologia como exemplo',()=>{
+ for(const side of ['back','spread'] as const){
+  const prompt=buildCoverImagePrompt({subject:'Geografia',topic:'Geografia da População e Urbana do Brasil',side});
+  assert.match(prompt,/urban neighborhoods|urban fabric/);
+  assert.match(prompt,/population|demograph/);
+  assert.doesNotMatch(prompt,/Brazilian watershed|lush Brazilian watershed|globe IN ITS ANTIQUE BRASS/);
+ }
+});
+test('o recorte específico decide as duas cenas, sem herdar o exemplo de clima do tópico amplo',()=>{
+ const prompt=buildCoverImagePrompt({subject:'Geografia',topic:'Climatologia e população',subtopic:'Migrações internas no Brasil',side:'spread'});
+ assert.match(prompt,/migration/);
+ assert.doesNotMatch(prompt,/Brazilian watershed|globe IN ITS ANTIQUE BRASS/);
+});
+test('cenas de outras disciplinas não recebem inventários de geografia',()=>{
+ for(const context of [
+  {subject:'Português',topic:'Orações subordinadas'},
+  {subject:'Literatura',topic:'Literatura contemporânea'},
+  {subject:'Biologia',topic:'Trocas gasosas'},
+  {subject:'Física',topic:'Efeito Doppler'},
+  {subject:'Matemática',topic:'Semelhança de triângulos'},
+ ])for(const side of ['back','spread'] as const){
+  const prompt=buildCoverImagePrompt({...context,side});
+  assert.doesNotMatch(prompt,/Brazilian watershed|For Climatologia|For climatology|globe IN ITS ANTIQUE BRASS/);
+  assert.ok(prompt.includes(context.topic));
+  assert.match(prompt,/exact.*scope/);
+ }
+});
