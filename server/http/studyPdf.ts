@@ -44,6 +44,10 @@ export async function renderStudyPdf(html: string): Promise<Uint8Array> {
       }
     });
     const ids = await page.$$eval('[data-toc-page]', entries => entries.map(entry => entry.getAttribute('data-toc-page')!));
+    const pageOffset = await page.evaluate(() => {
+      const root = document.querySelector<HTMLElement>('[data-print-booklet-source]');
+      return root ? root.dataset.printBookletMode === 'separate' ? -1 : 1 : 0;
+    });
     let previous: Record<string, number> = {};
     // Reprint the source after filling the index. No PDF pages are cut or reassembled.
     for (let pass = 0; pass < 5; pass++) {
@@ -52,8 +56,8 @@ export async function renderStudyPdf(html: string): Promise<Uint8Array> {
       const current = await readSectionPages(pdf, ids);
       if (ids.every(id => previous[id] === current[id])) return pdf;
       await page.evaluate(numbers => {
-        for (const entry of document.querySelectorAll<HTMLElement>('[data-toc-page]')) entry.textContent = String(numbers[entry.dataset.tocPage!]);
-      }, current);
+        for (const entry of document.querySelectorAll<HTMLElement>('[data-toc-page]')) entry.textContent = String(numbers.pages[entry.dataset.tocPage!] + numbers.offset);
+      }, { pages: current, offset: pageOffset });
       previous = current;
     }
     throw new Error('PDF pagination did not converge');

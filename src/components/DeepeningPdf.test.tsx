@@ -7,7 +7,7 @@ const image = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAB';
 const pdf = () => new Response('%PDF-1.7\n', { headers: { 'Content-Type': 'application/pdf' } });
 afterEach(() => { cleanup(); vi.unstubAllGlobals(); });
 function setup(guideKey: string, fetch: (url: string, options?: RequestInit) => Promise<Response>, readSaved: typeof fetch = async () => new Response(null, {status:404})) {
-  vi.stubGlobal('fetch', (url: string, options?: RequestInit) => url.endsWith('/booklet') ? Promise.resolve(new Response(null,{status:404})) : url.startsWith('/api/study-pdf/saved/') ? readSaved(url, options) : fetch(url, options));
+  vi.stubGlobal('fetch', (url: string, options?: RequestInit) => /\/booklet(?:\?|$)/.test(url) ? Promise.resolve(new Response(null,{status:404})) : url.startsWith('/api/study-pdf/saved/') ? readSaved(url, options) : fetch(url, options));
   vi.stubGlobal('URL', class extends URL { static createObjectURL = vi.fn(() => 'blob:prepared'); static revokeObjectURL = vi.fn(); });
   const root = document.createElement('article');
   root.dataset.printSubject = 'Matemática'; root.dataset.printTopic = 'Probabilidade';

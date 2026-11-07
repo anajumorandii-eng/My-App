@@ -1,3 +1,4 @@
+import type { BookletMode } from '../lib/bookletPlan';
 import type { PrintCoverContext } from '../lib/printCoverSpec';
 import { BookletPdf } from './BookletPdf';
 import { useEffect, useRef, useState } from 'react';
@@ -43,7 +44,7 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
   const { user } = useAuth();
   const [attempt, setAttempt] = useState(0);
   const [edition,setEdition]=useState('original');
-  const [file, setFile] = useState<{ key: string; url: string; blob: Blob; documentId?: string; context: PrintCoverContext; getBookletSource: (signal: AbortSignal) => Promise<Blob> }>();
+  const [file, setFile] = useState<{ key: string; url: string; blob: Blob; documentId?: string; context: PrintCoverContext; getBookletSource: (signal: AbortSignal, mode?: BookletMode) => Promise<Blob> }>();
   const [error, setError] = useState('');
   const [standardCover, setStandardCover] = useState(false);
   const [coverProblem, setCoverProblem] = useState('');
@@ -116,10 +117,10 @@ export function DeepeningPdf({ getContent, title, guideKey, revision, generateCo
         }
         controller.signal.throwIfAborted();
         objectUrl = URL.createObjectURL(blob);
-        setFile({ key: cacheKey, url: objectUrl, blob, documentId, context:coverContext, getBookletSource: async signal => {
+        setFile({ key: cacheKey, url: objectUrl, blob, documentId, context:coverContext, getBookletSource: async (signal, mode = 'integrated') => {
           const content = bookletContent ?? await capturePrintableContent(getContent, signal);
           signal.throwIfAborted();
-          return requestStudyPdf(createBookletSourceRoot(content, title), title, `${printStyles}\n${bookletPrintLayout}`, signal);
+          return requestStudyPdf(createBookletSourceRoot(content, title, mode), title, `${printStyles}\n${bookletPrintLayout}`, signal);
         } });
       } catch (failure) {
         if (!controller.signal.aborted) setError(failure instanceof Error && failure.name !== 'TimeoutError' ? failure.message : 'Não foi possível preparar o material. Tente novamente.');
