@@ -9,3 +9,7 @@ O livreto final passa a ser persistido como o PDF comum, incluindo a arte integr
 A interface só informa que o livreto está salvo após a gravação concluir. Falhas ao salvar mantêm o arquivo preparado para nova tentativa sem repaginar nem gerar outra imagem. Durante uma substituição, os links da versão anterior continuam acessíveis; a URL só é trocada após salvar a nova versão. A geração explícita de outra edição renova a identidade da arte. PDFs já baixados não são alterados.
 
 Os testes cobrem recuperação após remontagem, ausência de geração automática, falha de leitura, repetição do salvamento com o mesmo arquivo, substituição explícita, identidade compartilhada na biblioteca, persistência dos bytes, isolamento entre contas e entre formatos, falha de armazenamento e rejeição de PDFs inválidos.
+
+## Formatos de impressão
+
+O comportamento atual distingue capa integrada e capa separada. A opção integrada preserva o endpoint PDF existente; a separada usa `?mode=separate` e salva atomicamente Capa e Miolo em um pacote privado. A biblioteca recupera cada opção sem geração automática. Os metadados da montagem permitem mostrar as contagens de folhas e brancos também após reabrir. Arquivos antigos recebem identificação explícita e podem ter a montagem corrigida mantendo a arte. Consulte [LIVRETO-IMPRESSAO.md](LIVRETO-IMPRESSAO.md) para a sequência de leitura, validação e instruções por arquivo.

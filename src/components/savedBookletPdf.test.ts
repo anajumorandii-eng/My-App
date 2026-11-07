@@ -21,3 +21,20 @@ it('recusa resposta corrompida sem tratar como arquivo ausente',async()=>{
  vi.stubGlobal('fetch',vi.fn().mockResolvedValue(new Response('não é PDF',{headers:{'Content-Type':'application/pdf','X-Booklet-Sheets':'2'}})));
  await expect(loadSavedBookletPdf(id,signal)).rejects.toThrow('recuperar');
 });
+
+it('salva e recupera Capa e Miolo juntos, sem alterar seus bytes',async()=>{
+ const {Blob:NodeBlob}=await import('node:buffer');vi.stubGlobal('Blob',NodeBlob);
+ const {bookletPrintPlan}=await import('../lib/bookletPlan');
+ const {decodeBookletPackage}=await import('../lib/bookletPackage');
+ const metadata=bookletPrintPlan(5,'separate'),body=new Blob(['%PDF-MIOLO'],{type:'application/pdf'}),cover=new Blob(['%PDF-CAPA'],{type:'application/pdf'});
+ const fetcher=vi.fn().mockResolvedValueOnce(new Response(null,{status:204}));vi.stubGlobal('fetch',fetcher);
+ await saveBookletPdf(id,body,signal,'separate',cover,metadata);
+ expect(fetcher.mock.calls[0][0]).toBe(`/api/study-pdf/saved/${id}/booklet?mode=separate`);
+ const uploaded=fetcher.mock.calls[0][1].body as Blob;
+ expect(uploaded.type).toBe('application/zip');
+ const bytes=new Uint8Array(await uploaded.arrayBuffer()),decoded=decodeBookletPackage(bytes);
+ expect(new TextDecoder().decode(decoded.body)).toBe('%PDF-MIOLO');expect(new TextDecoder().decode(decoded.cover)).toBe('%PDF-CAPA');
+ fetcher.mockResolvedValueOnce(new Response(bytes,{headers:{'Content-Type':'application/zip'}}));
+ const saved=await loadSavedBookletPdf(id,signal,'separate');
+ expect(await saved?.blob.text()).toBe('%PDF-MIOLO');expect(await saved?.coverBlob?.text()).toBe('%PDF-CAPA');expect(saved?.blankPages).toBe(3);
+});

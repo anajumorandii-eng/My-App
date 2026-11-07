@@ -1,3 +1,4 @@
+import type { BookletMode } from './bookletPlan';
 import { preparedCoverIllustration, coverContextKey, readPrintCoverContext } from './printCoverContext';
 import { createPrintFrontMatter } from './printFrontMatter';
 import { printStyles } from './printStyles';
@@ -66,9 +67,10 @@ export function createStrategyPrintRoot(content: HTMLElement, title: string) {
 }
 
 /** Recompõe o mesmo texto para A5; a capa definitiva é desenhada na imposição. */
-export function createBookletSourceRoot(content: HTMLElement, title: string) {
+export function createBookletSourceRoot(content: HTMLElement, title: string, mode: BookletMode = 'integrated') {
   const root = createStrategyPrintRoot(content, title);
   root.dataset.printBookletSource = '';
+  root.dataset.printBookletMode = mode;
   delete root.dataset.printReviewCompact;
   delete root.dataset.printDeepeningCompact;
   const toc = root.querySelector('[data-print-toc]');

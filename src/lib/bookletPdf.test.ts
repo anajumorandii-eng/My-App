@@ -1,3 +1,4 @@
+import { bookletPrintPlan } from './bookletPlan';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { PDFDocument, StandardFonts, PDFRawStream, PDFName } from 'pdf-lib';
@@ -30,7 +31,7 @@ test('gera folhas A4 paisagem com texto nativo na ordem de impressão e preserva
  try{
   const path=join(folder,'booklet.pdf');writeFileSync(path,result.bytes);
   const sides=execFileSync('pdftotext',['-layout',path,'-'],{encoding:'utf8'}).split('\f').filter(s=>s.trim());
-  assert.deepEqual(sides.map(s=>s.match(/PAGE_\d/g)),[['PAGE_1'],['PAGE_2'],['PAGE_3'],['PAGE_4','PAGE_5']]);
+  assert.deepEqual(sides.map(s=>s.match(/PAGE_\d/g)),[['PAGE_1'],['PAGE_5','PAGE_2'],['PAGE_3','PAGE_4']]);
  }finally{rmSync(folder,{recursive:true,force:true});}
 });
 
@@ -41,17 +42,6 @@ test('preserva páginas originalmente vazias sem deslocar a dobra',async()=>{
  assert.equal((await PDFDocument.load(result.bytes)).getPageCount(),2);
 });
 
-
-test('mantém a contracapa do lado de fora, com os brancos antes dela, para qualquer tamanho',()=>{
- for(let count=1;count<=400;count++){
-  const plan=bookletPageOrder(count,true);
-  assert.deepEqual(plan[0],[count,0]);
-  assert.deepEqual(plan.flat().filter((n):n is number=>n!==null).sort((a,b)=>a-b),Array.from({length:count+1},(_,i)=>i));
-  assert.equal(plan.length,Math.ceil((count+1)/4)*2);
- }
- assert.deepEqual(bookletPageOrder(5,true),[[5,0],[1,null],[null,2],[3,4]]);
- assert.deepEqual(bookletPageOrder(4,true),[[4,0],[1,null],[null,2],[3,null]]);
-});
 
 test('incorpora uma segunda ilustração à contracapa e conserva o texto nativo',async()=>{
  const source=await PDFDocument.create();const font=await source.embedFont(StandardFonts.Helvetica);
@@ -155,4 +145,66 @@ test('mantém 11 pt físicos no miolo A5, sem uma segunda redução na imposiç�
   }
   assert.ok(measured>10.9&&measured<11.1,`fonte física esperada: 11 pt; obtida: ${measured}`);
  }finally{await task.destroy();}
+});
+
+
+/** Simula a leitura das folhas encaixadas: frente direita, verso esquerdo,
+ * folhas internas, verso direito e frente esquerda. Não repete a fórmula de imposição. */
+function unfold<T>(sides:T[][]){
+ const reading:T[]=[];
+ for(let i=0;i<sides.length;i+=2)reading.push(sides[i][1],sides[i+1][0]);
+ for(let i=sides.length-2;i>=0;i-=2)reading.push(sides[i+1][1],sides[i][0]);
+ return reading;
+}
+test('simulação da dobra conserva a sequência para todas as contagens e separa a folha da capa',()=>{
+ for(let count=1;count<=399;count++)for(const mode of ['integrated','separate'] as const){
+  const plan=bookletPrintPlan(count,mode),reading=unfold(plan.sides),body=Array.from({length:count},(_,i)=>i),padding=Array<null>((4-count%4)%4).fill(null);
+  assert.deepEqual(reading,mode==='separate'?[...body,...padding]:['front',null,...body,...padding,null,'back']);
+  assert.equal(plan.sides.length,plan.sheets*2);
+  assert.equal(plan.sheets+(mode==='separate'?1:0),Math.ceil(count/4)+1);
+  assert.equal(plan.blankPages,padding.length+(mode==='integrated'?2:0));
+  assert.deepEqual(reading.filter(item=>typeof item==='number'),body);
+  if(mode==='integrated'){assert.deepEqual(plan.sides[0],['back','front']);assert.deepEqual(plan.sides[1],[null,null]);}
+ }
+ assert.throws(()=>bookletPrintPlan(0,'separate'));assert.throws(()=>bookletPrintPlan(1.5,'integrated'));
+});
+test('PDFs finais simulam a montagem sem perder, duplicar ou inverter conteúdo e preservam fonte vetorial',async()=>{
+ const {getDocument}=await import('pdfjs-dist/legacy/build/pdf.mjs');
+ const cap=await PDFDocument.create(),font=await cap.embedFont(StandardFonts.Helvetica),outside=cap.addPage([841.8897637795277,595.2755905511812]);
+ outside.drawText('BACK',{x:40,y:500,font,size:16});outside.drawText('FRONT',{x:460,y:500,font,size:16});const capBytes=await cap.save();
+ for(const count of [1,2,3,4,5,7,8,9,15,16,17]){
+  const source=await PDFDocument.create(),textFont=await source.embedFont(StandardFonts.Helvetica);
+  source.addPage([420.94488,595.27559]).drawText('SOURCE_COVER',{x:30,y:500,font:textFont,size:11});
+  for(let i=1;i<=count;i++){const page=source.addPage([420.94488,595.27559]);if(count===5&&i===2)continue;page.drawText(`P${i}_TOP`,{x:35,y:540,font:textFont,size:11});page.drawText(`P${i}_BOTTOM`,{x:35,y:35,font:textFont,size:11});}
+  const original=await source.save(),copy=original.slice();
+  for(const mode of ['integrated','separate'] as const){
+   const result=await createBookletPdf(original,undefined,undefined,undefined,mode,capBytes);
+   assert.deepEqual(original,copy);assert.deepEqual(result.coverBytes,capBytes);
+   const task=getDocument({data:Uint8Array.from(result.bytes),useSystemFonts:true,isEvalSupported:false});
+   try{
+    const pdf=await task.promise,sides:(string|number|null)[][]=[];let markers=0;
+    for(let p=1;p<=pdf.numPages;p++){
+     const page=await pdf.getPage(p),content=await page.getTextContent(),half=page.getViewport({scale:1}).width/2,side:(string|number|null)[]=[null,null];
+     for(const item of content.items)if('str'in item){
+      assert.doesNotMatch(item.str,/SOURCE_COVER/);
+      const column=item.transform[4]>=half?1:0,match=/^P(\d+)_TOP$/.exec(item.str);
+      if(match){side[column]=Number(match[1]);markers++;assert.ok(item.transform[5]>500);assert.ok(Math.abs(Math.hypot(item.transform[0],item.transform[1])-11)<.1);}
+      if(/_BOTTOM$/.test(item.str))assert.ok(item.transform[5]<50);
+      if(item.str==='FRONT'||item.str==='BACK')side[column]=item.str;
+     }
+     sides.push(side);
+    }
+    const body=Array.from({length:count},(_,i)=>count===5&&i===1?null:i+1),padding=Array<null>((4-count%4)%4).fill(null);
+    assert.equal(markers,count-(count===5?1:0));
+    assert.deepEqual(unfold(sides),mode==='separate'?[...body,...padding]:['FRONT',null,...body,...padding,null,'BACK']);
+    if(mode==='integrated')assert.deepEqual(sides[1],[null,null]);
+   }finally{await task.destroy();}
+   if(mode==='separate')assert.equal((await PDFDocument.load(result.coverBytes)).getPageCount(),1);
+  }
+ }
+});
+test('mantém páginas originalmente vazias na posição de leitura, além dos brancos de preenchimento',async()=>{
+ const source=await PDFDocument.create(),font=await source.embedFont(StandardFonts.Helvetica);source.addPage([420.94488,595.27559]);
+ for(let i=1;i<=5;i++){const page=source.addPage([420.94488,595.27559]);if(i!==2)page.drawText(`READ_${i}`,{x:35,y:500,font,size:11});}
+ for(const mode of ['separate','integrated'] as const){const result=await createBookletPdf(await source.save(),undefined,undefined,undefined,mode);assert.equal(result.contentPages,5);assert.equal(result.blankPages,mode==='separate'?3:5);}
 });
