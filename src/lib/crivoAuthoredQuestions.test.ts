@@ -91,7 +91,12 @@ test('o lote ENEM acompanha o formato medido nas provas reais da banca', () => {
   for (const { arquivo, questoes } of enem) {
     assert.ok(mediana(questoes.map(q => corpo(q).length)) >= 600, `${arquivo}: enunciados curtos`);
     const alternativa = mediana(questoes.flatMap(q => q.options.map(o => o.text.length)));
-    assert.ok(alternativa >= 20 && alternativa <= 60, `${arquivo}: alternativa mediana ${alternativa}`);
+    // A faixa depende do dia: Matemática (mediana real 6) e Natureza (17) têm
+    // alternativas curtas, e um lote só do segundo dia ficaria abaixo dos 20
+    // que valem para Linguagens (56) e Humanas (34) sem estar fora do padrão.
+    const soDia2 = questoes.every(q => ['Matemática', 'Biologia', 'Física', 'Química'].includes(q.subject));
+    const [min, max] = soDia2 ? [8, 30] : [20, 60];
+    assert.ok(alternativa >= min && alternativa <= max, `${arquivo}: alternativa mediana ${alternativa}`);
     // A banca ordena as alternativas pelo tamanho em 44% das questões (o acaso
     // daria 1 em 120) e as numéricas em ordem crescente em 77%; a posição da
     // resposta vem dessa ordem, não da vontade de quem escreve.
