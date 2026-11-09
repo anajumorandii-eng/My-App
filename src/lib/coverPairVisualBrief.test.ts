@@ -2,6 +2,44 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { buildCoverPairVisualBrief } from './coverPairVisualBrief';
 
+test('dinâmica energética relaciona os estudos ao percurso de movimento sem herdar máquinas em outro recorte', () => {
+ const brief=buildCoverPairVisualBrief({subject:'Física',topic:'Dinâmica Energética e Transformações de Energia'});
+ assert.match(brief.frontScenes.join(' '),/kinetic energy/);
+ assert.match(brief.backScenes.join(' '),/work.*gravity/);
+ assert.match(brief.connection.join(' '),/trajectory/);
+ const specific=buildCoverPairVisualBrief({subject:'Física',topic:'Dinâmica energética',subtopic:'Efeito Doppler'});
+ assert.doesNotMatch(JSON.stringify(specific),/gravity track|pulley|elastic spring/);
+});
+
+test('átomo e polaridade desenvolvem uma nuvem contínua respeitando a molécula do recorte', () => {
+ const brief=buildCoverPairVisualBrief({subject:'Química',topic:'Modelos atômicos e estrutura do átomo + Polaridade das ligações'});
+ assert.match(brief.frontScenes.join(' '),/electron-density/);
+ assert.match(brief.frontScenes.join(' '),/unequal/);
+ assert.match(brief.backScenes.join(' '),/historical.*models/);
+ assert.match(brief.connection.join(' '),/electron-density/);
+ const specific=buildCoverPairVisualBrief({subject:'Química',topic:'Modelos atômicos e polaridade',subtopic:'Polaridade do dióxido de carbono'});
+ assert.match(specific.frontScenes.join(' '),/exact selected molecule/);
+ assert.doesNotMatch(specific.backScenes.join(' '),/historical.*models/);
+ const other=buildCoverPairVisualBrief({subject:'Química',topic:'Modelos atômicos',subtopic:'Reagente limitante'});
+ assert.doesNotMatch(JSON.stringify(other),/electron-density|historical.*models/);
+});
+
+test('energia elétrica e térmica não herdam o inventário de energia mecânica', () => {
+ for(const subtopic of ['Transformações de energia em uma pilha','Conservação de energia em circuitos elétricos','Transformações de energia térmica']) {
+  const brief=buildCoverPairVisualBrief({subject:'Física',topic:'Dinâmica energética',subtopic});
+  assert.doesNotMatch(JSON.stringify(brief),/gravity track|raised mass|rolling sphere|elastic spring/);
+ }
+});
+
+test('modelos históricos preservam as estruturas próprias em vez de receber nuvem moderna', () => {
+ const contexts=[['Dalton',/solid spherical atoms/],['Thomson',/embedded electrons/],['Rutherford',/compact nucleus/],['Bohr',/quantized/]] as const;
+ for(const [model,expected] of contexts){
+  const brief=buildCoverPairVisualBrief({subject:'Química',topic:'Modelos atômicos',subtopic:`Modelo atômico de ${model}`});
+  assert.match(brief.frontScenes.join(' '),expected);
+  assert.doesNotMatch(brief.frontScenes.join(' '),/electron-density cloud/);
+ }
+});
+
 test('genética geral conecta DNA e cromatina aos estudos de ervilhas de Mendel', () => {
  const brief=buildCoverPairVisualBrief({subject:'Biologia',topic:'Genética'});
  assert.match(brief.frontScenes.join(' '),/paired DNA strands.*chromatin/);

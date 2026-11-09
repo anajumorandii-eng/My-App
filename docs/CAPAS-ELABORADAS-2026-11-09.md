@@ -1,5 +1,9 @@
 # Capas elaboradas do Crivo
 
+Atualização posterior aprovada: [capas vivas e integradas à página](capas-vivas-2026-11-09/README.md).
+A direção ampliada, o movimento pertinente ao recorte e a conexão obrigatória
+passam a orientar todas as matérias e os três formatos de geração.
+
 A direção de arte compartilhada em `server/ai/coverArtDirection.ts` orienta
 capa individual, contracapa e arte conjunta de livreto: gravura fina,
 aquarela luminosa, texturas e estudos em camadas, com verde, vinho e dourado

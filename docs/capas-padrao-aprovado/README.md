@@ -1,5 +1,10 @@
 ## Aplicação por matéria e recorte
 
+A direção vigente foi ampliada em 09/11/2026: [capas vivas, conexão obrigatória e
+ocupação ampla da página](../capas-vivas-2026-11-09/README.md). Revisão e
+aprofundamento preservam suas finalidades, com ilustrações ricas e expansivas
+nos dois casos; o termo histórico “compacta” não autoriza imagens pequenas.
+
 A direção compartilhada exige um motivo dominante legível em miniatura, linhas secundárias finas, aquarela translúcida e contrastes concentrados no objeto principal. Folhagem só recebe destaque quando pertinente ao conteúdo. Gramática e línguas, Redação, Filosofia e Sociologia têm repertórios próprios, sem receber automaticamente máscaras de teatro, bustos gregos ou cenas históricas europeias. Na indisponibilidade da geração, esses novos repertórios usam as artes de contingência já existentes; elas não substituem o fluxo personalizado.
 
 O endereço e o provedor configurados permanecem inalterados. Os nomes legados de variáveis não identificam o fornecedor atual. Esta entrega trata da direção visual, sem alterar a correção de fórmulas.

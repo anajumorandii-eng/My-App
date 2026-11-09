@@ -25,12 +25,29 @@ test('elaboração aprovada alcança capa, contracapa e livreto em todas as mat�
   for(const side of ['front','back','spread'] as const) {
    const prompt=buildCoverImagePrompt({subject,topic:'Tema específico',side});
    assert.match(prompt,/ELABORATED CRIVO ATLAS/);
+   assert.match(prompt,/LIVING CRIVO ATLAS/);
+   assert.match(prompt,/meaningful motion or transformation/);
+   assert.match(prompt,/near the inner frame/);
    assert.match(prompt,/foreground, middle ground and fine background studies/);
    assert.match(prompt,/muted botanical green, oxblood accents and antique copper/);
    assert.match(prompt,/No text, lettering/);
    assert.match(prompt,/transparent/);
   }
  }
+});
+
+test('livreto exige conexão contínua e ocupação ampla em qualquer matéria sem invadir a tipografia', () => {
+ for(const subject of ['Biologia','Matemática','Física','Química','Geografia','História','Literatura','Português','Gramática','Inglês','Redação','Filosofia','Sociologia']) {
+  const prompt=buildCoverImagePrompt({subject,topic:'Tema específico',side:'spread'});
+  assert.match(prompt,/MANDATORY CONTINUOUS CONNECTION/);
+  assert.match(prompt,/visibly touches BOTH scenes/);
+  assert.match(prompt,/matching palette alone is insufficient/);
+  assert.match(prompt,/LEFT.*y=20%-84%/);
+  assert.match(prompt,/RIGHT.*y=34%-84%/);
+  assert.doesNotMatch(prompt,/generous clear margins|Shared palette and linework also create continuity/);
+ }
+ const portrait=buildCoverImagePrompt({subject:'Física',topic:'Dinâmica energética'});
+ assert.doesNotMatch(portrait,/MANDATORY CONTINUOUS CONNECTION|visibly touches BOTH scenes/);
 });
 
 test('capa individual também recebe o plano de cena elaborado para o recorte', () => {
@@ -453,7 +470,7 @@ test('pedido de Português contém orientação própria antes da estética e ev
 test('livreto solicita uma única arte panorâmica contínua com capa e contracapa planejadas juntas',async()=>{
  const input={subject:'Geografia',topic:'Climatologia e Problemas Socioambientais',side:'spread' as const};
  assert.deepEqual(validateCoverContext(input),input);
- const prompt=buildCoverImagePrompt(input);assert.match(prompt,/ONE SINGLE PAIRED COVER/);assert.match(prompt,/TWO DISTINCT TALL VERTICAL COMPOSITIONS/);assert.match(prompt,/x=2%-49%, y=20%-82%/);assert.match(prompt,/untrusted data/);
+ const prompt=buildCoverImagePrompt(input);assert.match(prompt,/ONE SINGLE PAIRED COVER/);assert.match(prompt,/TWO DISTINCT TALL VERTICAL COMPOSITIONS/);assert.match(prompt,/x=2.5%-49%, y=20%-84%/);assert.match(prompt,/untrusted data/);
  let calls=0;
  const wide=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAACAAAAAUCAYAAADskT9PAAAAKklEQVR4nGNgGAWjYIABo1Fm6P+BdADTQFo+6oBRB4w6YNQBo2AUDAoAAAS6AgP2cc2iAAAAAElFTkSuQmCC','base64');
  const service=new CoverImageService({baseUrl:'https://gateway.test/v1',apiKey:'private-test-key',model:'cover-image-route',fetch:async(_url,init)=>{

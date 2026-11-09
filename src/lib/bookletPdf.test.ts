@@ -117,12 +117,40 @@ test('capas integradas usam uma só imagem na dobra e fontes incorporadas; miolo
   execFileSync('pdftoppm',['-f','1','-l','1','-singlefile','-scale-to','600',path,prefix]);
   const ppm=readFileSync(prefix+'.ppm'),header=/^P6\s+(\d+)\s+(\d+)\s+255\s/.exec(ppm.toString('ascii',0,80))!;
   const width=Number(header[1]),height=Number(header[2]),offset=header[0].length;
+  for(const [x,y] of [[width*.1,height*.1],[width*.9,height*.25],[width*.1,height*.9],[width*.9,height*.9]]){
+   const pixel=offset+3*(Math.floor(y)*width+Math.floor(x));
+   assert.deepEqual([...ppm.subarray(pixel,pixel+3)],[246,242,233],'arte opaca não cobre as regiões nativas dos títulos e rodapés');
+  }
+  for(const x of [width*.04,width*.96]){
+   const pixel=offset+3*(Math.floor(height*.5)*width+Math.floor(x));
+   assert.deepEqual([...ppm.subarray(pixel,pixel+3)],[50,105,85],'a arte ocupa a largura útil até perto das molduras');
+  }
   for(const x of [width/2-3,width/2-1,width/2,width/2+1,width/2+3]){
    const pixel=offset+3*(Math.floor(height/2)*width+Math.floor(x));assert.deepEqual([...ppm.subarray(pixel,pixel+3)],[50,105,85],'a arte atravessa a dobra sem faixa nem redimensionamento separado');
   }
   for(const x of [0,width-1])for(const y of [0,height-1]){
    const pixel=offset+3*(y*width+x);assert.deepEqual([...ppm.subarray(pixel,pixel+3)],[246,242,233],`borda ${x},${y}`);
   }
+ }finally{rmSync(folder,{recursive:true,force:true});}
+});
+
+test('o PDF conserva marcadores nas extremidades da arte que precisa de encaixe',async()=>{
+ // Camada transparente: magenta no topo dos objetos e azul na base, fora das reservas originais.
+ const marked=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAGQAAAA8CAYAAACQPx/OAAAA2klEQVR4nO3bsQnDQBBFQdXkXlyE+y9ABocHjmyx78R8ePmxEynQcZiZmZnZxTuP89yx6btdtunDAln2eD3PHZu+22WbPiyQZdOHBbJs+rBAlk0fFsiy6cMCWTZ9WCDLpg/7K8j099Dfv6OmDwvkZiDT7/j1/UAiAYkFJBaQWEBiAYkFJBaQWEBiAYkFJBaQWEBiAYkFJBaQWEBiAYkFJBaQWEBiAYkFJBaQWEBiAYkFJBaQWEBiAYkFJBaQWEBiAYkFJBaQWEBifQU5Pr/o7thd3g8kkpnZlnsD14IeshtH7ocAAAAASUVORK5CYII=','base64');
+ const source=await PDFDocument.create();source.addPage();
+ const result=await createBookletPdf(await source.save(),marked,{subject:'Química',topic:'Polaridade'},coverFonts());
+ const folder=mkdtempSync(join(tmpdir(),'crivo-cover-fit-'));
+ try{
+  const path=join(folder,'livreto.pdf'),prefix=join(folder,'outside');writeFileSync(path,result.bytes);
+  execFileSync('pdftoppm',['-f','1','-l','1','-singlefile','-scale-to','600',path,prefix]);
+  const ppm=readFileSync(prefix+'.ppm'),header=/^P6\s+(\d+)\s+(\d+)\s+255\s/.exec(ppm.toString('ascii',0,80))!;
+  let magenta=0,blue=0;
+  for(let i=header[0].length;i<ppm.length;i+=3){
+   if(ppm[i]>240&&ppm[i+1]<10&&ppm[i+2]>240)magenta++;
+   if(ppm[i]<10&&ppm[i+1]<10&&ppm[i+2]>240)blue++;
+  }
+  assert.ok(magenta>10,'o topo dos objetos deve continuar visível');
+  assert.ok(blue>10,'a base dos objetos deve continuar visível');
  }finally{rmSync(folder,{recursive:true,force:true});}
 });
 
