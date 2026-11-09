@@ -2,10 +2,15 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "3aa1b1ff4257d95b6f0e95733aa14960a80a6751",
-  "generated_at_utc": "2026-11-08T15:01:04Z",
+  "source_commit": "71e330302d58223968ee1a84411195dd9992703d",
+  "generated_at_utc": "2026-11-09T19:58:39Z",
   "changed_files": [
-    "AGENTS.md"
+    "docs/CAPAS-ELABORADAS-2026-11-09.md",
+    "server/ai/coverArtDirection.ts",
+    "server/ai/coverImages.test.ts",
+    "server/ai/coverImages.ts",
+    "src/lib/coverPairVisualBrief.test.ts",
+    "src/lib/coverPairVisualBrief.ts"
   ],
   "next_session": {
     "mode": "delta-only",
