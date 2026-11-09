@@ -20,6 +20,28 @@ const context = {
   board: "UNICAMP",
 };
 
+test('elaboração aprovada alcança capa, contracapa e livreto em todas as matérias', () => {
+ for(const subject of ['Biologia','Matemática','Física','Química','Geografia','História','Literatura','Português','Gramática','Inglês','Redação','Filosofia','Sociologia']) {
+  for(const side of ['front','back','spread'] as const) {
+   const prompt=buildCoverImagePrompt({subject,topic:'Tema específico',side});
+   assert.match(prompt,/ELABORATED CRIVO ATLAS/);
+   assert.match(prompt,/foreground, middle ground and fine background studies/);
+   assert.match(prompt,/muted botanical green, oxblood accents and antique copper/);
+   assert.match(prompt,/No text, lettering/);
+   assert.match(prompt,/transparent/);
+  }
+ }
+});
+
+test('capa individual também recebe o plano de cena elaborado para o recorte', () => {
+ const general=buildCoverImagePrompt({subject:'Biologia',topic:'Genética'});
+ assert.match(general,/paired DNA strands.*chromatin/);
+ assert.doesNotMatch(general,/Mendelian|backScenes|Plan both sides|DNA filament becomes/);
+ const specific=buildCoverImagePrompt({subject:'Biologia',topic:'Genética',subtopic:'Replicação do DNA'});
+ assert.match(specific,/replication/);
+ assert.doesNotMatch(specific,/Mendelian/);
+});
+
 test("capa valida apenas metadados limitados, recusando prompt, modelo ou URL do cliente", () => {
   assert.deepEqual(validateCoverContext(context), context);
   for (const payload of [
