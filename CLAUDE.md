@@ -466,6 +466,11 @@ Capas por IA, PDF e streaming de revisões: ler antes
 `docs/CONTEXTO-IA-IMAGENS-PDF-2026-10-27.md`. As variáveis `OMNIROUTE_*` são
 nomes legados e não identificam o provedor atual.
 
+Capas: a direção aprovada em 09/11/2026 para todas as matérias está em
+`docs/capas-vivas-2026-11-09/README.md`, com referências visuais. Exige cenas
+vivas e amplas, integradas à página e conectadas através da dobra por um
+elemento do próprio recorte, preservando tipografia e moldura nativas.
+
 Prompts que produzem JSON estruturado são analisados por parsers tolerantes
 (`src/lib/errorDiagnosis.ts`), que nunca lançam e rebaixam confiança que o
 modelo tenha inflado. Saída de modelo é dado suspeito, não fato.

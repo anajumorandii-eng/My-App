@@ -1,6 +1,8 @@
 import { rgb, pushGraphicsState, rectangle, clip, endPath, popGraphicsState, type PDFPage, type PDFFont } from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
+import { PNG } from 'pdf-lib/cjs/utils/png.js';
 import type { PrintCoverContext } from './printCoverSpec';
+import { bookletCoverLayout as layout, fitBookletArtwork } from './bookletCoverLayout';
 
 export interface BookletCoverFonts { serif: Uint8Array; display: Uint8Array; italic: Uint8Array; text: Uint8Array; }
 
@@ -11,6 +13,9 @@ export async function drawBookletCoverSpread(page: PDFPage, illustration: Uint8A
   const art = await document.embedPng(illustration);
   if (art.width <= art.height) throw new Error('A arte das capas precisa ser panorâmica. Tente gerar o livreto novamente.');
   const { width, height } = page.getSize(), half = width / 2;
+  // Usa o mesmo leitor PNG da incorporação para medir a arte, sem cortar ou editar seus pixels.
+  const png = PNG.load(illustration);
+  const fit = fitBookletArtwork(png.alphaChannel, png.width, png.height, width);
   // A incorporação integral mantém os contornos após espaços nas fontes da identidade.
   const serif = await document.embedFont(fonts.serif);
   const bold = await document.embedFont(fonts.display);
@@ -57,8 +62,15 @@ export async function drawBookletCoverSpread(page: PDFPage, illustration: Uint8A
   for (const center of [half / 2, half * 1.5]) page.drawLine({ start: { x: center - 85, y: height * (center < half ? .826 : .752) }, end: { x: center + 85, y: height * (center < half ? .826 : .752) }, color: gold, thickness: .45 });
   // Duas massas verticais em posições próprias; só um detalhe delicado cruza a dobra.
   // A camada de arte usa as coordenadas da capa aberta inteira, sem achatamento em faixa.
-  page.pushOperators(pushGraphicsState(), rectangle(16, 18, width - 32, height - 36), clip(), endPath());
-  page.drawImage(art, { x: 8, y: 0, width: width - 16, height });
+  // A arte ocupa a folha inteira; mesmo uma saída opaca não pode apagar os títulos.
+  // As regiões se encontram na dobra, mantendo a conexão sem reduzir cada lado.
+  page.pushOperators(
+    pushGraphicsState(),
+    rectangle(layout.frameInset, height * (1 - layout.artworkBottom), half - layout.frameInset, height * (layout.artworkBottom - layout.leftArtworkTop)),
+    rectangle(half, height * (1 - layout.artworkBottom), half - layout.frameInset, height * (layout.artworkBottom - layout.rightArtworkTop)),
+    clip(), endPath(),
+  );
+  page.drawImage(art, { x: width * fit.left, y: height * (1 - fit.top - fit.scale), width: width * fit.scale, height: height * fit.scale });
   page.pushOperators(popGraphicsState());
   for (const center of [half / 2, half * 1.5]) {
     page.drawLine({ start: { x: center - 103, y: height * .143 }, end: { x: center + 103, y: height * .143 }, color: gold, thickness: .4 });

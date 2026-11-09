@@ -62,12 +62,56 @@ export function buildCoverPairVisualBrief(context: PrintCoverContext) {
       back: 'A different planar construction study showing corresponding angles and scaled triangle relationships without invented numerical labels.',
       connection: 'A fine corresponding-side construction line links the two triangle studies.',
     },
+  ].filter(scene => scene.match.test(scope)) : brief.theme === 'physics' ? [
+    {
+      match: /^(?!.*(?:eletric|circuit|pilha|bateria|termic|termo|quimic|calor|luz|fotoss|nuclear)).*(?:dinamica energetica|energia mecanica|trabalho e energia)/,
+      front: 'Mechanical energy unfolding: a rolling sphere on a graceful gravity track develops gravitational potential into kinetic energy, with restrained motion echoes and an elastic spring or swinging pendulum only where relevant. Integrate study pages, material detail and directional depth into one expansive living scene, not a catalog of standing machines.',
+      back: 'A different scientific study scene develops mechanical work against gravity through a raised mass, a coherent pulley or inclined plane, and finely engraved study leaves in motion. Choose only mechanisms justified by the selected scope, no generic steam engine or industrial inventory.',
+      connection: 'A continuous engraved trajectory emerges from the left study and develops into the right moving path, visibly joining both scenes across the fold at matching height and scale; this is an illustrated study-to-phenomenon connection, not a literal perpetual-motion transmission.',
+    },
+  ].filter(scene => scene.match.test(scope)) : brief.theme === 'chemistry' ? [
+    {
+      match: /modelo.*dalton|dalton.*modelo/,
+      front: 'Dalton atomic model: solid spherical atoms as the historical indivisible-particle representation, with precise material texture and related particle combinations; no nucleus, embedded charges or modern density envelope.',
+      back: 'A different engraved Dalton study folio develops the selected particle proportions and combinations, with curling paper and coherent relationships rather than later atomic structures.',
+      connection: 'A continuous particle-study construction trace develops from the left folio into the right Dalton spheres across the fold.',
+    },
+    {
+      match: /modelo.*thomson|thomson.*modelo/,
+      front: 'Thomson atomic model: a continuous positively charged sphere with embedded electrons, shown as a historical representation; no concentrated nucleus or later planetary structure.',
+      back: 'A different Thomson study scene develops charge distribution within the selected historical model, using fine engraved studies and layered paper.',
+      connection: 'A continuous charge-distribution study trace develops from the left folio into the right Thomson representation across the fold.',
+    },
+    {
+      match: /modelo.*rutherford|rutherford.*modelo/,
+      front: 'Rutherford atomic model: a compact nucleus and surrounding electrons in a largely empty atomic volume, clearly a historical nuclear representation rather than a modern density envelope.',
+      back: 'A distinct Rutherford scattering study shows incident and deflected paths around a thin foil where relevant to the selected historical scope, without invented numerical results.',
+      connection: 'A fine continuous scattering-study trajectory develops from the left experiment into the right nuclear representation across the fold.',
+    },
+    {
+      match: /modelo.*bohr|bohr.*modelo/,
+      front: 'Bohr atomic model: quantized electron energy shells and a restrained transition study, explicitly a historical model with discrete energy levels rather than a modern density envelope.',
+      back: 'A different Bohr study folio develops discrete levels and absorption or emission relationships only where selected, with fine engraved construction and curling paper.',
+      connection: 'A continuous energy-level construction trace develops from the left folio into the right Bohr shell study across the fold.',
+    },
+    {
+      match: /^(?!.*(?:dalton|thomson|rutherford|bohr)).*(?:modelos? atomic|estrutura (?:do )?atomo|estrutura atomica)/,
+      front: 'Atomic structure: a finely resolved nucleus within a translucent electron-density cloud, with layered engraved texture and directional depth; represent modern density rather than literal hard planetary electron paths.',
+      back: 'An open atomic study folio with curling leaves develops historical atomic models as distinct engraved studies, including scattering relationships only when pertinent. Distinguish historical representations from the modern cloud, without invented labels or equations.',
+      connection: 'A continuous electron-density trace grows from the left atomic studies and develops into the right atomic structure, visibly crossing the fold without a gap.',
+    },
+    {
+      match: /polaridade|ligacoes? polares?|ligacao covalente polar/,
+      front: 'Bond polarity: choose the exact selected molecule and show its geometry and unequal electron-density distribution where applicable; respect any cancellation of bond dipoles in the selected molecule. For a general polar-bond scope, a bent water molecule may carry the composition with one oxygen and exactly two hydrogens, a denser envelope toward oxygen and restrained surrounding molecular orientations. Never substitute water for a different specifically selected molecule.',
+      back: 'A different molecular study scene develops bond geometry and electron sharing through delicate structural studies and curling paper, with relevant microscopic organization rather than unrelated reaction glassware or prism rainbows.',
+      connection: 'A continuous electron-density envelope develops from the left bonding studies into the right molecular scene, visibly touching both sides across the fold. When atomic structure is also selected, grow this same envelope from atomic density into bonding instead of adding a second disconnected bridge.',
+    },
   ].filter(scene => scene.match.test(scope)) : [];
   return {
     ...brief,
     frontScenes: scenes.length ? scenes.map(scene => scene.front) : ['Choose one dominant object, structure or relationship required by the exact scope. Use only its relevant supporting motifs from this brief.'],
     backScenes: scenes.length ? scenes.map(scene => scene.back) : ['Choose a DIFFERENT scene grounded in the same exact scope: its context, interacting structure, application or consequence. Every dominant and supporting motif on this side must identify that scope independently. Do not use a generic scenic landscape or a discipline-wide decorative inventory.'],
-    connection: scenes.length ? scenes.map(scene => scene.connection) : ['Choose a small visual connection inherent to the selected relationship, such as its own structural line or material trace. Shared palette and linework also create continuity; do not force a natural setting or atmospheric connector into unrelated content.'],
-    pairRule: 'Plan both sides before painting. For combined scopes integrate only the matching relationships into one composition per side; these are alternatives and guidance, not a mandatory object inventory. Check each side independently against the exact scope. A coherent palette or an attractive connection never excuses an unrelated rear scene. Use no content examples from another topic. The quoted subtopic always takes precedence.',
+    connection: scenes.length ? scenes.map(scene => scene.connection) : ['Choose one continuous visual connection inherent to the selected relationship, such as its structural line, material trace or a study developing into the selected phenomenon. It must visibly touch both scenes at matching height and scale across the fold. For textual or conceptual content, use a meaningful editorial line or shared manuscript structure, without readable invented text. Do not force a natural setting, physical apparatus or atmospheric connector into unrelated content.'],
+    pairRule: 'Plan both sides before painting. For combined scopes integrate only the matching relationships into one composition per side; these are alternatives and guidance, not a mandatory object inventory. Check each side independently against the exact scope. Select one meaningful continuous connector and develop it across the fold; a matching palette alone is insufficient. A coherent palette or an attractive connection never excuses an unrelated rear scene. Use no content examples from another topic. The quoted subtopic always takes precedence.',
   };
 }
