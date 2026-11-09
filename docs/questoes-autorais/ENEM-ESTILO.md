@@ -173,3 +173,23 @@ alternativas em ordem crescente natural.
 
 Neste lote, cerca de um quinto das respostas já saiu como alternativa mais
 longa na escrita, de modo que nenhum distrator precisou ser cortado.
+
+## Lote 5 (200 questões, formato do dia 2)
+
+Natureza e Matemática, na proporção da prova: Matemática 100, Biologia 37,
+Física 34, Química 29. Assuntos: porcentagem, razão e escala, juros,
+probabilidade condicional, estatística, contagem, geometria plana e espacial,
+progressões, logaritmo e trigonometria; ecologia, eutrofização, genética,
+imunologia, fisiologia, biotecnologia e biomas; consumo elétrico, calorimetria,
+som, ondas, óptica, leis de Newton, energia, impulso, eletrostática e
+termodinâmica; separação de misturas, estequiometria, soluções, pH,
+equilíbrio, cinética, termoquímica, pilhas, eletrólise, radioatividade,
+orgânica, polímeros e química ambiental. Gabarito: A 28, B 31, C 46, D 60,
+E 35. Enunciado mediano de 605 caracteres; 129 questões com alternativas em
+ordem crescente.
+
+A alternativa mediana é de 12 caracteres (7 em Matemática e 31 em Natureza),
+perto das medianas reais de 6 e 17. Por isso, o teste aceita de 8 a 30 em lote
+só do dia 2, e não os 20 a 60 do dia 1. No reposicionamento do gabarito, só se
+movem as questões textuais: as numéricas ficam em ordem crescente de valor, e a
+letra delas é a que essa ordem determinar.
