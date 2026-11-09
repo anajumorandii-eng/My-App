@@ -30,6 +30,38 @@ export function buildCoverPairVisualBrief(context: PrintCoverContext) {
       back: 'Brazilian watershed landscape with mountains, forest, a river, agriculture and a small city only for a Brazilian environmental scope; otherwise use a watershed appropriate to the selected territory, without another globe or weather instruments.',
       connection: 'A delicate cloud band connects the higher contextual landscape to the lower atmospheric motif across the fold.',
     },
+  ].filter(scene => scene.match.test(scope)) : brief.theme === 'biology' ? [
+    {
+      match: /^(genetica|hereditariedade|genetica e hereditariedade)$/,
+      front: 'Molecular heredity: paired DNA strands winding toward chromatin and a softly translucent nucleus, with fine structural studies and microscopy instruments subordinate to the molecular protagonist.',
+      back: 'Mendelian inheritance: pea plants with flowers, pods and seed variations intertwined with an open botanical study notebook and restrained crossing relationships, without readable notes or invented ratios.',
+      connection: 'A delicate DNA filament becomes a botanical stem trace between the molecular and Mendelian studies, as a decorative connection rather than a literal biological transformation.',
+    },
+    {
+      match: /(?:replicacao|duplicacao).*dna|dna.*(?:replicacao|duplicacao)/,
+      front: 'DNA replication: a dominant opening double helix with separated template strands and emerging complementary strands, fine molecular engraving and translucent structural detail.',
+      back: 'A different close study of the replication fork and complementary strand assembly, without unrelated laboratory or botanical inventory.',
+      connection: 'Continue one delicate DNA backbone trace between the two replication studies.',
+    },
+    {
+      match: /^(?!.*(?:nao[\s-]*mendel|non[\s-]*mendel)).*(?:mendel|monoibrid|diibrid)/,
+      front: 'Mendelian inheritance: flowering pea stems, open pods and contrasting seed traits composed as one detailed botanical study of the selected crossing scope.',
+      back: 'A distinct botanical notebook study of pea flowers, pods and inherited trait correspondences, without readable notes, invented ratios or unrelated molecular structures.',
+      connection: 'A fine pea tendril links the two botanical studies.',
+    },
+  ].filter(scene => scene.match.test(scope)) : brief.theme === 'mathematics' ? [
+    {
+      match: /^geometria plana$/,
+      front: 'Plane geometry: a brass compass and straightedge among fine circles, triangles and tangent planar constructions, layered translucent washes and precise engraved construction marks; no solids.',
+      back: 'A distinct open construction notebook with planar geometric studies and draughting tools, interwoven arcs and proportion relationships, no readable formulas or spatial solids.',
+      connection: 'A delicate construction arc continues between the two planar studies.',
+    },
+    {
+      match: /semelhanca.*triangul/,
+      front: 'Triangle similarity: corresponding triangles at different scales, aligned corresponding sides and fine proportional construction lines; the triangles remain the dominant motif.',
+      back: 'A different planar construction study showing corresponding angles and scaled triangle relationships without invented numerical labels.',
+      connection: 'A fine corresponding-side construction line links the two triangle studies.',
+    },
   ].filter(scene => scene.match.test(scope)) : [];
   return {
     ...brief,

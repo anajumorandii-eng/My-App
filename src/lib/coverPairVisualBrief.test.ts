@@ -2,6 +2,45 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { buildCoverPairVisualBrief } from './coverPairVisualBrief';
 
+test('genética geral conecta DNA e cromatina aos estudos de ervilhas de Mendel', () => {
+ const brief=buildCoverPairVisualBrief({subject:'Biologia',topic:'Genética'});
+ assert.match(brief.frontScenes.join(' '),/paired DNA strands.*chromatin/);
+ assert.match(brief.backScenes.join(' '),/Mendelian.*pea/);
+ assert.match(brief.connection.join(' '),/DNA filament/);
+ assert.notDeepEqual(brief.frontScenes,brief.backScenes);
+});
+
+test('subtópicos não herdam o inventário da genética geral', () => {
+ const molecular=buildCoverPairVisualBrief({subject:'Biologia',topic:'Genética',subtopic:'Replicação do DNA'});
+ assert.match(molecular.frontScenes.join(' '),/replication/);
+ assert.doesNotMatch(JSON.stringify(molecular),/\bpea\b|Mendelian/);
+ const mendelian=buildCoverPairVisualBrief({subject:'Biologia',topic:'Genética',subtopic:'Leis de Mendel'});
+ assert.match(mendelian.frontScenes.join(' '),/pea/);
+ assert.doesNotMatch(JSON.stringify(mendelian),/chromatin|microscope/);
+ const ecology=buildCoverPairVisualBrief({subject:'Biologia',topic:'Genética',subtopic:'Teias alimentares'});
+ assert.doesNotMatch(JSON.stringify(ecology),/Mendelian|DNA filament/);
+});
+
+test('replicação de RNA ou viral e herança não mendeliana não recebem cenas de DNA ou Mendel', () => {
+ for(const subtopic of ['Replicação do RNA','Replicação viral','Herança não mendeliana','Genética não-mendeliana']) {
+  const brief=buildCoverPairVisualBrief({subject:'Biologia',topic:'Genética',subtopic});
+  assert.doesNotMatch(brief.frontScenes.join(' '),/DNA replication|Mendelian inheritance|pea/);
+ }
+});
+
+test('geometria plana ganha cenas próprias sem contaminar outro recorte', () => {
+ const plane=buildCoverPairVisualBrief({subject:'Matemática',topic:'Geometria plana'});
+ assert.match(plane.frontScenes.join(' '),/compass.*circles.*triangles/);
+ assert.match(plane.backScenes.join(' '),/construction notebook/);
+ assert.match(plane.connection.join(' '),/construction arc/);
+ const specific=buildCoverPairVisualBrief({subject:'Matemática',topic:'Geometria plana',subtopic:'Semelhança de triângulos'});
+ assert.match(specific.frontScenes.join(' '),/corresponding triangles/);
+ const other=buildCoverPairVisualBrief({subject:'Matemática',topic:'Geometria plana',subtopic:'Função quadrática'});
+ assert.doesNotMatch(JSON.stringify(other),/construction notebook|brass compass/);
+ const history=buildCoverPairVisualBrief({subject:'História',topic:'Genética e geometria plana'});
+ assert.doesNotMatch(JSON.stringify(history),/Mendelian|construction notebook/);
+});
+
 test('população e urbanização planejam duas cenas humanas e espaciais, sem o inventário climático',()=>{
  const brief=buildCoverPairVisualBrief({subject:'Geografia',topic:'Geografia da População e Urbana do Brasil'});
  assert.match(brief.frontScenes.join(' '),/Population geography.*Urban geography/);
