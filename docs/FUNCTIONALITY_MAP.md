@@ -37,6 +37,7 @@ podem desaparecer.
 | `/obras-obrigatorias` | Revisão ativa do repertório literário obrigatório | conteúdo literário e flashcards |
 | `/conexoes` | Login Google, agenda e arquivos do Drive | `lib/auth`, integrações Calendar/Drive |
 | `/perfil` | Metas, bancas, disponibilidade e preferências de aprendizagem | perfil, metas e agenda do estudante |
+| `/ajuda` | Manual de uso na tela e na Leitura Crivo, com sumário navegável | `docs/MANUAL-CRIVO.md` (fonte única), `StudyReaderButton` |
 | `/admin` | Métricas de uso, falhas, cache, tokens e custo de IA | `/api/admin/metrics` |
 | `/admin/obras` | Upload, auditoria, segmentação e requisitos de obras | `/api/admin/literary` |
 | `/admin/conteudo` | Gestão e semeadura de questões, métodos e episódios | `/api/admin/content` |
@@ -51,7 +52,7 @@ podem desaparecer.
 | `features/daily-plan` | Prioriza, explica e aloca ações de estudo no tempo disponível. |
 | `lib/aiClient` e contratos do tutor | Chamadas de IA, mensagens de falha e estruturação de respostas. |
 | `design-system` | Tema claro/escuro, paletas por matéria, movimento e componentes reutilizáveis. |
-| `RouteVisualShell` e `routeVisuals` | Seam visual única para as 28 telas; define campo instrumental sem alterar a lógica de cada view. |
+| `RouteVisualShell` e `routeVisuals` | Seam visual única para as 29 telas; define campo instrumental sem alterar a lógica de cada view. |
 
 ## Invariantes para futuras migrações
 

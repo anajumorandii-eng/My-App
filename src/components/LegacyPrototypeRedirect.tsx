@@ -32,6 +32,7 @@ const PROTOTYPE_SCREEN_ROUTES: Record<string, string> = {
   prioridades: '/prioridades',
   conexoes: '/conexoes',
   perfil: '/perfil',
+  ajuda: '/ajuda',
   admin: '/admin',
   'admin-obras': '/admin/obras',
   'admin-conteudo': '/admin/conteudo',

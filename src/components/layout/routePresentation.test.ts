@@ -11,8 +11,8 @@ describe('routePresentationFor', () => {
 });
 
 describe('routeVisualFor', () => {
-  it('covers the 28 production screens and keeps work details literary', () => {
-    expect(PRODUCTION_ROUTE_VISUAL_COUNT).toBe(28);
+  it('covers the 29 production screens and keeps work details literary', () => {
+    expect(PRODUCTION_ROUTE_VISUAL_COUNT).toBe(29);
     expect(routeVisualFor('/sessao')).toMatchObject({ subject: 'Matemática', kind: 'practice' });
     expect(routeVisualFor('/obras/memorias-postumas')).toMatchObject({ subject: 'Literatura', kind: 'library' });
     expect(routeVisualFor('/admin/conteudo')).toMatchObject({ kind: 'admin' });

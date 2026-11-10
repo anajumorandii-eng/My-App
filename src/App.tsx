@@ -32,6 +32,7 @@ const SavedReviewSummaries = lazy(() => import('./views/Aprofundamentos').then(m
 const Aprofundamentos = lazy(() => import('./views/Aprofundamentos'));
 const Conexoes = lazy(() => import('./views/Conexoes'));
 const Perfil = lazy(() => import('./views/Perfil'));
+const Ajuda = lazy(() => import('./views/Ajuda'));
 const Redacao = lazy(() => import('./views/Redacao'));
 const Treino2aFase = lazy(() => import('./views/Treino2aFase'));
 const Recuperacao = lazy(() => import('./views/Recuperacao'));
@@ -117,6 +118,7 @@ export default function App() {
                 <Route path="aprofundamentos" element={<Aprofundamentos />} />
                 <Route path="conexoes" element={<Conexoes />} />
                 <Route path="perfil" element={<Perfil />} />
+                <Route path="ajuda" element={<Ajuda />} />
                 <Route path="redacao" element={<Redacao />} />
                 <Route path="treino-2a-fase" element={<Treino2aFase />} />
                 <Route path="recuperacao" element={<Recuperacao />} />

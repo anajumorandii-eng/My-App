@@ -16,7 +16,7 @@ export default function StudyReader({ title, content, sections, onClose }: { tit
   const context = readPrintCoverContext(contextRoot);
   const specific = context.subtopic && !/^(vis[aã]o geral|obra completa|t[oó]pico completo)$/i.test(context.subtopic) ? context.subtopic : '';
   const displayTitle = context.work ? (specific && specific !== context.work ? `${context.work} · ${specific}` : context.work) : specific || context.topic || title;
-  const kind = /^revis/i.test(context.purpose || title) ? 'Revisão' : /^aprofund/i.test(context.purpose || title) ? 'Aprofundamento' : /^resumo/i.test(context.purpose || title) ? 'Resumo' : 'Guia de estudo';
+  const kind = /^manual/i.test(context.purpose || title) ? 'Manual' : /^revis/i.test(context.purpose || title) ? 'Revisão' : /^aprofund/i.test(context.purpose || title) ? 'Aprofundamento' : /^resumo/i.test(context.purpose || title) ? 'Resumo' : 'Guia de estudo';
   const isLiterature = /literatura/i.test(context.subject || title);
   const art = preparedCoverIllustration(contextRoot) || (isLiterature ? '/reading/literature.png' : '/reading/notebook.png');
   const close = () => { dialog.current?.close(); onClose(); };
