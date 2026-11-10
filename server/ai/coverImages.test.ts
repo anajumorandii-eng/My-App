@@ -28,11 +28,21 @@ test('elaboração aprovada alcança capa, contracapa e livreto em todas as mat�
    assert.match(prompt,/LIVING CRIVO ATLAS/);
    assert.match(prompt,/meaningful motion or transformation/);
    assert.match(prompt,/near the inner frame/);
+   assert.match(prompt,/LIGHTNESS AND MARGINS/);
+   assert.match(prompt,/almost-transparent watercolor/);
    assert.match(prompt,/foreground, middle ground and fine background studies/);
    assert.match(prompt,/muted botanical green, oxblood accents and antique copper/);
    assert.match(prompt,/No text, lettering/);
    assert.match(prompt,/transparent/);
   }
+ }
+});
+
+test('leveza permite fenômenos exigidos pelo recorte sem impor efeitos decorativos', () => {
+ for(const topic of ['Teste de chama','Combustão','Formação de espuma']){
+  const prompt=buildCoverImagePrompt({subject:'Química',topic,side:'spread'});
+  assert.ok(prompt.includes(topic));
+  assert.match(prompt,/phenomena required by the exact scope remain allowed/);
  }
 });
 
