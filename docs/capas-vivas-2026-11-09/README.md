@@ -11,6 +11,17 @@ acabamento e composição; seus objetos não devem ser transferidos a outros tem
 
 ![Química: nuvem eletrônica e continuidade entre cenas](quimica-aprovada.png)
 
+### Refinamento aprovado: presença com leveza
+
+![Estequiometria: margens integradas e composição leve](estequiometria-leve-aprovada.png)
+
+O refinamento posterior mantém os protagonistas grandes e o movimento, com
+aquarelas quase transparentes e gravuras finas integrando as margens. A cena
+conserva ar entre os elementos; ocupar a largura útil não significa empilhar
+objetos ou criar blocos densos de cor. A conexão continua pertencendo ao tema:
+neste exemplo, o fluxo de solução atravessa a dobra e liga os dois lados.
+As reservas de tipografia e rodapé seguem transparentes no pedido de arte.
+
 As imagens são exemplos autorais gerados para aprovação, sem dados pessoais.
 Não são capas fixas usadas no aplicativo nem PDFs de estudo da estudante.
 
@@ -24,6 +35,9 @@ Não são capas fixas usadas no aplicativo nem PDFs de estudo da estudante.
 - A composição ocupa a largura útil até perto da moldura. Elementos e lavagens
   são redistribuídos de forma orgânica; não esticar objetos nem preencher a
   página com uma faixa horizontal.
+- As margens recebem transições quase transparentes e detalhes pertinentes,
+  com leveza. Evitar fundos densos, sombreamento escuro, folhagens ou objetos
+  extras usados apenas para preencher espaço. Aquarela não substitui a conexão.
 - Capa e contracapa têm protagonistas diferentes e complementares, ligados por
   um elemento contínuo do próprio recorte, que toca ambas as cenas e atravessa
   a dobra na mesma posição e escala. Paleta compartilhada não substitui a conexão.
