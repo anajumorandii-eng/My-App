@@ -27,7 +27,7 @@ const PATH_BY_SCREEN: Record<string, string> = {
   sessao: '/sessao', questoes: '/questoes', resumos: '/resumos', visual: '/visual', revisoes: '/revisoes', flashcards: '/flashcards',
   'obras-obrigatorias': '/obras-obrigatorias', obras: '/obras', 'obra-detalhe': '/obras', erros: '/erros', podcast: '/podcast',
   tutor: '/tutor', laboratorio: '/laboratorio', 'treino-2a-fase': '/treino-2a-fase', redacao: '/redacao', estrategias: '/estrategias', aprofundamentos: '/aprofundamentos', 'meus-resumos-revisao': '/meus-resumos-revisao',
-  evolucao: '/evolucao', prioridades: '/prioridades', conexoes: '/conexoes', perfil: '/perfil', admin: '/admin',
+  evolucao: '/evolucao', prioridades: '/prioridades', conexoes: '/conexoes', perfil: '/perfil', ajuda: '/ajuda', admin: '/admin',
   'avaliacao-ia': '/avaliacao-ia', 'admin-obras': '/admin/obras', 'admin-conteudo': '/admin/conteudo',
 };
 

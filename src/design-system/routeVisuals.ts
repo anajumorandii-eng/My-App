@@ -30,6 +30,7 @@ const ROUTE_VISUALS: Record<string, RouteVisual> = {
   '/estrategias': { subject: 'Matemática', kind: 'library' },
   '/conexoes': { kind: 'account' },
   '/perfil': { kind: 'account' },
+  '/ajuda': { kind: 'account' },
   '/redacao': { subject: 'Redação', kind: 'practice' },
   '/treino-2a-fase': { subject: 'História', kind: 'practice' },
   '/recuperacao': { subject: 'Química', kind: 'decision' },
