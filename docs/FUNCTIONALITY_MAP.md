@@ -1,5 +1,7 @@
 # Mapa de funcionalidades do Crivo
 
+> Para o guia de uso voltado à estudante, veja [`MANUAL-CRIVO.md`](MANUAL-CRIVO.md).
+
 Este documento é o inventário de produto para mudanças de interface. A regra
 de migração é simples: uma tela pode mudar de composição visual, mas suas
 ações, estados de vazio/carregamento/erro, persistência e navegação abaixo não
