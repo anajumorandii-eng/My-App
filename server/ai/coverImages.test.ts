@@ -29,9 +29,11 @@ test('elaboração aprovada alcança capa, contracapa e livreto em todas as mat�
    assert.match(prompt,/meaningful motion or transformation/);
    assert.match(prompt,/near the inner frame/);
    assert.match(prompt,/LIGHTNESS AND MARGINS/);
+   assert.match(prompt,/VIVID PIGMENT AND COLOR FIDELITY/);
+   assert.match(prompt,/Low-opacity washes belong to the margins, not the protagonists/);
    assert.match(prompt,/almost-transparent watercolor/);
    assert.match(prompt,/foreground, middle ground and fine background studies/);
-   assert.match(prompt,/muted botanical green, oxblood accents and antique copper/);
+   assert.match(prompt,/rich botanical green, luminous oxblood accents and antique copper/);
    assert.match(prompt,/No text, lettering/);
    assert.match(prompt,/transparent/);
   }
@@ -96,7 +98,7 @@ test("revisões não reintroduzem medalhão nem cartões radiais no vocabulário
     const prompt = buildCoverImagePrompt({ subject: "Matemática", topic, purpose: "Revisão aprofundada" });
     assert.match(prompt, /Revision cover: compose one unified central illustration/);
     assert.match(prompt, /ornamental scientific atlas/);
-    assert.match(prompt, /muted botanical green, oxblood accents and antique copper/);
+    assert.match(prompt, /rich botanical green, luminous oxblood accents and antique copper/);
     assert.match(prompt, /topic below determines the objects/);
     assert.doesNotMatch(prompt, /recall cards arranged around|central subject medallion|restrained circular path/);
     assert.match(prompt, new RegExp(topic));

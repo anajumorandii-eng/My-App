@@ -470,6 +470,9 @@ Capas: a direção aprovada em 09/11/2026 para todas as matérias está em
 `docs/capas-vivas-2026-11-09/README.md`, com referências visuais. Exige cenas
 vivas e amplas, integradas à página e conectadas através da dobra por um
 elemento do próprio recorte, preservando tipografia e moldura nativas.
+O refinamento de cor exige pigmentos vivos nos protagonistas e aquarelas
+leves nas margens. Conferir a saída pela rota real e pelo compositor nativo;
+uma prévia feita fora desse fluxo não certifica o resultado do motor ativo.
 
 Prompts que produzem JSON estruturado são analisados por parsers tolerantes
 (`src/lib/errorDiagnosis.ts`), que nunca lançam e rebaixam confiança que o
