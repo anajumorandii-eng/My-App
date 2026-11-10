@@ -2,11 +2,11 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "af5faf589139f7686d8b1bcf8d98cb3de5ca2fe4",
-  "generated_at_utc": "2026-11-10T00:37:16Z",
+  "source_commit": "dbe902ac92dfbdcf0b293f1bae46ad8692987c1a",
+  "generated_at_utc": "2026-11-10T02:03:30Z",
   "changed_files": [
+    "CLAUDE.md",
     "docs/capas-vivas-2026-11-09/README.md",
-    "docs/capas-vivas-2026-11-09/estequiometria-leve-aprovada.png",
     "server/ai/coverArtDirection.ts",
     "server/ai/coverImages.test.ts"
   ],
