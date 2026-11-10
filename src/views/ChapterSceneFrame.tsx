@@ -1,11 +1,12 @@
 import React, { useEffect, useId, useRef, useState } from 'react';
 import { Columns2, Maximize2, Minimize2 } from 'lucide-react';
-import { ChapterObjectIcon } from './visual-boards/ChapterObjectIcon';
 import './ChapterSceneFrame.css';
 
 /** A mesma cena fica no lugar ao ampliar: medidas, casos e evidências não são reiniciados. */
-export function ChapterSceneFrame({ chapterId, subject, title, topic, children }: {
+export function ChapterSceneFrame({ chapterId, subject, title, topic, lead, children }: {
   chapterId: string; subject: string; title: string; topic: string;
+  /** Controle que ocupa o lugar da etiqueta na barra (a alternância Cena 3D / Esquema). */
+  lead?: React.ReactNode;
   children: React.ReactNode | ((closeFocus: () => void) => React.ReactNode);
 }) {
   const [focused, setFocused] = useState(false);
@@ -60,8 +61,10 @@ export function ChapterSceneFrame({ chapterId, subject, title, topic, children }
   return <div ref={root} className={`vs-chapter-scene${focused ? ' vs-chapter-scene--focus' : ''}${comparison ? ' vs-chapter-scene--comparison' : ''}`}
     data-chapter-scene={chapterId} data-chapter-subject={subject} role={focused ? 'dialog' : undefined} aria-modal={focused || undefined} aria-labelledby={focused ? id : undefined}>
     <header className="vs-chapter-scene-tools">
-      <ChapterObjectIcon chapterId={chapterId} />
-      <div><small>{subject} · cena do capítulo</small><strong id={id}>{title}</strong></div>
+      {/* O título já está no topo da página; repetido aqui, com um ícone de
+          80 px, empurrava a cena para a segunda tela no celular. Fica só para
+          leitor de tela, que precisa dele para nomear o diálogo do modo foco. */}
+      <div>{lead ?? <small>{subject} · cena do capítulo</small>}<strong id={id} className="sr-only">{title}</strong></div>
       <button type="button" aria-pressed={comparison} onClick={() => setComparison(!comparison)}><Columns2 aria-hidden="true"/><span>Comparar painéis</span></button>
       <button ref={toggle} type="button" onClick={() => setFocused(!focused)} aria-expanded={focused}>
         {focused ? <Minimize2 aria-hidden="true" /> : <Maximize2 aria-hidden="true" />}

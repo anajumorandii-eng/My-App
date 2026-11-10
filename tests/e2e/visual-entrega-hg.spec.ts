@@ -37,6 +37,13 @@ for (const width of [390,834,1366]) for (const theme of ['light','dark']) for (c
       await expect(page.locator('.vs-topic-identity strong')).toHaveText(chapter.id==='geo-bonus-demografico'?'Estrutura Ativa da População':chapter.title);
       // AnimatePresence termina a saída e entrada de cada capítulo (0,38 s por fase).
       if(reducedMotion==='no-preference') await page.waitForTimeout(850);
+      // O palco 3D abre primeiro em Explorar; esta suíte confere a cena autoral,
+      // que fica na vista Esquema, a um toque dele.
+      // A moldura do capítulo entra depois do título (AnimatePresence troca a cena
+      // em seguida); sem esperar por ela, o botão ainda não existe.
+      await expect(page.locator(`[data-chapter-scene="${chapter.id}"]`)).toBeAttached();
+      const esquema = page.getByRole('button', {name:'Esquema'});
+      if(await esquema.count() && await esquema.getAttribute('aria-pressed') !== 'true') await esquema.click();
       const board = page.locator('[data-testid="visual-study-board"], .tc-scene, .topic-studio').first();
       await expect(board).toBeVisible();
       const svg = board.locator('svg[role="img"], .independence-board__map svg').first();

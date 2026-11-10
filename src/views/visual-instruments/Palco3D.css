@@ -1,0 +1,79 @@
+/*
+ * Palco 3D: a cena ocupa a largura do capítulo e o resto se organiza em volta.
+ *
+ * As regras antigas de `.vs-spatial-lab` punham o modelo numa coluna de 1,7fr
+ * ao lado de uma coluna de controles; aqui a grade volta a ser uma coluna só.
+ * Só tokens (`--vs-*`): o palco precisa acompanhar caderno, papel e tema escuro.
+ */
+.vs-spatial-lab.vs-palco { display: block; margin-top: 0; padding: clamp(14px, 2.4vw, 26px); }
+.vs-palco-topo { display: flex; gap: 10px 14px; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.vs-spatial-lab.vs-palco .vs-palco-topo h3 { min-width: 0; flex: 1; margin: 0; font-size: clamp(20px, 2.6vw, 30px); }
+.vs-palco-acoes { display: flex; flex: 0 0 auto; gap: 8px; }
+.vs-palco-acoes button { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 8px 14px; border: 1px solid var(--vs-line); border-radius: 999px; background: var(--vs-paper-strong); color: var(--vs-ink); font: 600 13px/1.2 Inter, system-ui, sans-serif; cursor: pointer; }
+.vs-palco-acoes button svg { width: 15px; height: 15px; }
+.vs-palco-acoes button:is([aria-pressed=true], [aria-expanded=true]) { border-color: var(--palco-sinal, var(--vs-burgundy)); color: var(--palco-sinal, var(--vs-burgundy)); }
+.vs-palco-acoes button:focus-visible { outline: 3px solid var(--vs-burgundy); outline-offset: 3px; }
+
+/* A cena. O fundo repete o do próprio desenho para que, em tela larga, a faixa
+   ao lado do modelo seja continuação do palco e não uma margem vazia. */
+.vs-palco-cena { display: grid; place-items: center; border-radius: 18px; overflow: hidden; background: radial-gradient(circle at 42% 30%, var(--vs-paper-strong), var(--vs-paper) 62%, color-mix(in srgb, var(--vs-line) 55%, var(--vs-paper)) 100%); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--vs-line) 70%, transparent); }
+.vs-palco-cena > svg.vs-spatial-stage { display: block; width: min(100%, calc(56vh * 1.125)); height: auto; max-width: none; background: transparent; border: 0; touch-action: none; cursor: grab; border-radius: 0; box-shadow: none; filter: none; }
+.vs-palco-cena > svg.vs-spatial-stage:active { cursor: grabbing; }
+.vs-palco-cena > svg.vs-spatial-stage:focus-visible { outline: 3px solid var(--vs-burgundy); outline-offset: -3px; }
+.vs-palco-cena > svg.vs-spatial-stage [data-spatial-backdrop] { fill: transparent; }
+
+.vs-spatial-lab.vs-palco > .vs-science-reading { margin: 14px 0 0; font-size: 15px; line-height: 1.6; }
+.vs-spatial-lab.vs-palco > .vs-science-reading::before { background: var(--palco-sinal, var(--vs-burgundy)); }
+
+.vs-palco-controles { margin-top: 14px; display: grid; gap: 4px 28px; align-items: end; }
+.vs-palco-controles > .vs-science-caption { margin: 0; }
+.vs-palco-controles .mechanism-time { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; }
+.vs-palco-controles .mechanism-time label { flex: 1 1 220px; margin: 0; }
+.vs-palco-comparar { margin: 6px 0 0; }
+.vs-spatial-lab.vs-palco .vs-palco-comparar button { background: transparent; border: 1px solid var(--vs-line); color: var(--vs-ink); font-weight: 500; box-shadow: none; }
+@media (min-width: 900px) {
+  .vs-palco-controles { grid-template-columns: 1fr 1fr; }
+  .vs-palco-controles > :is(.vs-science-caption, .vs-science-choices, .vs-palco-comparar) { grid-column: 1 / -1; }
+  .vs-palco-controles > .vs-spatial-parameter { grid-column: 1; grid-row: span 1; }
+}
+
+.vs-palco-personalizar { margin: 0 0 12px; padding: 16px 18px; border: 1px solid var(--vs-line); border-radius: 14px; background: var(--vs-paper); display: grid; gap: 14px 28px; }
+@media (min-width: 720px) { .vs-palco-personalizar { grid-template-columns: 1.2fr 1fr 1.2fr; } .vs-palco-personalizar > p { grid-column: 1 / -1; } }
+.vs-palco-personalizar fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+.vs-palco-personalizar legend { padding: 0; margin-bottom: 8px; font: 600 11px/1.4 Inter, system-ui, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--vs-dim); }
+.vs-palco-cores { display: flex; flex-wrap: wrap; gap: 8px; }
+.vs-palco-cores label { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 6px 12px 6px 8px; border: 1px solid var(--vs-line); border-radius: 999px; background: var(--vs-paper-strong); font-size: 13px; cursor: pointer; }
+.vs-palco-cores label:has(input:checked) { border-color: var(--vs-ink); box-shadow: 0 0 0 1px var(--vs-ink); }
+.vs-palco-cores label:has(input:focus-visible) { outline: 3px solid var(--vs-burgundy); outline-offset: 3px; }
+.vs-spatial-lab.vs-palco .vs-palco-cores input { position: absolute; width: 1px; height: 1px; min-height: 0; opacity: 0; }
+.vs-palco-cores label > span { display: inline-flex; }
+.vs-palco-cores label i { width: 16px; height: 16px; border-radius: 50%; background: var(--palco-sinal, var(--vs-burgundy)); border: 1px solid color-mix(in srgb, var(--vs-ink) 20%, transparent); }
+.vs-palco-cores label i + i { margin-left: -5px; background: var(--palco-soma, var(--vs-blue)); }
+.vs-palco-chave { display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 14px; cursor: pointer; }
+.vs-spatial-lab.vs-palco .vs-palco-chave input { width: 20px; height: 20px; min-height: 0; flex: 0 0 20px; accent-color: var(--vs-burgundy); }
+
+/* Paletas. Misturar com a tinta do tema escurece no claro e clareia no escuro,
+   então o mesmo par continua legível sobre papel e sobre fundo escuro. */
+:is(.vs-palco[data-palco-cor=materia], .vs-palco-cores label[data-cor=materia]) { --palco-sinal: var(--chapter-accent, var(--vs-burgundy)); --palco-soma: color-mix(in srgb, var(--vs-ink) 62%, var(--vs-paper)); }
+:is(.vs-palco[data-palco-cor=floresta], .vs-palco-cores label[data-cor=floresta]) { --palco-sinal: color-mix(in srgb, #2f7d57 78%, var(--vs-ink)); --palco-soma: color-mix(in srgb, #c98a1c 82%, var(--vs-ink)); }
+:is(.vs-palco[data-palco-cor=oceano], .vs-palco-cores label[data-cor=oceano]) { --palco-sinal: color-mix(in srgb, #1f6f9c 78%, var(--vs-ink)); --palco-soma: color-mix(in srgb, #cf5a3f 82%, var(--vs-ink)); }
+:is(.vs-palco[data-palco-cor=grafite], .vs-palco-cores label[data-cor=grafite]) { --palco-sinal: var(--vs-ink); --palco-soma: color-mix(in srgb, var(--vs-ink) 50%, var(--vs-paper)); }
+.vs-palco-cores label[data-cor=crivo] { --palco-sinal: var(--vs-burgundy); --palco-soma: var(--vs-blue); }
+
+@media (max-width: 560px) {
+  .vs-palco-acoes { gap: 6px; }
+  .vs-palco-acoes button { width: 44px; padding: 0; justify-content: center; }
+  .vs-palco-cena { border-radius: 14px; margin-inline: -4px; }
+}
+
+/* Abaixo de 900 px os três botões viram ícones: com o texto, quebravam em duas
+   linhas e empurravam a cena para fora da primeira tela do celular. O nome
+   continua no botão para leitor de tela. */
+@media (max-width: 899px) {
+  .vs-palco-acoes button span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .vs-palco-acoes button { width: 44px; padding: 0; justify-content: center; }
+  .vs-palco-acoes button svg { width: 18px; height: 18px; }
+}
+/* O desenho traz dois retângulos de fundo (papel e luz); dentro do palco quem
+   pinta o fundo é a própria caixa, senão sobra a borda de um quadro dentro do outro. */
+.vs-palco-cena > svg.vs-spatial-stage > rect { fill: transparent; }

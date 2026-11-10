@@ -44,6 +44,8 @@ for (const [subject, id] of chapters) {
     await page.emulateMedia({ reducedMotion: 'no-preference' });
     await lab.getByRole('button', { name: 'Girar o modelo' }).click();
     await expect(lab.getByRole('button', { name: 'Pausar giro' })).toHaveAttribute('aria-pressed', 'true');
+    // Os controles de ponto de vista moram em "Personalizar cena", recolhido por padrão.
+    await lab.getByRole('button', { name: 'Personalizar cena' }).click();
     await lab.getByRole('slider', { name: /Girar a vista/ }).fill('140');
     await page.evaluate(() => new Promise<void>(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve()))));
     await expect(lab.getByRole('img')).toHaveAttribute('data-view-yaw', '140');
