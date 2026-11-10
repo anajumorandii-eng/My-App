@@ -2,13 +2,22 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "dbe902ac92dfbdcf0b293f1bae46ad8692987c1a",
-  "generated_at_utc": "2026-11-10T02:03:30Z",
+  "source_commit": "73d270d56380c61e7da55960be6b0fee1512ae0f",
+  "generated_at_utc": "2026-11-10T18:54:40Z",
   "changed_files": [
-    "CLAUDE.md",
-    "docs/capas-vivas-2026-11-09/README.md",
-    "server/ai/coverArtDirection.ts",
-    "server/ai/coverImages.test.ts"
+    "src/hooks/usePreferenciasCena.ts",
+    "src/views/ChapterSceneFrame.css",
+    "src/views/ChapterSceneFrame.tsx",
+    "src/views/Visual.test.tsx",
+    "src/views/Visual.tsx",
+    "src/views/VisualArtifact.tsx",
+    "src/views/VisualJourney.test.tsx",
+    "src/views/visual-instruments/Palco3D.css",
+    "src/views/visual-instruments/Palco3D.test.tsx",
+    "src/views/visual-instruments/SpatialLabFrame.tsx",
+    "src/views/visual-instruments/SpatialStage.tsx",
+    "tests/e2e/visual-entrega-hg.spec.ts",
+    "tests/e2e/visual-refinement-continuation.spec.ts"
   ],
   "next_session": {
     "mode": "delta-only",
