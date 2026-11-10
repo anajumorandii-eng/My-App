@@ -22,6 +22,21 @@ objetos ou criar blocos densos de cor. A conexão continua pertencendo ao tema:
 neste exemplo, o fluxo de solução atravessa a dobra e liga os dois lados.
 As reservas de tipografia e rodapé seguem transparentes no pedido de arte.
 
+### Cor viva e conferência pelo fluxo real
+
+O ajuste posterior exige pigmentos mais vivos nos protagonistas: verde nítido
+e profundo, vinho distinto de marrom, cobre e dourado quentes e cores próprias
+do conteúdo preservadas. Sépia orienta a gravura, não um filtro sobre toda a
+pintura. Transparência leve fica nas margens; objetos sólidos mantêm cor
+definida, respeitando materiais naturalmente translúcidos como vidro e líquido.
+A leveza vem do espaço e das transições, sem apagar os pigmentos nem usar néon.
+
+Para conferir correspondência com o aplicativo, gerar pela rota autenticada
+real `/api/cover-illustrations` e montar a resposta no compositor nativo. Uma
+prévia criada em outra ferramenta continua sendo referência visual e não
+comprova, sozinha, a saída do provedor ativo. Não mudar endereço, credenciais,
+quota ou transporte apenas para produzir uma prévia diferente.
+
 As imagens são exemplos autorais gerados para aprovação, sem dados pessoais.
 Não são capas fixas usadas no aplicativo nem PDFs de estudo da estudante.
 
