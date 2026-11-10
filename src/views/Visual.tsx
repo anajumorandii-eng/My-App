@@ -572,7 +572,7 @@ export default function Visual() {
             </AnimatePresence>
           )}
 
-          {mode !== 'testar' && <ConceptChain
+          {mode === 'reconstruir' && <ConceptChain
             key={'map-' + summary.id}
             map={map}
             states={states}
@@ -583,6 +583,23 @@ export default function Visual() {
           />}
 
           {mode === 'explorar' && <VisualJourney key={'journey-' + summary.id} summary={summary} initialIndex={journeyStep} onStepChange={setJourneyStep} onPractice={() => changeMode('testar')} />}
+          {/* Em Explorar o mapa era mais uma leitura do capítulo logo abaixo da
+              cena, repetindo as cinco etapas que a leitura guiada já percorre.
+              Continua disponível — é por ele que se abre o conceito no
+              inspetor —, mas recolhido e depois da leitura. Em Reconstruir ele
+              é o exercício e aparece aberto, acima. */}
+          {mode === 'explorar' && <details className="vs-mapa-recolhido">
+            <summary>Mapa do capítulo e domínio de cada conceito</summary>
+            <ConceptChain
+              key={'map-' + summary.id}
+              map={map}
+              states={states}
+              selectedId={selectedNode}
+              onSelect={selectNode}
+              hiddenEdgeIds={hiddenEdgeIds}
+              escondendo={false}
+            />
+          </details>}
           {/* Quantas conexões o diagnóstico escondeu. Vivia dentro da prancha
               adiabática — a única das 26 que não usava o BoardShell —, então
               valia para um capítulo só. Aqui vale para todos, e a frase sobre

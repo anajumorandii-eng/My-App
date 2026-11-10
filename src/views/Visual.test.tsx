@@ -1,5 +1,5 @@
 
-import { act, fireEvent, render, screen, within, waitFor } from '@testing-library/react';
+import { act, fireEvent, render as renderBase, screen, within, waitFor } from '@testing-library/react';
 import { Link, MemoryRouter } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import userEvent from '@testing-library/user-event';
@@ -8,6 +8,17 @@ import { buildVisualMap } from '../lib/visualStudy';
 import type { RetrievalAttempt, SummaryProgress, SummaryProgressMap } from '../types/summary';
 import Visual from './Visual';
 import { findBoard } from './visual-boards/registry';
+
+// O palco 3D abre primeiro em Explorar; o esquema plano, que estes testes
+// cobrem, fica a um toque dele. Abrir aqui mantém cada teste falando do que
+// ele verifica, sem repetir o clique em todos.
+const render: typeof renderBase = ((...args: Parameters<typeof renderBase>) => {
+  const result = renderBase(...args);
+  const esquema = screen.queryByRole('button', { name: 'Esquema' });
+  if (esquema) fireEvent.click(esquema);
+  return result;
+}) as typeof renderBase;
+
 import { findInstrument } from './visual-instruments/registry';
 
 const capitulo = interactiveSummaries.find(
@@ -398,4 +409,28 @@ it('volta à explicação autoral do desafio sem perder a resposta ou o feedback
   fireEvent.click(screen.getByRole('tab', { name: 'Testar' }));
   expect(screen.getByLabelText('Sua resposta')).toHaveValue('Minha hipótese preservada');
   expect(screen.getByText(/Você preservou:/)).toBeInTheDocument();
+});
+
+describe('palco único', () => {
+  // A página empilhava esquema plano, modelo 3D, conceitos e mapa. Em Explorar
+  // a cena 3D abre sozinha; o esquema ocupa o mesmo lugar quando pedido.
+  it('abre a cena 3D primeiro e troca pelo esquema no mesmo lugar', async () => {
+    const { container } = renderBase(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
+    await waitFor(() => expect(container.querySelector('.vs-palco')).toBeInTheDocument());
+    expect(screen.getByRole('button', { name: 'Cena 3D' })).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.queryByTestId('visual-study-board')).not.toBeInTheDocument();
+    expect(container.querySelector('.vs-mapa-recolhido')).not.toHaveAttribute('open');
+    fireEvent.click(screen.getByRole('button', { name: 'Esquema' }));
+    expect(screen.getByTestId('visual-study-board')).toBeInTheDocument();
+    expect(container.querySelector('.vs-palco')).not.toBeInTheDocument();
+  });
+
+  it('em Reconstruir o esquema é a cena e o mapa aparece aberto', async () => {
+    const { container } = renderBase(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
+    fireEvent.click(screen.getByRole('tab', { name: /Reconstruir/ }));
+    expect(screen.queryByRole('button', { name: 'Cena 3D' })).not.toBeInTheDocument();
+    expect(screen.getByTestId('visual-study-board')).toBeInTheDocument();
+    expect(container.querySelector('.vs-mapa-recolhido')).not.toBeInTheDocument();
+    expect(container.querySelectorAll('.vs-chain-link').length).toBeGreaterThan(0);
+  });
 });

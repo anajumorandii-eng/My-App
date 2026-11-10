@@ -2,13 +2,48 @@ import React, { useId } from 'react';
 import type { PhysicsSpatialDrawing, SpatialTrace } from '../../lib/physicsSpatialDrawing';
 import { rotateSpatialPoint, type SpatialPoint } from '../../lib/spatialSolid';
 import type { SpatialCamera } from './SpatialLabFrame';
+import { usePreferenciasCenaAtual } from '../../hooks/usePreferenciasCena';
 
 type Role = SpatialTrace['role'];
-const COLOR: Record<Role, string> = { body: 'var(--vs-ink)', signal: 'var(--vs-burgundy)', reference: 'var(--vs-dim)', sum: 'var(--vs-blue)' };
+// O destaque e o complemento saem da paleta que a estudante escolheu no palco;
+// sem palco em volta (uso isolado), valem as cores de sempre.
+const COLOR: Record<Role, string> = { body: 'var(--vs-ink)', signal: 'var(--palco-sinal, var(--vs-burgundy))', reference: 'var(--vs-dim)', sum: 'var(--palco-soma, var(--vs-blue))' };
 const VIEW_W = 360, VIEW_H = 320, CX = 180, CY = 150;
 /** Distância da câmera: perspectiva leve, só para profundidade — não deforma a leitura das medidas. */
 const CAMERA_DISTANCE = 520;
 const LIGHT: SpatialPoint = (() => { const l: SpatialPoint = [-.45, .75, .5]; const n = Math.hypot(...l); return l.map(v => v / n) as SpatialPoint; })();
+
+export interface PlacedSpatialLabel { text: string; x: number; y: number; ax: number; ay: number; w: number }
+
+/**
+ * Posiciona as etiquetas sem deixá-las umas sobre as outras.
+ *
+ * Cada etiqueta era desenhada exatamente sobre o seu ponto. Nos modelos de
+ * anéis concêntricos os pontos são quase o mesmo, e as quatro etiquetas viravam
+ * uma pilha em que só a última se lia ("Su·Musi·…·Espiritualidade", no
+ * Simbolismo) — 23 capítulos na varredura de 10/11/2026. Aqui a etiqueta que
+ * colidiria desce para a primeira faixa livre, e um fio a liga ao ponto de
+ * origem (`ax`, `ay`) para o vínculo não se perder.
+ */
+export function placeSpatialLabels(labels: readonly { text: string; x: number; y: number }[]): PlacedSpatialLabel[] {
+  const H = 19, GAP = 3;
+  const placed: PlacedSpatialLabel[] = [];
+  const order = labels.map((label, index) => ({ label, index })).sort((a, b) => a.label.y - b.label.y || a.label.x - b.label.x);
+  const result: PlacedSpatialLabel[] = new Array(labels.length);
+  for (const { label, index } of order) {
+    const w = Math.max(20, label.text.length * 6.2 + 14);
+    const x = Math.max(w / 2 + 4, Math.min(VIEW_W - w / 2 - 4, label.x));
+    let y = Math.max(H / 2 + 4, Math.min(VIEW_H - H / 2 - 4, label.y));
+    const collides = (cy: number) => placed.some(other => Math.abs(other.x - x) < (other.w + w) / 2 + GAP && Math.abs(other.y - cy) < H + GAP);
+    // Desce faixa a faixa; sem espaço abaixo, sobe a partir do ponto original.
+    let guard = 0;
+    while (collides(y) && y + H + GAP <= VIEW_H - H / 2 - 4 && guard++ < 24) y += H + GAP;
+    if (collides(y)) { y = Math.max(H / 2 + 4, Math.min(VIEW_H - H / 2 - 4, label.y)); guard = 0; while (collides(y) && y - H - GAP >= H / 2 + 4 && guard++ < 24) y -= H + GAP; }
+    const item = { text: label.text, x, y, ax: label.x, ay: label.y, w };
+    placed.push(item); result[index] = item;
+  }
+  return result;
+}
 
 type Item =
   | { kind: 'trace'; depth: number; trace: SpatialTrace; points: [number, number, number][]; shade: number }
@@ -26,6 +61,7 @@ export function SpatialStage({ model, camera, label, dataAttributes }: {
   model: PhysicsSpatialDrawing; camera: SpatialCamera; label: string; dataAttributes: Record<string, string>;
 }) {
   const uid = useId().replace(/:/g, '');
+  const preferencias = usePreferenciasCenaAtual();
   const all = [...model.traces.flatMap(t => t.points), ...model.dots.map(d => d.point), ...model.labels.map(l => l.point)];
   const extent = Math.max(1, ...all.map(p => Math.hypot(...p)));
   const zoom = Math.min(2.4, 128 / extent);
@@ -72,6 +108,8 @@ export function SpatialStage({ model, camera, label, dataAttributes }: {
   const shadowCenter = toView([0, floorY, 0]);
   const path = (pts: [number, number, number][], closed?: boolean) => pts.map((p, i) => `${i ? 'L' : 'M'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ') + (closed ? ' Z' : '');
 
+  const labels = placeSpatialLabels(model.labels.map(l => { const [x, y] = toView(l.point); return { text: l.text, x, y }; }));
+
   return <svg {...camera.interaction} className="vs-plane vs-science-object vs-spatial-stage" style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
     viewBox={`0 0 ${VIEW_W} ${VIEW_H}`} role="img" aria-label={label} data-view-yaw={camera.yaw} data-view-pitch={camera.pitch} {...dataAttributes}>
     <defs>
@@ -101,11 +139,11 @@ export function SpatialStage({ model, camera, label, dataAttributes }: {
     </defs>
     <rect x="0" y="0" width={VIEW_W} height={VIEW_H} rx="16" fill={`url(#${uid}-bg)`} data-spatial-backdrop="true" />
     <rect x="0" y="0" width={VIEW_W} height={VIEW_H} rx="16" fill={`url(#${uid}-key)`} pointerEvents="none" />
-    <g data-spatial-floor="true" mask={`url(#${uid}-floormask)`}>
+    {preferencias.piso && <g data-spatial-floor="true" mask={`url(#${uid}-floormask)`}>
       <g stroke="var(--vs-dim)" strokeWidth=".55" opacity=".42">
         {grid.map(([a, b], i) => { const p = toView(a), q = toView(b); return <line key={i} x1={p[0]} y1={p[1]} x2={q[0]} y2={q[1]} />; })}
       </g>
-    </g>
+    </g>}
     <ellipse cx={shadowCenter[0]} cy={shadowCenter[1]} rx={extent * zoom * .72} ry={extent * zoom * .72 * Math.max(.16, Math.abs(Math.sin(camera.pitch * Math.PI / 180)))} fill={`url(#${uid}-shadow)`} />
     <g filter={`url(#${uid}-soft)`}>
       {model.dots.map((d, i) => { const s = toView([d.point[0], floorY, d.point[2]]); const r = (d.radius ?? 5) * Math.sqrt(zoom); return <ellipse key={i} cx={s[0]} cy={s[1]} rx={r * .95} ry={r * .32} fill="var(--vs-ink)" opacity=".16" />; })}
@@ -128,12 +166,10 @@ export function SpatialStage({ model, camera, label, dataAttributes }: {
           strokeLinejoin="round" strokeLinecap="round" markerEnd={trace.arrow ? `url(#${uid}-arrow-${trace.role})` : undefined} />
       </g>;
     })}
-    {model.labels.map((l, i) => {
-      const [x, y] = toView(l.point), w = Math.max(20, l.text.length * 6.2 + 14);
-      return <g key={i} className="vs-spatial-label" filter={`url(#${uid}-lift)`}>
-        <rect x={x - w / 2} y={y - 9.5} width={w} height="19" rx="9.5" fill="var(--vs-paper-strong)" fillOpacity=".94" stroke="var(--vs-line)" strokeWidth=".6" />
-        <text x={x} y={y + 3.8} textAnchor="middle" fill="var(--vs-ink)">{l.text}</text>
-      </g>;
-    })}
+    {preferencias.rotulos && labels.map((l, i) => <g key={i} className="vs-spatial-label" filter={`url(#${uid}-lift)`}>
+      {Math.hypot(l.x - l.ax, l.y - l.ay) > 6 && <line x1={l.ax} y1={l.ay} x2={l.x} y2={l.y} stroke="var(--vs-dim)" strokeWidth=".7" strokeOpacity=".7" />}
+      <rect x={l.x - l.w / 2} y={l.y - 9.5} width={l.w} height="19" rx="9.5" fill="var(--vs-paper-strong)" fillOpacity=".94" stroke="var(--vs-line)" strokeWidth=".6" />
+      <text x={l.x} y={l.y + 3.8} textAnchor="middle" fill="var(--vs-ink)">{l.text}</text>
+    </g>)}
   </svg>;
 }

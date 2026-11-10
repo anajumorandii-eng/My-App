@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup, fireEvent, render, screen, within } from '@testing-library/react';
+import { cleanup, fireEvent, render as renderBase, screen, within } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import { VisualJourney } from './VisualJourney';
 import { VisualArtifact } from './VisualArtifact';
@@ -9,6 +9,17 @@ import { NewtonLab, AtomLab } from './visual-boards/MechanismLab';
 import { topicExperiments } from './topic-experiments/catalog';
 import { sceneFor } from './topic-scenes/sceneFor';
 import { findBoard } from './visual-boards/registry';
+
+// O palco 3D abre primeiro em Explorar; o esquema plano, que estes testes
+// cobrem, fica a um toque dele. Abrir aqui mantém cada teste falando do que
+// ele verifica, sem repetir o clique em todos.
+const render: typeof renderBase = ((...args: Parameters<typeof renderBase>) => {
+  const result = renderBase(...args);
+  const esquema = screen.queryByRole('button', { name: 'Esquema' });
+  if (esquema) fireEvent.click(esquema);
+  return result;
+}) as typeof renderBase;
+
 import { findInstrument } from './visual-instruments/registry';
 
 const normalizedText = (value: string | null | undefined) => value?.replace(/\s+/g, ' ').trim() ?? '';

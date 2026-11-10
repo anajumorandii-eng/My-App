@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { challengeSectionIndex } from '../lib/visualChallenge';
-import { SpatialChapterSupplement } from './SpatialChapterSupplement';
+import { SpatialChapterSupplement, hasSpatialSupplement } from './SpatialChapterSupplement';
 import { HumanitiesConcepts } from './HumanitiesConcepts';
 import { ChapterSceneFrame } from './ChapterSceneFrame';
 import type { NodeState, VisualMap } from '../lib/visualStudy';
@@ -11,6 +11,7 @@ import { TopicScene } from './topic-scenes/TopicScene';
 import { findBoard } from './visual-boards/registry';
 import { findInstrument } from './visual-instruments/registry';
 import type { VisualRepresentation } from './visualRepresentation';
+import { Box, LayoutPanelTop } from 'lucide-react';
 
 type StudyMode = 'explorar' | 'testar' | 'reconstruir';
 
@@ -49,11 +50,34 @@ export function VisualArtifact({
 
   const challengeSection = summary.sections[challengeSectionIndex(summary)];
 
+  // Uma leitura por vez. A página empilhava o esquema plano, o modelo 3D, os
+  // conceitos e o mapa: quatro interpretações do mesmo capítulo, de cinco a
+  // nove telas de altura, e a Ana Júlia apontou que isso atrapalhava mais do
+  // que ajudava — a cena 3D é que devia ser a experiência. Em Explorar o palco
+  // 3D abre primeiro e sozinho; o esquema plano continua a um toque, no mesmo
+  // lugar, para quem quer a operação que só ele tem (o quadro de Punnett, o
+  // gráfico manipulável). Em Reconstruir o esquema continua sendo a cena,
+  // porque é ele que sabe esconder os vínculos frágeis.
+  const temPalco = mode === 'explorar' && hasSpatialSupplement(summary.id);
+  // A escolha vale para o capítulo em que foi feita. Guardada junto do id, ela
+  // volta a "cena" já no primeiro quadro do capítulo seguinte; com um efeito
+  // para zerá-la, esse quadro ainda saía com o esquema do capítulo anterior.
+  const [escolha, setEscolha] = useState<{ id: string; vista: 'cena' | 'esquema' }>({ id: summary.id, vista: 'cena' });
+  const vista = escolha.id === summary.id ? escolha.vista : 'cena';
+  const setVista = (nova: 'cena' | 'esquema') => setEscolha({ id: summary.id, vista: nova });
+  const mostraEsquema = !temPalco || vista === 'esquema';
+
   return (
     <div data-visual-representation={representation} data-study-artifact-mode={mode}
       data-humanities-workspace={summary.subject === 'Geografia' ? 'geography' : summary.subject === 'História' ? 'history' : undefined}>
-      <ChapterSceneFrame chapterId={summary.id} subject={summary.subject} title={summary.title} topic={summary.topic}>
+      <ChapterSceneFrame chapterId={summary.id} subject={summary.subject} title={summary.title} topic={summary.topic}
+        lead={temPalco ? <div className="vs-vista-toggle" role="group" aria-label="Vista do capítulo">
+          <button type="button" aria-pressed={vista === 'cena'} onClick={() => setVista('cena')}><Box aria-hidden="true" />Cena 3D</button>
+          <button type="button" aria-pressed={vista === 'esquema'} onClick={() => setVista('esquema')}><LayoutPanelTop aria-hidden="true" />Esquema</button>
+        </div> : undefined}>
       {closeFocus => <>
+      {temPalco && vista === 'cena' && <SpatialChapterSupplement key={`espacial-${summary.id}`} chapterId={summary.id} />}
+      {mostraEsquema && <>
       {Board && <Board map={map} states={states} selectedId={selectedId} onSelect={id => { closeFocus(); onSelect(id); }} hiddenEdgeIds={hiddenEdgeIds} mode={mode}
         activeStep={activeIndex} onStepChange={onSelectStep} challengeActive={mode !== 'explorar'} focusTarget={selectedId} />}
       {representation === 'experiment' && <TopicExperiment key={summary.id} summaryId={summary.id}
@@ -61,9 +85,9 @@ export function VisualArtifact({
       {representation === 'scene' && <TopicScene key={`cena-${summary.id}`} summaryId={summary.id}
         stage={{ map, sections: summary.sections, activeStep: activeIndex, onStepChange: onSelectStep, selectedId, onSelect, mode, hiddenEdgeIds }} />}
       {representation === 'fallback' && <TopicFallbackVisual summary={summary} activeIndex={activeIndex} onSelectStep={onSelectStep} />}
-      {mode === 'explorar' && <SpatialChapterSupplement key={`espacial-${summary.id}`} chapterId={summary.id} />}
       {mode === 'explorar' &&
         <HumanitiesConcepts map={map} states={states} selectedId={selectedId} onSelect={id => { closeFocus(); onSelect(id); }} />}
+      </>}
       </>}
       </ChapterSceneFrame>
       {mode === 'explorar' && <section className="vs-scene-bridge" aria-label="Da cena à compreensão">
@@ -71,10 +95,8 @@ export function VisualArtifact({
           <p>{map.recallPrompt}</p>
           {challengeSection && <p className="vs-scene-challenge-context">Explicação do desafio: {challengeSection.title}</p>}</div>
         <div className="vs-scene-bridge-actions">
-          <button type="button" onClick={() => {
-            const reading = document.getElementById('visual-chapter-reading');
-            reading?.scrollIntoView?.({ block: 'start' }); reading?.focus({ preventScroll: true });
-          }}>Entender esta etapa</button>
+          {/* "Entender esta etapa" só rolava a tela até a leitura, que agora
+              vem logo abaixo: era um terceiro botão para um caminho óbvio. */}
           {onReadChallenge && <button type="button" onClick={onReadChallenge}>Entender o desafio</button>}
           {onPractice && <button type="button" onClick={onPractice}>Responder ao desafio</button>}
         </div>
