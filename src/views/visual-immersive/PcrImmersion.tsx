@@ -292,11 +292,18 @@ export default function PcrImmersion({ onPractice, temaInicial }: { onPractice?:
     const up = () => { dragging = false; };
     canvasEl.addEventListener('pointerdown', down); canvasEl.addEventListener('pointermove', move);
     for (const name of ['pointerup', 'pointercancel', 'lostpointercapture']) canvasEl.addEventListener(name, up);
-    const visibility = () => { visible = !document.hidden; previousTime = 0; };
+    // Duas condições independentes: a aba estar à frente e a cena estar na
+    // tela. Antes o retorno à aba punha `visible = true` sozinho; quem tinha
+    // rolado até a leitura, trocado de aba e voltado ficava com a cena
+    // desenhando fora da tela, porque o IntersectionObserver só avisa quando a
+    // interseção muda.
+    let naTela = true;
+    const atualizar = () => { visible = naTela && !document.hidden; previousTime = 0; };
+    const visibility = atualizar;
     document.addEventListener('visibilitychange', visibility);
     // Fora da tela o laço não desenha: são noventa e poucas partículas e
     // centenas de esferas por quadro, à toa enquanto se lê o texto abaixo.
-    const onScreen = new IntersectionObserver(entries => { visible = entries[0].isIntersecting && !document.hidden; previousTime = 0; });
+    const onScreen = new IntersectionObserver(entries => { naTela = entries[entries.length - 1].isIntersecting; atualizar(); });
     onScreen.observe(shellEl);
     return () => {
       cancelAnimationFrame(frameId); observer.disconnect(); onScreen.disconnect();
