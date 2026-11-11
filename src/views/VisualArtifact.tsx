@@ -13,6 +13,7 @@ import { findInstrument } from './visual-instruments/registry';
 import type { VisualRepresentation } from './visualRepresentation';
 import { Box, LayoutPanelTop } from 'lucide-react';
 import { immersiveSceneFor } from './visual-immersive/registry';
+import { ChapterOutline } from './ChapterOutline';
 
 type StudyMode = 'explorar' | 'testar' | 'reconstruir';
 
@@ -68,11 +69,14 @@ export function VisualArtifact({
   const vista = escolha.id === summary.id ? escolha.vista : 'cena';
   const setVista = (nova: 'cena' | 'esquema') => setEscolha({ id: summary.id, vista: nova });
   const mostraEsquema = !temPalco || vista === 'esquema';
+  // A PCR já tem uma cena própria. O esquema de Biotecnologia organiza os
+  // assuntos da leitura, em vez de abrir outro laboratório da mesma reação.
+  const mostraPercurso = summary.id === 'summary-biologia-biotecnologia' && mode === 'explorar' && vista === 'esquema';
 
   return (
     <div data-visual-representation={representation} data-study-artifact-mode={mode}
       data-humanities-workspace={summary.subject === 'Geografia' ? 'geography' : summary.subject === 'História' ? 'history' : undefined}>
-      <ChapterSceneFrame chapterId={summary.id} subject={summary.subject} title={summary.title} topic={summary.topic}
+      <ChapterSceneFrame chapterId={summary.id} subject={summary.subject} title={summary.title} topic={summary.topic} showComparison={!mostraPercurso}
         lead={temPalco ? <div className="vs-vista-toggle" role="group" aria-label="Vista do capítulo">
           <button type="button" aria-pressed={vista === 'cena'} onClick={() => setVista('cena')}><Box aria-hidden="true" />Cena 3D</button>
           <button type="button" aria-pressed={vista === 'esquema'} onClick={() => setVista('esquema')}><LayoutPanelTop aria-hidden="true" />Esquema</button>
@@ -81,7 +85,15 @@ export function VisualArtifact({
       {temPalco && vista === 'cena' && (Imersiva
         ? <Suspense fallback={<p role="status">Preparando a cena…</p>}><Imersiva key={`imersiva-${summary.id}`} onPractice={onPractice} /></Suspense>
         : <SpatialChapterSupplement key={`espacial-${summary.id}`} chapterId={summary.id} />)}
-      {mostraEsquema && <>
+      {mostraPercurso && <ChapterOutline summary={summary} activeIndex={activeIndex} onSelectStep={index => {
+        const reading = document.getElementById('visual-chapter-reading');
+        closeFocus(); onSelectStep(index);
+        requestAnimationFrame(() => {
+          if (!reading?.isConnected) return;
+          reading.scrollIntoView({ block: 'start' }); reading.focus({ preventScroll: true });
+        });
+      }} />}
+      {mostraEsquema && !mostraPercurso && <>
       {Board && <Board map={map} states={states} selectedId={selectedId} onSelect={id => { closeFocus(); onSelect(id); }} hiddenEdgeIds={hiddenEdgeIds} mode={mode}
         activeStep={activeIndex} onStepChange={onSelectStep} challengeActive={mode !== 'explorar'} focusTarget={selectedId} />}
       {representation === 'experiment' && <TopicExperiment key={summary.id} summaryId={summary.id}
@@ -94,7 +106,7 @@ export function VisualArtifact({
       </>}
       </>}
       </ChapterSceneFrame>
-      {mode === 'explorar' && <section className="vs-scene-bridge" aria-label="Da cena à compreensão">
+      {mode === 'explorar' && !mostraPercurso && <section className="vs-scene-bridge" aria-label="Da cena à compreensão">
         <div><small>RELACIONE COM O CAPÍTULO</small><h3>{summary.sections[activeIndex]?.title ?? summary.title}</h3>
           <p>{map.recallPrompt}</p>
           {challengeSection && <p className="vs-scene-challenge-context">Explicação do desafio: {challengeSection.title}</p>}</div>

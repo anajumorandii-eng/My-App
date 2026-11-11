@@ -1,0 +1,18 @@
+.vs-chapter-outline{border:1px solid var(--vs-line);border-radius:18px;background:var(--vs-paper);color:var(--vs-ink);padding:24px}
+.vs-chapter-outline h2{font:500 clamp(24px,3vw,32px)/1.2 Newsreader,Georgia,serif;margin:0 0 20px;letter-spacing:-.025em}
+.vs-chapter-outline ol{list-style:none;padding:0;margin:0}
+.vs-chapter-outline li+li{border-top:1px solid var(--vs-line)}
+.vs-chapter-outline button{display:grid;grid-template-columns:32px minmax(0,1fr) 20px;align-items:center;gap:16px;width:100%;min-height:80px;padding:16px 12px;border:0;border-radius:8px;background:transparent;color:inherit;text-align:left;cursor:pointer}
+.vs-chapter-outline button:hover{background:color-mix(in srgb,var(--vs-burgundy) 5%,transparent)}
+.vs-chapter-outline button[aria-current=step]{background:color-mix(in srgb,var(--vs-burgundy) 7%,transparent);box-shadow:inset 3px 0 var(--vs-burgundy)}
+.vs-chapter-outline button:focus-visible{outline:3px solid var(--vs-burgundy);outline-offset:2px}
+.vs-chapter-outline-number{font:500 13px/1.4 Inter,system-ui,sans-serif;color:var(--vs-dim);font-variant-numeric:tabular-nums}
+.vs-chapter-outline-topic{display:grid;gap:4px;min-width:0}
+.vs-chapter-outline-topic small{font:600 10px/1.4 Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--vs-dim)}
+.vs-chapter-outline-topic strong{font:500 16px/1.4 Inter,system-ui,sans-serif;overflow-wrap:anywhere}
+.vs-chapter-outline button[aria-current=step] :is(.vs-chapter-outline-number,small){color:var(--vs-burgundy)}
+.vs-chapter-outline button svg{width:18px;height:18px;color:var(--vs-dim)}
+@media(max-width:1023px){.vs-chapter-outline button{scroll-margin-block:80px calc(88px + env(safe-area-inset-bottom,0px))}}
+/* O percurso acima já seleciona a leitura: uma segunda lista seria repetição. */
+.vs-main:has(.vs-chapter-outline) .vs-journey>nav{display:none}
+@media(max-width:560px){.vs-chapter-outline{padding:20px 14px}.vs-chapter-outline button{gap:10px;grid-template-columns:24px minmax(0,1fr) 18px;padding:14px 10px}.vs-chapter-outline-topic strong{font-size:15px}}
