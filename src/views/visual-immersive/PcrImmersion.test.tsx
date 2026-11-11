@@ -61,6 +61,44 @@ describe('cena imersiva da PCR', () => {
   });
 });
 
+describe('previsão antes de cada etapa', () => {
+  it('responder avança a etapa e devolve se a previsão estava certa', () => {
+    render(<PcrImmersion />);
+    fireEvent.click(screen.getByRole('button', { name: 'Separa as duas fitas' }));
+    expect(screen.getAllByRole('button', { name: /^0[1-5]/ })[1]).toHaveAttribute('aria-current', 'step');
+    expect(screen.getByRole('status')).toHaveTextContent('Você previu certo.');
+  });
+
+  it('no erro, explica o porquê em vez de só marcar errado', () => {
+    render(<PcrImmersion />);
+    fireEvent.click(screen.getByRole('button', { name: 'Quebra cada fita em pedaços' }));
+    expect(screen.getByRole('status')).toHaveTextContent(/Não foi isso\. O calor rompe as ligações de hidrogênio/);
+  });
+
+  it('pular pelo trilho não deixa retorno de uma previsão que não foi feita', () => {
+    render(<PcrImmersion />);
+    fireEvent.click(screen.getByRole('button', { name: 'Separa as duas fitas' }));
+    fireEvent.click(screen.getAllByRole('button', { name: /^0[1-5]/ })[3]);
+    expect(screen.queryByRole('status')).not.toBeInTheDocument();
+  });
+
+  it('a última etapa não pede previsão: não há próxima', () => {
+    render(<PcrImmersion />);
+    fireEvent.click(screen.getAllByRole('button', { name: /^0[1-5]/ })[4]);
+    expect(screen.queryByRole('group', { name: 'Antes de avançar, preveja' })).not.toBeInTheDocument();
+  });
+});
+
+describe('tinta da cena', () => {
+  it('abre em caderno e alterna para a versão da referência', () => {
+    const { container } = render(<PcrImmersion />);
+    expect(container.querySelector('.crivo-immersion')).toHaveAttribute('data-tema', 'caderno');
+    fireEvent.click(screen.getByRole('button', { name: /Ver em noite/ }));
+    expect(container.querySelector('.crivo-immersion')).toHaveAttribute('data-tema', 'noite');
+    expect(screen.getByRole('button', { name: /Ver em caderno/ })).toBeInTheDocument();
+  });
+});
+
 describe('registro de cenas imersivas', () => {
   // É protótipo de um capítulo só: registrar outro por engano trocaria a cena
   // dele por uma molécula de DNA que não é o assunto.

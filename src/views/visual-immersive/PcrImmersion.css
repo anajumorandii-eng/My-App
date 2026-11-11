@@ -109,3 +109,125 @@
 @media(max-width:640px){
 .crivo-immersion .cr-view-note{top:36px;right:20px}
 }
+
+/* ───── Revisão de 11/11/2026, sobre a referência ─────
+   Cinco mudanças propostas à Ana Júlia depois de ver a cena no aplicativo:
+   tinta de caderno, composição própria no celular, texto legível, a frase fixa
+   de vitrine fora, e uma previsão antes de cada etapa. */
+
+/* 1. Texto. Vários rótulos tinham 9 a 11 px; no celular cansavam. */
+.crivo-immersion .cr-eyebrow{font-size:11.5px}
+.crivo-immersion .cr-indicator,.crivo-immersion .cr-view-note{font-size:11px}
+.crivo-immersion .cr-temp-caption{font-size:11.5px;max-width:160px}
+.crivo-immersion .cr-stage-kicker{font-size:11.5px}
+.crivo-immersion .cr-description{font-size:15.5px;line-height:1.5;min-height:0}
+.crivo-immersion .cr-detail{font-size:14px}
+.crivo-immersion .cr-step{font-size:13px;min-height:52px}
+.crivo-immersion .cr-step span{font-size:11.5px}
+.crivo-immersion .cr-label-copy{font-size:13px}
+.crivo-immersion .cr-label-copy small{font-size:10.5px}
+.crivo-immersion .cr-next,.crivo-immersion .cr-practice{font-size:14px}
+.crivo-immersion .cr-choice{font-size:14px;min-height:44px;padding:9px 16px}
+.crivo-immersion .cr-foot{font-size:12px;align-items:center;flex-wrap:wrap}
+.crivo-immersion .cr-motion{font-size:13px;min-height:44px}
+.crivo-immersion .cr-foot-text{margin-left:auto}
+
+/* 2. Previsão antes de avançar, e o retorno dela na etapa seguinte. */
+.crivo-immersion .cr-readout{align-items:flex-end;flex-wrap:wrap}
+.crivo-immersion .cr-predict{flex:1 1 100%;order:3;pointer-events:auto;border-top:1px solid var(--line);padding-top:14px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+.crivo-immersion .cr-predict p{margin:0;font-size:15px;line-height:1.4;flex:1 1 260px}
+.crivo-immersion .cr-predict p span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:4px}
+.crivo-immersion .cr-predict div{display:flex;flex-wrap:wrap;gap:8px}
+.crivo-immersion .cr-feedback{margin:0 0 10px;padding:10px 14px;border-left:3px solid var(--lime);border-radius:0 10px 10px 0;background:#d4f68c12;font-size:14px;line-height:1.5}
+.crivo-immersion .cr-feedback[data-acertou=false]{border-left-color:#e9ca7a;background:#e9ca7a14}
+.crivo-immersion .cr-feedback strong{font-weight:650}
+
+/* 3. Tinta de caderno: mesmo desenho, cores do aplicativo. */
+.crivo-immersion[data-tema=caderno]{--ink:#2a2118;--dim:#6b5f50;--lime:#86233a;--line:#2a211826;background:#f6f0e3;color:var(--ink);color-scheme:light;box-shadow:inset 0 0 0 1px #2a21181f}
+.crivo-immersion[data-tema=caderno] .cr-shell{background:none}
+.crivo-immersion[data-tema=caderno] .cr-indicator{color:#5a4f41}
+.crivo-immersion[data-tema=caderno] .cr-dot{box-shadow:none}
+.crivo-immersion[data-tema=caderno] .cr-watermark{color:#2a211809}
+.crivo-immersion[data-tema=caderno] .cr-view-note{color:#6b5f50}
+.crivo-immersion[data-tema=caderno] .cr-tool{border-color:#2a211833;background:#fffaf0e6;color:var(--ink)}
+.crivo-immersion[data-tema=caderno] .cr-tool:hover{background:#efe6d3}
+.crivo-immersion[data-tema=caderno] .cr-tool[aria-pressed=true]{background:var(--lime);color:#fffaf0}
+.crivo-immersion[data-tema=caderno] .cr-label{background:#fffaf0e0;color:var(--ink);filter:drop-shadow(0 1px 3px #2a211826)}
+.crivo-immersion[data-tema=caderno] .cr-label-dot{border-color:var(--lime);box-shadow:0 0 0 5px #86233a14}
+.crivo-immersion[data-tema=caderno] .cr-label-copy small{color:#6b5f50}
+.crivo-immersion[data-tema=caderno] .cr-bottom{background:linear-gradient(transparent,#f6f0e3f2 24%,#f6f0e3 70%)}
+.crivo-immersion[data-tema=caderno] .cr-description{color:#3a3026}
+.crivo-immersion[data-tema=caderno] .cr-detail{color:#5a4f41}
+.crivo-immersion[data-tema=caderno] .cr-next{color:#fffaf0;box-shadow:0 6px 16px -8px #86233a}
+.crivo-immersion[data-tema=caderno] .cr-next:hover{background:#9b2c46}
+.crivo-immersion[data-tema=caderno] .cr-practice{border-color:#86233a80}
+.crivo-immersion[data-tema=caderno] .cr-step{border-top-color:#2a211826;color:#6b5f50}
+.crivo-immersion[data-tema=caderno] .cr-step span{color:#8a7d68}
+.crivo-immersion[data-tema=caderno] .cr-foot{color:#6b5f50}
+.crivo-immersion[data-tema=caderno] .cr-choice{border-color:#2a211840;background:#fffaf0;color:var(--ink)}
+.crivo-immersion[data-tema=caderno] .cr-choice[aria-pressed=true]{border-color:var(--lime);color:var(--lime);background:#86233a0f}
+.crivo-immersion[data-tema=caderno] .cr-feedback{background:#86233a0d}
+.crivo-immersion[data-tema=caderno] .cr-feedback[data-acertou=false]{border-left-color:#b9791c;background:#b9791c14}
+
+/* 4. Celular: a cena cabe na tela. Na referência tinha 820 px, e o trilho de
+   etapas ficava abaixo da dobra. O botão grande de avançar sai enquanto houver
+   previsão — responder é o que avança, e o trilho continua para quem quer pular. */
+@media(max-width:640px){
+.crivo-immersion .cr-shell{min-height:700px}
+.crivo-immersion .cr-intro{margin:22px 18px 0;width:auto}
+.crivo-immersion h2{font-size:34px;max-width:none;line-height:1.02}
+.crivo-immersion h2 br{display:none}
+.crivo-immersion h2 em{margin-left:.22em}
+.crivo-immersion .cr-eyebrow{font-size:10.5px;margin-bottom:8px}
+.crivo-immersion .cr-indicator{display:none}
+.crivo-immersion .cr-view-note{display:none}
+.crivo-immersion .cr-watermark{top:150px;font-size:120px}
+.crivo-immersion .cr-temp{top:118px;left:18px}
+.crivo-immersion .cr-temp-number{font-size:30px}
+.crivo-immersion .cr-temp-caption{font-size:11px;max-width:110px}
+.crivo-immersion .cr-tools{top:118px;right:14px}
+.crivo-immersion .cr-tool{width:44px;height:44px}
+.crivo-immersion .cr-bottom{padding:48px 18px 12px}
+.crivo-immersion .cr-readout{margin-bottom:12px;display:flex;gap:10px}
+.crivo-immersion .cr-description{font-size:14.5px;min-height:0}
+.crivo-immersion .cr-predict{padding-top:10px;gap:8px}
+.crivo-immersion .cr-predict p{font-size:14.5px;flex-basis:100%}
+.crivo-immersion .cr-predict div{width:100%}
+.crivo-immersion .cr-predict .cr-choice{flex:1 1 0;min-width:0;padding:8px 10px;font-size:13.5px;line-height:1.25}
+.crivo-immersion .cr-predict ~ .cr-actions{display:none}
+.crivo-immersion .cr-actions{width:100%;margin-top:0}
+.crivo-immersion .cr-step{font-size:12px;min-height:48px;padding-top:8px}
+.crivo-immersion .cr-step span{font-size:11px}
+.crivo-immersion .cr-foot{margin-top:4px;font-size:11.5px}
+.crivo-immersion .cr-motion{font-size:12.5px}
+.crivo-immersion .cr-foot-text{display:none}
+.crivo-immersion .cr-label-copy{font-size:12px}
+.crivo-immersion .cr-label-copy small{font-size:10.5px}
+}
+
+/* 5. Acertos de composição vistos na captura.
+   - No caderno a etapa atual perdia o destaque: a regra de cor das etapas
+     vinha depois da de aria-current com a mesma especificidade.
+   - Com a previsão o bloco de texto cresceu e cobria a metade de baixo da
+     molécula no iPad; a cena ganha altura e a leitura da temperatura sobe.
+   - No celular o título de duas linhas batia na temperatura e na etiqueta. */
+.crivo-immersion[data-tema=caderno] .cr-step[aria-current=step]{border-color:var(--lime);color:var(--lime)}
+.crivo-immersion[data-tema=caderno] .cr-step[aria-current=step] span{color:var(--lime)}
+.crivo-immersion .cr-step[aria-current=step]{font-weight:650}
+@media(min-width:641px){
+.crivo-immersion .cr-shell{min-height:820px}
+.crivo-immersion .cr-temp{top:300px}
+.crivo-immersion .cr-watermark{top:250px}
+}
+@media(max-width:640px){
+.crivo-immersion .cr-shell{min-height:724px}
+.crivo-immersion h2{font-size:28px}
+.crivo-immersion .cr-temp{top:150px}
+.crivo-immersion .cr-tools{top:150px}
+.crivo-immersion .cr-watermark{top:180px}
+}
+
+.crivo-immersion .cr-feedback[data-acertou=true]{display:inline-block;padding:6px 12px;border-radius:0 999px 999px 0}
+@media(min-width:641px){
+.crivo-immersion .cr-temp{top:262px}
+}
