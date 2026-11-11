@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import { challengeSectionIndex } from '../lib/visualChallenge';
 import { SpatialChapterSupplement, hasSpatialSupplement } from './SpatialChapterSupplement';
 import { HumanitiesConcepts } from './HumanitiesConcepts';
@@ -12,6 +12,7 @@ import { findBoard } from './visual-boards/registry';
 import { findInstrument } from './visual-instruments/registry';
 import type { VisualRepresentation } from './visualRepresentation';
 import { Box, LayoutPanelTop } from 'lucide-react';
+import { immersiveSceneFor } from './visual-immersive/registry';
 
 type StudyMode = 'explorar' | 'testar' | 'reconstruir';
 
@@ -58,7 +59,8 @@ export function VisualArtifact({
   // lugar, para quem quer a operação que só ele tem (o quadro de Punnett, o
   // gráfico manipulável). Em Reconstruir o esquema continua sendo a cena,
   // porque é ele que sabe esconder os vínculos frágeis.
-  const temPalco = mode === 'explorar' && hasSpatialSupplement(summary.id);
+  const Imersiva = immersiveSceneFor(summary.id);
+  const temPalco = mode === 'explorar' && (!!Imersiva || hasSpatialSupplement(summary.id));
   // A escolha vale para o capítulo em que foi feita. Guardada junto do id, ela
   // volta a "cena" já no primeiro quadro do capítulo seguinte; com um efeito
   // para zerá-la, esse quadro ainda saía com o esquema do capítulo anterior.
@@ -76,7 +78,9 @@ export function VisualArtifact({
           <button type="button" aria-pressed={vista === 'esquema'} onClick={() => setVista('esquema')}><LayoutPanelTop aria-hidden="true" />Esquema</button>
         </div> : undefined}>
       {closeFocus => <>
-      {temPalco && vista === 'cena' && <SpatialChapterSupplement key={`espacial-${summary.id}`} chapterId={summary.id} />}
+      {temPalco && vista === 'cena' && (Imersiva
+        ? <Suspense fallback={<p role="status">Preparando a cena…</p>}><Imersiva key={`imersiva-${summary.id}`} onPractice={onPractice} /></Suspense>
+        : <SpatialChapterSupplement key={`espacial-${summary.id}`} chapterId={summary.id} />)}
       {mostraEsquema && <>
       {Board && <Board map={map} states={states} selectedId={selectedId} onSelect={id => { closeFocus(); onSelect(id); }} hiddenEdgeIds={hiddenEdgeIds} mode={mode}
         activeStep={activeIndex} onStepChange={onSelectStep} challengeActive={mode !== 'explorar'} focusTarget={selectedId} />}

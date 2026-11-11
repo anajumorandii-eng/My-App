@@ -1,0 +1,245 @@
+/*
+ * Cena imersiva (referência "CRIVO · Protótipo Visual PCR", enviada pela Ana
+ * Júlia em 10/11/2026). As cores são da cena, não do tema: ela é uma janela
+ * para dentro da molécula e mantém o próprio fundo em caderno, papel ou escuro,
+ * como uma ilustração mantém as suas. A moldura de demonstração do protótipo
+ * (logotipo e aba "Visual") não veio: a navegação é a do aplicativo.
+ */
+
+.crivo-immersion{--ink:#edf4df;--dim:#b1c4b9;--lime:#d4f68c;--line:#e0f4d825;position:relative;isolation:isolate;overflow:hidden;width:100%;background:#071b19;color:var(--ink);font-family:Inter,system-ui,sans-serif;border-radius:18px;color-scheme:dark;box-sizing:border-box}
+.crivo-immersion *{box-sizing:border-box}
+.crivo-immersion button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.crivo-immersion button:focus-visible{outline:2px solid var(--lime);outline-offset:5px}
+.crivo-immersion .cr-shell{position:relative;min-height:720px;overflow:hidden;background:radial-gradient(ellipse at 67% 39%,#305b4811,transparent 63%)}
+.crivo-immersion .cr-canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y;cursor:grab}
+.crivo-immersion .cr-canvas:active{cursor:grabbing}
+.crivo-immersion .cr-intro{position:relative;z-index:2;margin:32px 0 0 38px;width:46%;pointer-events:none}
+.crivo-immersion .cr-eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);font-weight:600;margin-bottom:18px}
+.crivo-immersion h2{font-size:clamp(45px,7vw,79px);font-weight:450;letter-spacing:-.065em;line-height:.98;margin:0;max-width:420px;text-wrap:balance}
+.crivo-immersion h2 em{font-family:Newsreader,Georgia,serif;font-weight:400;color:var(--lime)}
+.crivo-immersion .cr-sub{font-size:13px;line-height:1.6;max-width:215px;margin:20px 0 0;color:var(--dim)}
+.crivo-immersion .cr-indicator{position:absolute;top:110px;right:36px;z-index:3;display:flex;align-items:center;gap:9px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#d0e7db;pointer-events:none}
+.crivo-immersion .cr-dot{width:5px;height:5px;background:var(--lime);border-radius:50%;box-shadow:0 0 12px #b7f790}
+.crivo-immersion .cr-watermark{position:absolute;top:280px;left:20px;z-index:0;font-size:160px;line-height:1;font-weight:700;letter-spacing:-.08em;color:#c6e9cb05;pointer-events:none}
+.crivo-immersion .cr-temp{position:absolute;left:39px;top:376px;z-index:2;pointer-events:none;display:flex;flex-direction:column;gap:7px}
+.crivo-immersion .cr-temp-number{font-size:35px;letter-spacing:-.05em;font-weight:400;font-variant-numeric:tabular-nums}
+.crivo-immersion .cr-temp-caption{color:var(--dim);font-size:10px;letter-spacing:.11em;text-transform:uppercase;max-width:130px;line-height:1.5}
+.crivo-immersion .cr-tools{position:absolute;right:24px;top:164px;z-index:5;display:flex;flex-direction:column;gap:8px}
+.crivo-immersion .cr-tool{width:42px;height:42px;border:1px solid #c7e7cc33;border-radius:50%;background:#0b2621db;display:grid;place-items:center;font-size:18px;transition:background .2s}
+.crivo-immersion .cr-tool:hover{background:#325240}
+.crivo-immersion .cr-tool[aria-pressed=true]{color:#162b23;background:var(--lime)}
+.crivo-immersion .cr-label{position:absolute;z-index:3;display:flex;align-items:center;gap:9px;max-width:190px;transform:translate(-10px,-50%);border:0;background:transparent;padding:10px;color:#e6f6df;text-align:left;filter:drop-shadow(0 2px 5px #061e19)}
+.crivo-immersion .cr-label-dot{width:8px;height:8px;border:1px solid #e4f6db;border-radius:50%;box-shadow:0 0 0 5px #d3e9c412;flex-shrink:0}
+.crivo-immersion .cr-label-copy{font-size:11px;line-height:1.4;white-space:nowrap;letter-spacing:.03em}
+.crivo-immersion .cr-label-copy small{display:block;font-size:9px;color:#b4cebf;letter-spacing:.14em;margin-top:3px;text-transform:uppercase}
+.crivo-immersion .cr-bottom{position:absolute;z-index:4;left:0;right:0;bottom:0;padding:64px 36px 22px;background:linear-gradient(transparent,#071b19ed 27%,#071b19 72%);pointer-events:none}
+.crivo-immersion .cr-bottom button{pointer-events:auto}
+.crivo-immersion .cr-readout{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:24px}
+.crivo-immersion .cr-copy{max-width:480px;min-width:0}
+.crivo-immersion .cr-stage-kicker{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);margin-bottom:8px}
+.crivo-immersion .cr-description{font-size:14px;line-height:1.55;color:#d4e1d8;min-height:44px;margin:0;text-wrap:pretty}
+.crivo-immersion .cr-next{border:0;border-radius:30px;background:var(--lime);color:#142a21;padding:15px 21px;min-height:48px;display:flex;align-items:center;justify-content:center;gap:20px;font-size:12px;font-weight:650;white-space:nowrap;box-shadow:0 0 35px #b8ed7020;transition:transform .2s,background .2s}
+.crivo-immersion .cr-next:hover{transform:translateY(-2px);background:#e3ffa8}
+.crivo-immersion .cr-next span:last-child{font-size:21px;line-height:15px}
+.crivo-immersion .cr-rail{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;pointer-events:auto}
+.crivo-immersion .cr-step{border:0;border-top:2px solid #aec2b52b;background:transparent;text-align:left;padding:13px 0 9px;min-height:48px;color:#a4bbad;transition:color .2s,border-color .2s;font-size:11px}
+.crivo-immersion .cr-step span{display:inline-block;margin-right:9px;font-size:10px;color:#8fa297}
+.crivo-immersion .cr-step[aria-current=step]{border-color:var(--lime);color:var(--lime)}
+.crivo-immersion .cr-step[aria-current=step] span{color:var(--lime)}
+.crivo-immersion .cr-foot{display:flex;justify-content:space-between;gap:12px;margin-top:14px;font-size:10px;color:#9eb6a6;letter-spacing:.02em}
+.crivo-immersion .cr-motion{border:0;background:transparent;padding:0;min-height:30px;display:flex;align-items:center;gap:6px;font-size:11px}
+.crivo-immersion .cr-foot-text{align-self:center;text-align:right}
+.crivo-immersion .cr-compare{display:flex;gap:8px;margin-top:13px;pointer-events:auto}
+.crivo-immersion .cr-compare[hidden]{display:none}
+.crivo-immersion .cr-choice{border:1px solid #a8c6b54f;border-radius:20px;background:#0b241e;color:#c5ddcd;min-height:40px;padding:8px 14px;font-size:11px}
+.crivo-immersion .cr-choice[aria-pressed=true]{border-color:var(--lime);color:var(--lime);background:#d4f68c0e}
+.crivo-immersion .cr-view-note{position:absolute;right:115px;top:436px;z-index:2;font-size:10px;letter-spacing:.08em;color:#abc3b4;pointer-events:none}
+@media(max-width:640px){
+.crivo-immersion{border-radius:13px}
+.crivo-immersion .cr-shell{min-height:820px}
+.crivo-immersion .cr-intro{margin:25px 20px 0;width:72%;}
+.crivo-immersion .cr-eyebrow{font-size:9px;margin-bottom:13px;letter-spacing:.16em}
+.crivo-immersion h2{font-size:45px;max-width:250px}
+.crivo-immersion .cr-sub{display:none}
+.crivo-immersion .cr-indicator{top:79px;right:20px;font-size:9px;letter-spacing:.05em}
+.crivo-immersion .cr-temp{top:233px;left:22px}
+.crivo-immersion .cr-temp-number{font-size:27px}
+.crivo-immersion .cr-temp-caption{font-size:9px;max-width:93px}
+.crivo-immersion .cr-watermark{top:300px;font-size:140px;left:-10px}
+.crivo-immersion .cr-tools{top:237px;right:16px;gap:9px}
+.crivo-immersion .cr-tool{width:42px;height:42px}
+.crivo-immersion .cr-view-note{top:512px;right:21px;font-size:9px}
+.crivo-immersion .cr-bottom{padding:55px 20px 16px}
+.crivo-immersion .cr-readout{display:block;margin-bottom:18px}
+.crivo-immersion .cr-copy{max-width:100%}
+.crivo-immersion .cr-description{font-size:12px;line-height:1.5;min-height:54px}
+.crivo-immersion .cr-next{margin-top:13px;width:100%;padding:12px 18px;min-height:44px;justify-content:space-between}
+.crivo-immersion .cr-rail{gap:9px}
+.crivo-immersion .cr-step{font-size:9px;line-height:1.5;padding-top:10px}
+.crivo-immersion .cr-step span{display:block;margin-bottom:3px}
+.crivo-immersion .cr-foot{margin-top:8px;gap:6px;font-size:9px}
+.crivo-immersion .cr-motion{font-size:10px;white-space:nowrap}
+.crivo-immersion .cr-label-copy{font-size:10px}
+.crivo-immersion .cr-label-copy small{font-size:9px}
+.crivo-immersion .cr-compare{margin-top:8px}
+}
+@media(prefers-reduced-motion:reduce){.crivo-immersion *{transition:none!important}}
+
+/* Sem a barra de demonstração, o texto de abertura sobe; o indicador e as
+   ferramentas acompanham. */
+.crivo-immersion .cr-intro{margin-top:44px}
+.crivo-immersion .cr-indicator{top:34px}
+.crivo-immersion .cr-tools{top:84px}
+.crivo-immersion .cr-detail{margin:10px 0 0;font-size:12.5px;line-height:1.55;color:#b9d2c2;max-width:480px;text-wrap:pretty}
+.crivo-immersion .cr-practice{border:1px solid #d4f68c66;border-radius:30px;background:transparent;color:var(--lime);padding:13px 19px;min-height:48px;font-size:12px;font-weight:650;white-space:nowrap}
+.crivo-immersion .cr-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;pointer-events:auto}
+@media(max-width:640px){
+.crivo-immersion .cr-intro{margin-top:30px}
+.crivo-immersion .cr-indicator{top:16px}
+.crivo-immersion .cr-tools{top:176px}
+.crivo-immersion .cr-actions{display:grid;grid-template-columns:1fr;margin-top:13px}
+.crivo-immersion .cr-actions .cr-next{margin-top:0}
+.crivo-immersion .cr-practice{width:100%;min-height:44px}
+}
+/* A dica de gesto ficava solta sobre a ponta da hélice (legível só em parte) e
+   a etiqueta do ponto de interesse caía em cima dos átomos. A dica sobe para
+   junto do indicador; a etiqueta ganha um fundo que a separa da molécula. */
+.crivo-immersion .cr-view-note{top:56px;right:36px}
+.crivo-immersion .cr-label{background:#071b19c4;border-radius:22px;padding:8px 14px 8px 10px}
+@media(max-width:640px){
+.crivo-immersion .cr-view-note{top:36px;right:20px}
+}
+
+/* ───── Revisão de 11/11/2026, sobre a referência ─────
+   Cinco mudanças propostas à Ana Júlia depois de ver a cena no aplicativo:
+   tinta de caderno, composição própria no celular, texto legível, a frase fixa
+   de vitrine fora, e uma previsão antes de cada etapa. */
+
+/* 1. Texto. Vários rótulos tinham 9 a 11 px; no celular cansavam. */
+.crivo-immersion .cr-eyebrow{font-size:11.5px}
+.crivo-immersion .cr-indicator,.crivo-immersion .cr-view-note{font-size:11px}
+.crivo-immersion .cr-temp-caption{font-size:11.5px;max-width:160px}
+.crivo-immersion .cr-stage-kicker{font-size:11.5px}
+.crivo-immersion .cr-description{font-size:15.5px;line-height:1.5;min-height:0}
+.crivo-immersion .cr-detail{font-size:14px}
+.crivo-immersion .cr-step{font-size:13px;min-height:52px}
+.crivo-immersion .cr-step span{font-size:11.5px}
+.crivo-immersion .cr-label-copy{font-size:13px}
+.crivo-immersion .cr-label-copy small{font-size:10.5px}
+.crivo-immersion .cr-next,.crivo-immersion .cr-practice{font-size:14px}
+.crivo-immersion .cr-choice{font-size:14px;min-height:44px;padding:9px 16px}
+.crivo-immersion .cr-foot{font-size:12px;align-items:center;flex-wrap:wrap}
+.crivo-immersion .cr-motion{font-size:13px;min-height:44px}
+.crivo-immersion .cr-foot-text{margin-left:auto}
+
+/* 2. Previsão antes de avançar, e o retorno dela na etapa seguinte. */
+.crivo-immersion .cr-readout{align-items:flex-end;flex-wrap:wrap}
+.crivo-immersion .cr-predict{flex:1 1 100%;order:3;pointer-events:auto;border-top:1px solid var(--line);padding-top:14px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+.crivo-immersion .cr-predict p{margin:0;font-size:15px;line-height:1.4;flex:1 1 260px}
+.crivo-immersion .cr-predict p span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:4px}
+.crivo-immersion .cr-predict div{display:flex;flex-wrap:wrap;gap:8px}
+.crivo-immersion .cr-feedback{margin:0 0 10px;padding:10px 14px;border-left:3px solid var(--lime);border-radius:0 10px 10px 0;background:#d4f68c12;font-size:14px;line-height:1.5}
+.crivo-immersion .cr-feedback[data-acertou=false]{border-left-color:#e9ca7a;background:#e9ca7a14}
+.crivo-immersion .cr-feedback strong{font-weight:650}
+
+/* 3. Tinta de caderno: mesmo desenho, cores do aplicativo. */
+.crivo-immersion[data-tema=caderno]{--ink:#2a2118;--dim:#6b5f50;--lime:#86233a;--line:#2a211826;background:#f6f0e3;color:var(--ink);color-scheme:light;box-shadow:inset 0 0 0 1px #2a21181f}
+.crivo-immersion[data-tema=caderno] .cr-shell{background:none}
+.crivo-immersion[data-tema=caderno] .cr-indicator{color:#5a4f41}
+.crivo-immersion[data-tema=caderno] .cr-dot{box-shadow:none}
+.crivo-immersion[data-tema=caderno] .cr-watermark{color:#2a211809}
+.crivo-immersion[data-tema=caderno] .cr-view-note{color:#6b5f50}
+.crivo-immersion[data-tema=caderno] .cr-tool{border-color:#2a211833;background:#fffaf0e6;color:var(--ink)}
+.crivo-immersion[data-tema=caderno] .cr-tool:hover{background:#efe6d3}
+.crivo-immersion[data-tema=caderno] .cr-tool[aria-pressed=true]{background:var(--lime);color:#fffaf0}
+.crivo-immersion[data-tema=caderno] .cr-label{background:#fffaf0e0;color:var(--ink);filter:drop-shadow(0 1px 3px #2a211826)}
+.crivo-immersion[data-tema=caderno] .cr-label-dot{border-color:var(--lime);box-shadow:0 0 0 5px #86233a14}
+.crivo-immersion[data-tema=caderno] .cr-label-copy small{color:#6b5f50}
+.crivo-immersion[data-tema=caderno] .cr-bottom{background:linear-gradient(transparent,#f6f0e3f2 24%,#f6f0e3 70%)}
+.crivo-immersion[data-tema=caderno] .cr-description{color:#3a3026}
+.crivo-immersion[data-tema=caderno] .cr-detail{color:#5a4f41}
+.crivo-immersion[data-tema=caderno] .cr-next{color:#fffaf0;box-shadow:0 6px 16px -8px #86233a}
+.crivo-immersion[data-tema=caderno] .cr-next:hover{background:#9b2c46}
+.crivo-immersion[data-tema=caderno] .cr-practice{border-color:#86233a80}
+.crivo-immersion[data-tema=caderno] .cr-step{border-top-color:#2a211826;color:#6b5f50}
+.crivo-immersion[data-tema=caderno] .cr-step span{color:#8a7d68}
+.crivo-immersion[data-tema=caderno] .cr-foot{color:#6b5f50}
+.crivo-immersion[data-tema=caderno] .cr-choice{border-color:#2a211840;background:#fffaf0;color:var(--ink)}
+.crivo-immersion[data-tema=caderno] .cr-choice[aria-pressed=true]{border-color:var(--lime);color:var(--lime);background:#86233a0f}
+.crivo-immersion[data-tema=caderno] .cr-feedback{background:#86233a0d}
+.crivo-immersion[data-tema=caderno] .cr-feedback[data-acertou=false]{border-left-color:#b9791c;background:#b9791c14}
+
+/* 4. Celular: a cena cabe na tela. Na referência tinha 820 px, e o trilho de
+   etapas ficava abaixo da dobra. O botão grande de avançar sai enquanto houver
+   previsão — responder é o que avança, e o trilho continua para quem quer pular. */
+@media(max-width:640px){
+.crivo-immersion .cr-shell{min-height:700px}
+.crivo-immersion .cr-intro{margin:22px 18px 0;width:auto}
+.crivo-immersion h2{font-size:34px;max-width:none;line-height:1.02}
+.crivo-immersion h2 br{display:none}
+.crivo-immersion h2 em{margin-left:.22em}
+.crivo-immersion .cr-eyebrow{font-size:10.5px;margin-bottom:8px}
+.crivo-immersion .cr-indicator{display:none}
+.crivo-immersion .cr-view-note{display:none}
+.crivo-immersion .cr-watermark{top:150px;font-size:120px}
+.crivo-immersion .cr-temp{top:118px;left:18px}
+.crivo-immersion .cr-temp-number{font-size:30px}
+.crivo-immersion .cr-temp-caption{font-size:11px;max-width:110px}
+.crivo-immersion .cr-tools{top:118px;right:14px}
+.crivo-immersion .cr-tool{width:44px;height:44px}
+.crivo-immersion .cr-bottom{padding:48px 18px 12px}
+.crivo-immersion .cr-readout{margin-bottom:12px;display:flex;gap:10px}
+.crivo-immersion .cr-description{font-size:14.5px;min-height:0}
+.crivo-immersion .cr-predict{padding-top:10px;gap:8px}
+.crivo-immersion .cr-predict p{font-size:14.5px;flex-basis:100%}
+.crivo-immersion .cr-predict div{width:100%}
+.crivo-immersion .cr-predict .cr-choice{flex:1 1 0;min-width:0;padding:8px 10px;font-size:13.5px;line-height:1.25}
+.crivo-immersion .cr-predict ~ .cr-actions{display:none}
+.crivo-immersion .cr-actions{width:100%;margin-top:0}
+.crivo-immersion .cr-step{font-size:12px;min-height:48px;padding-top:8px}
+.crivo-immersion .cr-step span{font-size:11px}
+.crivo-immersion .cr-foot{margin-top:4px;font-size:11.5px}
+.crivo-immersion .cr-motion{font-size:12.5px}
+.crivo-immersion .cr-foot-text{display:none}
+.crivo-immersion .cr-label-copy{font-size:12px}
+.crivo-immersion .cr-label-copy small{font-size:10.5px}
+}
+
+/* 5. Acertos de composição vistos na captura.
+   - No caderno a etapa atual perdia o destaque: a regra de cor das etapas
+     vinha depois da de aria-current com a mesma especificidade.
+   - Com a previsão o bloco de texto cresceu e cobria a metade de baixo da
+     molécula no iPad; a cena ganha altura e a leitura da temperatura sobe.
+   - No celular o título de duas linhas batia na temperatura e na etiqueta. */
+.crivo-immersion[data-tema=caderno] .cr-step[aria-current=step]{border-color:var(--lime);color:var(--lime)}
+.crivo-immersion[data-tema=caderno] .cr-step[aria-current=step] span{color:var(--lime)}
+.crivo-immersion .cr-step[aria-current=step]{font-weight:650}
+@media(min-width:641px){
+.crivo-immersion .cr-shell{min-height:820px}
+.crivo-immersion .cr-temp{top:300px}
+.crivo-immersion .cr-watermark{top:250px}
+}
+@media(max-width:640px){
+.crivo-immersion .cr-shell{min-height:724px}
+.crivo-immersion h2{font-size:28px}
+.crivo-immersion .cr-temp{top:150px}
+.crivo-immersion .cr-tools{top:150px}
+.crivo-immersion .cr-watermark{top:180px}
+}
+
+.crivo-immersion .cr-feedback[data-acertou=true]{display:inline-block;padding:6px 12px;border-radius:0 999px 999px 0}
+@media(min-width:641px){
+.crivo-immersion .cr-temp{top:262px}
+}
+
+/* 6. Fechamento após a aprovação de 11/11/2026.
+   - iPad: a legenda da temperatura encostava no rótulo da etapa quando havia
+     retorno de previsão; a leitura sobe mais um pouco.
+   - Celular: no erro, o porquê já explica a etapa. Mostrar também o texto da
+     etapa fazia o bloco cobrir o terço de baixo da molécula. */
+@media(min-width:641px){
+.crivo-immersion .cr-temp{top:236px}
+}
+@media(max-width:640px){
+.crivo-immersion .cr-feedback[data-acertou=false] + .cr-description{display:none}
+}
