@@ -2,20 +2,14 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "a627ef21c1bf6763d945cbce57f18214231a3509",
-  "generated_at_utc": "2026-11-10T21:46:42Z",
+  "source_commit": "26b3278f2b39069a05a464d1552465df8b502092",
+  "generated_at_utc": "2026-11-11T13:01:34Z",
   "changed_files": [
-    "docs/FUNCTIONALITY_MAP.md",
-    "docs/MANUAL-CRIVO.md",
-    "src/App.tsx",
-    "src/components/LegacyPrototypeRedirect.tsx",
-    "src/components/NucleoInstrumentalProductionLayout.tsx",
-    "src/components/StudyReader.tsx",
-    "src/components/layout/routePresentation.test.ts",
-    "src/design-system/routeVisuals.ts",
-    "src/prototypes/NucleoInstrumentalPrototype.tsx",
-    "src/views/Ajuda.test.tsx",
-    "src/views/Ajuda.tsx"
+    "src/views/VisualArtifact.tsx",
+    "src/views/visual-immersive/PcrImmersion.css",
+    "src/views/visual-immersive/PcrImmersion.test.tsx",
+    "src/views/visual-immersive/PcrImmersion.tsx",
+    "src/views/visual-immersive/registry.ts"
   ],
   "next_session": {
     "mode": "delta-only",
