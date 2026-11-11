@@ -71,12 +71,29 @@ type P3 = { x: number; y: number; z: number };
 const seed = (i: number) => { const value = Math.sin(i * 127.1 + 311.7) * 43758.5453; return value - Math.floor(value); };
 const rgba = (hex: string, alpha: number) => { const n = parseInt(hex.slice(1), 16); return `rgba(${n >> 16 & 255},${n >> 8 & 255},${n & 255},${alpha})`; };
 
-export default function PcrImmersion({ onPractice, temaInicial = 'caderno' }: { onPractice?: () => void; temaInicial?: TemaDaCena }) {
+/** O tema escuro do aplicativo marca `<html class="dark">`; a cena acompanha. */
+function useAppEscuro(): boolean {
+  const ler = () => typeof document !== 'undefined' && document.documentElement.classList.contains('dark');
+  const [escuro, setEscuro] = useState(ler);
+  useEffect(() => {
+    const observer = new MutationObserver(() => setEscuro(ler()));
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
+  return escuro;
+}
+
+export default function PcrImmersion({ onPractice, temaInicial }: { onPractice?: () => void; temaInicial?: TemaDaCena }) {
   const [phase, setPhase] = useState(0);
   const [primers, setPrimers] = useState(true);
   const [zoomed, setZoomed] = useState(false);
   const [detail, setDetail] = useState(false);
-  const [tema, setTema] = useState<TemaDaCena>(temaInicial);
+  // Sem escolha, a tinta segue o tema do aplicativo: em caderno fixo, a cena
+  // virava um quadro claro no meio do tema escuro. Quem troca pelo botão fica
+  // com a escolha enquanto a cena estiver aberta.
+  const appEscuro = useAppEscuro();
+  const [escolhida, setEscolhida] = useState<TemaDaCena | null>(temaInicial ?? null);
+  const tema: TemaDaCena = escolhida ?? (appEscuro ? 'noite' : 'caderno');
   // O que a estudante previu ao sair da etapa anterior. Vale só nesta visita:
   // a cena não é avaliação, e evidência continua vindo de Testar e Reconstruir.
   const [previsao, setPrevisao] = useState<{ acertou: boolean; porque: string } | null>(null);
@@ -344,7 +361,7 @@ export default function PcrImmersion({ onPractice, temaInicial = 'caderno' }: { 
           <button type="button" className="cr-motion" aria-pressed={paused} onClick={() => setPaused(value => !value)}>
             <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span> {paused ? 'Retomar movimento' : 'Pausar movimento'}
           </button>
-          <button type="button" className="cr-motion cr-tema" aria-pressed={tema === 'noite'} onClick={() => setTema(atual => atual === 'noite' ? 'caderno' : 'noite')}>
+          <button type="button" className="cr-motion cr-tema" aria-pressed={tema === 'noite'} onClick={() => setEscolhida(tema === 'noite' ? 'caderno' : 'noite')}>
             <span aria-hidden="true">◐</span> {tema === 'noite' ? 'Ver em caderno' : 'Ver em noite'}
           </button>
           <span className="cr-foot-text">Geometria e tempo simplificados</span>

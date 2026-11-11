@@ -99,6 +99,20 @@ describe('tinta da cena', () => {
   });
 });
 
+describe('tinta segue o tema do aplicativo', () => {
+  it('abre em noite quando o aplicativo está no tema escuro', () => {
+    document.documentElement.classList.add('dark');
+    try {
+      const { container } = render(<PcrImmersion />);
+      expect(container.querySelector('.crivo-immersion')).toHaveAttribute('data-tema', 'noite');
+      fireEvent.click(screen.getByRole('button', { name: /Ver em caderno/ }));
+      expect(container.querySelector('.crivo-immersion')).toHaveAttribute('data-tema', 'caderno');
+    } finally {
+      document.documentElement.classList.remove('dark');
+    }
+  });
+});
+
 describe('registro de cenas imersivas', () => {
   // É protótipo de um capítulo só: registrar outro por engano trocaria a cena
   // dele por uma molécula de DNA que não é o assunto.

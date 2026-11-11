@@ -231,3 +231,15 @@
 @media(min-width:641px){
 .crivo-immersion .cr-temp{top:262px}
 }
+
+/* 6. Fechamento após a aprovação de 11/11/2026.
+   - iPad: a legenda da temperatura encostava no rótulo da etapa quando havia
+     retorno de previsão; a leitura sobe mais um pouco.
+   - Celular: no erro, o porquê já explica a etapa. Mostrar também o texto da
+     etapa fazia o bloco cobrir o terço de baixo da molécula. */
+@media(min-width:641px){
+.crivo-immersion .cr-temp{top:236px}
+}
+@media(max-width:640px){
+.crivo-immersion .cr-feedback[data-acertou=false] + .cr-description{display:none}
+}
