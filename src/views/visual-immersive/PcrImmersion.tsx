@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { readReducedMotionPreference, useLiveReducedMotion } from '../../hooks/useLiveReducedMotion';
+import { useLiveReducedMotion } from '../../hooks/useLiveReducedMotion';
+import { advanceSynthesis, newBaseOpacity } from './pcrAnimation';
 import './PcrImmersion.css';
 
 /**
@@ -34,10 +35,12 @@ export const PCR_PHASES: readonly Phase[] = [
   { title: ['O calor', 'separa.'], kicker: '02 / Desnaturação', rail: 'Separar', text: 'O aquecimento desfaz o pareamento entre as bases. As duas fitas se separam e cada uma pode servir de molde.', number: '95°', unit: 'Celsius · exemplo', action: 'Resfriar e ligar primers', label: 'Fitas separadas', detail: 'O calor separa as fitas ao romper as interações entre elas. A cadeia de cada fita permanece íntegra.', predict: { question: 'Ao resfriar, o que se liga primeiro às fitas separadas?', options: ['As fitas longas, refazendo a hélice', 'Os primers'], right: 1, why: 'Os primers são curtos e estão em grande excesso: acham a sequência complementar antes de as fitas longas se reassociarem.' } },
   { title: ['O início', 'da cópia.'], kicker: '03 / Anelamento', rail: 'Primers', text: 'Ao resfriar, os primers se ligam a sequências complementares em fitas opostas. Eles definem onde a síntese começa.', number: '58°', unit: 'Celsius · exemplo', action: 'Iniciar a síntese', label: 'Primer', detail: 'Os primers são pequenos trechos de DNA. A temperatura de anelamento varia conforme as sequências usadas.', predict: { question: 'Em que sentido a nova fita vai crescer?', options: ['5′ → 3′', '3′ → 5′'], right: 0, why: 'A polimerase só acrescenta nucleotídeos à extremidade 3′ do primer.' } },
   { title: ['A informação', 'se multiplica.'], kicker: '04 / Extensão', rail: 'Copiar', text: 'A polimerase estende os primers. As novas fitas crescem no sentido 5′ → 3′, incorporando nucleotídeos complementares.', number: '72°', unit: 'Celsius · exemplo', action: 'Comparar os cenários', label: 'DNA polimerase', detail: 'A polimerase acrescenta nucleotídeos à extremidade 3′ do primer. O movimento na cena representa a progressão da síntese.', predict: { question: 'E se a reação não tivesse primers?', options: ['A cópia aconteceria, só mais devagar', 'Nenhuma fita nova seria sintetizada'], right: 1, why: 'Sem a extremidade 3′ de um primer, a polimerase não tem onde começar.' } },
-  { title: ['E sem', 'primers?'], kicker: '05 / Compare o resultado', rail: 'Comparar', text: 'Com primers, há pontos de partida para a síntese. Cada fita molde recebe uma nova fita complementar.', number: '02', unit: 'Duplas após a síntese', action: 'Rever a experiência', label: 'Nova fita', detail: 'Em ciclos repetidos, a quantidade do trecho-alvo aumenta. A cena mostra uma representação simplificada da síntese.' },
+  { title: ['E sem', 'primers?'], kicker: '05 / Compare o resultado', rail: 'Comparar', text: 'Com primers, duas novas fitas são sintetizadas. Cada molécula resultante tem uma fita original e uma nova.', number: '02', unit: 'Novas fitas sintetizadas', action: 'Rever a experiência', label: 'Nova fita', detail: 'Em ciclos repetidos, a quantidade do trecho-alvo aumenta. A cena mostra uma representação simplificada da síntese.' },
 ];
 
 const SEM_PRIMERS = 'Sem primers desde o início da reação, a polimerase não tem um ponto de partida. Não há amplificação do trecho-alvo.';
+const DETALHE_SEM_PRIMERS = 'O DNA inicial continua presente, mas, sem primers, a polimerase não inicia novas fitas.';
+const DETALHE_FITA_PRONTA = 'Cada molécula resultante tem uma fita original e uma nova. A nova fita foi sintetizada no sentido 5′ → 3′ a partir do primer.';
 
 export type TemaDaCena = 'caderno' | 'noite';
 
@@ -98,20 +101,22 @@ export default function PcrImmersion({ onPractice, temaInicial }: { onPractice?:
   // a cena não é avaliação, e evidência continua vindo de Testar e Reconstruir.
   const [previsao, setPrevisao] = useState<{ acertou: boolean; porque: string } | null>(null);
   const reduced = useLiveReducedMotion();
-  const [paused, setPaused] = useState(() => readReducedMotionPreference());
-  useEffect(() => { if (reduced) setPaused(true); }, [reduced]);
+  const [paused, setPaused] = useState(false);
+  const [synthesisComplete, setSynthesisComplete] = useState(false);
 
   const shell = useRef<HTMLDivElement>(null), canvas = useRef<HTMLCanvasElement>(null), hotspot = useRef<HTMLButtonElement>(null);
   // O laço de desenho lê o estado por aqui: recriá-lo a cada clique reiniciaria
   // a separação das fitas e a síntese no meio da transição.
-  const live = useRef({ phase, primers, zoomed, paused, tema, turn: 0 });
+  const live = useRef({ phase, primers, zoomed, paused, reduced, tema, turn: 0 });
+  live.current.reduced = reduced;
   live.current.tema = tema; live.current.phase = phase; live.current.primers = primers; live.current.zoomed = zoomed; live.current.paused = paused;
 
-  const goTo = (value: number) => { setPhase(value); setPrimers(true); setDetail(false); setPrevisao(null); };
+  const goTo = (value: number) => { setPhase(value); setPrimers(true); setDetail(false); setPrevisao(null); if (value !== phase) setSynthesisComplete(false); };
   const prever = (escolha: number) => {
     const pergunta = PCR_PHASES[phase].predict;
     if (!pergunta) return;
     setPhase(phase + 1); setPrimers(true); setDetail(false);
+    setSynthesisComplete(false);
     setPrevisao({ acertou: escolha === pergunta.right, porque: pergunta.why });
   };
 
@@ -125,6 +130,7 @@ export default function PcrImmersion({ onPractice, temaInicial }: { onPractice?:
     let elapsed = 0, rotation = .18, rotationTarget = .18, tilt = .12, tiltTarget = .12;
     let separation = 0, primerAmount = 0, extension = 0, zoom = 1, cameraShift = 0, heat = 0;
     let dragging = false, lastX = 0, lastY = 0, lastPhase = 0, lastTurn = live.current.turn;
+    let lastPrimers = true, lastPaused = false, lastZoomed = false, completed = false;
     const sprites = new Map<string, HTMLCanvasElement>();
     const particles = Array.from({ length: 95 }, (_, i) => ({ x: seed(i) * 2 - 1, y: seed(i + 95) * 2 - 1, z: seed(i + 190), size: 1 + seed(i + 285) * 3.5, speed: .18 + seed(i + 380) * .4 }));
 
@@ -211,8 +217,8 @@ export default function PcrImmersion({ onPractice, temaInicial }: { onPractice?:
           if (i % 2 === 0) addSphere({ x: p.x + 3, y: p.y - 4, z: p.z + 5 }, 2.2, ATOM.white, .65);
           if (strand === 0 && separation < 50) addBond(mix(p, opposite, .42), mix(p, opposite, .58), pal.ponte, 1.2, Math.max(0, 1 - separation / 45) * .7);
           const isPrimer = strand === 0 ? i >= N - 4 : i < 4;
-          const fraction = strand === 0 ? (N - 4 - i) / (N - 4) : (i - 3) / (N - 4);
-          const copied = isPrimer ? primerAmount : Math.max(0, Math.min(1, (extension - fraction) * 7));
+          const order = strand === 0 ? N - 5 - i : i - 4;
+          const copied = isPrimer ? primerAmount : newBaseOpacity(extension, order, N - 4);
           if (copied > .005) {
             const newColor = isPrimer ? ATOM.gold : ATOM.violet;
             addSphere(localOpposite, 5.5, newColor, copied);
@@ -222,7 +228,7 @@ export default function PcrImmersion({ onPractice, temaInicial }: { onPractice?:
           }
         }
       }
-      if (now === 3 && extension < .995 && primerAmount > .8) {
+      if (now === 3 && extension < 1 && primerAmount > .8) {
         for (let strand = 0; strand < 2; strand++) {
           const i = strand === 0 ? (N - 4) * (1 - extension) : 3 + (N - 4) * extension;
           const p = point(i, strand, true);
@@ -246,7 +252,7 @@ export default function PcrImmersion({ onPractice, temaInicial }: { onPractice?:
       }
       let target = point(10, 1);
       if (now === 2) target = point(2, 1, true);
-      if (now === 3) target = point(3 + (N - 4) * Math.min(extension, .95), 1, true);
+      if (now === 3) target = extension >= 1 ? point(10, 1, true) : point(3 + (N - 4) * extension, 1, true);
       if (now === 4) target = point(10, 1, withPrimers);
       // A largura inclui a folga das duas ferramentas à direita: sem ela a etiqueta
       // parava debaixo do botão de aproximar.
@@ -263,20 +269,29 @@ export default function PcrImmersion({ onPractice, temaInicial }: { onPractice?:
       if (!visible) return;
       const state = live.current;
       const delta = previousTime ? Math.min((timestamp - previousTime) / 1000, .05) : .016; previousTime = timestamp;
-      if (state.phase !== lastPhase) { if (state.phase === 3) extension = 0; lastPhase = state.phase; }
+      const changed = state.phase !== lastPhase || state.primers !== lastPrimers;
+      const zoomChanged = state.zoomed !== lastZoomed; lastZoomed = state.zoomed;
+      if (state.phase !== lastPhase) { if (state.phase === 3) extension = 0; completed = false; lastPhase = state.phase; }
+      lastPrimers = state.primers;
+      if (state.paused && !lastPaused) { rotationTarget = rotation; tiltTarget = tilt; }
+      lastPaused = state.paused;
       if (state.turn !== lastTurn) { rotationTarget += Math.PI / 3 * (state.turn - lastTurn); lastTurn = state.turn; }
-      // Pausada, a cena salta para o estado final da etapa em vez de congelar a
-      // meio caminho: com movimento reduzido ainda se vê o resultado de cada passo.
-      const ease = state.paused ? 1 : 1 - Math.exp(-delta * 3);
-      if (!state.paused) { elapsed += delta; if (!dragging) rotationTarget += delta * .055; }
-      rotation += (rotationTarget - rotation) * Math.min(1, delta * 5);
-      tilt += (tiltTarget - tilt) * Math.min(1, delta * 5);
+      // Trocar explicitamente de etapa/cenário continua mostrando seu resultado
+      // mesmo com a pausa ligada. Pausar a etapa corrente conserva seu progresso.
+      const instant = state.reduced || (state.paused && changed);
+      const ease = instant ? 1 : state.paused ? 0 : 1 - Math.exp(-delta * 3);
+      const still = state.paused || state.reduced;
+      if (!still) { elapsed += delta; if (!dragging) rotationTarget += delta * .055; }
+      const cameraEase = still ? 1 : Math.min(1, delta * 5);
+      rotation += (rotationTarget - rotation) * cameraEase;
+      tilt += (tiltTarget - tilt) * cameraEase;
       separation += ((state.phase === 0 ? 0 : 88) - separation) * ease;
       const hasPrimers = state.phase >= 2 && (state.phase !== 4 || state.primers);
       primerAmount += ((hasPrimers ? 1 : 0) - primerAmount) * ease;
-      if (state.phase === 3) extension = state.paused ? 1 : Math.min(1, extension + delta * .105);
+      if (state.phase === 3) extension = advanceSynthesis(extension, delta, state.paused, instant);
       else extension += ((state.phase === 4 && state.primers ? 1 : 0) - extension) * ease;
-      zoom += ((state.zoomed ? 1.25 : 1) - zoom) * ease;
+      if (state.phase === 3 && extension >= 1 && !completed) { completed = true; setSynthesisComplete(true); }
+      zoom += ((state.zoomed ? 1.25 : 1) - zoom) * (state.reduced || (still && zoomChanged) ? 1 : ease);
       cameraShift += ((state.phase === 2 ? 14 : 0) - cameraShift) * ease;
       heat += ((state.phase === 1 ? 1 : 0) - heat) * ease;
       background(); drawMolecule();
@@ -315,7 +330,9 @@ export default function PcrImmersion({ onPractice, temaInicial }: { onPractice?:
 
   const data = PCR_PHASES[phase];
   const semPrimers = phase === 4 && !primers;
-  const label = semPrimers ? 'Fita molde' : data.label;
+  const fitaPronta = phase === 3 && (reduced || synthesisComplete);
+  const label = semPrimers ? 'Fita molde' : fitaPronta ? 'Nova fita' : data.label;
+  const detailText = semPrimers ? DETALHE_SEM_PRIMERS : fitaPronta ? DETALHE_FITA_PRONTA : data.detail;
   return <section className="crivo-immersion" data-tema={tema} aria-label="Cena imersiva: reação em cadeia da polimerase">
     <div className="cr-shell" ref={shell}>
       <canvas ref={canvas} className="cr-canvas" role="img" aria-label="Modelo tridimensional esquemático do DNA. As etapas mostram a separação das fitas, a ligação dos primers e a síntese de novas fitas." />
@@ -344,7 +361,7 @@ export default function PcrImmersion({ onPractice, temaInicial }: { onPractice?:
               <strong>{previsao.acertou ? 'Você previu certo.' : 'Não foi isso.'}</strong>{!previsao.acertou && <> {previsao.porque}</>}
             </p>}
             <p className="cr-description" aria-live="polite">{semPrimers ? SEM_PRIMERS : data.text}</p>
-            {detail && <p className="cr-detail">{data.detail}</p>}
+            {detail && <p className="cr-detail">{detailText}</p>}
             {phase === 4 && <div className="cr-compare" role="group" aria-label="Cenário da reação">
               <button type="button" className="cr-choice" aria-pressed={primers} onClick={() => setPrimers(true)}>Com primers</button>
               <button type="button" className="cr-choice" aria-pressed={!primers} onClick={() => setPrimers(false)}>Sem primers</button>
@@ -365,8 +382,8 @@ export default function PcrImmersion({ onPractice, temaInicial }: { onPractice?:
           </button>)}
         </nav>
         <div className="cr-foot">
-          <button type="button" className="cr-motion" aria-pressed={paused} onClick={() => setPaused(value => !value)}>
-            <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span> {paused ? 'Retomar movimento' : 'Pausar movimento'}
+          <button type="button" className="cr-motion" disabled={reduced} aria-pressed={paused || reduced} onClick={() => setPaused(value => !value)}>
+            <span aria-hidden="true">{paused || reduced ? '▷' : 'Ⅱ'}</span> {reduced ? 'Movimento reduzido' : paused ? 'Retomar movimento' : 'Pausar movimento'}
           </button>
           <button type="button" className="cr-motion cr-tema" aria-pressed={tema === 'noite'} onClick={() => setEscolhida(tema === 'noite' ? 'caderno' : 'noite')}>
             <span aria-hidden="true">◐</span> {tema === 'noite' ? 'Ver em caderno' : 'Ver em noite'}

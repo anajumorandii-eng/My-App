@@ -1,8 +1,11 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+import * as motionPreference from '../../hooks/useLiveReducedMotion';
 import PcrImmersion, { PCR_PHASES } from './PcrImmersion';
 import { IMMERSIVE_SCENES, immersiveSceneFor } from './registry';
+
+afterEach(() => vi.mocked(motionPreference.useLiveReducedMotion).mockRestore?.());
 
 describe('cena imersiva da PCR', () => {
   it('percorre as cinco etapas pelo trilho e pelo botão de avançar', () => {
@@ -24,6 +27,7 @@ describe('cena imersiva da PCR', () => {
     expect(screen.queryByRole('group', { name: 'Cenário da reação' })).not.toBeInTheDocument();
     fireEvent.click(screen.getAllByRole('button', { name: /^0[1-5]/ })[4]);
     expect(leitura()).toBe('02');
+    expect(screen.getByText('Novas fitas sintetizadas')).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Sem primers' }));
     expect(screen.getByText(/Não há amplificação do trecho-alvo/)).toBeInTheDocument();
     expect(leitura()).toBe('00');
@@ -58,6 +62,30 @@ describe('cena imersiva da PCR', () => {
     const antes = pausa.getAttribute('aria-pressed');
     fireEvent.click(pausa);
     expect(pausa.getAttribute('aria-pressed')).not.toBe(antes);
+  });
+});
+
+describe('coerência do resultado da PCR', () => {
+  it('troca o detalhe aberto quando os primers são retirados', () => {
+    render(<PcrImmersion />);
+    fireEvent.click(screen.getAllByRole('button', { name: /^0[1-5]/ })[4]);
+    fireEvent.click(screen.getByRole('button', { name: 'Inspecionar nova fita' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Sem primers' }));
+    expect(screen.getByRole('button', { name: 'Inspecionar fita molde' })).toHaveAttribute('aria-expanded', 'true');
+    expect(screen.getByText(/O DNA inicial continua presente/)).toBeInTheDocument();
+    expect(screen.queryByText(/Em ciclos repetidos, a quantidade/)).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Com primers' }));
+    expect(screen.queryByText(/O DNA inicial continua presente/)).not.toBeInTheDocument();
+  });
+
+  it('com movimento reduzido, inspeciona a fita pronta em vez de uma enzima ausente', () => {
+    vi.spyOn(motionPreference, 'useLiveReducedMotion').mockReturnValue(true);
+    render(<PcrImmersion />);
+    fireEvent.click(screen.getAllByRole('button', { name: /^0[1-5]/ })[3]);
+    expect(screen.queryByRole('button', { name: 'Inspecionar dna polimerase' })).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Inspecionar nova fita' }));
+    expect(screen.getByText(/Cada molécula resultante/)).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Movimento reduzido/ })).toBeDisabled();
   });
 });
 
