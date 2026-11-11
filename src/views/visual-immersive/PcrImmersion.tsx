@@ -64,7 +64,7 @@ const PALETA = {
 const N = 28;
 // Centro da molécula no celular. A referência a punha em 371 px numa cena de
 // 820 px, mais alta que a tela: quem estava na etapa 1 não via o trilho de
-// etapas sem rolar. Aqui a cena tem 690 px e a molécula sobe e encolhe.
+// etapas sem rolar. Aqui a cena tem 724 px e a molécula sobe e encolhe.
 const MOBILE_CY = 262;
 type P3 = { x: number; y: number; z: number };
 

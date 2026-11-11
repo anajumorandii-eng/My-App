@@ -181,7 +181,9 @@ interface, ícones e navegação continuam obedecendo ao shell existente do CRIV
 - `src/views/Visual.css`: composição responsiva e estados visuais;
 - `src/lib/visualStudy.ts`: tipos e regras do mapa;
 - `src/lib/visualStudy.test.ts`: testes das regras de reconstrução;
-- `src/views/Visual.test.tsx`: testes da interação da tela.
+- `src/views/Visual.test.tsx`: testes da interação da tela;
+- `src/views/visual-immersive/`: cena imersiva da PCR, especificada em
+  [`CENA-IMERSIVA-PCR.md`](CENA-IMERSIVA-PCR.md).
 
 ## Referências visuais
 
