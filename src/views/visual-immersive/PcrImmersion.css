@@ -243,3 +243,18 @@
 @media(max-width:640px){
 .crivo-immersion .cr-feedback[data-acertou=false] + .cr-description{display:none}
 }
+
+/* A barra do aplicativo é fixa até 1023 px. A folga pertence à casca,
+   abaixo dos controles: não desloca a molécula nem aumenta o bloco de leitura. */
+@media(max-width:1023px){
+  .crivo-immersion{--cr-navigation-space:calc(88px + env(safe-area-inset-bottom,0px));scroll-margin-top:72px}
+  .crivo-immersion .cr-shell{min-height:calc(820px + var(--cr-navigation-space))}
+  .crivo-immersion .cr-bottom{padding-bottom:calc(22px + var(--cr-navigation-space))}
+  .crivo-immersion button{scroll-margin-block:80px calc(16px + var(--cr-navigation-space))}
+  .vs-chapter-scene--focus .crivo-immersion{--cr-navigation-space:0px}
+}
+@media(max-width:640px){
+  .crivo-immersion .cr-shell{min-height:calc(724px + var(--cr-navigation-space))}
+  .crivo-immersion .cr-bottom{padding-bottom:calc(12px + var(--cr-navigation-space))}
+}
+.crivo-immersion .cr-motion:disabled{cursor:default}
