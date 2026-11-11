@@ -1,0 +1,164 @@
+[
+ {
+  "vp": "celular 390×844",
+  "tema": "caderno",
+  "rm": "no-preference",
+  "tam": [
+   "44×44",
+   "44×44"
+  ],
+  "fora": false,
+  "col": [],
+  "over": 0,
+  "pausa": "false",
+  "zoom": "true",
+  "cols": [],
+  "foco": "solid 2px",
+  "errs": [],
+  "net": []
+ },
+ {
+  "vp": "celular 390×844",
+  "tema": "caderno",
+  "rm": "reduce",
+  "tam": [
+   "44×44",
+   "44×44"
+  ],
+  "fora": false,
+  "col": [],
+  "over": 0,
+  "pausa": "true",
+  "zoom": "true",
+  "cols": [],
+  "foco": "solid 2px",
+  "errs": [],
+  "net": []
+ },
+ {
+  "vp": "celular 390×844",
+  "tema": "noite",
+  "rm": "no-preference",
+  "tam": [
+   "44×44",
+   "44×44"
+  ],
+  "fora": false,
+  "col": [],
+  "over": 0,
+  "pausa": "false",
+  "zoom": "true",
+  "cols": [],
+  "foco": "solid 2px",
+  "errs": [],
+  "net": []
+ },
+ {
+  "vp": "ipad 834×1112",
+  "tema": "caderno",
+  "rm": "no-preference",
+  "tam": [
+   "44×44",
+   "44×44"
+  ],
+  "fora": false,
+  "col": [],
+  "over": 0,
+  "pausa": "false",
+  "zoom": "true",
+  "cols": [],
+  "foco": "solid 2px",
+  "errs": [],
+  "net": []
+ },
+ {
+  "vp": "ipad 834×1112",
+  "tema": "caderno",
+  "rm": "reduce",
+  "tam": [
+   "44×44",
+   "44×44"
+  ],
+  "fora": false,
+  "col": [],
+  "over": 0,
+  "pausa": "true",
+  "zoom": "true",
+  "cols": [],
+  "foco": "solid 2px",
+  "errs": [],
+  "net": []
+ },
+ {
+  "vp": "ipad 834×1112",
+  "tema": "noite",
+  "rm": "no-preference",
+  "tam": [
+   "44×44",
+   "44×44"
+  ],
+  "fora": false,
+  "col": [],
+  "over": 0,
+  "pausa": "false",
+  "zoom": "true",
+  "cols": [],
+  "foco": "solid 2px",
+  "errs": [],
+  "net": []
+ },
+ {
+  "vp": "desktop 1366×900",
+  "tema": "caderno",
+  "rm": "no-preference",
+  "tam": [
+   "44×44",
+   "44×44"
+  ],
+  "fora": false,
+  "col": [],
+  "over": 0,
+  "pausa": "false",
+  "zoom": "true",
+  "cols": [],
+  "foco": "solid 2px",
+  "errs": [],
+  "net": []
+ },
+ {
+  "vp": "desktop 1366×900",
+  "tema": "caderno",
+  "rm": "reduce",
+  "tam": [
+   "44×44",
+   "44×44"
+  ],
+  "fora": false,
+  "col": [],
+  "over": 0,
+  "pausa": "true",
+  "zoom": "true",
+  "cols": [],
+  "foco": "solid 2px",
+  "errs": [],
+  "net": []
+ },
+ {
+  "vp": "desktop 1366×900",
+  "tema": "noite",
+  "rm": "no-preference",
+  "tam": [
+   "44×44",
+   "44×44"
+  ],
+  "fora": false,
+  "col": [],
+  "over": 0,
+  "pausa": "false",
+  "zoom": "true",
+  "cols": [],
+  "foco": "solid 2px",
+  "errs": [],
+  "net": []
+ }
+]

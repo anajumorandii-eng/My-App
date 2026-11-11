@@ -298,7 +298,7 @@ A posição é limitada para não sair do quadro nem parar debaixo das ferrament
 | | Largura reservada | x mínimo | y entre |
 | --- | --- | --- | --- |
 | iPad e desktop | 250 px | 47% da largura | 240 e 400 px |
-| Celular | 212 px | 18 px | 236 e 292 px |
+| Celular | 236 px | 18 px | 236 e 292 px |
 
 Tocar no ponto abre o detalhe da etapa e aproxima a molécula.
 
@@ -364,6 +364,9 @@ marcação, que é o que os testes verificam.
 O desenho em si foi conferido no navegador, em iPad (834 × 1112) e celular
 (390 × 844), nas duas tintas e nos dois temas, sem erro de console e sem
 estouro horizontal.
+
+A conferência mais recente, com capturas e medidas em celular, iPad e desktop,
+está em [`docs/visual-imersivo-pcr-2026-11-11/`](../visual-imersivo-pcr-2026-11-11/README.md).
 
 ## 14. Limites
 
