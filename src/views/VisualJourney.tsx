@@ -23,8 +23,8 @@ export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepCha
   return (
     <section id="visual-chapter-reading" tabIndex={-1} className="vs-journey" aria-label="Percurso do capítulo" data-subject={summary.subject}>
       <header className="vs-journey-heading">
-        <div><span className="vs-board-kicker">{summary.subject} · {summary.topic}</span><h2>{summary.title}</h2></div>
-        <span className="vs-journey-count">{index + 1} / {summary.sections.length}</span>
+        <h2>Leitura do capítulo</h2>
+        <span className="vs-journey-count" aria-label={`Etapa ${index + 1} de ${summary.sections.length}`}>{index + 1} / {summary.sections.length}</span>
       </header>
       {summary.overview !== summary.sections[0]?.content && summary.overview.length < 400 && <p>{summary.overview}</p>}
       <nav aria-label="Etapas do capítulo"><ol className="vs-journey-steps">
@@ -55,7 +55,7 @@ export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepCha
       <footer className="vs-journey-controls">
         <button type="button" disabled={index === 0} onClick={() => go(index - 1)}>← Etapa anterior</button>
         <button type="button" onClick={() => index < summary.sections.length - 1 ? go(index + 1) : onPractice()}>
-          {index < summary.sections.length - 1 ? `Continuar: ${STAGE_LABEL[summary.sections[index + 1].stage]}` : 'Testar o que aprendi'} →
+          {index < summary.sections.length - 1 ? `Continuar: ${summary.sections[index + 1].title}` : 'Testar o que aprendi'} →
         </button>
       </footer>
       <details className="vs-journey-sources"><summary>Fontes e pré-requisitos deste capítulo</summary>

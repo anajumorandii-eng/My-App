@@ -1,0 +1,28 @@
+/* Uma linha de identidade, uma de modo e a vista da cena logo abaixo. */
+.crivo-visual.crivo-visual--atlas .vs-topic-bar{grid-template-columns:44px minmax(0,1fr) auto;margin-bottom:0;gap:10px}
+.crivo-visual.crivo-visual--atlas .vs-topic-bar .vs-back-button{width:44px;height:44px}
+.crivo-visual.crivo-visual--atlas .vs-topic-bar .vs-domain-toggle{grid-column:auto;grid-row:auto;min-height:44px;justify-self:end;padding:8px 12px;font-size:12px}
+.vs-topic-bar .vs-domain-toggle svg{width:18px;height:18px;flex-shrink:0}
+.crivo-visual.crivo-visual--atlas .vs-study-toolbar{margin-bottom:0;gap:6px}
+.crivo-visual.crivo-visual--atlas .vs-mode-row{margin:0}
+.crivo-visual.crivo-visual--atlas .vs-mode-row .vs-modes{flex:1 1 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}
+.crivo-visual.crivo-visual--atlas .vs-modes>button{min-width:0;gap:6px;padding:9px 8px!important}
+.crivo-visual .vs-study-toolbar:has(#visual-mode-explorar[aria-selected=true]) .vs-mode-hint{display:none}
+.crivo-visual .vs-topic-bar .vs-domain-toggle:focus-visible{outline:3px solid var(--vs-burgundy);outline-offset:3px}
+.crivo-visual .vs-journey-heading{align-items:center;margin-bottom:12px}
+.crivo-visual.crivo-visual--atlas .vs-journey-heading h2{margin:0;font:500 18px/1.4 Inter,system-ui,sans-serif}
+.vs-journey-count{font:500 13px/1.4 Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums}
+.vs-journey-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:8px 0 12px;overflow:visible}
+.vs-journey-steps li{min-width:0}
+.vs-journey-steps button{min-width:0;min-height:64px;overflow-wrap:anywhere}
+.vs-journey-controls button{min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+.vs-journey-controls button:last-child{flex:1 1 240px}
+.vs-journey button{scroll-margin-block:80px calc(88px + env(safe-area-inset-bottom,0px))}
+@media(max-width:900px){
+  .crivo-visual.crivo-visual--atlas .vs-topic-bar .vs-domain-toggle{width:44px;padding:0;justify-content:center}
+  .vs-topic-bar .vs-domain-toggle span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .vs-journey-steps button{flex-direction:column;align-items:center;gap:4px;padding:8px 2px;text-align:center}
+  .vs-journey-steps small{font:500 11px/1.4 Inter,system-ui,sans-serif;margin:0}
+  .vs-journey-steps .vs-journey-number{font:600 13px/1.4 Inter,system-ui,sans-serif}
+  .vs-journey-steps strong{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+}
