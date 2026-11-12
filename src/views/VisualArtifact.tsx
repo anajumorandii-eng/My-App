@@ -30,6 +30,7 @@ interface VisualArtifactProps {
   onSelectStep: (index: number) => void;
   onPractice?: () => void;
   onReadChallenge?: () => void;
+  onReadStep?: () => void;
 }
 
 /**
@@ -42,7 +43,7 @@ interface VisualArtifactProps {
  */
 export function VisualArtifact({
   summary, representation, map, states, selectedId, onSelect, hiddenEdgeIds,
-  mode, activeIndex, onSelectStep, onPractice, onReadChallenge,
+  mode, activeIndex, onSelectStep, onPractice, onReadChallenge, onReadStep,
 }: VisualArtifactProps) {
   const Board = representation === 'board'
     ? findBoard(summary)?.Component ?? null
@@ -72,6 +73,7 @@ export function VisualArtifact({
   // A PCR já tem uma cena própria. O esquema de Biotecnologia organiza os
   // assuntos da leitura, em vez de abrir outro laboratório da mesma reação.
   const mostraPercurso = summary.id === 'summary-biologia-biotecnologia' && mode === 'explorar' && vista === 'esquema';
+  const fluxoEnxuto = summary.id === 'summary-biologia-biotecnologia';
 
   return (
     <div data-visual-representation={representation} data-study-artifact-mode={mode}
@@ -83,7 +85,7 @@ export function VisualArtifact({
         </div> : undefined}>
       {closeFocus => <>
       {temPalco && vista === 'cena' && (Imersiva
-        ? <Suspense fallback={<p role="status">Preparando a cena…</p>}><Imersiva key={`imersiva-${summary.id}`} onPractice={onPractice} /></Suspense>
+        ? <Suspense fallback={<p role="status">Preparando a cena…</p>}><Imersiva key={`imersiva-${summary.id}`} onPractice={fluxoEnxuto ? undefined : onPractice} /></Suspense>
         : <SpatialChapterSupplement key={`espacial-${summary.id}`} chapterId={summary.id} />)}
       {mostraPercurso && <ChapterOutline summary={summary} activeIndex={activeIndex} onSelectStep={index => {
         const reading = document.getElementById('visual-chapter-reading');
@@ -106,7 +108,11 @@ export function VisualArtifact({
       </>}
       </>}
       </ChapterSceneFrame>
-      {mode === 'explorar' && !mostraPercurso && <section className="vs-scene-bridge" aria-label="Da cena à compreensão">
+      {mode === 'explorar' && !mostraPercurso && fluxoEnxuto && <section className="vs-reading-handoff" aria-label="Continuar o estudo">
+        <div><small>PRÓXIMO PASSO</small><h3>{summary.sections[activeIndex]?.title ?? summary.title}</h3></div>
+        {onReadStep && <button type="button" onClick={onReadStep}>Continuar na leitura <span aria-hidden="true">↓</span></button>}
+      </section>}
+      {mode === 'explorar' && !mostraPercurso && !fluxoEnxuto && <section className="vs-scene-bridge" aria-label="Da cena à compreensão">
         <div><small>RELACIONE COM O CAPÍTULO</small><h3>{summary.sections[activeIndex]?.title ?? summary.title}</h3>
           <p>{map.recallPrompt}</p>
           {challengeSection && <p className="vs-scene-challenge-context">Explicação do desafio: {challengeSection.title}</p>}</div>

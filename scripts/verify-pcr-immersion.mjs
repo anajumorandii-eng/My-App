@@ -81,7 +81,10 @@ try {
       await expect(scene.getByRole('button', { name: 'Pausar movimento' })).toBeEnabled();
       await steps.nth(4).click();
     }
-    await scene.getByRole('button', { name: 'Testar o que entendi' }).click();
+    await page.getByRole('button', { name: 'Continuar na leitura', exact: true }).click();
+    const reading = page.locator('#visual-chapter-reading');
+    await reading.getByRole('navigation', { name: 'Etapas do capítulo' }).getByRole('button').nth(4).click();
+    await reading.getByRole('button', { name: /Testar o que aprendi/ }).click();
     await expect(scene).toHaveCount(0);
     await expect(page.getByRole('tab', { name: 'Testar', exact: true })).toHaveAttribute('aria-selected', 'true');
     assert.deepEqual(errors, []);
