@@ -13,6 +13,16 @@ const props = {
 };
 
 describe('Esquema de Biotecnologia', () => {
+  it('oferece uma única passagem para a leitura sem repetir a pergunta do desafio', () => {
+    const read = vi.fn(), practice = vi.fn();
+    render(<VisualArtifact {...props} onReadStep={read} onPractice={practice} />);
+    const bridge = screen.getByRole('region', { name: 'Continuar o estudo' });
+    expect(within(bridge).queryByText(props.map.recallPrompt!)).not.toBeInTheDocument();
+    expect(within(bridge).getAllByRole('button')).toHaveLength(1);
+    fireEvent.click(within(bridge).getByRole('button', { name: 'Continuar na leitura' }));
+    expect(read).toHaveBeenCalledOnce();
+    expect(practice).not.toHaveBeenCalled();
+  });
   it('oferece os assuntos do capítulo sem repetir o laboratório da PCR', () => {
     render(<VisualArtifact {...props} />);
     fireEvent.click(screen.getByRole('button', { name: 'Esquema' }));

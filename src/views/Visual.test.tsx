@@ -65,6 +65,24 @@ beforeEach(() => {
   update.mockClear();
 });
 
+it('Biotecnologia concentra a reconstrução no exercício e preserva a resposta entre modos', async () => {
+  const route = '/visual?summary=summary-biologia-biotecnologia';
+  renderBase(<MemoryRouter initialEntries={[route]}><Visual /></MemoryRouter>);
+  fireEvent.click(screen.getByRole('tab', { name: 'Testar' }));
+  expect(screen.getByRole('heading', { name: 'Teste sua compreensão' })).toBeInTheDocument();
+  fireEvent.change(screen.getByRole('textbox', { name: 'Sua resposta' }), { target: { value: 'DNA recombinante e transferência de genes.' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Enviar para correção' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Reconstruir relações' }));
+  expect(screen.getByRole('heading', { name: 'Reconstrução ativa' })).toBeInTheDocument();
+  expect(screen.queryByTestId('visual-study-board')).not.toBeInTheDocument();
+  const map = screen.getByText('Consultar mapa do capítulo').closest('details');
+  expect(map).not.toHaveAttribute('open');
+  expect(screen.getByRole('button', { name: 'Conferir reconstrução' })).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('tab', { name: 'Testar' }));
+  expect(screen.getByRole('textbox', { name: 'Sua resposta' })).toHaveValue('DNA recombinante e transferência de genes.');
+  expect(screen.getByText('Você preservou:')).toBeInTheDocument();
+});
+
 it('substitui mapa e leitura ao trocar de capítulo, sem deixar cópias anteriores', async () => {
   const next = interactiveSummaries.find(s => s.id === 'summary-matematica-porcentagem')!;
   const { container } = render(<MemoryRouter initialEntries={[rota]}><Link to={'/visual?summary=' + next.id}>Trocar capítulo</Link><Visual /></MemoryRouter>);

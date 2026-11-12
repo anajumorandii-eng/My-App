@@ -51,7 +51,7 @@ try {
     await expect(page.locator('.crivo-immersion')).toBeVisible();
     await expect(page.getByRole('navigation', { name: 'Etapas do capítulo' })).toBeVisible();
     await page.getByRole('tab', { name: 'Reconstruir', exact: true }).click();
-    await expect(page.getByTestId('visual-study-board')).toBeVisible();
+    await expect(page.getByTestId('visual-study-board')).toHaveCount(0);
     await expect(outline).toHaveCount(0);
     await page.getByRole('tab', { name: 'Testar', exact: true }).click();
     await expect(page.getByTestId('visual-study-board')).toHaveCount(0);
