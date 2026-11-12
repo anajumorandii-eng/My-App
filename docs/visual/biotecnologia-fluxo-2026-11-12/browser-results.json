@@ -1,0 +1,38 @@
+[
+  {
+    "name": "ipad",
+    "sizes": {
+      "viewport": 834,
+      "page": 834
+    },
+    "errors": [],
+    "networkErrors": []
+  },
+  {
+    "name": "ipad-escuro",
+    "sizes": {
+      "viewport": 834,
+      "page": 834
+    },
+    "errors": [],
+    "networkErrors": []
+  },
+  {
+    "name": "mobile",
+    "sizes": {
+      "viewport": 390,
+      "page": 390
+    },
+    "errors": [],
+    "networkErrors": []
+  },
+  {
+    "name": "mobile-estreito",
+    "sizes": {
+      "viewport": 360,
+      "page": 360
+    },
+    "errors": [],
+    "networkErrors": []
+  }
+]

@@ -62,7 +62,59 @@ function tentativa(matched: string[], missing: string | null): RetrievalAttempt 
 
 beforeEach(() => {
   progress = {};
-  update.mockClear();
+  update.mockReset();
+});
+
+it('mantém a rodada e seu feedback quando a correção atualiza a evidência do capítulo', () => {
+  update.mockImplementation((id, apply) => { progress = { ...progress, [id]: apply(progress[id] ?? comProgresso([])) }; });
+  const { container } = renderBase(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
+  fireEvent.click(screen.getByRole('tab', { name: 'Reconstruir' }));
+  const firstGap = container.querySelector('.vs-gap') as HTMLElement;
+  fireEvent.click(within(firstGap).getAllByRole('button')[0]);
+  fireEvent.click(screen.getByRole('button', { name: 'Conferir reconstrução' }));
+  expect(update).toHaveBeenCalledWith(capitulo.id, expect.any(Function));
+  expect(container.querySelector('.vs-gap [role="status"]')).toBeInTheDocument();
+  expect(container.querySelector('.vs-gap button[aria-pressed="true"]')).toBeInTheDocument();
+});
+
+it.each([
+  'summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares',
+  'summary-matematica-potencias-e-radicais',
+  'summary-historia-introducao-a-historia-e-primeiras-civilizacoes',
+])('organiza o estudo de %s com exercício primeiro e referência sob demanda', async (id) => {
+  renderBase(<MemoryRouter initialEntries={['/visual?summary=' + id]}><Visual /></MemoryRouter>);
+  expect(screen.getByRole('region', { name: 'Continuar o estudo' }).querySelectorAll('button')).toHaveLength(1);
+  fireEvent.click(screen.getByRole('tab', { name: 'Testar' }));
+  expect(screen.getByRole('heading', { name: 'Teste sua compreensão' })).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('tab', { name: 'Reconstruir' }));
+  expect(screen.getByRole('heading', { name: 'Reconstrução ativa' })).toBeInTheDocument();
+  expect(screen.queryByTestId('visual-study-board')).not.toBeInTheDocument();
+  expect(screen.queryByLabelText('Cadeia de conceitos do capítulo')).not.toBeInTheDocument();
+  fireEvent.click(screen.getByText('Consultar cena e mapa do capítulo'));
+  expect(await screen.findByLabelText('Cadeia de conceitos do capítulo')).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('tab', { name: 'Testar' }));
+  fireEvent.click(screen.getByRole('tab', { name: 'Reconstruir' }));
+  expect(screen.queryByLabelText('Cadeia de conceitos do capítulo')).not.toBeInTheDocument();
+  fireEvent.click(screen.getByRole('button', { name: 'Voltar à biblioteca visual' }));
+  expect(screen.getByRole('combobox')).toBeInTheDocument();
+});
+
+it('Biotecnologia concentra a reconstrução no exercício e preserva a resposta entre modos', async () => {
+  const route = '/visual?summary=summary-biologia-biotecnologia';
+  renderBase(<MemoryRouter initialEntries={[route]}><Visual /></MemoryRouter>);
+  fireEvent.click(screen.getByRole('tab', { name: 'Testar' }));
+  expect(screen.getByRole('heading', { name: 'Teste sua compreensão' })).toBeInTheDocument();
+  fireEvent.change(screen.getByRole('textbox', { name: 'Sua resposta' }), { target: { value: 'DNA recombinante e transferência de genes.' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Enviar para correção' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Reconstruir relações' }));
+  expect(screen.getByRole('heading', { name: 'Reconstrução ativa' })).toBeInTheDocument();
+  expect(screen.queryByTestId('visual-study-board')).not.toBeInTheDocument();
+  const map = screen.getByText('Consultar mapa do capítulo').closest('details');
+  expect(map).not.toHaveAttribute('open');
+  expect(screen.getByRole('button', { name: 'Conferir reconstrução' })).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('tab', { name: 'Testar' }));
+  expect(screen.getByRole('textbox', { name: 'Sua resposta' })).toHaveValue('DNA recombinante e transferência de genes.');
+  expect(screen.getByText('Você preservou:')).toBeInTheDocument();
 });
 
 it('substitui mapa e leitura ao trocar de capítulo, sem deixar cópias anteriores', async () => {
@@ -88,7 +140,7 @@ describe('Visual aprovado', () => {
     expect(button).toHaveAttribute('aria-pressed', 'true');
     expect(container.querySelector('.vs-inspector')).toHaveTextContent(chapter.sections[1].title);
     expect(within(screen.getByRole('navigation', { name: 'Etapas do capítulo' })).getAllByRole('button')[1]).toHaveAttribute('aria-current', 'step');
-    expect(screen.getByRole('region', { name: 'Da cena à compreensão' })).toHaveTextContent(chapter.sections[1].title);
+    expect(screen.getByRole('region', { name: 'Continuar o estudo' })).toHaveTextContent(chapter.sections[1].title);
     expect(screen.queryByRole('dialog', { name: chapter.title })).toBeNull();
     expect(update).not.toHaveBeenCalled();
     await user.click(screen.getByRole('tab', { name: 'Testar' }));
@@ -106,7 +158,7 @@ describe('Visual aprovado', () => {
     await user.click(screen.getByRole('tab', { name: 'Testar' }));
     expect(screen.queryByRole('region', { name: 'Percurso do capítulo' })).not.toBeInTheDocument();
     expect(screen.queryByTestId('visual-study-board')).not.toBeInTheDocument();
-    expect(screen.getByText(/mesma prancha/)).toBeInTheDocument();
+    expect(screen.getByText('Responda sem consultar a leitura.')).toBeInTheDocument();
     await user.click(screen.getByRole('tab', { name: 'Explorar' }));
     const resumed = within(screen.getByRole('navigation', { name: 'Etapas do capítulo' })).getAllByRole('button');
     expect(resumed[2]).toHaveAttribute('aria-current', 'step');
@@ -152,7 +204,7 @@ describe('Visual aprovado', () => {
 
     await user.click(screen.getByRole('tab', { name: 'Testar' }));
     expect(screen.queryByRole('complementary', { name: 'Conceito selecionado' })).not.toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'Recuperação sem consulta' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Teste sua compreensão' })).toBeInTheDocument();
   });
 
   it('usa a mesma evidência da recuperação ativa no modo Testar', async () => {
@@ -185,9 +237,12 @@ describe('Visual aprovado', () => {
 
     await user.click(screen.getByRole('tab', { name: 'Reconstruir' }));
     expect(screen.getByRole('heading', { name: 'Reconstrução ativa' })).toBeInTheDocument();
+    expect(screen.queryByTestId('visual-study-board')).not.toBeInTheDocument();
+    await user.click(screen.getByText('Consultar cena e mapa do capítulo'));
     expect(screen.getByTestId('visual-study-board')).toBeInTheDocument();
     expect(screen.getByTestId('visual-study-board').closest('[data-visual-representation="board"]')).toHaveAttribute('data-study-artifact-mode', 'reconstruir');
-    expect(screen.getByText(/relações em que suas evidências são mais frágeis/)).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: /Por que estas/ }));
+    expect(screen.getByRole('button', { name: /Por que estas/ })).toHaveAttribute('aria-expanded', 'true');
   });
 
   it('não reaproveita a prancha de Termodinâmica em capítulos sem material autoral', () => {
@@ -293,6 +348,7 @@ describe('cadeia de conceitos', () => {
     expect(within(cadeia).queryByText('elo a reconstruir')).not.toBeInTheDocument();
 
     await user.click(screen.getByRole('tab', { name: 'Reconstruir' }));
+    await user.click(screen.getByText('Consultar cena e mapa do capítulo'));
     expect(within(screen.getByLabelText('Cadeia de conceitos do capítulo')).getAllByText('elo a reconstruir').length).toBeGreaterThan(0);
   });
 });
@@ -396,16 +452,17 @@ describe('biblioteca do Visual lembra a matéria', () => {
 
 it('volta à explicação autoral do desafio sem perder a resposta ou o feedback', async () => {
   render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
-  fireEvent.click(screen.getByRole('button', { name: 'Entender o desafio' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Continuar na leitura' }));
   const section = capitulo.sections.find(s => s.id === capitulo.retrieval[0].sectionId)!;
   await waitFor(() => expect(screen.getByRole('region', { name: 'Percurso do capítulo' })).toHaveFocus());
-  expect(within(screen.getByRole('navigation', { name: 'Etapas do capítulo' })).getByRole('button', { name: new RegExp(section.title) })).toHaveAttribute('aria-current', 'step');
+  expect(within(screen.getByRole('navigation', { name: 'Etapas do capítulo' })).getAllByRole('button')[0]).toHaveAttribute('aria-current', 'step');
   fireEvent.click(screen.getByRole('tab', { name: 'Testar' }));
-  expect(screen.getByLabelText('Sua resposta')).toHaveAccessibleDescription(`${capitulo.retrieval[0].prompt} Etapa relacionada: ${section.title}`);
+  expect(screen.getByLabelText('Sua resposta')).toHaveAccessibleDescription(capitulo.retrieval[0].prompt);
   fireEvent.change(screen.getByLabelText('Sua resposta'), { target: { value: 'Minha hipótese preservada' } });
   fireEvent.click(screen.getByRole('button', { name: 'Enviar para correção' }));
-  fireEvent.click(screen.getByRole('button', { name: 'Revisar a explicação deste desafio' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Revisar a leitura' }));
   await waitFor(() => expect(screen.getByRole('region', { name: 'Percurso do capítulo' })).toHaveFocus());
+  expect(within(screen.getByRole('navigation', { name: 'Etapas do capítulo' })).getByRole('button', { name: new RegExp(section.title) })).toHaveAttribute('aria-current', 'step');
   fireEvent.click(screen.getByRole('tab', { name: 'Testar' }));
   expect(screen.getByLabelText('Sua resposta')).toHaveValue('Minha hipótese preservada');
   expect(screen.getByText(/Você preservou:/)).toBeInTheDocument();
@@ -425,10 +482,12 @@ describe('palco único', () => {
     expect(container.querySelector('.vs-palco')).not.toBeInTheDocument();
   });
 
-  it('em Reconstruir o esquema é a cena e o mapa aparece aberto', async () => {
+  it('em Reconstruir a consulta abre a cena e o mapa sem antecipar o exercício', async () => {
     const { container } = renderBase(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
     fireEvent.click(screen.getByRole('tab', { name: /Reconstruir/ }));
     expect(screen.queryByRole('button', { name: 'Cena 3D' })).not.toBeInTheDocument();
+    expect(screen.queryByTestId('visual-study-board')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByText('Consultar cena e mapa do capítulo'));
     expect(screen.getByTestId('visual-study-board')).toBeInTheDocument();
     expect(container.querySelector('.vs-mapa-recolhido')).not.toBeInTheDocument();
     expect(container.querySelectorAll('.vs-chain-link').length).toBeGreaterThan(0);

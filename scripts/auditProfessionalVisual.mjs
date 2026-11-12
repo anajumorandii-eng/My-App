@@ -83,17 +83,20 @@ try {
           result.widths.push({ width, ...sizes });
           if (sizes.content > sizes.viewport + 1) result.errors.push(`Overflow em ${width}px: ${sizes.content}`);
         }
-        await page.getByRole('button', { name: 'Entender esta etapa' }).click();
+        await page.getByRole('button', { name: 'Continuar na leitura' }).click();
         if (!await page.locator('#visual-chapter-reading').evaluate(el => el === document.activeElement)) throw new Error('Leitura sem foco');
-        await page.getByRole('button', { name: 'Entender o desafio' }).click();
+        await page.getByRole('tab', { name: 'Testar', exact: true }).click();
+        await page.getByLabel('Sua resposta', { exact: true }).fill('Hipótese para revisar');
+        await page.getByRole('button', { name: 'Enviar para correção' }).click();
+        await page.getByRole('button', { name: 'Revisar a leitura' }).click();
         const section = challengeLinks.find(link => link.id === chapter.id);
         const currentStep = page.getByRole('navigation', { name: 'Etapas do capítulo' }).locator('[aria-current="step"]');
         await currentStep.filter({ hasText: section.sectionTitle }).waitFor();
         if (!(await currentStep.innerText()).includes(section.sectionTitle)) throw new Error('Desafio ligado à etapa errada');
         if (!await page.locator('#visual-chapter-reading').evaluate(el => el === document.activeElement)) throw new Error('Explicação do desafio sem foco');
         result.challengeSection = section.sectionId;
-        await page.getByRole('button', { name: 'Responder ao desafio' }).click();
-        await page.getByRole('heading', { name: 'Recuperação sem consulta' }).waitFor();
+        await page.getByRole('tab', { name: 'Testar', exact: true }).click();
+        await page.getByRole('heading', { name: 'Teste sua compreensão' }).waitFor();
         if (await page.locator('.vs-spatial-lab').count()) throw new Error('Cena presente na recuperação sem consulta');
       } catch (error) {
         // An interrupted browser cannot provide evidence about later chapters.

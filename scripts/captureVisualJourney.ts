@@ -30,7 +30,7 @@ try {
     await journey.screenshot({ path: path.join(output, `${index + 1}-percurso.png`) });
     await steps.last().click();
     await journey.getByRole('button', { name: /Testar o que aprendi/ }).click();
-    await page.getByRole('heading', { name: 'Recuperação sem consulta' }).waitFor();
+    await page.getByRole('heading', { name: 'Teste sua compreensão' }).waitFor();
     if (await journey.count() || await page.getByTestId('visual-study-board').count()) throw new Error(`Consulta visível no teste: ${chapter.id}`);
     await page.getByRole('tab', { name: 'Reconstruir' }).click();
     await page.getByRole('heading', { name: 'Reconstrução ativa' }).waitFor();

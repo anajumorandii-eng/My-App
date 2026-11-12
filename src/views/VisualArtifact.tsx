@@ -1,5 +1,4 @@
 import React, { Suspense, useState } from 'react';
-import { challengeSectionIndex } from '../lib/visualChallenge';
 import { SpatialChapterSupplement, hasSpatialSupplement } from './SpatialChapterSupplement';
 import { HumanitiesConcepts } from './HumanitiesConcepts';
 import { ChapterSceneFrame } from './ChapterSceneFrame';
@@ -13,6 +12,7 @@ import { findInstrument } from './visual-instruments/registry';
 import type { VisualRepresentation } from './visualRepresentation';
 import { Box, LayoutPanelTop } from 'lucide-react';
 import { immersiveSceneFor } from './visual-immersive/registry';
+import { ChapterOutline } from './ChapterOutline';
 
 type StudyMode = 'explorar' | 'testar' | 'reconstruir';
 
@@ -27,8 +27,7 @@ interface VisualArtifactProps {
   mode: StudyMode;
   activeIndex: number;
   onSelectStep: (index: number) => void;
-  onPractice?: () => void;
-  onReadChallenge?: () => void;
+  onReadStep?: () => void;
 }
 
 /**
@@ -41,7 +40,7 @@ interface VisualArtifactProps {
  */
 export function VisualArtifact({
   summary, representation, map, states, selectedId, onSelect, hiddenEdgeIds,
-  mode, activeIndex, onSelectStep, onPractice, onReadChallenge,
+  mode, activeIndex, onSelectStep, onReadStep,
 }: VisualArtifactProps) {
   const Board = representation === 'board'
     ? findBoard(summary)?.Component ?? null
@@ -49,15 +48,13 @@ export function VisualArtifact({
       ? findInstrument(summary)?.Component ?? null
       : null;
 
-  const challengeSection = summary.sections[challengeSectionIndex(summary)];
-
   // Uma leitura por vez. A página empilhava o esquema plano, o modelo 3D, os
   // conceitos e o mapa: quatro interpretações do mesmo capítulo, de cinco a
   // nove telas de altura, e a Ana Júlia apontou que isso atrapalhava mais do
   // que ajudava — a cena 3D é que devia ser a experiência. Em Explorar o palco
   // 3D abre primeiro e sozinho; o esquema plano continua a um toque, no mesmo
   // lugar, para quem quer a operação que só ele tem (o quadro de Punnett, o
-  // gráfico manipulável). Em Reconstruir o esquema continua sendo a cena,
+  // gráfico manipulável). Em Reconstruir a consulta preserva o esquema,
   // porque é ele que sabe esconder os vínculos frágeis.
   const Imersiva = immersiveSceneFor(summary.id);
   const temPalco = mode === 'explorar' && (!!Imersiva || hasSpatialSupplement(summary.id));
@@ -68,20 +65,31 @@ export function VisualArtifact({
   const vista = escolha.id === summary.id ? escolha.vista : 'cena';
   const setVista = (nova: 'cena' | 'esquema') => setEscolha({ id: summary.id, vista: nova });
   const mostraEsquema = !temPalco || vista === 'esquema';
+  // A PCR já tem uma cena própria. O esquema de Biotecnologia organiza os
+  // assuntos da leitura, em vez de abrir outro laboratório da mesma reação.
+  const mostraPercurso = summary.id === 'summary-biologia-biotecnologia' && mode === 'explorar' && vista === 'esquema';
 
   return (
     <div data-visual-representation={representation} data-study-artifact-mode={mode}
       data-humanities-workspace={summary.subject === 'Geografia' ? 'geography' : summary.subject === 'História' ? 'history' : undefined}>
-      <ChapterSceneFrame chapterId={summary.id} subject={summary.subject} title={summary.title} topic={summary.topic}
+      <ChapterSceneFrame chapterId={summary.id} subject={summary.subject} title={summary.title} topic={summary.topic} showComparison={!mostraPercurso}
         lead={temPalco ? <div className="vs-vista-toggle" role="group" aria-label="Vista do capítulo">
           <button type="button" aria-pressed={vista === 'cena'} onClick={() => setVista('cena')}><Box aria-hidden="true" />Cena 3D</button>
           <button type="button" aria-pressed={vista === 'esquema'} onClick={() => setVista('esquema')}><LayoutPanelTop aria-hidden="true" />Esquema</button>
         </div> : undefined}>
       {closeFocus => <>
       {temPalco && vista === 'cena' && (Imersiva
-        ? <Suspense fallback={<p role="status">Preparando a cena…</p>}><Imersiva key={`imersiva-${summary.id}`} onPractice={onPractice} /></Suspense>
+        ? <Suspense fallback={<p role="status">Preparando a cena…</p>}><Imersiva key={`imersiva-${summary.id}`} /></Suspense>
         : <SpatialChapterSupplement key={`espacial-${summary.id}`} chapterId={summary.id} />)}
-      {mostraEsquema && <>
+      {mostraPercurso && <ChapterOutline summary={summary} activeIndex={activeIndex} onSelectStep={index => {
+        const reading = document.getElementById('visual-chapter-reading');
+        closeFocus(); onSelectStep(index);
+        requestAnimationFrame(() => {
+          if (!reading?.isConnected) return;
+          reading.scrollIntoView({ block: 'start' }); reading.focus({ preventScroll: true });
+        });
+      }} />}
+      {mostraEsquema && !mostraPercurso && <>
       {Board && <Board map={map} states={states} selectedId={selectedId} onSelect={id => { closeFocus(); onSelect(id); }} hiddenEdgeIds={hiddenEdgeIds} mode={mode}
         activeStep={activeIndex} onStepChange={onSelectStep} challengeActive={mode !== 'explorar'} focusTarget={selectedId} />}
       {representation === 'experiment' && <TopicExperiment key={summary.id} summaryId={summary.id}
@@ -94,17 +102,11 @@ export function VisualArtifact({
       </>}
       </>}
       </ChapterSceneFrame>
-      {mode === 'explorar' && <section className="vs-scene-bridge" aria-label="Da cena à compreensão">
-        <div><small>RELACIONE COM O CAPÍTULO</small><h3>{summary.sections[activeIndex]?.title ?? summary.title}</h3>
-          <p>{map.recallPrompt}</p>
-          {challengeSection && <p className="vs-scene-challenge-context">Explicação do desafio: {challengeSection.title}</p>}</div>
-        <div className="vs-scene-bridge-actions">
-          {/* "Entender esta etapa" só rolava a tela até a leitura, que agora
-              vem logo abaixo: era um terceiro botão para um caminho óbvio. */}
-          {onReadChallenge && <button type="button" onClick={onReadChallenge}>Entender o desafio</button>}
-          {onPractice && <button type="button" onClick={onPractice}>Responder ao desafio</button>}
-        </div>
+      {mode === 'explorar' && !mostraPercurso && <section className="vs-reading-handoff" aria-label="Continuar o estudo">
+        <div><small>PRÓXIMO PASSO</small><h3>{summary.sections[activeIndex]?.title ?? summary.title}</h3></div>
+        {onReadStep && <button type="button" onClick={onReadStep}>Continuar na leitura <span aria-hidden="true">↓</span></button>}
       </section>}
+
 
     </div>
   );

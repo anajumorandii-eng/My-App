@@ -4,6 +4,15 @@ Evidência da mudança dos botões de girar e aproximar, de 42 para 44 px, pedid
 pela regra de entrega de `docs/visual/PADRAO-VISUAL-OBRIGATORIO.md`. A mudança
 tinha sido enviada só com lint e testes; a revisão da PR #441 apontou a falta.
 
+## Refeita sobre a `main` atual
+
+A tabela e as capturas abaixo são da segunda rodada, de 12/11/2026, depois de
+trazer para a branch as PRs #442, #445 e #446, que mudaram a pausa, o
+movimento reduzido, a altura da casca e o topo da página. O resultado foi o
+mesmo da primeira rodada. Na mesma ocasião, `scripts/verify-pcr-immersion.mjs`
+(o roteiro da PR #442) passou nas quatro larguras com as duas mudanças desta
+branch aplicadas.
+
 ## Como foi feito
 
 Build de produção (`npm run build` + `npm start`), Chromium, página
@@ -36,7 +45,8 @@ Em cada combinação o roteiro:
 | 1366 | escuro | normal | 44×44 | 0 | 2 px | 0 | 0 | 0 |
 
 - A tinta acompanhou o tema: caderno no claro, noite no escuro.
-- Com movimento reduzido a cena abriu pausada.
+- Com movimento reduzido o controle do rodapé abriu marcado e desabilitado
+  ("Movimento reduzido").
 - Aproximar ficou marcado como pressionado depois do clique.
 
 Os números brutos estão em `medidas.json`.

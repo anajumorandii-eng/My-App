@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { ArrowLeft, Compass, HelpCircle, RotateCcw, Search, Undo2, Waypoints, X } from 'lucide-react';
+import { ArrowLeft, ChartNoAxesColumn, Compass, HelpCircle, RotateCcw, Search, Undo2, Waypoints, X } from 'lucide-react';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { useMateriaLembrada } from '../hooks/useMateriaLembrada';
 
@@ -30,24 +30,12 @@ import { registrarRecente } from './visual-boards/BuscaRapida';
 import { ChapterObjectIcon } from './visual-boards/ChapterObjectIcon';
 import './Visual.css';
 import './VisualAtlas.css';
+import './VisualNavigation.css';
+import './VisualStudyFlow.css';
 
 type Mode = 'explorar' | 'testar' | 'reconstruir';
 
 const MODE_LABEL: Record<Mode, string> = { explorar: 'Explorar', testar: 'Testar', reconstruir: 'Reconstruir' };
-const MODE_HINT: Record<Mode, string> = {
-  explorar: 'Observe a cena e percorra as etapas. Depois, teste o que aprendeu.',
-  testar: 'Recupere sem consultar. O que você escrever vira evidência.',
-  reconstruir: 'Recomponha os elos que o diagnóstico escondeu.',
-};
-
-const REPRESENTATION_LABEL = {
-  board: 'na mesma prancha',
-  experiment: 'no mesmo experimento',
-  instrument: 'no mesmo instrumento',
-  scene: 'na mesma cena',
-  fallback: 'na mesma estrutura visual',
-} as const;
-
 const MODES: Mode[] = ['explorar', 'testar', 'reconstruir'];
 const NODE_H = 62;
 const NODE_GAP = 46;
@@ -286,6 +274,10 @@ export default function Visual() {
   const [mode, setMode] = useState<Mode>('explorar');
   const [journeyStep, setJourneyStep] = useState(0);
   const [focusReading, setFocusReading] = useState(false);
+  const [showStudyReference, setShowStudyReference] = useState(false);
+  const [reconstructionRound, setReconstructionRound] = useState<{
+    chapterId: string; relations: ReturnType<typeof chooseHiddenRelations>;
+  } | null>(null);
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
   const [disagreed, setDisagreed] = useState(false);
   const [mostrarDominio, setMostrarDominio] = useState(false);
@@ -315,7 +307,11 @@ export default function Visual() {
   useAmbienteDaTela(ambiente, preferencias);
   useEffect(() => { if (summary) registrarRecente(summary.id); }, [summary]);
 
-  const hidden = useMemo(() => (map ? chooseHiddenRelations(map, answers) : []), [map, answers]);
+  const suggestedHidden = useMemo(() => (map ? chooseHiddenRelations(map, answers) : []), [map, answers]);
+  // Registrar evidência pode mudar as prioridades. A rodada conserva as
+  // questões que a estudante respondeu até ela escolher reiniciar.
+  const hidden = mode === 'reconstruir' && reconstructionRound && reconstructionRound.chapterId === summary?.id
+    ? reconstructionRound.relations : suggestedHidden;
   const intervention = useMemo(() => (map ? minimalIntervention(map, answers) : null), [map, answers]);
 
   const states = useMemo(() => {
@@ -324,10 +320,20 @@ export default function Visual() {
     return Object.fromEntries(map.nodes.map((node) => [node.id, nodeState(node, itemProgress, relationStates)]));
   }, [map, answers, itemProgress]);
 
-  const changeMode = (next: Mode) => {
+  const changeMode = (next: Mode, focusPanel = false) => {
+    if (next === 'reconstruir' && summary && reconstructionRound?.chapterId !== summary.id) {
+      setReconstructionRound({ chapterId: summary.id, relations: suggestedHidden });
+    }
     setMode(next);
+    setShowStudyReference(false);
     setSelectedNode(null);
     setDisagreed(false);
+    if (focusPanel) {
+      requestAnimationFrame(() => {
+        const heading = document.getElementById(`visual-mode-panel-${next}`)?.querySelector<HTMLElement>('.vs-practice-panel h2');
+        heading?.scrollIntoView?.({ block: 'start' }); heading?.focus({ preventScroll: true });
+      });
+    }
   };
 
   const readChallenge = () => {
@@ -359,7 +365,7 @@ export default function Visual() {
   // Trocar de capítulo tem de limpar a mesa: manter resposta e peças da anterior
   // faria a reconstrução corrigir o texto errado contra o mapa novo.
   useEffect(() => {
-    setFocusReading(false); setJourneyStep(0); setMode('explorar'); setSelectedNode(null); setDisagreed(false); setDraft(''); setFeedback(null);
+    setReconstructionRound(null); setShowStudyReference(false); setFocusReading(false); setJourneyStep(0); setMode('explorar'); setSelectedNode(null); setDisagreed(false); setDraft(''); setFeedback(null);
     setPlacements({}); setHistory([]); setGrades({}); setShowWhyHidden(false);
   }, [summaryId]);
 
@@ -451,15 +457,26 @@ export default function Visual() {
     <MolduraTecnologicaContext.Provider value={false}>
     {/* ni-main dá as margens que toda tela tem: sem ele o Visual encostava na
         barra lateral e na borda direita do iPad. */}
-    <div className={`ni-main crivo-visual crivo-visual--atlas${tecnologico ? ' crivo-visual--tech' : ''}`}>
+    <div className={`ni-main crivo-visual crivo-visual--atlas${tecnologico ? ' crivo-visual--tech' : ''} crivo-visual--focused-study`}>
       <header className="vs-topic-bar">
         <button onClick={() => setSearchParams({})} className="vs-back-button" aria-label="Voltar à biblioteca visual">
           <ArrowLeft aria-hidden="true" />
         </button>
         <div className="vs-topic-identity">
-          <span>{summary.subject} / {summary.topic}</span>
+          <span>{summary.subject}{summary.topic !== summary.title ? ` / ${summary.topic}` : ''}</span>
           <strong>{summary.title}</strong>
         </div>
+      <button
+        type="button"
+        className="vs-domain-toggle"
+        aria-label="Mostrar domínio"
+        title="Mostrar domínio"
+        aria-pressed={mostrarDominio}
+        onClick={() => setMostrarDominio((v) => !v)}
+      >
+        <ChartNoAxesColumn aria-hidden="true" />
+        <span>Mostrar domínio</span>
+      </button>
       </header>
 
       {syncError && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">{syncError}</div>}
@@ -495,22 +512,7 @@ export default function Visual() {
         ))}
       </div>
 
-      {/* "Mostrar domínio": a leitura do capítulo inteiro de uma vez, em vez de
-          nó por nó pelo inspetor. Não é dado novo — é o mesmo `states` que já
-          colore cada cartão, reunido numa lista com a legenda ao lado. Sem a
-          legenda, a cor sozinha não diz o que significa para quem abriu a tela
-          pela primeira vez. */}
-      <button
-        type="button"
-        className="vs-domain-toggle"
-        aria-pressed={mostrarDominio}
-        onClick={() => setMostrarDominio((v) => !v)}
-      >
-        <span className="vs-domain-switch" aria-hidden="true" />
-        Mostrar domínio
-      </button>
       </div>
-      <p className="vs-mode-hint">{MODE_HINT[mode]}</p>
       </div>
 
       {mostrarDominio && (
@@ -545,7 +547,7 @@ export default function Visual() {
 
       <div data-study-mode={mode} className={`vs-workspace${!selectedNode && !intervention ? ' vs-workspace--solo' : ''}`}>
         <motion.section key={mode} id={`visual-mode-panel-${mode}`} role="tabpanel" aria-labelledby={`visual-mode-${mode}`} className="vs-main" initial={reducedMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: reducedMotion ? 0 : MOTION_DURATION.component }}>
-          {mode !== 'testar' && (
+          {mode === 'explorar' && (
             <AnimatePresence mode="wait">
               <motion.div
                 key={summary.id}
@@ -565,29 +567,18 @@ export default function Visual() {
                   mode={mode}
                   activeIndex={journeyStep}
                   onSelectStep={setJourneyStep}
-                  onPractice={() => changeMode('testar')}
-                  onReadChallenge={readChallenge}
+                  onReadStep={() => setFocusReading(true)}
                 />
               </motion.div>
             </AnimatePresence>
           )}
 
-          {mode === 'reconstruir' && <ConceptChain
-            key={'map-' + summary.id}
-            map={map}
-            states={states}
-            selectedId={selectedNode}
-            onSelect={selectNode}
-            hiddenEdgeIds={hiddenEdgeIds}
-            escondendo={mode === 'reconstruir'}
-          />}
-
-          {mode === 'explorar' && <VisualJourney key={'journey-' + summary.id} summary={summary} initialIndex={journeyStep} onStepChange={setJourneyStep} onPractice={() => changeMode('testar')} />}
+          {mode === 'explorar' && <VisualJourney key={'journey-' + summary.id} summary={summary} initialIndex={journeyStep} onStepChange={setJourneyStep} onPractice={() => changeMode('testar', true)} />}
           {/* Em Explorar o mapa era mais uma leitura do capítulo logo abaixo da
               cena, repetindo as cinco etapas que a leitura guiada já percorre.
               Continua disponível — é por ele que se abre o conceito no
               inspetor —, mas recolhido e depois da leitura. Em Reconstruir ele
-              é o exercício e aparece aberto, acima. */}
+              fica na consulta sob demanda, depois do exercício. */}
           {mode === 'explorar' && <details className="vs-mapa-recolhido">
             <summary>Mapa do capítulo e domínio de cada conceito</summary>
             <ConceptChain
@@ -600,35 +591,22 @@ export default function Visual() {
               escondendo={false}
             />
           </details>}
-          {/* Quantas conexões o diagnóstico escondeu. Vivia dentro da prancha
-              adiabática — a única das 26 que não usava o BoardShell —, então
-              valia para um capítulo só. Aqui vale para todos, e a frase sobre
-              "responder sem consultar" saiu porque o MODE_HINT acima já a diz. */}
-          {mode === 'reconstruir' && hiddenEdgeIds.length > 0 && (
-            <p className="vs-active-mode-note" role="status">
-              {hiddenEdgeIds.length === 1
-                ? '1 conexão frágil priorizada para reconstrução.'
-                : `${hiddenEdgeIds.length} conexões frágeis priorizadas para reconstrução.`}
-            </p>
-          )}
-
           {mode === 'testar' && (
-            <section className="rounded-2xl border-2 border-indigo-200 bg-white p-5 dark:border-indigo-900 dark:bg-zinc-900">
-              <h2 className="font-bold">Recuperação sem consulta</h2>
+            <section className="vs-practice-panel">
+              <h2 tabIndex={-1} className="font-bold">Teste sua compreensão</h2>
               <p className="vs-recall-note mt-2 text-sm" data-visual-representation={representation}>
-                Recupere as relações que explorou {REPRESENTATION_LABEL[representation]}, sem consultar a cena ou a leitura.
+                Responda sem consultar a leitura.
               </p>
               {question ? (
                 <>
                   <p id="visual-recall-question" className="mt-2 font-semibold">{question.prompt}</p>
-                  <p id="visual-recall-context" className="vs-recall-note mt-2 text-sm">Etapa relacionada: {summary.sections[challengeSectionIndex(summary)]?.title}</p>
                   <textarea
                     aria-label="Sua resposta"
-                    aria-describedby="visual-recall-question visual-recall-context"
+                    aria-describedby="visual-recall-question"
                     rows={5}
                     value={draft}
                     onChange={(event) => { setDraft(event.target.value); setFeedback(null); }}
-                    placeholder="Reconstrua a relação entre os conceitos, sem voltar ao texto…"
+                    placeholder="Escreva sua resposta…"
                     className="mt-3 w-full rounded-xl border border-zinc-300 bg-transparent p-3 dark:border-zinc-700"
                   />
                   <details className="mt-2">
@@ -644,11 +622,14 @@ export default function Visual() {
                   </button>
                   {feedback && (
                     <div role="status" className="mt-4 rounded-xl bg-zinc-100 p-4 text-sm dark:bg-zinc-800">
-                      <button type="button" onClick={readChallenge} className="mb-3 min-h-11 rounded-lg border px-3 py-2">Revisar a explicação deste desafio</button>
                       <p><strong>Você preservou:</strong> {feedback.matched.length ? feedback.matched.join(', ') : 'ainda nenhuma relação identificável'}</p>
                       {feedback.missing
-                        ? <p className="mt-2 text-amber-700 dark:text-amber-300"><strong>Primeiro elo ausente:</strong> {feedback.missing}.</p>
+                        ? <p className="mt-2 text-amber-800 dark:text-amber-300"><strong>Primeiro elo ausente:</strong> {feedback.missing}.</p>
                         : <p className="mt-2 text-emerald-700 dark:text-emerald-300"><strong>Estrutura essencial completa.</strong> {question.transferPrompt}</p>}
+                      <div className="vs-practice-next">
+                        <button type="button" onClick={readChallenge}>Revisar a leitura</button>
+                        <button type="button" onClick={() => changeMode('reconstruir', true)}>Reconstruir relações</button>
+                      </div>
                     </div>
                   )}
                 </>
@@ -659,14 +640,14 @@ export default function Visual() {
           )}
 
           {mode === 'reconstruir' && (
-            <section className="rounded-2xl border-2 border-indigo-200 bg-white p-5 dark:border-indigo-900 dark:bg-zinc-900">
-              <h2 className="font-bold">Reconstrução ativa</h2>
+            <section className="vs-practice-panel">
+              <h2 tabIndex={-1} className="font-bold">Reconstrução ativa</h2>
               {hidden.length === 0 ? (
                 <p className="mt-2 text-sm text-zinc-500">Não há relação para ocultar neste capítulo.</p>
               ) : (
                 <>
                   <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-                    O CRIVO ocultou primeiro as relações em que suas evidências são mais frágeis.
+                    Escolha uma relação para cada lacuna. Você também pode arrastar as opções.
                   </p>
                   <button
                     onClick={() => setShowWhyHidden((value) => !value)}
@@ -698,12 +679,11 @@ export default function Visual() {
                           }}
                         >
                           <p className="text-xs font-bold uppercase tracking-wide text-zinc-500">Lacuna {index + 1}</p>
-                          <p className="mt-1 text-sm">Qual relação preenche este elo?</p>
                           <div className="vs-drop-target" aria-live="polite">
                             <span aria-hidden="true">{placements[item.relationId] ? '✓' : '↳'}</span>
                             {placements[item.relationId]
                               ? displayLabel(placements[item.relationId])
-                              : 'Arraste uma relação para este espaço'}
+                              : 'Escolha uma opção abaixo'}
                           </div>
                           <div className="vs-bank mt-3 flex flex-wrap gap-2">
                             {bank.map((label) => {
@@ -762,7 +742,7 @@ export default function Visual() {
                       <Undo2 className="mr-1.5 h-4 w-4" aria-hidden="true" />Desfazer
                     </button>
                     <button
-                      onClick={() => { setPlacements({}); setHistory([]); setGrades({}); }}
+                      onClick={() => { setPlacements({}); setHistory([]); setGrades({}); setReconstructionRound({ chapterId: summary.id, relations: suggestedHidden }); }}
                       className="inline-flex items-center rounded-xl border border-zinc-300 px-4 py-2.5 text-sm font-medium dark:border-zinc-700"
                     >
                       <RotateCcw className="mr-1.5 h-4 w-4" aria-hidden="true" />Reiniciar
@@ -772,6 +752,19 @@ export default function Visual() {
               )}
             </section>
           )}
+          {mode === 'reconstruir' && <details className="vs-rebuild-map" open={showStudyReference}>
+            <summary onClick={event => { event.preventDefault(); setShowStudyReference(value => !value); }}>
+              {summary.id === 'summary-biologia-biotecnologia' ? 'Consultar mapa do capítulo' : 'Consultar cena e mapa do capítulo'}
+            </summary>
+            {showStudyReference && <>
+              {summary.id !== 'summary-biologia-biotecnologia' && <VisualArtifact
+                summary={summary} representation={representation} map={map} states={states}
+                selectedId={selectedNode} onSelect={selectNode} hiddenEdgeIds={hiddenEdgeIds}
+                mode="reconstruir" activeIndex={journeyStep} onSelectStep={setJourneyStep}
+              />}
+              <ConceptChain map={map} states={states} selectedId={selectedNode} onSelect={selectNode} hiddenEdgeIds={hiddenEdgeIds} escondendo />
+            </>}
+          </details>}
         </motion.section>
 
 

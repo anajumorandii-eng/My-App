@@ -1,8 +1,10 @@
 # Cena imersiva da PCR — especificação
 
 Como foi feita a cena 3D do capítulo de Biotecnologia
-(`summary-biologia-biotecnologia`), integrada na PR #440. Serve de registro e de
-modelo para a próxima cena nessa linguagem.
+(`summary-biologia-biotecnologia`). Entrou na PR #440; a PR #442 corrigiu o
+resultado da etapa 5, a pausa e os controles; as PRs #445 e #446 mudaram como
+ela se liga ao resto da página. Serve de registro e de modelo para a próxima
+cena nessa linguagem.
 
 Tudo aqui descreve o código que está em `src/views/visual-immersive/`. Onde um
 número aparece, ele está no código com esse valor; ao mudar o código, mude aqui.
@@ -22,7 +24,7 @@ revisão que ela aprovou em 11/11/2026.
 | Tinta | Duas: `caderno` e `noite` | Verde-escuro e lima eram um salto de linguagem num app de papel e bordô |
 | Frase fixa | Removida ("Uma mudança de escala…") | Repetia igual nas cinco etapas |
 | Previsão | Uma pergunta antes de cada avanço | Sem ela a cena só se assistia |
-| Celular | Composição própria, 724 px | A referência tinha 820 px, mais que a tela |
+| Celular | Composição própria, 724 px mais a folga da barra | A referência tinha 820 px e punha a molécula abaixo da dobra |
 | Evidência | A cena não grava nada | Histórico próprio faria o mapa e o Caderno discordarem |
 
 A regra do projeto "a cena é desenhada em SVG, nunca um arquivo de imagem"
@@ -34,10 +36,13 @@ tema, reage às etapas e anima. Não há raster.
 | Arquivo | Papel |
 | --- | --- |
 | `PcrImmersion.tsx` | Componente: dados das etapas, estado, laço de desenho, marcação |
+| `pcrAnimation.ts` | Duas funções puras: opacidade de cada base nova e avanço da síntese |
 | `PcrImmersion.css` | Estilo, escopado em `.crivo-immersion` |
 | `registry.ts` | Quais capítulos têm cena imersiva (hoje, um) |
-| `PcrImmersion.test.tsx` | 12 testes de comportamento |
+| `PcrImmersion.test.tsx` | 14 testes de comportamento |
+| `pcrAnimation.test.ts` | 4 testes das funções de animação |
 | `../VisualArtifact.tsx` | Onde a cena entra na página do capítulo |
+| `scripts/verify-pcr-immersion.mjs` | Roteiro de conferência no navegador |
 
 ## 3. Como entra na página
 
@@ -46,15 +51,20 @@ tema, reage às etapas e anima. Não há raster.
 1. `immersiveSceneFor(summary.id)` devolve o componente imersivo ou `null`.
 2. Havendo cena imersiva, ela substitui o modelo espacial genérico
    (`SpatialChapterSupplement`).
-3. A alternância **Cena 3D / Esquema** continua: o esquema plano fica a um toque.
-4. Em Testar a cena não é montada; em Reconstruir a cena é o esquema.
+3. A alternância **Cena 3D / Esquema** continua. Em Biotecnologia, o Esquema é
+   o percurso dos assuntos da leitura (`ChapterOutline`), e não outro
+   laboratório da mesma reação.
+4. Abaixo da cena, a faixa "Próximo passo" leva à leitura do capítulo
+   ("Continuar na leitura").
+5. Em Testar a cena não é montada.
 
 O componente é carregado sob demanda (`lazy` + `Suspense`), para não pesar na
-abertura dos outros capítulos. Recebe uma única propriedade útil:
+abertura dos outros capítulos. Aceita duas propriedades opcionais:
 
-- `onPractice`: leva ao modo Testar do capítulo. É o botão "Testar o que
-  entendi" da última etapa.
-- `temaInicial` (opcional): força a tinta; sem ela, a cena segue o tema do app.
+- `onPractice`: quando recebida, a última etapa mostra o botão "Testar o que
+  entendi". **A página hoje não a passa**: desde a PR #445 a saída da cena é a
+  faixa "Próximo passo", e o botão não aparece no aplicativo.
+- `temaInicial`: força a tinta; sem ela, a cena segue o tema do app.
 
 ## 4. As cinco etapas
 
@@ -68,11 +78,16 @@ texto do botão de avançar, nome do ponto de interesse e o detalhe dele.
 | 2 | Separar | O calor *separa.* | 95° | Celsius · exemplo | Fitas afastadas, brilho quente |
 | 3 | Primers | O início *da cópia.* | 58° | Celsius · exemplo | Primers dourados nas pontas |
 | 4 | Copiar | A informação *se multiplica.* | 72° | Celsius · exemplo | Fita nova crescendo, polimerase |
-| 5 | Comparar | E sem *primers?* | 02 / 00 | Duplas após a síntese | Com e sem primers |
+| 5 | Comparar | E sem *primers?* | 02 / 00 | Novas fitas sintetizadas | Com e sem primers |
 
-Na etapa 5 há dois botões, **Com primers** e **Sem primers**. Sem primers, a
-leitura vira `00`, a legenda "Novas fitas sintetizadas", o ponto de interesse
-"Fita molde", e o texto explica que não há amplificação.
+Na etapa 5 há dois botões, **Com primers** e **Sem primers**. Os dois cenários
+medem a mesma grandeza, novas fitas sintetizadas: `02` com primers, `00` sem.
+Sem primers, o ponto de interesse vira "Fita molde", o texto explica que não há
+amplificação e o detalhe diz que o DNA inicial continua presente. Trocar de
+cenário atualiza também o detalhe que já estava aberto.
+
+Na etapa 4, quando a síntese termina, a polimerase some e o ponto de interesse
+passa de "DNA polimerase" a "Nova fita", com o detalhe correspondente.
 
 ### Previsão antes de avançar
 
@@ -108,7 +123,11 @@ Estado de React, que decide o que a marcação mostra:
 | `detail` | booleano | Detalhe do ponto de interesse aberto |
 | `escolhida` | tinta ou `null` | Tinta escolhida no botão; `null` segue o app |
 | `previsao` | `{acertou, porque}` ou `null` | Retorno da previsão |
-| `paused` | booleano | Movimento pausado |
+| `paused` | booleano | Pausa manual; começa em `false` |
+| `synthesisComplete` | booleano | A síntese da etapa 4 terminou; troca o ponto de interesse |
+
+A preferência de movimento reduzido (`reduced`, de `useLiveReducedMotion`) é
+lida à parte e não se confunde com a pausa manual.
 
 O laço de desenho não depende desse estado como dependência de efeito. Ele lê
 uma referência (`live`) atualizada a cada render. Recriar o laço a cada clique
@@ -143,7 +162,7 @@ fita 1 (dourado). O restante da fita nova é roxo.
 
 Na etapa 4, a polimerase é um aglomerado de 19 esferas douradas (raio 7 a 11)
 em torno do ponto de síntese de cada fita, distribuídas pelo ângulo áureo
-(`j × 2,39996`). Some quando a extensão passa de 0,995.
+(`j × 2,39996`). Some quando a extensão chega a 1.
 
 As pontas 5′ e 3′ são escritas no canvas a partir da etapa 2, em Inter 600 de
 13 px. A orientação não muda com a câmera.
@@ -193,19 +212,33 @@ Um único `requestAnimationFrame`. A cada quadro:
 
 Entrar na etapa 4 zera `extension`, para a síntese recomeçar.
 
-A fita nova aparece nucleotídeo a nucleotídeo: a opacidade de cada um é
-`(extension − fração) × 7`, limitada entre 0 e 1, onde `fração` é a posição dele
-ao longo da fita.
+A fita nova aparece base a base, na ordem da síntese. A opacidade de cada uma é
+`extension × 24 − ordem`, limitada entre 0 e 1 (`newBaseOpacity`), onde 24 é o
+número de bases depois do primer e `ordem` é a posição dela a partir do primer.
+Cada base termina de aparecer antes de a frente de síntese alcançar a seguinte,
+e ao final as 24 ficam inteiramente visíveis.
 
-### Pausa e movimento reduzido
+### Pausa manual
 
-- Pausada, a suavização vira 1: a cena **salta para o estado final** da etapa.
-  Não congela a meio caminho, então quem usa movimento reduzido ainda vê o
-  resultado de cada passo.
-- Na etapa 4 pausada, `extension` vai direto a 1.
-- A preferência de movimento reduzido é lida ao montar e acompanhada ao vivo
-  (`useLiveReducedMotion`); quando ligada, a cena pausa.
-- O botão "Pausar movimento / Retomar movimento" fica no rodapé.
+O botão "Pausar movimento / Retomar movimento" **conserva o estado corrente**:
+síntese, separação, calor, partículas e câmera param onde estão, e retomar
+continua desse ponto (`advanceSynthesis` devolve a própria extensão enquanto
+pausada). Girar e aproximar continuam funcionando.
+
+Trocar de etapa ou de cenário durante a pausa mostra direto o resultado da
+escolha, sem animar.
+
+### Movimento reduzido
+
+É independente da pausa manual. Com a preferência ligada:
+
+- a cena apresenta o estado final de cada etapa, sem transição;
+- a deriva da câmera para;
+- o botão do rodapé fica desabilitado e passa a dizer "Movimento reduzido";
+- na etapa 4, a fita já aparece pronta e o ponto de interesse é "Nova fita".
+
+A preferência é acompanhada ao vivo. Desligá-la devolve a pausa manual ao
+estado em que estava antes.
 
 ### Quando o laço desenha
 
@@ -278,6 +311,7 @@ fixa. O canvas ocupa a casca inteira; o resto fica por cima, em posição absolu
 | Indicador | `.cr-indicator` | Topo direito (oculto no celular) |
 | Dica de gesto | `.cr-view-note` | Abaixo do indicador (oculta no celular) |
 | Leitura | `.cr-temp` | Esquerda, a 236 px (celular: 150 px) |
+| Ferramentas, tamanho | `.cr-tool` | 44 × 44 px em todas as larguras |
 | Marca d'água "PCR" | `.cr-watermark` | Atrás, decorativa |
 | Ferramentas | `.cr-tools` | Direita: girar e aproximar |
 | Ponto de interesse | `.cr-label` | Segue a molécula |
@@ -285,7 +319,17 @@ fixa. O canvas ocupa a casca inteira; o resto fica por cima, em posição absolu
 | Trilho | `.cr-rail` | Cinco botões |
 | Rodapé | `.cr-foot` | Pausa, troca de tinta, aviso |
 
-Altura da casca: **820 px** a partir de 641 px de largura; **724 px** abaixo.
+Altura mínima da casca:
+
+| Largura | Altura |
+| --- | --- |
+| 1024 px ou mais | 820 px |
+| 641 a 1023 px | 820 px + 88 px + área segura (908 px) |
+| até 640 px | 724 px + 88 px + área segura (812 px) |
+
+Os 88 px a mais, até 1023 px, são a folga da barra fixa do aplicativo. Ela fica
+abaixo dos controles e não desloca a molécula. No modo foco, sem barra por cima,
+a folga é retirada.
 
 ### Ponto de interesse
 
@@ -341,32 +385,40 @@ rótulo do assunto no celular). A referência tinha rótulos de 9 px.
 - Girar e aproximar têm botão, porque arrastar não é alcançável por teclado.
 - Alvos de toque com 44 px ou mais.
 - Movimento reduzido: descrito na seção 8.
+- Os botões têm margem de rolagem, para não pararem debaixo da barra fixa ao
+  navegar por teclado.
 
 Limite conhecido: a rotação por arraste não tem equivalente por setas do
 teclado; há só o botão de girar em passos de 60°.
 
-## 13. Testes
+## 13. Testes e conferência
 
-`PcrImmersion.test.tsx`, 12 testes. O jsdom não implementa Canvas 2D, então o
-laço não roda neles: o componente detecta a falta de contexto e fica só com a
-marcação, que é o que os testes verificam.
+`PcrImmersion.test.tsx` (14 testes) e `pcrAnimation.test.ts` (4 testes). O jsdom
+não implementa Canvas 2D, então o laço não roda neles: o componente detecta a
+falta de contexto e fica só com a marcação. O que depende do laço e pode ser
+testado sem canvas foi extraído para `pcrAnimation.ts`.
 
 - Percorre as cinco etapas pelo trilho e pelo botão de avançar.
-- Compara com e sem primers só na última etapa, e volta ao padrão ao trocar.
-- Abre o detalhe no ponto de interesse e o recolhe ao trocar de etapa.
-- Termina no desafio real do capítulo.
-- Pausa e retoma o movimento.
+- Compara com e sem primers só na última etapa, na mesma unidade, e volta ao
+  padrão ao trocar.
+- Abre o detalhe no ponto de interesse, troca-o com o cenário e o recolhe ao
+  trocar de etapa.
+- Mostra "Testar o que entendi" só quando recebe `onPractice`.
+- Pausa e retoma o movimento; identifica a fita pronta com movimento reduzido.
 - Previsão: avança e devolve acerto; no erro explica o porquê; pular pelo
   trilho não deixa retorno; a última etapa não pergunta.
 - Tinta: abre em caderno, alterna, e abre em noite com o app escuro.
 - Registro: atende só o capítulo de Biotecnologia.
+- Animação: as bases ficam visíveis na ordem, e pausar conserva o progresso.
 
-O desenho em si foi conferido no navegador, em iPad (834 × 1112) e celular
-(390 × 844), nas duas tintas e nos dois temas, sem erro de console e sem
-estouro horizontal.
+Conferência no navegador, com capturas e medidas salvas:
 
-A conferência mais recente, com capturas e medidas em celular, iPad e desktop,
-está em [`docs/visual-imersivo-pcr-2026-11-11/`](../visual-imersivo-pcr-2026-11-11/README.md).
+- [`pcr-revisao-2026-11-11/`](pcr-revisao-2026-11-11/README.md): resultado,
+  pausa e controles (PR #442), pelo roteiro `scripts/verify-pcr-immersion.mjs`,
+  em 360, 390, 834 e 1366 px.
+- [`../visual-imersivo-pcr-2026-11-11/`](../visual-imersivo-pcr-2026-11-11/README.md):
+  tamanho e colisão dos botões de girar e aproximar, em 390, 834 e 1366 px, nos
+  dois temas e com movimento reduzido.
 
 ## 14. Limites
 

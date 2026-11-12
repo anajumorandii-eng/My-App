@@ -1,0 +1,22 @@
+.vs-reading-handoff{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:16px 0;padding:18px 20px;border:1px solid var(--vs-line);border-radius:14px;background:var(--vs-paper);color:var(--vs-ink)}
+.vs-reading-handoff>div{min-width:0}
+.vs-reading-handoff small{font:600 10px/1.4 Inter,system-ui,sans-serif;letter-spacing:.1em;color:var(--vs-dim)}
+.vs-reading-handoff h3{font:500 17px/1.4 Inter,system-ui,sans-serif;margin:4px 0 0;overflow-wrap:anywhere}
+.vs-reading-handoff button,.crivo-visual--focused-study .vs-practice-next button{min-height:44px;padding:12px 16px;border:1px solid var(--vs-line);border-radius:10px;font:600 14px/1.4 Inter,system-ui,sans-serif;cursor:pointer}
+.vs-reading-handoff button{display:flex;gap:12px;align-items:center;justify-content:center;flex-shrink:0;background:var(--vs-burgundy);color:var(--vs-paper-strong);border-color:var(--vs-burgundy)}
+.crivo-visual--focused-study .vs-practice-panel{border:1px solid var(--vs-line);border-radius:18px;padding:clamp(20px,3vw,32px);background:var(--vs-paper-strong);color:var(--vs-ink);min-width:0}
+.crivo-visual--focused-study .vs-practice-panel>h2{font:500 clamp(24px,3vw,30px)/1.2 Newsreader,Georgia,serif;margin:0 0 10px}
+.crivo-visual--focused-study .vs-practice-panel textarea{min-height:160px;line-height:1.6;border-color:var(--vs-line);color:var(--vs-ink)}
+.crivo-visual--focused-study .vs-practice-panel>button:not([aria-expanded]),.crivo-visual--focused-study .vs-practice-panel>div.flex>button:first-child,.crivo-visual--focused-study .vs-practice-next button:last-child{background:var(--vs-burgundy);color:var(--vs-paper-strong);border-color:var(--vs-burgundy)}
+.crivo-visual--focused-study .vs-practice-next{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.crivo-visual--focused-study .vs-practice-next button:first-child{background:var(--vs-paper);color:var(--vs-ink)}
+.crivo-visual--focused-study .vs-practice-panel>div[role=status]{background:color-mix(in srgb,var(--vs-burgundy) 6%,var(--vs-paper-strong));color:var(--vs-ink);border:1px solid var(--vs-line)}
+.crivo-visual--focused-study .vs-gap{border-color:var(--vs-line);background:var(--vs-paper);padding:18px}
+.crivo-visual--focused-study .vs-bank button{min-height:44px;white-space:normal;text-align:left}
+.crivo-visual--focused-study .vs-rebuild-map{border:1px solid var(--vs-line);border-radius:14px;padding:14px 18px;background:var(--vs-paper)}
+.crivo-visual--focused-study .vs-rebuild-map>summary{min-height:44px;display:list-item;align-content:center;cursor:pointer;font-size:14px}
+.crivo-visual--focused-study :is(.vs-practice-panel button,.vs-practice-panel textarea,.vs-rebuild-map summary),.vs-reading-handoff button{scroll-margin-block:80px calc(88px + env(safe-area-inset-bottom,0px))}
+.crivo-visual--focused-study :is(.vs-practice-panel button,.vs-practice-panel textarea,.vs-rebuild-map summary):focus-visible,.vs-reading-handoff button:focus-visible{outline:3px solid var(--vs-burgundy);outline-offset:3px}
+@media(max-width:560px){.vs-reading-handoff{flex-direction:column;align-items:stretch;padding:16px}.vs-practice-next button{flex:1 1 150px}.crivo-visual--focused-study .vs-practice-panel>div.flex>button:first-child{flex-basis:100%}}
+
+.vs-rebuild-map [data-study-artifact-mode]{margin-top:16px}

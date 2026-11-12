@@ -1,0 +1,186 @@
+[
+  {
+    "name": "mobile-360",
+    "sizes": {
+      "viewport": 360,
+      "page": 360
+    },
+    "errors": [],
+    "networkErrors": [],
+    "controls": [
+      {
+        "text": "01DNA",
+        "reachable": true,
+        "bottom": 651.875
+      },
+      {
+        "text": "02Separar",
+        "reachable": true,
+        "bottom": 651.875
+      },
+      {
+        "text": "03Primers",
+        "reachable": true,
+        "bottom": 651.875
+      },
+      {
+        "text": "04Copiar",
+        "reachable": true,
+        "bottom": 651.875
+      },
+      {
+        "text": "05Comparar",
+        "reachable": true,
+        "bottom": 651.875
+      },
+      {
+        "text": "▷ Movimento reduzido",
+        "reachable": true,
+        "bottom": 699.875
+      },
+      {
+        "text": "◐ Ver em caderno",
+        "reachable": true,
+        "bottom": 699.875
+      }
+    ]
+  },
+  {
+    "name": "mobile-390",
+    "sizes": {
+      "viewport": 390,
+      "page": 390
+    },
+    "errors": [],
+    "networkErrors": [],
+    "controls": [
+      {
+        "text": "01DNA",
+        "reachable": true,
+        "bottom": 695.875
+      },
+      {
+        "text": "02Separar",
+        "reachable": true,
+        "bottom": 695.875
+      },
+      {
+        "text": "03Primers",
+        "reachable": true,
+        "bottom": 695.875
+      },
+      {
+        "text": "04Copiar",
+        "reachable": true,
+        "bottom": 695.875
+      },
+      {
+        "text": "05Comparar",
+        "reachable": true,
+        "bottom": 695.875
+      },
+      {
+        "text": "▷ Movimento reduzido",
+        "reachable": true,
+        "bottom": 743.875
+      },
+      {
+        "text": "◐ Ver em caderno",
+        "reachable": true,
+        "bottom": 743.875
+      }
+    ]
+  },
+  {
+    "name": "ipad",
+    "sizes": {
+      "viewport": 834,
+      "page": 834
+    },
+    "errors": [],
+    "networkErrors": [],
+    "controls": [
+      {
+        "text": "01DNA",
+        "reachable": true,
+        "bottom": 943.875
+      },
+      {
+        "text": "02Separar",
+        "reachable": true,
+        "bottom": 943.875
+      },
+      {
+        "text": "03Primers",
+        "reachable": true,
+        "bottom": 943.875
+      },
+      {
+        "text": "04Copiar",
+        "reachable": true,
+        "bottom": 943.875
+      },
+      {
+        "text": "05Comparar",
+        "reachable": true,
+        "bottom": 943.875
+      },
+      {
+        "text": "▷ Movimento reduzido",
+        "reachable": true,
+        "bottom": 1001.875
+      },
+      {
+        "text": "◐ Ver em caderno",
+        "reachable": true,
+        "bottom": 1001.875
+      }
+    ]
+  },
+  {
+    "name": "desktop",
+    "sizes": {
+      "viewport": 1366,
+      "page": 1366
+    },
+    "errors": [],
+    "networkErrors": [],
+    "controls": [
+      {
+        "text": "01DNA",
+        "reachable": true,
+        "bottom": 820.390625
+      },
+      {
+        "text": "02Separar",
+        "reachable": true,
+        "bottom": 820.390625
+      },
+      {
+        "text": "03Primers",
+        "reachable": true,
+        "bottom": 820.390625
+      },
+      {
+        "text": "04Copiar",
+        "reachable": true,
+        "bottom": 820.390625
+      },
+      {
+        "text": "05Comparar",
+        "reachable": true,
+        "bottom": 820.390625
+      },
+      {
+        "text": "Ⅱ Pausar movimento",
+        "reachable": true,
+        "bottom": 878.390625
+      },
+      {
+        "text": "◐ Ver em caderno",
+        "reachable": true,
+        "bottom": 878.390625
+      }
+    ]
+  }
+]
