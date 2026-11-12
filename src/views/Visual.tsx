@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { ArrowLeft, Compass, HelpCircle, RotateCcw, Search, Undo2, Waypoints, X } from 'lucide-react';
+import { ArrowLeft, ChartNoAxesColumn, Compass, HelpCircle, RotateCcw, Search, Undo2, Waypoints, X } from 'lucide-react';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { useMateriaLembrada } from '../hooks/useMateriaLembrada';
 
@@ -30,6 +30,7 @@ import { registrarRecente } from './visual-boards/BuscaRapida';
 import { ChapterObjectIcon } from './visual-boards/ChapterObjectIcon';
 import './Visual.css';
 import './VisualAtlas.css';
+import './VisualNavigation.css';
 
 type Mode = 'explorar' | 'testar' | 'reconstruir';
 
@@ -457,9 +458,20 @@ export default function Visual() {
           <ArrowLeft aria-hidden="true" />
         </button>
         <div className="vs-topic-identity">
-          <span>{summary.subject} / {summary.topic}</span>
+          <span>{summary.subject}{summary.topic !== summary.title ? ` / ${summary.topic}` : ''}</span>
           <strong>{summary.title}</strong>
         </div>
+      <button
+        type="button"
+        className="vs-domain-toggle"
+        aria-label="Mostrar domínio"
+        title="Mostrar domínio"
+        aria-pressed={mostrarDominio}
+        onClick={() => setMostrarDominio((v) => !v)}
+      >
+        <ChartNoAxesColumn aria-hidden="true" />
+        <span>Mostrar domínio</span>
+      </button>
       </header>
 
       {syncError && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">{syncError}</div>}
@@ -495,20 +507,6 @@ export default function Visual() {
         ))}
       </div>
 
-      {/* "Mostrar domínio": a leitura do capítulo inteiro de uma vez, em vez de
-          nó por nó pelo inspetor. Não é dado novo — é o mesmo `states` que já
-          colore cada cartão, reunido numa lista com a legenda ao lado. Sem a
-          legenda, a cor sozinha não diz o que significa para quem abriu a tela
-          pela primeira vez. */}
-      <button
-        type="button"
-        className="vs-domain-toggle"
-        aria-pressed={mostrarDominio}
-        onClick={() => setMostrarDominio((v) => !v)}
-      >
-        <span className="vs-domain-switch" aria-hidden="true" />
-        Mostrar domínio
-      </button>
       </div>
       <p className="vs-mode-hint">{MODE_HINT[mode]}</p>
       </div>
