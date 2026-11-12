@@ -244,6 +244,10 @@
 .crivo-immersion .cr-feedback[data-acertou=false] + .cr-description{display:none}
 }
 
+/* As duas ferramentas tinham 42 px no iPad e no desktop, abaixo dos 44 px que o
+   resto da cena respeita. */
+.crivo-immersion .cr-tool{width:44px;height:44px}
+
 /* A barra do aplicativo é fixa até 1023 px. A folga pertence à casca,
    abaixo dos controles: não desloca a molécula nem aumenta o bloco de leitura. */
 @media(max-width:1023px){

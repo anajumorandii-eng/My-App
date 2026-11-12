@@ -67,7 +67,7 @@ const PALETA = {
 const N = 28;
 // Centro da molécula no celular. A referência a punha em 371 px numa cena de
 // 820 px, mais alta que a tela: quem estava na etapa 1 não via o trilho de
-// etapas sem rolar. Aqui a cena tem 690 px e a molécula sobe e encolhe.
+// etapas sem rolar. Aqui a cena tem 724 px e a molécula sobe e encolhe.
 const MOBILE_CY = 262;
 type P3 = { x: number; y: number; z: number };
 
@@ -256,7 +256,7 @@ export default function PcrImmersion({ onPractice, temaInicial }: { onPractice?:
       if (now === 4) target = point(10, 1, withPrimers);
       // A largura inclui a folga das duas ferramentas à direita: sem ela a etiqueta
       // parava debaixo do botão de aproximar.
-      const anchor = project(target), mobile = width < 641, labelWidth = mobile ? 212 : 250;
+      const anchor = project(target), mobile = width < 641, labelWidth = mobile ? 236 : 250;
       const labelX = Math.min(width - labelWidth - 14, Math.max(mobile ? 18 : width * .47, anchor.x + 24));
       const labelY = Math.max(mobile ? 236 : 240, Math.min(mobile ? 292 : 400, anchor.y - 20));
       if (hotspot.current) { hotspot.current.style.left = labelX + 'px'; hotspot.current.style.top = labelY + 'px'; }
