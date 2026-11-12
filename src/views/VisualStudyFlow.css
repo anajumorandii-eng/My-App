@@ -18,3 +18,5 @@
 .crivo-visual--focused-study :is(.vs-practice-panel button,.vs-practice-panel textarea,.vs-rebuild-map summary),.vs-reading-handoff button{scroll-margin-block:80px calc(88px + env(safe-area-inset-bottom,0px))}
 .crivo-visual--focused-study :is(.vs-practice-panel button,.vs-practice-panel textarea,.vs-rebuild-map summary):focus-visible,.vs-reading-handoff button:focus-visible{outline:3px solid var(--vs-burgundy);outline-offset:3px}
 @media(max-width:560px){.vs-reading-handoff{flex-direction:column;align-items:stretch;padding:16px}.vs-practice-next button{flex:1 1 150px}.crivo-visual--focused-study .vs-practice-panel>div.flex>button:first-child{flex-basis:100%}}
+
+.vs-rebuild-map [data-study-artifact-mode]{margin-top:16px}

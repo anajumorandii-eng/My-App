@@ -21,15 +21,15 @@ for(const [name,width,height,theme,touch] of profiles){
  await lab.getByRole('img').focus();await page.keyboard.press('ArrowRight');
  if(await lab.getByRole('status',{name:'Leitura do modelo espacial'}).innerText()!==before)throw Error('Câmera mudou conteúdo');
  await lab.screenshot({style:'.ni-production-mobile, .crivo-mobile-toolbar, .crivo-skip-link { visibility: hidden !important; }',path:`${out}/${name}-${theme}-comparacao.png`});
- await page.locator('.vs-scene-bridge').screenshot({style:'.ni-production-mobile, .crivo-mobile-toolbar, .crivo-skip-link { visibility: hidden !important; }',path:`${out}/${name}-${theme}-integracao.png`});
+ await page.locator('.vs-reading-handoff').screenshot({style:'.ni-production-mobile, .crivo-mobile-toolbar, .crivo-skip-link { visibility: hidden !important; }',path:`${out}/${name}-${theme}-integracao.png`});
  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);
  if(overflow)throw Error(`${name}: overflow`);
- const read = page.getByRole('button',{name:'Entender esta etapa'});
+ const read = page.getByRole('button',{name:'Continuar na leitura'});
  if (touch) await read.tap(); else await read.click();
  if(await page.locator('#visual-chapter-reading').evaluate(e=>e!==document.activeElement))throw Error('Foco não chegou à leitura');
- const challenge = page.getByRole('button',{name:'Responder ao desafio'});
+ const challenge = page.getByRole('tab',{name:'Testar',exact:true});
  if (touch) await challenge.tap(); else await challenge.click();
- await page.getByRole('heading',{name:'Recuperação sem consulta'}).waitFor();
+ await page.getByRole('heading',{name:'Teste sua compreensão'}).waitFor();
  if(await page.locator('.vs-spatial-lab').count())throw Error('Consulta presente no teste');
  results.push({name,width,height,theme,touch,overflow,errors});await page.close();
 }

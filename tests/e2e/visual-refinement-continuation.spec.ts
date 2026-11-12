@@ -69,13 +69,12 @@ for (const [subject, id] of chapters) {
     await lab.getByRole('button', { name: 'Limpar comparação' }).click();
     await expect(lab.getByRole('button', { name: 'Guardar para comparar' })).toBeFocused();
     const section = challengeLinks.find(link => link.id === id)!;
-    await page.getByRole('button', { name: 'Entender o desafio' })[activate]();
+    await page.getByRole('button', { name: 'Continuar na leitura' })[activate]();
     await expect(page.locator('#visual-chapter-reading')).toBeFocused();
-    await expect(page.getByRole('navigation', { name: 'Etapas do capítulo' }).locator('[aria-current="step"]')).toContainText(section.sectionTitle);
-    await page.getByRole('button', { name: 'Responder ao desafio' })[activate]();
+    await page.getByRole('tab', { name: 'Testar', exact: true })[activate]();
     await page.getByLabel('Sua resposta', { exact: true }).fill('Hipótese para revisar');
     await page.getByRole('button', { name: 'Enviar para correção' }).click();
-    await page.getByRole('button', { name: 'Revisar a explicação deste desafio' })[activate]();
+    await page.getByRole('button', { name: 'Revisar a leitura' })[activate]();
     await expect(page.locator('#visual-chapter-reading')).toBeFocused();
     await expect(page.getByRole('navigation', { name: 'Etapas do capítulo' }).locator('[aria-current="step"]')).toContainText(section.sectionTitle);
     await page.getByRole('tab', { name: 'Testar', exact: true }).click();
