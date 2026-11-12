@@ -1,0 +1,191 @@
+[
+ {
+  "largura": "celular 390×844",
+  "tema": "claro",
+  "movimento": "no-preference",
+  "leituras": [
+   "Φ",
+   "Φ ↑",
+   "i ↺",
+   "i ↻",
+   "i ≠ 0"
+  ],
+  "tinta": "caderno",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "quadroParado": true,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "celular 390×844",
+  "tema": "escuro",
+  "movimento": "no-preference",
+  "leituras": [
+   "Φ",
+   "Φ ↑",
+   "i ↺",
+   "i ↻",
+   "i ≠ 0"
+  ],
+  "tinta": "noite",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "quadroParado": true,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "celular 390×844",
+  "tema": "claro",
+  "movimento": "reduce",
+  "leituras": [
+   "Φ",
+   "Φ ↑",
+   "i ↺",
+   "i ↻",
+   "i ≠ 0"
+  ],
+  "tinta": "caderno",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "quadroParado": null,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "ipad 834×1112",
+  "tema": "claro",
+  "movimento": "no-preference",
+  "leituras": [
+   "Φ",
+   "Φ ↑",
+   "i ↺",
+   "i ↻",
+   "i ≠ 0"
+  ],
+  "tinta": "caderno",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "quadroParado": true,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "ipad 834×1112",
+  "tema": "escuro",
+  "movimento": "no-preference",
+  "leituras": [
+   "Φ",
+   "Φ ↑",
+   "i ↺",
+   "i ↻",
+   "i ≠ 0"
+  ],
+  "tinta": "noite",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "quadroParado": true,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "ipad 834×1112",
+  "tema": "claro",
+  "movimento": "reduce",
+  "leituras": [
+   "Φ",
+   "Φ ↑",
+   "i ↺",
+   "i ↻",
+   "i ≠ 0"
+  ],
+  "tinta": "caderno",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "quadroParado": null,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "desktop 1366×900",
+  "tema": "claro",
+  "movimento": "no-preference",
+  "leituras": [
+   "Φ",
+   "Φ ↑",
+   "i ↺",
+   "i ↻",
+   "i ≠ 0"
+  ],
+  "tinta": "caderno",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "quadroParado": true,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "desktop 1366×900",
+  "tema": "escuro",
+  "movimento": "no-preference",
+  "leituras": [
+   "Φ",
+   "Φ ↑",
+   "i ↺",
+   "i ↻",
+   "i ≠ 0"
+  ],
+  "tinta": "noite",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "quadroParado": true,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "desktop 1366×900",
+  "tema": "claro",
+  "movimento": "reduce",
+  "leituras": [
+   "Φ",
+   "Φ ↑",
+   "i ↺",
+   "i ↻",
+   "i ≠ 0"
+  ],
+  "tinta": "caderno",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "quadroParado": null,
+  "sobreposicoes": []
+ }
+]

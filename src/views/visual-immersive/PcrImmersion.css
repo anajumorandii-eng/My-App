@@ -262,3 +262,10 @@
   .crivo-immersion .cr-bottom{padding-bottom:calc(12px + var(--cr-navigation-space))}
 }
 .crivo-immersion .cr-motion:disabled{cursor:default}
+
+/* A partir de 1024 px a cena divide a largura com o painel de diagnóstico, mas
+   o título continua medido pela janela (7vw): com duas linhas de 79 px ele
+   descia até a leitura da esquerda. A leitura desce; vale para as duas cenas. */
+@media(min-width:1024px){
+.crivo-immersion .cr-temp{top:296px}
+}

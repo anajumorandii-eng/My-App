@@ -444,6 +444,10 @@ que sirva a outro assunto. O que se reaproveita é a estrutura:
 6. Compor iPad e celular em separado, medindo sobreposição na captura.
 7. Registrar o capítulo em `registry.ts` e cobrir o comportamento com testes.
 
+A segunda cena (Lei de Lenz) seguiu este roteiro e extraiu a parte comum para
+`immersiveStage.tsx`: estado das etapas, canvas, câmera, laço e casca. Uma cena
+nova parte dele e escreve só as etapas e o desenho.
+
 Antes de uma segunda cena, vale extrair o que é comum (casca, trilho, previsão,
 rodapé, laço e tintas) para um componente compartilhado. Hoje tudo isso está
 dentro de `PcrImmersion`, o que é certo para uma cena e errado para duas.

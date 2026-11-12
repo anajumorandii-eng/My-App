@@ -182,8 +182,9 @@ interface, ícones e navegação continuam obedecendo ao shell existente do CRIV
 - `src/lib/visualStudy.ts`: tipos e regras do mapa;
 - `src/lib/visualStudy.test.ts`: testes das regras de reconstrução;
 - `src/views/Visual.test.tsx`: testes da interação da tela;
-- `src/views/visual-immersive/`: cena imersiva da PCR, especificada em
-  [`CENA-IMERSIVA-PCR.md`](CENA-IMERSIVA-PCR.md).
+- `src/views/visual-immersive/`: cenas imersivas. A da PCR está especificada em
+  [`CENA-IMERSIVA-PCR.md`](CENA-IMERSIVA-PCR.md); a da Lei de Lenz, conferida em
+  [`lenz-2026-11-12/`](lenz-2026-11-12/README.md).
 
 ## Referências visuais
 
