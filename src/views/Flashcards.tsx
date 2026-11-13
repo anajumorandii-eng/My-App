@@ -31,21 +31,26 @@ import { StudyMultiFilter } from '../components/StudyMultiFilter';
 import { flashcardExamBoards, matchesFlashcardBoards } from '../lib/flashcardExamFilters';
 import { BOARD_FOCUS_LABEL, describeBoardFocus, flashcardBoardFocus } from '../lib/flashcardBoardFocus';
 import { studyAreaForTopic } from '../data/studyProtocols';
+import deckCounts from '../data/flashcardDeckCounts.json';
 import { SUBJECT_ICONS } from './Dashboard';
 
 // Contagens conhecidas de antemão (conteúdo estático) — evita ter que
 // buscar todo mundo só pra montar a grade de matérias.
+// Totais gerados por scripts/enxugar-flashcards.py; o teste de integridade os
+// compara com os baralhos de public/flashcards.
+const DECK_COUNTS: Record<string, number> = deckCounts;
+
 const SUBJECTS: { name: string; count: number; colorClasses: string }[] = [
-  { name: 'Biologia', count: 2403, colorClasses: 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300' },
-  { name: 'Física', count: 2562, colorClasses: 'bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300' },
-  { name: 'Geografia', count: 1497, colorClasses: 'bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300' },
-  { name: 'História', count: 1839, colorClasses: 'bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300' },
-  { name: 'Inglês', count: 298, colorClasses: 'bg-sky-50 dark:bg-sky-900/20 text-sky-700 dark:text-sky-300' },
-  { name: 'Português', count: 3281, colorClasses: 'bg-violet-50 dark:bg-violet-900/20 text-violet-700 dark:text-violet-300' },
-  { name: 'Matemática', count: 2479, colorClasses: 'bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300' },
-  { name: 'Química', count: 1538, colorClasses: 'bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300' },
-  { name: 'Filosofia', count: 413, colorClasses: 'bg-stone-50 dark:bg-stone-900/20 text-stone-700 dark:text-stone-300' },
-  { name: 'Sociologia', count: 315, colorClasses: 'bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300' },
+  { name: 'Biologia', count: DECK_COUNTS['Biologia'], colorClasses: 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300' },
+  { name: 'Física', count: DECK_COUNTS['Física'], colorClasses: 'bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300' },
+  { name: 'Geografia', count: DECK_COUNTS['Geografia'], colorClasses: 'bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300' },
+  { name: 'História', count: DECK_COUNTS['História'], colorClasses: 'bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300' },
+  { name: 'Inglês', count: DECK_COUNTS['Inglês'], colorClasses: 'bg-sky-50 dark:bg-sky-900/20 text-sky-700 dark:text-sky-300' },
+  { name: 'Português', count: DECK_COUNTS['Português'], colorClasses: 'bg-violet-50 dark:bg-violet-900/20 text-violet-700 dark:text-violet-300' },
+  { name: 'Matemática', count: DECK_COUNTS['Matemática'], colorClasses: 'bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300' },
+  { name: 'Química', count: DECK_COUNTS['Química'], colorClasses: 'bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300' },
+  { name: 'Filosofia', count: DECK_COUNTS['Filosofia'], colorClasses: 'bg-stone-50 dark:bg-stone-900/20 text-stone-700 dark:text-stone-300' },
+  { name: 'Sociologia', count: DECK_COUNTS['Sociologia'], colorClasses: 'bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300' },
 ];
 
 const PRIORITY_LABELS: Record<FlashcardPriority, string> = {

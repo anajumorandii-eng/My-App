@@ -6,6 +6,7 @@ import test from 'node:test';
 import { classifyCards } from '../../scripts/classifyFlashcards';
 import { deriveFlashcardClassification } from './flashcardTaxonomy';
 import type { Flashcard } from '../types';
+import deckCounts from '../data/flashcardDeckCounts.json';
 
 const SUBJECT_FILES = [
   'biologia.json',
@@ -74,4 +75,15 @@ test('materialized subject data preserves the audited classification contract', 
     inherited: 7125,
     fallback: 0,
   });
+});
+
+test('os totais da tela de matérias batem com os baralhos', async () => {
+  const directory = path.resolve('public', 'flashcards');
+  const subjects: Record<string, number> = {};
+  for (const file of SUBJECT_FILES) {
+    for (const card of JSON.parse(await readFile(path.join(directory, file), 'utf8')) as Flashcard[]) {
+      subjects[card.subject] = (subjects[card.subject] ?? 0) + 1;
+    }
+  }
+  assert.deepEqual(deckCounts, subjects);
 });

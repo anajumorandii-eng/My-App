@@ -23,6 +23,9 @@ import re
 from pathlib import Path
 
 PASTA = Path('public/flashcards')
+MATERIA = {'biologia': 'Biologia', 'filosofia': 'Filosofia', 'fisica': 'Física', 'geografia': 'Geografia',
+           'historia': 'História', 'ingles': 'Inglês', 'matematica': 'Matemática', 'portugues': 'Português',
+           'quimica': 'Química', 'sociologia': 'Sociologia'}
 ARQUIVOS = ['biologia', 'filosofia', 'fisica', 'geografia', 'historia', 'ingles',
             'matematica', 'portugues', 'quimica', 'sociologia']
 
@@ -94,11 +97,16 @@ def enxugar(cards):
 
 
 antes = depois = 0
+contagens = {}
 for nome in ARQUIVOS:
     caminho = PASTA / f'{nome}.json'
     cards = json.loads(caminho.read_text(encoding='utf-8'))
     novos = enxugar(cards)
     antes += len(cards); depois += len(novos)
+    contagens[MATERIA[nome]] = len(novos)
     print(f'{nome}: {len(cards)} → {len(novos)}')
     caminho.write_text(json.dumps(novos, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print(f'total: {antes} → {depois}')
+# A tela de matérias mostra estes totais antes de baixar o baralho; fixos no
+# componente, ficaram com os números de antes do enxugamento.
+Path('src/data/flashcardDeckCounts.json').write_text(json.dumps(contagens, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
