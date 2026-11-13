@@ -29,6 +29,8 @@ import { motion } from 'motion/react';
 import { Panel } from '../components/ui/Panel';
 import { StudyMultiFilter } from '../components/StudyMultiFilter';
 import { flashcardExamBoards, matchesFlashcardBoards } from '../lib/flashcardExamFilters';
+import { BOARD_FOCUS_LABEL, describeBoardFocus, flashcardBoardFocus } from '../lib/flashcardBoardFocus';
+import { studyAreaForTopic } from '../data/studyProtocols';
 import { SUBJECT_ICONS } from './Dashboard';
 
 // Contagens conhecidas de antemão (conteúdo estático) — evita ter que
@@ -63,8 +65,18 @@ const TRAINING_TYPE_LABELS: Record<FlashcardTrainingType, string> = {
 const SELECTED_TOPICS_NAVIGATION_ID = '__selected_flashcard_topics__';
 const OTHER_TOPICS_NAVIGATION_ID = '__other_flashcard_topics__';
 
-function toSessionCard(card: Flashcard): SessionCard {
-  return { id: card.id, front: card.front, back: card.back, label: card.chapter };
+function toSessionCard(card: Flashcard, selectedBoards: string[] = []): SessionCard {
+  const area = card.topicId ? studyAreaForTopic({ id: card.topicId, subject: card.subject }) : card.subject;
+  // As bancas escolhidas no filtro vêm primeiro; o resto segue a incidência.
+  const focus = [...flashcardBoardFocus(card)].sort((a, b) =>
+    Number(selectedBoards.includes(b.board)) - Number(selectedBoards.includes(a.board)));
+  return {
+    id: card.id, front: card.front, back: card.back, label: card.chapter,
+    boardFocus: focus.map((item) => ({
+      board: item.board, level: item.level, label: BOARD_FOCUS_LABEL[item.level],
+      detail: describeBoardFocus(item, area), how: item.how,
+    })),
+  };
 }
 
 function BackButton({ onClick }: { onClick: () => void }) {
@@ -537,8 +549,11 @@ export default function Flashcards() {
             <p className="text-sm text-zinc-500 mt-1">Escolha o tipo de treino.</p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {FLASHCARD_TRAINING_TYPE_ORDER.map((trainingType) => {
-              const counts = trainingScope.buckets[navigation.priority][trainingType];
+            {/* Tipo sem cartão some em vez de aparecer desabilitado: depois do
+                enxugamento, discursivos, interpretação e padrões das bancas
+                ficaram vazios, e três botões mortos eram ruído na escolha. */}
+            {FLASHCARD_TRAINING_TYPE_ORDER.filter((trainingType) => trainingScope.buckets[navigation.priority!][trainingType].total > 0).map((trainingType) => {
+              const counts = trainingScope.buckets[navigation.priority!][trainingType];
               return (
                 <button
                   key={trainingType}
@@ -561,7 +576,7 @@ export default function Flashcards() {
         sessionCards.length > 0 ? (
           <FlashcardSession
             title={sessionTitle}
-            cards={sessionCards.map(toSessionCard)}
+            cards={sessionCards.map(card => toSessionCard(card, selectedBoards))}
             onRate={recordReview}
             onExit={exitSession}
           />
