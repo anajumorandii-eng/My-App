@@ -48,11 +48,13 @@ it('permite desfazer filtro vazio e usar Todos sem perder cartões sem banca', a
   const user = userEvent.setup(); render(<Flashcards />);
   await user.click(screen.getByRole('button', { name: 'Biologia' }));
   await user.click(await screen.findByRole('checkbox', { name: /^Estrutura e Fisiologia Celular/ }));
-  await user.click(screen.getByRole('checkbox', { name: 'ENEM' }));
+  // Estrutura celular não é tópico frequente na UNESP e o cartão não traz a
+  // etiqueta: o filtro fica vazio. Genética e Ecologia são frequentes nela.
+  await user.click(screen.getByRole('checkbox', { name: 'UNESP' }));
   expect(screen.getByRole('status')).toHaveTextContent('0 cartões');
   expect(screen.getByRole('button', { name: 'Revisar todos os vencidos da seleção' })).toBeDisabled();
   await user.click(screen.getByRole('checkbox', { name: /^Estrutura e Fisiologia Celular/ }));
-  expect(screen.getByRole('status')).toHaveTextContent('2 cartões');
+  expect(screen.getByRole('status')).toHaveTextContent('4 cartões');
   await user.click(screen.getByRole('checkbox', { name: 'Todas as bancas' }));
   expect(screen.getByRole('status')).toHaveTextContent('5 cartões');
 });

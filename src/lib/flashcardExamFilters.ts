@@ -1,5 +1,6 @@
 import type { Flashcard } from '../types';
 import { canonicalExamBoard } from './questionExamFilters';
+import { flashcardFocusBoards } from './flashcardBoardFocus';
 
 const BOARDS = new Set(['ENEM', 'FUVEST', 'UNICAMP', 'UNESP', 'FAMERP', 'UNIFESP', 'VUNESP']);
 const MODELS: Record<string, string> = {
@@ -10,12 +11,20 @@ const MODELS: Record<string, string> = {
   '13_vunesp_2a_fase_d_c_e_a': 'VUNESP',
 };
 
-/** Bancas declaradas nas etiquetas: VUNESP sozinha não identifica uma instituição. */
-export function flashcardExamBoards(card: Pick<Flashcard, 'tags'>): string[] {
-  return [...new Set(card.tags.flatMap(tag => {
-    const board = MODELS[tag.toLowerCase()] ?? canonicalExamBoard(tag);
-    return BOARDS.has(board) ? [board] : [];
-  }))];
+/**
+ * Bancas declaradas nas etiquetas (VUNESP sozinha não identifica uma
+ * instituição) mais aquelas em que o tópico é frequente nas provas classificadas. Só as
+ * etiquetas não bastam: os cartões que as traziam eram os moldes fixos por
+ * banca, removidos no enxugamento, e o filtro ficaria vazio para o resto.
+ */
+export function flashcardExamBoards(card: Pick<Flashcard, 'tags' | 'topicId' | 'subject'>): string[] {
+  return [...new Set([
+    ...card.tags.flatMap(tag => {
+      const board = MODELS[tag.toLowerCase()] ?? canonicalExamBoard(tag);
+      return BOARDS.has(board) ? [board] : [];
+    }),
+    ...flashcardFocusBoards(card),
+  ])];
 }
 
 export function matchesFlashcardBoards(card: Flashcard, boards: string[]): boolean {

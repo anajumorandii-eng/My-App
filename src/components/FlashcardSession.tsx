@@ -27,7 +27,24 @@ export interface SessionCard {
   front: string;
   back: string;
   label?: string; // ex.: capítulo ou obra, mostrado como contexto acima da pergunta
+  /** Foco de cada banca no tópico, mostrado com a resposta. */
+  boardFocus?: SessionBoardFocus[];
 }
+
+export interface SessionBoardFocus {
+  board: string;
+  level: 'frequente' | 'aparece' | 'nao-apareceu' | 'sem-dados';
+  label: string;
+  detail: string;
+  how: string;
+}
+
+const FOCUS_TONE: Record<SessionBoardFocus['level'], string> = {
+  frequente: 'text-emerald-700 dark:text-emerald-300',
+  aparece: 'text-amber-700 dark:text-amber-300',
+  'nao-apareceu': 'text-zinc-500 dark:text-zinc-400',
+  'sem-dados': 'text-zinc-500 dark:text-zinc-400',
+};
 
 interface FlashcardSessionProps {
   title: string;
@@ -135,6 +152,24 @@ export default function FlashcardSession({ title, cards, onRate, onExit, onCompl
           {revealed && (
             <div className="mt-5 pt-5 border-t border-zinc-100 dark:border-zinc-800">
               <div className="prose prose-zinc dark:prose-invert max-w-none text-base" dangerouslySetInnerHTML={{ __html: current.back }} />
+              {current.boardFocus && current.boardFocus.length > 0 && (
+                <section aria-label="Foco por banca" className="mt-5 pt-4 border-t border-zinc-100 dark:border-zinc-800">
+                  <h4 className="text-xs font-semibold uppercase tracking-wide text-zinc-500 mb-2">Foco por banca</h4>
+                  <ul className="space-y-2">
+                    {current.boardFocus.map((focus) => (
+                      <li key={focus.board} className="text-sm">
+                        <span className="font-semibold">{focus.board}</span>
+                        {' · '}
+                        <span className={`font-medium ${FOCUS_TONE[focus.level]}`}>{focus.label}</span>
+                        <span className="text-zinc-500 dark:text-zinc-400"> — {focus.detail}</span>
+                        {(focus.level === 'frequente' || focus.level === 'aparece') && (
+                          <span className="block text-zinc-600 dark:text-zinc-300">{focus.how}</span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
             </div>
           )}
         </div>
