@@ -53,6 +53,59 @@
     "statementComplete": true
   },
   {
+    "number": 2,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Figuras de Linguagem",
+    "title": "Metáforas para o folhetim e o folhetinista",
+    "concept": "Metáfora e referência: identificar a que cada imagem se aplica; pré-requisitos: atenção ao “respectivamente”.",
+    "steps": [
+      "Localize cada expressão e veja o que ela nomeia.",
+      "“Este monstro de Horácio, este novo Proteu, que chamam — folhetim”: as duas imagens designam o gênero.",
+      "“Fazerem do escritor uma espécie de colibri”: a imagem designa quem escreve, o folhetinista.",
+      "“Candeias às avessas” é o mau humor do cronista; “mel das flores” é o que o colibri suga (graça, sal, espírito); E traz duas imagens do folhetim.",
+      "Folhetim = monstro de Horácio; folhetinista = espécie de colibri — alternativa A."
+    ],
+    "trap": "E reúne duas expressões corretas, mas ambas do folhetim: falta a do folhetinista.",
+    "retrieval": [
+      "Por que o folhetim é comparado a um ser feito de partes de vários animais?",
+      "O que o colibri “suga”, na imagem de Alencar?"
+    ],
+    "transfer": "Exercício autoral: no 3º parágrafo, que duas imagens de insetos descrevem a ilusão e a realidade do folhetinista?",
+    "criteria": [
+      "Borboleta: o que ele julga ser.",
+      "Formiga com asas: o que ele é."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "“monstro de Horácio” (1º parágrafo) e “espécie de colibri” (2º parágrafo)."
+      },
+      {
+        "id": "b",
+        "text": "“candeias às avessas” (1º parágrafo) e “espécie de colibri” (2º parágrafo)."
+      },
+      {
+        "id": "c",
+        "text": "“mel das flores” (2º parágrafo) e “monstro de Horácio” (1º parágrafo)."
+      },
+      {
+        "id": "d",
+        "text": "“novo Proteu” (1º parágrafo) e “mel das flores” (2º parágrafo)."
+      },
+      {
+        "id": "e",
+        "text": "“monstro de Horácio” (1º parágrafo) e “novo Proteu” (1º parágrafo)."
+      }
+    ],
+    "pages": [
+      3
+    ],
+    "statement": "Leia um trecho de um folhetim, texto precursor da crônica atual, do escritor José de Alencar, publicado originalmente em 24.09.1854. Os parágrafos estão numerados entre colchetes.\n\n[1] É uma felicidade que não me tenha ainda dado ao trabalho de saber quem foi o inventor deste monstro de Horácio¹, deste novo Proteu², que chamam — folhetim; senão aproveitaria alguns momentos em que estivesse de candeias às avessas³, e escrever-lhe-ia uma biografia, que, com as anotações de certos críticos que eu conheço, havia de fazer o tal sujeito ter um inferno no purgatório onde necessariamente deve estar o inventor de tão desastrada ideia.\n[2] [...] Fazerem do escritor uma espécie de colibri a esvoaçar em ziguezague, e a sugar, como o mel das flores, a graça, o sal e o espírito que deve necessariamente descobrir no fato o mais comezinho!\n[3] Ainda isto não é tudo. Depois que o mísero folhetinista por força de vontade conseguiu atingir a este último esforço da volubilidade, quando à custa de magia e de encanto fez que a pena se lembrasse dos tempos em que voava, deixa finalmente o pensamento lançar-se sobre o papel, livre como o espaço. Cuida que é uma borboleta que quebrou a crisálida para ostentar o brilho fascinador de suas cores; mas engana-se: é apenas uma formiga que criou asas para perder-se.\n[4] De um lado um crítico, aliás de boa-fé, é de opinião que o folhetinista inventou em vez de contar, o que por conseguinte excedeu os limites da crônica. Outro afirma que plagiou, e prova imediatamente que tal autor, se não disse a mesma coisa, teve intenção de dizer [...]. Se se trata de coisa séria, a amável leitora amarrota o jornal, e atira-o de lado com um momozinho⁴ displicente a que é impossível resistir. Quando se fala de bailes, de uma mocinha bonita, de uns olhos brejeiros, o velho tira os óculos de maçado⁵ e diz entre dentes: “Ah! o sujeitinho está namorando à minha custa! Não fala contra as reformas! Hei de suspender a assinatura.”\n\n(José de Alencar. Ao correr da pena, 2004.)\n\n¹ monstro de Horácio: figura grotesca imaginada pelo escritor latino Horácio; tal figura conjugava partes de diferentes animais.\n² Proteu: deus marinho, que podia assumir diferentes formas.\n³ de candeias às avessas: de mau humor.\n⁴ momozinho: zombaria, galhofa.\n⁵ maçado: aborrecido, entediado.\n\nConstituem expressões empregadas por José de Alencar para caracterizar, respectivamente, o folhetim e o folhetinista:",
+    "statementComplete": true
+  },
+  {
     "number": 3,
     "topicId": "por_norma_culta",
     "subject": "Português",
@@ -103,6 +156,112 @@
       3
     ],
     "statement": "Leia o trecho de um folhetim, texto precursor da crônica atual, do escritor José de Alencar, publicado originalmente em 24.09.1854.\n\nÉ uma felicidade que não me tenha ainda dado ao trabalho de saber quem foi o inventor deste monstro de Horácio¹, deste novo Proteu², que chamam — folhetim; senão aproveitaria alguns momentos em que estivesse de candeias às avessas³, e escrever-lhe-ia uma biografia, que, com as anotações de certos críticos que eu conheço, havia de fazer o tal sujeito ter um inferno no purgatório onde necessariamente deve estar o inventor de tão desastrada ideia.\n\n[...] Fazerem do escritor uma espécie de colibri a esvoaçar em ziguezague, e a sugar, como o mel das flores, a graça, o sal e o espírito que deve necessariamente descobrir no fato o mais comezinho!\n\nAinda isto não é tudo. Depois que o mísero folhetinista por força de vontade conseguiu atingir a este último esforço da volubilidade, quando à custa de magia e de encanto fez que a pena se lembrasse dos tempos em que voava, deixa finalmente o pensamento lançar-se sobre o papel, livre como o espaço. Cuida que é uma borboleta que quebrou a crisálida para ostentar o brilho fascinador de suas cores; mas engana-se: é apenas uma formiga que criou asas para perder-se.\n\nDe um lado um crítico, aliás de boa-fé, é de opinião que o folhetinista inventou em vez de contar, o que por conseguinte excedeu os limites da crônica. Outro afirma que plagiou, e prova imediatamente que tal autor, se não disse a mesma coisa, teve intenção de dizer [...]. Se se trata de coisa séria, a amável leitora amarrota o jornal, e atira-o de lado com um momozinho⁴ displicente a que é impossível resistir. Quando se fala de bailes, de uma mocinha bonita, de uns olhos brejeiros, o velho tira os óculos de maçado⁵ e diz entre dentes: “Ah! o sujeitinho está namorando à minha custa! Não fala contra as reformas! Hei de suspender a assinatura.”\n\n(José de Alencar. Ao correr da pena, 2004.) ¹ monstro de Horácio: figura grotesca imaginada pelo escritor latino Horácio; tal figura conjugava partes de diferentes animais\n\n² Proteu: deus marinho, que podia assumir diferentes formas.\n\n³ de candeias às avessas: de mau humor.\n\n⁴ momozinho: zombaria, galhofa.\n\n⁵ maçado: aborrecido, entediado.\n\nO pronome sublinhado no primeiro parágrafo refere-se\n(O pronome destacado é “lhe”, em “escrever-lhe-ia”.)",
+    "statementComplete": true
+  },
+  {
+    "number": 4,
+    "topicId": "por_sintaxe",
+    "subject": "Português",
+    "chapter": "Orações Adverbiais",
+    "title": "“Se” condicional",
+    "concept": "Valores de “se” (conjunção condicional × pronome) e de “quando” e “mas”; pré-requisitos: classificação das conjunções.",
+    "steps": [
+      "Classifique cada termo destacado.",
+      "Em A, “se não disse a mesma coisa” introduz uma hipótese: caso não tenha dito.",
+      "É conjunção subordinativa condicional.",
+      "Em B e E, “quando” indica tempo; em C, “mas” indica oposição; em D, o termo destacado é o segundo “se”, pronome que acompanha o verbo “tratar-se”.",
+      "Alternativa A."
+    ],
+    "trap": "Em D há um “se” condicional, mas é o primeiro; o destacado é o pronome.",
+    "retrieval": [
+      "Como distinguir “se” conjunção de “se” pronome?",
+      "Que valor tem “quando” nos trechos B e E?"
+    ],
+    "transfer": "Exercício autoral: classifique os dois “se” de “Se se esforçar, vencerá”.",
+    "criteria": [
+      "Primeiro: conjunção condicional.",
+      "Segundo: pronome reflexivo."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "“tal autor, [se] não disse a mesma coisa, teve intenção de dizer” (4º parágrafo)."
+      },
+      {
+        "id": "b",
+        "text": "“[quando] à custa de magia e de encanto fez que a pena se lembrasse dos tempos em que voava” (3º parágrafo)."
+      },
+      {
+        "id": "c",
+        "text": "“[mas] engana-se: é apenas uma formiga que criou asas para perder-se” (3º parágrafo)."
+      },
+      {
+        "id": "d",
+        "text": "“Se [se] trata de coisa séria, a amável leitora amarrota o jornal” (4º parágrafo)."
+      },
+      {
+        "id": "e",
+        "text": "“[Quando] se fala de bailes, de uma mocinha bonita, de uns olhos brejeiros, o velho tira os óculos de maçado” (4º parágrafo)."
+      }
+    ],
+    "pages": [
+      3
+    ],
+    "statement": "Leia um trecho de um folhetim, texto precursor da crônica atual, do escritor José de Alencar, publicado originalmente em 24.09.1854. Os parágrafos estão numerados entre colchetes.\n\n[1] É uma felicidade que não me tenha ainda dado ao trabalho de saber quem foi o inventor deste monstro de Horácio¹, deste novo Proteu², que chamam — folhetim; senão aproveitaria alguns momentos em que estivesse de candeias às avessas³, e escrever-lhe-ia uma biografia, que, com as anotações de certos críticos que eu conheço, havia de fazer o tal sujeito ter um inferno no purgatório onde necessariamente deve estar o inventor de tão desastrada ideia.\n[2] [...] Fazerem do escritor uma espécie de colibri a esvoaçar em ziguezague, e a sugar, como o mel das flores, a graça, o sal e o espírito que deve necessariamente descobrir no fato o mais comezinho!\n[3] Ainda isto não é tudo. Depois que o mísero folhetinista por força de vontade conseguiu atingir a este último esforço da volubilidade, quando à custa de magia e de encanto fez que a pena se lembrasse dos tempos em que voava, deixa finalmente o pensamento lançar-se sobre o papel, livre como o espaço. Cuida que é uma borboleta que quebrou a crisálida para ostentar o brilho fascinador de suas cores; mas engana-se: é apenas uma formiga que criou asas para perder-se.\n[4] De um lado um crítico, aliás de boa-fé, é de opinião que o folhetinista inventou em vez de contar, o que por conseguinte excedeu os limites da crônica. Outro afirma que plagiou, e prova imediatamente que tal autor, se não disse a mesma coisa, teve intenção de dizer [...]. Se se trata de coisa séria, a amável leitora amarrota o jornal, e atira-o de lado com um momozinho⁴ displicente a que é impossível resistir. Quando se fala de bailes, de uma mocinha bonita, de uns olhos brejeiros, o velho tira os óculos de maçado⁵ e diz entre dentes: “Ah! o sujeitinho está namorando à minha custa! Não fala contra as reformas! Hei de suspender a assinatura.”\n\n(José de Alencar. Ao correr da pena, 2004.)\n\n¹ monstro de Horácio: figura grotesca imaginada pelo escritor latino Horácio; tal figura conjugava partes de diferentes animais.\n² Proteu: deus marinho, que podia assumir diferentes formas.\n³ de candeias às avessas: de mau humor.\n⁴ momozinho: zombaria, galhofa.\n⁵ maçado: aborrecido, entediado.\n\n[Em cada alternativa, na prova, um termo aparece sublinhado; aqui ele vem entre colchetes.]\n\nEstabelece no texto uma relação de condição o termo sublinhado no seguinte trecho:",
+    "statementComplete": true
+  },
+  {
+    "number": 5,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Os Dois Níveis da Leitura",
+    "title": "Ciência e expectativa mítica",
+    "concept": "Compreensão de tese: distinguir “carregar a mesma expectativa” de “retomar” ou “depender”; pré-requisitos: leitura atenta de modalizadores.",
+    "steps": [
+      "Localize a frase-chave: a ciência carrega, nas suas raízes, “a mesma expectativa mítica de explicações finais sobre o mundo”.",
+      "O ponto comum entre ciência e mito é a expectativa de explicação final, totalizante.",
+      "Isso é aproximação, semelhança de busca.",
+      "A diz que a ciência retoma as narrativas míticas; D, que não pode prescindir delas; C e E falam de fascínio crescente e de explicação final próxima, o que o texto não afirma.",
+      "Alternativa B."
+    ],
+    "trap": "A e B começam iguais: a diferença está no verbo — “aproxima” (texto) × “retome” (extrapolação).",
+    "retrieval": [
+      "O que, segundo Gleiser, ciência e mito têm em comum?",
+      "O que o autor quer dizer com “nosso foco precisa mudar”?"
+    ],
+    "transfer": "Exercício autoral: explique em uma frase a tese do 2º parágrafo sobre assimetria.",
+    "criteria": [
+      "Afirmar que a criação vem de imperfeições e assimetrias.",
+      "Citar um exemplo do texto (matéria, vida, cosmo)."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a busca por explicações totalizantes sobre o mundo faz com que a ciência atual retome as antigas narrativas míticas."
+      },
+      {
+        "id": "b",
+        "text": "a busca por explicações totalizantes sobre o mundo aproxima a ciência atual das antigas narrativas míticas."
+      },
+      {
+        "id": "c",
+        "text": "em razão do espantoso avanço da ciência, nosso fascínio atual pelo mistério do Universo aumenta vertiginosamente."
+      },
+      {
+        "id": "d",
+        "text": "a despeito dos decisivos avanços tecnológicos, a ciência atual não pode prescindir das antigas explicações míticas."
+      },
+      {
+        "id": "e",
+        "text": "em razão dos assombrosos avanços tecnológicos, a ciência atual aproxima-se da possibilidade de uma explicação final sobre o Universo."
+      }
+    ],
+    "pages": [
+      4
+    ],
+    "statement": "Leia um trecho do livro Criação imperfeita, do físico Marcelo Gleiser. Os parágrafos estão numerados entre colchetes.\n\n[1] Nosso primeiro antepassado era tão fascinado quanto somos hoje pelo mistério da Criação. Nossos descendentes continuarão essa busca, tentando desvendar o sentido da existência. Somos, e seremos sempre, criaturas criadoras. Mas nosso foco precisa mudar. A ciência nos mostrou que a razão, motivada pela paixão da descoberta, é o instrumento mais poderoso que temos para responder a nossas perguntas sobre o mundo natural. Dado que nossas primeiras explicações do mundo surgiram de imagens e narrativas míticas, não é surpreendente que a ciência carregue, nas suas raízes, a mesma expectativa mítica de explicações finais sobre o mundo, sobre nossa razão de ser. [...]\n[2] A despeito da nossa necessidade de encontrar perfeição e simetria em tudo, o poder criativo da Natureza vem de assimetrias e de imperfeições que se manifestam desde o mundo das partículas subatômicas ao Universo como um todo. Buscamos por simetrias perfeitas, criamos equações para descrevê-las, mas vemos que nossas soluções são apenas aproximações de uma realidade imperfeita. E assim deveria ser. Assimetria gera desequilíbrio, desequilíbrio gera transformação, transformação gera realização, a emergência de estrutura. Algumas das simetrias mais básicas da física de partículas devem ser violadas para que a matéria exista. A vida seria impossível sem a assimetria molecular, a quiralidade das biomoléculas. O Universo por inteiro talvez tenha surgido de uma flutuação quântica que emergiu do multiverso, uma entidade atemporal onde incontáveis possíveis universos coexistem. Segundo essa visão, o cosmo é produto de um acidente que carregava consigo as sementes da existência. De um início incerto e após uma expansão superacelerada, o cosmo evoluiu para gerar os elementos químicos mais leves. Em seguida, nuvens de hidrogênio e hélio, cercadas por véus invisíveis de matéria escura, entraram em colapso devido a sua própria gravidade para formar as primeiras estrelas e galáxias. Bilhões de anos mais tarde, em torno de uma estrela comum, um planeta banhado por vastos oceanos coletou os ingredientes necessários para a vida. Após colisões de enorme violência com asteroides e cometas, de incontáveis erupções vulcânicas, de turbulência furiosa nos oceanos, o planeta foi se acalmando. Da sopa primordial, moléculas interagiram e cresceram, interligando-se para formar a primeira criatura viva. Bilhões de anos mais tarde, nossos antepassados começaram a se questionar sobre a razão de sua existência. Sozinhos, contemplaram os céus, buscando nas estrelas pela sua origem.\n\n(Criação imperfeita, 2024.)\n\nDe acordo com o físico Marcelo Gleiser,",
     "statementComplete": true
   },
   {
@@ -373,6 +532,59 @@
     "statementComplete": true
   },
   {
+    "number": 11,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Leitura de Textos Cômicos",
+    "title": "A rima perdida de Lola",
+    "concept": "Rima e classes de palavras; efeito da passagem da 1ª para a 3ª pessoa; pré-requisitos: reconhecer estrangeirismo substantivado (“show”).",
+    "steps": [
+      "Ache as palavras que rimam na fala de Lola: “Andorinha eu sou” / “eu dou um show”.",
+      "A rima é entre “sou” e “show”.",
+      "“Sou” é verbo (ser, 1ª pessoa); “show” é substantivo.",
+      "Na versão do microfone, “sou” vira “é” (3ª pessoa), e a rima com “show” se perde; “dou” também é verbo, mas está no meio do verso.",
+      "Alternativa A."
+    ],
+    "trap": "“Sou” e “dou” rimam e são dois verbos, mas “dou” não está em posição de rima e sua troca por “dá” não é o que Lola lamenta.",
+    "retrieval": [
+      "Que mudança gramatical o microfone faz em todas as falas?",
+      "Por que essa mudança destrói a rima?"
+    ],
+    "transfer": "Exercício autoral: reescreva a fala do microfone mantendo a 3ª pessoa e criando uma nova rima.",
+    "criteria": [
+      "Manter o sujeito “ela”.",
+      "Fazer rimar os finais dos dois versos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "um verbo e um substantivo."
+      },
+      {
+        "id": "b",
+        "text": "dois substantivos."
+      },
+      {
+        "id": "c",
+        "text": "um substantivo e um adjetivo."
+      },
+      {
+        "id": "d",
+        "text": "um verbo e um adjetivo."
+      },
+      {
+        "id": "e",
+        "text": "dois verbos."
+      }
+    ],
+    "pages": [
+      6
+    ],
+    "statement": "Examine a tirinha da cartunista Laerte.\n\n[Tirinha “Lola, a andorinha”. A andorinha Lola fala a um microfone de pedestal; a cada fala dela, o quadrinho ao lado mostra uma caixa de som repetindo o recado para uma plateia.\nLola: “Teste!” — Caixa de som: “Teste!”\nLola: “Meu nome é Lola...” — Caixa de som: “O nome dela é Lola...”\nLola: “Andorinha eu sou...” — Caixa de som: “Andorinha ela é...”\nLola: “Quando abro o bico eu dou um show!” — Caixa de som: “Quando abre o bico ela dá um show!”\nNo último quadrinho, alguém pergunta: “Dei o recado?”, e Lola responde: “Deu, mas sem a rima.”]\n\n(Lola, a andorinha, 2013. Adaptado.)\n\nAo final da tirinha, Lola diz que o microfone deu o recado (ou seja, reproduziu o conteúdo de sua fala), “mas sem a rima”. A rima que não se manteve na fala do microfone é aquela que ocorre entre",
+    "statementComplete": true
+  },
+  {
     "number": 12,
     "topicId": "por_texto",
     "subject": "Português",
@@ -426,6 +638,168 @@
     "statementComplete": true
   },
   {
+    "number": 13,
+    "topicId": "por_lit_modernismo",
+    "subject": "Português",
+    "chapter": "Parnasianismo",
+    "title": "A luva e a efemeridade",
+    "concept": "Leitura de metáfora em poema: a luva como cálice de flor que murcha; pré-requisitos: tema da transitoriedade.",
+    "steps": [
+      "Releia a 3ª estrofe: a luva se compara a um cálix que guardou a alma de um lírio e que em breve vai se desfazer “em poeira, em nada”.",
+      "A imagem é de algo que teve vida e está destinado a desaparecer.",
+      "Desfazer-se em pó é metáfora da brevidade da existência.",
+      "Não há crítica a insensibilidade, egoísmo, hipocrisia ou conformismo.",
+      "Alternativa B: efemeridade."
+    ],
+    "trap": "A luva está abandonada, o que sugere “insensibilidade”; mas a 3ª estrofe fala do fim de quem fala, não da culpa de quem abandonou.",
+    "retrieval": [
+      "Que palavras da estrofe indicam desaparecimento?",
+      "Quem é o eu lírico do soneto?"
+    ],
+    "transfer": "Exercício autoral: relacione “em poeira, em nada” à tradição do tema da brevidade da vida.",
+    "criteria": [
+      "Citar a ideia de retorno ao pó.",
+      "Relacionar à passagem do tempo."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "da insensibilidade humana."
+      },
+      {
+        "id": "b",
+        "text": "da efemeridade humana."
+      },
+      {
+        "id": "c",
+        "text": "do egoísmo humano."
+      },
+      {
+        "id": "d",
+        "text": "da hipocrisia humana."
+      },
+      {
+        "id": "e",
+        "text": "do conformismo humano."
+      }
+    ],
+    "pages": [
+      6,
+      7
+    ],
+    "statement": "Leia o soneto “Luva abandonada”, de Alberto de Oliveira.\n\nUma só vez calçar-vos me foi dado,\nDedos claros! A escura sorte minha,\nO meu destino, como um vento irado,\nLevou-vos longe e me deixou sozinha!\n\nSobre este cofre, desta cama ao lado,\nMurcho, como uma flor, triste e mesquinha,\nBebendo ávida o cheiro delicado\nQue aquela mão de dedos claros tinha.\n\nCálix¹ que a alma de um lírio teve um dia\nEm si guardada, antes que ao chão pendesse,\nBreve me hei de esfazer² em poeira, em nada...\n\nOh! em que chaga viva tocaria\nQuem nesta vida compreender pudesse\nA saudade da luva abandonada!\n\n(www.nilc.icmc.usp.br)\n\n¹ cálix: invólucro externo de uma flor; cálice.\n² esfazer: desfazer.\n\nA terceira estrofe do soneto explora, em termos metafóricos, o tema",
+    "statementComplete": true
+  },
+  {
+    "number": 14,
+    "topicId": "por_lit_modernismo",
+    "subject": "Português",
+    "chapter": "Parnasianismo",
+    "title": "Um parnasiano sentimental",
+    "concept": "Parnasianismo: objetividade, impassibilidade, culto da forma, descrição de objetos; pré-requisitos: reconhecer o que confirma e o que contraria a estética.",
+    "steps": [
+      "Liste traços parnasianos: forma fixa (soneto), rimas, descrição de objeto, contenção emotiva.",
+      "O soneto mantém a forma rigorosa e o objeto (uma luva).",
+      "Mas a luva fala em 1ª pessoa de sua sorte, saudade e dor: confissão sentimental.",
+      "A é traço parnasiano, não afastamento; B e D não ocorrem; C é falsa: a forma é rigorosa.",
+      "Alternativa E."
+    ],
+    "trap": "A questão pede o que afasta o poema do Parnasianismo; a alternativa A descreve exatamente o ideal parnasiano.",
+    "retrieval": [
+      "Que elementos do soneto são tipicamente parnasianos?",
+      "Que palavras revelam emoção do eu lírico?"
+    ],
+    "transfer": "Exercício autoral: compare o tom deste soneto com o de “Vaso grego”, do mesmo autor.",
+    "criteria": [
+      "“Vaso grego”: descrição objetiva e impessoal.",
+      "“Luva abandonada”: voz subjetiva e saudosa."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a recusa da sentimentalidade, em favor da objetividade."
+      },
+      {
+        "id": "b",
+        "text": "a representação bucólica da natureza."
+      },
+      {
+        "id": "c",
+        "text": "a despreocupação formal, em favor da experimentação."
+      },
+      {
+        "id": "d",
+        "text": "a referência a entidades mitológicas."
+      },
+      {
+        "id": "e",
+        "text": "a tonalidade confessional e sentimental."
+      }
+    ],
+    "pages": [
+      6,
+      7
+    ],
+    "statement": "Leia o soneto “Luva abandonada”, de Alberto de Oliveira.\n\nUma só vez calçar-vos me foi dado,\nDedos claros! A escura sorte minha,\nO meu destino, como um vento irado,\nLevou-vos longe e me deixou sozinha!\n\nSobre este cofre, desta cama ao lado,\nMurcho, como uma flor, triste e mesquinha,\nBebendo ávida o cheiro delicado\nQue aquela mão de dedos claros tinha.\n\nCálix¹ que a alma de um lírio teve um dia\nEm si guardada, antes que ao chão pendesse,\nBreve me hei de esfazer² em poeira, em nada...\n\nOh! em que chaga viva tocaria\nQuem nesta vida compreender pudesse\nA saudade da luva abandonada!\n\n(www.nilc.icmc.usp.br)\n\n¹ cálix: invólucro externo de uma flor; cálice.\n² esfazer: desfazer.\n\nUma característica presente nesse soneto que o afasta da estética parnasiana é",
+    "statementComplete": true
+  },
+  {
+    "number": 15,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Pronomes",
+    "title": "Referente do pronome relativo",
+    "concept": "Pronome relativo e ordem inversa: reorganizar o período para achar o antecedente; pré-requisitos: sujeito × objeto.",
+    "steps": [
+      "O relativo é o “que” de “Cálix que a alma de um lírio teve um dia em si guardada”.",
+      "Ponha na ordem direta: a alma de um lírio teve o cálix guardada em si? Não — o cálix teve, um dia, a alma de um lírio guardada em si.",
+      "“Que” retoma “cálix” e funciona como sujeito de “teve”.",
+      "“Alma” é núcleo do objeto de “teve”; “lírio” a especifica; “chão” e “poeira” estão em outras orações.",
+      "Alternativa D."
+    ],
+    "trap": "A proximidade engana: o termo logo após o “que” (“a alma de um lírio”) é o objeto, não o antecedente.",
+    "retrieval": [
+      "Qual é o sujeito de “teve” na estrofe?",
+      "O que o cálix guardava?"
+    ],
+    "transfer": "Exercício autoral: indique o antecedente do “que” em “Bebendo ávida o cheiro delicado / Que aquela mão de dedos claros tinha”.",
+    "criteria": [
+      "Identificar “cheiro delicado”.",
+      "Classificar o “que” como objeto direto de “tinha”."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "lírio."
+      },
+      {
+        "id": "b",
+        "text": "alma."
+      },
+      {
+        "id": "c",
+        "text": "chão."
+      },
+      {
+        "id": "d",
+        "text": "cálix."
+      },
+      {
+        "id": "e",
+        "text": "poeira."
+      }
+    ],
+    "pages": [
+      6,
+      7
+    ],
+    "statement": "Leia o soneto “Luva abandonada”, de Alberto de Oliveira.\n\nUma só vez calçar-vos me foi dado,\nDedos claros! A escura sorte minha,\nO meu destino, como um vento irado,\nLevou-vos longe e me deixou sozinha!\n\nSobre este cofre, desta cama ao lado,\nMurcho, como uma flor, triste e mesquinha,\nBebendo ávida o cheiro delicado\nQue aquela mão de dedos claros tinha.\n\nCálix¹ que a alma de um lírio teve um dia\nEm si guardada, antes que ao chão pendesse,\nBreve me hei de esfazer² em poeira, em nada...\n\nOh! em que chaga viva tocaria\nQuem nesta vida compreender pudesse\nA saudade da luva abandonada!\n\n(www.nilc.icmc.usp.br)\n\n¹ cálix: invólucro externo de uma flor; cálice.\n² esfazer: desfazer.\n\nO referente do pronome relativo que consta da terceira estrofe é",
+    "statementComplete": true
+  },
+  {
     "number": 16,
     "topicId": "ing_01",
     "subject": "Inglês",
@@ -476,6 +850,114 @@
       7
     ],
     "statement": "Leia o texto e examine a imagem do robô.\n\nEat your heart out, Victor Frankenstein!¹ Researchers have succeeded in creating living machines made from electronic parts and living fungi. In the past, so-called biohybrid robots — which combine living tissue with robotic materials — have generally employed animal cells, but these are hard to keep alive. Fungi, by contrast, are incredibly resilient. Their branching networks of rootlike filaments, called mycelia, which allow mushrooms to connect and communicate underground, can both sense the environment and fire off electrical signals in response — just like neurons in the human brain.\n\nThe team behind the project cultured these filaments from the king oyster mushroom (Pleurotus eryngii) onto electrodes in a 3D-printed platform, then hooked them up to a computer interface — allowing electrical impulses from the fungi to be converted into digital commands.\n\nThe end result was the above pictured soft, starfish-shaped walking robot, as well as another hard robot with wheels. In both cases, the team used ultraviolet light to stimulate the mycelium², triggering electrical signals that directed the robots to walk and roll at different speeds, the researchers report in Science Robotics. Experts tell National Geographic that the advance lays the groundwork for building robust, sustainable robots. In the future, these hardy, light-activated cyborgs could be employed in harsh environments on Earth or even on missions outside our planet.\n\n(Phie Jacobs. www.science.org, 28.08.2024. Adaptado.)\n\n¹ Victor Frankenstein: young scientist and protagonist of a novel and a film, who becomes obsessed with the idea of creating life. Frankenstein constructs the Monster, a living creature with human-like appearance, from parts of deceased bodies.\n\n² mycelium: singular form of mycelia.\n\nThe main purpose of the text is to",
+    "statementComplete": true
+  },
+  {
+    "number": 17,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "“Eat your heart out”",
+    "concept": "Expressão idiomática: não se traduz palavra por palavra; pré-requisitos: usar o contexto (pesquisadores superam o feito de Frankenstein).",
+    "steps": [
+      "O texto anuncia que cientistas criaram máquinas vivas.",
+      "A frase se dirige a Frankenstein, personagem que criou vida artificial.",
+      "“Eat your heart out, X” é dito a quem seria superado: “morra de inveja, X”.",
+      "B inverte a relação; C, D e E traduzem literalmente “heart” ou inventam sentido.",
+      "Alternativa A."
+    ],
+    "trap": "Traduções literais com “coração” (D, E) são a armadilha típica de expressões idiomáticas.",
+    "retrieval": [
+      "Por que Frankenstein é evocado no início do texto?",
+      "Dê outro exemplo de expressão idiomática em inglês que não se traduz ao pé da letra."
+    ],
+    "transfer": "Exercício autoral: traduza “Eat your heart out, Picasso!” dito por uma criança que mostra um desenho.",
+    "criteria": [
+      "Usar “Morra de inveja, Picasso!”.",
+      "Manter o tom de brincadeira."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Morra de inveja."
+      },
+      {
+        "id": "b",
+        "text": "Não chega a seus pés."
+      },
+      {
+        "id": "c",
+        "text": "Quanta bobagem."
+      },
+      {
+        "id": "d",
+        "text": "O coração vai sair pela boca."
+      },
+      {
+        "id": "e",
+        "text": "Você tem um coração de ouro."
+      }
+    ],
+    "pages": [
+      7,
+      8
+    ],
+    "statement": "Leia o texto e examine a imagem.\n\n[Imagem: robô macio, em forma de estrela-do-mar, com um cultivo de fungos na parte central.]\n\n[1] Eat your heart out, Victor Frankenstein¹! Researchers have succeeded in creating living machines made from electronic parts and living fungi. In the past, so-called biohybrid robots ― which combine living tissue with robotic materials — have generally employed animal cells, but these are hard to keep alive. Fungi, by contrast, are incredibly resilient. Their branching networks of rootlike filaments, called mycelia, which allow mushrooms to connect and communicate underground, can both sense the environment and fire off electrical signals in response — just like neurons in the human brain.\n[2] The team behind the project cultured these filaments from the king oyster mushroom (Pleurotus eryngii) onto electrodes in a 3D-printed platform, then hooked them up to a computer interface — allowing electrical impulses from the fungi to be converted into digital commands.\n[3] The end result was the above pictured soft, starfish-shaped walking robot, as well as another hard robot with wheels. In both cases, the team used ultraviolet light to stimulate the mycelium², triggering electrical signals that directed the robots to walk and roll at different speeds, the researchers report in Science Robotics. Experts tell National Geographic that the advance lays the groundwork for building robust, sustainable robots. In the future, these hardy, light-activated cyborgs could be employed in harsh environments on Earth or even on missions outside our planet.\n\n(Phie Jacobs. www.science.org, 28.08.2024. Adaptado.)\n\n¹ Victor Frankenstein: young scientist and protagonist of a novel and a film, who becomes obsessed with the idea of creating life. Frankenstein constructs the Monster, a living creature with human-like appearance, from parts of deceased bodies.\n² mycelium: singular form of mycelia.\n\nNo trecho inicial do primeiro parágrafo “Eat your heart out, Victor Frankenstein!”, a expressão sublinhada [“Eat your heart out”] equivale, em português, a:",
+    "statementComplete": true
+  },
+  {
+    "number": 18,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "Por que fungos nos robôs bio-híbridos",
+    "concept": "Informação explícita e falsos cognatos de contexto; pré-requisitos: resilient, hard to keep alive.",
+    "steps": [
+      "Procure a comparação entre células animais e fungos no 1º parágrafo.",
+      "Células animais são “hard to keep alive”; “Fungi, by contrast, are incredibly resilient”.",
+      "Resilient = resistente, capaz de suportar condições adversas.",
+      "A confunde “king oyster mushroom” (cogumelo) com ostras; B distorce a comparação com neurônios; D troca “difíceis de manter vivas” por “caras”; E inverte causa.",
+      "Alternativa C."
+    ],
+    "trap": "“King oyster mushroom” é o nome de um cogumelo, não tem relação com ostras marinhas.",
+    "retrieval": [
+      "Qual é a desvantagem das células animais, segundo o texto?",
+      "A que são comparados os sinais elétricos do micélio?"
+    ],
+    "transfer": "Exercício autoral: traduza “these hardy, light-activated cyborgs”.",
+    "criteria": [
+      "Traduzir hardy como resistentes.",
+      "Traduzir light-activated como ativados por luz."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "as ostras marinhas tornam o cultivo de fungos fácil e viável."
+      },
+      {
+        "id": "b",
+        "text": "os fungos emitem sinais elétricos para estimular os neurônios humanos."
+      },
+      {
+        "id": "c",
+        "text": "os fungos são resistentes e adaptáveis."
+      },
+      {
+        "id": "d",
+        "text": "as células vivas de animais são muito dispendiosas."
+      },
+      {
+        "id": "e",
+        "text": "os robôs com formato de estrela-do-mar são compatíveis com os fungos."
+      }
+    ],
+    "pages": [
+      7,
+      8
+    ],
+    "statement": "Leia o texto e examine a imagem.\n\n[Imagem: robô macio, em forma de estrela-do-mar, com um cultivo de fungos na parte central.]\n\n[1] Eat your heart out, Victor Frankenstein¹! Researchers have succeeded in creating living machines made from electronic parts and living fungi. In the past, so-called biohybrid robots ― which combine living tissue with robotic materials — have generally employed animal cells, but these are hard to keep alive. Fungi, by contrast, are incredibly resilient. Their branching networks of rootlike filaments, called mycelia, which allow mushrooms to connect and communicate underground, can both sense the environment and fire off electrical signals in response — just like neurons in the human brain.\n[2] The team behind the project cultured these filaments from the king oyster mushroom (Pleurotus eryngii) onto electrodes in a 3D-printed platform, then hooked them up to a computer interface — allowing electrical impulses from the fungi to be converted into digital commands.\n[3] The end result was the above pictured soft, starfish-shaped walking robot, as well as another hard robot with wheels. In both cases, the team used ultraviolet light to stimulate the mycelium², triggering electrical signals that directed the robots to walk and roll at different speeds, the researchers report in Science Robotics. Experts tell National Geographic that the advance lays the groundwork for building robust, sustainable robots. In the future, these hardy, light-activated cyborgs could be employed in harsh environments on Earth or even on missions outside our planet.\n\n(Phie Jacobs. www.science.org, 28.08.2024. Adaptado.)\n\n¹ Victor Frankenstein: young scientist and protagonist of a novel and a film, who becomes obsessed with the idea of creating life. Frankenstein constructs the Monster, a living creature with human-like appearance, from parts of deceased bodies.\n² mycelium: singular form of mycelia.\n\nDe acordo com o texto, os novos robôs bio-híbridos utilizam fungos porque",
     "statementComplete": true
   },
   {
@@ -533,6 +1015,167 @@
     "statementComplete": true
   },
   {
+    "number": 20,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "Função de uma oração explicativa",
+    "concept": "Oração relativa explicativa (non-defining relative clause) entre travessões; pré-requisitos: reconhecer aposto/definição.",
+    "steps": [
+      "Veja onde o trecho está: logo após “so-called biohybrid robots”, entre travessões.",
+      "Ele diz o que são esses robôs: combinam tecido vivo com materiais robóticos.",
+      "É uma definição, isto é, uma explicação do termo anterior.",
+      "Não há contraste, citação, contra-argumento nem especulação.",
+      "Alternativa B."
+    ],
+    "trap": "O contraste do parágrafo vem depois (“by contrast”), não nesse trecho.",
+    "retrieval": [
+      "A que termo se refere o pronome “which”?",
+      "Que sinal de pontuação marca o caráter explicativo do trecho?"
+    ],
+    "transfer": "Exercício autoral: escreva em inglês uma oração explicativa para “mycelia”.",
+    "criteria": [
+      "Usar “which” entre vírgulas ou travessões.",
+      "Definir como rede de filamentos dos fungos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "offers a contrasting viewpoint."
+      },
+      {
+        "id": "b",
+        "text": "provides an explanation."
+      },
+      {
+        "id": "c",
+        "text": "introduces a quotation."
+      },
+      {
+        "id": "d",
+        "text": "presents a counter-argument."
+      },
+      {
+        "id": "e",
+        "text": "suggests a speculative remark."
+      }
+    ],
+    "pages": [
+      7,
+      8
+    ],
+    "statement": "Leia o texto e examine a imagem.\n\n[Imagem: robô macio, em forma de estrela-do-mar, com um cultivo de fungos na parte central.]\n\n[1] Eat your heart out, Victor Frankenstein¹! Researchers have succeeded in creating living machines made from electronic parts and living fungi. In the past, so-called biohybrid robots ― which combine living tissue with robotic materials — have generally employed animal cells, but these are hard to keep alive. Fungi, by contrast, are incredibly resilient. Their branching networks of rootlike filaments, called mycelia, which allow mushrooms to connect and communicate underground, can both sense the environment and fire off electrical signals in response — just like neurons in the human brain.\n[2] The team behind the project cultured these filaments from the king oyster mushroom (Pleurotus eryngii) onto electrodes in a 3D-printed platform, then hooked them up to a computer interface — allowing electrical impulses from the fungi to be converted into digital commands.\n[3] The end result was the above pictured soft, starfish-shaped walking robot, as well as another hard robot with wheels. In both cases, the team used ultraviolet light to stimulate the mycelium², triggering electrical signals that directed the robots to walk and roll at different speeds, the researchers report in Science Robotics. Experts tell National Geographic that the advance lays the groundwork for building robust, sustainable robots. In the future, these hardy, light-activated cyborgs could be employed in harsh environments on Earth or even on missions outside our planet.\n\n(Phie Jacobs. www.science.org, 28.08.2024. Adaptado.)\n\n¹ Victor Frankenstein: young scientist and protagonist of a novel and a film, who becomes obsessed with the idea of creating life. Frankenstein constructs the Monster, a living creature with human-like appearance, from parts of deceased bodies.\n² mycelium: singular form of mycelia.\n\nThe excerpt from the first paragraph “which combine living tissue with robotic materials”",
+    "statementComplete": true
+  },
+  {
+    "number": 21,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "Conector “by contrast”",
+    "concept": "Conectores de contraste; pré-requisitos: identificar os dois termos opostos (células animais × fungos).",
+    "steps": [
+      "Antes: células animais são difíceis de manter vivas.",
+      "Depois: fungos são muito resistentes.",
+      "“By contrast” marca oposição entre as duas informações.",
+      "“On the other hand” (por outro lado) faz o mesmo; so to speak = por assim dizer; apart from that = além disso; for this reason = por isso; to say the least = no mínimo.",
+      "Alternativa A."
+    ],
+    "trap": "“Apart from that” parece contraste, mas acrescenta informação.",
+    "retrieval": [
+      "Quais são os dois elementos contrastados?",
+      "Cite outro conector de contraste em inglês."
+    ],
+    "transfer": "Exercício autoral: una com “by contrast” as ideias “Cats are independent” e “Dogs need attention”.",
+    "criteria": [
+      "Colocar o conector na segunda frase.",
+      "Manter o sentido de oposição."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "on the other hand."
+      },
+      {
+        "id": "b",
+        "text": "so to speak."
+      },
+      {
+        "id": "c",
+        "text": "apart from that."
+      },
+      {
+        "id": "d",
+        "text": "for this reason."
+      },
+      {
+        "id": "e",
+        "text": "to say the least."
+      }
+    ],
+    "pages": [
+      7,
+      8
+    ],
+    "statement": "Leia o texto e examine a imagem.\n\n[Imagem: robô macio, em forma de estrela-do-mar, com um cultivo de fungos na parte central.]\n\n[1] Eat your heart out, Victor Frankenstein¹! Researchers have succeeded in creating living machines made from electronic parts and living fungi. In the past, so-called biohybrid robots ― which combine living tissue with robotic materials — have generally employed animal cells, but these are hard to keep alive. Fungi, by contrast, are incredibly resilient. Their branching networks of rootlike filaments, called mycelia, which allow mushrooms to connect and communicate underground, can both sense the environment and fire off electrical signals in response — just like neurons in the human brain.\n[2] The team behind the project cultured these filaments from the king oyster mushroom (Pleurotus eryngii) onto electrodes in a 3D-printed platform, then hooked them up to a computer interface — allowing electrical impulses from the fungi to be converted into digital commands.\n[3] The end result was the above pictured soft, starfish-shaped walking robot, as well as another hard robot with wheels. In both cases, the team used ultraviolet light to stimulate the mycelium², triggering electrical signals that directed the robots to walk and roll at different speeds, the researchers report in Science Robotics. Experts tell National Geographic that the advance lays the groundwork for building robust, sustainable robots. In the future, these hardy, light-activated cyborgs could be employed in harsh environments on Earth or even on missions outside our planet.\n\n(Phie Jacobs. www.science.org, 28.08.2024. Adaptado.)\n\n¹ Victor Frankenstein: young scientist and protagonist of a novel and a film, who becomes obsessed with the idea of creating life. Frankenstein constructs the Monster, a living creature with human-like appearance, from parts of deceased bodies.\n² mycelium: singular form of mycelia.\n\nNo trecho do primeiro parágrafo “Fungi, by contrast, are incredibly resilient”, a expressão sublinhada [“by contrast”] pode ser substituída, sem alteração de sentido, por:",
+    "statementComplete": true
+  },
+  {
+    "number": 22,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Pollution",
+    "title": "Queimadas incomuns em agosto de 2024",
+    "concept": "Localização de informação com atenção ao qualificador “unusual”; pré-requisitos: worst, never seen before.",
+    "steps": [
+      "A pergunta pede o evento incomum, não qualquer queimada.",
+      "2º parágrafo: São Paulo teve “its worst August since INPE’s measurements began in 1998” — “something never seen before”.",
+      "Na Amazônia, ao contrário, queimadas ilegais “are common at this time of year”.",
+      "Cerrado e Pantanal aparecem na comparação geral; fronteiras são citadas em sentido figurado (“know no borders”).",
+      "Alternativa D."
+    ],
+    "trap": "Amazônia e Pantanal queimaram mais, mas isso é recorrente; o inédito foi São Paulo.",
+    "retrieval": [
+      "Que dado numérico o texto dá sobre São Paulo?",
+      "O que significa “know no borders”?"
+    ],
+    "transfer": "Exercício autoral: traduza “something never seen before”.",
+    "criteria": [
+      "Traduzir como “algo nunca visto antes”.",
+      "Relacionar ao recorde de focos de calor."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "at the boarders of Brazil."
+      },
+      {
+        "id": "b",
+        "text": "in the Cerrado."
+      },
+      {
+        "id": "c",
+        "text": "in the Amazon."
+      },
+      {
+        "id": "d",
+        "text": "in the state of São Paulo."
+      },
+      {
+        "id": "e",
+        "text": "in Pantanal."
+      }
+    ],
+    "pages": [
+      9
+    ],
+    "statement": "Leia o texto e examine o infográfico.\n\n[1] Year after year, illegal fires consume thousands of hectares of Brazilian biomes, threatening biodiversity and all life on the planet. Data from the end of August 2024 shows a dramatic and alarming increase in fire outbreaks compared to the same period in 2023 in the Amazon, Cerrado, and Pantanal. In this distressing scenario, impunity acts as fuel for this destruction, and the Brazilian authorities must respond quickly: investigate and hold those responsible for illegal fires accountable, while also strengthening prevention measures and adopting strategies to deal with the reality of extreme events.\n[2] The consequences of fires know no borders. In addition to causing harm to people living nearby, the smoke from fires in the Amazon and Pantanal travelled to distant regions. The state of São Paulo experienced its worst August since INPE’s (Instituto Nacional de Pesquisas Espaciais) measurements began in 1998, with 3,612 heat spots recorded — something never seen before. The reasons are still being investigated, as on a single day (August 23), the number of fire outbreaks in the state surpassed those recorded across the entire Amazon biome, where illegal fires are common at this time of year.\n\n(www.greenpeace.org, 05.09.2024. Adaptado.)\n\n[Infográfico sobre o uso do fogo no desmatamento e na pecuária, com itens explicativos; um deles, “Pasture ‘renovation’”, é citado na questão 24. Veja a figura.]\n\nAccording to the text, in August 2024, there was an unusual fire irruption event",
+    "statementComplete": true
+  },
+  {
     "number": 23,
     "topicId": "ing_01",
     "subject": "Inglês",
@@ -583,6 +1226,59 @@
       9
     ],
     "statement": "Leia o texto e examine o infográfico.\n\nYear after year, illegal fires consume thousands of hectares of Brazilian biomes, threatening biodiversity and all life on the planet. Data from the end of August 2024 shows a dramatic and alarming increase in fire outbreaks compared to the same period in 2023 in the Amazon, Cerrado, and Pantanal. In this distressing scenario, impunity acts as fuel for this destruction, and the Brazilian authorities must respond quickly: investigate and hold those responsible for illegal fires accountable, while also strengthening prevention measures and adopting strategies to deal with the reality of extreme events.\n\nThe consequences of fires know no borders. In addition to causing harm to people living nearby, the smoke from fires in the Amazon and Pantanal travelled to distant regions. The state of São Paulo experienced its worst August since INPE's (Instituto Nacional de Pesquisas Espaciais) measurements began in 1998, with 3,612 heat spots recorded — something never seen before. The reasons are still being investigated, as on a single day (August 23), the number of fire outbreaks in the state surpassed those recorded across the entire Amazon biome, where illegal fires are common at this time of year.\n\n(www.greenpeace.org, 05.09.2024. Adaptado.)\n\nNo trecho do primeiro parágrafo “In this distressing scenario, impunity acts as fuel for this destruction, and the Brazilian authorities must respond quickly”, o termo sublinhado expressa\n(O termo destacado é “must”.)",
+    "statementComplete": true
+  },
+  {
+    "number": 24,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Pollution",
+    "title": "“In order to”",
+    "concept": "Expressões de finalidade (purpose): in order to, so as to, to; pré-requisitos: distinguir finalidade de tempo, causa e substituição.",
+    "steps": [
+      "“In order to + verbo” indica finalidade: queima-se o pasto para preparar o solo.",
+      "Procure outra estrutura de finalidade.",
+      "“So as to prepare the soil” tem o mesmo sentido.",
+      "Instead of = em vez de; during = durante; after = depois de; because = porque.",
+      "Alternativa C."
+    ],
+    "trap": "“Because” indica causa já existente; aqui o preparo do solo é objetivo, não causa anterior.",
+    "retrieval": [
+      "Que ideia “in order to” expressa?",
+      "Qual a forma mais curta de expressar finalidade em inglês?"
+    ],
+    "transfer": "Exercício autoral: reescreva “She studies hard in order to pass the exam” com outra expressão de finalidade.",
+    "criteria": [
+      "Usar “so as to” ou apenas “to”.",
+      "Manter o verbo no infinitivo."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "instead of the soil preparation."
+      },
+      {
+        "id": "b",
+        "text": "during the preparation of the soil."
+      },
+      {
+        "id": "c",
+        "text": "so as to prepare the soil."
+      },
+      {
+        "id": "d",
+        "text": "after preparing the soil."
+      },
+      {
+        "id": "e",
+        "text": "because the soil has been prepared."
+      }
+    ],
+    "pages": [
+      9
+    ],
+    "statement": "Leia o texto e examine o infográfico.\n\n[1] Year after year, illegal fires consume thousands of hectares of Brazilian biomes, threatening biodiversity and all life on the planet. Data from the end of August 2024 shows a dramatic and alarming increase in fire outbreaks compared to the same period in 2023 in the Amazon, Cerrado, and Pantanal. In this distressing scenario, impunity acts as fuel for this destruction, and the Brazilian authorities must respond quickly: investigate and hold those responsible for illegal fires accountable, while also strengthening prevention measures and adopting strategies to deal with the reality of extreme events.\n[2] The consequences of fires know no borders. In addition to causing harm to people living nearby, the smoke from fires in the Amazon and Pantanal travelled to distant regions. The state of São Paulo experienced its worst August since INPE’s (Instituto Nacional de Pesquisas Espaciais) measurements began in 1998, with 3,612 heat spots recorded — something never seen before. The reasons are still being investigated, as on a single day (August 23), the number of fire outbreaks in the state surpassed those recorded across the entire Amazon biome, where illegal fires are common at this time of year.\n\n(www.greenpeace.org, 05.09.2024. Adaptado.)\n\n[Infográfico sobre o uso do fogo no desmatamento e na pecuária, com itens explicativos; um deles, “Pasture ‘renovation’”, é citado na questão 24. Veja a figura.]\n\nNo trecho do item “Pasture ‘renovation’”, do infográfico, “older pasture is burned in order to prepare the soil for new pasture”, o trecho sublinhado [“in order to prepare the soil”] pode ser substituído, sem alteração de sentido, por:",
     "statementComplete": true
   },
   {
