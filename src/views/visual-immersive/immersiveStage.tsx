@@ -295,6 +295,15 @@ export function ImmersiveShell(props: {
   hotspotHint?: string;
   /** Controles próprios da cena, abaixo do texto (ex.: os dois cenários da última etapa). */
   children?: React.ReactNode;
+  /**
+   * Palco próprio no lugar do canvas 2D. A cena de geometria molecular desenha
+   * em WebGL sobre o estúdio do Hoje, que cria o canvas dele; a casca, as
+   * etapas e as previsões continuam as mesmas.
+   */
+  stage?: React.ReactNode;
+  footNote?: string;
+  /** Avisa do clique em girar a cena que não tem laço lendo `state.turn`. */
+  onTurn?: () => void;
 }) {
   const { state, phases, refs } = props;
   const data = phases[state.phase];
@@ -303,7 +312,7 @@ export function ImmersiveShell(props: {
   const { paused, reduced, tema, zoomed, previsao } = state;
   return <section className="crivo-immersion" data-tema={tema} aria-label={props.sectionLabel}>
     <div className="cr-shell" ref={refs.shell}>
-      <canvas ref={refs.canvas} className="cr-canvas" role="img" aria-label={props.canvasLabel} />
+      {props.stage ?? <canvas ref={refs.canvas} className="cr-canvas" role="img" aria-label={props.canvasLabel} />}
       <div className="cr-indicator"><span className="cr-dot" /><span>{props.indicator}</span></div>
       <div className="cr-intro">
         <div className="cr-eyebrow">{props.eyebrow}</div>
@@ -312,7 +321,7 @@ export function ImmersiveShell(props: {
       <div className="cr-watermark" aria-hidden="true">{props.watermark}</div>
       <div className="cr-temp"><span className="cr-temp-number">{reading.number}</span><span className="cr-temp-caption">{reading.unit}</span></div>
       <div className="cr-tools">
-        <button type="button" className="cr-tool" aria-label={`Girar ${props.objeto}`} onClick={() => { state.turn.current += 1; }}>↻</button>
+        <button type="button" className="cr-tool" aria-label={`Girar ${props.objeto}`} onClick={() => { state.turn.current += 1; props.onTurn?.(); }}>↻</button>
         <button type="button" className="cr-tool" aria-label={`${zoomed ? 'Afastar' : 'Aproximar'} ${props.objeto}`} aria-pressed={zoomed} onClick={() => state.setZoomed(value => !value)}>{zoomed ? '−' : '＋'}</button>
       </div>
       <button type="button" ref={refs.hotspot} className="cr-label" aria-label={`Inspecionar ${label.toLowerCase()}`} aria-expanded={state.detail} onClick={() => { state.setDetail(true); state.setZoomed(true); }}>
@@ -351,7 +360,7 @@ export function ImmersiveShell(props: {
           <button type="button" className="cr-motion cr-tema" aria-pressed={tema === 'noite'} onClick={state.alternarTinta}>
             <span aria-hidden="true">◐</span> {tema === 'noite' ? 'Ver em caderno' : 'Ver em noite'}
           </button>
-          <span className="cr-foot-text">Geometria e tempo simplificados</span>
+          <span className="cr-foot-text">{props.footNote ?? 'Geometria e tempo simplificados'}</span>
         </div>
       </div>
     </div>

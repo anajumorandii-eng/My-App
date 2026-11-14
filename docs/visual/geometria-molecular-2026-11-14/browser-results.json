@@ -1,0 +1,272 @@
+[
+ {
+  "largura": "celular 390×844",
+  "tema": "claro",
+  "movimento": "no-preference",
+  "leituras": [
+   "180°",
+   "120°",
+   "109,5°",
+   "107°",
+   "104,5°"
+  ],
+  "desenhado": [
+   0.0117,
+   0.0121,
+   0.0109,
+   0.0098,
+   0.0093
+  ],
+  "tinta": "caderno",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "repouso": true,
+  "girou": true,
+  "quadroParado": true,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "celular 390×844",
+  "tema": "escuro",
+  "movimento": "no-preference",
+  "leituras": [
+   "180°",
+   "120°",
+   "109,5°",
+   "107°",
+   "104,5°"
+  ],
+  "desenhado": [
+   0.0117,
+   0.0121,
+   0.0109,
+   0.0098,
+   0.0093
+  ],
+  "tinta": "noite",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "repouso": true,
+  "girou": true,
+  "quadroParado": true,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "celular 390×844",
+  "tema": "claro",
+  "movimento": "reduce",
+  "leituras": [
+   "180°",
+   "120°",
+   "109,5°",
+   "107°",
+   "104,5°"
+  ],
+  "desenhado": [
+   0.0117,
+   0.0121,
+   0.0109,
+   0.0098,
+   0.0093
+  ],
+  "tinta": "caderno",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "repouso": true,
+  "girou": true,
+  "quadroParado": null,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "ipad 834×1112",
+  "tema": "claro",
+  "movimento": "no-preference",
+  "leituras": [
+   "180°",
+   "120°",
+   "109,5°",
+   "107°",
+   "104,5°"
+  ],
+  "desenhado": [
+   0.0168,
+   0.0176,
+   0.0159,
+   0.0141,
+   0.0171
+  ],
+  "tinta": "caderno",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "repouso": true,
+  "girou": true,
+  "quadroParado": true,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "ipad 834×1112",
+  "tema": "escuro",
+  "movimento": "no-preference",
+  "leituras": [
+   "180°",
+   "120°",
+   "109,5°",
+   "107°",
+   "104,5°"
+  ],
+  "desenhado": [
+   0.0168,
+   0.0176,
+   0.0159,
+   0.0141,
+   0.0171
+  ],
+  "tinta": "noite",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "repouso": true,
+  "girou": true,
+  "quadroParado": true,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "ipad 834×1112",
+  "tema": "claro",
+  "movimento": "reduce",
+  "leituras": [
+   "180°",
+   "120°",
+   "109,5°",
+   "107°",
+   "104,5°"
+  ],
+  "desenhado": [
+   0.0168,
+   0.0176,
+   0.0159,
+   0.0141,
+   0.0171
+  ],
+  "tinta": "caderno",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "repouso": true,
+  "girou": true,
+  "quadroParado": null,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "desktop 1366×900",
+  "tema": "claro",
+  "movimento": "no-preference",
+  "leituras": [
+   "180°",
+   "120°",
+   "109,5°",
+   "107°",
+   "104,5°"
+  ],
+  "desenhado": [
+   0.0103,
+   0.0105,
+   0.0098,
+   0.0102,
+   0.013
+  ],
+  "tinta": "caderno",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "repouso": true,
+  "girou": true,
+  "quadroParado": true,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "desktop 1366×900",
+  "tema": "escuro",
+  "movimento": "no-preference",
+  "leituras": [
+   "180°",
+   "120°",
+   "109,5°",
+   "107°",
+   "104,5°"
+  ],
+  "desenhado": [
+   0.0103,
+   0.0105,
+   0.0098,
+   0.0102,
+   0.013
+  ],
+  "tinta": "noite",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "repouso": true,
+  "girou": true,
+  "quadroParado": true,
+  "sobreposicoes": []
+ },
+ {
+  "largura": "desktop 1366×900",
+  "tema": "claro",
+  "movimento": "reduce",
+  "leituras": [
+   "180°",
+   "120°",
+   "109,5°",
+   "107°",
+   "104,5°"
+  ],
+  "desenhado": [
+   0.0103,
+   0.0105,
+   0.0098,
+   0.0102,
+   0.013
+  ],
+  "tinta": "caderno",
+  "estouro": 0,
+  "ferramentas": [
+   "44×44",
+   "44×44"
+  ],
+  "foco": "solid 2px",
+  "repouso": true,
+  "girou": true,
+  "quadroParado": null,
+  "sobreposicoes": []
+ }
+]

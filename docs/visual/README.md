@@ -184,7 +184,9 @@ interface, ícones e navegação continuam obedecendo ao shell existente do CRIV
 - `src/views/Visual.test.tsx`: testes da interação da tela;
 - `src/views/visual-immersive/`: cenas imersivas. A da PCR está especificada em
   [`CENA-IMERSIVA-PCR.md`](CENA-IMERSIVA-PCR.md); a da Lei de Lenz, conferida em
-  [`lenz-2026-11-12/`](lenz-2026-11-12/README.md).
+  [`lenz-2026-11-12/`](lenz-2026-11-12/README.md); a de geometria
+  molecular, em WebGL sobre o estúdio do Hoje, em
+  [`geometria-molecular-2026-11-14/`](geometria-molecular-2026-11-14/README.md).
 
 ## Referências visuais
 

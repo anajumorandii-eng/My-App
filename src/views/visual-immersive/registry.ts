@@ -18,6 +18,9 @@ export const IMMERSIVE_SCENES: Record<string, LazyExoticComponent<ComponentType<
   // Segunda cena, para testar a linguagem fora da Biologia. Aqui a cena é o
   // capítulo inteiro: fluxo, sentido da corrente e o caso do ímã parado.
   'summary-fisica-inducao-eletromagnetica-lei-de-lenz': lazy(() => import('./LenzImmersion')),
+  // Terceira cena e a primeira em WebGL, sobre o estúdio three.js do Hoje: o
+  // teste que a Ana Júlia pediu para comparar com as duas em Canvas 2D.
+  'summary-quimica-geometria-molecular': lazy(() => import('./MoleculeImmersion')),
 };
 
 export const immersiveSceneFor = (chapterId: string) => IMMERSIVE_SCENES[chapterId] ?? null;

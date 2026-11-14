@@ -144,8 +144,8 @@ describe('tinta segue o tema do aplicativo', () => {
 describe('registro de cenas imersivas', () => {
   // É protótipo de um capítulo só: registrar outro por engano trocaria a cena
   // dele por uma molécula de DNA que não é o assunto.
-  it('atende só os dois capítulos que têm cena desenhada para eles', () => {
-    expect(Object.keys(IMMERSIVE_SCENES)).toEqual(['summary-biologia-biotecnologia', 'summary-fisica-inducao-eletromagnetica-lei-de-lenz']);
+  it('atende só os três capítulos que têm cena desenhada para eles', () => {
+    expect(Object.keys(IMMERSIVE_SCENES)).toEqual(['summary-biologia-biotecnologia', 'summary-fisica-inducao-eletromagnetica-lei-de-lenz', 'summary-quimica-geometria-molecular']);
     expect(immersiveSceneFor('summary-biologia-acidos-nucleicos')).toBeNull();
   });
 });
