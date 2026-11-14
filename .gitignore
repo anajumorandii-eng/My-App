@@ -37,3 +37,8 @@ gen-lang-client-*.json
 credentials.json
 # Arquivos locais do Visual Studio
 .vs/
+
+# Arquivos temporários da verificação local de instalação no Windows.
+/.backup-integridade-*/
+/resultado-vitest.txt
+/verificar-integridade.cjs

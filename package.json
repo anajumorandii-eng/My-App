@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "dev": "tsx server.ts",
     "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
@@ -38,14 +41,14 @@
     "fflate": "^0.8.3",
     "firebase": "^12.19.0",
     "firebase-admin": "^14.5.0",
-    "googleapis": "^174.0.1",
+    "googleapis": "^190.0.0",
     "katex": "^0.18.4",
     "lucide-react": "^1.31.0",
     "motion": "^12.43.0",
     "pdf-lib": "^1.17.1",
     "pdf-parse": "^2.4.5",
     "pdfjs-dist": "^5.4.296",
-    "puppeteer-core": "^24.43.1",
+    "puppeteer-core": "^25.17.0",
     "react": "^19.0.1",
     "react-dom": "^19.0.1",
     "react-markdown": "^10.1.0",
