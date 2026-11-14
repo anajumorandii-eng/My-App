@@ -239187,5 +239187,757 @@
         "url": "/question-media/figuras/unesp_2025_v1_q89-1.webp"
       }
     ]
+  },
+  {
+    "id": "unifesp_2025_v1_q02",
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Figuras de Linguagem",
+    "prompt": "Leia um trecho de um folhetim, texto precursor da crônica atual, do escritor José de Alencar, publicado originalmente em 24.09.1854. Os parágrafos estão numerados entre colchetes.\n\n[1] É uma felicidade que não me tenha ainda dado ao trabalho de saber quem foi o inventor deste monstro de Horácio¹, deste novo Proteu², que chamam — folhetim; senão aproveitaria alguns momentos em que estivesse de candeias às avessas³, e escrever-lhe-ia uma biografia, que, com as anotações de certos críticos que eu conheço, havia de fazer o tal sujeito ter um inferno no purgatório onde necessariamente deve estar o inventor de tão desastrada ideia.\n[2] [...] Fazerem do escritor uma espécie de colibri a esvoaçar em ziguezague, e a sugar, como o mel das flores, a graça, o sal e o espírito que deve necessariamente descobrir no fato o mais comezinho!\n[3] Ainda isto não é tudo. Depois que o mísero folhetinista por força de vontade conseguiu atingir a este último esforço da volubilidade, quando à custa de magia e de encanto fez que a pena se lembrasse dos tempos em que voava, deixa finalmente o pensamento lançar-se sobre o papel, livre como o espaço. Cuida que é uma borboleta que quebrou a crisálida para ostentar o brilho fascinador de suas cores; mas engana-se: é apenas uma formiga que criou asas para perder-se.\n[4] De um lado um crítico, aliás de boa-fé, é de opinião que o folhetinista inventou em vez de contar, o que por conseguinte excedeu os limites da crônica. Outro afirma que plagiou, e prova imediatamente que tal autor, se não disse a mesma coisa, teve intenção de dizer [...]. Se se trata de coisa séria, a amável leitora amarrota o jornal, e atira-o de lado com um momozinho⁴ displicente a que é impossível resistir. Quando se fala de bailes, de uma mocinha bonita, de uns olhos brejeiros, o velho tira os óculos de maçado⁵ e diz entre dentes: “Ah! o sujeitinho está namorando à minha custa! Não fala contra as reformas! Hei de suspender a assinatura.”\n\n(José de Alencar. Ao correr da pena, 2004.)\n\n¹ monstro de Horácio: figura grotesca imaginada pelo escritor latino Horácio; tal figura conjugava partes de diferentes animais.\n² Proteu: deus marinho, que podia assumir diferentes formas.\n³ de candeias às avessas: de mau humor.\n⁴ momozinho: zombaria, galhofa.\n⁵ maçado: aborrecido, entediado.\n\nConstituem expressões empregadas por José de Alencar para caracterizar, respectivamente, o folhetim e o folhetinista:",
+    "options": [
+      {
+        "id": "a",
+        "text": "“monstro de Horácio” (1º parágrafo) e “espécie de colibri” (2º parágrafo)."
+      },
+      {
+        "id": "b",
+        "text": "“candeias às avessas” (1º parágrafo) e “espécie de colibri” (2º parágrafo)."
+      },
+      {
+        "id": "c",
+        "text": "“mel das flores” (2º parágrafo) e “monstro de Horácio” (1º parágrafo)."
+      },
+      {
+        "id": "d",
+        "text": "“novo Proteu” (1º parágrafo) e “mel das flores” (2º parágrafo)."
+      },
+      {
+        "id": "e",
+        "text": "“monstro de Horácio” (1º parágrafo) e “novo Proteu” (1º parágrafo)."
+      }
+    ],
+    "correctOptionId": "a",
+    "difficulty": "easy",
+    "originalPages": [
+      {
+        "page": 3,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p03.webp"
+      }
+    ],
+    "statementComplete": true,
+    "sourceMaterial": {
+      "file": "UNIFESP_2025_dia_1_objetiva_V1.pdf",
+      "page": 3,
+      "questionNumber": 2
+    },
+    "examSource": {
+      "board": "UNIFESP",
+      "year": 2025,
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
+      "phase": "1º dia · Língua Portuguesa e Língua Inglesa",
+      "version": "V1",
+      "questionNumber": 2
+    },
+    "explanation": "Gabarito oficial: A · UNIFESP 2025 · V1 · questão 2.\n\nConceito e pré-requisitos\nMetáfora e referência: identificar a que cada imagem se aplica; pré-requisitos: atenção ao “respectivamente”.\n\nResolução por etapas\n1. Identificar dados: Localize cada expressão e veja o que ela nomeia.\n2. Escolher a estratégia: “Este monstro de Horácio, este novo Proteu, que chamam — folhetim”: as duas imagens designam o gênero.\n3. Aplicar o conceito: “Fazerem do escritor uma espécie de colibri”: a imagem designa quem escreve, o folhetinista.\n4. Justificar: “Candeias às avessas” é o mau humor do cronista; “mel das flores” é o que o colibri suga (graça, sal, espírito); E traz duas imagens do folhetim.\n5. Conferir: Folhetim = monstro de Horácio; folhetinista = espécie de colibri — alternativa A.\n\nPadrão de cobrança e pegadinha\nE reúne duas expressões corretas, mas ambas do folhetim: falta a do folhetinista.\n\nRevisão ativa — responda sem consultar\n1. Por que o folhetim é comparado a um ser feito de partes de vários animais?\n2. O que o colibri “suga”, na imagem de Alencar?\n\nTransferência — Exercício autoral: no 3º parágrafo, que duas imagens de insetos descrevem a ilusão e a realidade do folhetinista?\nCritérios de resposta:\n• Borboleta: o que ele julga ser.\n• Formiga com asas: o que ele é."
+  },
+  {
+    "id": "unifesp_2025_v1_q04",
+    "topicId": "por_sintaxe",
+    "subject": "Português",
+    "chapter": "Orações Adverbiais",
+    "prompt": "Leia um trecho de um folhetim, texto precursor da crônica atual, do escritor José de Alencar, publicado originalmente em 24.09.1854. Os parágrafos estão numerados entre colchetes.\n\n[1] É uma felicidade que não me tenha ainda dado ao trabalho de saber quem foi o inventor deste monstro de Horácio¹, deste novo Proteu², que chamam — folhetim; senão aproveitaria alguns momentos em que estivesse de candeias às avessas³, e escrever-lhe-ia uma biografia, que, com as anotações de certos críticos que eu conheço, havia de fazer o tal sujeito ter um inferno no purgatório onde necessariamente deve estar o inventor de tão desastrada ideia.\n[2] [...] Fazerem do escritor uma espécie de colibri a esvoaçar em ziguezague, e a sugar, como o mel das flores, a graça, o sal e o espírito que deve necessariamente descobrir no fato o mais comezinho!\n[3] Ainda isto não é tudo. Depois que o mísero folhetinista por força de vontade conseguiu atingir a este último esforço da volubilidade, quando à custa de magia e de encanto fez que a pena se lembrasse dos tempos em que voava, deixa finalmente o pensamento lançar-se sobre o papel, livre como o espaço. Cuida que é uma borboleta que quebrou a crisálida para ostentar o brilho fascinador de suas cores; mas engana-se: é apenas uma formiga que criou asas para perder-se.\n[4] De um lado um crítico, aliás de boa-fé, é de opinião que o folhetinista inventou em vez de contar, o que por conseguinte excedeu os limites da crônica. Outro afirma que plagiou, e prova imediatamente que tal autor, se não disse a mesma coisa, teve intenção de dizer [...]. Se se trata de coisa séria, a amável leitora amarrota o jornal, e atira-o de lado com um momozinho⁴ displicente a que é impossível resistir. Quando se fala de bailes, de uma mocinha bonita, de uns olhos brejeiros, o velho tira os óculos de maçado⁵ e diz entre dentes: “Ah! o sujeitinho está namorando à minha custa! Não fala contra as reformas! Hei de suspender a assinatura.”\n\n(José de Alencar. Ao correr da pena, 2004.)\n\n¹ monstro de Horácio: figura grotesca imaginada pelo escritor latino Horácio; tal figura conjugava partes de diferentes animais.\n² Proteu: deus marinho, que podia assumir diferentes formas.\n³ de candeias às avessas: de mau humor.\n⁴ momozinho: zombaria, galhofa.\n⁵ maçado: aborrecido, entediado.\n\n[Em cada alternativa, na prova, um termo aparece sublinhado; aqui ele vem entre colchetes.]\n\nEstabelece no texto uma relação de condição o termo sublinhado no seguinte trecho:",
+    "options": [
+      {
+        "id": "a",
+        "text": "“tal autor, [se] não disse a mesma coisa, teve intenção de dizer” (4º parágrafo)."
+      },
+      {
+        "id": "b",
+        "text": "“[quando] à custa de magia e de encanto fez que a pena se lembrasse dos tempos em que voava” (3º parágrafo)."
+      },
+      {
+        "id": "c",
+        "text": "“[mas] engana-se: é apenas uma formiga que criou asas para perder-se” (3º parágrafo)."
+      },
+      {
+        "id": "d",
+        "text": "“Se [se] trata de coisa séria, a amável leitora amarrota o jornal” (4º parágrafo)."
+      },
+      {
+        "id": "e",
+        "text": "“[Quando] se fala de bailes, de uma mocinha bonita, de uns olhos brejeiros, o velho tira os óculos de maçado” (4º parágrafo)."
+      }
+    ],
+    "correctOptionId": "a",
+    "difficulty": "medium",
+    "originalPages": [
+      {
+        "page": 3,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p03.webp"
+      }
+    ],
+    "statementComplete": true,
+    "sourceMaterial": {
+      "file": "UNIFESP_2025_dia_1_objetiva_V1.pdf",
+      "page": 3,
+      "questionNumber": 4
+    },
+    "examSource": {
+      "board": "UNIFESP",
+      "year": 2025,
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
+      "phase": "1º dia · Língua Portuguesa e Língua Inglesa",
+      "version": "V1",
+      "questionNumber": 4
+    },
+    "explanation": "Gabarito oficial: A · UNIFESP 2025 · V1 · questão 4.\n\nConceito e pré-requisitos\nValores de “se” (conjunção condicional × pronome) e de “quando” e “mas”; pré-requisitos: classificação das conjunções.\n\nResolução por etapas\n1. Identificar dados: Classifique cada termo destacado.\n2. Escolher a estratégia: Em A, “se não disse a mesma coisa” introduz uma hipótese: caso não tenha dito.\n3. Aplicar o conceito: É conjunção subordinativa condicional.\n4. Justificar: Em B e E, “quando” indica tempo; em C, “mas” indica oposição; em D, o termo destacado é o segundo “se”, pronome que acompanha o verbo “tratar-se”.\n5. Conferir: Alternativa A.\n\nPadrão de cobrança e pegadinha\nEm D há um “se” condicional, mas é o primeiro; o destacado é o pronome.\n\nRevisão ativa — responda sem consultar\n1. Como distinguir “se” conjunção de “se” pronome?\n2. Que valor tem “quando” nos trechos B e E?\n\nTransferência — Exercício autoral: classifique os dois “se” de “Se se esforçar, vencerá”.\nCritérios de resposta:\n• Primeiro: conjunção condicional.\n• Segundo: pronome reflexivo."
+  },
+  {
+    "id": "unifesp_2025_v1_q05",
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Os Dois Níveis da Leitura",
+    "prompt": "Leia um trecho do livro Criação imperfeita, do físico Marcelo Gleiser. Os parágrafos estão numerados entre colchetes.\n\n[1] Nosso primeiro antepassado era tão fascinado quanto somos hoje pelo mistério da Criação. Nossos descendentes continuarão essa busca, tentando desvendar o sentido da existência. Somos, e seremos sempre, criaturas criadoras. Mas nosso foco precisa mudar. A ciência nos mostrou que a razão, motivada pela paixão da descoberta, é o instrumento mais poderoso que temos para responder a nossas perguntas sobre o mundo natural. Dado que nossas primeiras explicações do mundo surgiram de imagens e narrativas míticas, não é surpreendente que a ciência carregue, nas suas raízes, a mesma expectativa mítica de explicações finais sobre o mundo, sobre nossa razão de ser. [...]\n[2] A despeito da nossa necessidade de encontrar perfeição e simetria em tudo, o poder criativo da Natureza vem de assimetrias e de imperfeições que se manifestam desde o mundo das partículas subatômicas ao Universo como um todo. Buscamos por simetrias perfeitas, criamos equações para descrevê-las, mas vemos que nossas soluções são apenas aproximações de uma realidade imperfeita. E assim deveria ser. Assimetria gera desequilíbrio, desequilíbrio gera transformação, transformação gera realização, a emergência de estrutura. Algumas das simetrias mais básicas da física de partículas devem ser violadas para que a matéria exista. A vida seria impossível sem a assimetria molecular, a quiralidade das biomoléculas. O Universo por inteiro talvez tenha surgido de uma flutuação quântica que emergiu do multiverso, uma entidade atemporal onde incontáveis possíveis universos coexistem. Segundo essa visão, o cosmo é produto de um acidente que carregava consigo as sementes da existência. De um início incerto e após uma expansão superacelerada, o cosmo evoluiu para gerar os elementos químicos mais leves. Em seguida, nuvens de hidrogênio e hélio, cercadas por véus invisíveis de matéria escura, entraram em colapso devido a sua própria gravidade para formar as primeiras estrelas e galáxias. Bilhões de anos mais tarde, em torno de uma estrela comum, um planeta banhado por vastos oceanos coletou os ingredientes necessários para a vida. Após colisões de enorme violência com asteroides e cometas, de incontáveis erupções vulcânicas, de turbulência furiosa nos oceanos, o planeta foi se acalmando. Da sopa primordial, moléculas interagiram e cresceram, interligando-se para formar a primeira criatura viva. Bilhões de anos mais tarde, nossos antepassados começaram a se questionar sobre a razão de sua existência. Sozinhos, contemplaram os céus, buscando nas estrelas pela sua origem.\n\n(Criação imperfeita, 2024.)\n\nDe acordo com o físico Marcelo Gleiser,",
+    "options": [
+      {
+        "id": "a",
+        "text": "a busca por explicações totalizantes sobre o mundo faz com que a ciência atual retome as antigas narrativas míticas."
+      },
+      {
+        "id": "b",
+        "text": "a busca por explicações totalizantes sobre o mundo aproxima a ciência atual das antigas narrativas míticas."
+      },
+      {
+        "id": "c",
+        "text": "em razão do espantoso avanço da ciência, nosso fascínio atual pelo mistério do Universo aumenta vertiginosamente."
+      },
+      {
+        "id": "d",
+        "text": "a despeito dos decisivos avanços tecnológicos, a ciência atual não pode prescindir das antigas explicações míticas."
+      },
+      {
+        "id": "e",
+        "text": "em razão dos assombrosos avanços tecnológicos, a ciência atual aproxima-se da possibilidade de uma explicação final sobre o Universo."
+      }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "medium",
+    "originalPages": [
+      {
+        "page": 4,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p04.webp"
+      }
+    ],
+    "statementComplete": true,
+    "sourceMaterial": {
+      "file": "UNIFESP_2025_dia_1_objetiva_V1.pdf",
+      "page": 4,
+      "questionNumber": 5
+    },
+    "examSource": {
+      "board": "UNIFESP",
+      "year": 2025,
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
+      "phase": "1º dia · Língua Portuguesa e Língua Inglesa",
+      "version": "V1",
+      "questionNumber": 5
+    },
+    "explanation": "Gabarito oficial: B · UNIFESP 2025 · V1 · questão 5.\n\nConceito e pré-requisitos\nCompreensão de tese: distinguir “carregar a mesma expectativa” de “retomar” ou “depender”; pré-requisitos: leitura atenta de modalizadores.\n\nResolução por etapas\n1. Identificar dados: Localize a frase-chave: a ciência carrega, nas suas raízes, “a mesma expectativa mítica de explicações finais sobre o mundo”.\n2. Escolher a estratégia: O ponto comum entre ciência e mito é a expectativa de explicação final, totalizante.\n3. Aplicar o conceito: Isso é aproximação, semelhança de busca.\n4. Justificar: A diz que a ciência retoma as narrativas míticas; D, que não pode prescindir delas; C e E falam de fascínio crescente e de explicação final próxima, o que o texto não afirma.\n5. Conferir: Alternativa B.\n\nPadrão de cobrança e pegadinha\nA e B começam iguais: a diferença está no verbo — “aproxima” (texto) × “retome” (extrapolação).\n\nRevisão ativa — responda sem consultar\n1. O que, segundo Gleiser, ciência e mito têm em comum?\n2. O que o autor quer dizer com “nosso foco precisa mudar”?\n\nTransferência — Exercício autoral: explique em uma frase a tese do 2º parágrafo sobre assimetria.\nCritérios de resposta:\n• Afirmar que a criação vem de imperfeições e assimetrias.\n• Citar um exemplo do texto (matéria, vida, cosmo)."
+  },
+  {
+    "id": "unifesp_2025_v1_q11",
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Leitura de Textos Cômicos",
+    "prompt": "Examine a tirinha da cartunista Laerte.\n\n[Tirinha “Lola, a andorinha”. A andorinha Lola fala a um microfone de pedestal; a cada fala dela, o quadrinho ao lado mostra uma caixa de som repetindo o recado para uma plateia.\nLola: “Teste!” — Caixa de som: “Teste!”\nLola: “Meu nome é Lola...” — Caixa de som: “O nome dela é Lola...”\nLola: “Andorinha eu sou...” — Caixa de som: “Andorinha ela é...”\nLola: “Quando abro o bico eu dou um show!” — Caixa de som: “Quando abre o bico ela dá um show!”\nNo último quadrinho, alguém pergunta: “Dei o recado?”, e Lola responde: “Deu, mas sem a rima.”]\n\n(Lola, a andorinha, 2013. Adaptado.)\n\nAo final da tirinha, Lola diz que o microfone deu o recado (ou seja, reproduziu o conteúdo de sua fala), “mas sem a rima”. A rima que não se manteve na fala do microfone é aquela que ocorre entre",
+    "options": [
+      {
+        "id": "a",
+        "text": "um verbo e um substantivo."
+      },
+      {
+        "id": "b",
+        "text": "dois substantivos."
+      },
+      {
+        "id": "c",
+        "text": "um substantivo e um adjetivo."
+      },
+      {
+        "id": "d",
+        "text": "um verbo e um adjetivo."
+      },
+      {
+        "id": "e",
+        "text": "dois verbos."
+      }
+    ],
+    "correctOptionId": "a",
+    "difficulty": "medium",
+    "originalPages": [
+      {
+        "page": 6,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p06.webp"
+      }
+    ],
+    "statementComplete": true,
+    "sourceMaterial": {
+      "file": "UNIFESP_2025_dia_1_objetiva_V1.pdf",
+      "page": 6,
+      "questionNumber": 11
+    },
+    "examSource": {
+      "board": "UNIFESP",
+      "year": 2025,
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
+      "phase": "1º dia · Língua Portuguesa e Língua Inglesa",
+      "version": "V1",
+      "questionNumber": 11
+    },
+    "explanation": "Gabarito oficial: A · UNIFESP 2025 · V1 · questão 11.\n\nConceito e pré-requisitos\nRima e classes de palavras; efeito da passagem da 1ª para a 3ª pessoa; pré-requisitos: reconhecer estrangeirismo substantivado (“show”).\n\nResolução por etapas\n1. Identificar dados: Ache as palavras que rimam na fala de Lola: “Andorinha eu sou” / “eu dou um show”.\n2. Escolher a estratégia: A rima é entre “sou” e “show”.\n3. Aplicar o conceito: “Sou” é verbo (ser, 1ª pessoa); “show” é substantivo.\n4. Justificar: Na versão do microfone, “sou” vira “é” (3ª pessoa), e a rima com “show” se perde; “dou” também é verbo, mas está no meio do verso.\n5. Conferir: Alternativa A.\n\nPadrão de cobrança e pegadinha\n“Sou” e “dou” rimam e são dois verbos, mas “dou” não está em posição de rima e sua troca por “dá” não é o que Lola lamenta.\n\nRevisão ativa — responda sem consultar\n1. Que mudança gramatical o microfone faz em todas as falas?\n2. Por que essa mudança destrói a rima?\n\nTransferência — Exercício autoral: reescreva a fala do microfone mantendo a 3ª pessoa e criando uma nova rima.\nCritérios de resposta:\n• Manter o sujeito “ela”.\n• Fazer rimar os finais dos dois versos.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unifesp_2025_v1_q10-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "unifesp_2025_v1_q13",
+    "topicId": "por_lit_modernismo",
+    "subject": "Português",
+    "chapter": "Parnasianismo",
+    "prompt": "Leia o soneto “Luva abandonada”, de Alberto de Oliveira.\n\nUma só vez calçar-vos me foi dado,\nDedos claros! A escura sorte minha,\nO meu destino, como um vento irado,\nLevou-vos longe e me deixou sozinha!\n\nSobre este cofre, desta cama ao lado,\nMurcho, como uma flor, triste e mesquinha,\nBebendo ávida o cheiro delicado\nQue aquela mão de dedos claros tinha.\n\nCálix¹ que a alma de um lírio teve um dia\nEm si guardada, antes que ao chão pendesse,\nBreve me hei de esfazer² em poeira, em nada...\n\nOh! em que chaga viva tocaria\nQuem nesta vida compreender pudesse\nA saudade da luva abandonada!\n\n(www.nilc.icmc.usp.br)\n\n¹ cálix: invólucro externo de uma flor; cálice.\n² esfazer: desfazer.\n\nA terceira estrofe do soneto explora, em termos metafóricos, o tema",
+    "options": [
+      {
+        "id": "a",
+        "text": "da insensibilidade humana."
+      },
+      {
+        "id": "b",
+        "text": "da efemeridade humana."
+      },
+      {
+        "id": "c",
+        "text": "do egoísmo humano."
+      },
+      {
+        "id": "d",
+        "text": "da hipocrisia humana."
+      },
+      {
+        "id": "e",
+        "text": "do conformismo humano."
+      }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "medium",
+    "originalPages": [
+      {
+        "page": 6,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p06.webp"
+      },
+      {
+        "page": 7,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p07.webp"
+      }
+    ],
+    "statementComplete": true,
+    "sourceMaterial": {
+      "file": "UNIFESP_2025_dia_1_objetiva_V1.pdf",
+      "page": 6,
+      "questionNumber": 13
+    },
+    "examSource": {
+      "board": "UNIFESP",
+      "year": 2025,
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
+      "phase": "1º dia · Língua Portuguesa e Língua Inglesa",
+      "version": "V1",
+      "questionNumber": 13
+    },
+    "explanation": "Gabarito oficial: B · UNIFESP 2025 · V1 · questão 13.\n\nConceito e pré-requisitos\nLeitura de metáfora em poema: a luva como cálice de flor que murcha; pré-requisitos: tema da transitoriedade.\n\nResolução por etapas\n1. Identificar dados: Releia a 3ª estrofe: a luva se compara a um cálix que guardou a alma de um lírio e que em breve vai se desfazer “em poeira, em nada”.\n2. Escolher a estratégia: A imagem é de algo que teve vida e está destinado a desaparecer.\n3. Aplicar o conceito: Desfazer-se em pó é metáfora da brevidade da existência.\n4. Justificar: Não há crítica a insensibilidade, egoísmo, hipocrisia ou conformismo.\n5. Conferir: Alternativa B: efemeridade.\n\nPadrão de cobrança e pegadinha\nA luva está abandonada, o que sugere “insensibilidade”; mas a 3ª estrofe fala do fim de quem fala, não da culpa de quem abandonou.\n\nRevisão ativa — responda sem consultar\n1. Que palavras da estrofe indicam desaparecimento?\n2. Quem é o eu lírico do soneto?\n\nTransferência — Exercício autoral: relacione “em poeira, em nada” à tradição do tema da brevidade da vida.\nCritérios de resposta:\n• Citar a ideia de retorno ao pó.\n• Relacionar à passagem do tempo."
+  },
+  {
+    "id": "unifesp_2025_v1_q14",
+    "topicId": "por_lit_modernismo",
+    "subject": "Português",
+    "chapter": "Parnasianismo",
+    "prompt": "Leia o soneto “Luva abandonada”, de Alberto de Oliveira.\n\nUma só vez calçar-vos me foi dado,\nDedos claros! A escura sorte minha,\nO meu destino, como um vento irado,\nLevou-vos longe e me deixou sozinha!\n\nSobre este cofre, desta cama ao lado,\nMurcho, como uma flor, triste e mesquinha,\nBebendo ávida o cheiro delicado\nQue aquela mão de dedos claros tinha.\n\nCálix¹ que a alma de um lírio teve um dia\nEm si guardada, antes que ao chão pendesse,\nBreve me hei de esfazer² em poeira, em nada...\n\nOh! em que chaga viva tocaria\nQuem nesta vida compreender pudesse\nA saudade da luva abandonada!\n\n(www.nilc.icmc.usp.br)\n\n¹ cálix: invólucro externo de uma flor; cálice.\n² esfazer: desfazer.\n\nUma característica presente nesse soneto que o afasta da estética parnasiana é",
+    "options": [
+      {
+        "id": "a",
+        "text": "a recusa da sentimentalidade, em favor da objetividade."
+      },
+      {
+        "id": "b",
+        "text": "a representação bucólica da natureza."
+      },
+      {
+        "id": "c",
+        "text": "a despreocupação formal, em favor da experimentação."
+      },
+      {
+        "id": "d",
+        "text": "a referência a entidades mitológicas."
+      },
+      {
+        "id": "e",
+        "text": "a tonalidade confessional e sentimental."
+      }
+    ],
+    "correctOptionId": "e",
+    "difficulty": "medium",
+    "originalPages": [
+      {
+        "page": 6,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p06.webp"
+      },
+      {
+        "page": 7,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p07.webp"
+      }
+    ],
+    "statementComplete": true,
+    "sourceMaterial": {
+      "file": "UNIFESP_2025_dia_1_objetiva_V1.pdf",
+      "page": 6,
+      "questionNumber": 14
+    },
+    "examSource": {
+      "board": "UNIFESP",
+      "year": 2025,
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
+      "phase": "1º dia · Língua Portuguesa e Língua Inglesa",
+      "version": "V1",
+      "questionNumber": 14
+    },
+    "explanation": "Gabarito oficial: E · UNIFESP 2025 · V1 · questão 14.\n\nConceito e pré-requisitos\nParnasianismo: objetividade, impassibilidade, culto da forma, descrição de objetos; pré-requisitos: reconhecer o que confirma e o que contraria a estética.\n\nResolução por etapas\n1. Identificar dados: Liste traços parnasianos: forma fixa (soneto), rimas, descrição de objeto, contenção emotiva.\n2. Escolher a estratégia: O soneto mantém a forma rigorosa e o objeto (uma luva).\n3. Aplicar o conceito: Mas a luva fala em 1ª pessoa de sua sorte, saudade e dor: confissão sentimental.\n4. Justificar: A é traço parnasiano, não afastamento; B e D não ocorrem; C é falsa: a forma é rigorosa.\n5. Conferir: Alternativa E.\n\nPadrão de cobrança e pegadinha\nA questão pede o que afasta o poema do Parnasianismo; a alternativa A descreve exatamente o ideal parnasiano.\n\nRevisão ativa — responda sem consultar\n1. Que elementos do soneto são tipicamente parnasianos?\n2. Que palavras revelam emoção do eu lírico?\n\nTransferência — Exercício autoral: compare o tom deste soneto com o de “Vaso grego”, do mesmo autor.\nCritérios de resposta:\n• “Vaso grego”: descrição objetiva e impessoal.\n• “Luva abandonada”: voz subjetiva e saudosa."
+  },
+  {
+    "id": "unifesp_2025_v1_q15",
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Pronomes",
+    "prompt": "Leia o soneto “Luva abandonada”, de Alberto de Oliveira.\n\nUma só vez calçar-vos me foi dado,\nDedos claros! A escura sorte minha,\nO meu destino, como um vento irado,\nLevou-vos longe e me deixou sozinha!\n\nSobre este cofre, desta cama ao lado,\nMurcho, como uma flor, triste e mesquinha,\nBebendo ávida o cheiro delicado\nQue aquela mão de dedos claros tinha.\n\nCálix¹ que a alma de um lírio teve um dia\nEm si guardada, antes que ao chão pendesse,\nBreve me hei de esfazer² em poeira, em nada...\n\nOh! em que chaga viva tocaria\nQuem nesta vida compreender pudesse\nA saudade da luva abandonada!\n\n(www.nilc.icmc.usp.br)\n\n¹ cálix: invólucro externo de uma flor; cálice.\n² esfazer: desfazer.\n\nO referente do pronome relativo que consta da terceira estrofe é",
+    "options": [
+      {
+        "id": "a",
+        "text": "lírio."
+      },
+      {
+        "id": "b",
+        "text": "alma."
+      },
+      {
+        "id": "c",
+        "text": "chão."
+      },
+      {
+        "id": "d",
+        "text": "cálix."
+      },
+      {
+        "id": "e",
+        "text": "poeira."
+      }
+    ],
+    "correctOptionId": "d",
+    "difficulty": "hard",
+    "originalPages": [
+      {
+        "page": 6,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p06.webp"
+      },
+      {
+        "page": 7,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p07.webp"
+      }
+    ],
+    "statementComplete": true,
+    "sourceMaterial": {
+      "file": "UNIFESP_2025_dia_1_objetiva_V1.pdf",
+      "page": 6,
+      "questionNumber": 15
+    },
+    "examSource": {
+      "board": "UNIFESP",
+      "year": 2025,
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
+      "phase": "1º dia · Língua Portuguesa e Língua Inglesa",
+      "version": "V1",
+      "questionNumber": 15
+    },
+    "explanation": "Gabarito oficial: D · UNIFESP 2025 · V1 · questão 15.\n\nConceito e pré-requisitos\nPronome relativo e ordem inversa: reorganizar o período para achar o antecedente; pré-requisitos: sujeito × objeto.\n\nResolução por etapas\n1. Identificar dados: O relativo é o “que” de “Cálix que a alma de um lírio teve um dia em si guardada”.\n2. Escolher a estratégia: Ponha na ordem direta: a alma de um lírio teve o cálix guardada em si? Não — o cálix teve, um dia, a alma de um lírio guardada em si.\n3. Aplicar o conceito: “Que” retoma “cálix” e funciona como sujeito de “teve”.\n4. Justificar: “Alma” é núcleo do objeto de “teve”; “lírio” a especifica; “chão” e “poeira” estão em outras orações.\n5. Conferir: Alternativa D.\n\nPadrão de cobrança e pegadinha\nA proximidade engana: o termo logo após o “que” (“a alma de um lírio”) é o objeto, não o antecedente.\n\nRevisão ativa — responda sem consultar\n1. Qual é o sujeito de “teve” na estrofe?\n2. O que o cálix guardava?\n\nTransferência — Exercício autoral: indique o antecedente do “que” em “Bebendo ávida o cheiro delicado / Que aquela mão de dedos claros tinha”.\nCritérios de resposta:\n• Identificar “cheiro delicado”.\n• Classificar o “que” como objeto direto de “tinha”."
+  },
+  {
+    "id": "unifesp_2025_v1_q17",
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "prompt": "Leia o texto e examine a imagem.\n\n[Imagem: robô macio, em forma de estrela-do-mar, com um cultivo de fungos na parte central.]\n\n[1] Eat your heart out, Victor Frankenstein¹! Researchers have succeeded in creating living machines made from electronic parts and living fungi. In the past, so-called biohybrid robots ― which combine living tissue with robotic materials — have generally employed animal cells, but these are hard to keep alive. Fungi, by contrast, are incredibly resilient. Their branching networks of rootlike filaments, called mycelia, which allow mushrooms to connect and communicate underground, can both sense the environment and fire off electrical signals in response — just like neurons in the human brain.\n[2] The team behind the project cultured these filaments from the king oyster mushroom (Pleurotus eryngii) onto electrodes in a 3D-printed platform, then hooked them up to a computer interface — allowing electrical impulses from the fungi to be converted into digital commands.\n[3] The end result was the above pictured soft, starfish-shaped walking robot, as well as another hard robot with wheels. In both cases, the team used ultraviolet light to stimulate the mycelium², triggering electrical signals that directed the robots to walk and roll at different speeds, the researchers report in Science Robotics. Experts tell National Geographic that the advance lays the groundwork for building robust, sustainable robots. In the future, these hardy, light-activated cyborgs could be employed in harsh environments on Earth or even on missions outside our planet.\n\n(Phie Jacobs. www.science.org, 28.08.2024. Adaptado.)\n\n¹ Victor Frankenstein: young scientist and protagonist of a novel and a film, who becomes obsessed with the idea of creating life. Frankenstein constructs the Monster, a living creature with human-like appearance, from parts of deceased bodies.\n² mycelium: singular form of mycelia.\n\nNo trecho inicial do primeiro parágrafo “Eat your heart out, Victor Frankenstein!”, a expressão sublinhada [“Eat your heart out”] equivale, em português, a:",
+    "options": [
+      {
+        "id": "a",
+        "text": "Morra de inveja."
+      },
+      {
+        "id": "b",
+        "text": "Não chega a seus pés."
+      },
+      {
+        "id": "c",
+        "text": "Quanta bobagem."
+      },
+      {
+        "id": "d",
+        "text": "O coração vai sair pela boca."
+      },
+      {
+        "id": "e",
+        "text": "Você tem um coração de ouro."
+      }
+    ],
+    "correctOptionId": "a",
+    "difficulty": "medium",
+    "originalPages": [
+      {
+        "page": 7,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p07.webp"
+      },
+      {
+        "page": 8,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p08.webp"
+      }
+    ],
+    "statementComplete": true,
+    "sourceMaterial": {
+      "file": "UNIFESP_2025_dia_1_objetiva_V1.pdf",
+      "page": 7,
+      "questionNumber": 17
+    },
+    "examSource": {
+      "board": "UNIFESP",
+      "year": 2025,
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
+      "phase": "1º dia · Língua Portuguesa e Língua Inglesa",
+      "version": "V1",
+      "questionNumber": 17
+    },
+    "explanation": "Gabarito oficial: A · UNIFESP 2025 · V1 · questão 17.\n\nConceito e pré-requisitos\nExpressão idiomática: não se traduz palavra por palavra; pré-requisitos: usar o contexto (pesquisadores superam o feito de Frankenstein).\n\nResolução por etapas\n1. Identificar dados: O texto anuncia que cientistas criaram máquinas vivas.\n2. Escolher a estratégia: A frase se dirige a Frankenstein, personagem que criou vida artificial.\n3. Aplicar o conceito: “Eat your heart out, X” é dito a quem seria superado: “morra de inveja, X”.\n4. Justificar: B inverte a relação; C, D e E traduzem literalmente “heart” ou inventam sentido.\n5. Conferir: Alternativa A.\n\nPadrão de cobrança e pegadinha\nTraduções literais com “coração” (D, E) são a armadilha típica de expressões idiomáticas.\n\nRevisão ativa — responda sem consultar\n1. Por que Frankenstein é evocado no início do texto?\n2. Dê outro exemplo de expressão idiomática em inglês que não se traduz ao pé da letra.\n\nTransferência — Exercício autoral: traduza “Eat your heart out, Picasso!” dito por uma criança que mostra um desenho.\nCritérios de resposta:\n• Usar “Morra de inveja, Picasso!”.\n• Manter o tom de brincadeira.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unifesp_2025_v1_q16-revisada-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "unifesp_2025_v1_q18",
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "prompt": "Leia o texto e examine a imagem.\n\n[Imagem: robô macio, em forma de estrela-do-mar, com um cultivo de fungos na parte central.]\n\n[1] Eat your heart out, Victor Frankenstein¹! Researchers have succeeded in creating living machines made from electronic parts and living fungi. In the past, so-called biohybrid robots ― which combine living tissue with robotic materials — have generally employed animal cells, but these are hard to keep alive. Fungi, by contrast, are incredibly resilient. Their branching networks of rootlike filaments, called mycelia, which allow mushrooms to connect and communicate underground, can both sense the environment and fire off electrical signals in response — just like neurons in the human brain.\n[2] The team behind the project cultured these filaments from the king oyster mushroom (Pleurotus eryngii) onto electrodes in a 3D-printed platform, then hooked them up to a computer interface — allowing electrical impulses from the fungi to be converted into digital commands.\n[3] The end result was the above pictured soft, starfish-shaped walking robot, as well as another hard robot with wheels. In both cases, the team used ultraviolet light to stimulate the mycelium², triggering electrical signals that directed the robots to walk and roll at different speeds, the researchers report in Science Robotics. Experts tell National Geographic that the advance lays the groundwork for building robust, sustainable robots. In the future, these hardy, light-activated cyborgs could be employed in harsh environments on Earth or even on missions outside our planet.\n\n(Phie Jacobs. www.science.org, 28.08.2024. Adaptado.)\n\n¹ Victor Frankenstein: young scientist and protagonist of a novel and a film, who becomes obsessed with the idea of creating life. Frankenstein constructs the Monster, a living creature with human-like appearance, from parts of deceased bodies.\n² mycelium: singular form of mycelia.\n\nDe acordo com o texto, os novos robôs bio-híbridos utilizam fungos porque",
+    "options": [
+      {
+        "id": "a",
+        "text": "as ostras marinhas tornam o cultivo de fungos fácil e viável."
+      },
+      {
+        "id": "b",
+        "text": "os fungos emitem sinais elétricos para estimular os neurônios humanos."
+      },
+      {
+        "id": "c",
+        "text": "os fungos são resistentes e adaptáveis."
+      },
+      {
+        "id": "d",
+        "text": "as células vivas de animais são muito dispendiosas."
+      },
+      {
+        "id": "e",
+        "text": "os robôs com formato de estrela-do-mar são compatíveis com os fungos."
+      }
+    ],
+    "correctOptionId": "c",
+    "difficulty": "easy",
+    "originalPages": [
+      {
+        "page": 7,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p07.webp"
+      },
+      {
+        "page": 8,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p08.webp"
+      }
+    ],
+    "statementComplete": true,
+    "sourceMaterial": {
+      "file": "UNIFESP_2025_dia_1_objetiva_V1.pdf",
+      "page": 7,
+      "questionNumber": 18
+    },
+    "examSource": {
+      "board": "UNIFESP",
+      "year": 2025,
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
+      "phase": "1º dia · Língua Portuguesa e Língua Inglesa",
+      "version": "V1",
+      "questionNumber": 18
+    },
+    "explanation": "Gabarito oficial: C · UNIFESP 2025 · V1 · questão 18.\n\nConceito e pré-requisitos\nInformação explícita e falsos cognatos de contexto; pré-requisitos: resilient, hard to keep alive.\n\nResolução por etapas\n1. Identificar dados: Procure a comparação entre células animais e fungos no 1º parágrafo.\n2. Escolher a estratégia: Células animais são “hard to keep alive”; “Fungi, by contrast, are incredibly resilient”.\n3. Aplicar o conceito: Resilient = resistente, capaz de suportar condições adversas.\n4. Justificar: A confunde “king oyster mushroom” (cogumelo) com ostras; B distorce a comparação com neurônios; D troca “difíceis de manter vivas” por “caras”; E inverte causa.\n5. Conferir: Alternativa C.\n\nPadrão de cobrança e pegadinha\n“King oyster mushroom” é o nome de um cogumelo, não tem relação com ostras marinhas.\n\nRevisão ativa — responda sem consultar\n1. Qual é a desvantagem das células animais, segundo o texto?\n2. A que são comparados os sinais elétricos do micélio?\n\nTransferência — Exercício autoral: traduza “these hardy, light-activated cyborgs”.\nCritérios de resposta:\n• Traduzir hardy como resistentes.\n• Traduzir light-activated como ativados por luz.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unifesp_2025_v1_q16-revisada-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "unifesp_2025_v1_q20",
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "prompt": "Leia o texto e examine a imagem.\n\n[Imagem: robô macio, em forma de estrela-do-mar, com um cultivo de fungos na parte central.]\n\n[1] Eat your heart out, Victor Frankenstein¹! Researchers have succeeded in creating living machines made from electronic parts and living fungi. In the past, so-called biohybrid robots ― which combine living tissue with robotic materials — have generally employed animal cells, but these are hard to keep alive. Fungi, by contrast, are incredibly resilient. Their branching networks of rootlike filaments, called mycelia, which allow mushrooms to connect and communicate underground, can both sense the environment and fire off electrical signals in response — just like neurons in the human brain.\n[2] The team behind the project cultured these filaments from the king oyster mushroom (Pleurotus eryngii) onto electrodes in a 3D-printed platform, then hooked them up to a computer interface — allowing electrical impulses from the fungi to be converted into digital commands.\n[3] The end result was the above pictured soft, starfish-shaped walking robot, as well as another hard robot with wheels. In both cases, the team used ultraviolet light to stimulate the mycelium², triggering electrical signals that directed the robots to walk and roll at different speeds, the researchers report in Science Robotics. Experts tell National Geographic that the advance lays the groundwork for building robust, sustainable robots. In the future, these hardy, light-activated cyborgs could be employed in harsh environments on Earth or even on missions outside our planet.\n\n(Phie Jacobs. www.science.org, 28.08.2024. Adaptado.)\n\n¹ Victor Frankenstein: young scientist and protagonist of a novel and a film, who becomes obsessed with the idea of creating life. Frankenstein constructs the Monster, a living creature with human-like appearance, from parts of deceased bodies.\n² mycelium: singular form of mycelia.\n\nThe excerpt from the first paragraph “which combine living tissue with robotic materials”",
+    "options": [
+      {
+        "id": "a",
+        "text": "offers a contrasting viewpoint."
+      },
+      {
+        "id": "b",
+        "text": "provides an explanation."
+      },
+      {
+        "id": "c",
+        "text": "introduces a quotation."
+      },
+      {
+        "id": "d",
+        "text": "presents a counter-argument."
+      },
+      {
+        "id": "e",
+        "text": "suggests a speculative remark."
+      }
+    ],
+    "correctOptionId": "b",
+    "difficulty": "medium",
+    "originalPages": [
+      {
+        "page": 7,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p07.webp"
+      },
+      {
+        "page": 8,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p08.webp"
+      }
+    ],
+    "statementComplete": true,
+    "sourceMaterial": {
+      "file": "UNIFESP_2025_dia_1_objetiva_V1.pdf",
+      "page": 7,
+      "questionNumber": 20
+    },
+    "examSource": {
+      "board": "UNIFESP",
+      "year": 2025,
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
+      "phase": "1º dia · Língua Portuguesa e Língua Inglesa",
+      "version": "V1",
+      "questionNumber": 20
+    },
+    "explanation": "Gabarito oficial: B · UNIFESP 2025 · V1 · questão 20.\n\nConceito e pré-requisitos\nOração relativa explicativa (non-defining relative clause) entre travessões; pré-requisitos: reconhecer aposto/definição.\n\nResolução por etapas\n1. Identificar dados: Veja onde o trecho está: logo após “so-called biohybrid robots”, entre travessões.\n2. Escolher a estratégia: Ele diz o que são esses robôs: combinam tecido vivo com materiais robóticos.\n3. Aplicar o conceito: É uma definição, isto é, uma explicação do termo anterior.\n4. Justificar: Não há contraste, citação, contra-argumento nem especulação.\n5. Conferir: Alternativa B.\n\nPadrão de cobrança e pegadinha\nO contraste do parágrafo vem depois (“by contrast”), não nesse trecho.\n\nRevisão ativa — responda sem consultar\n1. A que termo se refere o pronome “which”?\n2. Que sinal de pontuação marca o caráter explicativo do trecho?\n\nTransferência — Exercício autoral: escreva em inglês uma oração explicativa para “mycelia”.\nCritérios de resposta:\n• Usar “which” entre vírgulas ou travessões.\n• Definir como rede de filamentos dos fungos.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unifesp_2025_v1_q16-revisada-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "unifesp_2025_v1_q21",
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "prompt": "Leia o texto e examine a imagem.\n\n[Imagem: robô macio, em forma de estrela-do-mar, com um cultivo de fungos na parte central.]\n\n[1] Eat your heart out, Victor Frankenstein¹! Researchers have succeeded in creating living machines made from electronic parts and living fungi. In the past, so-called biohybrid robots ― which combine living tissue with robotic materials — have generally employed animal cells, but these are hard to keep alive. Fungi, by contrast, are incredibly resilient. Their branching networks of rootlike filaments, called mycelia, which allow mushrooms to connect and communicate underground, can both sense the environment and fire off electrical signals in response — just like neurons in the human brain.\n[2] The team behind the project cultured these filaments from the king oyster mushroom (Pleurotus eryngii) onto electrodes in a 3D-printed platform, then hooked them up to a computer interface — allowing electrical impulses from the fungi to be converted into digital commands.\n[3] The end result was the above pictured soft, starfish-shaped walking robot, as well as another hard robot with wheels. In both cases, the team used ultraviolet light to stimulate the mycelium², triggering electrical signals that directed the robots to walk and roll at different speeds, the researchers report in Science Robotics. Experts tell National Geographic that the advance lays the groundwork for building robust, sustainable robots. In the future, these hardy, light-activated cyborgs could be employed in harsh environments on Earth or even on missions outside our planet.\n\n(Phie Jacobs. www.science.org, 28.08.2024. Adaptado.)\n\n¹ Victor Frankenstein: young scientist and protagonist of a novel and a film, who becomes obsessed with the idea of creating life. Frankenstein constructs the Monster, a living creature with human-like appearance, from parts of deceased bodies.\n² mycelium: singular form of mycelia.\n\nNo trecho do primeiro parágrafo “Fungi, by contrast, are incredibly resilient”, a expressão sublinhada [“by contrast”] pode ser substituída, sem alteração de sentido, por:",
+    "options": [
+      {
+        "id": "a",
+        "text": "on the other hand."
+      },
+      {
+        "id": "b",
+        "text": "so to speak."
+      },
+      {
+        "id": "c",
+        "text": "apart from that."
+      },
+      {
+        "id": "d",
+        "text": "for this reason."
+      },
+      {
+        "id": "e",
+        "text": "to say the least."
+      }
+    ],
+    "correctOptionId": "a",
+    "difficulty": "easy",
+    "originalPages": [
+      {
+        "page": 7,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p07.webp"
+      },
+      {
+        "page": 8,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p08.webp"
+      }
+    ],
+    "statementComplete": true,
+    "sourceMaterial": {
+      "file": "UNIFESP_2025_dia_1_objetiva_V1.pdf",
+      "page": 7,
+      "questionNumber": 21
+    },
+    "examSource": {
+      "board": "UNIFESP",
+      "year": 2025,
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
+      "phase": "1º dia · Língua Portuguesa e Língua Inglesa",
+      "version": "V1",
+      "questionNumber": 21
+    },
+    "explanation": "Gabarito oficial: A · UNIFESP 2025 · V1 · questão 21.\n\nConceito e pré-requisitos\nConectores de contraste; pré-requisitos: identificar os dois termos opostos (células animais × fungos).\n\nResolução por etapas\n1. Identificar dados: Antes: células animais são difíceis de manter vivas.\n2. Escolher a estratégia: Depois: fungos são muito resistentes.\n3. Aplicar o conceito: “By contrast” marca oposição entre as duas informações.\n4. Justificar: “On the other hand” (por outro lado) faz o mesmo; so to speak = por assim dizer; apart from that = além disso; for this reason = por isso; to say the least = no mínimo.\n5. Conferir: Alternativa A.\n\nPadrão de cobrança e pegadinha\n“Apart from that” parece contraste, mas acrescenta informação.\n\nRevisão ativa — responda sem consultar\n1. Quais são os dois elementos contrastados?\n2. Cite outro conector de contraste em inglês.\n\nTransferência — Exercício autoral: una com “by contrast” as ideias “Cats are independent” e “Dogs need attention”.\nCritérios de resposta:\n• Colocar o conector na segunda frase.\n• Manter o sentido de oposição.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unifesp_2025_v1_q16-revisada-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "unifesp_2025_v1_q22",
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Pollution",
+    "prompt": "Leia o texto e examine o infográfico.\n\n[1] Year after year, illegal fires consume thousands of hectares of Brazilian biomes, threatening biodiversity and all life on the planet. Data from the end of August 2024 shows a dramatic and alarming increase in fire outbreaks compared to the same period in 2023 in the Amazon, Cerrado, and Pantanal. In this distressing scenario, impunity acts as fuel for this destruction, and the Brazilian authorities must respond quickly: investigate and hold those responsible for illegal fires accountable, while also strengthening prevention measures and adopting strategies to deal with the reality of extreme events.\n[2] The consequences of fires know no borders. In addition to causing harm to people living nearby, the smoke from fires in the Amazon and Pantanal travelled to distant regions. The state of São Paulo experienced its worst August since INPE’s (Instituto Nacional de Pesquisas Espaciais) measurements began in 1998, with 3,612 heat spots recorded — something never seen before. The reasons are still being investigated, as on a single day (August 23), the number of fire outbreaks in the state surpassed those recorded across the entire Amazon biome, where illegal fires are common at this time of year.\n\n(www.greenpeace.org, 05.09.2024. Adaptado.)\n\n[Infográfico sobre o uso do fogo no desmatamento e na pecuária, com itens explicativos; um deles, “Pasture ‘renovation’”, é citado na questão 24. Veja a figura.]\n\nAccording to the text, in August 2024, there was an unusual fire irruption event",
+    "options": [
+      {
+        "id": "a",
+        "text": "at the boarders of Brazil."
+      },
+      {
+        "id": "b",
+        "text": "in the Cerrado."
+      },
+      {
+        "id": "c",
+        "text": "in the Amazon."
+      },
+      {
+        "id": "d",
+        "text": "in the state of São Paulo."
+      },
+      {
+        "id": "e",
+        "text": "in Pantanal."
+      }
+    ],
+    "correctOptionId": "d",
+    "difficulty": "medium",
+    "originalPages": [
+      {
+        "page": 9,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p09.webp"
+      }
+    ],
+    "statementComplete": true,
+    "sourceMaterial": {
+      "file": "UNIFESP_2025_dia_1_objetiva_V1.pdf",
+      "page": 9,
+      "questionNumber": 22
+    },
+    "examSource": {
+      "board": "UNIFESP",
+      "year": 2025,
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
+      "phase": "1º dia · Língua Portuguesa e Língua Inglesa",
+      "version": "V1",
+      "questionNumber": 22
+    },
+    "explanation": "Gabarito oficial: D · UNIFESP 2025 · V1 · questão 22.\n\nConceito e pré-requisitos\nLocalização de informação com atenção ao qualificador “unusual”; pré-requisitos: worst, never seen before.\n\nResolução por etapas\n1. Identificar dados: A pergunta pede o evento incomum, não qualquer queimada.\n2. Escolher a estratégia: 2º parágrafo: São Paulo teve “its worst August since INPE’s measurements began in 1998” — “something never seen before”.\n3. Aplicar o conceito: Na Amazônia, ao contrário, queimadas ilegais “are common at this time of year”.\n4. Justificar: Cerrado e Pantanal aparecem na comparação geral; fronteiras são citadas em sentido figurado (“know no borders”).\n5. Conferir: Alternativa D.\n\nPadrão de cobrança e pegadinha\nAmazônia e Pantanal queimaram mais, mas isso é recorrente; o inédito foi São Paulo.\n\nRevisão ativa — responda sem consultar\n1. Que dado numérico o texto dá sobre São Paulo?\n2. O que significa “know no borders”?\n\nTransferência — Exercício autoral: traduza “something never seen before”.\nCritérios de resposta:\n• Traduzir como “algo nunca visto antes”.\n• Relacionar ao recorde de focos de calor.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unifesp_2025_v1_q25-revisada-1.webp"
+      }
+    ]
+  },
+  {
+    "id": "unifesp_2025_v1_q24",
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Pollution",
+    "prompt": "Leia o texto e examine o infográfico.\n\n[1] Year after year, illegal fires consume thousands of hectares of Brazilian biomes, threatening biodiversity and all life on the planet. Data from the end of August 2024 shows a dramatic and alarming increase in fire outbreaks compared to the same period in 2023 in the Amazon, Cerrado, and Pantanal. In this distressing scenario, impunity acts as fuel for this destruction, and the Brazilian authorities must respond quickly: investigate and hold those responsible for illegal fires accountable, while also strengthening prevention measures and adopting strategies to deal with the reality of extreme events.\n[2] The consequences of fires know no borders. In addition to causing harm to people living nearby, the smoke from fires in the Amazon and Pantanal travelled to distant regions. The state of São Paulo experienced its worst August since INPE’s (Instituto Nacional de Pesquisas Espaciais) measurements began in 1998, with 3,612 heat spots recorded — something never seen before. The reasons are still being investigated, as on a single day (August 23), the number of fire outbreaks in the state surpassed those recorded across the entire Amazon biome, where illegal fires are common at this time of year.\n\n(www.greenpeace.org, 05.09.2024. Adaptado.)\n\n[Infográfico sobre o uso do fogo no desmatamento e na pecuária, com itens explicativos; um deles, “Pasture ‘renovation’”, é citado na questão 24. Veja a figura.]\n\nNo trecho do item “Pasture ‘renovation’”, do infográfico, “older pasture is burned in order to prepare the soil for new pasture”, o trecho sublinhado [“in order to prepare the soil”] pode ser substituído, sem alteração de sentido, por:",
+    "options": [
+      {
+        "id": "a",
+        "text": "instead of the soil preparation."
+      },
+      {
+        "id": "b",
+        "text": "during the preparation of the soil."
+      },
+      {
+        "id": "c",
+        "text": "so as to prepare the soil."
+      },
+      {
+        "id": "d",
+        "text": "after preparing the soil."
+      },
+      {
+        "id": "e",
+        "text": "because the soil has been prepared."
+      }
+    ],
+    "correctOptionId": "c",
+    "difficulty": "easy",
+    "originalPages": [
+      {
+        "page": 9,
+        "url": "/question-media/oficiais/unifesp-2025-v1/p09.webp"
+      }
+    ],
+    "statementComplete": true,
+    "sourceMaterial": {
+      "file": "UNIFESP_2025_dia_1_objetiva_V1.pdf",
+      "page": 9,
+      "questionNumber": 24
+    },
+    "examSource": {
+      "board": "UNIFESP",
+      "year": 2025,
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
+      "phase": "1º dia · Língua Portuguesa e Língua Inglesa",
+      "version": "V1",
+      "questionNumber": 24
+    },
+    "explanation": "Gabarito oficial: C · UNIFESP 2025 · V1 · questão 24.\n\nConceito e pré-requisitos\nExpressões de finalidade (purpose): in order to, so as to, to; pré-requisitos: distinguir finalidade de tempo, causa e substituição.\n\nResolução por etapas\n1. Identificar dados: “In order to + verbo” indica finalidade: queima-se o pasto para preparar o solo.\n2. Escolher a estratégia: Procure outra estrutura de finalidade.\n3. Aplicar o conceito: “So as to prepare the soil” tem o mesmo sentido.\n4. Justificar: Instead of = em vez de; during = durante; after = depois de; because = porque.\n5. Conferir: Alternativa C.\n\nPadrão de cobrança e pegadinha\n“Because” indica causa já existente; aqui o preparo do solo é objetivo, não causa anterior.\n\nRevisão ativa — responda sem consultar\n1. Que ideia “in order to” expressa?\n2. Qual a forma mais curta de expressar finalidade em inglês?\n\nTransferência — Exercício autoral: reescreva “She studies hard in order to pass the exam” com outra expressão de finalidade.\nCritérios de resposta:\n• Usar “so as to” ou apenas “to”.\n• Manter o verbo no infinitivo.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unifesp_2025_v1_q25-revisada-1.webp"
+      }
+    ]
   }
 ]
