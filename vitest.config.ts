@@ -7,6 +7,8 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./src/testSetup.ts'],
     clearMocks: true,
+    // A suíte completa no Windows excedia esperas de renderização com mais processos.
+    maxWorkers: 2,
     css: { include: [/katex/] },
     testTimeout: 15000,
   },
