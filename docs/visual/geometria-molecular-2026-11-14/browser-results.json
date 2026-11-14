@@ -1,0 +1,3172 @@
+[
+  {
+    "largura": "celular-360 360×800",
+    "tema": "claro",
+    "movimento": "no-preference",
+    "leituras": [
+      "180°",
+      "120°",
+      "109,5°",
+      "107°",
+      "104,5°"
+    ],
+    "quadrosDistintos": 5,
+    "quadroParado": true,
+    "sobreposicoes": [],
+    "foco": {
+      "label": "Girar molécula",
+      "outline": "solid 2px",
+      "visible": true
+    },
+    "controles": [
+      {
+        "text": "01Linear",
+        "reachable": true
+      },
+      {
+        "text": "02Trigonal",
+        "reachable": true
+      },
+      {
+        "text": "03Tetraedro",
+        "reachable": true
+      },
+      {
+        "text": "04Pirâmide",
+        "reachable": true
+      },
+      {
+        "text": "05Polar",
+        "reachable": true
+      },
+      {
+        "text": "▷ Retomar movimento",
+        "reachable": true
+      },
+      {
+        "text": "◐ Ver em noite",
+        "reachable": true
+      }
+    ],
+    "tinta": "caderno",
+    "estouro": 0,
+    "ferramentas": [
+      [
+        44,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ],
+    "contextos": [
+      "2d"
+    ],
+    "canvases": 1,
+    "fontes": [
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "JetBrains Mono",
+      "JetBrains Mono",
+      "Kalam",
+      "Newsreader",
+      "Newsreader",
+      "Space Grotesk",
+      "Space Grotesk",
+      "Kalam"
+    ],
+    "ux": {
+      "core": {
+        "url": "http://127.0.0.1:3003/visual?summary=summary-quimica-geometria-molecular",
+        "viewport": [
+          360,
+          800
+        ],
+        "contrast": {
+          "checked": 113,
+          "measured": 113,
+          "unparseable": 0,
+          "failures": [],
+          "unverifiable": [
+            {
+              "text": "01",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "01 Linear",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "02",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "02 Trigonal",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "03",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "03 Tetraedro",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "05",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "05 Polar",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "▷ Retomar movimento",
+              "selector": "div.cr-shell > div.cr-bottom > div.cr-foot > button.cr-motion",
+              "fontSize": "12.5px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "◐ Ver em noite",
+              "selector": "div.cr-shell > div.cr-bottom > div.cr-foot > button.cr-motion",
+              "fontSize": "12.5px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            }
+          ]
+        },
+        "tapTargets": {
+          "checked": 62,
+          "tooSmall": [],
+          "between24and44": 8
+        },
+        "naming": {
+          "unnamed": [],
+          "pollutedNames": [],
+          "duplicateNames": []
+        },
+        "duplicateDestinations": [],
+        "head": {
+          "lang": "pt-BR",
+          "dir": "ltr",
+          "title": "Crivo",
+          "description": null,
+          "viewport": "width=device-width, initial-scale=1.0",
+          "canonical": null,
+          "openGraph": [],
+          "twitter": [],
+          "hreflang": [],
+          "structuredData": 0
+        },
+        "structure": {
+          "h1Count": 0,
+          "outline": [
+            "H2: Um parempurra.",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Leitura do capítulo",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Mapa do capítulo",
+            "H2: Seu próximo elo"
+          ],
+          "skippedLevels": [],
+          "landmarks": "main=1  nav=6  header=6  footer=1  aside=2  [role=main]=0  [role=navigation]=0",
+          "skipLink": true,
+          "imagesMissingAlt": [],
+          "totalImages": 2
+        },
+        "forms": [],
+        "disabledSubmits": [],
+        "layout": {
+          "horizontalOverflow": null,
+          "pageHeight": 3685,
+          "screensOfScroll": 4.6,
+          "overflowingElements": []
+        },
+        "performance": {
+          "ttfb": 7,
+          "domContentLoaded": 998,
+          "loadEvent": 998,
+          "paints": {
+            "first-paint": 400,
+            "first-contentful-paint": 1740
+          },
+          "requestCount": 40,
+          "transferKB": 3390,
+          "note": "transferKB reads 0 for cached resources — hard-reload before trusting it"
+        }
+      },
+      "focus": {
+        "focusedElement": {
+          "tag": "button",
+          "role": null,
+          "tabindex": null,
+          "text": "↻",
+          "ariaLabel": "Girar molécula"
+        },
+        "focusVisibleMatches": true,
+        "indicator": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "oklab(0.630431 0.0145856 0.113821)",
+          "outlineOffset": "3px",
+          "boxShadow": "none",
+          "backgroundBehind": "rgb(246, 240, 227)"
+        },
+        "verdict": {
+          "contrastRatio": 3.11,
+          "contrastRequired": 3,
+          "contrastPasses": true,
+          "note_1_4_11": "Passes WCAG 2.2 SC 1.4.11 (Non-text Contrast, ≥ 3:1).",
+          "note_thickness": "Thickness meets the 2px guidance in SC 2.4.13 (Focus Appearance)."
+        }
+      }
+    }
+  },
+  {
+    "largura": "celular-360 360×800",
+    "tema": "escuro",
+    "movimento": "no-preference",
+    "leituras": [
+      "180°",
+      "120°",
+      "109,5°",
+      "107°",
+      "104,5°"
+    ],
+    "quadrosDistintos": 5,
+    "quadroParado": true,
+    "sobreposicoes": [],
+    "foco": {
+      "label": "Girar molécula",
+      "outline": "solid 2px",
+      "visible": true
+    },
+    "controles": [
+      {
+        "text": "01Linear",
+        "reachable": true
+      },
+      {
+        "text": "02Trigonal",
+        "reachable": true
+      },
+      {
+        "text": "03Tetraedro",
+        "reachable": true
+      },
+      {
+        "text": "04Pirâmide",
+        "reachable": true
+      },
+      {
+        "text": "05Polar",
+        "reachable": true
+      },
+      {
+        "text": "▷ Retomar movimento",
+        "reachable": true
+      },
+      {
+        "text": "◐ Ver em caderno",
+        "reachable": true
+      }
+    ],
+    "tinta": "noite",
+    "estouro": 0,
+    "ferramentas": [
+      [
+        44,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ],
+    "contextos": [
+      "2d"
+    ],
+    "canvases": 1,
+    "fontes": [
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "JetBrains Mono",
+      "JetBrains Mono",
+      "Kalam",
+      "Newsreader",
+      "Newsreader",
+      "Space Grotesk",
+      "Space Grotesk",
+      "Kalam"
+    ],
+    "ux": {
+      "core": {
+        "url": "http://127.0.0.1:3003/visual?summary=summary-quimica-geometria-molecular",
+        "viewport": [
+          360,
+          800
+        ],
+        "contrast": {
+          "checked": 113,
+          "measured": 113,
+          "unparseable": 0,
+          "failures": [],
+          "unverifiable": []
+        },
+        "tapTargets": {
+          "checked": 62,
+          "tooSmall": [],
+          "between24and44": 8
+        },
+        "naming": {
+          "unnamed": [],
+          "pollutedNames": [],
+          "duplicateNames": []
+        },
+        "duplicateDestinations": [],
+        "head": {
+          "lang": "pt-BR",
+          "dir": "ltr",
+          "title": "Crivo",
+          "description": null,
+          "viewport": "width=device-width, initial-scale=1.0",
+          "canonical": null,
+          "openGraph": [],
+          "twitter": [],
+          "hreflang": [],
+          "structuredData": 0
+        },
+        "structure": {
+          "h1Count": 0,
+          "outline": [
+            "H2: Um parempurra.",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Leitura do capítulo",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Mapa do capítulo",
+            "H2: Seu próximo elo"
+          ],
+          "skippedLevels": [],
+          "landmarks": "main=1  nav=6  header=6  footer=1  aside=2  [role=main]=0  [role=navigation]=0",
+          "skipLink": true,
+          "imagesMissingAlt": [],
+          "totalImages": 2
+        },
+        "forms": [],
+        "disabledSubmits": [],
+        "layout": {
+          "horizontalOverflow": null,
+          "pageHeight": 3685,
+          "screensOfScroll": 4.6,
+          "overflowingElements": []
+        },
+        "performance": {
+          "ttfb": 8,
+          "domContentLoaded": 576,
+          "loadEvent": 576,
+          "paints": {
+            "first-paint": 284,
+            "first-contentful-paint": 964
+          },
+          "requestCount": 40,
+          "transferKB": 3390,
+          "note": "transferKB reads 0 for cached resources — hard-reload before trusting it"
+        }
+      },
+      "focus": {
+        "focusedElement": {
+          "tag": "button",
+          "role": null,
+          "tabindex": null,
+          "text": "↻",
+          "ariaLabel": "Girar molécula"
+        },
+        "focusVisibleMatches": true,
+        "indicator": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(217, 181, 131)",
+          "outlineOffset": "3px",
+          "boxShadow": "none",
+          "backgroundBehind": "rgb(7, 27, 25)"
+        },
+        "verdict": {
+          "contrastRatio": 9.23,
+          "contrastRequired": 3,
+          "contrastPasses": true,
+          "note_1_4_11": "Passes WCAG 2.2 SC 1.4.11 (Non-text Contrast, ≥ 3:1).",
+          "note_thickness": "Thickness meets the 2px guidance in SC 2.4.13 (Focus Appearance)."
+        }
+      }
+    }
+  },
+  {
+    "largura": "celular-360 360×800",
+    "tema": "claro",
+    "movimento": "reduce",
+    "leituras": [
+      "180°",
+      "120°",
+      "109,5°",
+      "107°",
+      "104,5°"
+    ],
+    "quadrosDistintos": 5,
+    "quadroParado": true,
+    "sobreposicoes": [],
+    "foco": {
+      "label": "Girar molécula",
+      "outline": "solid 2px",
+      "visible": true
+    },
+    "controles": [
+      {
+        "text": "01Linear",
+        "reachable": true
+      },
+      {
+        "text": "02Trigonal",
+        "reachable": true
+      },
+      {
+        "text": "03Tetraedro",
+        "reachable": true
+      },
+      {
+        "text": "04Pirâmide",
+        "reachable": true
+      },
+      {
+        "text": "05Polar",
+        "reachable": true
+      },
+      {
+        "text": "▷ Movimento reduzido",
+        "reachable": true
+      },
+      {
+        "text": "◐ Ver em noite",
+        "reachable": true
+      }
+    ],
+    "tinta": "caderno",
+    "estouro": 0,
+    "ferramentas": [
+      [
+        44,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ],
+    "contextos": [
+      "2d"
+    ],
+    "canvases": 1,
+    "fontes": [
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "JetBrains Mono",
+      "JetBrains Mono",
+      "Kalam",
+      "Newsreader",
+      "Newsreader",
+      "Newsreader",
+      "Space Grotesk",
+      "Space Grotesk",
+      "Kalam"
+    ],
+    "ux": {
+      "core": {
+        "url": "http://127.0.0.1:3003/visual?summary=summary-quimica-geometria-molecular",
+        "viewport": [
+          360,
+          800
+        ],
+        "contrast": {
+          "checked": 113,
+          "measured": 113,
+          "unparseable": 0,
+          "failures": [],
+          "unverifiable": [
+            {
+              "text": "01",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "01 Linear",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "02",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "02 Trigonal",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "03",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "03 Tetraedro",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "05",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "05 Polar",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "▷ Movimento reduzido",
+              "selector": "div.cr-shell > div.cr-bottom > div.cr-foot > button.cr-motion",
+              "fontSize": "12.5px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "◐ Ver em noite",
+              "selector": "div.cr-shell > div.cr-bottom > div.cr-foot > button.cr-motion",
+              "fontSize": "12.5px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            }
+          ]
+        },
+        "tapTargets": {
+          "checked": 57,
+          "tooSmall": [],
+          "between24and44": 8
+        },
+        "naming": {
+          "unnamed": [],
+          "pollutedNames": [],
+          "duplicateNames": []
+        },
+        "duplicateDestinations": [],
+        "head": {
+          "lang": "pt-BR",
+          "dir": "ltr",
+          "title": "Crivo",
+          "description": null,
+          "viewport": "width=device-width, initial-scale=1.0",
+          "canonical": null,
+          "openGraph": [],
+          "twitter": [],
+          "hreflang": [],
+          "structuredData": 0
+        },
+        "structure": {
+          "h1Count": 0,
+          "outline": [
+            "H2: Um parempurra.",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Leitura do capítulo",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Mapa do capítulo",
+            "H2: Seu próximo elo"
+          ],
+          "skippedLevels": [],
+          "landmarks": "main=1  nav=6  header=6  footer=1  aside=2  [role=main]=0  [role=navigation]=0",
+          "skipLink": true,
+          "imagesMissingAlt": [],
+          "totalImages": 2
+        },
+        "forms": [],
+        "disabledSubmits": [],
+        "layout": {
+          "horizontalOverflow": null,
+          "pageHeight": 3685,
+          "screensOfScroll": 4.6,
+          "overflowingElements": []
+        },
+        "performance": {
+          "ttfb": 5,
+          "domContentLoaded": 581,
+          "loadEvent": 581,
+          "paints": {
+            "first-paint": 292,
+            "first-contentful-paint": 936
+          },
+          "requestCount": 40,
+          "transferKB": 3390,
+          "note": "transferKB reads 0 for cached resources — hard-reload before trusting it"
+        }
+      },
+      "focus": {
+        "focusedElement": {
+          "tag": "button",
+          "role": null,
+          "tabindex": null,
+          "text": "↻",
+          "ariaLabel": "Girar molécula"
+        },
+        "focusVisibleMatches": true,
+        "indicator": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "oklab(0.630431 0.0145856 0.113821)",
+          "outlineOffset": "3px",
+          "boxShadow": "none",
+          "backgroundBehind": "rgb(246, 240, 227)"
+        },
+        "verdict": {
+          "contrastRatio": 3.11,
+          "contrastRequired": 3,
+          "contrastPasses": true,
+          "note_1_4_11": "Passes WCAG 2.2 SC 1.4.11 (Non-text Contrast, ≥ 3:1).",
+          "note_thickness": "Thickness meets the 2px guidance in SC 2.4.13 (Focus Appearance)."
+        }
+      }
+    }
+  },
+  {
+    "largura": "celular 390×844",
+    "tema": "claro",
+    "movimento": "no-preference",
+    "leituras": [
+      "180°",
+      "120°",
+      "109,5°",
+      "107°",
+      "104,5°"
+    ],
+    "quadrosDistintos": 5,
+    "quadroParado": true,
+    "sobreposicoes": [],
+    "foco": {
+      "label": "Girar molécula",
+      "outline": "solid 2px",
+      "visible": true
+    },
+    "controles": [
+      {
+        "text": "01Linear",
+        "reachable": true
+      },
+      {
+        "text": "02Trigonal",
+        "reachable": true
+      },
+      {
+        "text": "03Tetraedro",
+        "reachable": true
+      },
+      {
+        "text": "04Pirâmide",
+        "reachable": true
+      },
+      {
+        "text": "05Polar",
+        "reachable": true
+      },
+      {
+        "text": "▷ Retomar movimento",
+        "reachable": true
+      },
+      {
+        "text": "◐ Ver em noite",
+        "reachable": true
+      }
+    ],
+    "tinta": "caderno",
+    "estouro": 0,
+    "ferramentas": [
+      [
+        44,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ],
+    "contextos": [
+      "2d"
+    ],
+    "canvases": 1,
+    "fontes": [
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "JetBrains Mono",
+      "JetBrains Mono",
+      "Kalam",
+      "Newsreader",
+      "Newsreader",
+      "Space Grotesk",
+      "Space Grotesk",
+      "Kalam"
+    ],
+    "ux": {
+      "core": {
+        "url": "http://127.0.0.1:3003/visual?summary=summary-quimica-geometria-molecular",
+        "viewport": [
+          390,
+          844
+        ],
+        "contrast": {
+          "checked": 113,
+          "measured": 113,
+          "unparseable": 0,
+          "failures": [],
+          "unverifiable": [
+            {
+              "text": "01",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "01 Linear",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "02",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "02 Trigonal",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "03",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "03 Tetraedro",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "05",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "05 Polar",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "▷ Retomar movimento",
+              "selector": "div.cr-shell > div.cr-bottom > div.cr-foot > button.cr-motion",
+              "fontSize": "12.5px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "◐ Ver em noite",
+              "selector": "div.cr-shell > div.cr-bottom > div.cr-foot > button.cr-motion",
+              "fontSize": "12.5px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            }
+          ]
+        },
+        "tapTargets": {
+          "checked": 62,
+          "tooSmall": [],
+          "between24and44": 8
+        },
+        "naming": {
+          "unnamed": [],
+          "pollutedNames": [],
+          "duplicateNames": []
+        },
+        "duplicateDestinations": [],
+        "head": {
+          "lang": "pt-BR",
+          "dir": "ltr",
+          "title": "Crivo",
+          "description": null,
+          "viewport": "width=device-width, initial-scale=1.0",
+          "canonical": null,
+          "openGraph": [],
+          "twitter": [],
+          "hreflang": [],
+          "structuredData": 0
+        },
+        "structure": {
+          "h1Count": 0,
+          "outline": [
+            "H2: Um parempurra.",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Leitura do capítulo",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Mapa do capítulo",
+            "H2: Seu próximo elo"
+          ],
+          "skippedLevels": [],
+          "landmarks": "main=1  nav=6  header=6  footer=1  aside=2  [role=main]=0  [role=navigation]=0",
+          "skipLink": true,
+          "imagesMissingAlt": [],
+          "totalImages": 2
+        },
+        "forms": [],
+        "disabledSubmits": [],
+        "layout": {
+          "horizontalOverflow": null,
+          "pageHeight": 3495,
+          "screensOfScroll": 4.1,
+          "overflowingElements": []
+        },
+        "performance": {
+          "ttfb": 5,
+          "domContentLoaded": 537,
+          "loadEvent": 538,
+          "paints": {
+            "first-paint": 324,
+            "first-contentful-paint": 956
+          },
+          "requestCount": 40,
+          "transferKB": 3390,
+          "note": "transferKB reads 0 for cached resources — hard-reload before trusting it"
+        }
+      },
+      "focus": {
+        "focusedElement": {
+          "tag": "button",
+          "role": null,
+          "tabindex": null,
+          "text": "↻",
+          "ariaLabel": "Girar molécula"
+        },
+        "focusVisibleMatches": true,
+        "indicator": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "oklab(0.630431 0.0145856 0.113821)",
+          "outlineOffset": "3px",
+          "boxShadow": "none",
+          "backgroundBehind": "rgb(246, 240, 227)"
+        },
+        "verdict": {
+          "contrastRatio": 3.11,
+          "contrastRequired": 3,
+          "contrastPasses": true,
+          "note_1_4_11": "Passes WCAG 2.2 SC 1.4.11 (Non-text Contrast, ≥ 3:1).",
+          "note_thickness": "Thickness meets the 2px guidance in SC 2.4.13 (Focus Appearance)."
+        }
+      }
+    }
+  },
+  {
+    "largura": "celular 390×844",
+    "tema": "escuro",
+    "movimento": "no-preference",
+    "leituras": [
+      "180°",
+      "120°",
+      "109,5°",
+      "107°",
+      "104,5°"
+    ],
+    "quadrosDistintos": 5,
+    "quadroParado": true,
+    "sobreposicoes": [],
+    "foco": {
+      "label": "Girar molécula",
+      "outline": "solid 2px",
+      "visible": true
+    },
+    "controles": [
+      {
+        "text": "01Linear",
+        "reachable": true
+      },
+      {
+        "text": "02Trigonal",
+        "reachable": true
+      },
+      {
+        "text": "03Tetraedro",
+        "reachable": true
+      },
+      {
+        "text": "04Pirâmide",
+        "reachable": true
+      },
+      {
+        "text": "05Polar",
+        "reachable": true
+      },
+      {
+        "text": "▷ Retomar movimento",
+        "reachable": true
+      },
+      {
+        "text": "◐ Ver em caderno",
+        "reachable": true
+      }
+    ],
+    "tinta": "noite",
+    "estouro": 0,
+    "ferramentas": [
+      [
+        44,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ],
+    "contextos": [
+      "2d"
+    ],
+    "canvases": 1,
+    "fontes": [
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "JetBrains Mono",
+      "JetBrains Mono",
+      "Kalam",
+      "Newsreader",
+      "Newsreader",
+      "Space Grotesk",
+      "Space Grotesk",
+      "Kalam"
+    ],
+    "ux": {
+      "core": {
+        "url": "http://127.0.0.1:3003/visual?summary=summary-quimica-geometria-molecular",
+        "viewport": [
+          390,
+          844
+        ],
+        "contrast": {
+          "checked": 113,
+          "measured": 113,
+          "unparseable": 0,
+          "failures": [],
+          "unverifiable": []
+        },
+        "tapTargets": {
+          "checked": 62,
+          "tooSmall": [],
+          "between24and44": 8
+        },
+        "naming": {
+          "unnamed": [],
+          "pollutedNames": [],
+          "duplicateNames": []
+        },
+        "duplicateDestinations": [],
+        "head": {
+          "lang": "pt-BR",
+          "dir": "ltr",
+          "title": "Crivo",
+          "description": null,
+          "viewport": "width=device-width, initial-scale=1.0",
+          "canonical": null,
+          "openGraph": [],
+          "twitter": [],
+          "hreflang": [],
+          "structuredData": 0
+        },
+        "structure": {
+          "h1Count": 0,
+          "outline": [
+            "H2: Um parempurra.",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Leitura do capítulo",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Mapa do capítulo",
+            "H2: Seu próximo elo"
+          ],
+          "skippedLevels": [],
+          "landmarks": "main=1  nav=6  header=6  footer=1  aside=2  [role=main]=0  [role=navigation]=0",
+          "skipLink": true,
+          "imagesMissingAlt": [],
+          "totalImages": 2
+        },
+        "forms": [],
+        "disabledSubmits": [],
+        "layout": {
+          "horizontalOverflow": null,
+          "pageHeight": 3495,
+          "screensOfScroll": 4.1,
+          "overflowingElements": []
+        },
+        "performance": {
+          "ttfb": 38,
+          "domContentLoaded": 759,
+          "loadEvent": 759,
+          "paints": {
+            "first-paint": 280,
+            "first-contentful-paint": 1448
+          },
+          "requestCount": 40,
+          "transferKB": 3390,
+          "note": "transferKB reads 0 for cached resources — hard-reload before trusting it"
+        }
+      },
+      "focus": {
+        "focusedElement": {
+          "tag": "button",
+          "role": null,
+          "tabindex": null,
+          "text": "↻",
+          "ariaLabel": "Girar molécula"
+        },
+        "focusVisibleMatches": true,
+        "indicator": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(217, 181, 131)",
+          "outlineOffset": "3px",
+          "boxShadow": "none",
+          "backgroundBehind": "rgb(7, 27, 25)"
+        },
+        "verdict": {
+          "contrastRatio": 9.23,
+          "contrastRequired": 3,
+          "contrastPasses": true,
+          "note_1_4_11": "Passes WCAG 2.2 SC 1.4.11 (Non-text Contrast, ≥ 3:1).",
+          "note_thickness": "Thickness meets the 2px guidance in SC 2.4.13 (Focus Appearance)."
+        }
+      }
+    }
+  },
+  {
+    "largura": "celular 390×844",
+    "tema": "claro",
+    "movimento": "reduce",
+    "leituras": [
+      "180°",
+      "120°",
+      "109,5°",
+      "107°",
+      "104,5°"
+    ],
+    "quadrosDistintos": 5,
+    "quadroParado": true,
+    "sobreposicoes": [],
+    "foco": {
+      "label": "Girar molécula",
+      "outline": "solid 2px",
+      "visible": true
+    },
+    "controles": [
+      {
+        "text": "01Linear",
+        "reachable": true
+      },
+      {
+        "text": "02Trigonal",
+        "reachable": true
+      },
+      {
+        "text": "03Tetraedro",
+        "reachable": true
+      },
+      {
+        "text": "04Pirâmide",
+        "reachable": true
+      },
+      {
+        "text": "05Polar",
+        "reachable": true
+      },
+      {
+        "text": "▷ Movimento reduzido",
+        "reachable": true
+      },
+      {
+        "text": "◐ Ver em noite",
+        "reachable": true
+      }
+    ],
+    "tinta": "caderno",
+    "estouro": 0,
+    "ferramentas": [
+      [
+        44,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ],
+    "contextos": [
+      "2d"
+    ],
+    "canvases": 1,
+    "fontes": [
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "JetBrains Mono",
+      "JetBrains Mono",
+      "Kalam",
+      "Newsreader",
+      "Newsreader",
+      "Newsreader",
+      "Space Grotesk",
+      "Space Grotesk",
+      "Kalam"
+    ],
+    "ux": {
+      "core": {
+        "url": "http://127.0.0.1:3003/visual?summary=summary-quimica-geometria-molecular",
+        "viewport": [
+          390,
+          844
+        ],
+        "contrast": {
+          "checked": 113,
+          "measured": 113,
+          "unparseable": 0,
+          "failures": [],
+          "unverifiable": [
+            {
+              "text": "01",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "01 Linear",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "02",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "02 Trigonal",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "03",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "03 Tetraedro",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "05",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "05 Polar",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "▷ Movimento reduzido",
+              "selector": "div.cr-shell > div.cr-bottom > div.cr-foot > button.cr-motion",
+              "fontSize": "12.5px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "◐ Ver em noite",
+              "selector": "div.cr-shell > div.cr-bottom > div.cr-foot > button.cr-motion",
+              "fontSize": "12.5px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            }
+          ]
+        },
+        "tapTargets": {
+          "checked": 57,
+          "tooSmall": [],
+          "between24and44": 8
+        },
+        "naming": {
+          "unnamed": [],
+          "pollutedNames": [],
+          "duplicateNames": []
+        },
+        "duplicateDestinations": [],
+        "head": {
+          "lang": "pt-BR",
+          "dir": "ltr",
+          "title": "Crivo",
+          "description": null,
+          "viewport": "width=device-width, initial-scale=1.0",
+          "canonical": null,
+          "openGraph": [],
+          "twitter": [],
+          "hreflang": [],
+          "structuredData": 0
+        },
+        "structure": {
+          "h1Count": 0,
+          "outline": [
+            "H2: Um parempurra.",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Leitura do capítulo",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Mapa do capítulo",
+            "H2: Seu próximo elo"
+          ],
+          "skippedLevels": [],
+          "landmarks": "main=1  nav=6  header=6  footer=1  aside=2  [role=main]=0  [role=navigation]=0",
+          "skipLink": true,
+          "imagesMissingAlt": [],
+          "totalImages": 2
+        },
+        "forms": [],
+        "disabledSubmits": [],
+        "layout": {
+          "horizontalOverflow": null,
+          "pageHeight": 3495,
+          "screensOfScroll": 4.1,
+          "overflowingElements": []
+        },
+        "performance": {
+          "ttfb": 6,
+          "domContentLoaded": 648,
+          "loadEvent": 649,
+          "paints": {
+            "first-paint": 324,
+            "first-contentful-paint": 920
+          },
+          "requestCount": 40,
+          "transferKB": 3390,
+          "note": "transferKB reads 0 for cached resources — hard-reload before trusting it"
+        }
+      },
+      "focus": {
+        "focusedElement": {
+          "tag": "button",
+          "role": null,
+          "tabindex": null,
+          "text": "↻",
+          "ariaLabel": "Girar molécula"
+        },
+        "focusVisibleMatches": true,
+        "indicator": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "oklab(0.630431 0.0145856 0.113821)",
+          "outlineOffset": "3px",
+          "boxShadow": "none",
+          "backgroundBehind": "rgb(246, 240, 227)"
+        },
+        "verdict": {
+          "contrastRatio": 3.11,
+          "contrastRequired": 3,
+          "contrastPasses": true,
+          "note_1_4_11": "Passes WCAG 2.2 SC 1.4.11 (Non-text Contrast, ≥ 3:1).",
+          "note_thickness": "Thickness meets the 2px guidance in SC 2.4.13 (Focus Appearance)."
+        }
+      }
+    }
+  },
+  {
+    "largura": "ipad 834×1112",
+    "tema": "claro",
+    "movimento": "no-preference",
+    "leituras": [
+      "180°",
+      "120°",
+      "109,5°",
+      "107°",
+      "104,5°"
+    ],
+    "quadrosDistintos": 5,
+    "quadroParado": true,
+    "sobreposicoes": [],
+    "foco": {
+      "label": "Girar molécula",
+      "outline": "solid 2px",
+      "visible": true
+    },
+    "controles": [
+      {
+        "text": "01Linear",
+        "reachable": true
+      },
+      {
+        "text": "02Trigonal",
+        "reachable": true
+      },
+      {
+        "text": "03Tetraedro",
+        "reachable": true
+      },
+      {
+        "text": "04Pirâmide",
+        "reachable": true
+      },
+      {
+        "text": "05Polar",
+        "reachable": true
+      },
+      {
+        "text": "▷ Retomar movimento",
+        "reachable": true
+      },
+      {
+        "text": "◐ Ver em noite",
+        "reachable": true
+      }
+    ],
+    "tinta": "caderno",
+    "estouro": 0,
+    "ferramentas": [
+      [
+        44,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ],
+    "contextos": [
+      "2d"
+    ],
+    "canvases": 1,
+    "fontes": [
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "JetBrains Mono",
+      "JetBrains Mono",
+      "Kalam",
+      "Newsreader",
+      "Newsreader",
+      "Newsreader",
+      "Space Grotesk",
+      "Space Grotesk",
+      "Kalam"
+    ],
+    "ux": {
+      "core": {
+        "url": "http://127.0.0.1:3003/visual?summary=summary-quimica-geometria-molecular",
+        "viewport": [
+          834,
+          1112
+        ],
+        "contrast": {
+          "checked": 118,
+          "measured": 118,
+          "unparseable": 0,
+          "failures": [],
+          "unverifiable": [
+            {
+              "text": "01",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11.5px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "01Linear",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "02",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11.5px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "02Trigonal",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "03",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11.5px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "03Tetraedro",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "05",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11.5px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "05Polar",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "▷ Retomar movimento",
+              "selector": "div.cr-shell > div.cr-bottom > div.cr-foot > button.cr-motion",
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "◐ Ver em noite",
+              "selector": "div.cr-shell > div.cr-bottom > div.cr-foot > button.cr-motion",
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            }
+          ]
+        },
+        "tapTargets": {
+          "checked": 63,
+          "tooSmall": [],
+          "between24and44": 8
+        },
+        "naming": {
+          "unnamed": [],
+          "pollutedNames": [],
+          "duplicateNames": []
+        },
+        "duplicateDestinations": [],
+        "head": {
+          "lang": "pt-BR",
+          "dir": "ltr",
+          "title": "Crivo",
+          "description": null,
+          "viewport": "width=device-width, initial-scale=1.0",
+          "canonical": null,
+          "openGraph": [],
+          "twitter": [],
+          "hreflang": [],
+          "structuredData": 0
+        },
+        "structure": {
+          "h1Count": 0,
+          "outline": [
+            "H2: Um par empurra.",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Leitura do capítulo",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Mapa do capítulo",
+            "H2: Seu próximo elo"
+          ],
+          "skippedLevels": [],
+          "landmarks": "main=1  nav=6  header=6  footer=1  aside=2  [role=main]=0  [role=navigation]=0",
+          "skipLink": true,
+          "imagesMissingAlt": [],
+          "totalImages": 2
+        },
+        "forms": [],
+        "disabledSubmits": [],
+        "layout": {
+          "horizontalOverflow": null,
+          "pageHeight": 2820,
+          "screensOfScroll": 2.5,
+          "overflowingElements": []
+        },
+        "performance": {
+          "ttfb": 14,
+          "domContentLoaded": 902,
+          "loadEvent": 902,
+          "paints": {
+            "first-paint": 396,
+            "first-contentful-paint": 1380
+          },
+          "requestCount": 40,
+          "transferKB": 3390,
+          "note": "transferKB reads 0 for cached resources — hard-reload before trusting it"
+        }
+      },
+      "focus": {
+        "focusedElement": {
+          "tag": "button",
+          "role": null,
+          "tabindex": null,
+          "text": "↻",
+          "ariaLabel": "Girar molécula"
+        },
+        "focusVisibleMatches": true,
+        "indicator": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "oklab(0.630431 0.0145856 0.113821)",
+          "outlineOffset": "3px",
+          "boxShadow": "none",
+          "backgroundBehind": "rgb(246, 240, 227)"
+        },
+        "verdict": {
+          "contrastRatio": 3.11,
+          "contrastRequired": 3,
+          "contrastPasses": true,
+          "note_1_4_11": "Passes WCAG 2.2 SC 1.4.11 (Non-text Contrast, ≥ 3:1).",
+          "note_thickness": "Thickness meets the 2px guidance in SC 2.4.13 (Focus Appearance)."
+        }
+      }
+    }
+  },
+  {
+    "largura": "ipad 834×1112",
+    "tema": "escuro",
+    "movimento": "no-preference",
+    "leituras": [
+      "180°",
+      "120°",
+      "109,5°",
+      "107°",
+      "104,5°"
+    ],
+    "quadrosDistintos": 5,
+    "quadroParado": true,
+    "sobreposicoes": [],
+    "foco": {
+      "label": "Girar molécula",
+      "outline": "solid 2px",
+      "visible": true
+    },
+    "controles": [
+      {
+        "text": "01Linear",
+        "reachable": true
+      },
+      {
+        "text": "02Trigonal",
+        "reachable": true
+      },
+      {
+        "text": "03Tetraedro",
+        "reachable": true
+      },
+      {
+        "text": "04Pirâmide",
+        "reachable": true
+      },
+      {
+        "text": "05Polar",
+        "reachable": true
+      },
+      {
+        "text": "▷ Retomar movimento",
+        "reachable": true
+      },
+      {
+        "text": "◐ Ver em caderno",
+        "reachable": true
+      }
+    ],
+    "tinta": "noite",
+    "estouro": 0,
+    "ferramentas": [
+      [
+        44,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ],
+    "contextos": [
+      "2d"
+    ],
+    "canvases": 1,
+    "fontes": [
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "JetBrains Mono",
+      "JetBrains Mono",
+      "Kalam",
+      "Newsreader",
+      "Newsreader",
+      "Newsreader",
+      "Space Grotesk",
+      "Space Grotesk",
+      "Kalam"
+    ],
+    "ux": {
+      "core": {
+        "url": "http://127.0.0.1:3003/visual?summary=summary-quimica-geometria-molecular",
+        "viewport": [
+          834,
+          1112
+        ],
+        "contrast": {
+          "checked": 118,
+          "measured": 118,
+          "unparseable": 0,
+          "failures": [],
+          "unverifiable": []
+        },
+        "tapTargets": {
+          "checked": 63,
+          "tooSmall": [],
+          "between24and44": 8
+        },
+        "naming": {
+          "unnamed": [],
+          "pollutedNames": [],
+          "duplicateNames": []
+        },
+        "duplicateDestinations": [],
+        "head": {
+          "lang": "pt-BR",
+          "dir": "ltr",
+          "title": "Crivo",
+          "description": null,
+          "viewport": "width=device-width, initial-scale=1.0",
+          "canonical": null,
+          "openGraph": [],
+          "twitter": [],
+          "hreflang": [],
+          "structuredData": 0
+        },
+        "structure": {
+          "h1Count": 0,
+          "outline": [
+            "H2: Um par empurra.",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Leitura do capítulo",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Mapa do capítulo",
+            "H2: Seu próximo elo"
+          ],
+          "skippedLevels": [],
+          "landmarks": "main=1  nav=6  header=6  footer=1  aside=2  [role=main]=0  [role=navigation]=0",
+          "skipLink": true,
+          "imagesMissingAlt": [],
+          "totalImages": 2
+        },
+        "forms": [],
+        "disabledSubmits": [],
+        "layout": {
+          "horizontalOverflow": null,
+          "pageHeight": 2820,
+          "screensOfScroll": 2.5,
+          "overflowingElements": []
+        },
+        "performance": {
+          "ttfb": 4,
+          "domContentLoaded": 734,
+          "loadEvent": 734,
+          "paints": {
+            "first-paint": 236,
+            "first-contentful-paint": 1224
+          },
+          "requestCount": 40,
+          "transferKB": 3390,
+          "note": "transferKB reads 0 for cached resources — hard-reload before trusting it"
+        }
+      },
+      "focus": {
+        "focusedElement": {
+          "tag": "button",
+          "role": null,
+          "tabindex": null,
+          "text": "↻",
+          "ariaLabel": "Girar molécula"
+        },
+        "focusVisibleMatches": true,
+        "indicator": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(217, 181, 131)",
+          "outlineOffset": "3px",
+          "boxShadow": "none",
+          "backgroundBehind": "rgb(7, 27, 25)"
+        },
+        "verdict": {
+          "contrastRatio": 9.23,
+          "contrastRequired": 3,
+          "contrastPasses": true,
+          "note_1_4_11": "Passes WCAG 2.2 SC 1.4.11 (Non-text Contrast, ≥ 3:1).",
+          "note_thickness": "Thickness meets the 2px guidance in SC 2.4.13 (Focus Appearance)."
+        }
+      }
+    }
+  },
+  {
+    "largura": "ipad 834×1112",
+    "tema": "claro",
+    "movimento": "reduce",
+    "leituras": [
+      "180°",
+      "120°",
+      "109,5°",
+      "107°",
+      "104,5°"
+    ],
+    "quadrosDistintos": 5,
+    "quadroParado": true,
+    "sobreposicoes": [],
+    "foco": {
+      "label": "Girar molécula",
+      "outline": "solid 2px",
+      "visible": true
+    },
+    "controles": [
+      {
+        "text": "01Linear",
+        "reachable": true
+      },
+      {
+        "text": "02Trigonal",
+        "reachable": true
+      },
+      {
+        "text": "03Tetraedro",
+        "reachable": true
+      },
+      {
+        "text": "04Pirâmide",
+        "reachable": true
+      },
+      {
+        "text": "05Polar",
+        "reachable": true
+      },
+      {
+        "text": "▷ Movimento reduzido",
+        "reachable": true
+      },
+      {
+        "text": "◐ Ver em noite",
+        "reachable": true
+      }
+    ],
+    "tinta": "caderno",
+    "estouro": 0,
+    "ferramentas": [
+      [
+        44,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ],
+    "contextos": [
+      "2d"
+    ],
+    "canvases": 1,
+    "fontes": [
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "JetBrains Mono",
+      "JetBrains Mono",
+      "Kalam",
+      "Newsreader",
+      "Newsreader",
+      "Newsreader",
+      "Space Grotesk",
+      "Space Grotesk",
+      "Kalam"
+    ],
+    "ux": {
+      "core": {
+        "url": "http://127.0.0.1:3003/visual?summary=summary-quimica-geometria-molecular",
+        "viewport": [
+          834,
+          1112
+        ],
+        "contrast": {
+          "checked": 118,
+          "measured": 118,
+          "unparseable": 0,
+          "failures": [],
+          "unverifiable": [
+            {
+              "text": "01",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11.5px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "01Linear",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "02",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11.5px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "02Trigonal",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "03",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11.5px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "03Tetraedro",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "05",
+              "selector": "div.cr-bottom > nav.cr-rail > button.cr-step > span",
+              "fontSize": "11.5px",
+              "fontWeight": "400",
+              "color": "rgb(138, 125, 104)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 3.55,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "05Polar",
+              "selector": "div.cr-shell > div.cr-bottom > nav.cr-rail > button.cr-step",
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "▷ Movimento reduzido",
+              "selector": "div.cr-shell > div.cr-bottom > div.cr-foot > button.cr-motion",
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            },
+            {
+              "text": "◐ Ver em noite",
+              "selector": "div.cr-shell > div.cr-bottom > div.cr-foot > button.cr-motion",
+              "fontSize": "13px",
+              "fontWeight": "400",
+              "color": "rgb(107, 95, 80)",
+              "background": "rgb(246, 240, 227)",
+              "ratio": 5.47,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: linear-gradient(rgba(0, 0, 0, 0), rgba(246, 240, 227, 0.95) "
+            }
+          ]
+        },
+        "tapTargets": {
+          "checked": 58,
+          "tooSmall": [],
+          "between24and44": 8
+        },
+        "naming": {
+          "unnamed": [],
+          "pollutedNames": [],
+          "duplicateNames": []
+        },
+        "duplicateDestinations": [],
+        "head": {
+          "lang": "pt-BR",
+          "dir": "ltr",
+          "title": "Crivo",
+          "description": null,
+          "viewport": "width=device-width, initial-scale=1.0",
+          "canonical": null,
+          "openGraph": [],
+          "twitter": [],
+          "hreflang": [],
+          "structuredData": 0
+        },
+        "structure": {
+          "h1Count": 0,
+          "outline": [
+            "H2: Um par empurra.",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Leitura do capítulo",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Mapa do capítulo",
+            "H2: Seu próximo elo"
+          ],
+          "skippedLevels": [],
+          "landmarks": "main=1  nav=6  header=6  footer=1  aside=2  [role=main]=0  [role=navigation]=0",
+          "skipLink": true,
+          "imagesMissingAlt": [],
+          "totalImages": 2
+        },
+        "forms": [],
+        "disabledSubmits": [],
+        "layout": {
+          "horizontalOverflow": null,
+          "pageHeight": 2820,
+          "screensOfScroll": 2.5,
+          "overflowingElements": []
+        },
+        "performance": {
+          "ttfb": 10,
+          "domContentLoaded": 932,
+          "loadEvent": 932,
+          "paints": {
+            "first-paint": 340,
+            "first-contentful-paint": 1348
+          },
+          "requestCount": 40,
+          "transferKB": 3390,
+          "note": "transferKB reads 0 for cached resources — hard-reload before trusting it"
+        }
+      },
+      "focus": {
+        "focusedElement": {
+          "tag": "button",
+          "role": null,
+          "tabindex": null,
+          "text": "↻",
+          "ariaLabel": "Girar molécula"
+        },
+        "focusVisibleMatches": true,
+        "indicator": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "oklab(0.630431 0.0145856 0.113821)",
+          "outlineOffset": "3px",
+          "boxShadow": "none",
+          "backgroundBehind": "rgb(246, 240, 227)"
+        },
+        "verdict": {
+          "contrastRatio": 3.11,
+          "contrastRequired": 3,
+          "contrastPasses": true,
+          "note_1_4_11": "Passes WCAG 2.2 SC 1.4.11 (Non-text Contrast, ≥ 3:1).",
+          "note_thickness": "Thickness meets the 2px guidance in SC 2.4.13 (Focus Appearance)."
+        }
+      }
+    }
+  },
+  {
+    "largura": "desktop 1366×900",
+    "tema": "claro",
+    "movimento": "no-preference",
+    "leituras": [
+      "180°",
+      "120°",
+      "109,5°",
+      "107°",
+      "104,5°"
+    ],
+    "quadrosDistintos": 5,
+    "quadroParado": true,
+    "sobreposicoes": [],
+    "foco": {
+      "label": "Girar molécula",
+      "outline": "solid 2px",
+      "visible": true
+    },
+    "controles": [
+      {
+        "text": "01Linear",
+        "reachable": true
+      },
+      {
+        "text": "02Trigonal",
+        "reachable": true
+      },
+      {
+        "text": "03Tetraedro",
+        "reachable": true
+      },
+      {
+        "text": "04Pirâmide",
+        "reachable": true
+      },
+      {
+        "text": "05Polar",
+        "reachable": true
+      },
+      {
+        "text": "▷ Retomar movimento",
+        "reachable": true
+      },
+      {
+        "text": "◐ Ver em noite",
+        "reachable": true
+      }
+    ],
+    "tinta": "caderno",
+    "estouro": 0,
+    "ferramentas": [
+      [
+        44,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ],
+    "contextos": [
+      "2d"
+    ],
+    "canvases": 1,
+    "fontes": [
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "JetBrains Mono",
+      "JetBrains Mono",
+      "Kalam",
+      "Newsreader",
+      "Newsreader",
+      "Newsreader",
+      "Space Grotesk",
+      "Space Grotesk",
+      "Kalam"
+    ],
+    "ux": {
+      "core": {
+        "url": "http://127.0.0.1:3003/visual?summary=summary-quimica-geometria-molecular",
+        "viewport": [
+          1366,
+          900
+        ],
+        "contrast": {
+          "checked": 162,
+          "measured": 162,
+          "unparseable": 0,
+          "failures": [],
+          "unverifiable": [
+            {
+              "text": "PLANEJAR",
+              "selector": "aside.ni-rail > nav.ni-rail-scroll > div.crivo-nav-group > p.crivo-nav-group-label",
+              "fontSize": "10px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Hoje",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Plano",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Reta Final",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Recuperação",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "PRATICAR",
+              "selector": "aside.ni-rail > nav.ni-rail-scroll > div.crivo-nav-group > p.crivo-nav-group-label",
+              "fontSize": "10px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Sessão de Estudo",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Questões",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Revisões",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Flashcards",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            }
+          ]
+        },
+        "tapTargets": {
+          "checked": 92,
+          "tooSmall": [],
+          "between24and44": 48
+        },
+        "naming": {
+          "unnamed": [],
+          "pollutedNames": [],
+          "duplicateNames": []
+        },
+        "duplicateDestinations": [
+          {
+            "href": "/sessao",
+            "labels": [
+              "Sessão de Estudo",
+              "Estudar"
+            ]
+          },
+          {
+            "href": "/evolucao",
+            "labels": [
+              "Evolução",
+              "Análises"
+            ]
+          },
+          {
+            "href": "/perfil",
+            "labels": [
+              "Perfil",
+              "AJ · Abrir perfil"
+            ]
+          }
+        ],
+        "head": {
+          "lang": "pt-BR",
+          "dir": "ltr",
+          "title": "Crivo",
+          "description": null,
+          "viewport": "width=device-width, initial-scale=1.0",
+          "canonical": null,
+          "openGraph": [],
+          "twitter": [],
+          "hreflang": [],
+          "structuredData": 0
+        },
+        "structure": {
+          "h1Count": 0,
+          "outline": [
+            "H2: Um par empurra.",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Leitura do capítulo",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Mapa do capítulo",
+            "H2: Seu próximo elo"
+          ],
+          "skippedLevels": [],
+          "landmarks": "main=1  nav=6  header=6  footer=1  aside=2  [role=main]=0  [role=navigation]=0",
+          "skipLink": true,
+          "imagesMissingAlt": [],
+          "totalImages": 2
+        },
+        "forms": [],
+        "disabledSubmits": [],
+        "layout": {
+          "horizontalOverflow": null,
+          "pageHeight": 2505,
+          "screensOfScroll": 2.8,
+          "overflowingElements": []
+        },
+        "performance": {
+          "ttfb": 41,
+          "domContentLoaded": 742,
+          "loadEvent": 743,
+          "paints": {
+            "first-paint": 380,
+            "first-contentful-paint": 1184
+          },
+          "requestCount": 40,
+          "transferKB": 3390,
+          "note": "transferKB reads 0 for cached resources — hard-reload before trusting it"
+        }
+      },
+      "focus": {
+        "focusedElement": {
+          "tag": "button",
+          "role": null,
+          "tabindex": null,
+          "text": "↻",
+          "ariaLabel": "Girar molécula"
+        },
+        "focusVisibleMatches": true,
+        "indicator": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "oklab(0.630431 0.0145856 0.113821)",
+          "outlineOffset": "3px",
+          "boxShadow": "none",
+          "backgroundBehind": "rgb(246, 240, 227)"
+        },
+        "verdict": {
+          "contrastRatio": 3.11,
+          "contrastRequired": 3,
+          "contrastPasses": true,
+          "note_1_4_11": "Passes WCAG 2.2 SC 1.4.11 (Non-text Contrast, ≥ 3:1).",
+          "note_thickness": "Thickness meets the 2px guidance in SC 2.4.13 (Focus Appearance)."
+        }
+      }
+    }
+  },
+  {
+    "largura": "desktop 1366×900",
+    "tema": "escuro",
+    "movimento": "no-preference",
+    "leituras": [
+      "180°",
+      "120°",
+      "109,5°",
+      "107°",
+      "104,5°"
+    ],
+    "quadrosDistintos": 5,
+    "quadroParado": true,
+    "sobreposicoes": [],
+    "foco": {
+      "label": "Girar molécula",
+      "outline": "solid 2px",
+      "visible": true
+    },
+    "controles": [
+      {
+        "text": "01Linear",
+        "reachable": true
+      },
+      {
+        "text": "02Trigonal",
+        "reachable": true
+      },
+      {
+        "text": "03Tetraedro",
+        "reachable": true
+      },
+      {
+        "text": "04Pirâmide",
+        "reachable": true
+      },
+      {
+        "text": "05Polar",
+        "reachable": true
+      },
+      {
+        "text": "▷ Retomar movimento",
+        "reachable": true
+      },
+      {
+        "text": "◐ Ver em caderno",
+        "reachable": true
+      }
+    ],
+    "tinta": "noite",
+    "estouro": 0,
+    "ferramentas": [
+      [
+        44,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ],
+    "contextos": [
+      "2d"
+    ],
+    "canvases": 1,
+    "fontes": [
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "JetBrains Mono",
+      "JetBrains Mono",
+      "Kalam",
+      "Newsreader",
+      "Newsreader",
+      "Newsreader",
+      "Space Grotesk",
+      "Space Grotesk",
+      "Kalam"
+    ],
+    "ux": {
+      "core": {
+        "url": "http://127.0.0.1:3003/visual?summary=summary-quimica-geometria-molecular",
+        "viewport": [
+          1366,
+          900
+        ],
+        "contrast": {
+          "checked": 162,
+          "measured": 162,
+          "unparseable": 0,
+          "failures": [],
+          "unverifiable": []
+        },
+        "tapTargets": {
+          "checked": 92,
+          "tooSmall": [],
+          "between24and44": 48
+        },
+        "naming": {
+          "unnamed": [],
+          "pollutedNames": [],
+          "duplicateNames": []
+        },
+        "duplicateDestinations": [
+          {
+            "href": "/sessao",
+            "labels": [
+              "Sessão de Estudo",
+              "Estudar"
+            ]
+          },
+          {
+            "href": "/evolucao",
+            "labels": [
+              "Evolução",
+              "Análises"
+            ]
+          },
+          {
+            "href": "/perfil",
+            "labels": [
+              "Perfil",
+              "AJ · Abrir perfil"
+            ]
+          }
+        ],
+        "head": {
+          "lang": "pt-BR",
+          "dir": "ltr",
+          "title": "Crivo",
+          "description": null,
+          "viewport": "width=device-width, initial-scale=1.0",
+          "canonical": null,
+          "openGraph": [],
+          "twitter": [],
+          "hreflang": [],
+          "structuredData": 0
+        },
+        "structure": {
+          "h1Count": 0,
+          "outline": [
+            "H2: Um par empurra.",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Leitura do capítulo",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Mapa do capítulo",
+            "H2: Seu próximo elo"
+          ],
+          "skippedLevels": [],
+          "landmarks": "main=1  nav=6  header=6  footer=1  aside=2  [role=main]=0  [role=navigation]=0",
+          "skipLink": true,
+          "imagesMissingAlt": [],
+          "totalImages": 2
+        },
+        "forms": [],
+        "disabledSubmits": [],
+        "layout": {
+          "horizontalOverflow": null,
+          "pageHeight": 2505,
+          "screensOfScroll": 2.8,
+          "overflowingElements": []
+        },
+        "performance": {
+          "ttfb": 5,
+          "domContentLoaded": 757,
+          "loadEvent": 758,
+          "paints": {
+            "first-paint": 380,
+            "first-contentful-paint": 1564
+          },
+          "requestCount": 40,
+          "transferKB": 3390,
+          "note": "transferKB reads 0 for cached resources — hard-reload before trusting it"
+        }
+      },
+      "focus": {
+        "focusedElement": {
+          "tag": "button",
+          "role": null,
+          "tabindex": null,
+          "text": "↻",
+          "ariaLabel": "Girar molécula"
+        },
+        "focusVisibleMatches": true,
+        "indicator": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "rgb(217, 181, 131)",
+          "outlineOffset": "3px",
+          "boxShadow": "none",
+          "backgroundBehind": "rgb(7, 27, 25)"
+        },
+        "verdict": {
+          "contrastRatio": 9.23,
+          "contrastRequired": 3,
+          "contrastPasses": true,
+          "note_1_4_11": "Passes WCAG 2.2 SC 1.4.11 (Non-text Contrast, ≥ 3:1).",
+          "note_thickness": "Thickness meets the 2px guidance in SC 2.4.13 (Focus Appearance)."
+        }
+      }
+    }
+  },
+  {
+    "largura": "desktop 1366×900",
+    "tema": "claro",
+    "movimento": "reduce",
+    "leituras": [
+      "180°",
+      "120°",
+      "109,5°",
+      "107°",
+      "104,5°"
+    ],
+    "quadrosDistintos": 5,
+    "quadroParado": true,
+    "sobreposicoes": [],
+    "foco": {
+      "label": "Girar molécula",
+      "outline": "solid 2px",
+      "visible": true
+    },
+    "controles": [
+      {
+        "text": "01Linear",
+        "reachable": true
+      },
+      {
+        "text": "02Trigonal",
+        "reachable": true
+      },
+      {
+        "text": "03Tetraedro",
+        "reachable": true
+      },
+      {
+        "text": "04Pirâmide",
+        "reachable": true
+      },
+      {
+        "text": "05Polar",
+        "reachable": true
+      },
+      {
+        "text": "▷ Movimento reduzido",
+        "reachable": true
+      },
+      {
+        "text": "◐ Ver em noite",
+        "reachable": true
+      }
+    ],
+    "tinta": "caderno",
+    "estouro": 0,
+    "ferramentas": [
+      [
+        44,
+        44
+      ],
+      [
+        44,
+        44
+      ]
+    ],
+    "contextos": [
+      "2d"
+    ],
+    "canvases": 1,
+    "fontes": [
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "Inter",
+      "JetBrains Mono",
+      "JetBrains Mono",
+      "Kalam",
+      "Newsreader",
+      "Newsreader",
+      "Newsreader",
+      "Space Grotesk",
+      "Space Grotesk",
+      "Kalam"
+    ],
+    "ux": {
+      "core": {
+        "url": "http://127.0.0.1:3003/visual?summary=summary-quimica-geometria-molecular",
+        "viewport": [
+          1366,
+          900
+        ],
+        "contrast": {
+          "checked": 162,
+          "measured": 162,
+          "unparseable": 0,
+          "failures": [],
+          "unverifiable": [
+            {
+              "text": "PLANEJAR",
+              "selector": "aside.ni-rail > nav.ni-rail-scroll > div.crivo-nav-group > p.crivo-nav-group-label",
+              "fontSize": "10px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Hoje",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Plano",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Reta Final",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Recuperação",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "PRATICAR",
+              "selector": "aside.ni-rail > nav.ni-rail-scroll > div.crivo-nav-group > p.crivo-nav-group-label",
+              "fontSize": "10px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Sessão de Estudo",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Questões",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Revisões",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            },
+            {
+              "text": "Flashcards",
+              "selector": "nav.ni-rail-scroll > div.crivo-nav-group > a > b",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "rgb(108, 106, 100)",
+              "background": "rgb(250, 249, 245)",
+              "ratio": 5.13,
+              "required": 4.5,
+              "warning": "background-image/gradient in stack: none, none"
+            }
+          ]
+        },
+        "tapTargets": {
+          "checked": 92,
+          "tooSmall": [],
+          "between24and44": 48
+        },
+        "naming": {
+          "unnamed": [],
+          "pollutedNames": [],
+          "duplicateNames": []
+        },
+        "duplicateDestinations": [
+          {
+            "href": "/sessao",
+            "labels": [
+              "Sessão de Estudo",
+              "Estudar"
+            ]
+          },
+          {
+            "href": "/evolucao",
+            "labels": [
+              "Evolução",
+              "Análises"
+            ]
+          },
+          {
+            "href": "/perfil",
+            "labels": [
+              "Perfil",
+              "AJ · Abrir perfil"
+            ]
+          }
+        ],
+        "head": {
+          "lang": "pt-BR",
+          "dir": "ltr",
+          "title": "Crivo",
+          "description": null,
+          "viewport": "width=device-width, initial-scale=1.0",
+          "canonical": null,
+          "openGraph": [],
+          "twitter": [],
+          "hreflang": [],
+          "structuredData": 0
+        },
+        "structure": {
+          "h1Count": 0,
+          "outline": [
+            "H2: Um par empurra.",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Leitura do capítulo",
+            "H3: A teoria da repulsão dos pares",
+            "H2: Mapa do capítulo",
+            "H2: Seu próximo elo"
+          ],
+          "skippedLevels": [],
+          "landmarks": "main=1  nav=6  header=6  footer=1  aside=2  [role=main]=0  [role=navigation]=0",
+          "skipLink": true,
+          "imagesMissingAlt": [],
+          "totalImages": 2
+        },
+        "forms": [],
+        "disabledSubmits": [],
+        "layout": {
+          "horizontalOverflow": null,
+          "pageHeight": 2505,
+          "screensOfScroll": 2.8,
+          "overflowingElements": []
+        },
+        "performance": {
+          "ttfb": 3,
+          "domContentLoaded": 821,
+          "loadEvent": 821,
+          "paints": {
+            "first-paint": 344,
+            "first-contentful-paint": 1440
+          },
+          "requestCount": 40,
+          "transferKB": 3390,
+          "note": "transferKB reads 0 for cached resources — hard-reload before trusting it"
+        }
+      },
+      "focus": {
+        "focusedElement": {
+          "tag": "button",
+          "role": null,
+          "tabindex": null,
+          "text": "↻",
+          "ariaLabel": "Girar molécula"
+        },
+        "focusVisibleMatches": true,
+        "indicator": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineColor": "oklab(0.630431 0.0145856 0.113821)",
+          "outlineOffset": "3px",
+          "boxShadow": "none",
+          "backgroundBehind": "rgb(246, 240, 227)"
+        },
+        "verdict": {
+          "contrastRatio": 3.11,
+          "contrastRequired": 3,
+          "contrastPasses": true,
+          "note_1_4_11": "Passes WCAG 2.2 SC 1.4.11 (Non-text Contrast, ≥ 3:1).",
+          "note_thickness": "Thickness meets the 2px guidance in SC 2.4.13 (Focus Appearance)."
+        }
+      }
+    }
+  }
+]

@@ -295,6 +295,7 @@ export function ImmersiveShell(props: {
   hotspotHint?: string;
   /** Controles próprios da cena, abaixo do texto (ex.: os dois cenários da última etapa). */
   children?: React.ReactNode;
+  footNote?: string;
 }) {
   const { state, phases, refs } = props;
   const data = phases[state.phase];
@@ -351,7 +352,7 @@ export function ImmersiveShell(props: {
           <button type="button" className="cr-motion cr-tema" aria-pressed={tema === 'noite'} onClick={state.alternarTinta}>
             <span aria-hidden="true">◐</span> {tema === 'noite' ? 'Ver em caderno' : 'Ver em noite'}
           </button>
-          <span className="cr-foot-text">Geometria e tempo simplificados</span>
+          <span className="cr-foot-text">{props.footNote ?? 'Geometria e tempo simplificados'}</span>
         </div>
       </div>
     </div>
