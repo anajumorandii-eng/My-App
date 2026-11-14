@@ -1,0 +1,225 @@
+{
+  "board": "FAMERP",
+  "year": 2026,
+  "phase": "1º dia · Conhecimentos Gerais",
+  "version": "V1",
+  "examUrl": "https://arquivos.qconcursos.com/prova/arquivo_prova/153796/vunesp-2025-famerp-vestibular-conhecimentos-gerais-prova.pdf",
+  "answerKeyUrl": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/153796/vunesp-2025-famerp-vestibular-conhecimentos-gerais-gabarito.pdf",
+  "excludedNumbers": [],
+  "media": [
+    {
+      "page": 3,
+      "url": "/question-media/oficiais/famerp-2026-v1/p03.webp",
+      "sha256": "251824f5ca377aca4715af9fcc4e6641f4fccf69aec4081c3d47856afd526748"
+    },
+    {
+      "page": 4,
+      "url": "/question-media/oficiais/famerp-2026-v1/p04.webp",
+      "sha256": "6799e6e07d5e2023cd68cbabc946f4377a36fe02293803c1c3fc7f4680ec048f"
+    },
+    {
+      "page": 5,
+      "url": "/question-media/oficiais/famerp-2026-v1/p05.webp",
+      "sha256": "41d5ede1655296416dca3d5a3e556dd3b1b80e9f8bc3504f6ba2473a10cb2a70"
+    },
+    {
+      "page": 6,
+      "url": "/question-media/oficiais/famerp-2026-v1/p06.webp",
+      "sha256": "8a16f86995067571bbd314e0a049e400da1a64da421cd75bd19fcb90a964453b"
+    },
+    {
+      "page": 7,
+      "url": "/question-media/oficiais/famerp-2026-v1/p07.webp",
+      "sha256": "927f3c143e18f79139c8eea957efba366514adc390d5b0445e6116841fd21f62"
+    },
+    {
+      "page": 8,
+      "url": "/question-media/oficiais/famerp-2026-v1/p08.webp",
+      "sha256": "a4ebe4575ac50cb3874058957e0d62894094ccf6fcbc39e60977135901407aca"
+    },
+    {
+      "page": 9,
+      "url": "/question-media/oficiais/famerp-2026-v1/p09.webp",
+      "sha256": "83784bacf138647df684dd0dff9c1e09fce6e31effd33aeb3282144c5b96559f"
+    },
+    {
+      "page": 10,
+      "url": "/question-media/oficiais/famerp-2026-v1/p10.webp",
+      "sha256": "aa2dd25e04b433db0001f17531f6a6f8ae3dadda4ed2f566e0dbf708f13b4e68"
+    },
+    {
+      "page": 11,
+      "url": "/question-media/oficiais/famerp-2026-v1/p11.webp",
+      "sha256": "105c3af5ccdabe70f40c9f29fe61ab7f9abd3d25bd3b402a2c14d33c57c78a2d"
+    },
+    {
+      "page": 12,
+      "url": "/question-media/oficiais/famerp-2026-v1/p12.webp",
+      "sha256": "7b9d853a2cd0349448bd6a8187538a6fed1be8fa82b852f5d073bd6757270f19"
+    },
+    {
+      "page": 13,
+      "url": "/question-media/oficiais/famerp-2026-v1/p13.webp",
+      "sha256": "0c23afc62d715e5274a1a444b164aba394e928035c8e460d9caac27bc4bece0e"
+    },
+    {
+      "page": 14,
+      "url": "/question-media/oficiais/famerp-2026-v1/p14.webp",
+      "sha256": "e7ca5b769dc59d1a8cd6d0d35de9ee470e2e2cf5d6e9e2bb9a6562d3503c6dd9"
+    },
+    {
+      "page": 15,
+      "url": "/question-media/oficiais/famerp-2026-v1/p15.webp",
+      "sha256": "debd8be6f75bd60cb074dbaf38b7f0aa623ca060c59b8d567ab04833b1a362db"
+    },
+    {
+      "page": 16,
+      "url": "/question-media/oficiais/famerp-2026-v1/p16.webp",
+      "sha256": "dcae2ffe0e5080863085a5b80c6d2cb85c293d005ff48fb4953b8c65698d62f3"
+    },
+    {
+      "page": 17,
+      "url": "/question-media/oficiais/famerp-2026-v1/p17.webp",
+      "sha256": "786bc30e95b776eef2f6ca5ccadc679767586e0c734526a06c88b1db0edd4fc2"
+    },
+    {
+      "page": 18,
+      "url": "/question-media/oficiais/famerp-2026-v1/p18.webp",
+      "sha256": "5bc1f7862b96757ed6c2489ca446f6f5621e91d30791e5f621db19c4d96bb6d1"
+    },
+    {
+      "page": 19,
+      "url": "/question-media/oficiais/famerp-2026-v1/p19.webp",
+      "sha256": "5300f4be9bf3984af8ba9ef85fd3e0d6dcf17f3a9c462f6a9ac657b923008c5f"
+    },
+    {
+      "page": 20,
+      "url": "/question-media/oficiais/famerp-2026-v1/p20.webp",
+      "sha256": "f0d416a2231b10db2863e5e17e56e9d203c19962146d7376cacae1e3d948fcfe"
+    },
+    {
+      "page": 21,
+      "url": "/question-media/oficiais/famerp-2026-v1/p21.webp",
+      "sha256": "2ce9c32e20a23104f8a45cfe6510be16474a7811a3153e29c0e587b5d0e0ad2c"
+    },
+    {
+      "page": 22,
+      "url": "/question-media/oficiais/famerp-2026-v1/p22.webp",
+      "sha256": "2239e3b0b3a7761d7f9d3e9bb1183a85dc1c5311588fa7777509963b7867f482"
+    },
+    {
+      "page": 23,
+      "url": "/question-media/oficiais/famerp-2026-v1/p23.webp",
+      "sha256": "d62a493320ed0f31cf02819b612bbb11bb9a4cc60204920f93cd6222a82fb62e"
+    },
+    {
+      "page": 24,
+      "url": "/question-media/oficiais/famerp-2026-v1/p24.webp",
+      "sha256": "9fc84ed236fc9af9baf6c40d16b5398ab9d8da4d63bab3f19f5d1406f63d9410"
+    },
+    {
+      "page": 25,
+      "url": "/question-media/oficiais/famerp-2026-v1/p25.webp",
+      "sha256": "43129c3267344b2a8ec613b1887b051fd3aa7243fc46e0312cbf712f2e79587f"
+    },
+    {
+      "page": 26,
+      "url": "/question-media/oficiais/famerp-2026-v1/p26.webp",
+      "sha256": "bf05d094e91a1966413ddf0632ebb2aaae4d65602d1cade387950ee938cb95cb"
+    }
+  ],
+  "idPrefix": "famerp_2026_v1",
+  "sourceFile": "FAMERP_2026_dia_1_V1.pdf",
+  "totalQuestions": 80,
+  "firstNumber": 1,
+  "optionIds": "abcde",
+  "selectedNumbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80
+  ],
+  "answerKeyFormat": "vunesp",
+  "keyMarker": "FMRP2501",
+  "examSha256": "0cf763533c927358f73db2e86320b655d00826acfd8592b5dfcd4bd74408b4dd",
+  "answerKeySha256": "afd7bf27a06c583485aec4b9698dc858e3e4edee3c6fa66f1545831f3cb82c8e",
+  "answerKeyTextSha256": "ee9a2eb6f9472209c051ead075f24b69df2ba81a93e5f4e9631c4774769a5156",
+  "answerKeyTextFile": "gabaritos/FAMERP/famerp-2026-v1.txt",
+  "itemsFile": "scripts/data/famerp-2026-v1-expansao.json"
+}
