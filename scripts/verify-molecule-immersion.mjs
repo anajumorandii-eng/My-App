@@ -1,29 +1,37 @@
-// Conferência da cena imersiva de geometria molecular (WebGL) no navegador,
-// pedida pela regra de entrega de docs/visual/PADRAO-VISUAL-OBRIGATORIO.md.
-// Grava capturas e medidas em docs/visual/geometria-molecular-2026-11-14/.
-//
-// Além do que as cenas 2D conferem, mede o que só o WebGL pode errar calado:
-// canvas que existe e não desenha nada, laço que não para, segundo contexto.
-//
-//   CRIVO_URL=http://127.0.0.1:3003 node scripts/verify-molecule-immersion.mjs
+// Conferência da geometria molecular em Canvas 2D na rota de produção.
+// CRIVO_URL=http://127.0.0.1:3003 node scripts/verify-molecule-immersion.mjs
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import { chromium } from '@playwright/test';
+import { chromium, expect } from '@playwright/test';
 
 const base = process.env.CRIVO_URL ?? 'http://localhost:3000';
 const output = 'docs/visual/geometria-molecular-2026-11-14';
 await fs.mkdir(output, { recursive: true });
-const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH ?? '/usr/bin/chromium', args: ['--no-sandbox', '--use-gl=swiftshader', '--enable-unsafe-swiftshader'] });
+const probeDir = process.env.CRIVO_UX_PROBES;
+const coreProbe = probeDir ? await fs.readFile(`${probeDir}/ux-probe-core.js`, 'utf8') : null;
+const focusProbe = probeDir ? await fs.readFile(`${probeDir}/ux-probe-focus.js`, 'utf8') : null;
+const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH ?? '/usr/bin/chromium', args: ['--no-sandbox'] });
 const results = [];
-const cena = '.crivo-immersion';
+const scene = '.crivo-immersion';
+const smoke = process.env.CRIVO_SMOKE === '1';
+const profiles = smoke ? [['celular', 390, 844], ['desktop', 1366, 900]]
+  : [['celular-360', 360, 800], ['celular', 390, 844], ['ipad', 834, 1112], ['desktop', 1366, 900]];
+const modes = smoke ? [['claro', 'no-preference']]
+  : [['claro', 'no-preference'], ['escuro', 'no-preference'], ['claro', 'reduce']];
 
 try {
-  for (const [name, width, height] of [['celular', 390, 844], ['ipad', 834, 1112], ['desktop', 1366, 900]]) {
-    for (const [tema, motion] of [['claro', 'no-preference'], ['escuro', 'no-preference'], ['claro', 'reduce']]) {
-      const context = await browser.newContext({ viewport: { width, height }, locale: 'pt-BR', reducedMotion: motion });
+  for (const [name, width, height] of profiles) {
+    for (const [tema, motion] of modes) {
+      const context = await browser.newContext({ viewport: { width, height }, locale: 'pt-BR', reducedMotion: motion, hasTouch: width < 1024 });
       await context.addInitScript(dark => {
         localStorage.setItem('juju_onboarding', 'true');
         if (dark) localStorage.setItem('crivo_theme', 'dark');
+        window.__molecularContexts = [];
+        const original = HTMLCanvasElement.prototype.getContext;
+        HTMLCanvasElement.prototype.getContext = function (kind, ...args) {
+          window.__molecularContexts.push(kind);
+          return original.call(this, kind, ...args);
+        };
       }, tema === 'escuro');
       const page = await context.newPage();
       const errors = [], network = [];
@@ -31,17 +39,21 @@ try {
       page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
       page.on('response', response => { if (response.status() >= 400 && !response.url().includes('/api/')) network.push(`${response.status()} ${response.url()}`); });
       await page.goto(`${base}/visual?summary=summary-quimica-geometria-molecular`);
-      await page.waitForSelector(`${cena} canvas`, { timeout: 60_000 });
-      await page.waitForTimeout(2500);
-      const top = await page.evaluate(selector => Math.round(document.querySelector(selector).getBoundingClientRect().top + scrollY), cena);
+      await page.waitForSelector(`${scene} .cr-canvas`, { timeout: 60_000 });
+      await page.evaluate(async () => { await document.fonts.ready; });
+      await page.waitForTimeout(500);
+      const top = await page.locator(scene).evaluate(el => Math.round(el.getBoundingClientRect().top + scrollY));
       await page.evaluate(y => scrollTo(0, y - 64), top);
+      const steps = page.locator(`${scene} .cr-step`);
+      const canvas = page.locator(`${scene} .cr-canvas`);
+      const pause = page.locator(`${scene} .cr-motion`).first();
+      if (motion !== 'reduce') await pause.click();
+      else await expect(pause).toBeDisabled();
 
-      // Sobreposição entre as peças que ficam por cima do canvas.
-      const colisoes = () => page.evaluate(selector => {
+      const collisions = () => page.evaluate(selector => {
         const pick = name => [...document.querySelectorAll(`${selector} ${name}`)].filter(node => node.getClientRects().length && getComputedStyle(node).display !== 'none');
-        const groups = { ferramenta: pick('.cr-tool'), etiqueta: pick('.cr-label'), titulo: pick('h2'), leitura: pick('.cr-temp-number'), texto: pick('.cr-bottom .cr-copy'), previsao: pick('.cr-predict') };
-        const found = [];
-        const names = Object.keys(groups);
+        const groups = { ferramenta: pick('.cr-tool'), etiqueta: pick('.cr-label'), titulo: pick('h2'), leitura: pick('.cr-temp'), texto: pick('.cr-bottom .cr-copy'), previsao: pick('.cr-predict') };
+        const names = Object.keys(groups), found = [];
         for (let i = 0; i < names.length; i++) for (let j = i + 1; j < names.length; j++) {
           for (const a of groups[names[i]]) for (const b of groups[names[j]]) {
             const p = a.getBoundingClientRect(), q = b.getBoundingClientRect();
@@ -50,122 +62,123 @@ try {
           }
         }
         return [...new Set(found)];
-      }, cena);
-
-      const leituras = [], sobreposicoes = new Set();
-      const etapas = page.locator(`${cena} .cr-step`);
-      const tela = page.locator(`${cena} .cr-stage3d canvas`);
-      const espera = motion === 'reduce' ? 500 : 2400;
-
-      // Fração do canvas com tinta. O estúdio preserva o quadro, então dá para
-      // ler os pixels: um canvas transparente passaria por "carregou".
-      const tinta = () => page.evaluate(selector => {
-        const origem = document.querySelector(`${selector} .cr-stage3d canvas`);
-        const copia = document.createElement('canvas'); copia.width = 200; copia.height = Math.round(200 * origem.height / origem.width);
-        const ctx = copia.getContext('2d'); ctx.drawImage(origem, 0, 0, copia.width, copia.height);
-        const { data } = ctx.getImageData(0, 0, copia.width, copia.height);
-        let opacos = 0; for (let i = 3; i < data.length; i += 4) if (data[i] > 200) opacos++;
-        return opacos / (data.length / 4);
-      }, cena);
-
-      // O próprio quadro do WebGL, e não uma captura da região: a casca tem
-      // pontos pulsando em CSS por cima do canvas, e a captura mudava com eles.
-      const quadro = () => page.evaluate(selector => document.querySelector(`${selector} .cr-stage3d canvas`).toDataURL(), cena);
-
-      // Os rótulos dos átomos ficam dentro da cena.
-      const rotulosFora = () => page.evaluate(selector => {
-        const casca = document.querySelector(`${selector} .cr-shell`).getBoundingClientRect();
-        return [...document.querySelectorAll(`${selector} .crivo-cena__rotulo`)].filter(node => node.textContent && node.getClientRects().length)
-          .filter(node => { const b = node.getBoundingClientRect(); return b.left < casca.left - 1 || b.right > casca.right + 1 || b.top < casca.top - 1; }).map(node => node.textContent);
-      }, cena);
-
-      const desenhado = [];
+      }, scene);
+      const frame = () => canvas.evaluate(el => el.toDataURL());
+      const readings = [], frames = new Set(), overlaps = [];
       for (let index = 0; index < 5; index++) {
-        await etapas.nth(index).click();
-        await page.waitForTimeout(espera);
-        leituras.push(await page.locator(`${cena} .cr-temp-number`).innerText());
-        for (const item of await colisoes()) sobreposicoes.add(`etapa ${index + 1}: ${item}`);
-        desenhado.push(Number((await tinta()).toFixed(4)));
-        assert.deepEqual(await rotulosFora(), [], `${name} ${tema}: rótulo fora da cena na etapa ${index + 1}`);
-        if (motion === 'no-preference') await page.screenshot({ path: `${output}/${name}-${tema}-etapa-${index + 1}.png` });
+        await steps.nth(index).click();
+        await page.waitForTimeout(250);
+        readings.push(await page.locator(`${scene} .cr-temp-number`).innerText());
+        frames.add(await frame());
+        overlaps.push(...(await collisions()).map(item => `etapa ${index + 1}: ${item}`));
+        if (motion === 'no-preference' && [0, 2, 4].includes(index)) {
+          await page.locator(scene).screenshot({ path: `${output}/${name}-${tema}-etapa-${index + 1}.png` });
+        }
       }
-      assert.deepEqual(leituras, ['180°', '120°', '109,5°', '107°', '104,5°'], `${name} ${tema}: leitura de cada etapa`);
-      assert.ok(desenhado.every(parte => parte > 0.004), `${name} ${tema}: o canvas desenhou a molécula (${desenhado})`);
-      assert.equal(await page.locator('canvas').evaluateAll(nodes => nodes.filter(node => node.closest('.cr-stage3d')).length), 1, 'um canvas WebGL só');
-
-      // A pegadinha do capítulo: CO₂ com ligações polares e molécula apolar.
+      assert.deepEqual(readings, ['180°', '120°', '109,5°', '107°', '104,5°']);
+      // Fundo e câmera estão congelados: quadros distintos provam que a cena
+      // muda com o conteúdo, não com o ruído de partículas ou uma captura vazia.
+      assert.equal(frames.size, 5, `${name} ${tema}: cinco geometrias desenhadas`);
       await page.getByRole('button', { name: 'CO₂, linear' }).click();
-      await page.waitForTimeout(espera);
-      assert.equal(await page.locator(`${cena} .cr-temp-number`).innerText(), 'μ = 0');
-      for (const item of await colisoes()) sobreposicoes.add(`etapa 5 CO₂: ${item}`);
-      if (motion === 'no-preference') await page.screenshot({ path: `${output}/${name}-${tema}-co2.png` });
+      await page.waitForTimeout(250);
+      await expect(page.locator(`${scene} .cr-temp-number`)).toHaveText('μ = 0');
+      assert.notEqual(await frame(), [...frames].at(-1), 'a comparação muda o desenho da água para CO₂');
+      overlaps.push(...(await collisions()).map(item => `CO₂: ${item}`));
+      if (motion === 'no-preference') await page.locator(scene).screenshot({ path: `${output}/${name}-${tema}-co2.png` });
 
-      // Nada se mexe sozinho: terminada a transição, o quadro fica igual.
-      const quieto = await quadro(); await page.waitForTimeout(900);
-      const repouso = quieto === await quadro();
-      assert.equal(repouso, true, `${name} ${tema}: a cena para depois da transição`);
+      const before = await frame();
+      await page.waitForTimeout(350);
+      const staticFrame = before === await frame();
+      assert.ok(staticFrame, `${name} ${tema}: pausa/movimento reduzido congela o quadro`);
+      await page.locator(`${scene} .cr-label`).click();
+      await expect(page.locator(`${scene} .cr-detail`)).toBeVisible();
+      await page.waitForTimeout(200);
+      overlaps.push(...(await collisions()).map(item => `inspeção: ${item}`));
 
-      // A etiqueta de exploração recebe o clique (não fica sob o bloco de texto).
-      await page.locator(`${cena} .cr-label`).click({ timeout: 4000 });
-      await assert.doesNotReject(page.locator(`${cena} .cr-detail`).waitFor({ timeout: 4000 }));
+      await steps.nth(2).click();
+      await page.waitForTimeout(200);
+      const beforeTurn = await frame();
+      await page.getByRole('button', { name: 'Girar molécula' }).click();
+      await page.waitForTimeout(200);
+      assert.notEqual(await frame(), beforeTurn, 'botão de girar muda a câmera');
+      const beforeZoom = await frame();
+      const zoom = page.locator(`${scene} .cr-tools button`).nth(1);
+      await zoom.click();
+      await page.waitForTimeout(200);
+      assert.notEqual(await frame(), beforeZoom, 'aproximação muda a câmera');
+      const beforeDrag = await frame();
+      await canvas.scrollIntoViewIfNeeded();
+      const freePoint = await canvas.evaluate(el => {
+        const r = el.getBoundingClientRect();
+        for (const dy of [200, 280, 340, 120]) for (const dx of [.4, .6, .75]) {
+          const x = r.x + r.width * dx, y = r.y + dy;
+          if (y > 70 && y < innerHeight - 90 && document.elementFromPoint(x, y) === el) return { x, y };
+        }
+        return null;
+      });
+      assert.ok(freePoint, 'há uma área do canvas alcançável para arraste');
+      const { x: dragX, y: dragY } = freePoint;
+      await page.mouse.move(dragX, dragY); await page.mouse.down();
+      await page.mouse.move(dragX + 45, dragY + 12, { steps: 5 }); await page.mouse.up();
+      await page.waitForTimeout(200);
+      assert.notEqual(await frame(), beforeDrag, 'arrastar gira a câmera');
 
-      // Arrastar gira a molécula.
-      await etapas.nth(2).click(); await page.waitForTimeout(espera);
-      const antesDoGiro = await quadro();
-      const caixa = await tela.boundingBox();
-      const px = caixa.x + caixa.width * (width < 641 ? .6 : .69), py = caixa.y + (width < 641 ? 230 : 220);
-      await page.mouse.move(px, py); await page.mouse.down(); await page.mouse.move(px + 70, py, { steps: 6 }); await page.mouse.up();
-      await page.waitForTimeout(400);
-      const girou = antesDoGiro !== await quadro();
-      assert.equal(girou, true, `${name} ${tema}: arrastar gira a molécula`);
+      await page.getByRole('button', { name: 'Abre', exact: true }).click();
+      await expect(page.locator(`${scene} .cr-feedback`)).toContainText('empurra as ligações');
+      await page.waitForTimeout(150);
+      overlaps.push(...(await collisions()).map(item => `previsão incorreta: ${item}`));
+      assert.deepEqual(overlaps, [], `${name} ${tema}: sobreposições`);
 
-      // Previsão: errar explica o porquê.
-      await page.getByRole('button', { name: 'Abre' }).click();
-      await assert.doesNotReject(page.locator(`${cena} .cr-feedback`).filter({ hasText: 'empurra as ligações' }).waitFor({ timeout: 4000 }));
-
-      // Com a cena pausada, trocar de etapa mostra direto o resultado; com
-      // movimento reduzido o controle fica desabilitado e tudo já é direto.
-      const pausa = page.locator(`${cena} .cr-motion`).first();
-      let quadroParado = null;
-      if (motion === 'reduce') {
-        assert.equal(await pausa.isDisabled(), true, 'movimento reduzido desabilita a pausa');
-      } else {
-        await pausa.click();
-        await etapas.nth(1).click(); await page.waitForTimeout(350);
-        const antes = await quadro(); await page.waitForTimeout(900);
-        quadroParado = antes === await quadro();
-        assert.equal(quadroParado, true, `${name} ${tema}: pausada, a troca de etapa é direta`);
-        await pausa.click();
-      }
-
-      // Teclado alcança a câmera com foco visível.
       await page.evaluate(y => scrollTo(0, y - 64), top);
-      await page.locator(`${cena} .cr-eyebrow`).click({ force: true });
-      let foco = 'não alcançado';
+      await page.locator(`${scene} .cr-eyebrow`).click({ force: true });
+      let focus;
       for (let i = 0; i < 8; i++) {
         await page.keyboard.press('Tab');
-        const [label, outline] = await page.evaluate(() => { const node = document.activeElement, style = getComputedStyle(node); return [node.getAttribute('aria-label') ?? '', `${style.outlineStyle} ${style.outlineWidth}`]; });
-        if (label === 'Girar molécula') { foco = outline; break; }
+        const data = await page.evaluate(() => {
+          const el = document.activeElement, css = getComputedStyle(el);
+          return { label: el.getAttribute('aria-label'), outline: `${css.outlineStyle} ${css.outlineWidth}`, visible: el.matches(':focus-visible') };
+        });
+        if (data.label === 'Girar molécula') { focus = data; break; }
       }
-      assert.notEqual(foco, 'não alcançado');
-      assert.ok(!foco.startsWith('none'), `foco visível: ${foco}`);
-
-      const medidas = await page.evaluate(selector => ({
+      assert.ok(focus?.visible && !focus.outline.startsWith('none'), 'foco visível alcança a câmera pelo teclado');
+      const ux = coreProbe ? { core: JSON.parse(await page.evaluate(coreProbe)), focus: JSON.parse(await page.evaluate(focusProbe)) } : null;
+      const measures = await page.evaluate(selector => ({
         tinta: document.querySelector(selector).dataset.tema,
         estouro: document.documentElement.scrollWidth - innerWidth,
-        ferramentas: [...document.querySelectorAll(`${selector} .cr-tool`)].map(node => { const box = node.getBoundingClientRect(); return `${Math.round(box.width)}×${Math.round(box.height)}`; }),
-      }), cena);
-      assert.equal(medidas.tinta, tema === 'escuro' ? 'noite' : 'caderno');
-      assert.equal(medidas.estouro, 0);
+        ferramentas: [...document.querySelectorAll(`${selector} .cr-tool`)].map(el => { const r = el.getBoundingClientRect(); return [r.width, r.height]; }),
+        contextos: [...new Set(window.__molecularContexts)],
+        canvases: document.querySelectorAll(`${selector} canvas`).length,
+        fontes: [...document.fonts].filter(font => font.status === 'loaded').map(font => font.family),
+      }), scene);
+      assert.equal(measures.tinta, tema === 'escuro' ? 'noite' : 'caderno');
+      assert.equal(measures.estouro, 0);
+      assert.equal(measures.canvases, 1);
+      assert.deepEqual(measures.contextos, ['2d'], 'somente Canvas 2D, sem contexto WebGL');
+      assert.ok(measures.ferramentas.every(([w,h]) => w >= 44 && h >= 44));
+
+      await page.locator(scene).evaluate(el => el.scrollIntoView({ block: 'end' }));
+      await page.waitForTimeout(100);
+      const controls = await page.locator(`${scene} .cr-rail button, ${scene} .cr-foot button`).evaluateAll(nodes => nodes.map(el => {
+        const r = el.getBoundingClientRect();
+        return { text: el.textContent.trim(), reachable: el.contains(document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2)) };
+      }));
+      assert.ok(controls.every(item => item.reachable), `trilho e rodapé alcançáveis: ${JSON.stringify(controls)}`);
+
+      await steps.nth(4).click();
+      // A integração das imersivas segue a PCR: continuar na leitura abre
+      // o VisualJourney, cuja última etapa leva ao desafio do capítulo.
+      await page.getByRole('button', { name: 'Continuar na leitura', exact: true }).click();
+      const reading = page.locator('#visual-chapter-reading');
+      await reading.getByRole('navigation', { name: 'Etapas do capítulo' }).getByRole('button').last().click();
+      await reading.getByRole('button', { name: /Testar o que aprendi/ }).click();
+      await expect(page.getByRole('tab', { name: 'Testar', exact: true })).toHaveAttribute('aria-selected', 'true');
       assert.deepEqual(errors, [], `${name} ${tema}: erros de execução`);
-      assert.deepEqual(network, [], `${name} ${tema}: respostas de erro`);
-      results.push({ largura: `${name} ${width}×${height}`, tema, movimento: motion, leituras, desenhado, ...medidas, foco, repouso, girou, quadroParado, sobreposicoes: [...sobreposicoes] });
+      assert.deepEqual(network, [], `${name} ${tema}: erros de rede`);
+      results.push({ largura: `${name} ${width}×${height}`, tema, movimento: motion, leituras: readings, quadrosDistintos: frames.size, quadroParado: staticFrame, sobreposicoes: overlaps, foco: focus, controles: controls, ...measures, ux });
+      console.log(name, tema, motion, 'Canvas 2D, cinco geometrias, câmera, previsão, foco e Testar conferidos.');
       await context.close();
     }
   }
-} finally {
-  await browser.close();
-}
-await fs.writeFile(`${output}/browser-results.json`, JSON.stringify(results, null, 1) + '\n');
-for (const row of results) console.log(row.largura, row.tema, row.movimento, '| sobreposições', JSON.stringify(row.sobreposicoes), '| desenhado', JSON.stringify(row.desenhado), '| foco', row.foco, '| repouso', row.repouso, '| girou', row.girou);
-console.log('Geometria molecular: três larguras, dois temas, movimento reduzido, cinco etapas, CO₂, repouso, giro, previsão, pausa e teclado conferidos.');
+} finally { await browser.close(); }
+await fs.writeFile(`${output}/browser-results.json`, JSON.stringify(results, null, 2) + '\n');
+console.log(`Geometria molecular: ${results.length} combinações de largura, tema e movimento conferidas.`);

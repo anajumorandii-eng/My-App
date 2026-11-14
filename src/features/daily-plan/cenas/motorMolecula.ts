@@ -21,12 +21,12 @@ export interface CenaMolecula {
   destruir(): void;
 }
 
-export const LIGACAO = 1.6;
+const LIGACAO = 1.6;
 const ALTURA = 2.3;
-export const RAIO: Record<string, number> = { H: 0.24, C: 0.4, N: 0.4, O: 0.38, B: 0.38, F: 0.34 };
+const RAIO: Record<string, number> = { H: 0.24, C: 0.4, N: 0.4, O: 0.38, B: 0.38, F: 0.34 };
 
 /** Cores dos elementos em tons da paleta do caderno, não as saturadas do CPK. */
-export function corDoElemento(el: string, escuro: boolean) {
+function corDoElemento(el: string, escuro: boolean) {
   const claro: Record<string, string> = { H: '#f6eedc', C: '#3b2c20', N: '#2f5d8a', O: '#8e1b2b', B: '#a8773a', F: '#4f7a34' };
   const noEscuro: Record<string, string> = { H: '#efe2c9', C: '#5a4634', N: '#6a9fd0', O: '#d0566a', B: '#d2a66a', F: '#8fc06a' };
   return (escuro ? noEscuro : claro)[el] ?? '#888888';
@@ -34,7 +34,7 @@ export function corDoElemento(el: string, escuro: boolean) {
 
 const vec = (v: Vetor, k = 1) => new THREE.Vector3(v[0] * k, v[1] * k, v[2] * k);
 
-export function cilindroEntre(a: THREE.Vector3, b: THREE.Vector3, raio: number, mat: THREE.Material) {
+function cilindroEntre(a: THREE.Vector3, b: THREE.Vector3, raio: number, mat: THREE.Material) {
   const dir = new THREE.Vector3().subVectors(b, a);
   const m = malha(new THREE.CylinderGeometry(raio, raio, dir.length(), 16), mat);
   m.position.addVectors(a, b).multiplyScalar(0.5);

@@ -269,16 +269,3 @@
 @media(min-width:1024px){
 .crivo-immersion .cr-temp{top:296px}
 }
-/* Palco WebGL (geometria molecular): o estúdio põe o canvas dele aqui dentro.
-   Transparente, deixa o fundo da casca aparecer; os rótulos dos átomos são
-   HTML por cima, posicionados pelo estúdio. */
-.crivo-immersion .cr-stage3d{position:absolute;inset:0;overflow:hidden}
-.crivo-immersion .cr-stage3d canvas{display:block;width:100%;height:100%}
-/* No celular a faixa entre a leitura e o texto tinha 118 px: a molécula saía
-   do tamanho de um ícone. Setenta a mais de altura, só nesta cena. */
-@media(max-width:640px){
-  .crivo-immersion .cr-shell:has(.cr-stage3d){min-height:calc(794px + var(--cr-navigation-space,0px))}
-}
-/* Nesta cena a etiqueta fica ao lado do texto, dentro da faixa do bloco de
-   baixo; sem subir de camada ela saía desbotada pelo degradê e sem clique. */
-.crivo-immersion .cr-shell:has(.cr-stage3d) .cr-label{z-index:5}

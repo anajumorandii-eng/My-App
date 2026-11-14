@@ -250,13 +250,8 @@ export interface Estudio {
   remontar(): void;
   /** Refaz tudo, fixo inclusive (mudou uma preferência que o fixo usa). */
   remontarTudo(): void;
-  /**
-   * Só redesenha: a peça foi mexida no lugar (girar a molécula), sem refazer.
-   * `comSombra` refaz também o mapa de sombra, para peça que mudou de forma
-   * no lugar: na cena imersiva do Visual as ligações se abrem e fecham, e a
-   * sombra antiga ficava parada no papel.
-   */
-  redesenhar(comSombra?: boolean): void;
+  /** Só redesenha: a peça foi mexida no lugar (girar a molécula), sem refazer. */
+  redesenhar(): void;
   configurar(cores: OpcoesDeCor): void;
   destruir(): void;
 }
@@ -505,7 +500,7 @@ export function criarEstudio<Id extends string>(
     tela,
     remontar,
     remontarTudo: montarTudo,
-    redesenhar(comSombra = false) { if (comSombra) sombraVelha = true; marcar(); },
+    redesenhar: marcar,
     configurar(novas) {
       const mudou = novas.acento !== cores.acento || novas.escuro !== cores.escuro;
       cores = novas;

@@ -1,89 +1,119 @@
-# Cena imersiva de geometria molecular (WebGL) — conferência de 14/11/2026
+# Geometria molecular em Canvas 2D — conferência de 14/11/2026
 
-Terceira cena imersiva do Visual, para o capítulo
-`summary-quimica-geometria-molecular`, e a primeira em WebGL. A PCR e a Lei de
-Lenz desenham em Canvas 2D. Esta foi feita como teste, a pedido da Ana Júlia,
-para comparar as duas técnicas no iPad antes de decidir o padrão das próximas.
+A cena de geometria molecular foi refeita seguindo a referência de
+biotecnologia/PCR escolhida pela Ana Júlia: Canvas 2D com projeção de volume,
+esferas, leitura por etapas e as tintas caderno/noite. A mudança abrange somente
+`summary-quimica-geometria-molecular`; a expansão para outros capítulos não faz
+parte desta entrega.
 
 ## O que a cena mostra
 
-| Etapa | Leitura | O que acontece |
+| Etapa | Leitura | Relação explicada |
 | --- | --- | --- |
-| 01 Linear | 180° | CO₂: duas nuvens ficam em lados opostos |
-| 02 Trigonal | 120° | BF₃: entra a terceira nuvem, as três dividem o plano |
-| 03 Tetraedro | 109,5° | CH₄: a quarta nuvem tira a molécula do plano |
-| 04 Pirâmide | 107° | NH₃: uma ligação vira par livre e fecha o ângulo |
-| 05 Polar | 104,5° / μ = 0 | H₂O polar contra CO₂ apolar, com os dipolos à mostra |
+| Linear | 180° | Duas nuvens do CO₂ ficam em lados opostos |
+| Trigonal | 120° | Três nuvens do BF₃ dividem um plano |
+| Tetraedro | 109,5° | Quatro nuvens do CH₄ ocupam o espaço |
+| Pirâmide | 107° | O par livre do NH₃ comprime as ligações |
+| Polar | 104,5° / μ = 0 | H₂O polar e CO₂ apolar: soma dos dipolos |
 
-Uma molécula vira a seguinte: as quatro nuvens ocupam sempre as mesmas posições
-(`vseprStages.ts`), e só se move o que a repulsão explica. Ângulos, contagem de
-nuvens e polaridade saem de `src/lib/geometriaMolecular.ts`; `vseprStages.test.ts`
-confere que as direções da cena reproduzem cada ângulo.
+Ângulos, moléculas e polaridade continuam derivados de
+`src/lib/geometriaMolecular.ts` e `vseprStages.ts`. O desenho específico fica em
+`vseprCanvas.ts`, reaproveitando `useImmersiveCanvas`, `ImmersiveShell`, sprites,
+fundo e etiqueta compartilhados com as cenas 2D. Nenhum contexto WebGL é
+solicitado nesta rota. O estúdio do Hoje permanece como no `main`.
 
-## Como foi feita
+## Composição e correções verificadas
 
-- **Não é uma base nova.** O aplicativo já tinha um estúdio three.js nas cenas
-  do Hoje (`src/features/daily-plan/cenas/estudio3d.ts`), aprovado depois de
-  várias rodadas: renderizador único compartilhado, papel milimetrado, traço a
-  tinta, desenho só quando algo muda. `motorVsepr.ts` monta sobre ele. Um
-  segundo contexto WebGL traria de volta o travamento do iPad que o
-  renderizador único resolveu.
-- **Mudança no estúdio:** `redesenhar(comSombra)` refaz o mapa de sombra quando
-  a peça muda de forma no lugar. Sem o argumento, o comportamento do Hoje é o
-  mesmo de antes.
-- **Casca comum:** `ImmersiveShell` ganhou `stage` (palco próprio no lugar do
-  canvas 2D), `onTurn` e `footNote`. Etapas, previsões, tintas e pausa são as
-  mesmas das outras cenas.
-- **Nada se mexe sozinho.** O laço roda durante a transição ou o gesto e para.
-- **Enquadramento medido.** A molécula ocupa o espaço que sobra entre título,
-  leitura, ferramentas e texto, lido da própria tela a cada desenho.
-- **Sem WebGL**, a cena fica com o texto das etapas e avisa no rodapé; o
-  esquema plano do capítulo continua a um toque.
+A revisão independente encontrou dois defeitos na primeira versão da troca:
 
-## Método
+- O palco empilhava título, leitura, molécula, etiqueta e descrição. A cena
+  inicial tinha 1.055 px no celular de 390 px e 1.246 px no desktop de 1366 px.
+  O novo enquadramento usa a faixa lateral no desktop/tablet e a área livre
+  no celular, com descrições e previsões curtas. A etiqueta aproveita o espaço
+  anterior ao texto, em vez de criar uma faixa vazia adicional.
+- Ligações dianteiras atravessavam os símbolos químicos. Os segmentos agora
+  terminam na superfície projetada das esferas, considerando inclusive as
+  pontas arredondadas, e os símbolos são pintados por último.
 
-`scripts/verify-molecule-immersion.mjs`, contra o build de produção, no
-Chromium com renderização por software: celular 390×844, iPad 834×1112 e
-desktop 1366×900, cada um em claro, escuro e `prefers-reduced-motion`.
-Resultado bruto em `browser-results.json`.
+A segunda revisão na produção não encontrou desvio pendente nesses pontos.
+Alturas iniciais medidas em `responsive-measures.json`:
 
-Além do que as cenas 2D conferem (leitura de cada etapa, sobreposição entre
-ferramentas, etiqueta, título, leitura, texto e previsão, foco de teclado,
-console, rede, estouro), o roteiro mede o que o WebGL pode errar calado:
+| Janela | Altura da cena |
+| --- | ---: |
+| 360 px | 895 px |
+| 390 px | 877 px |
+| 768 px | 891 px |
+| 1366 px | 820 px |
 
-- o canvas tem tinta de fato (fração de pixels opacos lida do próprio quadro);
-- há um canvas WebGL só;
-- terminada a transição, o quadro não muda mais;
-- arrastar gira a molécula;
-- a etiqueta de exploração recebe o clique;
-- pausada, a troca de etapa mostra direto o resultado.
+Na referência PCR, a cena tem 812 px na janela de 390 px. Abrir detalhes pode
+acrescentar altura para preservar o objeto e a legibilidade, sem comprimir o
+desenho ou cobrir controles.
 
-## Resultado
+## Conferência em navegador
 
-Nove combinações: cinco leituras corretas, canvas desenhado em todas as etapas,
-nenhuma sobreposição, estouro 0, ferramentas 44×44, foco `solid 2px`, repouso
-depois da transição, giro por arraste e pausa conferidos.
+`scripts/verify-molecule-immersion.mjs` foi executado contra o build de
+produção, com Chromium instalado no executor. Resultado bruto em
+`browser-results.json` e capturas nesta pasta.
 
-## Defeitos achados na captura e corrigidos
+Foram conferidas 12 combinações: 360×800, 390×844, 834×1112 e 1366×900,
+cada uma em claro, escuro e claro com movimento reduzido.
 
-- Título de três linhas cobria a leitura: títulos encurtados.
-- Etiqueta de exploração em cima da molécula: saiu de cima dela (ao lado do
-  texto no iPad, logo acima dele no celular e no computador).
-- Etiqueta desbotada e sem clique sob o degradê do bloco de texto: subiu de camada.
-- De frente, uma ligação se escondia atrás do átomo central e o CO₂ apontava
-  para a câmera: ângulo inicial trocado.
-- Símbolo do átomo central encostado no do ligante ("O C"): foi para baixo do átomo.
-- No celular a molécula saía do tamanho de um ícone: a cena ganhou 70 px.
-- "Polaridade" quebrava no trilho do celular: "Polar".
-- O laço seguia meio segundo além do movimento visível: assentamento mais cedo.
-- O próprio roteiro acusava movimento que era dos pontos pulsando em CSS por
-  cima do canvas: passou a comparar o quadro do WebGL.
+Em todas elas:
 
-## O que não foi conferido
+- um canvas na cena, solicitações de contexto somente `2d`;
+- cinco desenhos distintos, com câmera e fundo congelados para a comparação;
+- leituras 180°, 120°, 109,5°, 107° e 104,5°, e CO₂ com μ = 0;
+- giro por botão e arraste, aproximação e inspeção funcionais;
+- previsão incorreta acompanhada da explicação e mudança de etapa;
+- quadro preservado com pausa ou movimento reduzido;
+- ausência de sobreposição entre ferramentas, etiqueta, título, leitura,
+  descrição e previsão, inclusive após abrir detalhes;
+- ausência de estouro horizontal e trilho/rodapé alcançáveis com a navegação
+  fixa do aplicativo presente;
+- câmera alcançada com Tab e foco visível; ferramentas de 44×44 px;
+- fluxo existente até o desafio real: Continuar na leitura → última etapa da
+  leitura → Testar o que aprendi;
+- nenhum erro de execução ou de carregamento de recurso não relacionado à API.
 
-- **iPad de verdade.** É o ponto do teste: fluidez, aquecimento e bateria só
-  se medem no aparelho. Aqui o WebGL rodou por software.
-- Safari; fundos "aurora" e "grade".
-- Ir do Visual para o Hoje e voltar com as duas cenas usando o mesmo
-  renderizador foi coberto só pelos testes de componente, não por captura.
-- O texto de Química não passou por revisão de especialista.
+O callback opcional `onPractice` também tem teste de componente. A integração
+atual das cenas, incluindo PCR, usa a saída pela leitura; este PR preserva esse
+fluxo.
+
+## Medições complementares de acesso
+
+Os probes `core` e `focus` da skill `ux-ui-audit`, quando disponibilizados ao
+roteiro por `CRIVO_UX_PROBES`, registraram nomeação dos controles, tamanho,
+estouro e contraste de foco após Tab real. O foco medido tem 2 px, com razão
+3,11:1 no caderno e 9,23:1 na noite.
+
+Não houve falha de contraste classificada como certa pelo probe. Fundos com
+gradiente foram marcados como indeterminados, portanto isso não certifica
+contraste de todos os textos. Entre esses alertas estão os numerais pequenos
+das etapas, com estimativa de 3,55:1 sobre a cor do papel, herdados da folha de
+estilo compartilhada com PCR. Não se declara conformidade WCAG completa.
+
+## Capturas
+
+- [Celular: tetraedro](celular-claro-etapa-3.png)
+- [Desktop: tetraedro](desktop-claro-etapa-3.png)
+- [Celular: comparação com CO₂](celular-escuro-co2.png)
+
+Capturas de uma região mais alta que a janela podem incluir a navegação fixa do
+aplicativo no meio da imagem. O alcance dos controles foi medido com a região
+rolada até eles, separadamente das capturas.
+
+## Testes de código
+
+`npm run lint`, `npm run build` e `npm test` concluíram com sucesso nesta
+branch: 1.401 testes de servidor/bibliotecas e 3.527 testes de interface em
+281 arquivos, sem falhas ou skips. Os testes de PDF usaram Chromium real.
+O teste das pontas arredondadas das ligações falhou antes da correção e passou
+depois dela; há cobertura também para projeção, enquadramento, pares livres,
+dipolos e o callback opcional de prática.
+
+## Limites
+
+- Sem teste em iPad físico ou Safari: fluidez, aquecimento e bateria exigem o
+  aparelho real.
+- Os fundos aurora/grade não receberam conferência específica.
+- A revisão visual e os testes não substituem a aprovação editorial da Ana Júlia.
