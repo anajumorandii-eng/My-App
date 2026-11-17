@@ -10,7 +10,7 @@ import { appendReviewedQuestions } from './officialExamImport';
 
 const batches = [
   ['unicamp-2025-qz',71], ['fuvest-2026-v1',49], ['unesp-2025-v1',89],
-  ['famerp-2025-v1',12], ['unifesp-2025-v1',25], ['enem-2022-d2-cd5',12],
+  ['famerp-2025-v1',12], ['unifesp-2025-v1',25], ['famerp-2026-v1',80], ['enem-2022-d2-cd5',12],
 ] as const;
 const hash = (bytes: Uint8Array | string) => createHash('sha256').update(bytes).digest('hex');
 // `figures` é gravado depois, por scripts/extrair-figuras.py, a partir da
@@ -58,7 +58,7 @@ test('preserva os registros anteriores fora da correção conferida de G6PD, sem
   assert.equal(bank.filter(q => q.id === 'q_real_fuvest_2022_bio').length, 1);
   assert.equal(hash(JSON.stringify(preserved.map(({ statementComplete: _complete, ...q }) => q))), '7dca5c26bac9342c1b33fb72ad47c375d67ad813e96ebb84cb457e010fc75d1e');
   // Questões autorais (crivo_*) têm teste próprio; aqui só conta o que veio de prova.
-  assert.equal(bank.filter(q=>!q.id.startsWith('crivo_')).length,4643);
+  assert.equal(bank.filter(q=>!q.id.startsWith('crivo_')).length,4723);
   const additions = batches.flatMap(([slug])=>{
     const {source,items,answers}=load(slug);
     return buildReviewedOfficialQuestions(items,answers,source,mockTopics);
