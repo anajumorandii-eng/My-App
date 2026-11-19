@@ -1,6 +1,6 @@
 import { useQuestionTimer } from '../hooks/useQuestionTimer';
 import { QuestionTimer } from '../components/QuestionTimer';
-import { formatQuestionTime, suggestedQuestionSeconds } from '../lib/questionTiming';
+import { suggestedQuestionSeconds } from '../lib/questionTiming';
 import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { UNSAFE_LocationContext } from 'react-router-dom';
 import { useAmbienteDaTela } from './visual-boards/ambiente';
@@ -24,7 +24,7 @@ const ERROR_TYPE_ORDER: ErrorLog['type'][] = [
 import { Skeleton } from '../components/ui/Skeleton';
 import { AiText } from '../components/AiText';
 import { TopicMastery, ErrorLog, Question } from '../types';
-import { applyReviewOutcome, qualityFromAnswerCorrectness, intervalDaysOf, nextReviewDate } from '../lib/spacedRepetition';
+import { applyReviewOutcome, qualityFromAnswerCorrectness } from '../lib/spacedRepetition';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   CheckCircle2,
@@ -32,7 +32,6 @@ import {
   RotateCcw,
   Sparkles,
   Stethoscope,
-  ArrowRight,
   BookOpen,
   CloudOff,
 } from 'lucide-react';
@@ -51,37 +50,6 @@ function matchesSelectedExams(question: Question, boards: string[], year: string
     : boards.some(board => matchesExamFilters(question, board, year));
 }
 
-function Metric({
-  label,
-  value,
-  bar = false,
-  fill,
-  warn = false,
-}: {
-  label: string;
-  value: string;
-  bar?: boolean;
-  // Quanto da barra preencher, de 0 a 1. Sem isto a barra vinha com 62% fixos
-  // no CSS: ela aparecia cheia pela metade num treino 0/0 e nunca se mexia,
-  // o que fazia o painel mostrar um número e desenhar outro.
-  fill?: number;
-  warn?: boolean;
-}) {
-  return (
-    <div className="ni-metric">
-      <small>{label}</small>
-      <b className={warn ? 'warn' : ''}>{value}</b>
-      {bar && (
-        <i>
-          <span
-            style={{ '--bar-fill': `${Math.round(Math.min(1, Math.max(0, fill ?? 0)) * 100)}%` } as React.CSSProperties}
-          />
-        </i>
-      )}
-    </div>
-  );
-}
-
 function examSourceLabel(source: Question['examSource'] | string | undefined, styleOf?: string) {
   if (!source) return styleOf ? `Autoral · estilo ${styleOf}` : 'Banco de Questões';
   return typeof source === 'string' ? source : `${source.board}${source.year ? ` ${source.year}` : ' · reprodução em apostila'}${source.phase ? ` · ${source.phase}` : ''}${source.version ? ` · ${source.version}` : ''}${source.questionNumber ? ` · questão ${source.questionNumber}` : ''}`;
@@ -89,7 +57,7 @@ function examSourceLabel(source: Question['examSource'] | string | undefined, st
 
 export default function Questoes() {
   const { user } = useAuth();
-  const { mastery, updateMastery, isPersisted, syncError } = useUserMastery();
+  const { updateMastery, isPersisted, syncError } = useUserMastery();
   const { questions: mockQuestions, loading: questionsLoading, syncError: questionsSyncError } = useQuestions(true);
   const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], [mockQuestions]);
   const localLocation = useContext(UNSAFE_LocationContext);
@@ -118,8 +86,10 @@ export default function Questoes() {
     };
   }, [mockQuestions, boardFilters]);
   const [index, setIndex] = useState(0);
-  const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
-  const [history, setHistory] = useState<{ questionId: string; correct: boolean; durationSeconds: number }[]>([]);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const submittedQuestions = useRef(new Set<string>());
+  const [useTimer, setUseTimer] = useState(false);
+  const [history, setHistory] = useState<{ questionId: string; correct: boolean; durationSeconds?: number }[]>([]);
   const [deepExplanation, setDeepExplanation] = useState<string | null>(null);
   const [loadingDeepExplanation, setLoadingDeepExplanation] = useState(false);
   const [deepExplanationError, setDeepExplanationError] = useState<string | null>(null);
@@ -211,13 +181,13 @@ export default function Questoes() {
   }, [scoped, topicFilters, subtopicFilter]);
 
   const question = pool.length > 0 ? pool[index % pool.length] : null;
-  const timer = useQuestionTimer(`${user?.uid ?? 'guest'}:${question?.id ?? 'empty'}`, Boolean(question && question.status !== 'annulled'));
+  const selectedOptionId = question ? answers[question.id] ?? null : null;
+  const timer = useQuestionTimer(`${user?.uid ?? 'guest'}:${question?.id ?? 'empty'}`, Boolean(useTimer && question && question.status !== 'annulled'));
   const [expectedOverride, setExpectedOverride] = useState<number | null>(null);
   const expectedSeconds = expectedOverride ?? suggestedQuestionSeconds(question?.difficulty);
-  useEffect(() => { setHistory([]); setExpectedOverride(null); }, [user?.uid]);
+  useEffect(() => { setHistory([]); setAnswers({}); submittedQuestions.current.clear(); setExpectedOverride(null); }, [user?.uid]);
   useEffect(() => {
     invalidateQuestionAi();
-    setSelectedOptionId(null);
     resetDiagnosisState();
   }, [question?.id, user?.uid]);
   const answered = selectedOptionId !== null;
@@ -237,7 +207,6 @@ export default function Questoes() {
     timer.restart();
     invalidateQuestionAi();
     setIndex(0);
-    setSelectedOptionId(null);
     setDeepExplanation(null);
     resetDiagnosisState();
   };
@@ -297,12 +266,12 @@ export default function Questoes() {
   };
 
   const selectOption = (optionId: string) => {
-    if (answered || !question || question.status === 'annulled') return;
-    const timing = timer.finish();
-    if (!timing) return;
+    if (answered || !question || question.status === 'annulled' || submittedQuestions.current.has(question.id)) return;
+    submittedQuestions.current.add(question.id);
+    const timing = useTimer ? timer.finish() : null;
     const correct = optionId === question.correctOptionId;
-    setSelectedOptionId(optionId);
-    setHistory((h) => [...h, { questionId: question.id, correct, durationSeconds: timing.durationSeconds }]);
+    setAnswers(previous => ({ ...previous, [question.id]: optionId }));
+    setHistory((h) => [...h, { questionId: question.id, correct, ...(timing ? { durationSeconds: timing.durationSeconds } : {}) }]);
 
     updateMastery((previous) => {
       const current = previous.find((item) => item.topicId === question.topicId);
@@ -328,8 +297,7 @@ export default function Questoes() {
     if (user) {
       addUserAttempt(user.uid, {
         id: `attempt_${crypto.randomUUID()}`,
-        ...timing,
-        expectedDurationSeconds: expectedSeconds,
+        ...(timing ? { ...timing, expectedDurationSeconds: expectedSeconds } : {}),
         questionId: question.id,
         topicId: question.topicId,
         correct,
@@ -342,11 +310,10 @@ export default function Questoes() {
     }
   };
 
-  const nextQuestion = () => {
+  const navigateQuestion = (direction: number) => {
     timer.restart();
     invalidateQuestionAi();
-    setIndex((i) => (i + 1) % pool.length);
-    setSelectedOptionId(null);
+    setIndex((i) => Math.max(0, Math.min(pool.length - 1, i + direction)));
     setDeepExplanation(null);
     setErrorType('unknown');
     setStudentAccount('');
@@ -357,8 +324,9 @@ export default function Questoes() {
     timer.restart();
     invalidateQuestionAi();
     setIndex(0);
-    setSelectedOptionId(null);
     setHistory([]);
+    setAnswers({});
+    submittedQuestions.current.clear();
     setDeepExplanation(null);
     setErrorType('unknown');
     setStudentAccount('');
@@ -501,22 +469,6 @@ export default function Questoes() {
     }
   };
 
-  const precisionPercent = history.length > 0 ? `${Math.round((correctCount / history.length) * 100)}%` : '—';
-
-  // O painel afirma que cada acerto estende o ciclo de revisão do tópico. Isso
-  // é verdade — applyReviewOutcome roda a cada resposta —, mas nada disso
-  // aparecia na tela, então a frase era indistinguível de enfeite. Estes dois
-  // números são lidos do mesmo registro que o motor grava.
-  const topicMastery = question ? mastery.find((item) => item.topicId === question.topicId) : undefined;
-  const masteryPercent = topicMastery ? `${Math.round(topicMastery.level)}%` : '—';
-  const nextReviewLabel = (() => {
-    if (!topicMastery) return 'após a 1ª resposta';
-    const dias = Math.round((nextReviewDate(topicMastery).getTime() - Date.now()) / 86400000);
-    if (dias <= 0) return 'hoje';
-    if (dias === 1) return 'amanhã';
-    return `em ${dias} dias`;
-  })();
-
   return (
     // A tela fixava no contêiner a paleta da matéria da questão, e a variável
     // vencia a do ambiente, que já segue o filtro de matéria (useAmbienteDaTela
@@ -654,13 +606,13 @@ export default function Questoes() {
 
         <div className="flex flex-wrap items-center gap-3">
           <Button type="submit" disabled={questionsLoading || !pool.length}>Buscar questões</Button>
-          <p className="text-xs text-[var(--dim)]">Os filtros ficam recolhidos após a busca. O cronômetro só começa quando você iniciar a questão.</p>
+          <p className="text-xs text-[var(--dim)]">Os filtros ficam recolhidos após a busca. O cronômetro é opcional; você pode responder diretamente.</p>
         </div>
         </form>
       </section>
 
       {question ? (
-        <section className="ni-grid ni-grid--practice">
+        <section className="grid grid-cols-1">
           {/* Left Workspace Panel */}
           <Panel subject={question.subject} interactive className="ni-panel ni-workspace">
             <div className="flex items-center justify-between gap-4">
@@ -674,7 +626,19 @@ export default function Questoes() {
 
             {isQuestionOnlyTopic(question.topicId) && <p className="my-3 text-xs text-[var(--dim)]">Assunto complementar do banco de questões. Ainda não há um módulo correspondente na sua grade de estudo.</p>}
 
-            {question.status !== 'annulled' && <QuestionTimer seconds={timer.seconds} expectedSeconds={expectedSeconds} started={timer.started} onStart={timer.start} running={timer.running} manualPause={timer.manualPause} finished={timer.finished} onTogglePause={timer.togglePause} onExpectedChange={setExpectedOverride} />}
+            <nav aria-label="Navegação das questões" className="my-4 flex flex-wrap items-center gap-3">
+              <Button variant="secondary" subject={question.subject} disabled={index === 0} onClick={() => navigateQuestion(-1)}>Questão anterior</Button>
+              <Button subject={question.subject} disabled={index >= pool.length - 1} onClick={() => navigateQuestion(1)}>Próxima questão</Button>
+              <Button variant="ghost" onClick={resetSession}><RotateCcw className="h-4 w-4" aria-hidden="true" />Reiniciar treino</Button>
+            </nav>
+
+            {question.status !== 'annulled' && <>
+              <label className="my-4 flex min-h-11 items-center gap-2 text-sm">
+                <input type="checkbox" checked={useTimer} disabled={answered} onChange={event => { setUseTimer(event.target.checked); timer.restart(); }} />
+                Usar cronômetro (opcional)
+              </label>
+              {useTimer && (!answered || timer.finished) && <QuestionTimer seconds={timer.seconds} expectedSeconds={expectedSeconds} started={timer.started} onStart={timer.start} running={timer.running} manualPause={timer.manualPause} finished={timer.finished} onTogglePause={timer.togglePause} onExpectedChange={setExpectedOverride} />}
+            </>}
 
             {/* O título era "Qual é o próximo passo do raciocínio?" em toda
                 questão, inclusive nas que não pedem raciocínio em etapas. */}
@@ -698,7 +662,7 @@ export default function Questoes() {
                 return (
                   <button
                     key={option.id}
-                    disabled={!timer.started || answered || question.status === 'annulled'}
+                    disabled={answered || question.status === 'annulled'}
                     onClick={() => selectOption(option.id)}
                     style={styleExtra}
                     className="transition-colors hover:border-[var(--primary)] text-xs"
@@ -714,19 +678,9 @@ export default function Questoes() {
 
             {question.status === 'annulled' && <div className="mt-6 space-y-3" role="status">
               <p>Questão anulada no gabarito definitivo. Disponível para consulta, sem correção ou efeito no progresso.</p>
-              <Button subject={question.subject} onClick={nextQuestion}>Próxima questão</Button>
             </div>}
             {answered && question.status !== 'annulled' && (
               <div className="mt-6 flex flex-col gap-4">
-                <Button
-                  subject={question.subject}
-                  onClick={nextQuestion}
-                  className="ni-primary w-full"
-                >
-                  <ArrowRight className="w-4 h-4 mr-2" />
-                  Próxima questão
-                </Button>
-
                 {/* Explanation & Diagnosis */}
                 <div className="p-4 rounded-xl border border-[var(--line)] bg-[var(--surface2)]/40 text-left space-y-3">
                   <div className="flex items-center justify-between">
@@ -871,48 +825,6 @@ export default function Questoes() {
             )}
           </Panel>
 
-          {/* Right Session Side Panel */}
-          <Panel subject={question.subject} interactive className="ni-panel ni-session-side">
-            <span className="ni-kicker">Este treino</span>
-            <div className="ni-timer" style={{ fontSize: '36px' }}>
-              {correctCount} / {history.length}
-            </div>
-
-            <Metric
-              label="Taxa de acerto"
-              value={precisionPercent}
-              bar
-              fill={history.length > 0 ? correctCount / history.length : 0}
-            />
-            <Metric label="Tempo médio por questão" value={history.length ? formatQuestionTime(history.reduce((sum, item) => sum + item.durationSeconds, 0) / history.length) : '—'} />
-            <Metric label="Filtro ativo" value={subjectFilter} />
-            <Metric
-              label="Domínio deste tópico"
-              value={masteryPercent}
-              bar
-              fill={topicMastery ? topicMastery.level / 100 : 0}
-            />
-            <Metric label="Próxima revisão" value={nextReviewLabel} />
-
-            <div className="ni-stack">
-              <span />
-              <span />
-              <span />
-            </div>
-
-            <p>
-              Cada resposta recalcula o domínio e o intervalo acima: acerto empurra a próxima revisão para mais
-              longe, erro traz de volta para perto.
-            </p>
-
-            <div className="mt-6 pt-3 border-t border-[var(--line)] flex items-center justify-between text-xs text-[var(--dim)]">
-              <button onClick={resetSession} className="flex items-center gap-1.5 hover:text-[var(--text)]">
-                <RotateCcw className="w-3.5 h-3.5" />
-                Reiniciar treino
-              </button>
-              <span>{pool.length} questões disponíveis</span>
-            </div>
-          </Panel>
         </section>
       ) : questionsLoading ? (
         // O banco de questões agora é buscado, não vem no bundle: sem este
