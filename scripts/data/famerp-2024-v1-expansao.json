@@ -1,0 +1,4248 @@
+[
+  {
+    "number": 1,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Intertextualidade e Interdiscursividade",
+    "title": "Lobo e Chapeuzinho: intertextualidade",
+    "concept": "Intertextualidade: diálogo explícito com um texto anterior (o conto da Chapeuzinho Vermelho); pré-requisitos: reconhecer personagens e situação do conto.",
+    "steps": [
+      "O cartum traz o lobo e a Chapeuzinho Vermelho, personagens de um conto conhecido.",
+      "O humor depende de o leitor conhecer a história original.",
+      "A menina corrige o nome: a peça é um capuz, não um chapéu.",
+      "Retomar um texto conhecido para criar novo sentido é intertextualidade.",
+      "Alternativa A."
+    ],
+    "trap": "Não há oposição de ideias (antítese) nem exagero (hipérbole): a graça está na referência ao conto.",
+    "retrieval": [
+      "Que texto o cartum retoma?",
+      "Por que o lobo diz “É o que sempre digo”?"
+    ],
+    "transfer": "Exercício autoral: crie um cartum que dialogue com outro conto de fadas.",
+    "criteria": [
+      "Personagens reconhecíveis.",
+      "Mudança de sentido em relação ao original."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "intertextualidade."
+      },
+      {
+        "id": "b",
+        "text": "antítese."
+      },
+      {
+        "id": "c",
+        "text": "eufemismo."
+      },
+      {
+        "id": "d",
+        "text": "pleonasmo."
+      },
+      {
+        "id": "e",
+        "text": "hipérbole."
+      }
+    ],
+    "pages": [
+      2
+    ],
+    "statement": "Examine o cartum de Rafael Corrêa, publicado em sua conta no Instagram em 15.04.2022.\n\n[Cartum: o lobo, de pé, aponta para uma menina de capa vermelha com capuz, a Chapeuzinho Vermelho. Ela diz: “Mas não é um chapéu, é um capuz”. O lobo responde: “É o que sempre digo”.]\n\nNa construção de seu sentido, o cartum mobiliza fundamentalmente o seguinte recurso expressivo:",
+    "statementComplete": true
+  },
+  {
+    "number": 2,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Gêneros Textuais",
+    "title": "Divulgação científica: linguagem acessível",
+    "concept": "Gêneros textuais: divulgação científica traduz conhecimento técnico para o público leigo; pré-requisitos: registro formal × informal.",
+    "steps": [
+      "A divulgação científica se dirige ao público geral.",
+      "O autor explica conceitos com exemplos cotidianos (ratoeiras, abacateiro).",
+      "Evita jargão técnico e hermetismo.",
+      "Mantém registro culto, embora use algumas expressões coloquiais: não é predominantemente informal.",
+      "Alternativa E."
+    ],
+    "trap": "C confunde acessível com informal: o texto é claro, mas segue a norma culta.",
+    "retrieval": [
+      "Qual é o público de um artigo de divulgação científica?",
+      "Que exemplos do cotidiano o autor usa?"
+    ],
+    "transfer": "Exercício autoral: reescreva de modo acessível a frase “o genoma humano contém aproximadamente 3 × 10⁴ genes”.",
+    "criteria": [
+      "Linguagem clara.",
+      "Sem perder a informação."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "técnica."
+      },
+      {
+        "id": "b",
+        "text": "figurada."
+      },
+      {
+        "id": "c",
+        "text": "informal."
+      },
+      {
+        "id": "d",
+        "text": "hermética."
+      },
+      {
+        "id": "e",
+        "text": "acessível."
+      }
+    ],
+    "pages": [
+      2
+    ],
+    "statement": "Leia o artigo “Sobre homens e ratos”, do médico Drauzio Varella, para responder às questões de 02 a 07.\n\nMulheres e homens têm apenas 30 mil genes! A divulgação desse dado pelo Projeto Genoma foi um balde de água fria no orgulho humano: imaginávamos que fossem pelo menos 100 mil. Se as moscas têm 13 mil genes, qualquer verme, 20 mil, um abacateiro, 25 mil, e os camundongos que caçamos nas ratoeiras têm 30 mil, 100 mil para nós parecia uma estimativa razoável. Afinal, não foi culpa nossa havermos sido criados à imagem e semelhança de Deus. A bem da verdade, já sabíamos que cerca de 98% de nossas sequências de DNA são idênticas às dos chimpanzés. Mas chimpanzés são animais políticos que formam comunidades com culturas próprias, utilizam instrumentos rudimentares e matam seus semelhantes premeditadamente. São, por assim dizer, seres mais humanos. Admitir, no entanto, que nosso genoma é formado pelo mesmo número de genes dos ratos, e que somente 300 genes são responsáveis pelas diferenças entre nós e eles, constitui humilhação inaceitável. A visão antropocêntrica, segundo a qual a vida na Terra teria evoluído dos seres unicelulares para indivíduos cada vez mais complexos até chegar ao homem, é um mau entendimento das leis da natureza. No “ranking” evolutivo, não existe primeira posição. A prova é que as bactérias foram os primeiros habitantes do planeta e não só ainda estão por aí como representam mais da metade da biomassa terrestre, isto é, se somarmos o peso de cada uma, obteremos mais da metade da massa de todos os demais seres vivos somados, incluindo árvores, elefantes e baleias. O Homo sapiens é simplesmente uma entre milhões de espécies. Nascemos há 5 milhões de anos, um segundo evolutivo comparado aos 4 bilhões de anos das bactérias. Não fizemos nenhuma falta à vida na Terra durante praticamente toda a existência dela e, se um dia formos extintos, nenhuma formiga, cigarra ou besouro chorará a nossa ausência. A evolução continuará seu caminho inexorável de competição e seleção natural, como ensinaram Charles Darwin e Alfred Wallace.\n\nNa verdade, os números do Projeto Genoma são lógicos. Os seres vivos mantêm a quase totalidade de seus genes ocupados na execução das tarefas do dia a dia: respiração, circulação, movimentação, digestão, excreção e produção de energia, entre outras. Muitos desses genes são tão essenciais ao trabalho doméstico que a evolução os preservou praticamente intactos de um ser vivo para outro. Entender a razão pela qual temos 30 mil genes como os ratos é fácil: eles são mamíferos como nós e apresentam fisiologia tão semelhante à nossa que podem ser utilizados em experiências para entender a fisiologia humana. O que intriga na evolução não é a proximidade genética entre as espécies, mas os genes responsáveis pelas diferenças. (Drauzio Varella. Borboletas da alma: escritos sobre ciência e saúde, 2006. Adaptado.)\n\nPor se tratar de um artigo de divulgação científica (e não de um artigo científico propriamente), predomina no texto uma linguagem",
+    "statementComplete": true
+  },
+  {
+    "number": 3,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "O Léxico em Contexto: Variadas Possibilidades Semânticas",
+    "title": "“Balde de água fria”",
+    "concept": "Expressões idiomáticas: sentido figurado; pré-requisitos: contexto da frase.",
+    "steps": [
+      "A expressão coloquial é “um balde de água fria”.",
+      "Ela indica frustração repentina de uma expectativa.",
+      "Esperávamos ter 100 mil genes; temos 30 mil.",
+      "O orgulho humano foi decepcionado.",
+      "Alternativa C."
+    ],
+    "trap": "A indignação aparece adiante (“humilhação inaceitável”), mas a expressão em si designa decepção.",
+    "retrieval": [
+      "Que expectativa foi frustrada?",
+      "Dê outra expressão com o mesmo sentido."
+    ],
+    "transfer": "Exercício autoral: use “balde de água fria” em uma frase sobre esporte.",
+    "criteria": [
+      "Expectativa frustrada.",
+      "Sentido figurado."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma constatação."
+      },
+      {
+        "id": "b",
+        "text": "uma indignação."
+      },
+      {
+        "id": "c",
+        "text": "uma decepção."
+      },
+      {
+        "id": "d",
+        "text": "uma incerteza."
+      },
+      {
+        "id": "e",
+        "text": "uma esperança."
+      }
+    ],
+    "pages": [
+      2
+    ],
+    "statement": "Leia o artigo “Sobre homens e ratos”, do médico Drauzio Varella, para responder às questões de 02 a 07.\n\nMulheres e homens têm apenas 30 mil genes! A divulgação desse dado pelo Projeto Genoma foi um balde de água fria no orgulho humano: imaginávamos que fossem pelo menos 100 mil. Se as moscas têm 13 mil genes, qualquer verme, 20 mil, um abacateiro, 25 mil, e os camundongos que caçamos nas ratoeiras têm 30 mil, 100 mil para nós parecia uma estimativa razoável. Afinal, não foi culpa nossa havermos sido criados à imagem e semelhança de Deus. A bem da verdade, já sabíamos que cerca de 98% de nossas sequências de DNA são idênticas às dos chimpanzés. Mas chimpanzés são animais políticos que formam comunidades com culturas próprias, utilizam instrumentos rudimentares e matam seus semelhantes premeditadamente. São, por assim dizer, seres mais humanos. Admitir, no entanto, que nosso genoma é formado pelo mesmo número de genes dos ratos, e que somente 300 genes são responsáveis pelas diferenças entre nós e eles, constitui humilhação inaceitável. A visão antropocêntrica, segundo a qual a vida na Terra teria evoluído dos seres unicelulares para indivíduos cada vez mais complexos até chegar ao homem, é um mau entendimento das leis da natureza. No “ranking” evolutivo, não existe primeira posição. A prova é que as bactérias foram os primeiros habitantes do planeta e não só ainda estão por aí como representam mais da metade da biomassa terrestre, isto é, se somarmos o peso de cada uma, obteremos mais da metade da massa de todos os demais seres vivos somados, incluindo árvores, elefantes e baleias. O Homo sapiens é simplesmente uma entre milhões de espécies. Nascemos há 5 milhões de anos, um segundo evolutivo comparado aos 4 bilhões de anos das bactérias. Não fizemos nenhuma falta à vida na Terra durante praticamente toda a existência dela e, se um dia formos extintos, nenhuma formiga, cigarra ou besouro chorará a nossa ausência. A evolução continuará seu caminho inexorável de competição e seleção natural, como ensinaram Charles Darwin e Alfred Wallace.\n\nNa verdade, os números do Projeto Genoma são lógicos. Os seres vivos mantêm a quase totalidade de seus genes ocupados na execução das tarefas do dia a dia: respiração, circulação, movimentação, digestão, excreção e produção de energia, entre outras. Muitos desses genes são tão essenciais ao trabalho doméstico que a evolução os preservou praticamente intactos de um ser vivo para outro. Entender a razão pela qual temos 30 mil genes como os ratos é fácil: eles são mamíferos como nós e apresentam fisiologia tão semelhante à nossa que podem ser utilizados em experiências para entender a fisiologia humana. O que intriga na evolução não é a proximidade genética entre as espécies, mas os genes responsáveis pelas diferenças. (Drauzio Varella. Borboletas da alma: escritos sobre ciência e saúde, 2006. Adaptado.)\n\nNo primeiro parágrafo, o autor recorre a uma conhecida expressão própria da linguagem coloquial. Tal expressão designa",
+    "statementComplete": true
+  },
+  {
+    "number": 4,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Significados Implícitos",
+    "title": "Ironia: criados à imagem de Deus",
+    "concept": "Ironia: dizer algo para sugerir o contrário ou criticar; pré-requisitos: perceber a posição do autor.",
+    "steps": [
+      "O autor critica a visão antropocêntrica.",
+      "Em B, ele simula a voz orgulhosa do ser humano: “não foi culpa nossa” ser especiais.",
+      "O tom fingido zomba dessa pretensão de superioridade.",
+      "As demais alternativas são afirmações diretas do autor.",
+      "Alternativa B."
+    ],
+    "trap": "C também diminui o ser humano, mas de forma direta, sem duplo sentido.",
+    "retrieval": [
+      "Qual é a posição do autor sobre o antropocentrismo?",
+      "Por que “não foi culpa nossa” soa irônico?"
+    ],
+    "transfer": "Exercício autoral: aponte outro trecho em que o autor zomba do orgulho humano.",
+    "criteria": [
+      "“humilhação inaceitável”.",
+      "Exagero do ponto de vista criticado."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "“A bem da verdade, já sabíamos que cerca de 98% de nossas sequências de DNA são idênticas às dos chimpanzés.” (1º parágrafo)"
+      },
+      {
+        "id": "b",
+        "text": "“Afinal, não foi culpa nossa havermos sido criados à imagem e semelhança de Deus.” (1º parágrafo)"
+      },
+      {
+        "id": "c",
+        "text": "“O Homo sapiens é simplesmente uma entre milhões de espécies.” (2º parágrafo)"
+      },
+      {
+        "id": "d",
+        "text": "“A evolução continuará seu caminho inexorável de competição e seleção natural, como ensinaram Charles Darwin e Alfred Wallace.” (2º parágrafo)"
+      },
+      {
+        "id": "e",
+        "text": "“Na verdade, os números do Projeto Genoma são lógicos.” (3º parágrafo)"
+      }
+    ],
+    "pages": [
+      2
+    ],
+    "statement": "Leia o artigo “Sobre homens e ratos”, do médico Drauzio Varella, para responder às questões de 02 a 07.\n\nMulheres e homens têm apenas 30 mil genes! A divulgação desse dado pelo Projeto Genoma foi um balde de água fria no orgulho humano: imaginávamos que fossem pelo menos 100 mil. Se as moscas têm 13 mil genes, qualquer verme, 20 mil, um abacateiro, 25 mil, e os camundongos que caçamos nas ratoeiras têm 30 mil, 100 mil para nós parecia uma estimativa razoável. Afinal, não foi culpa nossa havermos sido criados à imagem e semelhança de Deus. A bem da verdade, já sabíamos que cerca de 98% de nossas sequências de DNA são idênticas às dos chimpanzés. Mas chimpanzés são animais políticos que formam comunidades com culturas próprias, utilizam instrumentos rudimentares e matam seus semelhantes premeditadamente. São, por assim dizer, seres mais humanos. Admitir, no entanto, que nosso genoma é formado pelo mesmo número de genes dos ratos, e que somente 300 genes são responsáveis pelas diferenças entre nós e eles, constitui humilhação inaceitável. A visão antropocêntrica, segundo a qual a vida na Terra teria evoluído dos seres unicelulares para indivíduos cada vez mais complexos até chegar ao homem, é um mau entendimento das leis da natureza. No “ranking” evolutivo, não existe primeira posição. A prova é que as bactérias foram os primeiros habitantes do planeta e não só ainda estão por aí como representam mais da metade da biomassa terrestre, isto é, se somarmos o peso de cada uma, obteremos mais da metade da massa de todos os demais seres vivos somados, incluindo árvores, elefantes e baleias. O Homo sapiens é simplesmente uma entre milhões de espécies. Nascemos há 5 milhões de anos, um segundo evolutivo comparado aos 4 bilhões de anos das bactérias. Não fizemos nenhuma falta à vida na Terra durante praticamente toda a existência dela e, se um dia formos extintos, nenhuma formiga, cigarra ou besouro chorará a nossa ausência. A evolução continuará seu caminho inexorável de competição e seleção natural, como ensinaram Charles Darwin e Alfred Wallace.\n\nNa verdade, os números do Projeto Genoma são lógicos. Os seres vivos mantêm a quase totalidade de seus genes ocupados na execução das tarefas do dia a dia: respiração, circulação, movimentação, digestão, excreção e produção de energia, entre outras. Muitos desses genes são tão essenciais ao trabalho doméstico que a evolução os preservou praticamente intactos de um ser vivo para outro. Entender a razão pela qual temos 30 mil genes como os ratos é fácil: eles são mamíferos como nós e apresentam fisiologia tão semelhante à nossa que podem ser utilizados em experiências para entender a fisiologia humana. O que intriga na evolução não é a proximidade genética entre as espécies, mas os genes responsáveis pelas diferenças. (Drauzio Varella. Borboletas da alma: escritos sobre ciência e saúde, 2006. Adaptado.)\n\nReveste-se de uma tonalidade irônica o seguinte trecho do artigo:",
+    "statementComplete": true
+  },
+  {
+    "number": 5,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Significados Implícitos",
+    "title": "Elipse de “sequências de DNA”",
+    "concept": "Coesão por elipse: omissão de termo recuperável no contexto; pré-requisitos: artigo que retoma substantivo omitido.",
+    "steps": [
+      "O trecho é “98% de nossas sequências de DNA são idênticas às dos chimpanzés”.",
+      "O “às” equivale a “às sequências de DNA”: a expressão foi omitida.",
+      "Sem a elipse, a frase repetiria “idênticas às sequências de DNA dos chimpanzés”.",
+      "As outras expressões não são omitidas: aparecem uma vez ou são retomadas por outras palavras.",
+      "Alternativa A."
+    ],
+    "trap": "D é tentadora porque “número de genes” aparece no parágrafo, mas o autor a escreve por extenso (“mesmo número de genes dos ratos”), sem omiti-la.",
+    "retrieval": [
+      "Que termo o “às” substitui?",
+      "O que é elipse?"
+    ],
+    "transfer": "Exercício autoral: reescreva a frase explicitando o termo omitido e compare a fluência.",
+    "criteria": [
+      "“idênticas às sequências de DNA dos chimpanzés”.",
+      "Notar a repetição evitada."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "“sequências de DNA”."
+      },
+      {
+        "id": "b",
+        "text": "“comunidades com culturas próprias”."
+      },
+      {
+        "id": "c",
+        "text": "“estimativa razoável”."
+      },
+      {
+        "id": "d",
+        "text": "“número de genes”."
+      },
+      {
+        "id": "e",
+        "text": "“orgulho humano”."
+      }
+    ],
+    "pages": [
+      2,
+      3
+    ],
+    "statement": "Leia o artigo “Sobre homens e ratos”, do médico Drauzio Varella, para responder às questões de 02 a 07.\n\nMulheres e homens têm apenas 30 mil genes! A divulgação desse dado pelo Projeto Genoma foi um balde de água fria no orgulho humano: imaginávamos que fossem pelo menos 100 mil. Se as moscas têm 13 mil genes, qualquer verme, 20 mil, um abacateiro, 25 mil, e os camundongos que caçamos nas ratoeiras têm 30 mil, 100 mil para nós parecia uma estimativa razoável. Afinal, não foi culpa nossa havermos sido criados à imagem e semelhança de Deus. A bem da verdade, já sabíamos que cerca de 98% de nossas sequências de DNA são idênticas às dos chimpanzés. Mas chimpanzés são animais políticos que formam comunidades com culturas próprias, utilizam instrumentos rudimentares e matam seus semelhantes premeditadamente. São, por assim dizer, seres mais humanos. Admitir, no entanto, que nosso genoma é formado pelo mesmo número de genes dos ratos, e que somente 300 genes são responsáveis pelas diferenças entre nós e eles, constitui humilhação inaceitável. A visão antropocêntrica, segundo a qual a vida na Terra teria evoluído dos seres unicelulares para indivíduos cada vez mais complexos até chegar ao homem, é um mau entendimento das leis da natureza. No “ranking” evolutivo, não existe primeira posição. A prova é que as bactérias foram os primeiros habitantes do planeta e não só ainda estão por aí como representam mais da metade da biomassa terrestre, isto é, se somarmos o peso de cada uma, obteremos mais da metade da massa de todos os demais seres vivos somados, incluindo árvores, elefantes e baleias. O Homo sapiens é simplesmente uma entre milhões de espécies. Nascemos há 5 milhões de anos, um segundo evolutivo comparado aos 4 bilhões de anos das bactérias. Não fizemos nenhuma falta à vida na Terra durante praticamente toda a existência dela e, se um dia formos extintos, nenhuma formiga, cigarra ou besouro chorará a nossa ausência. A evolução continuará seu caminho inexorável de competição e seleção natural, como ensinaram Charles Darwin e Alfred Wallace.\n\nNa verdade, os números do Projeto Genoma são lógicos. Os seres vivos mantêm a quase totalidade de seus genes ocupados na execução das tarefas do dia a dia: respiração, circulação, movimentação, digestão, excreção e produção de energia, entre outras. Muitos desses genes são tão essenciais ao trabalho doméstico que a evolução os preservou praticamente intactos de um ser vivo para outro. Entender a razão pela qual temos 30 mil genes como os ratos é fácil: eles são mamíferos como nós e apresentam fisiologia tão semelhante à nossa que podem ser utilizados em experiências para entender a fisiologia humana. O que intriga na evolução não é a proximidade genética entre as espécies, mas os genes responsáveis pelas diferenças. (Drauzio Varella. Borboletas da alma: escritos sobre ciência e saúde, 2006. Adaptado.)\n\nPara evitar a sua repetição, assegurando-se assim uma maior coesão textual, o autor omite no primeiro parágrafo a expressão:",
+    "statementComplete": true
+  },
+  {
+    "number": 6,
+    "topicId": "por_sintaxe",
+    "subject": "Português",
+    "chapter": "Orações Adverbiais",
+    "title": "Tão... que: consequência",
+    "concept": "Orações adverbiais consecutivas: “tão... que”, “tanto... que”; pré-requisitos: distinguir causa de consequência.",
+    "steps": [
+      "Há a correlação “tão essenciais... que”.",
+      "A primeira oração diz o motivo (os genes são essenciais).",
+      "A segunda diz o efeito: a evolução os preservou.",
+      "Efeito decorrente de intensidade = consequência.",
+      "Alternativa D."
+    ],
+    "trap": "C inverte a relação: a causa é ser essencial; a preservação é a consequência.",
+    "retrieval": [
+      "Que conjunções correlativas indicam consequência?",
+      "Qual oração exprime a causa?"
+    ],
+    "transfer": "Exercício autoral: reescreva a frase com oração causal.",
+    "criteria": [
+      "“Como são essenciais, a evolução os preservou.”",
+      "Inverter a ordem."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "comparação."
+      },
+      {
+        "id": "b",
+        "text": "condição."
+      },
+      {
+        "id": "c",
+        "text": "causa."
+      },
+      {
+        "id": "d",
+        "text": "consequência."
+      },
+      {
+        "id": "e",
+        "text": "concessão."
+      }
+    ],
+    "pages": [
+      2,
+      3
+    ],
+    "statement": "Leia o artigo “Sobre homens e ratos”, do médico Drauzio Varella, para responder às questões de 02 a 07.\n\nMulheres e homens têm apenas 30 mil genes! A divulgação desse dado pelo Projeto Genoma foi um balde de água fria no orgulho humano: imaginávamos que fossem pelo menos 100 mil. Se as moscas têm 13 mil genes, qualquer verme, 20 mil, um abacateiro, 25 mil, e os camundongos que caçamos nas ratoeiras têm 30 mil, 100 mil para nós parecia uma estimativa razoável. Afinal, não foi culpa nossa havermos sido criados à imagem e semelhança de Deus. A bem da verdade, já sabíamos que cerca de 98% de nossas sequências de DNA são idênticas às dos chimpanzés. Mas chimpanzés são animais políticos que formam comunidades com culturas próprias, utilizam instrumentos rudimentares e matam seus semelhantes premeditadamente. São, por assim dizer, seres mais humanos. Admitir, no entanto, que nosso genoma é formado pelo mesmo número de genes dos ratos, e que somente 300 genes são responsáveis pelas diferenças entre nós e eles, constitui humilhação inaceitável. A visão antropocêntrica, segundo a qual a vida na Terra teria evoluído dos seres unicelulares para indivíduos cada vez mais complexos até chegar ao homem, é um mau entendimento das leis da natureza. No “ranking” evolutivo, não existe primeira posição. A prova é que as bactérias foram os primeiros habitantes do planeta e não só ainda estão por aí como representam mais da metade da biomassa terrestre, isto é, se somarmos o peso de cada uma, obteremos mais da metade da massa de todos os demais seres vivos somados, incluindo árvores, elefantes e baleias. O Homo sapiens é simplesmente uma entre milhões de espécies. Nascemos há 5 milhões de anos, um segundo evolutivo comparado aos 4 bilhões de anos das bactérias. Não fizemos nenhuma falta à vida na Terra durante praticamente toda a existência dela e, se um dia formos extintos, nenhuma formiga, cigarra ou besouro chorará a nossa ausência. A evolução continuará seu caminho inexorável de competição e seleção natural, como ensinaram Charles Darwin e Alfred Wallace.\n\nNa verdade, os números do Projeto Genoma são lógicos. Os seres vivos mantêm a quase totalidade de seus genes ocupados na execução das tarefas do dia a dia: respiração, circulação, movimentação, digestão, excreção e produção de energia, entre outras. Muitos desses genes são tão essenciais ao trabalho doméstico que a evolução os preservou praticamente intactos de um ser vivo para outro. Entender a razão pela qual temos 30 mil genes como os ratos é fácil: eles são mamíferos como nós e apresentam fisiologia tão semelhante à nossa que podem ser utilizados em experiências para entender a fisiologia humana. O que intriga na evolução não é a proximidade genética entre as espécies, mas os genes responsáveis pelas diferenças. (Drauzio Varella. Borboletas da alma: escritos sobre ciência e saúde, 2006. Adaptado.)\n\n“Muitos desses genes são tão essenciais ao trabalho doméstico [que a evolução os preservou praticamente intactos de um ser vivo para outro].” (3º parágrafo)\n\n[O trecho entre colchetes está sublinhado na prova.]\n\nEm relação à oração que a antecede, a oração sublinhada expressa ideia de",
+    "statementComplete": true
+  },
+  {
+    "number": 7,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação",
+    "title": "Vírgula de elipse do verbo",
+    "concept": "Vírgula indicando zeugma (elipse de verbo já expresso); pré-requisitos: usos da vírgula.",
+    "steps": [
+      "Procure um verbo omitido e substituído por vírgula.",
+      "Em E: “qualquer verme, 20 mil” = “qualquer verme [tem] 20 mil”.",
+      "O mesmo em “um abacateiro, 25 mil”.",
+      "As outras vírgulas isolam intercalações, orações ou enumerações.",
+      "Alternativa E."
+    ],
+    "trap": "D tem vírgulas de enumeração, não de verbo omitido.",
+    "retrieval": [
+      "Que verbo foi omitido em E?",
+      "Que função têm as vírgulas em C?"
+    ],
+    "transfer": "Exercício autoral: crie uma frase com vírgula de elipse do verbo.",
+    "criteria": [
+      "Ex.: “Eu prefiro café; ela, chá.”",
+      "Verbo omitido recuperável."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "“Admitir, no entanto, que nosso genoma é formado pelo mesmo número de genes dos ratos, e que somente 300 genes são responsáveis pelas diferenças entre nós e eles, constitui humilhação inaceitável.” (1º parágrafo)"
+      },
+      {
+        "id": "b",
+        "text": "“Não fizemos nenhuma falta à vida na Terra durante praticamente toda a existência dela e, se um dia formos extintos, nenhuma formiga, cigarra ou besouro chorará a nossa ausência.” (2º parágrafo)"
+      },
+      {
+        "id": "c",
+        "text": "“A visão antropocêntrica, segundo a qual a vida na Terra teria evoluído dos seres unicelulares para indivíduos cada vez mais complexos até chegar ao homem, é um mau entendimento das leis da natureza.” (2º parágrafo)"
+      },
+      {
+        "id": "d",
+        "text": "“Os seres vivos mantêm a quase totalidade de seus genes ocupados na execução das tarefas do dia a dia: respiração, circulação, movimentação, digestão, excreção e produção de energia, entre outras.” (3º parágrafo)"
+      },
+      {
+        "id": "e",
+        "text": "“Se as moscas têm 13 mil genes, qualquer verme, 20 mil, um abacateiro, 25 mil, e os camundongos que caçamos nas ratoeiras têm 30 mil, 100 mil para nós parecia uma estimativa razoável.” (1º parágrafo)"
+      }
+    ],
+    "pages": [
+      2,
+      3
+    ],
+    "statement": "Leia o artigo “Sobre homens e ratos”, do médico Drauzio Varella, para responder às questões de 02 a 07.\n\nMulheres e homens têm apenas 30 mil genes! A divulgação desse dado pelo Projeto Genoma foi um balde de água fria no orgulho humano: imaginávamos que fossem pelo menos 100 mil. Se as moscas têm 13 mil genes, qualquer verme, 20 mil, um abacateiro, 25 mil, e os camundongos que caçamos nas ratoeiras têm 30 mil, 100 mil para nós parecia uma estimativa razoável. Afinal, não foi culpa nossa havermos sido criados à imagem e semelhança de Deus. A bem da verdade, já sabíamos que cerca de 98% de nossas sequências de DNA são idênticas às dos chimpanzés. Mas chimpanzés são animais políticos que formam comunidades com culturas próprias, utilizam instrumentos rudimentares e matam seus semelhantes premeditadamente. São, por assim dizer, seres mais humanos. Admitir, no entanto, que nosso genoma é formado pelo mesmo número de genes dos ratos, e que somente 300 genes são responsáveis pelas diferenças entre nós e eles, constitui humilhação inaceitável. A visão antropocêntrica, segundo a qual a vida na Terra teria evoluído dos seres unicelulares para indivíduos cada vez mais complexos até chegar ao homem, é um mau entendimento das leis da natureza. No “ranking” evolutivo, não existe primeira posição. A prova é que as bactérias foram os primeiros habitantes do planeta e não só ainda estão por aí como representam mais da metade da biomassa terrestre, isto é, se somarmos o peso de cada uma, obteremos mais da metade da massa de todos os demais seres vivos somados, incluindo árvores, elefantes e baleias. O Homo sapiens é simplesmente uma entre milhões de espécies. Nascemos há 5 milhões de anos, um segundo evolutivo comparado aos 4 bilhões de anos das bactérias. Não fizemos nenhuma falta à vida na Terra durante praticamente toda a existência dela e, se um dia formos extintos, nenhuma formiga, cigarra ou besouro chorará a nossa ausência. A evolução continuará seu caminho inexorável de competição e seleção natural, como ensinaram Charles Darwin e Alfred Wallace.\n\nNa verdade, os números do Projeto Genoma são lógicos. Os seres vivos mantêm a quase totalidade de seus genes ocupados na execução das tarefas do dia a dia: respiração, circulação, movimentação, digestão, excreção e produção de energia, entre outras. Muitos desses genes são tão essenciais ao trabalho doméstico que a evolução os preservou praticamente intactos de um ser vivo para outro. Entender a razão pela qual temos 30 mil genes como os ratos é fácil: eles são mamíferos como nós e apresentam fisiologia tão semelhante à nossa que podem ser utilizados em experiências para entender a fisiologia humana. O que intriga na evolução não é a proximidade genética entre as espécies, mas os genes responsáveis pelas diferenças. (Drauzio Varella. Borboletas da alma: escritos sobre ciência e saúde, 2006. Adaptado.)\n\nVerifica-se o emprego de vírgula para assinalar a elipse de um verbo em:",
+    "statementComplete": true
+  },
+  {
+    "number": 8,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Leitura de Textos Cômicos",
+    "title": "O anjo da guarda e o casamento",
+    "concept": "Humor por quebra de expectativa; inferência de sentimento; pré-requisitos: ironia.",
+    "steps": [
+      "O anjo lista os perigos dos quais salvou o homem.",
+      "O homem agradece, mas cobra: onde estava o anjo quando ele se casou?",
+      "Ele considera o casamento um desastre do qual não foi protegido.",
+      "A pergunta revela ressentimento, mágoa.",
+      "Alternativa C."
+    ],
+    "trap": "Não é indiferença: ele agradece e se importa; a cobrança mostra que se sente ferido.",
+    "retrieval": [
+      "Que efeito tem a última pergunta?",
+      "Por que o casamento aparece como um perigo?"
+    ],
+    "transfer": "Exercício autoral: explique como o final cria o humor.",
+    "criteria": [
+      "Expectativa: agradecimento.",
+      "Ruptura: queixa do casamento."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "enfado."
+      },
+      {
+        "id": "b",
+        "text": "indiferença."
+      },
+      {
+        "id": "c",
+        "text": "mágoa."
+      },
+      {
+        "id": "d",
+        "text": "resignação."
+      },
+      {
+        "id": "e",
+        "text": "arrogância."
+      }
+    ],
+    "pages": [
+      3
+    ],
+    "statement": "Leia a narrativa “O protetor”, de Millôr Fernandes, para responder às questões 08 e 09.\n\nO homem vinha guiando o carro a 120 km/h quando o pneu furou. O carro deu três voltas sobre si mesmo, foi atirado pelos ares, bateu num galho de árvore e, quando ia se esborrachando no chão, alguém o segurou sem que ele pudesse ver quem. Ele ficou um pouco tonto e foi aí que ouviu a voz misteriosa que lhe disse: “Não se estás morto, não! Estás vivo! Eu continuo aqui para proteger-te. Sou teu anjo da guarda. Quando tiveste aquele ataque de coqueluche, aos seis meses de idade, eu estava lá para te salvar. Quando ficaste na frente do trem, aos seis anos, eu estava lá para te ajudar. Quando foste para a guerra na Itália, quando saltaste de paraquedas na Coreia, quando ias te afogando em Copacabana, sempre fui eu quem te ajudou.” “Está bem, está bem, muito obrigado”, disse então o homem agradecido. “Mas onde diabos estava você quando eu me casei?” (Millôr Fernandes. Contos fabulosos, 2007.)\n\nA pergunta do homem a seu anjo da guarda revela, sobretudo, um sentimento de",
+    "statementComplete": true
+  },
+  {
+    "number": 9,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Tipos de Discurso",
+    "title": "Transposição para o discurso indireto",
+    "concept": "Discurso direto → indireto: tempo verbal (presente → pretérito imperfeito), advérbio (aqui → ali) e pessoa (te → o); pré-requisitos: verbo dicendi + “que”.",
+    "steps": [
+      "No indireto, a fala vira oração introduzida por “que”.",
+      "Presente “continuo” passa a pretérito imperfeito “continuava”.",
+      "“Aqui” vira “ali”, pois o narrador está em outro lugar.",
+      "“Te” (2ª pessoa) vira “o” (3ª pessoa): “protegê-lo”.",
+      "Alternativa B."
+    ],
+    "trap": "D mantém “te”, que só faz sentido na fala direta; E troca a afirmação por uma ordem.",
+    "retrieval": [
+      "Que tempo verbal substitui o presente no discurso indireto?",
+      "Por que “aqui” vira “ali”?"
+    ],
+    "transfer": "Exercício autoral: transponha para o indireto: “Eu estava lá para te salvar.”",
+    "criteria": [
+      "“...disse que estivera lá para salvá-lo.”",
+      "Mais-que-perfeito."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A voz misteriosa lhe disse: — Continue aqui para proteger-se."
+      },
+      {
+        "id": "b",
+        "text": "A voz misteriosa lhe disse que continuava ali para protegê-lo."
+      },
+      {
+        "id": "c",
+        "text": "A voz misteriosa lhe disse: — Continuarei aqui para proteger-te."
+      },
+      {
+        "id": "d",
+        "text": "A voz misteriosa lhe disse que continuaria ali para proteger-te."
+      },
+      {
+        "id": "e",
+        "text": "A voz misteriosa lhe disse que continuasse ali para protegê-lo."
+      }
+    ],
+    "pages": [
+      3
+    ],
+    "statement": "Leia a narrativa “O protetor”, de Millôr Fernandes, para responder às questões 08 e 09.\n\nO homem vinha guiando o carro a 120 km/h quando o pneu furou. O carro deu três voltas sobre si mesmo, foi atirado pelos ares, bateu num galho de árvore e, quando ia se esborrachando no chão, alguém o segurou sem que ele pudesse ver quem. Ele ficou um pouco tonto e foi aí que ouviu a voz misteriosa que lhe disse: “Não se estás morto, não! Estás vivo! Eu continuo aqui para proteger-te. Sou teu anjo da guarda. Quando tiveste aquele ataque de coqueluche, aos seis meses de idade, eu estava lá para te salvar. Quando ficaste na frente do trem, aos seis anos, eu estava lá para te ajudar. Quando foste para a guerra na Itália, quando saltaste de paraquedas na Coreia, quando ias te afogando em Copacabana, sempre fui eu quem te ajudou.” “Está bem, está bem, muito obrigado”, disse então o homem agradecido. “Mas onde diabos estava você quando eu me casei?” (Millôr Fernandes. Contos fabulosos, 2007.)\n\n“a voz misteriosa [...] lhe disse: [...] ‘Eu continuo aqui para proteger-te.’” (1º parágrafo)\n\nAo ser transposto para o discurso indireto, o trecho assume a seguinte redação:",
+    "statementComplete": true
+  },
+  {
+    "number": 10,
+    "topicId": "por_lit_romantismo_realismo",
+    "subject": "Português",
+    "chapter": "A Estética Romântica: Poesia",
+    "title": "Romantismo: cor local e lirismo",
+    "concept": "Romantismo: nacionalismo, subjetivismo (primado do lirismo), cor local, folclore; pré-requisitos: oposição ao Neoclassicismo.",
+    "steps": [
+      "O movimento se opõe à inspiração greco-romana neoclássica.",
+      "Valoriza o interior (coração, lirismo) e a cor local.",
+      "Busca temas nacionais, históricos e populares.",
+      "Essas são marcas do Romantismo.",
+      "Alternativa A."
+    ],
+    "trap": "O Arcadismo é justamente o neoclassicismo ao qual o texto se opõe.",
+    "retrieval": [
+      "Que movimento o Romantismo sucede?",
+      "O que é “cor local”?"
+    ],
+    "transfer": "Exercício autoral: cite uma obra romântica brasileira que valoriza a cor local.",
+    "criteria": [
+      "Ex.: Iracema ou O guarani.",
+      "Natureza e cultura brasileiras."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "romântico."
+      },
+      {
+        "id": "b",
+        "text": "árcade."
+      },
+      {
+        "id": "c",
+        "text": "naturalista."
+      },
+      {
+        "id": "d",
+        "text": "barroco."
+      },
+      {
+        "id": "e",
+        "text": "simbolista."
+      }
+    ],
+    "pages": [
+      4
+    ],
+    "statement": "Pela necessidade de alargar o horizonte literário, este movimento dirigiu-se para fontes de inspiração nacional e local, em oposição à inspiração greco-romana que dominou a poética neoclássica. O primeiro passo nessa busca de novas dimensões foi dado no sentido interior, na direção da natureza do coração e do espírito, de que resultou o primado do lirismo, como a forma natural e primitiva da poesia, e o estabelecimento de um tipo de realismo baseado na verdade interior e na efusão do coração. O outro passo orientou-se para a valorização da “cor local” e do pitoresco, procurando, em virtude do princípio relativista de que o homem varia conforme os tempos e lugares, captar a sua verdade na diversidade exterior e interior — costumes, sentimentos, linguagem — que o tornam típico. Essa teoria encontrou clima sobretudo no romance, mas serviu de base também para a valorização da história local e das criações populares ou folclore. (Afrânio Coutinho. Introdução à literatura no Brasil, 1976. Adaptado.)\n\nO texto trata do movimento",
+    "statementComplete": true
+  },
+  {
+    "number": 11,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Ecology (Greenhouse Gases)",
+    "title": "Aquifers: part of the solution",
+    "concept": "Propósito comunicativo; pré-requisitos: vocabulário scarcity, address, manage expectations.",
+    "steps": [
+      "O texto celebra a descoberta de aquíferos no Níger.",
+      "Mas adverte: eles “not always going to help address water scarcity”.",
+      "Cita a água salina do aquífero de Turkana, no Quênia.",
+      "Conclui que é preciso pensar em outras soluções: aquíferos são só parte da resposta.",
+      "Alternativa B."
+    ],
+    "trap": "C contradiz o texto, que pede para “manage expectations”.",
+    "retrieval": [
+      "Que problema tinha o aquífero de Turkana?",
+      "O que significa “water scarcity”?"
+    ],
+    "transfer": "Exercise: write one sentence in English about another solution to water scarcity.",
+    "criteria": [
+      "Ex.: water reuse or desalination.",
+      "Correct structure."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "reveal that the world’s largest aquifers are located in Niger."
+      },
+      {
+        "id": "b",
+        "text": "show that aquifers are just part of the solution to water scarcity."
+      },
+      {
+        "id": "c",
+        "text": "provide a definite answer to the global water scarcity."
+      },
+      {
+        "id": "d",
+        "text": "draw attention to the most effective ways to fight climate change."
+      },
+      {
+        "id": "e",
+        "text": "explain how water becomes a renewable resource."
+      }
+    ],
+    "pages": [
+      4
+    ],
+    "statement": "Leia o texto para responder às questões de 11 a 16.\n\n[Foto de um poço no deserto.]\n\nDiscoveries of aquifers — underground earth formations that hold water — often create excitement around their ability to ease water scarcity in a region. The United States recently announced the discovery of five aquifers in Niger, one of Africa’s most water scarce countries, containing over 600 billion cubic metres of water. To put it into perspective, Egypt’s current water demand is 114 billion cubic metres of water per year. These are welcome announcements. Due to a changing climate and the increasing demands of a growing population, many of Africa’s surface water resources — such as dams and rivers — are facing serious risks. They’re being overused and slowly decreasing. Alternative water sources, like aquifers, need to be explored. They are highly prevalent across the African continent, but they’re not always going to help address water scarcity. For instance, early research findings deemed Kenya’s Turkana aquifer water unfit for use due to high salinity. It’s important to bear these challenges in mind so that expectations can be managed. It is also useful for planners and governments, as they need to think of other ways around the water scarcity problem. (Gaathier Mahed. https://theconversation.com, 21.03.2023. Adaptado.)\n\nThe text intends to",
+    "statementComplete": true
+  },
+  {
+    "number": 12,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Ecology (Greenhouse Gases)",
+    "title": "“To put it into perspective”",
+    "concept": "Expressões de comparação; pré-requisitos: inferência pelo contexto.",
+    "steps": [
+      "O texto deu um número enorme: 600 bilhões de m³.",
+      "Para torná-lo compreensível, compara com a demanda do Egito.",
+      "“Put into perspective” = relacionar a algo conhecido.",
+      "É uma comparação.",
+      "Alternativa E."
+    ],
+    "trap": "Não é conclusão (D): o texto continua apresentando dados.",
+    "retrieval": [
+      "Quantos anos de demanda egípcia caberiam no aquífero?",
+      "Que expressão em português equivale a “to put into perspective”?"
+    ],
+    "transfer": "Exercise: calculate how many years of Egypt’s demand the aquifers could supply.",
+    "criteria": [
+      "600 ÷ 114.",
+      "About 5 years."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "deny something."
+      },
+      {
+        "id": "b",
+        "text": "normalize something."
+      },
+      {
+        "id": "c",
+        "text": "speak rapidly."
+      },
+      {
+        "id": "d",
+        "text": "conclude something."
+      },
+      {
+        "id": "e",
+        "text": "compare with something similar."
+      }
+    ],
+    "pages": [
+      4
+    ],
+    "statement": "Leia o texto para responder às questões de 11 a 16.\n\n[Foto de um poço no deserto.]\n\nDiscoveries of aquifers — underground earth formations that hold water — often create excitement around their ability to ease water scarcity in a region. The United States recently announced the discovery of five aquifers in Niger, one of Africa’s most water scarce countries, containing over 600 billion cubic metres of water. To put it into perspective, Egypt’s current water demand is 114 billion cubic metres of water per year. These are welcome announcements. Due to a changing climate and the increasing demands of a growing population, many of Africa’s surface water resources — such as dams and rivers — are facing serious risks. They’re being overused and slowly decreasing. Alternative water sources, like aquifers, need to be explored. They are highly prevalent across the African continent, but they’re not always going to help address water scarcity. For instance, early research findings deemed Kenya’s Turkana aquifer water unfit for use due to high salinity. It’s important to bear these challenges in mind so that expectations can be managed. It is also useful for planners and governments, as they need to think of other ways around the water scarcity problem. (Gaathier Mahed. https://theconversation.com, 21.03.2023. Adaptado.)\n\nIn the excerpt from the first paragraph “[To put it into perspective], Egypt’s current water demand is 114 billion cubic metres of water per year”, the underlined expression means to",
+    "statementComplete": true
+  },
+  {
+    "number": 13,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Ecology (Greenhouse Gases)",
+    "title": "“Due to”: causa",
+    "concept": "Conectivos de causa (due to, because of) e de finalidade (so that); pré-requisitos: vocabulário.",
+    "steps": [
+      "“Due to” significa “devido a”.",
+      "O trecho explica por que as águas superficiais estão em risco.",
+      "B tem “so that”, que indica finalidade.",
+      "As demais são afirmações sem conector causal.",
+      "Alternativa D."
+    ],
+    "trap": "B parece causal, mas “so that” = “para que” (finalidade).",
+    "retrieval": [
+      "Qual a diferença entre “due to” e “so that”?",
+      "Que riscos sofrem rios e represas africanos?"
+    ],
+    "transfer": "Exercise: rewrite option D using “because of”.",
+    "criteria": [
+      "Because of a changing climate...",
+      "Same meaning."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "“The United States recently announced the discovery of five aquifers in Niger” (1º parágrafo)."
+      },
+      {
+        "id": "b",
+        "text": "“It’s important to bear these challenges in mind so that expectations can be managed” (3º parágrafo)."
+      },
+      {
+        "id": "c",
+        "text": "“Egypt’s current water demand is 114 billion cubic metres of water per year” (1º parágrafo)."
+      },
+      {
+        "id": "d",
+        "text": "“Due to a changing climate and the increasing demands of a growing population” (2º parágrafo)."
+      },
+      {
+        "id": "e",
+        "text": "“Alternative water sources, like aquifers, need to be explored” (3º parágrafo)."
+      }
+    ],
+    "pages": [
+      4
+    ],
+    "statement": "Leia o texto para responder às questões de 11 a 16.\n\n[Foto de um poço no deserto.]\n\nDiscoveries of aquifers — underground earth formations that hold water — often create excitement around their ability to ease water scarcity in a region. The United States recently announced the discovery of five aquifers in Niger, one of Africa’s most water scarce countries, containing over 600 billion cubic metres of water. To put it into perspective, Egypt’s current water demand is 114 billion cubic metres of water per year. These are welcome announcements. Due to a changing climate and the increasing demands of a growing population, many of Africa’s surface water resources — such as dams and rivers — are facing serious risks. They’re being overused and slowly decreasing. Alternative water sources, like aquifers, need to be explored. They are highly prevalent across the African continent, but they’re not always going to help address water scarcity. For instance, early research findings deemed Kenya’s Turkana aquifer water unfit for use due to high salinity. It’s important to bear these challenges in mind so that expectations can be managed. It is also useful for planners and governments, as they need to think of other ways around the water scarcity problem. (Gaathier Mahed. https://theconversation.com, 21.03.2023. Adaptado.)\n\nA frase do texto que expressa ideia de causa é:",
+    "statementComplete": true
+  },
+  {
+    "number": 14,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Ecology (Greenhouse Gases)",
+    "title": "“For instance” = to illustrate",
+    "concept": "Conectivos de exemplificação; pré-requisitos: for example, for instance, to illustrate.",
+    "steps": [
+      "“For instance” introduz um exemplo.",
+      "O exemplo ilustra a ideia anterior: aquíferos nem sempre resolvem a escassez.",
+      "O equivalente é “to illustrate”.",
+      "Besides = além disso; to sum up = em resumo; on the other hand = por outro lado.",
+      "Alternativa E."
+    ],
+    "trap": "“Indeed” reforça, mas não introduz exemplo.",
+    "retrieval": [
+      "Qual é o exemplo dado?",
+      "Que conectivo indica conclusão?"
+    ],
+    "transfer": "Exercise: write a sentence using “for instance”.",
+    "criteria": [
+      "Give an example.",
+      "Correct punctuation."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "Besides."
+      },
+      {
+        "id": "b",
+        "text": "Indeed."
+      },
+      {
+        "id": "c",
+        "text": "To sum up."
+      },
+      {
+        "id": "d",
+        "text": "On the other hand."
+      },
+      {
+        "id": "e",
+        "text": "To illustrate."
+      }
+    ],
+    "pages": [
+      4,
+      5
+    ],
+    "statement": "Leia o texto para responder às questões de 11 a 16.\n\n[Foto de um poço no deserto.]\n\nDiscoveries of aquifers — underground earth formations that hold water — often create excitement around their ability to ease water scarcity in a region. The United States recently announced the discovery of five aquifers in Niger, one of Africa’s most water scarce countries, containing over 600 billion cubic metres of water. To put it into perspective, Egypt’s current water demand is 114 billion cubic metres of water per year. These are welcome announcements. Due to a changing climate and the increasing demands of a growing population, many of Africa’s surface water resources — such as dams and rivers — are facing serious risks. They’re being overused and slowly decreasing. Alternative water sources, like aquifers, need to be explored. They are highly prevalent across the African continent, but they’re not always going to help address water scarcity. For instance, early research findings deemed Kenya’s Turkana aquifer water unfit for use due to high salinity. It’s important to bear these challenges in mind so that expectations can be managed. It is also useful for planners and governments, as they need to think of other ways around the water scarcity problem. (Gaathier Mahed. https://theconversation.com, 21.03.2023. Adaptado.)\n\nIn the excerpt from the third paragraph “[For instance], early research findings deemed Kenya’s Turkana aquifer water unfit for use”, the underlined expression can be replaced, without meaning change, by",
+    "statementComplete": true
+  },
+  {
+    "number": 15,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Ecology (Greenhouse Gases)",
+    "title": "Aquífero de Turkana: água imprópria",
+    "concept": "Compreensão de detalhe; vocabulário: unfit for use, salinity.",
+    "steps": [
+      "O texto diz que a água de Turkana foi considerada “unfit for use”.",
+      "O motivo é a “high salinity”.",
+      "Água imprópria para uso.",
+      "Não há menção a privatização, tamanho ou redução.",
+      "Alternativa C."
+    ],
+    "trap": "D contradiz o texto: o exemplo serve para mostrar que aquíferos nem sempre ajudam.",
+    "retrieval": [
+      "Por que a água foi considerada imprópria?",
+      "O que significa “unfit”?"
+    ],
+    "transfer": "Exercise: explain in Portuguese why high salinity makes water unfit for drinking.",
+    "criteria": [
+      "Sais em excesso.",
+      "Exige dessalinização."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "poderá ser privatizado em breve pelo governo local."
+      },
+      {
+        "id": "b",
+        "text": "foi recentemente classificado como o maior aquífero do continente africano."
+      },
+      {
+        "id": "c",
+        "text": "fornece água imprópria para o consumo dos moradores da região."
+      },
+      {
+        "id": "d",
+        "text": "está ajudando a combater a falta de água potável na região."
+      },
+      {
+        "id": "e",
+        "text": "está diminuindo de tamanho devido às condições geológicas da região."
+      }
+    ],
+    "pages": [
+      4,
+      5
+    ],
+    "statement": "Leia o texto para responder às questões de 11 a 16.\n\n[Foto de um poço no deserto.]\n\nDiscoveries of aquifers — underground earth formations that hold water — often create excitement around their ability to ease water scarcity in a region. The United States recently announced the discovery of five aquifers in Niger, one of Africa’s most water scarce countries, containing over 600 billion cubic metres of water. To put it into perspective, Egypt’s current water demand is 114 billion cubic metres of water per year. These are welcome announcements. Due to a changing climate and the increasing demands of a growing population, many of Africa’s surface water resources — such as dams and rivers — are facing serious risks. They’re being overused and slowly decreasing. Alternative water sources, like aquifers, need to be explored. They are highly prevalent across the African continent, but they’re not always going to help address water scarcity. For instance, early research findings deemed Kenya’s Turkana aquifer water unfit for use due to high salinity. It’s important to bear these challenges in mind so that expectations can be managed. It is also useful for planners and governments, as they need to think of other ways around the water scarcity problem. (Gaathier Mahed. https://theconversation.com, 21.03.2023. Adaptado.)\n\nDe acordo com o terceiro parágrafo, o aquífero localizado no Quênia",
+    "statementComplete": true
+  },
+  {
+    "number": 16,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Ecology (Greenhouse Gases)",
+    "title": "“as” = because",
+    "concept": "Conectivos: “as” causal; pré-requisitos: sentidos de “as” (como, enquanto, porque).",
+    "steps": [
+      "A segunda oração explica por que a informação é útil.",
+      "“As” tem valor causal aqui.",
+      "Equivale a “because”.",
+      "Though = embora; whereas = ao passo que; till = até.",
+      "Alternativa B."
+    ],
+    "trap": "“As” também pode significar “enquanto” (whereas), mas o contexto é de explicação, não de contraste.",
+    "retrieval": [
+      "Que outros sentidos tem “as”?",
+      "Por que a informação é útil aos governos?"
+    ],
+    "transfer": "Exercise: write a sentence with causal “as”.",
+    "criteria": [
+      "Ex.: “As it was raining, we stayed home.”",
+      "Cause in the clause."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "till."
+      },
+      {
+        "id": "b",
+        "text": "because."
+      },
+      {
+        "id": "c",
+        "text": "which."
+      },
+      {
+        "id": "d",
+        "text": "though."
+      },
+      {
+        "id": "e",
+        "text": "whereas."
+      }
+    ],
+    "pages": [
+      4,
+      5
+    ],
+    "statement": "Leia o texto para responder às questões de 11 a 16.\n\n[Foto de um poço no deserto.]\n\nDiscoveries of aquifers — underground earth formations that hold water — often create excitement around their ability to ease water scarcity in a region. The United States recently announced the discovery of five aquifers in Niger, one of Africa’s most water scarce countries, containing over 600 billion cubic metres of water. To put it into perspective, Egypt’s current water demand is 114 billion cubic metres of water per year. These are welcome announcements. Due to a changing climate and the increasing demands of a growing population, many of Africa’s surface water resources — such as dams and rivers — are facing serious risks. They’re being overused and slowly decreasing. Alternative water sources, like aquifers, need to be explored. They are highly prevalent across the African continent, but they’re not always going to help address water scarcity. For instance, early research findings deemed Kenya’s Turkana aquifer water unfit for use due to high salinity. It’s important to bear these challenges in mind so that expectations can be managed. It is also useful for planners and governments, as they need to think of other ways around the water scarcity problem. (Gaathier Mahed. https://theconversation.com, 21.03.2023. Adaptado.)\n\nIn the excerpt form the third paragraph “It is also useful for planners and governments, [as] they need to think of other ways around the water scarcity problem”, the underlined word can be replaced, without meaning change, by",
+    "statementComplete": true
+  },
+  {
+    "number": 17,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Health – Probiotics",
+    "title": "“Roll my eyes”",
+    "concept": "Expressões idiomáticas: roll one’s eyes = revirar os olhos (impaciência, desdém); pré-requisitos: contexto.",
+    "steps": [
+      "Revirar os olhos é gesto de impaciência ou descrença.",
+      "A mulher não levava a sério os pais que falavam de alergia.",
+      "Ela se irritava com eles.",
+      "Não era alegria, orgulho ou vergonha.",
+      "Alternativa C."
+    ],
+    "trap": "E (vergonha) é o que ela talvez sinta hoje, não o que sentia antes.",
+    "retrieval": [
+      "Que gesto “roll my eyes” descreve?",
+      "O que mudou na vida dela?"
+    ],
+    "transfer": "Exercise: write a sentence with “used to” about a past habit.",
+    "criteria": [
+      "Ex.: “I used to walk to school.”",
+      "Past habit."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "feel cheerful."
+      },
+      {
+        "id": "b",
+        "text": "be proud."
+      },
+      {
+        "id": "c",
+        "text": "get annoyed."
+      },
+      {
+        "id": "d",
+        "text": "get anxious."
+      },
+      {
+        "id": "e",
+        "text": "feel ashamed."
+      }
+    ],
+    "pages": [
+      5
+    ],
+    "statement": "Leia o pôster de um depoimento publicado no website “Natasha Allergy Research Foundation” para responder às questões 17 e 18.\n\n[Pôster com a foto de uma mulher e o texto:] “I used to roll my eyes at parents who claimed their kids had food allergies. That is, until I became one of them.”\n\n(www.narf.org.uk)\n\nIn the excerpt “I used to [roll my eyes] at parents who claimed their kids had food allergies”, the underlined expression means to",
+    "statementComplete": true
+  },
+  {
+    "number": 18,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Health – Probiotics",
+    "title": "“One of them”: pais de crianças alérgicas",
+    "concept": "Referência pronominal; pré-requisitos: retomada anafórica.",
+    "steps": [
+      "“Them” retoma “parents who claimed their kids had food allergies”.",
+      "Ela passou a ser uma dessas mães: o filho dela tem alergia.",
+      "Ou seja, pais de pessoas alérgicas.",
+      "Não é ela quem tem alergia (D).",
+      "Alternativa E."
+    ],
+    "trap": "D confunde: quem tem alergia são os filhos; “them” são os pais.",
+    "retrieval": [
+      "Qual é o antecedente de “them”?",
+      "Por que a mulher mudou de opinião?"
+    ],
+    "transfer": "Exercise: rewrite the sentence replacing “them” with its referent.",
+    "criteria": [
+      "“...until I became one of those parents.”",
+      "Keep the meaning."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "às pessoas que não fazem tratamento para alergias alimentares."
+      },
+      {
+        "id": "b",
+        "text": "às pessoas que discriminam aqueles que têm alergias alimentares."
+      },
+      {
+        "id": "c",
+        "text": "aos filhos de pessoas com alergias alimentares."
+      },
+      {
+        "id": "d",
+        "text": "às pessoas com alergias alimentares."
+      },
+      {
+        "id": "e",
+        "text": "aos pais de pessoas com alergias alimentares."
+      }
+    ],
+    "pages": [
+      5
+    ],
+    "statement": "Leia o pôster de um depoimento publicado no website “Natasha Allergy Research Foundation” para responder às questões 17 e 18.\n\n[Pôster com a foto de uma mulher e o texto:] “I used to roll my eyes at parents who claimed their kids had food allergies. That is, until I became one of them.”\n\n(www.narf.org.uk)\n\nNo trecho do pôster “That is, until I became one of [them]”, o termo sublinhado refere-se",
+    "statementComplete": true
+  },
+  {
+    "number": 19,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Novels/Short Stories",
+    "title": "Modal “should” = ought to",
+    "concept": "Verbos modais: should/ought to (conselho); pré-requisitos: will, may, can, would.",
+    "steps": [
+      "“Should” expressa conselho ou recomendação.",
+      "“Ought to” tem o mesmo sentido.",
+      "Will = futuro; may = possibilidade/permissão; can = capacidade.",
+      "Would = condicional.",
+      "Alternativa C."
+    ],
+    "trap": "“Would” se parece com “should” na forma, mas indica hipótese, não conselho.",
+    "retrieval": [
+      "Que modal expressa conselho?",
+      "Como se diz “deveriam” em inglês?"
+    ],
+    "transfer": "Exercise: give advice to a friend using “ought to”.",
+    "criteria": [
+      "Ex.: “You ought to sleep more.”",
+      "Use the base form after ought to."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "will."
+      },
+      {
+        "id": "b",
+        "text": "may."
+      },
+      {
+        "id": "c",
+        "text": "ought to."
+      },
+      {
+        "id": "d",
+        "text": "would."
+      },
+      {
+        "id": "e",
+        "text": "can."
+      }
+    ],
+    "pages": [
+      6
+    ],
+    "statement": "Leia a tirinha do cartunista Jim Davis para responder às questões 19 e 20.\n\n[Tirinha de Garfield. 1º quadro: Jon, diante de Garfield e Odie: “You two should stop being so competitive.” 2º quadro: Garfield: “Okay, Jon, we will.” 3º quadro: Garfield: “But since you brought the subject up, which one of us would you say was more competitive?”]\n\n(www.gocomics.com)\n\nIn the excerpt from the first panel “You two [should] stop being so competitive”, the underlined word can be replaced, without meaning change, by",
+    "statementComplete": true
+  },
+  {
+    "number": 20,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Novels/Short Stories",
+    "title": "“Since” causal",
+    "concept": "“Since”: causal (já que) × temporal (desde); pré-requisitos: present perfect com since temporal.",
+    "steps": [
+      "Na tirinha, “since” = “já que”: causa.",
+      "Em A: “já que você não pode ir” — também causal.",
+      "Em B, C, D e E, “since” marca um ponto no tempo (“desde que”).",
+      "Essas frases usam o present perfect, típico do “since” temporal.",
+      "Alternativa A."
+    ],
+    "trap": "C pode sugerir causa (“jogamos melhor desde que você entrou”), mas o sentido é temporal.",
+    "retrieval": [
+      "Que tempo verbal acompanha o “since” temporal?",
+      "Como traduzir “since you brought the subject up”?"
+    ],
+    "transfer": "Exercise: write two sentences, one with causal and one with temporal “since”.",
+    "criteria": [
+      "Causal: “Since it’s late, let’s go.”",
+      "Temporal: “I’ve lived here since 2020.”"
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Should we invite someone else [since] you can’t go?"
+      },
+      {
+        "id": "b",
+        "text": "So much has changed in the sport [since] you were a teenager."
+      },
+      {
+        "id": "c",
+        "text": "We’ve played better [since] you joined the team."
+      },
+      {
+        "id": "d",
+        "text": "You haven’t played rugby [since] you left university."
+      },
+      {
+        "id": "e",
+        "text": "It’s been a long time [since] you all went out to eat together."
+      }
+    ],
+    "pages": [
+      6
+    ],
+    "statement": "Leia a tirinha do cartunista Jim Davis para responder às questões 19 e 20.\n\n[Tirinha de Garfield. 1º quadro: Jon, diante de Garfield e Odie: “You two should stop being so competitive.” 2º quadro: Garfield: “Okay, Jon, we will.” 3º quadro: Garfield: “But since you brought the subject up, which one of us would you say was more competitive?”]\n\n(www.gocomics.com)\n\nNo trecho do terceiro quadrinho “But [since] you brought the subject up”, o termo sublinhado foi empregado com o mesmo sentido do termo sublinhado em:",
+    "statementComplete": true
+  },
+  {
+    "number": 21,
+    "topicId": "his_idade_media",
+    "subject": "História",
+    "chapter": "Alta Idade Média e Feudalismo",
+    "title": "Servos e mobilidade na Idade Média",
+    "concept": "Historiografia: revisão da ideia de servo preso à gleba; pré-requisitos: vassalagem (entre nobres) × servidão.",
+    "steps": [
+      "Le Goff diz que os servos raramente eram presos à terra.",
+      "Taxas feudais pesadas os levavam a buscar algo melhor em outro lugar.",
+      "Logo, havia deslocamentos entre senhorias e cidades.",
+      "Vassalagem era a relação entre nobres (suserano e vassalo), não entre senhor e servo.",
+      "Alternativa D."
+    ],
+    "trap": "E usa “vassalagem” para servos; o termo designa o vínculo entre senhores.",
+    "retrieval": [
+      "Que “velha ideia” o autor quer abandonar?",
+      "O que é vassalagem?"
+    ],
+    "transfer": "Exercício autoral: cite um fator que atraía camponeses para as cidades na Baixa Idade Média.",
+    "criteria": [
+      "Comércio e corporações.",
+      "“O ar da cidade liberta.”"
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "as mulheres e os homens dedicavam-se sempre às mesmas atividades produtivas."
+      },
+      {
+        "id": "b",
+        "text": "os servos organizavam-se em corporações em defesa de melhores condições de trabalho."
+      },
+      {
+        "id": "c",
+        "text": "a tributação cobrada pelos senhores era proporcional à produtividade dos servos."
+      },
+      {
+        "id": "d",
+        "text": "os homens e as mulheres deslocavam-se entre feudos e cidades."
+      },
+      {
+        "id": "e",
+        "text": "o vínculo entre senhores e servos era definido pelas relações de vassalagem."
+      }
+    ],
+    "pages": [
+      6
+    ],
+    "statement": "Contrariamente a uma velha ideia bastante difundida, que devemos absolutamente abandonar, os servos eram raramente ligados à terra (à “gleba”). Nas senhorias, principalmente, as taxas recolhidas pelos senhores entre os camponeses — quer dizer, exatamente, as taxas “feudais” — eram pesadas. Os servos eram, portanto, levados a ver se achavam coisa melhor em outro lugar. (Jacques Le Goff. A Idade Média explicada aos meus filhos, 2007.)\n\nO texto trata das relações entre senhores e servos na Idade Média e sustenta que",
+    "statementComplete": true
+  },
+  {
+    "number": 22,
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "chapter": "Vida Urbana e Renascimento Cultural",
+    "title": "Pietà de Michelangelo",
+    "concept": "Renascimento: naturalismo, estudo da anatomia, equilíbrio clássico; pré-requisitos: cronologia (fim do século XV).",
+    "steps": [
+      "A obra é do fim do século XV, auge do Renascimento italiano.",
+      "Michelangelo detalha a anatomia de Cristo com precisão.",
+      "O equilíbrio e a serenidade são clássicos, não barrocos.",
+      "A cena é religiosa, não do cotidiano urbano.",
+      "Alternativa B."
+    ],
+    "trap": "A atribui exagero de sofrimento; o rosto sereno de Maria é justamente anti-barroco.",
+    "retrieval": [
+      "Em que século surge o Barroco?",
+      "Por que os renascentistas estudavam anatomia?"
+    ],
+    "transfer": "Exercício autoral: compare a Pietà com uma escultura barroca.",
+    "criteria": [
+      "Barroco: movimento e dramaticidade.",
+      "Renascimento: equilíbrio."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "do barroco, com o claro exagero na expressão de sofrimento no rosto das figuras sagradas."
+      },
+      {
+        "id": "b",
+        "text": "do renascimento cultural, com o cuidadoso detalhamento da anatomia humana."
+      },
+      {
+        "id": "c",
+        "text": "da arte bizantina, com a simbolização da confiança humana nos desígnios do Criador."
+      },
+      {
+        "id": "d",
+        "text": "da iconografia medieval, com o enaltecimento da força política do cristianismo romano."
+      },
+      {
+        "id": "e",
+        "text": "do humanismo, com a representação de uma cena do cotidiano urbano."
+      }
+    ],
+    "pages": [
+      6
+    ],
+    "statement": "Analise a escultura Pietà, realizada por Michelângelo nos últimos anos do século XV.\n\n[Foto da escultura em mármore: Maria, sentada, sustenta no colo o corpo de Cristo morto; a anatomia de Cristo, os músculos, as veias e o panejamento das vestes são minuciosamente esculpidos; o rosto de Maria é sereno.]\n\n(https://catalogo.michelangelocapelasistina.com.br)\n\nA escultura expressa princípios artísticos",
+    "statementComplete": true
+  },
+  {
+    "number": 23,
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "chapter": "A Mineração no Brasil Colonial",
+    "title": "Corrida do ouro e novo eixo econômico",
+    "concept": "Ciclo do ouro: retração açucareira e migração para Minas; pré-requisitos: centro econômico colonial.",
+    "steps": [
+      "A lavoura canavieira do litoral (Nordeste) entrava em retração.",
+      "Levas de gente iam para as Gerais em busca de ouro.",
+      "Até a capital mudaria para o Rio em 1763.",
+      "O eixo econômico passou do Nordeste ao Sudeste.",
+      "Alternativa E."
+    ],
+    "trap": "C contradiz o texto: 14 mil escravizados já trabalhavam nas minas após onze anos.",
+    "retrieval": [
+      "Por que a capital mudou para o Rio em 1763?",
+      "Que minério atraiu os colonos?"
+    ],
+    "transfer": "Exercício autoral: cite uma consequência da mineração para o interior do Brasil.",
+    "criteria": [
+      "Urbanização (Vila Rica).",
+      "Abastecimento por tropeiros."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "o fim das exportações do açúcar extraído da cana."
+      },
+      {
+        "id": "b",
+        "text": "a intensificação da imigração de brasileiros para a Europa."
+      },
+      {
+        "id": "c",
+        "text": "a redução no emprego da mão de obra de africanos escravizados."
+      },
+      {
+        "id": "d",
+        "text": "a descoberta de minas de esmeralda na região de Minas Gerais."
+      },
+      {
+        "id": "e",
+        "text": "o deslocamento do eixo econômico do Nordeste para o Sudeste."
+      }
+    ],
+    "pages": [
+      7
+    ],
+    "statement": "No final do século XVII a lavoura canavieira do litoral passava por período de retração, e considere-se que, atraídas pelos relatos de riquezas fabulosas, levas de gente corriam para os sertões das Gerais. Das 10 mil pessoas que deixaram Portugal entre 1700 e 1706, a maioria rumava para Minas. Nos fins do século XVI, estimara-se haver no Brasil 14 mil escravizados africanos — número igual ao dos que, após onze anos de povoamento, trabalhavam nas lavras mineiras! (Laura de Mello e Souza. O Jardim das Hespérides: Minas e as visões do mundo natural no século XVIII, 2022. Adaptado.)\n\nO excerto revela um importante processo ocorrido na colonização brasileira, na passagem do século XVI para o XVII, que foi",
+    "statementComplete": true
+  },
+  {
+    "number": 24,
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "chapter": "América Espanhola",
+    "title": "A mita no Peru colonial",
+    "concept": "Mita: trabalho compulsório indígena nas minas (Potosí); pré-requisitos: encomienda e mita.",
+    "steps": [
+      "A mita era o recrutamento forçado de indígenas para trabalhar, sobretudo nas minas.",
+      "Os índios eram levados presos “como malfeitores”.",
+      "Famílias se despediam sem esperança de revê-los.",
+      "O texto liga o trabalho forçado à destruição dos laços familiares.",
+      "Alternativa D."
+    ],
+    "trap": "B toma a comparação “como malfeitores” ao pé da letra: eles não eram criminosos.",
+    "retrieval": [
+      "O que era a mita?",
+      "Onde ficava a principal mina de prata da América espanhola?"
+    ],
+    "transfer": "Exercício autoral: relacione a mita à rebelião de Tupac Amaru.",
+    "criteria": [
+      "Exploração extrema.",
+      "Revolta indígena de 1780."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "as manifestações culturais indígenas e os princípios da religiosidade católica trazidos pelos colonizadores."
+      },
+      {
+        "id": "b",
+        "text": "o aprisionamento de indígenas acusados de crimes contra os colonizadores e a aplicação da pena de morte."
+      },
+      {
+        "id": "c",
+        "text": "a persistência de rituais dos povos nativos e a intolerância religiosa dos colonizadores espanhóis."
+      },
+      {
+        "id": "d",
+        "text": "o trabalho compulsório imposto aos indígenas e a desagregação dos laços familiares e comunitários."
+      },
+      {
+        "id": "e",
+        "text": "a tentativa de colonizadores integrarem os indígenas à sociedade colonial e a resistência dos nativos."
+      }
+    ],
+    "pages": [
+      7
+    ],
+    "statement": "Leia o excerto da crônica de Frei Buenaventura de Salinas y Córdova, do início do século XVII.\n\nNo tempo das “mitas”, é lastimável ver os índios [...] presos como malfeitores, com cordas e argolas de ferro; e as mulheres, os filhos e parentes se despedindo dos templos, deixando fechadas suas casas e os seguindo, dando alarido aos céus, desgrenhando os cabelos, cantando em sua língua tristes canções e lamentos lúgubres, despedindo-se deles, sem esperança de voltar a vê-los. (Apud: Kátia Gerab e Maria Angélica Campos Resende. A rebelião de Tupac Amaru: luta e resistência no Peru do século XVIII, 1987.)\n\nO excerto trata da colonização espanhola do Peru e expõe a relação entre",
+    "statementComplete": true
+  },
+  {
+    "number": 25,
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "chapter": "Revolução Industrial",
+    "title": "Tocqueville em Manchester",
+    "concept": "Revolução Industrial: riqueza e miséria urbana; pré-requisitos: condições de trabalho no século XIX.",
+    "steps": [
+      "“Deste esgoto imundo jorra ouro puro”: imensa riqueza.",
+      "“O homem civilizado torna-se quase um selvagem”: degradação humana.",
+      "As antíteses opõem riqueza e brutalidade da fábrica.",
+      "Não há requinte das instalações nem boa remuneração.",
+      "Alternativa A."
+    ],
+    "trap": "C supõe instalações requintadas; o texto fala em vala e esgoto imundo.",
+    "retrieval": [
+      "Que antíteses aparecem no trecho?",
+      "Como viviam os operários de Manchester?"
+    ],
+    "transfer": "Exercício autoral: cite uma reação operária às condições da Revolução Industrial.",
+    "criteria": [
+      "Ludismo ou cartismo.",
+      "Sindicatos."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "o aumento na produção de riquezas e os efeitos devastadores da organização fabril."
+      },
+      {
+        "id": "b",
+        "text": "a brutalidade da matéria-prima industrial e a sofisticação do produto final."
+      },
+      {
+        "id": "c",
+        "text": "o requinte das instalações industriais e a sujeira provocada pelas fumaças tóxicas."
+      },
+      {
+        "id": "d",
+        "text": "a carência da população urbana e a boa remuneração oferecida pelos industriais."
+      },
+      {
+        "id": "e",
+        "text": "a limitada produtividade da produção industrial e a ampla produção manufatureira."
+      }
+    ],
+    "pages": [
+      7
+    ],
+    "statement": "Leia o trecho de uma observação de Alexis de Tocqueville sobre as fábricas da cidade de Manchester, na Inglaterra, em 1835. Desta vala imunda a maior corrente da indústria humana flui para fertilizar o mundo todo. Deste esgoto imundo jorra ouro puro. Aqui a humanidade atinge o seu mais completo desenvolvimento e sua maior brutalidade, aqui a civilização faz milagres e o homem civilizado torna-se quase um selvagem. (Apud: Eric J. Hobsbawm. A era das revoluções: 1789-1848, 1986.)\n\nEssa observação atesta o contraste entre",
+    "statementComplete": true
+  },
+  {
+    "number": 26,
+    "topicId": "his_brasil_imperio",
+    "subject": "História",
+    "chapter": "Brasil Império: o Declínio do Segundo Reinado",
+    "title": "Abolição na Revista Illustrada",
+    "concept": "Crise do escravismo nos anos 1880; imprensa abolicionista (Angelo Agostini); pré-requisitos: Lei Áurea (1888).",
+    "steps": [
+      "A data é novembro de 1887, meses antes da Lei Áurea.",
+      "O escravizado é disputado por dois grupos de homens brancos.",
+      "Um grupo quer mantê-lo escravo; o outro, libertá-lo.",
+      "É a disputa entre escravistas e abolicionistas.",
+      "Alternativa E."
+    ],
+    "trap": "C reduz a cena a negros × brancos, mas os dois lados em disputa são brancos.",
+    "retrieval": [
+      "Quando foi assinada a Lei Áurea?",
+      "Quem era Angelo Agostini?"
+    ],
+    "transfer": "Exercício autoral: explique por que a imprensa ilustrada foi importante para o abolicionismo.",
+    "criteria": [
+      "Alcance popular da imagem.",
+      "Sátira política."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "liberais e conservadores."
+      },
+      {
+        "id": "b",
+        "text": "monarquistas e republicanos."
+      },
+      {
+        "id": "c",
+        "text": "negros e brancos."
+      },
+      {
+        "id": "d",
+        "text": "racistas e antirracistas."
+      },
+      {
+        "id": "e",
+        "text": "escravistas e abolicionistas."
+      }
+    ],
+    "pages": [
+      7
+    ],
+    "statement": "Analise a imagem, publicada na Revista Illustrada, em 19.11.1887.\n\n[Caricatura: um homem negro, escravizado, é puxado em direções opostas por dois grupos de homens brancos de terno; um dos grupos segura uma bandeira; a cena é um cabo de guerra pelo destino do escravizado.]\n\n(In: Ynaê Lopes dos Santos. História da África e do Brasil afrodescendente, 2017.)\n\nA imagem caracteriza o momento político pelo qual o Brasil passava como uma disputa entre",
+    "statementComplete": true
+  },
+  {
+    "number": 27,
+    "topicId": "por_lit_modernismo",
+    "subject": "Português",
+    "chapter": "Semana de Arte Moderna",
+    "title": "“Juvenilidades Auriverdes”: nacional e universal",
+    "concept": "Modernismo de 1922: brasilidade atualizada pelas vanguardas europeias; pré-requisitos: Pauliceia desvairada.",
+    "steps": [
+      "Os versos enumeram elementos nacionais: bananeiras, araras, sabiás, cajus.",
+      "Esses elementos “almejam localizar-se” na “celebração do Universal”.",
+      "O projeto é inserir o Brasil no cenário moderno internacional.",
+      "Conciliar nacional e universal foi marca da Semana de 1922.",
+      "Alternativa C."
+    ],
+    "trap": "A lembra o ufanismo romântico, mas o poema não exalta a pátria por si: quer levá-la ao universal, com ironia vanguardista.",
+    "retrieval": [
+      "Que elementos nacionais aparecem nos versos?",
+      "O que o “Universal” representa no poema?"
+    ],
+    "transfer": "Exercício autoral: relacione o poema ao Manifesto Antropófago.",
+    "criteria": [
+      "Devorar o estrangeiro.",
+      "Produzir arte brasileira moderna."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a celebração ufanista das riquezas pátrias."
+      },
+      {
+        "id": "b",
+        "text": "a defesa da sustentabilidade e do mundo natural."
+      },
+      {
+        "id": "c",
+        "text": "o esforço de conciliar o nacional e o internacional."
+      },
+      {
+        "id": "d",
+        "text": "a valorização da arte naturalista."
+      },
+      {
+        "id": "e",
+        "text": "o empenho em conectar o ser humano à natureza."
+      }
+    ],
+    "pages": [
+      8
+    ],
+    "statement": "Nós somos as Juvenilidades Auriverdes!\nAs franjadas flâmulas das bananeiras,\nas esmeraldas das araras,\nos rubis dos colibris,\nos lirismos dos sabiás e das jandaias,\nos abacaxis, as mangas, os cajus\nalmejam localizar-se triunfantemente,\nna fremente celebração do Universal!...\n\n(Mário de Andrade. Poesias completas, 2013.)\n\nOs versos do poema de Mário de Andrade, originalmente publicado em 1922, apresentam como uma das principais características da Semana de Arte Moderna",
+    "statementComplete": true
+  },
+  {
+    "number": 28,
+    "topicId": "his_guerra_fria_contemporaneo",
+    "subject": "História",
+    "chapter": "Descolonização Afro-Asiática",
+    "title": "Pan-africanismo e negritude",
+    "concept": "Pan-africanismo e negritude como base ideológica da descolonização; pré-requisitos: diáspora atlântica.",
+    "steps": [
+      "O texto liga os movimentos de libertação à ideia de unidade africana.",
+      "Essa unidade nasce da experiência comum da colonização.",
+      "A negritude valoriza traços culturais compartilhados de africanos e afro-americanos.",
+      "Ou seja, emancipação e consciência de uma história comum caminham juntas.",
+      "Alternativa E."
+    ],
+    "trap": "B atribui ao texto uma orientação socialista que ele não menciona.",
+    "retrieval": [
+      "O que é pan-africanismo?",
+      "Quem cunhou o termo “negritude”?"
+    ],
+    "transfer": "Exercício autoral: cite um líder ligado ao pan-africanismo.",
+    "criteria": [
+      "Ex.: Kwame Nkrumah.",
+      "Gana, 1957."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "critica os comportamentos racistas dos colonizadores europeus na África do Norte e no Oriente Médio."
+      },
+      {
+        "id": "b",
+        "text": "caracteriza a luta independentista como um movimento popular e defensor de princípios socialistas."
+      },
+      {
+        "id": "c",
+        "text": "aponta o caráter pacífico das mobilizações emancipacionistas nas áreas de domínio colonial europeu."
+      },
+      {
+        "id": "d",
+        "text": "acentua as diferenças entre as experiências das colonizações europeias na América e na África."
+      },
+      {
+        "id": "e",
+        "text": "indica a conexão entre emancipacionismo e consciência de semelhanças históricas entre os povos africanos."
+      }
+    ],
+    "pages": [
+      8
+    ],
+    "statement": "Junto com os movimentos de libertação cresceu a ideia de uma unidade africana, só possível de ser criada a partir dos efeitos da colonização, e que foi batizada com o nome de “pan-africanismo”. Por trás dessa ideia havia um forte sentimento anticolonial, e de valorização do que foi chamado de “negritude”, ou seja, um conjunto de características culturais próprias das sociedades africanas e afro-americanas, formadas a partir da diáspora atlântica. (Marina de Mello e Souza. África e Brasil africano, 2007.)\n\nAo analisar os processos de independência na África do século XX, o excerto",
+    "statementComplete": true
+  },
+  {
+    "number": 29,
+    "topicId": "his_guerra_fria_contemporaneo",
+    "subject": "História",
+    "chapter": "Guerra Fria",
+    "title": "Maio de 1968 e a democracia",
+    "concept": "Democracia como regime que institucionaliza o conflito (Lefort); pré-requisitos: Maio de 1968 na França.",
+    "steps": [
+      "O autor admite que o movimento era estudantil, mas diz que esse não foi o motivo principal.",
+      "O decisivo foi que a democracia dá lugar ao conflito, por mais intenso que seja.",
+      "O regime absorve o dissenso em vez de ser derrubado por ele.",
+      "Democracia é, portanto, espaço de disputa legítima.",
+      "Alternativa A."
+    ],
+    "trap": "B recolhe o argumento que o autor relativiza (“não apenas porque”) e o transforma na tese.",
+    "retrieval": [
+      "Por que o movimento não virou revolução, segundo o autor?",
+      "O que aconteceu na França em maio de 1968?"
+    ],
+    "transfer": "Exercício autoral: explique a frase “o conflito encontra lugar na democracia”.",
+    "criteria": [
+      "Eleições, greves, protestos legais.",
+      "Contestação sem ruptura."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "caracteriza a democracia como um espaço de dissensos e disputas lícitas."
+      },
+      {
+        "id": "b",
+        "text": "reconhece a fragilidade de uma mobilização meramente estudantil."
+      },
+      {
+        "id": "c",
+        "text": "nega o caráter democrático do movimento dos estudantes."
+      },
+      {
+        "id": "d",
+        "text": "critica o comportamento autoritário e belicoso dos líderes do movimento."
+      },
+      {
+        "id": "e",
+        "text": "destaca a violenta repressão política sofrida pelo movimento dos estudantes."
+      }
+    ],
+    "pages": [
+      8
+    ],
+    "statement": "Se o movimento de maio de 1968 não foi a origem de uma revolução, isso não ocorreu apenas porque era essencialmente um movimento de estudantes; foi, acima de tudo, porque a democracia é esse regime no qual o conflito, por mais intenso que seja, geralmente encontra lugar. (Claude Lefort. “Relecture”. In: Edgar Morin et al. Mai 68: la brèche, suivi de Vingt ans après, 1988. Adaptado.)\n\nAo avaliar o impacto do movimento estudantil francês de maio de 1968, o excerto",
+    "statementComplete": true
+  },
+  {
+    "number": 30,
+    "topicId": "his_republica_liberal_atual",
+    "subject": "História",
+    "chapter": "O Brasil Atual",
+    "title": "O que fazer com a democracia",
+    "concept": "Nova República e crise democrática recente; pré-requisitos: redemocratização (1985-1988).",
+    "steps": [
+      "O autor diz que a redemocratização “se encerrou”: não está incompleta.",
+      "A questão agora é “o que fazer” com a democracia.",
+      "Também é preciso buscar autonomia nos arranjos globais.",
+      "Ele propõe pensar os rumos da democracia.",
+      "Alternativa B."
+    ],
+    "trap": "A contradiz o texto, que afirma encerrada a redemocratização; E erra ao falar em democracia “implantada durante o regime militar”.",
+    "retrieval": [
+      "Quando se encerrou a redemocratização, segundo o autor?",
+      "Por que a democracia estaria “em risco”?"
+    ],
+    "transfer": "Exercício autoral: cite um marco da redemocratização brasileira.",
+    "criteria": [
+      "Constituição de 1988.",
+      "Diretas Já ou eleição de 1989."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "atesta a incompletude do processo de redemocratização iniciado após o regime militar."
+      },
+      {
+        "id": "b",
+        "text": "defende a necessidade de pensar os rumos da democracia brasileira."
+      },
+      {
+        "id": "c",
+        "text": "valoriza a ampla autonomia político-econômica alcançada pelo país no plano internacional."
+      },
+      {
+        "id": "d",
+        "text": "critica a participação do país na dinâmica mercantil do mundo globalizado."
+      },
+      {
+        "id": "e",
+        "text": "reconhece o fracasso do modelo democrático implantado durante o regime militar."
+      }
+    ],
+    "pages": [
+      8
+    ],
+    "statement": "A democracia está novamente em risco. Mas o processo de redemocratização propriamente dito se encerrou. Agora, a questão não é mais como implantar a democracia, e sim o que fazer com ela. E como encontrar um lugar para o país nos arranjos globais que lhe permita alcançar o máximo de autonomia possível. (Marcos Nobre. Limites da democracia, 2022. Adaptado.)\n\nReferindo-se ao Brasil de 2013 a 2022, o excerto",
+    "statementComplete": true
+  },
+  {
+    "number": 31,
+    "topicId": "geo_globalizacao_economica",
+    "subject": "Geografia",
+    "chapter": "Unilateralismo e Multilateralismo",
+    "title": "Funções da OMC",
+    "concept": "OMC (1995): regras e solução de controvérsias do comércio multilateral; pré-requisitos: FMI e Banco Mundial.",
+    "steps": [
+      "O memorando foi assinado na OMC para ajustar quotas tarifárias.",
+      "A OMC administra acordos comerciais entre os membros.",
+      "Empréstimos são papel do FMI e do Banco Mundial.",
+      "O padrão dólar-ouro foi definido em Bretton Woods (1944) e abandonado em 1971.",
+      "Alternativa D."
+    ],
+    "trap": "A descreve o FMI, não a OMC.",
+    "retrieval": [
+      "Que instituição concede empréstimos a países em crise?",
+      "O que são quotas tarifárias?"
+    ],
+    "transfer": "Exercício autoral: explique o que é o Órgão de Solução de Controvérsias da OMC.",
+    "criteria": [
+      "Julga disputas comerciais.",
+      "Autoriza retaliações."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "oferecer empréstimos a países emergentes."
+      },
+      {
+        "id": "b",
+        "text": "estabelecer o sistema de flutuação do padrão dólar-ouro."
+      },
+      {
+        "id": "c",
+        "text": "estruturar a inclusão de países subdesenvolvidos em blocos econômicos."
+      },
+      {
+        "id": "d",
+        "text": "gerenciar acordos que compõem o sistema multilateral de comércio."
+      },
+      {
+        "id": "e",
+        "text": "promover a paridade cambial do poder de compra."
+      }
+    ],
+    "pages": [
+      9
+    ],
+    "statement": "O Brasil e o Reino Unido concluíram as negociações referentes à repartição do volume das quotas tarifárias de importação (TRQs) da União Europeia (UE) entre o bloco europeu e o Reino Unido, em decorrência da saída do Reino Unido do bloco (Brexit). Um memorando de entendimento nesse sentido foi assinado em 17 de novembro de 2022 na Organização Mundial do Comércio (OMC). Esses ajustes garantirão que o Brexit não prejudicará os fluxos comerciais regulares do Brasil com a UE e com o Reino Unido, de produtos agrícolas e não agrícolas. (www.cnnbrasil.com.br, 18.11.2022. Adaptado.)\n\nConsiderando o excerto, uma das funções da Organização Mundial do Comércio é",
+    "statementComplete": true
+  },
+  {
+    "number": 32,
+    "topicId": "geo_globalizacao_economica",
+    "subject": "Geografia",
+    "chapter": "Desigualdades Globais",
+    "title": "Coeficiente de Gini por região",
+    "concept": "Coeficiente de Gini: 0 = igualdade, 1 = desigualdade máxima; pré-requisitos: comparar séries.",
+    "steps": [
+      "América Latina e Caribe: 0,474 em 1990 e 0,455 em 2018 — queda.",
+      "Ásia caiu (0,362 → 0,349), não aumentou.",
+      "Europa tem os menores índices, não os maiores.",
+      "A América do Norte e a África subiram: não houve queda em todas as regiões, e Gini maior não é renda uniforme.",
+      "Alternativa C."
+    ],
+    "trap": "E confunde: o Gini da América do Norte subiu para 0,415, o que indica renda mais concentrada.",
+    "retrieval": [
+      "O que mede o coeficiente de Gini?",
+      "Que região tem os menores índices?"
+    ],
+    "transfer": "Exercício autoral: calcule a variação do Gini da América do Norte.",
+    "criteria": [
+      "0,415 − 0,346.",
+      "+0,069."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a expansão das relações econômicas entre os países asiáticos ampliou a concentração de renda."
+      },
+      {
+        "id": "b",
+        "text": "os efeitos das crises econômicas produziram na Europa os maiores índices de desigualdade de renda."
+      },
+      {
+        "id": "c",
+        "text": "a América Latina e o Caribe apresentaram diminuição na concentração de renda."
+      },
+      {
+        "id": "d",
+        "text": "a desigualdade de renda foi reduzida em todas as áreas continentais."
+      },
+      {
+        "id": "e",
+        "text": "o crescimento econômico na América do Norte ampliou a renda de forma uniforme."
+      }
+    ],
+    "pages": [
+      9
+    ],
+    "statement": "[Gráfico de barras: “A desigualdade por região: coeficiente de Gini”, em 1990, 2000, 2010 e 2018.\nMundo — 0,416; 0,423; 0,383; 0,376\nAmérica Latina e Caribe — 0,474; 0,514; 0,483; 0,455\nÁfrica — 0,437; 0,437; 0,435; 0,438\nÁsia — 0,362; 0,359; 0,362; 0,349\nEuropa — 0,270; 0,340; 0,316; 0,316\nOriente Médio — 0,408; 0,388; 0,380; 0,373\nAmérica do Norte — 0,346; 0,368; 0,370; 0,415]\n\n(Nora Lustig. https://nuso.org, dezembro de 2020.)\n\nA partir de conhecimentos sobre indicadores sociais e da análise do gráfico, os dados apresentados indicam que, entre 1990 e 2018,",
+    "statementComplete": true
+  },
+  {
+    "number": 33,
+    "topicId": "geo_economica_brasil",
+    "subject": "Geografia",
+    "chapter": "O Espaço Agrário Brasileiro",
+    "title": "Expansão da cana em São Paulo",
+    "concept": "Expansão sucroalcooleira (Proálcool, etanol, carro flex); pré-requisitos: leitura de mapas coropléticos.",
+    "steps": [
+      "Em 2015 a mancha escura concentra-se no interior de São Paulo.",
+      "A cana avançou também para o Centro-Oeste, em vez de recuar.",
+      "Na Amazônia há pouca área plantada.",
+      "A Zona da Mata perdeu importância relativa.",
+      "Alternativa B."
+    ],
+    "trap": "C remete à geografia colonial da cana; os mapas de 2015 mostram outro centro.",
+    "retrieval": [
+      "Que fatores impulsionaram o etanol nos anos 2000?",
+      "Para onde a cana se expandiu além de São Paulo?"
+    ],
+    "transfer": "Exercício autoral: cite um impacto ambiental da expansão canavieira.",
+    "criteria": [
+      "Queimadas (antes da colheita mecanizada).",
+      "Substituição de pastagens e Cerrado."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "cresceu de modo intenso na região amazônica."
+      },
+      {
+        "id": "b",
+        "text": "expandiu-se no interior do Estado de São Paulo."
+      },
+      {
+        "id": "c",
+        "text": "concentrou-se nas áreas da Zona da Mata Nordestina."
+      },
+      {
+        "id": "d",
+        "text": "sofreu redução na região Centro-Oeste."
+      },
+      {
+        "id": "e",
+        "text": "sofreu retração na região Sudeste."
+      }
+    ],
+    "pages": [
+      9
+    ],
+    "statement": "Analise os mapas, que mostram a área plantada (em hectare) da produção de cana-de-açúcar em 1990 e 2015.\n\n[Dois mapas do Brasil por municípios, em tons de cinza (mais escuro = maior área plantada). Em 1990, as maiores áreas aparecem no litoral nordestino e em parte de São Paulo, de forma dispersa. Em 2015, há forte concentração de municípios escuros no interior paulista e em áreas vizinhas de Minas Gerais, Goiás e Mato Grosso do Sul.]\n\n(Pedro D. M. Neves et al. https://journals.openedition.org, 2020.)\n\nEntre 1990 e 2015, a produção canavieira no Brasil",
+    "statementComplete": true
+  },
+  {
+    "number": 34,
+    "topicId": "soc_trabalho_sociedade",
+    "subject": "Sociologia",
+    "chapter": "Transformações no Mundo do Trabalho",
+    "title": "IA e desemprego estrutural",
+    "concept": "Desemprego estrutural (tecnológico) × conjuntural (crise); pré-requisitos: automação.",
+    "steps": [
+      "Automação e IA podem redesenhar 70% do trabalho em muitos municípios.",
+      "Postos substituídos por máquinas deixam de existir.",
+      "Isso não depende do ciclo econômico: é desemprego estrutural.",
+      "Não reduz a dependência tecnológica nem aumenta o trabalho formal.",
+      "Alternativa E."
+    ],
+    "trap": "B fala em desemprego conjuntural, ligado a crises passageiras, não à mudança tecnológica.",
+    "retrieval": [
+      "Qual a diferença entre desemprego estrutural e conjuntural?",
+      "Quais empregos são mais vulneráveis à automação?"
+    ],
+    "transfer": "Exercício autoral: proponha uma política para reduzir o desemprego tecnológico.",
+    "criteria": [
+      "Requalificação profissional.",
+      "Educação técnica."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "menor dependência de tecnologia de ponta."
+      },
+      {
+        "id": "b",
+        "text": "redução do desemprego conjuntural."
+      },
+      {
+        "id": "c",
+        "text": "diminuição do trabalho informal."
+      },
+      {
+        "id": "d",
+        "text": "crescimento do trabalho formal."
+      },
+      {
+        "id": "e",
+        "text": "aumento do desemprego estrutural."
+      }
+    ],
+    "pages": [
+      10
+    ],
+    "statement": "No programa Roda Viva, o cientista Silvio Meira falou sobre o impacto da inteligência artificial nos empregos, principalmente em trabalhos com salários mais baixos. “Estudos mostram que cerca de 70% do trabalho em 60% dos municípios brasileiros pode ser redesenhado por uma combinação de automação, robotização e inteligência artificial [...]”, afirma. (https://cultura.uol.com.br, 24.07.2023.)\n\nO contexto apresentado pelo cientista indica que a inteligência artificial produzirá",
+    "statementComplete": true
+  },
+  {
+    "number": 35,
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "chapter": "Geologia e Geomorfologia",
+    "title": "Fossa oceânica na subducção",
+    "concept": "Limites convergentes oceano-continente: fossa, arco vulcânico, zona de Benioff; pré-requisitos: dorsal = limite divergente.",
+    "steps": [
+      "O diagrama mostra subducção: uma placa mergulha sob a outra.",
+      "No ponto de mergulho, o fundo oceânico forma uma depressão profunda e alongada.",
+      "Essa feição é a fossa oceânica.",
+      "Dorsais surgem em limites divergentes; dobramentos ocorrem na placa continental.",
+      "Alternativa A."
+    ],
+    "trap": "D usa “depressão relativa”, termo do relevo continental (abaixo do entorno, acima do nível do mar).",
+    "retrieval": [
+      "Onde fica a Fossa das Marianas?",
+      "Que tipo de limite gera dorsais?"
+    ],
+    "transfer": "Exercício autoral: explique por que há vulcões na placa continental.",
+    "criteria": [
+      "A placa oceânica funde-se em profundidade.",
+      "O magma sobe."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma fossa oceânica."
+      },
+      {
+        "id": "b",
+        "text": "um dobramento."
+      },
+      {
+        "id": "c",
+        "text": "uma dorsal meso-oceânica."
+      },
+      {
+        "id": "d",
+        "text": "uma depressão relativa."
+      },
+      {
+        "id": "e",
+        "text": "uma plataforma continental."
+      }
+    ],
+    "pages": [
+      10
+    ],
+    "statement": "[Bloco-diagrama: uma placa oceânica mergulha sob uma placa continental (placa em subducção), com a zona de Benioff, terremotos (X) e vulcões na placa continental; a profundidade da placa tectônica é de 48-96 km. A área 1, destacada no alto, é a depressão no fundo do mar exatamente onde a placa oceânica começa a mergulhar.]\n\n(www.creationscience.com. Adaptado.)\n\nA área em 1, na imagem, ilustra a formação de",
+    "statementComplete": true
+  },
+  {
+    "number": 36,
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "chapter": "Desafios Ambientais do Século XXI",
+    "title": "Incêndios e mudanças climáticas",
+    "concept": "Retroalimentação clima-fogo: calor e secas mais intensos favorecem incêndios; pré-requisitos: aquecimento global.",
+    "steps": [
+      "O texto mostra aumento dos incêndios florestais em 20 anos.",
+      "Temperaturas maiores e secas prolongadas deixam a vegetação mais inflamável.",
+      "Esses são efeitos das mudanças climáticas.",
+      "Agroflorestas e terraceamento são práticas de conservação.",
+      "Alternativa D."
+    ],
+    "trap": "B cita correntes convectivas, que são processo atmosférico normal, não causa do agravamento.",
+    "retrieval": [
+      "Por que incêndios liberam mais CO₂?",
+      "Que práticas agrícolas conservam o solo?"
+    ],
+    "transfer": "Exercício autoral: explique o ciclo vicioso entre incêndios e aquecimento.",
+    "criteria": [
+      "Fogo emite CO₂.",
+      "Mais calor, mais fogo."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "à expansão das agroflorestas."
+      },
+      {
+        "id": "b",
+        "text": "à formação de correntes convectivas."
+      },
+      {
+        "id": "c",
+        "text": "ao uso da técnica agrícola de terraceamento."
+      },
+      {
+        "id": "d",
+        "text": "aos efeitos das mudanças climáticas."
+      },
+      {
+        "id": "e",
+        "text": "à redução dos sistemas de irrigação."
+      }
+    ],
+    "pages": [
+      10
+    ],
+    "statement": "A partir de dados de um novo estudo conduzido por pesquisadores da Universidade de Maryland, o Global Forest Watch identificou que os incêndios florestais causaram 3 milhões de hectares a mais de perda anual de cobertura florestal em 2021 em comparação a 2001 — uma área equivalente ao território da Bélgica — e foram responsáveis por mais de um quarto de toda a perda de cobertura vegetal dos últimos 20 anos. (James MacCarthy et al. www.wribrasil.org.br, 17.08.2022.)\n\nUma das possíveis causas do agravamento da perda da cobertura florestal apresentada no excerto diz respeito",
+    "statementComplete": true
+  },
+  {
+    "number": 37,
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "chapter": "Dinâmica Climática",
+    "title": "Furacões e água oceânica quente",
+    "concept": "Ciclones tropicais: água quente (≥ 26-27 °C), baixa pressão, umidade; pré-requisitos: calor latente.",
+    "steps": [
+      "Furacões se alimentam do calor e da umidade do oceano.",
+      "Quanto mais quente a água, mais evaporação e mais energia.",
+      "Eles se formam em baixa pressão, não em alta.",
+      "Ao chegar a latitudes altas ou à terra, enfraquecem.",
+      "Alternativa C."
+    ],
+    "trap": "D inverte: o olho do furacão é um centro de baixíssima pressão.",
+    "retrieval": [
+      "Qual temperatura mínima da água favorece furacões?",
+      "Por que perdem força sobre o continente?"
+    ],
+    "transfer": "Exercício autoral: relacione aquecimento global e furacões mais intensos.",
+    "criteria": [
+      "Oceanos mais quentes.",
+      "Mais energia disponível."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "a presença de ventos contra-alísios."
+      },
+      {
+        "id": "b",
+        "text": "o seu trajeto em áreas de elevada latitude."
+      },
+      {
+        "id": "c",
+        "text": "a temperatura elevada da água oceânica."
+      },
+      {
+        "id": "d",
+        "text": "a sua formação em zona de alta pressão."
+      },
+      {
+        "id": "e",
+        "text": "o baixo índice de umidade."
+      }
+    ],
+    "pages": [
+      10
+    ],
+    "statement": "[Escala de ventos de furacões Saffir-Simpson: Categoria 1 — 119-153 km/h — danos em telhados, postes e cabos elétricos; possíveis apagões. Categoria 2 — 154-177 km/h — danos graves em telhados e revestimentos; apagões quase totais. Categoria 3 — 178-208 km/h — danos devastadores; energia e água interrompidas por dias ou semanas. Categoria 4 — 209-251 km/h — danos estruturais; áreas bloqueadas por árvores e postes. Categoria 5 — 252 km/h — casas destruídas; região inabitável por semanas ou meses.]\n\n(Camila Costa et al. www.bbc.com, 26.08.2020.)\n\nEntre os aspectos naturais que influenciam a intensidade de um furacão está",
+    "statementComplete": true
+  },
+  {
+    "number": 38,
+    "topicId": "geo_economica_brasil",
+    "subject": "Geografia",
+    "chapter": "Matriz Energética",
+    "title": "Biomassa de açaí na Amazônia",
+    "concept": "Energia de biomassa: renovável, substitui geradores a diesel; pré-requisitos: ciclo do carbono.",
+    "steps": [
+      "Comunidades isoladas costumam usar geradores a diesel.",
+      "O bagaço do açaí é resíduo orgânico renovável.",
+      "O CO₂ liberado foi absorvido pela planta ao crescer.",
+      "Substituir o diesel reduz emissões de gases de efeito estufa.",
+      "Alternativa E."
+    ],
+    "trap": "D contradiz o texto: a proposta é justamente usar matéria orgânica vegetal.",
+    "retrieval": [
+      "Por que a biomassa é considerada renovável?",
+      "Que combustível ela substitui nessas comunidades?"
+    ],
+    "transfer": "Exercício autoral: cite uma vantagem social do projeto.",
+    "criteria": [
+      "Energia elétrica local.",
+      "Aproveitamento de resíduo da economia regional."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "satisfazer a demanda por placas fotovoltaicas."
+      },
+      {
+        "id": "b",
+        "text": "estimular o consumo de gases CFC."
+      },
+      {
+        "id": "c",
+        "text": "aumentar a dependência de recursos não-renováveis."
+      },
+      {
+        "id": "d",
+        "text": "reduzir a utilização de matéria orgânica vegetal."
+      },
+      {
+        "id": "e",
+        "text": "diminuir a emissão de gases do efeito estufa."
+      }
+    ],
+    "pages": [
+      11
+    ],
+    "statement": "Um estudo experimental publicado na revista científica Matéria desenvolveu um gerador de energia movido a biomassa e que pode ser uma solução elétrica eficiente e segura para comunidades isoladas da Amazônia. No caso das comunidades paraenses, o bagaço do açaí tem um grande potencial para ser utilizado como biomassa. (Lucas Zacari. www.nexojornal.com.br, 01.08.2023. Adaptado.)\n\nConsiderando o excerto, o uso da biomassa nas comunidades isoladas da Amazônia visa",
+    "statementComplete": true
+  },
+  {
+    "number": 39,
+    "topicId": "geo_cartografia",
+    "subject": "Geografia",
+    "chapter": "Cartografia Digital",
+    "title": "Imagem aérea × imagem de satélite",
+    "concept": "Sensoriamento remoto: altitude da plataforma, resolução e área coberta; pré-requisitos: aerofotogrametria.",
+    "steps": [
+      "Imagens aéreas são feitas por aviões ou drones, a centenas ou milhares de metros.",
+      "Satélites orbitam a centenas de quilômetros.",
+      "Logo, a imagem aérea é captada a menor distância.",
+      "Satélites cobrem áreas grandes; sensores ativos funcionam com tempo nublado.",
+      "Alternativa B."
+    ],
+    "trap": "E inverte a escala: satélites cobrem áreas amplas.",
+    "retrieval": [
+      "Qual plataforma está mais distante da superfície?",
+      "Por que imagens aéreas costumam ter mais detalhe?"
+    ],
+    "transfer": "Exercício autoral: cite um uso adequado de drone e um de satélite.",
+    "criteria": [
+      "Drone: cadastro urbano de bairro.",
+      "Satélite: monitorar desmatamento."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "as imagens aéreas não dependem de drones ou aviões."
+      },
+      {
+        "id": "b",
+        "text": "a imagem aérea capta a superfície terrestre a uma menor distância."
+      },
+      {
+        "id": "c",
+        "text": "as imagens de satélite não são obtidas durante tempestades."
+      },
+      {
+        "id": "d",
+        "text": "a imagem aérea não depende do ângulo da fotografia."
+      },
+      {
+        "id": "e",
+        "text": "as imagens de satélite cobrem áreas reduzidas."
+      }
+    ],
+    "pages": [
+      11
+    ],
+    "statement": "Imagens aéreas e imagens de satélite são dois tipos de fotos tiradas de um ponto de vista acima do solo. Embora possam ser utilizadas para funções como mapeamento e identificação de características geográficas, elas também possuem diferenças distintas. (www.baseaerofoto.com.br)\n\nUma das diferenças entre as imagens aéreas e as de satélite é que",
+    "statementComplete": true
+  },
+  {
+    "number": 40,
+    "topicId": "geo_cartografia",
+    "subject": "Geografia",
+    "chapter": "Representações Gráficas e Cartográficas",
+    "title": "Anamorfose do PIB",
+    "concept": "Anamorfose: área deformada proporcionalmente a uma variável; pré-requisitos: tipos de mapa.",
+    "steps": [
+      "A área de cada país muda conforme o PIB.",
+      "Essa deformação proposital caracteriza a anamorfose.",
+      "Carta topográfica e mapa hipsométrico representam relevo.",
+      "Planta representa área pequena em escala grande.",
+      "Alternativa D."
+    ],
+    "trap": "B (mapa ordenado) usa cores ou tons por classe, sem deformar a área.",
+    "retrieval": [
+      "O que é uma anamorfose?",
+      "Que mapa representa altitudes por cores?"
+    ],
+    "transfer": "Exercício autoral: como apareceria o Brasil numa anamorfose da população?",
+    "criteria": [
+      "Maior que a África do Sul e menor que a Índia.",
+      "Área proporcional aos habitantes."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma carta topográfica."
+      },
+      {
+        "id": "b",
+        "text": "um mapa ordenado."
+      },
+      {
+        "id": "c",
+        "text": "uma planta."
+      },
+      {
+        "id": "d",
+        "text": "uma anamorfose."
+      },
+      {
+        "id": "e",
+        "text": "um mapa hipsométrico."
+      }
+    ],
+    "pages": [
+      11
+    ],
+    "statement": "Um professor que deseja apresentar para seus alunos a diferença do Produto Interno Bruto (PIB) entre países escolhe uma representação cartográfica na qual a área do país sofre uma deformação proporcional ao valor do PIB. Considerando as características apresentadas, a representação cartográfica escolhida pelo professor é",
+    "statementComplete": true
+  },
+  {
+    "number": 41,
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "chapter": "Dinâmica de Populações",
+    "title": "Daphnia: crescimento e colapso",
+    "concept": "Crescimento populacional em sistema fechado: esgotamento de recursos e resistência do meio; pré-requisitos: competição intraespecífica.",
+    "steps": [
+      "No tubo fechado, os nutrientes não são repostos.",
+      "Até o pico (~50 dias), a população cresce com recursos sobrando.",
+      "Depois, muitos indivíduos disputam pouco alimento: competição intensa.",
+      "A população despenca; não há estabilidade após 80 dias.",
+      "Alternativa A."
+    ],
+    "trap": "D descreve uma curva logística que se estabiliza; aqui a população continua caindo.",
+    "retrieval": [
+      "Por que a população cai depois do pico?",
+      "O que é resistência do meio?"
+    ],
+    "transfer": "Exercício autoral: desenhe a curva esperada se os nutrientes fossem repostos.",
+    "criteria": [
+      "Curva em S.",
+      "Estabilidade na capacidade de suporte."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "após 50 dias a competição por nutrientes foi mais intensa entre os microcrustáceos."
+      },
+      {
+        "id": "b",
+        "text": "durante os 140 dias houve abundância de recursos para todos os microcrustáceos."
+      },
+      {
+        "id": "c",
+        "text": "até 20 dias a população de microcrustáceos estava sob forte resistência do meio."
+      },
+      {
+        "id": "d",
+        "text": "após 80 dias a população de microcrustáceos entrou em estabilidade dinâmica."
+      },
+      {
+        "id": "e",
+        "text": "até 40 dias houve intensa sobreposição de nichos entre os microcrustáceos."
+      }
+    ],
+    "pages": [
+      11
+    ],
+    "statement": "Uma população de microcrustáceos (Daphnia sp.) foi mantida em tubo de ensaio com nutrientes e condições ideais de temperatura e pH da água. Durante 140 dias, o crescimento dessa população foi quantificado, e os dados obtidos foram inseridos no gráfico.\n\n[Gráfico: número de microcrustáceos por 50 mL × tempo (dias). A população cresce devagar até cerca de 40 dias, sobe rapidamente até um pico de cerca de 145 indivíduos por volta de 50 dias (linha tracejada) e depois cai continuamente até perto de zero aos 140 dias.]\n\nA análise do gráfico permite concluir que",
+    "statementComplete": true
+  },
+  {
+    "number": 42,
+    "topicId": "bio_estrutura_fisio_celular",
+    "subject": "Biologia",
+    "chapter": "Citoplasma: Estrutura e Componentes I",
+    "title": "Glicocálice: síntese e função",
+    "concept": "Via secretora: RER (proteínas) → Golgi (glicosilação) → membrana; glicocálice no reconhecimento celular; pré-requisitos: organelas.",
+    "steps": [
+      "Proteínas de exportação são feitas por ribossomos aderidos ao retículo granular (RER).",
+      "No complexo golgiense, recebem os açúcares (glicosilação).",
+      "Vesículas levam as glicoproteínas à membrana.",
+      "O glicocálice atua no reconhecimento celular (ex.: grupos sanguíneos, imunidade).",
+      "Alternativa E."
+    ],
+    "trap": "C troca o retículo granular pelo agranular, que produz lipídios, não proteínas.",
+    "retrieval": [
+      "Qual retículo tem ribossomos aderidos?",
+      "Dê um exemplo de reconhecimento celular."
+    ],
+    "transfer": "Exercício autoral: explique a função dos lisossomos.",
+    "criteria": [
+      "Digestão intracelular.",
+      "Enzimas hidrolíticas."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "ribossomos – citoplasma – retículo endoplasmático agranular – transporte ativo."
+      },
+      {
+        "id": "b",
+        "text": "lisossomos – complexo golgiense – retículo endoplasmático agranular – reconhecimento celular."
+      },
+      {
+        "id": "c",
+        "text": "ribossomos – retículo endoplasmático agranular – complexo golgiense – deslocamento celular."
+      },
+      {
+        "id": "d",
+        "text": "lisossomos – complexo golgiense – retículo endoplasmático granular – transporte ativo."
+      },
+      {
+        "id": "e",
+        "text": "ribossomos – retículo endoplasmático granular – complexo golgiense – reconhecimento celular."
+      }
+    ],
+    "pages": [
+      11
+    ],
+    "statement": "A superfície externa da membrana plasmática das células animais apresenta uma grande quantidade de glicoproteínas que compõem o glicocálice. Essas moléculas são sintetizadas no citoplasma e exportadas para a superfície da membrana plasmática. A parte proteica de uma glicoproteína é sintetizada pelos ______ do ______, e a parte glicídica é sintetizada no ______. Uma das funções do glicocálice é atuar no ______.\n\nAs lacunas do texto são preenchidas, respectivamente, por:",
+    "statementComplete": true
+  },
+  {
+    "number": 43,
+    "topicId": "bio_botanica",
+    "subject": "Biologia",
+    "chapter": "Fungos",
+    "title": "Candida albicans: fungo",
+    "concept": "Fungos: eucariontes, heterótrofos, digestão extracelular por enzimas liberadas; pré-requisitos: levedura é fungo unicelular.",
+    "steps": [
+      "Leveduras são fungos: eucariontes.",
+      "Não fazem fotossíntese: heterótrofos.",
+      "Liberam enzimas no meio e absorvem os nutrientes já digeridos.",
+      "Essa é a digestão extracelular, por absorção.",
+      "Alternativa C."
+    ],
+    "trap": "B acerta a digestão externa, mas fungos não são procariontes.",
+    "retrieval": [
+      "Que tipo de célula têm os fungos?",
+      "Como os fungos obtêm alimento?"
+    ],
+    "transfer": "Exercício autoral: explique por que antibióticos não tratam candidíase.",
+    "criteria": [
+      "Antibióticos atuam em bactérias.",
+      "Fungos exigem antifúngicos."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "eucarionte, autótrofo e realiza digestão intracorpórea."
+      },
+      {
+        "id": "b",
+        "text": "procarionte, heterótrofo e realiza digestão extracorpórea."
+      },
+      {
+        "id": "c",
+        "text": "eucarionte, heterótrofo e realiza digestão extracelular."
+      },
+      {
+        "id": "d",
+        "text": "procarionte, autótrofo e realiza digestão extracelular."
+      },
+      {
+        "id": "e",
+        "text": "eucarionte, heterótrofo e realiza digestão intracorpórea."
+      }
+    ],
+    "pages": [
+      12
+    ],
+    "statement": "A levedura Candida albicans causa em humanos a doença conhecida como candidíase, cujos sintomas podem ser coceira genital, dor ao urinar e corrimento vaginal. O agente etiológico da candidíase é um organismo",
+    "statementComplete": true
+  },
+  {
+    "number": 44,
+    "topicId": "bio_zoologia",
+    "subject": "Biologia",
+    "chapter": "Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética",
+    "title": "Besouros: espécies diferentes",
+    "concept": "Nomenclatura binomial (gênero + epíteto específico) e isolamento reprodutivo; pré-requisitos: conceito biológico de espécie.",
+    "steps": [
+      "Os dois nomes começam por Chrysomeles: mesmo gênero.",
+      "Os epítetos (andersonii, albinatus) diferem: espécies diferentes.",
+      "Espécies diferentes estão isoladas reprodutivamente.",
+      "Se cruzarem, os descendentes tendem a ser inviáveis ou estéreis.",
+      "Alternativa B."
+    ],
+    "trap": "A diz gêneros diferentes; o gênero é o mesmo (Chrysomeles).",
+    "retrieval": [
+      "Que parte do nome científico indica o gênero?",
+      "O que é isolamento reprodutivo pós-zigótico?"
+    ],
+    "transfer": "Exercício autoral: dê um exemplo de híbrido estéril.",
+    "criteria": [
+      "Mula (égua × jumento).",
+      "Espécies diferentes do mesmo gênero."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "inviáveis, pois os besouros são de gêneros diferentes."
+      },
+      {
+        "id": "b",
+        "text": "inviáveis, pois os besouros são de espécies diferentes."
+      },
+      {
+        "id": "c",
+        "text": "viáveis, pois os besouros são do mesmo subgênero."
+      },
+      {
+        "id": "d",
+        "text": "viáveis, pois os besouros são da mesma espécie."
+      },
+      {
+        "id": "e",
+        "text": "inviáveis, pois os besouros são de famílias diferentes."
+      }
+    ],
+    "pages": [
+      12
+    ],
+    "statement": "Leia a tirinha do cartunista Fernando Gonsalez.\n\n[Tirinha. 1º quadro: “Um especialista em besouros faz um desejo antes de morrer”: “Quero reencarnar como um besouro!”. 2º quadro: já besouro, ele pergunta a outra besoura: “Vamos transar?”. 3º quadro: ela responde: “Não! Você é da espécie Chrysomeles andersonii e eu sou um Chrysomeles albinatus”.]\n\n(www1.folha.uol.com.br. Adaptado.)\n\nA tirinha aborda de forma bem humorada uma possível incompatibilidade reprodutiva entre os dois besouros. No entanto, esse cruzamento pode ocorrer e gerar descendentes",
+    "statementComplete": true
+  },
+  {
+    "number": 45,
+    "topicId": "bio_metabolismo_energetico",
+    "subject": "Biologia",
+    "chapter": "Proteínas: Enzimas",
+    "title": "Via metabólica e retroinibição",
+    "concept": "Vias metabólicas em cadeia e retroalimentação negativa; pré-requisitos: “um gene, uma enzima”.",
+    "steps": [
+      "O excesso de produto final inibe a enzima 3 e os genes 2, 4 e 5.",
+      "Sem enzima 2 (gene 2), Y não é formado.",
+      "Sem enzima 3, Z não é formado; sem enzima 4 (gene 4), W não é formado.",
+      "Logo, Y, Z e W deixam de ser sintetizados.",
+      "Alternativa E."
+    ],
+    "trap": "C erra: o gene 5 codifica a enzima que transforma W, então sua mutação acumula W, mas não impede sua síntese.",
+    "retrieval": [
+      "Que enzima forma o substrato W?",
+      "O que é retroinibição?"
+    ],
+    "transfer": "Exercício autoral: o que acumula se o gene 3 sofrer mutação?",
+    "criteria": [
+      "O substrato Y.",
+      "A enzima 3 não converte Y em Z."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a desnaturação da enzima 4 inibe a atividade da enzima 3."
+      },
+      {
+        "id": "b",
+        "text": "o substrato X acumula se houver escassez do produto final."
+      },
+      {
+        "id": "c",
+        "text": "a mutação no gene 5 interfere na síntese do substrato W."
+      },
+      {
+        "id": "d",
+        "text": "a síntese do substrato W independe da expressão do gene 1."
+      },
+      {
+        "id": "e",
+        "text": "o excesso de produto final inibe a síntese dos substratos Y, Z e W."
+      }
+    ],
+    "pages": [
+      12
+    ],
+    "statement": "O esquema representa uma via metabólica em que uma substância precursora sofre a ação da enzima 1, que desencadeia as reações de síntese dos substratos X, Y, Z e W. Essas reações são catalisadas por enzimas, expressas pelos seus respectivos genes, que viabilizam a formação do produto final. O excesso de produto final tem efeito inibitório sobre a enzima 3 e os genes 2, 4 e 5.\n\n[Esquema: Precursor —(enzima 1, gene 1)→ X —(enzima 2, gene 2)→ Y —(enzima 3, gene 3)→ Z —(enzima 4, gene 4)→ W —(enzima 5, gene 5)→ Produto final.]\n\n(www.macmillanhighered.com. Adaptado.)\n\nNessa via metabólica,",
+    "statementComplete": true
+  },
+  {
+    "number": 46,
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "chapter": "Embriologia Animal",
+    "title": "Gástrula e arquêntero",
+    "concept": "Gastrulação: invaginação que forma o arquêntero e o blastóporo; pré-requisitos: protostômios × deuterostômios.",
+    "steps": [
+      "Na gastrulação, células se invaginam.",
+      "Forma-se uma cavidade interna, o arquêntero.",
+      "O arquêntero originará a cavidade do tubo digestivo.",
+      "Nos vertebrados (deuterostômios) o blastóporo origina o ânus, não a boca.",
+      "Alternativa D."
+    ],
+    "trap": "C inverte: o blastóporo vira boca nos protostômios (muitos invertebrados).",
+    "retrieval": [
+      "O que é o arquêntero?",
+      "O que o blastóporo origina nos vertebrados?"
+    ],
+    "transfer": "Exercício autoral: cite os três folhetos germinativos.",
+    "criteria": [
+      "Ectoderme, mesoderme, endoderme.",
+      "Exemplo de órgão de cada."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "um folheto embrionário que envolve o celoma."
+      },
+      {
+        "id": "b",
+        "text": "pequenos espaços que originam as câmaras cardíacas."
+      },
+      {
+        "id": "c",
+        "text": "um orifício que origina a boca, apenas nos vertebrados."
+      },
+      {
+        "id": "d",
+        "text": "um espaço interno que origina a cavidade digestiva."
+      },
+      {
+        "id": "e",
+        "text": "três folhetos germinativos que originam o cérebro, apenas nos invertebrados."
+      }
+    ],
+    "pages": [
+      12
+    ],
+    "statement": "Ao longo do desenvolvimento embrionário da grande maioria dos invertebrados e em todos os vertebrados ocorre a formação da gástrula. Nesse estágio, o embrião apresenta",
+    "statementComplete": true
+  },
+  {
+    "number": 47,
+    "topicId": "bio_fisio_vegetal",
+    "subject": "Biologia",
+    "chapter": "Histologia e Morfologia Vegetal",
+    "title": "Colênquima: sustentação flexível",
+    "concept": "Tecidos de sustentação: colênquima (vivo, parede celulósica irregular, flexível) × esclerênquima (morto, lignificado); pré-requisitos: meristemas.",
+    "steps": [
+      "O tecido é permanente: não é meristema nem câmbio.",
+      "Tem células vivas, alongadas, com paredes de celulose e pectina espessadas de modo irregular.",
+      "Dá sustentação com flexibilidade a órgãos jovens.",
+      "Esse tecido é o colênquima.",
+      "Alternativa B."
+    ],
+    "trap": "D (xilema) também sustenta, mas suas células condutoras são mortas e lignificadas.",
+    "retrieval": [
+      "Qual a diferença entre colênquima e esclerênquima?",
+      "Onde o colênquima é encontrado?"
+    ],
+    "transfer": "Exercício autoral: dê um exemplo cotidiano de colênquima.",
+    "criteria": [
+      "“Fios” do talo do aipo.",
+      "Sustentação flexível."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "meristema."
+      },
+      {
+        "id": "b",
+        "text": "colênquima."
+      },
+      {
+        "id": "c",
+        "text": "parênquima."
+      },
+      {
+        "id": "d",
+        "text": "xilema."
+      },
+      {
+        "id": "e",
+        "text": "câmbio."
+      }
+    ],
+    "pages": [
+      13
+    ],
+    "statement": "Em dias com rajadas de vento, é possível verificar que galhos e folhas de muitas espécies de árvores se flexionam, mas não quebram. Isso se deve à contribuição de um tecido vegetal permanente constituído por células vivas alongadas, com paredes de espessuras irregulares de celulose, pectina e hemicelulose. Tal tecido é denominado",
+    "statementComplete": true
+  },
+  {
+    "number": 48,
+    "topicId": "bio_genetica",
+    "subject": "Biologia",
+    "chapter": "Ligação Gênica",
+    "title": "Drosophila: distância de 16 morganídeos",
+    "concept": "Cruzamento-teste com genes ligados; frequência de recombinação = distância (cM); pré-requisitos: tipos parentais × recombinantes.",
+    "steps": [
+      "O macho pv/pv só produz gametas pv: os fenótipos refletem os óvulos.",
+      "Classes mais frequentes (42% + 42%) são parentais: PV e pv.",
+      "Recombinantes: Pv e pV, 8% + 8% = 16%.",
+      "Taxa de recombinação de 16% = 16 unidades de mapa.",
+      "Alternativa E."
+    ],
+    "trap": "D erra: segregação independente daria 25% para cada classe.",
+    "retrieval": [
+      "Por que o macho não interfere nas classes?",
+      "Quais classes são recombinantes?"
+    ],
+    "transfer": "Exercício autoral: que proporções seriam esperadas com segregação independente?",
+    "criteria": [
+      "25% de cada fenótipo.",
+      "1 : 1 : 1 : 1."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "o macho produziu 16% de espermatozoides contendo os alelos P e v."
+      },
+      {
+        "id": "b",
+        "text": "os alelos recessivos p e v estão presentes em um mesmo óvulo recombinante."
+      },
+      {
+        "id": "c",
+        "text": "a fêmea produziu 8% de óvulos contendo os alelos recessivos p e v."
+      },
+      {
+        "id": "d",
+        "text": "os alelos P e V segregam-se independentemente durante a meiose."
+      },
+      {
+        "id": "e",
+        "text": "os alelos P e V distam 16 unidades de recombinação um do outro."
+      }
+    ],
+    "pages": [
+      13
+    ],
+    "statement": "Em moscas-das-frutas (Drosophila melanogaster), a cor cinza do corpo do inseto é determinada pelo alelo dominante P, e a cor preta pelo alelo recessivo p. A forma normal das asas da mosca é determinada pelo alelo dominante V, e as asas vestigiais pelo alelo recessivo v. Realizou-se um experimento em que fêmeas duplo-heterozigotas foram cruzadas com machos de corpo preto e asas vestigiais. A tabela mostra os resultados desses cruzamentos.\n\nFenótipos — Porcentagens aproximadas de descendentes\nMoscas cinzas com asas normais — 42%\nMoscas pretas com asas vestigiais — 42%\nMoscas cinzas com asas vestigiais — 8%\nMoscas pretas com asas normais — 8%\n\nDiante desses resultados, conclui-se que:",
+    "statementComplete": true
+  },
+  {
+    "number": 49,
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "chapter": "Fisiologia da Sustentação e da Locomoção",
+    "title": "Carne clara e carne escura",
+    "concept": "Fibras musculares: tipo I (vermelhas, ricas em mioglobina, contração lenta, resistência) × tipo II (brancas, pobres em mioglobina, contração rápida, curta duração); pré-requisitos: metabolismo aeróbio e anaeróbio.",
+    "steps": [
+      "O frango anda muito (coxa escura) e voa pouco (peito claro).",
+      "A carne clara é pobre em mioglobina.",
+      "Ela serve a esforços curtos e explosivos, como um voo rápido de fuga.",
+      "Suas fibras se contraem rapidamente, com metabolismo anaeróbio.",
+      "Alternativa A."
+    ],
+    "trap": "B troca os pares: carne escura é rica, não pobre, em mioglobina.",
+    "retrieval": [
+      "Qual a função da mioglobina?",
+      "Por que a coxa do frango é escura?"
+    ],
+    "transfer": "Exercício autoral: explique por que patos têm o peito escuro.",
+    "criteria": [
+      "Voam longas distâncias.",
+      "Fibras ricas em mioglobina."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "clara – pobre – curta – rápida."
+      },
+      {
+        "id": "b",
+        "text": "escura – pobre – longa – lenta."
+      },
+      {
+        "id": "c",
+        "text": "escura – rica – curta – lenta."
+      },
+      {
+        "id": "d",
+        "text": "clara – rica – longa – rápida."
+      },
+      {
+        "id": "e",
+        "text": "clara – rica – curta – lenta."
+      }
+    ],
+    "pages": [
+      13
+    ],
+    "statement": "Ao se fatiar um frango assado inteiro, é possível nele verificar a presença de carne mais escura nas coxas e carne mais clara no peito. Essa diferença de cores da carne mostra diferentes adaptações do sistema locomotor do frango. A carne ______ é ______ em mioglobina, o que favorece esforços físicos de ______ duração e exige contração ______ das células musculares.\n\nAs lacunas no texto são preenchidas, respectivamente, por:",
+    "statementComplete": true
+  },
+  {
+    "number": 50,
+    "topicId": "bio_evolucao",
+    "subject": "Biologia",
+    "chapter": "Mecanismos da Evolução Biológica",
+    "title": "Seleção natural: pirarucus escuros",
+    "concept": "Seleção natural: variação preexistente + sobrevivência diferencial; pré-requisitos: lamarckismo (uso e desuso, herança do adquirido).",
+    "steps": [
+      "Seleção natural parte de variações já existentes entre indivíduos.",
+      "Indivíduos com variação vantajosa sobrevivem e se reproduzem mais.",
+      "Em D, pirarucus escuros se camuflam melhor na sombra: sobrevivência diferencial.",
+      "A, B e C descrevem mudança por necessidade ou herança de caráter adquirido (visão lamarckista); E atribui à troca sazonal um aumento de variabilidade genética.",
+      "Alternativa D."
+    ],
+    "trap": "C soa adaptativo, mas diz que as plantas “desenvolveram” frutos “por serem” consumidas: finalidade, não seleção.",
+    "retrieval": [
+      "Qual a diferença entre a explicação de Darwin e a de Lamarck?",
+      "A troca de pelagem da lebre altera seus genes?"
+    ],
+    "transfer": "Exercício autoral: reescreva a alternativa A em termos darwinistas.",
+    "criteria": [
+      "Águias com visão mais aguda já existiam.",
+      "Caçavam melhor e deixaram mais descendentes."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "As águias aprimoraram a visão frontal a grandes distâncias para identificarem pequenas presas durante o voo e alongaram suas garras para segurarem com mais força animais maiores e mais pesados."
+      },
+      {
+        "id": "b",
+        "text": "Roedores que vivem em áreas com fartura de alimentos tendem a desenvolver corpos com mais massa muscular e, portanto, geram descendentes maiores e também com maior massa muscular."
+      },
+      {
+        "id": "c",
+        "text": "Algumas plantas desenvolveram frutos mais coloridos e doces por serem frequentemente consumidas por aves e mamíferos, que se alimentam e dispersam as sementes desses frutos no ambiente."
+      },
+      {
+        "id": "d",
+        "text": "Pirarucus com escamas dorsais mais escuras apresentam maiores chances de sobrevivência em áreas sombreadas de um rio, como embaixo de troncos e galhos submersos e entre as rochas no leito."
+      },
+      {
+        "id": "e",
+        "text": "Lebres do Ártico apresentam camuflagem sazonal e alternam a cor da pelagem de marrom para branca para se adaptarem à neve durante o inverno, o que aumenta a variabilidade genética na população."
+      }
+    ],
+    "pages": [
+      13
+    ],
+    "statement": "As ideias de Charles Darwin e de Alfred Wallace influenciaram o pensamento científico do século XIX, ao proporem o mecanismo evolutivo da seleção natural. A frase associada ao mecanismo de seleção natural é:",
+    "statementComplete": true
+  },
+  {
+    "number": 51,
+    "topicId": "qui_gases",
+    "subject": "Química",
+    "chapter": "Composição da Matéria: Estados Físicos",
+    "title": "Condensação e fusão: sinal da energia",
+    "concept": "Mudanças de estado: condensação (vapor → líquido, libera calor) e fusão (sólido → líquido, absorve calor); pré-requisitos: energia das interações intermoleculares.",
+    "steps": [
+      "1: o vapor do ar toca o copo frio e vira líquido — condensação.",
+      "Condensar aproxima as moléculas e libera energia: exotérmico.",
+      "2: o gelo derrete — fusão.",
+      "Fundir exige romper interações: absorve energia, endotérmico.",
+      "Alternativa C."
+    ],
+    "trap": "A acerta os nomes, mas a fusão absorve calor; não é exotérmica.",
+    "retrieval": [
+      "Por que o copo gelado fica molhado por fora?",
+      "Que mudança de estado é endotérmica: fusão ou solidificação?"
+    ],
+    "transfer": "Exercício autoral: explique por que o suor esfria o corpo.",
+    "criteria": [
+      "Evaporação é endotérmica.",
+      "Retira calor da pele."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "condensação em 1 e fusão em 2; e ambos os processos são exotérmicos."
+      },
+      {
+        "id": "b",
+        "text": "liquefação em 1 e em 2; um processo exotérmico."
+      },
+      {
+        "id": "c",
+        "text": "condensação e processo exotérmico em 1; fusão e processo endotérmico em 2."
+      },
+      {
+        "id": "d",
+        "text": "liquefação e processo endotérmico em 1; fusão e processo exotérmico em 2."
+      },
+      {
+        "id": "e",
+        "text": "sublimação em 1 e liquefação em 2; e ambos os processos são exotérmicos."
+      }
+    ],
+    "pages": [
+      14
+    ],
+    "statement": "A imagem mostra a formação de água líquida por meio de duas mudanças de estado físico distintas:\n\nMudança 1 – água formada na superfície externa de um copo.\nMudança 2 – água proveniente do derretimento de gelo.\n\n[Foto: copo de bebida gelada com gotas de água na superfície externa e cubos de gelo derretendo.]\n\n(www.purizon.com.br)\n\nDe acordo com as informações fornecidas, afirma-se que nas mudanças citadas ocorre",
+    "statementComplete": true
+  },
+  {
+    "number": 52,
+    "topicId": "qui_polaridade_geometria",
+    "subject": "Química",
+    "chapter": "Ligações Químicas e Alotropia",
+    "title": "Ozônio: alótropos do oxigênio",
+    "concept": "Alotropia: substâncias simples diferentes do mesmo elemento (O2 e O3); pré-requisitos: isótopos e isóbaros são átomos.",
+    "steps": [
+      "Todas as espécies contêm só o elemento oxigênio.",
+      "O2 e O3 são substâncias simples diferentes do mesmo elemento: alótropos.",
+      "O átomo isolado O não é substância estável; não há três substâncias.",
+      "Isótopos e isóbaros se referem a núcleos diferentes, não a moléculas.",
+      "Alternativa A."
+    ],
+    "trap": "D conta o átomo de oxigênio como substância; ele é um intermediário reativo, não uma substância química.",
+    "retrieval": [
+      "Que outros alótropos você conhece?",
+      "Qual a diferença entre isótopos e alótropos?"
+    ],
+    "transfer": "Exercício autoral: cite dois alótropos do carbono.",
+    "criteria": [
+      "Grafite e diamante.",
+      "Diferentes arranjos dos átomos."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "um elemento químico e dois alótropos do oxigênio."
+      },
+      {
+        "id": "b",
+        "text": "um elemento químico e dois isóbaros do oxigênio."
+      },
+      {
+        "id": "c",
+        "text": "um elemento químico e dois isótopos do oxigênio."
+      },
+      {
+        "id": "d",
+        "text": "três substâncias químicas e dois alótropos do oxigênio."
+      },
+      {
+        "id": "e",
+        "text": "três substâncias químicas e dois isóbaros do oxigênio."
+      }
+    ],
+    "pages": [
+      14
+    ],
+    "statement": "O gás ozônio é uma substância química ambígua do ponto de vista ambiental. Na troposfera, o ozônio é tóxico devido ao caráter oxidante. Na estratosfera, absorve radiação ultravioleta nociva ao ser humano por meio de um processo natural que leva à contínua formação e fragmentação da molécula, como representado na imagem.\n\n[Esquema: raios ultravioleta quebram o ozônio (O3) em gás oxigênio (O2) e um átomo de oxigênio (O); o átomo de oxigênio se une a outro O2, formando de novo ozônio.]\n\n(www.wwf.org.br. Adaptado.)\n\nO processo ilustrado na imagem envolve a participação de",
+    "statementComplete": true
+  },
+  {
+    "number": 53,
+    "topicId": "qui_inorganica",
+    "subject": "Química",
+    "chapter": "Química Inorgânica",
+    "title": "Carbonato de lítio e o íon Li⁺",
+    "concept": "Fórmula de compostos iônicos pela neutralidade; distribuição eletrônica de íons; pré-requisitos: Li (Z = 3), metal alcalino forma Li⁺.",
+    "steps": [
+      "O lítio, metal alcalino, forma Li⁺.",
+      "O carbonato é CO3²⁻: são necessários dois Li⁺ — Li2CO3.",
+      "O átomo Li tem 1s² 2s¹.",
+      "O íon Li⁺ perde o elétron 2s: 1s².",
+      "Alternativa B."
+    ],
+    "trap": "A dá a distribuição do átomo neutro; a pergunta pede a do íon.",
+    "retrieval": [
+      "Que carga tem o íon de um metal alcalino?",
+      "Quantos elétrons tem o Li⁺?"
+    ],
+    "transfer": "Exercício autoral: escreva a fórmula do carbonato de cálcio.",
+    "criteria": [
+      "Ca²⁺ e CO3²⁻.",
+      "CaCO3."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "Li2CO3 e 1s2 2s1"
+      },
+      {
+        "id": "b",
+        "text": "Li2CO3 e 1s2"
+      },
+      {
+        "id": "c",
+        "text": "LiCO3 e 1s2"
+      },
+      {
+        "id": "d",
+        "text": "Li(CO3)2 e 1s2"
+      },
+      {
+        "id": "e",
+        "text": "Li(CO3)2 e 1s2 2s1"
+      }
+    ],
+    "pages": [
+      14
+    ],
+    "statement": "O lítio é um metal alcalino economicamente importante e bastante versátil. A forma iônica desse elemento químico combinada ao íon carbonato (CO3²⁻) forma o carbonato de lítio, composto iônico empregado como medicamento no tratamento do transtorno bipolar. A fórmula do composto iônico de lítio mencionado no texto e a distribuição eletrônica em níveis e subníveis de energia do íon lítio são:",
+    "statementComplete": true
+  },
+  {
+    "number": 54,
+    "topicId": "bio_estrutura_fisio_celular",
+    "subject": "Biologia",
+    "chapter": "Composição Química Celular: Proteínas e sua Função Estrutural",
+    "title": "Carbono e amônia: enzimas",
+    "concept": "Composição elementar das biomoléculas: proteínas têm C, H, O, N; carboidratos e lipídios simples, só C, H, O; pré-requisitos: enzimas são proteínas.",
+    "steps": [
+      "O poema cita carbono (C) e amoníaco (NH3): C, N e H.",
+      "Carboidratos e polissacarídeos têm só C, H e O.",
+      "Ácidos graxos e lipídeos simples também não têm N.",
+      "Enzimas são proteínas, formadas por aminoácidos que contêm C, H, O e N.",
+      "Alternativa D."
+    ],
+    "trap": "C pode parecer certa porque alguns lipídeos complexos têm N, mas não é regra; nas enzimas o N está sempre presente.",
+    "retrieval": [
+      "Que elementos formam os aminoácidos?",
+      "Por que os carboidratos não têm nitrogênio?"
+    ],
+    "transfer": "Exercício autoral: em que grupo do aminoácido está o nitrogênio?",
+    "criteria": [
+      "Grupo amino (–NH2).",
+      "Ligação peptídica."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "polissacarídeos."
+      },
+      {
+        "id": "b",
+        "text": "carboidratos."
+      },
+      {
+        "id": "c",
+        "text": "lipídeos."
+      },
+      {
+        "id": "d",
+        "text": "enzimas."
+      },
+      {
+        "id": "e",
+        "text": "ácidos graxos."
+      }
+    ],
+    "pages": [
+      14
+    ],
+    "statement": "Analise o primeiro verso do poema “Psicologia de um Vencido”, de Augusto dos Anjos, que faz alusão à composição química dos seres humanos restringindo-a ao elemento químico carbono e ao composto amônia (NH3). Eu, filho do carbono e do amoníaco, Monstro de escuridão e rutilância, Sofro, desde a epigênesis da infância, A influência má dos signos do zodíaco.\n\nTodos os elementos químicos identificados no poema podem ser encontrados nas moléculas de",
+    "statementComplete": true
+  },
+  {
+    "number": 55,
+    "topicId": "qui_solucoes",
+    "subject": "Química",
+    "chapter": "Dispersões",
+    "title": "Diluição e soro glicosado",
+    "concept": "Concentração m/v e proporção em alíquotas; pré-requisitos: 5% (m/v) = 5 g em 100 mL.",
+    "steps": [
+      "Volume total ≈ 240 mL; o paciente recebe 30 mL = 1/8.",
+      "Medicamento: 400 mg ÷ 8 = 50 mg = 0,05 g.",
+      "Glicose: 5% de 30 mL = 1,5 g.",
+      "Assim, 0,05 g e 1,5 g.",
+      "Alternativa C."
+    ],
+    "trap": "Calcular a glicose em 240 mL (12 g) e dividir de forma errada leva a 1,2 g (A ou D).",
+    "retrieval": [
+      "Que fração da solução o paciente recebe?",
+      "Quantos gramas de glicose há em 100 mL a 5%?"
+    ],
+    "transfer": "Exercício autoral: quanto de medicamento haveria em 60 mL?",
+    "criteria": [
+      "2 × 0,05.",
+      "0,1 g."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,18 g e 1,2 g."
+      },
+      {
+        "id": "b",
+        "text": "1,8 g e 1,5 g."
+      },
+      {
+        "id": "c",
+        "text": "0,05 g e 1,5 g."
+      },
+      {
+        "id": "d",
+        "text": "0,05 g e 1,2 g."
+      },
+      {
+        "id": "e",
+        "text": "0,5 g e 1,5 g."
+      }
+    ],
+    "pages": [
+      15
+    ],
+    "statement": "Um médico prescreve para seu paciente a infusão de 30 mL de uma solução preparada pela diluição de 400 mg de determinado medicamento em 240 mL de soro glicosado a 5% (m/v). As massas do medicamento e de glicose administradas ao paciente são, respectivamente, de",
+    "statementComplete": true
+  },
+  {
+    "number": 56,
+    "topicId": "qui_eletroquimica",
+    "subject": "Química",
+    "chapter": "Introdução ao Estudo das Pilhas e Baterias",
+    "title": "Pilha M–cobre",
+    "concept": "Potencial padrão de redução e ddp da pilha: ΔE = E°cátodo − E°ânodo; pré-requisitos: elétrons vão do ânodo ao cátodo.",
+    "steps": [
+      "Com o cobre, os elétrons vão para o Cu: E°(Cu²⁺/Cu) = +0,34 V.",
+      "Com M, o fluxo se inverte: M se oxida, E°(M) = −0,44 V.",
+      "Na pilha M–Cu, quem tem maior E° (cobre) é o cátodo.",
+      "ΔE = 0,34 − (−0,44) = 0,78 V.",
+      "Alternativa B."
+    ],
+    "trap": "Subtrair os módulos (0,44 − 0,34 = 0,10 V) ignora o sinal negativo de M.",
+    "retrieval": [
+      "Qual eletrodo sofre redução?",
+      "Que metal comum tem E° ≈ −0,44 V?"
+    ],
+    "transfer": "Exercício autoral: escreva a reação global, supondo M = ferro.",
+    "criteria": [
+      "Fe + Cu²⁺ → Fe²⁺ + Cu.",
+      "ΔE = 0,78 V."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,10 V, na qual M é o cátodo."
+      },
+      {
+        "id": "b",
+        "text": "0,78 V, em que o cobre é o cátodo."
+      },
+      {
+        "id": "c",
+        "text": "0,10 V, em que o cobre é o ânodo."
+      },
+      {
+        "id": "d",
+        "text": "0,10 V, na qual M é o ânodo."
+      },
+      {
+        "id": "e",
+        "text": "0,78 V, na qual M é o cátodo."
+      }
+    ],
+    "pages": [
+      15
+    ],
+    "statement": "O arranjo experimental mostrado na imagem representa uma célula eletroquímica (pilha) usada na obtenção do potencial padrão de redução (Eo) de semirreações, adotando-se Eo = 0 V para o eletrodo de hidrogênio.\n\n[Figura: pilha com eletrodo de hidrogênio (H2 em H2SO4 aq) ligado a eletrodo de cobre (Cu em CuSO4 aq); voltímetro indica 0,34 V; os elétrons fluem do eletrodo de hidrogênio para o cobre.]\n\n(brasilescola.uol.com.br)\n\nDe acordo com as informações, uma pilha formada pelo metal M e pelo metal cobre produz um potencial de",
+    "statementComplete": true
+  },
+  {
+    "number": 57,
+    "topicId": "qui_equilibrio",
+    "subject": "Química",
+    "chapter": "Equilíbrios Iônicos",
+    "title": "pH das águas minerais",
+    "concept": "pH e escala logarítmica; hidrólise básica de ânions de ácido fraco; pré-requisitos: Na⁺ e K⁺ não hidrolisam.",
+    "steps": [
+      "pH 6 contra pH 10: diferença de 4 unidades = 10⁴.",
+      "Menor pH = mais H⁺: a água 1 tem 10⁴ vezes mais.",
+      "HCO3⁻ e CO3²⁻ são bases (ânions de ácido fraco) e geram OH⁻.",
+      "Na⁺ e K⁺ vêm de base forte e não alteram o pH.",
+      "Alternativa E."
+    ],
+    "trap": "C cita o sódio, abundante na água 2, mas o Na⁺ não hidrolisa.",
+    "retrieval": [
+      "Por que 4 unidades de pH equivalem a 10⁴?",
+      "Como o carbonato eleva o pH?"
+    ],
+    "transfer": "Exercício autoral: escreva a hidrólise do carbonato.",
+    "criteria": [
+      "CO3²⁻ + H2O ⇌ HCO3⁻ + OH⁻.",
+      "Meio básico."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "menor; bicarbonato e sódio."
+      },
+      {
+        "id": "b",
+        "text": "menor; potássio e nitrato."
+      },
+      {
+        "id": "c",
+        "text": "maior; bicarbonato e sódio."
+      },
+      {
+        "id": "d",
+        "text": "maior; sódio e potássio."
+      },
+      {
+        "id": "e",
+        "text": "maior; bicarbonato e carbonato."
+      }
+    ],
+    "pages": [
+      15
+    ],
+    "statement": "Analise os dados extraídos dos rótulos de duas marcas de água mineral.\n\nComposição química (mg/L) — Água mineral 1 (pH = 6,07) — Água mineral 2 (pH = 10,0)\nBicarbonato, HCO3⁻ — 19,55 — 78,43\nCarbonato, CO3²⁻ — — — 61,19\nSódio, Na⁺ — 6,57 — 75,81\nPotássio, K⁺ — 9,97 — 0,21\nNitrato, NO3⁻ — 0,30 — 0,50\n\nA concentração de íons H⁺ na água mineral 1 é da ordem de 10⁴ vezes ______ que na água mineral 2. Contribuem para o elevado pH da água mineral 2 a presença dos íons ______ e ______.\n\nAs lacunas do texto são preenchidas, respectivamente, por",
+    "statementComplete": true
+  },
+  {
+    "number": 58,
+    "topicId": "qui_equilibrio",
+    "subject": "Química",
+    "chapter": "Equilíbrios Iônicos II",
+    "title": "Fenolftaleína rosa em meio básico",
+    "concept": "Indicadores e pH; hidrólise salina; pré-requisitos: força de ácidos e bases.",
+    "steps": [
+      "A forma rosa aparece em pH acima de ~8: meio básico.",
+      "NH4OH (amônia aquosa) é base: pH > 7.",
+      "HCl é ácido; Al2(SO4)3 e NH4Cl hidrolisam dando meio ácido.",
+      "KNO3 é neutro (ácido forte + base forte).",
+      "Alternativa D."
+    ],
+    "trap": "NH4Cl e NH4OH parecem semelhantes, mas o cloreto de amônio é sal ácido.",
+    "retrieval": [
+      "Por que o Al2(SO4)3 é ácido em água?",
+      "Em que pH a fenolftaleína fica rosa?"
+    ],
+    "transfer": "Exercício autoral: explique o deslocamento do equilíbrio da fenolftaleína ao se adicionar base.",
+    "criteria": [
+      "OH⁻ consome H3O⁺.",
+      "Equilíbrio vai para a forma rosa."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "Al2(SO4)3"
+      },
+      {
+        "id": "b",
+        "text": "HCl"
+      },
+      {
+        "id": "c",
+        "text": "NH4Cl"
+      },
+      {
+        "id": "d",
+        "text": "NH4OH"
+      },
+      {
+        "id": "e",
+        "text": "KNO3"
+      }
+    ],
+    "pages": [
+      16
+    ],
+    "statement": "Indicadores ácido-base são compostos químicos que alteram a coloração da solução aquosa em função do pH. A equação mostra o equilíbrio químico da fenolftaleína em meio aquoso. Esse indicador muda a cor da solução em pH ao redor de 8.\n\n[Equação: a forma incolor da fenolftaleína (com grupos –OH) reage com a água formando a forma rosa (com grupo –O⁻) e H3O⁺.]\n\nA fenolftaleína deixa rosa a solução aquosa de",
+    "statementComplete": true
+  },
+  {
+    "number": 59,
+    "topicId": "qui_eletroquimica",
+    "subject": "Química",
+    "chapter": "Aspectos Quantitativos da Eletroquímica e Metalurgia",
+    "title": "Tempo de eletrólise para uma lata",
+    "concept": "Leis de Faraday: Q = i·t e 3 mol de elétrons por mol de Al; pré-requisitos: massa molar do Al (27 g/mol).",
+    "steps": [
+      "13,5 g de Al = 0,5 mol.",
+      "Elétrons: 3 × 0,5 = 1,5 mol → 1,5 × 96 500 = 144 750 C.",
+      "t = Q/i = 144 750 ÷ 10 = 14 475 s.",
+      "14 475 s ÷ 60 ≈ 241 min.",
+      "Alternativa A."
+    ],
+    "trap": "Esquecer o fator 3 dos elétrons dá cerca de 80 min, fora das opções; esquecer de converter s em min também engana.",
+    "retrieval": [
+      "Quantos elétrons cada Al³⁺ recebe?",
+      "Quanto vale 1 Faraday?"
+    ],
+    "transfer": "Exercício autoral: quanto tempo com corrente de 50 A?",
+    "criteria": [
+      "14 475 ÷ 5.",
+      "≈ 48 min."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "240 minutos."
+      },
+      {
+        "id": "b",
+        "text": "150 minutos."
+      },
+      {
+        "id": "c",
+        "text": "90 minutos."
+      },
+      {
+        "id": "d",
+        "text": "520 minutos."
+      },
+      {
+        "id": "e",
+        "text": "40 minutos."
+      }
+    ],
+    "pages": [
+      16
+    ],
+    "statement": "A reciclagem do alumínio no Brasil é fonte de renda para coletores de material reciclado, além de proporcionar relevante economia de recursos e energia quando comparado à produção do metal por meio da eletrólise da alumina fundida. Uma lata de refrigerante vazia pesa em média 13,5 g e consome a carga correspondente a 1 Faraday (96 500 C) para cada mol de elétrons envolvidos no processo. A equação representa a reação de redução do alumínio durante a eletrólise da alumina fundida. Al³⁺ (l) + 3 e⁻ → Al (l) O tempo de eletrólise necessário para a produção da massa de alumínio correspondente a uma lata de refrigerante, utilizando uma corrente de 10 A, é de, aproximadamente,\n\n[A prova fornece a Classificação Periódica: Al = 27.]",
+    "statementComplete": true
+  },
+  {
+    "number": 60,
+    "topicId": "qui_organica_fundamentos",
+    "subject": "Química",
+    "chapter": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+    "title": "2,4-D: éter aromático",
+    "concept": "Funções oxigenadas e hibridação do carbono; pré-requisitos: carbonos do anel aromático são sp².",
+    "steps": [
+      "Os carbonos do anel benzênico são sp².",
+      "Ao anel liga-se um oxigênio que também se liga ao CH2: C–O–C, função éter.",
+      "O grupo –COOH está ligado ao CH2, que é sp³.",
+      "Logo, o grupo oxigenado ligado ao carbono sp² do anel é o éter.",
+      "Alternativa B."
+    ],
+    "trap": "E é a outra função oxigenada da molécula, mas o carbono ao qual o –COOH se liga (CH2) é sp³.",
+    "retrieval": [
+      "Por que os carbonos do anel são sp²?",
+      "Que função tem o grupo C–O–C?"
+    ],
+    "transfer": "Exercício autoral: escreva o nome da função presente no grupo –COOH.",
+    "criteria": [
+      "Ácido carboxílico.",
+      "Carbono da carboxila é sp²."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "éster."
+      },
+      {
+        "id": "b",
+        "text": "éter."
+      },
+      {
+        "id": "c",
+        "text": "álcool."
+      },
+      {
+        "id": "d",
+        "text": "cetona."
+      },
+      {
+        "id": "e",
+        "text": "ácido carboxílico."
+      }
+    ],
+    "pages": [
+      16
+    ],
+    "statement": "O 2,4-D, como é conhecido no setor agrícola o ácido 2,4-diclorofenoxiacético, é um herbicida que está entre os cinco agrotóxicos mais utilizados no Brasil.\n\n[Fórmula estrutural: anel benzênico com dois átomos de cloro (nas posições 2 e 4) e, na posição 1, um oxigênio ligado ao anel e a um grupo –CH2–COOH.]\n\nO nome do grupo funcional oxigenado ligado a um carbono sp2 é:",
+    "statementComplete": true
+  },
+  {
+    "number": 61,
+    "topicId": "fis_cinematica",
+    "subject": "Física",
+    "chapter": "Cinemática Escalar. Conceitos Fundamentais",
+    "title": "Quanto vale um pé",
+    "concept": "Conversão de unidades por proporção; pré-requisitos: km para cm.",
+    "steps": [
+      "40 mil pés ≈ 12,2 km.",
+      "12,2 km = 1 220 000 cm.",
+      "1 pé = 1 220 000 ÷ 40 000.",
+      "= 30,5 cm.",
+      "Alternativa C."
+    ],
+    "trap": "25,4 cm lembra a polegada (2,54 cm) multiplicada por 10, não o pé.",
+    "retrieval": [
+      "Quantos centímetros há em 1 km?",
+      "Quantas polegadas tem um pé?"
+    ],
+    "transfer": "Exercício autoral: converta 1 000 pés em metros.",
+    "criteria": [
+      "1 000 × 0,305.",
+      "305 m."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "53,8 cm."
+      },
+      {
+        "id": "b",
+        "text": "25,4 cm."
+      },
+      {
+        "id": "c",
+        "text": "30,5 cm."
+      },
+      {
+        "id": "d",
+        "text": "35,0 cm."
+      },
+      {
+        "id": "e",
+        "text": "38, 6 cm."
+      }
+    ],
+    "pages": [
+      17
+    ],
+    "statement": "A altitude máxima que um avião comercial pode atingir é estabelecida em torno dos 40 mil pés (cerca de 12,2 km). Esse limite é conhecido como “teto de serviço”. A maioria dos jatos comerciais voa em níveis próximos a esse limite para otimizar a eficiência de consumo de combustível. (https://noticias.r7.com. Adaptado.) Na aviação, utiliza-se a unidade pé nas indicações de altitude. Um pé equivale a, aproximadamente,",
+    "statementComplete": true
+  },
+  {
+    "number": 62,
+    "topicId": "fis_cinematica",
+    "subject": "Física",
+    "chapter": "Movimento Uniforme",
+    "title": "Pênalti a 108 km/h",
+    "concept": "Velocidade média: Δs = v·Δt; pré-requisitos: km/h para m/s (÷ 3,6).",
+    "steps": [
+      "108 km/h ÷ 3,6 = 30 m/s.",
+      "Δt = 0,4 s.",
+      "Δs = 30 × 0,4.",
+      "= 12 m.",
+      "Alternativa E."
+    ],
+    "trap": "11 m é a distância oficial da marca do pênalti; a bola, porém, faz trajetória não retilínea até a linha, e o dado pedido sai do cálculo.",
+    "retrieval": [
+      "Como converter km/h em m/s?",
+      "Qual é a distância da marca do pênalti ao gol?"
+    ],
+    "transfer": "Exercício autoral: quanto tempo a bola levaria a 72 km/h?",
+    "criteria": [
+      "20 m/s.",
+      "0,6 s para 12 m."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "15 m."
+      },
+      {
+        "id": "b",
+        "text": "14 m."
+      },
+      {
+        "id": "c",
+        "text": "11 m."
+      },
+      {
+        "id": "d",
+        "text": "10 m."
+      },
+      {
+        "id": "e",
+        "text": "12 m."
+      }
+    ],
+    "pages": [
+      17
+    ],
+    "statement": "Em uma cobrança de pênalti, um jogador de futebol chuta a bola em direção ao gol com velocidade média de 108 km/h. A partir do momento em que perde contato com o pé do jogador, a bola demora apenas 0,4 segundos para chegar à linha do gol. Durante esse período, a distância percorrida pela bola foi de",
+    "statementComplete": true
+  },
+  {
+    "number": 63,
+    "topicId": "fis_leis_newton",
+    "subject": "Física",
+    "chapter": "A Força de Contato",
+    "title": "Toalha em repouso: atrito",
+    "concept": "Atrito estático: assume o valor necessário para equilibrar a tendência de movimento; pré-requisitos: primeira lei de Newton.",
+    "steps": [
+      "A parte mais longa (L2) é mais pesada e tende a puxar a toalha para o seu lado.",
+      "O atrito estático se opõe a essa tendência.",
+      "Ele equilibra exatamente a diferença dos pesos pendentes, sem exceder o limite.",
+      "Não precisa ser maior que o peso total; a normal também não supera o peso.",
+      "Alternativa B."
+    ],
+    "trap": "A supõe atrito maior que o peso: em equilíbrio, o atrito vale só o necessário para anular a tendência.",
+    "retrieval": [
+      "O que é atrito estático?",
+      "Por que a toalha tende a escorregar para o lado de L2?"
+    ],
+    "transfer": "Exercício autoral: o que acontece se L1 aumentar muito?",
+    "criteria": [
+      "A tendência supera o atrito máximo.",
+      "A toalha escorrega."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "o atrito entre a superfície da toalha e a superfície do suporte produz uma força de intensidade maior do que o peso da toalha."
+      },
+      {
+        "id": "b",
+        "text": "o atrito entre a superfície da toalha e a superfície do suporte produz uma força contrária à tendência de movimento, de intensidade suficiente para impedir o deslizamento da toalha."
+      },
+      {
+        "id": "c",
+        "text": "o peso da parte da toalha de comprimento L1 é menor do que a intensidade da força de atrito entre a superfície da toalha e a superfície do suporte."
+      },
+      {
+        "id": "d",
+        "text": "o suporte aplica na toalha uma força normal de intensidade maior do que o peso da toalha."
+      },
+      {
+        "id": "e",
+        "text": "o peso da parte da toalha de comprimento L2 é menor do que a intensidade da força de atrito entre a superfície da toalha e a superfície do suporte."
+      }
+    ],
+    "pages": [
+      17
+    ],
+    "statement": "Uma toalha retangular e homogênea, de comprimento L, está apoiada em um suporte horizontal. As partes da toalha pendentes de cada lado do suporte têm comprimentos L1 e L2, como mostra a imagem. Considere que L1 + L2 = L.\n\n[Figura: toalha pendurada numa barra horizontal; uma parte pende de um lado, com comprimento L1, e a outra do outro lado, com comprimento L2, sendo L2 maior que L1.]\n\n(www.dmix.com.br. Adaptado.)\n\nEssa toalha permanece em repouso porque",
+    "statementComplete": true
+  },
+  {
+    "number": 64,
+    "topicId": "fis_energia",
+    "subject": "Física",
+    "chapter": "Sistemas Conservativos e Sistemas Não Conservativos",
+    "title": "Energia dissipada no quique",
+    "concept": "Energia potencial gravitacional e dissipação; pré-requisitos: E = mgh.",
+    "steps": [
+      "Energia inicial: 0,6 × 10 × 1,90 = 11,4 J.",
+      "Energia final: 0,6 × 10 × 1,50 = 9,0 J.",
+      "Dissipada: 11,4 − 9,0.",
+      "= 2,4 J.",
+      "Alternativa C."
+    ],
+    "trap": "9,0 J é a energia que resta, não a dissipada.",
+    "retrieval": [
+      "Por que a bola não volta à altura inicial?",
+      "Em que forma a energia é dissipada?"
+    ],
+    "transfer": "Exercício autoral: que fração da energia foi dissipada?",
+    "criteria": [
+      "2,4 ÷ 11,4.",
+      "≈ 21%."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "3,6 J."
+      },
+      {
+        "id": "b",
+        "text": "1,2 J."
+      },
+      {
+        "id": "c",
+        "text": "2,4 J."
+      },
+      {
+        "id": "d",
+        "text": "7,8 J."
+      },
+      {
+        "id": "e",
+        "text": "9,0 J."
+      }
+    ],
+    "pages": [
+      17
+    ],
+    "statement": "Uma bola de basquetebol, de massa 600 g, é abandonada de uma altura de 1,90 m em relação ao solo. A bola colide com o solo e retorna a uma altura de 1,50 m. Desprezando a resistência com o ar e adotando o valor de 10 m/s2 para a aceleração da gravidade, a energia mecânica dissipada durante a colisão dessa bola com o solo possui valor de",
+    "statementComplete": true
+  },
+  {
+    "number": 65,
+    "topicId": "fis_estatica",
+    "subject": "Física",
+    "chapter": "Hidrostática: Densidade e Pressão",
+    "title": "Taxa de aumento da pressão hidrostática",
+    "concept": "Lei de Stevin: p = ρgh; taxa de variação proporcional à de h; pré-requisitos: cm para m.",
+    "steps": [
+      "Δp/Δt = ρ · g · Δh/Δt.",
+      "Δh/Δt = 5,0 cm/min = 0,05 m/min.",
+      "Δp/Δt = 1 000 × 10 × 0,05.",
+      "= 500 Pa/min = 5,0 × 10² Pa/min.",
+      "Alternativa A."
+    ],
+    "trap": "Sem converter cm para m, o resultado sai cem vezes maior.",
+    "retrieval": [
+      "A pressão no fundo depende da área da base?",
+      "Qual é a fórmula da pressão hidrostática?"
+    ],
+    "transfer": "Exercício autoral: qual a pressão hidrostática após 10 min?",
+    "criteria": [
+      "5 000 Pa.",
+      "Altura de 0,5 m."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "5,0 × 10² Pa/min."
+      },
+      {
+        "id": "b",
+        "text": "8,0 × 10¹ Pa/min."
+      },
+      {
+        "id": "c",
+        "text": "2,5 × 10¹ Pa/min."
+      },
+      {
+        "id": "d",
+        "text": "2,0 × 10² Pa/min."
+      },
+      {
+        "id": "e",
+        "text": "2,5 × 10³ Pa/min."
+      }
+    ],
+    "pages": [
+      18
+    ],
+    "statement": "Uma torneira despeja água à razão constante em um tanque em forma de paralelepípedo, com base plana e horizontal, como mostra a figura.\n\n[Figura: torneira enchendo um tanque em forma de paralelepípedo.]\n\n(www.geogebra.org. Adaptado.)\n\nSabendo que o nível da água no recipiente sobe à razão de 5,0 cm/min, que a massa específica da água é igual a 1,0 × 10³ kg/m³ e que aceleração gravitacional no local é 10 m/s², a taxa com que a pressão hidrostática sobre a base desse recipiente aumenta é",
+    "statementComplete": true
+  },
+  {
+    "number": 66,
+    "topicId": "fis_calorimetria",
+    "subject": "Física",
+    "chapter": "Calor Sensível e Calor Latente",
+    "title": "Ebulidor em Santos e na Cidade do México",
+    "concept": "Calor sensível Q = m·c·ΔT e potência constante; pré-requisitos: ebulição depende da pressão atmosférica.",
+    "steps": [
+      "Santos: ΔT = 80 °C em 15 min.",
+      "Cidade do México: ΔT = 92 − 20 = 72 °C.",
+      "Com potência igual, o tempo é proporcional a ΔT.",
+      "t = 15 × 72/80 = 13,5 min.",
+      "Alternativa D."
+    ],
+    "trap": "Inverter a proporção (15 × 80/72) dá cerca de 16,7 min, como se o aquecimento ficasse mais demorado.",
+    "retrieval": [
+      "Por que a água ferve a 92 °C na Cidade do México?",
+      "O que significa potência constante?"
+    ],
+    "transfer": "Exercício autoral: calcule a potência do ebulidor (c = 4 200 J/kg·°C).",
+    "criteria": [
+      "Q = 1 × 4 200 × 80 = 336 000 J.",
+      "P = 336 000 ÷ 900 ≈ 373 W."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "12,6 min."
+      },
+      {
+        "id": "b",
+        "text": "12,0 min"
+      },
+      {
+        "id": "c",
+        "text": "10,5 min."
+      },
+      {
+        "id": "d",
+        "text": "13,5 min."
+      },
+      {
+        "id": "e",
+        "text": "11,2 min."
+      }
+    ],
+    "pages": [
+      18
+    ],
+    "statement": "Na cidade de Santos, onde a temperatura de ebulição da água é 100 ºC, um ebulidor eleva a temperatura de 1,0 kg de água de 20 ºC até o ponto de ebulição em 15 minutos, fornecendo calor a uma taxa constante. Já na Cidade do México, esse ebulidor, fornecendo calor à mesma taxa, elevará a temperatura de 1,0 kg de água de 20 ºC até o ponto de ebulição, que agora é de 92 ºC, em",
+    "statementComplete": true
+  },
+  {
+    "number": 67,
+    "topicId": "fis_optica_instrumental",
+    "subject": "Física",
+    "chapter": "Equação do Fabricante de Lentes e Associação de Lentes",
+    "title": "Duas lentes convergentes de mesma focal",
+    "concept": "Lentes convergentes: objeto em 2f forma imagem em 2f; raios que saem paralelos vêm do foco; pré-requisitos: equação de Gauss.",
+    "steps": [
+      "Para L2: os raios saem paralelos, então partiam do foco de L2, a d dela: f2 = d.",
+      "Para L1: objeto a 2d e imagem a 2d.",
+      "Pela equação de Gauss: 1/f1 = 1/(2d) + 1/(2d) = 1/d → f1 = d.",
+      "Logo, f1 = f2.",
+      "Alternativa C."
+    ],
+    "trap": "Tomar 2d como distância focal de L1 confunde o ponto antiprincipal (2f) com o foco.",
+    "retrieval": [
+      "Onde se forma a imagem de um objeto colocado no ponto antiprincipal?",
+      "Por que os raios saem paralelos de L2?"
+    ],
+    "transfer": "Exercício autoral: qual seria a ampliação da imagem formada por L1?",
+    "criteria": [
+      "A = −p’/p = −1.",
+      "Imagem invertida e de mesmo tamanho."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "f1 = f2/4"
+      },
+      {
+        "id": "b",
+        "text": "f1 = 4 f2"
+      },
+      {
+        "id": "c",
+        "text": "f1 = f2"
+      },
+      {
+        "id": "d",
+        "text": "f1 = 2 f2"
+      },
+      {
+        "id": "e",
+        "text": "f1 = f2/2"
+      }
+    ],
+    "pages": [
+      18
+    ],
+    "statement": "Duas lentes convergentes, L1 e L2, fazem parte do sistema óptico de um microscópio, de modo que seus eixos principais são coincidentes. Quando essas duas lentes distam 3d uma da outra, dois raios de luz monocromática fazem os trajetos mostrados na figura, atravessando ambas as lentes.\n\n[Figura: eixo principal com marcas separadas por d. Dois raios partem de um ponto do eixo situado a 2d à esquerda de L1, atravessam L1 e convergem num ponto do eixo situado a 2d à direita de L1, isto é, a d à esquerda de L2; ao atravessarem L2, saem paralelos ao eixo.]\n\nA relação entre a distância focal f1 da lente L1 e a distância focal f2 da lente L2 é",
+    "statementComplete": true
+  },
+  {
+    "number": 68,
+    "topicId": "fis_gravitacao_circular",
+    "subject": "Física",
+    "chapter": "Movimento Harmônico Simples (MHS)",
+    "title": "Pêndulo com fio quadruplicado",
+    "concept": "Frequência do pêndulo simples inversamente proporcional a √L; pré-requisitos: proporcionalidade com raiz.",
+    "steps": [
+      "f ∝ 1/√L.",
+      "Quadruplicar L multiplica √L por 2.",
+      "A frequência cai pela metade.",
+      "40 ÷ 2 = 20 oscilações por minuto.",
+      "Alternativa D."
+    ],
+    "trap": "Dividir por 4 (10) esquece a raiz quadrada.",
+    "retrieval": [
+      "Como o período depende do comprimento?",
+      "A massa da esfera altera a frequência?"
+    ],
+    "transfer": "Exercício autoral: que comprimento dobraria a frequência?",
+    "criteria": [
+      "L/4.",
+      "f ∝ 1/√L."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "60."
+      },
+      {
+        "id": "b",
+        "text": "10."
+      },
+      {
+        "id": "c",
+        "text": "80."
+      },
+      {
+        "id": "d",
+        "text": "20."
+      },
+      {
+        "id": "e",
+        "text": "160."
+      }
+    ],
+    "pages": [
+      19
+    ],
+    "statement": "A frequência de oscilação de um pêndulo simples é dada pela expressão f = (1/2π) · √(g/L), sendo L o comprimento do fio do pêndulo e g a aceleração gravitacional.\n\n[Figura: pêndulo simples de comprimento L oscilando.]\n\nConsidere um pêndulo simples cujo comprimento do fio seja L e que, ao oscilar livremente, completa 40 oscilações por minuto. Se o comprimento do fio desse pêndulo for quadruplicado, o número de oscilações por minuto que esse pêndulo passará a executar quando oscilar livremente será",
+    "statementComplete": true
+  },
+  {
+    "number": 69,
+    "topicId": "fis_circuitos",
+    "subject": "Física",
+    "chapter": "Corrente Elétrica",
+    "title": "Área sob i × t: carga",
+    "concept": "Corrente i = ΔQ/Δt; área sob i × t = carga; pré-requisitos: unidade mA·h.",
+    "steps": [
+      "A área de um gráfico é o produto dos eixos: corrente × tempo.",
+      "i · Δt = ΔQ.",
+      "Logo, a área é a carga elétrica.",
+      "Energia exigiria multiplicar também pela tensão.",
+      "Alternativa A."
+    ],
+    "trap": "B parece natural (carregar a bateria), mas energia seria a área sob P × t.",
+    "retrieval": [
+      "O que significa “mAh” numa bateria?",
+      "Que gráfico teria a energia como área?"
+    ],
+    "transfer": "Exercício autoral: estime a carga nos primeiros 0,6 h.",
+    "criteria": [
+      "500 mA × 0,6 h.",
+      "300 mAh."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "carga elétrica que flui pela bateria."
+      },
+      {
+        "id": "b",
+        "text": "energia elétrica transferida para a bateria."
+      },
+      {
+        "id": "c",
+        "text": "diferença de potencial final da bateria."
+      },
+      {
+        "id": "d",
+        "text": "resistência elétrica da bateria."
+      },
+      {
+        "id": "e",
+        "text": "potência elétrica da bateria."
+      }
+    ],
+    "pages": [
+      19
+    ],
+    "statement": "A curva do gráfico, destacada na cor vermelha, representa a corrente elétrica que flui pela bateria de um smartphone, em função do tempo, durante o seu carregamento.\n\n[Gráfico: corrente de carga (mA) × tempo de carga (h). A corrente fica constante em 500 mA até cerca de 0,6 h e depois decresce até quase zero perto de 2,6 h; a área sob a curva está pintada de verde.]\n\n(https://.conocimientohoy.wordpress.com. Adaptado.)\n\nA área sob a curva do gráfico, indicada na cor verde, corresponde à",
+    "statementComplete": true
+  },
+  {
+    "number": 70,
+    "topicId": "fis_eletromagnetismo",
+    "subject": "Física",
+    "chapter": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+    "title": "Carga positiva em campo entrando na folha",
+    "concept": "Força magnética (F = qv × B), perpendicular a v e B: MCU no plano perpendicular a B; pré-requisitos: regra da mão esquerda ou do tapa.",
+    "steps": [
+      "v para a direita, B entrando na folha.",
+      "Para carga positiva, F = q v × B aponta para cima.",
+      "A força é perpendicular à velocidade: movimento circular no plano da folha.",
+      "Indo para a direita e curvando para cima, a partícula gira no sentido anti-horário.",
+      "Alternativa E."
+    ],
+    "trap": "A acerta a trajetória circular, mas o sentido seria horário para carga negativa.",
+    "retrieval": [
+      "Por que a trajetória é circular, e não parabólica?",
+      "Para onde aponta a força no instante da entrada?"
+    ],
+    "transfer": "Exercício autoral: qual seria o sentido para um elétron?",
+    "criteria": [
+      "Força para baixo.",
+      "Sentido horário."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "circular sobre o plano e no sentido horário."
+      },
+      {
+        "id": "b",
+        "text": "parabólica sobre o plano e no sentido anti-horário."
+      },
+      {
+        "id": "c",
+        "text": "circular, perpendicular ao plano e saindo da folha."
+      },
+      {
+        "id": "d",
+        "text": "parabólica, perpendicular ao plano e entrando na folha."
+      },
+      {
+        "id": "e",
+        "text": "circular sobre o plano e no sentido anti-horário."
+      }
+    ],
+    "pages": [
+      19
+    ],
+    "statement": "Uma partícula, eletrizada com carga positiva, penetra, com velocidade constante v , em uma região na qual há um campo magnético uniforme, como mostrado na figura.\n\n[Figura: a partícula positiva move-se horizontalmente para a direita e entra numa região com campo magnético B perpendicular ao plano, entrando na folha (símbolo ⊗).]\n\nConsidere que o peso da partícula seja desprezível quando comparado à intensidade da força magnética que passa a atuar sobre ela, após penetrar na região em que há campo magnético. Em relação ao plano da figura, e para quem olha para ela, a partícula, após penetrar na região em que há campo magnético, descreverá uma trajetória",
+    "statementComplete": true
+  },
+  {
+    "number": 71,
+    "topicId": "mat_equacoes",
+    "subject": "Matemática",
+    "chapter": "Modelagem Algébrica de Problemas I",
+    "title": "Cafeína: soluções inteiras",
+    "concept": "Equação diofantina linear com soluções não negativas; pré-requisitos: paridade.",
+    "steps": [
+      "Seja C a cafeína da marca C: 0,1C·x + 0,04C·y = C.",
+      "Multiplicando por 100/C: 10x + 4y = 100 → 5x + 2y = 50.",
+      "2y = 50 − 5x exige x par, com 5x ≤ 50.",
+      "x ∈ {0, 2, 4, 6, 8, 10}, cada um com y inteiro não negativo.",
+      "6 pares — alternativa C."
+    ],
+    "trap": "Esquecer x = 0 (só marca B) ou x = 10 (só marca A) dá 4 ou 5.",
+    "retrieval": [
+      "Por que x precisa ser par?",
+      "Qual é o par com x = 0?"
+    ],
+    "transfer": "Exercício autoral: liste todos os pares.",
+    "criteria": [
+      "(0,25), (2,20), (4,15), (6,10), (8,5), (10,0).",
+      "Verificar cada um."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "5."
+      },
+      {
+        "id": "b",
+        "text": "4."
+      },
+      {
+        "id": "c",
+        "text": "6."
+      },
+      {
+        "id": "d",
+        "text": "8."
+      },
+      {
+        "id": "e",
+        "text": "9."
+      }
+    ],
+    "pages": [
+      20
+    ],
+    "statement": "A quantidade de cafeína em uma xícara padrão de café das marcas A e B corresponde, respectivamente, a 10% e a 4% da quantidade de cafeína em uma xícara padrão de café da marca C. Se (x, y) denota o par ordenado de inteiros não negativos tais que o consumo de x xícaras de tamanho padrão da marca A junto com y xícaras de tamanho padrão da marca B corresponda à mesma ingestão de cafeína de 1 xícara padrão de café da marca C, então o número de possibilidades distintas para (x, y) é igual a",
+    "statementComplete": true
+  },
+  {
+    "number": 72,
+    "topicId": "mat_dados_probabilidade",
+    "subject": "Matemática",
+    "chapter": "Introdução às Probabilidades",
+    "title": "Dados com faces apagadas",
+    "concept": "Probabilidade com espaço amostral de 36 resultados; pré-requisitos: listar casos favoráveis.",
+    "steps": [
+      "Dado 1: faces {—, 2, 3, 4, 5, 6}; dado 2: {1, 2, 3, —, 5, 6}.",
+      "Somas 7 possíveis: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1).",
+      "Somem os pares que usam o 1 no dado 1 ou o 4 no dado 2: (1,6) e (3,4).",
+      "Restam 4 casos em 36.",
+      "P = 4/36 = 1/9 — alternativa E."
+    ],
+    "trap": "1/6 é a probabilidade com dados normais; duas das seis combinações desapareceram.",
+    "retrieval": [
+      "Quantos resultados tem o espaço amostral?",
+      "Que pares somam 7 com dados comuns?"
+    ],
+    "transfer": "Exercício autoral: qual a probabilidade de soma 12?",
+    "criteria": [
+      "(6,6) ainda existe.",
+      "1/36."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "1/3"
+      },
+      {
+        "id": "b",
+        "text": "1/4"
+      },
+      {
+        "id": "c",
+        "text": "1/6"
+      },
+      {
+        "id": "d",
+        "text": "1/12"
+      },
+      {
+        "id": "e",
+        "text": "1/9"
+      }
+    ],
+    "pages": [
+      20
+    ],
+    "statement": "A face correspondente ao número 1 de um dado comum de seis faces foi apagada. O mesmo ocorreu com a face correspondente ao número 4 de outro dado comum de seis faces.\n\n[Figura: os dois dados.]\n\nLançando-se ao acaso esses dois dados juntos, a probabilidade de a soma dos números obtidos ser igual a 7 é de",
+    "statementComplete": true
+  },
+  {
+    "number": 73,
+    "topicId": "mat_geometria_plana",
+    "subject": "Matemática",
+    "chapter": "Ângulos em Polígonos",
+    "title": "Polígonos em torno de um vértice",
+    "concept": "Ângulo interno de polígono regular: 180(n − 2)/n; ângulos em volta de um ponto somam 360°; pré-requisitos: ladrilhamento.",
+    "steps": [
+      "Ângulo interno do quadrado: 90°; do hexágono: 120°.",
+      "Os três ângulos completam 360° em Q.",
+      "Ângulo de Pn: 360 − 90 − 120 = 150°.",
+      "180(n − 2)/n = 150 → 30n = 360 → n = 12.",
+      "Alternativa C."
+    ],
+    "trap": "Usar ângulos externos em vez de internos leva a valores errados de n.",
+    "retrieval": [
+      "Qual é o ângulo interno do hexágono regular?",
+      "Por que os ângulos em Q somam 360°?"
+    ],
+    "transfer": "Exercício autoral: que polígono completaria um vértice com dois octógonos?",
+    "criteria": [
+      "360 − 2·135 = 90°.",
+      "Quadrado."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "10."
+      },
+      {
+        "id": "b",
+        "text": "24."
+      },
+      {
+        "id": "c",
+        "text": "12."
+      },
+      {
+        "id": "d",
+        "text": "9."
+      },
+      {
+        "id": "e",
+        "text": "15."
+      }
+    ],
+    "pages": [
+      20
+    ],
+    "statement": "Os polígonos regulares de 4, 6 e n lados, indicados na figura por P4, P6 e Pn, possuem o vértice Q em comum e, dois a dois, compartilham um lado.\n\n[Figura: um quadrado (P4), um hexágono regular (P6) e um terceiro polígono regular (Pn) encaixados em torno do vértice comum Q, sem sobreposição e sem folga.]\n\nNa situação descrita, n é igual a",
+    "statementComplete": true
+  },
+  {
+    "number": 74,
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "subject": "Matemática",
+    "chapter": "Potências e Radicais",
+    "title": "Produto de 16 frações",
+    "concept": "Propriedades de potências e soma de PA; pré-requisitos: 16 = 2⁴.",
+    "steps": [
+      "Cada fração é 2⁴/2ⁿ = 2^(4 − n).",
+      "Produto: 2^[Σ(4 − n)] para n de 1 a 16.",
+      "Σ(4 − n) = 64 − (1 + 2 + ... + 16) = 64 − 136.",
+      "= −72.",
+      "2⁻⁷² — alternativa D."
+    ],
+    "trap": "2⁶⁴ considera só o numerador (16¹⁶), esquecendo os denominadores.",
+    "retrieval": [
+      "Quanto vale 1 + 2 + ... + 16?",
+      "Por que 16¹⁶ = 2⁶⁴?"
+    ],
+    "transfer": "Exercício autoral: a partir de que fração o produto parcial começa a diminuir?",
+    "criteria": [
+      "Frações menores que 1: n > 4.",
+      "A partir da 5ª."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "2⁶⁴"
+      },
+      {
+        "id": "b",
+        "text": "2⁻⁶⁴"
+      },
+      {
+        "id": "c",
+        "text": "2⁻³²"
+      },
+      {
+        "id": "d",
+        "text": "2⁻⁷²"
+      },
+      {
+        "id": "e",
+        "text": "2⁷²"
+      }
+    ],
+    "pages": [
+      20
+    ],
+    "statement": "Observe o produto de infinitas frações que seguem determinado padrão:\n\n(16/2) · (16/4) · (16/8) · (16/16) · ... · (16/2ⁿ) · ...\n\nO produto das 16 primeiras frações desse padrão é igual a:",
+    "statementComplete": true
+  },
+  {
+    "number": 75,
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "subject": "Matemática",
+    "chapter": "Porcentagem",
+    "title": "Três afirmações sobre porcentagem",
+    "concept": "Porcentagem como fator multiplicativo; pré-requisitos: aumentos e descontos sucessivos.",
+    "steps": [
+      "Ana: (x/100)·y = (y/100)·x — verdadeiro.",
+      "Beto: y(1 − x/100)(1 + x/100) = y(1 − x²/10⁴) < y — falso.",
+      "Cléo: y(1 − x/100) = (100 − x)y/100 — verdadeiro.",
+      "Corretas: Ana e Cléo.",
+      "Alternativa A."
+    ],
+    "trap": "Beto parece intuitivo, mas o acréscimo incide sobre um valor menor.",
+    "retrieval": [
+      "Por que desconto e acréscimo iguais não se anulam?",
+      "Quanto é 10% de 50 e 50% de 10?"
+    ],
+    "transfer": "Exercício autoral: desconto de 20% seguido de acréscimo de 20% em R$ 100.",
+    "criteria": [
+      "80 → 96.",
+      "Perda de 4%."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ana e Cléo, apenas."
+      },
+      {
+        "id": "b",
+        "text": "Cléo, apenas."
+      },
+      {
+        "id": "c",
+        "text": "Beto e Cléo, apenas."
+      },
+      {
+        "id": "d",
+        "text": "Beto, apenas."
+      },
+      {
+        "id": "e",
+        "text": "Ana, Beto e Cléo."
+      }
+    ],
+    "pages": [
+      21
+    ],
+    "statement": "Ana, Beto e Cléo fizeram as seguintes afirmações a respeito de cálculos com porcentagem, em que x e y são valores positivos:\n\nAna: “x% de y é sempre igual a y% de x”.\nBeto: “Um desconto de x% sobre y, seguido de um acréscimo de x% sobre o valor após o desconto, sempre resulta em y”.\nCléo: “Dar um desconto de x% sobre y sempre resulta em (100 – x)y/100”.\n\nEstá correto o que foi afirmado por",
+    "statementComplete": true
+  },
+  {
+    "number": 76,
+    "topicId": "mat_trigonometria",
+    "subject": "Matemática",
+    "chapter": "Trigonometria no Triângulo Retângulo",
+    "title": "Área do triângulo MER",
+    "concept": "Razões trigonométricas no triângulo retângulo e área; pré-requisitos: tg 45° = 1, tg 30° = √3/3.",
+    "steps": [
+      "No triângulo EPR: tg 45° = PR/EP → EP = 12 cm.",
+      "No triângulo EPM: tg 30° = MP/EP → MP = 12 · √3/3 = 4√3.",
+      "MR = 12 + 4√3.",
+      "Área = ½ · (12 + 4√3) · 12 = 72 + 24√3 = 24(3 + √3).",
+      "Alternativa C."
+    ],
+    "trap": "Usar só um dos triângulos retângulos (ex.: ½ · 12 · 12 = 72) esquece a parte MP.",
+    "retrieval": [
+      "Por que EP = PR?",
+      "Qual é a área do triângulo EPM?"
+    ],
+    "transfer": "Exercício autoral: calcule o comprimento ME.",
+    "criteria": [
+      "cos 30° = EP/ME.",
+      "ME = 8√3 cm."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "6(√3 + 3)"
+      },
+      {
+        "id": "b",
+        "text": "12(√3 + 3)"
+      },
+      {
+        "id": "c",
+        "text": "24(√3 + 3)"
+      },
+      {
+        "id": "d",
+        "text": "48(√3 + 3)"
+      },
+      {
+        "id": "e",
+        "text": "3(√3 + 3)"
+      }
+    ],
+    "pages": [
+      21
+    ],
+    "statement": "A figura mostra os triângulos MEP e REP, que compartilham o lado EP.\n\n[Figura: triângulo MER com a altura EP perpendicular a MR, sendo P entre M e R; o ângulo MÊP mede 30° e o ângulo PÊR mede 45°; PR = 12 cm.]\n\nDado:\n— 30º — 45º — 60º\nsen — 1/2 — √2/2 — √3/2\ncos — √3/2 — √2/2 — 1/2\ntg — √3/3 — 1 — √3\n\nA área do triângulo MER, em cm², é igual a",
+    "statementComplete": true
+  },
+  {
+    "number": 77,
+    "topicId": "mat_geometria_espacial",
+    "subject": "Matemática",
+    "chapter": "Cubos e Paralelepípedos",
+    "title": "Corte em escada no paralelepípedo",
+    "concept": "Área criada por um corte: duas faces novas iguais à superfície de corte; pré-requisitos: comprimento de poligonal em degraus.",
+    "steps": [
+      "O corte cria duas superfícies novas, uma em cada prisma.",
+      "A poligonal em escada percorre, ao todo, 9 cm na direção da largura e 7 − 4 = 3 cm na do comprimento: 12 cm.",
+      "Área de cada superfície de corte: 12 × 5 = 60 cm².",
+      "Acréscimo total: 2 × 60 = 120 cm².",
+      "Alternativa E."
+    ],
+    "trap": "Contar só uma face nova (60 cm²) esquece que ela aparece nos dois prismas.",
+    "retrieval": [
+      "Por que a escada tem 12 cm de comprimento total?",
+      "Quantas faces novas surgem?"
+    ],
+    "transfer": "Exercício autoral: e se o corte fosse plano, de frente a fundo, a 7 cm da extremidade?",
+    "criteria": [
+      "Face 9 × 5 = 45 cm².",
+      "Acréscimo de 90 cm²."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "150 cm²."
+      },
+      {
+        "id": "b",
+        "text": "160 cm²."
+      },
+      {
+        "id": "c",
+        "text": "110 cm²."
+      },
+      {
+        "id": "d",
+        "text": "180 cm²."
+      },
+      {
+        "id": "e",
+        "text": "120 cm²."
+      }
+    ],
+    "pages": [
+      21
+    ],
+    "statement": "Um paralelepípedo será dividido em dois prismas, conforme mostra a figura.\n\n[Figura: paralelepípedo de 20 cm × 9 cm × 5 cm. O corte é vertical e em escada: visto de cima, a linha de corte vai da aresta frontal, a 7 cm da extremidade direita, até a aresta traseira, a 4 cm dessa extremidade, alternando degraus nas direções da largura e do comprimento, sempre em ângulos retos.]\n\nApós separados, a soma das áreas totais dos dois prismas irá superar a área total do prisma original em",
+    "statementComplete": true
+  },
+  {
+    "number": 78,
+    "topicId": "mat_geometria_analitica",
+    "subject": "Matemática",
+    "chapter": "Posições Relativas entre Duas Retas",
+    "title": "Ruas perpendiculares no plano",
+    "concept": "Coeficiente angular e retas perpendiculares (m1·m2 = −1); pré-requisitos: equação da reta por ponto e inclinação.",
+    "steps": [
+      "Rua São Lucas: passa por (0, −1) e (2, 0): m = 1/2.",
+      "Rua São Camilo: perpendicular, m = −2, passando por (8, 3).",
+      "y − 3 = −2(x − 8).",
+      "Com y = 0: x = 8 + 3/2 = 19/2.",
+      "Alternativa D."
+    ],
+    "trap": "Usar m = 2 (sem trocar o sinal) daria x = 13/2, fora das opções.",
+    "retrieval": [
+      "Qual a relação entre coeficientes angulares de retas perpendiculares?",
+      "Confira se (8, 3) está na Rua São Lucas."
+    ],
+    "transfer": "Exercício autoral: em que ponto a Rua São Camilo corta o eixo y?",
+    "criteria": [
+      "x = 0: y = 19.",
+      "(0, 19)."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "(11, 0)"
+      },
+      {
+        "id": "b",
+        "text": "(10, 0)"
+      },
+      {
+        "id": "c",
+        "text": "(17/2, 0)"
+      },
+      {
+        "id": "d",
+        "text": "(19/2, 0)"
+      },
+      {
+        "id": "e",
+        "text": "(21/2, 0)"
+      }
+    ],
+    "pages": [
+      22
+    ],
+    "statement": "Cada local de uma cidade plana pode ser representado por um par ordenado (x, y) em um plano cartesiano desenhado sobre o mapa dessa cidade. A figura mostra esse plano cartesiano, com a indicação de duas ruas retilíneas que são perpendiculares no ponto de coordenadas (8, 3).\n\n[Figura: a Rua São Lucas é uma reta que corta o eixo y em −1 e o eixo x em 2; a Rua São Camilo é perpendicular a ela no ponto (8, 3).]\n\nMariana mora nessa cidade, no ponto em que a representação da Rua São Camilo no plano cartesiano intersecta o eixo x. Esse ponto tem coordenadas",
+    "statementComplete": true
+  },
+  {
+    "number": 79,
+    "topicId": "mat_dados_probabilidade",
+    "subject": "Matemática",
+    "chapter": "Estatística Descritiva",
+    "title": "Lucro médio e mediana das receitas",
+    "concept": "Média, mediana e valores negativos; pré-requisitos: ordenar dados.",
+    "steps": [
+      "Lucros: 200, 200, −100 e 500 → média L = 800 ÷ 4 = 200.",
+      "Receitas em ordem: 900, 1 100, 1 200, 1 400.",
+      "Mediana M = (1 100 + 1 200)/2 = 1 150.",
+      "(L + M)/2 = (200 + 1 150)/2 = 675.",
+      "Alternativa B."
+    ],
+    "trap": "Ignorar o prejuízo de 2021 (contar +100) dá L = 250 e média 700, fora das opções.",
+    "retrieval": [
+      "Qual foi o resultado de 2021?",
+      "Como se calcula a mediana com número par de dados?"
+    ],
+    "transfer": "Exercício autoral: calcule a mediana das despesas.",
+    "criteria": [
+      "900, 900, 1 000, 1 000.",
+      "950."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "625."
+      },
+      {
+        "id": "b",
+        "text": "675."
+      },
+      {
+        "id": "c",
+        "text": "650."
+      },
+      {
+        "id": "d",
+        "text": "575."
+      },
+      {
+        "id": "e",
+        "text": "600."
+      }
+    ],
+    "pages": [
+      22
+    ],
+    "statement": "O gráfico mostra o total de receitas e de despesas de uma empresa no balanço anual de quatro anos consecutivos.\n\n[Gráfico de barras, em milhares de R$: 2019 — receitas 1 200, despesas 1 000; 2020 — receitas 1 100, despesas 900; 2021 — receitas 900, despesas 1 000; 2022 — receitas 1 400, despesas 900. Lucro = Receitas − Despesas.]\n\nConsiderando-se o período representado no gráfico, sendo L o lucro médio anual da empresa e M a mediana das receitas, a média aritmética simples entre L e M, em milhares de reais, é igual a",
+    "statementComplete": true
+  },
+  {
+    "number": 80,
+    "topicId": "mat_funcoes",
+    "subject": "Matemática",
+    "chapter": "Função Quadrática",
+    "title": "Raízes reais distintas não negativas",
+    "concept": "Discriminante e relações de Girard; pré-requisitos: soma e produto das raízes.",
+    "steps": [
+      "Raízes distintas: Δ = 16 − 4c > 0 → c < 4.",
+      "Soma das raízes = 4 > 0: compatível com raízes não negativas.",
+      "Produto = c ≥ 0 garante que nenhuma seja negativa.",
+      "Logo, 0 ≤ c < 4.",
+      "Alternativa A."
+    ],
+    "trap": "E admite c negativo, que daria uma raiz negativa (produto negativo).",
+    "retrieval": [
+      "O que acontece se c = 4?",
+      "O que o produto negativo diz sobre as raízes?"
+    ],
+    "transfer": "Exercício autoral: resolva a equação para c = 0.",
+    "criteria": [
+      "x² − 4x = 0.",
+      "x = 0 ou x = 4."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "0 ≤ c < 4"
+      },
+      {
+        "id": "b",
+        "text": "c ≤ 4"
+      },
+      {
+        "id": "c",
+        "text": "c > 4"
+      },
+      {
+        "id": "d",
+        "text": "c ≥ 4"
+      },
+      {
+        "id": "e",
+        "text": "– 4 ≤ c < 4"
+      }
+    ],
+    "pages": [
+      22
+    ],
+    "statement": "Considere a equação quadrática x2 – 4x + c = 0, sendo c um número real que faça com que a equação tenha duas raízes reais distintas não negativas. Sendo assim, o conjunto de todos os valores reais que c pode assumir, e somente eles, é tal que",
+    "statementComplete": true
+  }
+]

@@ -1,0 +1,210 @@
+{
+  "board": "FAMERP",
+  "year": 2024,
+  "phase": "1ª fase",
+  "version": "V1",
+  "examUrl": "https://arquivos.qconcursos.com/prova/arquivo_prova/153795/vunesp-2023-famerp-vestibular-conhecimentos-gerais-prova.pdf",
+  "answerKeyUrl": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/153795/vunesp-2023-famerp-vestibular-conhecimentos-gerais-gabarito.pdf",
+  "excludedNumbers": [],
+  "media": [
+    {
+      "page": 2,
+      "url": "/question-media/oficiais/famerp-2024-v1/p02.webp",
+      "sha256": "8edd7f683937d33449fd89c47c190e9854c54c85d76967a1809d299fbc8362ad"
+    },
+    {
+      "page": 3,
+      "url": "/question-media/oficiais/famerp-2024-v1/p03.webp",
+      "sha256": "c50ef75035f1d213f8181af6480023c4eb0b482bdfba910ed061004dfb4989d2"
+    },
+    {
+      "page": 4,
+      "url": "/question-media/oficiais/famerp-2024-v1/p04.webp",
+      "sha256": "240e44e255d8c4cde0636fb1b62d7191a531721b58bff7488375b2bf7acb8618"
+    },
+    {
+      "page": 5,
+      "url": "/question-media/oficiais/famerp-2024-v1/p05.webp",
+      "sha256": "a60ba93664851b1555beae420efa6b69b4a333371ff5457de1070b58bea3a3b3"
+    },
+    {
+      "page": 6,
+      "url": "/question-media/oficiais/famerp-2024-v1/p06.webp",
+      "sha256": "67aa279a999c3028539d74c095a12b8202e89f1aa90c8788b956c912dd8caadd"
+    },
+    {
+      "page": 7,
+      "url": "/question-media/oficiais/famerp-2024-v1/p07.webp",
+      "sha256": "1d865d4aa2ff8db80e7e7465b896920f75f429511d8f69159043e45070c92095"
+    },
+    {
+      "page": 8,
+      "url": "/question-media/oficiais/famerp-2024-v1/p08.webp",
+      "sha256": "0abcce7e85517efbf03b4bedd924ab2a1888392683c384e9c583c4019b1efb75"
+    },
+    {
+      "page": 9,
+      "url": "/question-media/oficiais/famerp-2024-v1/p09.webp",
+      "sha256": "f392f6b55083f8690b8bbe917fe6f3e4f9f530f8fd595463701d856187baf465"
+    },
+    {
+      "page": 10,
+      "url": "/question-media/oficiais/famerp-2024-v1/p10.webp",
+      "sha256": "597785f3bffab03cd77f7760e7ce458f7e818e987c4333f51e016380c3b58171"
+    },
+    {
+      "page": 11,
+      "url": "/question-media/oficiais/famerp-2024-v1/p11.webp",
+      "sha256": "ce15ee2aa3121af3aff1d42ce1f34e4f527ff93f484777ae1b490c5f63a77dc5"
+    },
+    {
+      "page": 12,
+      "url": "/question-media/oficiais/famerp-2024-v1/p12.webp",
+      "sha256": "3231e96cbb4f0f0365bbf4b93ae30f681be08cd32c24b37e4f44a310ac4475e1"
+    },
+    {
+      "page": 13,
+      "url": "/question-media/oficiais/famerp-2024-v1/p13.webp",
+      "sha256": "b3e28c051398bfca931421fdec98a3b5adfd2c585503709af93001d41d4a30fd"
+    },
+    {
+      "page": 14,
+      "url": "/question-media/oficiais/famerp-2024-v1/p14.webp",
+      "sha256": "7af1d9379051a339d1b1a86f679c5012984426d1aef37e49a56b5ce09552984f"
+    },
+    {
+      "page": 15,
+      "url": "/question-media/oficiais/famerp-2024-v1/p15.webp",
+      "sha256": "b2b353e7ad1bcdf5ebdc826d4e6d0dcab1eeb9c283cb32aa379b24ebc93590c5"
+    },
+    {
+      "page": 16,
+      "url": "/question-media/oficiais/famerp-2024-v1/p16.webp",
+      "sha256": "e774325115c1bc2792dacbb343215ae84bdba2f227e76569e6d4f4f26a9bc33d"
+    },
+    {
+      "page": 17,
+      "url": "/question-media/oficiais/famerp-2024-v1/p17.webp",
+      "sha256": "b0e2881bded1767c058528b355bea5af04818dbb54dc8457418343aa9025f67c"
+    },
+    {
+      "page": 18,
+      "url": "/question-media/oficiais/famerp-2024-v1/p18.webp",
+      "sha256": "811e5cecafc66258d1fa4c0927cee27615fcbe0ab25ed23e2e1191006457b3d6"
+    },
+    {
+      "page": 19,
+      "url": "/question-media/oficiais/famerp-2024-v1/p19.webp",
+      "sha256": "88f235bd21cef0fbb2853d74ea4a053ffc4d726b29f698d2c7a9f3f4625f9728"
+    },
+    {
+      "page": 20,
+      "url": "/question-media/oficiais/famerp-2024-v1/p20.webp",
+      "sha256": "b65679a6d42fe61f21393cb67542d8e17f86e14dcdcefe46f60d110df618b1ed"
+    },
+    {
+      "page": 21,
+      "url": "/question-media/oficiais/famerp-2024-v1/p21.webp",
+      "sha256": "966592ceb95b6ce068bc8001404e603b74c6155a0e646868cf9550662517eb2a"
+    },
+    {
+      "page": 22,
+      "url": "/question-media/oficiais/famerp-2024-v1/p22.webp",
+      "sha256": "5d5995d3b496c9e5396264ccd5715a52578940725d770e7b96a455cb2ed595c4"
+    }
+  ],
+  "idPrefix": "famerp_2024_v1",
+  "sourceFile": "FAMERP_2024_CG_V1.pdf",
+  "totalQuestions": 80,
+  "firstNumber": 1,
+  "optionIds": "abcde",
+  "selectedNumbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80
+  ],
+  "answerKeyFormat": "vunesp",
+  "keyMarker": "FMRP2301",
+  "examSha256": "65e326c89905f51905849066a3b9f5ba38b214da34c49345d475c4010efa4112",
+  "answerKeySha256": "057a2b59f4924ba5f412b0f05ed72161dd91cd4e37a83c7889d035f78f18e20b",
+  "answerKeyTextSha256": "54ee5dfad784213aae254b98d23adb3040b14de2a9c608d22e31ceb746097cb5",
+  "answerKeyTextFile": "gabaritos/FAMERP/famerp-2024-v1.txt",
+  "itemsFile": "scripts/data/famerp-2024-v1-expansao.json"
+}
