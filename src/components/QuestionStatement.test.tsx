@@ -34,3 +34,14 @@ it('não mostra a página quando a tabela já está transcrita e conferida', () 
     prompt: 'A tabela indica temperaturas: A | B\n4 | −1\n10 | 8. Qual é a relação linear?' }} />);
   expect(screen.queryByRole('img')).toBeNull();
 });
+
+it('separa parágrafos e preserva versos sem alterar o texto', () => {
+  const prompt = 'Primeiro verso\nSegundo verso\n\n(Autoria e fonte.)\n\nO poema apresenta:';
+  const { container } = render(<QuestionStatement question={{ ...question, prompt }} />);
+  const paragraphs = container.querySelectorAll('p');
+  expect(paragraphs).toHaveLength(3);
+  expect(paragraphs[0].textContent).toBe('Primeiro verso\nSegundo verso');
+  expect(paragraphs[0]).toHaveClass('whitespace-pre-line');
+  expect(paragraphs[1].textContent).toBe('(Autoria e fonte.)');
+  expect(paragraphs[2].textContent).toBe('O poema apresenta:');
+});
