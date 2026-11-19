@@ -56,7 +56,10 @@ test('preserva os registros anteriores fora da correção conferida de G6PD, sem
   const preserved = bank.slice(0, 2959).filter(q => q.id !== 'q_real_fuvest_2022_bio');
   assert.equal(preserved.length, 2958);
   assert.equal(bank.filter(q => q.id === 'q_real_fuvest_2022_bio').length, 1);
-  assert.equal(hash(JSON.stringify(preserved.map(({ statementComplete: _complete, ...q }) => q))), '7dca5c26bac9342c1b33fb72ad47c375d67ad813e96ebb84cb457e010fc75d1e');
+  // A diagramação do poema mudou apenas espaços para quebras de verso.
+  // Normalizar só esse enunciado mantém o hash histórico protegendo o conteúdo.
+  assert.equal(hash(JSON.stringify(preserved.map(({ statementComplete: _complete, ...q }) =>
+    q.id === 'ap_hisbra_unesp_003' ? { ...q, prompt: q.prompt.replace(/\s+/g, ' ') } : q))), '7dca5c26bac9342c1b33fb72ad47c375d67ad813e96ebb84cb457e010fc75d1e');
   // Questões autorais (crivo_*) têm teste próprio; aqui só conta o que veio de prova.
   assert.equal(bank.filter(q=>!q.id.startsWith('crivo_')).length,5050);
   const additions = batches.flatMap(([slug])=>{

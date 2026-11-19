@@ -645,7 +645,7 @@ export default function Questoes() {
             <h2 ref={questionHeading} tabIndex={-1} className="scroll-mt-24">Escolha uma alternativa.</h2>
             <p>O feedback e a justificativa só aparecem após a sua tentativa.</p>
 
-            <div className="ni-question"><QuestionStatement question={question} /></div>
+            <div className="ni-question min-w-0" style={{ maxWidth: 'none' }}><QuestionStatement question={question} /></div>
 
             <div className="ni-options" style={{ gridTemplateColumns: '1fr' }}>
               {question.options.map((option) => {
