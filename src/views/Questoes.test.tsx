@@ -101,7 +101,7 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     await startIfReady(user);
     await user.click(screen.getByRole('button',{name:/Citoplasma/}));
     await user.click(screen.getByRole('button',{name:'Resolução por etapas'}));
-    await user.click(screen.getByRole('button',{name:'Próxima questão'}));
+    await user.click(screen.getByRole('button',{name:'Reiniciar treino'}));
     await startIfReady(user);
     await user.click(screen.getByRole('button',{name:/Mitocôndria/}));
     emit('Comentário da tentativa A');finish({text:'Comentário da tentativa A'});
@@ -457,18 +457,10 @@ describe('Questoes — visibilidade do filtro de questões reais', () => {
     await waitFor(() => expect(screen.getByText(/Questão 1 de 2/)).toBeInTheDocument());
   });
 
-  it('a barra de precisão acompanha o valor em vez de ficar cheia por padrão', async () => {
-    // Regressão: .ni-metric>i span tinha width:62% fixo no CSS, então a barra
-    // aparecia mais da metade cheia num treino 0/0, ao lado de um valor "—".
-    const user = userEvent.setup();
+  it('remove o painel lateral do treino', () => {
     const { container } = render(<Questoes />);
-
-    const barra = () => container.querySelector('.ni-metric > i > span') as HTMLElement;
-    expect(barra().style.getPropertyValue('--bar-fill')).toBe('0%');
-
-    await startIfReady(user);
-    await user.click(screen.getByRole('button', { name: /Mitocôndria/ }));
-    await waitFor(() => expect(barra().style.getPropertyValue('--bar-fill')).toBe('0%'));
+    expect(screen.queryByText('Este treino')).not.toBeInTheDocument();
+    expect(container.querySelector('.ni-session-side')).toBeNull();
   });
 
   it('agrupa os tópicos por matéria em vez de listar todos de uma vez', async () => {
@@ -551,7 +543,7 @@ describe('Questoes — seleção múltipla', () => {
     await startIfReady(user);
     await user.click(screen.getByRole('button', { name: /Citoplasma/ }));
     await user.click(screen.getByRole('checkbox', { name: 'FUVEST' }));
-    expect(screen.queryByText(QUESTION.explanation)).not.toBeInTheDocument();
+    expect(screen.getByText(QUESTION.explanation)).toBeInTheDocument();
     await user.click(screen.getByRole('checkbox', { name: 'ENEM' }));
     expect(screen.getByRole('status')).toHaveTextContent('2 questões encontradas');
     await user.selectOptions(screen.getByLabelText('Subtópico'), 'Herança Sexual');
@@ -598,6 +590,7 @@ describe('cronômetro da questão',()=>{
     vi.useFakeTimers();
     try {
       render(<Questoes/>);
+      fireEvent.click(screen.getByRole('checkbox',{name:'Usar cronômetro (opcional)'}));
       expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:00');
       expect(screen.getByLabelText('Tempo esperado por questão')).toHaveValue('120');
       fireEvent.change(screen.getByLabelText('Tempo esperado por questão'),{target:{value:'180'}});
@@ -612,7 +605,7 @@ describe('cronômetro da questão',()=>{
       act(()=>vi.advanceTimersByTime(120000));
       expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:46');
       fireEvent.click(screen.getByRole('button',{name:/Citoplasma/}));expect(addUserAttemptMock).toHaveBeenCalledTimes(1);
-      fireEvent.click(screen.getByRole('button',{name:'Próxima questão'}));
+      fireEvent.click(screen.getByRole('button',{name:'Reiniciar treino'}));
       expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:00');
       act(()=>vi.advanceTimersByTime(3000));expect(screen.getByRole('timer',{name:'Tempo decorrido'})).toHaveTextContent('00:00');
       fireEvent.click(screen.getByRole('button',{name:'Iniciar questão'}));
@@ -624,7 +617,7 @@ describe('cronômetro da questão',()=>{
   it('permite ultrapassar a meta e responder sem penalidade ou bloqueio',()=>{
     vi.useFakeTimers();
     try {
-      render(<Questoes/>);fireEvent.click(screen.getByRole('button',{name:'Iniciar questão'}));act(()=>vi.advanceTimersByTime(121000));
+      render(<Questoes/>);fireEvent.click(screen.getByRole('checkbox',{name:'Usar cronômetro (opcional)'}));fireEvent.click(screen.getByRole('button',{name:'Iniciar questão'}));act(()=>vi.advanceTimersByTime(121000));
       expect(screen.getByText(/Você passou da meta/)).toBeInTheDocument();
       expect(screen.getByRole('button',{name:/Citoplasma/})).toBeEnabled();
       fireEvent.click(screen.getByRole('button',{name:/Citoplasma/}));
@@ -636,19 +629,19 @@ describe('cronômetro da questão',()=>{
 describe('Questoes — filtros recolhidos após a busca',()=>{
  it('busca, recolhe, permite resolver e restaura os filtros para edição',async()=>{
   const user=userEvent.setup();render(<Questoes/>);
-  expect(screen.getByRole('button',{name:/Citoplasma/})).toBeDisabled();
+  expect(screen.getByRole('button',{name:/Citoplasma/})).toBeEnabled();
   await user.selectOptions(screen.getByLabelText('Matéria'),'Biologia');
   await user.type(screen.getByRole('searchbox',{name:'Buscar questões'}),'glicolise');
   await user.click(screen.getByRole('button',{name:'Buscar questões'}));
   expect(screen.queryByRole('searchbox')).not.toBeInTheDocument();
   expect(screen.getByText(/Busca: “glicolise”/)).toBeInTheDocument();
   await waitFor(()=>expect(screen.getByRole('heading',{name:'Escolha uma alternativa.'})).toHaveFocus());
-  await user.click(screen.getByRole('button',{name:'Iniciar questão'}));
+  await startIfReady(user);
   expect(screen.getByRole('button',{name:/Citoplasma/})).toBeEnabled();
   await user.click(screen.getByRole('button',{name:'Editar filtros'}));
   expect(screen.getByRole('searchbox',{name:'Buscar questões'})).toHaveValue('glicolise');
   expect(screen.getByLabelText('Matéria')).toHaveValue('Biologia');
-  expect(screen.getByText('Pausado por você')).toBeInTheDocument();
+  expect(screen.getByRole('checkbox',{name:'Usar cronômetro (opcional)'})).not.toBeChecked();
  });
  it('mantém filtros acessíveis quando a busca não encontra questões e não inicia o relógio',async()=>{
   const user=userEvent.setup();render(<Questoes/>);
@@ -657,7 +650,7 @@ describe('Questoes — filtros recolhidos após a busca',()=>{
   expect(screen.getByRole('button',{name:'Buscar questões'})).toBeDisabled();
   expect(screen.getByRole('searchbox')).toBeVisible();
   await user.click(screen.getByRole('button',{name:'Limpar busca'}));
-  expect(screen.getByText('Aguardando início')).toBeInTheDocument();
+  expect(screen.queryByRole('timer')).not.toBeInTheDocument();
   expect(addUserAttemptMock).not.toHaveBeenCalled();
  });
 });
@@ -676,7 +669,32 @@ it.each([
   await user.click(screen.getByRole('button',{name:'Buscar questões'}));
   expect(screen.queryByRole('searchbox')).not.toBeInTheDocument();
   expect(screen.getByText(new RegExp(chapter))).toBeInTheDocument();
-  await user.click(screen.getByRole('button',{name:'Iniciar questão'}));
+  await startIfReady(user);
   await user.click(screen.getByRole('button',{name:/Citoplasma/}));
   expect(addUserAttemptMock).toHaveBeenCalledWith('user-1',expect.objectContaining({topicId,questionId:'q1'}));
+});
+
+
+describe('navegação livre', () => {
+  it('pula sem registrar tentativa e restaura a resposta ao voltar', async () => {
+    questionsHook.mockReturnValue({ questions: [QUESTION, {...QUESTION, id:'q2', prompt:'Segunda questão'}], syncError:null });
+    const user = userEvent.setup(); render(<Questoes />);
+    expect(screen.getByRole('button',{name:'Questão anterior'})).toBeDisabled();
+    await user.click(screen.getByRole('button',{name:'Próxima questão'}));
+    expect(screen.getByText('Segunda questão')).toBeInTheDocument();
+    expect(addUserAttemptMock).not.toHaveBeenCalled();
+    expect(masteryHook.mock.results[0].value.updateMastery).not.toHaveBeenCalled();
+    expect(screen.getByRole('button',{name:'Próxima questão'})).toBeDisabled();
+    await user.click(screen.getByRole('button',{name:'Questão anterior'}));
+    await user.click(screen.getByRole('button',{name:/Citoplasma/}));
+    expect(addUserAttemptMock).toHaveBeenCalledTimes(1);
+    const attempt = addUserAttemptMock.mock.calls[0][1];
+    expect(attempt.durationSeconds).toBeUndefined();
+    expect(attempt.expectedDurationSeconds).toBeUndefined();
+    await user.click(screen.getByRole('button',{name:'Próxima questão'}));
+    await user.click(screen.getByRole('button',{name:'Questão anterior'}));
+    expect(screen.getByRole('button',{name:/Citoplasma/})).toBeDisabled();
+    expect(screen.getByText(/Alternativa correta:/)).toBeInTheDocument();
+    expect(addUserAttemptMock).toHaveBeenCalledTimes(1);
+  });
 });
