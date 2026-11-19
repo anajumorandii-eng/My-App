@@ -1,5 +1,111 @@
 [
   {
+    "number": 1,
+    "topicId": "por_lit_classica_barroca",
+    "subject": "Português",
+    "chapter": "A Estética Neoclássica",
+    "title": "Onde se esconderam Antero e Cupido",
+    "concept": "Leitura de poema árcade: identificar interlocutor e referentes; pré-requisitos: vocativo e pronome possessivo de 2ª pessoa.",
+    "steps": [
+      "O eu lírico se dirige a Glaura (“Empenhou-se, ó Glaura, o zelo”).",
+      "Na 6ª estrofe: os filhos de Vênus, “receosos pelo insulto”, “no teu seio se acolheram”.",
+      "“Teu” refere-se à interlocutora, Glaura.",
+      "Os mares são onde Vênus procura a cinta; os olhos do eu lírico só os veem (“dos meus olhos não se escondem”).",
+      "Alternativa B."
+    ],
+    "trap": "“Dos meus olhos não se escondem” sugere os olhos do eu lírico como esconderijo; o verso diz o contrário: ele os vê.",
+    "retrieval": [
+      "A quem se refere o possessivo “teu” na 6ª estrofe?",
+      "Por que o eu lírico diz que “sabe a quem” levaram a cinta?"
+    ],
+    "transfer": "Exercício autoral: explique a imagem do roubo da cinta de Vênus como elogio à amada.",
+    "criteria": [
+      "A beleza da amada guarda os Amores.",
+      "Glaura supera a própria Vênus em encanto."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "no peito do eu lírico."
+      },
+      {
+        "id": "b",
+        "text": "no peito de Glaura."
+      },
+      {
+        "id": "c",
+        "text": "no peito de Vênus."
+      },
+      {
+        "id": "d",
+        "text": "nos mares."
+      },
+      {
+        "id": "e",
+        "text": "nos olhos do eu lírico."
+      }
+    ],
+    "pages": [
+      2
+    ],
+    "statement": "Leia o poema “A cinta de Vênus”, do poeta árcade Silva Alvarenga.\n\nCai a cinta a Vênus¹ bela,\nSem cautela recostada;\nE turbada² entre os pesares\nPede aos mares que lha deem.\n\nO tesouro se procura,\nOs desejos se interessam,\nOs cuidados já se apressam,\nE a ternura vai também.\n\nEmpenhou-se, ó Glaura, o zelo;\nMas em vão: que perda triste!\nSó eu vi, sei onde existe;\nE dizê-lo não convém.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\nRoubador do puro ornato\nFoi Antero e foi Cupido³;\nE o levaram escondido\nCom recato, eu sei a quem.\n\nReceosos pelo insulto,\nQue traidores cometeram,\nNo teu seio se acolheram,\nOnde oculto asilo têm.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\nDos meus olhos não se escondem\nOs meninos⁴, a quem amo:\nSe os procuro, espreito e chamo,\nCorrespondem, mas não vêm.\n\nCom acenos expressivos\nDe alegria suspeitosa\nMostram faixa preciosa,\nQue atrativos mil contêm.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\nSe piedade aflito rogo,\nE que cessem teus rigores,\n(Ah cruéis, lindos Amores!)\nFogem logo e com desdém.\n\nAbrandá-los não consigo,\nE já deles tenho medo:\nGuarda, Ninfa, este segredo,\nQue não digo a mais ninguém.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\n(Silva Alvarenga. Obras poéticas: poemas líricos, 2005.)\n¹ Vênus: deusa do Amor.\n² turbada: aflita, transtornada.\n³ Antero e Cupido: irmãos, filhos de Vênus.\n⁴ meninos: os filhos de Vênus, ou seja, Antero e Cupido.\n\nDepreende-se do poema que Antero e Cupido se esconderam",
+    "statementComplete": true
+  },
+  {
+    "number": 2,
+    "topicId": "por_lit_classica_barroca",
+    "subject": "Português",
+    "chapter": "A Estética Neoclássica",
+    "title": "Sentimento contraditório: “cruéis, lindos Amores”",
+    "concept": "Contradição afetiva explicitada por antítese de qualificadores; pré-requisitos: distinguir sentimento contraditório de ação contraditória.",
+    "steps": [
+      "Procure palavras que qualifiquem os filhos de Vênus de modo oposto.",
+      "“Cruéis” e “lindos” atribuem aos Amores, ao mesmo tempo, atração e sofrimento.",
+      "A antítese explicita amor e queixa na mesma exclamação.",
+      "A expressa só afeto; B, um comportamento contraditório dos meninos, não um sentimento; C narra o insulto; E expressa só medo.",
+      "Alternativa D."
+    ],
+    "trap": "B mostra contradição (“correspondem, mas não vêm”), mas da atitude dos Amores, não do sentimento do eu lírico.",
+    "retrieval": [
+      "Que dois adjetivos opostos aparecem no trecho correto?",
+      "Que figura de linguagem sustenta a contradição?"
+    ],
+    "transfer": "Exercício autoral: crie um verso com antítese que exprima amor e sofrimento ao mesmo tempo.",
+    "criteria": [
+      "Usar dois termos de sentido oposto.",
+      "Dirigi-los ao mesmo objeto amado."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "“Dos meus olhos não se escondem / Os meninos, a quem amo:” (8ª estrofe)"
+      },
+      {
+        "id": "b",
+        "text": "“Se os procuro, espreito e chamo, / Correspondem, mas não vêm.” (8ª estrofe)"
+      },
+      {
+        "id": "c",
+        "text": "“Receosos pelo insulto, / Que traidores cometeram,” (6ª estrofe)"
+      },
+      {
+        "id": "d",
+        "text": "“(Ah cruéis, lindos Amores!) / Fogem logo e com desdém.” (11ª estrofe)"
+      },
+      {
+        "id": "e",
+        "text": "“Abrandá-los não consigo, / E já deles tenho medo:” (12ª estrofe)"
+      }
+    ],
+    "pages": [
+      2
+    ],
+    "statement": "Leia o poema “A cinta de Vênus”, do poeta árcade Silva Alvarenga.\n\nCai a cinta a Vênus¹ bela,\nSem cautela recostada;\nE turbada² entre os pesares\nPede aos mares que lha deem.\n\nO tesouro se procura,\nOs desejos se interessam,\nOs cuidados já se apressam,\nE a ternura vai também.\n\nEmpenhou-se, ó Glaura, o zelo;\nMas em vão: que perda triste!\nSó eu vi, sei onde existe;\nE dizê-lo não convém.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\nRoubador do puro ornato\nFoi Antero e foi Cupido³;\nE o levaram escondido\nCom recato, eu sei a quem.\n\nReceosos pelo insulto,\nQue traidores cometeram,\nNo teu seio se acolheram,\nOnde oculto asilo têm.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\nDos meus olhos não se escondem\nOs meninos⁴, a quem amo:\nSe os procuro, espreito e chamo,\nCorrespondem, mas não vêm.\n\nCom acenos expressivos\nDe alegria suspeitosa\nMostram faixa preciosa,\nQue atrativos mil contêm.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\nSe piedade aflito rogo,\nE que cessem teus rigores,\n(Ah cruéis, lindos Amores!)\nFogem logo e com desdém.\n\nAbrandá-los não consigo,\nE já deles tenho medo:\nGuarda, Ninfa, este segredo,\nQue não digo a mais ninguém.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\n(Silva Alvarenga. Obras poéticas: poemas líricos, 2005.)\n¹ Vênus: deusa do Amor.\n² turbada: aflita, transtornada.\n³ Antero e Cupido: irmãos, filhos de Vênus.\n⁴ meninos: os filhos de Vênus, ou seja, Antero e Cupido.\n\nNo poema, o eu lírico manifesta um sentimento contraditório em relação aos filhos de Vênus. Tal sentimento contraditório está explícito no seguinte trecho:",
+    "statementComplete": true
+  },
+  {
     "number": 3,
     "topicId": "por_lit_classica_barroca",
     "subject": "Português",
@@ -50,6 +156,60 @@
       2
     ],
     "statement": "Leia o poema “A cinta de Vênus”, do poeta árcade Silva Alvarenga.\n\nCai a cinta a Vênus¹ bela,\nSem cautela recostada;\nE turbada² entre os pesares\nPede aos mares que lha deem.\n\nO tesouro se procura,\nOs desejos se interessam,\nOs cuidados já se apressam,\nE a ternura vai também.\n\nEmpenhou-se, ó Glaura, o zelo;\nMas em vão: que perda triste!\nSó eu vi, sei onde existe;\nE dizê-lo não convém.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\nRoubador do puro ornato\nFoi Antero e foi Cupido³;\nE o levaram escondido\nCom recato, eu sei a quem.\n\nReceosos pelo insulto,\nQue traidores cometeram,\nNo teu seio se acolheram,\nOnde oculto asilo têm.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\nDos meus olhos não se escondem\nOs meninos⁴, a quem amo:\nSe os procuro, espreito e chamo,\nCorrespondem, mas não vêm.\n\nCom acenos expressivos\nDe alegria suspeitosa\nMostram faixa preciosa,\nQue atrativos mil contêm.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\nSe piedade aflito rogo,\nE que cessem teus rigores,\n(Ah cruéis, lindos Amores!)\nFogem logo e com desdém.\n\nAbrandá-los não consigo,\nE já deles tenho medo:\nGuarda, Ninfa, este segredo,\nQue não digo a mais ninguém.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\n(Silva Alvarenga. Obras poéticas: poemas líricos, 2005.)\n¹ Vênus: deusa do Amor.\n² turbada: aflita, transtornada.\n³ Antero e Cupido: irmãos, filhos de Vênus.\n⁴ meninos: os filhos de Vênus, ou seja, Antero e Cupido.\n\nUma característica da estética árcade observada nesse poema é",
+    "statementComplete": true
+  },
+  {
+    "number": 4,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Pronomes",
+    "title": "A contração “lha”",
+    "concept": "Pronomes oblíquos: “lhe” (objeto indireto, a quem) e “a” (objeto direto, o quê); pré-requisitos: regência de “dar” (dar algo a alguém).",
+    "steps": [
+      "Desfaça a contração: “que lhe deem a [cinta]”.",
+      "“Dar” pede objeto direto (o que se dá) e indireto (a quem se dá).",
+      "“A”, objeto direto, retoma o que se perdeu: a cinta.",
+      "“Lhe”, objeto indireto, refere-se a quem pede: Vênus.",
+      "“Lhe” = Vênus; “a” = cinta — alternativa C."
+    ],
+    "trap": "A ordem pedida é a da contração (lhe + a): Vênus primeiro, cinta depois; D inverte.",
+    "retrieval": [
+      "Qual a função sintática de “lhe” na frase?",
+      "Por que “cautela” não pode ser o referente?"
+    ],
+    "transfer": "Exercício autoral: desfaça a contração em “Pediu o livro e o professor deu-lho”.",
+    "criteria": [
+      "Escrever “deu-lhe o livro”.",
+      "Identificar “lhe” como objeto indireto e “o” como objeto direto."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "“cinta” e “cautela”."
+      },
+      {
+        "id": "b",
+        "text": "“cautela” e “cinta”."
+      },
+      {
+        "id": "c",
+        "text": "“Vênus” e “cinta”."
+      },
+      {
+        "id": "d",
+        "text": "“cinta” e “Vênus”."
+      },
+      {
+        "id": "e",
+        "text": "“Vênus” e “cautela”."
+      }
+    ],
+    "pages": [
+      2,
+      3
+    ],
+    "statement": "Leia o poema “A cinta de Vênus”, do poeta árcade Silva Alvarenga.\n\nCai a cinta a Vênus¹ bela,\nSem cautela recostada;\nE turbada² entre os pesares\nPede aos mares que lha deem.\n\nO tesouro se procura,\nOs desejos se interessam,\nOs cuidados já se apressam,\nE a ternura vai também.\n\nEmpenhou-se, ó Glaura, o zelo;\nMas em vão: que perda triste!\nSó eu vi, sei onde existe;\nE dizê-lo não convém.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\nRoubador do puro ornato\nFoi Antero e foi Cupido³;\nE o levaram escondido\nCom recato, eu sei a quem.\n\nReceosos pelo insulto,\nQue traidores cometeram,\nNo teu seio se acolheram,\nOnde oculto asilo têm.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\nDos meus olhos não se escondem\nOs meninos⁴, a quem amo:\nSe os procuro, espreito e chamo,\nCorrespondem, mas não vêm.\n\nCom acenos expressivos\nDe alegria suspeitosa\nMostram faixa preciosa,\nQue atrativos mil contêm.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\nSe piedade aflito rogo,\nE que cessem teus rigores,\n(Ah cruéis, lindos Amores!)\nFogem logo e com desdém.\n\nAbrandá-los não consigo,\nE já deles tenho medo:\nGuarda, Ninfa, este segredo,\nQue não digo a mais ninguém.\n\nCai a cinta a Vênus bela,\nSem cautela recostada;\nE turbada entre os pesares\nPede aos mares que lha deem.\n\n(Silva Alvarenga. Obras poéticas: poemas líricos, 2005.)\n¹ Vênus: deusa do Amor.\n² turbada: aflita, transtornada.\n³ Antero e Cupido: irmãos, filhos de Vênus.\n⁴ meninos: os filhos de Vênus, ou seja, Antero e Cupido.\n\nDois pronomes átonos, quando ocorrem numa mesma oração, podem ser contraídos, como no verso “Pede aos mares que lha deem.”, em que “lha” é a junção de “lhe” + “a”. Esses pronomes referem-se, respectivamente, a",
     "statementComplete": true
   },
   {
@@ -107,6 +267,328 @@
     "statementComplete": true
   },
   {
+    "number": 6,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Leitura de Textos Cômicos",
+    "title": "Cinema: arte ou sala?",
+    "concept": "Ambiguidade lexical como fonte de humor; pré-requisitos: polissemia (uma palavra, mais de um sentido).",
+    "steps": [
+      "“Entender de cinema” supõe cinema como arte, linguagem.",
+      "A resposta “já fui em vários” toma cinema como sala de exibição.",
+      "A graça vem do deslizamento entre os dois sentidos da mesma palavra.",
+      "Não há suavização (eufemismo), comentário sobre a própria linguagem, contradição lógica nem exagero.",
+      "Alternativa A."
+    ],
+    "trap": "Metalinguagem atrai porque se fala de “escrever um e-book”, mas o humor está no duplo sentido de “cinema”.",
+    "retrieval": [
+      "Que dois sentidos de “cinema” aparecem no diálogo?",
+      "Por que a resposta revela despreparo da personagem?"
+    ],
+    "transfer": "Exercício autoral: crie um diálogo humorístico com a palavra “banco”.",
+    "criteria": [
+      "Usar dois sentidos (instituição e assento).",
+      "Fazer o humor vir da troca de sentido."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "ambiguidade."
+      },
+      {
+        "id": "b",
+        "text": "eufemismo."
+      },
+      {
+        "id": "c",
+        "text": "metalinguagem."
+      },
+      {
+        "id": "d",
+        "text": "paradoxo."
+      },
+      {
+        "id": "e",
+        "text": "hipérbole."
+      }
+    ],
+    "pages": [
+      3
+    ],
+    "statement": "Examine o cartum de Richard Bittencourt, o Fí.\n\n[Cartum: duas personagens conversam sentadas em poltronas, com uma mesinha entre elas.\n— Vou escrever um e-book sobre cinema.\n— Entende de cinema?\n— Claro, já fui em vários.]\n\n(Richard Bittencourt. As lágrimas sinceras de Júlio Gilson, 2023.)\n\nPara obter seu efeito de humor, o cartum explora o seguinte recurso expressivo:",
+    "statementComplete": true
+  },
+  {
+    "number": 7,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Os Dois Níveis da Leitura",
+    "title": "O que resiste ao tempo, segundo Machado",
+    "concept": "Compreensão de crônica: identificar o que o texto afirma e o que relativiza; pré-requisitos: ironia machadiana.",
+    "steps": [
+      "No 3º parágrafo: “Duas coisas, entretanto, perduram no meio da instabilidade universal”.",
+      "São elas a constância da polícia em proibir e a disposição do povo em desobedecer.",
+      "Logo, a teimosia popular resiste ao tempo.",
+      "A contraria “muita e muita dezena de anos há de correr”; C exagera (“imunes”); D é o oposto; E é negada pelo “entretanto”.",
+      "Alternativa B."
+    ],
+    "trap": "C é tentadora, mas o cronista diz que as crendices durarão “muita dezena de anos”, não que sejam imunes ao tempo.",
+    "retrieval": [
+      "Que duas coisas “perduram” segundo o cronista?",
+      "Que palavra introduz a exceção à instabilidade universal?"
+    ],
+    "transfer": "Exercício autoral: explique o “resíduo comum” mencionado no fim da crônica.",
+    "criteria": [
+      "O edital impresso e os fogos queimados.",
+      "A ironia: ambas as partes cumprem seu papel sem efeito."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "as crendices do povo estão na iminência de se extinguirem."
+      },
+      {
+        "id": "b",
+        "text": "a teimosia do povo em desobedecer à polícia resiste à ação do tempo."
+      },
+      {
+        "id": "c",
+        "text": "as crendices do povo revelam-se imunes à ação do tempo."
+      },
+      {
+        "id": "d",
+        "text": "o povo tem mostrado disposição em se adaptar às determinações da polícia."
+      },
+      {
+        "id": "e",
+        "text": "nada há no mundo que escape à ação do tempo."
+      }
+    ],
+    "pages": [
+      3
+    ],
+    "statement": "Leia o trecho de uma crônica de Machado de Assis, publicada originalmente em 16.06.1878. Os parágrafos estão numerados entre colchetes.\n\n[1] Estrugiram¹ os últimos foguetes de Santo Antônio; não tarda chegar a vez de S. João e de S. Pedro. [...] Indague quem quiser o motivo histórico deste foguetear os três santos, uso que herdamos dos nossos maiores; a realidade é que, não obstante o ceticismo do tempo, muita e muita dezena de anos há de correr, primeiro que o povo perca os seus antigos amores. Nestas noites abençoadas é que as crendices sãs abrem todas as velas. As consultas, as sortes, os ovos guardados em água, e outras sublimes ridicularias², ria-se delas quem quiser; eu vejo-as com respeito, com simpatia, e se alguma coisa me molestam é por eu não as saber já praticar. [...]\n[2] Os dias passam, e os meses, e os anos, e as situações políticas, e as gerações e os sentimentos, e as ideias. Cada olimpíada³ traz nas mãos uma nova andaina⁴ do tempo. [...]\n[3] Duas coisas, entretanto, perduram no meio da instabilidade universal: 1º a constância da polícia, que todos os anos declara editalmente ser proibido queimar fogos, por ocasião das festas de S. João e seus comensais; 2º a disposição do povo em desobedecer às ordens da polícia. A proibição não é simples vontade do chefe; é uma postura municipal de 1856. Anualmente aparece o mesmo edital, escrito com os mesmos termos; o chefe rubrica essa chapa inofensiva, que é impressa, lida e desrespeitada. Da tenacidade com que a polícia proíbe, e da teimosia com que o povo infringe a proibição, fica um resíduo comum: o trecho impresso e os fogos queimados.\n\n(Machado de Assis. Notas semanais, 2008.)\n\n¹ estrugir: soar ou vibrar fortemente.\n² ridicularia: coisa mínima e sem importância; insignificância.\n³ olimpíada: período de quatro anos.\n⁴ andaina: veste.\n\nDe acordo com o cronista,",
+    "statementComplete": true
+  },
+  {
+    "number": 8,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Figuras de Linguagem",
+    "title": "“Sublimes ridicularias”",
+    "concept": "Oxímoro: união de termos de sentidos incompatíveis; pré-requisitos: vocabulário (ridicularia = insignificância).",
+    "steps": [
+      "“Ridicularia” significa coisa mínima, sem importância (nota 2).",
+      "“Sublime” significa elevado, grandioso.",
+      "Unir os dois termos cria uma incompatibilidade intencional: oxímoro.",
+      "Nas demais expressões, adjetivo e substantivo combinam sem contradição.",
+      "Alternativa D."
+    ],
+    "trap": "Sem a nota de rodapé, “ridicularias” poderia parecer neutro; ela define o termo como insignificância.",
+    "retrieval": [
+      "O que significa “ridicularia”?",
+      "Que efeito o cronista obtém ao chamá-las de sublimes?"
+    ],
+    "transfer": "Exercício autoral: crie um oxímoro para descrever uma tradição popular.",
+    "criteria": [
+      "Unir dois termos de sentidos opostos.",
+      "Manter coerência com o tema."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "“motivo histórico” (1º parágrafo)."
+      },
+      {
+        "id": "b",
+        "text": "“antigos amores” (1º parágrafo)."
+      },
+      {
+        "id": "c",
+        "text": "“resíduo comum” (3º parágrafo)."
+      },
+      {
+        "id": "d",
+        "text": "“sublimes ridicularias” (1º parágrafo)."
+      },
+      {
+        "id": "e",
+        "text": "“noites abençoadas” (1º parágrafo)."
+      }
+    ],
+    "pages": [
+      3,
+      4
+    ],
+    "statement": "Leia o trecho de uma crônica de Machado de Assis, publicada originalmente em 16.06.1878. Os parágrafos estão numerados entre colchetes.\n\n[1] Estrugiram¹ os últimos foguetes de Santo Antônio; não tarda chegar a vez de S. João e de S. Pedro. [...] Indague quem quiser o motivo histórico deste foguetear os três santos, uso que herdamos dos nossos maiores; a realidade é que, não obstante o ceticismo do tempo, muita e muita dezena de anos há de correr, primeiro que o povo perca os seus antigos amores. Nestas noites abençoadas é que as crendices sãs abrem todas as velas. As consultas, as sortes, os ovos guardados em água, e outras sublimes ridicularias², ria-se delas quem quiser; eu vejo-as com respeito, com simpatia, e se alguma coisa me molestam é por eu não as saber já praticar. [...]\n[2] Os dias passam, e os meses, e os anos, e as situações políticas, e as gerações e os sentimentos, e as ideias. Cada olimpíada³ traz nas mãos uma nova andaina⁴ do tempo. [...]\n[3] Duas coisas, entretanto, perduram no meio da instabilidade universal: 1º a constância da polícia, que todos os anos declara editalmente ser proibido queimar fogos, por ocasião das festas de S. João e seus comensais; 2º a disposição do povo em desobedecer às ordens da polícia. A proibição não é simples vontade do chefe; é uma postura municipal de 1856. Anualmente aparece o mesmo edital, escrito com os mesmos termos; o chefe rubrica essa chapa inofensiva, que é impressa, lida e desrespeitada. Da tenacidade com que a polícia proíbe, e da teimosia com que o povo infringe a proibição, fica um resíduo comum: o trecho impresso e os fogos queimados.\n\n(Machado de Assis. Notas semanais, 2008.)\n\n¹ estrugir: soar ou vibrar fortemente.\n² ridicularia: coisa mínima e sem importância; insignificância.\n³ olimpíada: período de quatro anos.\n⁴ andaina: veste.\n\nObserva-se uma incompatibilidade semântica entre os termos que compõem a seguinte expressão:",
+    "statementComplete": true
+  },
+  {
+    "number": 9,
+    "topicId": "por_sintaxe",
+    "subject": "Português",
+    "chapter": "Orações Adverbiais",
+    "title": "“Não obstante”: concessão",
+    "concept": "Locução prepositiva concessiva “não obstante” (= apesar de); pré-requisitos: concessão = obstáculo que não impede o fato.",
+    "steps": [
+      "“Não obstante” equivale a “apesar de”.",
+      "O ceticismo da época seria um obstáculo à permanência das crendices.",
+      "Mesmo assim, elas vão durar muitas décadas: o obstáculo não impede o fato.",
+      "Isso é concessão; não há hipótese, comparação, resultado ou objetivo.",
+      "Alternativa A."
+    ],
+    "trap": "Concessão e oposição são vizinhas; o teste é substituir por “apesar de” ou “embora”.",
+    "retrieval": [
+      "Que expressão pode substituir “não obstante” sem mudar o sentido?",
+      "Qual é o fato que se realiza apesar do obstáculo?"
+    ],
+    "transfer": "Exercício autoral: reescreva o trecho com uma oração introduzida por “embora”.",
+    "criteria": [
+      "Escrever “embora o tempo seja cético”.",
+      "Usar o verbo no subjuntivo."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "concessão."
+      },
+      {
+        "id": "b",
+        "text": "condição."
+      },
+      {
+        "id": "c",
+        "text": "comparação."
+      },
+      {
+        "id": "d",
+        "text": "consequência."
+      },
+      {
+        "id": "e",
+        "text": "finalidade."
+      }
+    ],
+    "pages": [
+      3,
+      4
+    ],
+    "statement": "Leia o trecho de uma crônica de Machado de Assis, publicada originalmente em 16.06.1878. Os parágrafos estão numerados entre colchetes.\n\n[1] Estrugiram¹ os últimos foguetes de Santo Antônio; não tarda chegar a vez de S. João e de S. Pedro. [...] Indague quem quiser o motivo histórico deste foguetear os três santos, uso que herdamos dos nossos maiores; a realidade é que, não obstante o ceticismo do tempo, muita e muita dezena de anos há de correr, primeiro que o povo perca os seus antigos amores. Nestas noites abençoadas é que as crendices sãs abrem todas as velas. As consultas, as sortes, os ovos guardados em água, e outras sublimes ridicularias², ria-se delas quem quiser; eu vejo-as com respeito, com simpatia, e se alguma coisa me molestam é por eu não as saber já praticar. [...]\n[2] Os dias passam, e os meses, e os anos, e as situações políticas, e as gerações e os sentimentos, e as ideias. Cada olimpíada³ traz nas mãos uma nova andaina⁴ do tempo. [...]\n[3] Duas coisas, entretanto, perduram no meio da instabilidade universal: 1º a constância da polícia, que todos os anos declara editalmente ser proibido queimar fogos, por ocasião das festas de S. João e seus comensais; 2º a disposição do povo em desobedecer às ordens da polícia. A proibição não é simples vontade do chefe; é uma postura municipal de 1856. Anualmente aparece o mesmo edital, escrito com os mesmos termos; o chefe rubrica essa chapa inofensiva, que é impressa, lida e desrespeitada. Da tenacidade com que a polícia proíbe, e da teimosia com que o povo infringe a proibição, fica um resíduo comum: o trecho impresso e os fogos queimados.\n\n(Machado de Assis. Notas semanais, 2008.)\n\n¹ estrugir: soar ou vibrar fortemente.\n² ridicularia: coisa mínima e sem importância; insignificância.\n³ olimpíada: período de quatro anos.\n⁴ andaina: veste.\n\n“a realidade é que, não obstante o ceticismo do tempo, muita e muita dezena de anos há de correr, primeiro que o povo perca os seus antigos amores.” (1º parágrafo)\n\n[Na prova, está sublinhado o trecho “não obstante o ceticismo do tempo”.]\n\nNo contexto em que se insere, o trecho sublinhado expressa ideia de",
+    "statementComplete": true
+  },
+  {
+    "number": 10,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Processos de Formação de Palavras",
+    "title": "Verbo substantivado: “o foguetear”",
+    "concept": "Derivação imprópria: infinitivo substantivado, marcado por determinante (artigo, demonstrativo); pré-requisitos: classes de palavras.",
+    "steps": [
+      "Procure o infinitivo precedido de determinante.",
+      "Em E, “deste foguetear” = de + este + foguetear: o demonstrativo acompanha o verbo.",
+      "O infinitivo passa a funcionar como substantivo (o ato de soltar foguetes).",
+      "Nas demais alternativas, o infinitivo mantém valor verbal, com complementos e sem determinante.",
+      "Alternativa E."
+    ],
+    "trap": "Todo infinitivo “parece” nome; o critério é o determinante que o acompanha.",
+    "retrieval": [
+      "Que palavra indica que “foguetear” virou substantivo?",
+      "Qual o sentido de “foguetear os três santos”?"
+    ],
+    "transfer": "Exercício autoral: crie uma frase em que “olhar” seja substantivo.",
+    "criteria": [
+      "Usar determinante (“o olhar”).",
+      "Atribuir-lhe função de nome na oração."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "“a disposição do povo em [desobedecer] às ordens da polícia” (3º parágrafo)."
+      },
+      {
+        "id": "b",
+        "text": "“não tarda [chegar] a vez de S. João e de S. Pedro” (1º parágrafo)."
+      },
+      {
+        "id": "c",
+        "text": "“todos os anos declara editalmente ser proibido [queimar] fogos” (3º parágrafo)."
+      },
+      {
+        "id": "d",
+        "text": "“muita e muita dezena de anos há de [correr]” (1º parágrafo)."
+      },
+      {
+        "id": "e",
+        "text": "“Indague quem quiser o motivo histórico deste [foguetear] os três santos” (1º parágrafo)."
+      }
+    ],
+    "pages": [
+      3,
+      4
+    ],
+    "statement": "Leia o trecho de uma crônica de Machado de Assis, publicada originalmente em 16.06.1878. Os parágrafos estão numerados entre colchetes.\n\n[1] Estrugiram¹ os últimos foguetes de Santo Antônio; não tarda chegar a vez de S. João e de S. Pedro. [...] Indague quem quiser o motivo histórico deste foguetear os três santos, uso que herdamos dos nossos maiores; a realidade é que, não obstante o ceticismo do tempo, muita e muita dezena de anos há de correr, primeiro que o povo perca os seus antigos amores. Nestas noites abençoadas é que as crendices sãs abrem todas as velas. As consultas, as sortes, os ovos guardados em água, e outras sublimes ridicularias², ria-se delas quem quiser; eu vejo-as com respeito, com simpatia, e se alguma coisa me molestam é por eu não as saber já praticar. [...]\n[2] Os dias passam, e os meses, e os anos, e as situações políticas, e as gerações e os sentimentos, e as ideias. Cada olimpíada³ traz nas mãos uma nova andaina⁴ do tempo. [...]\n[3] Duas coisas, entretanto, perduram no meio da instabilidade universal: 1º a constância da polícia, que todos os anos declara editalmente ser proibido queimar fogos, por ocasião das festas de S. João e seus comensais; 2º a disposição do povo em desobedecer às ordens da polícia. A proibição não é simples vontade do chefe; é uma postura municipal de 1856. Anualmente aparece o mesmo edital, escrito com os mesmos termos; o chefe rubrica essa chapa inofensiva, que é impressa, lida e desrespeitada. Da tenacidade com que a polícia proíbe, e da teimosia com que o povo infringe a proibição, fica um resíduo comum: o trecho impresso e os fogos queimados.\n\n(Machado de Assis. Notas semanais, 2008.)\n\n¹ estrugir: soar ou vibrar fortemente.\n² ridicularia: coisa mínima e sem importância; insignificância.\n³ olimpíada: período de quatro anos.\n⁴ andaina: veste.\n\n[Em cada alternativa, na prova, um termo aparece sublinhado; aqui ele vem entre colchetes.]\n\nOriginalmente um verbo, o termo sublinhado está empregado como substantivo no seguinte trecho:",
+    "statementComplete": true
+  },
+  {
+    "number": 11,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "Do auge ao desinteresse pelos aplicativos",
+    "concept": "Ideia central de texto jornalístico; pré-requisitos: surged, lost its spark, dwindled.",
+    "steps": [
+      "1º e 2º parágrafos: sucesso do Tinder e explosão do uso, inclusive na pandemia.",
+      "3º parágrafo: “Yet lately online dating has lost its spark” — downloads e usuários em queda.",
+      "O texto narra a passagem do auge à perda de interesse.",
+      "Saúde mental, privacidade e psicologia não são tratadas; C cobre só o início.",
+      "Alternativa A."
+    ],
+    "trap": "C descreve o começo do texto (Match.com → Tinder), não o percurso completo.",
+    "retrieval": [
+      "Que palavra marca a virada do texto no 3º parágrafo?",
+      "Que dados mostram a queda?"
+    ],
+    "transfer": "Exercício autoral: traduza “online dating has lost its spark”.",
+    "criteria": [
+      "Traduzir como “o namoro online perdeu o encanto/brilho”.",
+      "Manter o sentido figurado de spark."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "shift from high demand to reduced interest in dating apps’ popularity."
+      },
+      {
+        "id": "b",
+        "text": "exploration of the risks and benefits of online dating on mental health."
+      },
+      {
+        "id": "c",
+        "text": "analysis of the evolution of online dating from websites to mobile apps."
+      },
+      {
+        "id": "d",
+        "text": "privacy concerns and data security issues in online dating platforms."
+      },
+      {
+        "id": "e",
+        "text": "psychology behind attraction and decision-making in swipe-based dating."
+      }
+    ],
+    "pages": [
+      4,
+      5
+    ],
+    "statement": "Leia o texto e examine o gráfico.\n\nWhen Tinder (a mobile dating app) was launched on college campuses in America in 2012, it quickly became a hit. Although online dating had been around since Match.com, a website for lonely hearts, launched in 1995, it had long struggled to shed¹ an image of desperation. But Tinder, by letting users sift through photos of countless potential dates with a simple swipe, made it easy and fun.\n\nSoon Tinder and its rivals had transformed dating. A report found that 30% of American adults had used an online dating service, including more than half of those aged between 18 and 29. One in five couples of that age had met through such a service. Usage surged during the pandemic, as lonely locked-down singles searched for partners. The market capitalisation of Bumble, a rival to Tinder, surged to $13 billion on its first day of trading² in February 2021. Later that year the value of Match Group, which owns Tinder, Hinge and scores of other dating services, reached nearly $50 billion.\n\nToday roughly 350 million people around the world have a dating app on their phone, up from 250 million in 2018, according to a research firm. In June 2024 Tokyo's government even said it would launch a matchmaking app of its own to pair up singles in the city. Yet lately online dating has lost its spark. The apps were downloaded 237 million times globally in 2023, down from 287 million in 2020. According to a research firm, the number of people who use them at least once a month has dwindled from 154 million in 2021 to 137 million in the second quarter of 2024.\n\n(www.economist.com, 08.08.2024. Adaptado.)\n¹ to shed: to get rid of something that is no longer wanted.\n² trading: the activity of buying and selling things.\n\nThe text is mainly about the",
+    "statementComplete": true
+  },
+  {
     "number": 12,
     "topicId": "ing_01",
     "subject": "Inglês",
@@ -158,6 +640,436 @@
       5
     ],
     "statement": "Leia o texto e examine o gráfico.\n\nWhen Tinder (a mobile dating app) was launched on college campuses in America in 2012, it quickly became a hit. Although online dating had been around since Match.com, a website for lonely hearts, launched in 1995, it had long struggled to shed¹ an image of desperation. But Tinder, by letting users sift through photos of countless potential dates with a simple swipe, made it easy and fun.\n\nSoon Tinder and its rivals had transformed dating. A report found that 30% of American adults had used an online dating service, including more than half of those aged between 18 and 29. One in five couples of that age had met through such a service. Usage surged during the pandemic, as lonely locked-down singles searched for partners. The market capitalisation of Bumble, a rival to Tinder, surged to $13 billion on its first day of trading² in February 2021. Later that year the value of Match Group, which owns Tinder, Hinge and scores of other dating services, reached nearly $50 billion.\n\nToday roughly 350 million people around the world have a dating app on their phone, up from 250 million in 2018, according to a research firm. In June 2024 Tokyo's government even said it would launch a matchmaking app of its own to pair up singles in the city. Yet lately online dating has lost its spark. The apps were downloaded 237 million times globally in 2023, down from 287 million in 2020. According to a research firm, the number of people who use them at least once a month has dwindled from 154 million in 2021 to 137 million in the second quarter of 2024.\n\n(www.economist.com, 08.08.2024. Adaptado.)\n¹ to shed: to get rid of something that is no longer wanted.\n² trading: the activity of buying and selling things.\n\nIn the excerpt from the first paragraph “Although online dating had been around since Match.com”, the underlined word can be replaced, without meaning change, by:\n(The underlined word is “Although”.)",
+    "statementComplete": true
+  },
+  {
+    "number": 13,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "Sentidos de “but”",
+    "concept": "Polissemia de “but”: conjunção adversativa (mas) × preposição de exceção (exceto); pré-requisitos: contexto da frase anterior.",
+    "steps": [
+      "No texto, “But” contrapõe a imagem de desespero do namoro online à facilidade trazida pelo Tinder: adversativo (mas).",
+      "Em D, “but” liga duas orações opostas: estudei muito, mas não passei.",
+      "É o mesmo valor adversativo.",
+      "Em A, B e E, “but” = exceto; em C, “no choice but” = senão.",
+      "Alternativa D."
+    ],
+    "trap": "Três alternativas usam “but” como “exceto”: só a que une orações opostas mantém o sentido de “mas”.",
+    "retrieval": [
+      "Que duas ideias o “But” do texto contrapõe?",
+      "Como se traduz “everyone but his cousin”?"
+    ],
+    "transfer": "Exercício autoral: escreva em inglês uma frase com “but” no sentido de “exceto”.",
+    "criteria": [
+      "Usar “all/everyone ... but ...”.",
+      "Indicar a exceção."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "He loves all animals but spiders."
+      },
+      {
+        "id": "b",
+        "text": "I tried all the dishes but the dessert."
+      },
+      {
+        "id": "c",
+        "text": "I had no choice but to accept the challenge."
+      },
+      {
+        "id": "d",
+        "text": "I studied hard but I didn’t pass the exam."
+      },
+      {
+        "id": "e",
+        "text": "He invited everyone but his cousin."
+      }
+    ],
+    "pages": [
+      4,
+      5
+    ],
+    "statement": "Leia o texto e examine o gráfico.\n\nWhen Tinder (a mobile dating app) was launched on college campuses in America in 2012, it quickly became a hit. Although online dating had been around since Match.com, a website for lonely hearts, launched in 1995, it had long struggled to shed¹ an image of desperation. But Tinder, by letting users sift through photos of countless potential dates with a simple swipe, made it easy and fun.\n\nSoon Tinder and its rivals had transformed dating. A report found that 30% of American adults had used an online dating service, including more than half of those aged between 18 and 29. One in five couples of that age had met through such a service. Usage surged during the pandemic, as lonely locked-down singles searched for partners. The market capitalisation of Bumble, a rival to Tinder, surged to $13 billion on its first day of trading² in February 2021. Later that year the value of Match Group, which owns Tinder, Hinge and scores of other dating services, reached nearly $50 billion.\n\nToday roughly 350 million people around the world have a dating app on their phone, up from 250 million in 2018, according to a research firm. In June 2024 Tokyo's government even said it would launch a matchmaking app of its own to pair up singles in the city. Yet lately online dating has lost its spark. The apps were downloaded 237 million times globally in 2023, down from 287 million in 2020. According to a research firm, the number of people who use them at least once a month has dwindled from 154 million in 2021 to 137 million in the second quarter of 2024.\n\n(www.economist.com, 08.08.2024. Adaptado.)\n¹ to shed: to get rid of something that is no longer wanted.\n² trading: the activity of buying and selling things.\n\nNo trecho do primeiro parágrafo “But Tinder, by letting users sift through photos of countless potential dates with a simple swipe, made it easy and fun”, o termo sublinhado [“But”] é empregado com o mesmo sentido do termo sublinhado em:\n\n[Em cada alternativa, o termo sublinhado é “but”.]",
+    "statementComplete": true
+  },
+  {
+    "number": 14,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "O que dizem os dois primeiros parágrafos",
+    "concept": "Verificação de informação explícita com atenção a números e referentes; pré-requisitos: shed an image, easy and fun.",
+    "steps": [
+      "O namoro online “struggled to shed an image of desperation”.",
+      "O Tinder, com o simples gesto de deslizar, “made it easy and fun”.",
+      "Logo, ajudou a reduzir a imagem de desespero: alternativa A.",
+      "B: 2012 é o ano do Tinder, não do sucesso do Match.com; C: 30% é dos adultos americanos e com qualquer serviço; D: 50 bilhões é a Match Group, e o Bumble chegou a 13; E erra a data.",
+      "Alternativa A."
+    ],
+    "trap": "Números certos ligados à entidade errada (C e D) são a armadilha típica de questões de dados.",
+    "retrieval": [
+      "Qual empresa atingiu quase 50 bilhões de dólares?",
+      "O que significa “to shed an image”?"
+    ],
+    "transfer": "Exercício autoral: indique em português o dado sobre casais de 18 a 29 anos.",
+    "criteria": [
+      "Um em cada cinco casais.",
+      "Conheceu-se por um serviço de namoro online."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "o aplicativo Tinder ajudou a reduzir a imagem de desespero associada ao namoro online ao torná-lo mais acessível e divertido."
+      },
+      {
+        "id": "b",
+        "text": "apesar de ter sido lançado em 1995, o site Match.com só conseguiu alcançar o sucesso no ano de 2012."
+      },
+      {
+        "id": "c",
+        "text": "o aplicativo Tinder é utilizado por 30% dos adultos com idade entre 18 e 29 anos."
+      },
+      {
+        "id": "d",
+        "text": "o valor de mercado do aplicativo Bumble, concorrente do Tinder, atingiu quase 50 bilhões de dólares no final de 2021."
+      },
+      {
+        "id": "e",
+        "text": "o aplicativo Tinder só começou a influenciar o mercado de namoro online de maneira significativa após o ano de 1995."
+      }
+    ],
+    "pages": [
+      4,
+      5
+    ],
+    "statement": "Leia o texto e examine o gráfico.\n\nWhen Tinder (a mobile dating app) was launched on college campuses in America in 2012, it quickly became a hit. Although online dating had been around since Match.com, a website for lonely hearts, launched in 1995, it had long struggled to shed¹ an image of desperation. But Tinder, by letting users sift through photos of countless potential dates with a simple swipe, made it easy and fun.\n\nSoon Tinder and its rivals had transformed dating. A report found that 30% of American adults had used an online dating service, including more than half of those aged between 18 and 29. One in five couples of that age had met through such a service. Usage surged during the pandemic, as lonely locked-down singles searched for partners. The market capitalisation of Bumble, a rival to Tinder, surged to $13 billion on its first day of trading² in February 2021. Later that year the value of Match Group, which owns Tinder, Hinge and scores of other dating services, reached nearly $50 billion.\n\nToday roughly 350 million people around the world have a dating app on their phone, up from 250 million in 2018, according to a research firm. In June 2024 Tokyo's government even said it would launch a matchmaking app of its own to pair up singles in the city. Yet lately online dating has lost its spark. The apps were downloaded 237 million times globally in 2023, down from 287 million in 2020. According to a research firm, the number of people who use them at least once a month has dwindled from 154 million in 2021 to 137 million in the second quarter of 2024.\n\n(www.economist.com, 08.08.2024. Adaptado.)\n¹ to shed: to get rid of something that is no longer wanted.\n² trading: the activity of buying and selling things.\n\nDe acordo com o primeiro e o segundo parágrafos,",
+    "statementComplete": true
+  },
+  {
+    "number": 15,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "“Roughly”",
+    "concept": "Advérbios de aproximação diante de números; pré-requisitos: roughly, about, around.",
+    "steps": [
+      "“Roughly” diante de número indica estimativa.",
+      "“Roughly 350 million” = cerca de 350 milhões.",
+      "“Approximately” tem o mesmo valor.",
+      "Effectively (efetivamente), periodically, merely (apenas) e globally mudam o sentido.",
+      "Alternativa B."
+    ],
+    "trap": "“Rough” significa áspero; o advérbio “roughly”, diante de número, significa aproximadamente.",
+    "retrieval": [
+      "Que outra palavra inglesa indica aproximação antes de números?",
+      "Que fonte o texto cita para esse dado?"
+    ],
+    "transfer": "Exercício autoral: reescreva a frase com “about”.",
+    "criteria": [
+      "“Today about 350 million people...”",
+      "Manter o restante da frase."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "effectively."
+      },
+      {
+        "id": "b",
+        "text": "approximately."
+      },
+      {
+        "id": "c",
+        "text": "periodically."
+      },
+      {
+        "id": "d",
+        "text": "merely."
+      },
+      {
+        "id": "e",
+        "text": "globally."
+      }
+    ],
+    "pages": [
+      4,
+      5
+    ],
+    "statement": "Leia o texto e examine o gráfico.\n\nWhen Tinder (a mobile dating app) was launched on college campuses in America in 2012, it quickly became a hit. Although online dating had been around since Match.com, a website for lonely hearts, launched in 1995, it had long struggled to shed¹ an image of desperation. But Tinder, by letting users sift through photos of countless potential dates with a simple swipe, made it easy and fun.\n\nSoon Tinder and its rivals had transformed dating. A report found that 30% of American adults had used an online dating service, including more than half of those aged between 18 and 29. One in five couples of that age had met through such a service. Usage surged during the pandemic, as lonely locked-down singles searched for partners. The market capitalisation of Bumble, a rival to Tinder, surged to $13 billion on its first day of trading² in February 2021. Later that year the value of Match Group, which owns Tinder, Hinge and scores of other dating services, reached nearly $50 billion.\n\nToday roughly 350 million people around the world have a dating app on their phone, up from 250 million in 2018, according to a research firm. In June 2024 Tokyo's government even said it would launch a matchmaking app of its own to pair up singles in the city. Yet lately online dating has lost its spark. The apps were downloaded 237 million times globally in 2023, down from 287 million in 2020. According to a research firm, the number of people who use them at least once a month has dwindled from 154 million in 2021 to 137 million in the second quarter of 2024.\n\n(www.economist.com, 08.08.2024. Adaptado.)\n¹ to shed: to get rid of something that is no longer wanted.\n² trading: the activity of buying and selling things.\n\nIn the excerpt from the third paragraph “Today roughly 350 million people around the world have a dating app”, the underlined word [“roughly”] can be replaced, without meaning change, by:",
+    "statementComplete": true
+  },
+  {
+    "number": 16,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "Gráfico de usuários ativos",
+    "concept": "Relação texto-gráfico; pré-requisitos: monthly active users, tendência de queda.",
+    "steps": [
+      "O gráfico mostra usuários mensais ativos no mundo, de 2019 a 2024.",
+      "A série sobe até cerca de 2021 e depois cai.",
+      "A frase que resume essa queda recente é “lately online dating has lost its spark”.",
+      "A, B e D trazem dados de adultos americanos, que o gráfico não mostra; C fala de Tóquio.",
+      "Alternativa E."
+    ],
+    "trap": "O gráfico é mundial e mensal; os percentuais americanos (B, D) não estão nele.",
+    "retrieval": [
+      "Que grandeza o gráfico mede?",
+      "Em que ano a série atinge o máximo?"
+    ],
+    "transfer": "Exercício autoral: descreva em inglês a tendência do gráfico depois de 2021.",
+    "criteria": [
+      "Usar verbo de queda (declined, dropped).",
+      "Citar o período."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "“One in five couples of that age had met through such a service” (2º parágrafo)."
+      },
+      {
+        "id": "b",
+        "text": "“30% of American adults had used an online dating service” (2º parágrafo)."
+      },
+      {
+        "id": "c",
+        "text": "“In June 2024 Tokyo’s government even said it would launch a matchmaking app” (3º parágrafo)."
+      },
+      {
+        "id": "d",
+        "text": "“more than half of those aged between 18 and 29” (2º parágrafo)."
+      },
+      {
+        "id": "e",
+        "text": "“Yet lately online dating has lost its spark” (3º parágrafo)."
+      }
+    ],
+    "pages": [
+      4,
+      5
+    ],
+    "statement": "Leia o texto e examine o gráfico.\n\nWhen Tinder (a mobile dating app) was launched on college campuses in America in 2012, it quickly became a hit. Although online dating had been around since Match.com, a website for lonely hearts, launched in 1995, it had long struggled to shed¹ an image of desperation. But Tinder, by letting users sift through photos of countless potential dates with a simple swipe, made it easy and fun.\n\nSoon Tinder and its rivals had transformed dating. A report found that 30% of American adults had used an online dating service, including more than half of those aged between 18 and 29. One in five couples of that age had met through such a service. Usage surged during the pandemic, as lonely locked-down singles searched for partners. The market capitalisation of Bumble, a rival to Tinder, surged to $13 billion on its first day of trading² in February 2021. Later that year the value of Match Group, which owns Tinder, Hinge and scores of other dating services, reached nearly $50 billion.\n\nToday roughly 350 million people around the world have a dating app on their phone, up from 250 million in 2018, according to a research firm. In June 2024 Tokyo's government even said it would launch a matchmaking app of its own to pair up singles in the city. Yet lately online dating has lost its spark. The apps were downloaded 237 million times globally in 2023, down from 287 million in 2020. According to a research firm, the number of people who use them at least once a month has dwindled from 154 million in 2021 to 137 million in the second quarter of 2024.\n\n(www.economist.com, 08.08.2024. Adaptado.)\n¹ to shed: to get rid of something that is no longer wanted.\n² trading: the activity of buying and selling things.\n\nA frase do texto que corresponde aos dados do gráfico é:",
+    "statementComplete": true
+  },
+  {
+    "number": 17,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "“Second quarter”",
+    "concept": "Vocabulário de períodos: quarter = um quarto do ano (três meses); pré-requisitos: nota do gráfico (“quarterly”).",
+    "steps": [
+      "“Quarter” é um quarto: aplicado ao ano, três meses.",
+      "O gráfico confirma: dados anuais até 2022, depois “quarterly”.",
+      "“Second quarter” = abril a junho.",
+      "Em português: segundo trimestre.",
+      "Alternativa D."
+    ],
+    "trap": "“Semester” existe em inglês, mas é “half”; quarter é sempre um quarto do ano.",
+    "retrieval": [
+      "Quantos meses tem um quarter?",
+      "Como se diz “semestre” em inglês corporativo?"
+    ],
+    "transfer": "Exercício autoral: que meses formam o terceiro trimestre?",
+    "criteria": [
+      "Julho, agosto e setembro.",
+      "Third quarter (Q3)."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "no segundo bimestre de 2024."
+      },
+      {
+        "id": "b",
+        "text": "no segundo semestre de 2024."
+      },
+      {
+        "id": "c",
+        "text": "no segundo mês de 2024."
+      },
+      {
+        "id": "d",
+        "text": "no segundo trimestre de 2024."
+      },
+      {
+        "id": "e",
+        "text": "no segundo quadrimestre de 2024."
+      }
+    ],
+    "pages": [
+      4,
+      5
+    ],
+    "statement": "Leia o texto e examine o gráfico.\n\nWhen Tinder (a mobile dating app) was launched on college campuses in America in 2012, it quickly became a hit. Although online dating had been around since Match.com, a website for lonely hearts, launched in 1995, it had long struggled to shed¹ an image of desperation. But Tinder, by letting users sift through photos of countless potential dates with a simple swipe, made it easy and fun.\n\nSoon Tinder and its rivals had transformed dating. A report found that 30% of American adults had used an online dating service, including more than half of those aged between 18 and 29. One in five couples of that age had met through such a service. Usage surged during the pandemic, as lonely locked-down singles searched for partners. The market capitalisation of Bumble, a rival to Tinder, surged to $13 billion on its first day of trading² in February 2021. Later that year the value of Match Group, which owns Tinder, Hinge and scores of other dating services, reached nearly $50 billion.\n\nToday roughly 350 million people around the world have a dating app on their phone, up from 250 million in 2018, according to a research firm. In June 2024 Tokyo's government even said it would launch a matchmaking app of its own to pair up singles in the city. Yet lately online dating has lost its spark. The apps were downloaded 237 million times globally in 2023, down from 287 million in 2020. According to a research firm, the number of people who use them at least once a month has dwindled from 154 million in 2021 to 137 million in the second quarter of 2024.\n\n(www.economist.com, 08.08.2024. Adaptado.)\n¹ to shed: to get rid of something that is no longer wanted.\n² trading: the activity of buying and selling things.\n\nNo contexto do terceiro parágrafo, o trecho “in the second quarter of 2024” equivale, em português, a:",
+    "statementComplete": true
+  },
+  {
+    "number": 18,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "Tema do cartaz sobre senhas",
+    "concept": "Tema central de texto multimodal; pré-requisitos: crack, hack, password.",
+    "steps": [
+      "O cartaz trata de senhas difíceis de quebrar.",
+      "Todas as dicas visam proteger contas contra invasões.",
+      "O tema é segurança digital.",
+      "Não fala de assédio, conexão, defeito técnico nem de exposição excessiva.",
+      "Alternativa B."
+    ],
+    "trap": "“Don’t include personal information” lembra oversharing, mas é só uma das dicas de segurança.",
+    "retrieval": [
+      "Que verbo do título indica invasão?",
+      "Qual dica fala de uma segunda forma de verificação?"
+    ],
+    "transfer": "Exercício autoral: traduza “Value length over complexity”.",
+    "criteria": [
+      "“Valorize o comprimento mais do que a complexidade.”",
+      "Relacionar a senhas longas."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "cyberbullying."
+      },
+      {
+        "id": "b",
+        "text": "security."
+      },
+      {
+        "id": "c",
+        "text": "connection."
+      },
+      {
+        "id": "d",
+        "text": "malfunction."
+      },
+      {
+        "id": "e",
+        "text": "oversharing."
+      }
+    ],
+    "pages": [
+      5
+    ],
+    "statement": "Read the campaign poster published on a company’s website.\n\n[Cartaz. Título: “If it’s easy to crack, you’re easy to hack.” Subtítulo: “Follow these steps for stronger password practice...”. Seis dicas com ícones: “Value length over complexity.”; “Never use the same password twice.”; “Don’t include any personal information.”; “Try building a password from four random words.”; “Enable two-factor authentication.”; “Consider using a password manager.”]\n\n(https://www.hutsix.io. Adaptado.)\n\nThe word that summarizes the central theme of the campaign poster is:",
+    "statementComplete": true
+  },
+  {
+    "number": 19,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "“If”: hipótese",
+    "concept": "Orações condicionais (if-clauses); pré-requisitos: valor de condição/hipótese.",
+    "steps": [
+      "A oração começa com “If” (se).",
+      "Ela apresenta uma suposição: caso a senha seja fácil de quebrar.",
+      "A consequência vem na oração principal: você é fácil de invadir.",
+      "Não há contraste, obrigação, comparação nem gradação.",
+      "Alternativa A."
+    ],
+    "trap": "“Easy... easy” repete a palavra, mas não compara: a estrutura é condicional.",
+    "retrieval": [
+      "Que conjunção introduz a hipótese?",
+      "Traduza o título."
+    ],
+    "transfer": "Exercício autoral: escreva uma frase condicional em inglês sobre senhas.",
+    "criteria": [
+      "Usar “If” na primeira oração.",
+      "Indicar a consequência na segunda."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "hypothesis."
+      },
+      {
+        "id": "b",
+        "text": "contrast."
+      },
+      {
+        "id": "c",
+        "text": "obligation."
+      },
+      {
+        "id": "d",
+        "text": "comparison."
+      },
+      {
+        "id": "e",
+        "text": "graduality."
+      }
+    ],
+    "pages": [
+      5,
+      6
+    ],
+    "statement": "Read the campaign poster published on a company’s website.\n\n[Cartaz. Título: “If it’s easy to crack, you’re easy to hack.” Subtítulo: “Follow these steps for stronger password practice...”. Seis dicas com ícones: “Value length over complexity.”; “Never use the same password twice.”; “Don’t include any personal information.”; “Try building a password from four random words.”; “Enable two-factor authentication.”; “Consider using a password manager.”]\n\n(https://www.hutsix.io. Adaptado.)\n\nIn the title of the campaign poster “If it’s easy to crack, you’re easy to hack”, the underlined words [“If it’s easy to crack”] express",
+    "statementComplete": true
+  },
+  {
+    "number": 20,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "Frases que gelam o sangue",
+    "concept": "Leitura de tirinha: título, expressão facial e expressão idiomática; pré-requisitos: make one’s blood run cold.",
+    "steps": [
+      "O título diz: frases que fazem “meu sangue correr mais frio que gelo”.",
+      "A expressão significa sentir medo, pavor.",
+      "As expressões da personagem (olhos arregalados, suor) confirmam o susto.",
+      "Gratidão, culpa, inspiração e orgulho não correspondem à expressão nem ao desenho.",
+      "Alternativa C."
+    ],
+    "trap": "“Do you remember that time you—” poderia sugerir culpa, mas o título define a emoção como medo.",
+    "retrieval": [
+      "O que significa “make my blood run cold”?",
+      "Que traços do desenho indicam o sentimento?"
+    ],
+    "transfer": "Exercício autoral: cite outra frase que poderia entrar na lista da tirinha.",
+    "criteria": [
+      "Uma frase que anuncie conversa séria.",
+      "Justificar o medo que provoca."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "grateful."
+      },
+      {
+        "id": "b",
+        "text": "guilty."
+      },
+      {
+        "id": "c",
+        "text": "frightened."
+      },
+      {
+        "id": "d",
+        "text": "inspired."
+      },
+      {
+        "id": "e",
+        "text": "proud."
+      }
+    ],
+    "pages": [
+      6
+    ],
+    "statement": "Read the comic strip by Sarah Andersen.\n\n[Tirinha “Phrases that make my blood run colder than ice”, em quatro quadrinhos com a mesma personagem, de olhos arregalados e suando:\n1) “We need to talk.” — “’Bout what?”\n2) “Hey. Can I ask you a question?” — “Oh! Sure!”\n3) “Do you remember that time you—” — “Nope.”\n4) “Can I see you for a second?” — “Alone?”]\n\n(Sarah Andersen. Adulthood is a myth, 2016.)\n\nAccording to the comic strip, phrases from 1 to 4 make the girl feel",
     "statementComplete": true
   },
   {
@@ -214,6 +1126,536 @@
     "statementComplete": true
   },
   {
+    "number": 22,
+    "topicId": "his_idade_media",
+    "subject": "História",
+    "chapter": "Alta Idade Média e Feudalismo",
+    "title": "Fome no século XI e castigo divino",
+    "concept": "Mentalidade medieval: explicação religiosa dos fenômenos naturais; pré-requisitos: ler a fonte pelo ponto de vista do autor.",
+    "steps": [
+      "O monge descreve chuvas e inundações fora do “curso normal das estações”.",
+      "Conclui: “não havia dúvidas de que se punia assim o orgulho da humanidade”.",
+      "Clima desregulado como castigo pelo pecado: cólera divina.",
+      "Técnicas, exploração dos servos, ação humana sobre a natureza não aparecem como causa no relato.",
+      "Alternativa B."
+    ],
+    "trap": "Historiadores hoje explicam a fome por fatores sociais e técnicos, mas a pergunta é o que o monge atribui.",
+    "retrieval": [
+      "Que causa natural o monge descreve?",
+      "A que causa última ele a atribui?"
+    ],
+    "transfer": "Exercício autoral: explique por que relatos de monges são fontes importantes para a Alta Idade Média.",
+    "criteria": [
+      "Mosteiros concentravam a escrita.",
+      "A visão religiosa marca a interpretação dos fatos."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "à insuficiência de conhecimento de técnicas de plantio."
+      },
+      {
+        "id": "b",
+        "text": "a eventos climáticos provocados pela cólera divina."
+      },
+      {
+        "id": "c",
+        "text": "ao aumento da exploração dos servos pelos senhores feudais."
+      },
+      {
+        "id": "d",
+        "text": "a alterações da natureza geradas pela exploração da terra."
+      },
+      {
+        "id": "e",
+        "text": "ao controle humano dos movimentos da natureza."
+      }
+    ],
+    "pages": [
+      6
+    ],
+    "statement": "[...] a fome começou a alastrar-se por toda a superfície da Terra, e chegou-se a temer o quase total desaparecimento do gênero humano. As condições atmosféricas, com efeito, a tal ponto iam contra o curso normal das estações que o tempo nunca se mostrava propício às semeaduras e, sobretudo por causa das inundações, jamais se apresentava favorável às colheitas. Parecia que os elementos estavam lutando entre si, mas não havia dúvidas de que se punia assim o orgulho da humanidade. (Raoul Glaber. Histoires. Apud: Georges Duby. A Europa na Idade Média, 1988. Adaptado.)\n\nO monge atribui a temporada de fome ocorrida naquele período",
+    "statementComplete": true
+  },
+  {
+    "number": 23,
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "chapter": "Dinâmica Interna da Colonização",
+    "title": "Mulheres no pequeno comércio colonial",
+    "concept": "Sociedade colonial e trabalho feminino; pré-requisitos: identificar as causas apontadas no excerto.",
+    "steps": [
+      "O texto explica a presença feminina no comércio ambulante pela “convergência de duas referências culturais”.",
+      "Uma é africana (mulheres na distribuição de alimentos); outra é portuguesa (divisão de papéis e legislação).",
+      "Duas tradições distintas que se combinam.",
+      "A atribui a causa ao governo; B troca africanos por indígenas; C e D contradizem a forte presença feminina no comércio.",
+      "Alternativa E."
+    ],
+    "trap": "B tem a estrutura certa (influência cultural), mas troca a matriz africana pela indígena.",
+    "retrieval": [
+      "Quais são as duas referências culturais citadas?",
+      "Que tipo de comércio as mulheres exerciam?"
+    ],
+    "transfer": "Exercício autoral: cite o nome dado às vendedoras de rua nas Minas coloniais.",
+    "criteria": [
+      "Negras de tabuleiro.",
+      "Vendiam alimentos nas vilas e lavras."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "do esforço do governo colonial para envolver as mulheres nas atividades produtivas."
+      },
+      {
+        "id": "b",
+        "text": "da influência cultural dos povos indígenas na organização da sociedade colonial."
+      },
+      {
+        "id": "c",
+        "text": "do confinamento das mulheres às atividades religiosas e domésticas."
+      },
+      {
+        "id": "d",
+        "text": "da exclusão das mulheres do trabalho na agricultura e no setor de serviços."
+      },
+      {
+        "id": "e",
+        "text": "da combinação de tradições culturais distintas presentes no Brasil colonial."
+      }
+    ],
+    "pages": [
+      7
+    ],
+    "statement": "A presença feminina foi sempre destacada no exercício do pequeno comércio em vilas e cidades do Brasil colonial. Desde os primeiros tempos, em lugares como Salvador, Rio de Janeiro, São Paulo, estabeleceu-se uma divisão de trabalho assentada em critérios sexuais, em que o comércio ambulante representava ocupação preponderantemente feminina. A quase exclusiva presença de mulheres num mercado onde se consumiam gêneros a varejo resultou da convergência de duas referências culturais determinantes no Brasil. A primeira delas está relacionada à influência africana, uma vez que nessas sociedades tradicionais as mulheres desempenhavam tarefas de alimentação e distribuição de gêneros de primeira necessidade. O segundo tipo de influência deriva da transposição para o mundo colonial da divisão de papéis sexuais vigentes em Portugal, onde a legislação amparava de maneira incisiva a participação feminina. (Luciano Figueiredo. “Mulheres nas Minas Gerais”. In: Mary del Priore (org.). História das mulheres no Brasil, 2015.)\n\nO excerto analisa o papel das mulheres nas Minas Gerais durante o período colonial e o caracteriza como um exemplo",
+    "statementComplete": true
+  },
+  {
+    "number": 24,
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "chapter": "A Mineração no Brasil Colonial",
+    "title": "Comércio ambulante e abastecimento das Minas",
+    "concept": "Mercado interno na mineração: vendedoras ambulantes levavam alimentos às lavras dispersas; pré-requisitos: povoamento disperso das Minas.",
+    "steps": [
+      "A atividade é o comércio ambulante de gêneros a varejo.",
+      "Nas Minas, a população vivia em vilas, arraiais e lavras espalhados pelas serras.",
+      "Vender de porta em porta e nas lavras levava alimento a quem estava longe dos mercados.",
+      "A e E não decorrem do excerto; B chama o comércio fixo de único capaz; D exclui as escravizadas, que eram grande parte das vendedoras.",
+      "Alternativa C."
+    ],
+    "trap": "D erra ao dizer “exclusivamente por pessoas livres”: muitas vendedoras eram escravizadas “de ganho”.",
+    "retrieval": [
+      "Por que o comércio ambulante era útil nas Minas?",
+      "O que era a escravidão “de ganho”?"
+    ],
+    "transfer": "Exercício autoral: explique por que as autoridades coloniais desconfiavam das vendedoras nas lavras.",
+    "criteria": [
+      "Temiam o desvio de ouro e o contrabando.",
+      "Temiam a articulação de escravizados fugidos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "era duramente tributado para que os lucros alcançados se concentrassem nas mãos dos representantes da Coroa portuguesa."
+      },
+      {
+        "id": "b",
+        "text": "concorria com o comércio regular e estável que era o único capaz de atender às necessidades da população das Minas Gerais."
+      },
+      {
+        "id": "c",
+        "text": "facilitava o abastecimento interno numa região em que os moradores viviam espalhados pelas vilas e montanhas."
+      },
+      {
+        "id": "d",
+        "text": "era exercido exclusivamente por pessoas livres que podiam circular com autonomia pelas diversas áreas da colônia."
+      },
+      {
+        "id": "e",
+        "text": "dependia de suprimentos provenientes das regiões distantes que enviavam mercadorias às Minas Gerais."
+      }
+    ],
+    "pages": [
+      7
+    ],
+    "statement": "A presença feminina foi sempre destacada no exercício do pequeno comércio em vilas e cidades do Brasil colonial. Desde os primeiros tempos, em lugares como Salvador, Rio de Janeiro, São Paulo, estabeleceu-se uma divisão de trabalho assentada em critérios sexuais, em que o comércio ambulante representava ocupação preponderantemente feminina. A quase exclusiva presença de mulheres num mercado onde se consumiam gêneros a varejo resultou da convergência de duas referências culturais determinantes no Brasil. A primeira delas está relacionada à influência africana, uma vez que nessas sociedades tradicionais as mulheres desempenhavam tarefas de alimentação e distribuição de gêneros de primeira necessidade. O segundo tipo de influência deriva da transposição para o mundo colonial da divisão de papéis sexuais vigentes em Portugal, onde a legislação amparava de maneira incisiva a participação feminina. (Luciano Figueiredo. “Mulheres nas Minas Gerais”. In: Mary del Priore (org.). História das mulheres no Brasil, 2015.)\n\nO tipo de atividade econômica mencionado no excerto",
+    "statementComplete": true
+  },
+  {
+    "number": 25,
+    "topicId": "his_idade_media",
+    "subject": "História",
+    "chapter": "A Primeira Globalização",
+    "title": "As origens da globalização por volta de 1500",
+    "concept": "Grandes navegações e “primeira globalização”: contato entre Europa, África, América e Ásia; pré-requisitos: tráfico atlântico.",
+    "steps": [
+      "O autor define a globalização do século XVI como o contato entre partes do mundo que se ignoravam.",
+      "O que pôs esses setores em contato foi a expansão marítima europeia.",
+      "Ela trouxe, entre outros fluxos, o tráfico de africanos escravizados pelo Atlântico.",
+      "A trata do renascimento comercial medieval, regional; B, D e E mencionam fatores europeus internos ou parciais.",
+      "Alternativa C."
+    ],
+    "trap": "A imprensa e a centralização monárquica são da época, mas não ligam continentes entre si.",
+    "retrieval": [
+      "Que continentes foram postos em contato no século XVI?",
+      "Por que o autor diz que ainda não havia economia mundial?"
+    ],
+    "transfer": "Exercício autoral: cite dois produtos que circularam entre continentes no século XVI.",
+    "criteria": [
+      "Açúcar e prata, especiarias ou escravizados africanos.",
+      "Indicar origem e destino."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "do ressurgimento do comércio e da articulação entre os mercados regionais."
+      },
+      {
+        "id": "b",
+        "text": "do fim do feudalismo e da invenção e disseminação da imprensa."
+      },
+      {
+        "id": "c",
+        "text": "da expansão marítima europeia e do tráfico transatlântico de escravizados."
+      },
+      {
+        "id": "d",
+        "text": "da luta cristã contra o islamismo e do monopólio colonial ibérico."
+      },
+      {
+        "id": "e",
+        "text": "da centralização monárquica e da ampliação do comércio subsaariano."
+      }
+    ],
+    "pages": [
+      7
+    ],
+    "statement": "Em 1500, ainda estamos bem longe de uma economia mundial. No limiar do século XVI, a globalização corresponde ao fato de setores do mundo que se ignoravam ou não se frequentavam diretamente serem postos em contato uns com os outros. (Serge Gruzinski. A passagem do século: 1480-1520: as origens da globalização, 1999.)\n\nA globalização identificada pelo excerto foi resultado, entre outros fatores,",
+    "statementComplete": true
+  },
+  {
+    "number": 26,
+    "topicId": "his_brasil_imperio",
+    "subject": "História",
+    "chapter": "Brasil Império: Segundo Reinado (1840-1889)",
+    "title": "Café no Oeste Paulista: ferrovias e mecanização",
+    "concept": "Expansão cafeeira para o Oeste Paulista: ferrovias e modernização produtiva; pré-requisitos: Lei Eusébio de Queirós (1850).",
+    "steps": [
+      "Problema 1: fazendas cada vez mais longe do porto de Santos.",
+      "Solução: estradas de ferro (São Paulo Railway, 1867, e as que se seguiram).",
+      "Problema 2: fim do tráfico em 1850, que reduziu a oferta de mão de obra.",
+      "Entre as respostas, a mecanização de parte do beneficiamento (descascadores, secadores), além da imigração europeia, que nenhuma alternativa cita corretamente.",
+      "Alternativa E."
+    ],
+    "trap": "A imigração europeia foi a principal resposta à falta de braços, mas B fala em bolivianos, o que é falso.",
+    "retrieval": [
+      "Que ferrovia ligou Jundiaí a Santos?",
+      "Que lei de 1850 proibiu o tráfico?"
+    ],
+    "transfer": "Exercício autoral: relacione as ferrovias ao crescimento de cidades do interior paulista.",
+    "criteria": [
+      "Estações e escoamento da produção.",
+      "Surgimento de núcleos urbanos ao longo dos trilhos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "à criação de portos fluviais na Bacia do Prata e ao desrespeito à proibição do tráfico."
+      },
+      {
+        "id": "b",
+        "text": "ao retorno dos latifúndios para áreas vizinhas do litoral e ao estímulo à imigração de bolivianos."
+      },
+      {
+        "id": "c",
+        "text": "à fundação de cidades no Oeste de São Paulo e ao uso de indígenas escravizados."
+      },
+      {
+        "id": "d",
+        "text": "ao aumento do mercado interno para o café e à ampliação do comércio com a Argentina."
+      },
+      {
+        "id": "e",
+        "text": "à abertura de estradas de ferro e à mecanização de parte da produção cafeeira."
+      }
+    ],
+    "pages": [
+      7
+    ],
+    "statement": "Em direção ao Oeste da província [de São Paulo], terras desabitadas foram sendo ocupadas pelos latifúndios produtores de café. Dois problemas cruciais se colocavam para os cafeicultores nessa expansão para Oeste. Em primeiro lugar, as novas fazendas localizavam-se cada vez mais longe do porto de Santos, por onde escoavam sua produção para o mercado externo. [...] Outro desafio foi o fim do tráfico negreiro internacional em 1850. (Miriam Dolhnikoff. História do Brasil império, 2019. Adaptado.)\n\nAs alternativas encontradas para superar, na segunda metade do século XIX, os “dois problemas cruciais” citados no excerto correspondem",
+    "statementComplete": true
+  },
+  {
+    "number": 27,
+    "topicId": "his_primeira_republica_vargas",
+    "subject": "História",
+    "chapter": "A República da Espada",
+    "title": "Charge da Revolta da Vacina",
+    "concept": "Revolta da Vacina (1904): vacinação obrigatória contra a varíola, imposta com força, e reação popular; pré-requisitos: leitura de charge.",
+    "steps": [
+      "“Hygiene à muque” significa higiene à força.",
+      "Soldados empurram a seringa; “Povo” e “Constituição” estão pisoteados.",
+      "A charge critica a imposição violenta da vacinação, que desrespeitava direitos.",
+      "A elogiaria o governo; B diz o oposto da imagem; C inverte (o exército garante a vacinação, não a impede); E confunde varíola com febre amarela.",
+      "Alternativa D."
+    ],
+    "trap": "Oswaldo Cruz combateu também a febre amarela, mas a vacina obrigatória de 1904 era contra a varíola.",
+    "retrieval": [
+      "O que significa a expressão “à muque”?",
+      "Que elementos da charge representam direitos desrespeitados?"
+    ],
+    "transfer": "Exercício autoral: cite duas causas da Revolta da Vacina além da obrigatoriedade.",
+    "criteria": [
+      "Reforma urbana com demolição de cortiços.",
+      "Desconfiança popular e falta de informação."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "valoriza o empenho dos vacinadores para obter a adesão da população à medida saneadora."
+      },
+      {
+        "id": "b",
+        "text": "atesta a constitucionalidade da vacinação obrigatória para impedir a disseminação da varíola."
+      },
+      {
+        "id": "c",
+        "text": "ironiza a necessidade de recorrer ao exército para impedir a realização do processo de vacinação."
+      },
+      {
+        "id": "d",
+        "text": "questiona o emprego da força para garantir o cumprimento da lei da vacinação obrigatória."
+      },
+      {
+        "id": "e",
+        "text": "defende a urgência de vacinar a população para erradicar a epidemia de febre amarela."
+      }
+    ],
+    "pages": [
+      8
+    ],
+    "statement": "Analise a charge, que representa Oswaldo Cruz e foi publicada no Rio de Janeiro em 1904.\n\n[Charge “Hygiene à muque”: Oswaldo Cruz, de bigode, avança segurando uma enorme seringa; atrás dele, uma fila de soldados armados empurra a seringa. Ao fundo, um cartaz com os dizeres “Aguilhão... tranquilidade pública”. Sob os pés dele, pisoteados, papéis com as palavras “Povo” e “Constituição”. Legenda inferior: “Ou vae ou racha!”.]\n\n(https://basearch.coc.fiocruz.br)\n\nA charge",
+    "statementComplete": true
+  },
+  {
+    "number": 28,
+    "topicId": "his_republica_liberal_atual",
+    "subject": "História",
+    "chapter": "Regime Militar (1964-1985) II",
+    "title": "AI-5: legalidade da exceção",
+    "concept": "Atos institucionais: normas de exceção com força legal; AI-5 (1968) como endurecimento máximo da ditadura; pré-requisitos: cronologia do regime.",
+    "steps": [
+      "O excerto: normas discricionárias “mas dotadas de valor legal”.",
+      "Ferramenta jurídica, portanto.",
+      "E “de intimidação pelo medo”, sem prazo, contra a oposição: revela o caráter ditatorial.",
+      "B fala em fragilidade; C atribui à oposição; D: o AI-5 é o oposto da abertura (que começou em 1974); E: foi decretado pelo Executivo e fechou o Congresso.",
+      "Alternativa A."
+    ],
+    "trap": "“Inconstitucional” parece crítico, mas o texto destaca justamente o “valor legal” atribuído ao AI-5.",
+    "retrieval": [
+      "Quem decretou o AI-5?",
+      "Cite duas medidas previstas no AI-5."
+    ],
+    "transfer": "Exercício autoral: explique como o AI-5 afetou o habeas corpus.",
+    "criteria": [
+      "Suspendeu-o para crimes políticos.",
+      "Permitiu prisões sem controle judicial."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "jurídica, que evidenciou o caráter ditatorial do regime militar."
+      },
+      {
+        "id": "b",
+        "text": "inconstitucional, que revelou a fragilidade política do regime militar."
+      },
+      {
+        "id": "c",
+        "text": "empregada pela oposição ao regime militar, mas ineficaz para democratizar o país."
+      },
+      {
+        "id": "d",
+        "text": "oficial, que determinou o início do processo de abertura política."
+      },
+      {
+        "id": "e",
+        "text": "aprovada pelo Congresso Nacional, mas destinada a aumentar o poder do Executivo."
+      }
+    ],
+    "pages": [
+      8
+    ],
+    "statement": "O AI-5 [Ato Institucional no 5] era uma ferramenta de intimidação pelo medo, não tinha prazo de vigência e seria empregado pela ditadura contra a oposição e a discordância. [...] O AI-5 fez parte de um conjunto de instrumentos e normas discricionárias mas dotadas de valor legal, adaptadas ou autoconferidas pelos militares. (Lilia M. Schwarcz e Heloisa M. Starling. Brasil: uma biografia, 2018.)\n\nO excerto apresenta o AI-5, emitido em dezembro de 1968, como uma ferramenta",
+    "statementComplete": true
+  },
+  {
+    "number": 29,
+    "topicId": "his_guerra_fria_contemporaneo",
+    "subject": "História",
+    "chapter": "Descolonização Afro-Asiática",
+    "title": "Substituição de importações na África independente",
+    "concept": "Industrialização por substituição de importações: produzir internamente o que antes se importava; pré-requisitos: comparação com o Brasil de Vargas e JK.",
+    "steps": [
+      "Substituir importações é passar a produzir no país os bens industriais que se compravam de fora.",
+      "Isso valoriza a indústria local voltada ao mercado interno.",
+      "Os bens visados são de consumo amplo (tecidos, alimentos processados, utensílios).",
+      "A e E exageram (a política não exige recusar capital estrangeiro nem romper o comércio); C trata de urbanismo; D não decorre do conceito.",
+      "Alternativa B."
+    ],
+    "trap": "Substituir importações não é isolamento comercial: muitas vezes a indústria nascente dependia de capital e máquinas estrangeiras.",
+    "retrieval": [
+      "O que significa substituir importações?",
+      "Que país latino-americano adotou essa política no século XX?"
+    ],
+    "transfer": "Exercício autoral: cite uma limitação dessa política.",
+    "criteria": [
+      "Dependência de bens de capital importados.",
+      "Mercado interno pequeno e pouca competitividade."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a recusa de financiamento econômico estrangeiro das economias nacionais dos países africanos."
+      },
+      {
+        "id": "b",
+        "text": "a valorização das produções locais de mercadorias industrializadas voltadas ao consumo de massa."
+      },
+      {
+        "id": "c",
+        "text": "o planejamento racional dos processos de crescimento dos centros urbanos nas capitais africanas."
+      },
+      {
+        "id": "d",
+        "text": "a subordinação dos países livres do continente africano aos interesses financeiros do mundo socialista."
+      },
+      {
+        "id": "e",
+        "text": "a suspensão das relações comerciais com as economias dos países industrializados do Ocidente europeu."
+      }
+    ],
+    "pages": [
+      8
+    ],
+    "statement": "À luz dos processos de independência do jugo colonial posteriores à Segunda Guerra Mundial, a maioria dos governos dos recém-nascidos Estados africanos incluiu em suas agendas a implementação da política de industrialização por substituição de importações. (Kauê Lopes dos Santos. Africano: uma introdução ao continente, 2022. Adaptado.)\n\nPode-se entender a chamada política de substituição de importações como",
+    "statementComplete": true
+  },
+  {
+    "number": 30,
+    "topicId": "his_guerra_fria_contemporaneo",
+    "subject": "História",
+    "chapter": "Guerra Fria",
+    "title": "Armas nucleares e dissuasão",
+    "concept": "Equilíbrio do terror e dissuasão nuclear; pré-requisitos: ler o argumento do autor.",
+    "steps": [
+      "Hobsbawm diz que as superpotências abandonaram a guerra direta, um “pacto suicida”.",
+      "As armas não foram usadas, mas a ameaça nuclear foi, “quase com certeza sem intenção de cumpri-la”.",
+      "Ou seja, valeram como instrumento de pressão e intimidação, não de combate.",
+      "A e D são exagerados; B contraria o poder das superpotências; E é falsa (não foram usadas).",
+      "Alternativa C."
+    ],
+    "trap": "D confunde ausência de guerra direta com harmonia: a Guerra Fria teve tensão e conflitos indiretos.",
+    "retrieval": [
+      "Por que a guerra direta seria “um pacto suicida”?",
+      "O que foi a Crise dos Mísseis de 1962?"
+    ],
+    "transfer": "Exercício autoral: explique o conceito de destruição mútua assegurada.",
+    "criteria": [
+      "Cada lado poderia destruir o outro mesmo após ser atacado.",
+      "Isso desestimulava o primeiro ataque."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "impediram as mudanças sócio-históricas em escala global."
+      },
+      {
+        "id": "b",
+        "text": "inviabilizam a supremacia política das superpotências."
+      },
+      {
+        "id": "c",
+        "text": "exerceram sobretudo função simbólica e persuasiva."
+      },
+      {
+        "id": "d",
+        "text": "possibilitaram a harmonia político-diplomática mundial."
+      },
+      {
+        "id": "e",
+        "text": "eram empregadas apenas em conflitos regionais."
+      }
+    ],
+    "pages": [
+      8
+    ],
+    "statement": "Assim que a URSS adquiriu armas nucleares [...] as duas superpotências claramente abandonaram a guerra como instrumento de política, pois isso equivalia a um pacto suicida. Não está muito claro se chegaram a considerar seriamente a possibilidade de uma ação nuclear contra terceiros [...], mas de todo modo as armas não foram usadas. Contudo, ambos usaram a ameaça nuclear, quase com certeza sem intenção de cumpri-la, em algumas ocasiões. (Eric Hobsbawm. Era dos extremos: o breve século XX: 1914-1991, 1995.)\n\nO excerto sustenta que, no âmbito da Guerra Fria, os armamentos nucleares",
+    "statementComplete": true
+  },
+  {
+    "number": 31,
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "chapter": "Biogeografia do Brasil I",
+    "title": "Incêndios no Pantanal em junho",
+    "concept": "Queimadas no Pantanal: seca extrema somada ao uso do fogo pelo ser humano; pré-requisitos: regime de cheias e secas do bioma.",
+    "steps": [
+      "Junho de 2024 teve seca severa no Pantanal, com rios em níveis muito baixos.",
+      "A vegetação seca vira combustível.",
+      "A maioria dos focos tem origem humana: queimadas para manejo de pastagens e fogo criminoso.",
+      "Hidrelétricas, La Niña (era fim de El Niño), cana e urbanização não explicam o caso.",
+      "Alternativa C."
+    ],
+    "trap": "Raios causam parte dos incêndios naturais, mas em junho, na seca, a origem predominante é humana.",
+    "retrieval": [
+      "O que significa ação antrópica?",
+      "Por que a seca intensifica os incêndios?"
+    ],
+    "transfer": "Exercício autoral: cite um efeito ecológico dos incêndios no Pantanal.",
+    "criteria": [
+      "Morte de fauna e perda de habitat.",
+      "Alteração da ciclagem de nutrientes."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "à construção de hidrelétricas e ao desmatamento."
+      },
+      {
+        "id": "b",
+        "text": "à vegetação densa e às descargas elétricas."
+      },
+      {
+        "id": "c",
+        "text": "ao período de estiagem e às ações antrópicas."
+      },
+      {
+        "id": "d",
+        "text": "ao fenômeno climático La Niña e à produção canavieira."
+      },
+      {
+        "id": "e",
+        "text": "à urbanização e ao sistema de abastecimento de água."
+      }
+    ],
+    "pages": [
+      9
+    ],
+    "statement": "Inesperado e assustador. É assim que pessoas que vivem ou trabalham na região do Pantanal têm definido os incêndios no bioma em pleno junho, período em que historicamente não há tanto fogo no bioma. (www.bbc.com.br, 21.06.2024. Adaptado.)\n\nAs causas dos incêndios no Pantanal, em junho de 2024, estão relacionadas",
+    "statementComplete": true
+  },
+  {
     "number": 32,
     "topicId": "geo_populacao_urbana_brasil",
     "subject": "Geografia",
@@ -264,6 +1706,695 @@
       9
     ],
     "statement": "Commodities são produtos padronizados, geralmente produzidos em larga escala, que podem ser intercambiados no mercado global com base em sua qualidade e características uniformes. No contexto comercial, as commodities frequentemente incluem produtos agrícolas, minerais e energéticos.\n\n(www.fazcomex.com.br. Adaptado.)\n\nPara o PIB brasileiro, as commodities são",
+    "statementComplete": true
+  },
+  {
+    "number": 33,
+    "topicId": "geo_populacao_urbana_brasil",
+    "subject": "Geografia",
+    "chapter": "Estrutura Étnica e Fluxos Migratórios",
+    "title": "Refugiados no aeroporto de Guarulhos",
+    "concept": "Fluxos migratórios contemporâneos e uso do Brasil como rota de trânsito; pré-requisitos: refúgio × migração econômica.",
+    "steps": [
+      "Os solicitantes vinham sobretudo da Índia, do Vietnã e de outros países distantes.",
+      "Pediam refúgio na área restrita do aeroporto, em conexão.",
+      "O caso foi associado a uma rota irregular rumo aos Estados Unidos, usando o Brasil como passagem.",
+      "Salários, universidades, pedidos da ONU e indústria têxtil não explicam a concentração no aeroporto.",
+      "Alternativa B."
+    ],
+    "trap": "D parece humanitária, mas a ONU não pediu esse fluxo; a explicação está na rota de trânsito.",
+    "retrieval": [
+      "De onde vinha a maioria dos solicitantes?",
+      "Por que pedir refúgio no aeroporto, e não após a imigração?"
+    ],
+    "transfer": "Exercício autoral: diferencie refugiado de migrante econômico.",
+    "criteria": [
+      "Refugiado: fuga de perseguição ou violência.",
+      "Migrante econômico: busca de trabalho e renda."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "aos salários altos para trabalhar na construção civil."
+      },
+      {
+        "id": "b",
+        "text": "à rota de imigração ilegal para os Estados Unidos."
+      },
+      {
+        "id": "c",
+        "text": "às oportunidades para estudar em universidades públicas."
+      },
+      {
+        "id": "d",
+        "text": "aos pedidos da ONU para minimizar a crise humanitária."
+      },
+      {
+        "id": "e",
+        "text": "às vagas de emprego para trabalhar em indústrias têxteis."
+      }
+    ],
+    "pages": [
+      9
+    ],
+    "statement": "Pelo menos mais 57 imigrantes chegaram ao Brasil em um mesmo dia (14.06.2024) pelo Aeroporto Internacional de Guarulhos, em São Paulo. Eles se juntaram a centenas de outros que aguardavam para apresentar pedido de refúgio no Brasil. Segundo o Ministério Público Federal (MPF), o número de estrangeiros no aeroporto chegava a 400. A maioria dos solicitantes de refúgio que estão no aeroporto é proveniente da Índia. Há ainda cidadãos do Vietnã, do Senegal, da Venezuela, de Cuba, e de Angola. (www.oglobo.globo.com, 14.06.2024. Adaptado.)\n\nO aumento dos pedidos de refúgio no Brasil, mencionado na notícia, associa-se",
+    "statementComplete": true
+  },
+  {
+    "number": 34,
+    "topicId": "geo_economica_brasil",
+    "subject": "Geografia",
+    "chapter": "O Espaço Agrário Brasileiro",
+    "title": "Grilagem de terras",
+    "concept": "Questão agrária: grilagem como apropriação ilegal de terras públicas com títulos falsos; pré-requisitos: terras devolutas.",
+    "steps": [
+      "O texto descreve divisão de terras em lotes e alteração de marcos para “dar aparência de posse regular”.",
+      "Isso é forjar a propriedade.",
+      "O nome vem da prática de envelhecer papéis com grilos em gavetas.",
+      "As demais alternativas descrevem procedimentos legais (regularização, demarcação, reforma agrária) ou ocupações por outro fundamento.",
+      "Alternativa A."
+    ],
+    "trap": "E confunde grilagem com ocupação por movimentos sociais, que reivindica a função social, sem falsificar títulos.",
+    "retrieval": [
+      "De onde vem o termo grilagem?",
+      "Que tipo de terra costuma ser alvo da grilagem?"
+    ],
+    "transfer": "Exercício autoral: relacione grilagem e desmatamento na Amazônia.",
+    "criteria": [
+      "Desmatar para simular posse.",
+      "Venda posterior da terra ocupada ilegalmente."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "apropriação de terras por meio de documentos falsificados."
+      },
+      {
+        "id": "b",
+        "text": "regularização fundiária por meio da lei de terras devolutas."
+      },
+      {
+        "id": "c",
+        "text": "demarcação de terras indígenas por meio da aplicação do Estatuto da Terra."
+      },
+      {
+        "id": "d",
+        "text": "redistribuição de terras por meio da Reforma Agrária."
+      },
+      {
+        "id": "e",
+        "text": "invasão de propriedades por meio do princípio da função social da terra."
+      }
+    ],
+    "pages": [
+      9
+    ],
+    "statement": "Grilagem de terras no Maranhão Um grupo criminoso é responsável por promover desmatamento para abertura de vias de acesso e compartimentação do terreno em diversas parcelas, que se assemelham a lotes, e, com isso, passar a promover sua ocupação, seja por meio de venda desses lotes a terceiros, seja por incentivo à alteração e supressão dos marcos já existentes, visando a dar aparência de posse regular. (www.g1.com.br, 21.08.2024. Adaptado.)\n\nA grilagem é uma prática histórica no Brasil que consiste na",
+    "statementComplete": true
+  },
+  {
+    "number": 35,
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "chapter": "Biogeografia do Brasil II",
+    "title": "Mangue e proteção costeira",
+    "concept": "Ecossistema manguezal: berçário de espécies, filtro de sedimentos e barreira contra a erosão; pré-requisitos: raízes-escora.",
+    "steps": [
+      "As raízes expostas fixam o solo lamacento.",
+      "Elas reduzem a força das marés e das ondas.",
+      "Assim o mangue protege a costa da erosão.",
+      "Pesca comercial é uso humano, não característica; o mangue não polui, é rico em biodiversidade, e a produção de oxigênio não é sua marca distintiva.",
+      "Alternativa E."
+    ],
+    "trap": "Todo ecossistema vegetal produz oxigênio; a característica específica do mangue é a proteção costeira.",
+    "retrieval": [
+      "Por que o mangue é chamado de berçário?",
+      "Onde o mangue se forma?"
+    ],
+    "transfer": "Exercício autoral: cite uma ameaça aos manguezais brasileiros.",
+    "criteria": [
+      "Aterros e especulação imobiliária.",
+      "Despejo de esgoto e carcinicultura."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "exploração da pesca comercial."
+      },
+      {
+        "id": "b",
+        "text": "poluição dos oceanos por matéria orgânica."
+      },
+      {
+        "id": "c",
+        "text": "produção de oxigênio atmosférico."
+      },
+      {
+        "id": "d",
+        "text": "escassez da biodiversidade local."
+      },
+      {
+        "id": "e",
+        "text": "proteção das áreas costeiras de erosão."
+      }
+    ],
+    "pages": [
+      10
+    ],
+    "statement": "Mangue ou mangal é uma formação vegetal de regiões alagadiças e ocorre apenas em regiões tropicais ou subtropicais no encontro entre o rio e o mar. É facilmente reconhecido pelas árvores com raízes expostas e solo lamacento. (www.wwf.com.br)\n\nÉ uma característica dos mangues a",
+    "statementComplete": true
+  },
+  {
+    "number": 36,
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "chapter": "Geologia e Geomorfologia",
+    "title": "Pedra Furada: arenito e erosão eólica",
+    "concept": "Rochas sedimentares e erosão diferencial; clima semiárido e ação eólica; pré-requisitos: tipos de rocha.",
+    "steps": [
+      "A rocha tem camadas e cor alaranjada: arenito, rocha sedimentar.",
+      "A Serra da Capivara está em área semiárida, de vegetação aberta.",
+      "O vento carrega areia que desgasta as partes menos resistentes, abrindo o arco.",
+      "Basalto e granito são ígneos; mármore é metamórfico; “argilosa magmática” é contraditório.",
+      "Alternativa A."
+    ],
+    "trap": "E mistura rocha sedimentar (argila) com origem magmática: a combinação é impossível.",
+    "retrieval": [
+      "Como se formam as rochas sedimentares?",
+      "Que agente erosivo predomina no semiárido?"
+    ],
+    "transfer": "Exercício autoral: explique por que a Serra da Capivara tem importância arqueológica.",
+    "criteria": [
+      "Pinturas rupestres pré-históricas.",
+      "Vestígios antigos de ocupação humana nas Américas."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "rocha arenítica sedimentar modelada pela ação eólica."
+      },
+      {
+        "id": "b",
+        "text": "rocha basáltica ígnea modelada pela ação vulcânica."
+      },
+      {
+        "id": "c",
+        "text": "rocha granítica magmática modelada pela ação da água."
+      },
+      {
+        "id": "d",
+        "text": "rocha de mármore metamórfico modelada pela ação da pressão e da temperatura."
+      },
+      {
+        "id": "e",
+        "text": "rocha argilosa magmática modelada pela ação da chuva."
+      }
+    ],
+    "pages": [
+      10
+    ],
+    "statement": "Observe a imagem da Pedra Furada, um dos pontos turísticos de contemplação do Parque Nacional da Serra da Capivara, localizado na região sudeste do Piauí.\n\n[Fotografia: grande arco de rocha alaranjada, em camadas, com uma abertura no alto, sobre vegetação de Caatinga.]\n\n(https://portal.iphan.gov.br)\n\nCom base na imagem e em conhecimentos sobre Geomorfologia, afirma-se que a formação geológica da Pedra Furada está relacionada à",
+    "statementComplete": true
+  },
+  {
+    "number": 37,
+    "topicId": "geo_populacao_urbana_brasil",
+    "subject": "Geografia",
+    "chapter": "O Espaço Urbano I",
+    "title": "São Sebastião: encostas e áreas de risco",
+    "concept": "Ocupação de encostas e prevenção de desastres: contenção, drenagem e realocação; pré-requisitos: áreas de risco geológico.",
+    "steps": [
+      "O desastre foi causado por deslizamentos em encostas ocupadas.",
+      "Moradores continuam nas áreas de risco.",
+      "O desafio é tornar seguras essas encostas (contenção, drenagem) ou realocar moradores.",
+      "Êxodo em massa, contaminação, criminalidade e eletricidade não são o problema central apontado.",
+      "Alternativa C."
+    ],
+    "trap": "Chuva extrema é o gatilho; a vulnerabilidade está na ocupação das encostas sem contenção.",
+    "retrieval": [
+      "Por que encostas íngremes são áreas de risco?",
+      "Quantos milímetros choveu em 12 horas?"
+    ],
+    "transfer": "Exercício autoral: cite duas medidas de prevenção para áreas de encosta.",
+    "criteria": [
+      "Muros de contenção e drenagem.",
+      "Sistemas de alerta e remoção preventiva."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "à saída em massa da população para outras cidades litorâneas."
+      },
+      {
+        "id": "b",
+        "text": "à contaminação dos reservatórios pela enxurrada."
+      },
+      {
+        "id": "c",
+        "text": "às obras de infraestruturas de contenção das encostas."
+      },
+      {
+        "id": "d",
+        "text": "ao aumento da criminalidade nas áreas atingidas pela tragédia."
+      },
+      {
+        "id": "e",
+        "text": "à dificuldade de fornecimento de eletricidade nas áreas afetadas."
+      }
+    ],
+    "pages": [
+      10
+    ],
+    "statement": "A chuva mais intensa já registrada no Brasil despejou 661 milímetros de água em um período de 12 horas em São Sebastião, em fevereiro de 2023, provocando deslizamentos de terra e inundações que ceifaram a vida de 64 pessoas. A destruição foi particularmente mais forte na Vila Sahy, uma das 21 áreas de risco identificadas em um levantamento do Instituto de Pesquisas Tecnológicas de 2018. (www.climainfo.org.br, 21.02.2024. Adaptado.)\n\nMesmo após um ano da tragédia, ainda há moradores vivendo em áreas de risco no alto do morro da Vila Sahy, bairro mais atingido pelas chuvas em São Sebastião. Um dos principais desafios ainda enfrentados pelo município de São Sebastião está relacionado",
+    "statementComplete": true
+  },
+  {
+    "number": 38,
+    "topicId": "geo_economica_brasil",
+    "subject": "Geografia",
+    "chapter": "Energia Elétrica no Brasil",
+    "title": "Termelétricas e seca",
+    "concept": "Matriz elétrica brasileira dependente de hidrelétricas; termelétricas como reserva na seca; pré-requisitos: crise hídrica de 2021.",
+    "steps": [
+      "A eletricidade brasileira vem principalmente de hidrelétricas.",
+      "Em secas fortes, os reservatórios baixam e a geração hídrica cai.",
+      "Para não faltar energia, aciona-se a geração térmica, mais cara.",
+      "A erra a matriz (não é movida a óleo); B, C e E indicam causas sem relação com a decisão.",
+      "Alternativa D."
+    ],
+    "trap": "A matriz elétrica é majoritariamente renovável; o óleo combustível é recurso de reserva, não base.",
+    "retrieval": [
+      "Qual a principal fonte da eletricidade brasileira?",
+      "Por que acionar termelétricas encarece a conta de luz?"
+    ],
+    "transfer": "Exercício autoral: explique o sistema de bandeiras tarifárias.",
+    "criteria": [
+      "Indica o custo da geração no mês.",
+      "Bandeira vermelha quando térmicas são acionadas."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "à baixa eficiência energética brasileira, majoritariamente movida a óleo combustível."
+      },
+      {
+        "id": "b",
+        "text": "à grande exportação de gás natural, importante recurso para a geração de energia."
+      },
+      {
+        "id": "c",
+        "text": "à queda da produção de energia solar, em períodos de incidência de incêndios florestais."
+      },
+      {
+        "id": "d",
+        "text": "à forte intensidade do período de seca, quando a geração de energia hidrelétrica diminui."
+      },
+      {
+        "id": "e",
+        "text": "à queda na importação de urânio, imprescindível para a produção de energia nuclear."
+      }
+    ],
+    "pages": [
+      10
+    ],
+    "statement": "O sufoco causado pela crise elétrica de 2021 fez o governo federal se adiantar, em 2024, e autorizar o acionamento de mais termelétricas pelo Operador Nacional do Sistema (ONS). A precaução, porém, pode aumentar o preço da energia, inclusive para as indústrias. O ministro de Minas e Energia disse que não há estimativa sobre quando essas usinas serão acionadas. Mas, uma vez autorizado, o ONS pode despachá-las assim que considerar necessário. (www.otempo.com.br, 14.09.2024. Adaptado.)\n\nO adiantamento do governo na autorização do acionamento das termelétricas, em 2024, relaciona-se",
+    "statementComplete": true
+  },
+  {
+    "number": 39,
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "chapter": "Geopolítica Ambiental",
+    "title": "Crédito de carbono",
+    "concept": "Mercado de carbono: cada crédito equivale a uma tonelada de CO₂ (ou equivalente) não emitida ou removida; pré-requisitos: Protocolo de Kyoto e Acordo de Paris.",
+    "steps": [
+      "O crédito nasce de projetos que reduzem ou evitam emissões.",
+      "Por convenção, um crédito = uma tonelada de CO₂ equivalente.",
+      "Quem não consegue reduzir as próprias emissões compra créditos para compensá-las.",
+      "B restringe a países subdesenvolvidos; C chama de empréstimo; D fala de custo de produtos; E, de voucher de consumo.",
+      "Alternativa A."
+    ],
+    "trap": "B lembra as permissões de emissão (cap-and-trade), mas o crédito representa redução comprovada, sem restrição geográfica.",
+    "retrieval": [
+      "Quanto vale, em toneladas de CO₂, um crédito de carbono?",
+      "Cite dois projetos que geram créditos."
+    ],
+    "transfer": "Exercício autoral: cite uma crítica ao mercado de carbono.",
+    "criteria": [
+      "Permite que poluidores mantenham emissões pagando.",
+      "Risco de créditos superestimados."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma unidade que representa a redução de uma tonelada de dióxido de carbono não emitida por projetos ambientais."
+      },
+      {
+        "id": "b",
+        "text": "uma permissão para uma empresa emitir uma quantidade específica de gases de efeito estufa em países subdesenvolvidos."
+      },
+      {
+        "id": "c",
+        "text": "um empréstimo financeiro concedido a projetos de energia renovável, melhorando o custo da eletricidade verde."
+      },
+      {
+        "id": "d",
+        "text": "um certificado que permite a uma empresa compensar o custo de seus produtos ao reduzir a emissão de poluentes."
+      },
+      {
+        "id": "e",
+        "text": "um voucher que pode ser trocado por produtos sustentáveis, promovendo práticas de consumo responsável."
+      }
+    ],
+    "pages": [
+      11
+    ],
+    "statement": "O mercado de crédito de carbono está se tornando cada vez mais popular para indivíduos, organizações e empresas. Os créditos e compensações de carbono são obtidos por meio de diversas iniciativas e projetos que tentam reduzir as emissões, como a produção de energia renovável, as melhorias na eficiência energética, o reflorestamento e a captura de metano em aterros sanitários. (www.exame.com.br, 12.01.2024. Adaptado.)\n\nO crédito de carbono é",
+    "statementComplete": true
+  },
+  {
+    "number": 40,
+    "topicId": "geo_geopolitica_regional",
+    "subject": "Geografia",
+    "chapter": "Tensões Geopolíticas na Europa",
+    "title": "Catalunha: Salvador Illa e o separatismo",
+    "concept": "Nacionalismos e separatismo na Espanha; pré-requisitos: referendo de 2017 e partidos catalães.",
+    "steps": [
+      "Illa é do Partido Socialista, aliado do governo espanhol de Pedro Sánchez.",
+      "Sua vitória encerrou mais de uma década de governos independentistas na Catalunha.",
+      "Isso indica perda de força do separatismo.",
+      "A Catalunha faz parte da Espanha, que já está na Otan e na zona do euro; curdos e guerra civil religiosa não têm relação com o caso.",
+      "Alternativa C."
+    ],
+    "trap": "E parece plausível, mas a Catalunha já usa o euro como parte da Espanha.",
+    "retrieval": [
+      "Que partido Salvador Illa representa?",
+      "O que aconteceu na Catalunha em 2017?"
+    ],
+    "transfer": "Exercício autoral: cite outra região europeia com movimento separatista.",
+    "criteria": [
+      "País Basco, Escócia ou Flandres.",
+      "Indicar o Estado a que pertence."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a retirada da Catalunha da Otan pelo governo espanhol."
+      },
+      {
+        "id": "b",
+        "text": "o controle político do povo curdo na Catalunha."
+      },
+      {
+        "id": "c",
+        "text": "a diminuição do poder do movimento separatista da Catalunha."
+      },
+      {
+        "id": "d",
+        "text": "o fim da guerra civil de caráter religioso na Catalunha."
+      },
+      {
+        "id": "e",
+        "text": "a inserção da Catalunha na zona do euro da União Europeia."
+      }
+    ],
+    "pages": [
+      11
+    ],
+    "statement": "O Parlamento da Catalunha elegeu Salvador Illa como novo líder do governo na região. Illa, aliado ao primeiro-ministro espanhol, Pedro Sánchez, foi escolhido depois de obter a maioria dos votos nas eleições regionais de maio. (www.poder360.com.br, 08.08.2024. Adaptado.)\n\nUma das implicações da vitória de Salvador Illa é",
+    "statementComplete": true
+  },
+  {
+    "number": 41,
+    "topicId": "bio_estrutura_fisio_celular",
+    "subject": "Biologia",
+    "chapter": "Composição Química Celular: Compostos Inorgânicos",
+    "title": "Água: essencial à vida",
+    "concept": "Água nos seres vivos: fontes (ingestão direta, alimentos, água metabólica) e ciclo hidrológico; pré-requisitos: catalisador × solvente.",
+    "steps": [
+      "A substância é a água.",
+      "Os animais obtêm água bebendo, mas também pelos alimentos (frutas, tecidos de presas) e pelo metabolismo.",
+      "Logo, ela pode ser obtida pela alimentação.",
+      "Lixiviar empobrece o solo; catalisadores biológicos são enzimas; a água excretada volta ao ambiente e a outros seres; ela circula em ciclo, não em fluxo unidirecional.",
+      "Alternativa B."
+    ],
+    "trap": "Fluxo unidirecional é característica da energia nos ecossistemas; a matéria, incluindo a água, circula.",
+    "retrieval": [
+      "Cite três formas de um animal obter água.",
+      "Por que a água não é catalisadora?"
+    ],
+    "transfer": "Exercício autoral: explique como um rato-canguru do deserto sobrevive quase sem beber água.",
+    "criteria": [
+      "Água metabólica da respiração celular.",
+      "Rins que concentram muito a urina."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "promove a fertilidade do solo ao lixiviar as regiões áridas."
+      },
+      {
+        "id": "b",
+        "text": "pode ser obtida pelos animais por meio da alimentação."
+      },
+      {
+        "id": "c",
+        "text": "atua como catalisadora biológica no interior das células."
+      },
+      {
+        "id": "d",
+        "text": "não retorna a outros seres vivos ao ser excretada pelos animais."
+      },
+      {
+        "id": "e",
+        "text": "segue um fluxo unidirecional sem retornar ao mesmo organismo."
+      }
+    ],
+    "pages": [
+      11
+    ],
+    "statement": "Leia o trecho da canção “Planeta Água”, de Guilherme Arantes. Os versos dessa canção referem-se a uma substância essencial à vida.\n\nTerra!\nPlaneta Água\nÁgua que nasce na fonte serena do mundo\nE que abre um profundo grotão\nÁgua que faz inocente riacho e deságua\nNa corrente do ribeirão\nÁguas escuras dos rios\nQue levam a fertilidade ao sertão\nÁguas que banham aldeias\nE matam a sede da população\n\n(www.letras.mus.br)\n\nEssa substância essencial à vida",
+    "statementComplete": true
+  },
+  {
+    "number": 42,
+    "topicId": "bio_metabolismo_energetico",
+    "subject": "Biologia",
+    "chapter": "Bioenergética: Fermentação e Respiração",
+    "title": "Fermentação alcoólica",
+    "concept": "Fermentação alcoólica: glicólise + redução do acetaldeído a etanol, sem O₂, saldo de 2 ATP; pré-requisitos: comparação com respiração aeróbia (~30-38 ATP).",
+    "steps": [
+      "Produtos: etanol e CO₂ — fermentação alcoólica.",
+      "Não usa oxigênio: anaeróbia.",
+      "Saldo de 2 ATP por glicose, muito menor que o da respiração aeróbia.",
+      "A erra: leveduras (eucariontes) fazem; B e D: não é aeróbia nem mitocondrial; C erra: o aceptor final de hidrogênio é uma molécula orgânica (acetaldeído).",
+      "Alternativa E."
+    ],
+    "trap": "C parece correta (“anaeróbio”), mas na fermentação o aceptor de hidrogênio é justamente orgânico.",
+    "retrieval": [
+      "Onde ocorre a glicólise?",
+      "Que organismo realiza fermentação alcoólica na fabricação do pão?"
+    ],
+    "transfer": "Exercício autoral: compare fermentação alcoólica e lática quanto aos produtos.",
+    "criteria": [
+      "Alcoólica: etanol e CO₂.",
+      "Lática: lactato, sem CO₂."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "anaeróbio e ocorre exclusivamente em organismos procariontes."
+      },
+      {
+        "id": "b",
+        "text": "aeróbio e envolve a participação de várias enzimas."
+      },
+      {
+        "id": "c",
+        "text": "anaeróbio e independe de uma molécula orgânica aceptora de hidrogênio."
+      },
+      {
+        "id": "d",
+        "text": "aeróbio e ocorre no interior das mitocôndrias."
+      },
+      {
+        "id": "e",
+        "text": "anaeróbio e gera um saldo de ATP menor do que a respiração celular."
+      }
+    ],
+    "pages": [
+      11
+    ],
+    "statement": "O esquema ilustra um tipo de metabolismo energético realizado por alguns organismos na natureza.\n\n[Esquema: glicose (6C) → glicólise, com formação de 2 ATP e redução de 2 NAD⁺ a 2 NADH + H⁺ → 2 moléculas de piruvato (3C) → liberação de 2 CO₂ e reoxidação do NADH → 2 moléculas de álcool etílico (etanol, 2C).]\n\n(Sônia Lopes e Sergio Rosso. Bio 1: conecte live, 2018.)\n\nEsse tipo de metabolismo energético é considerado",
+    "statementComplete": true
+  },
+  {
+    "number": 43,
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "chapter": "Biomas Brasileiros",
+    "title": "Caatinga: espinhos e economia de água",
+    "concept": "Caatinga: clima semiárido e plantas xerófitas (espinhos, folhas caducas, caules suculentos); pré-requisitos: transpiração.",
+    "steps": [
+      "A área hachurada é o semiárido nordestino: Caatinga.",
+      "Plantas da Caatinga têm adaptações à seca.",
+      "Folhas transformadas em espinhos reduzem a superfície de transpiração.",
+      "Cascas grossas (não delgadas) protegem do fogo, no Cerrado; raízes aéreas são de mangue; folhas largas e perenes são de florestas úmidas; porte grande não é típico.",
+      "Alternativa C."
+    ],
+    "trap": "A casca que protege do fogo é grossa e típica do Cerrado: A troca o bioma e o atributo.",
+    "retrieval": [
+      "Por que muitas plantas da Caatinga perdem as folhas na seca?",
+      "Cite uma planta típica da Caatinga."
+    ],
+    "transfer": "Exercício autoral: explique a função do caule suculento do mandacaru.",
+    "criteria": [
+      "Armazenar água.",
+      "Realizar fotossíntese no lugar das folhas."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "caules com cascas delgadas, que as protegem das queimadas."
+      },
+      {
+        "id": "b",
+        "text": "raízes aéreas, que facilitam a absorção de água do lençol subterrâneo."
+      },
+      {
+        "id": "c",
+        "text": "espinhos numerosos, que reduzem a perda de água."
+      },
+      {
+        "id": "d",
+        "text": "folhas largas e perenes, que garantem alta taxa fotossintética."
+      },
+      {
+        "id": "e",
+        "text": "caules de grande porte, que facilitam a dispersão de sementes."
+      }
+    ],
+    "pages": [
+      12
+    ],
+    "statement": "A área hachurada do mapa destaca um importante bioma brasileiro.\n\n[Mapa do Brasil com área hachurada no interior do Nordeste.]\n\n(https://chc.org.br)\n\nUma das adaptações de certas espécies de plantas típicas desse bioma brasileiro é a presença de",
+    "statementComplete": true
+  },
+  {
+    "number": 44,
+    "topicId": "bio_zoologia",
+    "subject": "Biologia",
+    "chapter": "Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética",
+    "title": "Cladograma: táxons mais aparentados",
+    "concept": "Leitura de cladograma: táxons-irmãos compartilham o ancestral comum mais recente; pré-requisitos: proximidade dos nomes não indica parentesco.",
+    "steps": [
+      "Procure os pares que se unem no nó mais recente (mais próximo das pontas).",
+      "Pelas alternativas: B e C formam par, mas não estão nas opções; E e F também formam par.",
+      "E e F são grupos-irmãos: maior semelhança genética esperada.",
+      "F e G se ligam só depois, via ancestral do par E-F; D e E estão em ramos distantes, apesar de vizinhos nas letras.",
+      "Alternativa D."
+    ],
+    "trap": "D e E aparecem lado a lado no topo da figura, mas pertencem aos dois grandes grupos opostos da árvore.",
+    "retrieval": [
+      "O que representa cada nó de um cladograma?",
+      "Quem é o grupo-irmão do par E-F?"
+    ],
+    "transfer": "Exercício autoral: indique o táxon mais próximo do par B-C.",
+    "criteria": [
+      "Táxon A.",
+      "Justificar pelo nó comum seguinte."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "F e G."
+      },
+      {
+        "id": "b",
+        "text": "C e D."
+      },
+      {
+        "id": "c",
+        "text": "A e B."
+      },
+      {
+        "id": "d",
+        "text": "E e F."
+      },
+      {
+        "id": "e",
+        "text": "D e E."
+      }
+    ],
+    "pages": [
+      12
+    ],
+    "statement": "Um cladograma é uma árvore evolutiva que mostra as relações ancestrais entre organismos. No passado, os cladogramas eram desenhados com base em similaridades fenotípicas dos organismos. Hoje, similaridades nas sequências de bases nitrogenadas do DNA entre organismos também podem ser usadas para representar os cladogramas. No cladograma, as letras representam diferentes táxons. (www.nature.com. Adaptado.)\n\n[Cladograma com sete táxons, da esquerda para a direita: A, B, C, D, E, F, G. B e C formam um par; esse par se une a A; o grupo A-B-C se une a D. Do outro lado, E e F formam um par, que se une a G. Os dois grandes grupos se unem na base da árvore.]\n\nNo cladograma ilustrado, os táxons que apresentam maior semelhança entre moléculas de DNA analisadas são",
+    "statementComplete": true
+  },
+  {
+    "number": 45,
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "chapter": "Coração e Vasos Sanguíneos",
+    "title": "Coração com ventrículo único",
+    "concept": "Circulação dupla incompleta (anfíbios e a maioria dos répteis): dois átrios e um ventrículo comum; pré-requisitos: comparação com aves e mamíferos.",
+    "steps": [
+      "A figura mostra dois átrios e um ventrículo único.",
+      "O átrio direito recebe sangue venoso do corpo; o esquerdo, sangue arterial dos pulmões.",
+      "No ventrículo único os dois sangues se encontram: há mistura.",
+      "Átrios não bombeiam para fora do coração; a aorta, nesse caso, leva sangue misturado; os átrios são separados, sem mistura.",
+      "Alternativa A."
+    ],
+    "trap": "Em corações de quatro cavidades (aves, mamíferos), a aorta leva sangue só arterial; não é o caso da figura.",
+    "retrieval": [
+      "Que grupos de vertebrados têm ventrículo único?",
+      "Qual a vantagem do coração com quatro cavidades?"
+    ],
+    "transfer": "Exercício autoral: compare a circulação de peixes e de anfíbios.",
+    "criteria": [
+      "Peixes: simples, só sangue venoso no coração.",
+      "Anfíbios: dupla e incompleta."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "ocorre mistura de sangue arterial e venoso no ventrículo."
+      },
+      {
+        "id": "b",
+        "text": "o sangue arterial é bombeado pelo átrio direito."
+      },
+      {
+        "id": "c",
+        "text": "o sangue venoso é bombeado pelo átrio esquerdo."
+      },
+      {
+        "id": "d",
+        "text": "circula sangue exclusivamente arterial pela artéria aorta."
+      },
+      {
+        "id": "e",
+        "text": "ocorre mistura de sangue arterial e venoso no átrio esquerdo."
+      }
+    ],
+    "pages": [
+      12
+    ],
+    "statement": "Analise a figura que representa o coração de um vertebrado.\n\n[Figura: coração com dois átrios e um único ventrículo; setas mostram o sangue venoso (azul), vindo do corpo, e o arterial (vermelho), vindo dos pulmões, chegando ao mesmo ventrículo e saindo dele.]\n\nDe acordo com a figura, no coração desse vertebrado",
     "statementComplete": true
   },
   {
@@ -373,6 +2504,324 @@
     "statementComplete": true
   },
   {
+    "number": 48,
+    "topicId": "bio_genetica",
+    "subject": "Biologia",
+    "chapter": "Alelos Múltiplos e Herança dos Grupos Sanguíneos",
+    "title": "Eritroblastose fetal no heredograma",
+    "concept": "Eritroblastose fetal: mãe Rh⁻ sensibilizada por filho anterior Rh⁺ e novo feto Rh⁺; pré-requisitos: genótipos dd e Dd.",
+    "steps": [
+      "A doença só ocorre com mãe Rh⁻ (dd) sensibilizada; II-2 é Rh⁺, então o casal II-1 × II-2 nunca a produz.",
+      "II-4 é Rh⁻ e já teve filho Rh⁺ (III-2) sem imunizante: está sensibilizada.",
+      "II-5 é Rh⁺ e teve eritroblastose: sua mãe era Rh⁻, logo ele herdou um d — é Dd.",
+      "Dd × dd: 50% de filhos Rh⁺, que terão eritroblastose.",
+      "Alternativa A."
+    ],
+    "trap": "E supõe que todo filho será Rh⁺; como o pai é heterozigoto, metade dos filhos será Rh⁻ e não terá a doença.",
+    "retrieval": [
+      "Por que a mãe Rh⁺ não pode ter filho com eritroblastose?",
+      "Como se deduz que II-5 é heterozigoto?"
+    ],
+    "transfer": "Exercício autoral: qual a probabilidade de o próximo filho de II-4 e II-5 ser menino com eritroblastose?",
+    "criteria": [
+      "1/2 × 1/2.",
+      "25%."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "II-4 e II-5 será de 50%."
+      },
+      {
+        "id": "b",
+        "text": "II-1 e II-2 será de 12,5%."
+      },
+      {
+        "id": "c",
+        "text": "II-1 e II-2 será de 75%."
+      },
+      {
+        "id": "d",
+        "text": "II-4 e II-5 será nula."
+      },
+      {
+        "id": "e",
+        "text": "II-4 e II-5 será 100%."
+      }
+    ],
+    "pages": [
+      13
+    ],
+    "statement": "O heredograma apresenta indivíduos que têm informações sobre a tipagem sanguínea para o fator Rh. Os homens destacados (II-1 e II-5) apresentaram eritroblastose fetal ao nascer, e nenhuma mulher desse heredograma recebeu imunizante anti-Rh após os nascimentos dos filhos.\n\n[Heredograma.\nGeração I: homem I-1 (Rh⁺) e mulher I-2 (Rh⁻).\nGeração II: II-1, homem Rh⁺ (com eritroblastose ao nascer), casado com II-2, mulher Rh⁺; II-3, homem Rh⁻; II-4, mulher Rh⁻, casada com II-5, homem Rh⁺ (com eritroblastose ao nascer). II-2, II-3 e II-4 são filhos do casal I-1 × I-2.\nGeração III: III-1, mulher Rh⁻, filha de II-1 e II-2; III-2, homem Rh⁺, filho de II-4 e II-5.]\n\nConsiderando os dados do heredograma, a probabilidade de uma próxima criança ter eritroblastose fetal gerada pelo casal",
+    "statementComplete": true
+  },
+  {
+    "number": 49,
+    "topicId": "bio_evolucao",
+    "subject": "Biologia",
+    "chapter": "Mecanismos da Evolução Biológica",
+    "title": "Camelídeos e especiação alopátrica",
+    "concept": "Especiação alopátrica: isolamento geográfico → fim do fluxo gênico → divergência → isolamento reprodutivo; pré-requisitos: simpátrica × alopátrica.",
+    "steps": [
+      "As populações ancestrais migraram para continentes diferentes.",
+      "Separadas geograficamente, deixaram de trocar genes.",
+      "Mutação, seleção e deriva atuaram de forma independente, até formarem espécies distintas.",
+      "A e E distorcem os conceitos; B tem viés lamarckista (“atendendo às mudanças”); D é contraditória: simpátrica é sem separação geográfica.",
+      "Alternativa C."
+    ],
+    "trap": "D descreve separação geográfica e a chama de simpátrica, que significa justamente “mesma região”.",
+    "retrieval": [
+      "O que interrompe o fluxo gênico na especiação alopátrica?",
+      "Dê um exemplo de especiação simpátrica."
+    ],
+    "transfer": "Exercício autoral: explique por que lhama e dromedário não se cruzam naturalmente.",
+    "criteria": [
+      "Estão em continentes diferentes.",
+      "Divergiram por milhões de anos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "deriva genética, na qual as espécies surgiram de forma repentina e com diferenças genéticas na ausência da seleção natural."
+      },
+      {
+        "id": "b",
+        "text": "evolução direcional, na qual o ancestral se modificou atendendo às mudanças ambientais de cada continente."
+      },
+      {
+        "id": "c",
+        "text": "especiação alopátrica, na qual houve interrupção do fluxo gênico entre os grupos separados geograficamente."
+      },
+      {
+        "id": "d",
+        "text": "especiação simpátrica, na qual ocorreram mutações no ancestral e as populações formadas se separaram geograficamente."
+      },
+      {
+        "id": "e",
+        "text": "evolução convergente, na qual as espécies se modificaram de forma simultânea nos diferentes continentes."
+      }
+    ],
+    "pages": [
+      14
+    ],
+    "statement": "A figura ilustra a origem evolutiva dos atuais camelídeos (camelos, dromedário, lhama, vicunha, alpaca e guanaco) a partir do ancestral Poebrodon, que migrou para a Eurásia e para a América do Sul milhões de anos atrás (MAA).\n\n[Mapa-múndi: setas partem do Poebrodon, na América do Norte (40 MAA); uma desce para a América do Sul (15,8 MAA), onde estão lhama, vicunha, alpaca e guanaco; outra cruza para a Eurásia (5–8 MAA), onde estão o camelo selvagem e o camelo bactriano (0,7–1,1 MAA), e chega à África, com o dromedário.]\n\n(www.researchgate.net. Adaptado.)\n\nA existência dessas diferentes espécies de camelídeos, nos diferentes continentes, é explicada pela hipótese de",
+    "statementComplete": true
+  },
+  {
+    "number": 50,
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "chapter": "Fisiologia da Digestão",
+    "title": "Enzimas e pH ótimo",
+    "concept": "Enzimas digestivas e pH ótimo: amilase salivar (~7), enzimas pancreáticas (~8); pré-requisitos: o estômago tem pH ácido (~2).",
+    "steps": [
+      "X atua melhor em pH neutro: amilase salivar, das glândulas da boca, que hidrolisa amido.",
+      "Y atua melhor em pH levemente básico: enzima pancreática, no meio alcalino do duodeno.",
+      "Entre as opções, a nuclease pancreática, que hidrolisa ácidos nucleicos, se encaixa.",
+      "A e D põem Y no estômago (pH ácido); C atribui enzima ao fígado (que produz bile, sem enzimas digestivas); E põe protease na boca.",
+      "Alternativa B."
+    ],
+    "trap": "O fígado produz bile, que emulsiona gorduras, mas não é enzima.",
+    "retrieval": [
+      "Qual é o pH ótimo da pepsina?",
+      "Que enzimas o pâncreas secreta?"
+    ],
+    "transfer": "Exercício autoral: explique por que a amilase salivar para de agir no estômago.",
+    "criteria": [
+      "O pH ácido do estômago desnatura a enzima.",
+      "Ela atua melhor em pH neutro."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "no duodeno – lipídio – estômago – proteína."
+      },
+      {
+        "id": "b",
+        "text": "na boca – amido – pâncreas – ácido nucleico."
+      },
+      {
+        "id": "c",
+        "text": "na boca – amido – fígado – lipídio."
+      },
+      {
+        "id": "d",
+        "text": "no duodeno – lipídio – estômago – amido."
+      },
+      {
+        "id": "e",
+        "text": "na boca – proteína – pâncreas – proteína."
+      }
+    ],
+    "pages": [
+      14
+    ],
+    "statement": "Analise o gráfico que ilustra as velocidades de reação de duas enzimas (X e Y) que digerem substratos em diferentes órgãos humanos.\n\n[Gráfico de velocidade de reação × pH (eixo de 7 a 9): a enzima X tem pico em pH ≈ 7; a enzima Y tem pico em pH ≈ 8,3.]\n\nA enzima X é secretada pelas glândulas presentes ______ e é responsável pela hidrólise das moléculas de ______. A enzima Y é secretada por células presentes no ______ e hidrolisa moléculas de ______.\n\nAs lacunas do texto são preenchidas, respectivamente, por:",
+    "statementComplete": true
+  },
+  {
+    "number": 51,
+    "topicId": "qui_radioatividade",
+    "subject": "Química",
+    "chapter": "Radioatividade: o Estudo das Radiações",
+    "title": "Síntese do livermório",
+    "concept": "Reações nucleares de fusão: conservação de prótons e nucleons; N = A − Z; pré-requisitos: números atômicos na tabela.",
+    "steps": [
+      "Prótons: 22 (Ti) + Z_alvo = 116 (Lv) → Z_alvo = 94: plutônio (Pu).",
+      "Massa: 50 + A_alvo = 294 → A_alvo = 244 (plutônio-244).",
+      "Nêutrons do Lv-290: 290 − 116.",
+      "= 174.",
+      "Alternativa A."
+    ],
+    "trap": "Usar o número de massa 294 do produto intermediário dá 178 nêutrons: a pergunta é sobre o Lv-290.",
+    "retrieval": [
+      "Qual o número atômico do livermório?",
+      "Quantos nêutrons foram emitidos na transformação?"
+    ],
+    "transfer": "Exercício autoral: quantos nêutrons tem o titânio-50?",
+    "criteria": [
+      "Calcular 50 − 22.",
+      "Obter 28."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Pu e 174."
+      },
+      {
+        "id": "b",
+        "text": "Fm e 178."
+      },
+      {
+        "id": "c",
+        "text": "Ds e 150."
+      },
+      {
+        "id": "d",
+        "text": "Pu e 178."
+      },
+      {
+        "id": "e",
+        "text": "Fm e 174."
+      }
+    ],
+    "pages": [
+      15
+    ],
+    "statement": "Os elementos químicos artificiais são produzidos em instalações de pesquisa, por meio do uso de aceleradores de partículas. Para a obtenção do elemento livermório-290 (290Lv), um feixe acelerado do átomo leve de titânio-50 é lançado sobre um alvo de um átomo pesado. Com a fusão desses dois átomos, forma-se um produto de fusão instável, livermório-294, que emite 4 nêutrons originando o novo elemento, livermório-290.\n\n[Figura: feixe de átomos leves (titânio-50) incide sobre um átomo pesado alvo; a fusão forma o livermório-294, que emite 4 nêutrons e origina o livermório-290. (www.chemistryworld.com. Adaptado.)]\n\n[A prova traz a Classificação Periódica: Ti (Z = 22), Lv (Z = 116), Pu (Z = 94), Fm (Z = 100), Ds (Z = 110).]\n\nO símbolo do elemento utilizado como átomo pesado, alvo nesse processo, e o número de nêutrons do átomo de livermório-290 são, respectivamente,",
+    "statementComplete": true
+  },
+  {
+    "number": 52,
+    "topicId": "qui_estequiometria",
+    "subject": "Química",
+    "chapter": "Separação de Misturas",
+    "title": "Dois líquidos imiscíveis no tubo",
+    "concept": "Miscibilidade (polaridade) e posição das fases (densidade); pré-requisitos: semelhante dissolve semelhante.",
+    "steps": [
+      "Os líquidos formam duas fases: são imiscíveis.",
+      "Metanol e água são miscíveis (ambos polares, com ligações de hidrogênio): A fica fora; pentano e CCl₄ são ambos apolares e se misturam: E fica fora.",
+      "O líquido 1 fica em cima: tem menor densidade que o 2.",
+      "Água (1,00) sobre CCl₄ (1,59) cumpre as duas condições; em C e D, o de cima seria o mais denso.",
+      "Alternativa B."
+    ],
+    "trap": "Basta a densidade para eliminar C e D, mas A e E caem por miscibilidade, não por densidade.",
+    "retrieval": [
+      "Por que metanol e água se misturam?",
+      "Que critério decide qual fase fica em cima?"
+    ],
+    "transfer": "Exercício autoral: em que ordem ficariam pentano e água?",
+    "criteria": [
+      "Pentano em cima.",
+      "Água embaixo."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "metanol e água."
+      },
+      {
+        "id": "b",
+        "text": "água e tetracloreto de carbono."
+      },
+      {
+        "id": "c",
+        "text": "metanol e pentano."
+      },
+      {
+        "id": "d",
+        "text": "água e pentano."
+      },
+      {
+        "id": "e",
+        "text": "pentano e tetracloreto de carbono."
+      }
+    ],
+    "pages": [
+      15
+    ],
+    "statement": "Em um experimento de química, dois líquidos, 1 e 2, foram adicionados a um tubo de ensaio, conforme representado na figura.\n\n[Figura: o líquido 1 e o líquido 2 são despejados no mesmo tubo e formam duas fases, com o líquido 1 em cima e o líquido 2 embaixo.]\n\nNa tabela são apresentadas algumas propriedades de substâncias que são líquidas em temperatura ambiente.\n\nSubstância — Fórmula — Densidade (g/cm³)\nMetanol — CH3OH — 0,79\nÁgua — H2O — 1,00\nTetracloreto de carbono — CCl4 — 1,59\nPentano — CH3CH2CH2CH2CH3 — 0,62\n\nOs líquidos 1 e 2 são, respectivamente,",
+    "statementComplete": true
+  },
+  {
+    "number": 53,
+    "topicId": "qui_gases",
+    "subject": "Química",
+    "chapter": "O Estado Gasoso",
+    "title": "Cilindros de mesmo volume: comparar massas",
+    "concept": "Hipótese de Avogadro: volumes iguais, mesma T e P → mesmo número de mols; massa proporcional à massa molar; pré-requisitos: S = 32, O = 16.",
+    "steps": [
+      "Mesmo V, T e P: mesmo número de mols nos três cilindros.",
+      "m = n·M: a massa acompanha a massa molar.",
+      "M(SO₂) = 64; M(O₃) = 48; M(O₂) = 32 g/mol.",
+      "64 > 48 > 32.",
+      "Alternativa E."
+    ],
+    "trap": "Mesmo número de mols não significa mesma massa (D): cada gás tem massa molar própria.",
+    "retrieval": [
+      "O que afirma a hipótese de Avogadro?",
+      "Qual é a massa molar do ozônio?"
+    ],
+    "transfer": "Exercício autoral: se cada cilindro tem 2 mol, qual a massa de SO₂?",
+    "criteria": [
+      "2 × 64.",
+      "128 g."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "mSO2 < mO3 > mO2"
+      },
+      {
+        "id": "b",
+        "text": "mSO2 = mO3 > mO2"
+      },
+      {
+        "id": "c",
+        "text": "mSO2 > mO3 < mO2"
+      },
+      {
+        "id": "d",
+        "text": "mSO2 = mO3 = mO2"
+      },
+      {
+        "id": "e",
+        "text": "mSO2 > mO3 > mO2"
+      }
+    ],
+    "pages": [
+      16
+    ],
+    "statement": "Em um laboratório químico existem três cilindros de gases com iguais capacidades volumétricas, conforme mostra a figura.\n\n[Figura: três cilindros iguais, rotulados SO2, O3 e O2.]\n\nNos cilindros, estão contidos, separadamente, os gases SO2, O3 e O2 sob a mesma condição de temperatura e pressão.\n\nA relação entre as massas dos três gases no interior dos cilindros (mSO2, mO3 e mO2) é:",
+    "statementComplete": true
+  },
+  {
     "number": 54,
     "topicId": "qui_estequiometria",
     "subject": "Química",
@@ -479,6 +2928,377 @@
     "statementComplete": true
   },
   {
+    "number": 56,
+    "topicId": "qui_cinetica",
+    "subject": "Química",
+    "chapter": "Cinética Química",
+    "title": "Ferro e ácido: qual grupo reage mais rápido",
+    "concept": "Fatores da velocidade de reação: superfície de contato, concentração e temperatura; pré-requisitos: teoria das colisões.",
+    "steps": [
+      "Palha de aço tem muito mais superfície de contato que lâminas.",
+      "6 mol/L é a maior concentração de ácido.",
+      "50 °C é a maior temperatura.",
+      "Só o grupo 4 reúne os três fatores favoráveis.",
+      "Alternativa A."
+    ],
+    "trap": "O grupo 1 tem a concentração máxima, mas perde em superfície e temperatura.",
+    "retrieval": [
+      "Por que a palha de aço reage mais rápido que a lâmina?",
+      "Como a temperatura afeta as colisões efetivas?"
+    ],
+    "transfer": "Exercício autoral: entre os grupos 2 e 5, qual reage mais rápido? Justifique com dois fatores.",
+    "criteria": [
+      "Comparar superfície (5 vence) e temperatura (2 vence).",
+      "Concluir que a comparação exige dados experimentais."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "4."
+      },
+      {
+        "id": "b",
+        "text": "1."
+      },
+      {
+        "id": "c",
+        "text": "2."
+      },
+      {
+        "id": "d",
+        "text": "3."
+      },
+      {
+        "id": "e",
+        "text": "5."
+      }
+    ],
+    "pages": [
+      17
+    ],
+    "statement": "Em uma aula de química, 5 grupos de alunos realizaram um experimento que consistiu em reagir 1 g de ferro com 150 mL de solução de ácido clorídrico (HCl). Para o experimento foi empregado aço, que é uma liga do ferro. Essa reação ocorre de acordo com a equação química:\n\nFe (s) + 2HCl (aq) → FeCl2 (aq) + H2 (g)\n\nOs materiais disponibilizados para essa reação foram lâminas de aço, palha de aço e soluções de HCl de 6 mol/L, 1 mol/L e 0,5 mol/L. Na tabela são apresentadas as condições dos experimentos realizados pelos 5 grupos de alunos.\n\nGrupo — Amostra de ferro — Concentração da solução de HCl — Temperatura\n1 — Lâminas de aço — 6 mol/L — 30 ºC\n2 — Lâminas de aço — 1 mol/L — 50 ºC\n3 — Lâminas de aço — 0,5 mol/L — 40 ºC\n4 — Palha de aço — 6 mol/L — 50 ºC\n5 — Palha de aço — 1 mol/L — 30 ºC\n\nO grupo cujo experimento se processou com maior rapidez é o de número",
+    "statementComplete": true
+  },
+  {
+    "number": 57,
+    "topicId": "qui_estequiometria",
+    "subject": "Química",
+    "chapter": "Massa Atômica, Mol e Massa Molar",
+    "title": "Cálcio no leite em pó",
+    "concept": "Proporção e quantidade de matéria: n = m/M; pré-requisitos: miligrama → grama.",
+    "steps": [
+      "A embalagem tem 200 g = 8 × 25 g.",
+      "Cálcio: 8 × 228 mg = 1 824 mg = 1,824 g.",
+      "n = 1,824/40.",
+      "n ≈ 0,0456 mol = 4,6 × 10⁻² mol.",
+      "Alternativa C."
+    ],
+    "trap": "Calcular só para 25 g dá 5,7 × 10⁻³ mol (E): é preciso considerar a embalagem inteira.",
+    "retrieval": [
+      "Quantas porções de 25 g há na embalagem?",
+      "Qual é a massa molar do cálcio?"
+    ],
+    "transfer": "Exercício autoral: quantos mols de cálcio há em uma porção de 25 g?",
+    "criteria": [
+      "228 mg = 0,228 g; 0,228/40.",
+      "5,7 × 10⁻³ mol."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "2,3 × 10⁻³ mol."
+      },
+      {
+        "id": "b",
+        "text": "4,6 × 10⁻³ mol."
+      },
+      {
+        "id": "c",
+        "text": "4,6 × 10⁻² mol."
+      },
+      {
+        "id": "d",
+        "text": "2,3 × 10⁻² mol."
+      },
+      {
+        "id": "e",
+        "text": "5,7 × 10⁻³ mol."
+      }
+    ],
+    "pages": [
+      17
+    ],
+    "statement": "Determinado leite em pó, comercializado em embalagens com 200 g de produto, apresenta no rótulo a seguinte informação nutricional:\n\n25 g de leite em pó contém 228 mg de cálcio\n\n[Massa molar do cálcio: 40 g/mol.]\n\nA quantidade de cálcio contida na massa total do leite em pó da embalagem é, aproximadamente,",
+    "statementComplete": true
+  },
+  {
+    "number": 58,
+    "topicId": "qui_oxirreducao",
+    "subject": "Química",
+    "chapter": "Química Ambiental",
+    "title": "Vulcões e chuva ácida",
+    "concept": "Óxidos ácidos (SO₂, NO₂) e formação de chuva ácida; pré-requisitos: óxidos neutros (CO, NO).",
+    "steps": [
+      "Chuva ácida vem de óxidos que reagem com água formando ácidos.",
+      "O SO₂ forma ácido sulfuroso e, oxidado a SO₃, ácido sulfúrico.",
+      "Vulcões emitem grandes quantidades de SO₂.",
+      "CO é óxido neutro; N₂ é inerte; NH₃ é básica; O₃ não forma ácido com a umidade.",
+      "Alternativa E."
+    ],
+    "trap": "CO é poluente e tóxico, mas não é óxido ácido: não forma ácido com a água.",
+    "retrieval": [
+      "Que ácido o SO₃ forma com a água?",
+      "Que outro óxido contribui para a chuva ácida em cidades?"
+    ],
+    "transfer": "Exercício autoral: escreva a equação do SO₂ com a água.",
+    "criteria": [
+      "SO₂ + H₂O → H₂SO₃.",
+      "Classificar o produto como ácido."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "o monóxido de carbono, CO."
+      },
+      {
+        "id": "b",
+        "text": "o nitrogênio, N2."
+      },
+      {
+        "id": "c",
+        "text": "a amônia, NH3."
+      },
+      {
+        "id": "d",
+        "text": "o ozônio, O3."
+      },
+      {
+        "id": "e",
+        "text": "o dióxido de enxofre, SO2."
+      }
+    ],
+    "pages": [
+      17
+    ],
+    "statement": "Ao longo do ano de 2024 foram registradas cerca de 60 erupções vulcânicas em diversas partes da Terra. As erupções vulcânicas liberam uma variedade de gases que interagem com a umidade do ar e podem gerar compostos que resultam em chuva ácida. Um desses gases é",
+    "statementComplete": true
+  },
+  {
+    "number": 59,
+    "topicId": "qui_estequiometria",
+    "subject": "Química",
+    "chapter": "Transformações Físicas e Químicas e Balanceamento de Equações",
+    "title": "Etapas do método científico",
+    "concept": "Etapas do método científico: observação → problema → hipótese → experimentação → análise → conclusão → divulgação; pré-requisitos: hipótese como afirmação testável.",
+    "steps": [
+      "A hipótese é uma explicação provisória que precisa ser testada.",
+      "O teste se faz com experimentos controlados e coleta de dados.",
+      "Essa é a etapa seguinte à formulação.",
+      "Observação, definição do problema e revisão da literatura vêm antes; a publicação vem depois da análise.",
+      "Alternativa B."
+    ],
+    "trap": "A revisão da literatura pode acompanhar todo o trabalho, mas é feita principalmente antes de formular a hipótese.",
+    "retrieval": [
+      "O que torna uma hipótese científica?",
+      "O que fazer se os dados contrariarem a hipótese?"
+    ],
+    "transfer": "Exercício autoral: proponha uma hipótese e um experimento sobre a influência da temperatura na fermentação.",
+    "criteria": [
+      "Hipótese testável com uma variável.",
+      "Experimento com controle."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "revisão da literatura científica existente."
+      },
+      {
+        "id": "b",
+        "text": "realização de experimentos e coleta de dados."
+      },
+      {
+        "id": "c",
+        "text": "observação de fenômenos naturais."
+      },
+      {
+        "id": "d",
+        "text": "publicação dos resultados em revistas científicas."
+      },
+      {
+        "id": "e",
+        "text": "definição do problema a ser investigado."
+      }
+    ],
+    "pages": [
+      17
+    ],
+    "statement": "O método científico é uma abordagem sistemática utilizada para a investigação de fenômenos e aquisição de novos conhecimentos. Ele baseia-se em observações rigorosas e controladas, a partir das quais suposições são constantemente testadas por meio de experimentação e análise crítica.\n\nNo contexto do método científico, o que deve ocorrer, sequencialmente, após a formulação de uma hipótese é a",
+    "statementComplete": true
+  },
+  {
+    "number": 60,
+    "topicId": "qui_organica_fundamentos",
+    "subject": "Química",
+    "chapter": "Introdução à Química Orgânica",
+    "title": "Penicilina G: carbonos ligados ao enxofre",
+    "concept": "Classificação de carbonos pelo número de outros carbonos ligados (primário 1, secundário 2, terciário 3, quaternário 4); pré-requisitos: heteroátomos não contam.",
+    "steps": [
+      "O heteroátomo do grupo 16 é o enxofre (S).",
+      "Um carbono ligado ao S também se liga ao N e a um único carbono (do anel β-lactâmico): carbono primário.",
+      "O outro se liga a dois CH₃ e ao carbono que traz o –COOH: três carbonos — terciário.",
+      "S e N não entram na contagem, por serem heteroátomos.",
+      "Primário e terciário — alternativa E."
+    ],
+    "trap": "Contar o S ou o N como ligantes transforma o terciário em quaternário: só ligações C–C contam.",
+    "retrieval": [
+      "Que elemento do grupo 16 está na penicilina?",
+      "Por que heteroátomos não contam na classificação?"
+    ],
+    "transfer": "Exercício autoral: classifique o carbono do grupo –COOH da penicilina.",
+    "criteria": [
+      "Ligado a um carbono do anel.",
+      "Primário."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "primário e secundário."
+      },
+      {
+        "id": "b",
+        "text": "secundário e quaternário."
+      },
+      {
+        "id": "c",
+        "text": "secundário e terciário."
+      },
+      {
+        "id": "d",
+        "text": "terciário e quaternário."
+      },
+      {
+        "id": "e",
+        "text": "primário e terciário."
+      }
+    ],
+    "pages": [
+      18
+    ],
+    "statement": "A penicilina G (C16H18N2O4S) foi a primeira molécula empregada para a inibição do crescimento de bactérias. Sua fórmula estrutural é representada na figura.\n\n[Fórmula estrutural da penicilina G: anel benzênico ligado a um grupo –CH2–C(=O)–NH–, ligado ao anel β-lactâmico (quatro membros, com N e C=O), fundido a um anel de cinco membros que contém o enxofre; no anel de cinco membros, o enxofre está ligado a um carbono que também se liga ao nitrogênio e ao carbono do anel β-lactâmico, e a um carbono com dois grupos metila (–CH3), vizinho ao carbono que traz o grupo –COOH.]\n\n(Samira Norzaee et al. The Scientific World Journal, nº 1, 2017.)\n\nNa molécula da penicilina G há um heteroátomo que pertence ao grupo 16 da Classificação Periódica ligado a dois átomos de carbono que são classificados, respectivamente, como",
+    "statementComplete": true
+  },
+  {
+    "number": 61,
+    "topicId": "fis_cinematica",
+    "subject": "Física",
+    "chapter": "Movimento Uniforme",
+    "title": "Quantos ônibus a linha precisa",
+    "concept": "Velocidade média e frequência de saídas: frota ≥ tempo de volta ÷ intervalo, arredondado para cima; pré-requisitos: horas em minutos.",
+    "steps": [
+      "Tempo de uma volta: 30 km ÷ 20 km/h = 1,5 h = 90 min.",
+      "Sai um ônibus a cada 20 min.",
+      "90 ÷ 20 = 4,5: durante uma volta saem 4,5 ônibus.",
+      "Como não há meio ônibus, são necessários 5: o primeiro só volta ao terminal depois de 90 min, após a saída de 4 outros.",
+      "Alternativa A."
+    ],
+    "trap": "Arredondar 4,5 para baixo (4) deixaria um horário sem ônibus.",
+    "retrieval": [
+      "Quanto tempo dura uma volta?",
+      "Por que se arredonda para cima?"
+    ],
+    "transfer": "Exercício autoral: com intervalo de 15 min, quantos ônibus seriam necessários?",
+    "criteria": [
+      "90 ÷ 15 = 6.",
+      "6 ônibus."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "5."
+      },
+      {
+        "id": "b",
+        "text": "4."
+      },
+      {
+        "id": "c",
+        "text": "3."
+      },
+      {
+        "id": "d",
+        "text": "6."
+      },
+      {
+        "id": "e",
+        "text": "7."
+      }
+    ],
+    "pages": [
+      18
+    ],
+    "statement": "Uma empresa de transportes mantém uma linha de ônibus que partem de um terminal e percorrem 30 km até retornar ao mesmo terminal, desenvolvendo, nesse percurso, a velocidade média de 20 km/h. Sabendo que o intervalo de tempo entre as saídas consecutivas de dois ônibus dessa linha é de 20 min, o número mínimo de ônibus que a empresa deve manter nessa linha para cumprir esse cronograma é de",
+    "statementComplete": true
+  },
+  {
+    "number": 62,
+    "topicId": "fis_leis_newton",
+    "subject": "Física",
+    "chapter": "As Leis de Newton",
+    "title": "Paraquedista e velocidade limite",
+    "concept": "Segunda lei de Newton e velocidade terminal: resistência do ar cresce com a velocidade até igualar o peso; pré-requisitos: aceleração = inclinação do gráfico v × t.",
+    "steps": [
+      "Entre t0 e t1, a velocidade aumenta: a resultante é para baixo (o peso supera a resistência do ar).",
+      "Entre t1 e t2, a velocidade é constante: aceleração nula.",
+      "Pela segunda lei de Newton, resultante nula: resistência do ar = peso.",
+      "A e E erram o primeiro trecho; B e C atribuem resultante ao trecho de velocidade constante.",
+      "Alternativa D."
+    ],
+    "trap": "Movimento não exige força resultante: velocidade constante significa resultante nula (primeira lei).",
+    "retrieval": [
+      "Por que a resistência do ar aumenta durante a queda?",
+      "O que acontece com a resultante quando o paraquedas abre?"
+    ],
+    "transfer": "Exercício autoral: descreva o gráfico v × t logo após a abertura do paraquedas.",
+    "criteria": [
+      "Queda brusca da velocidade (resultante para cima).",
+      "Nova velocidade limite menor."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "tem sentido para cima, entre os instantes t0 e t1."
+      },
+      {
+        "id": "b",
+        "text": "tem sentido para baixo, entre os instantes t1 e t2."
+      },
+      {
+        "id": "c",
+        "text": "tem sentido para cima, entre os instantes t1 e t2."
+      },
+      {
+        "id": "d",
+        "text": "é nula, entre os instantes t1 e t2."
+      },
+      {
+        "id": "e",
+        "text": "é nula, entre os instantes t0 e t1."
+      }
+    ],
+    "pages": [
+      18
+    ],
+    "statement": "Analise o gráfico que apresenta, qualitativamente, a variação da velocidade vertical de um paraquedista a partir do instante em que ele salta do avião, o instante t = t0.\n\n[Gráfico v × t: a velocidade parte de zero em t0, cresce cada vez mais devagar até atingir o valor limite vL em t1 e permanece constante igual a vL de t1 a t2.]\n\nA componente vertical da resultante das forças que atuam sobre esse paraquedista",
+    "statementComplete": true
+  },
+  {
     "number": 63,
     "topicId": "fis_gravitacao_circular",
     "subject": "Física",
@@ -529,6 +3349,430 @@
       18
     ],
     "statement": "Considerando a Terra como uma esfera perfeita e homogênea, para que um satélite artificial descreva uma órbita circular ao redor desse planeta e mantenha constante o módulo da sua velocidade, a força gravitacional entre a Terra e esse satélite deve ser a resultante centrípeta sobre ele. Sendo G a constante de gravitação universal, M a massa da Terra, m a massa do satélite e R o raio da órbita desse satélite ao redor da Terra, a expressão que fornece o módulo da velocidade do satélite, em relação ao centro da Terra, é:",
+    "statementComplete": true
+  },
+  {
+    "number": 64,
+    "topicId": "fis_estatica",
+    "subject": "Física",
+    "chapter": "Hidrostática: Densidade e Pressão",
+    "title": "Empuxo: fruta afundada por um peixe",
+    "concept": "Princípio de Arquimedes: empuxo proporcional ao volume submerso; pré-requisitos: equilíbrio de forças.",
+    "steps": [
+      "Flutuando com 85% submersa: empuxo = peso = 0,34 N.",
+      "Totalmente submersa, o empuxo seria 0,34 ÷ 0,85 = 0,40 N.",
+      "Para mantê-la submersa, o peixe deve compensar a diferença entre empuxo total e peso.",
+      "F = 0,40 − 0,34 = 0,06 N.",
+      "Alternativa C."
+    ],
+    "trap": "0,40 N é o empuxo total; a força do peixe é só o excedente sobre o peso.",
+    "retrieval": [
+      "Por que o empuxo aumenta quando a fruta afunda mais?",
+      "Qual é a densidade da fruta em relação à da água?"
+    ],
+    "transfer": "Exercício autoral: calcule a densidade da fruta, sabendo que a da água é 1,0 g/cm³.",
+    "criteria": [
+      "Fração submersa = densidade relativa.",
+      "0,85 g/cm³."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,40 N."
+      },
+      {
+        "id": "b",
+        "text": "0,74 N."
+      },
+      {
+        "id": "c",
+        "text": "0,06 N."
+      },
+      {
+        "id": "d",
+        "text": "0,34 N."
+      },
+      {
+        "id": "e",
+        "text": "0,03 N."
+      }
+    ],
+    "pages": [
+      19
+    ],
+    "statement": "Uma fruta de peso 0,34 N flutua, em equilíbrio, nas águas calmas de um lago com 85% de seu volume submerso. Em dado instante, um peixe morde essa fruta e a puxa para dentro da água.\n\nA intensidade mínima da componente vertical da força que o peixe deve exercer sobre a fruta para afundá-la totalmente é de",
+    "statementComplete": true
+  },
+  {
+    "number": 65,
+    "topicId": "fis_calorimetria",
+    "subject": "Física",
+    "chapter": "Dilatação ou Contração Térmica dos Sólidos e Líquidos",
+    "title": "Dilatação volumétrica e linear",
+    "concept": "Relação entre coeficientes de dilatação: γ = 3α; pré-requisitos: variações percentuais pequenas.",
+    "steps": [
+      "Para pequenas variações, ΔV/V ≈ 3·ΔL/L.",
+      "0,27% = 3 × ΔL/L.",
+      "ΔL/L = 0,09%.",
+      "O diâmetro é uma dimensão linear: aumenta 0,09%.",
+      "Alternativa B."
+    ],
+    "trap": "Dividir por 2 (relação de área) daria cerca de 0,13%; o diâmetro é linear, então divide-se por 3.",
+    "retrieval": [
+      "Qual a relação entre os coeficientes linear e volumétrico?",
+      "Quanto aumentaria a área da superfície da esfera?"
+    ],
+    "transfer": "Exercício autoral: calcule o coeficiente de dilatação linear do tungstênio com esses dados.",
+    "criteria": [
+      "α = 0,0009 ÷ 200.",
+      "4,5 × 10⁻⁶ °C⁻¹."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,03%."
+      },
+      {
+        "id": "b",
+        "text": "0,09%."
+      },
+      {
+        "id": "c",
+        "text": "0,13%."
+      },
+      {
+        "id": "d",
+        "text": "0,18%."
+      },
+      {
+        "id": "e",
+        "text": "0,27%."
+      }
+    ],
+    "pages": [
+      19
+    ],
+    "statement": "Ao se aquecer, em 200 ºC, uma esfera de tungstênio, seu volume aumentou 0,27% em relação ao volume inicial. Nesse mesmo aquecimento, o diâmetro dessa esfera aumentou, em relação ao diâmetro inicial,",
+    "statementComplete": true
+  },
+  {
+    "number": 66,
+    "topicId": "fis_termodinamica_gases",
+    "subject": "Física",
+    "chapter": "Primeira Lei da Termodinâmica",
+    "title": "Densidade do gás em recipiente rígido",
+    "concept": "Densidade = massa ÷ volume; em recipiente rígido e hermético, massa e volume não mudam; pré-requisitos: transformação isocórica.",
+    "steps": [
+      "O cilindro é fechado: a massa de gás não muda.",
+      "A tampa é fixa: o volume não muda.",
+      "d = m/V permanece constante.",
+      "Pressão e temperatura podem variar juntas (P/T constante), sem alterar a densidade.",
+      "Alternativa A."
+    ],
+    "trap": "A fórmula d = PM/(RT) sugere dependência de P e T, mas, a volume constante, P e T variam na mesma proporção e d não muda.",
+    "retrieval": [
+      "Que tipo de transformação ocorre a volume constante?",
+      "Como a densidade de um gás mudaria se o volume pudesse variar?"
+    ],
+    "transfer": "Exercício autoral: se a temperatura absoluta dobrar, o que acontece com a pressão?",
+    "criteria": [
+      "Dobra.",
+      "Lei de Charles (isocórica)."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "é constante."
+      },
+      {
+        "id": "b",
+        "text": "aumenta com o aumento da pressão."
+      },
+      {
+        "id": "c",
+        "text": "aumenta com o aumento da temperatura."
+      },
+      {
+        "id": "d",
+        "text": "diminui com o aumento da pressão."
+      },
+      {
+        "id": "e",
+        "text": "diminui com o aumento da temperatura."
+      }
+    ],
+    "pages": [
+      19
+    ],
+    "statement": "A figura mostra, em corte, um cilindro de volume constante e hermeticamente fechado por uma tampa fixa, o qual contém certa massa de gás ideal.\n\n[Figura: cilindro fechado por tampa fixa, com gás ideal no interior, indicado por P, V, T.]\n\nSabendo que a equação p ⋅ V = n ⋅ R ⋅ T relaciona as variáveis de estado pressão, volume e temperatura de um gás ideal, em que n é o número de mols desse gás e R é a constante universal dos gases ideais, a densidade do gás no interior desse cilindro",
+    "statementComplete": true
+  },
+  {
+    "number": 67,
+    "topicId": "fis_optica_geometrica",
+    "subject": "Física",
+    "chapter": "Reflexão em Superfícies Planas",
+    "title": "Imagem de Paula no espelho",
+    "concept": "Imagem em espelho plano: simétrica ao objeto em relação ao plano do espelho; pré-requisitos: imagem virtual atrás do espelho.",
+    "steps": [
+      "A imagem de Paula fica atrás do espelho, na mesma perpendicular a ele.",
+      "Fica à mesma distância do espelho que Paula, do outro lado.",
+      "O ponto 3 está alinhado com Paula e atrás do espelho, à mesma distância.",
+      "O ponto 4 é onde o raio se reflete, não a imagem; 1 e 2 não estão alinhados com Paula; 5 está no plano do espelho.",
+      "Alternativa E."
+    ],
+    "trap": "O ponto 4 marca a reflexão do raio que chega a Mariana, mas a imagem fica no prolongamento do raio refletido, atrás do espelho.",
+    "retrieval": [
+      "Onde fica a imagem de um objeto em espelho plano?",
+      "A posição da imagem depende de quem observa?"
+    ],
+    "transfer": "Exercício autoral: em que ponto do espelho deve incidir o raio que leva a imagem de Mariana até Paula?",
+    "criteria": [
+      "No mesmo ponto 4, por simetria.",
+      "Ângulo de incidência igual ao de reflexão."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "2."
+      },
+      {
+        "id": "b",
+        "text": "4."
+      },
+      {
+        "id": "c",
+        "text": "1."
+      },
+      {
+        "id": "d",
+        "text": "5."
+      },
+      {
+        "id": "e",
+        "text": "3."
+      }
+    ],
+    "pages": [
+      19
+    ],
+    "statement": "Mariana (M) e Paula (P) conversam diante de um espelho plano vertical que cobre parte de uma parede, conforme mostra a figura, em uma visão de cima.\n\n[Figura, vista de cima: um espelho plano horizontal na figura, com o ponto 4 sobre ele. Abaixo do espelho estão Mariana (à esquerda) e Paula (à direita). Acima do espelho, atrás dele, estão os pontos 1 e 2 (à esquerda) e 3 (à direita, alinhado com Paula); o ponto 5 está à direita, na altura do espelho, alinhado com Paula. Linhas tracejadas ligam Mariana ao ponto 4 e o ponto 4 a Paula.]\n\nAo olhar para o espelho, Mariana vê a imagem de Paula na posição",
+    "statementComplete": true
+  },
+  {
+    "number": 68,
+    "topicId": "fis_circuitos",
+    "subject": "Física",
+    "chapter": "Potência Elétrica",
+    "title": "Tempo de funcionamento do compressor",
+    "concept": "Energia elétrica: E = P·Δt; pré-requisitos: W para kW.",
+    "steps": [
+      "Consumo diário: 36,3 ÷ 30 = 1,21 kWh.",
+      "Potência: 110 W = 0,110 kW.",
+      "Δt = E/P = 1,21 ÷ 0,110.",
+      "Δt = 11 h por dia.",
+      "Alternativa D."
+    ],
+    "trap": "Sem converter W para kW, o resultado sai mil vezes menor.",
+    "retrieval": [
+      "Por que o compressor não funciona as 24 horas?",
+      "Quanto custaria o mês com tarifa de R$ 0,80 por kWh?"
+    ],
+    "transfer": "Exercício autoral: calcule o consumo mensal se o compressor funcionasse 8 h por dia.",
+    "criteria": [
+      "0,11 × 8 × 30.",
+      "26,4 kWh."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "8 h."
+      },
+      {
+        "id": "b",
+        "text": "12 h."
+      },
+      {
+        "id": "c",
+        "text": "9 h."
+      },
+      {
+        "id": "d",
+        "text": "11 h."
+      },
+      {
+        "id": "e",
+        "text": "10 h."
+      }
+    ],
+    "pages": [
+      20
+    ],
+    "statement": "O compressor de determinada geladeira doméstica tem potência de 110 W. Sabendo que esse compressor consome 36,3 kWh de energia em um mês de 30 dias, o tempo médio que ele funciona em um dia é de",
+    "statementComplete": true
+  },
+  {
+    "number": 69,
+    "topicId": "fis_eletromagnetismo",
+    "subject": "Física",
+    "chapter": "Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre",
+    "title": "Força magnética sobre um próton",
+    "concept": "Força de Lorentz: perpendicular à velocidade, não realiza trabalho; produz MCU; pré-requisitos: força centrípeta.",
+    "steps": [
+      "A força magnética é sempre perpendicular à velocidade.",
+      "Força perpendicular ao movimento não realiza trabalho: a energia cinética e o módulo da velocidade não mudam.",
+      "Mas ela muda continuamente a direção: o próton descreve circunferência.",
+      "As alternativas A, D e E supõem trabalho da força; B nega qualquer efeito.",
+      "Alternativa C."
+    ],
+    "trap": "Uma força pode atuar sem mudar a rapidez: é o caso de toda força centrípeta.",
+    "retrieval": [
+      "Por que a força magnética não realiza trabalho?",
+      "Que trajetória o próton descreve?"
+    ],
+    "transfer": "Exercício autoral: escreva a expressão do raio da trajetória do próton.",
+    "criteria": [
+      "r = m·v/(q·B).",
+      "Igualar força magnética e centrípeta."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "altera tanto o módulo da velocidade do próton quanto a direção dessa velocidade."
+      },
+      {
+        "id": "b",
+        "text": "não altera o módulo da velocidade do próton nem a direção dessa velocidade."
+      },
+      {
+        "id": "c",
+        "text": "não altera o módulo da velocidade do próton, mas altera a direção dessa velocidade."
+      },
+      {
+        "id": "d",
+        "text": "diminui o módulo da velocidade do próton, mas não altera a direção dessa velocidade."
+      },
+      {
+        "id": "e",
+        "text": "aumenta o módulo da velocidade do próton, mas não altera a direção dessa velocidade."
+      }
+    ],
+    "pages": [
+      20
+    ],
+    "statement": "Ao penetrar, com velocidade v, em uma região na qual existe um campo magnético uniforme, um próton fica sujeito à ação de uma força magnética devida a esse campo. Considere que apenas essa força esteja agindo sobre o próton e que as direções da velocidade do próton e do campo magnético sejam perpendiculares entre si. A ação dessa força",
+    "statementComplete": true
+  },
+  {
+    "number": 70,
+    "topicId": "fis_fisica_moderna",
+    "subject": "Física",
+    "chapter": "Noções Básicas de Física Quântica",
+    "title": "Efeito fotoelétrico no potássio",
+    "concept": "Energia do fóton E = h·f e frequência de corte; pré-requisitos: notação científica.",
+    "steps": [
+      "Frequência mínima: f₀ = E₀/h = 3,5 × 10⁻¹⁹ ÷ 6,6 × 10⁻³⁴.",
+      "f₀ ≈ 5,3 × 10¹⁴ Hz.",
+      "Emitem elétrons as cores com frequência acima de 5,3 × 10¹⁴ Hz.",
+      "Verde (5,5), azul (6,5) e violeta (7,5); laranja (5,0) e vermelha (4,5) ficam abaixo.",
+      "Alternativa A."
+    ],
+    "trap": "Laranja está perto do limite (5,0 contra 5,3): incluí-la é o erro mais comum.",
+    "retrieval": [
+      "Qual é a frequência de corte do potássio?",
+      "A intensidade da luz vermelha muda o resultado?"
+    ],
+    "transfer": "Exercício autoral: calcule a energia de um fóton de luz violeta.",
+    "criteria": [
+      "6,6 × 10⁻³⁴ × 7,5 × 10¹⁴.",
+      "≈ 5,0 × 10⁻¹⁹ J."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "violeta, azul e verde."
+      },
+      {
+        "id": "b",
+        "text": "violeta, azul, verde e laranja."
+      },
+      {
+        "id": "c",
+        "text": "violeta e azul."
+      },
+      {
+        "id": "d",
+        "text": "laranja e vermelha."
+      },
+      {
+        "id": "e",
+        "text": "verde, laranja e vermelha."
+      }
+    ],
+    "pages": [
+      20
+    ],
+    "statement": "O transporte de energia por meio de radiação eletromagnética ocorre na forma de “partículas” de energia, denominadas fótons. A quantidade de energia de cada fóton, EF, é dada pela expressão EF = h ∙ f, sendo f a frequência da radiação e h a constante de Planck, cujo valor é 6,6 × 10⁻³⁴ J·s. Ao incidir na superfície de certos materiais, esses fótons podem produzir a emissão de elétrons por essa superfície, mas, para que essa emissão ocorra, é necessário que o fóton transporte uma quantidade mínima de energia, a qual depende do material da superfície. Para uma superfície de potássio, a quantidade mínima de energia necessária para ocorrer a emissão de um elétron é de 3,5 × 10⁻¹⁹ J.\n\nA tabela mostra a frequência de cinco cores de luz que incidem em uma superfície de potássio.\n\nCor — Frequência (10¹⁴ Hz)\nVermelha — 4,5\nLaranja — 5,0\nVerde — 5,5\nAzul — 6,5\nVioleta — 7,5\n\nAs cores das luzes cujos fótons transportam energia suficiente para produzir a emissão de elétrons ao incidirem em uma superfície de potássio são, apenas,",
+    "statementComplete": true
+  },
+  {
+    "number": 71,
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "subject": "Matemática",
+    "chapter": "Porcentagem",
+    "title": "Relação candidato/vaga",
+    "concept": "Relação candidato/vaga = candidatos ÷ vagas; porcentagem de parte em relação ao todo; pré-requisitos: multiplicação.",
+    "steps": [
+      "Candidatos por curso = vagas × relação.",
+      "Medicina 130; Engenharia 63; Enfermagem 2; Direito 35.",
+      "Total: 230 candidatos.",
+      "Engenharia: 63/230 ≈ 27,4%.",
+      "Alternativa A."
+    ],
+    "trap": "Somar as relações candidato/vaga em vez de calcular os candidatos leva a 31,5/73 ≈ 43% (E).",
+    "retrieval": [
+      "Quantos candidatos disputaram Medicina?",
+      "Por que não se pode somar as relações candidato/vaga?"
+    ],
+    "transfer": "Exercício autoral: qual porcentagem do total disputou Medicina?",
+    "criteria": [
+      "130/230.",
+      "≈ 56,5%."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "27% e 28%."
+      },
+      {
+        "id": "b",
+        "text": "31% e 32%."
+      },
+      {
+        "id": "c",
+        "text": "16% e 17%."
+      },
+      {
+        "id": "d",
+        "text": "36% e 37%."
+      },
+      {
+        "id": "e",
+        "text": "43% e 44%."
+      }
+    ],
+    "pages": [
+      20
+    ],
+    "statement": "A tabela indica a relação candidato/vaga no processo seletivo de acesso à pós-graduação de quatro cursos de uma universidade:\n\nCurso — Número de vagas — Relação candidato/vaga\nMedicina — 4 — 32,5\nEngenharia — 2 — 31,5\nEnfermagem — 1 — 2\nDireito — 5 — 7\n\nDo total de candidatos que participaram do processo seletivo nesses quatro cursos, a porcentagem dos que participaram no curso de Engenharia ficou entre",
     "statementComplete": true
   },
   {
@@ -585,6 +3829,218 @@
     "statementComplete": true
   },
   {
+    "number": 73,
+    "topicId": "mat_combinatoria",
+    "subject": "Matemática",
+    "chapter": "Técnicas de Contagem",
+    "title": "Distribuição de livros com condição",
+    "concept": "Contagem de soluções inteiras com restrições; pré-requisitos: listar casos de forma organizada.",
+    "steps": [
+      "Sejam a, b, c, d ≥ 1, com a + b + c + d = 10 e a + b = 2c. Então 3c + d = 10.",
+      "c = 1 → d = 7 e a + b = 2: (1,1) → 1 modo.",
+      "c = 2 → d = 4 e a + b = 4: (1,3), (2,2), (3,1) → 3 modos.",
+      "c = 3 → d = 1 e a + b = 6: cinco pares de (1,5) a (5,1) → 5 modos. Com c = 4, d seria negativo.",
+      "Total: 1 + 3 + 5 = 9 — alternativa D."
+    ],
+    "trap": "Os livros são idênticos: importa quantos cada uma recebe, não quais livros.",
+    "retrieval": [
+      "Que equação resulta das duas condições?",
+      "Por que c não pode ser 4?"
+    ],
+    "transfer": "Exercício autoral: refaça a contagem com 13 livros.",
+    "criteria": [
+      "3c + d = 13, c de 1 a 4.",
+      "1 + 3 + 5 + 7 = 16 modos."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "6."
+      },
+      {
+        "id": "b",
+        "text": "8."
+      },
+      {
+        "id": "c",
+        "text": "10."
+      },
+      {
+        "id": "d",
+        "text": "9."
+      },
+      {
+        "id": "e",
+        "text": "5."
+      }
+    ],
+    "pages": [
+      21
+    ],
+    "statement": "Dez livros idênticos foram distribuídos entre as vendedoras Ana, Beatriz, Carmen e Dirce, de modo que:\n\n1. nenhuma delas ficou sem ao menos um livro;\n2. Ana e Beatriz ficaram, juntas, com o dobro do número de livros de Carmen.\n\nO número de maneiras diferentes que tal distribuição pode ser feita é",
+    "statementComplete": true
+  },
+  {
+    "number": 74,
+    "topicId": "mat_geometria_plana",
+    "subject": "Matemática",
+    "chapter": "Ângulos e Circunferências",
+    "title": "Ângulo inscrito e ângulo central",
+    "concept": "Ângulo inscrito = metade do arco subentendido; ângulo central = arco; pré-requisitos: arcos complementares somam 360°.",
+    "steps": [
+      "O ângulo inscrito CÂI = 108° subentende o arco CI que não contém A.",
+      "Esse arco mede 2 × 108° = 216°.",
+      "O ângulo α, interno ao quadrilátero, é o ângulo central correspondente ao outro arco CI (o que contém A).",
+      "α = 360° − 216° = 144°.",
+      "Alternativa B."
+    ],
+    "trap": "Tomar α como o dobro de 108° (216°) não serve: um ângulo interno de quadrilátero convexo é menor que 180°.",
+    "retrieval": [
+      "Qual a relação entre ângulo inscrito e arco?",
+      "Por que α é o replemento de 216°?"
+    ],
+    "transfer": "Exercício autoral: verifique a soma dos ângulos internos do quadrilátero sabendo que os ângulos em C e em I são iguais.",
+    "criteria": [
+      "108 + 144 + 2x = 360.",
+      "x = 54°."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "162º"
+      },
+      {
+        "id": "b",
+        "text": "144º"
+      },
+      {
+        "id": "c",
+        "text": "154º"
+      },
+      {
+        "id": "d",
+        "text": "172º"
+      },
+      {
+        "id": "e",
+        "text": "152º"
+      }
+    ],
+    "pages": [
+      21
+    ],
+    "statement": "A figura indica um círculo de centro O e um quadrilátero convexo CAIO, com C, A e I sendo pontos pertencentes à circunferência desse círculo. Tal quadrilátero representa o percurso em terreno plano, sempre em linha reta, feito por Márcia, que foi de C até A, de A até I, de I até O e, por fim, de O até C. Os ângulos internos CÂI e IÔC desse quadrilátero medem, respectivamente, 108º e α.\n\n[Figura: circunferência de centro O; C, A e I sobre ela; o quadrilátero CAIO tem ângulo de 108° em A e ângulo α em O.]\n\nNa condição descrita, α é igual a:",
+    "statementComplete": true
+  },
+  {
+    "number": 75,
+    "topicId": "mat_geometria_analitica",
+    "subject": "Matemática",
+    "chapter": "Distância entre um Ponto e uma Reta",
+    "title": "Distância à bissetriz",
+    "concept": "Distância de ponto a reta: d = |ax₀ + by₀ + c|/√(a² + b²); pré-requisitos: bissetriz dos quadrantes ímpares é y = x.",
+    "steps": [
+      "A bissetriz dos quadrantes ímpares é y = x, ou x − y = 0.",
+      "d = |2 − 8|/√(1² + (−1)²).",
+      "d = 6/√2.",
+      "d = 3√2.",
+      "Alternativa E."
+    ],
+    "trap": "Esquecer o denominador √2 dá 6 (D): a distância vertical não é a perpendicular.",
+    "retrieval": [
+      "Qual é a equação da bissetriz dos quadrantes pares?",
+      "Por que se usa o valor absoluto?"
+    ],
+    "transfer": "Exercício autoral: calcule a distância de P à bissetriz dos quadrantes pares.",
+    "criteria": [
+      "Reta x + y = 0.",
+      "10/√2 = 5√2."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "2√2"
+      },
+      {
+        "id": "b",
+        "text": "9/2"
+      },
+      {
+        "id": "c",
+        "text": "3√2/2"
+      },
+      {
+        "id": "d",
+        "text": "6"
+      },
+      {
+        "id": "e",
+        "text": "3√2"
+      }
+    ],
+    "pages": [
+      21
+    ],
+    "statement": "Analise o gráfico.\n\n[Plano cartesiano com a reta bissetriz dos quadrantes ímpares (y = x) e o ponto P acima dela, no 1º quadrante.]\n\nA distância entre o ponto P, de coordenadas (2, 8), e a bissetriz dos quadrantes ímpares no plano cartesiano de eixos ortogonais é igual a:",
+    "statementComplete": true
+  },
+  {
+    "number": 76,
+    "topicId": "mat_log_exponenciais",
+    "subject": "Matemática",
+    "chapter": "Modelagem Exponencial de Problemas",
+    "title": "Decaimento exponencial",
+    "concept": "Função exponencial de decaimento e meia-vida; pré-requisitos: potências de base 2 com expoente negativo.",
+    "steps": [
+      "f(50) = 60 · 2^(−1) = 30.",
+      "f(150) = 60 · 2^(−3) = 60/8 = 7,5.",
+      "Diferença: 30 − 7,5.",
+      "= 22,5.",
+      "Alternativa A."
+    ],
+    "trap": "Note que a meia-vida é 50 s (2^(−0,02 × 50) = 1/2): a cada 50 s a quantidade cai à metade.",
+    "retrieval": [
+      "Qual é a meia-vida desse elemento?",
+      "Quanto resta após 100 s?"
+    ],
+    "transfer": "Exercício autoral: após quantos segundos restarão 3,75 unidades?",
+    "criteria": [
+      "60/3,75 = 16 = 2⁴.",
+      "200 s."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "22,5."
+      },
+      {
+        "id": "b",
+        "text": "15,0."
+      },
+      {
+        "id": "c",
+        "text": "36,0."
+      },
+      {
+        "id": "d",
+        "text": "18,5."
+      },
+      {
+        "id": "e",
+        "text": "12,5."
+      }
+    ],
+    "pages": [
+      22
+    ],
+    "statement": "Um elemento radioativo decai de modo que a quantidade restante f(t) do elemento após t segundos é dada por f(t) = 60 ⋅ 2^(–0,02t). Sendo assim, a diferença entre quantidades restantes desse elemento radioativo após 50 segundos e 150 segundos, na unidade de medida de f(t), será igual a",
+    "statementComplete": true
+  },
+  {
     "number": 77,
     "topicId": "mat_geometria_espacial",
     "subject": "Matemática",
@@ -635,6 +4091,165 @@
       22
     ],
     "statement": "A área total de um cilindro circular reto é numericamente igual ao seu volume. Se as medidas do raio da base e da altura desse cilindro são, em uma mesma unidade de medida, r e h, respectivamente, então r é igual a:",
+    "statementComplete": true
+  },
+  {
+    "number": 78,
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "subject": "Matemática",
+    "chapter": "Razão e Proporção",
+    "title": "Reservatório e novos alunos",
+    "concept": "Proporção inversa e unidades de consumo (aluno × dia); pré-requisitos: contar dias corretamente.",
+    "steps": [
+      "Total de água: 830 × 20 = 16 600 aluno-dias.",
+      "Após 5 dias, restam 830 × 15 = 12 450 aluno-dias.",
+      "Com 850 alunos: 12 450 ÷ 850 ≈ 14,6 dias de consumo completo.",
+      "Há água para 14 dias inteiros após o ingresso; no 15º dia ela não basta.",
+      "Alternativa E."
+    ],
+    "trap": "14,6 não significa que falte no 14º dia: os 14 primeiros dias são atendidos por inteiro.",
+    "retrieval": [
+      "Quantos aluno-dias restam após 5 dias?",
+      "Por que o resultado é contado a partir do ingresso dos novos alunos?"
+    ],
+    "transfer": "Exercício autoral: e se tivessem ingressado 80 alunos?",
+    "criteria": [
+      "12 450 ÷ 910 ≈ 13,7.",
+      "Faltaria no 14º dia."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "16º"
+      },
+      {
+        "id": "b",
+        "text": "14º"
+      },
+      {
+        "id": "c",
+        "text": "12º"
+      },
+      {
+        "id": "d",
+        "text": "13º"
+      },
+      {
+        "id": "e",
+        "text": "15º"
+      }
+    ],
+    "pages": [
+      22
+    ],
+    "statement": "O reservatório de uma escola tem exatamente a quantidade necessária para o consumo dos seus 830 alunos durante 20 dias. Após 5 dias do início do uso da água desse reservatório, 20 novos alunos ingressaram na escola. Admitindo-se que apenas os alunos consomem a água desse reservatório e que todos os alunos consomem a mesma quantidade de água todos os dias, após o ingresso dos 20 novos alunos, o primeiro dia em que não haverá água suficiente para o consumo de todos os alunos na escola será o",
+    "statementComplete": true
+  },
+  {
+    "number": 79,
+    "topicId": "mat_log_exponenciais",
+    "subject": "Matemática",
+    "chapter": "Introdução aos Logaritmos",
+    "title": "log 14 a partir de log 7 e log 5",
+    "concept": "Propriedades dos logaritmos (produto e quociente); pré-requisitos: 2 = 10/5.",
+    "steps": [
+      "14 = 7 × 2 e 2 = 10/5.",
+      "log 14 = log 7 + log 2.",
+      "log 2 = log 10 − log 5 = 1 − y.",
+      "log 14 = x + 1 − y.",
+      "Alternativa A."
+    ],
+    "trap": "log 2 não é dado: é preciso escrevê-lo como log(10/5).",
+    "retrieval": [
+      "Que propriedade transforma log de produto em soma?",
+      "Quanto vale log 10?"
+    ],
+    "transfer": "Exercício autoral: escreva log 35 em função de x e y.",
+    "criteria": [
+      "log 35 = log 7 + log 5.",
+      "x + y."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 + x – y"
+      },
+      {
+        "id": "b",
+        "text": "(x – y)/2"
+      },
+      {
+        "id": "c",
+        "text": "–1 + x + y"
+      },
+      {
+        "id": "d",
+        "text": "5(x – y)/7"
+      },
+      {
+        "id": "e",
+        "text": "1 – x + y"
+      }
+    ],
+    "pages": [
+      22
+    ],
+    "statement": "Se o logaritmo de 7 na base 10 é igual a x e o logaritmo de 5 na base 10 é igual a y, então, o logaritmo de 14 na base 10 é igual a:",
+    "statementComplete": true
+  },
+  {
+    "number": 80,
+    "topicId": "mat_funcoes",
+    "subject": "Matemática",
+    "chapter": "Função Quadrática",
+    "title": "Lucro máximo",
+    "concept": "Vértice da parábola: máximo de função quadrática com a < 0; pré-requisitos: xv = −b/(2a).",
+    "steps": [
+      "a = −1 < 0: a parábola tem ponto de máximo.",
+      "xv = −820/(2 × −1) = 410 empregados.",
+      "L(410) = −410² + 820 × 410 = 410 × 410.",
+      "= 168 100.",
+      "Alternativa A."
+    ],
+    "trap": "410 é o número de empregados no ótimo; o lucro máximo é o valor de L nesse ponto.",
+    "retrieval": [
+      "Por que a função tem máximo, e não mínimo?",
+      "Quantos empregados dão o lucro máximo?"
+    ],
+    "transfer": "Exercício autoral: com quantos empregados o lucro seria zero?",
+    "criteria": [
+      "Raízes 0 e 820.",
+      "0 ou 820 empregados."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "R$ 168.100,00."
+      },
+      {
+        "id": "b",
+        "text": "R$ 336.200,00."
+      },
+      {
+        "id": "c",
+        "text": "R$ 164.000,00."
+      },
+      {
+        "id": "d",
+        "text": "R$ 84.050,00."
+      },
+      {
+        "id": "e",
+        "text": "R$ 328.000,00."
+      }
+    ],
+    "pages": [
+      22
+    ],
+    "statement": "O lucro L(x), em reais, de uma empresa em função do número x de empregados que nela trabalham é dado por L(x) = – x² + 820x. De acordo com tal modelo, o lucro máximo que essa empresa pode obter é igual a",
     "statementComplete": true
   }
 ]
