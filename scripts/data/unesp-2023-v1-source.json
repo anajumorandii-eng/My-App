@@ -1,0 +1,275 @@
+{
+  "board": "UNESP",
+  "year": 2023,
+  "phase": "1ª fase",
+  "version": "V1",
+  "examUrl": "https://arquivos.qconcursos.com/prova/arquivo_prova/155811/vunesp-2022-unesp-vestibular-prova.pdf",
+  "answerKeyUrl": "https://arquivos.qconcursos.com/prova/arquivo_gabarito/155811/vunesp-2022-unesp-vestibular-gabarito.pdf",
+  "excludedNumbers": [],
+  "media": [
+    {
+      "page": 3,
+      "url": "/question-media/oficiais/unesp-2023-v1/p03.webp",
+      "sha256": "2635d99b958c475c097340527094a85b1b4c293271e5e1ee47ef388dcf7afcc6"
+    },
+    {
+      "page": 4,
+      "url": "/question-media/oficiais/unesp-2023-v1/p04.webp",
+      "sha256": "fab519de74cd0511b17de2e3cfb227b7ca24fbcbd7e8fdb217020620bb2dfa30"
+    },
+    {
+      "page": 5,
+      "url": "/question-media/oficiais/unesp-2023-v1/p05.webp",
+      "sha256": "5493a662f1577dab2f2fe26fb950531a9399daf0a100789d79308b8e374c7319"
+    },
+    {
+      "page": 6,
+      "url": "/question-media/oficiais/unesp-2023-v1/p06.webp",
+      "sha256": "87bfad1c25b2ba52fbf83111690493fb25e2ff9896ffe34a1a944193f13acd02"
+    },
+    {
+      "page": 7,
+      "url": "/question-media/oficiais/unesp-2023-v1/p07.webp",
+      "sha256": "83f4a3a6bd0f00e059c66f108b2cc6257eb6f7d28dc34416465e946e911bb4cc"
+    },
+    {
+      "page": 8,
+      "url": "/question-media/oficiais/unesp-2023-v1/p08.webp",
+      "sha256": "cbbe5a15b0853e829abcc86315242b8ff13bcfae3535e94bec8a998114204908"
+    },
+    {
+      "page": 9,
+      "url": "/question-media/oficiais/unesp-2023-v1/p09.webp",
+      "sha256": "b03e6621f21b3f37a57fe18676c0938573bf29798dfea94e39e90db54cccb2cb"
+    },
+    {
+      "page": 10,
+      "url": "/question-media/oficiais/unesp-2023-v1/p10.webp",
+      "sha256": "adb11a5a2c07c45c35df017463ab381e69b79049a58b8e6135bed9fd06d2f481"
+    },
+    {
+      "page": 11,
+      "url": "/question-media/oficiais/unesp-2023-v1/p11.webp",
+      "sha256": "ff7296a70070b981f5d898f7ebeeeeed29e04929729714833e5116127a9e06c7"
+    },
+    {
+      "page": 12,
+      "url": "/question-media/oficiais/unesp-2023-v1/p12.webp",
+      "sha256": "6732591fbb235b3520f13b348b41ad5b91fc2980fe693f9c34a33ff065a70f3c"
+    },
+    {
+      "page": 13,
+      "url": "/question-media/oficiais/unesp-2023-v1/p13.webp",
+      "sha256": "dae99caddae722b0a27560f691d84068af275ec573100027cdb28faf1fbd4bee"
+    },
+    {
+      "page": 14,
+      "url": "/question-media/oficiais/unesp-2023-v1/p14.webp",
+      "sha256": "b56ae575b794a5e588b0c264fcb34ba588298264cc02332145fe4ae5b2168d2b"
+    },
+    {
+      "page": 15,
+      "url": "/question-media/oficiais/unesp-2023-v1/p15.webp",
+      "sha256": "8214a280ae31843dfa8c2fbfcd8c34d651ae1935c9f21838486e7a2a1b8ed160"
+    },
+    {
+      "page": 16,
+      "url": "/question-media/oficiais/unesp-2023-v1/p16.webp",
+      "sha256": "a873b3408ba2a55c2ea5f3cfce4f39127f818cb75d5ec34ab90b23a235822da6"
+    },
+    {
+      "page": 17,
+      "url": "/question-media/oficiais/unesp-2023-v1/p17.webp",
+      "sha256": "4899c5db378823f86e1f3cbee0852ad4db7b5ac5c38da4fa29ecb79917082d37"
+    },
+    {
+      "page": 18,
+      "url": "/question-media/oficiais/unesp-2023-v1/p18.webp",
+      "sha256": "a9c4b422ea2f5e5727267078611255fba255bd8d4eb549d3a9a843794d163dac"
+    },
+    {
+      "page": 19,
+      "url": "/question-media/oficiais/unesp-2023-v1/p19.webp",
+      "sha256": "70a0f2f153338cc9255ab2d575413f0b13e41d85fc71d149789649d663539395"
+    },
+    {
+      "page": 20,
+      "url": "/question-media/oficiais/unesp-2023-v1/p20.webp",
+      "sha256": "8af0fe23d4457f46610dc031da54bd9e60b115c6526c3a003c6399a7a1d8a07c"
+    },
+    {
+      "page": 21,
+      "url": "/question-media/oficiais/unesp-2023-v1/p21.webp",
+      "sha256": "4af0104a53e11e252305655726da076fb486b300fc908675c9dc7d2c9eb9d883"
+    },
+    {
+      "page": 22,
+      "url": "/question-media/oficiais/unesp-2023-v1/p22.webp",
+      "sha256": "f8dfe09cfd90adfbe2ea2e6de3e94d3d3f922d35cc053fe3faae7956ed3ec588"
+    },
+    {
+      "page": 23,
+      "url": "/question-media/oficiais/unesp-2023-v1/p23.webp",
+      "sha256": "11e5f779fcc96966b8e4ed540017c19fad73d4006d2ab65084e798c099b6a6c1"
+    },
+    {
+      "page": 24,
+      "url": "/question-media/oficiais/unesp-2023-v1/p24.webp",
+      "sha256": "8c0ea6f61a1378f59d1a40f916c41d2721ab749f4386e73713b115fdff8ad594"
+    },
+    {
+      "page": 25,
+      "url": "/question-media/oficiais/unesp-2023-v1/p25.webp",
+      "sha256": "fbd2b0dd03b34aa7e7c8d0247a680de8bd9eab5aaabb7f61a0a3efcf81da04b9"
+    },
+    {
+      "page": 26,
+      "url": "/question-media/oficiais/unesp-2023-v1/p26.webp",
+      "sha256": "2a50cb04dbe334eeb08e8393ce421d7eb3f35d8996d0d0930d399f235d6800aa"
+    },
+    {
+      "page": 27,
+      "url": "/question-media/oficiais/unesp-2023-v1/p27.webp",
+      "sha256": "3144fb1d7432d490bc299e38792aa6ff83f308cf50bdfeb9cc034abd00afd408"
+    },
+    {
+      "page": 28,
+      "url": "/question-media/oficiais/unesp-2023-v1/p28.webp",
+      "sha256": "5f671da0e2ee03adb83279e54d65971e7f58e260fb5cb3c012e3323447e7c238"
+    },
+    {
+      "page": 29,
+      "url": "/question-media/oficiais/unesp-2023-v1/p29.webp",
+      "sha256": "084bac805e769ab1ce6de10ff65b023f224269a637108c34402f591e78664a30"
+    },
+    {
+      "page": 30,
+      "url": "/question-media/oficiais/unesp-2023-v1/p30.webp",
+      "sha256": "1db3b4ec7ce8d8385a08bfa58becdd9989aff16f390ad933ee045c223a860424"
+    },
+    {
+      "page": 31,
+      "url": "/question-media/oficiais/unesp-2023-v1/p31.webp",
+      "sha256": "92b13b2c81645f44cbb30219a8821a3db927f9ebd0d56aa7bcf1c2f6590340c4"
+    },
+    {
+      "page": 32,
+      "url": "/question-media/oficiais/unesp-2023-v1/p32.webp",
+      "sha256": "c579ec6e086c0b6543d2f3e77b210c29a6749a2ac8e3b6b15bb59ea4b113a6d3"
+    },
+    {
+      "page": 33,
+      "url": "/question-media/oficiais/unesp-2023-v1/p33.webp",
+      "sha256": "20a8edd5c646d9f642d7eaa79e02a00f28930c5dabf38b3ad4d89e91379b562c"
+    },
+    {
+      "page": 34,
+      "url": "/question-media/oficiais/unesp-2023-v1/p34.webp",
+      "sha256": "35657fa5ddad2d79abbacb2629be67113b8a38ee8444c1c3f5c47e23eb742289"
+    }
+  ],
+  "idPrefix": "unesp_2023_v1",
+  "sourceFile": "UNESP_2023_1a_fase_V1.pdf",
+  "totalQuestions": 90,
+  "firstNumber": 1,
+  "optionIds": "abcde",
+  "selectedNumbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+  ],
+  "answerKeyFormat": "vunesp",
+  "keyMarker": "VNSP2206",
+  "examSha256": "372ea0808d59ffb5936479d772ef6f0230e42dd8975aefb5a65487151a3cbc11",
+  "answerKeySha256": "7efe9a394bcc71c1a4316ed7787dfd5802071d4710c1fdcab5997bd66a268ee8",
+  "answerKeyTextSha256": "e771fa82894250d4f7e83b1def6cd5860a0f262679c8b33180be8ee01edb0334",
+  "answerKeyTextFile": "gabaritos/UNESP/unesp-2023-v1.txt",
+  "itemsFile": "scripts/data/unesp-2023-v1-expansao.json"
+}
