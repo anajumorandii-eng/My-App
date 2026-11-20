@@ -10,7 +10,7 @@
   "inputs": {
     "bank": {
       "path": "public/questions.json",
-      "sha256": "7124e672a71b9daf5a0cd0217f5e2407f770396cf58ee49d56ae8caeec179c45"
+      "sha256": "5a0641caea551fd2f37b57f31bf260668fb9fede5320c28dfe430a880c6e4a91"
     },
     "manifest": {
       "path": "scripts/data/enem-completo-2018-2025/manifest.json",

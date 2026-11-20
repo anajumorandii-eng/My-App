@@ -377,27 +377,27 @@
   },
   {
     "number": 8,
-    "topicId": "geo_climatologia_socioambiental",
-    "subject": "Geografia",
-    "chapter": "Desafios Ambientais do Século XXI",
+    "topicId": "soc_globalizacao",
+    "subject": "Sociologia",
+    "chapter": "A Sociedade da Informação",
     "title": "Monstros com antidepressivos",
-    "concept": "Poluentes emergentes: fármacos no esgoto contaminam águas e organismos; pré-requisitos: tratamento de esgoto.",
+    "concept": "Humor por inversão: os monstros, devoradores de gente, notam que as pessoas estão “recheadas” de antidepressivos; pré-requisitos: medicalização e saúde mental como questão de saúde pública.",
     "steps": [
-      "Os monstros comem peixes vindos do mar perto da cidade.",
-      "Os peixes estão “cheios de antidepressivos”.",
-      "Os remédios consumidos pela população vão para o esgoto e chegam ao mar.",
-      "O efeito sobre os peixes revela consumo massivo de antidepressivos: problema de saúde pública.",
+      "Os monstros destroem a cidade e comem pessoas.",
+      "Um deles comenta que o outro se sente ótimo porque “essas coisas” estão cheias de antidepressivos.",
+      "“Essas coisas” são as pessoas: a população consome tantos antidepressivos que eles passam ao predador.",
+      "A ironia aponta o uso massivo de antidepressivos, isto é, a saúde mental da população urbana como problema de saúde pública.",
       "Alternativa C."
     ],
-    "trap": "E é plausível (contaminação), mas a ironia aponta o uso generalizado de antidepressivos pela população.",
+    "trap": "E (desequilíbrio ambiental) parece caber num filme de monstros, mas a piada não é sobre ambiente: é sobre o consumo generalizado de remédios pelas pessoas.",
     "retrieval": [
-      "Como os fármacos chegam ao mar?",
+      "O que os monstros estão comendo?",
       "Por que o monstro “se sente ótimo”?"
     ],
-    "transfer": "Exercício autoral: proponha uma medida para reduzir fármacos no esgoto.",
+    "transfer": "Exercício autoral: explique por que o alto consumo de antidepressivos é tratado como questão de saúde pública.",
     "criteria": [
-      "Descarte correto de remédios.",
-      "Tratamento avançado do esgoto."
+      "Prevalência de depressão e ansiedade.",
+      "Acesso a tratamento e medicalização."
     ],
     "difficulty": "medium",
     "options": [
@@ -425,7 +425,7 @@
     "pages": [
       4
     ],
-    "statement": "Examine o cartum de Paul Noth, publicado pela revista The New Yorker em 18.02.2021.\n\n[Cartum: dois monstros gigantes, tipo Godzilla, saem do mar diante de arranha-céus, segurando peixes e algas. Um diz ao outro: “Of course you feel great. These things are loaded with antidepressants.” (“Claro que você se sente ótimo. Essas coisas estão cheias de antidepressivos.”)]\n\nO cartum ironiza, sobretudo, um problema de",
+    "statement": "Examine o cartum de Paul Noth, publicado pela revista The New Yorker em 18.02.2021.\n\n[Cartum: dois monstros gigantes, tipo Godzilla, destroem uma cidade de arranha-céus e comem pessoas, que seguram nas mãos como petiscos. Um diz ao outro: “Of course you feel great. These things are loaded with antidepressants.” (“Claro que você se sente ótimo. Essas coisas estão cheias de antidepressivos.”, referindo-se às pessoas que estão comendo)]\n\nO cartum ironiza, sobretudo, um problema de",
     "statementComplete": true
   },
   {
@@ -4228,23 +4228,23 @@
     "options": [
       {
         "id": "a",
-        "text": "H3C–CH(OH)–CH3 (propan-2-ol)"
+        "text": "H3C–CH(OH)–CH3"
       },
       {
         "id": "b",
-        "text": "H3C–CH2–CHO (propanal)"
+        "text": "H3C–CH2–CHO"
       },
       {
         "id": "c",
-        "text": "H3C–CO–CH3 (propanona)"
+        "text": "H3C–CO–CH3"
       },
       {
         "id": "d",
-        "text": "H3C–CH2–COOH (ácido propanoico)"
+        "text": "H3C–CH2–COOH"
       },
       {
         "id": "e",
-        "text": "HOCH2–CH(OH)–CH2OH (propanotriol)"
+        "text": "HOCH2–CH(OH)–CH2OH"
       }
     ],
     "pages": [
