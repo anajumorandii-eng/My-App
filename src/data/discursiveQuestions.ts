@@ -9,12 +9,17 @@
 // em vez de adivinhados.
 
 import { DiscursiveQuestion } from '../types';
+import { famerp2026Discursive } from './discursiveFamerp2026';
+import { famerp2025Discursive } from './discursiveFamerp2025';
+import { famerp2024Discursive } from './discursiveFamerp2024';
+import { famerp2023Discursive } from './discursiveFamerp2023';
+import { famerp2022Discursive } from './discursiveFamerp2022';
 
 export const boardExamStructure: Record<string, string> = {
   Fuvest: '2ª fase em 2 dias. Dia 1: Português + Redação. Dia 2: 12 questões dissertativas (para Medicina/Biológicas, majoritariamente Biologia, Química e Física), em 4h.',
   'Unicamp / Comvest': '2ª fase em 2 dias consecutivos, ~28 questões dissertativas + redação, até 5h por dia.',
   'Unesp / Vunesp': '2ª fase em 2 dias, 36 questões discursivas + redação, 5h por dia (dia 1: Humanas + Natureza/Matemática; dia 2: Linguagens + redação).',
-  Famerp: 'Prova de conhecimentos específicos com 20 questões discursivas (aprox. 8 Biologia, 6 Química, 6 Física), em 4h.',
+  Famerp: '2º dia: 20 questões discursivas (8 de Biologia, 6 de Química, 6 de Física) e a redação, em 4h. Cada questão vale de 0 a 4 pontos.',
   Unifesp: 'Prova II (dia 2) com 20 questões discursivas, aprox. 5 de cada: Biologia, Química, Física e Matemática, em 4h.',
 };
 
@@ -1013,4 +1018,9 @@ export const discursiveQuestions: DiscursiveQuestion[] = [
     sourceUrl: 'https://www.vunesp.com.br/',
     note: 'Questão 06 da prova de conhecimentos específicos. Enunciado, tabela de entalpias e itens transcritos do caderno oficial da Unifesp/Vunesp. A resposta-modelo foi elaborada aqui e o cálculo de ΔH foi conferido — não é o gabarito oficial da banca.',
   },
+  ...famerp2026Discursive,
+  ...famerp2025Discursive,
+  ...famerp2024Discursive,
+  ...famerp2023Discursive,
+  ...famerp2022Discursive,
 ];

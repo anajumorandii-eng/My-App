@@ -302,6 +302,8 @@ export interface DiscursiveQuestion {
   modelAnswer: string[];
   suggestedMinutes: number;
   sourceUrl?: string;
+  /** Recortes do caderno oficial; o enunciado também descreve a figura. */
+  figures?: { url: string; alt: string }[];
   uncertain?: boolean;
   note?: string;
 }

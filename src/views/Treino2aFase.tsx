@@ -331,7 +331,10 @@ function DiscursiveTraining() {
           {/* Question text */}
           <div>
             <p className="text-xs font-semibold text-[var(--dim)] mb-1">{question.topic}</p>
-            <p className="text-sm font-display text-[var(--text)] leading-relaxed">{question.prompt}</p>
+            <p className="text-sm font-display text-[var(--text)] leading-relaxed whitespace-pre-line">{question.prompt}</p>
+            {question.figures?.map((f) => (
+              <img key={f.url} src={f.url} alt={f.alt} loading="lazy" className="mt-3 max-w-full h-auto rounded-lg border border-[var(--line)] bg-white" />
+            ))}
             {question.subItems && (
               <ul className="mt-3 space-y-2">
                 {question.subItems.map((s) => (
