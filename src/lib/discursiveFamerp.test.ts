@@ -3,9 +3,10 @@ import assert from 'node:assert/strict';
 import { existsSync } from 'node:fs';
 import { famerp2026Discursive } from '../data/discursiveFamerp2026.ts';
 import { famerp2025Discursive } from '../data/discursiveFamerp2025.ts';
+import { famerp2024Discursive } from '../data/discursiveFamerp2024.ts';
 import { discursiveQuestions } from '../data/discursiveQuestions.ts';
 
-for (const [ano, banco] of [[2026, famerp2026Discursive], [2025, famerp2025Discursive]] as const)
+for (const [ano, banco] of [[2026, famerp2026Discursive], [2025, famerp2025Discursive], [2024, famerp2024Discursive]] as const)
 describe(`discursivas Famerp ${ano}`, () => {
   const famerp2026Discursive = banco;
   it('traz as 20 questões, numeradas e no banco do Treino de 2ª Fase', () => {

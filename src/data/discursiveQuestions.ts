@@ -11,6 +11,7 @@
 import { DiscursiveQuestion } from '../types';
 import { famerp2026Discursive } from './discursiveFamerp2026';
 import { famerp2025Discursive } from './discursiveFamerp2025';
+import { famerp2024Discursive } from './discursiveFamerp2024';
 
 export const boardExamStructure: Record<string, string> = {
   Fuvest: '2ª fase em 2 dias. Dia 1: Português + Redação. Dia 2: 12 questões dissertativas (para Medicina/Biológicas, majoritariamente Biologia, Química e Física), em 4h.',
@@ -1017,4 +1018,5 @@ export const discursiveQuestions: DiscursiveQuestion[] = [
   },
   ...famerp2026Discursive,
   ...famerp2025Discursive,
+  ...famerp2024Discursive,
 ];
