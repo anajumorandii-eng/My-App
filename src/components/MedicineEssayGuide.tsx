@@ -38,7 +38,7 @@ export function MedicineEssayGuide() {
         <h2 className={H2}>Como é a prova</h2>
         <p className={TEXT}>{guide.when}</p>
         <p className={TEXT}><b className="text-[var(--text)]">Pontuação:</b> {guide.scoring}</p>
-        <p className={`text-[11px] flex items-start gap-1.5 ${guide.confirmed ? 'text-[var(--dim)]' : 'text-amber-900 dark:text-amber-200'}`}>
+        <p className={`text-[11px] flex items-start gap-1.5 ${guide.confirmed ? 'text-[var(--dim)]' : 'text-[var(--status-warning)]'}`}>
           {!guide.confirmed && <AlertTriangle className="w-3.5 h-3.5 shrink-0 mt-0.5" />}
           <span>Fonte: {guide.sourceNote}</span>
         </p>
@@ -59,7 +59,7 @@ export function MedicineEssayGuide() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <Panel subject="Português" className="ni-panel p-4">
-          <h2 className={`${H2} flex items-center gap-1.5`}><XCircle className="w-3.5 h-3.5 text-[#e08391]" />O que zera a redação</h2>
+          <h2 className={`${H2} flex items-center gap-1.5`}><XCircle className="w-3.5 h-3.5 text-[var(--status-error)]" />O que zera a redação</h2>
           <ul className="space-y-1">{guide.zeroRules.map((r) => <li key={r} className={TEXT}>• {r}</li>)}</ul>
         </Panel>
         <Panel subject="Português" className="ni-panel p-4 space-y-3">
