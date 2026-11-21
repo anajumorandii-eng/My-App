@@ -1,0 +1,225 @@
+{
+  "board": "FAMERP",
+  "year": 2023,
+  "phase": "1ª fase",
+  "version": "V1",
+  "examUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/famerp/2023/1dia/famerp2023_1dia_prova.pdf",
+  "answerKeyUrl": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/famerp/2023/1dia/famerp2023_1dia_gabarito.pdf",
+  "excludedNumbers": [],
+  "media": [
+    {
+      "page": 3,
+      "url": "/question-media/oficiais/famerp-2023-v1/p03.webp",
+      "sha256": "4f3b5bdc2dd624e550c8207d75e3103b9e7624868e73fb8a4fc4d72100f6505b"
+    },
+    {
+      "page": 4,
+      "url": "/question-media/oficiais/famerp-2023-v1/p04.webp",
+      "sha256": "b25cea8e90ec3dd1d52b483f81d0d0fb1f69b2e3b0fc6193ad4b33ec000175b8"
+    },
+    {
+      "page": 5,
+      "url": "/question-media/oficiais/famerp-2023-v1/p05.webp",
+      "sha256": "fad244df704a3978dd22c3f739a12eec6160d88a9ab501daf677feda9f782d55"
+    },
+    {
+      "page": 6,
+      "url": "/question-media/oficiais/famerp-2023-v1/p06.webp",
+      "sha256": "6cfa925280f72ac99a8d12d7937a7503b728ecac54b366fa83493a68480e13be"
+    },
+    {
+      "page": 7,
+      "url": "/question-media/oficiais/famerp-2023-v1/p07.webp",
+      "sha256": "596a76298e742fab22e0b92f63292da149e27fe9e058b952ac058858cfe17f30"
+    },
+    {
+      "page": 8,
+      "url": "/question-media/oficiais/famerp-2023-v1/p08.webp",
+      "sha256": "c0b3ef6adfa00a81f35aad039e420dd59a653b80c5c11e1ade6b3c161d4884ba"
+    },
+    {
+      "page": 9,
+      "url": "/question-media/oficiais/famerp-2023-v1/p09.webp",
+      "sha256": "9b746d2a42f47a948a11ec63430a7744086747700354270e629bd16f326b6775"
+    },
+    {
+      "page": 10,
+      "url": "/question-media/oficiais/famerp-2023-v1/p10.webp",
+      "sha256": "c566e748518ed07a034c750e6393ffd252ebfd72e18adfbd235b79f676a635ee"
+    },
+    {
+      "page": 11,
+      "url": "/question-media/oficiais/famerp-2023-v1/p11.webp",
+      "sha256": "3983e3fee7bab8b0683367bc5c8288641f5b0c5d36759206601d5ce3b5b52a5f"
+    },
+    {
+      "page": 12,
+      "url": "/question-media/oficiais/famerp-2023-v1/p12.webp",
+      "sha256": "fb2ca713f7e57acc8219ee48bbef6b4582803a03e38c4e8d001ee95acfe861b0"
+    },
+    {
+      "page": 13,
+      "url": "/question-media/oficiais/famerp-2023-v1/p13.webp",
+      "sha256": "bca74f7130bba837328ec09e9d7d4c0537fb6d8681167aa59a5cadff0351e82d"
+    },
+    {
+      "page": 14,
+      "url": "/question-media/oficiais/famerp-2023-v1/p14.webp",
+      "sha256": "059bd2829babea93055cf16ac4958450b5a538fbee29d216cbbc4e132e9b3d95"
+    },
+    {
+      "page": 15,
+      "url": "/question-media/oficiais/famerp-2023-v1/p15.webp",
+      "sha256": "f2070a83d5183bf1a6fbb0513795daf58f3c257c122b477f2baa3a6a8d22e7fb"
+    },
+    {
+      "page": 16,
+      "url": "/question-media/oficiais/famerp-2023-v1/p16.webp",
+      "sha256": "9bd927ca1196c1cd499af7c38c8f471868369fcec53c0041118b6f3a3408de93"
+    },
+    {
+      "page": 17,
+      "url": "/question-media/oficiais/famerp-2023-v1/p17.webp",
+      "sha256": "88afcab4a018fb5082e57cef5e4e5a26731bbb217fe298fca68d3ee5b489fa20"
+    },
+    {
+      "page": 18,
+      "url": "/question-media/oficiais/famerp-2023-v1/p18.webp",
+      "sha256": "43ec451071f2ff0ee44df045880359f6bc600a457632f89f0d3da27ba4f53056"
+    },
+    {
+      "page": 19,
+      "url": "/question-media/oficiais/famerp-2023-v1/p19.webp",
+      "sha256": "7083619615489ef199f189caf929a0f13ac961a5e0ada0a90c862e5848d0ce81"
+    },
+    {
+      "page": 20,
+      "url": "/question-media/oficiais/famerp-2023-v1/p20.webp",
+      "sha256": "56026b37ce620a62668f1d843649db627da78a14913b5f2eaf8b63a1ec9f2c30"
+    },
+    {
+      "page": 21,
+      "url": "/question-media/oficiais/famerp-2023-v1/p21.webp",
+      "sha256": "de3f47b148516fda25a2179f894aca1da0cb4ab34b22fc43078746d396e5fcb4"
+    },
+    {
+      "page": 22,
+      "url": "/question-media/oficiais/famerp-2023-v1/p22.webp",
+      "sha256": "3b16cdbe80f9d1fa189a61bc7dbfc4adea01ccddfc12c61205bbedf3b9dc4848"
+    },
+    {
+      "page": 23,
+      "url": "/question-media/oficiais/famerp-2023-v1/p23.webp",
+      "sha256": "565fc1f30dbc563261292946a61c0c40afcd407ba0772f2c2441ecab0999e90e"
+    },
+    {
+      "page": 24,
+      "url": "/question-media/oficiais/famerp-2023-v1/p24.webp",
+      "sha256": "fb7e6e954545a0cdc19b1531efc5f3be638f5b1e2e32c2d383c6b5ec601b0349"
+    },
+    {
+      "page": 25,
+      "url": "/question-media/oficiais/famerp-2023-v1/p25.webp",
+      "sha256": "64114dacdbca2d5c4ad34f25bfa09999a9dfb40a566b36336114577ff1380213"
+    },
+    {
+      "page": 26,
+      "url": "/question-media/oficiais/famerp-2023-v1/p26.webp",
+      "sha256": "56e9095fb44e0bd3b95969956f45673a8152ce12e02575868358db541f4da82e"
+    }
+  ],
+  "idPrefix": "famerp_2023_v1",
+  "sourceFile": "FAMERP_2023_CG_V1.pdf",
+  "totalQuestions": 80,
+  "firstNumber": 1,
+  "optionIds": "abcde",
+  "selectedNumbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80
+  ],
+  "answerKeyFormat": "vunesp",
+  "keyMarker": "FMRP2201",
+  "examSha256": "1f4a904ad81b72883164b04867137e39b5b0f4ca0dce55ba2c269321083cc070",
+  "answerKeySha256": "33964ab6b96e39509b19031bbe517b6f7bbb3097f776717ece4d6b46ee801ef7",
+  "answerKeyTextSha256": "64746d2a6e20dc474d6ef581aff64d45bccf8377ac91cebd081bf7443b6295bb",
+  "answerKeyTextFile": "gabaritos/FAMERP/famerp-2023-v1.txt",
+  "itemsFile": "scripts/data/famerp-2023-v1-expansao.json"
+}
