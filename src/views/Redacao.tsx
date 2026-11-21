@@ -1,6 +1,7 @@
 import { StudyExportButton } from '../components/StudyExportButton';
 import { EssayReviewAudit, type EssayAudit } from '../components/EssayReviewAudit';
 import { EssayWorkshop } from '../components/EssayWorkshop';
+import { MedicineEssayGuide } from '../components/MedicineEssayGuide';
 import { EnemEssayAxesPanel } from '../components/EnemEssayAxesPanel';
 import { emptyEssayPlan } from '../data/essayWorkshop';
 import { readEssayCurrent, readEssayVersions, essayCorrectionQuestion, type EssayVersion } from '../lib/essayWorkspace';
@@ -23,13 +24,14 @@ import { AiText } from '../components/AiText';
 import { Panel } from '../components/ui/Panel';
 import { SUBJECT_ICONS } from './Dashboard';
 
-type Tab = 'enem2026' | 'pratica' | 'estrutura' | 'bancas' | 'erros' | 'checklist';
+type Tab = 'enem2026' | 'famerpUnifesp' | 'pratica' | 'estrutura' | 'bancas' | 'erros' | 'checklist';
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'pratica', label: 'Escrever e Reescrever' },
   { id: 'enem2026', label: 'ENEM 2026: eixos e repertório' },
   { id: 'estrutura', label: 'Guia de Estrutura' },
   { id: 'bancas', label: 'Por Vestibular' },
+  { id: 'famerpUnifesp', label: 'Famerp e Unifesp' },
   { id: 'erros', label: 'Erros que Limitam a Nota' },
   { id: 'checklist', label: 'Checklist de Revisão' },
 ];
@@ -454,6 +456,8 @@ function EssayEditor({ scope }: { scope: string }) {
           })}
         </section>
       )}
+
+      {tab === 'famerpUnifesp' && <MedicineEssayGuide />}
 
       {/* Common Mistakes Tab */}
       {tab === 'erros' && (
