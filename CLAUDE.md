@@ -111,9 +111,10 @@ retrato é 834×1112, em paisagem 1366×900.
   com `MODULE_NOT_FOUND` em vez de erro de tipo, e `npm test` para em
   `tsx: not found` sem rodar um teste sequer.
 - `settings.json` registra esse hook e autoriza instalação local (`npm install`,
-  `npm ci`), lint/testes/build e leitura Git (`status`, `diff`, `log`, `show`).
-  Instalação e build escrevem arquivos locais; a lista não autoriza push ou
-  merge. O fluxo de branch/PR vem da instrução explícita registrada acima.
+  `npm ci`), lint/testes/build, leitura Git (`status`, `diff`, `log`, `show`)
+  e, a pedido da Ana Júlia em 21/11/2026, o fluxo de branch (`add`, `commit`,
+  `push`, `fetch`, `pull`, `switch`, `checkout`, `branch`, `merge`): sem isso o
+  verificador do modo automático recusava commits já autorizados por ela.
 - `skills/` tem as 36 skills do projeto no formato que o Claude Code lê. Elas
   vivem também em `.agents/skills/`, que é o formato do Codex, e
   `skills-lock.json` continua sendo a fonte da verdade — o README de
