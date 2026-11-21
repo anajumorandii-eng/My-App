@@ -2,9 +2,12 @@ import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync } from 'node:fs';
 import { famerp2026Discursive } from '../data/discursiveFamerp2026.ts';
+import { famerp2025Discursive } from '../data/discursiveFamerp2025.ts';
 import { discursiveQuestions } from '../data/discursiveQuestions.ts';
 
-describe('discursivas Famerp 2026', () => {
+for (const [ano, banco] of [[2026, famerp2026Discursive], [2025, famerp2025Discursive]] as const)
+describe(`discursivas Famerp ${ano}`, () => {
+  const famerp2026Discursive = banco;
   it('traz as 20 questões, numeradas e no banco do Treino de 2ª Fase', () => {
     assert.equal(famerp2026Discursive.length, 20);
     const ids = famerp2026Discursive.map((q) => q.id);

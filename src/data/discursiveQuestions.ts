@@ -10,6 +10,7 @@
 
 import { DiscursiveQuestion } from '../types';
 import { famerp2026Discursive } from './discursiveFamerp2026';
+import { famerp2025Discursive } from './discursiveFamerp2025';
 
 export const boardExamStructure: Record<string, string> = {
   Fuvest: '2ª fase em 2 dias. Dia 1: Português + Redação. Dia 2: 12 questões dissertativas (para Medicina/Biológicas, majoritariamente Biologia, Química e Física), em 4h.',
@@ -1015,4 +1016,5 @@ export const discursiveQuestions: DiscursiveQuestion[] = [
     note: 'Questão 06 da prova de conhecimentos específicos. Enunciado, tabela de entalpias e itens transcritos do caderno oficial da Unifesp/Vunesp. A resposta-modelo foi elaborada aqui e o cálculo de ΔH foi conferido — não é o gabarito oficial da banca.',
   },
   ...famerp2026Discursive,
+  ...famerp2025Discursive,
 ];
