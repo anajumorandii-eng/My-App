@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom';
-import { AlertTriangle, ArrowLeft, BookOpen, CalendarClock, CheckCircle2, ListChecks, PenLine, Target } from 'lucide-react';
+import React, { useMemo, useState } from 'react';
+import { Link, Navigate, useNavigate, useParams } from 'react-router-dom';
+import { AlertTriangle, ArrowLeft, CalendarClock, CheckCircle2, ListChecks, PenLine, Target } from 'lucide-react';
 import { useQuestions } from '../hooks/useQuestions';
 import { Panel } from '../components/ui/Panel';
 import { Button } from '../components/ui/Button';
@@ -12,7 +12,8 @@ import { playbookFor, type ExamPlaybook, type PlaybookStep } from '../data/examP
 import { studyBoardProfiles } from '../data/studyProtocols';
 import { secondPhaseProtocols } from '../data/resolutionStrategies';
 import { boardPriorities, countdownPlan, examEditions, type BoardPriorities } from '../lib/boardPrep';
-import { theoryFor, theoryKey, type ChapterTheory } from '../data/examTheory';
+import { theoryFor, theoryKey, type BoardTheory } from '../data/examTheory';
+import { BoardTheoryView } from '../components/provas/BoardTheoryView';
 import { CHIP, LINK, daysLabel, formatExamDate } from './Provas';
 
 type TabId = 'visao' | 'estrategia' | 'materias' | 'teoria' | 'prioridades' | 'simulado' | 'segunda-fase';
@@ -59,7 +60,7 @@ export default function ProvaBanca() {
   const tabs: TabId[] = [
     'visao',
     ...(data.playbook ? ['estrategia', 'materias'] as TabId[] : []),
-    ...(data.priorities?.chapters.some((c) => data.theory?.[theoryKey(c.topicId, c.chapter)]) ? ['teoria'] as TabId[] : []),
+    ...(data.theory && (data.theory.discursive.length > 0 || data.priorities?.chapters.some((c) => data.theory!.chapters[theoryKey(c.topicId, c.chapter)])) ? ['teoria'] as TabId[] : []),
     ...(data.priorities && data.priorities.chapters.length > 0 ? ['prioridades'] as TabId[] : []),
     ...(data.editions.length > 0 ? ['simulado'] as TabId[] : []),
     ...(data.discursive.length > 0 || data.protocols.length > 0 || data.playbook ? ['segunda-fase'] as TabId[] : []),
@@ -92,9 +93,9 @@ export default function ProvaBanca() {
         ? <Panel className="p-5"><p>Carregando as provas…</p></Panel>
         : active === 'visao' ? <VisaoGeral board={board} data={data} go={go} tabs={tabs} />
         : active === 'estrategia' ? <Estrategia playbook={data.playbook!} />
-        : active === 'materias' ? <Materias board={board} playbook={data.playbook!} priorities={data.priorities} theory={data.theory} />
-        : active === 'teoria' ? <Teoria board={board} priorities={data.priorities!} theory={data.theory!} />
-        : active === 'prioridades' ? <Prioridades board={board} priorities={data.priorities!} theory={data.theory} />
+        : active === 'materias' ? <Materias board={board} playbook={data.playbook!} priorities={data.priorities} theory={data.theory?.chapters} hasDiscursiveTheory={Boolean(data.theory?.discursive.length)} />
+        : active === 'teoria' ? <BoardTheoryView boardName={board.name} questionBoard={board.questionBoard} priorities={data.priorities} theory={data.theory!} />
+        : active === 'prioridades' ? <Prioridades board={board} priorities={data.priorities!} theory={data.theory?.chapters} />
         : active === 'simulado' ? <ExamSimulator questions={questions} board={board.questionBoard!} boardName={board.name} defaultMinutes={240} />
         : <SegundaFase board={board} data={data} />}
     </div>
@@ -102,7 +103,7 @@ export default function ProvaBanca() {
 }
 
 type BoardData = {
-  theory?: Record<string, ChapterTheory>;
+  theory?: BoardTheory;
   playbook?: ExamPlaybook;
   editions: ReturnType<typeof examEditions>;
   priorities: BoardPriorities | null;
@@ -205,7 +206,7 @@ function Estrategia({ playbook }: { playbook: ExamPlaybook }) {
   );
 }
 
-function Materias({ board, playbook, priorities, theory }: { board: ExamBoardEntry; playbook: ExamPlaybook; priorities: BoardPriorities | null; theory?: Record<string, ChapterTheory> }) {
+function Materias({ board, playbook, priorities, theory, hasDiscursiveTheory }: { board: ExamBoardEntry; playbook: ExamPlaybook; priorities: BoardPriorities | null; theory?: BoardTheory['chapters']; hasDiscursiveTheory: boolean }) {
   const [subject, setSubject] = useState(playbook.subjects[0].subject);
   const current = playbook.subjects.find((s) => s.subject === subject) ?? playbook.subjects[0];
   const chapters = priorities?.chapters.filter((c) => c.subject === current.subject) ?? [];
@@ -263,14 +264,17 @@ function Materias({ board, playbook, priorities, theory }: { board: ExamBoardEnt
           <div className="flex flex-wrap gap-2 text-xs">{current.discursive.recurring.map((r) => <span key={r} className={CHIP}>{r}</span>)}</div>
           <h3 className="font-medium text-sm">Antes de passar a limpo</h3>
           <ul className="text-sm space-y-1">{current.discursive.checklist.map((c) => <li key={c} className="flex gap-2"><ListChecks className="w-4 h-4 shrink-0 mt-0.5" aria-hidden />{c}</li>)}</ul>
-          <Link className={LINK} to={`/treino-2a-fase?banca=${encodeURIComponent(board.discursiveBoard ?? board.name)}`}>Treinar discursivas</Link>
+          <div className="flex flex-wrap gap-4">
+            {hasDiscursiveTheory && <Link className={LINK} to={`/provas/${board.slug}/teoria?parte=discursivas&materia=${encodeURIComponent(current.subject)}`}>Teoria das discursivas de {current.subject}</Link>}
+            <Link className={LINK} to={`/treino-2a-fase?banca=${encodeURIComponent(board.discursiveBoard ?? board.name)}`}>Treinar discursivas</Link>
+          </div>
         </Panel>
       )}
     </div>
   );
 }
 
-function Prioridades({ board, priorities, theory }: { board: ExamBoardEntry; priorities: BoardPriorities; theory?: Record<string, ChapterTheory> }) {
+function Prioridades({ board, priorities, theory }: { board: ExamBoardEntry; priorities: BoardPriorities; theory?: BoardTheory['chapters'] }) {
   const subjects = [...new Set(priorities.chapters.map((p) => p.subject))];
   const oldest = priorities.years[priorities.years.length - 1];
   return (
@@ -316,7 +320,10 @@ function SegundaFase({ board, data }: { board: ExamBoardEntry; data: BoardData }
           {data.discursive.length > 0 && (
             <>
               <p className="text-sm">{data.discursive.length} questões reais no Crivo: {Object.entries(bySubject).map(([s, n]) => `${s} ${n}`).join(', ')}. Escreva a resposta e peça a correção do CRIVO, que compara com a resposta-modelo pelo critério da banca.</p>
-              <Link className={LINK} to={`/treino-2a-fase?banca=${encodeURIComponent(board.discursiveBoard!)}`}>Treinar discursivas da {board.name}</Link>
+              <div className="flex flex-wrap gap-4">
+                {data.theory && data.theory.discursive.length > 0 && <Link className={LINK} to={`/provas/${board.slug}/teoria?parte=discursivas`}>Teoria dos temas que mais caem</Link>}
+                <Link className={LINK} to={`/treino-2a-fase?banca=${encodeURIComponent(board.discursiveBoard!)}`}>Treinar discursivas da {board.name}</Link>
+              </div>
             </>
           )}
         </Panel>
@@ -356,79 +363,7 @@ function SegundaFase({ board, data }: { board: ExamBoardEntry; data: BoardData }
 }
 
 
-function TheoryLink({ board, theory, topicId, chapter }: { board: ExamBoardEntry; theory?: Record<string, ChapterTheory>; topicId: string; chapter: string }) {
+function TheoryLink({ board, theory, topicId, chapter }: { board: ExamBoardEntry; theory?: BoardTheory['chapters']; topicId: string; chapter: string }) {
   if (!theory?.[theoryKey(topicId, chapter)]) return <span className="ml-auto" />;
   return <Link className={`${LINK} ml-auto`} to={`/provas/${board.slug}/teoria?capitulo=${encodeURIComponent(theoryKey(topicId, chapter))}`}>Teoria</Link>;
-}
-
-function Teoria({ board, priorities, theory }: { board: ExamBoardEntry; priorities: BoardPriorities; theory: Record<string, ChapterTheory> }) {
-  const [params] = useSearchParams();
-  const requested = params.get('capitulo');
-  const chapters = priorities.chapters.filter((c) => theory[theoryKey(c.topicId, c.chapter)]);
-  const subjects = [...new Set(chapters.map((c) => c.subject))];
-  const requestedChapter = chapters.find((c) => theoryKey(c.topicId, c.chapter) === requested);
-  const [subject, setSubject] = useState(requestedChapter?.subject ?? subjects[0]);
-  const target = useRef<HTMLDetailsElement>(null);
-
-  // Vindo de "Teoria" na lista de prioridades, o capítulo pedido abre já
-  // aberto e na tela; sem isso o link caía no topo da matéria errada.
-  useEffect(() => { target.current?.scrollIntoView?.({ block: 'start' }); }, [requested]);
-
-  return (
-    <div className="space-y-4">
-      <Panel className="p-5 space-y-2">
-        <h2 className="text-lg font-semibold">Teoria no recorte da {board.name}</h2>
-        <p className="text-sm">Para cada capítulo que mais se repete: como ele caiu nas provas reais, o conceito, as fórmulas, um exemplo resolvido e as armadilhas. Os exemplos têm números próprios, para não entregar as questões que você vai fazer no simulado.</p>
-      </Panel>
-      <div role="group" aria-label="Matéria" className="flex flex-wrap gap-2">
-        {subjects.map((s) => (
-          <Button key={s} size="sm" variant={s === subject ? 'primary' : 'secondary'} aria-pressed={s === subject} onClick={() => setSubject(s)}>{s}</Button>
-        ))}
-      </div>
-      {chapters.filter((c) => c.subject === subject).map((c) => {
-        const key = theoryKey(c.topicId, c.chapter);
-        const t = theory[key];
-        const isTarget = key === requested;
-        return (
-          <details key={key} ref={isTarget ? target : undefined} open={isTarget || undefined} className="ni-panel p-5 space-y-4 scroll-mt-24">
-            <summary className="cursor-pointer flex flex-wrap items-center gap-x-3 gap-y-1">
-              <span aria-label={c.stars === 2 ? 'muito frequente' : 'frequente'}>{c.stars === 2 ? '★★' : '★'}</span>
-              <span className="font-semibold">{c.chapter}</span>
-              <span className="text-xs">{c.years.join(', ')}</span>
-            </summary>
-            <div className="mt-4 space-y-4">
-              <p className="text-sm rounded-lg border border-[var(--line)] p-3"><b>Como cai na {board.name}: </b>{t.howItFalls}</p>
-              <div className="space-y-2">
-                <h3 className="font-medium flex items-center gap-2"><BookOpen className="w-4 h-4" aria-hidden /> O que você precisa saber</h3>
-                <ul className="text-sm space-y-2 list-disc pl-5">{t.concepts.map((x) => <li key={x}>{x}</li>)}</ul>
-              </div>
-              {t.formulas && (
-                <div className="flex flex-wrap gap-2 text-sm">{t.formulas.map((f) => <span key={f} className={CHIP}>{f}</span>)}</div>
-              )}
-              <div className="space-y-2">
-                <h3 className="font-medium">Exemplo</h3>
-                <p className="text-sm">{t.example.prompt}</p>
-                <details className="text-sm">
-                  <summary className="cursor-pointer underline underline-offset-2">Tente antes; depois veja a resolução</summary>
-                  <ol className="mt-2 list-decimal pl-5 space-y-1">{t.example.steps.map((x) => <li key={x}>{x}</li>)}</ol>
-                </details>
-              </div>
-              <div className="space-y-2">
-                <h3 className="font-medium flex items-center gap-2"><AlertTriangle className="w-4 h-4" style={{ color: 'var(--status-warning)' }} aria-hidden /> Armadilhas</h3>
-                <ul className="grid gap-3 md:grid-cols-2">
-                  {t.traps.map((x) => (
-                    <li key={x.trap} className="text-sm rounded-lg border border-[var(--line)] p-3 space-y-1">
-                      <p className="font-medium">{x.trap}</p>
-                      <p className="flex gap-2"><CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: 'var(--status-success)' }} aria-hidden />{x.fix}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <Link className={LINK} to={`/questoes?board=${board.questionBoard}&topic=${encodeURIComponent(c.topicId)}&chapter=${encodeURIComponent(c.chapter)}`}>Treinar com as questões da {board.name}</Link>
-            </div>
-          </details>
-        );
-      })}
-    </div>
-  );
 }

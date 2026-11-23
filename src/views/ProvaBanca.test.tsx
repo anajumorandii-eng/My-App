@@ -57,7 +57,7 @@ it('lista as bancas com a de estratégia completa primeiro', () => {
 it('a página da Famerp traz estratégia, matérias, prioridades, simulado e discursivas', () => {
   renderAt('/provas/famerp');
   const tabs = screen.getAllByRole('tab').map((t) => t.textContent);
-  expect(tabs).toEqual(['Visão geral', 'Estratégia de prova', 'Como cada matéria cobra', 'O que mais cai', 'Simulado', 'Discursivas e redação']);
+  expect(tabs).toEqual(['Visão geral', 'Estratégia de prova', 'Como cada matéria cobra', 'Teoria do que mais cai', 'O que mais cai', 'Simulado', 'Discursivas e redação']);
 });
 
 it('banca sem conteúdo próprio não ganha aba vazia', () => {
@@ -138,6 +138,17 @@ it('abre a teoria do capítulo pedido, com a resolução escondida até ela tent
   const card = screen.getByText('Porcentagem').closest('details')!;
   expect(card).toHaveAttribute('open');
   expect(within(card).getByText(/Como cai na Famerp/)).toBeInTheDocument();
-  const solution = within(card).getByText('Tente antes; depois veja a resolução').closest('details')!;
+  const solution = within(card).getAllByText('Tente antes; depois veja a resolução')[0].closest('details')!;
   expect(solution).not.toHaveAttribute('open');
+});
+
+it('a teoria das discursivas abre na matéria pedida e esconde a resposta-modelo até ela escrever', async () => {
+  renderAt('/provas/famerp/teoria?parte=discursivas&materia=Qu%C3%ADmica');
+  expect(screen.getByRole('button', { name: 'Química' })).toHaveAttribute('aria-pressed', 'true');
+  const card = screen.getByText('Pilhas, eletrólise e corrosão').closest('details')!;
+  fireEvent.click(within(card).getByText('Pilhas, eletrólise e corrosão'));
+  expect(await within(card).findByText('O mecanismo')).toBeInTheDocument();
+  expect(within(card).getByText('Treino discursivo')).toBeInTheDocument();
+  const model = within(card).getByText(/Escreva sua resposta/).closest('details')!;
+  expect(model).not.toHaveAttribute('open');
 });

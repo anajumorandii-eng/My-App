@@ -1,29 +1,82 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import katex from 'katex';
 import type { Question } from '../types.ts';
 import { boardPriorities } from './boardPrep.ts';
-import { famerpTheory } from '../data/examTheory/famerp.ts';
+import { famerpDiscursiveThemes, famerpTheory } from '../data/examTheory/famerp/index.ts';
+import type { ChapterTheory } from '../data/examTheory/types.ts';
+import { famerp2022Discursive } from '../data/discursiveFamerp2022.ts';
+import { famerp2023Discursive } from '../data/discursiveFamerp2023.ts';
+import { famerp2024Discursive } from '../data/discursiveFamerp2024.ts';
+import { famerp2025Discursive } from '../data/discursiveFamerp2025.ts';
+import { famerp2026Discursive } from '../data/discursiveFamerp2026.ts';
 
 const bank = JSON.parse(readFileSync(new URL('../../public/questions.json', import.meta.url), 'utf8')) as Question[];
 const priorityKeys = boardPriorities(bank, 'FAMERP').chapters.map((c) => `${c.topicId}::${c.chapter}`);
+const NATUREZA = new Set(['Biologia', 'Química', 'Física']);
 
-describe('teoria da Famerp', () => {
-  it('todo capítulo que mais cai tem teoria', () => {
-    const missing = priorityKeys.filter((k) => !famerpTheory[k]);
-    assert.deepEqual(missing, [], 'importar um ano novo criou prioridade sem teoria');
-  });
+// Toda fórmula do texto passa pelo KaTeX em modo estrito de erro: uma barra
+// esquecida no LaTeX vira texto vermelho na tela, e isso não aparece no tsc.
+function mathOf(text: string): string[] {
+  return [...text.matchAll(/\$\$([\s\S]+?)\$\$|\$([^$\n]+?)\$/g)].map((m) => m[1] ?? m[2]);
+}
+function allText(t: ChapterTheory): string[] {
+  return [t.howItFalls, t.explanation, ...(t.formulas ?? []).map((f) => f.meaning), ...t.applications, ...t.strategy,
+    ...t.examples.flatMap((e) => [e.prompt, ...e.steps]), ...(t.discursive ? [t.discursive.prompt, ...t.discursive.modelAnswer, ...t.discursive.scoring] : []),
+    ...t.traps.flatMap((x) => [x.trap, x.fix])];
+}
+function assertDeep(key: string, t: ChapterTheory) {
+  assert.ok(t.explanation.length > 600, `${key}: explicação rasa`);
+  assert.ok(t.applications.length >= 3, `${key}: onde se aplica`);
+  assert.ok(t.strategy.length >= 2, `${key}: estratégia`);
+  assert.ok(t.examples.length >= 1 && t.examples.every((e) => e.steps.length >= 1), `${key}: exemplos`);
+  assert.ok(t.traps.length >= 2, `${key}: armadilhas`);
+  for (const f of t.formulas ?? []) assert.doesNotThrow(() => katex.renderToString(f.tex, { throwOnError: true }), `${key}: ${f.tex}`);
+  for (const text of allText(t)) for (const tex of mathOf(text)) {
+    assert.doesNotThrow(() => katex.renderToString(tex, { throwOnError: true }), `${key}: $${tex}$`);
+    // "16/1,6×10⁻¹⁹" compila no KaTeX e lê-se (16/1,6)×10⁻¹⁹: denominador em
+    // notação científica precisa de \frac ou parênteses. A revisão pegou dois.
+    assert.doesNotMatch(tex, /\/\s*[\d{},.]+\s*\\times\s*10/, `${key}: denominador sem agrupar em $${tex}$`);
+  }
+}
 
-  it('não sobra teoria de capítulo que deixou de ser prioridade', () => {
+describe('teoria da Famerp: objetiva', () => {
+  it('todo capítulo que mais cai tem teoria, e não sobra teoria órfã', () => {
+    assert.deepEqual(priorityKeys.filter((k) => !famerpTheory[k]), [], 'importar um ano novo criou prioridade sem teoria');
     assert.deepEqual(Object.keys(famerpTheory).filter((k) => !priorityKeys.includes(k)), []);
   });
 
-  it('cada capítulo traz conceito, exemplo resolvido e armadilhas com a correção', () => {
+  it('cada capítulo é aprofundado e suas fórmulas compilam', () => {
+    for (const [key, t] of Object.entries(famerpTheory)) assertDeep(key, t);
+  });
+
+  it('capítulo de Biologia, Química ou Física traz discursiva com resposta-modelo e critério', () => {
+    const subjectOf = new Map(boardPriorities(bank, 'FAMERP').chapters.map((c) => [`${c.topicId}::${c.chapter}`, c.subject]));
     for (const [key, t] of Object.entries(famerpTheory)) {
-      assert.ok(t.howItFalls.length > 60, `${key}: como cai`);
-      assert.ok(t.concepts.length >= 3, `${key}: conceitos`);
-      assert.ok(t.example.steps.length >= 2, `${key}: resolução`);
-      assert.ok(t.traps.length >= 2 && t.traps.every((x) => x.fix.length > 10), `${key}: armadilhas`);
+      if (!NATUREZA.has(subjectOf.get(key)!)) continue;
+      assert.ok(t.discursive && t.discursive.modelAnswer.length >= 2 && t.discursive.scoring.length >= 2, `${key}: discursiva`);
+    }
+  });
+});
+
+describe('teoria da Famerp: discursivas', () => {
+  const realYears = new Map<string, Set<number>>();
+  for (const q of [...famerp2022Discursive, ...famerp2023Discursive, ...famerp2024Discursive, ...famerp2025Discursive, ...famerp2026Discursive]) {
+    if (!realYears.has(q.subject)) realYears.set(q.subject, new Set());
+    realYears.get(q.subject)!.add(q.year);
+  }
+
+  it('cobre as três matérias do 2º dia, com ids únicos e anos que existem no banco', () => {
+    assert.deepEqual(new Set(famerpDiscursiveThemes.map((t) => t.subject)), NATUREZA);
+    assert.equal(new Set(famerpDiscursiveThemes.map((t) => t.id)).size, famerpDiscursiveThemes.length);
+    for (const t of famerpDiscursiveThemes) for (const y of t.years) assert.ok(realYears.get(t.subject)!.has(y), `${t.id}: ${y}`);
+  });
+
+  it('cada tema é aprofundado, com discursiva de treino, e suas fórmulas compilam', () => {
+    for (const t of famerpDiscursiveThemes) {
+      assertDeep(t.id, t);
+      assert.ok(t.discursive && t.discursive.modelAnswer.length >= 2, `${t.id}: discursiva`);
     }
   });
 });
