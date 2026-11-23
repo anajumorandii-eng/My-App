@@ -2,10 +2,10 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "77e40bace5e5f3cff8b4f6e4093599a45854fffd",
-  "generated_at_utc": "2026-11-22T00:12:09Z",
+  "source_commit": "f86fc176cfd60cc7284df8201a9992dc913ef79e",
+  "generated_at_utc": "2026-11-23T15:05:53Z",
   "changed_files": [
-    "docs/estudos-2026/GUIA-INCIDENCIA-UNESP-2023-2026.md"
+    "docs/estudos-2026/GUIA-FAMERP-2027.md"
   ],
   "next_session": {
     "mode": "delta-only",
