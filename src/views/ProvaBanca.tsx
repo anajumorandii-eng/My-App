@@ -1,6 +1,6 @@
-import React, { useMemo, useState } from 'react';
-import { Link, Navigate, useNavigate, useParams } from 'react-router-dom';
-import { AlertTriangle, ArrowLeft, CalendarClock, CheckCircle2, ListChecks, PenLine, Target } from 'lucide-react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { AlertTriangle, ArrowLeft, BookOpen, CalendarClock, CheckCircle2, ListChecks, PenLine, Target } from 'lucide-react';
 import { useQuestions } from '../hooks/useQuestions';
 import { Panel } from '../components/ui/Panel';
 import { Button } from '../components/ui/Button';
@@ -12,14 +12,16 @@ import { playbookFor, type ExamPlaybook, type PlaybookStep } from '../data/examP
 import { studyBoardProfiles } from '../data/studyProtocols';
 import { secondPhaseProtocols } from '../data/resolutionStrategies';
 import { boardPriorities, countdownPlan, examEditions, type BoardPriorities } from '../lib/boardPrep';
+import { theoryFor, theoryKey, type ChapterTheory } from '../data/examTheory';
 import { CHIP, LINK, daysLabel, formatExamDate } from './Provas';
 
-type TabId = 'visao' | 'estrategia' | 'materias' | 'prioridades' | 'simulado' | 'segunda-fase';
+type TabId = 'visao' | 'estrategia' | 'materias' | 'teoria' | 'prioridades' | 'simulado' | 'segunda-fase';
 
 const TAB_LABELS: Record<TabId, string> = {
   visao: 'Visão geral',
   estrategia: 'Estratégia de prova',
   materias: 'Como cada matéria cobra',
+  teoria: 'Teoria do que mais cai',
   prioridades: 'O que mais cai',
   simulado: 'Simulado',
   'segunda-fase': 'Discursivas e redação',
@@ -46,7 +48,8 @@ export default function ProvaBanca() {
     const protocols = board.protocolBoard ? secondPhaseProtocols.filter((p) => p.board === board.protocolBoard) : [];
     const profile = board.profileBoard ? studyBoardProfiles.find((p) => p.board === board.profileBoard) : undefined;
     const upcoming = board.calendarBoard ? examsForBoard(board.calendarBoard) : [];
-    return { playbook, editions, priorities, discursive, protocols, profile, upcoming };
+    const theory = theoryFor(board.slug);
+    return { theory, playbook, editions, priorities, discursive, protocols, profile, upcoming };
   }, [board, questions]);
 
   if (!board || !data) return <Navigate to="/provas" replace />;
@@ -56,6 +59,7 @@ export default function ProvaBanca() {
   const tabs: TabId[] = [
     'visao',
     ...(data.playbook ? ['estrategia', 'materias'] as TabId[] : []),
+    ...(data.priorities?.chapters.some((c) => data.theory?.[theoryKey(c.topicId, c.chapter)]) ? ['teoria'] as TabId[] : []),
     ...(data.priorities && data.priorities.chapters.length > 0 ? ['prioridades'] as TabId[] : []),
     ...(data.editions.length > 0 ? ['simulado'] as TabId[] : []),
     ...(data.discursive.length > 0 || data.protocols.length > 0 || data.playbook ? ['segunda-fase'] as TabId[] : []),
@@ -84,12 +88,13 @@ export default function ProvaBanca() {
         ))}
       </div>
 
-      {loading && questions.length === 0 && (active === 'prioridades' || active === 'simulado')
+      {loading && questions.length === 0 && (active === 'prioridades' || active === 'simulado' || active === 'teoria')
         ? <Panel className="p-5"><p>Carregando as provas…</p></Panel>
         : active === 'visao' ? <VisaoGeral board={board} data={data} go={go} tabs={tabs} />
         : active === 'estrategia' ? <Estrategia playbook={data.playbook!} />
-        : active === 'materias' ? <Materias board={board} playbook={data.playbook!} priorities={data.priorities} />
-        : active === 'prioridades' ? <Prioridades board={board} priorities={data.priorities!} />
+        : active === 'materias' ? <Materias board={board} playbook={data.playbook!} priorities={data.priorities} theory={data.theory} />
+        : active === 'teoria' ? <Teoria board={board} priorities={data.priorities!} theory={data.theory!} />
+        : active === 'prioridades' ? <Prioridades board={board} priorities={data.priorities!} theory={data.theory} />
         : active === 'simulado' ? <ExamSimulator questions={questions} board={board.questionBoard!} boardName={board.name} defaultMinutes={240} />
         : <SegundaFase board={board} data={data} />}
     </div>
@@ -97,6 +102,7 @@ export default function ProvaBanca() {
 }
 
 type BoardData = {
+  theory?: Record<string, ChapterTheory>;
   playbook?: ExamPlaybook;
   editions: ReturnType<typeof examEditions>;
   priorities: BoardPriorities | null;
@@ -174,6 +180,7 @@ function VisaoGeral({ board, data, go, tabs }: { board: ExamBoardEntry; data: Bo
         <h2 className="text-lg font-semibold">O que você tem no Crivo</h2>
         <ul className="text-sm space-y-2">
           {tabs.includes('estrategia') && <li><button type="button" className={LINK} onClick={() => go('estrategia')}>Estratégia para cada dia de prova</button></li>}
+          {tabs.includes('teoria') && <li><button type="button" className={LINK} onClick={() => go('teoria')}>Teoria de cada capítulo que mais cai, no recorte da banca</button></li>}
           {tabs.includes('materias') && <li><button type="button" className={LINK} onClick={() => go('materias')}>Como cada matéria é cobrada, com método e armadilhas</button></li>}
           {data.priorities && data.priorities.chapters.length > 0 && <li><button type="button" className={LINK} onClick={() => go('prioridades')}>{data.priorities.chapters.length} capítulos que se repetem em {data.priorities.years.length} provas</button></li>}
           {data.editions.length > 0 && <li><button type="button" className={LINK} onClick={() => go('simulado')}>{data.editions.length} {data.editions.length === 1 ? 'prova real' : 'provas reais'} para simulado com cronômetro</button></li>}
@@ -198,7 +205,7 @@ function Estrategia({ playbook }: { playbook: ExamPlaybook }) {
   );
 }
 
-function Materias({ board, playbook, priorities }: { board: ExamBoardEntry; playbook: ExamPlaybook; priorities: BoardPriorities | null }) {
+function Materias({ board, playbook, priorities, theory }: { board: ExamBoardEntry; playbook: ExamPlaybook; priorities: BoardPriorities | null; theory?: Record<string, ChapterTheory> }) {
   const [subject, setSubject] = useState(playbook.subjects[0].subject);
   const current = playbook.subjects.find((s) => s.subject === subject) ?? playbook.subjects[0];
   const chapters = priorities?.chapters.filter((c) => c.subject === current.subject) ?? [];
@@ -223,7 +230,8 @@ function Materias({ board, playbook, priorities }: { board: ExamBoardEntry; play
                   <li key={`${c.topicId}-${c.chapter}`} className="flex flex-wrap items-center gap-2 text-sm">
                     <span aria-label={c.stars === 2 ? 'muito frequente' : 'frequente'}>{c.stars === 2 ? '★★' : '★'}</span>
                     <span>{c.chapter}</span>
-                    <Link className={`${LINK} ml-auto`} to={`/questoes?board=${board.questionBoard}&topic=${encodeURIComponent(c.topicId)}&chapter=${encodeURIComponent(c.chapter)}`}>Treinar</Link>
+                    <TheoryLink board={board} theory={theory} topicId={c.topicId} chapter={c.chapter} />
+                    <Link className={LINK} to={`/questoes?board=${board.questionBoard}&topic=${encodeURIComponent(c.topicId)}&chapter=${encodeURIComponent(c.chapter)}`}>Treinar</Link>
                   </li>
                 ))}
               </ul>
@@ -262,7 +270,7 @@ function Materias({ board, playbook, priorities }: { board: ExamBoardEntry; play
   );
 }
 
-function Prioridades({ board, priorities }: { board: ExamBoardEntry; priorities: BoardPriorities }) {
+function Prioridades({ board, priorities, theory }: { board: ExamBoardEntry; priorities: BoardPriorities; theory?: Record<string, ChapterTheory> }) {
   const subjects = [...new Set(priorities.chapters.map((p) => p.subject))];
   const oldest = priorities.years[priorities.years.length - 1];
   return (
@@ -282,7 +290,8 @@ function Prioridades({ board, priorities }: { board: ExamBoardEntry; priorities:
                   <span aria-label={p.stars === 2 ? 'muito frequente' : 'frequente'}>{p.stars === 2 ? '★★' : '★'}</span>
                   <span className="font-medium">{p.chapter}</span>
                   <span className="text-xs">{p.years.join(', ')} · {p.count} questões</span>
-                  <Link className={`${LINK} ml-auto`} to={`/questoes?board=${board.questionBoard}&topic=${encodeURIComponent(p.topicId)}&chapter=${encodeURIComponent(p.chapter)}`}>Treinar</Link>
+                  <TheoryLink board={board} theory={theory} topicId={p.topicId} chapter={p.chapter} />
+                  <Link className={LINK} to={`/questoes?board=${board.questionBoard}&topic=${encodeURIComponent(p.topicId)}&chapter=${encodeURIComponent(p.chapter)}`}>Treinar</Link>
                 </li>
               ))}
             </ul>
@@ -346,3 +355,80 @@ function SegundaFase({ board, data }: { board: ExamBoardEntry; data: BoardData }
   );
 }
 
+
+function TheoryLink({ board, theory, topicId, chapter }: { board: ExamBoardEntry; theory?: Record<string, ChapterTheory>; topicId: string; chapter: string }) {
+  if (!theory?.[theoryKey(topicId, chapter)]) return <span className="ml-auto" />;
+  return <Link className={`${LINK} ml-auto`} to={`/provas/${board.slug}/teoria?capitulo=${encodeURIComponent(theoryKey(topicId, chapter))}`}>Teoria</Link>;
+}
+
+function Teoria({ board, priorities, theory }: { board: ExamBoardEntry; priorities: BoardPriorities; theory: Record<string, ChapterTheory> }) {
+  const [params] = useSearchParams();
+  const requested = params.get('capitulo');
+  const chapters = priorities.chapters.filter((c) => theory[theoryKey(c.topicId, c.chapter)]);
+  const subjects = [...new Set(chapters.map((c) => c.subject))];
+  const requestedChapter = chapters.find((c) => theoryKey(c.topicId, c.chapter) === requested);
+  const [subject, setSubject] = useState(requestedChapter?.subject ?? subjects[0]);
+  const target = useRef<HTMLDetailsElement>(null);
+
+  // Vindo de "Teoria" na lista de prioridades, o capítulo pedido abre já
+  // aberto e na tela; sem isso o link caía no topo da matéria errada.
+  useEffect(() => { target.current?.scrollIntoView?.({ block: 'start' }); }, [requested]);
+
+  return (
+    <div className="space-y-4">
+      <Panel className="p-5 space-y-2">
+        <h2 className="text-lg font-semibold">Teoria no recorte da {board.name}</h2>
+        <p className="text-sm">Para cada capítulo que mais se repete: como ele caiu nas provas reais, o conceito, as fórmulas, um exemplo resolvido e as armadilhas. Os exemplos têm números próprios, para não entregar as questões que você vai fazer no simulado.</p>
+      </Panel>
+      <div role="group" aria-label="Matéria" className="flex flex-wrap gap-2">
+        {subjects.map((s) => (
+          <Button key={s} size="sm" variant={s === subject ? 'primary' : 'secondary'} aria-pressed={s === subject} onClick={() => setSubject(s)}>{s}</Button>
+        ))}
+      </div>
+      {chapters.filter((c) => c.subject === subject).map((c) => {
+        const key = theoryKey(c.topicId, c.chapter);
+        const t = theory[key];
+        const isTarget = key === requested;
+        return (
+          <details key={key} ref={isTarget ? target : undefined} open={isTarget || undefined} className="ni-panel p-5 space-y-4 scroll-mt-24">
+            <summary className="cursor-pointer flex flex-wrap items-center gap-x-3 gap-y-1">
+              <span aria-label={c.stars === 2 ? 'muito frequente' : 'frequente'}>{c.stars === 2 ? '★★' : '★'}</span>
+              <span className="font-semibold">{c.chapter}</span>
+              <span className="text-xs">{c.years.join(', ')}</span>
+            </summary>
+            <div className="mt-4 space-y-4">
+              <p className="text-sm rounded-lg border border-[var(--line)] p-3"><b>Como cai na {board.name}: </b>{t.howItFalls}</p>
+              <div className="space-y-2">
+                <h3 className="font-medium flex items-center gap-2"><BookOpen className="w-4 h-4" aria-hidden /> O que você precisa saber</h3>
+                <ul className="text-sm space-y-2 list-disc pl-5">{t.concepts.map((x) => <li key={x}>{x}</li>)}</ul>
+              </div>
+              {t.formulas && (
+                <div className="flex flex-wrap gap-2 text-sm">{t.formulas.map((f) => <span key={f} className={CHIP}>{f}</span>)}</div>
+              )}
+              <div className="space-y-2">
+                <h3 className="font-medium">Exemplo</h3>
+                <p className="text-sm">{t.example.prompt}</p>
+                <details className="text-sm">
+                  <summary className="cursor-pointer underline underline-offset-2">Tente antes; depois veja a resolução</summary>
+                  <ol className="mt-2 list-decimal pl-5 space-y-1">{t.example.steps.map((x) => <li key={x}>{x}</li>)}</ol>
+                </details>
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-medium flex items-center gap-2"><AlertTriangle className="w-4 h-4" style={{ color: 'var(--status-warning)' }} aria-hidden /> Armadilhas</h3>
+                <ul className="grid gap-3 md:grid-cols-2">
+                  {t.traps.map((x) => (
+                    <li key={x.trap} className="text-sm rounded-lg border border-[var(--line)] p-3 space-y-1">
+                      <p className="font-medium">{x.trap}</p>
+                      <p className="flex gap-2"><CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color: 'var(--status-success)' }} aria-hidden />{x.fix}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <Link className={LINK} to={`/questoes?board=${board.questionBoard}&topic=${encodeURIComponent(c.topicId)}&chapter=${encodeURIComponent(c.chapter)}`}>Treinar com as questões da {board.name}</Link>
+            </div>
+          </details>
+        );
+      })}
+    </div>
+  );
+}

@@ -123,3 +123,21 @@ it('recupera a prova em andamento salva pela antiga tela da Famerp', () => {
   expect(localStorage.getItem('crivo-famerp-simulado-v1:aj')).toBeNull();
   expect(JSON.parse(localStorage.getItem('crivo-simulado-v1:aj')!)).toMatchObject({ board: 'FAMERP', version: 'V1', year: 2024 });
 });
+
+it('abre a teoria do capítulo pedido, com a resolução escondida até ela tentar', () => {
+  const pct = (year: number): Question => ({ ...question(41, year), id: `famerp_${year}_pct`, topicId: 'mat_aritmetica_proporcionalidade', subject: 'Matemática', chapter: 'Porcentagem', examSource: { board: 'FAMERP', year, questionNumber: 41, version: 'V1' } });
+  questionsHook.mockReturnValue({ questions: [...exam(2025), ...exam(2024), ...exam(2023), pct(2025), pct(2024), pct(2023)], loading: false });
+
+  renderAt('/provas/famerp/prioridades');
+  const link = screen.getByRole('link', { name: 'Teoria' });
+  expect(link).toHaveAttribute('href', '/provas/famerp/teoria?capitulo=mat_aritmetica_proporcionalidade%3A%3APorcentagem');
+  cleanup();
+
+  renderAt('/provas/famerp/teoria?capitulo=mat_aritmetica_proporcionalidade%3A%3APorcentagem');
+  expect(screen.getByRole('button', { name: 'Matemática' })).toHaveAttribute('aria-pressed', 'true');
+  const card = screen.getByText('Porcentagem').closest('details')!;
+  expect(card).toHaveAttribute('open');
+  expect(within(card).getByText(/Como cai na Famerp/)).toBeInTheDocument();
+  const solution = within(card).getByText('Tente antes; depois veja a resolução').closest('details')!;
+  expect(solution).not.toHaveAttribute('open');
+});
