@@ -1,24 +1,25 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, Clock, Flag, ListChecks, PenLine, XCircle } from 'lucide-react';
-import { useAuth } from '../context/AuthContext';
-import { useQuestions } from '../hooks/useQuestions';
-import { useUserMastery } from '../hooks/useUserMastery';
-import { QuestionStatement } from '../components/QuestionStatement';
-import { Panel } from '../components/ui/Panel';
-import { Button } from '../components/ui/Button';
-import { addUserAttempt, addUserErrorLog } from '../lib/userData';
-import { applyReviewOutcome, qualityFromAnswerCorrectness } from '../lib/spacedRepetition';
-import { discursiveQuestions } from '../data/discursiveQuestions';
-import type { Question, TopicMastery } from '../types';
+import { CheckCircle2, Clock, Flag, XCircle } from 'lucide-react';
+import { useAuth } from '../../context/AuthContext';
+import { useUserMastery } from '../../hooks/useUserMastery';
+import { QuestionStatement } from '../QuestionStatement';
+import { Panel } from '../ui/Panel';
+import { Button } from '../ui/Button';
+import { addUserAttempt, addUserErrorLog } from '../../lib/userData';
+import { applyReviewOutcome, qualityFromAnswerCorrectness } from '../../lib/spacedRepetition';
+import type { Question, TopicMastery } from '../../types';
 import {
-  buildFamerpExam, famerpPriorities, famerpYears, formatClock, parseSimuladoState, scoreSimulado, secondsRemaining,
+  buildExam, examEditions, formatClock, parseSimuladoState, scoreSimulado, secondsRemaining,
   type SimuladoState,
-} from '../lib/famerpPrep';
+} from '../../lib/boardPrep';
+import { canonicalExamBoard } from '../../lib/questionExamFilters';
 
-type Tab = 'simulado' | 'prioridades' | 'segundo-dia';
-
-const storageKey = (uid: string | undefined) => `crivo-famerp-simulado-v1:${uid ?? 'guest'}`;
+// Um simulado por vez por estudante, de qualquer banca: a chave não leva a
+// banca porque não faz sentido manter duas provas de horas abertas ao mesmo
+// tempo, e a tela de outra banca mostra a prova em andamento em vez de
+// apagá-la.
+const storageKey = (uid: string | undefined) => `crivo-simulado-v1:${uid ?? 'guest'}`;
 
 function readState(key: string): SimuladoState | null {
   try { return parseSimuladoState(localStorage.getItem(key)); } catch { return null; }
@@ -27,44 +28,22 @@ function writeState(key: string, state: SimuladoState | null) {
   try { if (state) localStorage.setItem(key, JSON.stringify(state)); else localStorage.removeItem(key); } catch { /* sem armazenamento: a prova segue só na memória */ }
 }
 
-export default function Famerp() {
-  const [tab, setTab] = useState<Tab>('simulado');
-  const { questions, loading } = useQuestions(true);
+const editionLabel = (board: string, year: number, version: string) => `${board} ${year}${version && version !== 'V1' ? ` · ${version}` : ''}`;
 
-  return (
-    <div className="ni-main space-y-5">
-      <div className="ni-title">
-        <h1 className="text-2xl font-semibold">Famerp</h1>
-        <p className="text-sm text-[var(--text-secondary)]">Provas reais de 2022 a 2026 como simulado, os assuntos que mais se repetem e o treino do 2º dia.</p>
-      </div>
-      <div role="tablist" aria-label="Preparação Famerp" className="flex flex-wrap gap-2">
-        {([['simulado', 'Simulado 1º dia'], ['prioridades', 'Prioridades'], ['segundo-dia', '2º dia e redação']] as const).map(([id, label]) => (
-          <Button key={id} role="tab" aria-selected={tab === id} variant={tab === id ? 'primary' : 'secondary'} size="sm" onClick={() => setTab(id)}>{label}</Button>
-        ))}
-      </div>
-      {loading && questions.length === 0
-        ? <Panel className="p-5"><p>Carregando as provas…</p></Panel>
-        : tab === 'simulado' ? <Simulado questions={questions} />
-        : tab === 'prioridades' ? <Prioridades questions={questions} />
-        : <SegundoDia />}
-    </div>
-  );
-}
-
-function Simulado({ questions }: { questions: Question[] }) {
+export function ExamSimulator({ questions, board, boardName, defaultMinutes }: { questions: Question[]; board: string; boardName: string; defaultMinutes: number }) {
   const { user } = useAuth();
   const { updateMastery } = useUserMastery();
   const key = storageKey(user?.uid);
-  const years = useMemo(() => famerpYears(questions), [questions]);
+  const editions = useMemo(() => examEditions(questions, board), [questions, board]);
   const [state, setStateRaw] = useState<SimuladoState | null>(() => readState(key));
-  const [year, setYear] = useState<number | null>(null);
-  const [minutes, setMinutes] = useState(240);
+  const [editionKey, setEditionKey] = useState<string | null>(null);
+  const [minutes, setMinutes] = useState(defaultMinutes);
   const [index, setIndex] = useState(0);
   const [now, setNow] = useState(() => new Date());
   const [recorded, setRecorded] = useState<'idle' | 'saving' | 'done' | 'error'>('idle');
 
   const setState = (next: SimuladoState | null) => { setStateRaw(next); writeState(key, next); };
-  const exam = useMemo(() => (state ? buildFamerpExam(questions, state.year) : []), [questions, state?.year]);
+  const exam = useMemo(() => (state ? buildExam(questions, state.board, state.year, state.version) : []), [questions, state?.board, state?.year, state?.version]);
 
   useEffect(() => {
     if (!state || state.finishedAt) return;
@@ -72,35 +51,46 @@ function Simulado({ questions }: { questions: Question[] }) {
     return () => window.clearInterval(id);
   }, [state?.startedAt, state?.finishedAt]);
 
-  const chosenYear = year ?? years[years.length - 1] ?? null;
+  // Começa pela edição mais antiga: as recentes ficam para a reta final.
+  const chosen = editions.find((e) => `${e.year}::${e.version}` === editionKey) ?? editions[editions.length - 1] ?? null;
 
   if (!state) {
     return (
       <Panel className="p-5 space-y-4">
         <h2 className="text-lg font-semibold">Prova completa, como no dia</h2>
-        <p className="text-sm">As 80 questões do caderno oficial, na ordem, sem correção até entregar. Para o plano do guia, deixe 2025 e 2026 para as duas últimas semanas.</p>
+        <p className="text-sm">O caderno oficial inteiro, na ordem, sem correção até entregar. Deixe as provas mais recentes para as duas últimas semanas.</p>
         <div className="flex flex-wrap gap-4 items-end">
           <label className="flex flex-col gap-1 text-sm">Ano da prova
-            <select className="ni-input" value={chosenYear ?? ''} onChange={(e) => setYear(Number(e.target.value))}>
-              {years.map((y) => <option key={y} value={y}>Famerp {y}</option>)}
+            <select className="ni-input" value={chosen ? `${chosen.year}::${chosen.version}` : ''} onChange={(e) => setEditionKey(e.target.value)}>
+              {editions.map((e) => <option key={`${e.year}::${e.version}`} value={`${e.year}::${e.version}`}>{editionLabel(boardName, e.year, e.version)} · {e.count} questões</option>)}
             </select>
           </label>
           <label className="flex flex-col gap-1 text-sm">Tempo (minutos)
             <input className="ni-input w-28" type="number" min={30} max={480} step={10} value={minutes} onChange={(e) => setMinutes(Math.max(30, Number(e.target.value) || 30))} />
           </label>
-          <Button disabled={chosenYear === null} onClick={() => { setIndex(0); setRecorded('idle'); setState({ year: chosenYear!, minutes, startedAt: new Date().toISOString(), answers: {} }); }}>Começar simulado</Button>
+          <Button disabled={chosen === null} onClick={() => { setIndex(0); setRecorded('idle'); setState({ board, year: chosen!.year, version: chosen!.version, minutes, startedAt: new Date().toISOString(), answers: {} }); }}>Começar simulado</Button>
         </div>
-        <p className="text-xs text-[var(--text-secondary)]">Use o tempo de prova do edital do Vestibular 2027; o valor inicial é só uma sugestão.</p>
+        <p className="text-xs text-[var(--text-secondary)]">Use o tempo de prova do edital; o valor inicial é só uma sugestão. Ritmo: {(minutes * 60 / Math.max(1, chosen?.count ?? 1) / 60).toFixed(1).replace('.', ',')} min por questão, sem contar o gabarito.</p>
+      </Panel>
+    );
+  }
+
+  if (canonicalExamBoard(state.board) !== canonicalExamBoard(board)) {
+    return (
+      <Panel className="p-5 space-y-3">
+        <p>Há um simulado {state.board} {state.year} {state.finishedAt ? 'entregue, com o resultado ainda aberto' : 'em andamento'} na página dessa banca.</p>
+        <p className="text-sm">Um simulado por vez: termine ou descarte aquele antes de começar outro.</p>
+        <Button variant="secondary" onClick={() => { if (window.confirm('Descartar o outro simulado? As respostas dele serão perdidas.')) setState(null); }}>Descartar e começar aqui</Button>
       </Panel>
     );
   }
 
   if (exam.length === 0) {
-    return <Panel className="p-5 space-y-3"><p>A prova Famerp {state.year} não está no banco carregado.</p><Button variant="secondary" onClick={() => setState(null)}>Escolher outra prova</Button></Panel>;
+    return <Panel className="p-5 space-y-3"><p>A prova {editionLabel(boardName, state.year, state.version)} não está no banco carregado.</p><Button variant="secondary" onClick={() => setState(null)}>Escolher outra prova</Button></Panel>;
   }
 
   if (state.finishedAt) {
-    return <Resultado exam={exam} state={state} recorded={recorded} onRecord={async () => {
+    return <Resultado boardName={boardName} exam={exam} state={state} recorded={recorded} onRecord={async () => {
       if (!user || recorded === 'saving' || recorded === 'done') return;
       setRecorded('saving');
       const result = scoreSimulado(exam, state.answers);
@@ -113,7 +103,7 @@ function Simulado({ questions }: { questions: Question[] }) {
           const q = exam.find((x) => x.id === id)!;
           return addUserErrorLog(user.uid, {
             id: `error_${crypto.randomUUID()}`, topicId: q.topicId, questionId: q.id, date, type: 'unknown', confidence: 'baixa',
-            notes: `Simulado Famerp ${state.year}, questão ${q.examSource?.questionNumber}: marcou ${state.answers[id].toUpperCase()}, gabarito ${q.correctOptionId.toUpperCase()}.`,
+            notes: `Simulado ${editionLabel(boardName, state.year, state.version)}, questão ${q.examSource?.questionNumber}: marcou ${state.answers[id].toUpperCase()}, gabarito ${q.correctOptionId.toUpperCase()}.`,
           });
         }));
         setRecorded('done');
@@ -153,7 +143,7 @@ function Simulado({ questions }: { questions: Question[] }) {
           <span aria-live="off" style={{ color: remaining < 0 ? 'var(--status-error)' : remaining < 900 ? 'var(--status-warning)' : undefined }}>{formatClock(remaining)}</span>
           {remaining < 0 && <span className="text-sm" style={{ color: 'var(--status-error)' }}>tempo esgotado</span>}
         </div>
-        <span className="text-sm">Famerp {state.year} · {answeredCount}/{exam.length} respondidas</span>
+        <span className="text-sm">{editionLabel(boardName, state.year, state.version)} · {answeredCount}/{exam.length} respondidas</span>
         <Button size="sm" onClick={finish}><Flag className="w-4 h-4" aria-hidden /> Entregar prova</Button>
       </Panel>
 
@@ -195,8 +185,8 @@ function Simulado({ questions }: { questions: Question[] }) {
   );
 }
 
-function Resultado({ exam, state, recorded, onRecord, onRestart }: {
-  exam: Question[]; state: SimuladoState; recorded: 'idle' | 'saving' | 'done' | 'error'; onRecord: () => void; onRestart: () => void;
+function Resultado({ boardName, exam, state, recorded, onRecord, onRestart }: {
+  boardName: string; exam: Question[]; state: SimuladoState; recorded: 'idle' | 'saving' | 'done' | 'error'; onRecord: () => void; onRestart: () => void;
 }) {
   const { user } = useAuth();
   const result = useMemo(() => scoreSimulado(exam, state.answers), [exam, state.answers]);
@@ -206,7 +196,7 @@ function Resultado({ exam, state, recorded, onRecord, onRestart }: {
   return (
     <div className="space-y-4">
       <Panel className="p-5 space-y-3">
-        <h2 className="text-lg font-semibold">Famerp {state.year}: {result.correct} de {result.total}</h2>
+        <h2 className="text-lg font-semibold">{editionLabel(boardName, state.year, state.version)}: {result.correct} de {result.total}</h2>
         <p className="text-sm">{result.answered} respondidas, {result.blankIds.length} em branco{result.annulled ? `, ${result.annulled} anulada(s) fora da conta` : ''}. Tempo usado: {formatClock(usedSeconds)} de {formatClock(state.minutes * 60)}.</p>
         <table className="w-full text-sm">
           <caption className="text-left text-xs mb-1">Da matéria mais fraca para a mais forte</caption>
@@ -250,58 +240,3 @@ function Resultado({ exam, state, recorded, onRecord, onRestart }: {
   );
 }
 
-function Prioridades({ questions }: { questions: Question[] }) {
-  const priorities = useMemo(() => famerpPriorities(questions), [questions]);
-  const years = useMemo(() => famerpYears(questions), [questions]);
-  const subjects = [...new Set(priorities.map((p) => p.subject))];
-
-  return (
-    <div className="space-y-4">
-      <Panel className="p-5 space-y-2">
-        <h2 className="text-lg font-semibold">O que mais se repete</h2>
-        <p className="text-sm">Capítulos que caíram em 3 ou mais das {years.length} provas objetivas do banco ({years[years.length - 1]}–{years[0]}). ★★ = 4 anos ou mais; ★ = 3 anos. A lista sai das próprias provas e muda se um ano novo for importado.</p>
-        <p className="text-sm">Treine cada um com as provas de 2022 a 2024 e deixe 2025 e 2026 para os simulados completos.</p>
-      </Panel>
-      {subjects.map((subject) => (
-        <Panel key={subject} className="p-5 space-y-2">
-          <h3 className="font-semibold">{subject}</h3>
-          <ul className="space-y-2">
-            {priorities.filter((p) => p.subject === subject).map((p) => (
-              <li key={`${p.topicId}-${p.chapter}`} className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
-                <span aria-label={p.stars === 2 ? 'caiu em 4 anos ou mais' : 'caiu em 3 anos'}>{p.stars === 2 ? '★★' : '★'}</span>
-                <span className="font-medium">{p.chapter}</span>
-                <span className="text-xs">{p.years.join(', ')} · {p.count} questões</span>
-                <Link className="ni-link text-xs ml-auto" to={`/questoes?board=FAMERP&topic=${encodeURIComponent(p.topicId)}&chapter=${encodeURIComponent(p.chapter)}`}>Treinar</Link>
-              </li>
-            ))}
-          </ul>
-        </Panel>
-      ))}
-    </div>
-  );
-}
-
-function SegundoDia() {
-  const famerp = discursiveQuestions.filter((q) => q.board === 'Famerp');
-  const bySubject = famerp.reduce<Record<string, number>>((acc, q) => ({ ...acc, [q.subject]: (acc[q.subject] ?? 0) + 1 }), {});
-  return (
-    <div className="space-y-4">
-      <Panel className="p-5 space-y-3">
-        <h2 className="text-lg font-semibold flex items-center gap-2"><ListChecks className="w-5 h-5" aria-hidden /> Discursivas</h2>
-        <p className="text-sm">{famerp.length} questões reais do 2º dia: {Object.entries(bySubject).map(([s, n]) => `${s} ${n}`).join(', ')}. Escreva a resposta e peça a correção do CRIVO, que compara com a resposta-modelo.</p>
-        <ol className="text-sm list-decimal pl-5 space-y-1">
-          <li>Procure no texto de apoio o dado decisivo (massa molar, potencial, meia-vida).</li>
-          <li>Sublinhe o verbo de comando de cada item: cite, explique, justifique, calcule, escreva a equação.</li>
-          <li>Nomeie com o termo técnico e explique o porquê em uma frase.</li>
-          <li>Nas contas: fórmula, substituição com unidades, resultado com unidade.</li>
-        </ol>
-        <Link className="ni-link" to="/treino-2a-fase?banca=Famerp">Treinar discursivas da Famerp</Link>
-      </Panel>
-      <Panel className="p-5 space-y-2">
-        <h2 className="text-lg font-semibold flex items-center gap-2"><PenLine className="w-5 h-5" aria-hidden /> Redação</h2>
-        <p className="text-sm">Uma redação por semana no formato Famerp: tese clara, duas razões explicadas, coletânea sem cópia. A correção usa os critérios da banca.</p>
-        <Link className="ni-link" to="/redacao">Abrir o ateliê de redação</Link>
-      </Panel>
-    </div>
-  );
-}
