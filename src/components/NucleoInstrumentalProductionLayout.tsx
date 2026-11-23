@@ -26,7 +26,7 @@ const PATH_BY_SCREEN: Record<string, string> = {
   hoje: '/', diagnostico: '/diagnostico', plano: '/plano', agenda: '/agenda', 'reta-final': '/reta-final', recuperacao: '/recuperacao',
   sessao: '/sessao', questoes: '/questoes', resumos: '/resumos', visual: '/visual', revisoes: '/revisoes', flashcards: '/flashcards',
   'obras-obrigatorias': '/obras-obrigatorias', obras: '/obras', 'obra-detalhe': '/obras', erros: '/erros', podcast: '/podcast',
-  tutor: '/tutor', laboratorio: '/laboratorio', 'treino-2a-fase': '/treino-2a-fase', famerp: '/famerp', redacao: '/redacao', estrategias: '/estrategias', aprofundamentos: '/aprofundamentos', 'meus-resumos-revisao': '/meus-resumos-revisao',
+  tutor: '/tutor', laboratorio: '/laboratorio', 'treino-2a-fase': '/treino-2a-fase', provas: '/provas', redacao: '/redacao', estrategias: '/estrategias', aprofundamentos: '/aprofundamentos', 'meus-resumos-revisao': '/meus-resumos-revisao',
   evolucao: '/evolucao', prioridades: '/prioridades', conexoes: '/conexoes', perfil: '/perfil', ajuda: '/ajuda', admin: '/admin',
   'avaliacao-ia': '/avaliacao-ia', 'admin-obras': '/admin/obras', 'admin-conteudo': '/admin/conteudo',
 };
@@ -46,6 +46,7 @@ const TOP_LEVEL = [
 
 function screenForPath(pathname: string) {
   if (pathname.startsWith('/obras/')) return SCREENS.find((screen) => screen.key === 'obra-detalhe')!;
+  if (pathname.startsWith('/provas/')) return SCREENS.find((screen) => screen.key === 'provas')!;
   return SCREENS.find((screen) => PATH_BY_SCREEN[screen.key] === pathname) ?? SCREENS[0];
 }
 

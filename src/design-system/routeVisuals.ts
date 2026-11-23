@@ -33,7 +33,7 @@ const ROUTE_VISUALS: Record<string, RouteVisual> = {
   '/ajuda': { kind: 'account' },
   '/redacao': { subject: 'Redação', kind: 'practice' },
   '/treino-2a-fase': { subject: 'História', kind: 'practice' },
-  '/famerp': { subject: 'Biologia', kind: 'practice' },
+  '/provas': { subject: 'Biologia', kind: 'decision' },
   '/recuperacao': { subject: 'Química', kind: 'decision' },
   '/diagnostico': { kind: 'analysis' },
   '/flashcards': { subject: 'Química', kind: 'practice' },
@@ -48,6 +48,7 @@ const FALLBACK_VISUAL: RouteVisual = { kind: 'account' };
 
 export function routeVisualFor(pathname: string): RouteVisual {
   if (pathname.startsWith('/obras/')) return { subject: 'Literatura', kind: 'library' };
+  if (pathname.startsWith('/provas/')) return ROUTE_VISUALS['/provas'];
   return ROUTE_VISUALS[pathname] ?? FALLBACK_VISUAL;
 }
 

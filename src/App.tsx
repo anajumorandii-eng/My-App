@@ -4,7 +4,7 @@
  */
 
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
 import NucleoInstrumentalProductionLayout from './components/NucleoInstrumentalProductionLayout';
 import { LegacyPrototypeRedirect } from './components/LegacyPrototypeRedirect';
 import { AuthProvider } from './context/AuthContext';
@@ -35,7 +35,8 @@ const Perfil = lazy(() => import('./views/Perfil'));
 const Ajuda = lazy(() => import('./views/Ajuda'));
 const Redacao = lazy(() => import('./views/Redacao'));
 const Treino2aFase = lazy(() => import('./views/Treino2aFase'));
-const Famerp = lazy(() => import('./views/Famerp'));
+const Provas = lazy(() => import('./views/Provas'));
+const ProvaBanca = lazy(() => import('./views/ProvaBanca'));
 const Recuperacao = lazy(() => import('./views/Recuperacao'));
 const Diagnostico = lazy(() => import('./views/Diagnostico'));
 const AiEvaluation = lazy(() => import('./views/AiEvaluation'));
@@ -122,7 +123,11 @@ export default function App() {
                 <Route path="ajuda" element={<Ajuda />} />
                 <Route path="redacao" element={<Redacao />} />
                 <Route path="treino-2a-fase" element={<Treino2aFase />} />
-                <Route path="famerp" element={<Famerp />} />
+                <Route path="provas" element={<Provas />} />
+                <Route path="provas/:slug" element={<ProvaBanca />} />
+                <Route path="provas/:slug/:tab" element={<ProvaBanca />} />
+                {/* A tela avulsa /famerp virou a página da banca dentro de Provas. */}
+                <Route path="famerp" element={<Navigate to="/provas/famerp" replace />} />
                 <Route path="recuperacao" element={<Recuperacao />} />
                 <Route path="diagnostico" element={<Diagnostico />} />
                 <Route path="flashcards" element={<Flashcards />} />
