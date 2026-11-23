@@ -308,7 +308,7 @@ export const famerpTheory: Record<string, ChapterTheory> = {
     formulas: ['E = h·f', 'Ec = h·f − W', 'f₀ = W/h', 'ΔE = E_final − E_inicial'],
     example: {
       prompt: 'Um metal tem W = 2,9 eV (h = 4,1 × 10⁻¹⁵ eV·s). Entre vermelho (4,5), verde (5,5) e violeta (7,5) × 10¹⁴ Hz, quais luzes arrancam elétrons?',
-      steps: ['Frequência de corte: f₀ = 2,9 / 4,1 × 10⁻¹⁵ ≈ 7,1 × 10¹⁴ Hz.', 'Só a violeta (7,5 × 10¹⁴ Hz) supera f₀.', 'Vermelho e verde não emitem elétrons, por mais intensos que sejam.'],
+      steps: ['Frequência de corte: f₀ = 2,9 / (4,1 × 10⁻¹⁵) ≈ 7,1 × 10¹⁴ Hz.', 'Só a violeta (7,5 × 10¹⁴ Hz) supera f₀.', 'Vermelho e verde não emitem elétrons, por mais intensos que sejam.'],
     },
     traps: [
       { trap: 'Achar que luz mais forte arranca elétrons mais rápidos.', fix: 'Intensidade aumenta o número de elétrons; a energia de cada um depende da frequência.' },
@@ -416,7 +416,7 @@ export const famerpTheory: Record<string, ChapterTheory> = {
       'Paralelepípedo retângulo de arestas a, b, c: volume V = abc; área total = 2(ab + ac + bc); diagonal d = √(a² + b² + c²).',
       'Cubo de aresta a: V = a³; área total = 6a²; diagonal = a√3.',
       'Ao cortar um sólido em dois, o volume total se conserva e a área total aumenta exatamente pelas faces novas criadas pelo corte (cada corte cria duas faces).',
-      'Plano que corta um cubo pela diagonal de uma face o divide em dois prismas triangulares de mesmo volume.',
+      'Plano perpendicular a uma face que passa por uma diagonal dela (e, portanto, pela diagonal paralela da face oposta) divide o cubo em dois prismas triangulares de mesmo volume. Um plano qualquer que só contenha a diagonal de uma face pode cortar outra forma, como um tetraedro.',
     ],
     formulas: ['V = abc', 'A = 2(ab + ac + bc)', 'd = √(a² + b² + c²)'],
     example: {
