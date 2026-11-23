@@ -2,10 +2,21 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "f86fc176cfd60cc7284df8201a9992dc913ef79e",
-  "generated_at_utc": "2026-11-23T15:05:53Z",
+  "source_commit": "7e347f4e037aec2de964064164160a1b6ec8d044",
+  "generated_at_utc": "2026-11-23T15:36:28Z",
   "changed_files": [
-    "docs/estudos-2026/GUIA-FAMERP-2027.md"
+    "server/ai/prompts.ts",
+    "src/App.tsx",
+    "src/components/NucleoInstrumentalProductionLayout.tsx",
+    "src/components/layout/routePresentation.test.ts",
+    "src/components/navigation/AppNavigation.tsx",
+    "src/design-system/routeVisuals.ts",
+    "src/lib/famerpPrep.test.ts",
+    "src/lib/famerpPrep.ts",
+    "src/prototypes/NucleoInstrumentalPrototype.tsx",
+    "src/views/Famerp.test.tsx",
+    "src/views/Famerp.tsx",
+    "src/views/Treino2aFase.tsx"
   ],
   "next_session": {
     "mode": "delta-only",
