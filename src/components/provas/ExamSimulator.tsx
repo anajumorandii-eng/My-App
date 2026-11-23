@@ -21,8 +21,24 @@ import { canonicalExamBoard } from '../../lib/questionExamFilters';
 // apagá-la.
 const storageKey = (uid: string | undefined) => `crivo-simulado-v1:${uid ?? 'guest'}`;
 
+// A tela avulsa /famerp, anterior a esta área, guardava a prova em outra
+// chave e sem banca nem caderno. Sem esta migração, uma prova em andamento ou
+// um resultado ainda não registrado sumiam na troca de tela.
+const legacyFamerpKey = (key: string) => key.replace('crivo-simulado-v1:', 'crivo-famerp-simulado-v1:');
+
 function readState(key: string): SimuladoState | null {
-  try { return parseSimuladoState(localStorage.getItem(key)); } catch { return null; }
+  try {
+    const current = parseSimuladoState(localStorage.getItem(key));
+    if (current) return current;
+    const legacyRaw = localStorage.getItem(legacyFamerpKey(key));
+    if (!legacyRaw) return null;
+    const legacy = JSON.parse(legacyRaw) as Record<string, unknown>;
+    // As provas completas da Famerp no banco são todas do caderno V1.
+    const migrated = parseSimuladoState(JSON.stringify({ ...legacy, board: 'FAMERP', version: 'V1' }));
+    if (migrated) localStorage.setItem(key, JSON.stringify(migrated));
+    localStorage.removeItem(legacyFamerpKey(key));
+    return migrated;
+  } catch { return null; }
 }
 function writeState(key: string, state: SimuladoState | null) {
   try { if (state) localStorage.setItem(key, JSON.stringify(state)); else localStorage.removeItem(key); } catch { /* sem armazenamento: a prova segue só na memória */ }

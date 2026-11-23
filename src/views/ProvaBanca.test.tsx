@@ -113,3 +113,13 @@ it('endereço de banca inexistente volta para a lista', () => {
   renderAt('/provas/nao-existe');
   expect(screen.getByRole('heading', { name: 'Provas e bancas' })).toBeInTheDocument();
 });
+
+it('recupera a prova em andamento salva pela antiga tela da Famerp', () => {
+  localStorage.setItem('crivo-famerp-simulado-v1:aj', JSON.stringify({
+    year: 2024, minutes: 240, startedAt: new Date().toISOString(), answers: { famerp_2024_v1_q01: 'a' },
+  }));
+  renderAt('/provas/famerp/simulado');
+  expect(screen.getByText(/Famerp 2024 · 1\/40 respondidas/)).toBeInTheDocument();
+  expect(localStorage.getItem('crivo-famerp-simulado-v1:aj')).toBeNull();
+  expect(JSON.parse(localStorage.getItem('crivo-simulado-v1:aj')!)).toMatchObject({ board: 'FAMERP', version: 'V1', year: 2024 });
+});
