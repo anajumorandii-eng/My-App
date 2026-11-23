@@ -337,7 +337,7 @@ Força de Coulomb e potencial de uma carga puntiforme. O potencial é escalar (s
     ],
     discursive: {
       prompt: md`Um fio de cobre de 10 m e área de seção $1{,}0\times10^{-6}$ m² ($\rho = 1{,}7\times10^{-8}\ \Omega\cdot$m) é percorrido por 2,0 A durante 8,0 s. (a) Qual a resistência do fio? (b) Quantos elétrons passaram por uma seção? ($e = 1{,}6\times10^{-19}$ C) (c) Se o fio tivesse o dobro do comprimento, o que aconteceria com a resistência?`,
-      modelAnswer: [md`(a) $R = \rho L/A = 1{,}7\times10^{-8} \cdot 10 / 1{,}0\times10^{-6} = 0{,}17\ \Omega$.`, md`(b) $Q = i\,t = 16$ C; $n = 16/1{,}6\times10^{-19} = 1{,}0\times10^{20}$ elétrons.`, md`(c) Dobraria, pois $R$ é proporcional ao comprimento.`],
+      modelAnswer: [md`(a) $R = \rho\,\dfrac{L}{A} = \dfrac{1{,}7\times10^{-8} \cdot 10}{1{,}0\times10^{-6}} = 0{,}17\ \Omega$.`, md`(b) $Q = i\,t = 16$ C; $n = \dfrac{16}{1{,}6\times10^{-19}} = 1{,}0\times10^{20}$ elétrons.`, md`(c) Dobraria, pois $R$ é proporcional ao comprimento.`],
       scoring: [md`2ª lei de Ohm com unidades.`, md`Carga e número de elétrons.`, md`Justifica pela proporcionalidade.`],
     },
     traps: [

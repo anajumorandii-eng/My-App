@@ -35,6 +35,9 @@ function assertDeep(key: string, t: ChapterTheory) {
   for (const f of t.formulas ?? []) assert.doesNotThrow(() => katex.renderToString(f.tex, { throwOnError: true }), `${key}: ${f.tex}`);
   for (const text of allText(t)) for (const tex of mathOf(text)) {
     assert.doesNotThrow(() => katex.renderToString(tex, { throwOnError: true }), `${key}: $${tex}$`);
+    // "16/1,6×10⁻¹⁹" compila no KaTeX e lê-se (16/1,6)×10⁻¹⁹: denominador em
+    // notação científica precisa de \frac ou parênteses. A revisão pegou dois.
+    assert.doesNotMatch(tex, /\/\s*[\d{},.]+\s*\\times\s*10/, `${key}: denominador sem agrupar em $${tex}$`);
   }
 }
 

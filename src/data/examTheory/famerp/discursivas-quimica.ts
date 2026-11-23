@@ -292,7 +292,7 @@ O equilíbrio se desloca para **compensar** a perturbação:
 - **Gás inerte a volume constante** não desloca: as concentrações dos participantes não mudam.
 
 ### Ácidos fortes e fracos
-- Forte: ioniza praticamente todo ($[\text{H}^+]$ = concentração do ácido): HCl, HNO₃, H₂SO₄.
+- Forte: ioniza praticamente todo. Nos **monoácidos** fortes (HCl, HNO₃), $[\text{H}^+]$ = concentração do ácido. Num poliácido como o H₂SO₄, cada ionização acrescenta H⁺: a 1ª é total, e a 2ª também contribui, então $[\text{H}^+]$ é maior que a concentração do ácido.
 - Fraco: ioniza pouco e fica em equilíbrio: CH₃COOH, HF, H₂CO₃.
 - O **HF é fraco** apesar de o flúor ser o mais eletronegativo: a ligação H–F é muito forte e o F⁻, pequeno, é muito solvatado.
 
@@ -312,7 +312,7 @@ $\text{pH} = -\log[\text{H}^+]$. Ácido: pH < 7; básico: pH > 7 (a 25 °C). Cad
     strategy: [
       md`Escreva a expressão de $K_c$ antes de qualquer conta.`,
       md`Em deslocamento, diga para onde e por quê ("para compensar o aumento de...").`,
-      md`Em pH, decida se o ácido é forte (concentração direta) ou fraco (use $K_a$).`,
+      md`Em pH, decida se o ácido é forte e monoprótico (concentração direta), poliprótico (some as ionizações) ou fraco (use $K_a$).`,
     ],
     examples: [
       {
