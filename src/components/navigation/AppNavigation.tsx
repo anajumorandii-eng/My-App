@@ -23,6 +23,7 @@ import {
   ListTodo,
   Link2,
   UserRound,
+  Target,
 } from 'lucide-react';
 import { AJMark } from '../brand/AJMark';
 
@@ -40,6 +41,7 @@ const secondaryGroups = [
     items: [
       { name: 'Questões', path: '/questoes', icon: HelpCircle },
       { name: 'Resumos', path: '/resumos', icon: FileText },
+      { name: 'Famerp', path: '/famerp', icon: Target },
       { name: 'Segunda fase', path: '/treino-2a-fase', icon: ClipboardCheck },
       { name: 'Redação', path: '/redacao', icon: PenLine },
       { name: 'Tutor', path: '/tutor', icon: MessageCircleQuestion },

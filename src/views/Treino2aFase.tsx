@@ -1,5 +1,6 @@
 import { StudyExportButton } from '../components/StudyExportButton';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
+import { UNSAFE_LocationContext } from 'react-router-dom';
 import { discursiveQuestions, boardExamStructure } from '../data/discursiveQuestions';
 import { secondPhaseProtocols } from '../data/resolutionStrategies';
 import { useDiscursiveAttempts } from '../hooks/useDiscursiveAttempts';
@@ -65,7 +66,11 @@ function DiscursiveTraining() {
   const { updateMastery, syncing: masterySyncing, syncError: masterySyncError } = useUserMastery();
 
   const boards = useMemo(() => ['Todas', ...new Set(discursiveQuestions.map((q) => q.board))], []);
-  const [boardFilter, setBoardFilter] = useState('Todas');
+  // A tela da Famerp abre esta aba já filtrada (?banca=Famerp); banca
+  // desconhecida cai em "Todas" em vez de mostrar uma lista vazia.
+  const locationContext = useContext(UNSAFE_LocationContext);
+  const requestedBoard = new URLSearchParams(locationContext?.location.search ?? window.location.search).get('banca');
+  const [boardFilter, setBoardFilter] = useState(() => (requestedBoard && boards.includes(requestedBoard) ? requestedBoard : 'Todas'));
   const subjects = useMemo(() => {
     const pool = boardFilter === 'Todas' ? discursiveQuestions : discursiveQuestions.filter((q) => q.board === boardFilter);
     return ['Todas', ...new Set(pool.map((q) => q.subject))];
