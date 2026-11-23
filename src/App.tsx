@@ -35,6 +35,7 @@ const Perfil = lazy(() => import('./views/Perfil'));
 const Ajuda = lazy(() => import('./views/Ajuda'));
 const Redacao = lazy(() => import('./views/Redacao'));
 const Treino2aFase = lazy(() => import('./views/Treino2aFase'));
+const Famerp = lazy(() => import('./views/Famerp'));
 const Recuperacao = lazy(() => import('./views/Recuperacao'));
 const Diagnostico = lazy(() => import('./views/Diagnostico'));
 const AiEvaluation = lazy(() => import('./views/AiEvaluation'));
@@ -121,6 +122,7 @@ export default function App() {
                 <Route path="ajuda" element={<Ajuda />} />
                 <Route path="redacao" element={<Redacao />} />
                 <Route path="treino-2a-fase" element={<Treino2aFase />} />
+                <Route path="famerp" element={<Famerp />} />
                 <Route path="recuperacao" element={<Recuperacao />} />
                 <Route path="diagnostico" element={<Diagnostico />} />
                 <Route path="flashcards" element={<Flashcards />} />

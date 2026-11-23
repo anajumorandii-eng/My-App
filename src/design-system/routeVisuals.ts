@@ -33,6 +33,7 @@ const ROUTE_VISUALS: Record<string, RouteVisual> = {
   '/ajuda': { kind: 'account' },
   '/redacao': { subject: 'Redação', kind: 'practice' },
   '/treino-2a-fase': { subject: 'História', kind: 'practice' },
+  '/famerp': { subject: 'Biologia', kind: 'practice' },
   '/recuperacao': { subject: 'Química', kind: 'decision' },
   '/diagnostico': { kind: 'analysis' },
   '/flashcards': { subject: 'Química', kind: 'practice' },

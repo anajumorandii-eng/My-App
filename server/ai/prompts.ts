@@ -14,6 +14,12 @@ function discursiveStructureGuidance(board: string | undefined): string {
   if (normalized.includes('unicamp')) {
     return 'Estrutura discursiva esperada pela banca (Unicamp): Comando → Fonte → Conceito → Relação (roteiro didático de treino, não rubrica oficial universal) — primeiro atender exatamente ao que o comando da questão pede, depois usar a fonte/dado do enunciado, explicar o conceito por trás, e relacionar tudo de volta à pergunta.';
   }
+  // Vem antes de Unesp/Vunesp: a Famerp é aplicada pela Vunesp, mas o 2º dia
+  // dela é só Biologia, Química e Física, e o modelo de resposta cobra o
+  // mecanismo nomeado e a conta com unidade, que a orientação genérica omitia.
+  if (normalized.includes('famerp')) {
+    return 'Estrutura discursiva esperada pela banca (Famerp/Vunesp, 2º dia de Biologia, Química e Física): responder item por item exatamente o que o verbo de comando pede (cite, explique, justifique, calcule, escreva a equação) → nomear com o termo técnico → justificar o mecanismo em uma frase → nas contas, fórmula, substituição com unidades e resultado com unidade; equações químicas balanceadas (roteiro didático de treino, não rubrica oficial). Penalize item sem resposta, nome sem justificativa, resultado sem unidade e equação sem balancear.';
+  }
   if (normalized.includes('unesp') || normalized.includes('vunesp')) {
     return 'Estrutura discursiva esperada pela banca (Unesp/Vunesp): Resposta direta → Conceito/cálculo → Explicação → Aplicação (roteiro didático de treino, não rubrica oficial universal) — começar com a resposta direta ao que foi pedido, mostrar o conceito ou cálculo por trás, explicar o raciocínio, e fechar relacionando com a aplicação ou o contexto do enunciado.';
   }

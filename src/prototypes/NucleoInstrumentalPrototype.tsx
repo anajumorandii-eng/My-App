@@ -299,6 +299,17 @@ export const SCREENS: InstrumentalScreen[] = [
     action: "Testar método",
   },
   {
+    key: "famerp",
+    label: "Famerp",
+    title: "Prova real, no tempo, com o que mais se repete.",
+    summary: "Simulado das provas oficiais, prioridades por incidência e treino do 2º dia.",
+    kind: "practice",
+    icon: Target,
+    subject: "Biologia",
+    topic: "Famerp",
+    action: "Abrir simulado",
+  },
+  {
     key: "treino-2a-fase",
     label: "Treino de 2ª Fase",
     title: "Construa resposta, não apenas resultado.",
