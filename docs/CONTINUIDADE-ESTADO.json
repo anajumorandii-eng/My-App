@@ -2,23 +2,16 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "18f06af5bfa7011582506daf426f695012a2b141",
-  "generated_at_utc": "2026-11-23T23:30:19Z",
+  "source_commit": "90612031b8d18f21e8aaaa0c8fe9471b2b8200a4",
+  "generated_at_utc": "2026-11-24T13:26:26Z",
   "changed_files": [
     "src/components/provas/BoardTheoryView.tsx",
-    "src/data/examTheory/famerp.ts",
-    "src/data/examTheory/famerp/discursivas-biologia.ts",
-    "src/data/examTheory/famerp/discursivas-fisica.ts",
-    "src/data/examTheory/famerp/discursivas-quimica.ts",
     "src/data/examTheory/famerp/index.ts",
     "src/data/examTheory/famerp/linguagens-humanas.ts",
-    "src/data/examTheory/famerp/matematica.ts",
-    "src/data/examTheory/famerp/natureza.ts",
-    "src/data/examTheory/index.ts",
+    "src/data/examTheory/famerp/padroes.ts",
     "src/data/examTheory/types.ts",
     "src/lib/examTheoryFamerp.test.ts",
-    "src/views/ProvaBanca.test.tsx",
-    "src/views/ProvaBanca.tsx"
+    "src/views/ProvaBanca.test.tsx"
   ],
   "next_session": {
     "mode": "delta-only",
