@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { AlertTriangle, BookOpen, CheckCircle2, Compass, FileSignature, ListChecks, MapPin, Sigma } from 'lucide-react';
+import { AlertTriangle, BookOpen, CheckCircle2, Compass, FileSignature, ListChecks, MapPin, Sigma, Target } from 'lucide-react';
 import { AiText } from '../AiText';
 import { Panel } from '../ui/Panel';
 import { Button } from '../ui/Button';
@@ -96,6 +96,33 @@ const TheoryCard = React.forwardRef<HTMLDetailsElement, {
       <summary className="cursor-pointer flex flex-wrap items-center gap-x-3 gap-y-1">{heading}</summary>
       <div className="mt-4 space-y-6">
         <div className="text-sm rounded-lg border border-[var(--line)] p-3"><b>Como cai na {boardName}: </b><AiText text={t.howItFalls} className="inline" /></div>
+
+        {t.patterns && t.patterns.length > 0 && (
+          <Section icon={<Target className="w-4 h-4" aria-hidden />} title={`Como a ${boardName} cobra, tipo por tipo`}>
+            <p className="text-xs">Tirado das questões reais. Se você guarda as provas de 2025 e 2026 para o simulado, faça-as antes de abrir os tipos que as citam.</p>
+            <div className="space-y-3">
+              {t.patterns.map((p) => (
+                <details key={p.title} className="rounded-lg border border-[var(--line)] p-3 text-sm">
+                  <summary className="cursor-pointer flex flex-wrap items-center gap-x-3 gap-y-1">
+                    <span className="font-medium">{p.title}</span>
+                    <span className="text-xs">{p.questions.join(' · ')}</span>
+                  </summary>
+                  <div className="mt-3 space-y-3">
+                    <div><p className="font-medium">O que a questão pede</p><AiText text={p.asks} /></div>
+                    <div>
+                      <p className="font-medium">Como resolver</p>
+                      <ol className="list-decimal pl-5 space-y-1">{p.solve.map((x) => <li key={x}><AiText text={x} /></li>)}</ol>
+                    </div>
+                    <div className="rounded-lg p-2" style={{ background: 'color-mix(in srgb, var(--status-warning) 10%, transparent)' }}>
+                      <p className="font-medium">Como as alternativas erradas são montadas</p>
+                      <AiText text={p.distractors} />
+                    </div>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </Section>
+        )}
 
         <Section icon={<BookOpen className="w-4 h-4" aria-hidden />} title="O mecanismo">
           <AiText text={t.explanation} className="text-sm" />

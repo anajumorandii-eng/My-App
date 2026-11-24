@@ -340,7 +340,10 @@ Tropeiros, gado do Sul e alimentos de outras capitanias abasteciam as minas, int
     howItFalls: md`Caiu em 2022, 2024 e 2025 com textos de Jacques Le Goff, Georges Duby e de um monge do ano 1000: o ritual de vassalagem, as obrigações dos servos e a explicação religiosa para a fome.`,
     explanation: md`### Duas relações diferentes
 - **Vassalagem**: entre **nobres**. O vassalo presta **homenagem** e jura **fidelidade** ao suserano, que lhe concede um **feudo** (investidura). O ritual usa gestos (mãos do vassalo entre as do senhor, beijo) e objetos simbólicos (um ramo, um punhado de terra) que representam a terra concedida.
-- **Servidão**: entre o **senhor** e o **camponês**. O servo é preso à terra, não pode ser vendido separado dela, e deve obrigações.
+- **Servidão**: entre o **senhor** e o **camponês**. O servo deve obrigações ao senhor em troca de proteção e do uso da terra.
+
+### Cuidado com o "servo preso à gleba"
+A ideia de que o servo era sempre preso à terra é a visão tradicional. O texto de Jacques Le Goff que a Famerp usou em 2024 diz o contrário: os servos **raramente** eram ligados à gleba e, como as taxas eram pesadas, **se deslocavam** entre senhorios e para as cidades em busca de condições melhores. Na prova, vale o que o excerto sustenta, e a banca escolheu justamente um texto que corrige o senso comum.
 
 ### Obrigações dos servos
 - **Corveia**: dias de trabalho nas terras do senhor.
@@ -398,7 +401,10 @@ Expansão a partir do interior paulista para Minas, Goiás e Mato Grosso do Sul,
 O agronegócio domina as **exportações** (soja, milho, carne, açúcar, café). A agricultura familiar responde por boa parte dos alimentos do mercado interno.
 
 ### Técnicas sustentáveis
-Integração lavoura-pecuária-floresta (ILPF), plantio direto (sem revolver o solo), rotação de culturas, sistemas agroflorestais e recuperação de pastagens degradadas.`,
+- **Agroecologia**: aplica princípios ecológicos à produção; integra saberes tradicionais e científicos, preserva biodiversidade e recursos, reduz insumos externos ("produz mais com menos") e aumenta a resiliência das famílias rurais. Foi a resposta de um infográfico da FAO em 2023.
+- Integração lavoura-pecuária-floresta (ILPF), **plantio direto** (sem revolver o solo; não existe "plantio indireto"), rotação de culturas, sistemas agroflorestais e recuperação de pastagens degradadas.
+- **Terraceamento** é técnica de contenção de erosão em encostas, não um sistema de produção.
+- Adubação química e monocultura são o oposto do manejo sustentável.`,
     applications: [
       md`**Questões ambientais**: desmatamento, queimadas e perda de biodiversidade.`,
       md`**História**: sesmarias, Lei de Terras e estrutura colonial.`,

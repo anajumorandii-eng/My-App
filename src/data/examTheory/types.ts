@@ -24,7 +24,24 @@ export interface DiscursiveDrill {
   scoring: string[];
 }
 
+/**
+ * Um tipo de cobrança, tirado das questões reais da banca: o que ela pede,
+ * como resolver e como as alternativas erradas são montadas. As questões
+ * citadas ("2024 q65") são conferidas contra o banco no teste.
+ */
+export interface ExamPattern {
+  title: string;
+  /** Questões reais deste tipo, no formato "ano qN". */
+  questions: string[];
+  asks: string;
+  solve: string[];
+  /** Como a banca monta as alternativas erradas neste tipo. */
+  distractors: string;
+}
+
 export interface ChapterTheory {
+  /** Tipos de cobrança vistos nas provas reais, com a resolução de cada um. */
+  patterns?: ExamPattern[];
   /** Como o assunto caiu nas provas reais da banca. */
   howItFalls: string;
   /** O mecanismo explicado por inteiro, em Markdown. */
