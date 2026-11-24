@@ -28,3 +28,14 @@ describe(`discursivas Famerp ${ano}`, () => {
     }
   });
 });
+
+it('cada discursiva da Famerp tem a lista do que o corretor confere, um bloco por item', async () => {
+  const { famerpExpectedChecks } = await import('../data/famerpExpectedChecks.ts');
+  const todas = [famerp2026Discursive, famerp2025Discursive, famerp2024Discursive, famerp2023Discursive, famerp2022Discursive].flat();
+  assert.deepEqual(Object.keys(famerpExpectedChecks).sort(), todas.map((q) => q.id).sort());
+  for (const q of todas) {
+    const checks = famerpExpectedChecks[q.id];
+    assert.equal(checks.length, q.subItems?.length, q.id);
+    for (const item of checks) assert.ok(item.length > 0 && item.every((c) => c.trim().length > 2), q.id);
+  }
+});

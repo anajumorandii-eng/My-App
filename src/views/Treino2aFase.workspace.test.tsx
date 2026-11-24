@@ -40,3 +40,17 @@ it('mostra falha da correção e mantém a resposta escrita para nova tentativa'
   expect(screen.getByLabelText('Sua resposta (redija com rigor)')).toHaveValue('Explicação preservada.');
   expect(screen.getByRole('button', { name: 'Corrigir minha resposta com IA' })).toBeEnabled();
 });
+it('na Famerp mostra o que o corretor confere por item e manda a lista para a correção', async () => {
+  mocks.stream.mockResolvedValue({ text: 'ok' });
+  render(<MemoryRouter initialEntries={['/treino-2a-fase?banca=Famerp']}><Treino2aFase /></MemoryRouter>);
+  // A primeira da Famerp é avulsa, fora dos cadernos de 2022–2026; abre-se uma do caderno.
+  fireEvent.click(screen.getByRole('button', { name: /Ciclo de máquina térmica no diagrama P × V/ }));
+  fireEvent.change(screen.getByLabelText('Sua resposta (redija com rigor)'), { target: { value: 'Resposta.' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Revelar gabarito comentado' }));
+  expect(screen.getByText('O que o corretor confere')).toBeInTheDocument();
+  expect(screen.getByText('Item a')).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('button', { name: 'Corrigir minha resposta com IA' }));
+  await waitFor(() => expect(mocks.stream).toHaveBeenCalled());
+  const payload = mocks.stream.mock.calls[0][1];
+  expect(payload.modelAnswer.some((m: string) => m.startsWith('Item a, o corretor confere:'))).toBe(true);
+});
