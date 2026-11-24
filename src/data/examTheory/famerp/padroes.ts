@@ -386,8 +386,8 @@ export const famerpPatterns: Record<string, ExamPattern[]> = {
       title: 'Cortes: área nova e volume',
       questions: ['2024 q77', '2022 q76'],
       asks: md`Um prisma cortado em escada, ou cubos cortados por um plano vertical; pede a área acrescentada ou o volume de uma parte.`,
-      solve: [md`Área acrescentada = 2 × área da superfície de corte (cada pedaço ganha uma).`, md`Volume: conte os cubos inteiros e as metades cortadas pela diagonal.`],
-      distractors: md`A área do corte contada uma vez só e volumes com cubos inteiros onde o plano corta pela metade.`,
+      solve: [md`Área acrescentada = 2 × área da superfície de corte (cada pedaço ganha uma).`, md`Volume: conte os cubos inteiros de cada lado; onde o plano passa na diagonal de um bloco de **dois cubos vizinhos**, esse bloco vira dois prismas triangulares iguais, cada um com o volume de **um cubo** (o plano não divide cada cubo ao meio).`],
+      distractors: md`A área do corte contada uma vez só e volumes de quem atribui o bloco cortado inteiro a um dos lados.`,
     },
   ],
 
