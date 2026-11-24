@@ -145,8 +145,8 @@ it('abre a teoria do capítulo pedido, com a resolução escondida até ela tent
 it('a teoria das discursivas abre na matéria pedida e esconde a resposta-modelo até ela escrever', async () => {
   renderAt('/provas/famerp/teoria?parte=discursivas&materia=Qu%C3%ADmica');
   expect(screen.getByRole('button', { name: 'Química' })).toHaveAttribute('aria-pressed', 'true');
-  const card = screen.getByText('Pilhas, eletrólise e corrosão').closest('details')!;
-  fireEvent.click(within(card).getByText('Pilhas, eletrólise e corrosão'));
+  const card = screen.getByText('Pilhas, baterias, eletrólise e corrosão').closest('details')!;
+  fireEvent.click(within(card).getByText('Pilhas, baterias, eletrólise e corrosão'));
   expect(await within(card).findByText('O mecanismo')).toBeInTheDocument();
   expect(within(card).getByText('Treino discursivo')).toBeInTheDocument();
   const model = within(card).getByText(/Escreva sua resposta/).closest('details')!;
