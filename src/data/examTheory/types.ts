@@ -65,3 +65,25 @@ export interface DiscursiveTheme extends ChapterTheory {
   /** Anos em que o tema apareceu nas discursivas do banco. */
   years: number[];
 }
+
+/** Parágrafo de uma redação-modelo, com o que ele faz em cada critério. */
+export interface EssayParagraph {
+  role: 'Introdução' | 'Desenvolvimento 1' | 'Desenvolvimento 2' | 'Conclusão';
+  text: string;
+  /** O que este parágrafo garante na grade (Tema, Estrutura, Língua, Coesão). */
+  doesWhat: string[];
+}
+
+/** Redação-modelo autoral para um tema real da banca. */
+export interface EssayModel {
+  year: number;
+  theme: string;
+  /** A forma da frase temática decide a forma da tese. */
+  shape: string;
+  thesis: string;
+  /** Riscos de fuga parcial específicos deste recorte. */
+  recorteTraps: string[];
+  paragraphs: EssayParagraph[];
+  /** Repertório usado, com o que cada item prova. */
+  repertoire: { item: string; proves: string }[];
+}

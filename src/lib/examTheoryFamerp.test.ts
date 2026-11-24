@@ -120,3 +120,17 @@ describe('teoria da Famerp: discursivas', () => {
     }
   });
 });
+
+it('redações-modelo da Famerp: um por tema real, quatro parágrafos e extensão de prova', async () => {
+  const { famerpEssayModels } = await import('../data/examTheory/famerp/redacao');
+  const { medicineEssayGuides } = await import('../data/vunespMedicineEssayGuide');
+  const realThemes = medicineEssayGuides.Famerp.themes;
+  assert.deepEqual(famerpEssayModels.map((e) => `${e.year} ${e.theme}`).sort(), realThemes.map((t) => `${t.year} ${t.theme}`).sort());
+  for (const e of famerpEssayModels) {
+    assert.deepEqual(e.paragraphs.map((p) => p.role), ['Introdução', 'Desenvolvimento 1', 'Desenvolvimento 2', 'Conclusão'], `${e.year}`);
+    // ~10 palavras por linha manuscrita: 240 a 360 palavras cabem em 25–30 linhas.
+    const words = e.paragraphs.map((p) => p.text).join(' ').split(/\s+/).length;
+    assert.ok(words >= 240 && words <= 360, `${e.year}: ${words} palavras`);
+    assert.ok(e.repertoire.length >= 2 && e.recorteTraps.length >= 2, `${e.year}`);
+  }
+});

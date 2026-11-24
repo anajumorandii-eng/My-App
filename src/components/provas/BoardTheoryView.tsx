@@ -5,11 +5,12 @@ import { AiText } from '../AiText';
 import { Panel } from '../ui/Panel';
 import { Button } from '../ui/Button';
 import { theoryKey, type BoardTheory, type ChapterTheory } from '../../data/examTheory';
+import { EssayModelsView } from './EssayModelsView';
 import type { BoardPriorities } from '../../lib/boardPrep';
 
 const LINK = 'text-sm underline underline-offset-2 hover:text-[var(--action-primary)]';
 
-type Part = 'objetiva' | 'discursivas';
+type Part = 'objetiva' | 'discursivas' | 'redacao';
 
 /**
  * Teoria da banca em duas partes: os capítulos que mais caem na objetiva e os
@@ -28,18 +29,20 @@ export function BoardTheoryView({ boardName, questionBoard, priorities, theory }
   const requestedTheme = params.get('tema');
   const chapters = (priorities?.chapters ?? []).filter((c) => theory.chapters[theoryKey(c.topicId, c.chapter)]);
   const hasDiscursive = theory.discursive.length > 0;
+  const essays = theory.essays ?? [];
 
-  const initialPart: Part = requestedTheme || (params.get('parte') === 'discursivas' && hasDiscursive) || chapters.length === 0 ? 'discursivas' : 'objetiva';
+  const initialPart: Part = params.get('parte') === 'redacao' && essays.length > 0 ? 'redacao'
+    : requestedTheme || (params.get('parte') === 'discursivas' && hasDiscursive) || chapters.length === 0 ? 'discursivas' : 'objetiva';
   const [part, setPart] = useState<Part>(initialPart);
 
   const objectiveSubjects = [...new Set(chapters.map((c) => c.subject))];
   const discursiveSubjects = [...new Set(theory.discursive.map((t) => t.subject))];
-  const subjects = part === 'objetiva' ? objectiveSubjects : discursiveSubjects;
+  const subjects = part === 'objetiva' ? objectiveSubjects : part === 'discursivas' ? discursiveSubjects : [];
 
   const initialSubject = part === 'objetiva'
     ? chapters.find((c) => theoryKey(c.topicId, c.chapter) === requestedChapter)?.subject
     : theory.discursive.find((t) => t.id === requestedTheme)?.subject ?? params.get('materia') ?? undefined;
-  const [subjectByPart, setSubjectByPart] = useState<Record<Part, string | undefined>>({ objetiva: part === 'objetiva' ? initialSubject : undefined, discursivas: part === 'discursivas' ? initialSubject : undefined });
+  const [subjectByPart, setSubjectByPart] = useState<Record<Part, string | undefined>>({ objetiva: part === 'objetiva' ? initialSubject : undefined, discursivas: part === 'discursivas' ? initialSubject : undefined, redacao: undefined });
   const subject = subjects.includes(subjectByPart[part] ?? '') ? subjectByPart[part]! : subjects[0];
 
   const target = useRef<HTMLDetailsElement>(null);
@@ -54,20 +57,22 @@ export function BoardTheoryView({ boardName, questionBoard, priorities, theory }
         <p className="text-sm">Cada item traz como o assunto caiu nas provas reais, o mecanismo explicado, as fórmulas, onde se aplica, como atacar a questão, exemplos resolvidos e as armadilhas. Em Biologia, Química e Física há também uma discursiva com resposta-modelo e o que a correção confere. Os exemplos têm números próprios, para não entregar as questões do simulado.</p>
       </Panel>
 
-      {hasDiscursive && chapters.length > 0 && (
+      {[chapters.length > 0, hasDiscursive, essays.length > 0].filter(Boolean).length > 1 && (
         <div role="tablist" aria-label="Parte da prova" className="flex flex-wrap gap-2">
-          <Button role="tab" aria-selected={part === 'objetiva'} size="sm" variant={part === 'objetiva' ? 'primary' : 'secondary'} onClick={() => setPart('objetiva')}>Objetiva: o que mais cai ({chapters.length})</Button>
-          <Button role="tab" aria-selected={part === 'discursivas'} size="sm" variant={part === 'discursivas' ? 'primary' : 'secondary'} onClick={() => setPart('discursivas')}>Discursivas do 2º dia ({theory.discursive.length})</Button>
+          {chapters.length > 0 && <Button role="tab" aria-selected={part === 'objetiva'} size="sm" variant={part === 'objetiva' ? 'primary' : 'secondary'} onClick={() => setPart('objetiva')}>Objetiva: o que mais cai ({chapters.length})</Button>}
+          {hasDiscursive && <Button role="tab" aria-selected={part === 'discursivas'} size="sm" variant={part === 'discursivas' ? 'primary' : 'secondary'} onClick={() => setPart('discursivas')}>Discursivas do 2º dia ({theory.discursive.length})</Button>}
+          {essays.length > 0 && <Button role="tab" aria-selected={part === 'redacao'} size="sm" variant={part === 'redacao' ? 'primary' : 'secondary'} onClick={() => setPart('redacao')}>Redação ({essays.length} temas reais)</Button>}
         </div>
       )}
 
-      <div role="group" aria-label="Matéria" className="flex flex-wrap gap-2">
+      {subjects.length > 0 && <div role="group" aria-label="Matéria" className="flex flex-wrap gap-2">
         {subjects.map((s) => (
           <Button key={s} size="sm" variant={s === subject ? 'primary' : 'secondary'} aria-pressed={s === subject} onClick={() => setSubjectByPart({ ...subjectByPart, [part]: s })}>{s}</Button>
         ))}
-      </div>
+      </div>}
 
-      {part === 'objetiva'
+      {part === 'redacao' ? <EssayModelsView boardName={boardName} essays={essays} />
+        : part === 'objetiva'
         ? chapters.filter((c) => c.subject === subject).map((c) => {
           const key = theoryKey(c.topicId, c.chapter);
           const isTarget = key === requestedChapter;

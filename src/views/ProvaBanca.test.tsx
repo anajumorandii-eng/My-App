@@ -153,6 +153,15 @@ it('a teoria das discursivas abre na matéria pedida e esconde a resposta-modelo
   expect(model).not.toHaveAttribute('open');
 });
 
+it('a aba Redação abre os modelos dos temas reais, sem a fileira de matérias', () => {
+  renderAt('/provas/famerp/teoria?parte=redacao');
+  expect(screen.getByRole('tab', { name: /Redação/ })).toHaveAttribute('aria-selected', 'true');
+  expect(screen.queryByRole('group', { name: 'Matéria' })).not.toBeInTheDocument();
+  const card = screen.getByText(/Racismo ambiental no Brasil/).closest('details')!;
+  expect(within(card).getByText('Desenvolvimento 2')).toBeInTheDocument();
+  expect(screen.getByText(/zera a redação idêntica ou muito semelhante/)).toBeInTheDocument();
+});
+
 it('mostra os tipos de cobrança do capítulo com as questões reais citadas', async () => {
   const pct = (year: number): Question => ({ ...question(41, year), id: `famerp_${year}_pct`, topicId: 'mat_aritmetica_proporcionalidade', subject: 'Matemática', chapter: 'Porcentagem', examSource: { board: 'FAMERP', year, questionNumber: 41, version: 'V1' } });
   questionsHook.mockReturnValue({ questions: [...exam(2025), ...exam(2024), ...exam(2023), pct(2025), pct(2024), pct(2023)], loading: false });
