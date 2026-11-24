@@ -2,17 +2,14 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "d8dcb24847bcf25d47b17e8769a7ae2d909f92bf",
-  "generated_at_utc": "2026-11-24T19:47:33Z",
+  "source_commit": "04f1da237dd665a546b0875f75aab0c2de32522e",
+  "generated_at_utc": "2026-11-24T20:19:50Z",
   "changed_files": [
-    "docs/leitura-crivo-teoria-2026-11-24/README.md",
-    "docs/leitura-crivo-teoria-2026-11-24/leitura-disc-desktop-2.png",
-    "docs/leitura-crivo-teoria-2026-11-24/leitura-disc-desktop.png",
-    "docs/leitura-crivo-teoria-2026-11-24/leitura-redacao-celular-2.png",
-    "docs/leitura-crivo-teoria-2026-11-24/leitura-redacao-celular.png",
-    "src/components/provas/BoardTheoryView.tsx",
-    "src/components/provas/EssayModelsView.tsx",
-    "src/views/ProvaBanca.test.tsx"
+    "docs/abas-banca-carregamento-2026-11-24/README.md",
+    "docs/abas-banca-carregamento-2026-11-24/abas-depois-da-carga.png",
+    "docs/abas-banca-carregamento-2026-11-24/abas-durante-carga.png",
+    "src/views/ProvaBanca.test.tsx",
+    "src/views/ProvaBanca.tsx"
   ],
   "next_session": {
     "mode": "delta-only",
