@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import katex from 'katex';
 import type { Question } from '../types.ts';
 import { boardPriorities } from './boardPrep.ts';
-import { famerpDiscursiveThemes, famerpTheory } from '../data/examTheory/famerp/index.ts';
+import { famerpDiscursiveThemes, famerpPatterns, famerpTheory } from '../data/examTheory/famerp/index.ts';
 import type { ChapterTheory } from '../data/examTheory/types.ts';
 import { famerp2022Discursive } from '../data/discursiveFamerp2022.ts';
 import { famerp2023Discursive } from '../data/discursiveFamerp2023.ts';
@@ -56,6 +56,28 @@ describe('teoria da Famerp: objetiva', () => {
     for (const [key, t] of Object.entries(famerpTheory)) {
       if (!NATUREZA.has(subjectOf.get(key)!)) continue;
       assert.ok(t.discursive && t.discursive.modelAnswer.length >= 2 && t.discursive.scoring.length >= 2, `${key}: discursiva`);
+    }
+  });
+});
+
+describe('teoria da Famerp: como a prova cobra', () => {
+  it('todo capítulo prioritário tem ao menos um tipo de cobrança, e não há tipo de capítulo inexistente', () => {
+    for (const key of priorityKeys) assert.ok(famerpPatterns[key]?.length, `${key}: sem tipos de cobrança`);
+    assert.deepEqual(Object.keys(famerpPatterns).filter((k) => !priorityKeys.includes(k)), []);
+  });
+
+  it('cada questão citada existe no banco e é daquele capítulo; nenhuma questão do capítulo fica de fora', () => {
+    for (const [key, patterns] of Object.entries(famerpPatterns)) {
+      const [topicId, chapter] = key.split('::');
+      const real = bank.filter((q) => q.examSource?.board === 'FAMERP' && q.topicId === topicId && q.chapter === chapter && q.examSource.questionNumber)
+        .map((q) => `${q.examSource!.year} q${q.examSource!.questionNumber}`);
+      const cited = patterns.flatMap((p) => p.questions);
+      for (const c of cited) assert.ok(real.includes(c), `${key}: ${c} não é questão deste capítulo`);
+      assert.deepEqual(real.filter((r) => !cited.includes(r)), [], `${key}: questão real sem tipo`);
+      for (const p of patterns) {
+        assert.ok(p.solve.length >= 1 && p.asks.length > 20 && p.distractors.length > 20, `${key}: ${p.title}`);
+        for (const tex of [p.asks, ...p.solve, p.distractors].flatMap(mathOf)) assert.doesNotThrow(() => katex.renderToString(tex, { throwOnError: true }), `${key}: $${tex}$`);
+      }
     }
   });
 });

@@ -152,3 +152,13 @@ it('a teoria das discursivas abre na matéria pedida e esconde a resposta-modelo
   const model = within(card).getByText(/Escreva sua resposta/).closest('details')!;
   expect(model).not.toHaveAttribute('open');
 });
+
+it('mostra os tipos de cobrança do capítulo com as questões reais citadas', async () => {
+  const pct = (year: number): Question => ({ ...question(41, year), id: `famerp_${year}_pct`, topicId: 'mat_aritmetica_proporcionalidade', subject: 'Matemática', chapter: 'Porcentagem', examSource: { board: 'FAMERP', year, questionNumber: 41, version: 'V1' } });
+  questionsHook.mockReturnValue({ questions: [...exam(2025), ...exam(2024), ...exam(2023), pct(2025), pct(2024), pct(2023)], loading: false });
+  renderAt('/provas/famerp/teoria?capitulo=mat_aritmetica_proporcionalidade%3A%3APorcentagem');
+  const card = screen.getByText('Porcentagem').closest('details')!;
+  expect(within(card).getByText('Como a Famerp cobra, tipo por tipo')).toBeInTheDocument();
+  expect(within(card).getAllByText('Lucro sobre o custo').length).toBeGreaterThan(0);
+  expect(within(card).getByText('2023 q71')).toBeInTheDocument();
+});
