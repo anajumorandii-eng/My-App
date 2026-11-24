@@ -2,11 +2,24 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "dbd21981af65d4d81d8b69144ed3ec943057c861",
-  "generated_at_utc": "2026-11-24T16:15:41Z",
+  "source_commit": "7a07c69476a77a940a752b6b7a89927596f3fd6e",
+  "generated_at_utc": "2026-11-24T16:18:37Z",
   "changed_files": [
-    "src/data/examTheory/famerp/discursivas-biologia.ts",
-    "src/data/examTheory/famerp/discursivas-fisica.ts"
+    "docs/provas-redacao-2026-11-24/README.md",
+    "docs/provas-redacao-2026-11-24/redacao-claro-celular-movimento-reduzido.png",
+    "docs/provas-redacao-2026-11-24/redacao-claro-celular.png",
+    "docs/provas-redacao-2026-11-24/redacao-claro-desktop.png",
+    "docs/provas-redacao-2026-11-24/redacao-claro-ipad.png",
+    "docs/provas-redacao-2026-11-24/redacao-escuro-celular.png",
+    "docs/provas-redacao-2026-11-24/redacao-escuro-desktop.png",
+    "docs/provas-redacao-2026-11-24/redacao-escuro-ipad.png",
+    "src/components/provas/BoardTheoryView.tsx",
+    "src/components/provas/EssayModelsView.tsx",
+    "src/data/examTheory/famerp/redacao.ts",
+    "src/data/examTheory/index.ts",
+    "src/data/examTheory/types.ts",
+    "src/lib/examTheoryFamerp.test.ts",
+    "src/views/ProvaBanca.test.tsx"
   ],
   "next_session": {
     "mode": "delta-only",
