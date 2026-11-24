@@ -387,8 +387,8 @@ $\Delta U = Q - \tau$.
         title: 'Dilatação por gráfico, por área e com recipiente',
         questions: ['2022 q17', '2023 q17', '2026 q17'],
         asks: md`Escolher o material pelo limite e calcular α; β e α pela variação de área; γ do vidro e dilatação e γ da glicerina pelo volume livre.`,
-        solve: [md`Converta o limite para a faixa do gráfico.`, md`$\alpha = \Delta L / (L_0 \Delta T)$; $\beta = 2\alpha$; $\gamma = 3\alpha$.`, md`Volume da glicerina = recipiente dilatado − volume livre.`],
-        distractors: md`Esquecer que o recipiente também dilata.`,
+        solve: [md`Converta o limite para a faixa do gráfico. "Porém inferior" exclui o material que **iguala** o limite (o aço em 2022).`, md`$\alpha = \Delta L / (L_0 \Delta T)$; $\beta = 2\alpha$; $\gamma = 3\alpha$.`, md`Volume da glicerina = recipiente dilatado − volume livre.`],
+        distractors: md`Escolher o material que iguala o limite quando a questão pede o inferior; esquecer que o recipiente também dilata.`,
       },
       {
         title: 'Calorimetria, condução e equilíbrio',

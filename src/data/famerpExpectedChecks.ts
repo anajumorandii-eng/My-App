@@ -1,8 +1,13 @@
 // O que o corretor confere em cada item das discursivas da Famerp, no formato
 // das respostas esperadas que a Vunesp publica para a Unesp: termo exato,
-// justificativa curta, conta com unidade. A Famerp não publica respostas
-// esperadas próprias (só os cadernos), por isso a lista é autoral do CRIVO,
-// escrita a partir da resposta-modelo de cada questão.
+// justificativa curta, conta com unidade. A lista é autoral do CRIVO, escrita a
+// partir da resposta-modelo de cada questão.
+//
+// Em 24/11/2026 as 100 foram conferidas com a resolução comentada do Etapa
+// (etaparesolve.etapa.com.br, provas 453, 490, 557, 675 e 741), que é de
+// cursinho, não da banca. A conferência achou um erro de leitura de gráfico
+// (2022 q17: o aço iguala o limite, a resposta é o titânio) e quatro critérios
+// incompletos. O texto do Etapa não foi copiado: é resolução de terceiros.
 //
 // Cada entrada tem uma lista por item, na ordem dos subItems. Não há peso por
 // ponto: o edital diz que cada questão vale de 0 a 4, mas não publica a divisão
@@ -28,7 +33,7 @@ export const famerpExpectedChecks: Record<string, string[][]> = {
   ],
   disc_famerp_2026_q05: [
     ['Estômago.', 'Ácido clorídrico (HCl).'],
-    ['O ácido ativa o pepsinogênio em pepsina e garante o pH ácido.', 'O bicarbonato neutraliza o ácido, sem ativação nem digestão.'],
+    ['O ácido ativa o pepsinogênio em pepsina e garante o pH ácido.', 'O bicarbonato eleva o pH: sem ativação, e a pepsina se desnatura em meio básico.'],
   ],
   disc_famerp_2026_q06: [
     ['Etapa 1 (replicação), em células da linhagem germinativa.', 'Ribossomo.'],
@@ -254,7 +259,7 @@ export const famerpExpectedChecks: Record<string, string[][]> = {
   ],
   // 2023
   disc_famerp_2023_q01: [
-    ['Catalisar a quebra do polímero em moléculas menores.', 'Temperatura ou pH.'],
+    ['Catalisar a quebra do polímero em moléculas menores.', 'Um fator abiótico: temperatura, pH, concentração de substrato ou de sais.'],
     ['Descobrir o gene (sequência de DNA) da enzima.', 'Universalidade do código genético.'],
   ],
   disc_famerp_2023_q02: [
@@ -262,7 +267,7 @@ export const famerpExpectedChecks: Record<string, string[][]> = {
     ['Destruição das fibras cardíacas, inflamação e fibrose, levando a cardiomegalia e insuficiência.', 'Fezes do barbeiro com o parasita entram pela lesão ou mucosa.'],
   ],
   disc_famerp_2023_q03: [
-    ['Pioneiros autótrofos, resistentes e pouco exigentes (liquens).', 'Vento, correntes marinhas ou aves.'],
+    ['Pioneiros autótrofos, pouco exigentes e de alta capacidade reprodutiva (liquens).', 'Esporos e sementes levados por vento, correntes marinhas, aves ou embarcações.'],
     ['Produção igual ao consumo (produtividade líquida perto de zero).', 'Mais espécies e estratos geram mais nichos.'],
   ],
   disc_famerp_2023_q04: [
@@ -271,7 +276,7 @@ export const famerpExpectedChecks: Record<string, string[][]> = {
   ],
   disc_famerp_2023_q05: [
     ['Células do próprio paciente (mesmo MHC).', 'Mitose descontrolada.'],
-    ['Proteínas.', 'Não é herdada, porque a alteração foi em células somáticas.'],
+    ['Proteínas de membrana (em geral glicoproteínas).', 'Não é herdada, porque a alteração foi em células somáticas.'],
   ],
   disc_famerp_2023_q06: [
     ['Evita perder água quando não há fotossíntese.', 'Solo seco ou salino.'],
@@ -380,7 +385,7 @@ export const famerpExpectedChecks: Record<string, string[][]> = {
   ],
   disc_famerp_2022_q12: [
     ['Pent-2-eno.', 'Isomeria de posição.'],
-    ['x = −53 kJ/mol.', 'Complexo ativado em 50 kJ/mol, com o mesmo ΔH.'],
+    ['x = −53 kJ/mol.', 'Complexo ativado em 50 kJ/mol (Ea de 253 para 103 kJ), com o mesmo ΔH.'],
   ],
   disc_famerp_2022_q13: [
     ['Potencial de redução menor que o do ferro: oxidam-se no lugar dele.', 'Zinco, comparando com a redução da água (−0,83 V).'],
@@ -399,7 +404,7 @@ export const famerpExpectedChecks: Record<string, string[][]> = {
     ['ΔEp = 25 J (h = 0,5 m).', '3,6 × 10⁵ voltas, com kWh convertido em joules.'],
   ],
   disc_famerp_2022_q17: [
-    ['Aço.', 'α ≈ 1,2 × 10⁻⁵ K⁻¹.'],
+    ['Titânio: o aço iguala o limite (20,125 cm), e a questão pede inferior.', 'α = 8,75 × 10⁻⁶ K⁻¹.'],
     ['0,5 °C/s.', '200 s.'],
   ],
   disc_famerp_2022_q18: [
