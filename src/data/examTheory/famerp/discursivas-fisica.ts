@@ -42,7 +42,7 @@ Isso resolve a questão em uma linha e serve de conferência quando você faz a 
 - $1\ \text{kWh} = 1\,000\ \text{W} \times 3\,600\ \text{s} = 3{,}6 \times 10^6\ \text{J}$.
 - $T(\text{K}) = \theta(^\circ\text{C}) + 273$. **Variação** de 1 °C = variação de 1 K.
 - $1\ \text{cal} \approx 4{,}2\ \text{J}$ (use se for dado).
-- km/h ÷ 3,6 = m/s; 1 L de água = 1 kg; 1 g/cm³ = 1 000 kg/m³; 1 cm² $= 10^{-4}$ m²; mA, mm, μ = $10^{-6}$.
+- km/h ÷ 3,6 = m/s; 1 L de água = 1 kg; 1 g/cm³ = 1 000 kg/m³; 1 cm² $= 10^{-4}$ m²; mili (mA, mm) $= 10^{-3}$; micro (μA, μm) $= 10^{-6}$.
 - Trabalhe em SI, **salvo** quando o enunciado dá constantes em outras unidades (cal/(s·cm·°C), Ω·cm): aí mantenha as unidades dele do começo ao fim.
 
 ### 4. Ler figura e gráfico

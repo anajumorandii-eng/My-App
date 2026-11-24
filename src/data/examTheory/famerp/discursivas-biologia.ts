@@ -148,7 +148,8 @@ Equilíbrio em população grande, panmítica, sem **mutação, seleção, migra
 - **Não disjunção** (na anáfase I ou II) gera gametas com cromossomo a mais. XXX é trissomia **sexual**; Down é trissomia de **autossomo** (21).`,
     formulas: [
       { tex: String.raw`\text{tipos de gameta} = 2^{n}`, meaning: md`$n$ = genes em heterozigose, com segregação independente.` },
-      { tex: String.raw`p^2 + 2pq + q^2 = 1,\qquad p + q + r = 1`, meaning: md`Hardy-Weinberg; no ABO, B heterozigoto $= 2qr$, AB $= 2pq$.` },
+      { tex: String.raw`p + q = 1,\qquad p^2 + 2pq + q^2 = 1`, meaning: md`Hardy-Weinberg com **dois** alelos.` },
+      { tex: String.raw`p + q + r = 1,\qquad (p + q + r)^2 = p^2 + q^2 + r^2 + 2pq + 2pr + 2qr = 1`, meaning: md`Com **três** alelos (ABO: $p$ = Iᴬ, $q$ = Iᴮ, $r$ = i): B heterozigoto $= 2qr$, AB $= 2pq$. A identidade de dois alelos não vale aqui.` },
       { tex: String.raw`\text{efeito por alelo} = \frac{\text{máx} - \text{mín}}{2n}`, meaning: md`Herança quantitativa.` },
       { tex: String.raw`\%\ \text{parentais} = 100\% - \text{UR}`, meaning: md`Ligação gênica; divida igualmente entre os dois tipos.` },
     ],
@@ -473,7 +474,7 @@ Densidade aumenta com natalidade e imigração; diminui com mortalidade e emigra
 ### 3. Sucessão ecológica
 - **Primária** (rocha nua, lava, duna): pioneiros **autótrofos resistentes e pouco exigentes** (liquens) iniciam o solo. Chegam por **vento, correntes marinhas ou aves**.
 - **Secundária** (após fogo ou desmatamento): já há solo e banco de sementes.
-- **Clímax**: produção bruta ≈ respiração da comunidade → **produtividade líquida ≈ 0**, biomassa estável. Mais espécies, estratos e microambientes → **mais nichos**.
+- **Clímax**: produção bruta ≈ respiração de **toda a comunidade** → **produtividade líquida da comunidade ≈ 0**, biomassa estável. Mais espécies, estratos e microambientes → **mais nichos**.
 
 ### 4. Fogo nos biomas
 - **Cerrado** evoluiu com fogo: **súber (cortiça) espesso** na casca isola os tecidos; **raízes profundas** alcançam a água; órgãos subterrâneos rebrotam.
@@ -492,7 +493,8 @@ Harmônicas: **mutualismo** (ambos ganham, interdependência), protocooperação
 - **Óleo na superfície**: bloqueia a luz e as trocas gasosas. As **zooxantelas** (algas simbiontes dos corais) não fazem fotossíntese; falta matéria orgânica e O₂ e o coral morre (além da toxicidade).`,
     formulas: [
       { tex: String.raw`\text{CO}_2 + \text{H}_2\text{O} \rightleftharpoons \text{H}^+ + \text{HCO}_3^-`, meaning: md`Origem da acidificação.` },
-      { tex: String.raw`\text{PPL} = \text{PPB} - \text{R}`, meaning: md`Produtividade líquida; no clímax tende a zero.` },
+      { tex: String.raw`\text{PPL} = \text{PPB} - \text{R}_{\text{produtores}}`, meaning: md`Produtividade primária líquida: o que sobra aos consumidores. Não zera no clímax.` },
+      { tex: String.raw`\text{PLC} = \text{PPB} - \text{R}_{\text{comunidade}}`, meaning: md`Produtividade líquida da **comunidade** (descontada a respiração de todos): tende a zero no clímax, e a biomassa para de crescer.` },
     ],
     applications: [
       md`**Geografia**: biomas, queimadas, exploração de petróleo, COP30.`,
@@ -527,7 +529,7 @@ Harmônicas: **mutualismo** (ambos ganham, interdependência), protocooperação
         title: 'Populações, cadeias e sucessão',
         questions: ['2022 q03', '2023 q03', '2024 q01'],
         asks: md`Cadeia com três níveis e nível do macaco; fator biótico e limite da densidade; característica dos pioneiros e como chegaram; biomassa e nichos no clímax; sucessão após fogo, súber, raízes e solo amazônico.`,
-        solve: [md`Use organismos do texto.`, md`Resistência do meio e capacidade de suporte.`, md`PPL ≈ 0 no clímax; mais estratos = mais nichos.`],
+        solve: [md`Use organismos do texto.`, md`Resistência do meio e capacidade de suporte.`, md`No clímax a produtividade líquida da comunidade ≈ 0; mais estratos = mais nichos.`],
         distractors: md`Não há alternativas: perde-se ponto dizendo que a população "cresce sem limite" e que o solo amazônico é fértil.`,
       },
       {
