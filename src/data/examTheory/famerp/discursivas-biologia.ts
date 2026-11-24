@@ -1,7 +1,12 @@
-// Temas que se repetem nas 40 discursivas de Biologia da Famerp 2022–2026
-// (8 por prova). Os anos saem da leitura de src/data/discursiveFamerp20XX.ts;
-// as perguntas de treino são autorais, para não entregar as da aba
-// Discursivas.
+// Temas das 40 discursivas de Biologia da Famerp 2022–2026 (8 por prova),
+// reescritos a partir da leitura de cada questão real. Os tipos de cobrança
+// citam as questões ("2025 q06" = disc_famerp_2025_q06) e o teste confere que
+// as 40 aparecem. As perguntas de treino são autorais.
+//
+// Achado que organiza tudo: o item (a) pede um nome exato (filo, célula,
+// órgão, local, classe de substância, hormônio); o item (b) pede o "por que"
+// de um mecanismo, quase sempre a partir de uma notícia. Por isso há um tema
+// para o vocabulário que o item (a) cobra.
 
 import type { DiscursiveTheme } from '../types';
 
@@ -9,149 +14,281 @@ const md = String.raw;
 
 export const discursivasBiologia: DiscursiveTheme[] = [
   {
-    id: 'bio-genetica',
+    id: 'bio-item-a',
     subject: 'Biologia',
-    title: 'Genética: cruzamentos, herança ligada ao sexo e populações',
+    title: 'Nomear com precisão: o vocabulário que o item (a) cobra',
     years: [2022, 2023, 2024, 2025, 2026],
-    howItFalls: md`Caiu **todo ano, com 2 a 3 itens por prova**: Hardy-Weinberg no sistema ABO e dominância incompleta (2022), distrofia de Duchenne ligada ao X (2023), cariótipo com translocação (2024), herança quantitativa e corpúsculo de Barr (2025), ligação gênica em *Drosophila* e herança ligada ao Z em aves (2026). É o tema que mais vale ponto no 2º dia.`,
-    explanation: md`### Base: alelos e gametas
-Cada indivíduo tem dois alelos por gene (um de cada genitor) e passa **um** para cada gameta (1ª lei de Mendel). Escrever os gametas antes do cruzamento evita metade dos erros.
+    howItFalls: md`Em quase todas as 40 questões, o item (a) pede um **nome exato**: o tipo de simetria e um cefalópode (2022), o filo de um verme (2024 e 2025), a célula ligada à anemia hemolítica e onde ela é destruída (2023), a classe orgânica dos anticorpos e da actina (2024 e 2026), o tipo de sistema nervoso da hidra e o órgão que controla a respiração (2024), a unidade funcional do rim (2025), o tubo acima da notocorda e a cavidade revestida por mesoderme (2026), o órgão e o ácido do estômago (2026), o tipo de endocitose do macrófago (2026). É ponto que se perde trocando um termo por outro parecido.`,
+    explanation: md`### Por que este tema existe
+A Famerp abre quase toda questão com uma pergunta de **identificação**. Ela não aceita "uma célula do sangue" quando pede "a hemácia", nem "proteínas e lipídios" quando pede "a classe orgânica". Esta lista reúne os termos que apareceram e os vizinhos com que costumam ser confundidos.
 
-### Tipos de dominância
-- **Completa**: Aa tem o fenótipo de AA. Aa × Aa → 3 : 1.
-- **Incompleta**: o heterozigoto é intermediário (flor rosa entre vermelha e branca). Aa × Aa → 1 : 2 : 1 em genótipo **e** fenótipo.
-- **Codominância**: os dois alelos se expressam (sangue AB).
+### Classes de substâncias orgânicas
+- **Proteínas**: enzimas, anticorpos (imunoglobulinas), actina e miosina, hemoglobina, hormônios peptídicos (insulina, glucagon, ADH).
+- **Lipídios**: fosfolipídios (membranas), triglicerídeos (reserva), **esteroides** (colesterol, testosterona, estrógeno, progesterona, cortisol).
+- **Carboidratos**: glicose, sacarose, **trealose** (dissacarídeo de glicoses), glicogênio (reserva animal), amido (vegetal), celulose.
+- **Ácidos nucleicos**: DNA e RNA.
 
-### Alelos múltiplos: ABO
-$I^A = I^B > i$. Tipo A pode ser $I^AI^A$ ou $I^Ai$; tipo O é $ii$. Pais A e B podem ter filho O se ambos forem heterozigotos.
+### Órgãos, células e locais que caíram
+- **Hemácia** (eritrócito): destruída no **baço** (e fígado).
+- **Néfron**: unidade funcional do rim. **Glomérulo** filtra; túbulos reabsorvem.
+- **Bulbo** (medula oblonga): controla respiração e batimentos.
+- **Estômago**: produz **pepsinogênio** e **ácido clorídrico**.
+- **Tuba uterina**: local da fecundação.
+- **Fígado**: sintetiza colesterol, armazena glicogênio.
+- **Mastócito**: célula do conjuntivo que libera histamina.
+- **Macrófago**: fagocita e apresenta antígenos.
 
-### Herança ligada ao X
-Genes no X. O homem (XY) tem um X só: um alelo recessivo já se expressa.
-- Pai afetado passa o X para **todas** as filhas e para **nenhum** filho.
-- Mãe portadora ($X^AX^a$) passa o alelo para metade dos filhos homens, que serão afetados.
-- Exemplos: hemofilia, daltonismo, distrofia de Duchenne.
+### Grupos animais
+- **Moluscos**: simetria bilateral, corpo mole, manto, pé muscular, **rádula** (fita dentada que raspa o alimento). Classes: gastrópodes (caramujo), bivalves (mexilhão; perderam a rádula), **cefalópodes** (polvo, lula, sépia, náutilo).
+- **Nematoda**: vermes cilíndricos, tubo digestório completo (*Ascaris*, nematódeos de vida livre).
+- **Cnidários** (hidra): sistema nervoso **difuso**, em rede, sem centralização.
 
-### Aves: sistema ZW
-O macho é **ZZ** e a fêmea é **ZW**: a lógica se inverte. A fêmea expressa qualquer alelo do Z.
+### Embriologia
+- **Ectoderma** → epiderme e sistema nervoso (**tubo neural** → encéfalo e medula).
+- **Mesoderma** → músculos, ossos, sangue, notocorda.
+- **Endoderma** → revestimento do tubo digestório e glândulas anexas.
+- **Celoma**: cavidade **revestida inteiramente por mesoderme** (celoma verdadeiro).
 
-### Corpúsculo de Barr
-Nas células com mais de um X, todos menos um se inativam e viram o corpúsculo de Barr. Número de corpúsculos $= \text{número de X} - 1$. Mulher XX tem 1; síndrome de Klinefelter (XXY) tem 1; síndrome de Turner (X0) tem 0.
+### Endocitose
+**Fagocitose**: englobar partícula sólida com pseudópodes. **Pinocitose**: englobar líquido. **Mediada por receptor**: com receptores específicos.
 
-### Alterações cromossômicas
-- **Não disjunção** na meiose gera gametas com um cromossomo a mais ou a menos: trissomias (síndrome de Down, 21).
-- **Translocação equilibrada**: o portador não tem sintomas, mas forma gametas desequilibrados e pode ter filhos afetados.
-
-### Ligação gênica
-Genes no mesmo cromossomo tendem a ir juntos. Os gametas **parentais** são os mais frequentes; os **recombinantes** surgem do crossing-over e sua frequência mede a distância (1% = 1 centimorgan).
-
-### Herança quantitativa
-Vários genes somam efeitos (altura, cor de pele, massa do fruto). Com $n$ pares de genes há $2n + 1$ classes de fenótipo, e cada alelo efetivo acrescenta $\dfrac{\text{máximo} - \text{mínimo}}{2n}$.
-
-### Populações: Hardy-Weinberg
-Numa população grande, sem seleção, mutação, migração ou deriva, as frequências se mantêm. Comece pela frequência dos homozigotos recessivos, que é observável: $q^2$.`,
-    formulas: [
-      { tex: String.raw`p + q = 1, \qquad p^2 + 2pq + q^2 = 1`, meaning: md`Hardy-Weinberg: $p^2$ = AA, $2pq$ = Aa, $q^2$ = aa.` },
-      { tex: String.raw`p + q + r = 1 \quad (I^A, I^B, i)`, meaning: md`ABO: tipo O $= r^2$; tipo A $= p^2 + 2pr$.` },
-      { tex: String.raw`\text{classes} = 2n + 1, \qquad \text{efeito de cada alelo} = \frac{\text{máx} - \text{mín}}{2n}`, meaning: md`Herança quantitativa com $n$ pares de genes.` },
-      { tex: String.raw`P(A \text{ e } B) = P(A)\cdot P(B), \qquad P(A \text{ ou } B) = P(A) + P(B)`, meaning: md`Eventos independentes multiplicam; excludentes somam.` },
-    ],
+### Como escrever
+Dê o termo técnico **e** uma característica que o identifica: "mastócito, célula do tecido conjuntivo que armazena histamina".`,
     applications: [
-      md`**Saúde**: aconselhamento genético, doenças ligadas ao X, transfusão de sangue e eritroblastose fetal.`,
-      md`**Evolução**: desvios de Hardy-Weinberg indicam seleção, deriva ou migração.`,
-      md`**Biotecnologia**: transgênicos e marcadores (2026 juntou transgenia e herança ligada ao Z).`,
-      md`**Matemática**: probabilidade e frações.`,
+      md`**Todo o 2º dia de Biologia**: o item (a) de quase todas as questões vem desta lista.`,
+      md`**Objetiva**: classificação, fisiologia e citologia caem na 1ª fase.`,
+      md`**Química**: classes de substâncias orgânicas e funções.`,
     ],
     strategy: [
-      md`Defina as letras e escreva os genótipos possíveis de cada indivíduo.`,
-      md`Use o heredograma: filho afetado de pais normais revela pais heterozigotos.`,
-      md`Escreva os gametas e só depois o quadro de cruzamento.`,
-      md`Separe "probabilidade de ser menino **e** afetado" de "probabilidade de um menino ser afetado".`,
-      md`Na resposta, mostre o cruzamento: a banca dá nota ao caminho.`,
+      md`Responda com o termo exato, não com a categoria ampla.`,
+      md`Se pede "onde", diga o órgão **e**, se couber, a estrutura (estômago, células principais).`,
+      md`Se pede "qual classe", diga o grupo orgânico (proteína, lipídio).`,
     ],
     examples: [
       {
-        title: 'Ligada ao X',
-        prompt: md`Mulher de visão normal, filha de pai daltônico, casa com homem de visão normal. Qual a probabilidade de terem um filho homem daltônico?`,
-        steps: [md`Ela recebeu o $X^d$ do pai: é $X^DX^d$. Ele é $X^DY$.`, md`Filhos: $X^DX^D$, $X^DX^d$, $X^DY$, $X^dY$, cada um com $\frac14$.`, md`Filho homem daltônico: $\frac14$. Entre os filhos homens, $\frac12$.`],
+        title: 'Classe orgânica',
+        prompt: md`A que classe de substâncias pertencem a insulina, o colesterol e o glicogênio?`,
+        steps: [md`Insulina: proteína (hormônio peptídico).`, md`Colesterol: lipídio (esteroide).`, md`Glicogênio: carboidrato (polissacarídeo de reserva).`],
       },
       {
-        title: 'Hardy-Weinberg',
-        prompt: md`Numa população em equilíbrio, 16% são aa. Qual a frequência de heterozigotos?`,
-        steps: [md`$q^2 = 0{,}16 \Rightarrow q = 0{,}4$; $p = 0{,}6$.`, md`$2pq = 2 \cdot 0{,}6 \cdot 0{,}4 = 0{,}48 = 48\%$.`],
+        title: 'Folheto embrionário',
+        prompt: md`De qual folheto se origina o sistema nervoso, e qual estrutura embrionária o forma?`,
+        steps: [md`Ectoderma.`, md`Tubo neural, formado pela invaginação do ectoderma acima da notocorda.`],
       },
     ],
     discursive: {
-      prompt: md`Num casal, a mulher é portadora de um alelo recessivo ligado ao X que causa uma doença muscular, e o homem é normal. (a) Escreva os genótipos do casal. (b) Qual a probabilidade de uma filha ser afetada? E de um filho? (c) Por que a doença é muito mais frequente em homens?`,
-      modelAnswer: [md`(a) Mulher $X^AX^a$; homem $X^AY$.`, md`(b) Filhas recebem o $X^A$ do pai: nenhuma afetada (0), metade portadoras. Filhos recebem o Y do pai e um X da mãe: $\frac12$ afetados.`, md`(c) O homem tem um só X; um único alelo recessivo se expressa. A mulher precisaria de dois.`],
-      scoring: [md`Genótipos com a notação do X.`, md`Probabilidades separadas por sexo e justificadas pelo cruzamento.`, md`Justificativa da maior frequência em homens pela hemizigose.`],
+      prompt: md`Uma notícia descreve uma lula gigante encontrada numa praia. (a) A que filo e a que classe ela pertence? Que tipo de simetria apresenta? (b) Cite a estrutura dos moluscos usada para raspar o alimento e um grupo de moluscos que a perdeu.`,
+      modelAnswer: [md`(a) Filo Mollusca, classe Cephalopoda; simetria bilateral.`, md`(b) A rádula; os bivalves (mexilhões, ostras), que se alimentam por filtração.`],
+      scoring: [md`Filo e classe corretos.`, md`Simetria bilateral.`, md`Rádula e o grupo que a perdeu.`],
     },
+    patterns: [
+      {
+        title: 'Identificar célula, órgão ou local',
+        questions: ['2023 q04', '2025 q06', '2026 q05', '2024 q03', '2022 q04'],
+        asks: md`Célula da anemia hemolítica e onde é destruída; unidade funcional do rim; órgão do pepsinogênio e ácido gástrico; órgão que controla a respiração; vaso com valvas.`,
+        solve: [md`Termo exato + uma característica.`],
+        distractors: md`Não há alternativas: perde-se ponto com termos vizinhos (fígado por baço, medula por bulbo, artéria por veia).`,
+      },
+      {
+        title: 'Classificar organismo e estrutura',
+        questions: ['2022 q02', '2024 q07', '2025 q03', '2026 q02'],
+        asks: md`Simetria e exemplo de cefalópode; filo do *Ascaris* e do nematódeo do permafrost; tubo neural e celoma.`,
+        solve: [md`Filo e classe pelo nome científico.`, md`Folheto e estrutura embrionária.`],
+        distractors: md`Chamar nematódeo de platelminto e celoma de "cavidade do corpo".`,
+      },
+      {
+        title: 'Classe de substância e tipo de processo',
+        questions: ['2024 q05', '2026 q03'],
+        asks: md`Classe orgânica dos anticorpos; tipo de endocitose e classe da actina.`,
+        solve: [md`Proteína; fagocitose.`],
+        distractors: md`Responder "glicídio" para anticorpo ou "pinocitose" para englobar bactéria.`,
+      },
+    ],
     traps: [
-      { trap: md`Tratar herança ligada ao X como autossômica.`, fix: md`Escreva o X e o Y nos genótipos.` },
-      { trap: md`Esquecer que nas aves a fêmea é ZW.`, fix: md`Em ZW, quem expressa o recessivo com um alelo só é a fêmea.` },
-      { trap: md`Confundir frequência de alelo com de genótipo.`, fix: md`$q$ é alelo; $q^2$ é genótipo.` },
+      { trap: md`Responder a categoria ampla ("célula do sangue").`, fix: md`Dê o nome exato (hemácia).` },
+      { trap: md`Confundir glucagon (hormônio) com glicogênio (polissacarídeo).`, fix: md`A Famerp cobrou exatamente esse erro num excerto em 2025.` },
+    ],
+  },
+
+  {
+    id: 'bio-genetica',
+    subject: 'Biologia',
+    title: 'Genética: cruzamentos, cromossomos e populações',
+    years: [2022, 2023, 2024, 2025, 2026],
+    howItFalls: md`É o tema **mais cobrado do 2º dia**: 9 das 40 questões. Dominância incompleta e número de combinações gaméticas (2022), Hardy-Weinberg no ABO (2022), Duchenne ligada ao X com probabilidade para a irmã (2023), cariótipo e translocação (2024), gafanhoto rosa com probabilidade condicional (2024), herança quantitativa (2025), corpúsculo de Barr e não disjunção (2025), ligação gênica com distância em UR (2026), transgênico com gene no Z em aves (2026). A banca exige **"demonstre os cálculos"**.`,
+    explanation: md`### 1. Gametas: o passo que mais erra
+Cada par de alelos segrega; cada gameta leva **um** alelo de cada gene. Número de tipos de gameta = $2^n$, com $n$ = número de genes em **heterozigose** (em segregação independente). MBLlCC: 2 × 2 × 1 = 4; MBLlCc: 2 × 2 × 2 = 8. **Combinações** num cruzamento = produto dos tipos de gameta dos dois (4 × 8 = 32).
+
+### 2. Tipos de dominância
+- **Completa**: Aa = AA no fenótipo; 3 : 1.
+- **Incompleta**: heterozigoto **intermediário** (creme entre marrom e branco); 1 : 2 : 1 em genótipo e fenótipo.
+- **Codominância**: os dois se expressam (sangue AB).
+
+### 3. Segregação independente × ligação
+- **2ª lei de Mendel** vale para genes em **cromossomos diferentes** (pares não homólogos).
+- **Ligados** (mesmo cromossomo): os gametas **parentais** são os mais frequentes. A frequência de recombinantes (por **crossing-over**, na prófase I) = distância em **UR** (centimorgans). Com 26 UR: 26% recombinantes (13% de cada), 74% parentais (37% de cada).
+- Crossing-over só ocorre entre **homólogos**; troca entre não homólogos é **translocação** (mutação estrutural).
+
+### 4. Probabilidade condicional
+"Filha **verde** de pais heterozigotos": ela não pode ser aa, então $P(\text{Aa}) = \frac{2}{3}$ (não $\frac12$). Depois multiplique pelas outras condições (passar o alelo, ser fêmea). Duchenne: irmã normal de um afetado, com mãe portadora: $P(\text{portadora}) = \frac12$; filho homem afetado: $\frac12 \cdot \frac12 \cdot \frac12 = \frac18$ (portadora × passar $X^d$ × menino). **Explicite cada fator.**
+
+### 5. Herança ligada ao sexo
+- **XY**: o homem é **heterogamético** (forma gametas X e Y). Recessivo no X se expressa no homem com um só alelo. Pai passa o X às filhas e o Y aos filhos.
+- **ZW (aves)**: a **fêmea** é ZW (heterogamética), o macho ZZ. A fêmea passa o **Z aos filhos machos** e o W às fêmeas. Gene no Z de uma galinha só chega aos filhos machos.
+
+### 6. Herança quantitativa (poligênica)
+Vários genes de efeito aditivo; distribuição em **sino**. Com $n$ pares: $2n + 1$ classes; cada alelo efetivo soma $\frac{\text{máx} - \text{mín}}{2n}$. A classe mais frequente tem $n$ alelos efetivos. Triplo heterozigoto × triplo heterozigoto gera os dois extremos.
+
+### 7. Populações: Hardy-Weinberg
+Equilíbrio em população grande, panmítica, sem **mutação, seleção, migração ou deriva** (esses são os fatores evolutivos). ABO: $p + q + r = 1$; B heterozigoto $= 2qr$; AB $= 2pq$.
+
+### 8. Cromossomos
+- Cariótipo humano: 46 = 44 autossomos + 2 sexuais. X e Y **não são homólogos** (tamanho e genes diferentes; só pequenas regiões pseudoautossômicas).
+- **Corpúsculo de Barr**: X inativado e condensado; número = X − 1 (46,XX → 1; 47,XXX → 2; 46,XY → 0).
+- **Não disjunção** (na anáfase I ou II) gera gametas com cromossomo a mais. XXX é trissomia **sexual**; Down é trissomia de **autossomo** (21).`,
+    formulas: [
+      { tex: String.raw`\text{tipos de gameta} = 2^{n}`, meaning: md`$n$ = genes em heterozigose, com segregação independente.` },
+      { tex: String.raw`p + q = 1,\qquad p^2 + 2pq + q^2 = 1`, meaning: md`Hardy-Weinberg com **dois** alelos.` },
+      { tex: String.raw`p + q + r = 1,\qquad (p + q + r)^2 = p^2 + q^2 + r^2 + 2pq + 2pr + 2qr = 1`, meaning: md`Com **três** alelos (ABO: $p$ = Iᴬ, $q$ = Iᴮ, $r$ = i): B heterozigoto $= 2qr$, AB $= 2pq$. A identidade de dois alelos não vale aqui.` },
+      { tex: String.raw`\text{efeito por alelo} = \frac{\text{máx} - \text{mín}}{2n}`, meaning: md`Herança quantitativa.` },
+      { tex: String.raw`\%\ \text{parentais} = 100\% - \text{UR}`, meaning: md`Ligação gênica; divida igualmente entre os dois tipos.` },
+    ],
+    applications: [
+      md`**Saúde**: aconselhamento genético, Duchenne, hemofilia, síndromes cromossômicas.`,
+      md`**Biotecnologia**: transgênicos e sexagem de aves.`,
+      md`**Evolução**: fatores que alteram frequências.`,
+      md`**Agricultura**: melhoramento de caracteres quantitativos.`,
+    ],
+    strategy: [
+      md`Escreva os genótipos de todos os indivíduos citados.`,
+      md`Liste os gametas antes de cruzar.`,
+      md`Probabilidade: um fator por condição, escrito e justificado.`,
+      md`Termine com a fração **e** a porcentagem ou o número esperado.`,
+    ],
+    examples: [
+      {
+        title: 'Probabilidade condicional',
+        prompt: md`Um homem normal, filho de pais heterozigotos para um alelo recessivo autossômico, casa com uma mulher afetada. Qual a probabilidade de terem um filho afetado?`,
+        steps: [md`$P(\text{Aa}) = \frac23$ (ele não é aa).`, md`Se Aa × aa, filho afetado: $\frac12$.`, md`$\frac23 \cdot \frac12 = \frac13$.`],
+      },
+      {
+        title: 'Ligação',
+        prompt: md`Genes a 10 UR; indivíduo AB/ab. Que gametas e proporções?`,
+        steps: [md`Parentais AB e ab: 45% cada.`, md`Recombinantes Ab e aB: 5% cada.`],
+      },
+    ],
+    discursive: {
+      prompt: md`Em aves, um alelo dominante ligado ao Z causa plumagem barrada. (a) Qual o sexo heterogamético nas aves? (b) Um macho barrado heterozigoto é cruzado com uma fêmea não barrada. Que proporção dos filhotes machos e das fêmeas será barrada? Demonstre.`,
+      modelAnswer: [md`(a) A fêmea (ZW).`, md`(b) Macho $Z^BZ^b$ × fêmea $Z^bW$. Machos: $Z^BZ^b$ ou $Z^bZ^b$ → $\frac12$ barrados. Fêmeas: $Z^BW$ ou $Z^bW$ → $\frac12$ barradas.`],
+      scoring: [md`Identifica a fêmea como heterogamética.`, md`Genótipos com Z e W.`, md`Proporções por sexo com o cruzamento escrito.`],
+    },
+    patterns: [
+      {
+        title: 'Gametas, dominância e Hardy-Weinberg',
+        questions: ['2022 q07', '2022 q08', '2025 q07'],
+        asks: md`Tipo de herança da pelagem e combinações gaméticas; fatores evolutivos e frequências no ABO; herança quantitativa, gameta de AABBEE e massa mais frequente.`,
+        solve: [md`$2^n$ por indivíduo e produto entre os dois.`, md`$r = 1 - p - q$; $2qr$ e $2pq$.`, md`Efeito por alelo e classe central.`],
+        distractors: md`Somar tipos de gameta em vez de multiplicar e calcular AB como $p \cdot q$ sem o 2.`,
+      },
+      {
+        title: 'Herança ligada ao sexo e probabilidade',
+        questions: ['2023 q07', '2026 q08', '2024 q08'],
+        asks: md`Cromossomo do alelo e por que o homem é heterogamético; probabilidade de a irmã ter filho afetado; gene no Z para só machos; probabilidade condicional com o gafanhoto rosa.`,
+        solve: [md`Genótipos com X/Y ou Z/W.`, md`Um fator por condição, incluindo $\frac23$ quando o fenótipo exclui o homozigoto recessivo.`],
+        distractors: md`Usar $\frac12$ em vez de $\frac23$ e esquecer o fator do sexo do filho.`,
+      },
+      {
+        title: 'Cromossomos, mutações e ligação',
+        questions: ['2024 q04', '2025 q08', '2026 q07'],
+        asks: md`Autossomos e por que X e Y não são homólogos; translocação × permutação; corpúsculo de Barr e não disjunção; crossing-over, separação de X e Y e gametas parentais a 26 UR.`,
+        solve: [md`Barr = X − 1.`, md`Permutação só entre homólogos.`, md`Parentais = (100 − UR)/2 cada.`],
+        distractors: md`Chamar a troca entre 10 e 14 de crossing-over e dar 74% a um único tipo parental.`,
+      },
+    ],
+    traps: [
+      { trap: md`Usar $\frac12$ para "ser heterozigoto" quando o fenótipo é dominante.`, fix: md`Entre AA e Aa de pais Aa × Aa, $P(\text{Aa}) = \frac23$.` },
+      { trap: md`Tratar aves como XY.`, fix: md`Em aves, a fêmea é ZW.` },
+      { trap: md`Não mostrar os cálculos.`, fix: md`A banca pede "demonstre": escreva cada fator.` },
     ],
   },
 
   {
     id: 'bio-imunologia',
     subject: 'Biologia',
-    title: 'Imunologia',
+    title: 'Imunologia e sangue',
     years: [2023, 2024, 2026],
-    howItFalls: md`Caiu em 2023 (anemia hemolítica autoimune e terapia CAR-T), 2024 (alergia: IgE, mastócitos e anafilaxia) e 2026 (fagocitose pelo macrófago e apresentação de antígeno). Sempre a partir de um caso clínico.`,
-    explanation: md`### Duas linhas de defesa
-- **Inata**: rápida e inespecífica. Barreiras (pele, mucosas), fagócitos (neutrófilos e macrófagos), inflamação, sistema complemento.
-- **Adaptativa**: lenta na primeira vez, específica e com **memória**. Linfócitos B e T.
+    howItFalls: md`Caiu em 3 anos com 4 questões: anemia hemolítica autoimune (2023), terapia CAR-T contra o câncer (2023), alergia com IgE, mastócitos e anafilaxia (2024), fagocitose pelo macrófago, fusão de membranas e apresentação de antígeno ao T CD4 (2026).`,
+    explanation: md`### 1. Inata e adaptativa
+- **Inata**: rápida, inespecífica. Barreiras, fagócitos (neutrófilos, macrófagos), inflamação.
+- **Adaptativa (adquirida)**: específica, com **memória**, depende de contato prévio. Linfócitos B e T.
 
-### Como a resposta adaptativa começa
-1. O **macrófago** (ou célula dendrítica) fagocita o invasor e o digere em lisossomos.
-2. Exibe pedaços dele (antígenos) na membrana, presos a proteínas do **MHC**: é a **apresentação de antígeno**.
-3. O **linfócito T auxiliar (CD4)** reconhece o antígeno e libera citocinas que ativam os outros linfócitos.
-4. O **linfócito B** se transforma em **plasmócito** e produz **anticorpos** específicos (imunidade humoral).
-5. O **linfócito T citotóxico (CD8)** mata células infectadas ou tumorais (imunidade celular).
-6. Ficam **células de memória**, que respondem mais rápido num segundo contato.
+### 2. Do macrófago ao anticorpo
+1. **Fagocitose**: o macrófago engloba a bactéria com pseudópodes (actina); forma-se o endossomo.
+2. **Fusão com o lisossomo** (possível porque as membranas são bicamadas fluidas de **fosfolipídios**): o endolisossomo digere a bactéria.
+3. **Apresentação**: fragmentos do antígeno vão à superfície ligados ao **MHC de classe II**.
+4. O **linfócito T CD4 (auxiliar)** reconhece o complexo pelo receptor (TCR) e libera citocinas que ativam B e T CD8.
+5. **Linfócito B** → **plasmócito** → anticorpos (imunoglobulinas, **proteínas**).
+6. **T CD8 (citotóxico)** destrói células infectadas ou tumorais.
+7. Ficam **células de memória**.
 
-### Vacina e soro
-- **Vacina**: antígeno → o corpo produz anticorpos e memória. Imunidade **ativa**, lenta e duradoura. Prevenção.
-- **Soro**: anticorpos prontos. Imunidade **passiva**, imediata e temporária. Tratamento (picada de cobra).
+### 3. Alergia e anafilaxia
+Hipersensibilidade a um alérgeno inofensivo. Na **sensibilização**, formam-se **IgE** que se fixam aos **mastócitos** (células do conjuntivo). No novo contato, os mastócitos liberam **histamina**: vasodilatação, edema e **broncoconstrição** (contração da musculatura lisa dos bronquíolos). Na **anafilaxia**, é sistêmica: queda de pressão e edema de glote. É imunidade **adquirida** porque depende de contato prévio e de resposta específica.
 
-### Quando o sistema erra
-- **Alergia**: resposta exagerada a um antígeno inofensivo. Anticorpos **IgE** se prendem aos **mastócitos**; num novo contato, eles liberam **histamina**: vasodilatação, coceira, broncoconstrição. Na **anafilaxia**, a reação é sistêmica e a pressão cai; trata-se com adrenalina.
-- **Autoimunidade**: anticorpos ou linfócitos atacam o próprio corpo. Na anemia hemolítica autoimune, anticorpos marcam as hemácias para destruição.
+### 4. Autoimunidade
+O sistema produz **autoanticorpos** contra antígenos do próprio corpo. Na anemia hemolítica autoimune, eles marcam as **hemácias** para destruição (no baço). Menos hemácias → menos hemoglobina → menos O₂ aos músculos → menos ATP aeróbio → **fadiga** em pequeno esforço.
 
-### Imunoterapia CAR-T
-Linfócitos T do paciente são modificados geneticamente para expressar um receptor que reconhece as células do câncer, e depois são devolvidos ao corpo.`,
+### 5. Câncer e terapia CAR-T
+Câncer = **mitose descontrolada**. Na CAR-T, linfócitos T do **próprio paciente** são modificados para reconhecer uma **proteína** da superfície tumoral. Baixo risco de rejeição: mesmos antígenos de histocompatibilidade (**MHC**). A modificação é em células **somáticas**: não passa aos filhos.
+
+### 6. Vacina e soro
+Vacina: antígeno → imunidade **ativa**, memória. Soro: anticorpos prontos → **passiva**, imediata, temporária.`,
     applications: [
-      md`**Saúde pública**: calendário vacinal, imunidade de rebanho.`,
-      md`**Genética**: sistema ABO e Rh, eritroblastose fetal.`,
-      md`**Biotecnologia**: anticorpos monoclonais e terapias com células modificadas.`,
-      md`**Célula**: fagocitose, lisossomos e membrana.`,
+      md`**Saúde**: alergias, anafilaxia (adrenalina), doenças autoimunes (lúpus), imunoterapia do câncer, vacinas.`,
+      md`**Biotecnologia**: células modificadas geneticamente.`,
+      md`**Célula**: endocitose, lisossomos, membrana fluida.`,
+      md`**Genética**: células somáticas × germinativas.`,
     ],
     strategy: [
-      md`Identifique a célula do caso (macrófago, linfócito B, T, mastócito).`,
-      md`Diga o que ela faz e qual molécula usa (anticorpo, histamina, citocina).`,
-      md`Classifique a imunidade: inata ou adaptativa; ativa ou passiva.`,
+      md`Nomeie a célula e a molécula (mastócito/histamina, plasmócito/anticorpo, macrófago/MHC II).`,
+      md`Explique a cadeia causa → efeito até o sintoma.`,
+      md`Herança: só alteração em células germinativas passa aos filhos.`,
     ],
     examples: [
       {
-        title: 'Vacina ou soro',
-        prompt: md`Uma pessoa picada por cobra deve receber vacina ou soro? Por quê?`,
-        steps: [md`Precisa de anticorpos imediatamente.`, md`Soro: traz anticorpos prontos (imunidade passiva). A vacina levaria dias.`],
+        title: 'Memória',
+        prompt: md`Por que a segunda exposição a um antígeno gera resposta mais rápida e intensa?`,
+        steps: [md`A primeira formou linfócitos de memória.`, md`Na segunda, eles se ativam logo e produzem mais anticorpos em menos tempo.`],
       },
       {
-        title: 'Memória',
-        prompt: md`Por que a segunda exposição a um antígeno gera resposta mais rápida?`,
-        steps: [md`Na primeira, formam-se linfócitos de memória.`, md`Na segunda, eles se ativam logo e produzem mais anticorpos em menos tempo.`],
+        title: 'Herança de terapia',
+        prompt: md`Uma terapia altera células da medula óssea de um paciente. Os filhos herdarão a alteração?`,
+        steps: [md`Não: são células somáticas.`, md`Só alterações nas células da linhagem germinativa passam aos gametas.`],
       },
     ],
     discursive: {
-      prompt: md`Uma pessoa alérgica a amendoim teve uma reação grave, com queda de pressão e dificuldade para respirar. (a) Que classe de anticorpo e que célula estão envolvidas? (b) Explique por que a pressão cai. (c) Por que a primeira exposição ao amendoim não causou reação?`,
-      modelAnswer: [md`(a) Anticorpos IgE ligados a mastócitos.`, md`(b) No contato com o alérgeno, os mastócitos liberam histamina, que causa vasodilatação generalizada; o sangue se distribui num volume vascular maior e a pressão cai.`, md`(c) Na primeira exposição houve só a sensibilização: produção de IgE, que se prendeu aos mastócitos. A reação aparece nos contatos seguintes.`],
-      scoring: [md`Nomeia IgE e mastócito.`, md`Liga histamina à vasodilatação e à queda de pressão.`, md`Explica a sensibilização prévia.`],
+      prompt: md`Uma pessoa alérgica a camarão teve dificuldade para respirar após comê-lo. (a) Por que a reação não ocorreu na primeira vez em que ela comeu camarão? (b) Que célula e que substância causam o fechamento das vias aéreas, e como?`,
+      modelAnswer: [md`(a) Na primeira exposição houve sensibilização: produção de IgE específica, que se fixou aos mastócitos. A reação exige esse contato prévio (imunidade adquirida).`, md`(b) Os mastócitos liberam histamina, que contrai a musculatura lisa dos bronquíolos (broncoconstrição) e causa edema, estreitando as vias aéreas.`],
+      scoring: [md`Sensibilização e IgE.`, md`Mastócito e histamina.`, md`Broncoconstrição e edema como mecanismo.`],
     },
+    patterns: [
+      {
+        title: 'Autoimunidade e terapia celular',
+        questions: ['2023 q04', '2023 q05'],
+        asks: md`Célula e local de destruição; mecanismo autoimune e fadiga; por que a CAR-T não é rejeitada, divisão no câncer, alvo proteico e se é herdada.`,
+        solve: [md`Autoanticorpos marcam hemácias.`, md`Menos O₂ → menos ATP → fadiga.`, md`Células próprias (MHC); somáticas não passam aos filhos.`],
+        distractors: md`Não há alternativas: perde-se ponto dizendo "o corpo rejeita menos" sem citar o MHC, ou afirmando herança de alteração somática.`,
+      },
+      {
+        title: 'Alergia e apresentação de antígeno',
+        questions: ['2024 q05', '2026 q03'],
+        asks: md`Classe dos anticorpos e por que a alergia é imunidade adquirida; mastócito e efeito nas vias aéreas; fagocitose, actina, fusão por fosfolipídios e sinalização ao T CD4.`,
+        solve: [md`Proteína; contato prévio e especificidade.`, md`Histamina → broncoconstrição.`, md`Antígeno no MHC II reconhecido pelo TCR do CD4.`],
+        distractors: md`Dizer que o macrófago "produz anticorpos".`,
+      },
+    ],
     traps: [
-      { trap: md`Dizer que o soro estimula a produção de anticorpos.`, fix: md`O soro já é o anticorpo.` },
-      { trap: md`Chamar o linfócito B de produtor direto de anticorpo.`, fix: md`Quem produz é o plasmócito, que vem do linfócito B ativado.` },
-      { trap: md`Confundir alergia com autoimunidade.`, fix: md`Alergia: alvo externo inofensivo. Autoimunidade: alvo do próprio corpo.` },
+      { trap: md`Dizer que o linfócito B produz anticorpo diretamente.`, fix: md`Quem produz é o plasmócito.` },
+      { trap: md`Confundir alergia com autoimunidade.`, fix: md`Alergia: alvo externo inofensivo; autoimunidade: alvo próprio.` },
     ],
   },
 
@@ -160,56 +297,82 @@ Linfócitos T do paciente são modificados geneticamente para expressar um recep
     subject: 'Biologia',
     title: 'Fisiologia humana',
     years: [2022, 2024, 2025, 2026],
-    howItFalls: md`Caiu em 2022 (ponte de safena: valvas venosas e circulação coronária), 2024 (sistema nervoso e reflexo patelar), 2025 (pâncreas, glucagon e glicogênio; néfron, ADH e transporte ativo) e 2026 (ativação do pepsinogênio).`,
-    explanation: md`### Circulação
-O coração bombeia sangue por artérias (paredes grossas, alta pressão) e o recebe por veias (paredes finas, **valvas** que impedem o refluxo). O miocárdio é irrigado pelas **coronárias**; se elas entopem, o músculo fica sem oxigênio (infarto). Na **ponte de safena**, um pedaço da veia safena da perna liga a aorta à coronária depois da obstrução; ela é implantada **invertida** para as valvas não bloquearem o fluxo.
+    howItFalls: md`Caiu em 4 anos com 5 questões: ponte de safena com valvas e pressão arterial (2022), sistema nervoso difuso, bulbo e reflexo patelar (2024), excerto com erro conceitual sobre o pâncreas e síntese de colesterol (2025), néfron, proteínas na urina, ADH e ATP nos túbulos (2025), experimento com pepsinogênio, ácido e bicarbonato (2026).`,
+    explanation: md`### 1. Circulação
+- **Artérias**: parede grossa e elástica, pressão alta. **Veias**: parede fina, pressão baixa, **valvas** que impedem o refluxo.
+- **Coronárias** irrigam o miocárdio, que trabalha sem parar; obstrução → isquemia → infarto.
+- Na **ponte de safena**, a veia passa a receber **pressão arterial**, muito maior que a que suporta normalmente: por isso tende a se obstruir.
 
-### Sistema nervoso: arco reflexo
-Receptor → neurônio **sensitivo** → medula → neurônio **motor** → músculo. O reflexo patelar não passa pelo encéfalo, por isso é rápido e involuntário. O impulso viaja como potencial de ação; na sinapse, neurotransmissores atravessam a fenda.
+### 2. Sistema nervoso
+- **Difuso** (cnidários, hidra): rede sem centralização. **Centralizado**: encéfalo + medula.
+- **Bulbo**: centro respiratório e cardiovascular.
+- **Reflexo patelar** (arco reflexo **medular**): batida no tendão estira o quadríceps → **neurônio sensitivo** (aferente, raiz dorsal) → sinapse **direta** na medula com o **neurônio motor** (eferente) → contração e extensão da perna, sem passar pelo encéfalo.
 
-### Glicemia
-- Glicose alta → **insulina** (células beta do pâncreas) → células captam glicose; fígado e músculo a guardam como **glicogênio**.
-- Glicose baixa → **glucagon** (células alfa) → fígado quebra glicogênio e libera glicose.
-- Hormônios **esteroides** (cortisol, sexuais) derivam do **colesterol**; atravessam a membrana e agem no núcleo.
+### 3. Pâncreas e glicemia
+- Endócrino: **insulina** (baixa a glicemia: glicose entra nas células, vira glicogênio) e **glucagon** (sobe a glicemia: quebra de glicogênio no fígado).
+- Exócrino: suco pancreático (lipase, amilase, tripsinogênio, bicarbonato).
+- **Glicogênio** é polissacarídeo de reserva, não hormônio: confundir os dois foi o "equívoco conceitual" cobrado em 2025.
+- **Colesterol**: sintetizado no **fígado**; precursor dos hormônios **esteroides** (gônadas: testosterona, estrógeno, progesterona; suprarrenal: cortisol).
 
-### Rim: o néfron
-1. **Filtração** no glomérulo: passam água, sais, glicose, ureia; ficam células e proteínas.
-2. **Reabsorção**: no túbulo proximal, glicose e aminoácidos voltam ao sangue por **transporte ativo** (gasta ATP). Se a glicemia passa do limite, sobra glicose na urina (diabetes).
-3. **ADH** (hormônio antidiurético, da neuro-hipófise) aumenta a permeabilidade do ducto coletor à água, por aquaporinas: urina mais concentrada. Álcool inibe o ADH e aumenta a diurese.
+### 4. Rim
+- **Néfron**: glomérulo + cápsula de Bowman (filtração) e túbulos (reabsorção e secreção).
+- **Proteínas** não aparecem na urina: são grandes demais para a barreira de filtração; proteína na urina indica lesão.
+- **ADH** (produzido no **hipotálamo**, liberado pela **neuro-hipófise**): com pouca água, a osmolaridade sobe; o ADH aumenta a permeabilidade dos túbulos distais e ductos coletores (aquaporinas); mais água volta ao sangue e a urina fica menor e concentrada.
+- **ATP** sustenta o **transporte ativo** (bomba Na⁺/K⁺) que reabsorve glicose, aminoácidos e íons contra o gradiente.
 
-### Digestão
-Enzimas que digerem proteínas são produzidas **inativas** (zimogênios) para não digerirem a célula que as fabrica. O **pepsinogênio**, liberado no estômago, é ativado em **pepsina** pelo HCl; depois a própria pepsina ativa mais pepsinogênio (autocatálise). A pepsina age em pH ácido.`,
+### 5. Digestão de proteínas no estômago
+- Células principais produzem **pepsinogênio** (inativo, para não digerir a própria célula); células parietais, **HCl**.
+- O ácido **ativa** o pepsinogênio em **pepsina** e mantém o pH ácido em que ela age.
+- **Bicarbonato** neutraliza o ácido: sem pH ácido, não há ativação nem digestão (como no duodeno).
+- Leitura de experimento: compare os tubos que diferem em **um só** fator.`,
     applications: [
-      md`**Saúde**: infarto, diabetes, desidratação, efeito do álcool.`,
-      md`**Química**: pH, enzimas como catalisadores, transporte de íons.`,
-      md`**Célula**: transporte ativo, receptores de membrana, síntese de proteínas.`,
+      md`**Saúde**: infarto e revascularização, diabetes, desidratação, álcool e ADH, refluxo e antiácidos.`,
+      md`**Química**: pH, catálise enzimática, transporte de íons.`,
+      md`**Célula**: transporte ativo, receptores, hormônios esteroides.`,
     ],
     strategy: [
-      md`Localize o órgão e a etapa (filtração, reabsorção, secreção).`,
-      md`Nomeie a estrutura e a molécula (ADH, aquaporina, glucagon).`,
-      md`Termine com a consequência no organismo (urina mais concentrada, glicemia sobe).`,
+      md`Localize órgão e etapa.`,
+      md`Nomeie estrutura e molécula.`,
+      md`Feche com a consequência no organismo.`,
+      md`Em experimento, compare tubos dois a dois.`,
     ],
     examples: [
       {
-        title: 'ADH',
-        prompt: md`Por que quem bebe muito álcool urina mais?`,
-        steps: [md`O álcool inibe a liberação de ADH.`, md`Com menos ADH, o ducto coletor reabsorve menos água e a urina fica mais volumosa e diluída.`],
+        title: 'ADH e álcool',
+        prompt: md`Por que quem bebe álcool urina mais?`,
+        steps: [md`O álcool inibe a liberação de ADH.`, md`Com menos ADH, o ducto coletor reabsorve menos água: urina volumosa e diluída.`],
       },
       {
-        title: 'Glucagon',
-        prompt: md`Durante um jejum, como a glicemia é mantida?`,
-        steps: [md`A glicose cai e as células alfa do pâncreas liberam glucagon.`, md`O fígado quebra glicogênio e libera glicose no sangue.`],
+        title: 'Experimento',
+        prompt: md`Tubo A: amilase + amido a 37 °C → digerido. Tubo B: amilase fervida + amido a 37 °C → não digerido. O que se conclui?`,
+        steps: [md`Só muda o aquecimento prévio da enzima.`, md`A fervura desnaturou a amilase.`],
       },
     ],
     discursive: {
-      prompt: md`Em pessoas com diabetes não controlado, aparece glicose na urina. (a) Em que parte do néfron a glicose é normalmente reabsorvida, e por qual tipo de transporte? (b) Por que ela aparece na urina nesses pacientes? (c) Que hormônio pancreático está deficiente no diabetes tipo 1, e qual seu efeito?`,
-      modelAnswer: [md`(a) No túbulo contorcido proximal, por transporte ativo, que depende de proteínas transportadoras e de ATP.`, md`(b) Com glicemia muito alta, a glicose filtrada excede a capacidade dos transportadores, que ficam saturados; o excedente segue na urina.`, md`(c) A insulina, que promove a captação de glicose pelas células e seu armazenamento como glicogênio, baixando a glicemia.`],
-      scoring: [md`Local e tipo de transporte corretos.`, md`Explica a saturação dos transportadores.`, md`Nomeia a insulina e seu efeito.`],
+      prompt: md`Uma pessoa desidratada produz pouca urina, e muito concentrada. (a) Que hormônio age, onde é produzido e de onde é liberado? (b) Explique como ele reduz o volume de urina. (c) Por que a glicose normalmente não aparece na urina?`,
+      modelAnswer: [md`(a) ADH (vasopressina), produzido no hipotálamo e liberado pela neuro-hipófise.`, md`(b) Aumenta a permeabilidade à água dos túbulos distais e ductos coletores (aquaporinas): mais água volta ao sangue e a urina fica menor e mais concentrada.`, md`(c) A glicose filtrada é reabsorvida no túbulo proximal por transporte ativo, que gasta ATP.`],
+      scoring: [md`Hormônio, local de produção e de liberação.`, md`Mecanismo com aquaporinas e ducto coletor.`, md`Reabsorção ativa da glicose.`],
     },
+    patterns: [
+      {
+        title: 'Circulação e sistema nervoso',
+        questions: ['2022 q04', '2024 q03'],
+        asks: md`Vaso com valvas e sua função; pressão sobre a safena e papel das coronárias; tipo de sistema nervoso da hidra, bulbo e explicação do reflexo patelar com os nervos.`,
+        solve: [md`Valvas = veias, impedem refluxo.`, md`Pressão arterial na veia.`, md`Sensitivo → medula → motor, sem encéfalo.`],
+        distractors: md`Não há alternativas: perde-se ponto ao pôr o reflexo patelar no cérebro e esquecer de nomear os nervos.`,
+      },
+      {
+        title: 'Rim, pâncreas e digestão',
+        questions: ['2025 q06', '2025 q04', '2026 q05'],
+        asks: md`Néfron, proteínas na urina, ADH e ATP; erro conceitual (glicogênio × glucagon), função da insulina, colesterol e gônadas; pepsinogênio, HCl, ativação e bicarbonato.`,
+        solve: [md`Filtração por tamanho; ADH e aquaporinas; transporte ativo.`, md`Glucagon é o hormônio; colesterol vira esteroides.`, md`Ácido ativa; bicarbonato neutraliza.`],
+        distractors: md`Aceitar "glicogênio" como hormônio e dizer que o bicarbonato "destrói" a enzima.`,
+      },
+    ],
     traps: [
-      { trap: md`Dizer que o ADH é produzido no rim.`, fix: md`É produzido no hipotálamo e liberado pela neuro-hipófise; age no rim.` },
-      { trap: md`Inverter insulina e glucagon.`, fix: md`Insulina baixa a glicemia; glucagon sobe.` },
-      { trap: md`Achar que o reflexo patelar passa pelo cérebro.`, fix: md`É medular.` },
+      { trap: md`Dizer que o ADH é produzido no rim ou na neuro-hipófise.`, fix: md`Produzido no hipotálamo, liberado pela neuro-hipófise, age no rim.` },
+      { trap: md`Confundir glucagon e glicogênio.`, fix: md`Glucagon: hormônio. Glicogênio: reserva.` },
+      { trap: md`Pôr o reflexo patelar no cérebro.`, fix: md`É medular.` },
     ],
   },
 
@@ -218,57 +381,81 @@ Enzimas que digerem proteínas são produzidas **inativas** (zimogênios) para n
     subject: 'Biologia',
     title: 'Fisiologia e reprodução vegetal',
     years: [2022, 2023, 2024, 2025, 2026],
-    howItFalls: md`Caiu **todo ano**: estiolamento e endosperma (2022), íons K⁺ e fechamento estomático (2023), óvulo vegetal e animal (2024), flor e fruto do tomate, partenocarpia e endosperma (2025), abertura estomática e absorção de água (2026).`,
-    explanation: md`### Estômatos
-Poros na folha controlados por duas **células-guarda**. O controle é osmótico:
-1. Com luz e baixa concentração de CO₂, bombas de prótons fazem entrar **K⁺** nas células-guarda.
-2. A concentração de solutos sobe e a água entra por **osmose**.
-3. As células ficam **túrgidas** e, pela parede mais espessa do lado do poro, se curvam e **abrem** o estômato.
-4. Com falta de água, o hormônio **ácido abscísico (ABA)** faz o K⁺ sair; a água sai, as células ficam flácidas e o estômato **fecha**.
-O estômato aberto deixa entrar CO₂ para a fotossíntese, mas perde água: é um equilíbrio entre fotossíntese e transpiração.
+    howItFalls: md`Caiu **todo ano**: estiolamento, respiração no escuro e endosperma (2022), gráfico de K⁺ nas células-guarda e fechamento estomático (2023), óvulo vegetal × animal (2024), flor e fruto do tomate, partenocarpia e DNA materno no endosperma (2025), gráfico de abertura estomática ao longo do dia e fechamento ao meio-dia (2026). Dois dos cinco vieram com **gráfico** para interpretar.`,
+    explanation: md`### 1. Estômatos: abertura
+1. Luz e CO₂ baixo ativam bombas de prótons; **K⁺ entra** nas células-guarda (vindo das células anexas).
+2. A concentração de solutos sobe; a **água entra por osmose**.
+3. As células ficam **túrgidas** e se curvam: o ostíolo **abre**.
+4. Entra CO₂ para a fotossíntese.
 
-### Transporte de água
-A água entra pela raiz (pelos absorventes) e sobe pelo **xilema**, puxada pela **transpiração** nas folhas (teoria da coesão-tensão). Os açúcares descem pelo **floema**.
+### 2. Estômatos: fechamento
+- **Ácido abscísico (ABA)**, produzido com falta de água: K⁺ **sai** das células-guarda, a água sai, as células ficam **flácidas** e o ostíolo **fecha**.
+- **À noite**: sem luz não há fotossíntese; fechar evita perder água à toa.
+- **Ao meio-dia** em dias quentes e secos: a transpiração supera a absorção, a planta entra em déficit hídrico e fecha temporariamente (a queda "X" do gráfico de 2026).
+- **Solo seco ou salino** induz fechamento mesmo com luz.
 
-### Estiolamento
-No escuro, a planta alonga muito o caule, fica amarelada (sem clorofila) e com folhas pequenas: gasta a reserva da semente tentando alcançar a luz.
+### 3. Transpiração e umidade
+A transpiração depende da diferença de vapor entre a folha e o ar. **Ar úmido** → diferença menor → transpiração **menor**. Vento, calor e ar seco aumentam a transpiração.
 
-### Reprodução das angiospermas
-- **Dupla fecundação**: um núcleo espermático fecunda a oosfera (zigoto 2n, embrião) e outro se une aos dois núcleos polares (**endosperma 3n**, reserva nutritiva).
-- **Óvulo** vira **semente**; **ovário** vira **fruto**.
-- **Partenocarpia**: fruto sem fecundação, portanto sem sementes (banana, alguns tomates).
-- Nas gimnospermas, o endosperma é n e não há fruto.`,
+### 4. Ler o gráfico
+Em gráfico de K⁺: K⁺ **alto** nas células-guarda = estômato **aberto**; K⁺ **baixo** nelas (alto nas anexas) = **fechado**. Em gráfico diário: abertura acompanha a luz; absorção de água acompanha a transpiração com atraso.
+
+### 5. Germinação e estiolamento
+No escuro, o embrião faz **respiração celular** consumindo as reservas. **Estiolamento**: caule longo e fino, sem clorofila, folhas pequenas; investe energia em crescer até a luz antes que as reservas acabem.
+
+### 6. Reprodução das angiospermas
+- **Óvulo vegetal** é **multicelular**: tegumentos, nucelo e **saco embrionário** (gametófito feminino) com a **oosfera**. O óvulo animal é uma única célula.
+- **Dupla fecundação**: um núcleo espermático + oosfera → zigoto (2n); outro + **dois núcleos polares** → **endosperma (3n)**. Endosperma tem **2 conjuntos maternos e 1 paterno**.
+- **Óvulo → semente; ovário → fruto** (pericarpo).
+- **Partenocarpia**: fruto sem fecundação, sem sementes; induzida artificialmente com **auxina** (e giberelina).
+- No feijão, as reservas foram para os **cotilédones**.`,
     applications: [
-      md`**Ecologia**: plantas do Cerrado com raízes profundas e da Caatinga com estômatos que fecham de dia.`,
+      md`**Ecologia**: adaptações do Cerrado e da Caatinga à seca.`,
       md`**Química**: osmose e concentração de solutos.`,
-      md`**Agricultura**: frutos sem sementes, irrigação e estresse hídrico.`,
-      md`**Fotossíntese**: entrada de CO₂ pelos estômatos.`,
+      md`**Agricultura**: frutos sem sementes, irrigação, broto de feijão.`,
+      md`**Fotossíntese e respiração**: entrada de CO₂ e uso de reservas.`,
     ],
     strategy: [
-      md`Em estômato, escreva a sequência: íon → osmose → turgor → abertura.`,
-      md`Em reprodução, pergunte: virou semente (óvulo) ou fruto (ovário)? Qual a ploidia?`,
-      md`Relacione sempre ao ambiente (luz, água, CO₂).`,
+      md`Estômato: escreva a sequência K⁺ → osmose → turgor → abertura (ou o inverso).`,
+      md`Gráfico: diga o que cada curva indica antes de responder.`,
+      md`Reprodução: diga a origem (óvulo/ovário) e a ploidia.`,
     ],
     examples: [
       {
-        title: 'Seca',
-        prompt: md`Por que, numa seca, as plantas fecham os estômatos e crescem menos?`,
-        steps: [md`O ABA faz o K⁺ sair das células-guarda; a água sai e o estômato fecha, reduzindo a perda de água.`, md`Com o estômato fechado, entra menos CO₂ e a fotossíntese cai.`],
+        title: 'Gráfico de K⁺',
+        prompt: md`Num gráfico, o K⁺ nas células-guarda cai enquanto sobe nas anexas. O que acontece com o estômato e por quê?`,
+        steps: [md`K⁺ sai das células-guarda; a água sai por osmose.`, md`Células flácidas: estômato fechando (ação do ABA).`],
       },
       {
-        title: 'Endosperma',
-        prompt: md`Qual a ploidia do endosperma do milho e de onde vem?`,
-        steps: [md`3n.`, md`Da união de um núcleo espermático com os dois núcleos polares, na dupla fecundação.`],
+        title: 'DNA no endosperma',
+        prompt: md`Por que o endosperma tem mais DNA materno que paterno?`,
+        steps: [md`Resulta de dois núcleos polares (maternos) + um núcleo espermático (paterno).`, md`3n: dois conjuntos maternos, um paterno.`],
       },
     ],
     discursive: {
-      prompt: md`Em folhas iluminadas, os estômatos se abrem; numa seca, se fecham mesmo com luz. (a) Explique o mecanismo de abertura. (b) Que hormônio promove o fechamento na seca? (c) Qual a consequência do fechamento para a fotossíntese?`,
-      modelAnswer: [md`(a) Na luz, íons K⁺ entram nas células-guarda; aumenta a concentração de solutos, a água entra por osmose, as células ficam túrgidas e se curvam, abrindo o ostíolo.`, md`(b) O ácido abscísico (ABA).`, md`(c) Diminui a entrada de CO₂, reduzindo a taxa de fotossíntese.`],
-      scoring: [md`Sequência completa: K⁺, osmose, turgor, abertura.`, md`Nomeia o ABA.`, md`Liga o fechamento à menor entrada de CO₂.`],
+      prompt: md`Em dias muito quentes e secos, muitas plantas fecham os estômatos por volta do meio-dia. (a) Explique o mecanismo do fechamento, citando o hormônio. (b) Qual a vantagem e qual o custo desse fechamento para a planta?`,
+      modelAnswer: [md`(a) O ácido abscísico faz o K⁺ sair das células-guarda; a água sai por osmose, elas ficam flácidas e o ostíolo se fecha.`, md`(b) Vantagem: reduz a perda de água por transpiração quando ela supera a absorção. Custo: entra menos CO₂ e a fotossíntese cai.`],
+      scoring: [md`ABA e saída de K⁺.`, md`Osmose e flacidez.`, md`Vantagem hídrica e custo fotossintético.`],
     },
+    patterns: [
+      {
+        title: 'Estômatos com gráfico',
+        questions: ['2023 q06', '2026 q04'],
+        asks: md`Vantagem de fechar à noite, condição do solo que induz fechamento, momento em que estão fechados pelo K⁺; por que abrem de dia, efeito da umidade do ar, hormônio do fechamento e condição do fechamento ao meio-dia.`,
+        solve: [md`K⁺ baixo nas células-guarda = fechado; ABA.`, md`Ar úmido reduz transpiração.`, md`Meio-dia quente e seco = déficit hídrico.`],
+        distractors: md`Não há alternativas: perde-se ponto dizendo que a luz "abre diretamente" o estômato, sem o K⁺ e a osmose.`,
+      },
+      {
+        title: 'Germinação, óvulo, flor e fruto',
+        questions: ['2022 q01', '2024 q06', '2025 q05'],
+        asks: md`Processo do embrião no escuro e vantagem do estiolamento; endosperma e origem; por que o óvulo vegetal é mais complexo; estruturas X e Y do tomate, partenocarpia e DNA materno no endosperma.`,
+        solve: [md`Respiração consumindo reservas.`, md`Óvulo multicelular com saco embrionário.`, md`Óvulo → semente; auxina; 2 polares + 1 espermático.`],
+        distractors: md`Dizer que a planta faz fotossíntese no escuro e que o fruto vem do óvulo.`,
+      },
+    ],
     traps: [
-      { trap: md`Dizer que a luz abre o estômato "diretamente".`, fix: md`A luz desencadeia a entrada de K⁺; quem abre é o turgor.` },
       { trap: md`Dizer que o fruto vem do óvulo.`, fix: md`Fruto vem do ovário; semente vem do óvulo.` },
+      { trap: md`Achar que o endosperma é 2n.`, fix: md`É 3n nas angiospermas.` },
     ],
   },
 
@@ -277,63 +464,85 @@ No escuro, a planta alonga muito o caule, fica amarelada (sem clorofila) e com f
     subject: 'Biologia',
     title: 'Ecologia a partir de notícia',
     years: [2022, 2023, 2024, 2025, 2026],
-    howItFalls: md`Caiu **todo ano**, sempre com notícia ou caso: macaco-prego e palmeira juçara (2022), sucessão primária em ilha vulcânica (2023), fogo no Cerrado e na Amazônia (2024), biomagnificação do arsênio (2025) e petróleo na Foz do Amazonas e acidificação dos oceanos (2026).`,
-    explanation: md`### Cadeias e teias
-Energia flui do **produtor** para os **consumidores**, perdendo cerca de 90% em cada nível (respiração, calor). Por isso há poucos níveis tróficos. A matéria **circula** (ciclos biogeoquímicos); a energia **não**.
+    howItFalls: md`Caiu **todo ano**, sempre com notícia: macaco-prego e palmeira juçara sem predadores (2022), sucessão primária em ilha vulcânica (2023), fogo no Cerrado e na Amazônia (2024), bactérias da pele de anfíbios e biomagnificação do arsênio (2025), petróleo na Foz do Amazonas, acidificação e corais (2026).`,
+    explanation: md`### 1. Cadeias e níveis tróficos
+Produtor (1º nível) → consumidor primário (2º) → secundário (3º)… Cerca de 90% da energia se perde em cada nível. Ao montar uma cadeia com organismos do texto, use **só** os citados e diga o nível pedido.
 
-### Biomagnificação
-Substâncias **não degradáveis e lipossolúveis** (metais como mercúrio e arsênio, inseticidas como DDT) se acumulam nos tecidos. A cada nível trófico, o consumidor come muitas presas e acumula o que todas tinham: a **concentração aumenta ao longo da cadeia**. Os predadores de topo, inclusive o ser humano, são os mais contaminados.
+### 2. Densidade populacional e resistência do meio
+Densidade aumenta com natalidade e imigração; diminui com mortalidade e emigração. **Fatores bióticos**: predação, competição, parasitismo, doenças, alimento. Sem predadores, a população cresce, mas **não indefinidamente**: a falta de recurso, a competição e as doenças (resistência do meio) a limitam à **capacidade de suporte**.
 
-### Sucessão ecológica
-- **Primária**: começa onde não havia solo (rocha vulcânica, duna). Pioneiras como **líquens** produzem ácidos que desgastam a rocha e formam o primeiro solo.
-- **Secundária**: começa onde já havia solo, depois de um distúrbio (queimada, roça abandonada); é mais rápida.
-- Ao longo da sucessão aumentam biomassa, diversidade e estabilidade até a **comunidade clímax**.
+### 3. Sucessão ecológica
+- **Primária** (rocha nua, lava, duna): pioneiros **autótrofos resistentes e pouco exigentes** (liquens) iniciam o solo. Chegam por **vento, correntes marinhas ou aves**.
+- **Secundária** (após fogo ou desmatamento): já há solo e banco de sementes.
+- **Clímax**: produção bruta ≈ respiração de **toda a comunidade** → **produtividade líquida da comunidade ≈ 0**, biomassa estável. Mais espécies, estratos e microambientes → **mais nichos**.
 
-### Fogo
-No **Cerrado**, o fogo é natural e as plantas têm adaptações (casca grossa e suberosa, órgãos subterrâneos, rebrota). Na **Amazônia**, a floresta não evoluiu com fogo: ele é resultado de desmatamento e destrói a comunidade.
+### 4. Fogo nos biomas
+- **Cerrado** evoluiu com fogo: **súber (cortiça) espesso** na casca isola os tecidos; **raízes profundas** alcançam a água; órgãos subterrâneos rebrotam.
+- **Amazônia** não evoluiu com fogo. O solo é **pobre e arenoso**; os nutrientes estão na biomassa e na **serapilheira**, com decomposição rápida e absorção por raízes superficiais e micorrizas (ciclagem rápida e quase fechada).
 
-### Acidificação dos oceanos
-O CO₂ dissolvido forma ácido carbônico, que libera H⁺ e baixa o pH:
-$\text{CO}_2 + \text{H}_2\text{O} \rightleftharpoons \text{H}_2\text{CO}_3 \rightleftharpoons \text{H}^+ + \text{HCO}_3^-$.
-O H⁺ consome carbonato ($\text{CO}_3^{2-}$), que corais e moluscos usam para fazer seus esqueletos e conchas de $\text{CaCO}_3$.
+### 5. Relações ecológicas
+Harmônicas: **mutualismo** (ambos ganham, interdependência), protocooperação, comensalismo. Desarmônicas: predação, parasitismo, competição.
 
-### Dinâmica de populações
-Densidade = indivíduos por área. Aumenta com natalidade e imigração; diminui com mortalidade e emigração. A falta de um recurso-chave (como o fruto da juçara) reduz a capacidade de suporte.`,
+### 6. Poluentes
+- **Biomagnificação**: substâncias não degradáveis e acumulativas (arsênio, mercúrio, DDT) **aumentam de concentração a cada nível trófico**; o topo é o mais contaminado.
+- **Anfíbios** são indicadores de poluição: pele fina, úmida, vascularizada e **permeável** (respiração cutânea).
+- **Carcinogênico**: agente que induz câncer, em geral por mutações que desregulam a divisão.
+
+### 7. Oceanos
+- **Acidificação**: $\text{CO}_2 + \text{H}_2\text{O} \rightleftharpoons \text{H}_2\text{CO}_3 \rightleftharpoons \text{H}^+ + \text{HCO}_3^-$; mais H⁺, pH menor, menos carbonato para esqueletos de $\text{CaCO}_3$.
+- **Óleo na superfície**: bloqueia a luz e as trocas gasosas. As **zooxantelas** (algas simbiontes dos corais) não fazem fotossíntese; falta matéria orgânica e O₂ e o coral morre (além da toxicidade).`,
     formulas: [
-      { tex: String.raw`\text{densidade} = \frac{\text{número de indivíduos}}{\text{área}}`, meaning: md`Densidade populacional.` },
-      { tex: String.raw`\text{CO}_2 + \text{H}_2\text{O} \rightleftharpoons \text{H}^+ + \text{HCO}_3^-`, meaning: md`Origem da acidificação dos oceanos.` },
+      { tex: String.raw`\text{CO}_2 + \text{H}_2\text{O} \rightleftharpoons \text{H}^+ + \text{HCO}_3^-`, meaning: md`Origem da acidificação.` },
+      { tex: String.raw`\text{PPL} = \text{PPB} - \text{R}_{\text{produtores}}`, meaning: md`Produtividade primária líquida: o que sobra aos consumidores. Não zera no clímax.` },
+      { tex: String.raw`\text{PLC} = \text{PPB} - \text{R}_{\text{comunidade}}`, meaning: md`Produtividade líquida da **comunidade** (descontada a respiração de todos): tende a zero no clímax, e a biomassa para de crescer.` },
     ],
     applications: [
-      md`**Química**: equilíbrio do CO₂ na água e pH.`,
-      md`**Geografia**: biomas, queimadas, mudanças climáticas, COP30.`,
-      md`**Saúde**: contaminação de peixes por mercúrio.`,
-      md`**Evolução**: adaptações das plantas do Cerrado ao fogo.`,
+      md`**Geografia**: biomas, queimadas, exploração de petróleo, COP30.`,
+      md`**Química**: equilíbrio do CO₂ e pH.`,
+      md`**Saúde**: contaminação por metais, câncer.`,
+      md`**Evolução**: adaptações ao fogo.`,
     ],
     strategy: [
-      md`Identifique o conceito por trás da notícia (biomagnificação, sucessão, ciclo).`,
-      md`Nomeie-o e explique o mecanismo, não só a consequência.`,
-      md`Se houver cadeia, desenhe-a e indique o nível trófico.`,
+      md`Ache o conceito por trás da notícia e nomeie-o.`,
+      md`Explique o mecanismo, não só a consequência.`,
+      md`Em cadeia, use só organismos do texto e indique o nível.`,
     ],
     examples: [
       {
-        title: 'Biomagnificação',
-        prompt: md`Por que o mercúrio de um garimpo aparece em maior concentração em botos do que em peixes herbívoros?`,
-        steps: [md`O mercúrio não é degradado nem excretado com facilidade.`, md`Cada nível trófico come muitos do nível anterior e acumula o mercúrio; o boto, no topo, tem a maior concentração.`],
+        title: 'Resistência do meio',
+        prompt: md`Sem onças, uma população de capivaras cresce. Ela crescerá para sempre?`,
+        steps: [md`Não.`, md`Alimento, espaço, competição e doenças limitam a população à capacidade de suporte.`],
       },
       {
-        title: 'Sucessão',
-        prompt: md`Que tipo de sucessão ocorre numa lava recém-solidificada, e quem são os pioneiros?`,
-        steps: [md`Primária, pois não há solo.`, md`Líquens, que formam o primeiro solo.`],
+        title: 'Biomagnificação',
+        prompt: md`Por que golfinhos têm mais mercúrio que as sardinhas que comem?`,
+        steps: [md`O mercúrio não é eliminado e se acumula.`, md`Cada nível consome muitos indivíduos do anterior: a concentração aumenta ao longo da cadeia.`],
       },
     ],
     discursive: {
-      prompt: md`O aumento do CO₂ atmosférico ameaça os recifes de coral. (a) Explique, com equação química, como o CO₂ altera o pH da água do mar. (b) Por que essa alteração prejudica os corais?`,
-      modelAnswer: [md`(a) O CO₂ se dissolve e reage com a água: $\text{CO}_2 + \text{H}_2\text{O} \rightleftharpoons \text{H}_2\text{CO}_3 \rightleftharpoons \text{H}^+ + \text{HCO}_3^-$. O aumento de H⁺ diminui o pH.`, md`(b) O H⁺ reage com o carbonato da água, tornando-o menos disponível; os corais usam carbonato para formar o esqueleto de $\text{CaCO}_3$, que passa a se formar com dificuldade e até a se dissolver.`],
-      scoring: [md`Equação correta, com o H⁺ liberado.`, md`Relaciona H⁺ à queda de pH.`, md`Liga a falta de carbonato ao esqueleto calcário.`],
+      prompt: md`Após um incêndio, uma área de Cerrado se regenera em poucos anos. (a) Que tipo de sucessão ocorre? Justifique. (b) Cite duas adaptações das árvores do Cerrado ao fogo e à seca.`,
+      modelAnswer: [md`(a) Secundária: já existem solo e banco de sementes e órgãos subterrâneos remanescentes.`, md`(b) Súber (cortiça) espesso na casca, que isola os tecidos do calor; raízes profundas que alcançam o lençol freático.`],
+      scoring: [md`Sucessão secundária com justificativa.`, md`Duas adaptações nomeadas e explicadas.`],
     },
+    patterns: [
+      {
+        title: 'Populações, cadeias e sucessão',
+        questions: ['2022 q03', '2023 q03', '2024 q01'],
+        asks: md`Cadeia com três níveis e nível do macaco; fator biótico e limite da densidade; característica dos pioneiros e como chegaram; biomassa e nichos no clímax; sucessão após fogo, súber, raízes e solo amazônico.`,
+        solve: [md`Use organismos do texto.`, md`Resistência do meio e capacidade de suporte.`, md`No clímax a produtividade líquida da comunidade ≈ 0; mais estratos = mais nichos.`],
+        distractors: md`Não há alternativas: perde-se ponto dizendo que a população "cresce sem limite" e que o solo amazônico é fértil.`,
+      },
+      {
+        title: 'Poluentes e oceanos',
+        questions: ['2025 q01', '2026 q01'],
+        asks: md`Relação harmônica bactéria–anfíbio, pele permeável, biomagnificação e carcinogênico; gás da queima e acidificação; óleo e morte dos corais.`,
+        solve: [md`Mutualismo.`, md`Concentração crescente por nível.`, md`CO₂ → H⁺; óleo bloqueia luz → zooxantelas param.`],
+        distractors: md`Dizer que a concentração diminui ao longo da cadeia.`,
+      },
+    ],
     traps: [
-      { trap: md`Dizer que a energia circula no ecossistema.`, fix: md`A matéria circula; a energia flui e se dissipa.` },
-      { trap: md`Achar que o fogo é sempre destrutivo em qualquer bioma.`, fix: md`No Cerrado ele faz parte da dinâmica natural.` },
+      { trap: md`Dizer que a energia circula.`, fix: md`A matéria circula; a energia flui e se dissipa.` },
+      { trap: md`Achar que floresta exuberante prova solo fértil.`, fix: md`Na Amazônia os nutrientes estão na biomassa.` },
     ],
   },
 
@@ -342,59 +551,237 @@ Densidade = indivíduos por área. Aumenta com natalidade e imigração; diminui
     subject: 'Biologia',
     title: 'Célula e biologia molecular',
     years: [2022, 2023, 2024, 2025, 2026],
-    howItFalls: md`Caiu **todo ano**: célula diploide e replicação semiconservativa (2022), enzimas e plasmídeos em superlarvas que digerem plástico (2023), síntese proteica em procariotos e eucariotos (2024), ciclo celular, fase S e G0 (2025), dogma central, código degenerado e splicing alternativo (2026).`,
-    explanation: md`### Replicação
-O DNA se duplica na **fase S** da interfase. É **semiconservativa**: cada molécula-filha tem uma fita antiga e uma nova. A DNA polimerase pareia A–T e C–G.
+    howItFalls: md`Caiu **todo ano**, com 6 questões: célula diploide, centrômeros e timina radioativa (2022), enzimas que degradam poliestireno e plasmídeo (2023), síntese proteica em procariotos e eucariotos (2024), ciclo celular com fase S, citocinese e G0 (2025), criptobiose com osmose, glicólise e temperatura (2025), dogma central, código degenerado e splicing alternativo (2026).`,
+    explanation: md`### 1. Cromossomos e ploidia
+- **Diploide (2n)**: cromossomos em **pares de homólogos** (um paterno, um materno). Na figura, conte pares de mesmo tamanho e forma.
+- **Centrômeros** = número de cromossomos (um por cromossomo, duplicado ou não).
+- Após a fase S, cada cromossomo tem **duas cromátides-irmãs**: na metáfase, 2n cromossomos = 4n cromátides.
 
-### Ciclo celular
-G1 (crescimento) → S (duplicação do DNA) → G2 (preparação) → mitose → citocinese. Células que param de se dividir (neurônios, músculo) ficam em **G0**. A quantidade de DNA dobra na fase S e cai à metade na divisão.
+### 2. Replicação semiconservativa
+Na **fase S**, a **DNA polimerase** copia o DNA; cada molécula-filha tem **uma fita antiga e uma nova**. Com timina radioativa no meio, **todas** as cromátides-irmãs saem marcadas (cada uma tem uma fita nova).
 
-### Dogma central
-DNA → (transcrição) → RNA → (tradução) → proteína.
-- **Transcrição**: no núcleo (eucariotos). O RNA mensageiro copia um gene.
-- **Processamento** (só eucariotos): retirada dos **íntrons** e união dos **éxons**. No **splicing alternativo**, éxons diferentes são combinados, e um gene gera várias proteínas.
-- **Tradução**: no ribossomo. Cada **códon** (3 bases) indica um aminoácido; o tRNA traz o aminoácido certo pelo anticódon.
+### 3. Ciclo celular
+G1 (crescimento) → **S** (replicação) → G2 → **M** (mitose + citocinese). Células somáticas se dividem por **mitose**. **Citocinese** animal: anel contrátil de **microfilamentos de actina** (com miosina) estrangula a célula. **G0**: célula sai do ciclo, fica diferenciada e não se divide (neurônios, músculo cardíaco).
 
-### Código genético
-- **Degenerado**: vários códons para o mesmo aminoácido (por isso algumas mutações não mudam a proteína).
-- **Universal**: o mesmo em quase todos os seres, o que permite a transgenia.
+### 4. Dogma central e síntese proteica
+DNA → (**replicação**) DNA; DNA → (**transcrição**) RNAm; RNAm → (**tradução**) proteína, no **ribossomo**.
+- **Procariotos**: sem núcleo; transcrição no citoplasma (nucleoide), tradução **simultânea**; vários ribossomos lendo o **mesmo RNAm** (polirribossomo) fazem proteínas **iguais**.
+- **Eucariotos**: transcrição no núcleo; **carioteca** separa DNA e citoplasma; o pré-RNAm passa por **splicing**: **íntrons removidos**, éxons unidos — por isso o RNAm maduro é menor.
+- **Splicing alternativo**: éxons combinados de formas diferentes → proteínas diferentes do mesmo gene.
+- **Código degenerado**: vários códons por aminoácido → mutação silenciosa.
+- **Código universal**: bactéria lê gene de outra espécie (transgenia).
+- **Mutação herdável**: copiada na **replicação** em células da linhagem germinativa.
 
-### Procariotos e eucariotos
-Procariotos não têm núcleo: transcrição e tradução ocorrem ao mesmo tempo, no citoplasma, e não há íntrons. Têm **plasmídeos**, pequenos DNAs circulares extras, que podem carregar genes de resistência ou de enzimas e ser transferidos entre bactérias.
+### 5. Engenharia genética
+**Plasmídeo**: DNA circular extra das bactérias. Para produzir uma proteína de outra espécie, é preciso **identificar o gene** (a sequência) e inseri-lo com **enzimas de restrição** (cortam em sequências específicas) e ligase.
 
-### Enzimas
-Proteínas catalisadoras específicas, com sítio ativo. Temperatura e pH fora do ideal as **desnaturam** (mudam a forma e param de funcionar).`,
+### 6. Enzimas
+Proteínas catalisadoras, específicas. Temperatura e pH alteram a atividade; frio **reduz** a velocidade (menos colisões), calor excessivo **desnatura**.
+
+### 7. Membrana e metabolismo
+- **Osmose**: água atravessa a membrana do meio menos concentrado para o mais concentrado (aquaporinas).
+- **Glicólise**: no **citosol**, glicose → 2 ácidos pirúvicos (2 ATP líquidos), sem O₂.`,
     applications: [
-      md`**Biotecnologia**: transgênicos, insulina produzida por bactérias, plasmídeos como vetores.`,
-      md`**Saúde**: câncer como perda de controle do ciclo celular; antibióticos que agem no ribossomo bacteriano.`,
-      md`**Evolução**: mutações como fonte de variação.`,
-      md`**Química**: proteínas, ligações de hidrogênio no DNA, catálise.`,
+      md`**Biotecnologia**: insulina recombinante, transgênicos, plasmídeos.`,
+      md`**Saúde**: câncer, quimioterápicos que agem na fase S.`,
+      md`**Ambiente**: enzimas que degradam plásticos.`,
+      md`**Química**: ligações de hidrogênio no DNA, catálise.`,
     ],
     strategy: [
-      md`Identifique a etapa (replicação, transcrição, tradução) e o local.`,
-      md`Diga se o organismo é procarioto ou eucarioto e o que muda.`,
-      md`Para mutações, verifique se o códon novo codifica o mesmo aminoácido.`,
+      md`Diga a etapa (replicação, transcrição, tradução) e o local.`,
+      md`Diga se é procarioto ou eucarioto e o que muda.`,
+      md`Conte cromossomos por centrômeros e cromátides pela fase.`,
     ],
     examples: [
       {
-        title: 'Código degenerado',
-        prompt: md`Uma mutação troca o códon GCU por GCC, e ambos codificam alanina. O que acontece com a proteína?`,
-        steps: [md`O aminoácido continua o mesmo.`, md`A proteína não muda: mutação silenciosa, explicada pela degeneração do código.`],
+        title: 'Contagem',
+        prompt: md`Célula 2n = 8 na metáfase mitótica: quantos centrômeros e quantas cromátides?`,
+        steps: [md`8 centrômeros (8 cromossomos).`, md`16 cromátides (cada cromossomo duplicado).`],
       },
       {
-        title: 'Splicing',
-        prompt: md`Como os humanos têm cerca de 20 mil genes e muito mais tipos de proteína?`,
-        steps: [md`Pelo splicing alternativo: os éxons de um mesmo gene são combinados de formas diferentes.`, md`Cada combinação gera um RNA maduro e uma proteína diferente.`],
+        title: 'Mutação silenciosa',
+        prompt: md`GCU muda para GCC, ambos alanina. O que acontece com a proteína?`,
+        steps: [md`Mesmo aminoácido: proteína inalterada (código degenerado).`],
       },
     ],
     discursive: {
-      prompt: md`Pesquisadores inseriram num plasmídeo o gene de uma enzima que degrada plástico e o introduziram em bactérias. (a) O que é um plasmídeo? (b) Por que a bactéria consegue produzir a enzima de outro organismo? (c) Por que a enzima pode deixar de funcionar acima de certa temperatura?`,
-      modelAnswer: [md`(a) Uma molécula pequena de DNA circular, separada do cromossomo bacteriano, que se replica de forma independente.`, md`(b) Porque o código genético é universal: os códons do gene são lidos da mesma forma pelos ribossomos da bactéria.`, md`(c) Porque a temperatura alta desnatura a proteína, alterando sua forma e o sítio ativo.`],
-      scoring: [md`Define plasmídeo.`, md`Cita a universalidade do código.`, md`Explica a desnaturação pelo sítio ativo.`],
+      prompt: md`Para produzir insulina humana, insere-se o gene humano num plasmídeo bacteriano. (a) Por que é preciso usar o DNA complementar ao RNAm maduro, e não o gene inteiro do cromossomo? (b) Por que a bactéria produz a mesma proteína que a célula humana?`,
+      modelAnswer: [md`(a) O gene humano tem íntrons, e a bactéria não faz splicing; o DNA feito a partir do RNAm maduro já tem só os éxons.`, md`(b) O código genético é universal: a bactéria lê os mesmos códons e une os mesmos aminoácidos.`],
+      scoring: [md`Relaciona íntrons à falta de splicing em procariotos.`, md`Universalidade do código.`],
     },
+    patterns: [
+      {
+        title: 'Cromossomos, replicação e ciclo',
+        questions: ['2022 q05', '2025 q02'],
+        asks: md`Por que a célula é diploide, centrômeros, cromátides marcadas e replicação semiconservativa; divisão das somáticas, fase da DNA polimerase, microfilamentos na citocinese e G0.`,
+        solve: [md`Pares de homólogos; centrômeros = cromossomos.`, md`Toda cromátide tem fita nova.`, md`Fase S; anel de actina; G0 sem divisão.`],
+        distractors: md`Não há alternativas: perde-se ponto contando cromátides como cromossomos e dizendo que só metade sai marcada.`,
+      },
+      {
+        title: 'Síntese proteica, código e engenharia genética',
+        questions: ['2024 q02', '2026 q06', '2023 q01'],
+        asks: md`Local da transcrição em procarioto e o que distingue as células; proteínas iguais e RNAm maduro menor; etapa da mutação herdável, ribossomo, código degenerado e splicing alternativo; função das enzimas, fator abiótico, gene a descobrir e universalidade.`,
+        solve: [md`Citoplasma; carioteca.`, md`Mesmo RNAm; íntrons removidos.`, md`Replicação; degenerado; splicing alternativo.`, md`Catálise; temperatura ou pH; gene; universal.`],
+        distractors: md`Dizer que a mutação passa aos filhos na tradução.`,
+      },
+      {
+        title: 'Membrana e metabolismo',
+        questions: ['2025 q03'],
+        asks: md`Transporte que reidratou as células, etapa que gera ácido pirúvico e velocidade das enzimas perto de 0 °C.`,
+        solve: [md`Osmose.`, md`Glicólise, no citosol.`, md`Frio reduz a velocidade.`],
+        distractors: md`Chamar de "transporte ativo" a entrada de água e dizer que o frio desnatura.`,
+      },
+    ],
     traps: [
-      { trap: md`Dizer que a replicação é conservativa.`, fix: md`É semiconservativa: uma fita velha e uma nova.` },
+      { trap: md`Replicação conservativa.`, fix: md`É semiconservativa.` },
       { trap: md`Atribuir íntrons a procariotos.`, fix: md`Procariotos não têm íntrons nem splicing.` },
+      { trap: md`Dizer que o frio desnatura enzimas.`, fix: md`O frio reduz a atividade; o calor excessivo desnatura.` },
+    ],
+  },
+
+  {
+    id: 'bio-evolucao-classificacao',
+    subject: 'Biologia',
+    title: 'Evolução e classificação',
+    years: [2022, 2023],
+    howItFalls: md`Caiu em 2022 (cladograma dos moluscos: função da rádula e se é homóloga) e 2023 (especiação no Havaí: montar um cladograma pelas idades das ilhas, mecanismos pós-zigóticos e isolamento geográfico). O aposematismo de 2024 entrou junto com a genética.`,
+    explanation: md`### 1. Homologia e analogia
+- **Homólogas**: mesma origem embrionária e ancestral comum, funções podendo diferir (rádula nos moluscos; braço humano e asa de morcego).
+- **Análogas**: mesma função, origens diferentes (asa de inseto e de ave): convergência.
+- No cladograma, uma estrutura que aparece **na base**, no ancestral comum, e é herdada pelos ramos é **homóloga**. Perder depois (bivalves sem rádula) não muda isso.
+
+### 2. Cladogramas
+Nós = ancestrais comuns; grupos que se unem no nó mais recente são **grupos-irmãos**. **Novidades evolutivas** marcadas num ramo valem para todos os descendentes daquele ponto.
+
+### 3. Especiação
+- **Alopátrica**: **isolamento geográfico** (mar entre ilhas) interrompe o fluxo gênico; mutação, seleção em ambientes diferentes e deriva acumulam diferenças até o **isolamento reprodutivo**.
+- **Simpátrica**: sem barreira geográfica.
+- Em arquipélagos de origem vulcânica, ilhas **mais antigas** foram colonizadas primeiro: suas espécies se separaram antes e ficam nos ramos **mais externos** do cladograma.
+
+### 4. Isolamento reprodutivo
+- **Pré-zigótico**: impede a fecundação (comportamento, época, mecânico, habitat, gamético).
+- **Pós-zigótico**: zigoto formado, mas **inviabilidade do híbrido**, **esterilidade do híbrido** ou **degeneração da F₂**.
+
+### 5. Seleção natural e aposematismo
+**Aposematismo**: coloração de advertência em organismos impalatáveis; predadores aprendem a evitá-los, os portadores sobrevivem mais e a frequência do alelo aumenta por seleção natural.`,
+    applications: [
+      md`**Classificação**: sistemática filogenética e nomenclatura.`,
+      md`**Genética**: frequências alélicas e seleção.`,
+      md`**Geografia**: arquipélagos vulcânicos e biogeografia.`,
+    ],
+    strategy: [
+      md`Homóloga: aponte o ancestral comum no cladograma.`,
+      md`Em ilhas, ordene pela idade: mais antiga, ramo mais externo.`,
+      md`Especiação: barreira → sem fluxo gênico → diferenças → isolamento reprodutivo.`,
+    ],
+    examples: [
+      {
+        title: 'Homologia',
+        prompt: md`Asa de morcego e nadadeira de golfinho são homólogas ou análogas?`,
+        steps: [md`Homólogas: mesmos ossos, mesma origem em mamíferos, funções diferentes.`],
+      },
+      {
+        title: 'Pós-zigótico',
+        prompt: md`Cite um mecanismo pós-zigótico de isolamento.`,
+        steps: [md`Esterilidade do híbrido (mula).`],
+      },
+    ],
+    discursive: {
+      prompt: md`Duas espécies de lagarto vivem em ilhas de 4 e 1 milhão de anos, e uma terceira no continente de onde vieram. (a) Que fator permitiu a especiação, e por que ele é fundamental? (b) Cite um mecanismo de isolamento pós-zigótico.`,
+      modelAnswer: [md`(a) O isolamento geográfico pelo mar, que interrompe o fluxo gênico; cada população acumula diferenças (mutação, seleção, deriva) até se isolar reprodutivamente.`, md`(b) Inviabilidade ou esterilidade do híbrido.`],
+      scoring: [md`Isolamento geográfico e fluxo gênico.`, md`Mecanismo pós-zigótico correto.`],
+    },
+    patterns: [
+      {
+        title: 'Cladograma e homologia',
+        questions: ['2022 q02', '2023 q08'],
+        asks: md`Simetria, cefalópode, função da rádula e se é homóloga; preencher um cladograma pelas idades das ilhas, mecanismo pós-zigótico e fator da especiação alopátrica.`,
+        solve: [md`Estrutura na base = homóloga.`, md`Ilha mais antiga = ramo externo.`, md`Isolamento geográfico interrompe o fluxo gênico.`],
+        distractors: md`Não há alternativas: perde-se ponto chamando a rádula de análoga por ter sido perdida nos bivalves.`,
+      },
+    ],
+    traps: [
+      { trap: md`Achar que estrutura perdida num grupo deixa de ser homóloga.`, fix: md`Homologia é origem comum.` },
+      { trap: md`Confundir pré e pós-zigótico.`, fix: md`Pós-zigótico: o zigoto se forma.` },
+    ],
+  },
+
+  {
+    id: 'bio-reproducao-parasitas',
+    subject: 'Biologia',
+    title: 'Reprodução humana, embriologia e parasitoses',
+    years: [2022, 2023, 2024, 2026],
+    howItFalls: md`Caiu em 4 anos: contraceptivo em gel que altera o pH vaginal e contraceptivos hormonais (2022), ciclo do *Trypanosoma cruzi* e lesão cardíaca (2023), por que "ovulação" não é o termo adequado (2024), ciclo do *Ascaris* com fase pulmonar (2024), notocorda, tubo neural, celoma e vírus que atravessam a placenta (2026).`,
+    explanation: md`### 1. Reprodução humana
+- **Fecundação**: na **tuba uterina**, no terço próximo ao ovário.
+- **pH vaginal** saudável: ácido (cerca de 4), dificulta microrganismos.
+- O ovário libera um **ovócito secundário** parado na **metáfase II**; a meiose II só termina — formando o **óvulo** — quando o espermatozoide penetra. Por isso "ovulação" é um nome impreciso.
+- **Contraceptivos hormonais**: estrógeno e progesterona (sintéticos) inibem, por **retroalimentação negativa**, FSH e LH da hipófise: não há ovulação. A progesterona também espessa o muco cervical.
+
+### 2. Embriologia
+- **Notocorda** (mesoderma) induz o ectoderma acima a formar o **tubo neural** (encéfalo e medula).
+- No ser humano, a notocorda é substituída pela **coluna vertebral**; restos dela formam o núcleo pulposo dos discos.
+- **Celoma**: cavidade revestida inteiramente por mesoderme.
+- **Placenta**: trocas entre mãe e feto; alguns vírus (rubéola, zika) a **atravessam** pelo sangue materno e causam malformações.
+
+### 3. Doença de Chagas
+- *Trypanosoma cruzi*, protozoário flagelado. Vetor: **barbeiro**.
+- Transmissão: o barbeiro pica e **defeca**; as fezes com tripomastigotas entram pela lesão ou mucosas quando a pessoa coça. Também por alimentos (açaí, caldo de cana) e transfusão.
+- Dentro das células, **amastigotas** (sem flagelo livre) se multiplicam; no coração, destroem fibras e geram inflamação e **fibrose**: cardiomegalia, arritmias, insuficiência cardíaca na fase crônica.
+
+### 4. Ascaridíase
+- *Ascaris lumbricoides*, filo **Nematoda**.
+- Transmissão: **ingestão de ovos** em água ou alimento contaminado por fezes (falta de saneamento).
+- O ovo eclode no **intestino delgado**; as larvas atravessam a parede, vão pelo sangue a fígado, coração e **pulmões**; nos alvéolos causam inflamação (pneumonia, síndrome de Loeffler); sobem pela traqueia, são deglutidas e voltam ao intestino, onde viram adultas.
+
+### 5. Prevenção
+Saneamento básico, higiene dos alimentos, melhoria das casas de pau a pique (barbeiro), controle do vetor.`,
+    applications: [
+      md`**Saúde pública**: saneamento, vigilância de vetores, pré-natal (rubéola, zika).`,
+      md`**Fisiologia**: hormônios e retroalimentação.`,
+      md`**Geografia**: doenças ligadas à pobreza e à falta de saneamento.`,
+    ],
+    strategy: [
+      md`Em ciclo de parasita, diga hospedeiro, forma e caminho no corpo.`,
+      md`Em transmissão, cite o mecanismo (fezes do barbeiro, ingestão de ovos).`,
+      md`Em reprodução, use o termo exato (ovócito secundário, tuba uterina).`,
+    ],
+    examples: [
+      {
+        title: 'Ovulação',
+        prompt: md`O que o ovário libera na ovulação, e quando se forma o óvulo?`,
+        steps: [md`Um ovócito secundário em metáfase II.`, md`O óvulo se forma quando a meiose II se completa, na fecundação.`],
+      },
+      {
+        title: 'Placenta',
+        prompt: md`Como o vírus da zika chega ao embrião?`,
+        steps: [md`Pelo sangue materno, atravessando a placenta para a circulação fetal.`],
+      },
+    ],
+    discursive: {
+      prompt: md`A esquistossomose e a ascaridíase são doenças ligadas à falta de saneamento. (a) A que filo pertence o *Ascaris* e como ele é transmitido? (b) Por que a ascaridíase pode causar sintomas pulmonares?`,
+      modelAnswer: [md`(a) Nematoda; por ingestão de ovos em água ou alimentos contaminados por fezes humanas.`, md`(b) As larvas eclodem no intestino, atravessam a parede, vão pelo sangue aos pulmões e inflamam os alvéolos antes de subir pela traqueia e voltar ao intestino.`],
+      scoring: [md`Filo e transmissão corretos.`, md`Ciclo pulmonar explicado.`],
+    },
+    patterns: [
+      {
+        title: 'Parasitoses',
+        questions: ['2023 q02', '2024 q07'],
+        asks: md`Doença, fase sem estrutura locomotora, lesão cardíaca e transmissão pelo barbeiro; filo, transmissão, local de eclosão e pneumonia.`,
+        solve: [md`Amastigota intracelular sem flagelo.`, md`Fibras cardíacas destruídas → fibrose.`, md`Fezes do barbeiro; ovos ingeridos; ciclo pulmonar.`],
+        distractors: md`Não há alternativas: perde-se ponto dizendo que o barbeiro transmite "pela picada" sem as fezes.`,
+      },
+      {
+        title: 'Reprodução e embriologia',
+        questions: ['2022 q06', '2024 q06', '2026 q02'],
+        asks: md`Local da fecundação e pH vaginal; hormônio e ação do contraceptivo; por que "ovulação" é impreciso; tubo neural, celoma, substituto da notocorda e vírus pela placenta.`,
+        solve: [md`Tuba uterina; ácido.`, md`Retroalimentação negativa de FSH e LH.`, md`Ovócito secundário; meiose II na fecundação.`, md`Coluna vertebral; placenta.`],
+        distractors: md`Pôr a fecundação no útero e dizer que o ovário libera um óvulo.`,
+      },
+    ],
+    traps: [
+      { trap: md`Dizer que a fecundação ocorre no útero.`, fix: md`Ocorre na tuba uterina.` },
+      { trap: md`Dizer que o barbeiro transmite pela saliva.`, fix: md`Transmite pelas fezes contaminadas.` },
     ],
   },
 ];
