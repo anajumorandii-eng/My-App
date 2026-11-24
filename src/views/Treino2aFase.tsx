@@ -2,6 +2,7 @@ import { StudyExportButton } from '../components/StudyExportButton';
 import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { UNSAFE_LocationContext } from 'react-router-dom';
 import { discursiveQuestions, boardExamStructure } from '../data/discursiveQuestions';
+import { famerpExpectedChecks } from '../data/famerpExpectedChecks';
 import { secondPhaseProtocols } from '../data/resolutionStrategies';
 import { useDiscursiveAttempts } from '../hooks/useDiscursiveAttempts';
 import { useUserMastery } from '../hooks/useUserMastery';
@@ -101,6 +102,7 @@ function DiscursiveTraining() {
   );
 
   const question = pool.length > 0 ? pool[index % pool.length] : null;
+  const checks = question ? famerpExpectedChecks[question.id] : undefined;
   // A cor da tela segue a matéria em foco pelo ambiente do app, em vez da
   // paleta que antes ficava fixa no contêiner e vencia o ambiente.
   const materiaDoAmbiente = question?.subject ?? null;
@@ -183,7 +185,10 @@ function DiscursiveTraining() {
         board: question.board,
         subject: question.subject,
         prompt: fullQuestionText(question),
-        modelAnswer: question.modelAnswer,
+        // A lista do corretor vai junto: sem ela a IA julgava pela resposta-modelo
+        // inteira e dava como certo quem acertava o raciocínio mas omitia o termo
+        // exato ou a unidade que a correção exige.
+        modelAnswer: [...question.modelAnswer, ...checksText(question)],
         studentAnswer: answer,
       }, (delta) => {
         acumulado += delta;
@@ -451,7 +456,7 @@ function DiscursiveTraining() {
           ) : (
             <div className="space-y-4">
               <div className="p-4 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-xs leading-relaxed text-[var(--text)]">
-                <p className="font-semibold text-emerald-800 dark:text-emerald-300 mb-2">Pontos esperados na resposta</p>
+                <p className="font-semibold text-emerald-800 dark:text-emerald-300 mb-2">{checks ? 'Resposta esperada' : 'Pontos esperados na resposta'}</p>
                 <ul className="space-y-1.5">
                   {question.modelAnswer.map((m, i) => (
                     <li key={i} className="flex items-start">
@@ -460,6 +465,18 @@ function DiscursiveTraining() {
                     </li>
                   ))}
                 </ul>
+                {checks && (
+                  <div className="mt-3 pt-3 border-t border-emerald-500/30">
+                    <p className="font-semibold text-emerald-800 dark:text-emerald-300 mb-1">O que o corretor confere</p>
+                    <p className="text-[11px] text-[var(--dim)] mb-2">Formato das respostas esperadas da Vunesp: termo exato, justificativa curta e conta com unidade. A Famerp não publica a sua; a lista é do CRIVO.</p>
+                    {checks.map((item, i) => (
+                      <div key={i} className="mb-1.5">
+                        <p className="font-medium">Item {question.subItems?.[i]?.letter ?? i + 1}</p>
+                        <ul className="space-y-0.5">{item.map((c) => <li key={c} className="flex items-start"><span className="mr-2" aria-hidden>☐</span><span>{c}</span></li>)}</ul>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {(!aiFeedback || feedbackError) && (
@@ -520,4 +537,8 @@ function DiscursiveTraining() {
       )}
     </div>
   );
+}
+
+function checksText(question: DiscursiveQuestion): string[] {
+  return (famerpExpectedChecks[question.id] ?? []).map((item, i) => `Item ${question.subItems?.[i]?.letter ?? i + 1}, o corretor confere: ${item.join(' ')}`);
 }
