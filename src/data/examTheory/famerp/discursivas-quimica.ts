@@ -168,13 +168,13 @@ Na pilha de 2026, o lado ácido tem $\text{MnO}_2 + 4\text{H}^+ + 2e^- \rightarr
 
 ### 7. Pilhas e baterias comerciais
 - **Alcalina** (Zn/MnO₂ em KOH), **de Edison** (Fe/Ni em KOH), **chumbo-ácido** (carros), **íons de lítio** (celulares).
-- **Recarregar = eletrólise**: a fonte externa força a reação inversa da descarga. Por isso só pilhas com produtos sólidos aderidos aos eletrodos são recarregáveis.
+- **Recarregar = eletrólise**: a fonte externa força a reação inversa da descarga. Só é recarregável a célula cuja reação de descarga é **reversível** e cujo projeto conserva os produtos onde a reação inversa os alcança: aderidos ao eletrodo (chumbo-ácido, lítio) ou guardados em tanques de eletrólito (baterias de fluxo). Na pilha alcalina comum, a descarga não se reverte de forma controlada.
 
 ### 8. Eletrólise: reação forçada
 Uma fonte externa obriga a reação não espontânea (energia elétrica → química).
 - **Cátodo** continua sendo onde ocorre a redução, mas agora é o polo **negativo**; **ânodo**, oxidação, é o polo **positivo**.
 - **Ígnea** (sal fundido, sem água): o cátion e o ânion do sal se descarregam (NaCl fundido → Na e Cl₂).
-- **Aquosa**: o cátion do sal **compete** com a água. Reduz-se quem tiver **maior** $E^\circ_{\text{red}}$. A redução da água em meio neutro ($2\text{H}_2\text{O} + 2e^- \rightarrow \text{H}_2 + 2\text{OH}^-$) vale cerca de $-0{,}83$ V. O Zn²⁺ ($-0{,}76$ V) se deposita antes da água; Mg²⁺ ($-2{,}37$) e Al³⁺ ($-1{,}66$) não, por isso **Mg e Al só se obtêm por eletrólise ígnea** (pergunta de 2022).
+- **Aquosa**: o cátion do sal **compete** com a água. Reduz-se quem tiver **maior** $E^\circ_{\text{red}}$. A redução da água ($2\text{H}_2\text{O} + 2e^- \rightarrow \text{H}_2 + 2\text{OH}^-$) tem $E^\circ = -0{,}83$ V em condição **padrão** ($[\text{OH}^-] = 1$ mol/L, meio básico); em pH 7 fica perto de $-0{,}41$ V. Use o valor que a questão fornecer (em 2022, $-0{,}83$ V). O Zn²⁺ ($-0{,}76$ V) se deposita antes da água; Mg²⁺ ($-2{,}37$) e Al³⁺ ($-1{,}66$) não, por isso **Mg e Al só se obtêm por eletrólise ígnea** (pergunta de 2022).
 - No ânodo, ânions **não oxigenados** (Cl⁻, Br⁻, I⁻) e OH⁻ se oxidam antes da água; os **oxigenados** (SO₄²⁻, NO₃⁻) e o F⁻ não, e quem se oxida é a água, liberando O₂.
 
 ### 9. Cálculos com o faraday
