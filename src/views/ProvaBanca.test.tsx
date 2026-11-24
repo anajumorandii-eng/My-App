@@ -181,6 +181,14 @@ it('cada redação-modelo tem a própria Leitura Crivo', () => {
   expect(within(card).getByRole('button', { name: 'Leitura Crivo' })).toBeEnabled();
 });
 
+it('mostra todas as abas desde a entrada, sem esperar o banco de questões carregar', () => {
+  questionsHook.mockReturnValue({ questions: [], loading: true });
+  renderAt('/provas/famerp');
+  for (const name of ['O que mais cai', 'Simulado', 'Discursivas e redação']) expect(screen.getByRole('tab', { name })).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('tab', { name: 'Simulado' }));
+  expect(screen.getByText('Carregando as provas…')).toBeInTheDocument();
+});
+
 it('mostra os tipos de cobrança do capítulo com as questões reais citadas', async () => {
   const pct = (year: number): Question => ({ ...question(41, year), id: `famerp_${year}_pct`, topicId: 'mat_aritmetica_proporcionalidade', subject: 'Matemática', chapter: 'Porcentagem', examSource: { board: 'FAMERP', year, questionNumber: 41, version: 'V1' } });
   questionsHook.mockReturnValue({ questions: [...exam(2025), ...exam(2024), ...exam(2023), pct(2025), pct(2024), pct(2023)], loading: false });
