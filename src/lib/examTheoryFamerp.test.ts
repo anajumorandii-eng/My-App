@@ -95,6 +95,24 @@ describe('teoria da Famerp: discursivas', () => {
     for (const t of famerpDiscursiveThemes) for (const y of t.years) assert.ok(realYears.get(t.subject)!.has(y), `${t.id}: ${y}`);
   });
 
+  // Matéria cujos temas já têm tipos de cobrança precisa cobrir todas as
+  // discursivas reais dela: uma questão sem tipo é um pedaço da prova que a
+  // teoria não ensina a responder.
+  it('os tipos de cobrança citam discursivas reais da matéria e cobrem todas', () => {
+    const all = [...famerp2022Discursive, ...famerp2023Discursive, ...famerp2024Discursive, ...famerp2025Discursive, ...famerp2026Discursive];
+    for (const subject of NATUREZA) {
+      const themes = famerpDiscursiveThemes.filter((t) => t.subject === subject);
+      if (!themes.some((t) => t.patterns?.length)) continue;
+      const real = all.filter((q) => q.subject === subject).map((q) => q.id);
+      const cited = themes.flatMap((t) => (t.patterns ?? []).flatMap((p) => p.questions)).map((c) => {
+        const [year, q] = c.split(' q');
+        return `disc_famerp_${year}_q${q.padStart(2, '0')}`;
+      });
+      for (const id of cited) assert.ok(real.includes(id), `${subject}: ${id} não é discursiva real da matéria`);
+      assert.deepEqual(real.filter((id) => !cited.includes(id)), [], `${subject}: discursivas sem tipo`);
+    }
+  });
+
   it('cada tema é aprofundado, com discursiva de treino, e suas fórmulas compilam', () => {
     for (const t of famerpDiscursiveThemes) {
       assertDeep(t.id, t);
