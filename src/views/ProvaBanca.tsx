@@ -56,13 +56,17 @@ export default function ProvaBanca() {
   if (!board || !data) return <Navigate to="/provas" replace />;
 
   // Só aparece a aba que tem conteúdo: uma aba vazia é a "aba pobre" que a
-  // área existe para não ter.
+  // área existe para não ter. Mas enquanto o banco carrega, as abas que
+  // dependem dele ficam visíveis (abrem no aviso de carregamento): escondê-las
+  // até o fim da carga fazia a fileira crescer de 5 para 7 abas segundos depois
+  // da entrada, e parecia que a tela tinha travado.
+  const pending = loading && questions.length === 0 && !!board.questionBoard;
   const tabs: TabId[] = [
     'visao',
     ...(data.playbook ? ['estrategia', 'materias'] as TabId[] : []),
     ...(data.theory && (data.theory.discursive.length > 0 || data.priorities?.chapters.some((c) => data.theory!.chapters[theoryKey(c.topicId, c.chapter)])) ? ['teoria'] as TabId[] : []),
-    ...(data.priorities && data.priorities.chapters.length > 0 ? ['prioridades'] as TabId[] : []),
-    ...(data.editions.length > 0 ? ['simulado'] as TabId[] : []),
+    ...(pending || (data.priorities && data.priorities.chapters.length > 0) ? ['prioridades'] as TabId[] : []),
+    ...(pending || data.editions.length > 0 ? ['simulado'] as TabId[] : []),
     ...(data.discursive.length > 0 || data.protocols.length > 0 || data.playbook ? ['segunda-fase'] as TabId[] : []),
   ];
   const active: TabId = tabs.includes(tab as TabId) ? tab as TabId : 'visao';
