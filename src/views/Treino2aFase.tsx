@@ -468,7 +468,7 @@ function DiscursiveTraining() {
                 {checks && (
                   <div className="mt-3 pt-3 border-t border-emerald-500/30">
                     <p className="font-semibold text-emerald-800 dark:text-emerald-300 mb-1">O que o corretor confere</p>
-                    <p className="text-[11px] text-[var(--dim)] mb-2">Formato das respostas esperadas da Vunesp: termo exato, justificativa curta e conta com unidade. A Famerp não publica a sua; a lista é do CRIVO.</p>
+                    <p className="text-[11px] text-[var(--dim)] mb-2">Lista do CRIVO no formato das respostas esperadas da Vunesp (termo exato, justificativa curta, conta com unidade), conferida questão por questão com a resolução comentada do Etapa.</p>
                     {checks.map((item, i) => (
                       <div key={i} className="mb-1.5">
                         <p className="font-medium">Item {question.subItems?.[i]?.letter ?? i + 1}</p>

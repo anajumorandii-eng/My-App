@@ -246,14 +246,14 @@ export const famerp2022Discursive: DiscursiveQuestion[] = [
   {
     ...base, id: 'disc_famerp_2022_q17', topicId: 'fis_calorimetria', subject: 'Física',
     topic: 'Escolha do eixo pela dilatação linear',
-    prompt: 'Seis eixos de 20,00 cm a 300 K foram testados; o escolhido não pode dilatar mais que 0,025 cm a cada 100 K. O gráfico mostra o comprimento até 800 K: alumínio ≈ 20,24 cm; latão ≈ 20,19; cobre ≈ 20,17; aço ≈ 20,12; titânio ≈ 20,09; invar ≈ 20,01.',
+    prompt: 'Seis eixos de 20,00 cm a 300 K foram testados; o escolhido não pode dilatar mais que 0,025 cm a cada 100 K. O gráfico mostra o comprimento até 800 K: alumínio ≈ 20,24 cm; latão ≈ 20,19; cobre ≈ 20,17; aço termina exatamente em 20,125 (linha tracejada); titânio ≈ 20,0875; invar ≈ 20,01.',
     figures: fig(17, 'Gráfico do comprimento de seis eixos de 300 K a 800 K'),
     subItems: [
       { letter: 'a', prompt: 'Qual material tem dilatação mais próxima, porém inferior, ao limite? Qual seu coeficiente de dilatação linear, em K⁻¹?' },
       { letter: 'b', prompt: 'Um eixo de 600 g, com calor específico 0,1 cal/(g·°C), é aquecido a 30 cal/s. Qual a taxa de variação da temperatura, em °C/s? Quanto tempo para elevar 100 °C?' },
     ],
     modelAnswer: [
-      'Item a: o limite equivale a 0,125 cm em 500 K (de 300 a 800 K), ou seja, 20,125 cm a 800 K. O aço (≈ 20,12 cm) é o mais próximo abaixo. α = 0,12/(20 × 500) ≈ 1,2 × 10⁻⁵ K⁻¹.',
+      'Item a: o limite equivale a 0,125 cm em 500 K (de 300 a 800 K), ou seja, 20,125 cm a 800 K. O aço chega exatamente a 20,125 cm: iguala o limite, não fica abaixo dele, e o enunciado pede "porém inferior". O mais próximo abaixo é o titânio (20,0875 cm). α = 0,0875/(20 × 500) = 8,75 × 10⁻⁶ K⁻¹.',
       'Item b: capacidade térmica C = 600 × 0,1 = 60 cal/°C; taxa = 30/60 = 0,5 °C/s. Para 100 °C: 100/0,5 = 200 s.',
     ],
     suggestedMinutes: 10,

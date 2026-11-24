@@ -84,7 +84,7 @@ export const famerp2026Discursive: DiscursiveQuestion[] = [
     ],
     modelAnswer: [
       'Item a: o estômago (células principais das glândulas gástricas). O ácido é o clorídrico (HCl).',
-      'Item b: o ácido converte o pepsinogênio inativo em pepsina e mantém o pH ácido em que ela atua, digerindo as proteínas da carne. O bicarbonato neutraliza o ácido; com pH elevado, o pepsinogênio não é ativado (e a pepsina não funcionaria), por isso não há digestão.',
+      'Item b: o ácido converte o pepsinogênio inativo em pepsina e mantém o pH ácido em que ela atua, digerindo as proteínas da carne. O bicarbonato neutraliza o ácido e eleva o pH: o pepsinogênio não é ativado, e a pepsina, se formada, se desnatura em meio básico; por isso não há digestão.',
     ],
     suggestedMinutes: 10,
   },

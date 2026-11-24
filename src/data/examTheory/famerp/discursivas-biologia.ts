@@ -323,7 +323,7 @@ Vacina: antígeno → imunidade **ativa**, memória. Soro: anticorpos prontos �
 ### 5. Digestão de proteínas no estômago
 - Células principais produzem **pepsinogênio** (inativo, para não digerir a própria célula); células parietais, **HCl**.
 - O ácido **ativa** o pepsinogênio em **pepsina** e mantém o pH ácido em que ela age.
-- **Bicarbonato** neutraliza o ácido: sem pH ácido, não há ativação nem digestão (como no duodeno).
+- **Bicarbonato** neutraliza o ácido: sem pH ácido não há ativação, e a pepsina se desnatura em meio básico (como no duodeno).
 - Leitura de experimento: compare os tubos que diferem em **um só** fator.`,
     applications: [
       md`**Saúde**: infarto e revascularização, diabetes, desidratação, álcool e ADH, refluxo e antiácidos.`,
@@ -366,7 +366,7 @@ Vacina: antígeno → imunidade **ativa**, memória. Soro: anticorpos prontos �
         questions: ['2025 q06', '2025 q04', '2026 q05'],
         asks: md`Néfron, proteínas na urina, ADH e ATP; erro conceitual (glicogênio × glucagon), função da insulina, colesterol e gônadas; pepsinogênio, HCl, ativação e bicarbonato.`,
         solve: [md`Filtração por tamanho; ADH e aquaporinas; transporte ativo.`, md`Glucagon é o hormônio; colesterol vira esteroides.`, md`Ácido ativa; bicarbonato neutraliza.`],
-        distractors: md`Aceitar "glicogênio" como hormônio e dizer que o bicarbonato "destrói" a enzima.`,
+        distractors: md`Aceitar "glicogênio" como hormônio e esquecer que, sem pH ácido, o pepsinogênio nem chega a ser ativado.`,
       },
     ],
     traps: [
