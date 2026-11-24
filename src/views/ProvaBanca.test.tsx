@@ -162,6 +162,25 @@ it('a aba Redação abre os modelos dos temas reais, sem a fileira de matérias'
   expect(screen.getByText(/zera a redação idêntica ou muito semelhante/)).toBeInTheDocument();
 });
 
+it('abre o tema discursivo na Leitura Crivo com as seções e sem entregar a resposta-modelo', async () => {
+  Object.defineProperty(HTMLDialogElement.prototype, 'showModal', { configurable: true, value: function (this: HTMLDialogElement) { this.setAttribute('open', ''); } });
+  Object.defineProperty(HTMLDialogElement.prototype, 'close', { configurable: true, value: function (this: HTMLDialogElement) { this.removeAttribute('open'); } });
+  renderAt('/provas/famerp/teoria?parte=discursivas&materia=Qu%C3%ADmica');
+  const card = screen.getByText('Pilhas, baterias, eletrólise e corrosão').closest('details')!;
+  fireEvent.click(within(card).getByRole('button', { name: 'Leitura Crivo' }));
+  // Busca por seletor: a varredura de papéis do Testing Library quebra no CSS do KaTeX no jsdom.
+  const reader = await waitFor(() => { const d = document.querySelector('dialog[open]'); if (!d) throw new Error('leitura fechada'); return d as HTMLElement; }, { timeout: 8000 });
+  expect(reader.querySelector('nav[aria-label="Seções da leitura"]')).toHaveTextContent('O mecanismo');
+  for (const answer of reader.querySelectorAll('[data-review-answer-key]')) expect(answer).not.toHaveAttribute('open');
+  expect(reader.textContent).not.toMatch(/Treinar com as discursivas reais/);
+});
+
+it('cada redação-modelo tem a própria Leitura Crivo', () => {
+  renderAt('/provas/famerp/teoria?parte=redacao');
+  const card = screen.getByText(/Racismo ambiental no Brasil/).closest('details')!;
+  expect(within(card).getByRole('button', { name: 'Leitura Crivo' })).toBeEnabled();
+});
+
 it('mostra os tipos de cobrança do capítulo com as questões reais citadas', async () => {
   const pct = (year: number): Question => ({ ...question(41, year), id: `famerp_${year}_pct`, topicId: 'mat_aritmetica_proporcionalidade', subject: 'Matemática', chapter: 'Porcentagem', examSource: { board: 'FAMERP', year, questionNumber: 41, version: 'V1' } });
   questionsHook.mockReturnValue({ questions: [...exam(2025), ...exam(2024), ...exam(2023), pct(2025), pct(2024), pct(2023)], loading: false });

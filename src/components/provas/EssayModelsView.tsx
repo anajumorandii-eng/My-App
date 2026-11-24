@@ -1,4 +1,6 @@
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { StudyReaderButton } from '../StudyReaderButton';
 import { AlertTriangle, BookOpen, Target } from 'lucide-react';
 import { Panel } from '../ui/Panel';
 import type { EssayModel } from '../../data/examTheory';
@@ -20,12 +22,21 @@ export function EssayModelsView({ boardName, essays }: { boardName: string; essa
         <Link className={LINK} to="/redacao">Critérios do edital, o que zera e exercícios: aba Redação</Link>
       </Panel>
 
-      {essays.map((e) => (
-        <details key={e.year} className="ni-panel p-4 space-y-3">
+      {essays.map((e) => <EssayModelCard key={e.year} boardName={boardName} essay={e} />)}
+    </div>
+  );
+}
+
+function EssayModelCard({ boardName, essay: e }: { boardName: string; essay: EssayModel }) {
+  const body = useRef<HTMLDivElement>(null);
+  return (
+        <details className="ni-panel p-4 space-y-3">
           <summary className="cursor-pointer flex flex-wrap items-baseline gap-2">
             <span className="text-xs">{e.year}</span>
             <span className="font-semibold">{e.theme}</span>
           </summary>
+          <StudyReaderButton title={`Redação-modelo — ${e.year} — ${boardName}`} getContent={() => body.current} />
+          <div ref={body} className="space-y-3" data-print-subject="Redação" data-print-subtopic={e.theme} data-print-board={boardName} data-print-purpose="Redação-modelo comentada">
 
           <section className="space-y-1">
             <h4 className="text-sm font-semibold flex items-center gap-1.5"><Target className="w-4 h-4" aria-hidden />Forma do tema e tese</h4>
@@ -55,8 +66,7 @@ export function EssayModelsView({ boardName, essays }: { boardName: string; essa
             <h4 className="text-sm font-semibold">Repertório e o que cada um prova</h4>
             <ul className="text-sm list-disc pl-5 space-y-0.5">{e.repertoire.map((r) => <li key={r.item}><b>{r.item}:</b> {r.proves}.</li>)}</ul>
           </section>
+          </div>
         </details>
-      ))}
-    </div>
   );
 }
