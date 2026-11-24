@@ -6,6 +6,7 @@ import { Panel } from '../ui/Panel';
 import { Button } from '../ui/Button';
 import { theoryKey, type BoardTheory, type ChapterTheory } from '../../data/examTheory';
 import { EssayModelsView } from './EssayModelsView';
+import { StudyReaderButton } from '../StudyReaderButton';
 import type { BoardPriorities } from '../../lib/boardPrep';
 
 const LINK = 'text-sm underline underline-offset-2 hover:text-[var(--action-primary)]';
@@ -78,6 +79,7 @@ export function BoardTheoryView({ boardName, questionBoard, priorities, theory }
           const isTarget = key === requestedChapter;
           return (
             <TheoryCard key={key} ref={isTarget ? target : undefined} open={isTarget} boardName={boardName}
+              reading={{ subject: c.subject, title: c.chapter }}
               heading={<><span aria-label={c.stars === 2 ? 'muito frequente' : 'frequente'}>{c.stars === 2 ? '★★' : '★'}</span><span className="font-semibold">{c.chapter}</span><span className="text-xs">{c.years.join(', ')}</span></>}
               theory={theory.chapters[key]}
               trainLink={questionBoard ? <Link className={LINK} to={`/questoes?board=${questionBoard}&topic=${encodeURIComponent(c.topicId)}&chapter=${encodeURIComponent(c.chapter)}`}>Treinar com as questões da {boardName}</Link> : null} />
@@ -85,6 +87,7 @@ export function BoardTheoryView({ boardName, questionBoard, priorities, theory }
         })
         : theory.discursive.filter((t) => t.subject === subject).map((t) => (
           <TheoryCard key={t.id} ref={t.id === requestedTheme ? target : undefined} open={t.id === requestedTheme} boardName={boardName}
+            reading={{ subject: t.subject, title: t.title, discursive: true }}
             heading={<><span className="font-semibold">{t.title}</span><span className="text-xs">{t.years.join(', ')}</span></>}
             theory={t}
             trainLink={<Link className={LINK} to={`/treino-2a-fase?banca=${encodeURIComponent(boardName)}`}>Treinar com as discursivas reais da {boardName}</Link>} />
@@ -95,11 +98,18 @@ export function BoardTheoryView({ boardName, questionBoard, priorities, theory }
 
 const TheoryCard = React.forwardRef<HTMLDetailsElement, {
   heading: React.ReactNode; theory: ChapterTheory; open: boolean; boardName: string; trainLink: React.ReactNode;
-}>(function TheoryCard({ heading, theory: t, open, boardName, trainLink }, ref) {
+  reading: { subject: string; title: string; discursive?: boolean };
+}>(function TheoryCard({ heading, theory: t, open, boardName, trainLink, reading }, ref) {
+  const body = useRef<HTMLDivElement>(null);
+  const readingTitle = `Teoria ${reading.discursive ? 'das discursivas' : 'da objetiva'} — ${reading.title} — ${boardName}`;
   return (
     <details ref={ref} open={open || undefined} className="ni-panel p-5 scroll-mt-24">
       <summary className="cursor-pointer flex flex-wrap items-center gap-x-3 gap-y-1">{heading}</summary>
-      <div className="mt-4 space-y-6">
+      <StudyReaderButton title={readingTitle} getContent={() => body.current} />
+      {/* A leitura copia este bloco. Resoluções e respostas-modelo seguem
+          fechadas lá também (data-review-answer-key), para não entregar a
+          resposta antes da tentativa, que é o motivo de estarem fechadas aqui. */}
+      <div ref={body} className="mt-4 space-y-6" data-print-subject={reading.subject} data-print-subtopic={reading.title} data-print-board={boardName} data-print-purpose={reading.discursive ? 'Guia de estudo das discursivas' : 'Guia de estudo da objetiva'}>
         <div className="text-sm rounded-lg border border-[var(--line)] p-3"><b>Como cai na {boardName}: </b><AiText text={t.howItFalls} className="inline" /></div>
 
         {t.patterns && t.patterns.length > 0 && (
@@ -160,7 +170,7 @@ const TheoryCard = React.forwardRef<HTMLDetailsElement, {
               <div key={e.title} className="rounded-lg border border-[var(--line)] p-3 space-y-2 text-sm">
                 <p className="font-medium">{e.title}</p>
                 <AiText text={e.prompt} />
-                <details>
+                <details data-review-answer-key>
                   <summary className="cursor-pointer underline underline-offset-2">Tente antes; depois veja a resolução</summary>
                   <ol className="mt-2 list-decimal pl-5 space-y-1">{e.steps.map((s) => <li key={s}><AiText text={s} /></li>)}</ol>
                 </details>
@@ -173,7 +183,7 @@ const TheoryCard = React.forwardRef<HTMLDetailsElement, {
           <Section icon={<FileSignature className="w-4 h-4" aria-hidden />} title="Treino discursivo">
             <div className="rounded-lg border p-3 space-y-3 text-sm" style={{ borderColor: 'var(--action-primary)' }}>
               <AiText text={t.discursive.prompt} />
-              <details>
+              <details data-review-answer-key>
                 <summary className="cursor-pointer underline underline-offset-2">Escreva sua resposta; depois compare com a resposta-modelo</summary>
                 <div className="mt-3 space-y-3">
                   <div className="space-y-1">{t.discursive.modelAnswer.map((a) => <AiText key={a} text={a} />)}</div>
@@ -200,7 +210,7 @@ const TheoryCard = React.forwardRef<HTMLDetailsElement, {
           </ul>
         </Section>
 
-        {trainLink}
+        <div data-reader-exclude>{trainLink}</div>
       </div>
     </details>
   );
