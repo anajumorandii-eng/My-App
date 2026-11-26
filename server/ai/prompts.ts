@@ -284,6 +284,11 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         '',
         discursiveScoreScale(text(payload, 'board')).rule,
         'Dê a nota item por item, cada uma com o motivo em uma linha (o que valeu ponto e o que tirou ponto), e só então a total. Dê crédito parcial a ideia certa com termo impreciso, sem justificativa ou sem unidade; não dê ponto a item em branco nem a conteúdo que contradiz o esperado. Não arredonde para cima por boa vontade.',
+        // Pedido da estudante: além do que faltou, ver a resposta que levaria a
+        // nota cheia e o caminho até ela, a partir do que ela mesma escreveu.
+        'Depois da avaliação, escreva duas seções:',
+        '"## Resposta nota máxima": a resposta que levaria a nota cheia, item por item, no tamanho que cabe no espaço da prova (de duas a cinco linhas por item). Parta do que o aluno escreveu: mantenha o que estava certo, com as palavras dele, e acrescente ou corrija só o que faltou. Use o termo técnico exato, a justificativa pedida pelo comando e, nas contas, fórmula, substituição com unidades e resultado com unidade.',
+        '"## Como chegar lá": para cada item que perdeu ponto, o raciocínio que leva à resposta certa, em passos curtos e numerados (o que o comando pede, que dado do enunciado usar, que conceito ou fórmula aplicar, como escrever). Feche com uma frase sobre o hábito que evitaria esse erro na prova. Se o item já estava completo, diga só "Item completo".',
         `Termine exatamente com estas duas linhas, nesta ordem: "${discursiveScoreScale(text(payload, 'board')).line} e "**Avaliação: Fraco, Mediano ou Forte**". Deixe claro que é uma estimativa, não a nota oficial. Responda em português do Brasil, de forma direta e específica, sem saudação.`,
         ...criteriaGradingInstruction(payload.criteria),
       ].join('\n');
