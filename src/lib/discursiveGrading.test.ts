@@ -49,3 +49,20 @@ it('lê a nota da correção por IA só nas formas válidas', async () => {
   assert.equal(parseAiScore('Nota estimada: 150%'), null);
   assert.equal(parseAiScore('sem nota'), null);
 });
+
+it('lê a marcação dos critérios que a IA devolve, descartando o que não valida', async () => {
+  const { parseCriteriaVerdicts, criterionIds, stripCriteriaBlock } = await import('./discursiveGrading.ts');
+  const ids = criterionIds([['x', 'y'], ['z']], ['a', 'b']);
+  assert.deepEqual(ids, [['a1', 'a2'], ['b1']]);
+  const text = 'Correção.\n**Nota estimada: 3 de 4**\n```json\n{"criterios":[{"id":"a1","veredito":"completo","onde":"calculation"},{"id":"a2","veredito":"parcial","onde":"concept_confusion"},{"id":"b1","veredito":"faltou","onde":"inventado"},{"id":"c9","veredito":"faltou"},{"id":"b1","veredito":"talvez"}]}\n```';
+  assert.deepEqual(parseCriteriaVerdicts(text, ids.flat()), {
+    a1: { verdict: 'completo' },
+    a2: { verdict: 'parcial', where: 'concept_confusion' },
+    b1: { verdict: 'faltou' },
+  });
+  assert.deepEqual(parseCriteriaVerdicts('sem bloco', ['a1']), {});
+  assert.deepEqual(parseCriteriaVerdicts('```json\n{quebrado\n```', ['a1']), {});
+  assert.equal(stripCriteriaBlock(text), 'Correção.\n**Nota estimada: 3 de 4**');
+  // Durante o streaming o bloco ainda não fechou: também some do texto.
+  assert.equal(stripCriteriaBlock('Texto\n```json\n{"crit'), 'Texto');
+});

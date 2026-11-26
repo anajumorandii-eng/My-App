@@ -4,7 +4,7 @@ import { UNSAFE_LocationContext } from 'react-router-dom';
 import { discursiveQuestions, boardExamStructure } from '../data/discursiveQuestions';
 import { famerpExpectedChecks } from '../data/famerpExpectedChecks';
 import { DiscursiveGrader, HowToGradeGuide } from '../components/DiscursiveGrader';
-import { errorLogsFromGrading, missSummary, MISS_LABELS, parseAiScore, ratingFromScore, type DiscursiveGrading } from '../lib/discursiveGrading';
+import { criterionIds, errorLogsFromGrading, missSummary, MISS_LABELS, parseAiScore, parseCriteriaVerdicts, ratingFromScore, stripCriteriaBlock, type DiscursiveGrading } from '../lib/discursiveGrading';
 import { addUserErrorLog } from '../lib/userData';
 import { secondPhaseProtocols } from '../data/resolutionStrategies';
 import { useDiscursiveAttempts } from '../hooks/useDiscursiveAttempts';
@@ -108,6 +108,8 @@ function DiscursiveTraining() {
 
   const question = pool.length > 0 ? pool[index % pool.length] : null;
   const checks = question ? famerpExpectedChecks[question.id] : undefined;
+  const checkLetters = useMemo(() => (question?.subItems ?? []).map((s) => s.letter), [question]);
+  const checkIds = useMemo(() => (checks ? criterionIds(checks, checkLetters) : undefined), [checks, checkLetters]);
   // A cor da tela segue a matéria em foco pelo ambiente do app, em vez da
   // paleta que antes ficava fixa no contêiner e vencia o ambiente.
   const materiaDoAmbiente = question?.subject ?? null;
@@ -126,6 +128,11 @@ function DiscursiveTraining() {
   const feedbackEpoch = useRef(0);
   useEffect(() => () => { feedbackEpoch.current++; }, []);
   const [loadingFeedback, setLoadingFeedback] = useState(false);
+  // A marcação da IA só entra quando a correção terminou: no meio do fluxo o
+  // bloco JSON ainda está incompleto. A chave remonta a correção guiada para
+  // receber a marcação nova sem misturar com a anterior.
+  const aiSuggested = useMemo(() => (checkIds && aiFeedback && !loadingFeedback ? parseCriteriaVerdicts(aiFeedback, checkIds.flat()) : undefined), [checkIds, aiFeedback, loadingFeedback]);
+  const aiSuggestionKey = aiSuggested && Object.keys(aiSuggested).length > 0 ? `ia-${aiFeedback.length}` : 'manual';
 
   const [secondsLeft, setSecondsLeft] = useState((question?.suggestedMinutes ?? 15) * 60);
   const [isRunning, setIsRunning] = useState(false);
@@ -230,6 +237,7 @@ function DiscursiveTraining() {
         // exato ou a unidade que a correção exige.
         modelAnswer: [...question.modelAnswer, ...checksText(question)],
         studentAnswer: answer,
+        ...(checks ? { criteria: checks.flatMap((item, i) => item.map((c, j) => `${checkIds![i][j]}: ${c}`)) } : {}),
       }, (delta) => {
         acumulado += delta;
         if (feedbackEpoch.current === epoch) setAiFeedback(acumulado);
@@ -546,7 +554,7 @@ function DiscursiveTraining() {
                   )}
                   <div className="flex items-start gap-2">
                     <Sparkles className="w-4 h-4 subject-text shrink-0 mt-0.5" />
-                    <AiText text={aiFeedback} className="flex-1" />
+                    <AiText text={stripCriteriaBlock(aiFeedback)} className="flex-1" />
                   </div>
                 </div>
               )}
@@ -557,7 +565,7 @@ function DiscursiveTraining() {
                   <p className="text-[var(--dim)] mt-1">{gradingResult.logged > 0 ? `${gradingResult.logged} ${gradingResult.logged === 1 ? 'ponto perdido foi' : 'pontos perdidos foram'} para o Caderno de Erros.` : 'Nenhum ponto foi para o Caderno de Erros.'} Agora reescreva só o item que perdeu ponto, em até três linhas.</p>
                 </div>
               ) : (
-                <DiscursiveGrader key={question.id} checks={checks} letters={(question.subItems ?? []).map((s) => s.letter)} disabled={savingRating} onSave={(g, n) => void saveGrading(g, n)} />
+                <DiscursiveGrader key={`${question.id}:${aiSuggestionKey}`} checks={checks} letters={checkLetters} ids={checkIds} suggested={aiSuggested} disabled={savingRating} onSave={(g, n) => void saveGrading(g, n)} />
               )) : (
               <div>
                 <div className="flex items-center justify-between mb-2">

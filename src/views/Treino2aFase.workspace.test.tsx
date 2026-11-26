@@ -67,7 +67,7 @@ it('corrige critério por critério, exige dizer onde errou e salva a nota estim
   // Critério perdido sem "onde" não deixa salvar.
   expect(save).toBeDisabled();
   fireEvent.change(screen.getByRole('combobox', { name: 'Onde perdeu o ponto?' }), { target: { value: 'calculation' } });
-  expect(screen.getByText(/Nota estimada:/)).toHaveTextContent('3 de 4');
+  expect(screen.getByText(/^Nota estimada:/, { selector: 'p' })).toHaveTextContent('3 de 4');
   fireEvent.click(save);
   await screen.findByText(/Correção salva: nota estimada 3 de 4/);
   const attempt = mocks.save.mock.calls.at(-1)![0];
@@ -99,4 +99,27 @@ it('destaca a nota estimada que volta da correção por IA', async () => {
   fireEvent.click(screen.getByRole('button', { name: 'Revelar gabarito comentado' }));
   fireEvent.click(screen.getByRole('button', { name: 'Corrigir minha resposta com IA' }));
   expect(await screen.findByText(/Nota estimada pela IA:/)).toHaveTextContent('3 de 4');
+});
+it('a correção por IA marca os critérios e preenche a correção guiada, que ela confere e salva', async () => {
+  const json = { criterios: [
+    { id: 'a1', veredito: 'completo' }, { id: 'a2', veredito: 'completo' },
+    { id: 'b1', veredito: 'completo' }, { id: 'b2', veredito: 'faltou', onde: 'calculation' },
+  ] };
+  const text = `Item b: faltou a potência.\n**Nota estimada: 3 de 4**\n**Avaliação: Mediano**\n\`\`\`json\n${JSON.stringify(json)}\n\`\`\``;
+  mocks.stream.mockResolvedValue({ text });
+  render(<MemoryRouter initialEntries={['/treino-2a-fase?banca=Famerp']}><Treino2aFase /></MemoryRouter>);
+  fireEvent.click(screen.getByRole('button', { name: /Ciclo de máquina térmica no diagrama P × V/ }));
+  fireEvent.change(screen.getByLabelText('Sua resposta (redija com rigor)'), { target: { value: 'Resposta.' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Revelar gabarito comentado' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Corrigir minha resposta com IA' }));
+  expect(await screen.findByText(/A correção por IA marcou 4 de 4 critérios/)).toBeInTheDocument();
+  // O payload levou os critérios numerados.
+  expect(mocks.stream.mock.calls.at(-1)![1].criteria).toEqual(['a1: Temperatura em kelvin (330 K).', 'a2: PV/T constante: T_C = 440 K.', 'b1: Trabalho = área do ciclo = 45 J.', 'b2: Potência = 60 W.']);
+  // O bloco JSON não aparece no texto da correção.
+  expect(screen.queryByText(/"criterios"/)).toBeNull();
+  expect(screen.getByText(/^Nota estimada:/, { selector: 'p' })).toHaveTextContent('3 de 4');
+  expect(screen.getByRole('combobox', { name: 'Onde perdeu o ponto?' })).toHaveValue('calculation');
+  fireEvent.click(screen.getByRole('button', { name: 'Salvar correção' }));
+  await screen.findByText(/Correção salva: nota estimada 3 de 4/);
+  expect(mocks.save.mock.calls.at(-1)![0].grading.items[1].checks[1]).toEqual({ text: 'Potência = 60 W.', verdict: 'faltou', where: 'calculation' });
 });

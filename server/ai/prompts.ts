@@ -20,6 +20,18 @@ export function discursiveScoreScale(board: string | undefined): { rule: string;
     : { rule: 'A escala oficial desta banca não está confirmada: estime a nota em percentual dos pontos esperados (0% a 100%, de 5 em 5).', line: '**Nota estimada: X%**" (por exemplo 75%)' };
 }
 
+// Com a lista do corretor, a correção também marca cada critério, num bloco
+// JSON depois do texto. O cliente lê esse bloco (parseCriteriaVerdicts) para
+// preencher a correção guiada, que a estudante confere antes de salvar.
+function criteriaGradingInstruction(criteria: unknown): string[] {
+  if (!Array.isArray(criteria) || criteria.length === 0) return [];
+  return [
+    '',
+    `Critérios do corretor, com identificador:\n${(criteria as string[]).map((c) => `- ${c}`).join('\n')}`,
+    'Depois das duas linhas finais, acrescente um bloco ```json com a marcação de CADA critério acima, no formato {"criterios":[{"id":"a1","veredito":"completo|parcial|faltou","onde":"conceptual|concept_confusion|interpretation|calculation|insufficient_justification|time"}]}. "onde" só quando o veredito não for completo: conceptual = conceito errado; concept_confusion = termo impreciso ou genérico; interpretation = leu mal o enunciado ou respondeu outra coisa; calculation = conta, conversão ou unidade; insufficient_justification = faltou o porquê; time = item em branco. Use os mesmos critérios da sua nota; não escreva nada depois do bloco.',
+  ];
+}
+
 function discursiveStructureGuidance(board: string | undefined): string {
   const normalized = (board ?? '').trim().toLowerCase();
   if (normalized.includes('unicamp')) {
@@ -273,6 +285,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         discursiveScoreScale(text(payload, 'board')).rule,
         'Dê a nota item por item, cada uma com o motivo em uma linha (o que valeu ponto e o que tirou ponto), e só então a total. Dê crédito parcial a ideia certa com termo impreciso, sem justificativa ou sem unidade; não dê ponto a item em branco nem a conteúdo que contradiz o esperado. Não arredonde para cima por boa vontade.',
         `Termine exatamente com estas duas linhas, nesta ordem: "${discursiveScoreScale(text(payload, 'board')).line} e "**Avaliação: Fraco, Mediano ou Forte**". Deixe claro que é uma estimativa, não a nota oficial. Responda em português do Brasil, de forma direta e específica, sem saudação.`,
+        ...criteriaGradingInstruction(payload.criteria),
       ].join('\n');
     case 'podcast-script': {
       const minutes = number(payload, 'durationMinutes');

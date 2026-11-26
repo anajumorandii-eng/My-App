@@ -227,6 +227,8 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
         prompt: requiredString(payload, 'prompt', MAX_LONG_TEXT),
         modelAnswer: requiredStringArray(payload, 'modelAnswer'),
         studentAnswer: requiredString(payload, 'studentAnswer', MAX_LONG_TEXT),
+        // Critérios numerados ("a1: texto"), para a correção marcar cada um.
+        criteria: payload.criteria !== undefined ? requiredStringArray(payload, 'criteria') : undefined,
       };
     case 'podcast-script': {
       const defaults = DEFAULT_PODCAST_SETTINGS;

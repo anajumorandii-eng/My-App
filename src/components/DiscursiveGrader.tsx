@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { CheckCircle2, CircleDashed, XCircle } from 'lucide-react';
-import { estimateScore, gradingProblems, MISS_LABELS, type CheckVerdict, type DiscursiveGrading, type ItemGrade, type MissWhere } from '../lib/discursiveGrading';
+import { estimateScore, gradingProblems, MISS_LABELS, type CheckVerdict, type DiscursiveGrading, type ItemGrade, type MissWhere, type SuggestedVerdicts } from '../lib/discursiveGrading';
 
 const VERDICTS: { value: CheckVerdict; label: string; icon: typeof CheckCircle2; color: string }[] = [
   { value: 'completo', label: 'Completo', icon: CheckCircle2, color: 'var(--status-success)' },
@@ -13,14 +13,23 @@ const VERDICTS: { value: CheckVerdict; label: string; icon: typeof CheckCircle2;
  * do corretor, diz onde perdeu cada ponto e só então salva. A nota sai daí,
  * não de um botão fraco/mediano/forte decidido no olho.
  */
-export function DiscursiveGrader({ checks, letters, disabled, onSave }: {
+export function DiscursiveGrader({ checks, letters, ids, suggested, disabled, onSave }: {
   checks: string[][];
   letters: string[];
+  /** Identificadores dos critérios ("a1"…), na mesma forma de checks. */
+  ids?: string[][];
+  /** Marcação vinda da correção por IA; ela confere e ajusta antes de salvar. */
+  suggested?: SuggestedVerdicts;
   disabled?: boolean;
   onSave: (grading: DiscursiveGrading, toNotebook: boolean) => void;
 }) {
-  const [verdicts, setVerdicts] = useState<Record<string, CheckVerdict>>({});
-  const [wheres, setWheres] = useState<Record<string, MissWhere>>({});
+  const fromAi = (pick: 'verdict' | 'where') => Object.fromEntries(checks.flatMap((item, i) => item.map((_, j) => {
+    const s = suggested?.[ids?.[i]?.[j] ?? ''];
+    return [`${i}:${j}`, s?.[pick]];
+  })).filter(([, v]) => v));
+  const [verdicts, setVerdicts] = useState<Record<string, CheckVerdict>>(() => fromAi('verdict') as Record<string, CheckVerdict>);
+  const [wheres, setWheres] = useState<Record<string, MissWhere>>(() => fromAi('where') as Record<string, MissWhere>);
+  const aiCount = Object.keys(suggested ?? {}).length;
   const [toNotebook, setToNotebook] = useState(true);
   const key = (i: number, j: number) => `${i}:${j}`;
 
@@ -42,6 +51,7 @@ export function DiscursiveGrader({ checks, letters, disabled, onSave }: {
     <section aria-labelledby="grader-title" className="rounded-xl border border-[var(--line)] p-4 space-y-4 text-xs">
       <div>
         <h3 id="grader-title" className="font-semibold text-sm text-[var(--text)]">Corrija sua resposta como a banca</h3>
+        {aiCount > 0 && <p role="status" className="mt-1 rounded-lg p-2" style={{ background: 'color-mix(in srgb, var(--action-primary) 10%, transparent)' }}>A correção por IA marcou {aiCount} de {checks.flat().length} critérios e disse onde você perdeu ponto. Confira cada um no que você escreveu e ajuste o que discordar antes de salvar.</p>}
         <p className="text-[var(--dim)] mt-1">Para cada critério, procure no que você escreveu. <b>Completo</b>: está lá, com o termo e a justificativa. <b>Parcial</b>: a ideia está, mas falta o termo exato, a justificativa ou a unidade. <b>Faltou</b>: não está.</p>
       </div>
 
@@ -69,7 +79,7 @@ export function DiscursiveGrader({ checks, letters, disabled, onSave }: {
                 {verdict && verdict !== 'completo' && (
                   <label className="flex flex-col gap-1">
                     <span className="text-[var(--dim)]">Onde perdeu o ponto?</span>
-                    <select value={wheres[k] ?? ''} disabled={disabled} onChange={(e) => setWheres({ ...wheres, [k]: e.target.value as MissWhere })}
+                    <select aria-label="Onde perdeu o ponto?" value={wheres[k] ?? ''} disabled={disabled} onChange={(e) => setWheres({ ...wheres, [k]: e.target.value as MissWhere })}
                       className="w-full min-w-0 px-2 py-1.5 rounded-lg border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)]">
                       <option value="" disabled>Escolha</option>
                       {(Object.keys(MISS_LABELS) as MissWhere[]).map((w) => <option key={w} value={w}>{MISS_LABELS[w].label}</option>)}

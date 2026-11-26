@@ -311,3 +311,16 @@ test('feedback discursivo pede nota estimada por item, na escala de 0 a 4 na Fam
   assert.doesNotMatch(fuvest, /0 a 4 pontos/);
   assert.match(fuvest, /\*\*Nota estimada: X%\*\*/);
 });
+
+test('com a lista do corretor, a correção pede a marcação de cada critério em JSON', () => {
+  const prompt = buildAiPrompt('discursive-feedback', validateAiPayload('discursive-feedback', {
+    board: 'Famerp', subject: 'Biologia', prompt: 'Cite.', modelAnswer: ['Ponto'], studentAnswer: 'Resposta.',
+    criteria: ['a1: Nematoda.', 'b1: Intestino delgado.'],
+  }));
+  assert.match(prompt, /- a1: Nematoda\.\n- b1: Intestino delgado\./);
+  assert.match(prompt, /"criterios"/);
+  const without = buildAiPrompt('discursive-feedback', validateAiPayload('discursive-feedback', {
+    board: 'Famerp', subject: 'Biologia', prompt: 'Cite.', modelAnswer: ['Ponto'], studentAnswer: 'Resposta.',
+  }));
+  assert.doesNotMatch(without, /"criterios"/);
+});

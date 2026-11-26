@@ -99,3 +99,42 @@ export function parseAiScore(text: string): string | null {
   if (pct) { const v = Number(pct[1]); return v <= 100 ? `${v}%` : null; }
   return null;
 }
+
+export type SuggestedVerdicts = Record<string, { verdict: CheckVerdict; where?: MissWhere }>;
+
+/** "a1", "a2", "b1"… na ordem dos itens e dos critérios. */
+export function criterionIds(checks: string[][], letters: string[]): string[][] {
+  return checks.map((item, i) => item.map((_, j) => `${letters[i] ?? i + 1}${j + 1}`));
+}
+
+/**
+ * Lê o bloco JSON de marcação que a correção por IA põe no fim. Como os
+ * parsers de errorDiagnosis, nunca lança: ignora id desconhecido, veredito
+ * fora da lista e "onde" inválido, e devolve só o que pôde validar. O
+ * resultado preenche a correção guiada, que a estudante ainda confere.
+ */
+export function parseCriteriaVerdicts(text: string, validIds: string[]): SuggestedVerdicts {
+  const block = text.match(/```(?:json)?\s*([\s\S]*?)```/)?.[1];
+  if (!block) return {};
+  let data: unknown;
+  try { data = JSON.parse(block); } catch { return {}; }
+  const list = (data as { criterios?: unknown })?.criterios;
+  if (!Array.isArray(list)) return {};
+  const ids = new Set(validIds);
+  const verdicts = new Set<CheckVerdict>(['completo', 'parcial', 'faltou']);
+  const out: SuggestedVerdicts = {};
+  for (const raw of list) {
+    const entry = raw as { id?: unknown; veredito?: unknown; onde?: unknown };
+    if (typeof entry?.id !== 'string' || !ids.has(entry.id)) continue;
+    if (typeof entry.veredito !== 'string' || !verdicts.has(entry.veredito as CheckVerdict)) continue;
+    const verdict = entry.veredito as CheckVerdict;
+    const where = typeof entry.onde === 'string' && entry.onde in MISS_LABELS ? entry.onde as MissWhere : undefined;
+    out[entry.id] = verdict !== 'completo' && where ? { verdict, where } : { verdict };
+  }
+  return out;
+}
+
+/** O texto da correção sem o bloco de marcação, que é dado para a tela, não leitura. */
+export function stripCriteriaBlock(text: string): string {
+  return text.replace(/```(?:json)?[\s\S]*?(```|$)/, '').trimEnd();
+}
