@@ -67,3 +67,16 @@ it('lê a marcação dos critérios que a IA devolve, descartando o que não val
   // Durante o streaming o bloco ainda não fechou: também some do texto.
   assert.equal(stripCriteriaBlock('Texto\n```json\n{"crit'), 'Texto');
 });
+
+it('separa a resposta nota máxima do resto da correção', async () => {
+  const { splitIdealAnswer } = await import('./discursiveGrading.ts');
+  const text = 'Item a: ok.\n\n## Resposta nota máxima\n\na) Doença de Chagas.\nb) Fibrose.\n\n## Como chegar lá\n\n1. Leia o comando.\n\n**Nota estimada: 3,5 de 4**';
+  const { ideal, rest } = splitIdealAnswer(text);
+  assert.equal(ideal, 'a) Doença de Chagas.\nb) Fibrose.');
+  assert.match(rest, /^Item a: ok\.\n\n## Como chegar lá/);
+  assert.match(rest, /Nota estimada/);
+  assert.doesNotMatch(rest, /Resposta nota máxima/);
+  // Seção no fim, sem título depois: vai até a linha da nota.
+  assert.equal(splitIdealAnswer('## Resposta nota máxima\nX.\n**Nota estimada: 4 de 4**').ideal, 'X.');
+  assert.deepEqual(splitIdealAnswer('Sem seção.'), { ideal: null, rest: 'Sem seção.' });
+});
