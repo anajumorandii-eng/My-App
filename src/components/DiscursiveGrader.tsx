@@ -13,7 +13,7 @@ const VERDICTS: { value: CheckVerdict; label: string; icon: typeof CheckCircle2;
  * do corretor, diz onde perdeu cada ponto e só então salva. A nota sai daí,
  * não de um botão fraco/mediano/forte decidido no olho.
  */
-export function DiscursiveGrader({ checks, letters, ids, suggested, disabled, onSave }: {
+export function DiscursiveGrader({ checks, letters, ids, suggested, disabled, toNotebook, onToNotebookChange, onSave }: {
   checks: string[][];
   letters: string[];
   /** Identificadores dos critérios ("a1"…), na mesma forma de checks. */
@@ -21,6 +21,10 @@ export function DiscursiveGrader({ checks, letters, ids, suggested, disabled, on
   /** Marcação vinda da correção por IA; ela confere e ajusta antes de salvar. */
   suggested?: SuggestedVerdicts;
   disabled?: boolean;
+  // Fica fora do componente: ele remonta quando a marcação da IA chega, e o
+  // estado interno voltava a "mandar ao Caderno" depois de ela desmarcar.
+  toNotebook: boolean;
+  onToNotebookChange: (value: boolean) => void;
   onSave: (grading: DiscursiveGrading, toNotebook: boolean) => void;
 }) {
   const fromAi = (pick: 'verdict' | 'where') => Object.fromEntries(checks.flatMap((item, i) => item.map((_, j) => {
@@ -30,7 +34,6 @@ export function DiscursiveGrader({ checks, letters, ids, suggested, disabled, on
   const [verdicts, setVerdicts] = useState<Record<string, CheckVerdict>>(() => fromAi('verdict') as Record<string, CheckVerdict>);
   const [wheres, setWheres] = useState<Record<string, MissWhere>>(() => fromAi('where') as Record<string, MissWhere>);
   const aiCount = Object.keys(suggested ?? {}).length;
-  const [toNotebook, setToNotebook] = useState(true);
   const key = (i: number, j: number) => `${i}:${j}`;
 
   const items: ItemGrade[] = useMemo(() => checks.map((item, i) => ({
@@ -99,7 +102,7 @@ export function DiscursiveGrader({ checks, letters, ids, suggested, disabled, on
         <p className="text-sm text-[var(--text)]" aria-live="polite">{answered ? <>Nota estimada: <b>{score.toLocaleString('pt-BR')} de 4</b></> : 'Marque todos os critérios para ver a nota estimada.'}</p>
         <p className="text-[11px] text-[var(--dim)]">Estimativa: cada item pesa igual e cada critério dentro dele também. A banca não publica a divisão interna dos 4 pontos.</p>
         <label className="flex items-center gap-2">
-          <input type="checkbox" checked={toNotebook} disabled={disabled} onChange={(e) => setToNotebook(e.target.checked)} />
+          <input type="checkbox" checked={toNotebook} disabled={disabled} onChange={(e) => onToNotebookChange(e.target.checked)} />
           Mandar cada ponto perdido para o Caderno de Erros
         </label>
         {answered && problems.length > 0 && <ul className="text-[11px] list-disc pl-4" style={{ color: 'var(--status-warning)' }}>{problems.map((p) => <li key={p}>{p}</li>)}</ul>}

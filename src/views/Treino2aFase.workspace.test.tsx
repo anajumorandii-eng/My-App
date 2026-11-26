@@ -123,3 +123,15 @@ it('a correção por IA marca os critérios e preenche a correção guiada, que 
   await screen.findByText(/Correção salva: nota estimada 3 de 4/);
   expect(mocks.save.mock.calls.at(-1)![0].grading.items[1].checks[1]).toEqual({ text: 'Potência = 60 W.', verdict: 'faltou', where: 'calculation' });
 });
+it('mantém a escolha de não mandar ao Caderno quando a marcação da IA chega', async () => {
+  const json = { criterios: [{ id: 'a1', veredito: 'completo' }, { id: 'a2', veredito: 'completo' }, { id: 'b1', veredito: 'completo' }, { id: 'b2', veredito: 'faltou', onde: 'calculation' }] };
+  mocks.stream.mockResolvedValue({ text: `**Nota estimada: 3 de 4**\n\`\`\`json\n${JSON.stringify(json)}\n\`\`\`` });
+  render(<MemoryRouter initialEntries={['/treino-2a-fase?banca=Famerp']}><Treino2aFase /></MemoryRouter>);
+  fireEvent.click(screen.getByRole('button', { name: /Ciclo de máquina térmica no diagrama P × V/ }));
+  fireEvent.change(screen.getByLabelText('Sua resposta (redija com rigor)'), { target: { value: 'Resposta.' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Revelar gabarito comentado' }));
+  fireEvent.click(screen.getByRole('checkbox', { name: /Mandar cada ponto perdido/ }));
+  fireEvent.click(screen.getByRole('button', { name: 'Corrigir minha resposta com IA' }));
+  await screen.findByText(/A correção por IA marcou 4 de 4 critérios/);
+  expect(screen.getByRole('checkbox', { name: /Mandar cada ponto perdido/ })).not.toBeChecked();
+});

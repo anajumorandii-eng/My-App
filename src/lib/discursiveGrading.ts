@@ -128,7 +128,9 @@ export function parseCriteriaVerdicts(text: string, validIds: string[]): Suggest
     if (typeof entry?.id !== 'string' || !ids.has(entry.id)) continue;
     if (typeof entry.veredito !== 'string' || !verdicts.has(entry.veredito as CheckVerdict)) continue;
     const verdict = entry.veredito as CheckVerdict;
-    const where = typeof entry.onde === 'string' && entry.onde in MISS_LABELS ? entry.onde as MissWhere : undefined;
+    // hasOwn, não "in": "toString" ou "constructor" vindos da IA passavam pelo
+    // "in" (propriedades herdadas) e quebravam o envio ao Caderno ao salvar.
+    const where = typeof entry.onde === 'string' && Object.prototype.hasOwnProperty.call(MISS_LABELS, entry.onde) ? entry.onde as MissWhere : undefined;
     out[entry.id] = verdict !== 'completo' && where ? { verdict, where } : { verdict };
   }
   return out;

@@ -125,6 +125,7 @@ function DiscursiveTraining() {
   const [feedbackError, setFeedbackError] = useState<string | null>(null);
   const [savingRating, setSavingRating] = useState(false);
   const [gradingResult, setGradingResult] = useState<{ score: number; logged: number } | null>(null);
+  const [toNotebook, setToNotebook] = useState(true);
   const feedbackEpoch = useRef(0);
   useEffect(() => () => { feedbackEpoch.current++; }, []);
   const [loadingFeedback, setLoadingFeedback] = useState(false);
@@ -565,7 +566,7 @@ function DiscursiveTraining() {
                   <p className="text-[var(--dim)] mt-1">{gradingResult.logged > 0 ? `${gradingResult.logged} ${gradingResult.logged === 1 ? 'ponto perdido foi' : 'pontos perdidos foram'} para o Caderno de Erros.` : 'Nenhum ponto foi para o Caderno de Erros.'} Agora reescreva só o item que perdeu ponto, em até três linhas.</p>
                 </div>
               ) : (
-                <DiscursiveGrader key={`${question.id}:${aiSuggestionKey}`} checks={checks} letters={checkLetters} ids={checkIds} suggested={aiSuggested} disabled={savingRating} onSave={(g, n) => void saveGrading(g, n)} />
+                <DiscursiveGrader key={`${question.id}:${aiSuggestionKey}`} checks={checks} letters={checkLetters} ids={checkIds} suggested={aiSuggested} disabled={savingRating} toNotebook={toNotebook} onToNotebookChange={setToNotebook} onSave={(g, n) => void saveGrading(g, n)} />
               )) : (
               <div>
                 <div className="flex items-center justify-between mb-2">

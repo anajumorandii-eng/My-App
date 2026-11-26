@@ -60,6 +60,7 @@ it('lê a marcação dos critérios que a IA devolve, descartando o que não val
     a2: { verdict: 'parcial', where: 'concept_confusion' },
     b1: { verdict: 'faltou' },
   });
+  assert.deepEqual(parseCriteriaVerdicts('```json\n{"criterios":[{"id":"a1","veredito":"faltou","onde":"toString"},{"id":"a2","veredito":"parcial","onde":"constructor"}]}\n```', ['a1', 'a2']), { a1: { verdict: 'faltou' }, a2: { verdict: 'parcial' } });
   assert.deepEqual(parseCriteriaVerdicts('sem bloco', ['a1']), {});
   assert.deepEqual(parseCriteriaVerdicts('```json\n{quebrado\n```', ['a1']), {});
   assert.equal(stripCriteriaBlock(text), 'Correção.\n**Nota estimada: 3 de 4**');
