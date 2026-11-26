@@ -25,8 +25,10 @@ export const INTERVENTION_LABELS: Record<InterventionType, string> = {
 };
 
 export const CONFIDENCE_LABELS: Record<NonNullable<ErrorLog['confidence']>, string> = {
-  baixa: 'Confiança baixa — hipótese da IA, não confirmada',
-  media: 'Confiança média — hipótese da IA, não confirmada',
+  // "Hipótese da IA" valia só para os registros com hipótese gerada; os que
+  // vêm da correção guiada são diagnóstico dela, ainda não confirmado.
+  baixa: 'Confiança baixa — diagnóstico ainda não confirmado',
+  media: 'Confiança média — diagnóstico ainda não confirmado',
   alta: 'Confiança alta',
   confirmado: 'Confirmado por você',
 };

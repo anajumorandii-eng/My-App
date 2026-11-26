@@ -76,13 +76,16 @@ function DiscursiveTraining() {
   // desconhecida cai em "Todas" em vez de mostrar uma lista vazia.
   const locationContext = useContext(UNSAFE_LocationContext);
   const requestedBoard = new URLSearchParams(locationContext?.location.search ?? window.location.search).get('banca');
-  const [boardFilter, setBoardFilter] = useState(() => (requestedBoard && boards.includes(requestedBoard) ? requestedBoard : 'Todas'));
+  // ?questao=<id> vem do Caderno de Erros ("Refazer esta questão"): abre a
+  // própria questão, filtrando pelo tópico dela para que fique na tela.
+  const requestedQuestion = discursiveQuestions.find((q) => q.id === new URLSearchParams(locationContext?.location.search ?? window.location.search).get('questao'));
+  const [boardFilter, setBoardFilter] = useState(() => requestedQuestion?.board ?? (requestedBoard && boards.includes(requestedBoard) ? requestedBoard : 'Todas'));
   const subjects = useMemo(() => {
     const pool = boardFilter === 'Todas' ? discursiveQuestions : discursiveQuestions.filter((q) => q.board === boardFilter);
     return ['Todas', ...new Set(pool.map((q) => q.subject))];
   }, [boardFilter]);
   const [subjectFilter, setSubjectFilter] = useState('Todas');
-  const [topicFilter, setTopicFilter] = useState('Todos');
+  const [topicFilter, setTopicFilter] = useState(() => requestedQuestion?.topic ?? 'Todos');
   const [index, setIndex] = useState(0);
 
   // Recorte antes do tópico, para que a lista de tópicos mostre só o que a
@@ -106,6 +109,13 @@ function DiscursiveTraining() {
     [scoped, topicFilter],
   );
 
+  // Se o tópico tem mais de uma questão, posiciona na pedida pelo Caderno.
+  useEffect(() => {
+    const position = requestedQuestion ? pool.findIndex((q) => q.id === requestedQuestion.id) : -1;
+    if (position > 0) setIndex(position);
+    // Só na entrada: depois, a navegação é dela.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const question = pool.length > 0 ? pool[index % pool.length] : null;
   const checks = question ? famerpExpectedChecks[question.id] : undefined;
   const checkLetters = useMemo(() => (question?.subItems ?? []).map((s) => s.letter), [question]);
@@ -210,7 +220,7 @@ function DiscursiveTraining() {
     }
     let logged = 0; let notebookFailed = false;
     if (toNotebook && user) {
-      const logs = errorLogsFromGrading(grading, current, date, () => `error_${crypto.randomUUID()}`);
+      const logs = errorLogsFromGrading(grading, current, date, () => `error_${crypto.randomUUID()}`, answer);
       try { await Promise.all(logs.map((log) => addUserErrorLog(user.uid, log))); logged = logs.length; }
       catch { notebookFailed = true; }
     }

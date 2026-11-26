@@ -8,7 +8,8 @@ import { getUserErrorLogs, addUserErrorLog } from '../lib/userData';
 import { requestAiTextStream } from '../lib/aiClient';
 import { ERROR_TYPE_LABELS as TYPE_LABELS, INTERVENTION_LABELS, CONFIDENCE_LABELS } from '../lib/errorLabels';
 import { AiText } from '../components/AiText';
-import { BookX, Plus, Sparkles, CloudOff, Stethoscope } from 'lucide-react';
+import { BookX, Plus, Sparkles, CloudOff, Stethoscope, ChevronDown } from 'lucide-react';
+import { ErrorDetail } from '../components/ErrorDetail';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import SummaryErrorsPanel from '../components/SummaryErrorsPanel';
@@ -35,6 +36,9 @@ export default function Erros() {
   const [form, setForm] = useState({ topicId: mockTopics[0].id, type: 'conceptual' as ErrorLog['type'], notes: '' });
   const [syncError, setSyncError] = useState<string | null>(null);
   const [generatingHypothesisFor, setGeneratingHypothesisFor] = useState<string | null>(null);
+  const [openId, setOpenId] = useState<string | null>(selectedRecord);
+  const [showResolved, setShowResolved] = useState(false);
+  useEffect(() => { if (selectedRecord) setOpenId(selectedRecord); }, [selectedRecord]);
 
   useEffect(() => {
     if (!user) {
@@ -57,13 +61,15 @@ export default function Erros() {
   }, [user, dataRevision]);
 
   const filtered = useMemo(
-    () => selectedRecord ? logs.filter((log) => log.id === selectedRecord) : (typeFilter === 'all' ? logs : logs.filter((l) => l.type === typeFilter)),
-    [logs, typeFilter, selectedRecord]
+    () => selectedRecord ? logs.filter((log) => log.id === selectedRecord) : logs
+      .filter((l) => (showResolved ? Boolean(l.resolvedAt) : !l.resolvedAt))
+      .filter((l) => typeFilter === 'all' || l.type === typeFilter),
+    [logs, typeFilter, selectedRecord, showResolved]
   );
 
   const countsByType = useMemo(() => {
     const counts: Partial<Record<ErrorLog['type'], number>> = {};
-    logs.forEach((l) => {
+    logs.filter((l) => !l.resolvedAt).forEach((l) => {
       counts[l.type] = (counts[l.type] ?? 0) + 1;
     });
     return counts;
@@ -124,6 +130,26 @@ export default function Erros() {
         console.error('Failed to update error log:', error);
         setSyncError('Essa atualização não foi salva na nuvem — pode não persistir.');
       });
+    }
+  };
+
+  // Explicação pedida ao abrir um erro já registrado (a do registro manual só
+  // nascia no momento do cadastro, e os erros da correção guiada ficavam sem).
+  const explainLog = async (log: ErrorLog) => {
+    const topic = mockTopics.find((t) => t.id === log.topicId);
+    setGeneratingHypothesisFor(log.id);
+    try {
+      let acumulado = '';
+      const notes = [log.breakPoint && `Critério perdido: ${log.breakPoint}`, log.notes, log.evidence && `Resposta da estudante: ${log.evidence}`, log.reflection && `Relato da estudante: ${log.reflection}`].filter(Boolean).join('\n');
+      const data = await requestAiTextStream('error-hypothesis', {
+        topic: topic?.name ?? 'Tópico desconhecido', subject: topic?.subject ?? 'Matéria desconhecida', errorType: TYPE_LABELS[log.type], notes,
+      }, (delta) => { acumulado += delta; setLogs((prev) => prev.map((l) => (l.id === log.id ? { ...l, aiHypothesis: acumulado } : l))); });
+      updateLog({ ...log, aiHypothesis: data.text });
+    } catch {
+      setLogs((prev) => prev.map((l) => (l.id === log.id ? { ...l, aiHypothesis: undefined } : l)));
+      setSyncError('Não foi possível gerar a explicação agora. Tente de novo.');
+    } finally {
+      setGeneratingHypothesisFor(null);
     }
   };
 
@@ -271,6 +297,12 @@ export default function Erros() {
       )}
 
       {selectedRecord && <div className="ni-panel p-3 mb-3 text-sm"><p>Registro selecionado pela revisita: {selectedRecord}</p><button type="button" className="underline" onClick={() => setSearchParams({})}>Mostrar todos os registros</button></div>}
+      {!selectedRecord && (
+        <div role="tablist" aria-label="Situação dos erros" className="flex gap-2 mb-3">
+          <button type="button" role="tab" aria-selected={!showResolved} onClick={() => setShowResolved(false)} className={`px-3 py-1.5 rounded-lg text-xs border ${!showResolved ? 'bg-[var(--action-primary)] text-[var(--text-inverse)] border-transparent' : 'border-[var(--line)]'}`}>Ativos ({logs.filter((l) => !l.resolvedAt).length})</button>
+          <button type="button" role="tab" aria-selected={showResolved} onClick={() => setShowResolved(true)} className={`px-3 py-1.5 rounded-lg text-xs border ${showResolved ? 'bg-[var(--action-primary)] text-[var(--text-inverse)] border-transparent' : 'border-[var(--line)]'}`}>Superados ({logs.filter((l) => l.resolvedAt).length})</button>
+        </div>
+      )}
       {/* List of error logs */}
       <div className="space-y-3">
         {filtered.map((log) => {
@@ -285,8 +317,9 @@ export default function Erros() {
               interactive
               className="ni-panel p-5 transition-colors"
             >
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-2.5">
+              <button type="button" aria-expanded={openId === log.id} onClick={() => setOpenId(openId === log.id ? null : log.id)}
+                className="w-full text-left flex items-center justify-between mb-2 gap-2">
+                <div className="flex items-center gap-2.5 min-w-0 flex-wrap">
                   <span
                     className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full flex items-center gap-1"
                     style={{ backgroundColor: subPalette.primary, color: PALETTE_INK }}
@@ -296,21 +329,28 @@ export default function Erros() {
                   </span>
                   <span className="font-display font-medium text-sm text-[var(--text)]">{topic?.name ?? 'Tópico'}</span>
                 </div>
-                <span className="text-[11px] font-mono text-[var(--dim)]">{new Date(log.date).toLocaleDateString('pt-BR')}</span>
-              </div>
+                <span className="flex items-center gap-2 shrink-0 text-[11px] font-mono text-[var(--dim)]">
+                  {new Date(log.date).toLocaleDateString('pt-BR')}
+                  <span className="inline-flex items-center gap-1 font-sans text-[var(--text)]">{openId === log.id ? 'Fechar' : 'Abrir erro'}<ChevronDown className={`w-3.5 h-3.5 transition-transform ${openId === log.id ? 'rotate-180' : ''}`} aria-hidden /></span>
+                </span>
+              </button>
 
               <p className="text-xs text-[var(--text)] leading-relaxed mb-1">{log.breakPoint || log.notes}</p>
               {log.breakPoint && log.notes && (
                 <p className="text-[11px] text-[var(--dim)] mb-2">{log.notes}</p>
               )}
-              {log.evidence && (
+              {log.evidence && openId !== log.id && (
                 <p className="text-[11px] text-[var(--dim)] mb-2">Evidência: <span className="text-[var(--text)]">{log.evidence}</span></p>
               )}
               {log.confidence && (
                 <p className="text-[11px] font-mono text-[var(--dim)] mb-2">{CONFIDENCE_LABELS[log.confidence]}</p>
               )}
 
-              {log.aiHypothesis && (
+              {openId === log.id && (
+                <ErrorDetail log={log} onUpdate={updateLog} onExplain={(l) => void explainLog(l)} explaining={generatingHypothesisFor === log.id} />
+              )}
+
+              {openId !== log.id && log.aiHypothesis && (
                 <div className="mt-3 p-3 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)]">
                   <div className="flex items-start gap-2">
                     <Sparkles className="w-4 h-4 subject-text shrink-0 mt-0.5" />
@@ -378,7 +418,7 @@ export default function Erros() {
 
         {filtered.length === 0 && (
           <div className="text-center py-12 border border-dashed border-[var(--line)] rounded-xl text-[var(--dim)] text-xs">
-            Nenhum erro registrado nessa categoria.
+            {showResolved ? 'Nenhum erro superado ainda. Quando refizer e acertar, marque o erro como superado.' : 'Nenhum erro ativo nessa categoria.'}
           </div>
         )}
       </div>

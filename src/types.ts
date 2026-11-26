@@ -102,6 +102,10 @@ export interface ErrorLog {
   proposedIntervention?: Intervention;
   interventionStatus?: 'pendente' | 'concluida' | 'recusada';
   outcomeRating?: 'melhorou' | 'sem_mudanca' | 'ainda_dificil';
+  // Relato dela, escrito depois, ao abrir o erro no Caderno.
+  reflection?: string;
+  // Quando ela refez e deu o erro por superado. Sai da lista de ativos, sem apagar.
+  resolvedAt?: string;
   revisitResults?: Partial<Record<'1' | '3' | '7', { completedAt: string; rating: 'independente' | 'com_ajuda' | 'nao_consegui'; nextAttemptDate?: string }>>;
 }
 
