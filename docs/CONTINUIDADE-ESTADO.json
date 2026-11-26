@@ -2,18 +2,11 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "1fec0121b1d0befeda49344d0faeb0cb9247f728",
-  "generated_at_utc": "2026-11-26T16:03:20Z",
+  "source_commit": "dbbdfff4669ef3582b09b9885e8b695f80ef5fa4",
+  "generated_at_utc": "2026-11-26T18:11:03Z",
   "changed_files": [
-    "docs/ia-preenche-correcao-2026-11-26/README.md",
     "server/ai/prompts.test.ts",
-    "server/ai/prompts.ts",
-    "server/ai/validation.ts",
-    "src/components/DiscursiveGrader.tsx",
-    "src/lib/discursiveGrading.test.ts",
-    "src/lib/discursiveGrading.ts",
-    "src/views/Treino2aFase.tsx",
-    "src/views/Treino2aFase.workspace.test.tsx"
+    "server/ai/prompts.ts"
   ],
   "next_session": {
     "mode": "delta-only",
