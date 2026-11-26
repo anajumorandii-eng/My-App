@@ -12,10 +12,12 @@ type Payload = Record<string, unknown>;
 // Escala da nota estimada na correção por IA. Só a Famerp tem a escala
 // conferida no edital (cada discursiva vale de 0 a 4); nas outras, a nota sai
 // em percentual dos pontos esperados, em vez de inventar uma escala da banca.
-export function discursiveScoreScale(board: string | undefined): string {
+// O formato da linha final é o que parseAiScore aceita: sem ele, uma
+// resposta como "Nota estimada: 2,5" seguia o pedido e sumia da tela.
+export function discursiveScoreScale(board: string | undefined): { rule: string; line: string } {
   return (board ?? '').trim().toLowerCase().includes('famerp')
-    ? 'Na Famerp cada discursiva vale de 0 a 4 pontos (edital). Estime a nota nessa escala, em meios pontos, dividindo os 4 pontos igualmente entre os itens.'
-    : 'A escala oficial desta banca não está confirmada: estime a nota em percentual dos pontos esperados (0% a 100%, de 5 em 5).';
+    ? { rule: 'Na Famerp cada discursiva vale de 0 a 4 pontos (edital). Estime a nota nessa escala, em meios pontos, dividindo os 4 pontos igualmente entre os itens.', line: '**Nota estimada: X de 4**" (X com vírgula decimal, por exemplo 2,5 de 4)' }
+    : { rule: 'A escala oficial desta banca não está confirmada: estime a nota em percentual dos pontos esperados (0% a 100%, de 5 em 5).', line: '**Nota estimada: X%**" (por exemplo 75%)' };
 }
 
 function discursiveStructureGuidance(board: string | undefined): string {
@@ -268,9 +270,9 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         '',
         'Avalie a resposta do aluno comparando com os pontos-chave esperados E com a estrutura discursiva esperada pela banca acima. Aponte o que foi bem coberto, o que está faltando ou incompleto, erros conceituais se houver, e se a estrutura da resposta seguiu o que a banca espera — como um corretor de banca faria.',
         '',
-        discursiveScoreScale(text(payload, 'board')),
+        discursiveScoreScale(text(payload, 'board')).rule,
         'Dê a nota item por item, cada uma com o motivo em uma linha (o que valeu ponto e o que tirou ponto), e só então a total. Dê crédito parcial a ideia certa com termo impreciso, sem justificativa ou sem unidade; não dê ponto a item em branco nem a conteúdo que contradiz o esperado. Não arredonde para cima por boa vontade.',
-        'Termine exatamente com estas duas linhas, nesta ordem: "**Nota estimada: X**" (na escala acima) e "**Avaliação: Fraco, Mediano ou Forte**". Deixe claro que é uma estimativa, não a nota oficial. Responda em português do Brasil, de forma direta e específica, sem saudação.',
+        `Termine exatamente com estas duas linhas, nesta ordem: "${discursiveScoreScale(text(payload, 'board')).line} e "**Avaliação: Fraco, Mediano ou Forte**". Deixe claro que é uma estimativa, não a nota oficial. Responda em português do Brasil, de forma direta e específica, sem saudação.`,
       ].join('\n');
     case 'podcast-script': {
       const minutes = number(payload, 'durationMinutes');

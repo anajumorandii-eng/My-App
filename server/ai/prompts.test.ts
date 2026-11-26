@@ -302,11 +302,12 @@ test('feedback discursivo pede nota estimada por item, na escala de 0 a 4 na Fam
   }));
   assert.match(famerp, /vale de 0 a 4 pontos/);
   assert.match(famerp, /nota item por item/);
-  assert.match(famerp, /\*\*Nota estimada: X\*\*/);
+  assert.match(famerp, /\*\*Nota estimada: X de 4\*\*/);
   // Sem escala confirmada, a nota sai em percentual, sem inventar a da banca.
   const fuvest = buildAiPrompt('discursive-feedback', validateAiPayload('discursive-feedback', {
     board: 'Fuvest', subject: 'Física', prompt: 'Calcule.', modelAnswer: ['Ponto'], studentAnswer: 'Resposta.',
   }));
   assert.match(fuvest, /percentual dos pontos esperados/);
   assert.doesNotMatch(fuvest, /0 a 4 pontos/);
+  assert.match(fuvest, /\*\*Nota estimada: X%\*\*/);
 });
