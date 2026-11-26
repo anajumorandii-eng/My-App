@@ -2,20 +2,14 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "e4993ea033dd75e5c7b5e7e4069f1657d8b8200c",
-  "generated_at_utc": "2026-11-26T19:31:47Z",
+  "source_commit": "222d820b8aeb3f1630bef6a0a69dbf8294841d97",
+  "generated_at_utc": "2026-11-26T20:43:36Z",
   "changed_files": [
-    "docs/caderno-erros-abrir-2026-11-26/README.md",
-    "docs/caderno-erros-abrir-2026-11-26/erro-aberto-celular.png",
-    "docs/caderno-erros-abrir-2026-11-26/erro-aberto-desktop.png",
-    "docs/caderno-erros-abrir-2026-11-26/erro-aberto-ipad.png",
-    "src/components/ErrorDetail.tsx",
+    "docs/correcao-lado-a-lado-2026-11-26/README.md",
+    "src/lib/discursiveGrading.test.ts",
     "src/lib/discursiveGrading.ts",
-    "src/lib/errorLabels.ts",
-    "src/types.ts",
-    "src/views/Erros.test.tsx",
-    "src/views/Erros.tsx",
-    "src/views/Treino2aFase.tsx"
+    "src/views/Treino2aFase.tsx",
+    "src/views/Treino2aFase.workspace.test.tsx"
   ],
   "next_session": {
     "mode": "delta-only",
