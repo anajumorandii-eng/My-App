@@ -1,14 +1,15 @@
-import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { act, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { beforeEach, expect, it, vi } from 'vitest';
 import Treino2aFase from './Treino2aFase';
 
-const mocks = vi.hoisted(() => ({ save: vi.fn(), mastery: vi.fn().mockResolvedValue(true), stream: vi.fn() }));
+const mocks = vi.hoisted(() => ({ save: vi.fn(), mastery: vi.fn().mockResolvedValue(true), stream: vi.fn(), errorLog: vi.fn().mockResolvedValue(undefined) }));
+vi.mock('../lib/userData', () => ({ addUserErrorLog: mocks.errorLog }));
 vi.mock('../context/AuthContext', () => ({ useAuth: () => ({ user: { uid: 'student' } }) }));
 vi.mock('../hooks/useDiscursiveAttempts', () => ({ useDiscursiveAttempts: () => ({ attempts: [], addAttempt: mocks.save, isPersisted: true }) }));
 vi.mock('../hooks/useUserMastery', () => ({ useUserMastery: () => ({ updateMastery: mocks.mastery }) }));
 vi.mock('../lib/aiClient', () => ({ requestAiTextStream: mocks.stream, aiErrorMessage: () => 'Sem conexão com a IA.' }));
-beforeEach(() => { localStorage.clear(); vi.clearAllMocks(); mocks.save.mockResolvedValue(true); });
+beforeEach(() => { localStorage.clear(); vi.clearAllMocks(); mocks.save.mockResolvedValue(true); mocks.mastery.mockResolvedValue(true); mocks.errorLog.mockResolvedValue(undefined); });
 const open = () => render(<MemoryRouter><Treino2aFase /></MemoryRouter>);
 
 it('restaura a resposta da mesma questão depois de sair e voltar', () => {
@@ -48,9 +49,44 @@ it('na Famerp mostra o que o corretor confere por item e manda a lista para a co
   fireEvent.change(screen.getByLabelText('Sua resposta (redija com rigor)'), { target: { value: 'Resposta.' } });
   fireEvent.click(screen.getByRole('button', { name: 'Revelar gabarito comentado' }));
   expect(screen.getByText('O que o corretor confere')).toBeInTheDocument();
-  expect(screen.getByText('Item a')).toBeInTheDocument();
+  expect(screen.getAllByText('Item a').length).toBeGreaterThan(0);
   fireEvent.click(screen.getByRole('button', { name: 'Corrigir minha resposta com IA' }));
   await waitFor(() => expect(mocks.stream).toHaveBeenCalled());
   const payload = mocks.stream.mock.calls[0][1];
   expect(payload.modelAnswer.some((m: string) => m.startsWith('Item a, o corretor confere:'))).toBe(true);
+});
+it('corrige critério por critério, exige dizer onde errou e salva a nota estimada', async () => {
+  render(<MemoryRouter initialEntries={['/treino-2a-fase?banca=Famerp']}><Treino2aFase /></MemoryRouter>);
+  fireEvent.click(screen.getByRole('button', { name: /Ciclo de máquina térmica no diagrama P × V/ }));
+  expect(screen.getByText('Como corrigir uma dissertativa')).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('button', { name: 'Revelar gabarito comentado' }));
+  const save = screen.getByRole('button', { name: 'Salvar correção' });
+  expect(save).toBeDisabled();
+  const groups = screen.getAllByRole('radiogroup');
+  groups.forEach((g, i) => fireEvent.click(within(g).getByRole('radio', { name: i === groups.length - 1 ? 'Faltou' : 'Completo' })));
+  // Critério perdido sem "onde" não deixa salvar.
+  expect(save).toBeDisabled();
+  fireEvent.change(screen.getByRole('combobox', { name: 'Onde perdeu o ponto?' }), { target: { value: 'calculation' } });
+  expect(screen.getByText(/Nota estimada:/)).toHaveTextContent('3 de 4');
+  fireEvent.click(save);
+  await screen.findByText(/Correção salva: nota estimada 3 de 4/);
+  const attempt = mocks.save.mock.calls.at(-1)![0];
+  expect(attempt.selfRating).toBe('mediano');
+  expect(attempt.grading.items[1].checks[1]).toEqual({ text: 'Potência = 60 W.', verdict: 'faltou', where: 'calculation' });
+});
+it('manda os pontos perdidos ao Caderno mesmo se ela avança de questão durante o salvamento', async () => {
+  let finish!: (saved: boolean) => void;
+  mocks.save.mockReturnValueOnce(new Promise((resolve) => { finish = resolve; }));
+  render(<MemoryRouter initialEntries={['/treino-2a-fase?banca=Famerp']}><Treino2aFase /></MemoryRouter>);
+  fireEvent.click(screen.getByRole('button', { name: /Ciclo de máquina térmica no diagrama P × V/ }));
+  fireEvent.click(screen.getByRole('button', { name: 'Revelar gabarito comentado' }));
+  const groups = screen.getAllByRole('radiogroup');
+  groups.forEach((g, i) => fireEvent.click(within(g).getByRole('radio', { name: i === groups.length - 1 ? 'Faltou' : 'Completo' })));
+  fireEvent.change(screen.getByRole('combobox', { name: 'Onde perdeu o ponto?' }), { target: { value: 'calculation' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Salvar correção' }));
+  // Troca de tópico: com o filtro num tópico de uma questão só, "Próxima" voltaria à mesma.
+  fireEvent.click(screen.getByRole('button', { name: /Óvulo vegetal × animal/ }));
+  await act(async () => { finish(true); });
+  await waitFor(() => expect(mocks.errorLog).toHaveBeenCalledTimes(1));
+  expect(mocks.errorLog.mock.calls[0][1]).toMatchObject({ type: 'calculation', breakPoint: 'Potência = 60 W.' });
 });
