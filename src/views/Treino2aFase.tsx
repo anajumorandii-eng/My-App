@@ -4,7 +4,7 @@ import { UNSAFE_LocationContext } from 'react-router-dom';
 import { discursiveQuestions, boardExamStructure } from '../data/discursiveQuestions';
 import { famerpExpectedChecks } from '../data/famerpExpectedChecks';
 import { DiscursiveGrader, HowToGradeGuide } from '../components/DiscursiveGrader';
-import { criterionIds, errorLogsFromGrading, missSummary, MISS_LABELS, parseAiScore, parseCriteriaVerdicts, ratingFromScore, stripCriteriaBlock, type DiscursiveGrading } from '../lib/discursiveGrading';
+import { criterionIds, errorLogsFromGrading, missSummary, MISS_LABELS, parseAiScore, parseCriteriaVerdicts, ratingFromScore, splitIdealAnswer, stripCriteriaBlock, type DiscursiveGrading } from '../lib/discursiveGrading';
 import { addUserErrorLog } from '../lib/userData';
 import { secondPhaseProtocols } from '../data/resolutionStrategies';
 import { useDiscursiveAttempts } from '../hooks/useDiscursiveAttempts';
@@ -143,6 +143,7 @@ function DiscursiveTraining() {
   // bloco JSON ainda está incompleto. A chave remonta a correção guiada para
   // receber a marcação nova sem misturar com a anterior.
   const aiSuggested = useMemo(() => (checkIds && aiFeedback && !loadingFeedback ? parseCriteriaVerdicts(aiFeedback, checkIds.flat()) : undefined), [checkIds, aiFeedback, loadingFeedback]);
+  const feedbackParts = useMemo(() => splitIdealAnswer(stripCriteriaBlock(aiFeedback ?? '')), [aiFeedback]);
   const aiSuggestionKey = aiSuggested && Object.keys(aiSuggested).length > 0 ? `ia-${aiFeedback.length}` : 'manual';
 
   const [secondsLeft, setSecondsLeft] = useState((question?.suggestedMinutes ?? 15) * 60);
@@ -565,9 +566,24 @@ function DiscursiveTraining() {
                   )}
                   <div className="flex items-start gap-2">
                     <Sparkles className="w-4 h-4 subject-text shrink-0 mt-0.5" />
-                    <AiText text={stripCriteriaBlock(aiFeedback)} className="flex-1" />
+                    <AiText text={feedbackParts.rest} className="flex-1" />
                   </div>
                 </div>
+              )}
+
+              {/* Pedido da estudante: ver lado a lado como fez e como deveria
+                  ter feito. No celular as colunas empilham. */}
+              {aiFeedback && feedbackParts.ideal && (
+                <section aria-label="Comparação das respostas" className="grid gap-3 md:grid-cols-2 text-xs leading-relaxed">
+                  <div className="rounded-xl border border-[var(--line)] p-4 min-w-0">
+                    <h3 className="font-semibold text-sm mb-2 text-[var(--text)]">Como você fez</h3>
+                    <p className="whitespace-pre-wrap text-[var(--text)]">{answer.trim() || 'Resposta em branco.'}</p>
+                  </div>
+                  <div className="rounded-xl border p-4 min-w-0" style={{ borderColor: 'var(--status-success)', background: 'color-mix(in srgb, var(--status-success) 8%, transparent)' }}>
+                    <h3 className="font-semibold text-sm mb-2 text-[var(--text)]">Como deveria ter feito</h3>
+                    <AiText text={feedbackParts.ideal} />
+                  </div>
+                </section>
               )}
 
               {checks ? (gradingResult ? (

@@ -142,3 +142,20 @@ export function parseCriteriaVerdicts(text: string, validIds: string[]): Suggest
 export function stripCriteriaBlock(text: string): string {
   return text.replace(/```(?:json)?[\s\S]*?(```|$)/, '').trimEnd();
 }
+
+/**
+ * Separa a seção "## Resposta nota máxima" do resto da correção, para a tela
+ * pô-la ao lado da resposta dela. A seção vai até o próximo título "## " ou
+ * até a linha da nota. Sem a seção, devolve o texto inteiro em `rest`.
+ */
+export function splitIdealAnswer(text: string): { ideal: string | null; rest: string } {
+  const match = text.match(/^#{1,3}\s*Resposta nota m[áa]xima\s*$/im);
+  if (!match || match.index === undefined) return { ideal: null, rest: text };
+  const start = match.index;
+  const after = text.slice(start + match[0].length);
+  const end = after.search(/^#{1,3}\s|^\**\s*Nota estimada/im);
+  const body = (end === -1 ? after : after.slice(0, end)).trim();
+  if (!body) return { ideal: null, rest: text };
+  const rest = (text.slice(0, start) + (end === -1 ? '' : after.slice(end))).replace(/\n{3,}/g, '\n\n').trim();
+  return { ideal: body, rest };
+}

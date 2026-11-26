@@ -135,3 +135,16 @@ it('mantém a escolha de não mandar ao Caderno quando a marcação da IA chega'
   await screen.findByText(/A correção por IA marcou 4 de 4 critérios/);
   expect(screen.getByRole('checkbox', { name: /Mandar cada ponto perdido/ })).not.toBeChecked();
 });
+it('põe lado a lado a resposta dela e a resposta nota máxima', async () => {
+  mocks.stream.mockResolvedValue({ text: 'Item a: ok.\n\n## Resposta nota máxima\n\na) 440 K.\n\n## Como chegar lá\n\n1. Use PV/T.\n\n**Nota estimada: 3 de 4**' });
+  render(<MemoryRouter initialEntries={['/treino-2a-fase?banca=Famerp']}><Treino2aFase /></MemoryRouter>);
+  fireEvent.click(screen.getByRole('button', { name: /Ciclo de máquina térmica no diagrama P × V/ }));
+  fireEvent.change(screen.getByLabelText('Sua resposta (redija com rigor)'), { target: { value: 'T_C = 400 K.' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Revelar gabarito comentado' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Corrigir minha resposta com IA' }));
+  const compare = await screen.findByRole('region', { name: 'Comparação das respostas' });
+  expect(within(compare).getByText('Como você fez').parentElement).toHaveTextContent('T_C = 400 K.');
+  await waitFor(() => expect(within(compare).getByText('Como deveria ter feito').parentElement).toHaveTextContent('a) 440 K.'));
+  // A seção não se repete no texto da correção.
+  expect(screen.queryByText(/Resposta nota máxima/)).toBeNull();
+});
