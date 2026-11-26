@@ -59,7 +59,7 @@ export function gradingProblems(items: ItemGrade[]): string[] {
 }
 
 /** Um registro no Caderno por critério que não saiu completo. */
-export function errorLogsFromGrading(grading: DiscursiveGrading, question: { id: string; topicId: string; board: string; year: number; topic: string }, date: string, makeId: () => string): ErrorLog[] {
+export function errorLogsFromGrading(grading: DiscursiveGrading, question: { id: string; topicId: string; board: string; year: number; topic: string }, date: string, makeId: () => string, studentAnswer?: string): ErrorLog[] {
   const logs: ErrorLog[] = [];
   for (const item of grading.items) for (const check of item.checks) {
     if (check.verdict === 'completo' || !check.where) continue;
@@ -69,6 +69,8 @@ export function errorLogsFromGrading(grading: DiscursiveGrading, question: { id:
       // uma explicação validada (regra do Caderno de Erros).
       confidence: 'media',
       breakPoint: check.text,
+      // A resposta dela, para o Caderno mostrar o que foi escrito ao abrir o erro.
+      ...(studentAnswer?.trim() ? { evidence: studentAnswer.trim().slice(0, 2000) } : {}),
       notes: `${question.board} ${question.year}, ${question.topic}, item ${item.letter}: critério ${check.verdict === 'parcial' ? 'parcial' : 'em falta'}, "${check.text}". Onde: ${MISS_LABELS[check.where].label.toLowerCase()}.`,
     });
   }
