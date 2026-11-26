@@ -324,3 +324,14 @@ test('com a lista do corretor, a correção pede a marcação de cada critério 
   }));
   assert.doesNotMatch(without, /"criterios"/);
 });
+
+test('a correção traz a resposta nota máxima e como chegar lá, a partir da resposta do aluno', () => {
+  const prompt = buildAiPrompt('discursive-feedback', validateAiPayload('discursive-feedback', {
+    board: 'Famerp', subject: 'Física', prompt: 'Calcule.', modelAnswer: ['Ponto'], studentAnswer: 'Resposta.',
+  }));
+  assert.match(prompt, /## Resposta nota máxima/);
+  assert.match(prompt, /Parta do que o aluno escreveu/);
+  assert.match(prompt, /## Como chegar lá/);
+  // As seções vêm antes das linhas finais, que a tela lê.
+  assert.ok(prompt.indexOf('## Como chegar lá') < prompt.indexOf('Termine exatamente'));
+});
