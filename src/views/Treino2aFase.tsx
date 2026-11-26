@@ -3,6 +3,9 @@ import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { UNSAFE_LocationContext } from 'react-router-dom';
 import { discursiveQuestions, boardExamStructure } from '../data/discursiveQuestions';
 import { famerpExpectedChecks } from '../data/famerpExpectedChecks';
+import { DiscursiveGrader, HowToGradeGuide } from '../components/DiscursiveGrader';
+import { errorLogsFromGrading, missSummary, MISS_LABELS, ratingFromScore, type DiscursiveGrading } from '../lib/discursiveGrading';
+import { addUserErrorLog } from '../lib/userData';
 import { secondPhaseProtocols } from '../data/resolutionStrategies';
 import { useDiscursiveAttempts } from '../hooks/useDiscursiveAttempts';
 import { useUserMastery } from '../hooks/useUserMastery';
@@ -63,7 +66,9 @@ export default function Treino2aFase() {
   return <DiscursiveTraining key={user?.uid ?? 'guest'} />;
 }
 function DiscursiveTraining() {
+  const { user } = useAuth();
   const { attempts, addAttempt, isPersisted, syncError } = useDiscursiveAttempts();
+  const misses = useMemo(() => missSummary(attempts).slice(0, 3), [attempts]);
   const { updateMastery, syncing: masterySyncing, syncError: masterySyncError } = useUserMastery();
 
   const boards = useMemo(() => ['Todas', ...new Set(discursiveQuestions.map((q) => q.board))], []);
@@ -117,6 +122,7 @@ function DiscursiveTraining() {
   const [aiFeedback, setAiFeedback, feedbackStatus] = useStudyDraft(`discursiva:${question?.id}:feedback`, '', isText);
   const [feedbackError, setFeedbackError] = useState<string | null>(null);
   const [savingRating, setSavingRating] = useState(false);
+  const [gradingResult, setGradingResult] = useState<{ score: number; logged: number } | null>(null);
   const feedbackEpoch = useRef(0);
   useEffect(() => () => { feedbackEpoch.current++; }, []);
   const [loadingFeedback, setLoadingFeedback] = useState(false);
@@ -128,6 +134,7 @@ function DiscursiveTraining() {
     setRevealed(false);
     setShowProtocol(false);
     setRating(null);
+    setGradingResult(null);
     feedbackEpoch.current++;
     setFeedbackError(null);
     setLoadingFeedback(false);
@@ -173,6 +180,31 @@ function DiscursiveTraining() {
     if (!masterySaved) setFeedbackError('A avaliação foi registrada, mas não foi possível atualizar o domínio. Sua resposta foi preservada.');
     setSavedFlash(true);
     setTimeout(() => setSavedFlash(false), 1500);
+  };
+
+  // Correção guiada: a nota sai dos critérios, e cada ponto perdido pode ir
+  // para o Caderno de Erros com o tipo que ela escolheu.
+  const saveGrading = async (grading: DiscursiveGrading, toNotebook: boolean) => {
+    if (!question || rating || savingRating) return;
+    const epoch = feedbackEpoch.current;
+    const value = ratingFromScore(grading.score);
+    const date = new Date().toISOString();
+    setSavingRating(true); setFeedbackError(null);
+    const saved = await addAttempt({ id: `disc_attempt_${Date.now()}`, questionId: question.id, topicId: question.topicId, selfRating: value, date, grading });
+    if (feedbackEpoch.current !== epoch) return;
+    if (!saved) { setSavingRating(false); setFeedbackError('Não foi possível salvar a correção. Sua resposta está preservada; tente novamente.'); return; }
+    let logged = 0;
+    if (toNotebook && user) {
+      const logs = errorLogsFromGrading(grading, question, date, () => `error_${crypto.randomUUID()}`);
+      try { await Promise.all(logs.map((log) => addUserErrorLog(user.uid, log))); logged = logs.length; }
+      catch { setFeedbackError('A correção foi salva, mas não foi possível mandar os pontos perdidos ao Caderno de Erros.'); }
+    }
+    if (feedbackEpoch.current !== epoch) return;
+    setSavingRating(false);
+    setRating(value);
+    setGradingResult({ score: grading.score, logged });
+    const masterySaved = await updateMastery(items => registerStudySelfRating(items, question.topicId, value));
+    if (feedbackEpoch.current === epoch && !masterySaved) setFeedbackError('A correção foi registrada, mas não foi possível atualizar o domínio. Sua resposta foi preservada.');
   };
 
   const fetchAiFeedback = async () => {
@@ -311,6 +343,13 @@ function DiscursiveTraining() {
         )}
       </div>
 
+      {misses.length > 0 && (
+        <section aria-label="Onde você mais perde ponto" className="rounded-xl border border-[var(--line)] p-3 text-xs">
+          <p className="font-semibold text-[var(--text)]">Onde você mais perde ponto nas discursivas</p>
+          <ul className="mt-1 space-y-0.5">{misses.map((m) => <li key={m.where} className="text-[var(--dim)]"><b className="text-[var(--text)]">{MISS_LABELS[m.where].label}</b>: {m.count} {m.count === 1 ? 'critério' : 'critérios'}. {MISS_LABELS[m.where].hint}</li>)}</ul>
+        </section>
+      )}
+
       {!question ? (
         <div className="text-center py-16 border border-dashed border-[var(--line)] rounded-2xl text-xs text-[var(--dim)]">
           Nenhuma questão disponível ainda para esse filtro.
@@ -444,6 +483,8 @@ function DiscursiveTraining() {
             />
           </div>
 
+          {checks && !revealed && <HowToGradeGuide />}
+
           {/* Reveal button or answer feedback */}
           {!revealed ? (
             <button
@@ -499,6 +540,14 @@ function DiscursiveTraining() {
                 </div>
               )}
 
+              {checks ? (gradingResult ? (
+                <div role="status" className="rounded-xl border border-[var(--line)] p-3 text-xs text-[var(--text)]">
+                  <p className="font-semibold">Correção salva: nota estimada {gradingResult.score.toLocaleString('pt-BR')} de 4.</p>
+                  <p className="text-[var(--dim)] mt-1">{gradingResult.logged > 0 ? `${gradingResult.logged} ${gradingResult.logged === 1 ? 'ponto perdido foi' : 'pontos perdidos foram'} para o Caderno de Erros.` : 'Nenhum ponto foi para o Caderno de Erros.'} Agora reescreva só o item que perdeu ponto, em até três linhas.</p>
+                </div>
+              ) : (
+                <DiscursiveGrader key={question.id} checks={checks} letters={(question.subItems ?? []).map((s) => s.letter)} disabled={savingRating} onSave={(g, n) => void saveGrading(g, n)} />
+              )) : (
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <p className="text-xs font-medium text-[var(--dim)]">Como você avalia sua resposta?</p>
@@ -524,6 +573,7 @@ function DiscursiveTraining() {
                   ))}
                 </div>
               </div>
+              )}
 
               <button
                 onClick={() => setIndex((i) => i + 1)}

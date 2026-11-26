@@ -316,6 +316,9 @@ export interface DiscursiveAttempt {
   topicId?: string;
   selfRating: 'fraco' | 'mediano' | 'forte';
   date: string;
+  // Correção guiada, critério por critério (src/lib/discursiveGrading.ts).
+  // Ausente nas tentativas avaliadas só por fraco/mediano/forte.
+  grading?: import('./lib/discursiveGrading').DiscursiveGrading;
 }
 
 export interface BacklogItem {
