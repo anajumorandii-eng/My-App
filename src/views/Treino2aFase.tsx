@@ -190,21 +190,29 @@ function DiscursiveTraining() {
     const value = ratingFromScore(grading.score);
     const date = new Date().toISOString();
     setSavingRating(true); setFeedbackError(null);
-    const saved = await addAttempt({ id: `disc_attempt_${Date.now()}`, questionId: question.id, topicId: question.topicId, selfRating: value, date, grading });
-    if (feedbackEpoch.current !== epoch) return;
-    if (!saved) { setSavingRating(false); setFeedbackError('Não foi possível salvar a correção. Sua resposta está preservada; tente novamente.'); return; }
-    let logged = 0;
-    if (toNotebook && user) {
-      const logs = errorLogsFromGrading(grading, question, date, () => `error_${crypto.randomUUID()}`);
-      try { await Promise.all(logs.map((log) => addUserErrorLog(user.uid, log))); logged = logs.length; }
-      catch { setFeedbackError('A correção foi salva, mas não foi possível mandar os pontos perdidos ao Caderno de Erros.'); }
+    // A gravação (tentativa, Caderno, domínio) vai até o fim mesmo se ela
+    // passar para a próxima questão no meio: a época só decide se a tela
+    // ainda mostra o resultado. Antes, avançar durante o salvamento descartava
+    // os pontos perdidos que ela pediu para mandar ao Caderno.
+    const current = question;
+    const saved = await addAttempt({ id: `disc_attempt_${Date.now()}`, questionId: current.id, topicId: current.topicId, selfRating: value, date, grading });
+    if (!saved) {
+      if (feedbackEpoch.current === epoch) { setSavingRating(false); setFeedbackError('Não foi possível salvar a correção. Sua resposta está preservada; tente novamente.'); }
+      return;
     }
+    let logged = 0; let notebookFailed = false;
+    if (toNotebook && user) {
+      const logs = errorLogsFromGrading(grading, current, date, () => `error_${crypto.randomUUID()}`);
+      try { await Promise.all(logs.map((log) => addUserErrorLog(user.uid, log))); logged = logs.length; }
+      catch { notebookFailed = true; }
+    }
+    const masterySaved = await updateMastery(items => registerStudySelfRating(items, current.topicId, value));
     if (feedbackEpoch.current !== epoch) return;
     setSavingRating(false);
     setRating(value);
     setGradingResult({ score: grading.score, logged });
-    const masterySaved = await updateMastery(items => registerStudySelfRating(items, question.topicId, value));
-    if (feedbackEpoch.current === epoch && !masterySaved) setFeedbackError('A correção foi registrada, mas não foi possível atualizar o domínio. Sua resposta foi preservada.');
+    if (notebookFailed) setFeedbackError('A correção foi salva, mas não foi possível mandar os pontos perdidos ao Caderno de Erros.');
+    else if (!masterySaved) setFeedbackError('A correção foi registrada, mas não foi possível atualizar o domínio. Sua resposta foi preservada.');
   };
 
   const fetchAiFeedback = async () => {
