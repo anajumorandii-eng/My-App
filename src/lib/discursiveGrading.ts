@@ -83,3 +83,19 @@ export function missSummary(attempts: Pick<DiscursiveAttempt, 'grading'>[]): { w
   }
   return [...counts.entries()].map(([where, count]) => ({ where, count })).sort((a, b) => b.count - a.count);
 }
+
+/**
+ * Lê a nota que a correção por IA escreve na linha "Nota estimada: …". Saída
+ * de modelo é dado suspeito: só aceita "X de 4" com X entre 0 e 4, ou um
+ * percentual de 0 a 100, e devolve null em qualquer outra forma, em vez de
+ * mostrar um número inventado em destaque.
+ */
+export function parseAiScore(text: string): string | null {
+  const line = text.match(/nota estimada\s*:\s*\**\s*([^\n*]+)/i)?.[1]?.trim();
+  if (!line) return null;
+  const outOf4 = line.match(/^(\d(?:[.,]5|[.,]0)?)\s*(?:de|\/)\s*4\b/);
+  if (outOf4) { const v = Number(outOf4[1].replace(',', '.')); return v >= 0 && v <= 4 ? `${outOf4[1].replace('.', ',')} de 4` : null; }
+  const pct = line.match(/^(\d{1,3})\s*%/);
+  if (pct) { const v = Number(pct[1]); return v <= 100 ? `${v}%` : null; }
+  return null;
+}
