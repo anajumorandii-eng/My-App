@@ -4,7 +4,7 @@ import { UNSAFE_LocationContext } from 'react-router-dom';
 import { discursiveQuestions, boardExamStructure } from '../data/discursiveQuestions';
 import { famerpExpectedChecks } from '../data/famerpExpectedChecks';
 import { DiscursiveGrader, HowToGradeGuide } from '../components/DiscursiveGrader';
-import { errorLogsFromGrading, missSummary, MISS_LABELS, ratingFromScore, type DiscursiveGrading } from '../lib/discursiveGrading';
+import { errorLogsFromGrading, missSummary, MISS_LABELS, parseAiScore, ratingFromScore, type DiscursiveGrading } from '../lib/discursiveGrading';
 import { addUserErrorLog } from '../lib/userData';
 import { secondPhaseProtocols } from '../data/resolutionStrategies';
 import { useDiscursiveAttempts } from '../hooks/useDiscursiveAttempts';
@@ -541,6 +541,9 @@ function DiscursiveTraining() {
 
               {aiFeedback && (
                 <div className="p-4 rounded-xl text-xs leading-relaxed border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-[var(--text)]">
+                  {!loadingFeedback && parseAiScore(aiFeedback) && (
+                    <p className="mb-3 text-sm">Nota estimada pela IA: <b>{parseAiScore(aiFeedback)}</b> <span className="text-[11px] text-[var(--dim)]">(estimativa, não a nota oficial)</span></p>
+                  )}
                   <div className="flex items-start gap-2">
                     <Sparkles className="w-4 h-4 subject-text shrink-0 mt-0.5" />
                     <AiText text={aiFeedback} className="flex-1" />

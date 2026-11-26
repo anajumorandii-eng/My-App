@@ -90,3 +90,13 @@ it('manda os pontos perdidos ao Caderno mesmo se ela avança de questão durante
   await waitFor(() => expect(mocks.errorLog).toHaveBeenCalledTimes(1));
   expect(mocks.errorLog.mock.calls[0][1]).toMatchObject({ type: 'calculation', breakPoint: 'Potência = 60 W.' });
 });
+it('destaca a nota estimada que volta da correção por IA', async () => {
+  const text = 'Item a: correto.\nItem b: faltou a unidade.\n**Nota estimada: 3 de 4**\n**Avaliação: Mediano**';
+  mocks.stream.mockResolvedValue({ text });
+  render(<MemoryRouter initialEntries={['/treino-2a-fase?banca=Famerp']}><Treino2aFase /></MemoryRouter>);
+  fireEvent.click(screen.getByRole('button', { name: /Ciclo de máquina térmica no diagrama P × V/ }));
+  fireEvent.change(screen.getByLabelText('Sua resposta (redija com rigor)'), { target: { value: 'Resposta.' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Revelar gabarito comentado' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Corrigir minha resposta com IA' }));
+  expect(await screen.findByText(/Nota estimada pela IA:/)).toHaveTextContent('3 de 4');
+});

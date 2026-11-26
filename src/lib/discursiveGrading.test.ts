@@ -39,3 +39,13 @@ it('resume onde ela mais perde ponto', () => {
   const g = (where: 'calculation' | 'insufficient_justification') => ({ grading: { score: 0, items: [{ letter: 'a', checks: [{ text: 'x', verdict: 'faltou' as const, where }] }] } });
   assert.deepEqual(missSummary([g('calculation'), g('calculation'), g('insufficient_justification'), {}]), [{ where: 'calculation', count: 2 }, { where: 'insufficient_justification', count: 1 }]);
 });
+
+it('lê a nota da correção por IA só nas formas válidas', async () => {
+  const { parseAiScore } = await import('./discursiveGrading.ts');
+  assert.equal(parseAiScore('Item a: ...\n**Nota estimada: 2,5 de 4**\n**Avaliação: Mediano**'), '2,5 de 4');
+  assert.equal(parseAiScore('Nota estimada: 3/4'), '3 de 4');
+  assert.equal(parseAiScore('**Nota estimada: 75%**'), '75%');
+  assert.equal(parseAiScore('Nota estimada: 7 de 4'), null);
+  assert.equal(parseAiScore('Nota estimada: 150%'), null);
+  assert.equal(parseAiScore('sem nota'), null);
+});

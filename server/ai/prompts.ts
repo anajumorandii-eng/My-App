@@ -9,6 +9,15 @@ type Payload = Record<string, unknown>;
 // estruturas de resposta discursiva fixas e diferentes entre si — usado
 // tanto para instruir a estudante ao gerar uma questão quanto para orientar
 // a correção de uma resposta discursiva.
+// Escala da nota estimada na correção por IA. Só a Famerp tem a escala
+// conferida no edital (cada discursiva vale de 0 a 4); nas outras, a nota sai
+// em percentual dos pontos esperados, em vez de inventar uma escala da banca.
+export function discursiveScoreScale(board: string | undefined): string {
+  return (board ?? '').trim().toLowerCase().includes('famerp')
+    ? 'Na Famerp cada discursiva vale de 0 a 4 pontos (edital). Estime a nota nessa escala, em meios pontos, dividindo os 4 pontos igualmente entre os itens.'
+    : 'A escala oficial desta banca não está confirmada: estime a nota em percentual dos pontos esperados (0% a 100%, de 5 em 5).';
+}
+
 function discursiveStructureGuidance(board: string | undefined): string {
   const normalized = (board ?? '').trim().toLowerCase();
   if (normalized.includes('unicamp')) {
@@ -257,7 +266,11 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         '',
         `Resposta do aluno:\n"${text(payload, 'studentAnswer')}"`,
         '',
-        'Avalie a resposta do aluno comparando com os pontos-chave esperados E com a estrutura discursiva esperada pela banca acima. Aponte o que foi bem coberto, o que está faltando ou incompleto, erros conceituais se houver, e se a estrutura da resposta seguiu o que a banca espera — como um corretor de banca faria. Termine com uma avaliação qualitativa clara (Fraco, Mediano ou Forte). Responda em português do Brasil, de forma direta e específica, sem saudação.',
+        'Avalie a resposta do aluno comparando com os pontos-chave esperados E com a estrutura discursiva esperada pela banca acima. Aponte o que foi bem coberto, o que está faltando ou incompleto, erros conceituais se houver, e se a estrutura da resposta seguiu o que a banca espera — como um corretor de banca faria.',
+        '',
+        discursiveScoreScale(text(payload, 'board')),
+        'Dê a nota item por item, cada uma com o motivo em uma linha (o que valeu ponto e o que tirou ponto), e só então a total. Dê crédito parcial a ideia certa com termo impreciso, sem justificativa ou sem unidade; não dê ponto a item em branco nem a conteúdo que contradiz o esperado. Não arredonde para cima por boa vontade.',
+        'Termine exatamente com estas duas linhas, nesta ordem: "**Nota estimada: X**" (na escala acima) e "**Avaliação: Fraco, Mediano ou Forte**". Deixe claro que é uma estimativa, não a nota oficial. Responda em português do Brasil, de forma direta e específica, sem saudação.',
       ].join('\n');
     case 'podcast-script': {
       const minutes = number(payload, 'durationMinutes');
