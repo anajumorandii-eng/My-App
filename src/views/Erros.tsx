@@ -236,8 +236,6 @@ export default function Erros() {
         </button>
       </div>
 
-      <SummaryErrorsPanel progress={summaryProgress} summaries={interactiveSummaries} />
-
       {/* Manual log form */}
       {showForm && (
         <Panel subject="História" className="ni-panel p-6 space-y-4 mb-4">
@@ -422,6 +420,10 @@ export default function Erros() {
           </div>
         )}
       </div>
+
+      {/* Depois da lista principal: os erros dos resumos são outra fonte e só
+          aparecem quando existem. */}
+      <div className="mt-8"><SummaryErrorsPanel progress={summaryProgress} summaries={interactiveSummaries} /></div>
     </div>
   );
 }

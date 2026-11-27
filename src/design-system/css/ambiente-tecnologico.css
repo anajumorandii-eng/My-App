@@ -833,3 +833,13 @@
   :root.dark .ni-production-app.crivo-editorial .crivo-caderno.crivo-caderno--mapa { opacity: .25; }
 }
 .vs-personalizar-painel :is(.vs-personalizar-opcoes, .vs-personalizar-cores) small { color: var(--amb-texto); opacity: 1; }
+
+/* O mapa de ideias do fundo "Caderno" ficava em opacidade cheia atrás da tela
+   toda: as cartas e o círculo central caíam sobre títulos, abas e cartões
+   translúcidos, e a estudante leu isso como poluição. Fica como textura de
+   papel: bem mais fraco e apagado na faixa central, onde mora o conteúdo. */
+.crivo-caderno--mapa {
+  opacity: .32;
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,.55) 14%, rgba(0,0,0,.12) 30%, rgba(0,0,0,.12) 70%, rgba(0,0,0,.55) 86%, #000 100%);
+  mask-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,.55) 14%, rgba(0,0,0,.12) 30%, rgba(0,0,0,.12) 70%, rgba(0,0,0,.55) 86%, #000 100%);
+}

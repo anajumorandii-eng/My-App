@@ -32,7 +32,12 @@ describe('erros derivados dos resumos', () => {
     const user = userEvent.setup();
     render(<MemoryRouter><SummaryErrorsPanel progress={partialProgress} summaries={interactiveSummaries}/></MemoryRouter>);
     await user.selectOptions(screen.getByLabelText('Filtrar erros dos resumos'), 'resolvidos');
-    expect(screen.getByRole('status')).toHaveTextContent('Nenhum erro de resumo neste filtro');
+    expect(screen.getByRole('status')).toHaveTextContent('Nenhum erro de resumo resolvido ainda.');
+  });
+
+  it('não ocupa a tela quando não há nenhum erro de resumo', () => {
+    const { container } = render(<MemoryRouter><SummaryErrorsPanel progress={{}} summaries={interactiveSummaries}/></MemoryRouter>);
+    expect(container).toBeEmptyDOMElement();
   });
 
   it('mantém evidência de referência removida sem oferecer link quebrado', () => {

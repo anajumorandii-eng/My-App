@@ -83,7 +83,7 @@ const displayLabel = (label: string) => label.charAt(0).toUpperCase() + label.sl
 
 function StateBadge({ state }: { state: NodeState }) {
   return (
-    <span data-state={state} className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 dark:border-zinc-700 px-2.5 py-1 text-xs font-semibold">
+    <span data-state={state} className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] px-2.5 py-1 text-xs font-semibold">
       <span className="vs-swatch" aria-hidden="true" />
       {NODE_STATE_LABEL[state]}
     </span>
@@ -128,32 +128,32 @@ function VisualLibrary({ onOpen, preferencias }: {
       {/* Mais de sessenta tópicos não cabem em fileira de chips: campo agrupado. */}
       <div className="vs-lib-filtros grid gap-3 sm:grid-cols-[220px_1fr]">
         <label className="text-sm">
-          <span className="mb-1 block font-semibold text-zinc-600 dark:text-zinc-400">Disciplina</span>
+          <span className="mb-1 block font-semibold text-[var(--dim)]">Disciplina</span>
           <select
             value={subject}
             onChange={(event) => { setSubject(event.target.value); setLimit(60); }}
-            className="w-full rounded-xl border border-zinc-300 bg-transparent px-3 py-2.5 dark:border-zinc-700"
+            className="w-full rounded-xl border border-[var(--line)] bg-transparent px-3 py-2.5"
           >
             <option value="">Todas</option>
             {subjects.map((item) => <option key={item} value={item}>{item}</option>)}
           </select>
         </label>
         <label className="text-sm">
-          <span className="mb-1 block font-semibold text-zinc-600 dark:text-zinc-400">Buscar capítulo</span>
+          <span className="mb-1 block font-semibold text-[var(--dim)]">Buscar capítulo</span>
           <span className="relative block">
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400" aria-hidden="true" />
             <input
               value={query}
               onChange={(event) => { setQuery(event.target.value); setLimit(60); }}
               placeholder="Termodinâmica, Revolução Francesa…"
-              className="w-full rounded-xl border border-zinc-300 bg-transparent py-2.5 pl-9 pr-3 dark:border-zinc-700"
+              className="w-full rounded-xl border border-[var(--line)] bg-transparent py-2.5 pl-9 pr-3"
             />
           </span>
         </label>
       </div>
 
       {list.length === 0 ? (
-        <p role="status" className="rounded-2xl border border-zinc-200 p-6 text-sm text-zinc-500 dark:border-zinc-800">
+        <p role="status" className="rounded-2xl border border-[var(--line)] p-6 text-sm text-[var(--dim)]">
           Nenhum capítulo encontrado com esses filtros.
         </p>
       ) : (
@@ -162,7 +162,7 @@ function VisualLibrary({ onOpen, preferencias }: {
             <li key={item.id}>
               <button
                 onClick={() => onOpen(item.id)}
-                className="vs-lib-card w-full rounded-2xl border border-zinc-200 bg-white p-4 text-left transition hover:border-indigo-400 dark:border-zinc-800 dark:bg-zinc-900"
+                className="vs-lib-card w-full rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-4 text-left transition hover:border-[var(--action-primary)]"
                 style={{ '--card-cor': ambienteDoCapitulo(item, preferencias.cor).paleta.a } as React.CSSProperties}
               >
                   {/* O quadradinho com o ícone da matéria e o do tópico ficava em
@@ -172,11 +172,11 @@ function VisualLibrary({ onOpen, preferencias }: {
                   <div className="flex items-start gap-4">
                     <ChapterObjectIcon chapterId={item.id} />
                     <div>
-                      <span className="vs-lib-card-materia text-xs font-bold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
+                      <span className="vs-lib-card-materia text-xs font-bold uppercase tracking-wide text-[var(--text)]">
                         {item.subject} • {item.topic}
                       </span>
                       <span className="mt-1 block font-bold">{item.title}</span>
-                      <span className="mt-1 block text-sm text-zinc-500">{item.sections.length} nós • {item.retrieval[0]?.expectedElements.length ?? 0} relações</span>
+                      <span className="mt-1 block text-sm text-[var(--dim)]">{item.sections.length} nós • {item.retrieval[0]?.expectedElements.length ?? 0} relações</span>
                     </div>
                   </div>
               </button>
@@ -370,14 +370,14 @@ export default function Visual() {
   }, [summaryId]);
 
   if (loading) {
-    return <div role="status" className="py-24 text-center text-zinc-500"><Waypoints className="mx-auto mb-3 h-8 w-8 animate-pulse" />Carregando o mapa e suas evidências…</div>;
+    return <div role="status" className="py-24 text-center text-[var(--dim)]"><Waypoints className="mx-auto mb-3 h-8 w-8 animate-pulse" />Carregando o mapa e suas evidências…</div>;
   }
 
   if (!summaryId || !map || !summary) {
     if (summaryId && !summary) {
       return (
         <div className="ni-main crivo-visual space-y-5">
-          <button onClick={() => setSearchParams({})} className="inline-flex items-center text-sm font-medium text-indigo-700 dark:text-indigo-300">
+          <button onClick={() => setSearchParams({})} className="inline-flex items-center text-sm font-medium text-[var(--text)]">
             <ArrowLeft className="mr-2 h-4 w-4" />Voltar ao Visual
           </button>
           <div role="alert" className="rounded-2xl border border-amber-300 bg-amber-50 p-6 dark:border-amber-900 dark:bg-amber-950/20">
@@ -607,7 +607,7 @@ export default function Visual() {
                     value={draft}
                     onChange={(event) => { setDraft(event.target.value); setFeedback(null); }}
                     placeholder="Escreva sua resposta…"
-                    className="mt-3 w-full rounded-xl border border-zinc-300 bg-transparent p-3 dark:border-zinc-700"
+                    className="mt-3 w-full rounded-xl border border-[var(--line)] bg-transparent p-3"
                   />
                   <details className="mt-2">
                     <summary className="vs-recall-note cursor-pointer text-sm">Preciso de uma pista</summary>
@@ -616,12 +616,12 @@ export default function Visual() {
                   <button
                     disabled={!draft.trim()}
                     onClick={submitRecall}
-                    className="mt-4 rounded-xl bg-indigo-600 px-4 py-2.5 font-semibold text-white disabled:opacity-40"
+                    className="mt-4 rounded-xl bg-[var(--action-primary)] px-4 py-2.5 font-semibold text-[var(--text-inverse)] disabled:opacity-40"
                   >
                     Enviar para correção
                   </button>
                   {feedback && (
-                    <div role="status" className="mt-4 rounded-xl bg-zinc-100 p-4 text-sm dark:bg-zinc-800">
+                    <div role="status" className="mt-4 rounded-xl bg-[var(--surface2)] p-4 text-sm">
                       <p><strong>Você preservou:</strong> {feedback.matched.length ? feedback.matched.join(', ') : 'ainda nenhuma relação identificável'}</p>
                       {feedback.missing
                         ? <p className="mt-2 text-amber-800 dark:text-amber-300"><strong>Primeiro elo ausente:</strong> {feedback.missing}.</p>
@@ -634,7 +634,7 @@ export default function Visual() {
                   )}
                 </>
               ) : (
-                <p className="mt-2 text-sm text-zinc-500">Este capítulo ainda não tem pergunta de recuperação.</p>
+                <p className="mt-2 text-sm text-[var(--dim)]">Este capítulo ainda não tem pergunta de recuperação.</p>
               )}
             </section>
           )}
@@ -643,21 +643,21 @@ export default function Visual() {
             <section className="vs-practice-panel">
               <h2 tabIndex={-1} className="font-bold">Reconstrução ativa</h2>
               {hidden.length === 0 ? (
-                <p className="mt-2 text-sm text-zinc-500">Não há relação para ocultar neste capítulo.</p>
+                <p className="mt-2 text-sm text-[var(--dim)]">Não há relação para ocultar neste capítulo.</p>
               ) : (
                 <>
-                  <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+                  <p className="mt-2 text-sm text-[var(--dim)]">
                     Escolha uma relação para cada lacuna. Você também pode arrastar as opções.
                   </p>
                   <button
                     onClick={() => setShowWhyHidden((value) => !value)}
                     aria-expanded={showWhyHidden}
-                    className="mt-1 inline-flex items-center text-sm font-medium text-indigo-700 dark:text-indigo-300"
+                    className="mt-1 inline-flex items-center text-sm font-medium text-[var(--text)]"
                   >
                     <HelpCircle className="mr-1.5 h-4 w-4" aria-hidden="true" />Por que estas?
                   </button>
                   {showWhyHidden && (
-                    <ul className="mt-2 space-y-1 rounded-xl bg-zinc-100 p-3 text-sm dark:bg-zinc-800">
+                    <ul className="mt-2 space-y-1 rounded-xl bg-[var(--surface2)] p-3 text-sm">
                       {hidden.map((item) => <li key={item.relationId}>{item.reason}</li>)}
                     </ul>
                   )}
@@ -668,7 +668,7 @@ export default function Visual() {
                       return (
                         <li
                           key={item.relationId}
-                          className="vs-gap rounded-xl border border-zinc-200 p-4 dark:border-zinc-800"
+                          className="vs-gap rounded-xl border border-[var(--line)] p-4"
                           onDragOver={(event) => {
                             if (event.dataTransfer.types.includes('text/plain')) event.preventDefault();
                           }}
@@ -678,7 +678,7 @@ export default function Visual() {
                             if (bank.includes(label)) place(item.relationId, label);
                           }}
                         >
-                          <p className="text-xs font-bold uppercase tracking-wide text-zinc-500">Lacuna {index + 1}</p>
+                          <p className="text-xs font-bold uppercase tracking-wide text-[var(--dim)]">Lacuna {index + 1}</p>
                           <div className="vs-drop-target" aria-live="polite">
                             <span aria-hidden="true">{placements[item.relationId] ? '✓' : '↳'}</span>
                             {placements[item.relationId]
@@ -701,7 +701,7 @@ export default function Visual() {
                                   }}
                                   onClick={() => place(item.relationId, label)}
                                   className={`rounded-lg border px-3 py-1.5 text-sm disabled:opacity-35 ${
-                                    chosen ? 'border-indigo-500 bg-indigo-50 font-semibold dark:bg-indigo-950/40' : 'border-zinc-300 dark:border-zinc-700'
+                                    chosen ? 'border-[var(--action-primary)] bg-[var(--surface2)] font-semibold' : 'border-[var(--line)]'
                                   }`}
                                 >
                                   {displayLabel(label)}
@@ -730,20 +730,20 @@ export default function Visual() {
                     <button
                       disabled={Object.keys(placements).length === 0}
                       onClick={submitReconstruction}
-                      className="rounded-xl bg-indigo-600 px-4 py-2.5 font-semibold text-white disabled:opacity-40"
+                      className="rounded-xl bg-[var(--action-primary)] px-4 py-2.5 font-semibold text-[var(--text-inverse)] disabled:opacity-40"
                     >
                       Conferir reconstrução
                     </button>
                     <button
                       disabled={history.length === 0}
                       onClick={() => { setPlacements(history[history.length - 1]); setHistory((items) => items.slice(0, -1)); setGrades({}); }}
-                      className="inline-flex items-center rounded-xl border border-zinc-300 px-4 py-2.5 text-sm font-medium disabled:opacity-40 dark:border-zinc-700"
+                      className="inline-flex items-center rounded-xl border border-[var(--line)] px-4 py-2.5 text-sm font-medium disabled:opacity-40"
                     >
                       <Undo2 className="mr-1.5 h-4 w-4" aria-hidden="true" />Desfazer
                     </button>
                     <button
                       onClick={() => { setPlacements({}); setHistory([]); setGrades({}); setReconstructionRound({ chapterId: summary.id, relations: suggestedHidden }); }}
-                      className="inline-flex items-center rounded-xl border border-zinc-300 px-4 py-2.5 text-sm font-medium dark:border-zinc-700"
+                      className="inline-flex items-center rounded-xl border border-[var(--line)] px-4 py-2.5 text-sm font-medium"
                     >
                       <RotateCcw className="mr-1.5 h-4 w-4" aria-hidden="true" />Reiniciar
                     </button>
