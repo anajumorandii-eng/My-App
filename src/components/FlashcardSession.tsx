@@ -145,7 +145,7 @@ export default function FlashcardSession({ title, cards, onRate, onExit, onCompl
 
       <div className="bg-[var(--surface)] border border-[var(--line)] rounded-2xl p-6 shadow-sm min-h-[220px] flex flex-col">
         {current.label && (
-          <span className="text-xs font-semibold text-[var(--action-primary)] mb-3">{current.label}</span>
+          <span className="text-xs font-semibold text-[var(--text)] mb-3">{current.label}</span>
         )}
         <div className="flex-1 flex flex-col justify-center">
           <div className="prose prose-zinc dark:prose-invert max-w-none text-base" dangerouslySetInnerHTML={{ __html: current.front }} />

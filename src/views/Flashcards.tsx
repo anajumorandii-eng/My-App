@@ -47,7 +47,7 @@ const SUBJECTS: { name: string; count: number; colorClasses: string }[] = [
   { name: 'História', count: DECK_COUNTS['História'], colorClasses: 'bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300' },
   { name: 'Inglês', count: DECK_COUNTS['Inglês'], colorClasses: 'bg-sky-50 dark:bg-sky-900/20 text-sky-700 dark:text-sky-300' },
   { name: 'Português', count: DECK_COUNTS['Português'], colorClasses: 'bg-violet-50 dark:bg-violet-900/20 text-violet-700 dark:text-violet-300' },
-  { name: 'Matemática', count: DECK_COUNTS['Matemática'], colorClasses: 'bg-[var(--surface2)] text-[var(--action-primary)]' },
+  { name: 'Matemática', count: DECK_COUNTS['Matemática'], colorClasses: 'bg-[var(--surface2)] text-[var(--text)]' },
   { name: 'Química', count: DECK_COUNTS['Química'], colorClasses: 'bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300' },
   { name: 'Filosofia', count: DECK_COUNTS['Filosofia'], colorClasses: 'bg-stone-50 dark:bg-stone-900/20 text-stone-700 dark:text-stone-300' },
   { name: 'Sociologia', count: DECK_COUNTS['Sociologia'], colorClasses: 'bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300' },
@@ -431,7 +431,7 @@ export default function Flashcards() {
               <button
                 onClick={reviewAllDueForTopic}
                 disabled={selectedTopic.due === 0}
-                className="flex-1 rounded-lg bg-[var(--action-primary)] px-4 py-2.5 text-sm font-medium text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+                className="flex-1 rounded-lg bg-[var(--action-primary)] px-4 py-2.5 text-sm font-medium text-[var(--text-inverse)] hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Revisar todos os vencidos da seleção
               </button>
@@ -502,7 +502,7 @@ export default function Flashcards() {
             <button
               onClick={reviewAllDueForTopic}
               disabled={dueCountForCurrentScope === 0}
-              className="flex-1 rounded-lg bg-[var(--action-primary)] px-4 py-2.5 text-sm font-medium text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+              className="flex-1 rounded-lg bg-[var(--action-primary)] px-4 py-2.5 text-sm font-medium text-[var(--text-inverse)] hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
             >
               Revisar todos os vencidos {selectedSubtopic ? 'deste subtópico' : 'deste tópico'}
             </button>
@@ -590,7 +590,7 @@ export default function Flashcards() {
             <h3 className="text-lg font-semibold">Nenhum cartão vencido neste tópico</h3>
             <button
               onClick={exitSession}
-              className="mt-5 inline-flex items-center rounded-lg bg-[var(--action-primary)] px-4 py-2 text-sm font-medium text-white hover:opacity-90"
+              className="mt-5 inline-flex items-center rounded-lg bg-[var(--action-primary)] px-4 py-2 text-sm font-medium text-[var(--text-inverse)] hover:opacity-90"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               {navigation.allDueForTopic ? 'Voltar ao tópico' : 'Voltar aos tipos de treino'}

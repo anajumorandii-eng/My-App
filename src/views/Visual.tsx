@@ -172,7 +172,7 @@ function VisualLibrary({ onOpen, preferencias }: {
                   <div className="flex items-start gap-4">
                     <ChapterObjectIcon chapterId={item.id} />
                     <div>
-                      <span className="vs-lib-card-materia text-xs font-bold uppercase tracking-wide text-[var(--action-primary)]">
+                      <span className="vs-lib-card-materia text-xs font-bold uppercase tracking-wide text-[var(--text)]">
                         {item.subject} • {item.topic}
                       </span>
                       <span className="mt-1 block font-bold">{item.title}</span>
@@ -377,7 +377,7 @@ export default function Visual() {
     if (summaryId && !summary) {
       return (
         <div className="ni-main crivo-visual space-y-5">
-          <button onClick={() => setSearchParams({})} className="inline-flex items-center text-sm font-medium text-[var(--action-primary)]">
+          <button onClick={() => setSearchParams({})} className="inline-flex items-center text-sm font-medium text-[var(--text)]">
             <ArrowLeft className="mr-2 h-4 w-4" />Voltar ao Visual
           </button>
           <div role="alert" className="rounded-2xl border border-amber-300 bg-amber-50 p-6 dark:border-amber-900 dark:bg-amber-950/20">
@@ -616,7 +616,7 @@ export default function Visual() {
                   <button
                     disabled={!draft.trim()}
                     onClick={submitRecall}
-                    className="mt-4 rounded-xl bg-[var(--action-primary)] px-4 py-2.5 font-semibold text-white disabled:opacity-40"
+                    className="mt-4 rounded-xl bg-[var(--action-primary)] px-4 py-2.5 font-semibold text-[var(--text-inverse)] disabled:opacity-40"
                   >
                     Enviar para correção
                   </button>
@@ -652,7 +652,7 @@ export default function Visual() {
                   <button
                     onClick={() => setShowWhyHidden((value) => !value)}
                     aria-expanded={showWhyHidden}
-                    className="mt-1 inline-flex items-center text-sm font-medium text-[var(--action-primary)]"
+                    className="mt-1 inline-flex items-center text-sm font-medium text-[var(--text)]"
                   >
                     <HelpCircle className="mr-1.5 h-4 w-4" aria-hidden="true" />Por que estas?
                   </button>
@@ -730,7 +730,7 @@ export default function Visual() {
                     <button
                       disabled={Object.keys(placements).length === 0}
                       onClick={submitReconstruction}
-                      className="rounded-xl bg-[var(--action-primary)] px-4 py-2.5 font-semibold text-white disabled:opacity-40"
+                      className="rounded-xl bg-[var(--action-primary)] px-4 py-2.5 font-semibold text-[var(--text-inverse)] disabled:opacity-40"
                     >
                       Conferir reconstrução
                     </button>
