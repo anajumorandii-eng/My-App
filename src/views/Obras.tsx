@@ -25,7 +25,9 @@ export default function Obras() {
       })
       .catch((error) => {
         console.error('Failed to load literary catalog:', error);
-        setLoadError('Não foi possível carregar o catálogo de obras. Tente recarregar a página.');
+        // O catálogo mora no Firestore: sem conta (ou sem permissão) a leitura é
+        // recusada. Dizer isso é mais útil que "recarregue a página", que não resolve.
+        setLoadError(/permission/i.test(String(error)) ? 'O catálogo de obras precisa da sua conta: entre pelo botão do topo para carregá-lo. As obras obrigatórias também estão em Flashcards de Obras.' : 'Não foi possível carregar o catálogo de obras. Tente recarregar a página.');
       });
   }, []);
 
@@ -65,7 +67,7 @@ export default function Obras() {
           <p>Leitura guiada, análise analítica e treino de prova para FUVEST e Unicamp/Comvest.</p>
         </div>
         <div className="ni-state">
-          <i /> {works === null ? 'carregando catálogo' : `${works.length} ${works.length === 1 ? 'obra' : 'obras'} no catálogo`}
+          <i /> {works === null ? (loadError ? 'catálogo indisponível' : 'carregando catálogo') : `${works.length} ${works.length === 1 ? 'obra' : 'obras'} no catálogo`}
         </div>
       </div>
 
@@ -102,7 +104,7 @@ export default function Obras() {
 
       {/* Error */}
       {loadError && (
-        <div className="rounded-xl bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300 p-4 text-sm">{loadError}</div>
+        <div role="alert" className="ni-panel rounded-xl p-4 text-sm">{loadError}</div>
       )}
 
       {/* Loading */}

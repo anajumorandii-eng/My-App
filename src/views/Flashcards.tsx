@@ -47,7 +47,7 @@ const SUBJECTS: { name: string; count: number; colorClasses: string }[] = [
   { name: 'História', count: DECK_COUNTS['História'], colorClasses: 'bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300' },
   { name: 'Inglês', count: DECK_COUNTS['Inglês'], colorClasses: 'bg-sky-50 dark:bg-sky-900/20 text-sky-700 dark:text-sky-300' },
   { name: 'Português', count: DECK_COUNTS['Português'], colorClasses: 'bg-violet-50 dark:bg-violet-900/20 text-violet-700 dark:text-violet-300' },
-  { name: 'Matemática', count: DECK_COUNTS['Matemática'], colorClasses: 'bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300' },
+  { name: 'Matemática', count: DECK_COUNTS['Matemática'], colorClasses: 'bg-[var(--surface2)] text-[var(--action-primary)]' },
   { name: 'Química', count: DECK_COUNTS['Química'], colorClasses: 'bg-rose-50 dark:bg-rose-900/20 text-rose-700 dark:text-rose-300' },
   { name: 'Filosofia', count: DECK_COUNTS['Filosofia'], colorClasses: 'bg-stone-50 dark:bg-stone-900/20 text-stone-700 dark:text-stone-300' },
   { name: 'Sociologia', count: DECK_COUNTS['Sociologia'], colorClasses: 'bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300' },
@@ -88,7 +88,7 @@ function BackButton({ onClick }: { onClick: () => void }) {
   return (
     <button
       onClick={onClick}
-      className="inline-flex items-center text-sm text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200"
+      className="inline-flex items-center text-sm text-[var(--dim)] hover:text-[var(--text)]"
     >
       <ArrowLeft className="w-4 h-4 mr-1.5" /> Voltar
     </button>
@@ -412,7 +412,7 @@ export default function Flashcards() {
           <BackButton onClick={() => dispatch({ type: 'back' })} />
           <div>
             <h2 className="text-xl font-semibold">{navigation.subject} — escolha um tópico ou combine vários</h2>
-            <p className="text-sm text-zinc-500 mt-1">Selecione o recorte que deseja revisar.</p>
+            <p className="text-sm text-[var(--dim)] mt-1">Selecione o recorte que deseja revisar.</p>
           </div>
           <p className="text-xs text-[var(--dim)]">As bancas correspondem às etiquetas e aos modelos de treino dos cartões.</p>
           <div className="crivo-topic-filters">
@@ -427,11 +427,11 @@ export default function Flashcards() {
           <p role="status" className="text-sm text-[var(--dim)]">{selectedTopic.total} cartões · {selectedTopic.due} vencidos na seleção</p>
 
           {selectedTopic && (
-            <div className="flex flex-col gap-2 rounded-xl border border-zinc-200 bg-white p-4 sm:flex-row dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="flex flex-col gap-2 rounded-xl border border-[var(--line)] bg-[var(--surface)] p-4 sm:flex-row">
               <button
                 onClick={reviewAllDueForTopic}
                 disabled={selectedTopic.due === 0}
-                className="flex-1 rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
+                className="flex-1 rounded-lg bg-[var(--action-primary)] px-4 py-2.5 text-sm font-medium text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 Revisar todos os vencidos da seleção
               </button>
@@ -442,7 +442,7 @@ export default function Flashcards() {
                     dispatch({ type: 'select_topic', topicId: navigation.topicId });
                   }
                 }}
-                className="flex-1 rounded-lg border border-zinc-300 px-4 py-2.5 text-sm font-medium hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-800"
+                className="flex-1 rounded-lg border border-[var(--line)] px-4 py-2.5 text-sm font-medium hover:bg-[var(--surface2)]"
               >
                 Escolher subtópico ou prioridade
               </button>
@@ -456,7 +456,7 @@ export default function Flashcards() {
           <BackButton onClick={() => dispatch({ type: 'back' })} />
           <div>
             <h2 className="text-xl font-semibold">{navigation.subject} — {selectedTopic.label}</h2>
-            <p className="text-sm text-zinc-500 mt-1">
+            <p className="text-sm text-[var(--dim)] mt-1">
               Escolha um subtópico para focar, ou siga com todos os tópicos selecionados.
             </p>
           </div>
@@ -466,12 +466,12 @@ export default function Flashcards() {
               aria-pressed={navigation.subtopicId === undefined}
               className={`rounded-xl border p-4 text-left shadow-sm transition-colors ${
                 navigation.subtopicId === undefined
-                  ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20'
-                  : 'border-zinc-200 bg-white hover:border-indigo-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-indigo-700'
+                  ? 'border-[var(--action-primary)] bg-[var(--surface2)]'
+                  : 'border-[var(--line)] bg-[var(--surface)] hover:border-[var(--action-primary)]'
               }`}
             >
               <span className="font-medium">Todos os tópicos selecionados</span>
-              <p className="mt-1 text-sm text-zinc-500">
+              <p className="mt-1 text-sm text-[var(--dim)]">
                 {selectedTopic.total.toLocaleString('pt-BR')} cartões · {selectedTopic.due.toLocaleString('pt-BR')} vencidos
               </p>
             </button>
@@ -485,12 +485,12 @@ export default function Flashcards() {
                   aria-pressed={isSelected}
                   className={`rounded-xl border p-4 text-left shadow-sm transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
                     isSelected
-                      ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20'
-                      : 'border-zinc-200 bg-white hover:border-indigo-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-indigo-700'
+                      ? 'border-[var(--action-primary)] bg-[var(--surface2)]'
+                      : 'border-[var(--line)] bg-[var(--surface)] hover:border-[var(--action-primary)]'
                   }`}
                 >
                   <span className="font-medium">{sub.label}</span>
-                  <p className="mt-1 text-sm text-zinc-500">
+                  <p className="mt-1 text-sm text-[var(--dim)]">
                     {sub.total.toLocaleString('pt-BR')} cartões · {sub.due.toLocaleString('pt-BR')} vencidos
                   </p>
                 </button>
@@ -498,17 +498,17 @@ export default function Flashcards() {
             })}
           </div>
 
-          <div className="flex flex-col gap-2 rounded-xl border border-zinc-200 bg-white p-4 sm:flex-row dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="flex flex-col gap-2 rounded-xl border border-[var(--line)] bg-[var(--surface)] p-4 sm:flex-row">
             <button
               onClick={reviewAllDueForTopic}
               disabled={dueCountForCurrentScope === 0}
-              className="flex-1 rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
+              className="flex-1 rounded-lg bg-[var(--action-primary)] px-4 py-2.5 text-sm font-medium text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
             >
               Revisar todos os vencidos {selectedSubtopic ? 'deste subtópico' : 'deste tópico'}
             </button>
             <button
               onClick={() => dispatch({ type: 'select_subtopic', subtopicId: navigation.subtopicId })}
-              className="flex-1 rounded-lg border border-zinc-300 px-4 py-2.5 text-sm font-medium hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-800"
+              className="flex-1 rounded-lg border border-[var(--line)] px-4 py-2.5 text-sm font-medium hover:bg-[var(--surface2)]"
             >
               Escolher prioridade
             </button>
@@ -521,7 +521,7 @@ export default function Flashcards() {
           <BackButton onClick={() => dispatch({ type: 'back' })} />
           <div>
             <h2 className="text-xl font-semibold">{navigation.subject} — {scopeLabel}</h2>
-            <p className="text-sm text-zinc-500 mt-1">Escolha a prioridade dos cartões.</p>
+            <p className="text-sm text-[var(--dim)] mt-1">Escolha a prioridade dos cartões.</p>
           </div>
           <div className="grid gap-3 sm:grid-cols-3">
             {FLASHCARD_PRIORITY_ORDER.map((priority) => {
@@ -531,10 +531,10 @@ export default function Flashcards() {
                   key={priority}
                   onClick={() => dispatch({ type: 'select_priority', priority })}
                   disabled={counts.total === 0}
-                  className="rounded-xl border border-zinc-200 bg-white p-4 text-left shadow-sm hover:border-indigo-300 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-indigo-700"
+                  className="rounded-xl border border-[var(--line)] bg-[var(--surface)] p-4 text-left shadow-sm hover:border-[var(--action-primary)] disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   <span className="font-medium">{PRIORITY_LABELS[priority]}</span>
-                  <p className="mt-1 text-sm text-zinc-500">
+                  <p className="mt-1 text-sm text-[var(--dim)]">
                     {counts.total.toLocaleString('pt-BR')} cartões · {counts.due.toLocaleString('pt-BR')} vencidos
                   </p>
                 </button>
@@ -551,7 +551,7 @@ export default function Flashcards() {
             <h2 className="text-xl font-semibold">
               {navigation.subject} — {scopeLabel} — {PRIORITY_LABELS[navigation.priority]}
             </h2>
-            <p className="text-sm text-zinc-500 mt-1">Escolha o tipo de treino.</p>
+            <p className="text-sm text-[var(--dim)] mt-1">Escolha o tipo de treino.</p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {/* Tipo sem cartão some em vez de aparecer desabilitado: depois do
@@ -564,10 +564,10 @@ export default function Flashcards() {
                   key={trainingType}
                   onClick={() => startTrainingSession(trainingType)}
                   disabled={counts.total === 0}
-                  className="rounded-xl border border-zinc-200 bg-white p-4 text-left shadow-sm hover:border-indigo-300 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-indigo-700"
+                  className="rounded-xl border border-[var(--line)] bg-[var(--surface)] p-4 text-left shadow-sm hover:border-[var(--action-primary)] disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   <span className="font-medium">{TRAINING_TYPE_LABELS[trainingType]}</span>
-                  <p className="mt-1 text-sm text-zinc-500">
+                  <p className="mt-1 text-sm text-[var(--dim)]">
                     {counts.total.toLocaleString('pt-BR')} cartões · {counts.due.toLocaleString('pt-BR')} vencidos
                   </p>
                 </button>
@@ -586,11 +586,11 @@ export default function Flashcards() {
             onExit={exitSession}
           />
         ) : (
-          <div className="rounded-2xl border border-zinc-200 bg-white p-8 text-center shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-8 text-center shadow-sm">
             <h3 className="text-lg font-semibold">Nenhum cartão vencido neste tópico</h3>
             <button
               onClick={exitSession}
-              className="mt-5 inline-flex items-center rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
+              className="mt-5 inline-flex items-center rounded-lg bg-[var(--action-primary)] px-4 py-2 text-sm font-medium text-white hover:opacity-90"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               {navigation.allDueForTopic ? 'Voltar ao tópico' : 'Voltar aos tipos de treino'}
